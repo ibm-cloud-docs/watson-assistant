@@ -1,0 +1,147 @@
+#  New Watson Assistant docs
+---
+toc:
+  properties:
+    subcollection: watson-assistant
+    version: 2
+    category: ai
+    audience: service
+    href: /docs/watson-assistant
+    product-page: https://ibm.com/cloud/watson-assistant
+    path: watson-assistant
+    label: New Watson Assistant (managed)
+
+#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
+  entries:
+  - navgroup:
+      id: learn
+      topics:
+      - welcome-beta.md
+#      - topicgroup:
+#          label: topic-group-label
+#          topics:
+#          - index.md
+
+ # - navgroup:
+ #     id: tutorial
+ #     topics:
+ #     - topic-1.md
+ #     - topic-2.md
+ #     - topic: topic-3.md
+ #       navtitle: A shorter navtitle
+
+  - navgroup:
+      id: howto
+      topics:
+      - topicgroup:
+          label: Building your assistant
+          topics:
+          - build-actions-overview.md
+          - start-conversation.md
+          - topicgroup:
+              label: Teaching your assistant
+              topics:
+              - understand-questions.md
+              - respond.md
+              - collect-info.md
+              - manage-info.md
+              - review.md
+              - manage-team.md
+              - search-add.md
+          - topicgroup:
+              label: Managing conversation flow
+              topics:
+              - manage-flow-overview.md
+              - step-conditions.md
+              - skip-steps.md
+              - step-what-next.md
+              - change-topic.md
+              - handle-errors.md
+          - human-agent.md
+          - access-control.md
+      - topicgroup:
+          label: Publishing and deploying your assistant
+          topics:
+          - publish-deploy-overview.md
+          - preview-share.md
+          - publish.md
+          - topicgroup:
+              label: Deploying to your website
+              topics:
+              - deploy-web-chat.md
+              - web-chat-basics.md
+              - web-chat-config.md
+              - web-chat-security.md
+              - deploy-salesforce.md
+              - deploy-zendesk.md
+              links:
+              - link:
+                  label: Integrating with Genesys Cloud
+                  href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/genesys
+              - link:
+                  label: Integrating with NICE inContact
+                  href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/incontact
+              - link:
+                  label: Integrating with Twilio Flex
+                  href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/flex
+              - link:
+                  label: Integrating with Oracle B2C Service
+                  href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/oracle
+              - link:
+                  label: Integrating with your own service desk
+                  href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter
+          - topicgroup:
+              label: Deploying for phone
+              topics:
+              - deploy-phone.md
+#             - phone-config.md
+#          - topicgroup:
+#              label: Deploying to other platforms
+#              topics:
+#              - deploy-integration-add.md
+#              - deploy-facebook.md
+#              - deploy-slack.md
+#              - deploy-sms.md
+#              - deploy-whatsapp.md
+      - topicgroup:
+          label: Advanced topics
+          topic:
+          - expressions.md
+
+#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
+#  Links to your command line reference docs should be included in the Reference navigation group.
+#  - navgroup:
+#      id: reference
+#      topics:
+#      - topicgroup:
+#          label: API reference
+#          links:
+#          - link:
+#              label: Catalog Management
+#              href: https://cloud.ibm.com/apidocs/resource-catalog/private-catalog
+#          - link:
+#              label: Enterprise Management
+#              href: https://{DomainName}/apidocs/enterprise-apis/enterprise
+#      - topicgroup:
+#          label: Command reference
+#          topics:
+#          - /cli/cli-manage-catalogs-plugin
+#          - /cli/cli-ibmcloud_commands_services
+#          - /cli/cli-ibmcloud_commands_account
+#      - topic-6.md
+
+#  - navgroup:
+#      id: help
+#      topics:
+#      - support.md
+#      - topicgroup:
+#          label: FAQs
+#          topics:
+#          - topic-7.md
+#          - topic-8.md
+#      - topicgroup:
+#          label: Troubleshooting
+#          topics:
+#          - topic-9.md
+#          - topic-10.md
+#      - release-notes.md
