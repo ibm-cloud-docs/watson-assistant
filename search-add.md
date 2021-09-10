@@ -1,0 +1,419 @@
+---
+
+copyright:
+  years: 2021
+lastupdated: "2021-09-09"
+
+subcollection: watson-assistant
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:deprecated: .deprecated}
+{:important: .important}
+{:note: .note}
+{:tip: .tip}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:video: .video}
+
+# Leveraging existing help content ![Plus or higher plan only](images/plus.png)
+{: #search-add}
+
+Put your subject matter expertise to work by adding search. The search integration gives your assistant access to corporate data collections that it can mine for answers.
+{: shortdesc}
+
+When a *search* is added, your assistant can route complex customer inquiries to the {{site.data.keyword.discoveryfull}} service. {{site.data.keyword.discoveryshort}} treats the user input as a search query. It finds information that is relevant to the query from an external data source and returns it to the assistant.
+
+This feature is available only to paid plan users.
+{: note}
+
+Add search to your assistant to prevent the assistant from having to say things like, `I'm sorry. I can't help you with that`. Instead, the assistant can query existing company documents or data to see whether any useful information can be found and shared with the customer.
+
+![Shows a search result in the Preview](images/search-preview-example.png)
+
+To show the exact answer highlighted in bold font, enable the *Emphasize the answer* feature that is available with {{site.data.keyword.discoveryshort}} v2 instances.
+{: tip}
+
+The following 4-minute video provides an overview of the search integration.
+
+![search integration overview](https://www.youtube.com/embed/_UgRPaxipgI){: video output="iframe" id="youtubeplayer" frameborder="0" width="560" height="315" webkitallowfullscreen mozallowfullscreen allowfullscreen}
+
+To read a transcript of the video, [open the video on YouTube.com](https://www.youtube.com/watch?v=_UgRPaxipgI&feature=emb_imp_woyt), click the *More actions* icon, and then choose *Open transcript*.
+
+To learn more about how search can benefit your business, [read this blog post](https://medium.com/ibm-watson/adding-search-to-watson-assistant-99e4e81839e5){: external}.
+
+Find out how to keep your assistant data current by reading the blog post, [COVID-19: Are Your Virtual Assistant’s Answers Up-To-Date?](https://medium.com/ibm-watson/covid-19-are-your-virtual-assistants-answers-up-to-date-c9e1ba70eb65){: external}.
+
+## How it works
+{: #search-add-how}
+
+The search integration searches for information from a data collection that you create by using the {{site.data.keyword.discoveryshort}} service.
+
+{{site.data.keyword.discoveryshort}} is a service that crawls, converts, and normalizes your unstructured data. The product applies data analysis and cognitive intuition to enrich your data such that you can more easily find and retrieve meaningful information from it later. To read more about {{site.data.keyword.discoveryshort}}, see the [product documentation](/docs/discovery?topic=discovery-about){: external}.
+
+Typically, the type of data collection you add to {{site.data.keyword.discoveryshort}} and access from your assistant contains information that is owned by your company. This proprietary information can include FAQs, sales collateral, technical manuals, or papers written by subject matter experts. Mine this dense collection of proprietary information to find answers to customer questions quickly.
+
+## Before you begin
+{: #search-add-prereqs}
+
+If you do not have a {{site.data.keyword.discoveryshort}} service instance, then a free Lite plan instance is provisioned for you as part of this process. If you have an existing {{site.data.keyword.discoveryshort}} service instance, connect to it; you are not asked to create a new instance as part of this process.
+
+If you create a Discovery instance first, do not add the pre-enriched data source that is named *Watson Discovery News* to your instance. It is not a data type that can be searched from {{site.data.keyword.conversationshort}}.
+{: tip}
+
+## Create the search integration
+{: #search-add-task}
+
+1.  From the assistant where you want to add search, click **Integrations**.
+
+    You can only add search if you are a user with a paid plan.
+    {: note}
+
+1.  In the **Extensions** section, locate Search, click **Add**, then click **Confirm**.
+
+1.  Connect to a {{site.data.keyword.discoveryshort}} service instance.
+
+    - If you don't have an instance, a {{site.data.keyword.discoveryshort}} service instance is created for you automatically. A Lite plan instance is provisioned no matter what type of {{site.data.keyword.conversationshort}} service plan you have.
+    - If you want to use {{site.data.keyword.discoveryshort}} features that are only available with the {{site.data.keyword.discoveryshort}} v2 API, create a {{site.data.keyword.discoveryshort}} instance that uses v2 before you continue.
+
+1.  Click **Next**.
+
+The remaining steps differ depending on whether you have access to an existing {{site.data.keyword.discoveryshort}} service instance with collections created or not. Follow the appropriate procedure for your situation:
+
+- [Connect to an existing Watson Discovery instance](#search-add-connect-discovery)
+- [Create a Watson Discovery instance](#search-add-create-discovery)
+
+## Connect to an existing Watson Discovery service instance
+{: #search-add-connect-discovery}
+
+1.  Choose the {{site.data.keyword.discoveryshort}} service instance that you want to extract information from.
+{: #choose-d-instance}
+
+    If you see a warning that some of your {{site.data.keyword.discoveryshort}} service instances do not have credentials set, it means that you can access at least one instance that you never opened from the {{site.data.keyword.cloud_notm}} dashboard directly yourself. You must access a service instance for credentials to be created for it, and credentials must exist before {{site.data.keyword.conversationshort}} can establish a connection to the {{site.data.keyword.discoveryshort}} service instance on your behalf. If you think a {{site.data.keyword.discoveryshort}} service instance is missing from the list, open the instance from the {{site.data.keyword.cloud}} dashboard directly to generate credentials for it.
+    {: note}
+
+1.  Indicate the data collection to use, by doing one of the following things:
+{: #pick-data-collection}
+
+    - Choose an existing data collection.
+
+      You can click the *Open in Discovery* link to review the configuration of a data collection before you decide which one to use.
+
+      Go to [Configure the search](#search-add-configure).
+
+    - If you do not have a collection or do not want to use any of the data collections that are listed, click **Create a new collection** to add one. Follow the procedure in [Create a data collection](#search-add-create-discovery-collection).
+
+      The **Create a new collection** button is not displayed if you have reached the limit to the number of collections you are allowed to create based on your {{site.data.keyword.discoveryshort}} service plan. See [{{site.data.keyword.discoveryshort}} pricing plans](/docs/discovery/discovery-about?topic=discovery-discovery-pricing-plans){: external} for plan limit details.
+      {: note}
+
+## Create a Watson Discovery service instance
+{: #search-add-create-discovery}
+
+1.  To create a {{site.data.keyword.discoveryshort}} service instance, click **Create new collection**.
+
+    If you do not have an existing {{site.data.keyword.discoveryshort}} service instance, a free instance of the {{site.data.keyword.discoveryshort}} service is created for you.
+
+    A Lite plan instance of the service is provisioned in {{site.data.keyword.Bluemix_notm}}, no matter what type of {{site.data.keyword.conversationshort}} service plan you have.
+    {: note}
+
+1.  Review the terms and conditions for using the instance, and then click **Accept** to continue.
+
+## Create a data collection
+{: #search-add-create-discovery-collection}
+
+If you have a Discovery service Lite plan, you are given an opportunity to upgrade your plan. If you don't want to upgrade now, click **Let's get started**.
+
+1.  To create a {{site.data.keyword.discoveryshort}} collection, do one of the following things:
+
+      - To create a collection from data that is stored in a type of data source for which {{site.data.keyword.discoveryshort}} provides built-in support, pick a data source type.
+
+        - **For some data collection types**: Provide the required information for the data source you choose, and then click **Connect**.
+
+            For a list of the supported data types and details on how to set up access to them, see [Connecting to data sources](/docs/discovery?topic=discovery-sources){: external}.
+        - Specify the information that you want to extract from the data source and include in your {{site.data.keyword.discoveryshort}} collection.
+
+            The options that are displayed differ depending on the data source type.
+
+            - For a Salesforce data source, you select the object types that you want to extract from the source documents. You might select a [Case object type](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_case.htm#!){: external} that represents a *case*, which is a customer issue or problem, for example.
+            - For a Sharepoint data source, you specify paths.
+            - For file repositories, you specify directories or files.
+            - For a web crawl data source, specify the base URL of a website that you want to crawl. The web page that you specify and any pages that it links to are crawled and a document is created per web page.
+            
+            Optionally, select the **Apply FAQ extraction** checkbox to enable a beta feature that is available in v2 {{site.data.keyword.discoveryshort}} instances. The FAQ extraction feature allows the {{site.data.keyword.discoveryshort}} service to extract question and answer pairs that it identifies in the data collection. If the answers to common questions are identified ahead of time, your assistant can more quickly find and return a concise answer when a customer asks a similar question.
+            
+            To get help with creating data sources, see [Troubleshooting](#search-add-troubleshoot).
+
+        -  Indicate the frequency with which you want data from the data source to be synchronized with the collection you are creating in {{site.data.keyword.discoveryshort}}.
+        
+        - Click **Save & Sync**.
+
+            Give Watson a few minutes to start creating documents. As soon as the source starts to be ingested, the number of documents displayed on the {{site.data.keyword.discoveryshort}} details page increases. You might need to refresh the page.
+
+            After the digestion process is completed, a summary page is displayed in {{site.data.keyword.discoveryshort}}, which is hosted in a separate web browser tab.
+
+      - To create a collection by uploading documents, click **Upload documents**.
+
+        - First, you define the collection, and then you upload the documents. Provide the following information:
+
+            - Collection name. The name must be unique for this service instance.
+            - Language. Select the language of the files that you are adding to this collection. For information about the languages supported by {{site.data.keyword.discoveryshort}}, see [Language support](/docs/discovery?topic=discovery-language-support){: external}.
+
+              If you are uploading a PDF document and want to extract party, nature, and category information from it, then expand the **Advanced** section and click **Use the Default Contract Configuration with this collection**. See [Collection requirements](/docs/discovery?topic=discovery-element-classification#element-collection){: external} for more details.
+        - Upload documents.
+
+            Supported file types include PDF, HTML, JSON, and DOC files. See [Adding content](/docs/discovery?topic=discovery-addcontent){: external} for more details.
+            {: note}
+
+            No ongoing synchronization of uploaded documents is available. If you want to pick up changes that are made to a document, upload a later version of the document.
+
+    Wait for the collection to be fully ingested before you return to {{site.data.keyword.conversationshort}}.
+
+1.  From the {{site.data.keyword.discoveryshort}} instance, click **Finish setup in Watson Assistant**.
+    If you need to, select the service instance again. Select the data collection if it's not selected automatically.
+
+### Data collection creation example
+{: #search-add-json-collection-example}
+
+For example, you might have a JSON file like this one:
+
+```bash
+{
+  "Title": "About",
+  "Shortdesc": "IBM Watson Assistant is a cognitive bot that you can customize for your business needs, and deploy across multiple channels to bring help to your customers where and when they need it.",
+  "Topics": "overview",
+  "url": "https://cloud.ibm.com/docs/assistant?topic=assistant-index"
+}
+```
+{: codeblock}
+
+If you upload a JSON file that contains repeating name values, then only the first occurrence of the name and value pair is indexed and returned by search. Break up the file into multiple JSON files and upload the set.
+{: tip}
+
+## Configure the search
+{: #search-add-configure}
+
+1.  On the {{site.data.keyword.conversationshort}} search integration page, click **Next**.
+
+1.  Choose the {{site.data.keyword.discoveryshort}} collection fields from which you want to extract text to include in the search result that is returned to the user.
+
+    The fields that are available differ based on the data you ingested.
+
+    Each search result can consist of the following sections:
+
+    - **Title**: Search result title. Use the title, name, or similar type of field from the collection as the search result title.
+
+      You must select something for the title or no search result response is displayed in the Facebook and Slack integrations.
+    - **Body**: Search result description. Use an abstract, summary, or highlight field from the collection as the search result body.
+
+       You must select something for the body or no search result response is displayed in the Facebook and Slack integrations.
+    - **URL**: This field can be populated with any footer content that you want to include at the end of the search result.
+
+       For example, you might want to include a hypertext link to the original data object in its native data source. Most online data sources provide self-referencing public URLs for objects in the store to support direct access. If you add a URL, it must be valid and reachable. If it is not, the Slack integration will not include the URL in its response and the Facebook integration will not return any response.
+
+       The Facebook and Slack integrations can successfully display the search result response when the URL field is empty.
+  
+    You must choose a value for at least one of the search result sections.
+    {: important}
+
+    See [Tips for collection field selection](#search-add-field-tips) for help.
+
+    If no options are available from the drop-down fields, give {{site.data.keyword.discoveryshort}} more time to finish creating the collection. After waiting, if the collection is not created, then your collection might not contain any documents or might have ingestion errors that you need to address first.
+
+    To continue the [example of the uploaded JSON file](#search-add-json-collection-example), a good mapping is to use the *Title*, *Shortdesc*, and *url* fields.
+
+    ![Shows that the Title, Shortdesc, and url fields are selected and the preview search card is populated with information from those fields](images/search-skill-configure-fields.png)
+
+    As you add field mappings, a preview of the search result is displayed with information from the corresponding fields of your data collection. This preview shows you what gets included in the search result response that is returned to users.
+
+    To get help with configuring the search, see [Troubleshooting](#search-add-troubleshoot).
+
+1.  Draft different messages to share with users based on the successfulness of the search.
+
+    <table>
+    <caption>Search result messages</caption>
+    <tr>
+      <th>Field name</th>
+      <th>Scenario</th>
+      <th>Example message</th>
+    </tr>
+    <tr>
+      <td>Message</td>
+      <td>Search results are returned</td>
+      <td>I found this information that might be helpful: </td>
+    </tr>
+    <tr>
+      <td>No results found</td>
+      <td>No search results are found</td>
+      <td>I searched my knowledge base for information that might address your query, but did not find anything useful to share.</td>
+    </tr>
+    <tr>
+      <td>Error message</td>
+      <td>I was unable to complete the search for some reason</td>
+      <td>I might have information that could help address your query, but am unable to search my knowledge base at the moment.</td>
+    </tr>
+    </table>
+
+1.  Choose whether to enable **Emphasize the answer**. 
+
+    This option is available only if your {{site.data.keyword.discoveryshort}} instance uses the v2 {{site.data.keyword.discoveryshort}} API.
+    {: note}
+
+    When you enable this feature, the sentence that is determined by {{site.data.keyword.discoveryshort}} to be the exact answer to the customer's question is highlighted in the block of text that is displayed to the customer as the search result. For more information about the feature, see the [{{site.data.keyword.discoveryshort}} documentation](/docs/discovery-data?topic=discovery-data-projects#conversational){: external}.
+
+1.  Specify the number of results to return.
+
+    The top three results are returned automatically. Can you choose to show fewer or more (up to 10) results in the response.
+
+    By default, customers can choose to see more results. If you don't want to give customers this choice, clear the **Include link for customers to view up to 10 results** checkbox.
+1.  Decide whether to be more selective with the answers that are returned.
+
+    By default, all search query matches, regardless of the confidence score of the match, are returned as search results. You can limit the search results to include only matches with a confidence score of 20% or higher in {{site.data.keyword.discoveryshort}}. 
+    
+    To enable the beta feature that filters the results, toggle the *Refine results to return more selective answers* switch to **On**.
+
+1.  Click **Preview** to open the Preview pane for testing. Enter a test message to see the results that are returned when your configuration choices are applied to the search. Make adjustments as necessary.
+
+1.  Click **Create**.
+
+If you want to change the configuration of the search result card later, open the search integration again, and make edits. You do not need to save changes as you make them; they are automatically applied. When you are happy with the search results, click **Save** to finish configuring the search integration.
+
+<!--If you decide you want to connect to a different {{site.data.keyword.discoveryshort}} service instance or data collection, then create a new search integration and configure it to connect to the other instance. You *cannot* change the service instance or data collection details for a search integration after you create it.
+{: important}-->
+
+### Tips for collection field selection
+{: #search-add-field-tips}
+
+The appropriate collection fields to extract data from vary depending on your collection's data source and how the data source was enriched. After you choose a data collection type, the collection field values are prepopulated with source fields that are considered most likely to contain useful information given the collection's data source type. However, you know your data better than anyone. You can change the source fields to ones that contain the best information to meet your needs.
+
+To learn more about the structure of the documents in your collection, including the names of fields that contain information you might want to extract, open the collection in {{site.data.keyword.discoveryshort}}, and then click the View data schema icon ![View data schema icon](images/icon-view-data-schema.png).
+
+The source fields are created when the collection is created. To learn more about fields that are generated for you, such as `enriched_text.concepts.text`, see [Configuring your service > Adding enrichments](/docs/discovery?topic=discovery-configservice#adding-enrichments){: external}.
+
+## Troubleshooting
+{: #search-add-troubleshoot}
+
+Review this information for help with performing common tasks.
+
+- **Creating a Web crawl data collection**: Things to know when you create a web crawl data source:
+
+    - For a {{site.data.keyword.discoveryshort}} Lite plan, you cannot create more than 1,000 documents. 
+    - To increase the number of documents that are available to the data collection, click add a URL group where you can list the URLs for pages that you want to crawl but that are not linked to from the initial seed URL.
+    - To decrease the number of documents that are available to the data collection, specify a subdomain of the base URL. Or, in the web crawl settings, limit the number of hops that Watson can make from the original page. You can specify subdomains to explicitly exclude from the crawl also.
+    - If no documents are listed after a few minutes and a page refresh, then make sure that the content you want to ingest is available from the URL's page source. Some web page content is dynamically generated and therefore cannot be crawled.
+
+- **Configuring search results for uploaded documents**: If you are using a collection of uploaded documents and cannot get the correct search results or the results are not concise enough, consider using *Smart Document Understanding* when you create the data collection. 
+
+  This feature enables you to annotate documents based on text formatting. For example, you can teach {{site.data.keyword.discoveryshort}} that any text in 28-point bold font is a document title. If you apply this information to the collection when you ingest it, you can later use the *title* field as the source for the title section of your search result. 
+  
+  You can also use Smart Document Understanding to split up large documents into segments that are easier to search. For more information, see the the [Smart Document Understanding](/docs/discovery?topic=discovery-sdu) topic in the {{site.data.keyword.discoveryshort}} documentation.
+
+- **Improve search results**: If you don't like the results you are seeing, review this information for help.
+
+  - Call the search integration from a dialog node, and specify filter details. 
+
+    From a dialog node search integration response, you can specify a full {{site.data.keyword.discoveryshort}} query syntax filter to help narrow the results. 
+    
+    For example, you can define a filter that filters out any documents in the data collection that do not mention an intent in the document title or some other metadata field. Or the filter can filter out documents that do not identify an entity as a known entity in the data collection's metadata or that don't mention the entity anywhere in the full text of the document. For details about how to add a search integration response type, see [Adding a *search integration* response type](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-add-search-skill).
+
+    For more tips about improving results, read the [Improve your natural language query results from Watson Discovery](https://developer.ibm.com/blogs/improving-your-natural-language-query-results-from-watson-discovery/){: external} blog post.
+
+- **My response text is surrounded by brackets**: If you notice that your response text is surrounded by brackets and quotation marks (`["My response text"]`) when you test it from the Preview, for example, you might need to change the source field that you're using in the configuration. The unexpected formatting indicates that the value is stored in the source document as an array. Any field that you extract text from must contain a value with a String data type, not an Array data type. When the chat integration shows a response that is extracted from a field that stores the data as an array, it does a straight conversion of the array value into a string, which produces a response that includes the array syntax.
+
+  For example, maybe the field in the source document contains an array with a single text value as its only array element:
+
+  ```json
+  "title": ["a single array element"]
+  ```
+  {: codeblock}
+
+  The array value is converted by the {{site.data.keyword.conversationshort}} into this string value:
+
+  ```json
+  "title": "[\"a single array element\"]"
+  ```
+  {: codeblock}
+
+  As a result, the string is returned in this format in the chat; the surrounding brackets and quotation marks are displayed:
+
+  ```
+  ["a single array element"]
+  ```
+  {: codeblock}
+
+  If you see this happening, consider choosing a different collection field from which to extract search results.
+  
+  The {{site.data.keyword.discoveryshort}} document `highlight` field stores values in an array.
+  {: note}
+
+## Next steps
+{: #search-add-next-steps}
+
+After you add search, it appears as a tile on the **Connect** page.
+
+The search integration cannot interact with customers until it is added to an assistant and the assistant is deployed.
+
+## Search trigger
+{: #search-add-trigger}
+
+The search integration is triggered from an action step. This approach is useful if you want to narrow down a user query before you trigger a search. 
+
+For example, the conversational flow might collect information about the type of device a customer wants to buy. When you know the device model, you can then send a model keyword in the query that is submitted to the search integration to get better results.
+
+In the *And then* field of the step where you want the search to be triggered, choose **Search for the answer**.
+
+To configure the search that is performed in {{site.data.keyword.discoveryshort}}, complete the following steps:
+
+1.  Click **Edit settings**.
+
+1.  Add values to one or both of the following fields:
+
+    - **Custom query**. Add a word or phrase that you want to submit to {{site.data.keyword.discoveryshort}} as the query string for the search.
+
+      For example, you can specify a string such as, `What cities do you fly to?`. 
+      
+      For a more dynamic string, you can include a variable. For example, `Do you have flights to ${destination}?`
+      
+      You are effectively defining the value that is used by the {{site.data.keyword.discoveryshort}} API as the `natural_language_query` parameter. For more information, see [Query parameters](/docs/discovery?topic=discovery-query-parameters#nlq){: external}.
+
+      If you don't specify a text string, the action sends the most-recently-submitted user message as the search string. 
+      
+      If you want to use the original customer message that triggered the action as the query string instead, you need to plan ahead. You can follow these steps:
+  
+      1. Create a session variable to store the initial user input. For example, named `original message`.
+      1. In Step 1, meaning the first step after the action trigger, set the value of the session variable. For more information about session variables, see [Defining session variables](#actions-variables-global).
+      1. Set the value of the variable by using an expression that looks like this: `<? input.text ?>`. 
+  
+        This expression captures the complete message that was submitted by the customer. As a result, your variable captures the customer message that triggered this action.
+      1. Add the session variable to the *Custom query* field. For example: `${original_message}`
+
+    - **Customer filter**: Add a text string that defines information that must be present in any of the search results that are returned. 
+    
+      You are effectively defining the value that is used by the {{site.data.keyword.discoveryshort}} API as the `filter` parameter. For more information, see [Query parameters](/docs/discovery?topic=discovery-query-parameters#filter){: external}.
+
+      The syntax to use for the filter value is not intuitive. Here are a few examples of common use cases:
+
+      - To indicate that you want to return only documents with positive sentiment, for example, specify `enriched_text.sentiment.document.label:positive`.
+
+      - To filter results to includes only documents that mention `Boston, MA`, specify `enriched_text.entities.text:"Boston, MA"`.
+
+      - To filter results to includes only documents that mention a city name that you saved in a context variable named `$destination`, you can specify `enriched_text.entities.text:$destination`.
+
+    If you add both a query and a filter value, the filter parameter is applied first to filter the data collection documents and cache the results. The query parameter then ranks the cached results.
+
+1.  If you want the search for an answer to be the last step in the action, select **End the action after returning results**.
+
+1.  Click **Apply**.
+
+## Test the search integration
+{: #search-add-test}
+
+After you configure search, you can send test queries to see the search results that get returned from {{site.data.keyword.discoveryshort}} by using the Preview page.
+
+To test the full experience that customers have when they ask questions that are either answered by the dialog or trigger a search, use the *Preview* button for your assistant.
