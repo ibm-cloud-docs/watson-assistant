@@ -25,6 +25,8 @@ subcollection: watson-assistant
 {:swift: .ph data-hd-programlang='swift'}
 {:video: .video}
 
+{{site.data.content.classiclink}}
+
 # Securing the web chat
 {: #web-chat-security}
 

@@ -23,6 +23,8 @@ subcollection: watson-assistant
 {:swift: .ph data-hd-programlang='swift'}
 {:video: .video}
 
+{{site.data.content.classiclink}}
+
 # Leveraging existing help content ![Plus or higher plan only](images/plus.png)
 {: #search-add}
 
