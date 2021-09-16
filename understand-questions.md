@@ -23,6 +23,8 @@ subcollection: watson-assistant
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
+{{site.data.content.classiclink}}
+
 # Understand your users' questions or requests
 {: #understand-questions}
 

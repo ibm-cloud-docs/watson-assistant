@@ -24,6 +24,8 @@ subcollection: watson-assistant
 {:swift: .ph data-hd-programlang='swift'}
 {:video: .video}
 
+{{site.data.content.classiclink}}
+
 # Adding integrations
 {: #deploy-integration-add}
 

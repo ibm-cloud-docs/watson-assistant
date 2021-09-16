@@ -23,6 +23,8 @@ subcollection: watson-assistant
 {:swift: .ph data-hd-programlang='swift'}
 {:video: .video}
 
+{{site.data.content.classiclink}}
+
 # Integrating with Facebook Messenger
 {: #deploy-facebook}
 
