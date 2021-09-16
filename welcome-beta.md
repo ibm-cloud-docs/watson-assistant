@@ -40,5 +40,4 @@ If you are want to be added to the beta, please [join the waitlist](https://form
 
 If you are already a beta participant, feel free to [provide feedback](https://form.asana.com/?k=vvRdQAmGMFAeEGRryhTA2w&d=8612789739828){: external} on the new product experience or documentation.
 
-If you are looking for the documentation for the currently available Watson Assistant product (the nlassic Watson Assistant), please go [here](https://cloud.ibm.com/docs/assistant){: external}.
-
+If you are looking for the documentation for the currently available Watson Assistant product (the classic Watson Assistant), please go [here](https://cloud.ibm.com/docs/assistant){: external}.
