@@ -108,6 +108,7 @@ toc:
           label: Improving your assistant
           topics:
           - analytics-overview.md
+          - analytics-action-completion.md
           - analytics-conversations.md
 #     - topicgroup:
 #          label: Advanced topics
