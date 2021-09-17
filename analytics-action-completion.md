@@ -69,7 +69,7 @@ To help you identify actions that need improvement, the **Action completion** pa
 
 You can use the **Actions** table to focus on improving the completion of your actions. **Total incomplete** results provide a focus area where you can make the biggest impact. The actions with the highest number of incompletions means these are the actions with the most users unable to get their questions answered or requests resolved.
 
-To work on a specific action, click on the action name in the table. A page opens with completion detail for that single action.
+To work on a specific action, click on the action name in the table. A page opens with completion details for that single action.
 
 ![Action page](images/analytics-single-action.png)
 
