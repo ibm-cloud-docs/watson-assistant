@@ -42,7 +42,7 @@ The **Action completion** page of {{site.data.keyword.conversationshort}} provid
 {: #complete-reasons}
 
 An action is considered complete when:
-- The final (end) step is reached
+- A final (end) step is reached
 - Search reached a final step
 - A subaction reached a final step, returns to a parent action, and the parent action ends because `End this action after subaction is completed` is selected
 - Connect to agent transfer occurs according to the step response and without involving the [Fallback action](/docs/watson-assistant?topic=watson-assistant-handle-errors#fallback-action)
