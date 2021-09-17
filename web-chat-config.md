@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-09-02"
+lastupdated: "2021-09-17"
 
 subcollection: watson-assistant
 
@@ -24,8 +24,6 @@ subcollection: watson-assistant
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 {:video: .video}
-
-{{site.data.content.classiclink}}
 
 # Applying advanced customizations
 {: #web-chat-config}
@@ -119,7 +117,9 @@ In the following example, the user ID `L12345` is added to the script.
     };
   setTimeout(function(){
     const t=document.createElement('script');
-    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    t.src='https://web-chat.global.assistant.dev.watson.appdomain.cloud/versions/' +
+      (window.watsonAssistantChatOptions.clientVersion || 'latest') +
+      '/WatsonAssistantChatEntry.js';
     document.head.appendChild(t);
   });
 </script>

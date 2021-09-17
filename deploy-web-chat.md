@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-09-14"
+lastupdated: "2021-09-17"
 
 subcollection: watson-assistant
 
@@ -24,8 +24,6 @@ subcollection: watson-assistant
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 {:video: .video}
-
-{{site.data.content.classiclink}}
 
 # Adding the web chat to your website
 {: #deploy-web-chat}
@@ -63,7 +61,7 @@ The web chat integration is added to your first assistant automatically. To add 
 
 1.  **Optional**: Customize the style of the chat window. You can make the following changes:
 
-    - **Assistant's name as known by customers**: The name by which the assistant is known to users. This name is displayed in the header of the chat window. The name can be up to 18 characters in length.
+    - **Assistant's name as known by customers**: The name by which the assistant is known to users. This name is displayed in the header of the chat window. The name can be up to 64 characters in length.
 
     - **Primary color**: The color of the web chat header.
 
