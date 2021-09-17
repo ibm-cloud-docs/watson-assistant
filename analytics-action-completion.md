@@ -73,7 +73,7 @@ To work on a specific action, click on the action name in the table. A page open
 
 ![Action page](images/analytics-single-action.png)
 
-The *Incomplete* and *Complete* tabs provide detail by timeframe. The Incomplete tab bar chart shows data for the four incompletion reasons. The Complete tab bar chart is organized by conversations either completed by assistant or completed by a planned `connect to agent` response.
+The *Incomplete* and *Complete* tabs provide details by timeframe. The Incomplete tab bar chart shows data for the four incompletion reasons. The Complete tab bar chart is organized by conversations either completed by assistant or completed by a planned `connect to agent` response.
 
 As you click on each tab, a table below the chart shows the list of either incomplete or complete requests. To explore individual requests in detail, you can click on each one. A panel opens showing the full back and forth between your customer and the assistant, including step interactions. The panel also provides a summary of how many requests there were, how many were recognized, whether search was initiated, and the duration of the conversation.
 
