@@ -31,7 +31,7 @@ subcollection: watson-assistant
 The **Conversations** page of {{site.data.keyword.conversationshort}} provides a history of conversations between users and a deployed assistant. You can use this history to improve how your assistants understand and respond to user requests.
 {: shortdesc}
 
-Each timestamp represents a single conversation. The **Actions** column hows you how many actions, search queries, or unrecognized requests are included in that conversation. The **Requests** column includes the questions or requests the user entered to initiate the action, start search query, or wasn't recognized.
+Each timestamp represents a single conversation. The **Actions** column hows you how many actions, search queries, or unrecognized requests are included in that conversation. The **Requests** column includes the questions or requests the user entered that initiated an action, started a search query, or weren't recognized.
 
 ![Conversations page](images/analytics-conversations.png)
 
