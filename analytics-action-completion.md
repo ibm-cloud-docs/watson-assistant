@@ -56,7 +56,7 @@ An action is considered incomplete for these reasons:
 | Reason | Description |
 | ------ | ---------- |
 | Stuck on a step |  Triggered during step validation where a user exceeds the maximum retries for the particular step. Default tries is set to 3, but you can change this setting. See [Customizing validation for a response](/docs/watson-assistant?topic=watson-assistant-handle-errors#customizing-validation-for-a-response) for more information. |
-| Started a new action | The user changes the conversation (digresses), triggers another action, and either doesn't return to the original action or the other action is also incomplete.
+| Started a new action | The user changes the topic of the conversation, triggering another action, and either doesn't return to the original action or the other action is also incomplete.
 | Escalate to agent | The user explicitly asks for a human agent, triggering the [Fallback action](/docs/watson-assistant?topic=watson-assistant-handle-errors#fallback-action). For more information, see [When your customer asks to speak to a human agent](/docs/watson-assistant?topic=watson-assistant-handle-errors#when-your-customer-asks-to-speak-to-a-human-agent). Or, the user chooses human agent escalation from the list of [suggestions in web chat](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-alternate). |
 | Abandoned or ongoing | If the action is neither complete or incomplete because of the reasons above (stuck on step, started a new action, or escalate to agent) then it's considered abandoned or ongoing. |
 
@@ -68,7 +68,6 @@ To help you identify actions that need improvement, the **Action completion** pa
 ![Action completion](images/analytics-action-completion.png)
 
 You can use the **Actions** table to focus on improving the completion of your actions. **Total incomplete** results provide a focus area where you can make the biggest impact. The actions with the highest number of incompletions means these are the actions with the most users unable to get their questions answered or requests resolved.
-
 
 
 
