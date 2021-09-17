@@ -61,6 +61,6 @@ The Actions and Keyword filters always appear at the top of the page. To show th
 ## Exploring conversations in detail
 {: analytics-conversations-exploring}
 
-To explore individual conversations in detail, you can click on any of the utterances or conversation time stamps.  A panel opens shows the full back and forth between your customer and the assistant, including step interactions. The panel also provides a summary of how many requests there were, how many were recognized, if search was initiated, and the duration of the conversation.
+To explore individual conversations in detail, you can click on any of the utterances or conversation time stamps.  A panel opens shows the full back and forth between your customer and the assistant, including step interactions. The panel also provides a summary of how many requests there were, how many were recognized, whether search was initiated, and the duration of the conversation.
 
 ![Conversation detail](images/analytics-conversations-side.png)
