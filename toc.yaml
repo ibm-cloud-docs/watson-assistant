@@ -58,7 +58,7 @@ toc:
               - change-topic.md
               - handle-errors.md
           - human-agent.md
-#          - access-control.md
+          - access-control.md
       - topicgroup:
           label: Publishing and deploying your assistant
           topics:
