@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-09"
+lastupdated: "2021-09-24"
 
 subcollection: watson-assistant
 
@@ -47,6 +47,7 @@ After you enter the phrase, it is stored in **Customer starts with**, at the sta
 
 ## Testing your phrase
 {: #understand-questions-testing}
+
 At this point, before even doing anything else with your action, you can already start checking if your assistant recognizes the starting phrase. 
 
 1.  Click the **Preview** button.
@@ -59,6 +60,7 @@ At this point, before even doing anything else with your action, you can already
 
 ## Adding more examples
 {: #understand-questions-adding-more-examples}
+
 When you're creating a new action, one example phrase is enough to start with. You can build the rest of your action with steps before adding more example phrases. Once doing so, return to **Customer starts with** and add 10 or more variations of the same question or request, using words that your customers commonly use. For example:
     
 - `Are you open on the weekend?`

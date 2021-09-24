@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-26"
+lastupdated: "2021-09-24"
 
 subcollection: watson-assistant
 
@@ -28,7 +28,7 @@ subcollection: watson-assistant
 # Responding to your users
 {: #respond}
 
-Once an action is activated, the body of the action is composed of multiple *steps* that make up the conversation between your assistant and your users. One part of each step is what the assistant says to the customer when the step is processed. We've already seen how to create a simple response, but you can use additional features to make your responses smarter and more complex.
+Once an action is activated, the body of the action is composed of multiple *steps* that make up the conversation between your assistant and your users. One part of each step is what the assistant says to the customer when the step is processed.
 
 ## Adding assistant responses
 {: #respond-creating}
@@ -39,6 +39,7 @@ You can enter a simple text response just by entering the text that you want you
 
 ### Formatting respsonses
 {: #respond-formatting}
+
 Use the text editor tools to format responses. Behind the scenes, these three choices are stored using Markdown format.
 
 | Choice | Markdown | Example output |
@@ -56,6 +57,7 @@ If you are using the web chat integration, standard HTML tagging is supported. O
 
 ### Including web content
 {: #respond-include-web-content}
+
 Depending on how your assistant is deployed, you can include references to web content. Choices include:
 
 | Type | Examples |
@@ -77,6 +79,7 @@ In your assistant's output, you can reference variables in order to personalize 
 
 ## Testing responses
 {: #respond-testing}
+
 To see if the assistant responses are formatted correctly, you can use **Preview**.
 
 1.  Click the **Preview** button.
