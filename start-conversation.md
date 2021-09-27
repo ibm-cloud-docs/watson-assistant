@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-26"
+lastupdated: "2021-09-24"
 
 subcollection: watson-assistant
 
@@ -35,7 +35,7 @@ The *Greet customer* action is triggered in situations where your assistant init
 {: note}
 
 ## Customizing the greeting
-{: #customize-greting}
+{: #customize-greeting}
 
 The *Greet customer* action is automatically provided for any assistant. To customize this action:
 
@@ -45,7 +45,7 @@ The *Greet customer* action is automatically provided for any assistant. To cust
 
 1. Click *Greet customer* to edit the greeting action.
 
-  Notice that for this action, you cannot specify the customer input that starts the action. That's because the greeting action is automatically sent when the assistant starts the conversation, before any user input is received.
+    Notice that for this action, you cannot specify the customer input that starts the action. That's because the greeting action is automatically sent when the assistant starts the conversation, before any user input is received.
 
 1. Under **Conversation steps**, click the first step. In the **Assistant says** field, edit the default text to specify the greeting text you want to use. For example, if you want your assistant to use a more casual tone, you might specify the text `Hi! What can I do for you?`
 
