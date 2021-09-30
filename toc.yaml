@@ -95,7 +95,9 @@ toc:
               label: Deploying for phone
               topics:
               - deploy-phone.md
-#             - phone-config.md
+              - phone-config.md
+              - deploy-phone-flex.md
+              - deploy-phone-genesys.md
 #          - topicgroup:
 #              label: Deploying to other platforms
 #              topics:
