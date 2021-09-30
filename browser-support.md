@@ -25,8 +25,8 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Broswer support
-{: #broswer-support}
+# Browser support
+{: #browser-support}
 
 The {{site.data.keyword.conversationshort}} application requires the same level of browser software as is required by {{site.data.keyword.Bluemix_notm}}. For more information, see [{{site.data.keyword.Bluemix_notm}} prerequisites](/docs/overview?topic=overview-prereqs-platform#browsers-platform){: external}.
 
