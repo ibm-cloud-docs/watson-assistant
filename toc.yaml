@@ -184,7 +184,7 @@ toc:
 #      - troubleshoot.md
       - feedback.md
       - topicgroup:
-          label: Developer community
+          label: Communities
           links:
           - link:
               label: Stack Overflow
