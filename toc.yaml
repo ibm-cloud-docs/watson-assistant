@@ -110,6 +110,23 @@ toc:
           - analytics-overview.md
           - analytics-action-completion.md
           - analytics-conversations.md
+      - topicgroup:
+          label: Administering your instance
+          topics:
+          - topic: admin-overview.md
+            navtitle: Overview
+          - admin-managing-plan.md
+          - admin-auditing.md
+          - admin-securing.md
+          - admin-backup-restore.md
+          - admin-recovery.md
+          - admin-failover.md
+          - admin-beta.md
+          - admin-language-support.md
+  - navgroup:
+      id: reference
+      topics:
+      - glossary.md
 #     - topicgroup:
 #          label: Advanced topics
 #          topic:
