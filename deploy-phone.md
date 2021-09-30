@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-09-10"
+lastupdated: "2021-09-24"
 
 subcollection: watson-assistant
 
@@ -38,7 +38,7 @@ A SIP trunk is equivalent to an analog telephone line, except it uses Voice over
 Generating a free phone number is available only with new phone integrations. If you have an existing phone integration and you want to switch to a free phone number, you must delete the existing integration and create a new one.
 {: note}
 
-When your customer makes a phone call using the telephone number connected to your assistant, the phone integration answers. The integration converts output from your assistant into voice audio by using the {{site.data.keyword.texttospeechfull}} service. The audio is sent to the telephone network through the SIP trunk. When the customer replies, the voice input is converted into text by using the {{site.data.keyword.speechtotextfull}} service.
+When your customer makes a phone call using the telephone number connected to your assistant, the phone integration makes it possible for your assistant to answer. The integration converts output from your assistant into voice audio by using the {{site.data.keyword.texttospeechfull}} service. The audio is sent to the telephone network through the SIP trunk. When the customer replies, the voice input is converted into text by using the {{site.data.keyword.speechtotextfull}} service.
 
 This feature is available only to Plus or Enterprise plan users. <!--Note that {{site.data.keyword.speechtotextshort}} and {{site.data.keyword.texttospeechshort}} charges are included in the cost of a [monthly active user](/docs/assistant?topic=assistant-services-information#services-information-user-based-plans) (MAU). -->
 
@@ -67,7 +67,7 @@ To set up the integration, complete the following steps:
       Generating a free phone number is supported only for {{site.data.keyword.conversationshort}} instances in the Dallas and Washington DC data centers.
       {: note}
 
-    - To use an existing phone number you have already configured with a [SIP trunk provider](#deploy-phone-sip-providers), click **Use an existing phone number with an external provider**.
+    - To use an existing phone number you have already configured with a [SIP trunk provider](/docs/watson-assistant?topic=watson-assistant-deploy-phone-config#deploy-phone-config-sip-providers), click **Use an existing phone number with an external provider**.
 
     Click **Next**.
 
@@ -111,7 +111,7 @@ To set up the integration, complete the following steps:
     If you created specialized custom models that you want your assistant to use, choose the {{site.data.keyword.speechtotextshort}} service instance that hosts the custom models now, and you can configure your assistant to use them later. The {{site.data.keyword.speechtotextshort}} service instance must be hosted in the same location as your {{site.data.keyword.conversationshort}} service instance. <!--For more information, see [Using a custom language model](/docs/assistant?topic=assistant-dialog-voice-actions#dialog-voice-actions-custom-language).-->
     {: note}
 
-    For more information about language models, see [Languages and models](https://cloud.ibm.com/docs/speech-to-text?topic=speech-to-text-models){: external} in the {{site.data.keyword.speechtotextshort}} documentation.
+    For more information about language models, see [Languages and models](/docs/speech-to-text?topic=speech-to-text-models){: external} in the {{site.data.keyword.speechtotextshort}} documentation.
 
     Click **Next**.
 
@@ -125,7 +125,7 @@ To set up the integration, complete the following steps:
 
     The list of voices is automatically filtered to use the same language as your assistant. To see all voices, toggle the **Filter voices based on assistant language** switch to **Off**.
 
-    For more information about voice options, and to listen to audio samples, see [Languages and voices](https://cloud.ibm.com/docs/text-to-speech?topic=text-to-speech-voices){: external} in the {{site.data.keyword.texttospeechshort}} documentation.
+    For more information about voice options, and to listen to audio samples, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices){: external} in the {{site.data.keyword.texttospeechshort}} documentation.
 
     Click **Next**.
 
@@ -182,3 +182,28 @@ To add more phone numbers:
     - To import a set of phone numbers that are stored in a comma-separated values (CSV) file, click the *Upload a CSV file* icon (![Add phone number][images/phone-integ-import-number.png]), and then find the CSV file that contains the list of phone numbers.
 
       The phone numbers you upload will replace any existing numbers in the table.
+
+## Setting up live agent escalation
+{: #deploy-phone-live-agent}
+
+If you want your assistant to be able to transfer a conversation to a live agent, you can connect your phone integration to a service desk system. For more information, see the instructions for the supported service desk platforms:
+
+- [Twilio Flex](/docs/watson-assistant?topic=watson-assistant-deploy-phone-flex)
+- [Genesys](/docs/watson-assistant?topic=watson-assistant-deploy-phone-genesys)
+
+## Phone integration limits
+{: #deploy-phone-limits}
+
+Any speech service charges that are incurred by the phone integration are included as *Voice add-on* charges in your {{site.data.keyword.conversationshort}} service plan usage. The Voice add-on use is charged separately and in addition to your service plan charges. 
+
+Plan usage is measured based on the number of monthly active users, where a user is identified by the caller's unique phone number. An MD5 hash is applied to the phone number and the 128-bit hash value is used for billing purposes.
+
+The number of concurrent calls that your assistant can participate in at one time depends on your plan type.
+
+| Plan             |  Concurrent calls |
+|------------------|------------------:|
+| Enterprise       |             1,000 |
+| Plus             |               100 |
+| Trial            |                 5 |
+{: caption="Plan details" caption-side="top"}
+
