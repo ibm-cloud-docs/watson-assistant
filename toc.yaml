@@ -129,6 +129,22 @@ toc:
       id: reference
       topics:
       - glossary.md
+      - topicgroup:
+          label: Web chat API reference
+          topics:
+          - link:
+              label: Instance methods
+              href: https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods
+          - link:
+              label: Events
+              href: https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events
+          - link:
+              label: Options object parameters
+              href: https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration
+      - link:
+          label: REST API reference
+          href: https://cloud.ibm.com/apidocs/assistant/assistant-v2
+
 #     - topicgroup:
 #          label: Advanced topics
 #          topic:
