@@ -25,7 +25,7 @@ subcollection: watson-assistant
 # Managing access
 {: #access-control}
 
-You can give other people access to your {{site.data.keyword.conversationshort}} resources, and control the level of access they get.
+You can give other people access to your {{site.data.keyword.conversationshort}} instance and resources, and control the level of access they get.
 {: shortdesc}
 
 Maybe you want one development team to have access to a test assistant and another development team to have access to a production assistant. And you want data scientists to be able to view analytics for user conversation logs from both assistants. And maybe you want a writer to be able to author the conversation that is used by your assistant with your customers. To manage who can do what with your assistants, you can assign different access roles to different people.
@@ -78,7 +78,7 @@ For each person to whom you grant access to your {{site.data.keyword.conversatio
 
     For help, see [Popular role assignments](#access-control-recommendations). For a description of all your options, see [Understanding roles](#access-control-iam-roles).
 
-1.  **Optional**: Select a single resource, such as a skill or assistant, and then assign the person to the appropriate service role for the resource.
+1.  **Optional**: Select a single resource and then assign the person to the appropriate service role for the resource.
 
     For a description of your resource-level service options, see [Resource-level access roles](#access-control-resource-service-roles).
 
@@ -152,8 +152,8 @@ Choose a service role for the user that will apply to all of the assistants in t
 | Role | Privileges of the users in this role |
 |------|---------------------------------------|
 | **Reader** | Open and read all assistants in the service instance, but not edit them. |
-| **Writer** | Read, edit, delete, or create assistants in the service instance. |
-| **Manager** | Read, edit, delete, or create assistants in the service instance; view all conversation logs; access the v1 API for all skills in the instance. |
+| **Writer** | Read, edit, delete, or create assistants in the service instance, and add a search integration |
+| **Manager** | Read, edit, delete, or create assistants in the service instance; view all conversation logs; access the v1 API. |
 {: caption="Table 2. Global service role details" caption-side="top"}
 
 #### Resource-level service roles
@@ -194,7 +194,7 @@ N/A stands for no assignment, meaning no role of the type is assigned.
 
 The {{site.data.keyword.conversationshort}} user interface and API comply with the access roles that are defined for a service instance. When someone logs in to the user interface, it adjusts to show only what the current user can access, and it disables functions that the user does not have permissions to do. Similarly, the API allows access only to resources and methods that are permitted for the role that is associated with the specified API key.
 
-If you cannot access the API Details page for a skill or assistant, you might not have the access that is required to use the instance-level API credentials. You can use a personal API key instead. Go to the [IBM Cloud API keys](https://cloud.ibm.com/iam/apikeys){: external} page to create an IBM Cloud API key to use to authenticate your API requests. For more information, see [Managing user API keys](/docs/account?topic=account-userapikey){: external}. With the personal key, you can make API requests that you have the appropriate privileges to complete. 
+If you cannot access the API Details page for an assistant, you might not have the access that is required to use the instance-level API credentials. You can use a personal API key instead. Go to the [IBM Cloud API keys](https://cloud.ibm.com/iam/apikeys){: external} page to create an IBM Cloud API key to use to authenticate your API requests. For more information, see [Managing user API keys](/docs/account?topic=account-userapikey){: external}. With the personal key, you can make API requests that you have the appropriate privileges to complete. 
 {: note}
 
 The following table shows the UI and API actions that can be performed by different resource-level service roles.
