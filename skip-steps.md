@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-26"
+lastupdated: "2021-09-30"
 
 subcollection: watson-assistant
 
@@ -36,4 +36,4 @@ Using this option means that the value for the step can be provided in the user'
 
 However, if your action asks for the same type of data in more than one step, use the **Always ask for this information, regardless of earlier messages** option to prevent the assistant from making incorrect assumptions. For example, you might have an action in which one step asks for a hotel check-in date and another step asks for the check-out date. If you skip asking, the assistant can mistake the check-in date for the check-out date.
 
-To allow skipping on a step, click **Edit response**, select **Always ask for this number, regardless of earlier messages**, and then click **Apply**.
+To allow skipping on a step, click **Edit response**, select **Skip if the customer already gave this information**, and then click **Apply**.
