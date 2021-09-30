@@ -154,18 +154,29 @@ toc:
 #          - /cli/cli-ibmcloud_commands_account
 #      - topic-6.md
 
-#  - navgroup:
-#      id: help
-#      topics:
-#      - support.md
+  - navgroup:
+      id: help
+      topics:
+#      - faqs.md
 #      - topicgroup:
-#          label: FAQs
-#          topics:
-#          - topic-7.md
-#          - topic-8.md
-#      - topicgroup:
-#          label: Troubleshooting
-#          topics:
-#          - topic-9.md
-#          - topic-10.md
-#      - release-notes.md
+#        label: Release notes
+#        topics:
+#        - release-notes.md
+#        - release-notes-chat.md
+#      - troubleshoot.md
+      - feedback.md
+      - topicgroup:
+          label: Developer community
+          links:
+          - link:
+              label: Stack Overflow
+              href: https://stackoverflow.com/questions/tagged/watson-assistant
+          - link:
+              label: WDC Slack channel
+              href: http://wdc-slack-inviter.mybluemix.net/
+          - link:
+              label: IBM Watson Apps Community
+              href: https://community.ibm.com/community/user/watsonapps/communities/community-home?CommunityKey=7a3dc5ba-3018-452d-9a43-a49dc6819633
+      - accessibility.md
+      - browser-support.md
+      - terms-notices.md
