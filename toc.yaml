@@ -58,7 +58,6 @@ toc:
               - change-topic.md
               - handle-errors.md
           - human-agent.md
-          - access-control.md
       - topicgroup:
           label: Publishing and deploying your assistant
           topics:
@@ -117,6 +116,7 @@ toc:
           topics:
           - topic: admin-overview.md
             navtitle: Overview
+          - access-control.md
           - admin-managing-plan.md
           - admin-auditing.md
           - admin-securing.md

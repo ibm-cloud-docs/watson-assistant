@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-24"
+lastupdated: "2021-09-30"
 
 subcollection: watson-assistant
 
@@ -33,6 +33,7 @@ These topics cover several tasks and areas involved with administering your inst
 
 | Topic | Description |
 | --- | --- |
+| [Managing access](/docs/watson-assistant?topic=watson-assistant-access-control) | You can give other people access to your Watson Assistant instance and resources, and control the level of access they get. |
 | [Managing your plan](/docs/watson-assistant?topic=watson-assistant-admin-managing-plan) | A {{site.data.keyword.conversationshort}} plan information reference and steps on upgrading your plan. |
 | [Auditing user activity](/docs/watson-assistant?topic=watson-assistant-auditing) | As a security officer, auditor, or manager, you can use the Activity Tracker service to track how users and applications interact with {{site.data.keyword.conversationshort}}. |
 | [Securing your assistant](/docs/watson-assistant?topic=watson-assistant-securing) | Data privacy, security, and governance solutions. |
