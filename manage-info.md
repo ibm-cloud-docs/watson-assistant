@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-26"
+lastupdated: "2021-10-01"
 
 subcollection: watson-assistant
 
@@ -100,9 +100,8 @@ To see these variables, click **Variables** in the navigation pane from the main
 | *Now*                      | `now`       | The current date and time in the user's time zone. | `2021-08-11T11:28:02` |
 | *Current time*             | `current_time` | The current time in the user's time zone.       | `11:28:02`            |
 | *Current date*             | `current_date` | The current date in the user's time zone.       | `2021-08-11`          |
-| *Last action*              | `last_action`  |                                                 |                       |
-| *Fallback reason*          | `fallback_reason` |                                              |                       |
-| *Assistant repeats itself* | `assistant_repeats_itself` |                                     |                       |
+| *Fallback reason*          | `fallback_reason` | The reason why a user is routed to the fallback action | `Step validation failed` `Agent requested` `No action matches` |
+| *No action matches count* | `no_action_matches_count` | The count of user's consecutive unrecognized input attempts | `3` |
 {: caption="Variables set by assistant" caption-side="top"}
 
 **Set by integration**:

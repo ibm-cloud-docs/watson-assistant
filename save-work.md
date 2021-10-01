@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-26"
+lastupdated: "2021-09-30"
 
 subcollection: watson-assistant
 
@@ -25,30 +25,14 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Manage actions across a team
-{: #manage-team}
-
-In this topic, learn about how to coordinate multiple people building actions in an assistant.
-
-## Adding team members to your assistant
-{: #manage-team-adding}
-
-You can collaborate building your assistant with others. To add people with access, see [Managing access](/docs/watson-assistant?topic=watson-assistant-access-control).
-
-## Saving changes
-{: #manage-team-saving}
+# Saving your work
+{: #save-work}
 
 When working on actions, your assistant automatically saves changes when you do one of the following:
 
 - Click on a new step
 - Open Preview
 - Reset Preview
-
-You can turn auto-save on and off my opening the settings of a an action and selecting the toggle. 
-
-![Auto-save](images/action-autosave.png)
-
-The auto-save toggle setting in one action applies across every action within your assistant. If you enable or disable auto-save in one action, the change applies to all actions.
 
 You can also save changes by clicking the **Save** icon, for example, in these places when working on actions:
 
@@ -63,8 +47,20 @@ When the system automatically saves or you click the **Save** icon, the followin
 - Variables you created
 - Action settings
 
+If you want to disable auto-save, you can toggle it off:
+
+1. Open the **Actions** page.
+
+1. Click the **Global settings** icon ![Gear icon](images/gear-icon-blue.png).
+
+1. In the Global Settings window, click the **Auto-save** tab.
+
+1. Toggle the switch to **Off**.
+
+![Auto-save](/images/save-work-auto-save.png)
+
 ### Avoiding conflicts
-{: #manage-team-conflicts}
+{: #save-work-conflicts}
 
 To avoid conflicts when saving, we recommend dividing work so that one person works on one action at a time.
 
@@ -79,5 +75,4 @@ Also, {{site.data.keyword.conversationshort}} prevents two users from working in
 {: #manage-team-moving-actions}
 
 This will be via JSON import/export on the settings page.-->
-
 

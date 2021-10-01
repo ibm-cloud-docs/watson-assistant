@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-09-01"
+lastupdated: "2021-10-01"
 
 subcollection: watson-assistant
 
@@ -56,18 +56,18 @@ The assistant determines when to change the conversation topic as follows:
 
 By default, the **Change conversation topic** feature is enabled for all assistants and actions. You don't have to do anything to take advantage of this feature.
 
-However, some processes are best completed without interruption, so you might want to disable this feature. You can do this either for the entire assistant, or just for an individual action.
+However, some processes are best completed without interruption, so you might want to disable this feature. You can do this either for all actions, or just for an individual action.
 
-To disable changing the topic for the entire assistant:
+To disable changing the topic for all actions:
 
-1. From the **Build** page of the assistant, click the **Settings** icon ![Gear icon](images/gear-icon.png).
+1. From the **Actions** page of the assistant, click the **Global settings** icon ![Gear icon](images/gear-icon-blue.png).
 
-1. In the settings window, click the **Change conversation topic** tab.
+1. In the Global Settings window, click the **Change conversation topic** tab.
 
 1. Toggle the switch to **Off**.
 
 To disable changing the topic for an individual action:
 
-1. While editing the action, click the click the **Settings** icon ![Gear icon](images/gear-icon.png).
+1. While editing the action, click the click the **Action settings** icon ![Gear icon](images/gear-icon-black.png).
 
 1. In the Action Settings window, toggle the **Change conversation topic** switch to **Off**.
