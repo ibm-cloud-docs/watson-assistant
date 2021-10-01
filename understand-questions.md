@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-24"
+lastupdated: "2021-10-01"
 
 subcollection: watson-assistant
 
@@ -58,6 +58,8 @@ At this point, before even doing anything else with your action, you can already
 
 1. If the assistant doesn't understand the phrase, you'll see the built-in action `No action matches`. For more information, see [When the assistant can't understand your customer's request](https://test.cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches).
 
+    ![No action matches](images/new-action-preview-no-match.png)
+
 ## Adding more examples
 {: #understand-questions-adding-more-examples}
 
@@ -91,14 +93,14 @@ You can control things like the wording your assistant uses to introduce the cla
 
 To customize clarification, complete the following steps:
 
-1.  From the Actions page, click the *Settings* icon ![Gear icon](images/gear-icon.png) in the page header.
+1.  From the **Actions** page, click the **Global settings** icon ![Gear icon](images/gear-icon-blue.png) in the page header.
 
 1.  On the **Ask clarifying question** tab, you can make the following changes:
 
     - In the **Assistant says** field, edit the text that is displayed before the list of clarification choices. 
     
       The default text is *Did you mean:*. You can change it to something else, such as *What do you want to do?* or *Pick what to do next*.
-    - In the **Label for a fallback choice** field, edit the label that is displayed for the choice that customers can click when none of the other choices are quite right. When a user picks this choice, the *Retry when no intent matches* system action is taken next.
+    - In the **Label for a fallback choice** field, edit the label that is displayed for the choice that customers can click when none of the other choices are quite right. When a user picks this choice, the *No action matches* system action is taken next.
     
       The label *None of the above* is used if you don't change it.  
       
@@ -117,16 +119,16 @@ You can disable clarifying questions for all actions.
 
 To disable clarification for all actions:
 
-1.  From the Actions page, click the **Settings** icon ![Gear icon](images/gear-icon.png) in the page header.
-1.  On the **Ask clarifying question** tab, set the switch to off.
+1.  From the **Actions** page, click the **Global settings** icon ![Gear icon](images/gear-icon-blue.png) in the page header.
+1.  On the **Ask clarifying question** tab, set the switch to **Off**.
 1.  Click **Save**, and then click **Close**.
 
 ### Excluding an action from clarifying questions
 
 You can also prevent a single action from being included in the list of choices during clarification. To exclude an action from clarification:
 
-1.  From the action editor, click the **Action settings** icon.
-1.  On the Action Settings window, toggle the **Ask clarifying question** switch to off.
+1.  From the action editor, click the **Action settings** icon ![Gear icon](images/gear-icon-black.png)
+1.  In Action Settings, toggle the **Ask clarifying question** switch to **Off**.
 
 ## Coordinating how multiple actions start
 {: #understand-questions-multiple-actions}
