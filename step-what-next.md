@@ -111,7 +111,7 @@ To pass values to the subaction:
 ## Search for the answer
 {: #search-for-answer}
 
-This option indicates that the assistant should use the {{site.data.keyword.discoveryfull}} service to search an external data source for information related to the customer's question. To use this option, you must configure a search integration for your assistant. For more information about configuring a search integration, see [Leveraging existing help content](/docs/watson-assistant?topic=watson-assistant-search-add)
+This option indicates that the assistant should use the {{site.data.keyword.discoveryfull}} service to search an external data source for information related to the customer's question. To use this option, you must configure a search integration for your assistant. For more information about configuring a search integration, see [Leveraging existing help content](/docs/watson-assistant?topic=watson-assistant-search-add).
 
 ## Connect to agent
 {: #connect-to-agent}
