@@ -4,6 +4,8 @@ copyright:
   years: 2018, 2021
 lastupdated: "2021-10-01"
 
+keywords: subaction, sub-action
+
 subcollection: watson-assistant
 
 ---
@@ -108,7 +110,7 @@ To pass values to the subaction:
 
 1. Click **Apply**.
 
-## Search for the answer
+## Search for the answer ![Plus or higher plan only](images/plus.png)
 {: #search-for-answer}
 
 This option indicates that the assistant should use the {{site.data.keyword.discoveryfull}} service to search an external data source for information related to the customer's question. To use this option, you must configure a search integration for your assistant. For more information about configuring a search integration, see [Leveraging existing help content](/docs/watson-assistant?topic=watson-assistant-search-add).
