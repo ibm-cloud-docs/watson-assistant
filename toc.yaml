@@ -129,6 +129,7 @@ toc:
       id: reference
       topics:
       - glossary.md
+      - preview-runtime-errors.md
       - topicgroup:
           label: Web chat API reference
           topics:
