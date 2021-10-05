@@ -39,7 +39,7 @@ To use this integration pattern, make sure you have the following:
 - {{site.data.keyword.conversationshort}} Plus or Enterprise Plan (required for phone integration)
 - A Twilio account with the following products:
     - Twilio Flex
-    - Twilio Voice with Programmable Voice API
+    - Twilio Voice with Programmable Voice API
     - Twilio Studio
 
 ## Adding the {{site.data.keyword.conversationshort}} phone integration
@@ -108,7 +108,7 @@ To create the call flow:
 
     - For **A CALL COMES IN**, select **Studio Flow**. Select your flow from the drop-down list.
 
-    - For **PRIMARY HANDLER FAILS**, select **Studio Flow**. Select your flow from the drop-down list.
+    - For **PRIMARY HANDLER FAILS**, select **Studio Flow**. Select your flow from the drop-down list.
 
 1. Go to the {{site.data.keyword.conversationshort}} user interface, open the phone integration settings for your assistant.
 
@@ -148,15 +148,15 @@ Now we need to configure the call flow to direct inbound calls to the assistant 
 
     ```javascript
     exports.handler = function(context, event, callback) {
-      const VoiceResponse = require('twilio').twiml.VoiceResponse;  
+      const VoiceResponse = require('twilio').twiml.VoiceResponse;  
       const response = new VoiceResponse();
-      const dial = response.dial({
-        answerOnBridge: "true",
-        referUrl: "https://watson-flex-test-7074.twil.io/refer-handler"
-      });
-      dial.sip('sip:{phone_number}@{sip_uri_hostname};secure=true');  
+      const dial = response.dial({
+        answerOnBridge: "true",
+        referUrl: "https://watson-flex-test-7074.twil.io/refer-handler"
+      });
+      dial.sip('sip:{phone_number}@{sip_uri_hostname};secure=true');  
       console.log (response.toString());
-      return callback(null, response);
+      return callback(null, response);
     }
     ```
 
@@ -169,7 +169,7 @@ Now we need to configure the call flow to direct inbound calls to the assistant 
 
 ## Redirecting to the incoming call handler 
 
-In this section you will use a TwiML **Redirect**** widget in your Studio Flow editor to call out to the `/call-recieve` function created in the previous section.
+In this section you will use a TwiML **Redirect**** widget in your Studio Flow editor to call out to the `/call-receive` function created in the previous section.
 
 1.  Add a **TwiML Redirect** widget to your Studio Flow canvas. 
 
@@ -199,15 +199,15 @@ We also need to configure the call flow to handle calls being transferred from t
 
     ```javascript
     exports.handler = function(context, event, callback) {
-      const VoiceResponse = require('twilio').twiml.VoiceResponse;  
+      const VoiceResponse = require('twilio').twiml.VoiceResponse;  
       const response = new VoiceResponse();
-      console.log("ReferTransferTarget: " + event.ReferTransferTarget);
-      var customHeaders = event.ReferTransferTarget.split("?");  
+      console.log("ReferTransferTarget: " + event.ReferTransferTarget);
+      var customHeaders = event.ReferTransferTarget.split("?");  
       console.log ("Custom Headers: " + customHeaders[1].replace(">",""));
-      response.redirect({
-            method: 'POST'
-        }, '{webhook_url}?FlowEvent=return&'+customHeaders[1].replace(">",""));      
-      console.log(response.toString());  
+      response.redirect({
+            method: 'POST'
+        }, '{webhook_url}?FlowEvent=return&'+customHeaders[1].replace(">",""));      
+      console.log(response.toString());  
       return callback(null, response);
     }
     ```
