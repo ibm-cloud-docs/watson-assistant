@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-09-09"
+lastupdated: "2021-10-05"
 
 subcollection: watson-assistant
 
@@ -31,14 +31,14 @@ subcollection: watson-assistant
 Your assistant can do a lot, but there might be some situations when your customers need help from a human agent. If your assistant is integrated with one of the supported service desk systems, you can build in logic that will transfer the conversation to a human when necessary. This is referred to as an _escalation_.
 {: shortdesc}
 
-To use this feature, your assistant must interact with customers using the web chat or phone integration.<!-- For more information, see **[PUBLISHING TOPIC]**.-->
+To use this feature, your assistant must interact with customers using the web chat or phone integration. For more information, see [Deploying your assistant](/docs/watson-assistant?topic=watson-assistant-deploy-assistant).
 {: note}
 
 With this feature, your agents work with one of the supported service desk tools, such as Salesforce, Zendesk, or Twilio Flex. When the assistant initiates a transfer, the agent receives a notification within the agent dashboard, and has access to the history of the customer's chat with the assistant.
 
-To see an example of how this works from the agent's perspective, watch this video showing a transfer to an agent using Genesys Cloud:
+<!-- To see an example of how this works from the agent's perspective, watch this video showing a transfer to an agent using Genesys Cloud:
 
-![Transfer to human agent using Genesys Cloud](https://www.youtube.com/embed/8IbXBsCELRA){: video output="iframe" id="youtubeplayer" frameborder="0" width="560" height="315" webkitallowfullscreen mozallowfullscreen allowfullscreen}
+![Transfer to human agent using Genesys Cloud](https://www.youtube.com/embed/8IbXBsCELRA){: video output="iframe" id="youtubeplayer" frameborder="0" width="560" height="315" webkitallowfullscreen mozallowfullscreen allowfullscreen}-->
 
 There are two basic scenarios for when your assistant might need to transfer a conversation to a human agent:
 
@@ -46,7 +46,7 @@ There are two basic scenarios for when your assistant might need to transfer a c
 
 - _Fallback escalation_ is an unexpected situation in which the customer is unable to get help from the assistant.
 
-Before you can add human agent transfers to your assistant, you must first add an integration to a service desk system. The supported service desks depend upon how customers connect to your assistant (web chat or phone).<!-- For more information about integrating with a service desk, see **[INTEGRATION TOPIC]**.-->
+Before you can add human agent transfers to your assistant, you must first add an integration to a service desk system. The supported service desks depend upon how customers connect to your assistant (web chat or phone). For more information about integrating with a service desk, see [Basic web chat configuration](/docs/watson-assistant?topic=watson-assistant-web-chat-basics) and [Phone integration configuration](/docs/watson-assistant?topic=watson-assistant-deploy-phone-config).
 {: note}
 
 ## Planned escalations
