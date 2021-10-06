@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-24"
+lastupdated: "2021-10-06"
 
 subcollection: watson-assistant
 
@@ -25,7 +25,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Leveraging existing help content ![Plus or higher plan only](images/plus.png)
+# Adding a search integration ![Plus or higher plan only](images/plus.png)
 {: #search-add}
 
 Put your subject matter expertise to work by adding search. The search integration gives your assistant access to corporate data collections that it can mine for answers.

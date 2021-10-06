@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-10-05"
+lastupdated: "2021-10-06"
 
 subcollection: watson-assistant
 
@@ -25,7 +25,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Handing off to a human agent
+# Connecting to a human agent
 {: #human-agent}
 
 Your assistant can do a lot, but there might be some situations when your customers need help from a human agent. If your assistant is integrated with one of the supported service desk systems, you can build in logic that will transfer the conversation to a human when necessary. This is referred to as an _escalation_.

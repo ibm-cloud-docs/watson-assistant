@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-09-01"
+lastupdated: "2021-10-06"
 
 subcollection: watson-assistant
 
@@ -25,7 +25,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Handling errors in the conversation
+# Providing options when a question or request can't be answered
 {: #handle-errors}
 
 No matter how well your assistant is designed, sometimes customers can run into problems getting it to understand them or do what they want. Your assistant can automatically help customers recover from many such situations, and you can configure how it responds.
