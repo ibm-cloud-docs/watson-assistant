@@ -176,13 +176,13 @@ toc:
   - navgroup:
       id: help
       topics:
-#      - faqs.md
+      - faqs.md
 #      - topicgroup:
 #        label: Release notes
 #        topics:
 #        - release-notes.md
 #        - release-notes-chat.md
-#      - troubleshoot.md
+      - troubleshoot.md
       - feedback.md
       - topicgroup:
           label: Communities
