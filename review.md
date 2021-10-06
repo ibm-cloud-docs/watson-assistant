@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-01"
+lastupdated: "2021-10-06"
 
 subcollection: watson-assistant
 
@@ -25,7 +25,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Reviewing and debugging your work
+# Reviewing and debugging your actions
 {: #review}
 
 In this topic, learn how to test the conversation you have built into an action, to experience what your users see with your assistant. If there are any issues, learn how to debug the user’s experience.

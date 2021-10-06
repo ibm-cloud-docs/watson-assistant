@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-26"
+lastupdated: "2021-10-06"
 
 subcollection: watson-assistant
 
@@ -25,7 +25,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Collecting information from your customer
+# Collecting information from your customers
 {: #collect-info}
 
 Many actions require multiple steps in order to collect all of the information required to complete the customer's request. When a step asks the customer for more information, the _customer response type_ defines what type of response is expected.

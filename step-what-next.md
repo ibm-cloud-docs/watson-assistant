@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-10-01"
+lastupdated: "2021-10-06"
 
 keywords: subaction, sub-action
 
@@ -27,7 +27,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Choosing what to do next
+# Choosing what to do at the end of a step
 {: #step-what-next}
 
 By default, the steps in an action are executed in sequence from first to last. However, you can change this default in order to change what happens next. Used in combination with step conditions, this capability makes it possible for the conversation to follow many different flows depending on the customer's input.

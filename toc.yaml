@@ -35,29 +35,24 @@ toc:
       topics:
       - topicgroup:
           label: Building your assistant
+
           topics:
-          - build-actions-overview.md
+          - topic: build-actions-overview.md
+            navtitle: Overview
           - start-conversation.md
-          - topicgroup:
-              label: Teaching your assistant
-              topics:
-              - understand-questions.md
-              - respond.md
-              - collect-info.md
-              - manage-info.md
-              - review.md
-              - manage-team.md
-              - search-add.md
-          - topicgroup:
-              label: Managing conversation flow
-              topics:
-              - manage-flow-overview.md
-              - step-conditions.md
-              - skip-steps.md
-              - step-what-next.md
-              - change-topic.md
-              - handle-errors.md
+          - understand-questions.md
+          - respond.md
+          - collect-info.md
+          - manage-info.md
+          - step-conditions.md
+          - skip-steps.md
+          - step-what-next.md
+          - search-add.md
+          - change-topic.md
+          - handle-errors.md
           - human-agent.md
+          - save-actions.md
+          - preview.md
       - topicgroup:
           label: Publishing and deploying your assistant
           topics:

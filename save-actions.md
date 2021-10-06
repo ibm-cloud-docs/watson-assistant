@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-30"
+lastupdated: "2021-10-06"
 
 subcollection: watson-assistant
 
@@ -25,8 +25,8 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Saving your work
-{: #save-work}
+# Saving your actions
+{: #save-actions}
 
 When working on actions, your assistant automatically saves changes when you do one of the following:
 
@@ -60,7 +60,7 @@ If you want to disable auto-save, you can toggle it off:
 ![Auto-save](/images/save-work-auto-save.png)
 
 ### Avoiding conflicts
-{: #save-work-conflicts}
+{: #save-actions-conflicts}
 
 To avoid conflicts when saving, we recommend dividing work so that one person works on one action at a time.
 
