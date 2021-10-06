@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-15"
+lastupdated: "2021-10-06"
 
 subcollection: watson-assistant
 
@@ -28,6 +28,6 @@ content-type: conref
 # Content references for watson-assistant
 {: #watson-assistant-conref}
 
-This documentation is for the new IBM Watson Assistant experience, now in beta. To see the documentation for the classic Watson Assistant, please go [here](https://cloud.ibm.com/docs/assistant){: external}.
+This documentation is for the **new IBM Watson Assistant** experience. To see the documentation for the classic Watson Assistant, please go [here](https://cloud.ibm.com/docs/assistant){: external}.
 {: important}
 {: #classiclink}
