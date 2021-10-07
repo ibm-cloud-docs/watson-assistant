@@ -67,8 +67,8 @@ toc:
               - web-chat-basics.md
               - web-chat-config.md
               - web-chat-security.md
-#              - deploy-salesforce.md
-#              - deploy-zendesk.md
+              - deploy-salesforce.md
+              - deploy-zendesk.md
               links:
               - link:
                   label: Integrating with Genesys Cloud
