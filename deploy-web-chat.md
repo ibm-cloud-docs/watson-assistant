@@ -58,7 +58,7 @@ The web chat integration is added to your first assistant automatically. To add 
     {: tip}
 
     ![Plus or higher plans only](images/plus.png) For environments where private endpoints are in use, keep in mind that the web chat integration sends traffic over the internet.
-    <!--- For more information, see [Private network endpoints](/docs/assistant?topic=assistant-security#security-private-endpoints).
+    <!--- For more information, see [Private network endpoints](/docs/assistant?topic=assistant-security#security-private-endpoints){: external}.
     {: note} --->
 
 1.  **Optional**: Customize the style of the chat window. You can make the following changes:
@@ -232,7 +232,7 @@ To customize suggestions, complete the following steps:
     If your web chat is not integrated with a service desk, you can change the option label to a message that helps your customers reach whatever form of support you do offer. If you offer a toll-free support line, you might add `Get the support line phone number`. Or if you offer an online support request form, you might add `Open a support ticket`.
 
     Whether you use the default option label or add your own, make sure your action is designed to recognize the message and respond to it appropriately.
-    <!--- For more information, see [Connecting customers with support](/docs/assistant?topic=assistant-dialog-support). --->
+    <!--- For more information, see [Connecting customers with support](/docs/assistant?topic=assistant-dialog-support){: external}. --->
 
 ## Rich responses
 {: #deploy-web-chat-dialog}
@@ -242,7 +242,7 @@ The rich responses that you add to an action are displayed in the web chat as ex
 - **Connect to human agent**: If service desk support is enabled for the web chat, this response type triggers a chat transfer. If service desk support is not configured, this response type is ignored.
 - **Option**: If your option list contains up to four choices, they are displayed as buttons. If your list contains five or more options, then they are displayed in a drop-down list.
 
-<!--- For more information about rich response types, see [Rich responses](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-multimedia). --->
+<!--- For more information about rich response types, see [Rich responses](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-multimedia){: external}. --->
 
 ## Web chat security
 {: #deploy-web-chat-security}
@@ -272,7 +272,7 @@ The starter kit reference implementations, while functional, are examples only, 
 - [Bring your own](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}: A web chat service desk extension starter kit that enables you to develop your own service desk integrations.
 
 After you set up a service desk integration, you must update your actions to ensure they understands user requests to speak to someone and can transfer the conversation properly.
-<!--- For more information, see [Adding chat transfer support](/docs/assistant?topic=assistant-dialog-support#dialog-support-transfers). --->
+<!--- For more information, see [Adding chat transfer support](/docs/assistant?topic=assistant-dialog-support#dialog-support-transfers){: external}. --->
 
 ## Web chat integration limits
 {: #deploy-web-chat-limits}

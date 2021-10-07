@@ -116,7 +116,7 @@ The rich responses that you add to a dialog are displayed in a Slack channel as 
 
 - **Search skill**: The response type is supported, but you must test and curate your search results to ensure that each result is as concise as possible. The combined length of the title, body, and URL of the search result must be less than or equal to 2,990 characters.
 
-See [Rich responses](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-multimedia) for more information about response types.
+See [Rich responses](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-multimedia){: external} for more information about response types.
 
 ## Chatting with the assistant
 {: #deploy-slack-try}
@@ -127,7 +127,7 @@ To start a chat with the assistant, complete the following steps:
 1.  Click the application that you created from the Apps section.
 1.  Chat with the assistant.
 
-The Welcome action is not processed by the Slack integration. The welcome message is not displayed in the Slack channel like it is in the "Try it out" pane or in the assistant preview. It is not triggered from here because nodes with the `welcome` special condition are skipped in dialog flows that are started by users. Slack waits for the user to initiate the conversation. For more information about how to set context variable values consistently at the start of a conversation, see [Starting the dialog](/docs/assistant?topic=assistant-dialog-start).
+The Welcome action is not processed by the Slack integration. The welcome message is not displayed in the Slack channel like it is in the "Try it out" pane or in the assistant preview. It is not triggered from here because nodes with the `welcome` special condition are skipped in dialog flows that are started by users. Slack waits for the user to initiate the conversation. For more information about how to set context variable values consistently at the start of a conversation, see [Starting the dialog](/docs/assistant?topic=assistant-dialog-start){: external}.
 {: note}
 
 The dialog flow for the current session is restarted after 60 minutes of inactivity (5 minutes for Lite and Standard plans). This means that if a user stops interacting with the assistant, after 60 (or 5) minutes, any context variable values that were set during the previous conversation are set to null or back to their default values.

@@ -33,7 +33,7 @@ Get help with solving issues that you encounter while using the product.
 
 Use these resources to get answers to your questions:
 
-- For answers to frequently asked questions, see the [FAQ](/docs/assistant?topic=assistant-faqs).
+- For answers to frequently asked questions, see the [FAQ](/docs/assistant?topic=assistant-faqs){: external}.
 
 - Click the **Learning center** link that is displayed in the header of the skill pages to find helpful product tours. The tours guide you through the steps to follow to complete a range of tasks, from adding your first intent to a dialog skill to enhancing the conversation in an actions skill. The *Additional resources* page has links to relevant documentation topics and how-to videos. You can search the resource link titles to find what you're looking for quickly.
 

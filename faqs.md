@@ -71,13 +71,13 @@ To view the **Analytics** page, you must have a service role of Manager and a pl
 {: faq}
 
 If you cannot view the API details or service credentials, it is likely that you do not have Manager access to the service instance in which the resource was created. Only people with Manager access to the instance can use the service credentials.
-<!--- For more information, see [Getting API information](/docs/assistant?topic=assistant-assistant-settings#assistant-settings-api-details). --->
+<!--- For more information, see [Getting API information](/docs/assistant?topic=assistant-assistant-settings#assistant-settings-api-details){: external}. --->
 
 <!--- ## Where can I find an example for creating my first assistant?
 {: #faqs-get-started}
 {: faq}
 
-Follow the steps in the [Getting started with {{site.data.keyword.conversationshort}}](/docs/assistant?topic=assistant-getting-started) tutorial for a product introduction and to get help creating your first assistant. --->
+Follow the steps in the [Getting started with {{site.data.keyword.conversationshort}}](/docs/assistant?topic=assistant-getting-started){: external} tutorial for a product introduction and to get help creating your first assistant. --->
 
 ## Can I export the user conversations from the **Analytics** page?
 {: #faqs-export-conversation}
@@ -90,13 +90,13 @@ You cannot directly export conversations from the conversation page. You can, ho
 {: faq}
 
 No, you cannot change from a Trial, Plus, or Standard plan to a Lite plan. And you cannot upgrade from a Trial to a Standard plan.
-<!--- For more information, see [Upgrading](/docs/assistant?topic=assistant-upgrade). --->
+<!--- For more information, see [Upgrading](/docs/assistant?topic=assistant-upgrade){: external}. --->
 
 <!--- ## How long are log files kept for a workspace?
 {: #faqs-assistant-logs}
 {: faq}
 
-The length of time for which messages are retained depends on your service plan. For more information, see [Log limits](/docs/assistant?topic=assistant-logs#logs-limits). --->
+The length of time for which messages are retained depends on your service plan. For more information, see [Log limits](/docs/assistant?topic=assistant-logs#logs-limits){: external}. --->
 
 ## How do I create a webhook?
 {: #faqs-webhook-how}
@@ -114,7 +114,7 @@ No, you can define only one webhook URL for an action. For more information, see
 {: #faqs-webhook-timeout}
 {: faq}
 
-No. The service that you call from the webhook must return a response in 8 seconds or less, or the call is canceled. You cannot increase this time limit. For more information about strategies for handling complex actions with a webhook, watch the video in [Making a programmatic call from dialog](/docs/assistant?topic=assistant-dialog-webhooks). --->
+No. The service that you call from the webhook must return a response in 8 seconds or less, or the call is canceled. You cannot increase this time limit. For more information about strategies for handling complex actions with a webhook, watch the video in [Making a programmatic call from dialog](/docs/assistant?topic=assistant-dialog-webhooks){: external}. --->
 
 ## Is there a range of IP addresses that are being used by a webhook?
 {: #faqs-webhook-ip}

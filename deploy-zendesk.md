@@ -220,14 +220,14 @@ To secure the Zendesk connection, complete the following steps:
 {: #deploy-zendesk-action-prereq}
 
 Update an action to make sure it understands when users request to speak to a person, and can transfer the conversation properly.
-<!--- For more information, see [Adding chat transfer support](/docs/assistant?topic=assistant-dialog-support#dialog-support-transfers). --->
+<!--- For more information, see [Adding chat transfer support](/docs/assistant?topic=assistant-dialog-support#dialog-support-transfers){: external}. --->
 
 ### Routing based on browser information
 {: #deploy-zendesk-routing-browser-info}
 
 When a customer interacts with the web chat, information about the current web browser session is collected. For example, the URL of the current page is collected. You can use this information to add custom routing rules to your actions. For example, if the customer is on the Products page when a transfer to a human is requested, you might want to route the chat transfer to agents who are experts in your product portfolio. If the customer is on the Returns page, you might want to route the chat transfer to agents who know how to help customers return merchandise.
 
-<!--- For more information, see [Web chat: Accessing browser information](/docs/assistant?topic=assistant-dialog-integrations#dialog-integrations-chat-browser-info). --->
+<!--- For more information, see [Web chat: Accessing browser information](/docs/assistant?topic=assistant-dialog-integrations#dialog-integrations-chat-browser-info){: external}. --->
 
 <!--- ### Routing by topic
 {: #deploy-zendesk-routing-topic}
@@ -242,7 +242,7 @@ To add custom routing logic, complete the following steps:
 
 1.  Find the dialog node in the branch where you want the transfer to take place, and then add the *Connect to human agent* response type as the dialog node response type.
 
-    For more information, see [Adding a *Connect to human agent* response type](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-add-connect-to-human-agent).
+    For more information, see [Adding a *Connect to human agent* response type](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-add-connect-to-human-agent){: external}.
 
 1.  After you add the response type and customize the transfer messages, select *Zendesk* from the **Service desk routing** field.
 

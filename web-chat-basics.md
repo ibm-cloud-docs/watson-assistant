@@ -68,7 +68,7 @@ For optimal results when rendering the web chat on mobile devices, the `<head>` 
 {: #web-chat-basics-global}
 
 The assistant understands customer messages that are written in any of the languages that are supported by the service. The responses from your assistant are defined by you in your actions and can be written in any language you want.
-<!--- For more information, see [Supported languages](/docs/assistant?topic=assistant-language-support). --->
+<!--- For more information, see [Supported languages](/docs/assistant?topic=assistant-language-support){: external}. --->
 
 Even if your action includes responses in a language other than English, some of the phrases that are displayed in the web chat widget are added by the web chat itself and do not come from the underlying action. These hardcoded phrases are specified in English unless you choose to apply a different language.
 
@@ -124,7 +124,7 @@ To test the updates in a version release of web chat before you apply the versio
 1.  Test the web chat, and make adjustments to the configuration if necessary.
 1.  Update your production deployment to use the latest version and apply any other configuration changes that you determined to be necessary after testing.
 
-<!--- For more information about features that were introduced in previous web chat versions, see the [Web chat release notes](/docs/assistant?topic=assistant-release-notes-chat). --->
+<!--- For more information about features that were introduced in previous web chat versions, see the [Web chat release notes](/docs/assistant?topic=assistant-release-notes-chat){: external}. --->
 
 ## Billing
 {: #web-chat-basics-billing}
@@ -136,11 +136,11 @@ The web chat uses the following methods to track users:
 - You can pass in a de—identified user ID either as part of a secure JWT or as a string passed to `instance.updateUserID` method. If you are using advanced security features, the user ID is derived from the sub claim in the JWT.
 - If you do not pass an identifier for the user when the session begins, the web chat creates one for you. It creates a first-party cookie with a generated anonymous ID. The cookie remains active for 45 days. If the same user returns to your site later in the month and chats with your assistant again, the web chat integration recognizes the user. And you are charged only once when the same anonymous user interacts with your assistant multiple times in a single month.
 
-<!--- For more information about billing, see [User-based plans explained](/docs/assistant?topic=assistant-services-information#services-information-user-based-plans). --->
+<!--- For more information about billing, see [User-based plans explained](/docs/assistant?topic=assistant-services-information#services-information-user-based-plans){: external}. --->
 
 For more information about MAU limits per plan, see [Web chat integration limits](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-limits).
 
-<!--- For more information about deleting a user's data, see [Labeling and deleting data](/docs/assistant?topic=assistant-information-security#information-security-gdpr-wa). --->
+<!--- For more information about deleting a user's data, see [Labeling and deleting data](/docs/assistant?topic=assistant-information-security#information-security-gdpr-wa){: external}. --->
 
 ## Human agent service integration
 {: #web-chat-basics-haa}

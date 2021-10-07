@@ -33,7 +33,7 @@ Facebook Messenger is a mobile messaging application that helps businesses and c
 
 After you create an action and add it to an assistant, you can integrate your assistant with Facebook Messenger.
 
-There is currently no mechanism for identifying users who interact with the assistant through Facebook Messenger, which means that is no way to identify or delete data associated with a specific user. Do not use this integration method for deployments that must be GDPR compliant. See [Information security](/docs/assistant?topic=assistant-information-security) for more details.
+There is currently no mechanism for identifying users who interact with the assistant through Facebook Messenger, which means that is no way to identify or delete data associated with a specific user. Do not use this integration method for deployments that must be GDPR compliant. See [Information security](/docs/assistant?topic=assistant-information-security){: external} for more details.
 {: important}
 
 1.  From the Assistants page, click to open the assistant tile that you want to deploy.
@@ -60,7 +60,7 @@ The rich responses that you add to the action are displayed in a Facebook app as
 
 - **Pause**: This response type pauses the assistant's activity in the Messenger. However, activity does not resume after the pause unless another response type is triggered after it. Whenever you include this response type, add another, different response type, such as a text response, and position it after this one.
 
-See [Rich responses](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-multimedia) for more information about response types.
+See [Rich responses](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-multimedia){: external} for more information about response types.
 
 ## Chatting with the assistant
 {: #deploy-facebook-try}
