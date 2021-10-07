@@ -50,7 +50,7 @@ subcollection: watson-assistant
 | Universal`*` | xx |
 {: caption="Table 1. Supported languages" caption-side="top"}
 
-`*` If you want to support conversations in a language for which {{site.data.keyword.conversationshort}} doesn't have a dedicated model, such as Russian, use the *Universal* language model. For more information, see [Adding support for global audiences](/docs/assistant?topic=assistant-assistant-language).
+`*` If you want to support conversations in a language for which {{site.data.keyword.conversationshort}} doesn't have a dedicated model, such as Russian, use the *Universal* language model. For more information, see [Adding support for global audiences](/docs/assistant?topic=assistant-assistant-language){: external}.
 
 ## Feature support details
 {: #admin-language-support-tables}
@@ -87,7 +87,7 @@ In the following tables, the level of language and feature support is indicated 
 <!--### Intent feature support details
 {: #admin-language-support-intents}
 
-| Language | **[Content Catalog](/docs/assistant?topic=assistant-catalog)** | **[Irrelevance detection](/docs/assistant?topic=assistant-irrelevance-detection)** | **[Enhanced intent detection](/docs/assistant?topic=assistant-intent-detection)** |
+| Language | **[Content Catalog](/docs/assistant?topic=assistant-catalog){: external}** | **[Irrelevance detection](/docs/assistant?topic=assistant-irrelevance-detection){: external}** | **[Enhanced intent detection](/docs/assistant?topic=assistant-intent-detection){: external}** |
 |:---:|:---:|:---:|:---:|
 | **English (en)**                   | GA | GA | GA |
 | **Arabic (ar)**                    | GA (except Covid-19) | NA | NA |
@@ -108,7 +108,7 @@ In the following tables, the level of language and feature support is indicated 
 ### Recommendations feature support details continued
 {: #admin-language-support-recommendations}
 
-| Language | **[User example recommendations](/docs/assistant?topic=assistant-intent-recommendations#intent-recommendations-get-example-recommendations-task)** | **[Intent recommendations](/docs/assistant?topic=assistant-intent-recommendations#intent-recommendations-get-intent-recommendations-task)** |
+| Language | **[User example recommendations](/docs/assistant?topic=assistant-intent-recommendations#intent-recommendations-get-example-recommendations-task){: external}** | **[Intent recommendations](/docs/assistant?topic=assistant-intent-recommendations#intent-recommendations-get-intent-recommendations-task){: external}** |
 |:---:|:---:|:---:|
 | **English (en)**                   | GA | GA |
 | **Arabic (ar)**                    | NA | NA |
@@ -129,7 +129,7 @@ In the following tables, the level of language and feature support is indicated 
 ### User input processing support details
 {: #admin-language-support-input}
 
-| Language | **[Dictionary-based entity support](/docs/assistant?topic=assistant-entities#entities-create-dictionary-based)** | **[Fuzzy matching (*Misspelling*)](/docs/assistant?topic=assistant-entities#entities-fuzzy-matching)** | **[Fuzzy matching (*Stemming*, *Partial match*)](/docs/assistant?topic=assistant-entities#entities-fuzzy-matching)** | **[Autocorrection](/docs/assistant?topic=assistant-dialog-runtime-spell-check)** |
+| Language | **[Dictionary-based entity support](/docs/assistant?topic=assistant-entities#entities-create-dictionary-based){: external}** | **[Fuzzy matching (*Misspelling*)](/docs/assistant?topic=assistant-entities#entities-fuzzy-matching){: external}** | **[Fuzzy matching (*Stemming*, *Partial match*)](/docs/assistant?topic=assistant-entities#entities-fuzzy-matching){: external}** | **[Autocorrection](/docs/assistant?topic=assistant-dialog-runtime-spell-check){: external}** |
 |:---:|:---:|:---:|:---:|:---:|
 | **English (en)**                   | GA | GA | GA | GA |
 | **Arabic (ar)**                    | GA | GA | NA | NA |
@@ -150,7 +150,7 @@ In the following tables, the level of language and feature support is indicated 
 <!--### Entity feature support details
 {: #admin-language-support-entities}
 
-| Language | **[Contextual entities](/docs/assistant?topic=assistant-entities#entities-create-annotation-based)** | **[Synonym recommendations](/docs/assistant?topic=assistant-entities#entities-create-dictionary-based)** |
+| Language | **[Contextual entities](/docs/assistant?topic=assistant-entities#entities-create-annotation-based){: external}** | **[Synonym recommendations](/docs/assistant?topic=assistant-entities#entities-create-dictionary-based){: external}** |
 |:---:|:---:|:---:|
 | **English (en)**                   | GA | GA |
 | **Arabic (ar)**                    | NA | NA |
@@ -171,7 +171,7 @@ In the following tables, the level of language and feature support is indicated 
 <!--### System entity feature support details
 {: #admin-language-support-system-entities}
 
-| Language | **[System entities](/docs/assistant?topic=assistant-system-entities)** | **[Legacy system entities](/docs/assistant?topic=assistant-legacy-system-entities)** |
+| Language | **[System entities](/docs/assistant?topic=assistant-system-entities){: external}** | **[Legacy system entities](/docs/assistant?topic=assistant-legacy-system-entities){: external}** |
 |:---|:---:|:---:|
 | **English (en)**                   | GA | Deprecated |
 | **Arabic (ar)**                    | GA | Deprecated |

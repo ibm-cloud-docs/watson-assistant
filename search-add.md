@@ -305,7 +305,7 @@ Review this information for help with performing common tasks.
 
         From a dialog node search integration response, you can specify a full {{site.data.keyword.discoveryshort}} query syntax filter to help narrow the results. 
     
-        For example, you can define a filter that filters out any documents in the data collection that do not mention an intent in the document title or some other metadata field. Or the filter can filter out documents that do not identify an entity as a known entity in the data collection's metadata or that don't mention the entity anywhere in the full text of the document. For details about how to add a search integration response type, see [Adding a *search integration* response type](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-add-search-skill).
+        For example, you can define a filter that filters out any documents in the data collection that do not mention an intent in the document title or some other metadata field. Or the filter can filter out documents that do not identify an entity as a known entity in the data collection's metadata or that don't mention the entity anywhere in the full text of the document. For details about how to add a search integration response type, see [Adding a *search integration* response type](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-add-search-skill){: external}.
 
          For more tips about improving results, read the [Improve your natural language query results from Watson Discovery](https://developer.ibm.com/blogs/improving-your-natural-language-query-results-from-watson-discovery/){: external} blog post.
 

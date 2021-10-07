@@ -28,6 +28,6 @@ subcollection: watson-assistant
 # Auditing user activity
 {: #auditing}
 
-In the classic {{site.data.keyword.conversationshort}}, you can use the Activity Tracker service to track how users and applications interact with your assistants. For more information, see [Activity Tracker events](/docs/assistant?topic=assistant-at-events) in the classic documentation.
+In the classic {{site.data.keyword.conversationshort}}, you can use the Activity Tracker service to track how users and applications interact with your assistants. For more information, see [Activity Tracker events](/docs/assistant?topic=assistant-at-events){: external} in the classic documentation.
 
 In the new {{site.data.keyword.conversationshort}}, because of the way transactions are recorded for actions, support for Activity Tracker events is planned for a future release.
