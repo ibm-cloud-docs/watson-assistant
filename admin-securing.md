@@ -134,7 +134,7 @@ curl -X GET -u "apikey:3Df... ...Y7Pc9" \
 
 where {url} is the appropriate URL for your instance. For more details, see [Service endpoint](/apidocs/assistant/assistant-v2#service-endpoint){: external}.
 
-See the [Filter query reference](/docs/assistant?topic=assistant-filter-reference) for additional details.
+See the [Filter query reference](/docs/assistant?topic=assistant-filter-reference){: external} for additional details.
 
 ### Deleting data
 {: #securing-delete-data}

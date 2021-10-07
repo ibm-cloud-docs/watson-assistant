@@ -51,17 +51,17 @@ Follow these steps to add integrations to your assistant:
 
 1.  Click the tile for the channel with which you want to integrate the assistant. The options include:
 
-    - [Web chat](/docs/assistant?topic=assistant-deploy-web-chat)
-    - [Phone](/docs/assistant?topic=assistant-deploy-phone)
-    - [Facebook Messenger](/docs/assistant?topic=assistant-deploy-facebook)
-    - [Slack](/docs/assistant?topic=assistant-deploy-slack)
-    - [SMS with Twilio](/docs/assistant?topic=assistant-deploy-sms)
-    - [WhatsApp with Twilio](/docs/assistant?topic=assistant-deploy-whatsapp)
+    - [Web chat](/docs/assistant?topic=assistant-deploy-web-chat){: external}
+    - [Phone](/docs/assistant?topic=assistant-deploy-phone){: external}
+    - [Facebook Messenger](/docs/assistant?topic=assistant-deploy-facebook){: external}
+    - [Slack](/docs/assistant?topic=assistant-deploy-slack){: external}
+    - [SMS with Twilio](/docs/assistant?topic=assistant-deploy-sms){: external}
+    - [WhatsApp with Twilio](/docs/assistant?topic=assistant-deploy-whatsapp){: external}
 
     Service desk integrations:
 
-    - [Web chat with Salesforce support](/docs/assistant?topic=assistant-deploy-salesforce)
-    - [Web chat with Zendesk support](/docs/assistant?topic=assistant-deploy-zendesk)
+    - [Web chat with Salesforce support](/docs/assistant?topic=assistant-deploy-salesforce){: external}
+    - [Web chat with Zendesk support](/docs/assistant?topic=assistant-deploy-zendesk){: external}
 
     Web chat service desk reference implementations:
 
@@ -74,7 +74,7 @@ Follow these steps to add integrations to your assistant:
 
 After you integrate the assistant, test it from the target channel to ensure that the assistant works as expected.
 
-![Plus or higher plans only](images/plus.png) For environments where private endpoints are in use, keep in mind that these integrations send traffic over the internet. For more information, see [Private network endpoints](https://cloud.ibm.com/docs/assistant?topic=assistant-security#security-private-endpoints).
+![Plus or higher plans only](images/plus.png) For environments where private endpoints are in use, keep in mind that these integrations send traffic over the internet. For more information, see [Private network endpoints](https://cloud.ibm.com/docs/assistant?topic=assistant-security#security-private-endpoints){: external}.
 {: note}
 
 ## How service desk platform integrations work

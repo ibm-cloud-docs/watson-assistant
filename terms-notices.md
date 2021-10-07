@@ -36,5 +36,5 @@ To learn more about service terms and data security, read the following informat
 
 - [Service terms](https://www.ibm.com/support/customer/csol/terms/){: external} (Search for the {{site.data.keyword.conversationshort}} offering)
 - [Data Processing and Protection Datasheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=DF7F84500FA711E69DCADF455C6AF151){: external}
-<!--- - [Information security](/docs/assistant?topic=assistant-information-security) --->
+<!--- - [Information security](/docs/assistant?topic=assistant-information-security){: external} --->
 - [IBM Cloud Data security and privacy](https://www.ibm.com/software/sla/sladb.nsf/sla/csdsp?OpenDocument){: external}

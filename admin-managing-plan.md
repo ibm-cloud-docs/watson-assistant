@@ -50,27 +50,27 @@ Explore the {{site.data.keyword.conversationshort}} [service plan options](https
 
 Information about the artifact limits per plan is available from the topics that describe how to create the artifacts, so you can refer to the limits when you need to know them. Here are links to the topics:
 
-- [Actions](/docs/assistant?topic=assistant-actions#actions-limits)
-- [Assistants](/docs/assistant?topic=assistant-assistant-add#assistant-add-limits)
-- [Counterexamples](/docs/assistant?topic=assistant-irrelevance-detection#irrelevance-detection-limits)
-- [Dialog nodes](/docs/assistant?topic=assistant-dialog-tasks#dialog-tasks-node-limits)
-- [Entities](/docs/assistant?topic=assistant-entities#entities-limits)
-- [Inactivity timeout](/docs/assistant?topic=assistant-assistant-settings#assistant-settings-session-limits)
-- [Intents](/docs/assistant?topic=assistant-intents#intents-limits)
-- [Integrations](/docs/assistant?topic=assistant-deploy-integration-add#deploy-integration-add-limits)
-- [Logs](/docs/assistant?topic=assistant-logs#logs-limits)
-- [Skills](/docs/assistant?topic=assistant-skill-add#skill-add-limits)
-- [Versions](/docs/assistant?topic=assistant-versions#versions-limits)
-- [Web chat integration](/docs/assistant?topic=assistant-deploy-web-chat#deploy-web-chat-limits)-->
+- [Actions](/docs/assistant?topic=assistant-actions#actions-limits){: external}
+- [Assistants](/docs/assistant?topic=assistant-assistant-add#assistant-add-limits){: external}
+- [Counterexamples](/docs/assistant?topic=assistant-irrelevance-detection#irrelevance-detection-limits){: external}
+- [Dialog nodes](/docs/assistant?topic=assistant-dialog-tasks#dialog-tasks-node-limits){: external}
+- [Entities](/docs/assistant?topic=assistant-entities#entities-limits){: external}
+- [Inactivity timeout](/docs/assistant?topic=assistant-assistant-settings#assistant-settings-session-limits){: external}
+- [Intents](/docs/assistant?topic=assistant-intents#intents-limits){: external}
+- [Integrations](/docs/assistant?topic=assistant-deploy-integration-add#deploy-integration-add-limits){: external}
+- [Logs](/docs/assistant?topic=assistant-logs#logs-limits){: external}
+- [Skills](/docs/assistant?topic=assistant-skill-add#skill-add-limits){: external}
+- [Versions](/docs/assistant?topic=assistant-versions#versions-limits){: external}
+- [Web chat integration](/docs/assistant?topic=assistant-deploy-web-chat#deploy-web-chat-limits){: external}-->
 
 ### Paid plan features
 {: #admin-managing-plan-paid}
 
 The following features are available only to users of a Plus or Enterprise plan. ![Plus or higher plans only](images/plus.png)
 
-<!--- [Autolearning](/docs/assistant?topic=assistant-autolearn) ![Beta](images/beta.png)
-- [Intent conflict resolution](/docs/assistant?topic=assistant-intents#intents-resolve-conflicts)
-- [Intent recommendations and intent user example recommendations](/docs/assistant?topic=assistant-intent-recommendations)-->
+<!--- [Autolearning](/docs/assistant?topic=assistant-autolearn){: external} ![Beta](images/beta.png)
+- [Intent conflict resolution](/docs/assistant?topic=assistant-intents#intents-resolve-conflicts){: external}
+- [Intent recommendations and intent user example recommendations](/docs/assistant?topic=assistant-intent-recommendations){: external}-->
 - [Phone integration](/docs/watson-assistant?topic=watson-assistant-deploy-phone)
 - [Private endpoints](/docs/watson-assistant?topic=watson-assistant-security#security-private-endpoints)
 - [Search](/docs/watson-assistant?topic=watson-assistant-search-add)

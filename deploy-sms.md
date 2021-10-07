@@ -62,7 +62,7 @@ The *SMS with Twilio* integration provides a more seamless integration with your
 
 - Starting an SMS-only interaction with an outgoing text
 - Configuring backup locations
-- Reviewing the usage summary page. Use IBM Log Analysis instead. For more information, see [Viewing logs](/docs/assistant?topic=assistant-deploy-phone#deploy-phone-logs).
+- Reviewing the usage summary page. Use IBM Log Analysis instead. For more information, see [Viewing logs](/docs/assistant?topic=assistant-deploy-phone#deploy-phone-logs){: external}.
 
 To migrate from {{site.data.keyword.iva_short}} to the {{site.data.keyword.conversationshort}} *SMS with Twilio* integration, complete the following step:
 
@@ -113,7 +113,7 @@ To set up the integration, complete the following steps:
 
 1.  Click **Save and exit**.
 
-If you want your assistant to be able to switch between voice and text during a customer interaction, enable both the phone and text messaging integrations. The integrations do not need to use the same third-party service provider. For more information, see [Integrating with phone](/docs/assistant?topic=assistant-deploy-phone).
+If you want your assistant to be able to switch between voice and text during a customer interaction, enable both the phone and text messaging integrations. The integrations do not need to use the same third-party service provider. For more information, see [Integrating with phone](/docs/assistant?topic=assistant-deploy-phone){: external}.
 
 ## Advanced configuration options
 {: #deploy-sms-advanced}
@@ -131,12 +131,12 @@ For the best customer experience, design your dialog with the capabilities of th
 
 - Do not include HTML elements in your text responses.
 - The SMS with Twilio integration does not support chat transfers that are initiated with the *Connect to human agent* response type.
-- The pause response type is ignored. If you want to add a pause, use a [vgwConversationResponseTimeout](/docs/assistant?topic=assistant-commands-sms#commands-sms-context-variables) context variable instead.
+- The pause response type is ignored. If you want to add a pause, use a [vgwConversationResponseTimeout](/docs/assistant?topic=assistant-commands-sms#commands-sms-context-variables){: external} context variable instead.
 - You can include search skill response types in dialog nodes that the phone integration will send as a message. The message includes the introductory text (*I searched my knowledge base* and so on), and then the body of only the first search result.
 
-If you want to use the same dialog for an assistant that you deploy to many different platforms, add custom responses per integration type. You can add a conditioned response that tells the assistant to show the response only when the SMS with Twilio integration is being used. For more information, see [Building integration-specific responses](/docs/assistant?topic=assistant-dialog-integrations#dialog-integrations-condition-by-type).
+If you want to use the same dialog for an assistant that you deploy to many different platforms, add custom responses per integration type. You can add a conditioned response that tells the assistant to show the response only when the SMS with Twilio integration is being used. For more information, see [Building integration-specific responses](/docs/assistant?topic=assistant-dialog-integrations#dialog-integrations-condition-by-type){: external}.
 
-For reference documentation, see [Handling SMS with Twilio interactions](/docs/assistant?topic=assistant-dialog-sms-actions).
+For reference documentation, see [Handling SMS with Twilio interactions](/docs/assistant?topic=assistant-dialog-sms-actions){: external}.
 
 ## Troubleshooting
 {: #deploy-sms-troubleshoot}

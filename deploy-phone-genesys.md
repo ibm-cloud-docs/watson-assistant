@@ -211,7 +211,7 @@ Now that your Genesys Cloud environment can connect to Watson Assistant, you can
 
     1. Click **Save**.
 
-1. Make sure your assistant is configured with at least one dialog node or action step that transfers calls to an agent using the *Connect To Agent* response_type. <!-- For more information about how to do this, see [Transferring a call to a human agent](/docs/assistant?topic=assistant-dialog-voice-actions#dialog-voice-actions-transfer). We need to add this back when Anna Guri completes her updates.-->
+1. Make sure your assistant is configured with at least one dialog node or action step that transfers calls to an agent using the *Connect To Agent* response_type. <!-- For more information about how to do this, see [Transferring a call to a human agent](/docs/assistant?topic=assistant-dialog-voice-actions#dialog-voice-actions-transfer){: external}. We need to add this back when Anna Guri completes her updates.-->
 
     For the `sip.uri` parameter, use the DID number you created in Genesys Cloud, as well as the inbound SIP URI from your Genesys trunk. Use the following format:
 
