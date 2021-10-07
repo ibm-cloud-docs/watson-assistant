@@ -31,7 +31,7 @@ subcollection: watson-assistant
 Welcome to the documentation for the new {{site.data.keyword.conversationshort}}!
 {: shortdesc}
 
-The new {{site.data.keyword.conversationshort}} experience, focused on using **actions** to build customer conversations, is designed to make it simple enough for *anyone* to build a virtual assistant. Building, testing,  publishing, and analyzing your assistant can all now be done in one simple and intuitive interface.
+The new {{site.data.keyword.conversationshort}} experience, focused on using **actions** to build customer conversations, is designed to make it simple enough for *anyone* to build a virtual assistant. Building, testing, publishing, and analyzing your assistant can all now be done in one simple and intuitive interface.
 
 - New **navigation** provides a workflow for building, previewing, publishing, and analyzing your assistant. 
 
@@ -55,4 +55,3 @@ You won't lose any work if you switch to the new experience, and you can switch 
 
 If you are looking for the documentation for the the classic {{site.data.keyword.conversationshort}} experience, please go [here](https://cloud.ibm.com/docs/assistant){: external}.
 {: note}
-
