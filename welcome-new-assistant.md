@@ -43,7 +43,7 @@ The new {{site.data.keyword.conversationshort}} experience, focused on using **a
 
 - Use a new suite of **analytics** to improve your assistant. Review which actions are being completed to see what your customers want help with, determine if your assistant understands and addresses customer needs, and decide how can you make your assistant better.
 
-Some new product instances are automatically provisioned with the New {{site.data.keyword.conversationshort}}. If your instance is still using the classic {{site.data.keyword.conversationshort}}, you can switch to the new experience by following these steps:
+Some new product instances are automatically provisioned with the new {{site.data.keyword.conversationshort}}. If your instance is still using the classic {{site.data.keyword.conversationshort}}, you can switch to the new experience by following these steps:
 
 1. From the {{site.data.keyword.conversationshort}} interface, click the **User Panel** ![User Panel icon](images/user-icon.png) icon to open your account menu.
 
