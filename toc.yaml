@@ -172,11 +172,11 @@ toc:
       id: help
       topics:
       - faqs.md
-#      - topicgroup:
-#        label: Release notes
-#        topics:
-#        - release-notes.md
-#        - release-notes-chat.md
+      - topicgroup:
+        label: Release notes
+        topics:
+        - release-notes.md
+        - release-notes-chat.md
       - troubleshoot.md
       - feedback.md
       - topicgroup:
