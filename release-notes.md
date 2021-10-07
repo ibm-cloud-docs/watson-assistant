@@ -52,6 +52,8 @@ The new Watson Assistant
     - Use a new suite of **analytics** to improve your assistant. Review which actions are being completed to see what your customers want help with, determine if your assistant understands and addresses customer needs, and decide how can you make your assistant better.
     - New **[documentation](/docs/watson-assistant)** focuses on the workflow of building, deploying, and improving your assistant.
 
+Older release notes might link to the documentation for the classic Watson Assistant experience.
+
 ## 21 September 2021
 {: #21Sep2021}
 
