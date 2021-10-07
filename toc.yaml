@@ -52,7 +52,7 @@ toc:
           - handle-errors.md
           - human-agent.md
           - save-actions.md
-          - preview.md
+          - review.md
       - topicgroup:
           label: Publishing and deploying your assistant
           topics:
