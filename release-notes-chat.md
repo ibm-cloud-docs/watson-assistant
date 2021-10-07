@@ -38,7 +38,7 @@ For information about new features and improvements to the core {{site.data.keyw
 ## Controlling the version
 {: #release-notes-chat-version}
 
-If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Versioning](/docs/watson-assistant?topic=watson-assistant-web-chat-basics#web-chat-basics-versions).
+If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Versioning](/docs/assistant?topic=assistant-web-chat-basics#web-chat-basics-versions).
 
 ## 5.0.2
 {: #5.0.2}
@@ -71,7 +71,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 - **Support for Carbon components**: As part of the new styling support, you can now use [Carbon components](https://www.carbondesignsystem.com/components/overview/){: external} in user-defined responses and web chat writeable elements. These components will inherit any theming customizations you have made to the web chat.
 
-- **New embedded script**: The embedded script you use to add the web chat to your website has been updated to avoid unexpected code changes when you lock on to a web chat version. (For more information about web chat versioning, see [Versioning](/docs/watson-assistant?topic=watson-assistant-web-chat-basics#web-chat-basics-versions).) The previous version of the script will continue to work but is now deprecated. If you want to upgrade your existing web chat deployments to use the new script, copy the updated code snippet from the **Embed** tab of the web chat integration settings. (Remember to reapply any customizations you have made.)
+- **New embedded script**: The embedded script you use to add the web chat to your website has been updated to avoid unexpected code changes when you lock on to a web chat version. (For more information about web chat versioning, see [Versioning](/docs/assistant?topic=assistant-web-chat-basics#web-chat-basics-versions).) The previous version of the script will continue to work but is now deprecated. If you want to upgrade your existing web chat deployments to use the new script, copy the updated code snippet from the **Embed** tab of the web chat integration settings. (Remember to reapply any customizations you have made.)
 - **Removal of deprecated methods and events**:
     - The `error` event has been replaced by the `onError` method in the [configuration object](https://web-chat.global.assistant.watson.cloud.ibm.com/testfest.html?to=api-configuration#configurationobject){: external}.
     - The `getID` method has been removed.
@@ -120,20 +120,20 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 *Release date: 6 May 2021*
 
-- **Service URLs updated**: The URLs used by the web chat to communicate with the Assistant service have been updated to remove the dependency on the deprecated `watsonplatform.net` domain. This change applies retroactively to version 3.3.0 and all subsequent web chat releases. Make sure the system that hosts the web chat widget has access to the new URL; for more information, see [Deploy your assistant in production](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#ddeploy-web-chat-snippet).
+- **Service URLs updated**: The URLs used by the web chat to communicate with the Assistant service have been updated to remove the dependency on the deprecated `watsonplatform.net` domain. This change applies retroactively to version 3.3.0 and all subsequent web chat releases. Make sure the system that hosts the web chat widget has access to the new URL; for more information, see [Deploy your assistant in production](/docs/assistant?topic=assistant-deploy-web-chat#ddeploy-web-chat-snippet).
 
 ## 4.2.0
 {: #4.2.0}
 
 *Release date: 27 April 2021*
 
-- **Conversation starters in suggestions**: The conversation starters you configure for the home screen are now shown as suggestions. If suggestions are enabled, the conversation starters appear in a new section titled **People are also interested in**. This provides an easy way for customers to change the subject or start the conversation over. For more information about the suggestions feature, see [Showing more suggestions](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-alternate). For more information about the home screen, see [Configuring the home screen](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-home-screen).
+- **Conversation starters in suggestions**: The conversation starters you configure for the home screen are now shown as suggestions. If suggestions are enabled, the conversation starters appear in a new section titled **People are also interested in**. This provides an easy way for customers to change the subject or start the conversation over. For more information about the suggestions feature, see [Showing more suggestions](/docs/assistant?topic=assistant-deploy-web-chat#deploy-web-chat-alternate). For more information about the home screen, see [Configuring the home screen](/docs/assistant?topic=assistant-deploy-web-chat#deploy-web-chat-home-screen).
 
 - **`onError` callback**: The new `onError` callback option in the web chat configuration enables you to specify a callback function that is called if errors occur in the web chat. This makes it possible for you to handle any errors or outages that occur with the web chat. For more information, see [Listening for errors](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#onerror-detail){: external}.
 
 - **Session ID available in widget state**: The state information returned by the `getState()` instance method now includes the session ID for the current conversation. For more information, see [instance.getState()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#getState){: external}.
 
-- **IBM watermark**: The web chat can now display a **Built with IBM Watson** watermark to users. This watermark is always enabled for any new web chat integrations on Lite plans. For more information, see [Create a web chat instance to add to your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-task).
+- **IBM watermark**: The web chat can now display a **Built with IBM Watson** watermark to users. This watermark is always enabled for any new web chat integrations on Lite plans. For more information, see [Create a web chat instance to add to your website](/docs/assistant?topic=assistant-deploy-web-chat#deploy-web-chat-task).
 
 - **Fixes to rendering of list items**: The rendering of HTML list items in the web chat widget has been updated.
 
@@ -142,7 +142,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 *Release date: 8 April 2021*
 
-- **Home screen now generally available**: Ease your customers into the conversation by adding a home screen to your web chat window. The home screen greets your customers and shows conversation starter messages that customers can click to easily start chatting with the assistant. For more information about the home screen feature, see [Configuring the home screen](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-home-screen).
+- **Home screen now generally available**: Ease your customers into the conversation by adding a home screen to your web chat window. The home screen greets your customers and shows conversation starter messages that customers can click to easily start chatting with the assistant. For more information about the home screen feature, see [Configuring the home screen](/docs/assistant?topic=assistant-deploy-web-chat#deploy-web-chat-home-screen).
 
 - **Home screen enabled by default**: The home screen feature is now enabled by default for all new web chat deployments.
 
@@ -245,7 +245,7 @@ For more information about the new methods, see [Instance methods](https://web-c
 
 *Release date: 22 September 2020*
 
-- **Choose when a link to support is included in suggestions**: The Suggestions beta feature has moved to its own tab. Now you can enable suggestions even if your web chat is not set up to connect to a service desk solution. That's because now you can control if and when the option to connect to customer support is available from the suggestions list. For more information, see [Showing more suggestions](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-alternate).
+- **Choose when a link to support is included in suggestions**: The Suggestions beta feature has moved to its own tab. Now you can enable suggestions even if your web chat is not set up to connect to a service desk solution. That's because now you can control if and when the option to connect to customer support is available from the suggestions list. For more information, see [Showing more suggestions](/docs/assistant?topic=assistant-deploy-web-chat#deploy-web-chat-alternate).
 
 - **Search result format change**: To support the ability to show more than 3 search results in a response, the search skill response type format changed. If you are using `pre:receive` or `receive` handlers to process search results, you might need to update your code. The `results` property was replaced by the `primary_results` and `additional_results` properties. For more information about the new search skill response type format, see the [API reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2#message){: external}.
 
@@ -256,14 +256,14 @@ For more information about the new methods, see [Instance methods](https://web-c
 
 *Release date: 2 September 2020*
 
-- **Add a home screen**: Ease your customers into the conversation by adding a home screen to your web chat window. The home screen greets your customers and shows conversation starter messages that customers can click to submit to the assistant. For more information about this beta feature, see [Adding a home screen](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-home-screen).
+- **Add a home screen**: Ease your customers into the conversation by adding a home screen to your web chat window. The home screen greets your customers and shows conversation starter messages that customers can click to submit to the assistant. For more information about this beta feature, see [Adding a home screen](/docs/assistant?topic=assistant-deploy-web-chat#deploy-web-chat-home-screen).
 
 ## 2.3.0
 {: #2.3.0}
 
 *Release date: 10 August 2020*
 
-- **Introducing *Suggestions***: Enable this beta feature to show a helper icon in the chat that customers can click to see alternate topics or to connect to an agent. For more information, see [Showing more suggestions](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-alternate).
+- **Introducing *Suggestions***: Enable this beta feature to show a helper icon in the chat that customers can click to see alternate topics or to connect to an agent. For more information, see [Showing more suggestions](/docs/assistant?topic=assistant-deploy-web-chat#deploy-web-chat-alternate).
 
 - **Search results are now expandable**: When search results are displayed in the web chat, users can click **Show more** to see more of the search result text.
 
