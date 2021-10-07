@@ -57,7 +57,7 @@ Older release notes might link to the [documentation for the classic Watson Assi
 ## 21 September 2021
 {: #21Sep2021}
 
-- **Analytics Overview change**: To improve reliability, the Values column has been removed from **Top entities** on the **Analytics Overview** page. Top Entities continues to provide counts of entity types. For more information, see [Top intents and top entities](/docs/assistant?topic=assistant-logs-overview#logs-overview-tops){: external}
+- **Analytics Overview change**: To improve reliability, the Values column has been removed from **Top entities** on the **Analytics Overview** page. Top Entities continues to provide counts of entity types. For more information, see [Top intents and top entities](/docs/assistant?topic=assistant-logs-overview#logs-overview-tops){: external}.
 
 ## 16 September 2021
 {: #16Sep2021}
