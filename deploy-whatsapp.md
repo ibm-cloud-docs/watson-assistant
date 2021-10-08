@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-10-07"
+lastupdated: "2021-10-08"
 
 subcollection: watson-assistant
 
@@ -67,7 +67,7 @@ WhatsApp has a rigorous process that they use to review all businesses that want
 
       Consider provisioning more than one phone number and going through the process of getting permission for the numbers in parallel. If your number was used by a different business previously (because Twilio assigned you a number that was used before, for example), WhatsApp will reject it.
 
-    - **Are you working with an ISV**: No
+    - **Are you working with an ISV**: Select **No**. 
     - **Twilio Account SID**: From the Twilio site, click the home icon to go to your project dashboard to find the SID.
     - **Facebook Business Manager ID**: Add the ID for the account that you created in the previous step.
 
@@ -129,7 +129,7 @@ Do not use the Twilio sandbox in production. Sandbox sessions expire after 3 day
 
 After WhatsApp grants permission for your Twilio phone number or number to access the WhatsApp network, update the integration to use your dedicated Twilio phone number instead of the sandbox number.
 
-1.  From the *WhatsApp with Twilio* integration setup page, scroll to the **Webhook** section of the **Basic setup** tab. codeopy the value from the **WhatsApp webhook** field.
+1.  From the *WhatsApp with Twilio* integration setup page, scroll to the **Webhook** section of the **Basic setup** tab. Copy the value from the **WhatsApp webhook** field.
 
 1.  Go to your Twilio account web page and add the webhook that you copied to the Twilio configuration to complete the connection to the WhatsApp integration in Twilio.
 
