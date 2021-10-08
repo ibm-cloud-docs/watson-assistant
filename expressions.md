@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-26"
+lastupdated: "2021-09-24"
 
 subcollection: watson-assistant
 
@@ -35,7 +35,7 @@ The Watson Assistant expression language is based on the Spring Expression Langu
 
 For example, you might use an expression to write simple math equations. Maybe a customer has $200 in a savings account and wants to transfer $150 from it to a new checking account. The funds transfer fee is $3, and the bank charges a fee when a savings account contains less than $50. You could create a step with a step condition that checks for this situation. The step condition would use an expression like this:
 
-```
+```text
 ${savings} - (${Step_232} + ${transfer_fee}) < 50
 ```
 {: codeblock}
@@ -68,4 +68,4 @@ To use an expression to define a session variable value:
 
 1.  Add the expression that you want to use.
 
-For a full list of supported expressions, see XXXX.
+<!-- For a full list of supported expressions, see XXXX.-->

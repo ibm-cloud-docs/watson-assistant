@@ -120,6 +120,24 @@ toc:
           - admin-failover.md
           - admin-beta.md
           - admin-language-support.md
+      - topicgroup:
+          label: Customizing and developing
+          topics:
+          - develop-overview.md
+          - expressions.md
+          - topicgroup:
+              label: Customizing channels
+              topics:
+              - customize-web-chat.md
+          - topicgroup:
+              label: Extending your assistant with webhooks
+              topics:
+              - topic: webhook-overview.md
+                navtitle: Overview
+              - webhook-pre.md
+              - webhook-post.md
+              - webhook-log.md
+
   - navgroup:
       id: reference
       topics:
