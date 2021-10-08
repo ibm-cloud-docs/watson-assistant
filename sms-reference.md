@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-10-06"
+lastupdated: "2021-10-08"
 
 subcollection: watson-assistant
 
@@ -43,8 +43,8 @@ Each action consists of a `command` property, followed by an optional `parameter
 | `smsActForceNoInputTurn` | Forces a new turn in the conversation without waiting for input from the user. The *SMS with Twilio* integration sends a message request with `smsNoInputTurn` in the text field so that you can map this request to an action. | None |
 | `terminateSession` | Ends the current SMS session. Use this command to ensure that the subsequent text message starts a new assistant-level session which does not retain any context values from the current session. | None |
 | `smsActSendMedia` | Enables MMS messaging.  | `mediaURL`: Specifies a JSON array of publicly accessible media URLs that are sent to the user. |
-| `smsActSetDisambiguationConfig` | Configures how to handle the choices that are displayed in a disambiguation list. | <ul><li>`prefixText`: Text to include before each option. For example, `Press %s for` where `%s` represents the number corresponding to a list choice; this is replaced with the actual number at run time.</li></ul> |
-| `smsActSetOptionsConfig` | Configures how to handle option response types. | <ul><li>`prefixText`: Text to include before each option. For example, `Press %s for` where `%s` represents the number corresponding to a list choice; this is replaced with the actual number at run time.</li></ul> |
+| `smsActSetDisambiguationConfig` | Configures how to handle the choices that are displayed in a disambiguation list. | `prefixText`: Text to include before each option. For example, `Press %s for` where `%s` represents the number corresponding to a list choice; this is replaced with the actual number at run time. |
+| `smsActSetOptionsConfig` | Configures how to handle option response types. | `prefixText`: Text to include before each option. For example, `Press %s for` where `%s` represents the number corresponding to a list choice; this is replaced with the actual number at run time. |
 {: caption="Table 1. Actions that you can initiate from the action" caption-side="top"}
 
 ## Reserved context variables
