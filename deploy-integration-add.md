@@ -43,7 +43,7 @@ Follow these steps to add integrations to your assistant:
 
     **Why do I have the *Web chat* integration?** This integration is provisioned and added automatically to your first assistant only.
 
-    Watson Assistant comes with the web chat integration, which is an engaging and fully extensible front-end client that can be added to your website in minutes. It is designed to handle advanced conversational scenarios, including rich responses, such as images, video, and iFrames, suggestions when the user gets stuck, and live agent escalation.
+    {{site.data.keyword.conversationshort}} comes with the web chat integration, which is an engaging and fully extensible front-end client that can be added to your website in minutes. It is designed to handle advanced conversational scenarios, including rich responses, such as images, video, and iframes, suggestions when the user gets stuck, and live agent escalation.
 
 1.  For any integration that you want to add, click **Add**. The options include:
 
