@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-09-01"
+lastupdated: "2021-10-07"
 
 subcollection: watson-assistant
 
@@ -42,17 +42,20 @@ If you don't have one, set up a Twilio messaging account and get a phone number.
 
 1.  Go to the [Twilio website](https://www.twilio.com/){: external}.
 1.  Create an account.
-1.  From the *All Products and Services* menu ![Twilio All products and services icon](images/twilio-products.png), click *Phone numbers*.
+1.  From the **Develop** tab, click **Phone numbers**.
 1.  Follow the instructions to get a phone number.
 
     When you get a Twilio phone number, it supports voice, SMS, and MMS automatically. Your new phone number is listed as an active number.
 
-## Ask WhatsApp for permission to enable your Twilio number for WhatsApp.
+Keep the Twilio web page open in a web browser tab so you can refer to it again later.
+{: tip}
+
+## Ask WhatsApp for permission to enable your Twilio number for WhatsApp
 {: #deploy-whatsapp-prereqs}
 
 WhatsApp has a rigorous process that they use to review all businesses that want to interact with customers over their network. WhatsApp, which is owned by Facebook, requires that you register your business with the Facebook business directory.
 
-1.  To register, go to the [Facebook Business Manager](https://business.facebook.com/overview){: external} website, and click *Create account* and follow the instructions to create an account.
+1.  To register, go to the [Facebook Business Manager](https://business.facebook.com/overview){: external} website, and click **Create account**. Follow the instructions to create an account.
 
 1.  Make a note of your Facebook Business Manager ID. You will need this in the next step.
 
@@ -60,15 +63,15 @@ WhatsApp has a rigorous process that they use to review all businesses that want
 
     Tips for specifying the following values:
 
-    - *Phone Number*: Specify the Twilio phone number that you created earlier.
+    - **Phone Number**: Specify the Twilio phone number that you created earlier.
 
       Consider provisioning more than one phone number and going through the process of getting permission for the numbers in parallel. If your number was used by a different business previously (because Twilio assigned you a number that was used before, for example), WhatsApp will reject it.
-      {: tip}
-    - *Are you working with an ISV*: No
-    - *Twilio Account SID*: From the Twilio site, click the home icon to go to your project dashboard to find the SID.
-    - *Facebook Business Manager ID*: Add the ID for the account that you created in the previous step.
 
-1.  Click *Request Now*.
+    - **Are you working with an ISV**: No
+    - **Twilio Account SID**: From the Twilio site, click the home icon to go to your project dashboard to find the SID.
+    - **Facebook Business Manager ID**: Add the ID for the account that you created in the previous step.
+
+1.  Click **Request Now**.
 
 Give WhatsApp time to evaluate and approve your request. It can take up to 7 days for your request to be approved.
 
@@ -77,37 +80,30 @@ Give WhatsApp time to evaluate and approve your request. It can take up to 7 day
 
 To set up the integration, complete the following steps:
 
-1.  Go to the **Integrations** page by clicking the ![open and close list of options](images/kebab.png) icon in the lower left menu.
+1. Go to the **Integrations** page by clicking the integrations icon (![Integrations icon](images/integrations-icon.png)) in the left menu.
 
-1.  Click **Add** on the **WhatsApp with Twilio** tile.
+1. Click **Add** on the *WhatsApp with Twilio* tile.
 
-1.  Click **Confirm**.
+1. Click **Confirm**.
 
-1.  From the Twilio site, click the home icon to go to your project dashboard.
+1.  From the Twilio site, click on your account name in the upper left menu to go to your account dashboard.
 
-    Copy the following values and store them temporarily, so you can paste them into the phone integration setup page in the next step.
+    Copy the following values and store them temporarily, so you can paste them into the *WhatsApp with Twilio* integration setup page in the upcoming steps.
 
     - Account SID
     - Auth token
 
-1.  Return to the WhatsApp integration setup page.
+1.  Return to the *WhatsApp with Twilio* integration setup page. Click **Next** to go to Step 1 of your *WhatsApp with Twilio* integration setup.
 
-    Paste the values that you copied in the previous step into the fields with the corresponding names in the *Twilio account information* section.
+1.  Enter your **Account SID** information. Click **Next** to go to Step 2 of your *WhatsApp with Twilio* integration setup.
 
-    - **Account SID**
-    - **Auth token**
+1.  Enter your **Auth token** information. Click **Next** to go to Step 3 of your *WhatsApp with Twilio* integration setup.
 
-1.  Click **Sync account**.
+1.  Copy the value from the **Webhook URI** field.
 
-1.  Add the Twilio messaging phone number that you created previously to the **Company phone number** field.
+    You can use this webhook URI to test your integration in the following section.
 
-    Specify the number by using the international phone number format: `+1 958 555 0123`. Do *not* include parentheses (`(958)`).
-
-    The phone number must be unique per WhatsApp integration.
-
-1.  Copy the value from the **WhatsApp Webhook** field.
-
-1.  Click **Save and exit**.
+1.  Click **Finish**.
 
 ## Testing the integration
 {: #deploy-whatsapp-sandbox}
@@ -120,11 +116,11 @@ Do not use the Twilio sandbox in production. Sandbox sessions expire after 3 day
 
 1.  Follow the instructions to create the sandbox.
 
-1.  Connect to the sandbox by sending a WhatsApp message from your device to the Sandbox phone number.
+1.  Connect to the sandbox by sending a WhatsApp message from your device to the sandbox phone number.
 
-1.  From the *Programmable Messaging* menu, expand *Settings*, and then click *WhatsApp Sandbox Settings*.
+1.  From the **Develop** tab, click **Messaging > Settings > WhatsApp sandbox settings**.
 
-1.  In the *Sandbox Configuration* section, paste the webhook URI that you copied earlier into the *when a message comes in* field, and then save the configuration.
+1.  In the **Sandbox Configuration** section, paste the webhook URI that you copied earlier into the *When a message comes in* field. Click **Save**.
 
 1.  You can test the integration by sending a message from WhatsApp to the shared phone number that is assigned to your Twilio sandbox.
 
@@ -133,9 +129,9 @@ Do not use the Twilio sandbox in production. Sandbox sessions expire after 3 day
 
 After WhatsApp grants permission for your Twilio phone number or number to access the WhatsApp network, update the integration to use your dedicated Twilio phone number instead of the sandbox number.
 
-1.  From the *WhatsApp with Twilio* integration setup page, scroll to the *Webhook* section of the *Basic Setup* tab, and then copy the value from the **Webhook URI (uniform resource identifier)** field.
+1.  From the *WhatsApp with Twilio* integration setup page, scroll to the **Webhook** section of the **Basic setup** tab. codeopy the value from the **WhatsApp webhook** field.
 
-1.  Go to your Twilio account web page and add the webhook you copied to the Twilio configuration to complete the connection to the WhatsApp integration in Twilio.
+1.  Go to your Twilio account web page and add the webhook that you copied to the Twilio configuration to complete the connection to the WhatsApp integration in Twilio.
 
 ## Give your customers fast access to your assistant
 {: #deploy-whatsapp-click-to-chat}
@@ -146,18 +142,18 @@ To add an icon to your web page, complete the following steps:
 
 1.  From the *WhatsApp with Twilio* integration setup page, click the **Click to chat** tab.
 
-1.  In the **Prefilled message** field, add text that you want WhatsApp to send to your assistant on the customer's behalf to get the conversation started.
+1.  In the **Pre-filled message** field, add text that you want WhatsApp to send to your assistant on the customer's behalf to get the conversation started.
 
     Specify a message that you know your assistant can answer in a useful way.
 
-1.  Copy the embed link and add it to your web page. Consider adding text in front of the icon that explains what the icon does. For example, you might add a `<span>` HTML tag in front of the icon's `<span>` element that says `Have a question? Ask Watson Assistant for help`.
+1.  Copy the **Embed link** and add it to your web page. Consider adding text in front of the icon that explains what the icon does. For example, you might add a `<span>` HTML tag in front of the icon's `<span>` element that says `Have a question? Ask Watson Assistant for help`.
 
-    When a user clicks the icon in your web page, it opens a WhatsApp messaging session that is connected to your assistant, and adds the text you specify into the user's text field, ready to be submitted.
+    When a user clicks the icon on your web page, it opens a WhatsApp messaging session that is connected to your assistant, and adds the text you specify into the user's text field, ready to be submitted.
 
-## Dialog considerations
-{: #deploy-whatsapp-dialog}
+## Action considerations
+{: #deploy-whatsapp-action}
 
-For the best customer experience, design your dialog with the capabilities of the WhatsApp integration in mind:
+For the best customer experience, design your actions with the capabilities of the WhatsApp integration in mind:
 
 - A text response that contains more than 1,600 characters is broken up into multiple responses.
 - Do not include HTML elements in your text responses.
@@ -171,4 +167,4 @@ For the best customer experience, design your dialog with the capabilities of th
 | Bold | `There's *no* crying in baseball.` | There's **no** crying in baseball. |
 {: caption="Supported Markdown syntax" caption-side="top"}
 
-<!-- If you want to use the same dialog for an assistant that you deploy to many different platforms, add custom responses per integration type. You can add a conditioned response that tells the assistant to show the response only when the *WhatsApp with Twilio* integration is being used. For more information, see [Building integration-specific responses](/docs/assistant?topic=assistant-dialog-integrations#dialog-integrations-condition-by-type){: external}. -->
+<!-- If you want to use the same dialog for an assistant that you deploy to many different platforms, add custom responses per integration type. You can add a conditioned response that tells the assistant to show the response only when the *WhatsApp with Twilio* integration is being used. For more information, see [Building integration-specific responses](/docs/assistant?topic=assistant-dialog-integrations#dialog-integrations-condition-by-type). -->
