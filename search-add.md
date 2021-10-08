@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-06"
+lastupdated: "2021-10-08"
 
 subcollection: watson-assistant
 
@@ -299,7 +299,7 @@ Review this information for help with performing common tasks.
   
     You can also use Smart Document Understanding to split up large documents into segments that are easier to search. For more information, see the the [Smart Document Understanding](/docs/discovery?topic=discovery-sdu) topic in the {{site.data.keyword.discoveryshort}} documentation.
 
-- **Improve search results**: If you don't like the results you are seeing, review this information for help.
+<!--- **Improve search results**: If you don't like the results you are seeing, review this information for help.
 
     - Call the search integration from a dialog node, and specify filter details. 
 
@@ -307,7 +307,7 @@ Review this information for help with performing common tasks.
     
         For example, you can define a filter that filters out any documents in the data collection that do not mention an intent in the document title or some other metadata field. Or the filter can filter out documents that do not identify an entity as a known entity in the data collection's metadata or that don't mention the entity anywhere in the full text of the document. For details about how to add a search integration response type, see [Adding a *search integration* response type](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-add-search-skill){: external}.
 
-         For more tips about improving results, read the [Improve your natural language query results from Watson Discovery](https://developer.ibm.com/blogs/improving-your-natural-language-query-results-from-watson-discovery/){: external} blog post.
+         For more tips about improving results, read the [Improve your natural language query results from Watson Discovery](https://developer.ibm.com/blogs/improving-your-natural-language-query-results-from-watson-discovery/){: external} blog post.-->
 
 - **My response text is surrounded by brackets**: If you notice that your response text is surrounded by brackets and quotation marks (`["My response text"]`) when you test it from the Preview, for example, you might need to change the source field that you're using in the configuration. The unexpected formatting indicates that the value is stored in the source document as an array. Any field that you extract text from must contain a value with a String data type, not an Array data type. When the chat integration shows a response that is extracted from a field that stores the data as an array, it does a straight conversion of the array value into a string, which produces a response that includes the array syntax.
 
@@ -401,4 +401,4 @@ To configure the search that is performed in {{site.data.keyword.discoveryshort}
 
 After you configure search, you can send test queries to see the search results that get returned from {{site.data.keyword.discoveryshort}} by using the Preview page.
 
-To test the full experience that customers have when they ask questions that are either answered by the dialog or trigger a search, use the *Preview* button for your assistant.
+To test the full experience that customers have when they ask questions that are either answered by the action or trigger a search, use the *Preview* button for your assistant.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-09-28"
+lastupdated: "2021-10-08"
 
 subcollection: watson-assistant
 
@@ -119,7 +119,7 @@ Access to {{site.data.keyword.conversationshort}}, its service instances, and al
 - Instance-level service roles
 - Resource-level service roles
 
-An instance-level access role is a role that applies to a service instance and all of the resources that are created as part of the instance. A resource-level service role gives you the ability to apply a finer-tuned level of access control to a single skill or assistant in an instance.
+An instance-level access role is a role that applies to a service instance and all of the resources that are created as part of the instance. A resource-level service role gives you the ability to apply a finer-tuned level of access control to a single assistant in an instance.
 
 ### Platform roles
 {: #access-control-global-platform-roles}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-22"
+lastupdated: "2021-10-08"
 
 subcollection: watson-assistant
 
@@ -64,7 +64,7 @@ To prevent IBM from using your log data for general service improvements, comple
 
 - If you are using a custom application, for each API `/message` request, set the `X-Watson-Learning-Opt-Out` header parameter to `true`.
 
-    For more information, see [Data collection](https://cloud.ibm.com/apidocs/assistant/assistant-v2#data-collection){: external}.
+    For more information, see [Data collection](/apidocs/assistant/assistant-v2#data-collection){: external}.
 - If you are using the web chat integration, add the `learningOptOut` parameter to the script that you embed in your web page, and set it to `true`. 
 
     For more information, see [Configuration](https://integrations.us-south.assistant.watson.cloud.ibm.com/web/developer-documentation/api-configuration){: external}.
@@ -112,7 +112,7 @@ curl -X POST -u "apikey:3Df... ...Y7Pc9"
 ```
 {: pre}
 
-where {url} is the appropriate URL for your instance. For more details, see [Service endpoint](https://cloud.ibm.com/apidocs/assistant/assistant-v2#service-endpoint){: external}.
+where {url} is the appropriate URL for your instance. For more details, see [Service endpoint](/apidocs/assistant/assistant-v2#service-endpoint){: external}.
 
 The `customer_id` string cannot include the semicolon (`;`) or equal sign (`=`) characters. You are responsible for ensuring that each `customer ID` property is unique across your customers.
 {: note}

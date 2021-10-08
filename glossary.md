@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-28"
+lastupdated: "2021-10-08"
 
 subcollection: watson-assistant
 
@@ -41,7 +41,7 @@ subcollection: watson-assistant
 | Environment | You can group your work in separate containers that are called environments. Each environment can contain content, channels, and integrations. As you build and evolve your assistant, you can take snapshots of these items and move them from one environment to another. Each new assistant automatically comes with two environments: draft and live. Your users interact with assistants on the live environment and cannot interact with assistants on the draft environment. [Learn more](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments). |
 | Escalation | If your assistant is integrated with one of the supported service desk systems, you can build in logic that transfers, or escalates, the conversation to a human when necessary. [Learn more](/docs/watson-assistant?topic=watson-assistant-human-agent). |
 | Incompletion | Reasons why an action is not completed by a user, including `escalated to agent`, `started a new action`, `stuck on a step`, or `abandoned or ongoing`. [Learn more](/docs/watson-assistant?topic=watson-assistant-analytics-action-completion#reasons-for-incompletion) |
-| Integrations | Add-ons to the end experience that help solve specific user problems, for example, connecting to a human agent or searching existing help content. Integrations are not required for an assistant, but they are recommended. [Learn more](/docs/assistant?topic=assistant-deploy-integration-add){: external}. |
+| Integrations | Add-ons to the end experience that help solve specific user problems, for example, connecting to a human agent or searching existing help content. Integrations are not required for an assistant, but they are recommended. [Learn more](/docs/watson-assistant?topic=watson-assistant-deploy-assistant). |
 | Message | A single turn within a conversation that includes a single call to the `/message` API endpoint and its corresponding response. |
 | Monthly active user (MAU) | A single unique user who interacts with an assistant one or many times in a given month. [Learn more] (/docs/watson-assistant?topic=watson-assistant-admin-managing-plan#admin-managing-plan-user-based). |
 | Preview | Embeds your assistant in a chat window that is displayed on an IBM-branded web page. From the preview, you can test how a conversation flows through your assistant, from end to end. [Learn more](/docs/watson-assistant?topic=watson-assistant-preview-share). |

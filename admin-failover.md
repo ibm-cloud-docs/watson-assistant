@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-23"
+lastupdated: "2021-10-08"
 
 subcollection: watson-assistant
 
@@ -54,7 +54,7 @@ There are pros and cons to both approaches, and considerations specific to {{sit
 ### Analytics
 {: #admin-failover-analytics}
 
-{{site.data.keyword.conversationshort}} analytics provide overview statistics on the number of interactions with users and containment rates. Analytics doesn't cumulate statistics across regions. With an active/passive topology, this approach to analytics should be sufficient. However, using an active/active topology likely requires using [webhooks](/docs/assistant?topic=assistant-webhook-log){: external} to gather interaction data, and build custom data warehouses and reports to understand total usage.
+{{site.data.keyword.conversationshort}} analytics provide overview statistics on the number of interactions with users and containment rates. Analytics doesn't cumulate statistics across regions. With an active/passive topology, this approach to analytics should be sufficient. However, using an active/active topology likely requires using [webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview) to gather interaction data, and build custom data warehouses and reports to understand total usage.
 
 ### Session history for web chat and the v2 api
 {: #admin-failover-session-history}
