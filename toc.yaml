@@ -92,13 +92,13 @@ toc:
               - phone-config.md
               - deploy-phone-flex.md
               - deploy-phone-genesys.md
-#          - topicgroup:
-#              label: Deploying to other platforms
-#              topics:
-#              - deploy-integration-add.md
+          - topicgroup:
+              label: Deploying to other platforms
+              topics:
+              - deploy-integration-add.md
 #              - deploy-facebook.md
 #              - deploy-slack.md
-#              - deploy-sms.md
+              - deploy-sms.md
 #              - deploy-whatsapp.md
       - topicgroup:
           label: Improving your assistant
@@ -125,6 +125,7 @@ toc:
       topics:
       - glossary.md
       - preview-runtime-errors.md
+      - sms-reference.md
       - topicgroup:
           label: Web chat API reference
           topics:
