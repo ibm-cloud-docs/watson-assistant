@@ -159,6 +159,7 @@ toc:
       - link:
           label: REST API reference
           href: https://cloud.ibm.com/apidocs/assistant/assistant-v2
+      - filter-reference.md
 
 #     - topicgroup:
 #          label: Advanced topics
