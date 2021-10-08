@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-23"
+lastupdated: "2021-10-08"
 keywords: export, import
 subcollection: watson-assistant
 
@@ -43,9 +43,9 @@ You cannot download the following data:
 ## Retaining logs
 {: #backup-retain-logs}
 
-If you want to store logs of conversations that users have had with your assistant, you can use the `/logs` API to export your log data. See [API reference](https://cloud.ibm.com/apidocs/assistant/assistant-v1#listlogs) for details.
+If you want to store logs of conversations that users have had with your assistant, you can use the `/logs` API to export your log data. See [API reference](https://cloud.ibm.com/apidocs/assistant/assistant-v1#listlogs){: external} for details.
 
-Logs are stored for a different amount of time depending on your service plan. For example, Lite plans provide logs from the past 7 days only. See [Log limits](/docs/assistant?topic=assistant-logs#logs-limits){: external} for more information.
+Logs are stored for a different amount of time depending on your service plan. For example, Lite plans provide logs from the past 7 days only.
 
 ## Downloading
 {: #backup-restore-export}
