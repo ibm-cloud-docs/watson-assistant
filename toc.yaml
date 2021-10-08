@@ -99,7 +99,7 @@ toc:
 #              - deploy-facebook.md
 #              - deploy-slack.md
               - deploy-sms.md
-#              - deploy-whatsapp.md
+              - deploy-whatsapp.md
       - topicgroup:
           label: Improving your assistant
           topics:
