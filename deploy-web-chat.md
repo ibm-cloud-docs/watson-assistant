@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-09-17"
+lastupdated: "2021-10-13"
 
 subcollection: watson-assistant
 
@@ -33,7 +33,9 @@ subcollection: watson-assistant
 Add your assistant to your company website as a web chat widget that can help your customers with common questions and tasks, and can transfer customers to human agents.
 {: shortdesc}
 
-When you create a web chat integration, code is generated that calls a script that is written in JavaScript. The script instantiates a unique instance of your assistant. You can then copy and paste the HTML `script` element into any page or pages on your website where you want users to be able to ask your assistant for help.
+For each assistant you create, the web chat integration provides a JavaScript code snippet that you can then copy and paste into your website HTML, on any page or pages where you want users to be able to ask your assistant for help. This script creates an instance of the web chat widget, saving you the time and effort that would be required to build your own custom user interface.
+
+The web chat widget uses cutting-edge functionality from IBM Design and Research to deliver an exceptional user experience. It is also extensively customizable, which means that you can take advantage of the web chat functionality while still maintaining consistency with your website style and branding.
 
 To learn more about web chat, watch the following 3-minute video.
 
@@ -252,9 +254,7 @@ Configure the web chat to authenticate users and send private data from your emb
 ## Adding service desk support
 {: #deploy-web-chat-haa}
 
-Delight your customers with 360-degree support by integrating your web chat with a third-party service desk solution.
-
-The following service desk offerings are supported:
+You can configure the web chat to transfer a customer to a human customer support agent if the customer asks for help from a person. The following service desk integrations are supported:
 
 - [Zendesk](/docs/watson-assistant?topic=watson-assistant-deploy-zendesk) {: #deploy-web-chat-zendesk}
 - [Salesforce](/docs/watson-assistant?topic=watson-assistant-deploy-salesforce) {: #deploy-web-chat-salesforce}
@@ -274,7 +274,52 @@ The starter kit reference implementations, while functional, are examples only, 
 After you set up a service desk integration, you must update your actions to ensure they understands user requests to speak to someone and can transfer the conversation properly.
 <!--- For more information, see [Adding chat transfer support](/docs/assistant?topic=assistant-dialog-support#dialog-support-transfers){: external}. --->
 
-## Web chat integration limits
+## Browser support
+{: #deploy-web-chat-browsers}
+
+The web chat supports a variety of devices and platforms. As a general rule, if the last two versions of a browser account for more than 1% of all desktop or mobile traffic, the web chat supports that browser.
+
+The following list specifies the minimum required browser software for the web chat (including the two most recent versions, except as noted):
+
+- Google Chrome
+- Apple Safari
+- Mobile Safari
+- Chrome for Android
+- Microsoft Edge (Chromium and non-Chromium)
+- Mozilla Firefox
+- Firefox ESR (most recent ESR only)
+- Opera
+- Samsung Mobile Browser
+- UC Browser for Android
+- Mobile Firefox
+
+For optimal results when rendering the web chat on mobile devices, the `<head>` element of your web page must include the following metadata element:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+```
+{: codeblock}
+
+## Accessibility
+{: #deploy-web-chat-accessibility}
+
+IBM strives to provide products with usable access for everyone, regardless of age or ability.
+
+The web chat integration is enabled for [Web Content Accessibility 2.1 Level AA](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/){: external} compliance. It is tested with both screen readers and automated tools on a continual basis.
+
+## Billing
+{: #deploy-web-chat-billing}
+
+Watson Assistant charges based on the number of unique monthly active users (MAU).
+
+By default, the web chat creates a unique, anonymous ID the first time a new user starts a session. This identifier is stored in a first-party cookie, which remains active for 45 days. If the same user returns to your site and chats with your assistant again while this cookie is still active, the web chat integration recognizes the user and uses the same user ID. This means that you are charged only once per month for the same anonymous user.
+
+On Apple devices, the Intelligent Tracking Prevention feature might cause you to be billed multiple times within a month for the same user. You can avoid this problem by using a server-side cookie in your web application. For more information, see [Apple devices](/docs/watson-assistant?topic=watson-assistant-customize-web-chat#customize-web-chat-billing-apple).
+{: #note}
+
+For non-anonymous users who log in to your website, you can customize the web chat code to pass in user IDs that you manage. For more information, see [Apple devices](/docs/watson-assistant?topic=watson-assistant-customize-web-chat#customize-web-chat-billing).
+
+### Web chat integration limits
 {: #deploy-web-chat-limits}
 
 The usage is measured differently depending on the plan type. For Lite plans, usage is measured by the number of `/message` calls (API) are sent to the assistant from the web chat integration. For all other plans, usage is measured by the number of monthly active users (MAU) that the web chat interacts with. The maximum number of allowed MAUs differs depending on your {{site.data.keyword.conversationshort}} plan type.

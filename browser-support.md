@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-30"
+lastupdated: "2021-10-13"
 
 subcollection: watson-assistant
 
@@ -30,4 +30,4 @@ subcollection: watson-assistant
 
 The {{site.data.keyword.conversationshort}} application requires the same level of browser software as is required by {{site.data.keyword.Bluemix_notm}}. For more information, see [{{site.data.keyword.Bluemix_notm}} prerequisites](/docs/overview?topic=overview-prereqs-platform#browsers-platform){: external}.
 
-For information about the web browsers that are supported by the web chat integration, see [Browser support](/docs/watson-assistant?topic=watson-assistant-web-chat-basics#web-chat-basics-browsers).
+For information about the web browsers that are supported by the web chat integration, see [Browser support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-browsers).

@@ -64,7 +64,6 @@ toc:
               label: Deploying to your website
               topics:
               - deploy-web-chat.md
-              - web-chat-basics.md
               - web-chat-config.md
               - web-chat-security.md
               - deploy-salesforce.md

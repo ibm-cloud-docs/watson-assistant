@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-07"
+lastupdated: "2021-10-13"
 
 subcollection: watson-assistant
 
@@ -38,7 +38,7 @@ For information about new features and improvements to the core {{site.data.keyw
 ## Controlling the version
 {: #release-notes-chat-version}
 
-If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Versioning](/docs/assistant?topic=assistant-web-chat-basics#web-chat-basics-versions){: external}.
+If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Versioning](/docs/watson-assistant?topic=watson-assistant-customize-web-chat#customize-web-chat-versions).
 
 ## 5.0.2
 {: #5.0.2}
