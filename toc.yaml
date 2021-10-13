@@ -192,10 +192,10 @@ toc:
       topics:
       - faqs.md
       - topicgroup:
-        label: Release notes
-        topics:
-        - release-notes.md
-        - release-notes-chat.md
+          label: Release notes
+          topics:
+          - release-notes.md
+          - release-notes-chat.md
       - troubleshoot.md
       - feedback.md
       - topicgroup:
