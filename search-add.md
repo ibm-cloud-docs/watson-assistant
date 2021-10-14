@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-08"
+lastupdated: "2021-10-14"
 
 subcollection: watson-assistant
 
@@ -230,7 +230,7 @@ If you upload a JSON file that contains repeating name values, then only the fir
 
     To continue the [example of the uploaded JSON file](#search-add-json-collection-example), a good mapping is to use the *Title*, *Shortdesc*, and *url* fields.
 
-    ![Shows that the Title, Shortdesc, and url fields are selected and the preview search card is populated with information from those fields](images/search-skill-configure-fields.png)
+    ![Shows that the Title, Shortdesc, and url fields are selected and the preview search card is populated with information from those fields](images/search-configure-fields.png)
 
     As you add field mappings, a preview of the search result is displayed with information from the corresponding fields of your data collection. This preview shows you what gets included in the search result response that is returned to users.
 
@@ -244,6 +244,8 @@ If you upload a JSON file that contains repeating name values, then only the fir
     | No results found | No search results are found | `I searched my knowledge base for information that might address your query, but did not find anything useful to share.` |
     | Error message | I was unable to complete the search for some reason | `I might have information that could help address your query, but am unable to search my knowledge base at the moment.` |
     {: caption="Search result messages" caption-side="top"}
+
+1.  **Extract FAQ pairs** is applied automatically. Frequently asked questions content is identified automatically and used to give more precise results.
 
 1.  Choose whether to enable **Emphasize the answer**. 
 
