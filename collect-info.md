@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-10-06"
+lastupdated: "2021-10-19"
 
 subcollection: watson-assistant
 
@@ -44,7 +44,7 @@ To choose the customer response type for a step, click **Define customer respons
 | Response type | Description | Example input |
 |---------------|-------------|----------|
 | [**Options**](#customer-response-type-options)   | A list of predefined choices that customers can select from. At run time, the web chat integration shows an options response as a set of clickable buttons or as a drop-down list, depending on the number of choices. | `Small` `Medium` `Large` |
-| [**Number**](#customer-response-type-number)    | A single generic number, specified either as numerals. | `100`, `one hundred` |
+| [**Number**](#customer-response-type-number)    | A single generic number, specified either as numerals (100) or words (one hundred). | `100`, `one hundred` |
 | [**Date**](#customer-response-type-date)      | A single specific date or a range of dates. | `31 December 2021`, `12/31/2020`, `tomorrow` |
 | [**Time**](#customer-response-type-time)      | A single specific time or a range of time.  | `5:00 PM`, `now` |
 | [**Currency**](#customer-response-type-currency)  | An amount of money, including the unit.     | `$25`, `500 yen` |
@@ -73,31 +73,18 @@ You can optionally add _synonyms_ for each option by clicking **Add synonyms**. 
 
 For example, you might define the following options:
 
-<table>
-      <caption>Options example</caption>
-      <tr>
-        <th>Option value</th>
-        <th>Synonyms</th>
-      </tr>
-      <tr>
-        <td>Blue</td>
-        <td>aqua, turquoise, navy</td>
-      </tr>
-      <tr>
-        <td>Red</td>
-        <td>burgundy, crimson, sangria</td>
-      </tr>
-      <tr>
-        <td>Green</td>
-        <td>lime, olive, forest</td>
-      </tr>
-</table>
+| Option value | Synonyms                         |
+|--------------|----------------------------------|
+| Blue         | aqua, turquoise, navy      |
+| Red          | burgundy, crimson, sangria |
+| Green        | lime, olive, forest        |
+{: caption="Options example" caption-side="top"}
 
 To select an option at run time, users can click an option button or list item, such as *Green*. Or they can type `Green` or one of its synonyms, such as `lime`.
 
 Synonyms are particularly useful for a response that might be skipped, because they enable the assistant to recognize an option the customer might have already chosen before seeing the list. For example, if the customer's original input was `I want to order a large coffee`, a synonym would enable the assistant to recognize `large` as equivalent to the actual size `Grande`.
 
-You can save your configured options response for reuse in other steps. To save a customer response, click the **Save response for reuse** icon. For more information, about saved customer responses, see [Saving and reusing customer responses](#saved-customer-responses).
+You can save your configured options response for reuse in other steps. To save a customer response, click the **Save response for reuse** icon. For more information about saved customer responses, see [Saving and reusing customer responses](#saved-customer-responses).
 {: tip}
 
 ### Number
@@ -241,4 +228,3 @@ After you unlink a response, you cannot re-link it. If you want to return to the
 {: tip}
 
 -->
-

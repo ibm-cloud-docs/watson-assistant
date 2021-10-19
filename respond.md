@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-06"
+lastupdated: "2021-10-19"
 
 subcollection: watson-assistant
 
@@ -30,14 +30,11 @@ subcollection: watson-assistant
 
 Once an action is activated, the body of the action is composed of multiple *steps* that make up the conversation between your assistant and your users. One part of each step is what the assistant says to the customer when the step is processed.
 
-## Adding assistant responses
-{: #respond-creating}
-
-To create your assistant's response in a step, you use the **Assistant says** section. This represents the text or speech the assistant delivers to a user at a particular step. Depending on the step, you can add a complete answer to a user's question or ask a follow-up question. 
+To create your assistant's response in a step, you use the **Assistant says** section. This represents the text or speech the assistant delivers to a user at a particular step. Depending on the step, you can add a complete answer to a user's question or ask a follow-up question.
 
 You can enter a simple text response just by entering the text that you want your assistant to display to the user. You can also add formatting and web content, and you can reference user information using *variables*.
 
-### Formatting respsonses
+## Formatting respsonses
 {: #respond-formatting}
 
 Use the text editor tools to format responses. Behind the scenes, these three choices are stored using Markdown format.
@@ -55,7 +52,7 @@ If you're using a custom client application that does not support Markdown, don'
 If you are using the web chat integration, standard HTML tagging is supported. Other integrations, such as for Facebook and Slack, don't support HTML.
 {: note}
 
-### Including web content
+## Including web content
 {: #respond-include-web-content}
 
 Depending on how your assistant is deployed, you can include references to web content. Choices include:
@@ -70,10 +67,10 @@ Depending on how your assistant is deployed, you can include references to web c
 
 <!-- To learn more about which deployment options are compatible see **[COMPATIBILITY CHART TOPIC]**. -->
 
-### Adding and referencing variables
+## Adding and referencing variables
 {: #respond-variables}
 
-During the conversation, your assistant stores information as *variables*. Variables are containers for data values that become available at run time; the value of a variable can change over time. Variables include *action variables*, which are persist only during a particular action, and *session variables*, which are available to any action. For more information about variables, see [Managing information during the conversation](/docs/watson-assistant?topic=watson-assistant-manage-info).
+During the conversation, your assistant stores information as *variables*. Variables are containers for data values that become available at run time; the value of a variable can change over time. Variables include *action variables*, which persist only during a particular action, and *session variables*, which are available to any action. For more information about variables, see [Managing information during the conversation](/docs/watson-assistant?topic=watson-assistant-manage-info).
 
 In your assistant's output, you can reference variables in order to personalize the conversation or include information that is available at run time. For more information about referencing variables in what your assistant says, see [Using variables to customize the conversation](/docs/watson-assistant?topic=watson-assistant-manage-info#reference-variables).
 
@@ -100,33 +97,3 @@ To see if the assistant responses are formatted correctly, you can use **Preview
 If you want to format your assistant’s responses in ways that the formatting tools don't provide, you can write custom formatting using the built-in JSON editor.
 
 To access the JSON editor, click the **Switch to JSON editor** icon in the corner of the **Assistant says** field. The JSON editor shows how the response is stored behind the scenes.<!-- For more information about how to use the JSON editor, see **[JSON EDITOR TOPIC]**. -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

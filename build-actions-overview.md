@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-26"
+lastupdated: "2021-10-19"
 
 subcollection: watson-assistant
 
@@ -183,7 +183,7 @@ To do this, we need to insert action variables (representing customer responses 
 
 1. Because this is the last step in the action, you don't need to specify any customer response.
 
-If you decide a step is no longer needed, you can delete it from the action. To delete a step, click the **Deletee** ![Delete step icon](images/step-delete-icon.png) icon on the tile for the step.
+If you decide a step is no longer needed, you can delete it from the action. To delete a step, click the **Delete** ![Delete step icon](images/step-delete-icon.png) icon on the tile for the step.
 {: tip}
 
 ## Testing the action
