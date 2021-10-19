@@ -34,7 +34,7 @@ To create your assistant's response in a step, you use the **Assistant says** se
 
 You can enter a simple text response just by entering the text that you want your assistant to display to the user. You can also add formatting and web content, and you can reference user information using *variables*.
 
-### Formatting respsonses
+## Formatting respsonses
 {: #respond-formatting}
 
 Use the text editor tools to format responses. Behind the scenes, these three choices are stored using Markdown format.
@@ -52,7 +52,7 @@ If you're using a custom client application that does not support Markdown, don'
 If you are using the web chat integration, standard HTML tagging is supported. Other integrations, such as for Facebook and Slack, don't support HTML.
 {: note}
 
-### Including web content
+## Including web content
 {: #respond-include-web-content}
 
 Depending on how your assistant is deployed, you can include references to web content. Choices include:
@@ -67,7 +67,7 @@ Depending on how your assistant is deployed, you can include references to web c
 
 <!-- To learn more about which deployment options are compatible see **[COMPATIBILITY CHART TOPIC]**. -->
 
-### Adding and referencing variables
+## Adding and referencing variables
 {: #respond-variables}
 
 During the conversation, your assistant stores information as *variables*. Variables are containers for data values that become available at run time; the value of a variable can change over time. Variables include *action variables*, which persist only during a particular action, and *session variables*, which are available to any action. For more information about variables, see [Managing information during the conversation](/docs/watson-assistant?topic=watson-assistant-manage-info).
