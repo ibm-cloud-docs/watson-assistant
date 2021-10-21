@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-14"
+lastupdated: "2021-10-21"
 
 subcollection: watson-assistant
 
@@ -256,7 +256,7 @@ If you upload a JSON file that contains repeating name values, then only the fir
 
 1.  Specify the number of results to return.
 
-    The top three results are returned automatically. Can you choose to show fewer or more (up to 10) results in the response.
+    The top three results are returned automatically. You can choose to show fewer or more (up to 10) results in the response.
 
     By default, customers can choose to see more results. If you don't want to give customers this choice, clear the **Include link for customers to view up to 10 results** checkbox.
 1.  Decide whether to be more selective with the answers that are returned.

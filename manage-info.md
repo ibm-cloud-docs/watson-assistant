@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-10-06"
+lastupdated: "2021-10-21"
 
 subcollection: watson-assistant
 
@@ -51,7 +51,7 @@ Watson Assistant supports two categories of variables:
 
     The name of an action variable is always the name of the step that defines the customer response. (You cannot change the name of an action variable.) For example, suppose you define a step that asks "When were you born?" and accepts a date value as a response. The customer response is automatically stored as an action variable called `When were you born?`, which you can then access from any subsequent step in the same action.
 
-- **Session variables**: A values that is not necessarily tied to a particular action can be stored as a *session variable*. Session variables are long-term memory: they persist throughout the user's interaction with the assistant, and your assistant can reference them from any action. 
+- **Session variables**: A value that is not necessarily tied to a particular action can be stored as a *session variable*. Session variables are long-term memory: they persist throughout the user's interaction with the assistant, and your assistant can reference them from any action. 
 
     You can create a session variable to store the value from an action variable, if you want to keep the value available for other actions to use. You can also define a session variable based on another session variable, or using a value defined in an expression. In addition to variables you create, Assistant provides a set of built-in session variables for global values like the current time and date.
 

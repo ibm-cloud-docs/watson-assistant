@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-26"
+lastupdated: "2021-10-21"
 
 subcollection: watson-assistant
 
@@ -36,7 +36,7 @@ For more information about variables, see [Managing information during the conve
 
 A basic step condition is expressed in the following form:
 
-  `If` `{variable}` `{operator}` `{value}`
+`If` `{variable}` `{operator}` `{value}`
 
 where:
 
@@ -46,9 +46,9 @@ where:
 
 For example, a step condition might read:
 
-  `If` `Withdraw from which account?` `is` `Checking`
+`If` `Withdraw from which account?` `is` `Checking`
 
-  This condition evaluates as true if the customer's response to the previous `Withdraw from which account?` step is `Checking`.
+This condition evaluates as true if the customer's response to the previous `Withdraw from which account?` step is `Checking`.
 
 Conditions can be grouped together to construct complex tests.
 
@@ -77,7 +77,7 @@ To add a step condition:
 
     - Select the operator representing the test you want to perform on the variable (for example, `is` or `is not`). The available operators for a particular value depend upon its data type. (For more information, see [Operators](#step-conditions-operators).)
 
-    - Select the value you want to evaluate the test against. Again, the values available depend upon the type of value you are testing. For example, an variable containing an options response can be tested against any of the defined options, and a date value can be tested against any date.
+    - Select the value you want to evaluate the test against. Again, the values available depend upon the type of value you are testing. For example, a variable containing an options response can be tested against any of the defined options, and a date value can be tested against any date.
 
 1.  To add more than one condition to a step, after adding a condition, click **Add condition**.
 
@@ -103,7 +103,7 @@ Currently, the only tests supported for session variables are `is defined` and `
 
 | Response type                        | Operators                           |
 |--------------------------------------|-------------------------------------|
-| Options<br/>Free text<!--<br/>Regex--> | <ul><li>is</li><li>is not</li></ul> |
-| Number<br/>Currency<br/>Percent<br/> | <ul><li>is defined</li><li>is not defined</li><li>is equal to (==)</li><li>is not equal to (≠)</li><li>is less than (&lt;)</li><li>is less than or equal to (&lt;=)</li><li>is greater than (&gt;)</li><li>is greater than or equal to (&gt;=)</li></ul> |
-| Date                                 | <ul><li>is defined</li><li>is not defined</li><li>is on</li><li>is not on</li><li>is before</li><li>is after</li><li>is on or before</li><li>is on or after</li></ul> |
-| Time                                 | <ul><li>is defined</li><li>is not defined</li><li>is at</li><li>is not at</li><li>is before</li><li>is after</li><li>is at or before</li><li>is at or after</li></ul> |
+| Options \n Free text<!-- \n Regex--> | - is \n - is not                    |
+| Number \n Currency \n Percent        | - is defined \n - is not defined \n - is equal to (==) \n - is not equal to (≠) \n - is less than (&lt;) \n - is less than or equal to (&lt;=) \n - is greater than (&gt;) \n - is greater than or equal to (&gt;=) |
+| Date                                 | - is defined \n - is not defined \n - is on \n - is not on \n - is before \n - is after \n - is on or before \n - is on or after |
+| Time                                 | - is defined \n - is not defined \n - is at \n - is not at \n - is before \n - is after \n - is at or before \n - is at or after |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-10-06"
+lastupdated: "2021-10-21"
 
 keywords: subaction, sub-action
 
@@ -63,10 +63,10 @@ To repeat previous steps:
 
 1. In the Settings window, click to select any previous steps you want to repeat. You can select any step that precedes the step you are editing.
 
-  Note that only the selected steps will repeat, regardless of their **And then** settings. Therefore, if you want to repeat the entire action up to shi point, you must select all of the previous steps.
+    Note that only the selected steps will repeat, regardless of their **And then** settings. Therefore, if you want to repeat the entire action up to this point, you must select all of the previous steps.
 
-  The current step you are editing is automatically included in the list of steps to be repeated. To avoid an infinite loop, use step conditions to ensure that this step only executes when it is appropriate for previous steps to be repeated. For example, you might have a step that repeats previous steps only if the user answered `No` to a confirmation question; this way, if the user answers `Yes`, nothing is repeated and the action continues.
-  {: tip}
+    The current step you are editing is automatically included in the list of steps to be repeated. To avoid an infinite loop, use step conditions to ensure that this step only executes when it is appropriate for previous steps to be repeated. For example, you might have a step that repeats previous steps only if the user answered `No` to a confirmation question; this way, if the user answers `Yes`, nothing is repeated and the action continues.
+    {: tip}
 
 1. Click **Apply**.
 
@@ -90,7 +90,7 @@ To call a subaction:
 
 1. If you do not want to continue with the current action, click **End this action after subaction is completed**. You might use this option in cases where the customer has decided to do something different; in this case, you want the conversation flow to switch to the subaction and not return.
 
-  By default, the assistant returns to the current action after the subaction completes. Any action variables or session variables defined in the subaction are accessible from subsequent steps in the calling action.
+    By default, the assistant returns to the current action after the subaction completes. Any action variables or session variables defined in the subaction are accessible from subsequent steps in the calling action.
 
 1. Click **Apply**.
 

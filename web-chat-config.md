@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-13"
+lastupdated: "2021-10-21"
 
 subcollection: watson-assistant
 
@@ -53,7 +53,7 @@ A developer can use these APIs to customize the web chat in the following ways:
 
 You can change the color of the launcher icon from the *Style* tab of the web chat configuration page. If you want to make more advanced customizations, you can make the following types of changes:
 
-- Change the launcher icon that is used to open the web chat widget. For a tutorial the shows you how, see [Using a custom launcher](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-launcher){: external}.
+- Change the launcher icon that is used to open the web chat widget. For a tutorial that shows you how, see [Using a custom launcher](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-launcher){: external}.
 - Change how the web chat widget opens. For example, you might want to launch the web chat from some other button or process that exists on your website, or maybe open it in a different location, or at a different size. For a tutorial that shows you how, see [Render to a custom element](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-example-element){: external}.
 - Hide the launcher icon entirely and automatically start the web widget in open state, at its full length. For more information, see the [`openChatByDefault` method](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#configurationobject){: external}.
 - Hide the close button so users cannnot close the web chat widget. For more information, see the [`hideCloseButton` method](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#configurationobject){: external}.
@@ -97,10 +97,10 @@ User information is used in the following ways:
 <!--- See [User-based plans](/docs/assistant?topic=assistant-services-information#services-information-user-based-plans){: external}. --->
 
 - The ability to delete any data created by someone who requests to be forgotten requires that a `customer_id` be associated with the user input. When a `user_id` is defined, the product can reuse it to pass a `customer_id` parameter.
-  <!--- See [Labeling and deleting data](/docs/assistant?topic=assistant-information-security#information-security-gdpr-wa){: external}. --->
+    <!--- See [Labeling and deleting data](/docs/assistant?topic=assistant-information-security#information-security-gdpr-wa){: external}. --->
 
-  Because the `user_id` value that you submit is included in the `customer_id` value that is added to the `X-Watson-Metadata` header in each message request, the `user_id` syntax must meet the requirements for header fields as defined in [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2).
-{: note}
+    Because the `user_id` value that you submit is included in the `customer_id` value that is added to the `X-Watson-Metadata` header in each message request, the `user_id` syntax must meet the requirements for header fields as defined in [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2).
+    {: note}
 
 To support these user-based capabilities, add the [`updateUserID()` method](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateuserid){: external} in the code snippet before you paste it into your web page.
 

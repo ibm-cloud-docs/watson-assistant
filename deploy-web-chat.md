@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-13"
+lastupdated: "2021-10-21"
 
 subcollection: watson-assistant
 
@@ -271,7 +271,7 @@ The starter kit reference implementations, while functional, are examples only, 
 
 - [Bring your own](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}: A web chat service desk extension starter kit that enables you to develop your own service desk integrations.
 
-After you set up a service desk integration, you must update your actions to ensure they understands user requests to speak to someone and can transfer the conversation properly.
+After you set up a service desk integration, you must update your actions to ensure they understand user requests to speak to someone and can transfer the conversation properly.
 <!--- For more information, see [Adding chat transfer support](/docs/assistant?topic=assistant-dialog-support#dialog-support-transfers){: external}. --->
 
 ## Browser support
