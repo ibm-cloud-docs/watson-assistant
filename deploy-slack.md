@@ -31,7 +31,7 @@ subcollection: watson-assistant
 Slack is a cloud-based messaging application that helps people collaborate with one another.
 {: shortdesc}
 
-After you configure an action and add it to an assistant, you can integrate the assistant with Slack.
+After you create an action, you can integrate your assistant with Slack.
 
 When integrated, depending on the events that you configure the assistant to support, your assistant can respond to questions that are asked in direct messages or in channels where the assistant is directly mentioned.
 
