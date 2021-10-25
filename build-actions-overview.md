@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-10-19"
+lastupdated: "2021-10-25"
 
 subcollection: watson-assistant
 
@@ -34,6 +34,7 @@ Like a human personal assistant, the assistant you build will help your customer
 An _action_ represents a discrete outcome you want your assistant to be able to accomplish in response to a user's request. An action comprises the interaction between a customer and the assistant about a particular question or request. This interation begins with the user input that starts the action (for example, `I want to withdraw money`). It might then include additional exchanges as the assistant gathers more information, and it ends when the assistant carries out the request or answers the customer's question.
 
 ## Creating and editing an action
+{: #build-actions-overview-creating}
 
 To see how actions work and how you build one, let's go through an example.
 
@@ -47,6 +48,7 @@ Initially, you only need to specify one example of typical user input that start
 {: tip}
 
 ## Using the action editor
+{: #build-actions-overview-using}
 
 After you create the action, the action editor opens.
 
@@ -64,6 +66,7 @@ As you edit an action, your changes are automatically saved.
 {: tip}
 
 ## Steps
+{: #build-actions-overview-steps}
 
 An action consists of one or more _steps_. The steps in an action define the conversation turns that follow the initial customer input that triggered the action. In a simple case, a step might consist of a direct answer to a question from the customer; for example, if the customer asks `What are your business hours?`, a one-step action might reply with `We are open Monday through Friday from 9 AM to 5 PM.`.
 
@@ -75,6 +78,7 @@ More commonly, though, an action requires multiple steps in order to fully under
 Each of these follow-up questions represents a step in the action.
 
 ### Editing a step
+{: #build-actions-overview-edit-step}
 
 Within a step, you define the following things:
 
@@ -114,6 +118,7 @@ Let's edit step 1 to find out which account the customer wants to withdraw money
     As expected, the assistant now prompts you to select the account you want to withdraw money from.
 
 ### Adding conditional steps
+{: #build-actions-overview-conditional-steps}
 
 Suppose our bank charges a fee for withdrawals from checking accounts, and we need to confirm that the customer understands this. This means that our action needs to have slightly different behavior depending on which kind of account the customer selects. We can handle this using step conditions.
 
@@ -155,6 +160,7 @@ We don't need a conditional step to handle a response of `Yes` in step 2, becaus
 {: note}
 
 ### Getting the amount
+{: #build-actions-overview-get-amount}
 
 We need one more piece of information before we can complete the customer's request: the amount of money to withdraw.
 
@@ -165,6 +171,7 @@ We need one more piece of information before we can complete the customer's requ
 1. Click **Define customer response**. This time we need the customer to specify a monetary amount, so select **Currency**. There are no more details you need to specify for a currency amount, so it is immediately added to the step.
 
 ### Finishing the action
+{: #build-actions-overview-finish-action}
 
 We now have all the information we need. For our example, we're not going to implement any real logic for making a withdrawal, but we can send a final message summing up what we're doing.
 
@@ -174,12 +181,12 @@ To do this, we need to insert action variables (representing customer responses 
 
 1. Now we need to build a confirmation message that says "OK, we will withdraw *amount* from your *account_type* account."
 
-  To create this response, type the text of the message in the **Assistant says** field, but in place of the variable values, click the **Insert a variable** ![Action variable icon](images/action-variable-icon.png) icon to insert references to action variables:
+    To create this response, type the text of the message in the **Assistant says** field, but in place of the variable values, click the **Insert a variable** ![Action variable icon](images/action-variable-icon.png) icon to insert references to action variables:
 
-  - For *amount*, select **4. How much do you want to withdraw?**.
-  - For *account_type*, select **1. Withdraw from which account?**.
+    - For *amount*, select **4. How much do you want to withdraw?**.
+    - For *account_type*, select **1. Withdraw from which account?**.
 
-  ![Action editor: message including variable references](images/action-editor-message-with-variables.png)
+    ![Action editor: message including variable references](images/action-editor-message-with-variables.png)
 
 1. Because this is the last step in the action, you don't need to specify any customer response.
 
@@ -187,6 +194,7 @@ If you decide a step is no longer needed, you can delete it from the action. To 
 {: tip}
 
 ## Testing the action
+{: #build-actions-overview-test}
 
 We can now test the action to make sure it's working like we expect. Click **Preview** to open the Preview pane. (If the text from a previous test is still shown, click the **Refresh** ![Preview refresh icon](images/preview-refresh-icon.png) icon to restart the conversation.)
 

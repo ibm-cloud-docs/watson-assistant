@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-07"
+lastupdated: "2021-10-25"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,16 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 25 October 2021
+{: #assistant-oct252021}
+{: release-note}
+
+Facebook and Slack integrations now available
+:   The new Watson Assistant now includes integrations for [Facebook Messenger](/docs/watson-assistant?topic=watson-assistant-deploy-facebook) and [Slack](/docs/watson-assistant?topic=watson-assistant-deploy-slack).
+
+Analytics for draft and live environments
+:   The **Analyze** page now lets you see analytics data for either the draft or live environments. For more information, see [Use analytics to review your entire assistant at a glance](/docs/watson-assistant?topic=watson-assistant-analytics-overview).
 
 ## 07 October 2021
 {: #assistant-07Oct2021}

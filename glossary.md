@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-08"
+lastupdated: "2021-10-22"
 
 subcollection: watson-assistant
 
@@ -31,7 +31,7 @@ subcollection: watson-assistant
 
 | Term | Definition |
 | --- | --- |
-| Action | An action represents a discrete task or question that your assistant is designed to help customers with. [Learn more](/docs/watson-assistant?topic=watson-assistant-build-actions-overview). |
+| Action | Actions represent the tasks or questions that your assistant can help customers with. Each action has a beginning and an end, making up a conversation between the assistant and a customer.  [Learn more](/docs/watson-assistant?topic=watson-assistant-build-actions-overview). |
 | Ask clarifying question | A feature that enables the assistant to ask customers to clarify (disambiguate) their meaning when the assistant isn't sure what a user wants to do next. [Learn more](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-ask-clarifying-question). |
 | Assistant | Container for your actions, channels, and integrations. You add actions and at least one channel to an assistant, and then deploy the assistant when you are ready to start helping your customers. [Learn more](/docs/watson-assistant?topic=watson-assistant-publish-overview). |
 | Change conversation topic | A feature that gives the user the power to direct the conversation. It allows digressions and prevents customers from getting stuck in a dialog thread; they can switch topics whenever they choose. [Learn more](/docs/watson-assistant?topic=watson-assistant-change-topic). |
@@ -48,6 +48,7 @@ subcollection: watson-assistant
 | Recognition | Measurement of how many requests are being recognized by the assistant and routed into starting an action. [Learn more](/docs/watson-assistant?topic=watson-assistant-analytics-overview#recognition). |
 | Response | To create your assistant's response in an action step, you use the *Assistant says* section. This represents the text or speech the assistant delivers to a user at a particular step. Depending on the step, you can add a complete answer to a user's question or ask a follow-up question. [Learn more](/docs/watson-assistant?topic=watson-assistant-respond). |
 | Step | A step that you add to an action represents a single interaction or exchange of information with a customer, a turn in the conversation. [Learn more](/docs/watson-assistant?topic=watson-assistant-build-actions-overview#steps). |
+| Subaction | An action that is called from another action is referred to as a subaction. For example, as part of an action to place an order, you might call a subaction that enables a new customer to create an account. |
 | Training |  To set up a Watson instance with components that enable the system to function in a particular domain (for example: corpus content, training data that generates machine learning models, programmatic algorithms, annotators, or other ground truth components) and then making improvements and updates to these components based on accuracy analysis. |
 | Variable | A variable is data that a customer shares with the assistant, which is collected and saved so it can be referenced later. In actions, you can collect *action* and *session* variables. [Learn more](/docs/watson-assistant?topic=watson-assistant-manage-info#action-variables-and-session-variables). |
 | Web chat | A channel that you can use to embed your assistant in your company website. [Learn more](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat). |
