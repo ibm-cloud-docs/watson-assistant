@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-10-04"
+lastupdated: "2021-10-25"
 
 subcollection: watson-assistant
 
@@ -28,7 +28,7 @@ subcollection: watson-assistant
 # Use analytics to review your entire assistant at a glance
 {: #analytics-overview}
 
-The **Analytics overview** page provides a summary of the interactions between users and your assistant.
+The **Analyze** page provides a summary of the interactions between users and your assistant.
 {: shortdesc}
 
 Analytics help you to understand the following things:
@@ -37,17 +37,17 @@ Analytics help you to understand the following things:
 - *Is your assistant understanding and addressing customer needs?*
 - *How can you make your assistant better?*
 
-To see analytics information, select **Analytics** in the navigation bar.
+To see analytics information, select **Analyze** in the navigation bar.
 
-## Choosing the time period
-{: analytics-overview-time-period}
+## Choosing the environment and date range
+{: #analytics-overview-time-period}
 
-To get started, choose the time period you want to analyze. All charts and cards reflect data based on the time and date you select. When you change the time period, the charts and cards on the page update to reflect the new date range. You can also use **Refresh data** ensure the latest data is shown.
+To get started, choose the [environment](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments) (draft or live) and date range you want to analyze. All charts and cards reflect data based on the environment and the date range you select. When you change the enviornment or the date range, the charts and cards on the page update to reflect the new date range. You can also use **Refresh** ensure the latest data is shown.
 
 ![Time period](images/analytics-time-period.png)
 
 ## Unique users, conversations, and user requests
-{: analytics-traffic}
+{: #analytics-traffic}
 
 These three traffic metrics -- *unique users*, *conversations*, and *user requests* -- provide you with data about the volume of user engagements with your assistant.
 
@@ -60,7 +60,7 @@ These three traffic metrics -- *unique users*, *conversations*, and *user reques
 *Request* is a root-level utterance, such as an initial question or request, that signals the start of a specific flow. A user can initiate multiple requests. Requests are meant to represent the core concepts or topics your users are asking about. A request can have multiple steps within it, for example `I want to order a pizza` is a request. `Delivery/takeout`, `Small/Medium/Large`, `Cheese/Pepperoni/Mushrooms/Peppers` are all steps within the request of ordering a pizza.
 
 ## Completion and recognition
-{: analytics-completion-recognition}
+{: #analytics-completion-recognition}
 
 The *completion* and *recognition* charts provide information about the actions in your assistant.
 
@@ -78,7 +78,7 @@ Completion is only applicable when a user question or request matched to an acti
 One action can be triggered multiple times, so to better understand individual action performance, click *Action completion* to understand each action in more detail.
 
 ### Recognition
-{: analytics-recognition-section}
+{: #analytics-recognition-section}
 
 *Recognition* is the measurement of how many requests are being recognized by the assistant and routed into starting an action.
 
@@ -87,7 +87,7 @@ The recognition chart provides you with a view into how many requests are matche
 To get more detail, click on *Unrecognized requests* to review the full conversations associated with requests that are not being recognized by the assistant.
 
 ## Most frequent, least frequent, and least completed
-{: analytics-most-least}
+{: #analytics-most-least}
 
 These most/least cards help you to quickly identify specific actions that might need your attention. From these lists, you can click a specific action to do more analysis.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-06"
+lastupdated: "2021-10-22"
 
 subcollection: watson-assistant
 
@@ -28,7 +28,7 @@ subcollection: watson-assistant
 # Understanding your users' questions or requests
 {: #understand-questions}
 
-Actions represent the discrete tasks or questions that your assistant is designed to help customers with. Each action has a beginning and an end, representing a conversation between the assistant and a customer. In this topic, learn how to begin an action, where it understands and recognizes a goal based on the words a customer uses to ask a question or make a request. 
+Actions represent the tasks or questions that your assistant can help customers with. Each action has a beginning and an end, making up a conversation between the assistant and a customer.  In this topic, learn how to begin an action, where it understands and recognizes a goal based on the words a customer uses to ask a question or make a request. 
 
 ## Beginning an action
 {: #understand-questions-start}

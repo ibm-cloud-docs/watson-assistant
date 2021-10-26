@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-17"
+lastupdated: "2021-10-25"
 
 subcollection: watson-assistant
 
@@ -49,7 +49,7 @@ An action is considered complete when:
 - The last step of the action has been executed and there are no more steps to execute
 
 ### Reasons for incompletion
-{: incomplete-reasons}
+{: #incomplete-reasons}
 
 An action is considered incomplete for these reasons:
 
@@ -61,7 +61,7 @@ An action is considered incomplete for these reasons:
 | Abandoned or ongoing | If the action is neither complete or incomplete because of the reasons above (stuck on step, started a new action, or escalate to agent) then it's considered abandoned or ongoing. |
 
 ## Improving completion
-{: analytics-improving-completion}
+{: #analytics-improving-completion}
 
 To help you identify actions that need improvement, the **Action completion** page is organized into a **How often** chart and an **Actions** table. The **How often** chart shows the number of complete and incomplete actions during a time frame. The **Actions** table provides number of requests, total incomplete, and completion percentage per action.
 
@@ -80,7 +80,7 @@ As you click on each tab, a table below the chart shows the list of either incom
 ![Request detail](images/analytics-completion-side-panel.png)
 
 ### Editing an action
-{: analytics-edit-action}
+{: #analytics-edit-action}
 
 Once you decide on changes you want to make to improve the action, click the edit icon in the header for the single action, which opens your action for further work on its steps.
 

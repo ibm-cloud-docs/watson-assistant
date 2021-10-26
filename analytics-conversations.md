@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-09-15"
+lastupdated: "2021-10-25"
 
 subcollection: watson-assistant
 
@@ -36,9 +36,9 @@ Each timestamp represents a single conversation. The **Actions** column hows you
 ![Conversations page](images/analytics-conversations.png)
 
 ## Choosing the time period
-{: analytics-conversations-time-period}
+{: #analytics-conversations-time-period}
 
-To get started, choose the time period you want to analyze. All conversations reflect data based on the time and date you select. When you change the time period, the conversations on the page update to reflect the new date range. You can also use **Refresh data** ensure the latest data is shown.
+To get started, choose the [environment](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments) (draft or live) and date range you want to analyze. All conversations reflect data based on the environment and the date range you select. When you change the enviornment or the date range, the conversations on the page update to reflect the new date range. You can also use **Refresh** ensure the latest data is shown.
 
 ![Time period](images/analytics-conversations-time-period.png)
 
@@ -59,7 +59,7 @@ The Actions and Keyword filters always appear at the top of the page. To show th
 ![Conversation filters](images/analytics-conversations-filters.png)
 
 ## Exploring conversations in detail
-{: analytics-conversations-exploring}
+{: #analytics-conversations-exploring}
 
 To explore individual conversations in detail, you can click on any of the utterances or conversation time stamps.  A panel opens showing the full back and forth between your customer and the assistant, including step interactions. The panel also provides a summary of how many requests there were, how many were recognized, whether search was initiated, and the duration of the conversation.
 
