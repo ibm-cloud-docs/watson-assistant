@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-01"
+lastupdated: "2021-09-27"
 
 subcollection: watson-assistant
 
@@ -31,18 +31,18 @@ subcollection: watson-assistant
 Slack is a cloud-based messaging application that helps people collaborate with one another.
 {: shortdesc}
 
-After you configure a dialog skill and add it to an assistant, you can integrate the assistant with Slack.
+After you create an action, you can integrate your assistant with Slack.
 
 When integrated, depending on the events that you configure the assistant to support, your assistant can respond to questions that are asked in direct messages or in channels where the assistant is directly mentioned.
 
 ## Adding the Slack integration
 {: #deploy-slack-task}
 
-1.  From the Assistants page, click to open the assistant tile that you want to deploy.
+1. Go to the **Integrations** page by clicking the integrations icon (![Integrations icon](images/integrations-icon.png)) in the left menu.
 
-1.  From the Integrations section, click **Add integration**.
+1. Click **Add** on the **Slack** tile.
 
-1.  Click **Slack**.
+1. Click **Confirm**.
 
 1.  You need to have a Slack app to connect to.
 
@@ -100,10 +100,10 @@ When integrated, depending on the events that you configure the assistant to sup
 
 1.  Optional: To add support for showing buttons, menus, and disambiguation options in the Slack app, go to the *Interactive Components* tab and enable the feature. Paste your request URL in the provided text entry field, and then click *Enable Interactive Components*.
 
-## Dialog considerations
-{: #deploy-slack-dialog}
+## Action considerations
+{: #deploy-slack-action}
 
-The rich responses that you add to a dialog are displayed in a Slack channel as expected, with the following exceptions:
+The rich responses that you add to an action are displayed in a Slack channel as expected, with the following exceptions:
 
 - **Connect to human agent**: This response type is ignored.
 
@@ -116,7 +116,7 @@ The rich responses that you add to a dialog are displayed in a Slack channel as 
 
 - **Search skill**: The response type is supported, but you must test and curate your search results to ensure that each result is as concise as possible. The combined length of the title, body, and URL of the search result must be less than or equal to 2,990 characters.
 
-See [Rich responses](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-multimedia){: external} for more information about response types.
+<!--- See [Rich responses](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-multimedia) for more information about response types. --->
 
 ## Chatting with the assistant
 {: #deploy-slack-try}
@@ -127,7 +127,8 @@ To start a chat with the assistant, complete the following steps:
 1.  Click the application that you created from the Apps section.
 1.  Chat with the assistant.
 
-The Welcome action is not processed by the Slack integration. The welcome message is not displayed in the Slack channel like it is in the "Try it out" pane or in the assistant preview. It is not triggered from here because nodes with the `welcome` special condition are skipped in dialog flows that are started by users. Slack waits for the user to initiate the conversation. For more information about how to set context variable values consistently at the start of a conversation, see [Starting the dialog](/docs/assistant?topic=assistant-dialog-start){: external}.
-{: note}
+The welcome action is not processed by the Slack integration. The welcome message is not displayed in the Slack channel like it is in the assistant preview. It is not triggered from here because nodes with the `welcome` special condition are skipped in action flows that are started by users. Slack waits for the user to initiate the conversation.
 
-The dialog flow for the current session is restarted after 60 minutes of inactivity (5 minutes for Lite and Standard plans). This means that if a user stops interacting with the assistant, after 60 (or 5) minutes, any context variable values that were set during the previous conversation are set to null or back to their default values.
+<!--- For more information about how to set context variable values consistently at the start of a conversation, see [Starting the dialog](/docs/assistant?topic=assistant-dialog-start). --->
+
+The action flow for the current session is restarted after 60 minutes of inactivity (5 minutes for Lite and Standard plans). This means that if a user stops interacting with the assistant, after 60 (or 5) minutes, any context variable values that were set during the previous conversation are set to null or back to their default values.
