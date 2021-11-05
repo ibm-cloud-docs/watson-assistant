@@ -65,7 +65,7 @@ You have multiple options for deploying your assistant, depending on how you wan
 ## Updating and managing channels
 Each channel has specific settings that you can adjust to adapt the end experience for your user. You can edit these settings by selecting the channel on the **Draft environment**, **Live environment**, or **Integrations** pages.
 
-If you make an update to a channel in the draft environment on the **Draft environment** page, the same channel in live environment is not impacted or changed on the **Live environment** page. Similarly, if you make an update to a channel in the live environment on the **Live environment** page, the same channel in draft environment is not impacted or changed on the **Draft environment** page. If you select a channel from the **Integrations** catalog, you are asked to select which environment you are editing:
+If you make an update to a channel in the draft environment on the **Draft environment** page, the same channel in live environment is not affected on the **Live environment** page. Similarly, if you make an update to a channel in the live environment on the **Live environment** page, the same channel in draft environment is not affected on the **Draft environment** page. If you select a channel from the **Integrations** catalog, you are asked to select which environment you are editing:
 
 ![GIF of the Integrations catalog](images/integrations-page.gif)
 
