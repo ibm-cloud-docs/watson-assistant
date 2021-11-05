@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-11-01"
+lastupdated: "2021-11-05"
 
 keywords: post webhook, postwebhook, post-webhook
 
@@ -67,7 +67,7 @@ Use an external service that can execute and return a result in less than 8 seco
 
 To add the webhook details, complete the following steps:
 
-1. From your assistant, click the ![Connect icon](images/connect-icon.png) icon to navigate to the **Connect** page.
+1. From your assistant, navigate to the page for the environment where you want to configure the webhook (**Draft environment** or **Live environment**).
 
 1. Click the ![Environment settings icon](images/gear-icon-black.png) icon to open the environment settings.
 
