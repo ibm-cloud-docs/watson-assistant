@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-19"
+lastupdated: "2021-11-05"
 
 subcollection: watson-assistant
 
@@ -52,7 +52,7 @@ If you're using a custom client application that does not support Markdown, don'
 If you are using the web chat integration, standard HTML tagging is supported. Other integrations, such as for Facebook and Slack, don't support HTML.
 {: note}
 
-## Including web content
+<!--## Including web content
 {: #respond-include-web-content}
 
 Depending on how your assistant is deployed, you can include references to web content. Choices include:
@@ -63,7 +63,7 @@ Depending on how your assistant is deployed, you can include references to web c
 | iFrame | Google Maps, SurveyMonkey, Calendly |
 | Image | Images from any public URL |
 | Video | YouTube, Vimeo, mp4 files |
-{: caption="Web content" caption-side="top"}
+{: caption="Web content" caption-side="top"}-->
 
 <!-- To learn more about which deployment options are compatible see **[COMPATIBILITY CHART TOPIC]**. -->
 

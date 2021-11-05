@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-22"
+lastupdated: "2021-11-05"
 
 subcollection: watson-assistant
 
@@ -43,12 +43,12 @@ subcollection: watson-assistant
 | Incompletion | Reasons why an action is not completed by a user, including `escalated to agent`, `started a new action`, `stuck on a step`, or `abandoned or ongoing`. [Learn more](/docs/watson-assistant?topic=watson-assistant-analytics-action-completion#reasons-for-incompletion) |
 | Integrations | Add-ons to the end experience that help solve specific user problems, for example, connecting to a human agent or searching existing help content. Integrations are not required for an assistant, but they are recommended. [Learn more](/docs/watson-assistant?topic=watson-assistant-deploy-assistant). |
 | Message | A single turn within a conversation that includes a single call to the `/message` API endpoint and its corresponding response. |
-| Monthly active user (MAU) | A single unique user who interacts with an assistant one or many times in a given month. [Learn more] (/docs/watson-assistant?topic=watson-assistant-admin-managing-plan#admin-managing-plan-user-based). |
+| Monthly active user (MAU) | A single unique user who interacts with an assistant one or many times in a given month. [Learn more](/docs/watson-assistant?topic=watson-assistant-admin-managing-plan#admin-managing-plan-user-based). |
 | Preview | Embeds your assistant in a chat window that is displayed on an IBM-branded web page. From the preview, you can test how a conversation flows through your assistant, from end to end. [Learn more](/docs/watson-assistant?topic=watson-assistant-preview-share). |
 | Recognition | Measurement of how many requests are being recognized by the assistant and routed into starting an action. [Learn more](/docs/watson-assistant?topic=watson-assistant-analytics-overview#recognition). |
 | Response | To create your assistant's response in an action step, you use the *Assistant says* section. This represents the text or speech the assistant delivers to a user at a particular step. Depending on the step, you can add a complete answer to a user's question or ask a follow-up question. [Learn more](/docs/watson-assistant?topic=watson-assistant-respond). |
 | Step | A step that you add to an action represents a single interaction or exchange of information with a customer, a turn in the conversation. [Learn more](/docs/watson-assistant?topic=watson-assistant-build-actions-overview#steps). |
-| Subaction | An action that is called from another action is referred to as a subaction. For example, as part of an action to place an order, you might call a subaction that enables a new customer to create an account. |
+| Subaction | An action that is called from another action is referred to as a subaction. For example, as part of an action to place an order, you might call a subaction that enables a new customer to create an account. [Learn more](/docs/watson-assistant?topic=watson-assistant-step-what-next#go-to-another-action) |
 | Training |  To set up a Watson instance with components that enable the system to function in a particular domain (for example: corpus content, training data that generates machine learning models, programmatic algorithms, annotators, or other ground truth components) and then making improvements and updates to these components based on accuracy analysis. |
 | Variable | A variable is data that a customer shares with the assistant, which is collected and saved so it can be referenced later. In actions, you can collect *action* and *session* variables. [Learn more](/docs/watson-assistant?topic=watson-assistant-manage-info#action-variables-and-session-variables). |
 | Web chat | A channel that you can use to embed your assistant in your company website. [Learn more](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat). |
