@@ -67,7 +67,7 @@ The following updates are not published in a version and must be configured manu
 
 ## Switching the live version
 {: #switching-live-version}
-1. To change the version of content that is live, go to the **Live environment** page and click the content under the **Published content** heading. The **Switch version** window comes up.
+1. To change the version of content that is live, go to the **Live environment** page and click the content under the **Published content** heading. The **Switch version** window opens.
 
 1. From the **Switch version** window, select the version of content that you want to connect to your live environment.
 
