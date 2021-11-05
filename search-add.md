@@ -369,7 +369,7 @@ To configure the search that is performed in {{site.data.keyword.discoveryshort}
 
       You are effectively defining the value that is used by the {{site.data.keyword.discoveryshort}} API as the `natural_language_query` parameter. For more information, see [Query parameters](/docs/discovery?topic=discovery-query-parameters#nlq){: external}.
 
-      If you don't specify a text string, the action sends the most-recently-submitted user message as the search string.
+      If you don't specify a text string, the action sends the most recently submitted user message as the search string.
 
       If you want to use the original customer message that triggered the action as the query string instead, you need to plan ahead. You can follow these steps:
 
