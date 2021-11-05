@@ -37,7 +37,7 @@ This topic reviews the basic steps and concepts that are involved to make your a
 Each assistant consists of three core elements:
 
 - **Content**: The conversation logic and words that are used to respond to your customer. Content is required for every assistant.
-- **Channels**: The location where your assistant interacts with your users, for example, over the phone, on a website, or in Slack. At least one channel is required for every assistant.
+- **Channels**: The location where your assistant interacts with your users (for example, over the phone, on a website, or in Slack). At least one channel is required for every assistant.
 - **Integrations**: Add-ons to the end experience that help solve specific user problems, for example, connecting to a human agent or searching existing help content. Integrations are not required for an assistant, but they are recommended.
 
 These three elements evolve as you build, edit, and update your assistant. In general, follow this high-level build, deploy, and publish process through the life of your assistant:
