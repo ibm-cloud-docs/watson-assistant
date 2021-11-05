@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-09-24"
+lastupdated: "2021-11-01"
 
 keywords: post webhook, postwebhook, post-webhook
 
@@ -69,7 +69,7 @@ To add the webhook details, complete the following steps:
 
 1. From your assistant, click the ![Connect icon](images/connect-icon.png) icon to navigate to the **Connect** page.
 
-1. Click the ![Environment settings icon](images/gear-icon.png) icon to open the environment settings.
+1. Click the ![Environment settings icon](images/gear-icon-black.png) icon to open the environment settings.
 
 1. On the **Environment settings** page, click **Webhooks > Post-message webhook**.
 
