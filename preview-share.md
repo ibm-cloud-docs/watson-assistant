@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-02"
+lastupdated: "2021-11-05"
 
 subcollection: watson-assistant
 
@@ -28,41 +28,31 @@ subcollection: watson-assistant
 # Previewing and sharing your assistant
 {: #preview-share}
 
-Internal review is a necessary step in any virtual assistant workflow. You need an environment that is free from customer interactions so your team can test your assistant. This draft environment should closely resemble the final experience that your users encounter so you can ensure that you are publishing the optimal end product.
-
-## The **Preview** page
-
-Click **Preview** in the navigation pane to open the Preview page, which you can use to test your assistant with your team. From this page, you can experience your assistant from your customer's perspective.
-
-The following image shows what the built-in web chat integration with Watson Assistant looks like on an example banking website. The interactive web chat widget is labeled **Assistant preview**. The content contained in that assistant is the content that you built into your actions or set up with the search integration.
-
-![Image of the Preview tab](images/preview-tab.png)
-
-On the **Preview** page, you also find the following elements:
-
-| Page element | Description |
-| --- | --- |
-| Share link | You can share an unauthenticated version of your assistant with your colleagues by sending them a link. |
-| **Test integrations** panel | Manage the different integrations that you connected to your draft. |
-<!-- | Website background input | This feature will be available in a future release. With this feature, you can change the background of the page so you can see what your assistant looks like in different website contexts. | -->
+Internal review is a necessary step in any virtual assistant workflow. You need an environment that is free from customer interactions so your team can test your assistant. The draft environment should closely resemble the final experience that your users encounter so you can ensure that you are publishing the optimal end product.
+{: shortdesc}
 
 ## Saving and editing your work in the draft environment
+Manage your draft environment from the **Draft environment** page, and preview customer interactions with your assistant from the **Preview** page. The assistant configurations on these pages cannot be seen by your customers. After you deploy your assistant to a live channel and publish your content, the assistant is live on its configured channels. Live channels are configured separately from draft channels so that you can test new channels in your draft environment before you deploy an assistant to them in the live environment. To learn more about {{site.data.keyword.conversationshort}} environments, see [Environments](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments).
 
-The **Preview** page represents the draft environment for your assistant. You can think of an _environment_ as a space within the product that contains a version of your work. As you edit and save your work, the version updates to reflect the most up-to-date content.
-
-The draft environment on the **Preview** page cannot be seen by your customers. However, after you deploy your assistant to a channel with customer traffic and publish your assistant, that assistant is in the live environment. To learn more about Watson Assistant environments, see [Environments](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments).
-
-As you edit your assistant from the **Build** page, your changes are automatically reflected on the **Preview** page. This includes any saved changes that are made to your assistant’s extensions, including search or integrations.
+As you edit your content from the **Actions** page, your changes are automatically reflected on the **Preview** page. This includes any saved changes that are made to your assistant’s integrations, including search or integrations with other platforms.
 
 ![GIF of a user saving integrations](images/integrations.gif)
 
-You can edit the web chat integration branding, home screen, and settings in the **Test integrations** panel under the web chat channel. Open the integration and select **Draft** to view the configuration pages.
+## The Preview page
+Use the **Preview** page to test your assistant with your team. From this page, you can experience your assistant from your customer's perspective. On the **Preview** page, the **Assistant preview** window is the interactive web chat widget where you can test out your assistant as if you were a customer. The content contained in the assistant is the content that you built into your actions or set up with the search integration. On the **Preview** page, you also find the following elements:
+- Share link: Share an unauthenticated version of your assistant with your colleagues by sending them a link.
+- **Test integrations** panel: Manage the different integrations that you connected to your draft environment.
+<!-- - Website background input: Change the background of the page so you can see what your assistant looks like in different website contexts. -->
 
-![GIF of a user opening an integration and selecting draft](images/integrations-2.gif)
+The following image shows what the web chat integration with {{site.data.keyword.conversationshort}} looks like on an example banking website:
+
+![Image of the Preview tab](images/preview-tab.png)
 
 ## Previewing more than one channel
-Test integrations provide the ability to test channels before you go live with them. You can add more channels to the assistant by going to the **Integrations** catalog in the left navigation.
+Test integrations provide the ability to test channels before you go live with them. You can add channels to the assistant by going to the **Integrations** catalog. For more information about adding integrations to your assistant, see [Adding integrations](/docs/watson-assistant?topic=watson-assistant-deploy-integration-add).
 
-After you add channels to the assistant, they are accessible from the **Test integrations** panel on the **Preview** page. These channels can be configured and deployed to test different mediums, such as websites and Slack channels, to ensure that your content appears in the way that you want it to.
+After you add channels to the assistant, they are accessible from the **Test integrations** panel on the the **Preview** page. From the **Test integrations** panel, open an integration to view and update its configuration.
 
-Do not use these channels for live deployments because they reflect the most recently edited content, not your published content.
+![Image of the Test integrations panel](images/test-integrations-panel.png)
+
+These channels can be configured and deployed to test different mediums, such as websites and Slack channels, to ensure that your content appears in the way that you want it to. Do not use these channels for live deployments because they reflect the most recently edited content, not your published content.

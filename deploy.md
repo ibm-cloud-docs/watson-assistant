@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-13"
+lastupdated: "2021-11-05"
 
 subcollection: watson-assistant
 
@@ -28,26 +28,26 @@ subcollection: watson-assistant
 # Deploying your assistant
 {: #deploy-assistant}
 
-Watson Assistant routes your customer's questions and requests to the correct resolution source. However, before your assistant can properly route requests, you must complete the following steps:
+{{site.data.keyword.conversationshort}} routes your customer's questions and requests to the correct resolution source. However, before your assistant can properly route requests, you must complete the following steps:
 
 1. Write content for your assistant
 1. Publish the content
 1. Connect an integration to your assistant
 1. Deploy the assistant to a channel
 
-After you connect an integration and deploy to a channel, you make your assistant available to your customers. You can find an overview visual of your progress toward completing these steps on the **Connect** page:
+After you connect an integration and deploy to a channel, you make your assistant available to your customers. You can find an overview visual of your progress toward completing these steps on the **Live environment** page:
 
-![Image of the Connect page](images/connect-page.png)
+![Image of the Live environment page](images/live-environment-page.png)
 
 ## Reviewing your connected channels
 Channels represent the locations or communication platforms where your assistant interacts with your users. Common examples of channels include the phone, a website, or Slack. If you do not connect your assistant to a channel, your users are not able to access the assistant.
 
 You can review your connected channels in the following two places:
 
-- **Preview** page - The **Preview** page represents your draft environment. Channels that are connected to this environment are exposed only to your internal team for testing and not to your customers.
-- **Connect** page - The **Connect** page represents your live environment. Channels that are connected to this environment represent the public-facing experience of your assistant and are exposed to your customers.
+- **Draft environment** page - Channels that are connected to this environment are exposed only to your internal team for testing and not to your customers.
+- **Live environment** page - Channels that are connected to this environment represent the public-facing experience of your assistant and are exposed to your customers.
 
-When you first create a new assistant, the assistant automatically connects to the web chat channel on your live environment. However, the assistant itself is not available to your customers until you embed the web chat JavaScript in the header of your website. For more information, see [Adding the web chat to your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
+You can test integrations from the **Draft environment** page and interact with your draft web chat on the **Preview** page. When you first create a new assistant, the assistant automatically connects to the web chat channel on your live environment. However, the assistant itself is not available to your customers until you embed the web chat JavaScript in the header of your website. For more information, see [Adding the web chat to your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
 
 ## Connecting your assistant to a new channel
 All of the channels you can connect your assistant to are available in the **Integrations** catalog. Two types of integrations are available from the **Integrations** catalog:
@@ -55,9 +55,7 @@ All of the channels you can connect your assistant to are available in the **Int
 - Channel integrations: The location where your assistant interacts with your users, for example, over the phone, on a website, or in Slack. At least one channel is required for every assistant.
 - Non-channel integrations: Add-ons to the end experience that help solve specific user problems, for example, connecting to a human agent or searching existing help content. Integrations are not required for an assistant, but they are recommended.
 
-When you add a channel to your assistant, two instances of the channel are created. One instance of the channel is connected to the draft environment and the other instance is connected to the live environment. To connect your assistant to a new channel, go to the **Integrations** catalog. Then, select a channel, and click **Add +** on the box of the channel that you'd like to connect:
-
-![GIF of the Add + button in the Integrations catalog](images/add-link.gif)
+When you add a channel to your assistant, two instances of the channel are created. One instance of the channel is connected to the draft environment and the other instance is connected to the live environment. To connect your assistant to a new channel, go to the **Integrations** catalog. For more information about adding integrations to your assistant, see [Adding integrations](/docs/watson-assistant?topic=watson-assistant-deploy-integration-add).
 
 You have multiple options for deploying your assistant, depending on how you want your customers to interact with it. In most cases, an assistant is deployed by using one of the following integrations:
 
@@ -65,9 +63,9 @@ You have multiple options for deploying your assistant, depending on how you wan
 - [Phone integration](/docs/watson-assistant?topic=watson-assistant-deploy-phone): The phone integration enables your assistant to converse with customers on the phone by using the IBM Watson Text to Speech and Speech to Text services. If your customer asks to speak to a person, the phone integration can transfer the call to an agent.
 
 ## Updating and managing channels
-Each channel has specific settings that you can adjust to adapt the end experience for your user. You can edit these settings by selecting the channel on the **Connect**, **Preview**, or **Integrations** pages.
+Each channel has specific settings that you can adjust to adapt the end experience for your user. You can edit these settings by selecting the channel on the **Draft environment**, **Live environment**, or **Integrations** pages.
 
-If you make an update to a channel in the draft environment on the **Preview** page, the same channel in live environment is not impacted or changed on the **Connect** page. Similarly, if you make an update to a channel in the live environment on the **Connect** page, the same channel in draft environment is not impacted or changed on the **Preview** page. If you select a channel from the **Integrations** page, you are asked to select which environment you are editing:
+If you make an update to a channel in the draft environment on the **Draft environment** page, the same channel in live environment is not impacted or changed on the **Live environment** page. Similarly, if you make an update to a channel in the live environment on the **Live environment** page, the same channel in draft environment is not impacted or changed on the **Draft environment** page. If you select a channel from the **Integrations** catalog, you are asked to select which environment you are editing:
 
 ![GIF of the Integrations catalog](images/integrations-page.gif)
 
