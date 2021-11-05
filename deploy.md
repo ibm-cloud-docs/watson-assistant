@@ -45,7 +45,7 @@ Channels represent the locations or communication platforms where your assistant
 You can review your connected channels in the following two places:
 
 - **Draft environment** page: Channels that are connected to this environment are exposed only to your internal team for testing and not to your customers.
-- **Live environment** page - Channels that are connected to this environment represent the public-facing experience of your assistant and are exposed to your customers.
+- **Live environment** page: Channels that are connected to this environment represent the public-facing experience of your assistant and are exposed to your customers.
 
 You can test integrations from the **Draft environment** page and interact with your draft web chat on the **Preview** page. When you first create a new assistant, the assistant automatically connects to the web chat channel on your live environment. However, the assistant itself is not available to your customers until you embed the web chat JavaScript in the header of your website. For more information, see [Adding the web chat to your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
 
