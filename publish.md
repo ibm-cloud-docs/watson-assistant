@@ -73,7 +73,7 @@ The following updates are not published in a version and must be configured manu
 
   ![Image of the Switch version window](images/switch-version-window.png)
 
-1. Click **Switch version**. Clicking **Switch version** points the live environment to the version of content that you selected in the previous step.
+1. Click **Switch version** to point the live environment to the version of content that you selected in the previous step.
 
 ## Managing the live environment
 The **Live environment** page shows the live environment and the content and channels that are attached to it. From the **Live environment** page, you can manage live channel configurations by clicking them. You can also change the content version that is connected to the live environment by clicking the version and following the instructions that are outlined in [Changing the live version](#changing-live-version).
