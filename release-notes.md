@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-25"
+lastupdated: "2021-11-05"
 
 keywords: Watson Assistant release notes
 
@@ -38,6 +38,13 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 04 November 2021
+(: #watson-assistant-nov042021)
+{: release-note}
+
+Draft and Live Environment pages
+: Two pages, **Draft environment** and **Live environment**, help you to see how your channels and resolution methods are connected, both for testing/preview and for live deployment. The Draft environment page is new as of this release. The Live environment page was previously named Connect. For more information, see [Overview: Publishing and deploying your assistant](/docs/watson-assistant?topic=watson-assistant-publish-overview).
+
 ## 25 October 2021
 {: #assistant-oct252021}
 {: release-note}
@@ -49,7 +56,7 @@ Analytics for draft and live environments
 :   The **Analyze** page now lets you see analytics data for either the draft or live environments. For more information, see [Use analytics to review your entire assistant at a glance](/docs/watson-assistant?topic=watson-assistant-analytics-overview).
 
 ## 07 October 2021
-{: #assistant-07Oct2021}
+{: #watson-assistant-07Oct2021}
 {: release-note}
 
 The new Watson Assistant
