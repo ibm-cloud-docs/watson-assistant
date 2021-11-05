@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-04"
+lastupdated: "2021-11-05"
 
 keywords: Watson Assistant frequently asked questions
 
@@ -102,7 +102,7 @@ The length of time for which messages are retained depends on your service plan.
 {: #faqs-webhook-how}
 {: faq}
 
-To define a webhook and add its details, go to the **Connect** page and open the **Environment settings** page. From the **Environment settings** page, click **Webhooks > Pre-message webhook**. From this page, you can add details about your webhook. For more information, see [Making a call before processing a message](/docs/watson-assistant?topic=watson-assistant-webhook-pre).
+To define a webhook and add its details, go to the **Live environment** page and open the **Environment settings** page. From the **Environment settings** page, click **Webhooks > Pre-message webhook**. From this page, you can add details about your webhook. For more information, see [Making a call before processing a message](/docs/watson-assistant?topic=watson-assistant-webhook-pre).
 
 ## Can I have more than one entry in the URL field for a webhook?
 {: #faqs-webhook-url}

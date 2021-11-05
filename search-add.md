@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-21"
+lastupdated: "2021-11-05"
 
 subcollection: watson-assistant
 
@@ -147,13 +147,13 @@ If you have a Discovery service Lite plan, you are given an opportunity to upgra
             - For a Sharepoint data source, you specify paths.
             - For file repositories, you specify directories or files.
             - For a web crawl data source, specify the base URL of a website that you want to crawl. The web page that you specify and any pages that it links to are crawled and a document is created per web page.
-            
+
             Optionally, select the **Apply FAQ extraction** checkbox to enable a beta feature that is available in v2 {{site.data.keyword.discoveryshort}} instances. The FAQ extraction feature allows the {{site.data.keyword.discoveryshort}} service to extract question and answer pairs that it identifies in the data collection. If the answers to common questions are identified ahead of time, your assistant can more quickly find and return a concise answer when a customer asks a similar question.
-            
+
             To get help with creating data sources, see [Troubleshooting](#search-add-troubleshoot).
 
         -  Indicate the frequency with which you want data from the data source to be synchronized with the collection you are creating in {{site.data.keyword.discoveryshort}}.
-        
+
         - Click **Save & Sync**.
 
             Give Watson a few minutes to start creating documents. As soon as the source starts to be ingested, the number of documents displayed on the {{site.data.keyword.discoveryshort}} details page increases. You might need to refresh the page.
@@ -220,7 +220,7 @@ If you upload a JSON file that contains repeating name values, then only the fir
        For example, you might want to include a hypertext link to the original data object in its native data source. Most online data sources provide self-referencing public URLs for objects in the store to support direct access. If you add a URL, it must be valid and reachable. If it is not, the Slack integration will not include the URL in its response and the Facebook integration will not return any response.
 
        The Facebook and Slack integrations can successfully display the search result response when the URL field is empty.
-  
+
     You must choose a value for at least one of the search result sections.
     {: important}
 
@@ -247,7 +247,7 @@ If you upload a JSON file that contains repeating name values, then only the fir
 
 1.  **Extract FAQ pairs** is applied automatically. Frequently asked questions content is identified automatically and used to give more precise results.
 
-1.  Choose whether to enable **Emphasize the answer**. 
+1.  Choose whether to enable **Emphasize the answer**.
 
     This option is available only if your {{site.data.keyword.discoveryshort}} instance uses the v2 {{site.data.keyword.discoveryshort}} API.
     {: note}
@@ -261,8 +261,8 @@ If you upload a JSON file that contains repeating name values, then only the fir
     By default, customers can choose to see more results. If you don't want to give customers this choice, clear the **Include link for customers to view up to 10 results** checkbox.
 1.  Decide whether to be more selective with the answers that are returned.
 
-    By default, all search query matches, regardless of the confidence score of the match, are returned as search results. You can limit the search results to include only matches with a confidence score of 20% or higher in {{site.data.keyword.discoveryshort}}. 
-    
+    By default, all search query matches, regardless of the confidence score of the match, are returned as search results. You can limit the search results to include only matches with a confidence score of 20% or higher in {{site.data.keyword.discoveryshort}}.
+
     To enable the beta feature that filters the results, toggle the *Refine results to return more selective answers* switch to **On**.
 
 1.  Click **Preview** to open the Preview pane for testing. Enter a test message to see the results that are returned when your configuration choices are applied to the search. Make adjustments as necessary.
@@ -290,23 +290,23 @@ Review this information for help with performing common tasks.
 
 - **Creating a Web crawl data collection**: Things to know when you create a web crawl data source:
 
-    - For a {{site.data.keyword.discoveryshort}} Lite plan, you cannot create more than 1,000 documents. 
+    - For a {{site.data.keyword.discoveryshort}} Lite plan, you cannot create more than 1,000 documents.
     - To increase the number of documents that are available to the data collection, click add a URL group where you can list the URLs for pages that you want to crawl but that are not linked to from the initial seed URL.
     - To decrease the number of documents that are available to the data collection, specify a subdomain of the base URL. Or, in the web crawl settings, limit the number of hops that Watson can make from the original page. You can specify subdomains to explicitly exclude from the crawl also.
     - If no documents are listed after a few minutes and a page refresh, then make sure that the content you want to ingest is available from the URL's page source. Some web page content is dynamically generated and therefore cannot be crawled.
 
-- **Configuring search results for uploaded documents**: If you are using a collection of uploaded documents and cannot get the correct search results or the results are not concise enough, consider using *Smart Document Understanding* when you create the data collection. 
+- **Configuring search results for uploaded documents**: If you are using a collection of uploaded documents and cannot get the correct search results or the results are not concise enough, consider using *Smart Document Understanding* when you create the data collection.
 
-    This feature enables you to annotate documents based on text formatting. For example, you can teach {{site.data.keyword.discoveryshort}} that any text in 28-point bold font is a document title. If you apply this information to the collection when you ingest it, you can later use the *title* field as the source for the title section of your search result. 
-  
+    This feature enables you to annotate documents based on text formatting. For example, you can teach {{site.data.keyword.discoveryshort}} that any text in 28-point bold font is a document title. If you apply this information to the collection when you ingest it, you can later use the *title* field as the source for the title section of your search result.
+
     You can also use Smart Document Understanding to split up large documents into segments that are easier to search. For more information, see the the [Smart Document Understanding](/docs/discovery?topic=discovery-sdu) topic in the {{site.data.keyword.discoveryshort}} documentation.
 
 <!--- **Improve search results**: If you don't like the results you are seeing, review this information for help.
 
-    - Call the search integration from a dialog node, and specify filter details. 
+    - Call the search integration from a dialog node, and specify filter details.
 
-        From a dialog node search integration response, you can specify a full {{site.data.keyword.discoveryshort}} query syntax filter to help narrow the results. 
-    
+        From a dialog node search integration response, you can specify a full {{site.data.keyword.discoveryshort}} query syntax filter to help narrow the results.
+
         For example, you can define a filter that filters out any documents in the data collection that do not mention an intent in the document title or some other metadata field. Or the filter can filter out documents that do not identify an entity as a known entity in the data collection's metadata or that don't mention the entity anywhere in the full text of the document. For details about how to add a search integration response type, see [Adding a *search integration* response type](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-add-search-skill){: external}.
 
          For more tips about improving results, read the [Improve your natural language query results from Watson Discovery](https://developer.ibm.com/blogs/improving-your-natural-language-query-results-from-watson-discovery/){: external} blog post.-->
@@ -335,21 +335,21 @@ Review this information for help with performing common tasks.
     {: codeblock}
 
     If you see this happening, consider choosing a different collection field from which to extract search results.
-  
+
     The {{site.data.keyword.discoveryshort}} document `highlight` field stores values in an array.
     {: note}
 
 ## Next steps
 {: #search-add-next-steps}
 
-After you add search, it appears as a tile on the **Connect** page.
+After you add search, it appears as a tile on the **Live environment** page.
 
 The search integration cannot interact with customers until it is added to an assistant and the assistant is deployed.
 
 ## Search trigger
 {: #search-add-trigger}
 
-The search integration is triggered from an action step. This approach is useful if you want to narrow down a user query before you trigger a search. 
+The search integration is triggered from an action step. This approach is useful if you want to narrow down a user query before you trigger a search.
 
 For example, the conversational flow might collect information about the type of device a customer wants to buy. When you know the device model, you can then send a model keyword in the query that is submitted to the search integration to get better results.
 
@@ -363,25 +363,25 @@ To configure the search that is performed in {{site.data.keyword.discoveryshort}
 
     - **Custom query**. Add a word or phrase that you want to submit to {{site.data.keyword.discoveryshort}} as the query string for the search.
 
-      For example, you can specify a string such as, `What cities do you fly to?`. 
-      
+      For example, you can specify a string such as, `What cities do you fly to?`.
+
       For a more dynamic string, you can include a variable. For example, `Do you have flights to ${destination}?`
-      
+
       You are effectively defining the value that is used by the {{site.data.keyword.discoveryshort}} API as the `natural_language_query` parameter. For more information, see [Query parameters](/docs/discovery?topic=discovery-query-parameters#nlq){: external}.
 
-      If you don't specify a text string, the action sends the most-recently-submitted user message as the search string. 
-      
+      If you don't specify a text string, the action sends the most recently submitted user message as the search string.
+
       If you want to use the original customer message that triggered the action as the query string instead, you need to plan ahead. You can follow these steps:
-  
+
       1. Create a session variable to store the initial user input. For example, named `original message`.
       1. In Step 1, meaning the first step after the action trigger, set the value of the session variable. For more information about session variables, see [Defining session variables](#actions-variables-global).
-      1. Set the value of the variable by using an expression that looks like this: `<? input.text ?>`. 
-  
+      1. Set the value of the variable by using an expression that looks like this: `<? input.text ?>`.
+
         This expression captures the complete message that was submitted by the customer. As a result, your variable captures the customer message that triggered this action.
       1. Add the session variable to the *Custom query* field. For example: `${original_message}`
 
-    - **Customer filter**: Add a text string that defines information that must be present in any of the search results that are returned. 
-    
+    - **Customer filter**: Add a text string that defines information that must be present in any of the search results that are returned.
+
       You are effectively defining the value that is used by the {{site.data.keyword.discoveryshort}} API as the `filter` parameter. For more information, see [Query parameters](/docs/discovery?topic=discovery-query-parameters#filter){: external}.
 
       The syntax to use for the filter value is not intuitive. Here are a few examples of common use cases:

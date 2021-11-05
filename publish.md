@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-02"
+lastupdated: "2021-11-05"
 
 subcollection: watson-assistant
 
@@ -28,9 +28,12 @@ subcollection: watson-assistant
 # Publishing your content
 {: #publish}
 
+Publishing is a way to maintain a healthy lifecycle management process. Publishing allows you to build and test your assistant in an environment separate from the live assistant that your customers interact with.
+{: shortdesc}
+
 It's important to understand how publishing works to ensure proper lifecycle management process for your assistant. For customers to interact with your most up-to-date content, you must do two foundational things:
 
-- Deploy a live channel
+- Deploy your assistant to a live channel
 - Publish content to the live environment
 
 ## How to publish
@@ -62,26 +65,19 @@ The following updates are not published in a version and must be configured manu
 - Channel configurations
 - Environment settings
 
-## Why publish?
-Publishing is a way to maintain a healthy lifecycle management process. Publishing allows users to build and test in a separate environment than where the live content resides.
-<!--- For more information, see [Manage your future iterations and launches](link). --->
+## Switching the live version
+{: #switching-live-version}
+1. To change the version of content that is live, go to the **Live environment** page and click the content under the **Published content** heading. The **Switch version** window opens.
 
-## Changing the live version
-{: #changing-live-version}
-1. To change the live version, go to the **Publish** page and select a non-live version from the **Version history** panel.
-1. Click **Revert**. Clicking **Revert** points the live environment to the version of content that you selected in the previous step.
+1. From the **Switch version** window, select the version of content that you want to connect to your live environment.
 
-  ![Image of the no new changes to publish screen with a version selected from Version history](images/unpublished-content-version-history.png)
+  ![Image of the Switch version window](images/switch-version-window.png)
 
-1. From the **Replace live version** window, confirm that the requested changes look correct. If they do, click **Revert**.
-
-  ![Image of the Replace live version dialog](images/replace-live-version-snippet.png)
+1. Click **Switch version** to point the live environment to the version of content that you selected in the previous step.
 
 ## Managing the live environment
-The **Connect** page shows the live environment and the content and channels that are attached to it.
-
-From the **Connect** page, you can manage live channel configurations by clicking them. You can also change the content version that is connected to the live environment by clicking the version and following the instructions that are outlined in [Changing the live version](#changing-live-version).
+The **Live environment** page shows the live environment and the content and channels that are attached to it. From the **Live environment** page, you can manage live channel configurations by clicking them. You can also change the content version that is connected to the live environment by clicking the version and following the instructions that are outlined in [Changing the live version](#changing-live-version).
 
 Update environment-specific settings by clicking the gear icon next to **live** in the upper left. From this menu, API details, web hooks, and inactivity timeout can be accessed and managed.
 
-![Image of the live environment channels](images/live-environment-channels.png)
+![Image of the Live environment page](images/live-environment-page.png)
