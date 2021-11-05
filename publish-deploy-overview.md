@@ -85,7 +85,7 @@ Use the **Live environment** page to manage the live environment. This page indi
 The version of content displayed under **Published content** is the version that is connected to the live environment. You can change this version from the **Publish** page, or by clicking **Edit content** from the **Live environment** page and selecting a different version.
 
 ## Deploying
-To deploy an assistant to customers, a channel must be created. Web chat is created by default, which allows an assistant to be embedded in a website. Many different channels exist that can be added from the **Integrations** catalog. For more information about deploying to your website, see [Adding the web chat to your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
+To deploy an assistant to customers, a channel integration must be added. By default, a web chat integration is created, allowing an assistant to be embedded in a website. Other channel integrations are available in the **Integrations** catalog. For more information about deploying to your website, see [Adding the web chat to your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
 
 ![Image of the Integrations catalog](images/integrations-catalog.png)
 
