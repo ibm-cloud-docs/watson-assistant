@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-10-21"
+lastupdated: "2021-11-08"
 
 subcollection: watson-assistant
 
@@ -152,7 +152,9 @@ To reference a variable in what your assistant says:
 
 1. In the **Assistant says** field, start typing the text for the response.
 
-1. When you reach a point where you want to insert a reference to a variable, type a dollar sign (`$`) or click the *Insert a variable* icon (![Insert a variable icon](images/action-variable-icon.png)). A list appears showing the variables you can choose from.
+1. When you reach a point where you want to insert a reference to a variable, type a dollar sign (`$`) or click the *Insert a variable* icon (![Insert a variable icon](images/action-variable-icon.png)). A list appears showing the variables you can choose from. 
+
+    You can also use variables in links. In the URL field for a link, add a dollar sign ($) character to see a list of variables to choose from.
 
 1. Click a variable to add a reference to it in the text.
 
