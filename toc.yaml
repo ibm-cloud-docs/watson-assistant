@@ -17,10 +17,11 @@ toc:
       id: learn
       topics:
       - welcome-new-assistant.md
-#      - topicgroup:
-#          label: topic-group-label
-#          topics:
-#          - index.md
+      - topicgroup:
+          label: Release notes
+          topics:
+          - release-notes.md
+          - release-notes-chat.md
 
  # - navgroup:
  #     id: tutorial
@@ -191,11 +192,6 @@ toc:
       id: help
       topics:
       - faqs.md
-      - topicgroup:
-          label: Release notes
-          topics:
-          - release-notes.md
-          - release-notes-chat.md
       - troubleshoot.md
       - feedback.md
       - topicgroup:
