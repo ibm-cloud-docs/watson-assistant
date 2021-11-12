@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-10-25"
+lastupdated: "2021-11-11"
 
 subcollection: watson-assistant
 
@@ -64,12 +64,12 @@ These three traffic metrics -- *unique users*, *conversations*, and *user reques
 
 The *completion* and *recognition* charts provide information about the actions in your assistant.
 
-![Completion and recognition](images/analytics-completion-recognition.png)
+![Completion and recognition](images/analytics-completion-recognition-2.png)
 
 ### Completion
 {: analytics-completion-section}
 
-*Completion* is the measurement of how often users are able to successfully get through all steps of an action. 
+*Completion* is the measurement of how often users are able to successfully get through all steps of an action.
 
 Your assistant measures when someone reaches the final step of an action. The completion chart provides an overview of all the actions you have built and how many of these are being completed or not.
 
@@ -93,10 +93,8 @@ These most/least cards help you to quickly identify specific actions that might 
 
 ![Most frequent, least frequent, and least completed](images/analytics-most-least.png)
 
-*Most frequent actions* shows the actions that have the most recognized requests matched with that action. 
+*Most frequent actions* shows the actions that have the most recognized requests matched with that action.
 
 *Least frequent actions* is the exact opposite of *most frequent*. It can help you identify actions that possibly have poor training and are not matching well to actual requests from your users.
 
 *Least completed actions* shows a list of actions with the lowest completion rate, by percentage. This measurement doesn't take traffic into account. This can be another good indication of actions where maybe the flow or content can be improved, and you can spend time investigating.
-
-

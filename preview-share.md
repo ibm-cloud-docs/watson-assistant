@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-11-11"
 
 subcollection: watson-assistant
 
@@ -39,20 +39,18 @@ As you edit your content from the **Actions** page, your changes are automatical
 ![GIF of a user saving integrations](images/integrations.gif)
 
 ## The Preview page
-Use the **Preview** page to test your assistant with your team. From this page, you can experience your assistant from your customer's perspective. On the **Preview** page, the **Assistant preview** window is the interactive web chat widget where you can test out your assistant as if you were a customer. The content contained in the assistant is the content that you built into your actions or set up with the search integration. On the **Preview** page, you also find the following elements:
+Use the **Preview** page to test your assistant with your team. From this page, you can experience your assistant from your customer's perspective. On the **Preview** page, the **Assistant preview** pane is the interactive web chat widget where you can test out your assistant as if you were a customer. The content contained in the assistant is the content that you built into your actions or set up with the search integration. On the **Preview** page, you also find the following elements:
+- Web chat channel configuration: Customize your draft web chat channel to match your brand or website. 
 - Share link: Share an unauthenticated version of your assistant with your colleagues by sending them a link.
-- **Test integrations** panel: Manage the different integrations that you connected to your draft environment.
 <!-- - Website background input: Change the background of the page so you can see what your assistant looks like in different website contexts. -->
 
 The following image shows what the web chat integration with {{site.data.keyword.conversationshort}} looks like on an example banking website:
 
-![Image of the Preview tab](images/preview-tab.png)
+![Image of the Preview page](images/preview-page.png)
 
-## Previewing more than one channel
-Test integrations provide the ability to test channels before you go live with them. You can add channels to the assistant by going to the **Integrations** catalog. For more information about adding integrations to your assistant, see [Adding integrations](/docs/watson-assistant?topic=watson-assistant-deploy-integration-add).
+## Previewing multiple channel integrations
+From the **Preview** page, you have the ability to test channels before you go live with them. For more information about adding channels to your assistant, see [Adding integrations](/docs/watson-assistant?topic=watson-assistant-deploy-integration-add). After you add channels to the assistant, they are accessible from the **Draft environment** page:
 
-After you add channels to the assistant, they are accessible from the **Test integrations** panel on the the **Preview** page. From the **Test integrations** panel, open an integration to view and update its configuration.
-
-![Image of the Test integrations panel](images/test-integrations-panel.png)
+![Image of the Draft environment panel](images/draft-environment-page.png)
 
 These channels can be configured and deployed to test different mediums, such as websites and Slack channels, to ensure that your content appears in the way that you want it to. Do not use these channels for live deployments because they reflect the most recently edited content, not your published content.

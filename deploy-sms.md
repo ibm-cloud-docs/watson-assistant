@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-10-07"
+lastupdated: "2021-11-11"
 
 subcollection: watson-assistant
 
@@ -73,6 +73,8 @@ To set up the integration, complete the following steps:
 1.  Enter your **Account SID** information. Click **Next** to go to Step 2 of your *SMS with Twilio* integration setup.
 
 1.  Enter your **Auth token** information. Click **Next** to go to Step 3 of your *SMS with Twilio* integration setup.
+
+1.  **Optional**: Enter the phone number that your Twilio account uses for SMS integration. The webhook URI is used to transfer messages, but if you add your phone number in this optional field, you can easily refer to it later. Click **Next** to go to Step 4 of your *SMS with Twilio* integration setup.
 
 1.  Copy the value from the **Webhook URI** field.
 

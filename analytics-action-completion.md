@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-25"
+lastupdated: "2021-11-11"
 
 subcollection: watson-assistant
 
@@ -63,17 +63,17 @@ An action is considered incomplete for these reasons:
 ## Improving completion
 {: #analytics-improving-completion}
 
-To help you identify actions that need improvement, the **Action completion** page is organized into a **How often** chart and an **Actions** table. The **How often** chart shows the number of complete and incomplete actions during a time frame. The **Actions** table provides number of requests, total incomplete, and completion percentage per action.
+To help you identify actions that need improvement, the **Action completion** page is organized into a **How often** chart and an **Actions** table. The **How often** chart shows either the percentage of complete actions or the number of complete and incomplete actions during a timeframe. Use the icon in the upper right of the chart to toggle between a line chart that shows the percentage of complete actions or a bar chart that shows the number of complete and incomplete actions. The **Actions** table provides number of requests, total incomplete, and completion percentage per action.
 
 ![Action completion](images/analytics-action-completion.png)
 
-You can use the **Actions** table to focus on improving the completion of your actions. **Total incomplete** results provide a focus area where you can make the biggest impact. The actions with the highest number of incompletions means these are the actions with the most users unable to get their questions answered or requests resolved.
+You can use the **Actions** table to focus on improving the completion of your actions. **Incomplete** results provide a focus area where you can make the biggest impact. The actions with the highest number of incompletions means these are the actions with the most users unable to get their questions answered or requests resolved.
 
 To work on a specific action, click on the action name in the table. A page opens with completion details for that single action.
 
 ![Action page](images/analytics-single-action.png)
 
-The *Incomplete* and *Complete* tabs provide details by timeframe. The Incomplete tab bar chart shows data for the four incompletion reasons. The Complete tab bar chart is organized by conversations either completed by assistant or completed by a planned `connect to agent` response.
+The *Incomplete* and *Complete* tabs provide details by timeframe. The *Incomplete* tab bar chart shows data for the four incompletion reasons. The *Complete* tab bar chart is organized by conversations either completed by the assistant or completed by a planned `connect to agent` response.
 
 As you click on each tab, a table below the chart shows the list of either incomplete or complete requests. To explore individual requests in detail, you can click on each one. A panel opens showing the full back and forth between your customer and the assistant, including step interactions. The panel also provides a summary of how many requests there were, how many were recognized, whether search was initiated, and the duration of the conversation.
 
@@ -82,6 +82,6 @@ As you click on each tab, a table below the chart shows the list of either incom
 ### Editing an action
 {: #analytics-edit-action}
 
-Once you decide on changes you want to make to improve the action, click the edit icon in the header for the single action, which opens your action for further work on its steps.
+After you decide on changes you want to make to improve the action, click the edit icon in the header for the single action, which opens your action for further work on its steps.
 
 ![Edit action](images/analytics-completion-edit-action.png)
