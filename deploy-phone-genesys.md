@@ -88,7 +88,7 @@ To integrate your assistant with Genesys Cloud, follow these steps:
   ![Genesys select codec](images/phone-genesys-select-codec.png)
 
 1. Under **Protocol**:
-  - In the **Header/Invite** section, toggle the **Conversation Headers** switch to **Enabled**
+  - In the **Header/Invite** section, toggle the **Conversation Headers** switch to **Enabled**.
   - Enable **Take Back and Transfer**.
 
   ![Genesys configure protocol](images/phone-genesys-configure-protocol.png)
