@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-17"
+lastupdated: "2021-11-17"
 
 subcollection: watson-assistant
 
@@ -85,13 +85,13 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
 1. Under **Media**, remove **Opus** from the **Preferred Codec List**. Click **Select a Codec** and then select **g729** to add it to the list. Leave **PCMU** as the first item in the list.
 
-  ![Genesys select codec](images/phone-genesys-select-codec.png)
+    ![Genesys select codec](images/phone-genesys-select-codec.png)
 
 1. Under **Protocol**:
-  - In the **Header/Invite** section, toggle the **Conversation Headers** switch to **Enabled**.
-  - Enable **Take Back and Transfer**.
+    - In the **Header/Invite** section, toggle the **Conversation Headers** switch to **Enabled**.
+    - Enable **Take Back and Transfer**.
 
-  ![Genesys configure protocol](images/phone-genesys-configure-protocol.png)
+    ![Genesys configure protocol](images/phone-genesys-configure-protocol.png)
 
 1. Click **Save External Trunk**.
 
@@ -122,13 +122,13 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
     - Toggle the **State** switch to **Enabled**.
 
-  ![Genesys outbound route](images/phone-genesys-outbound-route.png)
+    ![Genesys outbound route](images/phone-genesys-outbound-route.png)
 
 1. Click **Save Outbound Routes**.
 
 1. Go to the **Simulate Call** tab and click the **Simulate Call** button. The trunk should be shown as operational. (No actual call is made during simulation.)
 
-  ![Genesys simulate call](images/phone-genesys-simulate-call.png)
+    ![Genesys simulate call](images/phone-genesys-simulate-call.png)
 
 1. Go to **Phone Management** and click **Create new**. Specify the following information:
 
@@ -253,8 +253,8 @@ Now that your Genesys Cloud environment can connect to Watson Assistant, you can
     }
     ```
 
-  Make sure you use the `\\` escape characters so Watson Assistant does not misinterpret the `@` as part of the entity shorthand syntax.
-  {: note}
+    Make sure you use the `\\` escape characters so Watson Assistant does not misinterpret the `@` as part of the entity shorthand syntax.
+    {: note}
 
 1. Make a test call and say something that initiates a transfer to an agent. In your Genesys Cloud console, you should see the transfer take place.
 
