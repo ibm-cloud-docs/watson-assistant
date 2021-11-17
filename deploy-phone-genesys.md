@@ -91,8 +91,6 @@ To integrate your assistant with Genesys Cloud, follow these steps:
     - In the **Header/Invite** section, toggle the **Conversation Headers** switch to **Enabled**.
     - Enable **Take Back and Transfer**.
 
-    ![Genesys configure protocol](images/phone-genesys-configure-protocol.png)
-
 1. Click **Save External Trunk**.
 
 1. Under **Sites**, select the existing site you want to use this trunk with. To create a new site, specify a name and location and click **Create**.
