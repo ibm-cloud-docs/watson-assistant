@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-11-19"
 
 subcollection: watson-assistant
 
@@ -91,9 +91,9 @@ To see if the assistant responses are formatted correctly, you can use **Preview
 - Only include links to external sites in responses if the answer depends on data that changes frequently.
 - Word your responses carefully. You can change how someone reacts to your system based simply on how you phrase a response. Changing one line of text can prevent you from having to write multiple lines of code to implement a complex programmatic solution.
 
-## Advanced options for formatting responses
-{: #respond-advanced-formatting}
+## Response types
+{: #respond-response-types}
 
-If you want to format your assistant’s responses in ways that the formatting tools don't provide, you can write custom formatting using the built-in JSON editor.
+In addition to text responses, you can use _response types_ to send responses that include multimedia or interactive elements, or to handle channel-specific interactions. To use most response types, you must use the JSON editor to directly edit the response object that your assistant sends to the channel.
 
-To access the JSON editor, click the **Switch to JSON editor** icon in the corner of the **Assistant says** field. The JSON editor shows how the response is stored behind the scenes.<!-- For more information about how to use the JSON editor, see **[JSON EDITOR TOPIC]**. -->
+For more information about how to edit responses using the JSON editor, see [Defining responses using the JSON editor](/docs/watson-assistant?topic=watson-assistant-responses-json).

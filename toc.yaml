@@ -124,11 +124,13 @@ toc:
           label: Customizing and developing
           topics:
           - develop-overview.md
+          - assistant-responses-json.md
           - expressions.md
           - topicgroup:
               label: Customizing channels
               topics:
               - customize-web-chat.md
+              - phone-actions.md
           - topicgroup:
               label: Extending your assistant with webhooks
               topics:
@@ -142,7 +144,9 @@ toc:
       id: reference
       topics:
       - glossary.md
+      - response-types-reference.md
       - preview-runtime-errors.md
+      - phone-context.md
       - sms-reference.md
       - topicgroup:
           label: Web chat API reference
