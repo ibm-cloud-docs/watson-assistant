@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-17"
+lastupdated: "2021-11-19"
 
 subcollection: watson-assistant
 
@@ -58,15 +58,13 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
     - In the **Inbound SIP Termination Identifier** field, specify any name you want to use (for example, `Watson`). This value will not be used for now, but it is required by Genesys Cloud.
 
-    - In the **Protocol** field, select *TLS*.
-
     ![Genesys create trunk](images/phone-genesys-create-trunk.png)
 
 1. Under **Outbound**, scroll to the **SIP Servers or Proxies** section. Specify the following information:
 
     - In the **Hostname or IP Address** field, type the SIP URI (not including `sips:`) from your Watson Assistant phone integration settings.
 
-    - In the **Port** field, type `5061`.
+    - In the **Port** field, type `5060`.
     
     Click the **`+`** button.
 
@@ -87,9 +85,7 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
     ![Genesys select codec](images/phone-genesys-select-codec.png)
 
-1. Under **Protocol**:
-    - In the **Header/Invite** section, toggle the **Conversation Headers** switch to **Enabled**.
-    - Enable **Take Back and Transfer**.
+1. Under **Protocol**, enable **Take Back and Transfer**.
 
 1. Click **Save External Trunk**.
 
@@ -106,7 +102,7 @@ To integrate your assistant with Genesys Cloud, follow these steps:
       To create a PSTN number you can give to your clients, you must create a Direct Inward Dialing (DID) or Bring Your Own Carrier (BYOC) number. For more information about how to do this, see the Genesys documentation.
       {: note}
 
-    - In the **Classification** field, type a classification name (for example, `Watson`).
+    - 1. In the **Classification** field, type a classification name (for example, `Watson`).
     
     Click **Save Number Plans**.
 
@@ -191,10 +187,6 @@ Now that your Genesys Cloud environment can connect to Watson Assistant, you can
 
       ![Genesys task](images/phone-genesys-task.png)
 
-    1. From your toolbox, under **Data**, drag a **Set Participant Data** widget into the first action. Click on the widget and specify an attribute named **uuiData**. For the value to assign, choose the **Expression** type and specify `Call.UUIData`.
-    
-      ![Genesys Set participant data widget](images/phone-genesys-set-participant-data-widget.png)
-
     1. From your toolbox, under **Transfer**, drag the **Transfer to ACD** widget into the first action.
 
       ![Genesys transfer widget](images/phone-genesys-transfer-widget.png)
@@ -219,7 +211,7 @@ Now that your Genesys Cloud environment can connect to Watson Assistant, you can
 
     1. Click **Save**.
 
-1. Make sure your assistant is configured with at least one dialog node or action step that transfers calls to an agent using the *Connect To Agent* response_type. <!-- For more information about how to do this, see [Transferring a call to a human agent](/docs/assistant?topic=assistant-dialog-voice-actions#dialog-voice-actions-transfer){: external}. We need to add this back when Anna Guri completes her updates.-->
+1. Make sure your assistant is configured to transfer calls to an agent using the *Connect To Agent* response_type. For more information about how to do this, see [Transferring a call to a human agent](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer).
 
     For the `sip.uri` parameter, use the DID number you created in Genesys Cloud, as well as the inbound SIP URI from your Genesys trunk. Use the following format:
 
@@ -255,8 +247,3 @@ Now that your Genesys Cloud environment can connect to Watson Assistant, you can
     {: note}
 
 1. Make a test call and say something that initiates a transfer to an agent. In your Genesys Cloud console, you should see the transfer take place.
-
-
-###  Share the conversation history with service desk agents 
-
-To enable the service desk agent to get a quick view of the conversation history between the visitor and the assistant, set up the {{site.data.keyword.conversationshort}} Agent App app for your Genesys Pure Cloud Environment. For more information, see the documentation for the [Genesys starter kit](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/genesys/agentApp){: external}.

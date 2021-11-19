@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-09-24"
+lastupdated: "2021-11-19"
 
 subcollection: watson-assistant
 
@@ -121,7 +121,7 @@ Your company might already have one or more phone numbers that connect to an aut
 
 A conversation cannot be transferred from one integration type to another. For example, if you use the web chat integration with service desk support, you cannot transfer a phone call to the service desk that is set up for the web chat.
 
-You must provide the call center SIP URI for the call center service you use. You must specify this information in your assistant when you enable a call transfer from a dialog node or action step. <!-- For more information, see [Transfer a call to a human agent](/docs/assistant?topic=assistant-dialog-voice-actions#dialog-voice-actions-transfer){: external}. Let's add this back when connect_to_agent is properly documented by Anna Guri. -->
+You must provide the call center SIP URI for the call center service you use. You must specify this information in your assistant when you enable a call transfer from a dialog node or action step. For more information, see [Transferring a call to a human agent](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer).
 
 ## Optimize your actions for phone interaction
 {: #deploy-phone-config-actions}
@@ -136,7 +136,7 @@ For the best customer experience, design your dialog with the capabilities of th
 
 For more information about using the search integration, see [Leveraging existing help content](/docs/watson-assistant?topic=watson-assistant-search-add).
 
-<!-- For more information about how to implement common actions from your dialog, see [Handling phone integrations](/docs/assistant?topic=assistant-dialog-voice-actions){: external}. Let's add this back when this section is updated by Anna Guri.-->
+For more information about how to implement common actions from your dialog, see [Handling phone interactions](/docs/watson-assistant?topic=watson-assistant-phone-actions).
 
 <!-- If you want to use the same dialog for an assistant that you deploy to many different platforms, you can add custom responses per integration type. Add a conditioned response that tells the assistant to show the response only when the phone integration is being used. For more information, see [Building integration-specific responses](/docs/assistant?topic=assistant-dialog-integrations#dialog-integrations-condition-by-type){: external}. I don't have confidence this really works. We should confirm it works with the phonse integration channel before this goes into our public doc.  -->
 
