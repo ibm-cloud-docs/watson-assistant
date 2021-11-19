@@ -249,19 +249,15 @@ Not all channel integrations support all response types. For information about w
 
 The following table indicates which channel integrations support each type. For additional information about any channel-specific limitations, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference).
 
-
 | Response type    | Web chat                          | Phone                             | SMS                               | Slack                             | Facebook                          | Whatsapp                          |
 |------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
 | audio            | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
-<!-- | channel_transfer |                                   |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | -->
 | connect_to_agent | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   | ![Yes](images/checkmark-icon.svg) |
 | dtmf             |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |
 | end_session      |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |
 | iframe           | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   | ![Yes](images/checkmark-icon.svg) |                                   |
 | image            | ![Yes](images/checkmark-icon.svg) |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 | option           | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
-<!-- | pause            | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | -->
-<!-- | search           | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | -->
 | speech_to_text   |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |
 | start_activities |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |
 | stop_activities  |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |
@@ -269,3 +265,4 @@ The following table indicates which channel integrations support each type. For 
 | text_to_speech   |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |
 | user_defined     | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 | video            | ![Yes](images/checkmark-icon.svg) |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
+
