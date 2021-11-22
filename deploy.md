@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-11-18"
 
 subcollection: watson-assistant
 
@@ -52,10 +52,12 @@ You can test integrations from the **Draft environment** page and interact with 
 ## Connecting your assistant to a new channel
 All of the channels you can connect your assistant to are available in the **Integrations** catalog. Two types of integrations are available from the **Integrations** catalog:
 
-- Channel integrations: The location where your assistant interacts with your users, for example, over the phone, on a website, or in Slack. At least one channel is required for every assistant.
-- Non-channel integrations: Add-ons to the end experience that help solve specific user problems, for example, connecting to a human agent or searching existing help content. Integrations are not required for an assistant, but they are recommended.
+- Channels: The location where your assistant interacts with your users, for example, over the phone, on a website, or in Slack. At least one channel is required for every assistant.
+- Extensions: Add-ons to the end experience that help solve specific user problems, for example, connecting to a human agent or searching existing help content. Extensions are not required for an assistant, but they are recommended.
 
 When you add a channel to your assistant, two instances of the channel are created. One instance of the channel is connected to the draft environment and the other instance is connected to the live environment. To connect your assistant to a new channel, go to the **Integrations** catalog. For more information about adding integrations to your assistant, see [Adding integrations](/docs/watson-assistant?topic=watson-assistant-deploy-integration-add).
+
+Although a channel always exists in both your draft and live environments, you can configure your integration separately between the draft and live environments. This allows you to test integrations on your draft environment before you go live with any integration configuration. After you add an integration, you must set it up if want to use it with your assistant. The **Finish setup** icon appears on any integration that you added but didn't yet set up:
 
 You have multiple options for deploying your assistant, depending on how you want your customers to interact with it. In most cases, an assistant is deployed by using one of the following integrations:
 
