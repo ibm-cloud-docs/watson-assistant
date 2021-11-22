@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-08"
+lastupdated: "2021-11-19"
 
 subcollection: assistant
 
@@ -66,7 +66,7 @@ You can use the following operators in your filter query.
 | `::!` | Negative exact match query operator. Prefix the query term with `::!` if you want to match only values that do _not_ exactly match the query term. |
 | `<=`, `>=`, `>`, `<` | Comparison operators. Prefix the query term with these operators to match based on arithmetic comparison. |
 | `\` | Escape operator. Use in queries that include control characters that would otherwise be parsed as operators. For example, `\!hello` would match the text `!hello`. |
-| `""` | Literal phrase. Use to encloses a query term that contains spaces or other special characters. No special characters within the quotation marks are parsed by the API. |
+| `""` | Literal phrase. Use to enclose a query term that contains spaces or other special characters. No special characters within the quotation marks are parsed by the API. |
 | `~` | Approximate match. Append this operator followed by a `1` or `2` to the end of the query term to specify the allowed number of single-character differences between the query string and a match in the response object. For example, `car~1` would match `car`, `cat`, or `cars`, but it would not match `cats`. This operator is not valid when filtering on `log_id` or any date or time field, or with fuzzy matching. |
 | `*` | Wildcard operator. Matches any sequence of zero or more characters. This operator is not valid when filtering on `log_id`, `language`, `request.context.system.assistant_id`, `workspace_id`, `request.context.metadata.deployment`, or any date or time field. |
 | `()`, `[]` | Grouping operators. Use to enclose a logical grouping of multiple expressions using Boolean operators. |
