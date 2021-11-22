@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-11-18"
 
 subcollection: watson-assistant
 
@@ -74,6 +74,15 @@ The following updates are not published in a version and must be configured manu
   ![Image of the Switch version window](images/switch-version-window.png)
 
 1. Click **Switch version** to point the live environment to the version of content that you selected in the previous step.
+
+## Reverting to a previous version
+Use the revert function if you need to update a version of content that is already published to your live environment. For example, if you publish V1 of your content and then notice an error in this content, you can revert your actions to V1 to correct the error. To revert to a previous version, click the **Revert** button from the **Publish** page:
+
+   ![Image of the Revert button](images/revert-button.png)
+
+From the **Revert unpublished content** page, first choose whether you want to save your in-progress actions as a content version so that you don't lose your current work. If you revert to a previous version, your published content isn't affected, but the content on the **Actions** page is overwritten with the version that you revert to. For example, if your V1 content is published and you revert to V1, then your V1 content remains published, and any content on the **Actions** page is overwritten with the V1 content.
+
+Next, select the version of content that you want to revert to. After you revert, you can go to the **Actions** page to make any fixes or updates. When you're ready to publish, go to the **Publish** page and publish your updated content as a new version (for example, V2).
 
 ## Managing the live environment
 The **Live environment** page shows the live environment and the content and channels that are attached to it. From the **Live environment** page, you can manage live channel configurations by clicking them. You can also change the content version that is connected to the live environment by clicking the version and following the instructions that are outlined in [Changing the live version](#changing-live-version).
