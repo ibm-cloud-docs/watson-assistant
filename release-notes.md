@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-11-12"
+lastupdated: "2021-12-3"
 
 keywords: Watson Assistant release notes
 
@@ -38,6 +38,16 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 3 December 2021
+{: #watson-assistant-dec32021}
+{: release-note}
+
+Configure webhook timeout
+:   From the **Pre-message webhook** and **Post-message webhook** configuration pages, you can configure the webhook timeout length from a minimum of 1 second to a maximum of 30 seconds. For more information, see [Extending your assistant with webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview).
+
+User-based switching between {{site.data.keyword.conversationshort}} experiences
+:   Previously, switching between the new {{site.data.keyword.conversationshort}} experience and the classic {{site.data.keyword.conversationshort}} experience was instance-based. For example, if a user switched from the classic experience to the new experience, all users of that {{site.data.keyword.conversationshort}} instance were switched to the new experience. Now, switching between the experiences is user-based. So, any user of a {{site.data.keyword.conversationshort}} instance can switch between the new and classic experiences, and other users of that {{site.data.keyword.conversationshort}} instance are not affected.
+
 ## 12 November 2021
 {: #watson-assistant-nov122021}
 {: release-note}
@@ -48,7 +58,7 @@ Completion analytic information
 Preview page update
 :   The **Test integrations** panel no longer exists on the **Preview** page. You can manage your draft web chat channel from the **Preview** page. However, all other draft environment integrations are managed from the **Draft environment** page. For more information, see [Previewing and sharing your assistant](/docs/watson-assistant?topic=watson-assistant-preview-share).
 
-## 04 November 2021
+## 4 November 2021
 {: #watson-assistant-nov042021}
 {: release-note}
 
@@ -68,7 +78,7 @@ Facebook and Slack integrations now available
 Analytics for draft and live environments
 :   The **Analyze** page now lets you see analytics data for either the draft or live environments. For more information, see [Use analytics to review your entire assistant at a glance](/docs/watson-assistant?topic=watson-assistant-analytics-overview).
 
-## 07 October 2021
+## 7 October 2021
 {: #watson-assistant-oct072021}
 {: release-note}
 
