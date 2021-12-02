@@ -39,7 +39,7 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
 ## 3 December 2021
-{: #watson-assistant-dec32021}
+{: #watson-assistant-dec032021}
 {: release-note}
 
 Configure webhook timeout
