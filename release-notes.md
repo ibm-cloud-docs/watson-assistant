@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-12-03"
+lastupdated: "2021-12-06"
 
 keywords: Watson Assistant release notes
 
@@ -47,6 +47,15 @@ Configure webhook timeout
 
 User-based switching between {{site.data.keyword.conversationshort}} experiences
 :   Previously, switching between the new {{site.data.keyword.conversationshort}} experience and the classic {{site.data.keyword.conversationshort}} experience was instance-based. For example, if a user switched from the classic experience to the new experience, all users of that {{site.data.keyword.conversationshort}} instance were switched to the new experience. Now, switching between the experiences is user-based. So, any user of a {{site.data.keyword.conversationshort}} instance can switch between the new and classic experiences, and other users of that {{site.data.keyword.conversationshort}} instance are not affected.
+
+## 27 November 2021
+{: #watson-assistant-nov272021}
+{: release-note}
+
+New API version
+:   The current API version is now `2021-11-27`. This version introduces the following changes:
+
+    - The `output.text` object is no longer returned in `message` responses. All responses, including text responses, are returned only in the `output.generic` array.
 
 ## 12 November 2021
 {: #watson-assistant-nov122021}
