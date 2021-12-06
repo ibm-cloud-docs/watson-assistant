@@ -28,53 +28,49 @@ subcollection: watson-assistant
 # CDR log event reference
 {: #cdr-log-reference}
 
-For `cdr_logged` events sent by a log webhook, the `payload` object contains data about a Call Detail Record (CDR) event that was handled by the phone integration. The `payload` object for a call detail record event contains the following keys:
+For `cdr_logged` events sent by a log webhook, the `payload` object contains data about a Call Detail Record (CDR) event that was handled by the phone integration. The `payload` object for a call detail record event contains the following properties:
 
-|Key| Type| Description|
-|-----|----|---|
-|`primary_phone_number`| string| The phone number that was called. |
-|`global_session_id`| string |The unique session identifier.|
-|`failure_occurred`| boolean|Indicates whether a failure occurred during the call.|
-|`failure_details`| string| Details about a failure.|
-|`transfer_occurred`| boolean|Indicates whether an attempt was made to transfer a call|
-|`active_calls`|  Number|Number of active calls when the call started.|
-|`x-global-sip-trunk-call-id`|string| The value of the SIP trunk call ID header extracted from the initial SIP `INVITE` request. The following SIP trunk call ID headers are supported: <br><ul>_X-Twilio-CallSid_</ul><ul>_X-SID_</ul><ul>_X-Global-SIP-Trunk-Call-ID_</ul>  |
-|`call`|JSON object| Contains information about the call.|
-|`session_initiation_protocol`|JSON object| SIP protocol related details.|
-|`max_response_milliseconds`|JSON object| Maximum latency for various services used during the call.|
-|`assistant_interaction_summaries`|JSON array| Details about the {{site.data.keyword.conversationshort}} transactions that took place during the call.|
-|`injected_custom_data`|JSON object| A JSON object that contains a set of key/value pairs. Extracted from the 	`cdr_custom_data` context variable.|
-|`warnings_and_errors`| JSON array| An array of warnings and errors that were logged during the call.|
-|`realtime_transport_network_summary`|JSON object| When RTCP is enabled, the `realtime_transport_network_summary` object provides statistics for the inbound stream in the `inbound_stream` object and statistics for the outbound stream in the `outbound_stream` object.|
-{: caption="Table 1. Keys for the `payload` object" caption-side="top"}
+| Property               | Type    | Description |
+|------------------------|---------|-------------|
+| `primary_phone_number` | string  | The phone number that was called. |
+| `global_session_id`    | string  | The unique session identifier.    |
+| `failure_occurred`     | boolean | Whether a failure occurred during the call. |
+| `failure_details`      | string  | Details about any failure that occurred. |
+| `transfer_occurred`    | boolean | Whether an attempt was made to transfer a call. |
+| `active_calls`         | Number  | The number of active calls when the call started. |
+| `x-global-sip-trunk-call-id` | string | The value of the SIP trunk call ID header extracted from the initial SIP `INVITE` request. The following SIP trunk call ID headers are supported: \n - `X-Twilio-CallSid` \n - `X-SID` \n - `X-Global-SIP-Trunk-Call-ID` |
+| `call`                 | Object  | Information about the call. (See below.) |
+| `session_initiation_protocol` | Object | SIP protocol related details. (See below.) |
+| `max_response_milliseconds`| Object | Maximum latency for services used during the call. |
+| `assistant_interaction_summaries` | Array | Details about the {{site.data.keyword.conversationshort}} interactions that took place during the call. |
+| `injected_custom_data` | Object  | A set of key/value pairs extracted from the `cdr_custom_data` context variable. |
+| `warnings_and_errors`  | Array   | Any warnings or errors that were logged during the call. |
+| `realtime_transport_network_summary` | Object| Statistics for the inbound stream in the `inbound_stream` object and statistics for the outbound stream in the `outbound_stream` object. Included only if RTCP is enabled. |
+{: caption="Properties of the CDR webhook `payload` object" caption-side="top"}
 
+The `call` object contains the following properties:
 
+| Property         | Type | Description |
+|------------------|------|-------------|
+| `start_timestamp`| String | The time when the call started, in ISO format (`yyyy-MM-ddTHH:mm:ss.SSSZ`). |
+| `stop_timestamp` | String | The time when the call ended, in ISO format (`yyyy-MM-ddTHH:mm:ss.SSSZ`). |
+| `milliseconds_elapsed` | Number| The duration of the call, in milliseconds. |
+| `end_reason`     | string | The reason the call ended. The possible reasons are as follows: \n - assistant_transfer \n - assistant_hangup \n - caller_hangup \n -failed |
+| `security.media_encrypted` | Boolean | Whether the media was encrypted. |
+| `security.signaling_encrypted` | Boolean| Whether the SIP signaling was encrypted. |
+| `security.sip_authenticated` | Boolean | Whether SIP authentication was used to authenticate the caller. |
+{: caption="Properties of the `call` object" caption-side="top"}
 
-The `call` object contains the following keys:
+The `session_initiation_protocol` object contains the following properties:
 
-
-|Key| Type| Description|
-|-----|----|---|
-|`start_timestamp`| string. Time in the ISO format `yyyy-MM-ddTHH:mm:ss.SSSZ`|Time when the call started. |
-|`stop_timestamp`| string. Time in the ISO format `yyyy-MM-ddTHH:mm:ss.SSSZ`|Time when the call ended. |
-|`milliseconds_elapsed`| number| Length of the call in milliseconds. |
-|`end_reason`| string| Call end reason:<br><ul>_assistant_transfer_</ul><ul> _assistant_hangup_</ul><ul>_caller_hangup_</ul><ul>_failed_ |
-|`security.media_encrypted`| boolean|Indicates whether the media was encrypted. |
-|`security.signaling_encrypted`| boolean|Indicates whether the SIP signaling was encrypted. |
-|`security.sip_authenticated`| boolean|Indicates whether SIP authentication was used to challenge the authentication of the caller. |
-{: caption="Table 2. Keys for the `call` object" caption-side="top"}
-
-
-The `session_initiation_protocol` object contains the following keys:
-
-|Key| Type|Description|
-|-----|----|---|
-|`invite_arrival_timestamp`|string. Time in the ISO format `yyyy-MM-ddTHH:mm:ss.SSSZ`| Time when the `INVITE` request arrived. |
-|`setup_milliseconds`| number|Time it took to set up the call in milliseconds. Specifically, the field shows the time between when the initial SIP `INVITE` request was received and when the final SIP `ACK` request was received. |
-|`headers.call_id`| string|The SIP `Call-ID` header field pulled from the SIP `INVITE` related to the call. |
-|`headers.from_uri`|string| SIP URI from the initial SIP INVITE `From` field |
-|`headers.to_uri`| string|SIP URI from the initial SIP INVITE `To` field |
-{: caption="Table 3. Keys for the `session_initiation_protocol` object" caption-side="top"}
+| Property             | Type  | Description |
+|----------------------|-------|-------------|
+| `invite_arrival_timestamp` | String | The time when the `INVITE` request arrived, in ISO format (`yyyy-MM-ddTHH:mm:ss.SSSZ`). |
+| `setup_milliseconds` | Number | The time it took to set up the call, in milliseconds. This is the time between when the initial SIP `INVITE` request was received and when the final SIP `ACK` request was received. |
+| `headers.call_id`    | String | The SIP `Call-ID` header field pulled from the SIP `INVITE` related to the call. |
+| `headers.from_uri`   | String | The SIP URI from the initial SIP INVITE `From` header. |
+| `headers.to_uri`     | String | The SIP URI from the initial SIP INVITE `To` header. |
+{: caption="Properties of the `session_initiation_protocol` object" caption-side="top"}
 
     
 The `assistant_interaction_summaries` object contains the following keys:

@@ -306,3 +306,4 @@ For `cdr_logged` events, the `payload` object contains data about a Call Detail 
 ```
 {: codeblock}
 
+For detailed information about the structure of the CDR event payload, see [CDR log event reference](/docs/watson-assistant?topic=watson-assistant-cdr-log-reference).
