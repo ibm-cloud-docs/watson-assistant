@@ -104,7 +104,7 @@ The objects in the `assistant_interaction_summaries.turns` array contain the fol
 | `response`         | Array  | An array of the `response` objects associated with the request. |
 {: caption="Properties of the objects in the `assistant_interaction_summaries.turns[]` array" caption-side="top"}
 
-### `assistant_interaction_summaries.turns[].request`
+#### `assistant_interaction_summaries.turns[].request`
 {: #cdr-log-reference-request}
 
 The `assistant_interaction_summaries.turns[].request` object contains the following properties:
@@ -115,7 +115,7 @@ The `assistant_interaction_summaries.turns[].request` object contains the follow
 | `streaming_statistics` | Object| Information and statistics related to the {{site.data.keyword.speechtotextshort}} recognition. See [`assistant_interaction_summaries.turns[].request.streaming_statistics`](#cdr-log-reference-request-streaming_statistics). |
 {: caption="Properties of the `assistant_interaction_summaries.turns[].request` object" caption-side="top"}
 
-### `assistant_interaction_summaries.turns[].request.streaming_statistics`
+##### `assistant_interaction_summaries.turns[].request.streaming_statistics`
 {: #cdr-log-reference-request-streaming_statistics}
 
 The `assistant_interaction_summaries.turns[].request.streaming_statistics` object contains the following properties:
@@ -130,7 +130,7 @@ The `assistant_interaction_summaries.turns[].request.streaming_statistics` objec
 | `confidence`     | Number  | The confidence score of the final utterance. |
 {: caption="Properties of the `assistant_interaction_summaries.turns[].streaming_statistics` object" caption-side="top"}
 
-### `assistant_interaction_summaries.turns[].response`
+#### `assistant_interaction_summaries.turns[].response`
 {: #cdr-log-reference-response}
 
 The `assistant_interaction_summaries.turns[].response` object contains the following properties:
@@ -142,7 +142,7 @@ The `assistant_interaction_summaries.turns[].response` object contains the follo
 | `streaming_statistics`| Object | Information and statistics related to {{site.data.keyword.texttospeechshort}} synthesis and playback. See [`assistant_interaction_summaries.turns[].response.streaming_statistics`](#cdr-log-reference-response-streaming_statistics). |
 {: caption="Properties of the `assistant_interaction_summaries.turns[].response` object" caption-side="top"}
 
-#### Mapping between CDR and {{site.data.keyword.conversationshort}} response types
+##### Mapping between CDR and {{site.data.keyword.conversationshort}} response types
 {: #cdr-log-reference-response-type-mapping}
 
 The values of the `type` property map to {{site.data.keyword.conversationshort}} response types as follows:
@@ -166,7 +166,7 @@ The values of the `type` property map to {{site.data.keyword.conversationshort}}
 | `disable_dtmf_barge_in` | `dtmf`, `command_info.type` : `disable_barge_in` |
 | `hangup`          | `end_session` |
 
-### `assistant_interaction_summaries.turns[].response.streaming_statistics`
+##### `assistant_interaction_summaries.turns[].response.streaming_statistics`
 {: #cdr-log-reference-response-streaming_statistics}
 
 The `assistant_interaction_summaries.turns[].response.streaming_statistics` object contains the following properties:
