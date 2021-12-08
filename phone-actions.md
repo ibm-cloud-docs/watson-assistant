@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-11-19"
+lastupdated: "2021-12-08"
 
 subcollection: watson-assistant
 
@@ -827,3 +827,65 @@ This example shows two responses: first a text response, followed by an `end_ses
 }
 ```
 {: codeblock}
+
+## Injecting custom values into CDR log events
+{: #phone-actions-cdr-custom-data}
+
+If you are using a log webhook to log call detail record (CDR) events, you can use the `cdr_custom_data` context variable to add custom data to logged events. You can use this method to record data during a call (for example, to indicate the completion of a specific tasks).
+
+To log custom CDR data, use the JSON editor to edit the context. Define `cdr_custom_data` as a child of the `context.integrations.voice_telephony` object, as in this example:
+
+```json
+  "context": {
+    "integrations": {
+      "voice_telephony": {
+        "cdr_custom_data": {
+          "key1": "value1",
+          "key2": "value2"
+        }
+      }
+    }
+  }
+```
+{: codeblock}
+
+The `cdr_custom_data` object can contain any valid JSON data.
+
+When you generate a CDR report, the custom data is included in the `injected_custom_data` field, as in this example:
+
+```json
+{
+  "payload": {
+  ...
+    "injected_custom_data": {
+      "key1": "value1",
+      "key2": "value2"
+    }
+  ...
+  }
+}
+```
+{: codeblock}
+
+For more information about the structure of the CDR log event payload, see [CDR log event reference](/docs/watson-assistant?topic=watson-assistant-cdr-log-reference).
+
+### Merging and deleting custom CDR data
+
+Each time the `cdr_custom_data` object is defined by an action, the new data is merged with any previously existing data. New values specified for previously defined properties overwrite the previous values, and any new properties are added; otherwise, the previously defined data is unchanged.
+
+To remove a previously defined property, you must explicitly set it to an empty value, as in this example:
+
+```json
+  "context": {
+    "integrations": {
+      "voice_telephony": {
+        "cdr_custom_data": {
+          "key1": ""
+        }
+      }
+    }
+  }
+
+```
+{: codeblock}
+

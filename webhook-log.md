@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-12-08"
 
 keywords: log webhook
 
@@ -163,235 +163,147 @@ For `cdr_logged` events, the `payload` object contains data about a Call Detail 
 
 ```json
 {
-  "payload": {
-    "active_calls": 1,
-    "assistant_interaction_summaries": [
-      {
-        "assistant_id": "21f4fd4f-a85c-40eb-a29c-d69a31e3d800",
-        "session_id": "2a3b6954-ea7a-40ab-9729-e85fcf2c786f",
-        "start_timestamp": "2021-04-21T16:31:06.696Z",
-        "stop_timestamp": "2021-04-21T16:31:28.345Z",
-        "turns": [
-          {
-            "assistant": {
-              "log_id": "928409de-0ca1-4e77-b855-764233f8142b",
-              "response_milliseconds": 156
-            },
-            "request": {
-              "type": "start"
-            },
-            "response": [
-              {
-                "barge_in_occurred": true,
-                "streaming_statistics": {
-                  "response_milliseconds": 301,
-                  "start_timestamp": "2021-04-21T16:31:08.352Z",
-                  "stop_timestamp": "2021-04-21T16:31:12.149Z",
-                  "transaction_id": "3dce431c-fb2f-4b62-9fce-585f4e06fe00"
-                },
-                "type": "text_to_speech"
-              }
-            ]
-          },
-          {
-            "assistant": {
-              "log_id": "d8bc82b8-9bad-4b3b-a771-d8f0e7f359ae",
-              "response_milliseconds": 181
-            },
-            "request": {
-              "streaming_statistics": {
-                "confidence": 0.99,
-                "echo_detected": false,
-                "response_milliseconds": 624,
-                "start_timestamp": "2021-04-21T16:31:12.147Z",
-                "stop_timestamp": "1970-01-01T00:00:00Z",
-                "transaction_id": "a4e97d73-c676-4b56-9f9c-785bb8781059"
-              },
-              "type": "speech_to_text"
-            },
-            "response": [
-              {
-                "barge_in_occurred": true,
-                "streaming_statistics": {
-                  "response_milliseconds": 325,
-                  "start_timestamp": "2021-04-21T16:31:12.682Z",
-                  "stop_timestamp": "2021-04-21T16:31:15.049Z",
-                  "transaction_id": "9d819ffe-f9a2-4e95-956b-0036d2d6d6a5"
-                },
-                "type": "text_to_speech"
-              }
-            ]
-          },
-          {
-            "assistant": {
-              "log_id": "e4118c32-6f79-4837-a5fc-e18f3aadbdb2",
-              "response_milliseconds": 157
-            },
-            "request": {
-              "streaming_statistics": {
-                "confidence": 0.98,
-                "echo_detected": false,
-                "response_milliseconds": 1005,
-                "start_timestamp": "2021-04-21T16:31:15.048Z",
-                "stop_timestamp": "1970-01-01T00:00:00Z",
-                "transaction_id": "a4e97d73-c676-4b56-9f9c-785bb8781059"
-              },
-              "type": "speech_to_text"
-            },
-            "response": [
-              {
-                "barge_in_occurred": false,
-                "streaming_statistics": {
-                  "response_milliseconds": 0,
-                  "start_timestamp": "2021-04-21T16:31:15.230Z",
-                  "stop_timestamp": "2021-04-21T16:31:17.389Z",
-                  "transaction_id": "8f925d45-75e3-48bc-be28-92848d39567d"
-                },
-                "type": "text_to_speech"
-              }
-            ]
-          },
-          {
-            "assistant": {
-              "log_id": "3784a688-5c67-453e-ba57-a6472d0b9607",
-              "response_milliseconds": 102
-            },
-            "request": {
-              "streaming_statistics": {
-                "confidence": 0.98,
-                "echo_detected": false,
-                "response_milliseconds": 1207,
-                "start_timestamp": "2021-04-21T16:31:18.929Z",
-                "stop_timestamp": "1970-01-01T00:00:00Z",
-                "transaction_id": "a4e97d73-c676-4b56-9f9c-785bb8781059"
-              },
-              "type": "speech_to_text"
-            },
-            "response": [
-              {
-                "barge_in_occurred": true,
-                "streaming_statistics": {
-                  "response_milliseconds": 298,
-                  "start_timestamp": "2021-04-21T16:31:19.348Z",
-                  "stop_timestamp": "2021-04-21T16:31:24.204Z",
-                  "transaction_id": "6f65ad6a-cae0-46cc-829b-f5c6d1fdaed3"
-                },
-                "type": "text_to_speech"
-              }
-            ]
-          },
-          {
-            "assistant": {
-              "log_id": "899e062c-3fcb-4bf5-b142-cc8ab0d57b9d",
-              "response_milliseconds": 97
-            },
-            "request": {
-              "streaming_statistics": {
-                "confidence": 0.98,
-                "echo_detected": false,
-                "response_milliseconds": 1401,
-                "start_timestamp": "2021-04-21T16:31:24.204Z",
-                "stop_timestamp": "1970-01-01T00:00:00Z",
-                "transaction_id": "a4e97d73-c676-4b56-9f9c-785bb8781059"
-              },
-              "type": "speech_to_text"
-            },
-            "response": [
-              {
-                "barge_in_occurred": true,
-                "streaming_statistics": {
-                  "response_milliseconds": 320,
-                  "start_timestamp": "2021-04-21T16:31:24.648Z",
-                  "stop_timestamp": "2021-04-21T16:31:28.178Z",
-                  "transaction_id": "5a3393bd-8c64-42e7-9874-ff2a721c7771"
-                },
-                "type": "text_to_speech"
-              }
-            ]
-          },
-          {
-            "assistant": {
-              "log_id": "6b2cd0ec-55e7-4ab5-8714-9ebc7f387254",
-              "response_milliseconds": 163
-            },
-            "request": {
-              "streaming_statistics": {
-                "confidence": 0.87,
-                "echo_detected": false,
-                "response_milliseconds": 1354,
-                "start_timestamp": "2021-04-21T16:31:28.177Z",
-                "stop_timestamp": "1970-01-01T00:00:00Z",
-                "transaction_id": "a4e97d73-c676-4b56-9f9c-785bb8781059"
-              },
-              "type": "speech_to_text"
-            },
-            "response": []
-          },
-          {
-            "assistant": {
-              "log_id": "80585f84-a1fe-4bcf-8737-737b01ed00e3",
-              "response_milliseconds": 0
-            },
-            "request": {
-              "type": "hangup"
-            },
-            "response": []
-          }
-        ]
-      }
-    ],
-    "call": {
-      "end_reason": "callerHangup",
-      "milliseconds_elapsed": 21906,
-      "outbound": false,
-      "security": {
-        "media_encrypted": false,
-        "signaling_encrypted": true,
-        "sip_authenticated": false
-      },
-      "start_timestamp": "2021-04-21T16:31:07.609Z",
-      "stop_timestamp": "2021-04-21T16:31:29.515Z"
+  "primary_phone_number": "+18005550123",
+  "global_session_id": "9caa8bad-aaa8-4a5a-a4b5-62bccc703d15",
+  "failure_occurred": false,
+  "transfer_occurred": false,
+  "active_calls": 0,
+  "warnings_and_errors": [
+    {
+      "code": "CWSMR0033W",
+      "message": "CWSMR0033W: The inbound RTP audio stream jitter of 43 ms exceeds the maximum jitter threshold of 30 ms."
     },
-    "failure_occurred": false,
-    "global_session_id": "17465345_115257202@10.90.150.99",
-    "max_response_milliseconds": {
-      "assistant": 181,
-      "speech_to_text": 1401,
-      "text_to_speech": 325
+    {
+      "code": "CWSMR0070W",
+      "message": "CWSMR0070W: A request to the Watson Speech To Text service failed for the following reason = Unexpected server response: 403, response headers = {\"strict-transport-security\":\"max-age=31536000; includeSubDomains;\",\"content-length\":\"157\",\"content-type\":\"application/json\",\"x-dp-watson-tran-id\":\"23860083-88b6-41d7-9130-30bbfebe647e\",\"x-request-id\":\"23860083-88b6-41d7-9130-30bbfebe647e\",\"x-global-transaction-id\":\"6c764df3-81db-41bb-a14f-62384facffca\",\"server\":\"watson-gateway\",\"x-edgeconnect-midmile-rtt\":\"1\",\"x-edgeconnect-origin-mex-latency\":\"28\",\"date\":\"Thu, 13 May 2021 20:31:12 GMT\",\"connection\":\"keep-alive\"}, response body = {\"code\":403,\"trace\":\"23860083-88b6-41d7-9130-30bbfebe647e\",\"error\":\"Forbidden\",\"more_info\":\"[https://cloud.ibm.com/docs/watson?topic=watson-forbidden-error](https://cloud.ibm.com/docs/watson?topic=watson-forbidden-error)\"}, x-global-transaction-id = 6c764df3-81db-41bb-a14f-62384facffca. The Media Relay will reattempt to send the request."
+    }
+  ],
+  "realtime_transport_network_summary": {
+    "inbound_stream": {
+      "average_jitter": 4,
+      "canonical_name": "b74f3689-1ae8-4a0a-bde3-adf5b488553e",
+      "maximum_jitter": 18,
+      "packets_lost": 0,
+      "packets_transmitted": 952,
+      "tool_name": ""
     },
-    "primary_phone_number": "+18005550123",    "realtime_transport_network_summary": {
-      "inbound_stream": {
-        "average_jitter": 4,
-        "canonical_name": "b74f3689-1ae8-4a0a-bde3-adf5b488553e",
-        "maximum_jitter": 18,
-        "packets_lost": 0,
-        "packets_transmitted": 952,
-        "tool_name": ""
-      },
-      "outbound_stream": {
-        "average_jitter": 0,
-        "canonical_name": "voice.gateway",
-        "maximum_jitter": 0,
-        "packets_lost": 0,
-        "packets_transmitted": 838,
-        "tool_name": "IBM Voice Gateway/1.0.7.0"
-      }
-    },
-    "session_initiation_protocol": {
-      "headers": {
-        "call_id": "17465345_115257202@10.90.150.99",
-        "from_uri": "sip:+18885550456@pstn.twilio.com",
-        "to_uri": "sip:+18005550123@public.voip.us-south.assistant.test.watson.cloud.ibm.com"
-      },
-      "invite_arrival_time": "2021-04-21T16:31:06.078Z",
-      "setup_milliseconds": 1531
-    },
-    "transfer_occurred": false,
-    "warnings_and_errors": []
+    "outbound_stream": {
+      "average_jitter": 0,
+      "canonical_name": "voice.gateway",
+      "maximum_jitter": 0,
+      "packets_lost": 0,
+      "packets_transmitted": 838,
+      "tool_name": "IBM Voice Gateway/1.0.7.0"
+    }
   },
-  "event": {
-    "name": "cdr_logged"
-  }
+  "call": {
+    "start_timestamp": "2021-10-12T20:54:02.591Z",
+    "stop_timestamp": "2021-10-12T20:54:20.375Z",
+    "milliseconds_elapsed": 17784,
+    "outbound": false,
+    "end_reason": "assistant_hangup",
+    "security": {
+      "media_encrypted": false,
+      "signaling_encrypted": false,
+      "sip_authenticated": false
+    }
+  },
+  "session_initiation_protocol": {
+    "invite_arrival_time": "2021-10-12T20:54:00.565Z",
+    "setup_milliseconds": 2026,
+    "headers": {
+      "call_id": "17465345_115257202@10.90.150.99",
+      "from_uri": "sip:+18885550456@pstn.twilio.com",
+      "to_uri": "sip:+18005550123@public.voip.us-south.assistant.test.watson.cloud.ibm.com"
+    }
+  },
+  "max_response_milliseconds": {
+    "assistant": 339,
+    "text_to_speech": 535,
+    "speech_to_text": 0
+  },
+  "assistant_interaction_summaries": [
+    {
+      "session_id": "7874ec3a-1330-4180-afe1-46bfb220af5b",
+      "assistant_id": "97f16ba4-ad94-41af-aa6c-33cd56ad5e7e",
+      "turns": [
+        {
+          "assistant": {
+            "log_id": "58bebfd1-0118-419b-a555-b152a1efbbe8",
+            "response_milliseconds": 339,
+            "start_timestamp": "2021-10-12T20:54:00.722Z"
+          },
+          "request": {
+            "type": "start"
+          },
+          "response": [
+            {
+              "barge_in_occurred": true,
+              "streaming_statistics": {
+                "response_milliseconds": 301,
+                "start_timestamp": "2021-10-12T20:54:00.722Z",
+                "stop_timestamp": "2021-10-12T20:54:01.023Z",
+                "transaction_id": "3dce431c-fb2f-4b62-9fce-585f4e06fe00"
+              },
+              "type": "text_to_speech"
+            }
+          ]
+        },
+        {
+          "assistant": {
+            "log_id": "38f36bfb-c2aa-4600-9418-6ab422664e31",
+            "response_milliseconds": 158,
+            "start_timestamp": "2021-10-12T20:54:05.621Z"
+          },
+          "request": {
+            "type": "dtmf"
+          },
+          "response": [
+            {
+              "type": "disable_speech_barge_in"
+            },
+            {
+              "type": "text_to_speech",
+              "barge_in_occurred": false,
+              "streaming_statistics": {
+                "transaction_id": "af4c47c3-5cc4-43c8-9b9c-81d6f997c52f",
+                "start_timestamp": "2021-10-12T20:54:06.321Z",
+                "stop_timestamp": "2021-10-12T20:54:14.338Z",
+                "response_milliseconds": 535
+              }
+            },
+            {
+              "type": "enable_speech_barge_in"
+            },
+            {
+              "type": "text_to_speech",
+              "barge_in_occurred": true,
+              "streaming_statistics": {
+                "transaction_id": "eafdd846-2829-4e1a-8068-b1035510b1e1",
+                "start_timestamp": "2021-10-12T20:54:14.795Z",
+                "stop_timestamp": "2021-10-12T20:54:20.388Z",
+                "response_milliseconds": 447
+              }
+            }
+          ]
+        },
+        {
+          "assistant": {
+            "log_id": "07d74b35-0205-43e4-923c-1e43e1cb429c",
+            "response_milliseconds": 0,
+            "start_timestamp": "2021-10-12T20:54:20.377Z"
+          },
+          "request": {
+            "type": "hangup"
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
 }
+
 ```
 {: codeblock}
+
+For detailed information about the structure of the CDR event payload, see [CDR log event reference](/docs/watson-assistant?topic=watson-assistant-cdr-log-reference).
