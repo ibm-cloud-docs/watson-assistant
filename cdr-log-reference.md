@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-12-07"
+lastupdated: "2021-12-08"
 
 subcollection: watson-assistant
 
@@ -41,7 +41,7 @@ For `cdr_logged` events sent by a log webhook, the `payload` object contains dat
 | `x-global-sip-trunk-call-id` | string | The value of the SIP trunk call ID header extracted from the initial SIP `INVITE` request. The following SIP trunk call ID headers are supported: \n - `X-Twilio-CallSid` \n - `X-SID` \n - `X-Global-SIP-Trunk-Call-ID` |
 | `call`                 | Object  | Information about the call. See [`call`](#cdr-log-reference-call). |
 | `session_initiation_protocol` | Object | SIP protocol related details. See [`session_initiation_protocol`](#cdr-log-reference-session_initiation_protocol). |
-| `max_response_milliseconds`| Object | Maximum latency for services used during the call. |
+| `max_response_milliseconds`| Object | Maximum latency for services used during the call. See [`max_response_milliseconds`](#cdr-log-reference-max_response_milliseconds). |
 | `assistant_interaction_summaries` | Array | Details about the {{site.data.keyword.conversationshort}} interactions that took place during the call. See [`assistant_interaction_summaries`](#cdr-log-reference-assistant_interaction_summaries). |
 | `injected_custom_data` | Object  | A set of key/value pairs extracted from the `cdr_custom_data` context variable. |
 | `warnings_and_errors`  | Array   | Any warnings or errors that were logged during the call. See [`warnings_and_errors`](#cdr-log-reference-warnings_and_errors). |
@@ -58,7 +58,7 @@ The `call` object contains the following properties:
 | `start_timestamp`| String | The time when the call started, in ISO format (`yyyy-MM-ddTHH:mm:ss.SSSZ`). |
 | `stop_timestamp` | String | The time when the call ended, in ISO format (`yyyy-MM-ddTHH:mm:ss.SSSZ`). |
 | `milliseconds_elapsed` | Number| The duration of the call, in milliseconds. |
-| `end_reason`     | string | The reason the call ended. The possible reasons are as follows: \n - assistant_transfer \n - assistant_hangup \n - caller_hangup \n -failed |
+| `end_reason`     | string | The reason the call ended. The possible reasons are as follows: \n - assistant_transfer \n - assistant_hangup \n - caller_hangup \n - failed |
 | `security.media_encrypted` | Boolean | Whether the media was encrypted. |
 | `security.signaling_encrypted` | Boolean| Whether the SIP signaling was encrypted. |
 | `security.sip_authenticated` | Boolean | Whether SIP authentication was used to authenticate the caller. |
@@ -111,7 +111,7 @@ The `assistant_interaction_summaries.turns[].request` object contains the follow
 
 | Property | Type   | Description |
 |----------|--------|-------------|
-| `type`   | String | The request type: \n - `start`: an initial request to the assistant is received \n - `speech_to_text`: a request for the {{site.data.keyword.speechtotextshort}} service is received \n - `dtmf`: DTMF collection completes \n - `sms`: an SMS message is received from the caller \n - `post_response_timeout`: the post-response timer expires \n - `redirect`: a call is redirected  \n - `transfer`: a call is transferred \n - `transfer_failed`: a call transfer fails \n - `final_utterance_timeout`: the final utterance timer expires \n - `no_input_turn`: `no inpout turn` is enabled \n - `sms_failure`: an SMS message cannot be sent to the caller \n - `speech_to_text_result_filtered`: an utterance is filtered due to low confidence level \n - `mrcp_recognition_unsuccessful`: the MRCP recognition completes without a final utterance \n - `network_warning`: a network error is detected \n - `media_capability_change`: media capabilities change during a call |
+| `type`   | String | The request type: \n - `start`: an initial request is sent to the assistant \n - `speech_to_text`: a request is sent to the {{site.data.keyword.speechtotextshort}} service \n - `dtmf`: DTMF collection completes \n - `sms`: an SMS message is received from the caller \n - `post_response_timeout`: the post-response timer expires \n - `redirect`: a call is redirected  \n - `transfer`: a call is transferred \n - `transfer_failed`: a call transfer fails \n - `final_utterance_timeout`: the final utterance timer expires \n - `no_input_turn`: `no inpout turn` is enabled \n - `sms_failure`: an SMS message cannot be sent to the caller \n - `speech_to_text_result_filtered`: an utterance is filtered due to low confidence level \n - `mrcp_recognition_unsuccessful`: the MRCP recognition completes without a final utterance \n - `network_warning`: a network error is detected \n - `media_capability_change`: media capabilities change during a call |
 | `streaming_statistics` | Object| Information and statistics related to the {{site.data.keyword.speechtotextshort}} recognition. See [`assistant_interaction_summaries.turns[].request.streaming_statistics`](#cdr-log-reference-request-streaming_statistics). |
 {: caption="Properties of the assistant_interaction_summaries.turns[].request object" caption-side="top"}
 
@@ -137,7 +137,7 @@ The `assistant_interaction_summaries.turns[].response` object contains the follo
 
 | Property           | Type    | Description |
 |--------------------|---------|-------------|
-| `type`             | String  | The response type: \n - `text_to_speech`: a command to play an utterance to the caller \n - `sms`: a command to send an SMS message to the caller \n - `url`: a command to play an audio file to the caller \n - `transfer`: a command to transfer a call \n - `text_to_speech_config`: a command to change the {{site.data.keyword.texttospeechshort}} settings \n - `speech_to_text_config`: a command to change the {{site.data.keyword.speechtotextshort}} settings \n - `pause_speech_to_text`: a command to stop speech recognition \n - `unpause_speech_to_text`: a command to start speech recognition \n - `pause_dtmf`: a command to stop DTMF recognition \n - `unpause_dtmf`: a command to start speech recognition \n - `enable_speech_barge_in`: a command to enable speech barge-in so that callers can interrupt playback by speaking \n - `disable_speech_barge_in`: a command to disable speech barge-in so that playback isn't interrupted when callers speak during audio playback \n - `enable_dtmf_barge_in`: a command to enable DTMF barge-in so that callers can interrupt playback from the phone integration by pressing a key \n - `disable_dtmf_barge_in`: a command to disable DTMF barge-in so that playback from the phone integration isn't interrupted when the caller presses a key \n - `dtmf`: a command to send DTMF signals to the caller \n - `hangup`: a command to disconnect the call \n See [Mapping between CDR and {{site.data.keyword.conversationshort}} response types](#cdr-log-reference-response-type-mapping). |
+| `type`             | String  | The response type: \n - `text_to_speech`: a command to play an utterance to the caller \n - `sms`: a command to send an SMS message to the caller \n - `url`: a command to play an audio file to the caller \n - `transfer`: a command to transfer a call \n - `text_to_speech_config`: a command to change the {{site.data.keyword.texttospeechshort}} settings \n - `speech_to_text_config`: a command to change the {{site.data.keyword.speechtotextshort}} settings \n - `pause_speech_to_text`: a command to stop speech recognition \n - `unpause_speech_to_text`: a command to start speech recognition \n - `pause_dtmf`: a command to stop DTMF recognition \n - `unpause_dtmf`: a command to start DTMF collection \n - `enable_speech_barge_in`: a command to enable speech barge-in so that callers can interrupt playback by speaking \n - `disable_speech_barge_in`: a command to disable speech barge-in so that playback isn't interrupted when callers speak during audio playback \n - `enable_dtmf_barge_in`: a command to enable DTMF barge-in so that callers can interrupt playback from the phone integration by pressing a key \n - `disable_dtmf_barge_in`: a command to disable DTMF barge-in so that playback from the phone integration isn't interrupted when the caller presses a key \n - `dtmf`: a command to send DTMF signals to the caller \n - `hangup`: a command to disconnect the call \n See [Mapping between CDR and {{site.data.keyword.conversationshort}} response types](#cdr-log-reference-response-type-mapping). |
 | `barge_in_occurred`| Boolean | Whether barge-in occurred during the turn. |
 | `streaming_statistics`| Object | Information and statistics related to {{site.data.keyword.texttospeechshort}} synthesis and playback. See [`assistant_interaction_summaries.turns[].response.streaming_statistics`](#cdr-log-reference-response-streaming_statistics). |
 {: caption="Properties of the assistant_interaction_summaries.turns[].response object" caption-side="top"}
@@ -219,7 +219,7 @@ The `max_response_milliseconds` object contains the following properties:
 | Property         | Type   | Description |
 |------------------|--------|-------------|
 | `assistant`      | Number | The maximum round-trip latency (in milliseconds), calculated from all {{site.data.keyword.conversationshort}} requests related to the call. |
-| `text_to_speech` | Number | The maximum time (in milliseconds) between when a text utterance is sent to the assistant and when the phone integration receives the first packet of synthesized audio. This value is calculated from all {{site.data.keyword.texttospeechshort}} requests related to the call. |
+| `text_to_speech` | Number | The maximum time (in milliseconds) between when a text utterance is sent to the {{site.data.keyword.texttospeechshort}} service and when the phone integration receives the first packet of synthesized audio. This value is calculated from all {{site.data.keyword.texttospeechshort}} requests related to the call. |
 | `speech_to_text` | Number | The maximum latency (in milliseconds) between when silence is detected in the caller's speech and when a final result from the {{site.data.keyword.speechtotextshort}} service is received. This value is calculated from all {{site.data.keyword.speechtotextshort}} recognition results related to the call. |
 {: caption="Properties of the max_response_milliseconds object" caption-side="top"}
 
@@ -261,6 +261,6 @@ The object for each stream contains the following properties:
 | `packets_lost`   | Number | An estimate of the number of packets that were lost during the call. |
 | `packets_transmitted` | Number | An estimate of the total number of packets that were transmitted during the call. |
 | `canonical_name` | String | A unique identifier for the sender of the stream, typically in `@` format. |
-| `tool_name`      | String | The name of the application or tool where the stream originated. For IBM Voice Gateway, the default is `IBM Voice Gateway/  `. |
+| `tool_name`      | String | The name of the application or tool where the stream originated. For the phone integration, the default is `IBM Voice Gateway/  `. |
 {: caption="Properties of the realtime_transport_network_summary object"  caption-side="top"}
 

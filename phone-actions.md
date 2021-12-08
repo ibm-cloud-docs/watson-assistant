@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-12-06"
+lastupdated: "2021-12-08"
 
 subcollection: watson-assistant
 
@@ -867,9 +867,11 @@ When you generate a CDR report, the custom data is included in the `injected_cus
 ```
 {: codeblock}
 
+For more information about the structure of the CDR log event payload, see [CDR log event reference](/docs/watson-assistant?topic=watson-assistant-cdr-log-reference).
+
 ### Merging and deleting custom CDR data
 
-As with any context variable, each time the `cdr_custom_data` object is defined by an action, the new data is merged with any previously existing data. New values specified for previously defined properties overwrite the previous values, and any new properties are added; otherwise, the previously defined data is unchanged.
+Each time the `cdr_custom_data` object is defined by an action, the new data is merged with any previously existing data. New values specified for previously defined properties overwrite the previous values, and any new properties are added; otherwise, the previously defined data is unchanged.
 
 To remove a previously defined property, you must explicitly set it to an empty value, as in this example:
 
