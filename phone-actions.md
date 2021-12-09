@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-12-08"
+lastupdated: "2021-12-09"
 
 subcollection: watson-assistant
 
@@ -305,7 +305,7 @@ Enables speech barge-in so that callers can interrupt playback by speaking.
 
 No parameters.
 
-### Change the assistant's voice
+### Changing the assistant's voice
 {: #phone-actions-change-voice}
 
 You can change the voice of your assistant when it covers certain topics in the conversation that warrant it. For example, you might want to use a voice with a British accent for a branch of the conversation that applies only to customers in the UK.
@@ -411,7 +411,7 @@ If you define a SIP URI as the transfer target, escape the at sign (`@`) in the 
 ```
 {: codeblock}
 
-###  Passing Watson Assistant Metadata in SIP Signaling
+### Passing Watson Assistant Metadata in SIP Signaling
 
 To support loading the conversational history between the caller and {{site.data.keyword.conversationshort}}, the phone integration specifies a value for the `User-to-User` header as a key that can be used with the web chat integration. If `User-to-User` is specified in the `transfer_headers` list, the session history key is sent in the `X-Watson-Assistant-Session-History-Key` header.
 
@@ -673,7 +673,7 @@ This example shows the `dtmf` response type with the `send` command, used to sen
 ```
 {: codeblock}
 
-## End the call
+## Ending the call
 {: #phone-actions-hangup}
 
 You can instruct your assistant end a phone call by using the `end_session` response type, as shown in this example.
