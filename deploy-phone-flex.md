@@ -173,7 +173,7 @@ Now we need to configure the call flow to direct inbound calls to the assistant 
 
 ## Redirecting to the incoming call handler 
 
-In this section you will use a TwiML **Redirect**** widget in your Studio Flow editor to call out to the `/call-recieve` function created in the previous section.
+In this section you will use a TwiML **Redirect**** widget in your Studio Flow editor to call out to the `/receive-call` function created in the previous section.
 
 1. Add a **TwiML Redirect** widget to your Studio Flow canvas. 
 
@@ -331,7 +331,7 @@ Your assistant should now be able to answer phone calls to your phone number and
 
 1. At this point you should hear the phrase configured in the **Say/Play** widget (such as "Transfer from Watson complete").
 
-1. If the transfer fails, use the console log to follow the flow of the call as it moves from the flow to the `/call-receive` handler, to {{site.data.keyword.conversationshort}}, to the refer-handler and back to your Twilio Flex flow.
+1. If the transfer fails, use the console log to follow the flow of the call as it moves from the flow to the `/receive-call` handler, to {{site.data.keyword.conversationshort}}, to the refer-handler and back to your Twilio Flex flow.
  
 
 ###  Share the conversation history with service desk agents 
