@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-11-11"
+lastupdated: "2021-12-13"
 
 subcollection: watson-assistant
 
@@ -116,8 +116,12 @@ For the best customer experience, design your actions with the capabilities of t
 
 - Do not include HTML elements in your text responses.
 - The *SMS with Twilio* integration does not support chat transfers that are initiated with the *Connect to human agent* response type.
+<!-- Pause response type not yet supported in actions
 - The pause response type is ignored.
+-->
+<!-- Search skill response type not yet supported in actions
 - You can include search skill response types in action nodes that the phone integration will send as a message. The message includes the introductory text (*I searched my knowledge base* and so on), and then the body of only the first search result.
+-->
 
 If you want to use the same action for an assistant that you deploy to many different platforms, add custom responses per integration type. You can add a conditioned response that tells the assistant to show the response only when the *SMS with Twilio* integration is being used.
 <!--- For more information, see [Building integration-specific responses](/docs/assistant?topic=assistant-dialog-integrations#dialog-integrations-condition-by-type). --->

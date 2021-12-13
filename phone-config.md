@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-11-19"
+lastupdated: "2021-12-13"
 
 subcollection: watson-assistant
 
@@ -132,7 +132,7 @@ For the best customer experience, design your dialog with the capabilities of th
 
 - You can use a search extension to include search results in actions that the phone integration will read. When search results are returned, the phone integration reads the introductory message (for example, `I found this information that might be helpful`), and then the body of only the first search result.
 
-    The entire search skill response (meaning the introductory message plus the body of the first search result) must be less than 5,000 characters long or the response will not be read at all. Be sure to test the search results that are returned and curate the data collection that you use as necessary.
+    The entire search response (meaning the introductory message plus the body of the first search result) must be less than 5,000 characters long or the response will not be read at all. Be sure to test the search results that are returned and curate the data collection that you use as necessary.
 
 For more information about using the search integration, see [Leveraging existing help content](/docs/watson-assistant?topic=watson-assistant-search-add).
 

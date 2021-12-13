@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-21"
+lastupdated: "2021-12-13"
 
 subcollection: watson-assistant
 
@@ -81,7 +81,9 @@ The web chat integration is added to your first assistant automatically. To add 
       - Marker that shows the start of the assistant’s response
       - Border of a button after it is clicked
       - Border of the drop-down list field as the user chooses an option
+<!-- Pause response type not yet supported in actions      
       - Typing indicator that is shown to repesent a pause response
+-->
 
     Style changes you make are immediately applied to the preview that is shown on the page, so you can see how your choices impact the style of the chat UI.
 
