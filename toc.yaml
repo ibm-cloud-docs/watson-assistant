@@ -49,6 +49,7 @@ toc:
           - skip-steps.md
           - step-what-next.md
           - search-add.md
+          - add-custom-extension.md
           - change-topic.md
           - handle-errors.md
           - human-agent.md
@@ -139,6 +140,7 @@ toc:
               - webhook-pre.md
               - webhook-post.md
               - webhook-log.md
+          - build-custom-extension.md
 
   - navgroup:
       id: reference
