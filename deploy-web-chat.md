@@ -81,9 +81,8 @@ The web chat integration is added to your first assistant automatically. To add 
       - Marker that shows the start of the assistant’s response
       - Border of a button after it is clicked
       - Border of the drop-down list field as the user chooses an option
-<!-- Pause response type not yet supported in actions      
-      - Typing indicator that is shown to repesent a pause response
--->
+    <!--- Pause response type not yet supported in actions --->
+    <!--- - Typing indicator that is shown to represent a pause response --->
 
     Style changes you make are immediately applied to the preview that is shown on the page, so you can see how your choices impact the style of the chat UI.
 
@@ -176,6 +175,25 @@ The web chat integration is added to your first assistant automatically. To add 
     If you don't extend the session timeout setting for the assistant, the flow for the current session is restarted after 5 minutes of inactivity. This means that if a user stops interacting with the assistant, after 5 minutes, any context variable values that were set during the previous conversation are set to null or back to their initial values.
 
 A developer can use APIs to apply more advanced customizations to the style of the web chat. For more information, see [Applying advanced customizations](/docs/watson-assistant?topic=watson-assistant-web-chat-config).
+
+## Configuring the launcher
+{: #deploy-web-chat-launcher}
+
+The web chat launcher welcomes and engages the user so that they know where to find help if they need it. Initially the web chat launcher starts off in it's small default state as a circle in the bottom right corner:
+
+![An example of the initial launcher](images/web-chat-icon.png)
+
+After 15 seconds the launcher will perform an expand animation in order to show a greeting message to the user. In this expanded state the launcher is still clickable so the user can use it to open the web chat as they normally would. If the user changes the page or reloads the page before the launcher has been able to expand (< 15 seconds) then the launcher will stay in it's initial small state on the next page load and try again to expand after 15 seconds. There are two slightly different appearances for this expanded state depending on if the user is on desktop or mobile. 
+
+For desktop this expanded launcher state will look like the picture below and can be closed by the user at any time with the close button in the top right. If the user does not close the expanded launcher and refreshes or changes the page the launcher will reappear in its expanded form immediately instead of waiting 15 seconds. It will stay in that expanded state until the user either opens it by clicking on either of the two primary buttons, or closes it, at which point it will stay in its small initial form shown above for the rest of the session.
+
+![An example of the desktop launcher](images/desktop-launcher.png)
+
+For mobile the expanded launcher state will look like the picture below. The user can close it by scrolling on the page, swiping right on the expanded launcher, or waiting 10 seconds at which point the expanded launcher will shrink back to its initial small state automatically. If the user refreshes or changes pages while the launcher is in it's expanded state then the launcher will reappear in its expanded state and wait 10 more seconds before shrinking back to its initial small state.
+
+![An example of the mobile launcher](images/mobile-launcher.png)
+
+The color of these launchers can be changed using the style tab (specifically the Accent color setting), and the text within the expanded launchers can be changed within the launcher tab. By default the desktop and mobile launchers use the greeting text shown in their respective screenshots above. This default text will be translated to any supported language if there's one set (see [here](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#languages) for instructions on setting language).
 
 ## Configuring the home screen
 {: #deploy-web-chat-home-screen}
