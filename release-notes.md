@@ -43,7 +43,7 @@ This topic describes the new features, changes, and bug fixes in each release of
 {: release-note}
 
 Apache Log4j security vulnerability updates
-:   {{site.data.keyword.conversationfull}} upgraded to using Log4j version 2.17.0, which addresses all of the Critical severity and High severity Log4j CVEs, specifically CVE-2021-45105, CVE-2021-45046, and CVE-2021-44228.
+:   {{site.data.keyword.conversationshort}} upgraded to using Log4j version 2.17.0, which addresses all of the Critical severity and High severity Log4j CVEs, specifically CVE-2021-45105, CVE-2021-45046, and CVE-2021-44228.
 
 ## 3 December 2021
 {: #watson-assistant-dec032021}
