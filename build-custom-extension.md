@@ -87,5 +87,38 @@ To build a custom extension based on the API definition, follow these steps:
 
 1. If you an encounter an error when you try to import the JSON file, make sure the file satisfies all of the requirements listed in [Preparing the API definition](##build-custom-extension-openapi-file). Edit the file to correct errors or remove unsupported features, and try the import again.
 
-1. ...
+1. In the **Review extension** step, review what has been imported. The **Extension operations** shows the operations that the assistant will be able to call from an action step. (An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.)
 
+    [image of example table]
+
+    For each operation, the table shows the following information:
+
+    - **Operation**: The name of the operation, which is derived from the `operationId` field in the OpenAPI file.
+    - **Description**: A short description of the operation, taken from the `summary` field.
+    - **Method**: The HTTP method used to send the API request for the operation.
+    - **Resource**: The path to the resource the operation acts upon.
+
+    To see additional information about an operation, hover the mouse pointer over its row in the table and click the ![menu icon](images/kebab.png).Select **Request** or **Response** to see details about the information sent with a request and returned with a response.
+
+    The **Request** table shows the input fields for which the assistant will be able to provide values when sending the request.
+    
+    [image of example table]
+    
+    Each row in the table shows the following information:
+
+    - **Name**: The name of the field, which might be a parameter (such as a query parameter or path parameter) or a property in the request body. The name is derived from the `name` field in the OpenAPI definition.
+    - **Description**: The description of the parameter or property, taken from the `description` field.
+    - **Example**: An example value, taken from the `example` field.
+
+    The **Response** table shows the action variables that will contain the data included in the response from the external service. After the request completes, these action variables will be available to subsequent action steps.
+    
+    [image of example table]
+    
+    For each variable, the table shows the following information:
+
+    - **Name**: The name of the action variable.
+    - **Description**: A description of the property that is mapped to the action variable. This might be a root property of the response body, or a property of a nested object in the response.
+    - **Path**: The path identifying the location of the property in the response body.
+    - **Example**: An example value.
+
+    If a response property contains an array, the individual elements in the array are not extracted as separate values. To access an element in an array, you must write an expression. For more information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions.md).
