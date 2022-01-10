@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-07"
+lastupdated: "2022-01-010"
 
 subcollection: watson-assistant
 
@@ -98,7 +98,7 @@ To build a custom extension based on the API definition, follow these steps:
     - **Method**: The HTTP method used to send the API request for the operation.
     - **Resource**: The path to the resource the operation acts upon.
 
-    To see additional information about an operation, hover the mouse pointer over its row in the table and click the ![menu icon](images/kebab.png).Select **Request** or **Response** to see details about the information sent with a request and returned with a response.
+1. To see additional information about an operation, hover the mouse pointer over its row in the table and click the ![menu icon](images/kebab.png).Select **Request** or **Response** to see details about the information sent with a request and returned with a response.
 
     The **Request** table shows the input fields for which the assistant will be able to provide values when sending the request.
     
@@ -122,3 +122,10 @@ To build a custom extension based on the API definition, follow these steps:
     - **Example**: An example value.
 
     If a response property contains an array, the individual elements in the array are not extracted as separate values. To access an element in an array, you must write an expression. For more information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions.md).
+    {: note}
+
+1. If you are satisfied with the extension, click **Finish**.
+
+    If you want to change something, delete the extension, edit the JSON file to make your changes, and repeat the import process.
+
+The new extension is now available from the integrations catalog.
