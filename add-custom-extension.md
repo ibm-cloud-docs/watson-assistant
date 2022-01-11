@@ -31,20 +31,19 @@ subcollection: watson-assistant
 # Adding a custom extension
 {: #add-custom-extension}
 
-A custom extension is an integration with an external service you have defined. A custom extension can be created for any service with a REST API that is described by an OpenAPI specification.
+After you have built a custom extension, you must add it to the assistant before it can be accessed by actions.
 {: shortdesc}
 
-A custom extension provides access to the operations supported by the external service. After you connect the extension to your assistant, your actions can call the external service, passing in any necessary input data. After the external service responds, any returned response data is available as action variables that subsequent steps can access.
+Adding the extension to the assistant configures the extension for use within a particular environment (Draft or Live), and it makes the extension available in the **And next** field in the action editor.
 
-For more information about how to create a custom extension, see [Build a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension).
+For information about how to create a custom extension, see [Build a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension).
 
-## Adding the custom extension to your assistant
+To add a custom extension to the assistant, follow these steps:
 
-To add a custom extension to your assistant, follow these steps:
+1. From the **Draft environment** or **Live environment** page, click **Browse catalog**.
 
-1. From your assistant, navigate to the page for the environment where you want to configure the webhook (**Draft environment** or **Live environment**).
-
-1. Click **Browse catalog**.
+    When you first add an extension to an assistant, the configuration settings you provide are applied only to the Draft environment. This is true even if you open the catalog from the **Live environment** page.
+    {: note}
 
 1. On the **Integrations** page, go to the **Extensions** section and find the tile for the custom extension you want to add. Click the ![menu icon](images/kebab.png) menu icon if you want to see overview information about the extension.
 
@@ -54,26 +53,51 @@ To add a custom extension to your assistant, follow these steps:
 
 1. In the **Authentication** step, specify the authentication credentials and server URL you want your assistant to use when calling the service. Click **Next**.
 
-1. In the **????** table, review the details of the data returned by each operation the extension supports. The table shows the following information:
+1. In the **Choose operations** step, review the operations supported by the extension. The table shows the following information about each operation:
 
-    - [details of table, once there is a new design]
+    - **Operation**: The name of the operation, based on the `operationId` in the API definition.
+    - **Description**: A brief description of the operation, taken from the `summary` in the API definition.
+    - **Method**: The HTTP method used for the request.
+    - **Resource**: The path to the resource the request acts upon.
+
+<!-- not sure if this is in MVP
+    If you want to limit what the assistant can access, you can remove operations from the table. To remove an operation, hover the mouse pointer over its row in the table and click the ![menu icon](images/kebab.png) menu icon. Select **Remove from assistant** to remove the operation. (If you change your mind later, you can re-add the operation by selecting **Add to assistant**.) -->
+
+1. For each supported operation, you can review the request and response data supported by the extension.
+
+To see additional information about an operation, hover the mouse pointer over its row in the table and click the ![menu icon](images/kebab.png) menu icon. Select **Request** or **Response** to see details about the information sent with a request and returned with a response.
+
+    The **Request** table shows the input fields for which the assistant will be able to provide values when sending the request.
+    
+    [image of example table]
+    
+    Each row in the table shows the following information:
+
+    [TBD ... need to understand what this will look like]
+
+    The **Response** table shows the fields that are included in the response data received from the external service.
+    
+    [image of example table]
+    
+    For each variable, the table shows the following information:
+
+    [TBD ... need to understand what this will look like]
+
+  <!-- not sure what is in MVP
+    If a response property contains an array, the individual elements in the array are not extracted as separate values. To access an element in an array, you must write an expression. For more information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions.md).
+    {: note}
+    -->
 
 1. Click **Finish**.
 
-The extension is now connected to your assistant and available for use by actions.
+The extension is now connected to your assistant and available for use by actions in the Draft environment.
 
-## Calling the custom extension from an action
-{: #add-custom-extension-action}
+To configure the extension for the Live environment, follow these steps:
 
-Now that you have added the custom extension to your assistant, you can call it from an action. The custom extension is available as a choice in the **And then** field of any step.
+1. Go to the **Live environment** page.
 
-To call a custom extension from an action:
+1. Under **Resolution Methods**, find the tile for the extension. You should see an indication that setup is incomplete:
 
-1. In the action editor, create or open the step from which you want to call the extension.
+    [image of extension with "Finish setup" indicator]
 
-1. In the step editor, click **And then**.
-
-1. Click **Use an extension**.
-
-1. ...
-
+1. Click the tile and repeat the configuration process, specifying the values you want to use for the Live environment.
