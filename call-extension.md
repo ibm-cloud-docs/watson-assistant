@@ -28,7 +28,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-## Calling an extension
+# Calling an extension
 {: #call-extension}
 
 An extension is an integration with an external service. By calling an extension from an action, your assistant can send requests to the external service and receive response data it can use in the conversation.
