@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-01-10"
+lastupdated: "2022-01-12"
 
 subcollection: watson-assistant
 
@@ -28,7 +28,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Adding a custom extension
+# Adding an extension to your assistant
 {: #add-custom-extension}
 
 After you have built a custom extension, you must add it to the assistant before it can be accessed by actions.
@@ -65,7 +65,7 @@ To add a custom extension to the assistant, follow these steps:
 
 1. For each supported operation, you can review the request and response data supported by the extension.
 
-To see additional information about an operation, hover the mouse pointer over its row in the table and click the ![menu icon](images/kebab.png) menu icon. Select **Request** or **Response** to see details about the information sent with a request and returned with a response.
+    To see additional information about an operation, hover the mouse pointer over its row in the table and click the ![menu icon](images/kebab.png) menu icon. Select **Request** or **Response** to see details about the information sent with a request and returned with a response.
 
     The **Request** table shows the input fields for which the assistant will be able to provide values when sending the request.
     
