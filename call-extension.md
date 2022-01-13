@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-01-12"
+lastupdated: "2022-01-13"
 
 subcollection: watson-assistant
 
@@ -52,7 +52,7 @@ To call a custom extension from an action:
 
     - In the **Operation** field, select the operation you want to perform.
 
-1. Specify values for each of the input parameters that will be sent to the extension. To assign a value to a parameter, click the input field for the value:
+1. Specify values for each of the required input parameters. To assign a value to a parameter, click the input field for the value:
 
     [image showing UI for setting parameter values]
 
@@ -62,6 +62,18 @@ To call a custom extension from an action:
 
     - Select a session variable or assistant variable to use its value.
 
-    - Select **Expression** to write an expression to define the value for the session variable. For more information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).
+    <!-- not supported yet
+    - Select **Expression** to write an expression to define the value for the session variable. For more information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).-->
 
-1. ...
+    You cannot currently use an expression to specify a parameter value. If you need to use an expression, insert a step before you call the extension, and use that step to assign the expression to an action variable. You can then use the variable as the parameter value.
+    {: note}
+
+1. If you want to specify values for an optional parameter, click **Optional parameters** and select the parameter you want to specify. Repeat this process for each optional parameter you want to use.
+
+1. Click **Apply**.
+
+The **And then** section of the step editor now shows an overview of the call to the extension:
+
+[screen shot of step editor showing call to extension]
+
+In subsequent steps, you can access the response variables and use them just as you would any other variable. For example, you might use a response variable as a step condition, or reference one in the output sent to your customer.
