@@ -40,6 +40,47 @@ For information about new features and improvements to the core {{site.data.keyw
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Versioning](/docs/watson-assistant?topic=watson-assistant-customize-web-chat#customize-web-chat-versions).
 
+## 6.0.0
+{: #6.0.0}
+
+*Release date: 19 January 2022*
+
+- **API version**: We updated the API version that is used by web chat from `2020-09-24` to `2021-11-27`. You can review the changes introduced by this update here: [November 27th release notes](https://cloud.ibm.com/docs/assistant?topic=assistant-release-notes#assistant-nov272021){: external} and [July 16th release notes](https://cloud.ibm.com/docs/assistant?topic=assistant-release-notes#assistant-jul162021){: external}.
+
+- **Launcher**: The new web chat launcher welcomes and engages the user so that they know where to find help if they need it. For more information, see [Configuring the launcher](/docs/assistant?topic=assistant-deploy-web-chat#deploy-web-chat-launcher){: external}).
+
+- **Home screen**: The web chat home screen has been updated to have a more modern look. For more information about the home screen, see [Configuring the home screen](/docs/assistant?topic=assistant-deploy-web-chat#deploy-web-chat-home-screen){: external}.
+
+- Agent events: There are now events that are fired by web chat as part of interacting with a human agent through our service desk integration. For more information, see [Agent events summary](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#summary){: external}.
+
+- Markdown: Web chat now fully supports common markdown in messages received from an Assistant. You may want to review existing responses that contain text that may potentially be recognized as markdown. For example a line of text that begins with a '>' will be interpreted as a block quote.
+
+- We changed how we set the timezone in context so that it will no longer override the timezone that may have already been set by the assistant. In addition we are now sending the locale to the assistant as part of context when a locale has been specified for web chat.
+
+- The `window:pre:open` and `window:open` events now fire any time the chat window is opened regardless of the reason. In previous releases, these events only fired if the window was opened by the user clicking on the built-in launcher. Other reasons like session history or custom launchers did not fire these events. The event data passed to the listener has a new reason property on it that indicates the reason the window was opened; this property can be used if you want to preserve the existing behavior. To do that, modify you handler to check for the default_launcher value.
+```
+instance.on({ type: "window:open", handler: event => {
+  if (event.data.reason === 'default_launcher') {
+    // Previous code.
+  }
+}});
+```
+For more information, see [Window open reasons](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#windowopenreasons){: external}.
+
+## 5.1.2
+{: #5.1.2}
+
+*Release date: 11 December 2021*
+
+- Bug fix for Salesforce integration.
+
+## 5.1.1
+{: #5.1.1}
+
+*Release date: 5 November 2021*
+
+- Bug fixes.
+
 ## 5.1.0
 {: #5.1.0}
 
@@ -127,7 +168,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 *Release date: 6 May 2021*
 
-- **Service URLs updated**: The URLs used by the web chat to communicate with the Assistant service have been updated to remove the dependency on the deprecated `watsonplatform.net` domain. This change applies retroactively to version 3.3.0 and all subsequent web chat releases. Make sure the system that hosts the web chat widget has access to the new URL; for more information, see [Deploy your assistant in production](/docs/assistant?topic=assistant-deploy-web-chat#ddeploy-web-chat-snippet){: external}.
+- **Service URLs updated**: The URLs used by the web chat to communicate with the Assistant service have been updated to remove the dependency on the deprecated `watsonplatform.net` domain. This change applies retroactively to version 3.3.0 and all subsequent web chat releases. Make sure the system that hosts the web chat widget has access to the new URL; for more information, see [Deploy your assistant in production](/docs/assistant?topic=assistant-deploy-web-chat#deploy-web-chat-snippet){: external}.
 
 ## 4.2.0
 {: #4.2.0}
