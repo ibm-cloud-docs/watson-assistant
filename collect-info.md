@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-10-19"
+  years: 2018, 2022
+lastupdated: "2022-01-13"
 
 subcollection: watson-assistant
 
@@ -67,7 +67,15 @@ The configuration information you must provide varies by response type.
 
 An _options_ response presents customers with a list of choices to select from. Use this response type when the cutomer's response must be one of a predefined set of known values. When you select an options response, you must then specify the valid options the assistant will display.
 
-The way in which these values are presented at run time depends upon how your customers connect to the assistant. In the web chat integration, the options are shown as clickable buttons (for 4 or fewer options) or as a drop-down list (for more than 5 options).
+The way in which these values are presented at run time depends upon how your customers connect to the assistant. In the web chat integration, the options are shown as clickable buttons (for 4 or fewer options) or as a drop-down list (for more than 5 options). 
+
+If you have a very long list of options, such as all the states in the U.S., you can choose to not show options in a list. This can be useful to prevent a phone integration from reading a long list of options to the customer. 
+
+To disable the list:
+
+1. In the options customer response, click the **Settings** icon.
+
+1. Move the **List options** toggle to off.
 
 You can optionally add _synonyms_ for each option by clicking **Add synonyms**. Synonyms are variations of an option value that customers might type. For each option that you add, add synonyms in a comma-separated list.
 
