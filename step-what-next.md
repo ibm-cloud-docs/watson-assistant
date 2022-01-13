@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-10-21"
+  years: 2018, 2022
+lastupdated: "2022-01-13"
 
 keywords: subaction, sub-action
 
@@ -41,6 +41,7 @@ Select an option from the drop-down list. The following options are available:
 - [Continue to next step](#continue-to-next-step)
 - [Re-ask previous step(s)](#re-ask-previous-step)
 - [Go to another action](#go-to-another-action)
+- [Use an extension](#use-extension)
 - [Search for the answer](#search-for-answer)
 - [Connect to agent](#connect-to-agent)
 - [End the action](#end-action)
@@ -109,6 +110,11 @@ To pass values to the subaction:
 1. Select the value you want to pass from the current action. You can select any available variable, or select **Expression** if you want to specify a different value.
 
 1. Click **Apply**.
+
+## Use an extension
+{: #use-extension}
+
+You can call an extension that has been added to your assistant in order to interact with an external service. For example, you might use an extension to interact with a ticketing or customer relationship management (CRM) system, or to retrieve real-time data such as mortgage rates or weather conditions. For more information about calling an extension, see [Calling an extension](/docs/watson-assistant?topic=watson-assistant-call-extension).
 
 ## Search for the answer ![Plus or higher plan only](images/plus.png)
 {: #search-for-answer}
