@@ -185,7 +185,7 @@ The web chat launcher welcomes and engages customers so they know where to find 
 
 After 15 seconds, the launcher expands to show a greeting message to the user. In this expanded state, a customer can still click the launcher to open the web chat. (If the customer reloads the page or navigates to a different page before the launcher has expanded, the 15-second timer restarts.) There are two slightly different appearances for this expanded state, depending on whether the user is using a desktop browser or a mobile browser. 
 
-- For desktop browsers, the expanded launcher shows two primary buttons the customer can click to open the web chat, and a **Close button** that closes the launcher:
+- For desktop browsers, the expanded launcher shows two primary buttons the customer can click to open the web chat, and a **Close** button that closes the launcher:
 
     ![An example of the desktop launcher](images/desktop-launcher.png)
 
@@ -197,7 +197,7 @@ After 15 seconds, the launcher expands to show a greeting message to the user. I
 
     The customer can close the launcher by scrolling on the page, swiping right on the expanded launcher, or waiting 10 seconds, at which point the expanded launcher shrinks back to its initial small state automatically. If the user reloads the page or navigates to a different page while the laucher is expanded, it stays in its expanded state, and the 10-second timer restarts.
 
-The language of the text shown within the launcher depends on the locale configured for the web chat. For more information, see [here](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#languages){: external}.
+The language of the text shown within the launcher depends on the locale configured for the web chat. For more information, see [Languages](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#languages){: external}.
 {: note}
 
 The color of the launcher is specified by the **Accent color** field on the **Style** tab of the web chat settings. To change the color, specify a new color using a standard hexadecimal RGB value.
