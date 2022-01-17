@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-10-28"
+  years: 2015, 2022
+lastupdated: "2022-01-19"
 
 subcollection: watson-assistant
 
@@ -45,27 +45,33 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 *Release date: 19 January 2022*
 
-- **API version**: We updated the API version that is used by web chat from `2020-09-24` to `2021-11-27`. You can review the changes introduced by this update here: [November 27th release notes](https://cloud.ibm.com/docs/assistant?topic=assistant-release-notes#assistant-nov272021){: external} and [July 16th release notes](https://cloud.ibm.com/docs/assistant?topic=assistant-release-notes#assistant-jul162021){: external}.
+- **API version**: The web chat now uses the `2021-11-27` version of the {{site.data.keyword.conversationshort}} API. Previously it used the `2021-11-27` API version. For information about changes introduced by this update, see the release notes for [27 November 2021](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes#watson-assistant-nov272021) and [16 July 2021](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes#watson-assistant-jul162021).
 
-- **Launcher**: The new web chat launcher welcomes and engages the user so that they know where to find help if they need it. For more information, see [Configuring the launcher](/docs/assistant?topic=assistant-deploy-web-chat#deploy-web-chat-launcher){: external}).
+- **Launcher**: The new web chat launcher welcomes and engages customers so they know where to find help if they need it. For more information, see [Launcher appearance and behavior](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-launcher).
 
-- **Home screen**: The web chat home screen has been updated to have a more modern look. For more information about the home screen, see [Configuring the home screen](/docs/assistant?topic=assistant-deploy-web-chat#deploy-web-chat-home-screen){: external}.
+- **Home screen**: The web chat home screen has been updated to have a more modern look. For more information about the home screen, see [Configuring the home screen](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-home-screen).
 
-- Agent events: There are now events that are fired by web chat as part of interacting with a human agent through our service desk integration. For more information, see [Agent events summary](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#summary){: external}.
+- **Agent events**: New events are now fired by the web chat when interacting with a human agent using a service desk integration. For more information, see [Agent events summary](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#summary){: external}.
 
-- Markdown: Web chat now fully supports common markdown in messages received from an Assistant. You may want to review existing responses that contain text that may potentially be recognized as markdown. For example a line of text that begins with a '>' will be interpreted as a block quote.
+- **Markdown support**: The web chat now fully supports common Markdown formatting in messages received from an assistant. You might need to review existing assistant output that contains strings that might be recognized as Markdown. (For example, a line of text that begins with a greater-than (`>`) character is interpreted as a block quote.)
 
-- We changed how we set the timezone in context so that it will no longer override the timezone that may have already been set by the assistant. In addition we are now sending the locale to the assistant as part of context when a locale has been specified for web chat.
+- **Time zone**: The time zone set in the context by the web chat no longer overrides any time zone set by the assistant.
 
-- The `window:pre:open` and `window:open` events now fire any time the chat window is opened regardless of the reason. In previous releases, these events only fired if the window was opened by the user clicking on the built-in launcher. Other reasons like session history or custom launchers did not fire these events. The event data passed to the listener has a new reason property on it that indicates the reason the window was opened; this property can be used if you want to preserve the existing behavior. To do that, modify you handler to check for the default_launcher value.
-```
-instance.on({ type: "window:open", handler: event => {
-  if (event.data.reason === 'default_launcher') {
-    // Previous code.
-  }
-}});
-```
-For more information, see [Window open reasons](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#windowopenreasons){: external}.
+- **Locale**: Any locale configured for the web chat is now sent to the assistant as part of the context.
+
+- **Window open events**: The `window:pre:open` and `window:open` events now fire any time the chat window is opened, regardless of the reason. In previous releases, these events only fired if the window was opened by the customer clicking on the built-in launcher. Other methods of opening the chat window, such as session history or custom launchers, did not fire these events.
+
+    The event data passed to the listener has a new `reason` property that indicates the reason the window was opened. If you want to preserve the previous behavior, you can modify your handler to check this property:
+
+    ```
+    instance.on({ type: "window:open", handler: event => {
+      if (event.data.reason === 'default_launcher') {
+        // Previous code.
+      }
+    }});
+    ```
+
+    For more information, see [Window open reasons](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#windowopenreasons){: external}.
 
 ## 5.1.2
 {: #5.1.2}
