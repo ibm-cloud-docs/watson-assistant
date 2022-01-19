@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-12-13"
+  years: 2019, 2022
+lastupdated: "2022-01-19"
 
 subcollection: watson-assistant
 
@@ -81,9 +81,8 @@ The web chat integration is added to your first assistant automatically. To add 
       - Marker that shows the start of the assistant’s response
       - Border of a button after it is clicked
       - Border of the drop-down list field as the user chooses an option
-<!-- Pause response type not yet supported in actions      
-      - Typing indicator that is shown to repesent a pause response
--->
+    <!--- Pause response type not yet supported in actions --->
+    <!--- - Typing indicator that is shown to represent a pause response --->
 
     Style changes you make are immediately applied to the preview that is shown on the page, so you can see how your choices impact the style of the chat UI.
 
@@ -176,6 +175,34 @@ The web chat integration is added to your first assistant automatically. To add 
     If you don't extend the session timeout setting for the assistant, the flow for the current session is restarted after 5 minutes of inactivity. This means that if a user stops interacting with the assistant, after 5 minutes, any context variable values that were set during the previous conversation are set to null or back to their initial values.
 
 A developer can use APIs to apply more advanced customizations to the style of the web chat. For more information, see [Applying advanced customizations](/docs/watson-assistant?topic=watson-assistant-web-chat-config).
+
+## Launcher appearance and behavior
+{: #deploy-web-chat-launcher}
+
+The web chat launcher welcomes and engages customers so they know where to find help if they need it. By default, the web chat launcher appears in a small initial state as a circle in the bottom right corner:
+
+![An example of the initial launcher](images/web-chat-icon.png)
+
+After 15 seconds, the launcher expands to show a greeting message to the user. In this expanded state, a customer can still click the launcher to open the web chat. (If the customer reloads the page or navigates to a different page before the launcher has expanded, the 15-second timer restarts.) There are two slightly different appearances for this expanded state, depending on whether the user is using a desktop browser or a mobile browser. 
+
+- For desktop browsers, the expanded launcher shows two primary buttons the customer can click to open the web chat, and a **Close** button that closes the launcher:
+
+    ![An example of the desktop launcher](images/desktop-launcher.png)
+
+    The expanded launcher remains in its expanded state even if the customer reloads the page or navigates to a different page. It stays in its expanded state until the customer either opens it by clicking on either of the two primary buttons, or closes it, at which point it returns to its initial small state for the rest of the session.
+
+- For mobile browsers, the launcher shows only a single primary button:
+
+    ![An example of the mobile launcher](images/mobile-launcher.png)
+
+    The customer can close the launcher by scrolling on the page, swiping right on the expanded launcher, or waiting 10 seconds, at which point the expanded launcher shrinks back to its initial small state automatically. If the user reloads the page or navigates to a different page while the laucher is expanded, it stays in its expanded state, and the 10-second timer restarts.
+
+The color of the launcher is specified by the **Accent color** field on the **Style** tab of the web chat settings. To change the color, specify a new color using a standard hexadecimal RGB value.
+
+You can customize the greeting message displayed by the launcher on the **Launcher** tab of the web chat settings. The settings include separate greeting messages for the desktop and mobile versions of the launcher.
+
+The language of the default text shown within the launcher depends on the locale configured for the web chat. For more information, see [Languages](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#languages){: external}. If you customize the greeting text, the text you provide is used regardless of the locale settings.
+{: note}
 
 ## Configuring the home screen
 {: #deploy-web-chat-home-screen}
