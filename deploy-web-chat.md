@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-12-13"
+  years: 2019, 2022
+lastupdated: "2022-01-19"
 
 subcollection: watson-assistant
 
@@ -176,24 +176,33 @@ The web chat integration is added to your first assistant automatically. To add 
 
 A developer can use APIs to apply more advanced customizations to the style of the web chat. For more information, see [Applying advanced customizations](/docs/watson-assistant?topic=watson-assistant-web-chat-config).
 
-## Configuring the launcher
+## Launcher appearance and behavior
 {: #deploy-web-chat-launcher}
 
-The web chat launcher welcomes and engages the user so that they know where to find help if they need it. Initially the web chat launcher starts off in it's small default state as a circle in the bottom right corner:
+The web chat launcher welcomes and engages customers so they know where to find help if they need it. By default, the web chat launcher appears in a small initial state as a circle in the bottom right corner:
 
 ![An example of the initial launcher](images/web-chat-icon.png)
 
-After 15 seconds the launcher will perform an expand animation in order to show a greeting message to the user. In this expanded state the launcher is still clickable so the user can use it to open the web chat as they normally would. If the user changes the page or reloads the page before the launcher has been able to expand (< 15 seconds) then the launcher will stay in it's initial small state on the next page load and try again to expand after 15 seconds. There are two slightly different appearances for this expanded state depending on if the user is on desktop or mobile. 
+After 15 seconds, the launcher expands to show a greeting message to the user. In this expanded state, a customer can still click the launcher to open the web chat. (If the customer reloads the page or navigates to a different page before the launcher has expanded, the 15-second timer restarts.) There are two slightly different appearances for this expanded state, depending on whether the user is using a desktop browser or a mobile browser. 
 
-For desktop this expanded launcher state will look like the picture below and can be closed by the user at any time with the close button in the top right. If the user does not close the expanded launcher and refreshes or changes the page the launcher will reappear in its expanded form immediately instead of waiting 15 seconds. It will stay in that expanded state until the user either opens it by clicking on either of the two primary buttons, or closes it, at which point it will stay in its small initial form shown above for the rest of the session.
+- For desktop browsers, the expanded launcher shows two primary buttons the customer can click to open the web chat, and a **Close** button that closes the launcher:
 
-![An example of the desktop launcher](images/desktop-launcher.png)
+    ![An example of the desktop launcher](images/desktop-launcher.png)
 
-For mobile the expanded launcher state will look like the picture below. The user can close it by scrolling on the page, swiping right on the expanded launcher, or waiting 10 seconds at which point the expanded launcher will shrink back to its initial small state automatically. If the user refreshes or changes pages while the launcher is in it's expanded state then the launcher will reappear in its expanded state and wait 10 more seconds before shrinking back to its initial small state.
+    The expanded launcher remains in its expanded state even if the customer reloads the page or navigates to a different page. It stays in its expanded state until the customer either opens it by clicking on either of the two primary buttons, or closes it, at which point it returns to its initial small state for the rest of the session.
 
-![An example of the mobile launcher](images/mobile-launcher.png)
+- For mobile browsers, the launcher shows only a single primary button:
 
-The color of these launchers can be changed using the style tab (specifically the Accent color setting), and the text within the expanded launchers can be changed within the launcher tab. By default the desktop and mobile launchers use the greeting text shown in their respective screenshots above. This default text will be translated to any supported language if there's one set (see [here](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#languages) for instructions on setting language).
+    ![An example of the mobile launcher](images/mobile-launcher.png)
+
+    The customer can close the launcher by scrolling on the page, swiping right on the expanded launcher, or waiting 10 seconds, at which point the expanded launcher shrinks back to its initial small state automatically. If the user reloads the page or navigates to a different page while the laucher is expanded, it stays in its expanded state, and the 10-second timer restarts.
+
+The color of the launcher is specified by the **Accent color** field on the **Style** tab of the web chat settings. To change the color, specify a new color using a standard hexadecimal RGB value.
+
+You can customize the greeting message displayed by the launcher on the **Launcher** tab of the web chat settings. The settings include separate greeting messages for the desktop and mobile versions of the launcher.
+
+The language of the default text shown within the launcher depends on the locale configured for the web chat. For more information, see [Languages](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#languages){: external}. If you customize the greeting text, the text you provide is used regardless of the locale settings.
+{: note}
 
 ## Configuring the home screen
 {: #deploy-web-chat-home-screen}
