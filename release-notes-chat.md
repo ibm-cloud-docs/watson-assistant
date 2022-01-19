@@ -45,7 +45,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 *Release date: 19 January 2022*
 
-- **API version**: The web chat now uses the `2021-11-27` version of the {{site.data.keyword.conversationshort}} API. Previously it used the `2021-09-21` API version. For information about changes introduced by this update, see the release notes for [27 November 2021](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes#watson-assistant-nov272021) and [16 July 2021](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes#watson-assistant-jul162021).
+- **API version**: The web chat now uses the `2021-11-27` version of the {{site.data.keyword.conversationshort}} API. Previously it used the `2020-09-24` API version. For information about API changes that have been introduced since the `2020-09-24` version, see the release notes for [27 November 2021](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes#watson-assistant-nov272021) and [16 July 2021](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes#watson-assistant-jul162021).
 
 - **Launcher**: The new web chat launcher welcomes and engages customers so they know where to find help if they need it. For more information, see [Launcher appearance and behavior](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-launcher).
 
@@ -73,6 +73,8 @@ If you want to evaluate changes that are introduced in a web chat release before
 
     For more information, see [Window open reasons](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#windowopenreasons){: external}.
 
+- **hideCloseButton property renamed**: The `hideCloseButton` property for custom panels has been renamed `hideBackButton`. The behavior of the property has not changed. For more information, see [customPanel.open()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#custompanelopen){: external}.
+
 ## 5.1.2
 {: #5.1.2}
 
@@ -85,6 +87,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 *Release date: 5 November 2021*
 
+- **"User is typing" support**: The web chat now supports displaying the "user is typing" message for service desks. This feature is supported for the Salesforce and Zendesk integrations, as well as any [starter kit](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external} integration that implements it.
 - Bug fixes.
 
 ## 5.1.0
