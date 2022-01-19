@@ -63,7 +63,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
     The event data passed to the listener has a new `reason` property that indicates the reason the window was opened. If you want to preserve the previous behavior, you can modify your handler to check this property:
 
-    ```
+    ```javascript
     instance.on({ type: "window:open", handler: event => {
       if (event.data.reason === 'default_launcher') {
         // Previous code.
