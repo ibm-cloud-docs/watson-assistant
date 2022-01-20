@@ -57,7 +57,7 @@ Customers interact with the assistant through one or more of these channels:
 
 The **assistant** receives a message from a customer and sends it down the appropriate resolution path. 
 
-If you want to preprocess incoming messages, this is where you would use webhooks to inject logic that calls an external service that can process the messages before the assistant routes them. Likewise, you can process responses from the assistant before they are returned to the customer.
+If you want to preprocess incoming messages, this is where you can use webhooks to inject logic that calls an external service that can process the messages before the assistant routes them. Likewise, you can process responses from the assistant before they are returned to the customer.
 
 The assistant chooses the appropriate resolution from among these options:
 
