@@ -63,7 +63,7 @@ The assistant chooses the appropriate resolution from among these options:
 
 - An **action** interprets the customer's message further, then directs the flow of the conversation. The action gathers any information it needs to respond or perform a transaction on the customer's behalf.
 
-- A **search integration** leverages existing FAQ or other curated content that you own to find relevant answers to customer questions.
+- A **search integration** uses existing FAQ or other curated content that you own to find relevant answers to customer questions.
 
 - If a customer wants more personalized help or wants to discuss a sensitive subject, the assistant can connect the customer with someone from your support team through the web chat integration.
 
