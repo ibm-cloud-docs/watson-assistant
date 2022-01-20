@@ -44,7 +44,7 @@ Use {{site.data.keyword.conversationfull}} to build your own branded live chatbo
 ## How it works
 {: #about-how-it-works}
 
-This diagram illustrates how the product delivers an exceptional, omnichannel customer experience:
+This diagram illustrates how {{site.data.keyword.conversationfull}} delivers an exceptional, omnichannel customer experience:
 
 ![Flow diagram of the service](images/arch-detail.png)
 
