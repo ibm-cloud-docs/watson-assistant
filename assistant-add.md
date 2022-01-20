@@ -41,7 +41,7 @@ When you add an instance of {{site.data.keyword.conversationshort}}, you create 
 
     - **Assistant name**: A name no more than 100 characters in length. A name is required.
     - **Description**: An optional description no more than 200 characters in length.
-    - **Assistant language**: Choose the language the assistant uses in conversations. Learn more about [language support](/docs/watson-assistant?topic=watson-assistant-admin-language-support).
+    - **Assistant language**: The language the assistant uses in conversations. Learn more about [language support](/docs/watson-assistant?topic=watson-assistant-admin-language-support).
 
 1.  Click **Create assistant**.
 
@@ -72,5 +72,4 @@ To delete an assistant, follow these steps:
 1. Click the **Delete assistant** button on the settings page. A confirmation question displays.
 
 1. To confirm, type the word `DELETE`, then click **Delete**.
-
 
