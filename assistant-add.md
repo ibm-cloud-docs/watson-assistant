@@ -52,7 +52,7 @@ Once you have created an assistant, you can start with the next topic in [Buildi
 ## Renaming an assistant
 {: #assistant-add-rename}
 
-You can change the name of an assistant and its associated description after you create the assistant. You can't change its language.
+You can change the name and description of an assistant after you create it. You can't change its language.
 
 To rename an assistant, follow these steps:
 
@@ -72,4 +72,3 @@ To delete an assistant, follow these steps:
 1. Click the **Delete assistant** button on the settings page. A confirmation question displays.
 
 1. To confirm, type the word `DELETE`, then click **Delete**.
-
