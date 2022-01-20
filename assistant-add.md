@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-01-19"
+lastupdated: "2022-01-20"
 
 subcollection: watson-assistant
 
@@ -28,7 +28,7 @@ subcollection: watson-assistant
 # Creating an assistant
 {: #assistant-add}
 
-Create an assistant that addressses the business goals of your customers.
+The first step in building your chatbot is creating a new assistant.
 {: shortdesc}
 
 When you add an instance of {{site.data.keyword.conversationshort}}, you create an assistant before doing anything else. If you want to add more assistants, follow these steps:
