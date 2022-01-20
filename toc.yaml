@@ -17,6 +17,7 @@ toc:
       id: learn
       topics:
       - welcome-new-assistant.md
+      - about.md
       - topicgroup:
           label: Release notes
           topics:
@@ -34,6 +35,7 @@ toc:
   - navgroup:
       id: howto
       topics:
+      - assistant-add.md
       - topicgroup:
           label: Building your assistant
 
