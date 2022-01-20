@@ -65,7 +65,7 @@ The assistant chooses the appropriate resolution from among these options:
 
 - A **search integration** uses existing FAQ or other curated content that you own to find relevant answers to customer questions.
 
-- If a customer wants more personalized help or wants to discuss a sensitive subject, the assistant can connect the customer with someone from your support team through the web chat integration.
+- If a customer wants more personalized help or wants to discuss a sensitive subject, the assistant can connect the customer with someone from your support team through the web chat or phone integration.
 
 For more information about the architecture, read the [How to Make Chatbot Orchestration Easier](https://medium.com/ibm-watson/how-to-make-chatbot-orchestration-easier-c8ed61620b8d){: external} blog on Medium.com.
 
