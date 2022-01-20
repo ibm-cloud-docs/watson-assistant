@@ -51,7 +51,7 @@ This diagram illustrates how {{site.data.keyword.conversationfull}} delivers an 
 Customers interact with the assistant through one or more of these channels:
 
 - A web chat that you embed in your company website and that can transfer complex requests to a customer support representative.
-- An existing social media messaging platform, such as Slack, Facebook Messenger, or WhatsApp
+- An existing social-media messaging platform, such as Slack, Facebook Messenger, or WhatsApp
 - A phone call or text message
 - A custom application that you develop, such as a mobile app or a robot with a voice interface
 
