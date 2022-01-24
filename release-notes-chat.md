@@ -40,6 +40,13 @@ For information about new features and improvements to the core {{site.data.keyw
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Versioning](/docs/watson-assistant?topic=watson-assistant-customize-web-chat#customize-web-chat-versions).
 
+## 6.0.1
+{: #6.0.1}
+
+*Release date: 24 January 2022*
+
+- Bug fix for the disclaimer. For more information about the disclaimer, see [Configuration options object](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#configurationobject){: external}.
+
 ## 6.0.0
 {: #6.0.0}
 
