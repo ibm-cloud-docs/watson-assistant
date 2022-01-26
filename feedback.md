@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-09-30"
+  years: 2015, 2022
+lastupdated: "2022-01-26"
 
 subcollection: watson-assistant
 
@@ -57,7 +57,7 @@ To request participation in the program, you must first create a new {{site.data
 Do not add an existing instance that you are using to do any real work to the early access program.
 {: important}
 
-1.  Create a {{site.data.keyword.conversationshort}} service resource from the [{{site.data.keyword.conversationshort}}](https://{DomainName}/catalog/services/watson-assistant){: external} page in the {{site.data.keyword.cloud}} catalog.
+1.  Create a {{site.data.keyword.conversationshort}} service resource from the [{{site.data.keyword.conversationshort}}](/catalog/services/watson-assistant){: external} page in the {{site.data.keyword.cloud}} catalog.
 
     The service instance can be part of a free (Lite) plan, and must be deployed to the **Dallas** location.
 
