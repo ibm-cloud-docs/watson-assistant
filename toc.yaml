@@ -18,6 +18,7 @@ toc:
       topics:
       - welcome-new-assistant.md
       - about.md
+      - plan-assistant.md
       - topicgroup:
           label: Release notes
           topics:
