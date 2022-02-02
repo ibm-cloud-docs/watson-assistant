@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-010"
+lastupdated: "2022-02-02"
 
 subcollection: watson-assistant
 
@@ -31,10 +31,10 @@ subcollection: watson-assistant
 # Building a custom extension
 {: #build-custom-extension}
 
-If you need to integration your assistant with an external service that has a REST API, you can build a custom extension by importing an OpenAPI document.
+If you need to integrate your assistant with an external service that has a REST API, you can build a custom extension by importing an OpenAPI document.
 {: shortdesc}
 
-By importing an OpenAPI document that describes an external service, you can create an extension that you can then connect to an assistant as an integration. You can then define actions that interact with the external service by calling the extension.
+By importing an OpenAPI document that describes an external service, you can create an extension that you can then connect to an assistant as an integration. In your actions, you can then define steps that interact with the external service by calling the extension.
 
 ## Overview
 {: #build-custom-extension-overview}
@@ -47,24 +47,24 @@ For more information about the OpenAPI specification, see [OpenAPI Specification
 
 When you create a custom extension, you import an OpenAPI document that describes the REST API of an external service. {{site.data.keyword.conversationshort}} parses the OpenAPI document to identify the operations supported by the external service, along with information about the input parameters and response for each operation and supported authentication methods.
 
-After this processing has completed, the custom extension becomes available as a new integration that you can connect to the assistant in either the Draft or Live environment. Your assistant can then use the extension to send requests to the external service based on conversations with your customers. Values included in the response from the service are then mapped to action variables, which can be accessed by subsequent action steps.
+After this processing has completed, the custom extension becomes available as a new integration that you can connect to the assistant in the Draft or Live environment. Your assistant can then use the extension to send requests to the external service based on conversations with your customers. Values included in the response from the service are then mapped to action variables, which can be accessed by subsequent action steps.
 
 (For more information about connecting a custom extension to an assistant, see [Add a custom extension](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).)
 
 ## Preparing the API definition
 {: #build-custom-extension-openapi-file}
 
-To create a custom extension, you need access to an OpenAPI document that describes the REST API you want to integrate with. Many third-party services publish OpenAPI documents that describe their APIs, which you can download and import. If you need to connect to an API that your company maintains, you can use standard tools to create an OpenAPI document describing it. (For more information about creating an OpenAPI document, see [OpenAPI 3.0 Tutorial](https://support.smartbear.com/swaggerhub/docs/tutorials/openapi-3-tutorial.html).)
+To create a custom extension, you need access to an OpenAPI document that describes the REST API you want to integrate with. Many third-party services publish OpenAPI documents that describe their APIs, which you can download and import. For an API that your company maintains, you can use standard tools to create an OpenAPI document describing it. (For more information about creating an OpenAPI document, see [OpenAPI 3.0 Tutorial](https://support.smartbear.com/swaggerhub/docs/tutorials/openapi-3-tutorial.html).)
 
 The OpenAPI document must satisfy the following requirements and restrictions:
 
-- The document must conform to the OpenAPI 3.0 specification. If you have an OpenAPI (or Swagger) document that uses an earlier version of the specification, you can use the online [Swagger editor](https://editor.swagger.io/) or other tools to convert it to OpenAPI 3.0.
+- The document must conform to the OpenAPI 3.0 specification. If you have an OpenAPI (or Swagger) document that uses an earlier version of the specification, you can use the online [Swagger editor](https://editor.swagger.io/) to convert it to OpenAPI 3.0.
 - The document must be in JSON format (YAML is not supported). If you have a YAML document, you can use the online [Swagger editor](https://editor.swagger.io/) to convert it to JSON.
 - Each operation must have a clear and concise `summary`. The text of the summary is used in the UI to describe the operations that are available from an action, so it should be short and meaningful to someone who is building an assistant.
 - [Relative URLs](https://swagger.io/docs/specification/api-host-and-base-path/#relative-urls){: external} are currently not supported.
 - Only `Basic`, `Bearer`, and `API key` authentication are supported.
 - References using `$ref` are currently not supported. (All schemas and other definitions must be inline.)
-- Schemas defined using `anyOf`, `oneOf`, or `allOf` are currently not supported.
+- Schemas defined using `anyOf`, `oneOf`, and `allOf` are currently not supported.
 - Arrays are not supported in request bodies. You can import a document that defines requests that take arrays, but the assistant will not be able to pass values for these parameters.
 - Arrays in response bodies are included, but individual values in an array are not mapped to separate action variables. These values can be accessed from an assistant only by writing expressions in the JSON editor.
 
@@ -72,7 +72,9 @@ The OpenAPI document must satisfy the following requirements and restrictions:
 
 To build a custom extension based on the API definition, follow these steps:
 
-1. On the **Integrations** page, go to the **Extensions** section and click the **Build a custom extension** tile.
+1. On either the **Draft environment** or **Live environment** page, click **Browse catalog** to open the integrations catalog.
+
+1. On the **Integrations** page, scroll to the **Extensions** section and click **Build a custom extension**.
 
 1. Read the **Get started** information and click **Next** to continue.
 
@@ -83,21 +85,23 @@ To build a custom extension based on the API definition, follow these steps:
 
     Click **Next**.
 
-1. In the **Import OpenAPI** step, click or drag and drop to add the OpenAPI document that describes the REST API you are integrating with. Click **Next**.
+1. In the **Import OpenAPI** step, click or drag and drop to add the OpenAPI document that describes the REST API you want to integrate with. Click **Next**.
 
 1. If you an encounter an error when you try to import the JSON file, make sure the file satisfies all of the requirements listed in [Preparing the API definition](##build-custom-extension-openapi-file). Edit the file to correct errors or remove unsupported features, and try the import again.
 
 1. In the **Review extension** step, review what has been imported. The **Extension operations** shows the operations that the assistant will be able to call from an action step. (An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.)
 
+    The table is organized by categories derived from the `tags` field in the OpenAPI file. Click the ![label](images/twistie.png) icon to see the operations in a category.
+
     [image of example table]
 
     For each operation, the table shows the following information:
 
-    - **Operation**: The name of the operation, which is derived from the `operationId` field in the OpenAPI file.
-    - **Description**: A short description of the operation, taken from the `summary` field.
+    - **Operation**: A description of the operation, which is derived from either the `summary` (if present) or `description` in the OpenAPI file.
     - **Method**: The HTTP method used to send the API request for the operation.
     - **Resource**: The path to the resource the operation acts upon.
 
+<!-->
 1. To see additional information about an operation, hover the mouse pointer over its row in the table and click the ![menu icon](images/kebab.png) menu icon. Select **Request** or **Response** to see details about the information sent with a request and returned with a response.
 
     The **Request** table shows the input fields for which the assistant will be able to provide values when sending the request.
@@ -123,7 +127,7 @@ To build a custom extension based on the API definition, follow these steps:
 
     If a response property contains an array, the individual elements in the array are not extracted as separate values. To access an element in an array, you must write an expression. For more information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions.md).
     {: note}
-
+-->
 1. If you are satisfied with the extension, click **Finish**.
 
     If you want to change something, delete the extension, edit the JSON file to make your changes, and repeat the import process.
