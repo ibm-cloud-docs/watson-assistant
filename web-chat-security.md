@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-09-24"
+  years: 2019, 2022
+lastupdated: "2022-01-20"
 
 subcollection: watson-assistant
 
@@ -219,7 +219,7 @@ For example, you might start a business process for a VIP customer that is diffe
     ```
     {: codeblock}
 
-1.   The encrypted user payload is decrypted and then saved to the `context.integrations.chat.private.user_payload` object.
+1. The encrypted user payload is decrypted and then saved to the `context.integrations.chat.private.user_payload` object.
 
     You might want to access the payload, for example, to get the customer importance information or single sign-on credentials that you can subsequently use to authenticate a webhook.
 
