@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-01-13"
+lastupdated: "2022-02-03"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,16 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 3 February 2022
+{: #watson-assistant-feb032022}
+{: release-note}
+
+Customize the Preview page background
+:   You can now change the background of the **Preview** page to one of your organization's web pages so you can preview and test your assistant from a customer's perspective. For more information, see [Previewing and sharing your assistant](/docs/watson-assistant?topic=watson-assistant-preview-share).
+
+Create saved customer responses
+:   You can create saved customer responses that can be reused when you build actions. These responses can also be created as session variables and used as conditions in your actions. For more information, see [Saving and reusing customer responses](/docs/watson-assistant?topic=watson-assistant-collect-info#saved-customer-responses).
 
 ## 13 January 2022
 {: #watson-assistant-jan132022}
