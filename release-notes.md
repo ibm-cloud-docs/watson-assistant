@@ -45,6 +45,9 @@ This topic describes the new features, changes, and bug fixes in each release of
 Customize the Preview page background
 :   You can now change the background of the **Preview** page to one of your organization's web pages so you can preview and test your assistant from a customer's perspective. For more information, see [Previewing and sharing your assistant](/docs/watson-assistant?topic=watson-assistant-preview-share).
 
+Add a type to session variables
+:   When you create a session variable, you can now set a variable type. For more information, see [Creating a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable). Previously, the only conditional tests supported for session variables were `is defined` and `is not defined`. Now, more tests are available to use when you apply conditions to your actions. For more information, see [Operators](/docs/watson-assistant?topic=watson-assistant-step-conditions#operators).
+
 Create saved customer responses
 :   You can create saved customer responses that can be reused when you build actions. These responses can also be created as session variables and used as conditions in your actions. For more information, see [Saving and reusing customer responses](/docs/watson-assistant?topic=watson-assistant-collect-info#saved-customer-responses).
 
