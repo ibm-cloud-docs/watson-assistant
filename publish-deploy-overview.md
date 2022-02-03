@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-11"
+  years: 2021, 2022
+lastupdated: "2022-02-03"
 
 subcollection: watson-assistant
 
@@ -58,7 +58,7 @@ Each new assistant comes with two environments: the draft environment and the li
 ## The draft environment
 Use the **Draft environment** page to manage the draft environment. Your draft content is permanently connected to the draft environment, and you can preview this content from your customers' perspective on the **Preview** page. From the **Preview** page, you can also manage your draft web chat channel. All other draft environment integrations are managed from the **Draft environment** page. Use your draft integrations for testing, not for going live. These integrations are unique to the draft environment, and changes to draft integrations don't affect live integrations.
 
-![Image of the Publish page](images/preview-page.png)
+![Image of the Draft environment page](images/draft-environment-page.png)
 
 The **Assistant preview** pane on the **Preview** page shows what the web chat channel looks like on a sample webpage. This preview pane shows draft content, draft integrations, and any changes to the web chat settings. To share a preview of your draft content, copy and paste the share link on the left side of the **Preview** page.
 
