@@ -45,7 +45,7 @@ The data stored by a variable is characterized by the type of data it contains (
 
 ## Action variables and session variables
 
-Watson Assistant supports two categories of variables:
+{{site.data.keyword.conversationshort}} supports two categories of variables:
 
 - **Action variables**: When a step collects information from the customer, the customer response is automatically stored in an *action variable*. You can think of action variables as short-term memory: they persist only for the duration of the current action.
 
@@ -53,7 +53,7 @@ Watson Assistant supports two categories of variables:
 
 - **Session variables**: A value that is not necessarily tied to a particular action can be stored as a *session variable*. Session variables are long-term memory: they persist throughout the user's interaction with the assistant, and your assistant can reference them from any action.
 
-    You can create a session variable to store the value from an action variable, if you want to keep the value available for other actions to use. You can also define a session variable based on another session variable, or using a value defined in an expression. In addition to variables you create, Assistant provides a set of built-in session variables for global values like the current time and date.
+    You can create a session variable to store the value from an action variable, if you want to keep the value available for other actions to use. You can also define a session variable based on another session variable, or using a value defined in an expression. In addition to variables you create, {{site.data.keyword.conversationshort}} provides a set of built-in session variables for global values like the current time and date.
 
     Session variables can help you to modularize your assistant, because you can write a single action that collects information needed in multiple places. For example, you might have a greeting action that collects basic information about the customer and stores the responses in session variables, which any action can then access.
 
@@ -87,7 +87,7 @@ To add a session variable that can be accessed by any action:
 ### Built-in variables
 {: #built-in-variables }
 
-In addition to the variables you create, Watson Assistant provides a set of built-in variables you can access from any action. At run time, these variables are automatically set with the appropriate values. For example, the *Current time* session variable always provides the current time in the user's time zone, at the time of the interaction with the customer.
+In addition to the variables you create, {{site.data.keyword.conversationshort}} provides a set of built-in variables you can access from any action. At run time, these variables are automatically set with the appropriate values. For example, the *Current time* session variable always provides the current time in the user's time zone, at the time of the interaction with the customer.
 
 To see these variables, click **Variables** in the navigation pane from the main actions page.
 
