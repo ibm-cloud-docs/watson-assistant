@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-11-08"
+  years: 2018, 2022
+lastupdated: "2022-02-01"
 
 subcollection: watson-assistant
 
@@ -51,7 +51,7 @@ Watson Assistant supports two categories of variables:
 
     The name of an action variable is always the name of the step that defines the customer response. (You cannot change the name of an action variable.) For example, suppose you define a step that asks "When were you born?" and accepts a date value as a response. The customer response is automatically stored as an action variable called `When were you born?`, which you can then access from any subsequent step in the same action.
 
-- **Session variables**: A value that is not necessarily tied to a particular action can be stored as a *session variable*. Session variables are long-term memory: they persist throughout the user's interaction with the assistant, and your assistant can reference them from any action. 
+- **Session variables**: A value that is not necessarily tied to a particular action can be stored as a *session variable*. Session variables are long-term memory: they persist throughout the user's interaction with the assistant, and your assistant can reference them from any action.
 
     You can create a session variable to store the value from an action variable, if you want to keep the value available for other actions to use. You can also define a session variable based on another session variable, or using a value defined in an expression. In addition to variables you create, Assistant provides a set of built-in session variables for global values like the current time and date.
 
@@ -75,6 +75,8 @@ To add a session variable that can be accessed by any action:
 1. In the **Name** field, type a name for the session variable.
 
     As you add the name, an ID is generated for you. Any spaces in the name are replaced with underscores (_) in the ID.
+
+1. **Optional**: Add a type. This sets the response type of the variable. For more information about response types, see [Choosing a response type](/docs/watson-assistant?topic=watson-assistant-collect-info#choosing-a-response-type). From this field, you can also select any of the saved responses that you created. For more information about saved responses, see [Saving and reusing customer responses](/docs/watson-assistant?topic=watson-assistant-collect-info#saved-customer-responses).
 
 1. **Optional**: Add an initial value. This sets the starting value for the variable at the beginning of each user session. For example, suppose you have an assistant your customers can use to make purchases; you might initialize a *Payment due* variable with a starting value of 0, and then add to that value as the customer orders items.
 
@@ -100,8 +102,9 @@ To see these variables, click **Variables** in the navigation pane from the main
 | *Now*                      | `now`       | The current date and time in the user's time zone. | `2021-08-11T11:28:02` |
 | *Current time*             | `current_time` | The current time in the user's time zone.       | `11:28:02`            |
 | *Current date*             | `current_date` | The current date in the user's time zone.       | `2021-08-11`          |
-| *Fallback reason*          | `fallback_reason` | The reason why a user is routed to the fallback action | `Step validation failed` `Agent requested` `No action matches` |
-| *No action matches count* | `no_action_matches_count` | The count of user's consecutive unrecognized input attempts | `3` |
+| *Last action*              | `last_action`  |                                                 |                       |
+| *Fallback reason*          | `fallback_reason` |                                              |                       |
+| *Assistant repeats itself* | `assistant_repeats_itself` |                                     |                       |
 {: caption="Variables set by assistant" caption-side="top"}
 
 **Set by integration**:
@@ -125,7 +128,7 @@ Any action can store a value in a session variable so it is availble to other ac
 
     If you have not yet created the session variable you want to use, select **New variable**. You can then specify the details about the new session variable, which will be added to the list of session variables for the assistant. (For more information, see [Creating a session variable](#create-session-variable).)
 
-    - From the main actions skill page, click to open the *Variables - Created by you* page. Click **New variable**. 
+    - From the main actions skill page, click to open the *Variables - Created by you* page. Click **New variable**.
 
 1. Select from the list to set the new value for the session variable:
 
@@ -139,7 +142,7 @@ Any action can store a value in a session variable so it is availble to other ac
 
 One of the ways you can use variables is to choose the correct path through the conversation, based on customer responses and other values available at run time. You can do this by defining step conditions, which determine whether a specific step in an action is executed based on runtime conditions.
 
-By defining a condition based on an action variable, you can control whether a step is executed based on the customer's response to a previous step. You can also build step conditions based on session variables, which can store information from other actions. 
+By defining a condition based on an action variable, you can control whether a step is executed based on the customer's response to a previous step. You can also build step conditions based on session variables, which can store information from other actions.
 
 For more information about step conditions, see [Defining step conditions](/docs/watson-assistant?topic=watson-assistant-step-conditions).
 
@@ -152,9 +155,7 @@ To reference a variable in what your assistant says:
 
 1. In the **Assistant says** field, start typing the text for the response.
 
-1. When you reach a point where you want to insert a reference to a variable, type a dollar sign (`$`) or click the *Insert a variable* icon (![Insert a variable icon](images/action-variable-icon.png)). A list appears showing the variables you can choose from. 
-
-    You can also use variables in links. In the URL field for a link, type a dollar sign (`$`) character to see a list of variables to choose from.
+1. When you reach a point where you want to insert a reference to a variable, type a dollar sign (`$`) or click the *Insert a variable* icon (![Insert a variable icon](images/action-variable-icon.png)). A list appears showing the variables you can choose from.
 
 1. Click a variable to add a reference to it in the text.
 
@@ -179,4 +180,3 @@ The default formats are as follows:
 
 When building an assistant response that includes variables, you concatenate multiple parts (text strings and variables). A single response can consist of no more than 30 concatenated parts (for example, 15 variables along with 15 text strings).
 {: note}
-
