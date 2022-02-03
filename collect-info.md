@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-01-13"
+lastupdated: "2022-02-02"
 
 subcollection: watson-assistant
 
@@ -50,7 +50,7 @@ To choose the customer response type for a step, click **Define customer respons
 | [**Currency**](#customer-response-type-currency)  | An amount of money, including the unit.     | `$25`, `500 yen` |
 | [**Percent**](#customer-response-type-percent)   | A fractional numeric value expressed as a percentage. | `10%`, `50 percent` |
 | [**Free text**](#customer-response-type-free-text) | Any arbitrary text response. | `123 Main Street`, `John Q. Smith` |
-<!-- | [**Regex**](#customer-response-type-regex)     | A text response that matches a specified pattern or format (such as an e-mail address or telephone number). || -->
+<!-- | [**Regex**](#customer-response-type-regex)     | A text response that matches a specified pattern or format (such as an email address or telephone number). || -->
 
 ## Skipping a step
 {: #collect-info-skip-step}
@@ -67,9 +67,9 @@ The configuration information you must provide varies by response type.
 
 An _options_ response presents customers with a list of choices to select from. Use this response type when the cutomer's response must be one of a predefined set of known values. When you select an options response, you must then specify the valid options the assistant will display.
 
-The way in which these values are presented at run time depends upon how your customers connect to the assistant. In the web chat integration, the options are shown as clickable buttons (for 4 or fewer options) or as a drop-down list (for more than 5 options). 
+The way in which these values are presented at run time depends upon how your customers connect to the assistant. In the web chat integration, the options are shown as clickable buttons (for 4 or fewer options) or as a drop-down list (for more than 5 options).
 
-If you have a very long list of options, such as all the states in the U.S., you can choose to not show options in a list. This can be useful to prevent a phone integration from reading a long list of options to the customer. 
+If you have a very long list of options, such as all the states in the U.S., you can choose to not show options in a list. This can be useful to prevent a phone integration from reading a long list of options to the customer.
 
 To disable the list:
 
@@ -157,37 +157,42 @@ A _free text_ response collects any arbitrary text string. Use this response for
 ### Regex
 {: #customer-response-type-regex}
 
-A _regex_ response collects a text string that matches a pattern expressed as a regular expression. Use this response to capture a value that must conform to a particular pattern or format, such as an e-mail address or telephone number.
+A _regex_ response collects a text string that matches a pattern expressed as a regular expression. Use this response to capture a value that must conform to a particular pattern or format, such as an email address or telephone number.
+
+You can specify multiple regular expressions for a single response. For example, you might define multiple regex patterns that match part numbers from different vendors that use different formats. Input text for the response will be recognized if it matches any of the regex patterns you specify.
 
 To add a regex response:
 
 1. Under **Define customer response** field, click **Regex**.
 
-1. In the **Edit response** window, click **Regular expression**.
+1. In the **Edit response** window, click in the **Regular expression** field.
 
 1. Select one of the predefined regular expressions, or select **Custom regular expression** to write your own.
 
-To use a predefined regular expression, select one of the following:
+    To use a predefined regular expression, select one of the following:
 
-- **Email**: An e-mail address (for example, `user@example.com`).
-- **US phone number**: A ten-digit phone number (for example, `800-555-1212`).
-- **Account number**: ????
-- **Credit card number**: ????
+    - **Email**: An Internet email address (for example, `user@example.com`).
+    - **Phone number**: A ten-digit US phone number (for example, `800-555-1212` or `(800) 555-1212`).
+    - **URL**: A correctly formatted URL for an online resource, optionally including the protocol (for example, `example.com` or `https://example.org/index.html`).
 
-1. To write your own custom regular expression, select **Custom regular expression** and then type your regex in the **Regular expression** field. For more information on regular expression syntax, see [Examples of regular expressions](https://support.google.com/a/answer/1371417){: external}.
+    To write your own custom regular expression, select **Custom regular expression** and then type your regex pattern in the **Regular expression** field. For more information on regular expression syntax, see [Examples of regular expressions](https://support.google.com/a/answer/1371417){: external}.
 
-#### Adding multiple regular expressions
+1. If you want to specify multiple regex patterns for the response, click **Add regular expression** to add another field in which you can select or define an additional regular expression.
 
-You can specify multiple regular expressions for a single response. For example, you could define multiple regex patterns that match part numbers from different vendors that use different formats.
+    When you specify more than one regular expression, a **Name** field is displayed for each one. Use this field to give each regex pattern a unique name. You can use this name in subsequent step conditions to identify which regex pattern was matched.
 
-To add multiple regular expressions for a response, click **Add regular expression** to add another field in which you can select or define an additional regular expression.
+    ![Response with multiple regex patterns](images/regex-multiple.png)
 
-!["Edit response" window with multipe regular expressions](images/multiple-regex-response.png)
+1. Test your regular expression by typing example input in the **Test** field. If any text within your input matches the regex patterns you have specified, the matching text is listed in the **Assistant recognizes:** field.
 
-Note that when you add more than one regular expression, a **Name** field is also displayed for each regular expression. Use this field to give each regular expression a descriptive name. You can later use this name in step conditions to identify which regular expression matched the customer's input. (For more information about step conditions, see XXXX).
+    ![Match shown in regex test](images/regex-test-match.png)
 
-You can save your configured regex response for reuse in other steps. To save a customer response, click the **Save response for reuse** icon. For more information, about saved customer responses, see [Saving and reusing customer responses](#saved-customer-responses).
+    The **Test** feature in the step editor uses a browser-based regex engine to find matches in your test input. At run time, the assistant uses a different regex engine that might have different results, especially with complex patterns. Before deploying your assistant in production, always use the assistant preview to test any step that uses a regex response.
+    {: note}
+
+You can save your configured regex response for reuse in other steps. For more information, about saved customer responses, see [Saving and reusing customer responses](#saved-customer-responses).
 {: tip}
+-->
 
 ## Saving and reusing customer responses
 {: #saved-customer-responses}
@@ -204,11 +209,11 @@ To create a saved customer response:
 
 1. In the **Name** field, specify a descriptive name for the saved customer response configuration; this name should reflect the category of the information it collects. For example, you might use the name `Confirmation` for a response that recognizes multiple synonyms for "yes" and "no."
 
-1. In the **Type of response** field, select the customer response type for this customer response.
-
-1. Configure the details of the response as required. For more information, see [Customer response types](#customer-response-types).
+1. Configure the details of the response as required. A saved response can be created only as an options response type. For more information about this response type, see [Customer response types](#customer-response-types).
 
 1. Click **Save**. The saved customer response now appears on the **Saved responses** page.
+
+<!--- 1. In the **Type of response** field, select the customer response type for this customer response. --->
 
 From this page, you can also edit or delete any existing saved customer response. Keep in mind that any changes you make will apply to all instances of the customer response in any step that uses it. If you delete a saved customer response, any steps that use that response become invalid and must be corrected to use a different response type.
 {: important}
@@ -224,7 +229,7 @@ After you save a customer response, it becomes available as a response type for 
 
 1. In the list of customer response types, click **Saved** to see the available saved customer responses.
 
-    ![Step editor showing saved customer responses](images/step-editor-saved-responses.png)
+    ![Step editor showing saved customer responses](images/step-editor-saved-responses-2.png)
 
 1. Click the saved response you want to use.
 
@@ -234,5 +239,3 @@ To edit a saved response from a step, click **Edit response**. Keep in mind that
 
 After you unlink a response, you cannot re-link it. If you want to return to the saved response without your edits, delete the response and then re-add the original saved response. If you want to make your edited version of the response available for reuse, save it as a new saved response.
 {: tip}
-
--->

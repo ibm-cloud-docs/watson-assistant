@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-10-21"
+  years: 2018, 2022
+lastupdated: "2022-02-02"
 
 subcollection: watson-assistant
 
@@ -58,7 +58,7 @@ To add a step condition:
 
     ![Step editor with condition field highlighted](images/step-condition.png)
 
-1. Select **With conditions** from the drop-down list. The **Conditions** section expands.
+1. Select **with conditions** from the drop-down list. The **Conditions** section expands.
 
 1. By default, a single condition group, containing a single condition, is automatically created based on the action variable stored by the most recent customer response.
 
@@ -77,11 +77,11 @@ To add a step condition:
 
     - Select the operator representing the test you want to perform on the variable (for example, `is` or `is not`). The available operators for a particular value depend upon its data type. (For more information, see [Operators](#step-conditions-operators).)
 
-    - Select the value you want to evaluate the test against. Again, the values available depend upon the type of value you are testing. For example, a variable containing an options response can be tested against any of the defined options, and a date value can be tested against any date.
+    - Select the value you want to evaluate the test against. Again, the values available depend upon the type of value you are testing. For example, an variable containing an options response can be tested against any of the defined options, and a date value can be tested against any date.
 
 1.  To add more than one condition to a step, after adding a condition, click **Add condition**.
 
-    One use case where using more than one condition is helpful is if you need to capture a value range. For example, maybe a requirement of opening a checking account is that the customer deposit at least $100 into the account at creation time. You might ask the customer if they want to transfer funds to the account, and if so, how much? To continue with the transfer, the transfer amount must be $100 or more, but cannot exceed $1000. You can add a step with the following conditions: 
+    One use case where using more than one condition is helpful is if you need to capture a value range. For example, maybe a requirement of opening a checking account is that the customer deposit at least $100 into the account at creation time. You might ask the customer if they want to transfer funds to the account, and if so, how much? To continue with the transfer, the transfer amount must be $100 or more, but cannot exceed $1000. You can add a step with the following conditions:
 
     - `How much to transfer?` `>` `99`
     - `How much to transfer?` `<` `1001`
@@ -98,12 +98,9 @@ To add a step condition:
 
 An operator specifies the kind of test you are performing on a value in a condition. The specific operators available in a condition depend on the customer response type of the value, as shown in the following table.
 
-Currently, the only tests supported for session variables are `is defined` and `is not defined`. Other tests are supported only for action variables.
-{: note}
-
 | Response type                        | Operators                           |
 |--------------------------------------|-------------------------------------|
-| Options \n Free text<!-- \n Regex--> | - is \n - is not                    |
-| Number \n Currency \n Percent        | - is defined \n - is not defined \n - is equal to (==) \n - is not equal to (≠) \n - is less than (&lt;) \n - is less than or equal to (&lt;=) \n - is greater than (&gt;) \n - is greater than or equal to (&gt;=) |
-| Date                                 | - is defined \n - is not defined \n - is on \n - is not on \n - is before \n - is after \n - is on or before \n - is on or after |
-| Time                                 | - is defined \n - is not defined \n - is at \n - is not at \n - is before \n - is after \n - is at or before \n - is at or after |
+| - Options\n- Free text               | - is\n- is not                      |
+| - Number\n- Currency\n- Percent      | - is defined\n- is not defined\n- is equal to (==)\n- is not equal to (≠)\n- is less than (&lt;)\n- is less than or equal to (&lt;=)\n- is greater than (&gt;)\n- is greater than or equal to (&gt;=) |
+| - Date                               | - is defined\n- is not defined\n- is on\n- is not on\n- is before\n- is after\n- is on or before\n- is on or after |
+| - Time                               | - is defined\n- is not defined\n- is at\n- is not at\n- is before\n- is after\n- is at or before\n- is at or after |
