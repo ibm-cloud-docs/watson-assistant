@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-11"
+  years: 2021, 2022
+lastupdated: "2022-02-03"
 
 subcollection: watson-assistant
 
@@ -40,11 +40,9 @@ As you edit your content from the **Actions** page, your changes are automatical
 
 ## The Preview page
 Use the **Preview** page to test your assistant with your team. From this page, you can experience your assistant from your customer's perspective. On the **Preview** page, the **Assistant preview** pane is the interactive web chat widget where you can test out your assistant as if you were a customer. The content contained in the assistant is the content that you built into your actions or set up with the search integration. On the **Preview** page, you also find the following elements:
-- Web chat channel configuration: Customize your draft web chat channel to match your brand or website. 
-- Share link: Share an unauthenticated version of your assistant with your colleagues by sending them a link.
-<!-- - Website background input: Change the background of the page so you can see what your assistant looks like in different website contexts. -->
-
-The following image shows what the web chat integration with {{site.data.keyword.conversationshort}} looks like on an example banking website:
+- **Customize web chat**: Customize your draft web chat channel to match your brand or website.
+- **Copy link to share**: Share an unauthenticated version of your assistant with your colleagues by sending them a link.
+- **Change website background**: Change the background of the page so you can see what your assistant looks like on different web pages.
 
 ![Image of the Preview page](images/preview-page.png)
 
