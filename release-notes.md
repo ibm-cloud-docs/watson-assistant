@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-03"
+lastupdated: "2022-02-04"
 
 keywords: Watson Assistant release notes
 
@@ -46,10 +46,10 @@ Customize the Preview page background
 :   You can now change the background of the **Preview** page to one of your organization's web pages so you can preview and test your assistant from a customer's perspective. For more information, see [Previewing and sharing your assistant](/docs/watson-assistant?topic=watson-assistant-preview-share).
 
 Add a type to session variables
-:   When you create a session variable, you can now set a variable type. For more information, see [Creating a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable). Previously, the only conditional tests supported for session variables were `is defined` and `is not defined`. Now, more tests are available to use when you apply conditions to your actions. For more information, see [Operators](/docs/watson-assistant?topic=watson-assistant-step-conditions#operators).
+:   When you create a session variable, you can now assign a type to the variable. For more information, see [Creating a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable). After a type is assigned to a variable, you can set more explicit conditions on that variable. Previously, you were able to check only whether session variables were `defined` or `not defined`. With variable types, you can create conditions based on the type of the variable (for example, `account balance < 100` or `departure date is after today`). For more information, see [Operators](/docs/watson-assistant?topic=watson-assistant-step-conditions#operators).
 
 Create saved customer responses
-:   You can create saved customer responses that can be reused when you build actions. These responses can also be created as session variables and used as conditions in your actions. For more information, see [Saving and reusing customer responses](/docs/watson-assistant?topic=watson-assistant-collect-info#saved-customer-responses).
+:   You can now create saved customer responses. There might be some questions that your assistant needs to ask in multiple different steps and actions. For example, a banking assistant might have different actions that ask for a customer's account number. Instead of building the same response over and over, you can create a saved customer response and reuse it across steps in multiple actions. For more information, see [Saving and reusing customer responses](/docs/watson-assistant?topic=watson-assistant-collect-info#saved-customer-responses).
 
 ## 13 January 2022
 {: #watson-assistant-jan132022}
