@@ -101,7 +101,7 @@ To build a custom extension based on the API definition, follow these steps:
     - **Method**: The HTTP method used to send the API request for the operation.
     - **Resource**: The path to the resource the operation acts upon.
 
-<!-->
+<!--
 1. To see additional information about an operation, hover the mouse pointer over its row in the table and click the ![menu icon](images/kebab.png) menu icon. Select **Request** or **Response** to see details about the information sent with a request and returned with a response.
 
     The **Request** table shows the input fields for which the assistant will be able to provide values when sending the request.
