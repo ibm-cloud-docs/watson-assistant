@@ -49,7 +49,7 @@ Add a type to session variables
 :   When you create a session variable, you can now assign a type to the variable. For more information, see [Creating a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable). After a type is assigned to a variable, you can set more explicit conditions on that variable. Previously, you were able to check only whether session variables were `defined` or `not defined`. With variable types, you can create conditions based on the type of the variable (for example, `account balance < 100` or `departure date is after today`). For more information, see [Operators](/docs/watson-assistant?topic=watson-assistant-step-conditions#operators).
 
 Create saved customer responses
-:   You can now create saved customers responses. Existing customer responses can be used only in a single step. Saved customer responses can be reused across multiple steps in multiple actions. You can also use saved customer responses to assign variable types to your session variables. For more information, see [Saving and reusing customer responses](/docs/watson-assistant?topic=watson-assistant-collect-info#saved-customer-responses).
+:   You can now create saved customer responses. Existing customer responses can be used only in a single step. Saved customer responses can be reused across multiple steps in multiple actions. You can also use saved customer responses to assign variable types to your session variables. For more information, see [Saving and reusing customer responses](/docs/watson-assistant?topic=watson-assistant-collect-info#saved-customer-responses).
 
 ## 13 January 2022
 {: #watson-assistant-jan132022}
