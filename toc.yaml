@@ -36,7 +36,6 @@ toc:
   - navgroup:
       id: howto
       topics:
-      - assistant-add.md
       - topicgroup:
           label: Building your assistant
 
@@ -57,6 +56,8 @@ toc:
           - human-agent.md
           - save-actions.md
           - review.md
+          - assistant-add.md
+          - assistant-rename-delete.md
       - topicgroup:
           label: Publishing and deploying your assistant
           topics:
