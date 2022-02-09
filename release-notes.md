@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-04"
+lastupdated: "2022-02-09"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,17 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 9 February 2022
+{: #watson-assistant-feb092022}
+{: release-note}
+
+All instances now default to new experience
+:    All new instances of {{site.data.keyword.conversationshort}} now direct users to the new product experience by default.
+
+    {{site.data.keyword.conversationshort}} has been completely overhauled to simplify the end-to-end process of building and deploying a virtual assistant, reducing time to launch and enabling nontechnical authors to create virtual assistants without involving developers. For more information about the new {{site.data.keyword.conversationshort}}, and instructions for switching between the new and old experiences, see [Welcome to the new {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant#welcome-new-assistant-switch-experience).
+
+    If you would like to send us feedback on the new experience, please use [this form](https://form.asana.com/?k=vvRdQAmGMFAeEGRryhTA2w&d=8612789739828){: external}.
 
 ## 3 February 2022
 {: #watson-assistant-feb032022}
