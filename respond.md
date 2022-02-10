@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-19"
+  years: 2021, 2022
+lastupdated: "2022-02-10"
 
 subcollection: watson-assistant
 
@@ -37,19 +37,20 @@ You can enter a simple text response just by entering the text that you want you
 ## Formatting respsonses
 {: #respond-formatting}
 
-Use the text editor tools to format responses. Behind the scenes, these three choices are stored using Markdown format.
+Use the text editor tools to apply font styling, such as bold or italic, to the text or to add links.
+
+Behind the scenes, font styling and link syntax are stored in Markdown format. If you are using the web chat integration, standard HTML tagging is supported. Other integrations, such as for Facebook and Slack, don't support HTML.
+
+<!--- Behind the scenes, these three choices are stored using Markdown format.
 
 | Choice | Markdown | Example output |
 |------------|--------|---------|
 | Bold | `There's **no** crying in baseball.` | There's **no** crying in baseball. |
 | Italic | `We're talking about *practice*.` | We're talking about *practice*. |
 | Link | `Contact us at [ibm.com](https://www.ibm.com).` | Contact us at [ibm.com](https://www.ibm.com). |
-{: caption="Formatting" caption-side="top"}
+{: caption="Formatting" caption-side="top"} --->
 
 If you're using a custom client application that does not support Markdown, don't apply text styling to your text responses.
-{: note}
-
-If you are using the web chat integration, standard HTML tagging is supported. Other integrations, such as for Facebook and Slack, don't support HTML.
 {: note}
 
 <!--## Including web content
