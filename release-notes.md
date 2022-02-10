@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-09"
+lastupdated: "2022-02-10"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,13 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 10 February 2022
+{: #watson-assistant-feb102022}
+{: release-note}
+
+Links in assistant responses can be configured to open in a new tab
+:   When you build an action, your assistant responses can include links. If you're using web chat, you can now control whether the link opens in a new tab. To enable a link to open in a new tab, select **Open link in new tab** from the **Insert link** configuration window. For more information, see [Adding assistant responses](/docs/watson-assistant?topic=watson-assistant-respond).
 
 ## 9 February 2022
 {: #watson-assistant-feb092022}
