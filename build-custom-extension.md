@@ -96,20 +96,20 @@ To build a custom extension based on the API definition, follow these steps:
 
     The **Review operations** table shows the operations that the assistant will be able to call from an action step. An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
 
-        The table is organized by categories derived from the `tags` field in the OpenAPI file. (Any operation for which `tags` is absent is shown in a category called _Default_.) Click the ![label](images/twistie.png) icon to see the operations in a category.
+    The table is organized by categories derived from the `tags` field in the OpenAPI file. (Any operation for which `tags` is absent is shown in a category called _Default_.) Click the ![label](images/twistie.png) icon to see the operations in a category.
 
-        ![Review operations table](images/extension-review-operations.png)
+    ![Review operations table](images/extension-review-operations.png)
 
-        For each operation, a row in the table shows the following information:
+    For each operation, a row in the table shows the following information:
 
-        - **Operation**: A description of the operation, which is derived from either the `summary` (if present) or `description` in the OpenAPI file.
-        - **Method**: The HTTP method used to send the API request for the operation.
-        - **Resource**: The path to the resource the operation acts upon.
+    - **Operation**: A description of the operation, which is derived from either the `summary` (if present) or `description` in the OpenAPI file.
+    - **Method**: The HTTP method used to send the API request for the operation.
+    - **Resource**: The path to the resource the operation acts upon.
         
-        After the main table row for an operation, the following additional details are shownn:
+    After the main table row for an operation, the following additional details are shownn:
 
-        - **Parameters**: The list of input parameters defined for the operation, along with the type of each parameter and whether the parameter is required or optional.
-        - **Response variables**: The properties of the response body properties that will be mapped to variables the assistant can access.
+    - **Parameters**: The list of input parameters defined for the operation, along with the type of each parameter and whether the parameter is required or optional.
+    - **Response variables**: The properties of the response body properties that will be mapped to variables the assistant can access.
 
     The **Review schemas** table shows detailed information about the named schemas defined in the OpenAPI document.
 
