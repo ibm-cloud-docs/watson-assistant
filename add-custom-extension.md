@@ -57,22 +57,22 @@ To add a custom extension to the assistant, follow these steps:
 
 1. In the **Manage operations** step, review the operations supported by the extension, and decide which operations and response variables you want to be available to the assistant.
 
-    The table shows the operations that the assistant will be able to call from an action step. An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
+The table shows the operations that the assistant will be able to call from an action step. An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
 
-    The table is organized by categories derived from the `tags` field in the OpenAPI file. (Any operation for which `tags` is absent is shown in a category called _Default_.) Click the ![label](images/twistie.png) icon to see the operations in a category.
+The table is organized by categories derived from the `tags` field in the OpenAPI file. (Any operation for which `tags` is absent is shown in a category called _Default_.) Click the ![label](images/twistie.png) icon to see the operations in a category.
 
-    ![Manage operations table](images/extension-manage-operations.png)
+![Manage operations table](images/extension-manage-operations.png)
 
-    For each operation, a row in the table shows the following information:
+For each operation, a row in the table shows the following information:
 
-    - **Operation**: A description of the operation, which is derived from either the `summary` (if present) or `description` in the OpenAPI file.
-    - **Method**: The HTTP method used to send the API request for the operation.
-    - **Resource**: The path to the resource the operation acts upon.
+- **Operation**: A description of the operation, which is derived from either the `summary` (if present) or `description` in the OpenAPI file.
+- **Method**: The HTTP method used to send the API request for the operation.
+- **Resource**: The path to the resource the operation acts upon.
 
-    After the main table row for an operation, the following additional details are shownn:
+After the main table row for an operation, the following additional details are shownn:
 
-    - **Parameters**: The list of input parameters defined for the operation, along with the type of each parameter and whether the parameter is required or optional.
-    - **Response variables**: The properties of the response body properties that will be mapped to variables the assistant can access.
+- **Parameters**: The list of input parameters defined for the operation, along with the type of each parameter and whether the parameter is required or optional.
+- **Response variables**: The properties of the response body properties that will be mapped to variables the assistant can access.
 
 1. To hide an operation from the assistant, click the ![switch icon](images/filename.png) switch icon in the **Add** column and toggle it off.
 
