@@ -64,7 +64,7 @@ The OpenAPI document must satisfy the following requirements and restrictions:
 - [Relative URLs](https://swagger.io/docs/specification/api-host-and-base-path/#relative-urls){: external} are currently not supported.
 - Only `Basic`, `Bearer`, and `API key` authentication are supported.
 - Schemas defined using `anyOf`, `oneOf`, and `allOf` are currently not supported.
-- Arrays are not supported in request bodies. You can import a document that defines requests that take arrays, but the assistant will not be able to pass values for these parameters.
+- Arrays are not supported in request bodies. You can import a document that defines requests that take arrays as optional parameters, but the assistant will not be able to pass values for these parameters. You cannot import a document that includes operations that _require_ arrays as parameters.
 - Arrays in response bodies are included, but individual values in an array are not mapped to action variables. These values can be accessed from an assistant only by writing expressions in the JSON editor.
 
 ## Building the custom extension
@@ -94,7 +94,7 @@ To build a custom extension based on the API definition, follow these steps:
 
     The **Review servers** table shows the URLs of the servers defined in the OpenAPI document.
 
-    - The **Review operations** table shows the operations that the assistant will be able to call from an action step. An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
+    The **Review operations** table shows the operations that the assistant will be able to call from an action step. An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
 
         The table is organized by categories derived from the `tags` field in the OpenAPI file. (Any operation for which `tags` is absent is shown in a category called _Default_.) Click the ![label](images/twistie.png) icon to see the operations in a category.
 
@@ -111,7 +111,7 @@ To build a custom extension based on the API definition, follow these steps:
         - **Parameters**: The list of input parameters defined for the operation, along with the type of each parameter and whether the parameter is required or optional.
         - **Response variables**: The properties of the response body properties that will be mapped to variables the assistant can access.
 
-    - The **Review schemas** table shows detailed information about the named schemas defined in the OpenAPI document.
+    The **Review schemas** table shows detailed information about the named schemas defined in the OpenAPI document.
 
 1. If you are satisfied with the extension, click **Finish**.
 
