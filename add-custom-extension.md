@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-04"
+lastupdated: "2022-02-15"
 
 subcollection: watson-assistant
 
@@ -49,48 +49,36 @@ To add a custom extension to the assistant, follow these steps:
 
 1. On the **Integrations** page, scroll to the **Extensions** section and find the tile for the custom extension you want to add.
 
-1. Click **Add**. Review the overview of the extension and click **Confirm** to add it to your assistant.
+1. Click **Add**. Review the overview of the extension and click **Confirm** to configure it for your assistant.
 
 1. Read the information in the **Get started** step, and then click **Next**.
 
 1. In the **Authentication** step, specify the authentication credentials and server URL you want your assistant to use when calling the service. Click **Next**.
 
-1. In the **Review operations** step, review the operations supported by the extension. The table shows the operations that the assistant will be able to call from an action step.
+1. In the **Manage operations** step, review the operations supported by the extension, and decide which operations and response variables you want to be available to the assistant.
 
-    The table is organized by category. Click the ![label](images/twistie.png) icon to see the operations in a category.
+    The table shows the operations that the assistant will be able to call from an action step. An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
 
-    [image of example table]
+    The table is organized by categories derived from the `tags` field in the OpenAPI file. (Any operation for which `tags` is absent is shown in a category called _Default_.) Click the ![label](images/twistie.png) icon to see the operations in a category.
 
-    For each operation, the table shows the following information:
+    ![Manage operations table](images/extension-manage-operations.png)
 
-    - **Operation**: A description of the operation.
+    For each operation, a row in the table shows the following information:
+
+    - **Operation**: A description of the operation, which is derived from either the `summary` (if present) or `description` in the OpenAPI file.
     - **Method**: The HTTP method used to send the API request for the operation.
     - **Resource**: The path to the resource the operation acts upon.
 
-<!--
-1. For each supported operation, you can review the request and response data supported by the extension.
+    After the main table row for an operation, the following additional details are shownn:
 
-    To see additional information about an operation, hover the mouse pointer over its row in the table and click the ![menu icon](images/kebab.png) menu icon. Select **Request** or **Response** to see details about the information sent with a request and returned with a response.
+    - **Parameters**: The list of input parameters defined for the operation, along with the type of each parameter and whether the parameter is required or optional.
+    - **Response variables**: The properties of the response body properties that will be mapped to variables the assistant can access.
 
-    The **Request** table shows the input fields for which the assistant will be able to provide values when sending the request.
-    
-    [image of example table]
-    
-    Each row in the table shows the following information:
+1. To hide an operation from the assistant, click the ![switch icon](images/filename.png) switch icon in the **Add** column and toggle it off.
 
-    [TBD ... need to understand what this will look like]
+    To hide an operation from the assistant, click the ![switch icon](images/filename.png) switch icon after the variable name and toggle it off.
 
-    The **Response** table shows the fields that are included in the response data received from the external service.
-    
-    [image of example table]
-    
-    For each variable, the table shows the following information:
-
-    [TBD ... need to understand what this will look like]
-
-    If a response property contains an array, the individual elements in the array are not extracted as separate values. To access an element in an array, you must write an expression. For more information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions.md).
-    {: note}
-    -->
+    By default, the assistant has access to all operations and all response variables returned from successful requests.
 
 1. Click **Finish**.
 
