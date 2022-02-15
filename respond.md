@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-10"
+lastupdated: "2022-02-15"
 
 subcollection: watson-assistant
 
@@ -97,4 +97,5 @@ To see if the assistant responses are formatted correctly, you can use **Preview
 
 In addition to text responses, you can use _response types_ to send responses that include multimedia or interactive elements, or to handle channel-specific interactions. To use most response types, you must use the JSON editor to directly edit the response object that your assistant sends to the channel.
 
-For more information about how to edit responses using the JSON editor, see [Defining responses using the JSON editor](/docs/watson-assistant?topic=watson-assistant-responses-json).
+For more information about how to edit responses using the JSON editor, see [Defining responses using the JSON editor](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json).
+
