@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-10"
 
 subcollection: watson-assistant
 
@@ -115,4 +115,4 @@ Use both. Leverage advanced capabilities that are available from a dialog skill 
 
 For more information, see [Choosing a conversational skill](/docs/assistant?topic=assistant-skills-choose).--->
 
-If you're ready to start building an assistant, see [Creating an assistant](/docs/watson-assistant?topic=watson-assistant-assistant-add) for more information.
+If you're ready to start building an assistant, see [Editing actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview) for more information.

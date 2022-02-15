@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-01-20"
+lastupdated: "2022-02-08"
 
 subcollection: watson-assistant
 
@@ -25,17 +25,16 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Creating an assistant
+# Adding more assistants
 {: #assistant-add}
 
-The first step in building your chatbot is creating a new assistant.
-{: shortdesc}
+You can create multiple assistants in your instance. The number of assistants you can create depends on your {{site.data.keyword.conversationshort}} [plan type](https://www.ibm.com/products/watson-assistant/pricing/){: external}. There is also a limit of 100 assistants per service instance.
 
-When you add an instance of {{site.data.keyword.conversationshort}}, you create an assistant before doing anything else. If you want to add more assistants, follow these steps:
+If you need to add more assistants, follow these steps:
 
 1.  In the top navigation, click the name of your current assistant, then choose **Create New**:
 
-    ![Create new](images/assistant-add-create-new.png).
+    ![Create new](images/assistant-add-create-new.png)
 
 1.  Add details about the new assistant:
 
@@ -45,30 +44,12 @@ When you add an instance of {{site.data.keyword.conversationshort}}, you create 
 
 1.  Click **Create assistant**.
 
-The number of assistants you can create depends on your {{site.data.keyword.conversationshort}} [plan type](https://www.ibm.com/products/watson-assistant/pricing/){: external}. There is also a limit of 100 assistants per service instance.
+## Switching between assistants
 
-Once you have created an assistant, you can start with the next topic in [Building your assistant](/docs/watson-assistant?topic=watson-assistant-build-actions-overview).
+To switch to another assistant in your instance:
 
-## Renaming an assistant
-{: #assistant-add-rename}
+1.  In the top navigation, click the name of your current assistant.
 
-You can change the name and description of an assistant after you create it. You can't change its language.
+    ![Switch assistants](images/assistant-add-switch.png)
 
-To rename an assistant, follow these steps:
-
-1.  Open **Assistant settings**.
-
-1.  Enter a new name or description.
-
-1.  Click **Save**.
-
-## Deleting an assistant
-{: #assistant-add-delete}
-
-To delete an assistant, follow these steps:
-
-1.  Open **Assistant settings**.
-
-1. Click the **Delete assistant** button on the settings page. A confirmation question displays.
-
-1. To confirm, type the word `DELETE`, then click **Delete**.
+1.  Choose the assistant you want to open.

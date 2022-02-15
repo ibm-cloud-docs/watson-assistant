@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-11-09"
+  years: 2018, 2022
+lastupdated: "2022-02-09"
 
 subcollection: watson-assistant
 
@@ -46,7 +46,7 @@ The new {{site.data.keyword.conversationshort}} experience, focused on using **a
 ## Switching the experience
 {: #welcome-new-assistant-switch-experience}
 
-Some new product instances are automatically provisioned with the new {{site.data.keyword.conversationshort}}. If your instance is still using the classic {{site.data.keyword.conversationshort}}, you can switch to the new experience by following these steps:
+If your instance is still using the classic {{site.data.keyword.conversationshort}}, you can switch to the new experience by following these steps:
 
 1. From the {{site.data.keyword.conversationshort}} interface, click the **Manage** ![Manage icon](images/user-icon.png) icon to open your account menu.
 

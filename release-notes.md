@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-04"
+lastupdated: "2022-02-10"
 
 keywords: Watson Assistant release notes
 
@@ -38,6 +38,24 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 10 February 2022
+{: #watson-assistant-feb102022}
+{: release-note}
+
+Links in assistant responses can be configured to open in a new tab
+:   When you build an action, your assistant responses can include links. If you're using web chat, you can now control whether the link opens in a new tab. To enable a link to open in a new tab, select **Open link in new tab** from the **Insert link** configuration window. For more information, see [Adding assistant responses](/docs/watson-assistant?topic=watson-assistant-respond).
+
+## 9 February 2022
+{: #watson-assistant-feb092022}
+{: release-note}
+
+All instances now default to new experience
+:    All new instances of {{site.data.keyword.conversationshort}} now direct users to the new product experience by default.
+
+    {{site.data.keyword.conversationshort}} has been completely overhauled to simplify the end-to-end process of building and deploying a virtual assistant, reducing time to launch and enabling nontechnical authors to create virtual assistants without involving developers. For more information about the new {{site.data.keyword.conversationshort}}, and instructions for switching between the new and old experiences, see [Welcome to the new {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant).
+
+    If you would like to send us feedback on the new experience, please use [this form](https://form.asana.com/?k=vvRdQAmGMFAeEGRryhTA2w&d=8612789739828){: external}.
+
 ## 3 February 2022
 {: #watson-assistant-feb032022}
 {: release-note}
@@ -49,7 +67,7 @@ Add a type to session variables
 :   When you create a session variable, you can now assign a type to the variable. For more information, see [Creating a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable). After a type is assigned to a variable, you can set more explicit conditions on that variable. Previously, you were able to check only whether session variables were `defined` or `not defined`. With variable types, you can create conditions based on the type of the variable (for example, `account balance < 100` or `departure date is after today`). For more information, see [Operators](/docs/watson-assistant?topic=watson-assistant-step-conditions#operators).
 
 Create saved customer responses
-:   You can now create saved customer responses. There might be some questions that your assistant needs to ask in multiple different steps and actions. For example, a banking assistant might have different actions that ask for a customer's account number. Instead of building the same response over and over, you can create a saved customer response and reuse it across steps in multiple actions. For more information, see [Saving and reusing customer responses](/docs/watson-assistant?topic=watson-assistant-collect-info#saved-customer-responses).
+:   You can now create saved customer responses. There might be some questions that your assistant needs to ask in different steps and actions. For example, a banking assistant might have different actions that ask for a customer's account number. Instead of building the same response over and over, you can create a saved customer response and reuse it across steps in multiple actions. For more information, see [Saving and reusing customer responses](/docs/watson-assistant?topic=watson-assistant-collect-info#saved-customer-responses).
 
 ## 13 January 2022
 {: #watson-assistant-jan132022}
