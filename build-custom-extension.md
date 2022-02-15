@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-04"
+lastupdated: "2022-02-15"
 
 subcollection: watson-assistant
 
@@ -63,10 +63,9 @@ The OpenAPI document must satisfy the following requirements and restrictions:
 - Each operation must have a clear and concise `summary`. The text of the summary is used in the UI to describe the operations that are available from an action, so it should be short and meaningful to someone who is building an assistant.
 - [Relative URLs](https://swagger.io/docs/specification/api-host-and-base-path/#relative-urls){: external} are currently not supported.
 - Only `Basic`, `Bearer`, and `API key` authentication are supported.
-- References using `$ref` are currently not supported. (All schemas and other definitions must be inline.)
 - Schemas defined using `anyOf`, `oneOf`, and `allOf` are currently not supported.
 - Arrays are not supported in request bodies. You can import a document that defines requests that take arrays, but the assistant will not be able to pass values for these parameters.
-- Arrays in response bodies are included, but individual values in an array are not mapped to separate action variables. These values can be accessed from an assistant only by writing expressions in the JSON editor.
+- Arrays in response bodies are included, but individual values in an array are not mapped to action variables. These values can be accessed from an assistant only by writing expressions in the JSON editor.
 
 ## Building the custom extension
 
@@ -85,49 +84,35 @@ To build a custom extension based on the API definition, follow these steps:
 
     Click **Next**.
 
-1. In the **Import OpenAPI** step, click or drag and drop to add the OpenAPI document that describes the REST API you want to integrate with. Click **Next**.
+1. In the **Import OpenAPI** step, click or drag and drop to add the OpenAPI document that describes the REST API you want to integrate with.
 
-1. If you an encounter an error when you try to import the JSON file, make sure the file satisfies all of the requirements listed in [Preparing the API definition](##build-custom-extension-openapi-file). Edit the file to correct errors or remove unsupported features, and try the import again.
+    If you an encounter an error when you try to import the JSON file, make sure the file satisfies all of the requirements listed in [Preparing the API definition](##build-custom-extension-openapi-file). Edit the file to correct errors or remove unsupported features. Click the **X** to clear the error message, and try the import again.
 
-1. In the **Review extension** step, review what has been imported. The **Extension operations** shows the operations that the assistant will be able to call from an action step. (An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.)
+    After you have imported the file successfully, click **Next**.
 
-    The table is organized by categories derived from the `tags` field in the OpenAPI file. Click the ![label](images/twistie.png) icon to see the operations in a category.
+1. In the **Review extension** step, review what has been imported.
 
-    [image of example table]
+    The **Review servers** table shows the URLs of the servers defined in the OpenAPI document.
 
-    For each operation, the table shows the following information:
+    - The **Review operations** table shows the operations that the assistant will be able to call from an action step. An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
 
-    - **Operation**: A description of the operation, which is derived from either the `summary` (if present) or `description` in the OpenAPI file.
-    - **Method**: The HTTP method used to send the API request for the operation.
-    - **Resource**: The path to the resource the operation acts upon.
+        The table is organized by categories derived from the `tags` field in the OpenAPI file. (Any operation for which `tags` is absent is shown in a category called _Default_.) Click the ![label](images/twistie.png) icon to see the operations in a category.
 
-<!--
-1. To see additional information about an operation, hover the mouse pointer over its row in the table and click the ![menu icon](images/kebab.png) menu icon. Select **Request** or **Response** to see details about the information sent with a request and returned with a response.
+        ![Review operations table](images/extension-review-operations.png)
 
-    The **Request** table shows the input fields for which the assistant will be able to provide values when sending the request.
-    
-    [image of example table]
-    
-    Each row in the table shows the following information:
+        For each operation, a row in the table shows the following information:
 
-    - **Name**: The name of the field, which might be a parameter (such as a query parameter or path parameter) or a property in the request body. The name is derived from the `name` field in the OpenAPI definition.
-    - **Description**: The description of the parameter or property, taken from the `description` field.
-    - **Example**: An example value, taken from the `example` field.
+        - **Operation**: A description of the operation, which is derived from either the `summary` (if present) or `description` in the OpenAPI file.
+        - **Method**: The HTTP method used to send the API request for the operation.
+        - **Resource**: The path to the resource the operation acts upon.
+        
+        After the main table row for an operation, the following additional details are shownn:
 
-    The **Response** table shows the action variables that will contain the data included in the response from the external service. After the request completes, these action variables will be available to subsequent action steps.
-    
-    [image of example table]
-    
-    For each variable, the table shows the following information:
+        - **Parameters**: The list of input parameters defined for the operation, along with the type of each parameter and whether the parameter is required or optional.
+        - **Response variables**: The properties of the response body properties that will be mapped to variables the assistant can access.
 
-    - **Name**: The name of the action variable.
-    - **Description**: A description of the property that is mapped to the action variable. This might be a root property of the response body, or a property of a nested object in the response.
-    - **Path**: The path identifying the location of the property in the response body.
-    - **Example**: An example value.
+    - The **Review schemas** table shows detailed information about the named schemas defined in the OpenAPI document.
 
-    If a response property contains an array, the individual elements in the array are not extracted as separate values. To access an element in an array, you must write an expression. For more information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions.md).
-    {: note}
--->
 1. If you are satisfied with the extension, click **Finish**.
 
     If you want to change something, delete the extension, edit the JSON file to make your changes, and repeat the import process.
