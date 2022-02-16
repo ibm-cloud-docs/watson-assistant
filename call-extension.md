@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-01-13"
+lastupdated: "2022-02-16"
 
 subcollection: watson-assistant
 
@@ -52,23 +52,16 @@ To call a custom extension from an action:
 
     - In the **Operation** field, select the operation you want to perform.
 
-1. Specify values for each of the required input parameters. To assign a value to a parameter, click the input field for the value:
+1. Specify values for each of the required input parameters. To assign a value to a parameter, click the input field for the value and select from the list of available variables.
 
-    [image showing UI for setting parameter values]
+    ![Setting a parameter value](images/extension-set-parameter.png)
 
-    Select from the list to set the new value for the session variable:
-
-    - Select an action variable to use the value of a customer response. You can choose an action variable created by any previous step in the current action.
-
-    - Select a session variable or assistant variable to use its value.
-
-    <!-- not supported yet
-    - Select **Expression** to write an expression to define the value for the session variable. For more information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).-->
+    Each parameter has a data type (such as _number_ or _string_). The variable you select must be compatible with the data type of the parameter; for more information, see [Compatible response types for parameters](#parameter-response-types).
 
     You cannot currently use an expression to specify a parameter value. If you need to use an expression, insert a step before you call the extension, and use that step to assign the expression to an action variable. You can then use the variable as the parameter value.
     {: note}
 
-1. If you want to specify values for an optional parameter, click **Optional parameters** and select the parameter you want to specify. Repeat this process for each optional parameter you want to use.
+1. If you want to specify a value for an optional parameter, click **Optional parameters** and select the parameter you want to specify. Repeat this process for each optional parameter you want to use.
 
 1. Click **Apply**.
 
@@ -77,3 +70,21 @@ The **And then** section of the step editor now shows an overview of the call to
 [screen shot of step editor showing call to extension]
 
 In subsequent steps, you can access the response variables and use them just as you would any other variable. For example, you might use a response variable as a step condition, or reference one in the output sent to your customer.
+
+## Compatible response types for parameters
+{: #parameter-response-types}
+
+Variables contain values that are derived from customer responses. When you assign a variable to a parameter, the variable you choose must have a customer response type that is compatible with the data type of the parameter. (for example, a _number_ parameter must be assigned a numeric value rather than text.)
+
+The following table shows the possible customer response types and the parameter data type compatible with each.
+
+| Customer response type | Parameter data type |
+| _Options_              | `string`            |
+| _Number_               | `number`\n`integer` |
+| _Date_                 | none                |
+| _Time_                 | none                |
+| _Currency_             | ?                   |
+| _Percent_              | ?                   |
+| _Free text_            | `string`            |
+{: caption="Compatible response types for parameters" caption-side="top"}
+
