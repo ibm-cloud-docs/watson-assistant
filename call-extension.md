@@ -28,7 +28,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Calling an extension
+# Accessing an external service using an extension
 {: #call-extension}
 
 An extension is an integration with an external service. By calling an extension from an action, your assistant can send requests to the external service and receive response data it can use in the conversation.
@@ -37,6 +37,12 @@ An extension is an integration with an external service. By calling an extension
 For example, you might use an extension to interact with a ticketing or customer relationship management (CRM) system, or to retrieve real-time data such as mortgage rates or weather conditions. Response data from the extension is then available as action variables, which your assistant can use in the conversation.
 
 For information about how to build a custom extension, see [Build a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension).
+
+Calls to extensions cannot be tested using the assistant preview pane. To test an assistant that uses extensions, use the **Preview** page or a preview link. For more information, see [Previewing and sharing your assistant](/docs/watson-assistant?topic=watson-assistant-preview-share).
+{: #note}
+
+## Calling an extension
+{: #call-extension-from-step}
 
 To call a custom extension from an action:
 
@@ -71,7 +77,7 @@ The **And then** section of the step editor now shows an overview of the call to
 
 In subsequent steps, you can access the response variables and use them just as you would any other variable. For example, you might use a response variable as a step condition, or reference one in the output sent to your customer.
 
-## Compatible response types for parameters
+### Compatible response types for parameters
 {: #parameter-response-types}
 
 Variables contain values that are derived from customer responses. When you assign a variable to a parameter, the variable you choose must have a customer response type that is compatible with the data type of the parameter. (for example, a _number_ parameter must be assigned a numeric value rather than text.)
@@ -87,4 +93,15 @@ The following table shows the possible customer response types and the parameter
 | _Percent_              | ?                   |
 | _Free text_            | `string`            |
 {: caption="Compatible response types for parameters" caption-side="top"}
+
+## Accessing extension response data
+{: #extension-access-response}
+
+After you call an extension, values from the response data are stored in special action variables that you can access in subsequent steps.
+
+You can access the response variables in the same way you access other action variables. You can reference it in the **Assistant says** text, evaluate it as part of a step condition, or assign it to a session variable so other actions can access it.
+
+The response variables are shown in the list of available actions, categorized under the name of the extension:
+
+![Referencing a response variable](images/extension-reference-response.png)
 
