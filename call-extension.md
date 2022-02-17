@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-02-16"
+lastupdated: "2022-02-17"
 
 subcollection: watson-assistant
 
@@ -28,7 +28,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Accessing an external service using an extension
+# Calling a custom extension
 {: #call-extension}
 
 An extension is an integration with an external service. By calling an extension from an action, your assistant can send requests to the external service and receive response data it can use in the conversation.
@@ -41,7 +41,7 @@ For information about how to build a custom extension, see [Build a custom exten
 Calls to extensions cannot be tested using the assistant preview pane. To test an assistant that uses extensions, use the **Preview** page or a preview link. For more information, see [Previewing and sharing your assistant](/docs/watson-assistant?topic=watson-assistant-preview-share).
 {: #note}
 
-## Calling an extension
+## Calling the extension from a step
 {: #call-extension-from-step}
 
 To call a custom extension from an action:
@@ -84,14 +84,15 @@ Variables contain values that are derived from customer responses. When you assi
 
 The following table shows the possible customer response types and the parameter data type compatible with each.
 
-| Customer response type | Parameter data type |
-| _Options_              | `string`            |
-| _Number_               | `number`\n`integer` |
-| _Date_                 | none                |
-| _Time_                 | none                |
-| _Currency_             | ?                   |
-| _Percent_              | ?                   |
-| _Free text_            | `string`            |
+| Customer response type | Compatible data types           |
+|------------------------|---------------------------------|
+| _Options_              | `string`                        |
+| _Number_               | `number`\n`integer`             |
+| _Date_                 | none                            |
+| _Time_                 | none                            |
+| _Currency_             | ?                               |
+| _Percent_              | ?                               |
+| _Free text_            | `string`                        |
 {: caption="Compatible response types for parameters" caption-side="top"}
 
 ## Accessing extension response data
