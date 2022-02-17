@@ -197,6 +197,8 @@ After 15 seconds, the launcher expands to show a greeting message to the user. I
 
     The customer can close the launcher by scrolling on the page, swiping right on the expanded launcher, or waiting 10 seconds, at which point the expanded launcher shrinks back to its initial small state automatically. If the user reloads the page or navigates to a different page while the laucher is expanded, it stays in its expanded state, and the 10-second timer restarts.
 
+Once the launchers return to their small state from expanding, and the customer has not yet clicked the launcher, on the next page refresh the launchers will bounce after a period of time. After a 15-second delay it will bounce, and then, if the launcher still hasn't been opened, it will bounce again a minute later. If the customer refreshes or changes pages before the bounce occurs then it will occur on the next page load. If the first 15s bounce was seen but the one 60s later was not (because the page was changed or refreshed) then the 60s bounce will attempt to be shown on the next page load. Once both bounces have occurred the launcher will remain in its small form without any more bounces for the remainder of the session.
+
 The color of the launcher is specified by the **Accent color** field on the **Style** tab of the web chat settings. To change the color, specify a new color using a standard hexadecimal RGB value.
 
 You can customize the greeting message displayed by the launcher on the **Launcher** tab of the web chat settings. The settings include separate greeting messages for the desktop and mobile versions of the launcher.
