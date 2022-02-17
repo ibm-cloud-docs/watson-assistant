@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-11-16"
+  years: 2020, 2022
+lastupdated: "2022-02-17"
 
 subcollection: watson-assistant
 
@@ -27,17 +27,44 @@ subcollection: watson-assistant
 # Managing access
 {: #access-control}
 
-If you need to collaborate with others on your assistants, you can use the [Identity and Access Management (IAM) page](https://cloud.ibm.com/iam/users) in IBM Cloud to add users.
+If you need to collaborate with others on your assistants, you can quickly add users with Administrator and Manager access from the **Manage** menu. To manage access to your assistants, use the [Identity and Access Management (IAM) page](https://cloud.ibm.com/iam/users) in IBM Cloud.
 {: shortdesc}
 
-In the new Watson Assistant, each assistant contains all the draft and live resolution methods (actions and search integration) and channels you add (such as web chat, Facebook, or Slack), so the simplest way to provide access is to add users to your Watson Assistant instance with Administrator and Manager permissions. This gives other users the same level of access to a Watson Assistant service instance as you, and ensures they have all the privileges they need to build and deploy any assistant. Unlike classic Watson Assistant, you no longer need to provide specific access to individual assistants and skills. Now in the new Watson Assistant, each assistant includes everything you need and access is more efficient.
+## Adding users from the Manage menu
+{: #access-control-add-users}
 
-## Opening Identity and Access Management
-{: #access-control-iam}
+In the new Watson Assistant, each assistant contains all the draft and live resolution methods (actions and search integration) and channels you add (such as web chat, Facebook, or Slack), so the simplest way to provide access is to add users to your Watson Assistant instance with Administrator and Manager permissions. This gives other users the same level of access to a Watson Assistant service instance as you, and ensures they have all the privileges they need to build and deploy any assistant. If you want to add users without full access or manage the access of existing users, see the steps for [Managing access with Identity and Access Management](#access-control-iam).
+
+To add users with Administrator and Manager access, complete the following steps:
 
 1.  Open the **Manage** menu.
 
-    ![Manage menu](images/access-control-manage-menu.png)
+    ![Manage menu](images/access-control-manage-menu-2.png)
+
+1. Click **Add users**.
+
+1. Enter the email addresses of the users that you want to provide full access to. Separate email addresses with commas, spaces, or line breaks.
+
+    ![Add users](images/add-users.png)
+
+    Adding users from this menu enables them to read, write, and manage all aspects of the instance.
+    {: important}
+
+1. Click **Submit**.
+
+After you click **Submit**, any user that you invite receives an email to access the assistant. After they accept the invite, they can now work on your assistant with you.
+
+## Managing access with Identity and Access Management
+{: #access-control-iam}
+
+Another way to add users to your assistants is using Identity and Access Management (IAM). If you want to add users, and you don't want them to have full Administrator and Manager access, use IAM to add them. From IAM, you can also manage access roles of those users that are already added to your assistants.
+
+### Opening Identity and Access Management
+{: #access-control-open-iam}
+
+1.  Open the **Manage** menu.
+
+    ![Manage menu](images/access-control-manage-menu-2.png)
 
 1.	Click **Manage users**.
 
@@ -45,10 +72,8 @@ In the new Watson Assistant, each assistant contains all the draft and live reso
 
     ![Access and permissions](images/access-control-manage-users-modal.png){: caption="Access and permissions" caption-side="bottom"}
 
-1.	You’ll use Identity and Access Management (IAM) for all steps to share access.
-
-## Providing access to your assistants
-{: #access-control-provide-access}
+### Adding users in Identity and Access Management
+{: #access-control-manage-access}
 
 1.	In IAM, click **Invite users**.
 
@@ -68,7 +93,7 @@ In the new Watson Assistant, each assistant contains all the draft and live reso
 
     ![Service instance](images/access-control-service-instance.png){: caption="Service instance" caption-side="bottom"}
 
-1.	In **Platform access**, check **Administrator**, and in **Service access**, check **Manager**. 
+1.	In **Platform access**, select the platform role that you want the user to have. A platform role controls a person's ability to access a service instance in IBM Cloud. In **Service access**, select the service role that you want the user to have. A service role controls what a person can do in Watson Assistant.
 
 1.	Click **Add** to add the access policy.
 
@@ -78,4 +103,4 @@ In the new Watson Assistant, each assistant contains all the draft and live reso
 
     ![Invite button](images/access-control-summary.png){: caption="Invite button" caption-side="bottom"}
 
-The user you invited appears in your list with the status of **Processing**. Once they accept the invite, status changes to **Active** and can now work on your assistants with you.
+The user you invited appears in your list with the status of **Processing**. After they accept the invite, status changes to **Active** and can now work on your assistants with you.
