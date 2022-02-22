@@ -73,9 +73,9 @@ To call a custom extension from an action:
 
 The **And then** section of the step editor now shows an overview of the call to the extension:
 
-[screen shot of step editor showing call to extension]
+![Overview of configured call to extension](images/extension-and-then.png)
 
-In subsequent steps, you can access the response variables and use them just as you would any other variable. For example, you might use a response variable as a step condition, or reference one in the output sent to your customer.
+If you need to make changes, click **Edit extension** to reopen the **Extension setup** window.
 
 ### Compatible response types for parameters
 {: #parameter-response-types}
@@ -84,15 +84,16 @@ Variables contain values that are derived from customer responses. When you assi
 
 The following table shows the possible customer response types and the parameter data type compatible with each.
 
-| Customer response type | Compatible data types           |
-|------------------------|---------------------------------|
-| _Options_              | `string`                        |
-| _Number_               | `number`\n`integer`             |
-| _Date_                 | none                            |
-| _Time_                 | none                            |
-| _Currency_             | ?                               |
-| _Percent_              | ?                               |
-| _Free text_            | `string`                        |
+| Customer response type | Compatible data types           | Notes |
+|------------------------|---------------------------------|-------|
+| _Options_              | `string`                        | The selected option is always treated as a string, even for numeric values. |
+| _Number_               | `number`\n`integer`             |       |
+| _Date_                 | `string`                        |       |
+| _Time_                 | `string`                        |       |
+| _Currency_             | `number`\n`integer`             |       |
+| _Percent_              | `number`\n`integer`             |       |
+| _Free text_            | `string`                        |       |
+| _Regex_                | `string`                        |       |
 {: caption="Compatible response types for parameters" caption-side="top"}
 
 ## Accessing extension response data
