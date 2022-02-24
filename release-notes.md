@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-02-24"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,13 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 24 February 2022
+{: #watson-assistant-feb242022}
+{: release-note}
+
+Regex customer response type
+:   The regex customer response type is now available. Use this response type to capture a value that must conform to a particular pattern or format, such as an email address or telephone number. For more information, see [Regex](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-collect-info#customer-response-type-regex).
 
 ## 17 February 2022
 {: #watson-assistant-feb172022}
