@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-02-24"
 
 subcollection: watson-assistant
 
@@ -50,7 +50,7 @@ To choose the customer response type for a step, click **Define customer respons
 | [**Currency**](#customer-response-type-currency)  | An amount of money, including the unit.     | `$25`, `500 yen` |
 | [**Percent**](#customer-response-type-percent)   | A fractional numeric value expressed as a percentage. | `10%`, `50 percent` |
 | [**Free text**](#customer-response-type-free-text) | Any arbitrary text response. | `123 Main Street`, `John Q. Smith` |
-<!-- | [**Regex**](#customer-response-type-regex)     | A text response that matches a specified pattern or format (such as an email address or telephone number). || -->
+| [**Regex**](#customer-response-type-regex)     | A text response that matches a specified pattern or format (such as an email address or telephone number). ||
 
 ## Skipping a step
 {: #collect-info-skip-step}
@@ -153,11 +153,10 @@ A _free text_ response collects any arbitrary text string. Use this response for
 - `John Q. Smith`
 - `Please add extra sauce`
 
-<!--
 ### Regex
 {: #customer-response-type-regex}
 
-A _regex_ response collects a text string that matches a pattern expressed as a regular expression. Use this response to capture a value that must conform to a particular pattern or format, such as an email address or telephone number.
+A _regex_ response collects a text string that matches a pattern expressed as a regular expression. Use this response type to capture a value that must conform to a particular pattern or format, such as an email address or telephone number.
 
 You can specify multiple regular expressions for a single response. For example, you might define multiple regex patterns that match part numbers from different vendors that use different formats. Input text for the response will be recognized if it matches any of the regex patterns you specify.
 
@@ -172,10 +171,13 @@ To add a regex response:
     To use a predefined regular expression, select one of the following:
 
     - **Email**: An Internet email address (for example, `user@example.com`).
-    - **Phone number**: A ten-digit US phone number (for example, `800-555-1212` or `(800) 555-1212`).
+    - **Phone number**: A 10-digit US phone number (for example, `800-555-1212` or `(800) 555-1212`). 
     - **URL**: A correctly formatted URL for an online resource, optionally including the protocol (for example, `example.com` or `https://example.org/index.html`).
 
-    To write your own custom regular expression, select **Custom regular expression** and then type your regex pattern in the **Regular expression** field. For more information on regular expression syntax, see [Examples of regular expressions](https://support.google.com/a/answer/1371417){: external}.
+    For examples of other common patterns, see [Example regex patterns](#regex-examples).
+    {: tip}
+
+    To write your own custom regular expression, select **Define custom regular expression** and then type your regex pattern in the **Regular expression** field. For more information on regular expression syntax, see [Syntax](https://github.com/google/re2/wiki/Syntax){: external}.
 
 1. If you want to specify multiple regex patterns for the response, click **Add regular expression** to add another field in which you can select or define an additional regular expression.
 
@@ -192,7 +194,21 @@ To add a regex response:
 
 You can save your configured regex response for reuse in other steps. For more information, about saved customer responses, see [Saving and reusing customer responses](#saved-customer-responses).
 {: tip}
--->
+
+#### Example regex patterns
+{: #regex-examples}
+
+You can use the following regex patterns to recognize some common types of user input.
+
+| Description               | Patterns    |
+|---------------------------|-------------|
+| US Social Security number | `^(?!(000&#124;666&#124;9))\d{3}-(?!00)\d{2}-(?!0000)\d{4}$` |
+| US passport number        | `/^[A-PR-WY][1-9]\d\s?\d{4}[1-9]$/` |
+| US bank routing number    | `\b((0[0-9])&#124;(1[0-2])&#124;(2[1-9])&#124;(3[0-2])&#124;(6[1-9])&#124;(7[0-2])&#124;80)&#124; ([0-9]{7})\b` |
+| UPS tracking number       | `/\b(1Z ?[0-9A-Z]{3} ?[0-9A-Z]{3} ?[0-9A-Z]{2} ?[0-9A-Z]{4} ?&#124; [0-9A-Z]{3} ?[0-9A-Z]&#124;[\dT]\d\d\d ?\d\d\d\d ?\d\d\d)\b/` |
+| USPS tracking number      | - `/(\b\d{30}\b)&#124;(\b91\d+\b)&#124;(\b\d{20}\b)/`\n- `/^E\D{1}\d{9}\D{2}$&#124;^9\d{15,21}$/`\n- `/^91[0-9]+$/`\n - `/^[A-Za-z]{2}[0-9]+US$/` |
+| FedEx tracking number     | - `/(\b96\d{20}\b)&#124;(\b\d{15}\b)&#124;(\b\d{12}\b)/`\n- `/\b((98\d\d\d\d\d?\d\d\d\d&#124;98\d\d) ?\d\d\d\d ?\d\d\d\d( ?\d\d\d)?)\b/`\n - `/^[0-9]{15}$/` |
+{: caption="Example regex patterns" caption-side="bottom"}
 
 ## Saving and reusing customer responses
 {: #saved-customer-responses}

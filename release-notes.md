@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-04"
+lastupdated: "2022-02-24"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,41 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 24 February 2022
+{: #watson-assistant-feb242022}
+{: release-note}
+
+Regex customer response type
+:   The regex customer response type is now available. Use this response type to capture a value that must conform to a particular pattern or format, such as an email address or telephone number. For more information, see [Regex](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-collect-info#customer-response-type-regex).
+
+## 17 February 2022
+{: #watson-assistant-feb172022}
+{: release-note}
+
+Adding users from the Manage menu
+:   If you want to collaborate with others on your assistants, you can now quickly add users with Administrator and Manager access from the **Manage** menu in your assistant. For more information, see [Adding users from the Manage menu](/docs/watson-assistant?topic=watson-assistant-access-control#access-control-add-users).
+
+Preview page share link
+:   When you use the **Copy link to share** button to share your assistant, the shared assistant now mirrors the Preview page. If you share the assistant with a colleague, they are able to see the assistant with any customizations that you made on the Preview page.
+
+## 10 February 2022
+{: #watson-assistant-feb102022}
+{: release-note}
+
+Links in assistant responses can be configured to open in a new tab
+:   When you build an action, your assistant responses can include links. If you're using web chat, you can now control whether the link opens in a new tab. To enable a link to open in a new tab, select **Open link in new tab** from the **Insert link** configuration window. For more information, see [Adding assistant responses](/docs/watson-assistant?topic=watson-assistant-respond).
+
+## 9 February 2022
+{: #watson-assistant-feb092022}
+{: release-note}
+
+All instances now default to new experience
+:    All new instances of {{site.data.keyword.conversationshort}} now direct users to the new product experience by default.
+
+    {{site.data.keyword.conversationshort}} has been completely overhauled to simplify the end-to-end process of building and deploying a virtual assistant, reducing time to launch and enabling nontechnical authors to create virtual assistants without involving developers. For more information about the new {{site.data.keyword.conversationshort}}, and instructions for switching between the new and old experiences, see [Welcome to the new {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant).
+
+    If you would like to send us feedback on the new experience, please use [this form](https://form.asana.com/?k=vvRdQAmGMFAeEGRryhTA2w&d=8612789739828){: external}.
 
 ## 3 February 2022
 {: #watson-assistant-feb032022}

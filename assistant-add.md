@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-07"
+lastupdated: "2022-02-08"
 
 subcollection: watson-assistant
 
@@ -50,6 +50,6 @@ To switch to another assistant in your instance:
 
 1.  In the top navigation, click the name of your current assistant.
 
-    ![Switch assistatns](images/assistant-add-switch.png)
+    ![Switch assistants](images/assistant-add-switch.png)
 
 1.  Choose the assistant you want to open.
