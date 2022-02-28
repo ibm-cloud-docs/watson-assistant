@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-08"
+lastupdated: "2022-02-28"
 keywords: export, import
 subcollection: watson-assistant
 
@@ -26,9 +26,9 @@ subcollection: watson-assistant
 {{site.data.content.classiclink}}
 
 # Backing up and restoring data
-{: #backup-restore}
+{: #admin-backup-restore}
 
-Back up and restore your data by downloading, and then uploading the data.
+Back up and restore your data by downloading, and then uploading the data. 
 {: shortdesc}
 
 You can download the following data from a {{site.data.keyword.conversationshort}} service instance:
@@ -45,7 +45,7 @@ You cannot download the following data:
 
 If you want to store logs of conversations that users have had with your assistant, you can use the `/logs` API to export your log data. See [API reference](https://cloud.ibm.com/apidocs/assistant/assistant-v1#listlogs){: external} for details.
 
-Logs are stored for a different amount of time depending on your service plan. For example, Lite plans provide logs from the past 7 days only.
+Logs are stored for a different amount of time depending on your service plan. For example, Lite plans provide logs from the past 7 days only. See [Log limits](/docs/assistant?topic=assistant-logs#logs-limits){: external}  for more information.
 
 ## Downloading
 {: #backup-restore-export}
