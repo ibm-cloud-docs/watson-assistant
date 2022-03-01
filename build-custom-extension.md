@@ -73,13 +73,13 @@ To build a custom extension based on the API definition, follow these steps:
 
 1. On either the **Draft environment** or **Live environment** page, click **Browse catalog** to open the integrations catalog.
 
-1. On the **Integrations** page, scroll to the **Extensions** section and click **Build a custom extension**.
+1. On the **Integrations** page, scroll to the **Extensions** section and click **Build custom extension**.
 
 1. Read the **Get started** information and click **Next** to continue.
 
 1. In the **Basic information** step, specify the following information about the extension you are creating:
 
-    - **Extension name**: A short, descriptive name for the extension (for example, `CRM system` or `Weather service`). This is the name that will be displayed on the tile for the extension on the **Integrations** page.
+    - **Extension name**: A short, descriptive name for the extension (for example, `CRM system` or `Weather service`). This is the name that will be displayed on the tile for the extension on the **Integrations** page, and in the list of available extensions in the action editor.
     - **Extension description**: A brief summary of the extension and what it does. The description will also be available from the **Integrations** page.
 
     Click **Next**.
@@ -92,29 +92,28 @@ To build a custom extension based on the API definition, follow these steps:
 
 1. In the **Review extension** step, review what has been imported.
 
-    The **Review servers** table shows the URLs of the servers defined in the OpenAPI document.
+    - The **Review servers** table shows the URLs of the servers defined in the OpenAPI document.
 
-    The **Review operations** table shows the operations that the assistant will be able to call from an action step. An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
+        The **Review operations** table shows the operations that the assistant will be able to call from an action step. An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
 
-    The table is organized by categories derived from the `tags` field in the OpenAPI file. (Any operation for which `tags` is absent is shown in a category called _Default_.) Click the ![label](images/twistie.png) icon to see the operations in a category.
+        ![Review operations table](images/extension-review-operations.png)
 
-    ![Review operations table](images/extension-review-operations.png)
+        For each operation, a row in the table shows the following information:
 
-    For each operation, a row in the table shows the following information:
+        - **Tag**: The value from the `tags` field in the OpenAPI file. (If no tags are present, the operation is  shown in a category called _default_.)
+        - **Operation**: A description of the operation, which is derived from either the `summary` (if present) or `description` in the OpenAPI file.
+        - **Method**: The HTTP method used to send the API request for the operation.
+        - **Resource**: The path to the resource the operation acts upon.
 
-    - **Operation**: A description of the operation, which is derived from either the `summary` (if present) or `description` in the OpenAPI file.
-    - **Method**: The HTTP method used to send the API request for the operation.
-    - **Resource**: The path to the resource the operation acts upon.
-        
-    After the main table row for an operation, the following additional details are shownn:
+        To see more information about an operation, click the ![label](images/twistie.png) icon next to its row in the table. The following additional details are shown:
 
-    - **Parameters**: The list of input parameters defined for the operation, along with the type of each parameter and whether the parameter is required or optional.
-    - **Response variables**: The properties of the response body properties that will be mapped to variables the assistant can access.
+        - **Request parameters**: The list of input parameters defined for the operation, along with the type of each parameter and whether the parameter is required or optional.
+        - **Response properties**: The properties of the response body that will be mapped to variables the assistant can access.
 
-    The **Review schemas** table shows detailed information about the named schemas defined in the OpenAPI document.
+    - The **Review schemas** table shows detailed information about the named schemas defined in the OpenAPI document.
 
 1. If you are satisfied with the extension, click **Finish**.
 
     If you want to change something, delete the extension, edit the JSON file to make your changes, and repeat the import process.
 
-The new extension is now available from the integrations catalog.
+The new extension is now available from the integrations catalog, and you can [add it to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
