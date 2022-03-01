@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-01"
+lastupdated: "2022-02-28"
 
 subcollection: watson-assistant
 
@@ -26,7 +26,7 @@ subcollection: watson-assistant
 {{site.data.content.classiclink}}
 
 # Securing your assistant
-{: #securing}
+{: #admin-securing}
 
 IBM is committed to providing our clients and partners with innovative data privacy, security, and governance solutions.
 {: shortdesc}
@@ -51,7 +51,7 @@ Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and 
 ## Health Insurance Portability and Accountability Act (HIPAA)
 {: #securing-hipaa}
 
-US Health Insurance Portability and Accountability Act (HIPAA) support is available for Enterprise plans that are hosted in the Washington, DC or Dallas locations. For more information, see [Enabling EU and HIPAA supported settings](/docs/account?topic=account-eu-hipaa-supported#eu-hipaa-supported){: external}.
+US Health Insurance Portability and Accountability Act (HIPAA) support is available for Enterprise plans that are hosted in the Washington, DC or Dallas locations. For more information, see [Enabling HIPAA support for your account](/docs/account?topic=account-enabling-hipaa){: external}.
 
 Do not add personal health information (PHI) to the training data (entities and intents, including user examples) that you create. In particular, be sure to remove any PHI from files that contain real user utterances that you upload to mine for intent or intent user example recommendations.
 
