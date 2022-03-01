@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-02-17"
+lastupdated: "2022-03-01"
 
 subcollection: watson-assistant
 
@@ -67,7 +67,9 @@ To call a custom extension from an action:
     You cannot currently use an expression to specify a parameter value. If you need to use an expression, insert a step before you call the extension, and use that step to assign the expression to an action variable. You can then use the variable as the parameter value.
     {: note}
 
-1. If you want to specify a value for an optional parameter, click **Optional parameters** and select the parameter you want to specify. Repeat this process for each optional parameter you want to use.
+    You must specify values for all required parameters before you can proceed.
+
+1. If you want to specify a value for any optional parameters, click **Optional parameters** and then repeat this process for each optional parameter you want to use.
 
 1. Click **Apply**.
 
@@ -86,14 +88,14 @@ The following table shows the possible customer response types and the parameter
 
 | Customer response type | Compatible data types           | Notes |
 |------------------------|---------------------------------|-------|
-| _Options_              | `string`                        | The selected option is always treated as a string, even for numeric values. |
-| _Number_               | `number`\n`integer`             |       |
-| _Date_                 | `string`                        |       |
-| _Time_                 | `string`                        |       |
-| _Currency_             | `number`\n`integer`             |       |
-| _Percent_              | `number`\n`integer`             |       |
-| _Free text_            | `string`                        |       |
-| _Regex_                | `string`                        |       |
+| options                | `string`                        | A selected option is always treated as a string, even if it is a numeric value. |
+| number                 | `number`\n`integer`             | A floating-point number passed as the value for an `integer` parameter might cause an error, depending on the behavior of the REST API. |
+| date                   | `string`                        | Dates are rendered as `YYYY-MM-DD`. |
+| time                   | `string`                        | Times are rendered as `HH:MM:SS` in 24-hour format, converted to the user's time zone. |
+| Currency               | `number`\n`integer`             |       |
+| Percent                | `number`\n`integer`             | A percent value is passed as an integer (so `75%` becomes `75`). |
+| Free text              | `string`                        |       |
+| Regex                  | `string`                        |       |
 {: caption="Compatible response types for parameters" caption-side="top"}
 
 ## Accessing extension response data
@@ -101,9 +103,10 @@ The following table shows the possible customer response types and the parameter
 
 After you call an extension, values from the response data are stored in special action variables that you can access in subsequent steps.
 
-You can access the response variables in the same way you access other action variables. You can reference it in the **Assistant says** text, evaluate it as part of a step condition, or assign it to a session variable so other actions can access it.
+You can access these variables in the same way you access other action variables. You can reference it in the **Assistant says** text, evaluate it as part of a step condition, or assign it to a session variable so other actions can access it.
 
 The response variables are shown in the list of available actions, categorized under the name of the extension:
 
 ![Referencing a response variable](images/extension-reference-response.png)
 
+ Each variable represents an atomic value (such as a string or number) from the response body. This value might be a root property of the response body, or it might be part of an object nested within the response body. The name of each variable uses dot notation to show the the path to the property within the response body (for example, `body.name` or `customer.address.zipcode`).
