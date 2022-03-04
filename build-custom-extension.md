@@ -34,7 +34,7 @@ subcollection: watson-assistant
 If you need to integrate your assistant with an external service that has a REST API, you can build a custom extension by importing an OpenAPI document.
 {: shortdesc}
 
-By importing an OpenAPI document that describes an external service, you can create an extension that you can then connect to an assistant as an integration. In your actions, you can then define steps that interact with the external service by calling the extension.
+After you create a custom extension, you can connect it to an assistant as an integration. In your actions, you can then define steps that interact with the external service by calling the extension.
 
 ## Overview
 {: #build-custom-extension-overview}
@@ -65,7 +65,7 @@ The OpenAPI document must satisfy the following requirements and restrictions:
 - Only `Basic`, `Bearer`, and `API key` authentication are supported.
 - Schemas defined using `anyOf`, `oneOf`, and `allOf` are currently not supported.
 - Arrays are not supported in request bodies. You can import a document that defines requests that take arrays as optional parameters, but the assistant will not be able to pass values for these parameters. You cannot import a document that includes operations that _require_ arrays as parameters.
-- Arrays in response bodies are included, but individual values in an array are not mapped to action variables. These values can be accessed from an assistant only by writing expressions in the JSON editor.
+- Any defined array properties are included in response bodies, but individual values inside an array are not mapped to action variables. These values can be accessed from an assistant only by writing expressions in the JSON editor.
 
 ## Building the custom extension
 
@@ -92,9 +92,9 @@ To build a custom extension based on the API definition, follow these steps:
 
 1. In the **Review extension** step, review what has been imported.
 
-    - The **Review servers** table shows the URLs of the servers defined in the OpenAPI document.
+    - The **Review servers** table shows the URLs of the servers defined in the OpenAPI document, along with any required server variables.
 
-        The **Review operations** table shows the operations that the assistant will be able to call from an action step. An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
+    - The **Review operations** table shows the operations that the assistant will be able to call from an action step. An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
 
         ![Review operations table](images/extension-review-operations.png)
 

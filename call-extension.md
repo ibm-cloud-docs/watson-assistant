@@ -39,7 +39,7 @@ For example, you might use an extension to interact with a ticketing or customer
 For information about how to build a custom extension, see [Build a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension).
 
 Calls to extensions cannot be tested using the assistant preview pane. To test an assistant that uses extensions, use the **Preview** page or a preview link. For more information, see [Previewing and sharing your assistant](/docs/watson-assistant?topic=watson-assistant-preview-share).
-{: #note}
+{: #important}
 
 ## Calling the extension from a step
 {: #call-extension-from-step}
@@ -56,22 +56,21 @@ To call a custom extension from an action:
 
     - In the **Extension** field, select the extension you want to call.
 
-    - In the **Operation** field, select the operation you want to perform.
+    - In the **Operation** field, select the operation you want to perform. (An _operation_ is a method or function supported by the extension.)
 
-1. Specify values for each of the required input parameters. To assign a value to a parameter, click the input field for the value and select from the list of available variables.
+1. Specify values for each of the required input parameters. A _parameter_ is an input value sent to an operation, such as the ID of a customer record you want to retrieve or the location to use for a weather forecast.
+
+    To assign a value to a parameter, click the input field for the value. You can then select from the list of available variables or write an expression to specify the value.
 
     ![Setting a parameter value](images/extension-set-parameter.png)
 
     Each parameter has a data type (such as _number_ or _string_). The variable you select must be compatible with the data type of the parameter; for more information, see [Compatible response types for parameters](#parameter-response-types).
 
-    You cannot currently use an expression to specify a parameter value. If you need to use an expression, insert a step before you call the extension, and use that step to assign the expression to an action variable. You can then use the variable as the parameter value.
-    {: note}
-
     You must specify values for all required parameters before you can proceed.
 
-1. If you want to specify a value for any optional parameters, click **Optional parameters** and then repeat this process for each optional parameter you want to use.
+1. If you want to specify a value for any optional parameters, click **Optional parameters**. You can then repeat this process for each optional parameter you want to use.
 
-1. Click **Apply**.
+1. Click **Apply**. (If the **Apply** button is not available, check to make sure you have specified values for all required parameters.)
 
 The **And then** section of the step editor now shows an overview of the call to the extension:
 
