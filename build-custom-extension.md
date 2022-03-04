@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-15"
+lastupdated: "2022-03-04"
 
 subcollection: watson-assistant
 
@@ -71,7 +71,7 @@ The OpenAPI document must satisfy the following requirements and restrictions:
 
 To build a custom extension based on the API definition, follow these steps:
 
-1. On either the **Draft environment** or **Live environment** page, click **Browse catalog** to open the integrations catalog.
+1. On either the ![Draft environment icon](images/draft-environment-icon.png)**Draft environment** or ![Live environment icon](images/live-environment-icon.png) **Live environment** page, click **Browse catalog** to open the integrations catalog.
 
 1. On the **Integrations** page, scroll to the **Extensions** section and click **Build custom extension**.
 
@@ -116,4 +116,4 @@ To build a custom extension based on the API definition, follow these steps:
 
     If you want to change something, delete the extension, edit the JSON file to make your changes, and repeat the import process.
 
-The new extension is now available from the integrations catalog, and you can [add it to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
+The new extension is now available as a tile in the **Extensions** section of the integrations catalog, and you can [add it to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
