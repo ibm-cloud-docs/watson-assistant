@@ -53,7 +53,19 @@ To add a custom extension to the assistant, follow these steps:
 
 1. Read the information in the **Get started** step, and then click **Next**.
 
-1. In the **Authentication** step, specify the authentication credentials and server URL you want your assistant to use when calling the service. Click **Next**.
+1. In the **Authentication** step, specify the authentication and server information you want your assistant to use when calling the service.
+
+    - In the **Authentication type** field, select the type of authentication to use. The supported authentication types are defined by the `securitySchemes` object in the OpenAPI document.
+
+        Specify any additional information required by the selected authentication type (for example, **Username** and **Password** for HTTP basic authentication).
+
+    - In the **Servers** field, select the server URL to use.
+
+        If the selected URL contains any variables, also specify the values to use. Depending on how each variable is defined in the OpenAPI document, you can either select from a list of valid values or type the value to use in the field.
+
+        The **Generated URL** message shows the full URL that the assistant will use, including the variable values.
+
+     Click **Next**.
 
 1. In the **Review operations** step, review the operations supported by the extension.
 
@@ -63,7 +75,6 @@ To add a custom extension to the assistant, follow these steps:
 
     For each operation, a row in the table shows the following information:
 
-    - **Tag**: The value from the `tags` field in the OpenAPI file. (If no tags are present, the operation is  shown in a category called _default_.)
     - **Operation**: A description of the operation, which is derived from either the `summary` (if present) or `description` in the OpenAPI file.
     - **Method**: The HTTP method used to send the API request for the operation.
     - **Resource**: The path to the resource the operation acts upon.
