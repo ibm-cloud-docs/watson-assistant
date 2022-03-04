@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-03-01"
+lastupdated: "2022-03-04"
 
 subcollection: watson-assistant
 
@@ -102,10 +102,12 @@ The following table shows the possible customer response types and the parameter
 
 After you call an extension, values from the response data are stored in special action variables that you can access in subsequent steps.
 
-You can access these variables in the same way you access other action variables. You can reference it in the **Assistant says** text, evaluate it as part of a step condition, or assign it to a session variable so other actions can access it.
-
-The response variables are shown in the list of available actions, categorized under the name of the extension:
+You can access these variables in the same way you access other action variables. You can reference it in the **Assistant says** text, evaluate it as part of a step condition, or assign it to a session variable so other actions can access it. The response variables are shown in the list of available variables, categorized under the name of the extension:
 
 ![Referencing a response variable](images/extension-reference-response.png)
 
- Each variable represents an atomic value (such as a string or number) from the response body. This value might be a root property of the response body, or it might be part of an object nested within the response body. The name of each variable uses dot notation to show the the path to the property within the response body (for example, `body.name` or `customer.address.zipcode`).
+Each variable represents an atomic value (such as a string or number) from the response body. This value might be a root property of the response body, or it might be part of an object nested within the response body. The name of each variable uses dot notation to show the the path to the property within the response body (for example, `body.name` or `body.customer.address.zipcode`).
+
+For example, this action step uses an expression to check the `availability` property in an extension response:
+
+![Extension variable in step condition](images/response-expression-condition.png)

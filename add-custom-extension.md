@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-03-04"
 
 subcollection: watson-assistant
 
@@ -36,13 +36,15 @@ After you build a custom extension, you must add it to the assistant before it c
 
 Adding the extension to the assistant configures the extension for use within a particular environment (Draft or Live), and it makes the extension available so that it can be called from actions.
 
+You can use different configuration details for each environment. For example, you might want to use the URL for a test server in the Draft environment, but a production server in the Live environment.
+
 For information about how to create a custom extension, see [Build a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension).
 
-## Adding the assistant to the Draft environment
+## Adding the extension to the Draft environment
 
 To add a custom extension to the assistant, follow these steps:
 
-1. From the **Draft environment** or **Live environment** page, click **Browse catalog**.
+1. From the ![Draft environment icon](images/draft-environment-icon.png) **Draft environment** or ![Live environment icon](images/live-environment-icon.png) **Live environment** page, click **Browse catalog**.
 
     When you first add an extension to an assistant, the configuration settings you provide are applied only to the Draft environment. This is true even if you open the catalog from the **Live environment** page.
     {: important}
@@ -94,10 +96,12 @@ The extension is now connected to your assistant and available for use by action
 
 To configure the extension for the Live environment, follow these steps:
 
-1. Go to the **Live environment** page.
+1. Go to the ![Live environment icon](images/live-environment-icon.png) **Live environment** page.
 
 1. Under **Resolution Methods**, find the tile for the extension. You should see an indication that setup is incomplete:
 
     ![Extension tile with "Finish setup" indicator](images/extension-finish-setup.png)
 
 1. Click the tile and then click **Add** to repeat the configuration process, specifying the values you want to use for the Live environment.
+
+The extension is now available in the environments you have configured, and it can be called from the assistant. For more information about how to call an extension from an action, see [Calling a custom extension](/docs/watson-assistant?topic=watson-assistant-call-extension).
