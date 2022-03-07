@@ -43,7 +43,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 ## 6.2.0
 {: #6.2.0}
 
-*Release date: 1 March 2022*
+*Release date: 7 March 2022*
 
 - **Navigation**: The web chat has been updated with new navigation features. Visual updates to the header of the web chat allow for more seamless movement through the web chat views. For example, new "Back" and "Minimize" buttons make it easier to navigate between the home screen, the chat view, and custom panels. A new customizable drop-down menu appears near the avatar in both the assistant and agent chat views (for more information, see [updateCustomMenuOptions](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecustommenuoptions){: external}. There are also improvements and fixes to the animations for the web chat panels to make the whole experience more seamless and cohesive.
 
