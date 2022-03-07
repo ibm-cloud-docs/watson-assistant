@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-07"
+lastupdated: "2022-03-07"
 
 subcollection: watson-assistant
 
@@ -45,13 +45,14 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 *Release date: 1 March 2022*
 
-- **Navigation**: The web chat now has a new navigation. This includes visual updates to the header of the web chat that allows for more seamless movement throughout the web chat views. For example custom panels now have a back button and a minimize button. Users can now return to the home screen with a back button on the header in the bot view. And theres now dropdowns available near the avatar in the bot and agent view that can be customized to provide more functionality to users, for more information, see [updateCustomMenuOptions](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecustommenuoptions){: external}. There are also improvements and fixes to the animations for the web chat panels to make the whole experience more seamless and cohesive.
+- **Navigation**: The web chat has been updated with new navigation features. Visual updates to the header of the web chat allow for more seamless movement through the web chat views. For example, new "Back" and "Minimize" buttons make it easier to navigate between the home screen, the chat view, and custom panels. A new customizable drop-down menu appears near the avatar in both the assistant and agent chat views (for more information, see [updateCustomMenuOptions](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecustommenuoptions){: external}. There are also improvements and fixes to the animations for the web chat panels to make the whole experience more seamless and cohesive.
 
-- **Launcher**: The new web chat launcher will now bounce on two different occasions to help encourage custom engagement if they need help. For more information, see [Launcher appearance and behavior](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-launcher).
+- **Launcher**: The new web chat launcher bounces on two different occasions to attract attention and encourage customer engagement. For more information, see [Launcher appearance and behavior](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-launcher).
 
 - **Launcher**: Support has been added to control what text the launcher greets the user with, and when the greeting message is shown. For more information, see [Launcher](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#launcher){: external}.
 
-- **Locale**: Web chat no longer sets the system context locale to en-us when no locale is configured for web chat. If a locale is configured for web chat then it will be set in system context.
+- **Locale**: The web chat no longer sets the locale in the system context to `en-us` when no locale is configured. The locale is set in the system context only if it is configured for web chat.
+
 - Bug fixes.
 
 ## 6.1.0
