@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-04"
+lastupdated: "2022-03-08"
 
 subcollection: watson-assistant
 
@@ -54,7 +54,10 @@ After this processing has completed, the custom extension becomes available as a
 ## Preparing the API definition
 {: #build-custom-extension-openapi-file}
 
-To create a custom extension, you need access to an OpenAPI document that describes the REST API you want to integrate with. Many third-party services publish OpenAPI documents that describe their APIs, which you can download and import. For an API that your company maintains, you can use standard tools to create an OpenAPI document describing it. (For more information about creating an OpenAPI document, see [OpenAPI 3.0 Tutorial](https://support.smartbear.com/swaggerhub/docs/tutorials/openapi-3-tutorial.html).)
+To create a custom extension, you need access to an OpenAPI document that describes the REST API you want to integrate with. Many third-party services publish OpenAPI documents that describe their APIs, which you can download and import. For an API that your company maintains, you can use standard tools to create an OpenAPI document describing it.
+
+The [SwaggerHub](https://swagger.io/tools/swaggerhub/){: external} website offers an [OpenAPI 3.0 Tutorial](https://support.smartbear.com/swaggerhub/docs/tutorials/openapi-3-tutorial.html){: external}, as well as [tools](https://swagger.io/tools/){: external} you can use to develop and validate your OpenAPI document.
+{: tip}
 
 The OpenAPI document must satisfy the following requirements and restrictions:
 
@@ -71,9 +74,9 @@ The OpenAPI document must satisfy the following requirements and restrictions:
 
 To build a custom extension based on the API definition, follow these steps:
 
-1. On either the ![Draft environment icon](images/draft-environment-icon.png)**Draft environment** or ![Live environment icon](images/live-environment-icon.png) **Live environment** page, click **Browse catalog** to open the integrations catalog.
+1. Go to the ![Integrations icon](images/integrations-icon.png) **Integrations** page.
 
-1. On the **Integrations** page, scroll to the **Extensions** section and click **Build custom extension**.
+1. Scroll to the **Extensions** section and click **Build custom extension**.
 
 1. Read the **Get started** information and click **Next** to continue.
 
@@ -92,7 +95,9 @@ To build a custom extension based on the API definition, follow these steps:
 
 1. In the **Review extension** step, review what has been imported.
 
-    - The **Review servers** table shows the URLs of the servers defined in the OpenAPI document, along with any required server variables.
+    - The **Review authentication** table shows information about the authentication methods defined in the OpenAPI document. (Authentication methods are defined by the `securitySchemes` object in the OpenAPI document.)
+
+    - The **Review servers** table shows the URLs of the servers defined in the OpenAPI document, along with any server variables that must be specified.
 
     - The **Review operations** table shows the operations that the assistant will be able to call from an action step. An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
 
@@ -100,7 +105,6 @@ To build a custom extension based on the API definition, follow these steps:
 
         For each operation, a row in the table shows the following information:
 
-        - **Tag**: The value from the `tags` field in the OpenAPI file. (If no tags are present, the operation is  shown in a category called _default_.)
         - **Operation**: A description of the operation, which is derived from either the `summary` (if present) or `description` in the OpenAPI file.
         - **Method**: The HTTP method used to send the API request for the operation.
         - **Resource**: The path to the resource the operation acts upon.

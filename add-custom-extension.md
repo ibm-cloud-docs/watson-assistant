@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-04"
+lastupdated: "2022-03-08"
 
 subcollection: watson-assistant
 
@@ -44,22 +44,20 @@ For information about how to create a custom extension, see [Build a custom exte
 
 To add a custom extension to the assistant, follow these steps:
 
-1. From the ![Draft environment icon](images/draft-environment-icon.png) **Draft environment** or ![Live environment icon](images/live-environment-icon.png) **Live environment** page, click **Browse catalog**.
-
-    When you first add an extension to an assistant, the configuration settings you provide are applied only to the Draft environment. This is true even if you open the catalog from the **Live environment** page.
-    {: important}
-
-1. On the **Integrations** page, scroll to the **Extensions** section and find the tile for the custom extension you want to add.
+1. On the ![Integrations icon](images/integrations-icon.png) **Integrations** page, scroll to the **Extensions** section and find the tile for the custom extension you want to add.
 
 1. Click **Add**. Review the overview of the extension and click **Confirm** to configure it for your assistant.
+
+    When you first add an extension to an assistant, the configuration settings you provide are applied only to the Draft environment. You must complete configuration for the Draft environment before you can add the extension in the Live environment.
+    {: important}
 
 1. Read the information in the **Get started** step, and then click **Next**.
 
 1. In the **Authentication** step, specify the authentication and server information you want your assistant to use when calling the service.
 
-    - In the **Authentication type** field, select the type of authentication to use. The supported authentication types are defined by the `securitySchemes` object in the OpenAPI document.
+    - In the **Authentication type** field, select the type of authentication to use.
 
-        Specify any additional information required by the selected authentication type (for example, **Username** and **Password** for HTTP basic authentication).
+        Depending on the authentication type you select, you might also need to specify additional information (for example, **Username** and **Password** for HTTP basic authentication).
 
     - In the **Servers** field, select the server URL to use.
 
@@ -96,12 +94,12 @@ The extension is now connected to your assistant and available for use by action
 
 To configure the extension for the Live environment, follow these steps:
 
-1. Go to the ![Live environment icon](images/live-environment-icon.png) **Live environment** page.
+1. On the ![Integrations icon](images/integrations-icon.png) **Integrations** page, scroll to the **Extensions** section and find the tile for the custom extension you want to add.
 
-1. Under **Resolution Methods**, find the tile for the extension. You should see an indication that setup is incomplete:
+1. Click **Open**. The **Open custom extension** window opens.
 
-    ![Extension tile with "Finish setup" indicator](images/extension-finish-setup.png)
+1. In the **Environment** field, select **Live**. Click **Confirm**.
 
-1. Click the tile and then click **Add** to repeat the configuration process, specifying the values you want to use for the Live environment.
+1. Repeat the configuration process, specifying the values you want to use for the Live environment.
 
 The extension is now available in the environments you have configured, and it can be called from the assistant. For more information about how to call an extension from an action, see [Calling a custom extension](/docs/watson-assistant?topic=watson-assistant-call-extension).
