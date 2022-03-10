@@ -57,7 +57,7 @@ The new {{site.data.keyword.conversationshort}} is a clean slate in the same IBM
 {: #faq-switching}
 {: faq}
 
-The assistants you create in one experience don't transfer to the other. But, you can switch experiences, return to your work, and create or use assistants. You won't lose anything by switching. Changing experiences doesn't affect other users working in the same instance. For more information, see [Switching the experience](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant#welcome-new-assistant-switch-experience).
+The assistants you create in one experience don't transfer to the other. However, you can switch experiences, return to your work, and create or use assistants. You won't lose anything by switching. Changing experiences doesn't affect other users working in the same instance. For more information, see [Switching the experience](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant#welcome-new-assistant-switch-experience).
 
 ### Is the classic {{site.data.keyword.conversationshort}} experience going away?
 {: #faq-classic-lifecycle}
