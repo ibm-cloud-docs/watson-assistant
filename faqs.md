@@ -51,7 +51,7 @@ The new {{site.data.keyword.conversationshort}} is an improved way to build, pub
 {: #faq-classic-assistants}
 {: faq}
 
-The new {{site.data.keyword.conversationshort}} is a clean slate in the same IBM Cloud instance as your classic experience. Assistants you created in one experience don't appear in the other. But, you can switch back and forth between experiences without losing any work. For more information, see [Switching the experience](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant#welcome-new-assistant-switch-experience).
+The new {{site.data.keyword.conversationshort}} is a clean slate in the same IBM Cloud instance as your classic experience. Assistants you created in one experience don't appear in the other. However, you can switch back and forth between experiences without losing any work. For more information, see [Switching the experience](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant#welcome-new-assistant-switch-experience).
 
 ### What happens when I switch between the classic and new {{site.data.keyword.conversationshort}} experiences?
 {: #faq-switching}
