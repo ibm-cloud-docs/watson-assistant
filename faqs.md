@@ -63,7 +63,7 @@ The assistants you create in one experience don't transfer to the other. However
 {: #faq-classic-lifecycle}
 {: faq}
 
-IBM has no plans to discontinue the classic {{site.data.keyword.conversationshort}} experience. You will always be able to build on the platform. But, we encourage you to explore the benefits and capabilities in the new {{site.data.keyword.conversationshort}}. For more information, see the [Getting Started guide](https://www.ibm.com/blogs/watson/2021/12/getting-started-with-the-new-watson-assistant-part-i-the-build-guide/){: external} or the [documentation](/docs/watson-assistant) for the new experience.
+IBM has no plans to discontinue the classic {{site.data.keyword.conversationshort}} experience. You will always be able to build on the platform. However, we encourage you to explore the benefits and capabilities in the new {{site.data.keyword.conversationshort}}. For more information, see the [Getting Started guide](https://www.ibm.com/blogs/watson/2021/12/getting-started-with-the-new-watson-assistant-part-i-the-build-guide/){: external} or the [documentation](/docs/watson-assistant) for the new experience.
 
 ### Where are the search skill and channel integrations in the new {{site.data.keyword.conversationshort}} experience? 
 {: #faq-integrations}
