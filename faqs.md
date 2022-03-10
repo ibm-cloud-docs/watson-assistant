@@ -75,7 +75,7 @@ In the left navigation, click **Integrations** ![Integrations](images/integratio
 {: #faq-assistant-id}
 {: faq}
 
-Assistant ID is now called *Environment ID*. The draft and live environments each have an ID. In either environment:
+The assistant ID is now called the *environment ID*. The draft and live environments each have unique IDs. In either environment:
 1. Click **Settings**.
 2. In API Details, the ID is in the **Environment ID (Assistant ID)** field.
 
