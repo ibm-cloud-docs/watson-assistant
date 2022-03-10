@@ -143,7 +143,16 @@ toc:
               - webhook-pre.md
               - webhook-post.md
               - webhook-log.md
-
+      - topicgroup:
+          label: Migrating to the new experience
+          topics:
+          - topic: migrate-overview.md
+            navtitle: Overview
+          - activate-dialog.md
+          - dialog-call-action.md
+          - dialog-analyze.md
+          - dialog-publish.md
+          
   - navgroup:
       id: reference
       topics:
