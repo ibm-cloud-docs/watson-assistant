@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-03-10"
 
 keywords: Watson Assistant release notes
 
@@ -38,12 +38,24 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 10 March 2022
+{: #watson-assistant-mar102022}
+{: release-note}
+
+Custom extensions
+:   If you need to integrate your assistant with an external service that has a REST API, you can now build a custom extension by importing an OpenAPI document. Your assistant can then send requests to the external service and receive response data it can use in the conversation. For example, you might use an extension to interact with a ticketing or customer relationship management (CRM) system, or to retrieve real-time data such as mortgage rates or weather conditions.
+
+   For more information about custom extensions, see [Building a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension) and [Calling a custom extension](/docs/watson-assistant?topic=watson-assistant-call-extension).
+
+Dialog feature available
+:   The dialog feature is available. If you have a dialog-based assistant that was built using the classic {{site.data.keyword.conversationshort}}, you can now migrate your dialog skill to the new {{site.data.keyword.conversationshort}} experience. For more information, see [Migrating to the new experience](/docs/watson-assistant?topic=watson-assistant-migrate-overview).
+
 ## 24 February 2022
 {: #watson-assistant-feb242022}
 {: release-note}
 
 Regex customer response type
-:   The regex customer response type is now available. Use this response type to capture a value that must conform to a particular pattern or format, such as an email address or telephone number. For more information, see [Regex](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-collect-info#customer-response-type-regex).
+:   The regex customer response type is now available. Use this response type to capture a value that must conform to a particular pattern or format, such as an email address or telephone number. For more information, see [Regex](/docs/watson-assistant?topic=watson-assistant-collect-info#customer-response-type-regex).
 
 ## 17 February 2022
 {: #watson-assistant-feb172022}
