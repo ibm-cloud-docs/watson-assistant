@@ -44,26 +44,26 @@ Find answers to frequently-asked questions and quick fixes for common problems.
 {: faq-what-is-the-new-experience}
 {: faq}
 
-The new {{site.data.keyword.conversationshort}} is an improved way to build, publish, and improve virtual assistants. In the new experience, you use actions to build conversations. Actions is a simple way for anyone, developer or not, to create assistants. For more information, see the [Getting Started guide](https://www.ibm.com/blogs/watson/2021/12/getting-started-with-the-new-watson-assistant-part-i-the-build-guide/){: external} or the [documentation](/docs/watson-assistant) for the new experience.
+The new {{site.data.keyword.conversationshort}} is an improved way to build, publish, and improve virtual assistants. In the new experience, you use actions to build conversations. Actions are a simple way for anyone, developer or not, to create assistants. For more information, see the [Getting Started guide](https://www.ibm.com/blogs/watson/2021/12/getting-started-with-the-new-watson-assistant-part-i-the-build-guide/){: external} or the [documentation](/docs/watson-assistant) for the new experience.
 
 
 ### Why can't I see the assistants I made with classic {{site.data.keyword.conversationshort}} in the new experience?
 {: #faq-classic-assistants}
 {: faq}
 
-The new {{site.data.keyword.conversationshort}} is a clean slate in the same IBM Cloud instance as your classic experience. Assistants you created in one experience don't appear in the other. But, you can switch back and forth between experiences without losing any work. For more information, see [Switching the experience](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant#welcome-new-assistant-switch-experience).
+The new {{site.data.keyword.conversationshort}} is a clean slate in the same IBM Cloud instance as your classic experience. Assistants you created in one experience don't appear in the other. However, you can switch back and forth between experiences without losing any work. For more information, see [Switching the experience](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant#welcome-new-assistant-switch-experience).
 
 ### What happens when I switch between the classic and new {{site.data.keyword.conversationshort}} experiences?
 {: #faq-switching}
 {: faq}
 
-The assistants you create in one experience don't transfer to the other. But, you can switch experiences, return to your work, and create or use assistants. You won't lose anything by switching. Changing experiences doesn't affect other users working in the same instance. For more information, see [Switching the experience](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant#welcome-new-assistant-switch-experience).
+The assistants you create in one experience don't transfer to the other. However, you can switch experiences, return to your work, and create or use assistants. You won't lose anything by switching. Changing experiences doesn't affect other users working in the same instance. For more information, see [Switching the experience](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant#welcome-new-assistant-switch-experience).
 
 ### Is the classic {{site.data.keyword.conversationshort}} experience going away?
 {: #faq-classic-lifecycle}
 {: faq}
 
-IBM has no plans to discontinue the classic {{site.data.keyword.conversationshort}} experience. You will always be able to build on the platform. But, we encourage you to explore the benefits and capabilities in the new {{site.data.keyword.conversationshort}}. For more information, see the [Getting Started guide](https://www.ibm.com/blogs/watson/2021/12/getting-started-with-the-new-watson-assistant-part-i-the-build-guide/){: external} or the [documentation](/docs/watson-assistant) for the new experience.
+IBM has no plans to discontinue the classic {{site.data.keyword.conversationshort}} experience. However, we encourage you to explore the benefits and capabilities in the new {{site.data.keyword.conversationshort}}. For more information, see the [Getting Started guide](https://www.ibm.com/blogs/watson/2021/12/getting-started-with-the-new-watson-assistant-part-i-the-build-guide/){: external} or the [documentation](/docs/watson-assistant) for the new experience.
 
 ### Where are the search skill and channel integrations in the new {{site.data.keyword.conversationshort}} experience? 
 {: #faq-integrations}
@@ -75,7 +75,7 @@ In the left navigation, click **Integrations** ![Integrations](images/integratio
 {: #faq-assistant-id}
 {: faq}
 
-Assistant ID is now called *Environment ID*. The draft and live environments each have an ID. In either environment:
+The assistant ID is now called the *environment ID*. The draft and live environments each have unique IDs. In either environment:
 1. Click **Settings**.
 2. In API Details, the ID is in the **Environment ID (Assistant ID)** field.
 
