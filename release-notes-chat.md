@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-07"
+lastupdated: "2022-03-08"
 
 subcollection: watson-assistant
 
@@ -45,7 +45,11 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 *Release date: 7 March 2022*
 
-- **Navigation**: The web chat has been updated with new navigation features. Visual updates to the header of the web chat allow for more seamless movement through the web chat views. For example, new "Back" and "Minimize" buttons make it easier to navigate between the home screen, the chat view, and custom panels. A new customizable drop-down menu appears near the avatar in both the assistant and agent chat views (for more information, see [updateCustomMenuOptions](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecustommenuoptions){: external}. There are also improvements and fixes to the animations for the web chat panels to make the whole experience more seamless and cohesive.
+- **Navigation**: The web chat has been updated with new navigation features. For example, new “Back” and “Minimize” buttons make it easier to navigate between the home screen, the chat view, and panels. A new customizable drop-down menu appears near the avatar in both the assistant and agent chat views. This new functionality allows you to easily add new options to the menu of the web chat (for more information, see [updateCustomMenuOptions](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecustommenuoptions){: external}.
+
+    The experience of connecting to a human agent has also been improved to make it clearer how a user requests an agent, returns to chatting with the assistant, and ends the conversation.
+
+    The animations for the web chat panels have also been improved to make the whole experience more seamless and cohesive.
 
 - **Launcher**: The new web chat launcher bounces on two different occasions to attract attention and encourage customer engagement. For more information, see [Launcher appearance and behavior](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-launcher).
 
