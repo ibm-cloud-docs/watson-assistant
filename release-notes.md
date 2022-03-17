@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-03-17"
 
 keywords: Watson Assistant release notes
 
@@ -38,12 +38,27 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 18 March 2022
+{: #watson-assistant-mar182022}
+{: release-note}
+
+Custom extensions
+:   If you need to integrate your assistant with an external service that has a REST API, you can now build a custom extension by importing an OpenAPI document. Your assistant can then send requests to the external service and receive response data it can use in the conversation. For example, you might use an extension to interact with a ticketing or customer relationship management (CRM) system, or to retrieve real-time data such as mortgage rates or weather conditions.
+
+   For more information about custom extensions, see [Building a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension) and [Calling a custom extension](/docs/watson-assistant?topic=watson-assistant-call-extension).
+
+Confirmation customer response type
+:   The confirmation customer response type is now available. Use this response type when a customer's response must be either Yes or No. For more information, see [Confirmation](/docs/watson-assistant?topic=watson-assistant-collect-info#customer-response-type-confirmation).
+
+Search integration highlights text in Chromium browser
+:   When a customer searches for some query in Watson Assistant, the search integration returns a URL. Now, when the customer clicks the URL, Chromium browser jumps to the matching text that is highlighted on the webpage.
+
 ## 24 February 2022
 {: #watson-assistant-feb242022}
 {: release-note}
 
 Regex customer response type
-:   The regex customer response type is now available. Use this response type to capture a value that must conform to a particular pattern or format, such as an email address or telephone number. For more information, see [Regex](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-collect-info#customer-response-type-regex).
+:   The regex customer response type is now available. Use this response type to capture a value that must conform to a particular pattern or format, such as an email address or telephone number. For more information, see [Regex](/docs/watson-assistant?topic=watson-assistant-collect-info#customer-response-type-regex).
 
 ## 17 February 2022
 {: #watson-assistant-feb172022}
