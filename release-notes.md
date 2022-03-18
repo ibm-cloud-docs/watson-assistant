@@ -50,8 +50,8 @@ Custom extensions
 Confirmation customer response type
 :   The confirmation customer response type is now available. Use this response type when a customer's response must be either Yes or No. For more information, see [Confirmation](/docs/watson-assistant?topic=watson-assistant-collect-info#customer-response-type-confirmation).
 
-<!--- Search integration highlights text in browser
-:   When a customer searches for some query in Watson Assistant, the search integration returns a URL. When the customer clicks the URL, the browser jumps to the matching text that is highlighted on the webpage. This feature is supported on Chromium browsers, including Google Chrome and Microsoft Edge. --->
+Search integration highlights text in browser
+:   Search results in {{site.data.keyword.conversationshort}} include a link. Now, when a customer clicks the link, search results are highlighted in their browser so it’s easier for them to see the relevant content. This feature is supported on Chromium browsers, including Google Chrome and Microsoft Edge.
 
 ## 24 February 2022
 {: #watson-assistant-feb242022}
