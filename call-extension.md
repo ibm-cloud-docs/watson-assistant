@@ -114,3 +114,55 @@ Each variable represents a value from the response body. To make it easy to acce
 For example, this action step uses an expression to check the `availability` property in an extension response:
 
 ![Extension variable in step condition](images/response-expression-condition.png)
+
+## Checking success or failure
+{: #extension-check-status}
+
+You might want your assistant to be able to handle errors that occur when calling a custom extension. You can do this by checking the HTTP status code that is returned as part of the response from the extension.
+{: shortdesc}
+
+If you define step conditions that check the status code, you can create steps that enable your assistant to respond differently depending on whether the call to the extension succeeded. (For more information about step conditions, see [Step conditions](/docs/watson-assistant?topic=watson-assistant-step-conditions).)
+
+There are many possible HTTP status codes, and different methods use different status codes to indicate various types of success or failure. To check the success or failure of a call to an extension, you need to know what HTTP status codes the external service returns. These status codes are specified in the OpenAPI document that describes the external API.
+{: important}
+
+To create a step condition that checks the status, follow these steps:
+
+1. Create or edit a step that comes after the call to the extension.
+
+1. Click the condition field at the beginning of the step and select **with conditions** from the drop-down list.
+
+1. Click the variable field and then select **Expression** from the drop-down list.
+
+    ![Selecting expression in a step condition](images/extension-condition-expression-1.png)
+
+1. In the expression field, type a dollar sign (`$`) to show the list of available variables.
+
+1. Select any variable that is a response value from the extension. (It doesn't matter which variable you select, as long as it is an extension response variable).
+
+    ![Response variable in step condition expression](images/extension-condition-expression-2.png)
+
+    The expression is automatically updated to show a reference to the variable you selected, in the format `${step_xxx_result_y.body.variablename}`. For example, if you selected a response variable called `body.id`, the reference might be `${step_596_result_1.body.id}`.
+
+1. Inside the curly braces, (`{}`), edit this reference to remove `.body.variablename`. You should be left with something like `${step_596_result_1}`.
+
+1. After the closing curly brace (`}`), add `.status`. The resulting reference identifies the status code returned from the call to the extension (for example, `${step_596_result_1}.status`).
+
+1. Complete the expression by adding the test you want to perform on the status code. For example, if you want your step to execute only in the event of a failure, you might check to see if the status code is not equal to 200 (the standard response code for most HTTP GET requests).
+
+    ![Expression in a step condition](images/extension-condition-expression-3.png)
+
+    For more information about writing expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).
+
+### Debugging the output
+{: #extension-debug-output}
+
+For debugging purposes, you might want your assistant to show the entire response it receives from the extension (including any error messages) in the output.
+
+To do this, create a step after the call to the extension, and in that step assign an expression to a session variable (for example, `response_body`). Construct the expression using the same method described in [the previous section](#extension-check-status), except specifying `.body` instead of `.status`.
+
+![expression to show response body](images/extension-debug-expression.png)
+
+You can then reference this variable in the **Assistant says** field to include the body of the response data in the output. If the call to the extension is successful, this shows the unformatted raw data received from the external service. In the event of a failure, it includes any error message that was received.
+
+For more information about creating and referencing variables, see [Using variables to manage conversation information](/docs/watson-assistant?topic=watson-assistant-manage-info).
