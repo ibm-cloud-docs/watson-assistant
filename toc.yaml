@@ -148,6 +148,7 @@ toc:
           topics:
           - topic: migrate-overview.md
             navtitle: Overview
+          - compare-actions-dialog.md
           - activate-dialog.md
           - dialog-call-action.md
           - dialog-analyze.md
