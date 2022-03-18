@@ -115,7 +115,7 @@ For example, this action step uses an expression to check the `availability` pro
 
 ![Extension variable in step condition](images/response-expression-condition.png)
 
-## Checking sucess or failure
+## Checking success or failure
 {: #extension-check-status}
 
 You might want your assistant to be able to handle errors that occur when calling a custom extension. You can do this by checking the HTTP status code that is returned as part of the response from the extension.
