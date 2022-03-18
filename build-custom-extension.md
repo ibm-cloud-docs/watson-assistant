@@ -47,7 +47,7 @@ For more information about the OpenAPI specification, see [OpenAPI Specification
 
 When you create a custom extension, you import an OpenAPI document that describes the REST API of an external service. {{site.data.keyword.conversationshort}} parses the OpenAPI document to identify the operations supported by the external service, along with information about the input parameters and response for each operation and supported authentication methods.
 
-After this processing has completed, the custom extension becomes available as a new integration that you can connect to the assistant in the Draft or Live environment. Your assistant can then use the extension to send requests to the external service based on conversations with your customers. Values included in the response from the service are then mapped to action variables, which can be accessed by subsequent action steps.
+After this processing has completed, the custom extension becomes available as a new integration that you can connect to the assistant in the draft or live environment. Your assistant can then use the extension to send requests to the external service based on conversations with your customers. Values included in the response from the service are then mapped to action variables, which can be accessed by subsequent action steps.
 
 (For more information about connecting a custom extension to an assistant, see [Add a custom extension](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).)
 
