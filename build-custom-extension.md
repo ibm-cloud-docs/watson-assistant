@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-18"
+lastupdated: "2022-03-21"
 
 subcollection: watson-assistant
 
@@ -35,6 +35,9 @@ If you need to integrate your assistant with an external service that has a REST
 {: shortdesc}
 
 After you create a custom extension, you can connect it to an assistant as an integration. In your actions, you can then define steps that interact with the external service by calling the extension.
+
+The [{{site.data.keyword.conversationshort}} extension starter kit](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions) repo on GitHub provides files you can use to quickly build a working extension. Each starter kit includes a tested OpenAPI definition you can use to create an extension that accesses a third-party API, along with a downloadable JSON file you can import to create an assistant that accesses the extension.
+{: tip}
 
 ## Overview
 {: #build-custom-extension-overview}
