@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-10"
+lastupdated: "2022-03-18"
 
 keywords: Watson Assistant release notes
 
@@ -38,8 +38,15 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
-## 17 March 2022
-{: #watson-assistant-mar172022}
+## 31 March 2022
+{: #watson-assistant-mar312022}
+{: release-note}
+
+Dialog feature available
+:   The dialog feature is available. If you have a dialog-based assistant that was built using the classic {{site.data.keyword.conversationshort}}, you can now migrate your dialog skill to the new {{site.data.keyword.conversationshort}} experience. For more information, see [Migrating to the new experience](/docs/watson-assistant?topic=watson-assistant-migrate-overview).
+
+## 18 March 2022
+{: #watson-assistant-mar182022}
 {: release-note}
 
 Custom extensions
@@ -47,8 +54,11 @@ Custom extensions
 
    For more information about custom extensions, see [Building a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension) and [Calling a custom extension](/docs/watson-assistant?topic=watson-assistant-call-extension).
 
-Dialog feature available
-:   The dialog feature is available. If you have a dialog-based assistant that was built using the classic {{site.data.keyword.conversationshort}}, you can now migrate your dialog skill to the new {{site.data.keyword.conversationshort}} experience. For more information, see [Migrating to the new experience](/docs/watson-assistant?topic=watson-assistant-migrate-overview).
+Confirmation customer response type
+:   The confirmation customer response type is now available. Use this response type when a customer's response must be either Yes or No. For more information, see [Confirmation](/docs/watson-assistant?topic=watson-assistant-collect-info#customer-response-type-confirmation).
+
+Search integration highlights text in browser
+:   Search results in {{site.data.keyword.conversationshort}} include a link. Now, when a customer clicks the link, search results are highlighted in their browser so it’s easier for them to see the relevant content. This feature is supported on Chromium browsers, including Google Chrome and Microsoft Edge.
 
 ## 24 February 2022
 {: #watson-assistant-feb242022}
