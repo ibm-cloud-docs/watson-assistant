@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-03-16"
 
 subcollection: watson-assistant
 
@@ -44,13 +44,14 @@ To choose the customer response type for a step, click **Define customer respons
 | Response type | Description | Example input |
 |---------------|-------------|----------|
 | [**Options**](#customer-response-type-options)   | A list of predefined choices that customers can select from. At run time, the web chat integration shows an options response as a set of clickable buttons or as a drop-down list, depending on the number of choices. | `Small` `Medium` `Large` |
+| [**Confirmation**](#customer-response-type-confirmation) | A choice of either `Yes` or `No`. At run time, the web chat integration shows the `Yes` and `No` options as clickable buttons. | `Yes`, `No` |
+| [**Regex**](#customer-response-type-regex)     | A text response that matches a specified pattern or format (such as an email address or telephone number). ||
 | [**Number**](#customer-response-type-number)    | A single generic number, specified either as numerals (100) or words (one hundred). | `100`, `one hundred` |
 | [**Date**](#customer-response-type-date)      | A single specific date or a range of dates. | `31 December 2021`, `12/31/2020`, `tomorrow` |
 | [**Time**](#customer-response-type-time)      | A single specific time or a range of time.  | `5:00 PM`, `now` |
 | [**Currency**](#customer-response-type-currency)  | An amount of money, including the unit.     | `$25`, `500 yen` |
 | [**Percent**](#customer-response-type-percent)   | A fractional numeric value expressed as a percentage. | `10%`, `50 percent` |
 | [**Free text**](#customer-response-type-free-text) | Any arbitrary text response. | `123 Main Street`, `John Q. Smith` |
-| [**Regex**](#customer-response-type-regex)     | A text response that matches a specified pattern or format (such as an email address or telephone number). ||
 
 ## Skipping a step
 {: #collect-info-skip-step}
@@ -94,6 +95,84 @@ Synonyms are particularly useful for a response that might be skipped, because t
 
 You can save your configured options response for reuse in other steps. To save a customer response, click the **Save response for reuse** icon. For more information about saved customer responses, see [Saving and reusing customer responses](#saved-customer-responses).
 {: tip}
+
+### Confirmation
+{: #customer-response-type-confirmation}
+
+A _confirmation_ response presents customers with the choices of either `Yes` or `No` as clickable buttons. Use this response type when the cutomer's response must be either Yes or No.
+
+The following customer responses are recognized as `Yes`:
+- `yeah`
+- `yea`
+- `yup`
+- `sure`
+- `positive`
+
+The following customer responses are recognized as `No`:
+- `not`
+- `nope`
+- `nay`
+- `negative`
+
+### Regex
+{: #customer-response-type-regex}
+
+A _regex_ response collects a text string that matches a pattern expressed as a regular expression. Use this response to capture a value that must conform to a particular pattern or format, such as an email address or telephone number.
+
+You can specify multiple regular expressions for a single response. For example, you might define multiple regex patterns that match part numbers from different vendors that use different formats. Input text for the response will be recognized if it matches any of the regex patterns you specify.
+
+To add a regex response:
+
+1. Under **Define customer response** field, click **Regex**.
+
+1. In the **Edit response** window, click in the **Regular expression** field.
+
+1. Select one of the predefined regular expressions, or select **Define custom regular expression** to write your own.
+
+    To use a predefined regular expression, select one of the following:
+
+    - **Email**: An Internet email address (for example, `user@example.com`).
+    - **Phone number**: A ten-digit US phone number (for example, `800-555-1212` or `(800) 555-1212`).
+    - **URL**: A correctly formatted URL for an online resource, optionally including the protocol (for example, `example.com` or `https://example.org/index.html`).
+
+    For examples of other common patterns, see [Example regex patterns](#regex-examples).
+    {: tip}
+
+    To write your own custom regular expression, select **Define custom regular expression** and then type your regex pattern in the **Regular expression** field. For more information on regular expression syntax, see [Syntax](https://github.com/google/re2/wiki/Syntax){: external}.
+
+    {{site.data.keyword.conversationshort}} uses the Google RE2 regular expression library to match regular expressions at run time. Regular expression syntax can vary between implementations, so make sure any regex patterns you write conform to the [RE2 syntax]([Syntax](https://github.com/google/re2/wiki/Syntax){: external}).
+    {: note}
+
+1. If you want to specify multiple regex patterns for the response, click **Add regular expression** to add another field in which you can select or define an additional regular expression.
+
+    When you specify more than one regular expression, a **Name** field is displayed for each one. Use this field to give each regex pattern a unique name. You can use this name in subsequent step conditions to identify which regex pattern was matched.
+
+    ![Response with multiple regex patterns](images/regex-multiple.png)
+
+1. Test your regular expression by typing example input in the **Test** field. If any text within your input matches the regex patterns you have specified, the matching text is listed in the **Assistant recognizes:** field.
+
+    ![Match shown in regex test](images/regex-test-match.png)
+
+    The **Test** feature in the step editor uses a browser-based regex engine to find matches in your test input. At run time, the assistant uses a different regex engine that might have different results, especially with complex patterns. Before deploying your assistant in production, always use the assistant preview to test any step that uses a regex response.
+    {: note}
+
+You can save your configured regex response for reuse in other steps. For more information, about saved customer responses, see [Saving and reusing customer responses](#saved-customer-responses).
+{: tip}
+
+#### Example regex patterns
+{: #regex-examples}
+
+You can use the following regex patterns to recognize some common types of user input.
+
+| Description               | Patterns    |
+|---------------------------|-------------|
+| US Social Security number | `^(?!(000&#124;666&#124;9))\d{3}-(?!00)\d{2}-(?!0000)\d{4}$` |
+| US passport number        | `/^[A-PR-WY][1-9]\d\s?\d{4}[1-9]$/` |
+| US bank routing number    | `\b((0[0-9])&#124;(1[0-2])&#124;(2[1-9])&#124;(3[0-2])&#124;(6[1-9])&#124;(7[0-2])&#124;80)&#124; ([0-9]{7})\b` |
+| UPS tracking number       | `/\b(1Z ?[0-9A-Z]{3} ?[0-9A-Z]{3} ?[0-9A-Z]{2} ?[0-9A-Z]{4} ?&#124; [0-9A-Z]{3} ?[0-9A-Z]&#124;[\dT]\d\d\d ?\d\d\d\d ?\d\d\d)\b/` |
+| USPS tracking number      | - `/(\b\d{30}\b)&#124;(\b91\d+\b)&#124;(\b\d{20}\b)/`\n- `/^E\D{1}\d{9}\D{2}$&#124;^9\d{15,21}$/`\n- `/^91[0-9]+$/`\n - `/^[A-Za-z]{2}[0-9]+US$/` |
+| FedEx tracking number     | - `/(\b96\d{20}\b)&#124;(\b\d{15}\b)&#124;(\b\d{12}\b)/`\n- `/\b((98\d\d\d\d\d?\d\d\d\d&#124;98\d\d) ?\d\d\d\d ?\d\d\d\d( ?\d\d\d)?)\b/`\n - `/^[0-9]{15}$/` |
+{: caption="Example regex patterns" caption-side="bottom"}
 
 ### Number
 {: #customer-response-type-number}
@@ -152,63 +231,6 @@ A _free text_ response collects any arbitrary text string. Use this response for
 - `123 Main St.`
 - `John Q. Smith`
 - `Please add extra sauce`
-
-### Regex
-{: #customer-response-type-regex}
-
-A _regex_ response collects a text string that matches a pattern expressed as a regular expression. Use this response type to capture a value that must conform to a particular pattern or format, such as an email address or telephone number.
-
-You can specify multiple regular expressions for a single response. For example, you might define multiple regex patterns that match part numbers from different vendors that use different formats. Input text for the response will be recognized if it matches any of the regex patterns you specify.
-
-To add a regex response:
-
-1. Under **Define customer response** field, click **Regex**.
-
-1. In the **Edit response** window, click in the **Regular expression** field.
-
-1. Select one of the predefined regular expressions, or select **Custom regular expression** to write your own.
-
-    To use a predefined regular expression, select one of the following:
-
-    - **Email**: An Internet email address (for example, `user@example.com`).
-    - **Phone number**: A 10-digit US phone number (for example, `800-555-1212` or `(800) 555-1212`). 
-    - **URL**: A correctly formatted URL for an online resource, optionally including the protocol (for example, `example.com` or `https://example.org/index.html`).
-
-    For examples of other common patterns, see [Example regex patterns](#regex-examples).
-    {: tip}
-
-    To write your own custom regular expression, select **Define custom regular expression** and then type your regex pattern in the **Regular expression** field. For more information on regular expression syntax, see [Syntax](https://github.com/google/re2/wiki/Syntax){: external}.
-
-1. If you want to specify multiple regex patterns for the response, click **Add regular expression** to add another field in which you can select or define an additional regular expression.
-
-    When you specify more than one regular expression, a **Name** field is displayed for each one. Use this field to give each regex pattern a unique name. You can use this name in subsequent step conditions to identify which regex pattern was matched.
-
-    ![Response with multiple regex patterns](images/regex-multiple.png)
-
-1. Test your regular expression by typing example input in the **Test** field. If any text within your input matches the regex patterns you have specified, the matching text is listed in the **Assistant recognizes:** field.
-
-    ![Match shown in regex test](images/regex-test-match.png)
-
-    The **Test** feature in the step editor uses a browser-based regex engine to find matches in your test input. At run time, the assistant uses a different regex engine that might have different results, especially with complex patterns. Before deploying your assistant in production, always use the assistant preview to test any step that uses a regex response.
-    {: note}
-
-You can save your configured regex response for reuse in other steps. For more information, about saved customer responses, see [Saving and reusing customer responses](#saved-customer-responses).
-{: tip}
-
-#### Example regex patterns
-{: #regex-examples}
-
-You can use the following regex patterns to recognize some common types of user input.
-
-| Description               | Patterns    |
-|---------------------------|-------------|
-| US Social Security number | `^(?!(000&#124;666&#124;9))\d{3}-(?!00)\d{2}-(?!0000)\d{4}$` |
-| US passport number        | `/^[A-PR-WY][1-9]\d\s?\d{4}[1-9]$/` |
-| US bank routing number    | `\b((0[0-9])&#124;(1[0-2])&#124;(2[1-9])&#124;(3[0-2])&#124;(6[1-9])&#124;(7[0-2])&#124;80)&#124; ([0-9]{7})\b` |
-| UPS tracking number       | `/\b(1Z ?[0-9A-Z]{3} ?[0-9A-Z]{3} ?[0-9A-Z]{2} ?[0-9A-Z]{4} ?&#124; [0-9A-Z]{3} ?[0-9A-Z]&#124;[\dT]\d\d\d ?\d\d\d\d ?\d\d\d)\b/` |
-| USPS tracking number      | - `/(\b\d{30}\b)&#124;(\b91\d+\b)&#124;(\b\d{20}\b)/`\n- `/^E\D{1}\d{9}\D{2}$&#124;^9\d{15,21}$/`\n- `/^91[0-9]+$/`\n - `/^[A-Za-z]{2}[0-9]+US$/` |
-| FedEx tracking number     | - `/(\b96\d{20}\b)&#124;(\b\d{15}\b)&#124;(\b\d{12}\b)/`\n- `/\b((98\d\d\d\d\d?\d\d\d\d&#124;98\d\d) ?\d\d\d\d ?\d\d\d\d( ?\d\d\d)?)\b/`\n - `/^[0-9]{15}$/` |
-{: caption="Example regex patterns" caption-side="bottom"}
 
 ## Saving and reusing customer responses
 {: #saved-customer-responses}
