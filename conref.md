@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-03-10"
+lastupdated: "2022-03-31"
 
 subcollection: watson-assistant
 
@@ -28,6 +28,6 @@ content-type: conref
 # Content references for watson-assistant
 {: #watson-assistant-conref}
 
-This documentation is for the **new {{site.data.keyword.conversationfull}}** experience. To see the documentation for the classic {{site.data.keyword.conversationshort}}, please go [here](https://cloud.ibm.com/docs/assistant){: external}.
-{: important}
+<!--This documentation is for the **new {{site.data.keyword.conversationfull}}** experience. To see the documentation for the classic {{site.data.keyword.conversationshort}}, please go [here](https://cloud.ibm.com/docs/assistant){: external}.
+{: important}-->
 {: #classiclink}
