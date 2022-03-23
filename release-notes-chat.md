@@ -40,6 +40,17 @@ For information about new features and improvements to the core {{site.data.keyw
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Versioning](/docs/watson-assistant?topic=watson-assistant-customize-web-chat#customize-web-chat-versions).
 
+## 6.3.0
+{: #6.3.0}
+
+*Release date: 24 March 2022*
+
+- **Search cards**: Search cards have a new design.
+
+- **Introduced the `instance.restartConversation()` method**: This new instance method allows you to restart the conversation in the assistant. It also comes with two new restart events, [pre:restartConversation](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#prerestartconversation){: external} and [restartConversation](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#restartconversation){: external}. For more information see [instance.restartConversation()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#restartconversation){: external}.
+  
+- Bug fixes.
+
 ## 6.2.0
 {: #6.2.0}
 
