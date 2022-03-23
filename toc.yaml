@@ -144,6 +144,8 @@ toc:
               - webhook-pre.md
               - webhook-post.md
               - webhook-log.md
+          - build-custom-extension.md
+          - add-custom-extension.md
       - topicgroup:
           label: Migrating to the new experience
           topics:
