@@ -47,7 +47,9 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 - **Search cards**: Search cards have a new design.
 
-- **Introduced the `instance.restartConversation()` method**: This new instance method allows you to restart the conversation in the assistant. It also comes with two new restart events, [pre:restartConversation](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#prerestartconversation){: external} and [restartConversation](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#restartconversation){: external}. For more information see [instance.restartConversation()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#restartconversation){: external}.
+- **New `restartConversation()` method**: The new `restartConversation()` instance method restarts the conversation with the assistant by clearing the web chat transcript and starting a new session. It also fires two new events (`pre:restartConversation` and `restartConversation`).
+
+    For more information, see [instance.restartConversation()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#restartconversation){: external}, [`pre:restartConversation`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#prerestartconversation){: external}, and [`restartConversation`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#restartconversation){: external}.
   
 - Bug fixes.
 
