@@ -53,7 +53,6 @@ If you want to evaluate changes that are introduced in a web chat release before
   
 - **New `agentEndConversation()` method**: The new `agentEndConversation()` instance method immediately ends the conversation with a human agent without requesting confirmation from the user. For more information, see [`instance.agentEndConversation()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#agentendconversation){: external}.
 
-    For more information, see [instance.agentEndConversation()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#agentendconversation){: external}.
 
 - Bug fixes.
 
