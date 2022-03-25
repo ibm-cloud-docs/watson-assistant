@@ -51,6 +51,10 @@ If you want to evaluate changes that are introduced in a web chat release before
 
     For more information, see [instance.restartConversation()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#restartconversation){: external}, [`pre:restartConversation`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#prerestartconversation){: external}, and [`restartConversation`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#restartconversation){: external}.
   
+- **New `agentEndConversation()` method**: The new `agentEndConversation()` instance method allows you to manually end the conversation with a human agent without requesting confirmation from the user.
+
+    For more information, see [instance.agentEndConversation()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#agentendconversation){: external}.
+
 - Bug fixes.
 
 ## 6.2.0
