@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-18"
+lastupdated: "2022-03-28"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,13 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 28 March 2022
+{: #watson-assistant-mar282022}
+{: release-note}
+
+New service desk support reference implementation
+:   You can use the reference implementation details to integrate the web chat with the Kustomer service desk. For more information, see [Adding service desk support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-haa).
 
 ## 18 March 2022
 {: #watson-assistant-mar182022}
