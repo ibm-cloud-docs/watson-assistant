@@ -88,6 +88,9 @@ toc:
                   label: Integrating with Oracle B2C Service
                   href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/oracle/webChat
               - link:
+                  label: Integrating with Kustomer
+                  href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/kustomer/webChat
+              - link:
                   label: Integrating with your own service desk
                   href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter
           - topicgroup:
