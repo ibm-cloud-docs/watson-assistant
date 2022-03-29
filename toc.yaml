@@ -217,9 +217,6 @@ toc:
               label: Stack Overflow
               href: https://stackoverflow.com/questions/tagged/watson-assistant
           - link:
-              label: WDC Slack channel
-              href: http://wdc-slack-inviter.mybluemix.net/
-          - link:
               label: IBM Watson Apps Community
               href: https://community.ibm.com/community/user/watsonapps/communities/community-home?CommunityKey=7a3dc5ba-3018-452d-9a43-a49dc6819633
       - accessibility.md
