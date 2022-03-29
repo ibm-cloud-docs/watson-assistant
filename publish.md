@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-18"
+  years: 2021, 2022
+lastupdated: "2022-03-29"
 
 subcollection: watson-assistant
 
@@ -48,9 +48,7 @@ It's important to understand how publishing works to ensure proper lifecycle man
   ![Image of the no new changes to publish screen](images/no-new-changes-publish.png)
 
 ## What is being published?
-When you publish content, a snapshot is taken of the current state of actions. The number of versions that can be maintained before they are deleted depends on the type of plan you have. If you reach the plan limit of versions you can have, the oldest version that isn't live is deleted when a new version is published.
-
-All updates to actions content are published in a version, including the following updates:
+When you publish content, a snapshot is taken of the current state of actions. All updates to actions content are published in a version, including the following updates:
 
 - Creating an action
 - Editing an action
@@ -64,6 +62,9 @@ The following updates are not published in a version and must be configured manu
 
 - Channel configurations
 - Environment settings
+
+The number of content versions that can be maintained before they are deleted depends on the type of plan you have. If you reach the plan limit of versions you can have, the oldest version that isn't live is deleted when a new version is published. For information about {{site.data.keyword.conversationshort}} plan limits, see [Pricing plans](https://www.ibm.com/cloud/watson-assistant/pricing/){: external}.
+{: important}
 
 ## Switching the live version
 {: #switching-live-version}
