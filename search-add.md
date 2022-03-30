@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-12-09"
+  years: 2021, 2022
+lastupdated: "2022-03-25"
 
 subcollection: watson-assistant
 
@@ -176,6 +176,9 @@ If you decide not to continue using the Plus plan and don't want to pay for it, 
 
 1.  The **Extract FAQ pairs** section displays if the feature is enabled in your {{site.data.keyword.discoveryshort}} collection. Frequently asked questions content is identified automatically and used to give more precise results.
 
+    This option is available only if your {{site.data.keyword.discoveryshort}} instance uses the v2 {{site.data.keyword.discoveryshort}} API.
+    {: note}
+
 1.  Choose whether to enable **Emphasize the answer**. 
 
     This option is available only if your {{site.data.keyword.discoveryshort}} instance uses the v2 {{site.data.keyword.discoveryshort}} API.
@@ -195,7 +198,7 @@ If you decide not to continue using the Plus plan and don't want to pay for it, 
 
 1.  Click **Create**.
 
-## Edit the search skill configuration
+## Edit the search integration configuration
 {: #search-edit-config}
 
 If you want to change the configuration of the search result card later, open the search integration again, and make edits. You do not need to save changes as you make them; they are automatically applied. When you are happy with the search results, click **Save** to finish configuring the search integration.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-18"
+lastupdated: "2022-03-28"
 
 keywords: Watson Assistant release notes
 
@@ -44,6 +44,13 @@ This topic describes the new features, changes, and bug fixes in each release of
 
 Dialog feature available
 :   The dialog feature is available. If you have a dialog-based assistant that was built using the classic {{site.data.keyword.conversationshort}}, you can now migrate your dialog skill to the new {{site.data.keyword.conversationshort}} experience. For more information, see [Migrating to the new experience](/docs/watson-assistant?topic=watson-assistant-migrate-overview).
+
+## 28 March 2022
+{: #watson-assistant-mar282022}
+{: release-note}
+
+New service desk support reference implementation
+:   You can use the reference implementation details to integrate the web chat with the Kustomer service desk. For more information, see [Adding service desk support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-haa).
 
 ## 18 March 2022
 {: #watson-assistant-mar182022}

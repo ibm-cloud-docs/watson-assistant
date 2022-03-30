@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-07"
+lastupdated: "2022-03-28"
 
 subcollection: watson-assistant
 
@@ -295,12 +295,11 @@ Fully functional reference implementations are provided for the following servic
 - [Genesys Cloud](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/genesys/webChat){: external}
 - [NICE inContact](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/incontact/webChat){: external}
 - [Twilio Flex](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/flex/webChat){: external}
+- [Kustomer](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/kustomer/webChat){: external}
 - [Bring your own (starter kit)](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}
 
 The starter kit reference implementations, while functional, are examples only, and have not been vetted for production use. You should perform robust testing before deploying these integrations in production.
 {: important}
-
-- [Bring your own](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}: A web chat service desk extension starter kit that enables you to develop your own service desk integrations.
 
 After you set up a service desk integration, you must update your actions to ensure they understand user requests to speak to someone and can transfer the conversation properly.
 <!--- For more information, see [Adding chat transfer support](/docs/assistant?topic=assistant-dialog-support#dialog-support-transfers){: external}. --->
