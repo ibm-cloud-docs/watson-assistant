@@ -149,7 +149,17 @@ toc:
               - webhook-log.md
           - build-custom-extension.md
           - add-custom-extension.md
-
+      - topicgroup:
+          label: Migrating to the new experience
+          topics:
+          - topic: migrate-overview.md
+            navtitle: Overview
+          - compare-actions-dialog.md
+          - activate-dialog.md
+          - dialog-call-action.md
+          - dialog-analyze.md
+          - dialog-publish.md
+          
   - navgroup:
       id: reference
       topics:
