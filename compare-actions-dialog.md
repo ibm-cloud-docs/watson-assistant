@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-24"
+lastupdated: "2022-04-05"
 
 subcollection: watson-assistant
 
@@ -30,7 +30,7 @@ subcollection: watson-assistant
 # Comparing actions and dialog
 {: #comparing-actions-dialog}
 
-Choose the right type of conversation for your use case. 
+Choose the right type of conversation for your use case.
 {: shortdesc}
 
 ## Actions benefits
@@ -84,7 +84,7 @@ If you are already familiar with dialog-based conversations, learn more about ho
 
 For some functions, there is parity but you follow different steps to implement the behavior you want.
 
-- **Jump-to**: In actions, you can jump from one step to another. In a dialog, you use a jump-to to skip to a specific dialog node in the same branch of the conversation. With actions, you can jump to a different step within an action also. However, to do so, you use conditions on the intervening steps to prevent them from being processed, rather than using an explicit jump-to. The benefit of this approach is that it's easier to anticipate the path of a conversation and follow it later if there are not multiple jump-tos sprinkled throughout the flow. 
+- **Jump-to**: In actions, you can jump from one step to another. In a dialog, you use a jump-to to skip to a specific dialog node in the same branch of the conversation. With actions, you can jump to a different step within an action also. However, to do so, you use conditions on the intervening steps to prevent them from being processed, rather than using an explicit jump-to. The benefit of this approach is that it's easier to anticipate the path of a conversation and follow it later if there are not multiple jump-tos sprinkled throughout the flow.
 - **Slots**: In a dialog, you add slots to a dialog node to call out a set of values that you want to collect from the user, and that you will take and store in any order. In actions, every step in the action acts like a slot. If the user provides information that address step 10 when answering the question to step 1, both step 1 and step 10 are filled. In fact, if you want step 10 to ask the question explicitly, you must select the **Always as for this** option on step 10.
 
 *Want to get started with actions, but need features that are available from a dialog?* Use both. Dialog is your primary conversation with users, but you can call an action from your dialog to perform a discrete task. For more information, see [Calling an actions from a dialog](/docs/watson-assistant?topic=watson-assistant-dialog-call-action).
