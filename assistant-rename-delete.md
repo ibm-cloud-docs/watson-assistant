@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-07"
+lastupdated: "2022-04-04"
 
 subcollection: watson-assistant
 
@@ -29,8 +29,6 @@ subcollection: watson-assistant
 {: #assistant-rename-delete}
 
 If necessary, you can rename or delete an assistant. You can't change the language of an assistant once it is set.
-
-If you need to add more assistants, follow these steps:
 
 ## Renaming an assistant
 {: #assistant-rename-delete-rename}
