@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-21"
+lastupdated: "2022-04-05"
 
 subcollection: watson-assistant
 
@@ -116,8 +116,6 @@ To build a custom extension based on the API definition, follow these steps:
 
         - **Request parameters**: The list of input parameters defined for the operation, along with the type of each parameter and whether the parameter is required or optional.
         - **Response properties**: The properties of the response body that will be mapped to variables the assistant can access.
-
-    - The **Review schemas** table shows detailed information about the named schemas defined in the OpenAPI document.
 
 1. If you are satisfied with the extension, click **Finish**.
 
