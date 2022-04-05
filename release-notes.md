@@ -38,8 +38,8 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
-## 4 April 2022
-{: #watson-assistant-apr042022}
+## 5 April 2022
+{: #watson-assistant-apr052022}
 {: release-note}
 
 Dialog feature available
