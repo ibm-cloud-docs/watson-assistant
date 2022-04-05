@@ -401,7 +401,7 @@ The `connect_to_agent` response type supports the following phone-specific prope
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
-| `service_desk.sip.uri` | N/A | The SIP or telephone URI to transfer the call to, such as `sip:12345556789\\@myhost.com` or `tel:+18883334444` |
+| `service_desk.sip.uri` | N/A | The SIP or telephone URI to transfer the call to, such as `sip:12345556789\\@myhost.com` or `tel:+18883334444`. Optional when using the `hangup` method. |
 | `service_desk.sip.transfer_method` | `refer` | Determines how to transfer the call: \n - `refer`: The call is transferred by sending a SIP `REFER` request. This is the default value. \n -  `hangup`: The call is transferred by sending a SIP `BYE` request. |
 | `service_desk.sip.transfer_target_header` | `Transfer-Target` | The SIP header that contains the transfer target when a `BYE` request is used for transferring the call. This option is supported only in the `hangup` method. |
 | `service_desk.sip.transfer_headers` | N/A | A list of custom header field name/value pairs to be added to a transfer request |
