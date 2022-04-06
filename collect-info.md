@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-04-06"
 
 subcollection: watson-assistant
 
@@ -251,7 +251,7 @@ To create a saved customer response:
 
 1. Click **Save**. The saved customer response now appears on the **Saved responses** page.
 
-<!--- 1. In the **Type of response** field, select the customer response type for this customer response. --->
+1. In the **Type of response** field, select the customer response type for this customer response.
 
 From this page, you can also edit or delete any existing saved customer response. Keep in mind that any changes you make will apply to all instances of the customer response in any step that uses it. If you delete a saved customer response, any steps that use that response become invalid and must be corrected to use a different response type.
 {: important}
