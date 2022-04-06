@@ -32,6 +32,12 @@ subcollection: watson-assistant
 Add integrations to your assistant so that you can publish your bot to the channels where your customers go for help.
 {: shortdesc}
 
+To deploy an assistant to customers, a channel integration must be added. By default, a web chat integration is created, allowing an assistant to be embedded in a website. Other channel integrations are available in the **Integrations** catalog. For more information about deploying to your website, see [Adding the web chat to your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
+
+![Image of the Integrations catalog](images/integrations-catalog.png)
+
+When you add an integration, that integration is added to both the draft and live environments. Use your draft environment to test draft content and integrations before you deploy your assistant to customers. For more information about adding integrations to your assistant, see [Adding integrations](/docs/watson-assistant?topic=watson-assistant-deploy-integration-add). After a live channel is added and configured, it is ready to deploy your assistant on its corresponding platform.
+
 ## Add an integration
 {: #deploy-integration-add-task}
 

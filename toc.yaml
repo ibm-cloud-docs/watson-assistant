@@ -38,7 +38,6 @@ toc:
       topics:
       - topicgroup:
           label: Building your assistant
-
           topics:
           - topic: build-actions-overview.md
             navtitle: Overview
@@ -60,39 +59,40 @@ toc:
           - assistant-add.md
           - assistant-rename-delete.md
       - topicgroup:
-          label: Publishing and deploying your assistant
+          label: Previewing and publishing
           topics:
           - publish-deploy-overview.md
           - preview-share.md
           - publish.md
+      - topicgroup:
+          label: Adding the assistant to your website
+          topics:
+          - deploy-web-chat.md
+          - web-chat-config.md
+          - web-chat-security.md
+          - deploy-salesforce.md
+          - deploy-zendesk.md
+          links:
+          - link:
+              label: Integrating with Genesys Cloud
+              href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/genesys
+          - link:
+              label: Integrating with NICE inContact
+              href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/incontact
+          - link:
+              label: Integrating with Twilio Flex
+              href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/flex
+          - link:
+              label: Integrating with Oracle B2C Service
+              href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/oracle
+          - link:
+              label: Integrating with your own service desk
+              href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter
+      - topicgroup:
+          label: Deploying to other channels
+          topics:
           - deploy.md
-          - topicgroup:
-              label: Deploying to your website
-              topics:
-              - deploy-web-chat.md
-              - web-chat-config.md
-              - web-chat-security.md
-              - deploy-salesforce.md
-              - deploy-zendesk.md
-              links:
-              - link:
-                  label: Integrating with Genesys Cloud
-                  href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/genesys/webChat
-              - link:
-                  label: Integrating with NICE inContact
-                  href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/incontact/webChat
-              - link:
-                  label: Integrating with Twilio Flex
-                  href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/flex/webChat
-              - link:
-                  label: Integrating with Oracle B2C Service
-                  href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/oracle/webChat
-              - link:
-                  label: Integrating with Kustomer
-                  href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/kustomer/webChat
-              - link:
-                  label: Integrating with your own service desk
-                  href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter
+          - deploy-integration-add.md
           - topicgroup:
               label: Deploying for phone
               topics:
@@ -100,14 +100,10 @@ toc:
               - phone-config.md
               - deploy-phone-flex.md
               - deploy-phone-genesys.md
-          - topicgroup:
-              label: Deploying to other platforms
-              topics:
-              - deploy-integration-add.md
-              - deploy-facebook.md
-              - deploy-slack.md
-              - deploy-sms.md
-              - deploy-whatsapp.md
+          - deploy-facebook.md
+          - deploy-slack.md
+          - deploy-sms.md
+          - deploy-whatsapp.md
       - topicgroup:
           label: Improving your assistant
           topics:
