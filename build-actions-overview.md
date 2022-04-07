@@ -78,7 +78,7 @@ More commonly, though, an action requires multiple steps in order to fully under
 Each of these follow-up questions represents a step in the action.
 
 ### Editing a step
-{: #build-actions-overview-edit}
+{: #build-actions-overview-edit-step}
 
 Within a step, you define the following things:
 
