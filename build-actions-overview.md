@@ -194,7 +194,7 @@ If you decide a step is no longer needed, you can delete it from the action. To 
 {: tip}
 
 ## Testing the action
-{: #build-actions-overview-test-action}
+{: #build-actions-overview-test}
 
 We can now test the action to make sure it's working like we expect. Click **Preview** to open the Preview pane. (If the text from a previous test is still shown, click the **Refresh** ![Preview refresh icon](images/preview-refresh-icon.png) icon to restart the conversation.)
 
