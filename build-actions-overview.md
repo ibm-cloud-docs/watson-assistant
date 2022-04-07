@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-10-25"
+lastupdated: "2022-04-07"
 
 subcollection: watson-assistant
 
@@ -31,10 +31,10 @@ subcollection: watson-assistant
 Like a human personal assistant, the assistant you build will help your customers perform tasks and answer questions. To accomplish this, you define actions for the assistant.
 {: shortdesc}
 
-An _action_ represents a discrete outcome you want your assistant to be able to accomplish in response to a user's request. An action comprises the interaction between a customer and the assistant about a particular question or request. This interation begins with the user input that starts the action (for example, `I want to withdraw money`). It might then include additional exchanges as the assistant gathers more information, and it ends when the assistant carries out the request or answers the customer's question.
+An _action_ represents a discrete outcome you want your assistant to be able to accomplish in response to a user's request. An action comprises the interaction between a customer and the assistant about a particular question or request. This interaction begins with the user input that starts the action (for example, `I want to withdraw money`). It might then include additional exchanges as the assistant gathers more information, and it ends when the assistant carries out the request or answers the customer's question.
 
 ## Creating and editing an action
-{: #build-actions-overview-creating}
+{: #build-actions-overview-creating-action}
 
 To see how actions work and how you build one, let's go through an example.
 
@@ -48,7 +48,7 @@ Initially, you only need to specify one example of typical user input that start
 {: tip}
 
 ## Using the action editor
-{: #build-actions-overview-using}
+{: #build-actions-overview-using-action-editor}
 
 After you create the action, the action editor opens.
 
@@ -78,7 +78,7 @@ More commonly, though, an action requires multiple steps in order to fully under
 Each of these follow-up questions represents a step in the action.
 
 ### Editing a step
-{: #build-actions-overview-edit-step}
+{: #build-actions-overview-editing-step}
 
 Within a step, you define the following things:
 
@@ -118,7 +118,7 @@ Let's edit step 1 to find out which account the customer wants to withdraw money
     As expected, the assistant now prompts you to select the account you want to withdraw money from.
 
 ### Adding conditional steps
-{: #build-actions-overview-conditional-steps}
+{: #build-actions-overview-adding-conditional-steps}
 
 Suppose our bank charges a fee for withdrawals from checking accounts, and we need to confirm that the customer understands this. This means that our action needs to have slightly different behavior depending on which kind of account the customer selects. We can handle this using step conditions.
 
@@ -160,7 +160,7 @@ We don't need a conditional step to handle a response of `Yes` in step 2, becaus
 {: note}
 
 ### Getting the amount
-{: #build-actions-overview-get-amount}
+{: #build-actions-overview-getting-amount}
 
 We need one more piece of information before we can complete the customer's request: the amount of money to withdraw.
 
@@ -171,7 +171,7 @@ We need one more piece of information before we can complete the customer's requ
 1. Click **Define customer response**. This time we need the customer to specify a monetary amount, so select **Currency**. There are no more details you need to specify for a currency amount, so it is immediately added to the step.
 
 ### Finishing the action
-{: #build-actions-overview-finish-action}
+{: #build-actions-overview-finishing-action}
 
 We now have all the information we need. For our example, we're not going to implement any real logic for making a withdrawal, but we can send a final message summing up what we're doing.
 
@@ -194,7 +194,7 @@ If you decide a step is no longer needed, you can delete it from the action. To 
 {: tip}
 
 ## Testing the action
-{: #build-actions-overview-test}
+{: #build-actions-overview-testing-action}
 
 We can now test the action to make sure it's working like we expect. Click **Preview** to open the Preview pane. (If the text from a previous test is still shown, click the **Refresh** ![Preview refresh icon](images/preview-refresh-icon.png) icon to restart the conversation.)
 
