@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-10-25"
+lastupdated: "2022-04-07"
 
 subcollection: watson-assistant
 
@@ -31,10 +31,10 @@ subcollection: watson-assistant
 Like a human personal assistant, the assistant you build will help your customers perform tasks and answer questions. To accomplish this, you define actions for the assistant.
 {: shortdesc}
 
-An _action_ represents a discrete outcome you want your assistant to be able to accomplish in response to a user's request. An action comprises the interaction between a customer and the assistant about a particular question or request. This interation begins with the user input that starts the action (for example, `I want to withdraw money`). It might then include additional exchanges as the assistant gathers more information, and it ends when the assistant carries out the request or answers the customer's question.
+An _action_ represents a discrete outcome you want your assistant to be able to accomplish in response to a user's request. An action comprises the interaction between a customer and the assistant about a particular question or request. This interaction begins with the user input that starts the action (for example, `I want to withdraw money`). It might then include additional exchanges as the assistant gathers more information, and it ends when the assistant carries out the request or answers the customer's question.
 
 ## Creating and editing an action
-{: #build-actions-overview-creating}
+{: #build-actions-overview-create}
 
 To see how actions work and how you build one, let's go through an example.
 
@@ -48,7 +48,7 @@ Initially, you only need to specify one example of typical user input that start
 {: tip}
 
 ## Using the action editor
-{: #build-actions-overview-using}
+{: #build-actions-overview-use}
 
 After you create the action, the action editor opens.
 
