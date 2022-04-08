@@ -30,6 +30,17 @@ subcollection: watson-assistant
 # About {{site.data.keyword.conversationshort}}
 {: #about}
 
+{{site.data.keyword.conversationfull}} is a complete solution you can use to quickly build a customized AI chatbot and deploy it on your website, over the phone, or to any other channel your customers use.
+
+[image]
+
+Without writing any code, you can build a chatbot that provides an end-to-end solution your customers can use to solve their problems:
+
+- Use industry-leading AI capabilities to understand your customers' natural-language questions and request.
+- Integrate directly into your website with a cutting-edge web chat widget, which you can extensively customize to match your style and branding.
+- 
+
+
 Use {{site.data.keyword.conversationfull}} to build your own branded live chatbot into any device, application, or channel. Your chatbot, which is also known as an *assistant*, connects to the customer engagement resources you already use to deliver an engaging, unified problem-solving experience to your customers.
 {: shortdesc}
 
