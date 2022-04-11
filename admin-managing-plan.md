@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-11"
 
 keywords: billing, data centers, MAU, monthly active users, service plans
 
@@ -109,7 +109,7 @@ If you are using a custom client with the {{site.data.keyword.conversationshort}
 }
 ```
 
-Older SDK versions might not support the `user_id` property at the root of the request body. You can also specify `user_id` as part of the `context.global.system` object.
+In some older SDK versions, the `user_id` property is not supported at the root of the `message` request body. As an alternative, you can specify `user_id` within the nested `context.global.system` object.
 {: important}
 
 For more information about the `user_id` property, see the API reference documentation:
