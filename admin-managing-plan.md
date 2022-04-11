@@ -118,7 +118,7 @@ For more information about the `user_id` property, see the API reference documen
 - [v2 stateful /message](https://cloud.ibm.com/apidocs/assistant-v2/assistant-v2#message)
 
 ### If the user ID is not specified
-(: #admin-managing-plan-no-userid)
+{: #admin-managing-plan-no-userid}
 
 If you are using a custom client application and do not set a `user_id` value, the service automatically sets it to one of the following values:
 
