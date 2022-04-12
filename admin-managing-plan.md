@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-21"
+lastupdated: "2022-04-12"
 
 keywords: billing, data centers, MAU, monthly active users, service plans
 
@@ -92,11 +92,33 @@ For example, the Plus plan starts at $140 and covers from 0 to 1,000 monthly act
 
 A *monthly active user (MAU)* is any unique user who has at least one meaningful interaction with your assistant or custom application over the calendar billing month. A meaningful interaction is an exchange in which a user sends a request to your service and your service responds. Welcome messages that are displayed at the start of a conversation are not charged.
 
-A unique user is recognized by the user ID that is associated with the person that interacts with your assistant. The built-in integrations typically set this property for you automatically. For more information about the `user_id` property, see the API reference documentation:
+A unique user is recognized by the user ID that is associated with the person that interacts with your assistant. The web chat and other built-in integrations set this property for you automatically.
+
+### Specifying the user ID with the REST API
+{: #admin-managing-plan-userid-api}
+
+If you are using a custom client with the {{site.data.keyword.conversationshort}} API, you must set the `user_id` property in the message payload your client sends to the `message` method. The `user_id` property is specified at the root of the request body, as in this example:
+
+```json
+{
+  "input": {
+    "message_type": "text",
+    "text": "I want to cancel my order"
+  },
+  "user_id": "my_user_id"
+}
+```
+
+In some older SDK versions, the `user_id` property is not supported as a top-level method parameter. As an alternative, you can specify `user_id` within the nested `context.global.system` object.
+{: important}
+
+For more information about the `user_id` property, see the API reference documentation:
   
 - [v2 stateless /message](https://cloud.ibm.com/apidocs/assistant-v2/assistant-v2#messagestateless)
 - [v2 stateful /message](https://cloud.ibm.com/apidocs/assistant-v2/assistant-v2#message)
-- [v1 /message](https://cloud.ibm.com/apidocs/assistant/assistant-v1#message)
+
+### If the user ID is not specified
+{: #admin-managing-plan-no-userid}
 
 If you are using a custom client application and do not set a `user_id` value, the service automatically sets it to one of the following values:
 
