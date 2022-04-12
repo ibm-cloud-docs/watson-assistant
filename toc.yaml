@@ -67,27 +67,32 @@ toc:
       - topicgroup:
           label: Adding the assistant to your website
           topics:
+          - web-chat-overview.md
           - deploy-web-chat.md
-          - web-chat-config.md
-          - web-chat-security.md
-          - deploy-salesforce.md
-          - deploy-zendesk.md
-          links:
-          - link:
-              label: Integrating with Genesys Cloud
-              href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/genesys
-          - link:
-              label: Integrating with NICE inContact
-              href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/incontact
-          - link:
-              label: Integrating with Twilio Flex
-              href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/flex
-          - link:
-              label: Integrating with Oracle B2C Service
-              href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/oracle
-          - link:
-              label: Integrating with your own service desk
-              href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter
+          - topicgroup:
+            label: Advanced topics
+            topics:
+              - web-chat-config.md
+              - customize-web-chat.md
+              - web-chat-security.md
+              - deploy-salesforce.md
+              - deploy-zendesk.md
+            links:
+            - link:
+                label: Integrating with Genesys Cloud
+                href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/genesys
+            - link:
+                label: Integrating with NICE inContact
+                href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/incontact
+            - link:
+                label: Integrating with Twilio Flex
+                href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/flex
+            - link:
+                label: Integrating with Oracle B2C Service
+                href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/oracle
+            - link:
+                label: Integrating with your own service desk
+                href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter
       - topicgroup:
           label: Deploying to other channels
           topics:
@@ -133,7 +138,6 @@ toc:
           - topicgroup:
               label: Customizing channels
               topics:
-              - customize-web-chat.md
               - phone-actions.md
           - topicgroup:
               label: Extending your assistant with webhooks
