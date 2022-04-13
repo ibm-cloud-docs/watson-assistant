@@ -67,7 +67,8 @@ toc:
       - topicgroup:
           label: Adding the assistant to your website
           topics:
-          - web-chat-overview.md
+          - topic: web-chat-overview.md
+            navtitle: Overview
           - deploy-web-chat.md
           - topicgroup:
             label: Advanced topics

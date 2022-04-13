@@ -27,26 +27,11 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Adding the web chat to your website
+# Embedding the web chat on your page
 {: #deploy-web-chat}
 
 Add your assistant to your company website as a web chat widget that can help your customers with common questions and tasks, and can transfer customers to human agents.
 {: shortdesc}
-
-For each assistant you create, the web chat integration provides a JavaScript code snippet that you can then copy and paste into your website HTML, on any page or pages where you want users to be able to ask your assistant for help. This script creates an instance of the web chat widget, saving you the time and effort that would be required to build your own custom user interface.
-
-The web chat widget uses cutting-edge functionality from IBM Design and Research to deliver an exceptional user experience. It is also extensively customizable, which means that you can take advantage of the web chat functionality while still maintaining consistency with your website style and branding.
-
-To learn more about web chat, watch the following 3-minute video.
-
-![Web chat overview](https://www.youtube.com/embed/52bpMKVigGU){: video output="iframe" id="youtubeplayer" frameborder="0" width="560" height="315" webkitallowfullscreen mozallowfullscreen allowfullscreen}
-
-To read a transcript of the video, [open the video on YouTube.com](https://www.youtube.com/watch?v=52bpMKVigGU&feature=emb_imp_woyt), click the *More actions* icon, and then choose *Open transcript*.
-
-To learn more about how web chat can help your business, read [the Medium blog post called Building a Virtual Assistant that Your Customers Want to Talk to](https://medium.com/ibm-watson/building-an-engaging-virtual-assistant-cf39cd0c3730){: external}.
-
-## Setting up the web chat
-{: #deploy-web-chat-task}
 
 The web chat integration is automatically included for every assistant, and is configured separately for the draft and live environments. You can extensively customize the appearance and behavior of the web chat, but you can quickly add it to your website using the default configuration.
 
