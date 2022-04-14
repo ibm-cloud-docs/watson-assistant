@@ -70,30 +70,22 @@ toc:
           - topic: web-chat-overview.md
             navtitle: Overview
           - deploy-web-chat.md
+          - web-chat-customize.md
+          - topicgroup:
+            label: Adding service desk support
+            topics:
+            - topic: web-chat-service-desk.md
+              navtitle: Overview
+            - deploy-salesforce.md
+            - deploy-zendesk.md
           - topicgroup:
             label: Advanced topics
             topics:
               - web-chat-config.md
               - customize-web-chat.md
               - web-chat-security.md
-              - deploy-salesforce.md
-              - deploy-zendesk.md
-            links:
-            - link:
-                label: Integrating with Genesys Cloud
-                href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/genesys
-            - link:
-                label: Integrating with NICE inContact
-                href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/incontact
-            - link:
-                label: Integrating with Twilio Flex
-                href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/flex
-            - link:
-                label: Integrating with Oracle B2C Service
-                href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/middleware/oracle
-            - link:
-                label: Integrating with your own service desk
-                href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter
+              - web-chat-service-desk-starter-kits.md
+              - topic
       - topicgroup:
           label: Deploying to other channels
           topics:

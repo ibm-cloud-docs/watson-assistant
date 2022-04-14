@@ -58,6 +58,46 @@ To learn more about how the web chat can help your business, read [the Medium bl
 
 If you don't extend the session timeout setting for the assistant, the flow for the current session is restarted after 5 minutes of inactivity. This means that if a user stops interacting with the assistant, after 5 minutes, any context variable values that were set during the previous conversation are set to null or back to their initial values.
 
+## Launcher appearance and behavior
+{: #deploy-web-chat-launcher}
+
+The web chat launcher welcomes and engages customers so they know where to find help if they need it. By default, the web chat launcher appears in a small initial state as a circle in the bottom right corner:
+
+![An example of the initial launcher](images/web-chat-icon.png)
+
+After 15 seconds, the launcher expands to show a greeting message to the user. In this expanded state, a customer can still click the launcher to open the web chat. (If the customer reloads the page or navigates to a different page before the launcher has expanded, the 15-second timer restarts.) There are two slightly different appearances for this expanded state, depending on whether the user is using a desktop browser or a mobile browser. 
+
+- For desktop browsers, the expanded launcher shows two primary buttons the customer can click to open the web chat, and a **Close** button that closes the launcher:
+
+    ![An example of the desktop launcher](images/desktop-launcher.png)
+
+    The expanded launcher remains in its expanded state even if the customer reloads the page or navigates to a different page. It stays in its expanded state until the customer either opens it by clicking on either of the two primary buttons, or closes it, at which point it returns to its initial small state for the rest of the session.
+
+- For mobile browsers, the launcher shows only a single primary button:
+
+    ![An example of the mobile launcher](images/mobile-launcher.png)
+
+    The customer can close the launcher by scrolling on the page, swiping right on the expanded launcher, or waiting 10 seconds, at which point the expanded launcher shrinks back to its initial small state automatically. If the user reloads the page or navigates to a different page while the laucher is expanded, it stays in its expanded state, and the 10-second timer restarts.
+
+After the next page refresh, if the launcher remains in its small state without being clicked, it bounces up and down to attract the customer's attention. The first bounce happens 15 seconds after the page refresh; if the customer still does not click the launcher, it bounces again 60 seconds later. (The timing of the second bounce might be affected if the user refreshes the page or navigates to a different page.) If the user still does not click the launcher, it does not bounce again.
+
+The color of the launcher is specified by the **Accent color** field on the **Style** tab of the web chat settings. To change the color, specify a new color using a standard hexadecimal RGB value.
+
+You can customize the greeting message displayed by the launcher on the **Launcher** tab of the web chat settings. The settings include separate greeting messages for the desktop and mobile versions of the launcher.
+
+The language of the default text shown within the launcher depends on the locale configured for the web chat. For more information, see [Languages](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#languages){: external}. If you customize the greeting text, the text you provide is used regardless of the locale settings.
+{: note}
+
+## Rich responses
+{: #deploy-web-chat-dialog}
+
+The rich responses that you add to an action are displayed in the web chat as expected, with the following exceptions:
+
+- **Connect to human agent**: If service desk support is enabled for the web chat, this response type triggers a chat transfer. If service desk support is not configured, this response type is ignored.
+- **Option**: If your option list contains up to four choices, they are displayed as buttons. If your list contains five or more options, then they are displayed in a drop-down list.
+
+<!--- For more information about rich response types, see [Rich responses](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-multimedia){: external}. --->
+
 ## Browser support
 {: #deploy-web-chat-browsers}
 
