@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-11-19"
+  years: 2015, 2022
+lastupdated: "2022-04-20"
 
 subcollection: watson-assistant
 
@@ -220,6 +220,47 @@ This example requests a transfer to a human agent and specifies messages to be d
       "agent_unavailable": {
         "message": "I'm sorry, but no agents are online at the moment. Please try again later."
       }
+    }
+  ]
+}
+```
+{: codeblock}
+
+## `date`
+{: response-types-json-date}
+
+Displays an interactive date picker the customer can use to specify a date value.
+
+### Integration channel support
+{: response-types-json-date-integrations}
+
+| Web chat                          |
+|-----------------------------------|
+| ![Yes](images/checkmark-icon.svg) |
+
+- In the web chat, the customer can specify a date value either by clicking the interactive date picker or typing a date value in the input field.
+
+### Fields
+{: response-types-json-date-fields}
+
+| Name          | Type   | Description        | Required? |
+|---------------|--------|--------------------|-----------|
+| response_type | string | `date`             | Y         |
+
+### Example
+{: response-types-json-connect-to-agent-example}
+
+This example sends a text response asking the user to specify a date, and then shows an interactive date picker.
+
+```json
+{
+  "generic": [
+    {
+      "response_type": "text",
+      "text": "What day will you be checking in?"
+    },
+    {
+      "response_type": "date"
     }
   ]
 }

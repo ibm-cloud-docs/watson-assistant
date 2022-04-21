@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-11-19"
+  years: 2015, 2022
+lastupdated: "2022-04-20"
 
 subcollection: watson-assistant
 
@@ -198,6 +198,9 @@ Not all channel integrations support all response types. For information about w
 `connect_to_agent`
 :   Requests that the conversation be transferred to a human service desk agent for help.
 
+`date`
+:   Requests that the channel collect a date value from the customer (for example, by displaying an interactive calendar).
+
 `dtmf`
 :   Sends commands to the phone integration to control input or output using dual-tone multi-frequency (DTMF) signals. (DTMF is a protocol used to transmit the tones that are generated when a user presses keys on a push-button phone.)
 
@@ -253,6 +256,7 @@ The following table indicates which channel integrations support each type. For 
 |------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
 | audio            | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 | connect_to_agent | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   | ![Yes](images/checkmark-icon.svg) |
+| date             | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |                                   |
 | dtmf             |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |
 | end_session      |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |
 | iframe           | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   | ![Yes](images/checkmark-icon.svg) |                                   |
