@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-04-05"
+lastupdated: "2022-04-22"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,16 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 21 April 2022
+{: #watson-assistant-apr212022}
+{: release-note}
+
+Ability to duplicate a step
+:   You can now duplicate a step so you don't have to re-create variable settings and customizations. Duplicating a step is helpful when you need to add a step similar to a previous step, but with minor modifications. For more information about how to duplicate a step, see [Duplicating a step](/docs/watson-assistant?topic=watson-assistant-build-actions-overview#build-actions-overview-duplicate-step).
+
+Markdown supported in action editor
+:   The action editor now supports basic Markdown syntax. As you type, the action editor renders the Markdown so you can see the content as your customers will when they interact with the assistant.
 
 ## 5 April 2022
 {: #watson-assistant-apr052022}
