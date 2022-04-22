@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-28"
+lastupdated: "2022-04-21"
 
 subcollection: watson-assistant
 
@@ -30,38 +30,36 @@ subcollection: watson-assistant
 # Embedding the web chat on your page
 {: #deploy-web-chat}
 
-Add your assistant to your company website as a web chat widget that can help your customers with common questions and tasks, and can transfer customers to human agents.
+To add the web chat widget to your website, all you need to do is embed a generated script element in your HTML source.
 {: shortdesc}
 
 The web chat integration is automatically included for every assistant, and is configured separately for the draft and live environments. You can extensively customize the appearance and behavior of the web chat, but you can quickly add it to your website using the default configuration.
 
 To add the web chat to your website, follow these steps:
 
-1. Go to the ![Draft environment icon](images/draft-environment-icon.png) **Draft environment** or ![Live environment icon](images/live-environment-icon.png) page, depending on which environment you want to use.
+1. On the ![Integrations icon](images/integrations-icon.png) **Integrations** page, find the **Web chat** tile and click click **Open**. The **Open web chat** window opens.
 
-1. In the **Channels** section, click the **Web chat** tile. The **Web chat** page opens, showing the settings for the web chat integration in the environment you are working in.
+1. In the **Environment** field, select **Draft** or **Live**, depending on which environment you want the web chat widget to connect to. Click **Confirm**.
+
+    The **Web chat** page opens, showing the settings for the web chat integration in the selected environment.
 
     The preview pane shows what the web chat will look like when it is embedded in a web page. If you see a message that starts with, `There is an error`, you probably haven't added any actions to your assistant yet. After you add an action, you can test the conversation from the preview pane.
     {: tip}
-
-    ![Plus or higher plans only](images/plus.png) For environments where private endpoints are in use, keep in mind that the web chat integration sends traffic over the internet.
-    <!--- For more information, see [Private network endpoints](/docs/assistant?topic=assistant-security#security-private-endpoints){: external}.
-    {: note} --->
 
 1.  Click the **Embed** tab.
 
     A code snippet is generated based on the web chat configuration. You (or a web developer) will add this code snippet to the web page where you want the web chat to appear.
     
-    This code snippet contains an HTML `script` element. The script calls JavaScript code that is hosted on an IBM site. The code creates an instance of a widget that communicates with the assistant.
+    This code snippet contains an HTML `script` element. The script calls JavaScript code that is hosted on an IBM site and creates an instance of a widget that communicates with the assistant.
     
-    Do not modify the `integrationID` or `region` property values.
-    {: important}
-
 1.  Click the ![Copy icon](images/copy-icon.png) **Copy to clipboard** icon to copy the embed script to the clipboard.
 
 1.  Edit the HTML source for the web page where you want the web chat widget to appear. Paste the code snippet into the page. Paste the code as close as possible to the closing `</body>` tag to ensure that your page renders faster.
 
-    If you want to quickly test the web chat in a local file, use this HTML code as the source for a test page:
+    Do not modify the `integrationID` or `region` property values in the generated embed script.
+    {: important}
+
+    If you aren't ready to add the web chat to a live website, you can quickly test it using a local HTML file. Use this HTML code as the source for a test page:
 
     ```html
     <html>
@@ -82,15 +80,17 @@ To add the web chat to your website, follow these steps:
     - `https://web-chat.global.assistant.watson.appdomain.cloud`: Hosts the code for the web chat widget, and is referenced by the script you embed on your website.
     - `https://integrations.{location}.assistant.watson.appdomain.cloud`: Hosts the web chat server, which handles communication with your assistant. Replace `{location}` with the location of the data center where your service instance is located, which is part of the service endpoint URL. For more information, see [Finding and updating the endpoint URL](/docs/watson?topic=watson-endpoint-change#endpoint-find-update){: external}.
 
-1.  Open the web page (or local test file) in your browser. You should see the ![Web chat launcher icon](images/web-chat-icon.png).
+1.  Open the web page (or local test file) in your browser. You should see the launcher icon displayed on the page:
 
-1.  Click the launcher icon to open the chat window and talk to your assistant.
+    ![Web chat launcher icon](images/web-chat-icon.png) 
+
+1.  Click the launcher icon to open the chat window.
 
     ![Web chat window](images/web-chat-window.png)
 
-    You can now test your assistant and see its responses just as your customers will see them.
+    You can now test your assistant and see its responses just as your customers would.
 
-1.  Paste the code snippet into each web page where you want the assistant to be available to your customers.
+1.  Paste the same embed script into each web page where you want the assistant to be available to your customers.
 
-    You can paste the same script tag into as many pages on your website as you want. Add it anywhere where you want users to be able to reach your assistant for help. However, be sure to add it only one time per page.
+    You can paste the same script tag into as many pages on your website as you want. Add it anywhere where you want users to be able to reach your assistant for help. However, be sure to add it only once on each page.
     {: tip}

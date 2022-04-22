@@ -30,7 +30,7 @@ subcollection: watson-assistant
 # Web chat overview
 {: #web-chat-overview}
 
-The web chat is a chat widget you can embed on your website, providing an easy-to-use chatbot interface for your customers.
+The web chat is a chat widget you can embed on your website, providing an easy-to-use chatbot interface for your customers. The web chat can help your customers with common questions and tasks, and can transfer customers to human agents.
 {: shortdesc}
 
 For each assistant you create, the web chat integration provides a JavaScript code snippet that you can copy and paste into any web page where you want users to be able to ask your assistant for help. This script creates an instance of the web chat widget, saving you the time and effort that would be required to build your own custom user interface.
