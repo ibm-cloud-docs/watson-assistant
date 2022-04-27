@@ -71,7 +71,7 @@ To add a custom extension to the assistant, follow these steps:
 
     The **Manage operations** table shows the operations that the assistant will be able to call from an action step. An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
 
-    ![Review operations table](images/extension-review-operations.png)
+    ![Manage operations table](images/extension-manage-operations.png)
 
     For each operation, a row in the table shows the following information:
 
