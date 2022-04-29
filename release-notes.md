@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-04-22"
+lastupdated: "2022-04-29"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,16 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 28 April 2022
+{: #watson-assistant-apr282022}
+{: release-note}
+
+Definitive calculation for abandoned actions
+:   Abandonment is now definitively calculated for your actions. On the **Analytics** page, actions are no longer considered `Ongoing` in the action completion analysis. An action is considered abandoned if it was not completed after 1 hour of inactivity and doesn't meet the criteria for any other incompletion reason (escalated to agent, started a new action, or stuck on a step). This change applies only to actions data after April 26, 2022. For more information about action incompletion, see [Reasons for incompletion](/docs/watson-assistant?topic=watson-assistant-analytics-action-completion#incomplete-reasons).
+
+Managing operations in extensions
+:   When you add a custom extension to an assistant, you can now choose which operations and response properties will be available to actions. For more information, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
 
 ## 21 April 2022
 {: #watson-assistant-apr212022}
