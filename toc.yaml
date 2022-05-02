@@ -18,6 +18,7 @@ toc:
       topics:
       - welcome-new-assistant.md
       - about.md
+      - getting-started.md
       - plan-assistant.md
       - topicgroup:
           label: Release notes
@@ -128,6 +129,7 @@ toc:
           - admin-failover.md
           - admin-beta.md
           - admin-language-support.md
+          - switch-experience.md
       - topicgroup:
           label: Customizing and developing
           topics:
