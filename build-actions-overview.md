@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2022-04-07"
+  years: 2018, 2022
+lastupdated: "2022-04-21"
 
 subcollection: watson-assistant
 
@@ -62,7 +62,7 @@ The editor window shows the parts of an action:
 
 - The **Preview** button opens a pane that shows you how the assistant responds to customer input. You can preview the assistant at any time to see the effect of changes you have made.
 
-As you edit an action, your changes are automatically saved.
+The action editor supports basic Markdown syntax.
 {: tip}
 
 ## Steps
@@ -116,6 +116,23 @@ Let's edit step 1 to find out which account the customer wants to withdraw money
     ![Previewing action with one step](images/action-preview-one-step.png)
 
     As expected, the assistant now prompts you to select the account you want to withdraw money from.
+
+### Duplicating a step
+{: #build-actions-overview-duplicate-step}
+
+You can duplicate a step so you don't have to re-create variable settings and customizations. Duplicating a step is helpful when you need to add a step similar to a previous step, but with minor modifications.
+
+Complete the following steps to duplicate a step:
+
+1. Click the **Duplicate** icon on the step that you want to duplicate.
+
+    ![Duplicate button on a step](images/action-editor-duplicate-button.png)
+
+    A step appears immediately following the step that you duplicated. This step is identical to the duplicated step and displays a blue circle in the upper right to indicate that the step is a duplicate.
+
+    ![Duplicated step](images/action-preview-duplicate-step.png)
+
+1. Edit the information in the new step as necessary.
 
 ### Adding conditional steps
 {: #build-actions-overview-conditional-steps}

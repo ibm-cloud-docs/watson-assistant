@@ -9,7 +9,7 @@ toc:
     href: /docs/watson-assistant
     product-page: https://ibm.com/cloud/watson-assistant
     path: watson-assistant
-    label: New Watson Assistant (managed)
+    label: Watson Assistant
 
 #  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
   entries:
@@ -18,6 +18,7 @@ toc:
       topics:
       - welcome-new-assistant.md
       - about.md
+      - getting-started.md
       - plan-assistant.md
       - topicgroup:
           label: Release notes
@@ -128,6 +129,7 @@ toc:
           - admin-failover.md
           - admin-beta.md
           - admin-language-support.md
+          - switch-experience.md
       - topicgroup:
           label: Customizing and developing
           topics:

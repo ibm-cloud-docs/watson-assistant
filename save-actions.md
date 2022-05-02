@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-10-06"
+  years: 2021, 2022
+lastupdated: "2022-04-21"
 
 subcollection: watson-assistant
 
@@ -75,4 +75,3 @@ Also, {{site.data.keyword.conversationshort}} prevents two users from working in
 {: #manage-team-moving-actions}
 
 This will be via JSON import/export on the settings page.-->
-
