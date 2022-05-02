@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-17"
+lastupdated: "2022-05-02"
 
 subcollection: watson-assistant
 
@@ -33,7 +33,7 @@ If you need to collaborate with others on your assistants, you can quickly add u
 ## Adding users from the Manage menu
 {: #access-control-add-users}
 
-In the new Watson Assistant, each assistant contains all the draft and live resolution methods (actions and search integration) and channels you add (such as web chat, Facebook, or Slack), so the simplest way to provide access is to add users to your Watson Assistant instance with Administrator and Manager permissions. This gives other users the same level of access to a Watson Assistant service instance as you, and ensures they have all the privileges they need to build and deploy any assistant. If you want to add users without full access or manage the access of existing users, see the steps for [Managing access with Identity and Access Management](#access-control-iam).
+In the new {{site.data.keyword.conversationshort}}, each assistant contains all the draft and live resolution methods (actions and search integration) and channels you add (such as web chat, Facebook, or Slack), so the simplest way to provide access is to add users to your {{site.data.keyword.conversationshort}} instance with Administrator and Manager permissions. This gives other users the same level of access to a {{site.data.keyword.conversationshort}} service instance as you, and ensures they have all the privileges they need to build and deploy any assistant. If you want to add users without full access or manage the access of existing users, see the steps for [Managing access with Identity and Access Management](#access-control-iam).
 
 To add users with Administrator and Manager access, complete the following steps:
 
@@ -83,7 +83,7 @@ Another way to add users to your assistants is using Identity and Access Managem
 
     ![IAM services](images/access-control-invite-users.png){: caption="IAM services" caption-side="bottom"}
 
-1.	In **Which service do you want to assign access to?**, choose **Watson Assistant**.
+1.	In **Which service do you want to assign access to?**, choose **{{site.data.keyword.conversationshort}}**.
 
 1.	In **How do you want to scope the access?**, choose **Resources based on selected attributes**.
 
@@ -93,7 +93,7 @@ Another way to add users to your assistants is using Identity and Access Managem
 
     ![Service instance](images/access-control-service-instance.png){: caption="Service instance" caption-side="bottom"}
 
-1.	In **Platform access**, select the platform role that you want the user to have. A platform role controls a person's ability to access a service instance in IBM Cloud. In **Service access**, select the service role that you want the user to have. A service role controls what a person can do in Watson Assistant.
+1.	In **Platform access**, select the [platform role](#access-control-platform-roles) that you want the user to have. A platform role controls a person's ability to access a service instance in {{site.data.keyword.cloud_notm}}. In **Service access**, select the [service role](#access-control-service-roles) that you want the user to have. A service role controls what a person can do in {{site.data.keyword.conversationshort}}.
 
 1.	Click **Add** to add the access policy.
 
@@ -104,3 +104,29 @@ Another way to add users to your assistants is using Identity and Access Managem
     ![Invite button](images/access-control-summary.png){: caption="Invite button" caption-side="bottom"}
 
 The user you invited appears in your list with the status of **Processing**. After they accept the invite, status changes to **Active** and can now work on your assistants with you.
+
+### Platform roles
+{: #access-control-platform-roles}
+
+A platform role controls a user's ability to work with a service instance in {{site.data.keyword.cloud_notm}}.
+
+| Role | Open | Modify | Delete | Manage access |
+|---|---|---|---|---|
+| **Viewer** | ![checkmark icon](../../icons/checkmark-icon.svg) | | | |
+| **Operator** | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | | | |
+| **Editor** | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | | | |
+| **Administrator** | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+{: caption="Table 1. Platform role details" caption-side="top"}
+
+### Service roles
+{: #access-control-service-roles}
+
+A service role controls what a person can do in {{site.data.keyword.conversationshort}}.
+
+| Role | Open assistants | Create assistants | Edit assistants | Delete assistants | Analytics | 
+|---|---|---|---|---|---|
+| **Reader** | ![checkmark icon](../../icons/checkmark-icon.svg) | | | | | |
+| **Writer** | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| **Manager** | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+{: caption="Table 2. Service role details" caption-side="top"}
+
