@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-12-13"
+  years: 2020, 2022
+lastupdated: "2022-05-03"
 
 subcollection: watson-assistant
 
@@ -189,7 +189,7 @@ You can ask for help setting up an account with another SIP trunk provider by op
 
 IBM has established relationships with the following SIP trunk providers:
 
-- [Five9](https://www.five9.com/connect/voip-call-center-solution){: external}
+- [Five9](https://www.five9.com/products/capabilities/contact-center-software){: external}
 - [Genesys](https://www.genesys.com/en-sg/definitions/what-is-a-trunk){: external}
 - [Vonage](https://www.vonage.com/communications-apis/sip-trunking/){: external}
 - [Voximplant](https://voximplant.com/){: external}
