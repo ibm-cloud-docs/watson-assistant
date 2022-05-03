@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-05-03"
 
 subcollection: watson-assistant
 
@@ -88,9 +88,11 @@ To add the web chat to your website, follow these steps:
 
     ![Web chat window](images/web-chat-window.png)
 
-    You can now test your assistant and see its responses just as your customers would.
-
 1.  Paste the same embed script into each web page where you want the assistant to be available to your customers.
 
     You can paste the same script tag into as many pages on your website as you want. Add it anywhere where you want users to be able to reach your assistant for help. However, be sure to add it only once on each page.
     {: tip}
+
+You can now test your assistant and see its responses just as your customers would.
+
+Before you go to production with the web chat, however, you will probably want to customize it for your site and for the needs of your customers. For more information, see [Customizing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-customize).
