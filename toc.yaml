@@ -71,7 +71,7 @@ toc:
           - topic: web-chat-overview.md
             navtitle: Overview
           - deploy-web-chat.md
-          - web-chat-customize.md
+          - web-chat-config.md
           - topicgroup:
             label: Adding service desk support
             topics:
@@ -82,7 +82,7 @@ toc:
           - topicgroup:
             label: Advanced topics
             topics:
-              - web-chat-config.md
+              - web-chat-customize.md
               - customize-web-chat.md
               - web-chat-security.md
               - web-chat-service-desk-starter-kits.md

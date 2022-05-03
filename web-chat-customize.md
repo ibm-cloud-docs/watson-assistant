@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-05-03"
+  years: 2019, 2021
+lastupdated: "2021-10-21"
 
 subcollection: watson-assistant
 
@@ -27,141 +27,103 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Customizing the web chat
-{: #web-chat-customize}
+# Applying advanced customizations
+{: #web-chat-config}
 
-You can modify the web chat integration settings to configure the styling and appearance of the web chat.
+Tailor the web chat to match your website and brand, and to behave in ways that meet your business needs.
 {: shortdesc}
 
-Before you deploy the web chat widget to your production website, you will probably need to make the following basic customizations for your assistant:
+## API overview
+{: #web-chat-config-api}
 
-- Specify the [assistant name](/docs/watson-assistant?topic=watson-assistant-topicid) that you want to show to your customers
-- Configure the [home screen](/docs/watson-assistant?topic=watson-assistant-topicid)
-- Suggestions
+The following APIs are available:
 
-You might also want to make additional customizations, such as changing the web chat colors to match your branding, customizing the launcher behavior, or enabling encryption. The web chat is configured separately for the draft and live environments.
+- **Configuration object**: When the embedded web chat widget starts, a configuration object named `watsonAssistantChatOptions` is used to define the widget. By editing the configuration object, you can customize the appearance and behavior of the web chat before it is rendered.
+- **Runtime methods**: Use the instance methods to perform tasks before a conversation between the assistant and your customer begins or after it ends.
+- **Events**: Your website can listen for these events, and then take custom actions.
 
-If you are a developer, you can customize the web chat even more extensively by using the web chat API. With the API, you can customize the styling, change the behavior of the web chat widget and launcher, customize strings, modify message content, and more. For more information about using the web chat API, see [Heading](/docs/watson-assistant?topic=watson-assistant-topicid).
-{: tip}
+A developer can use these APIs to customize the web chat in the following ways:
 
-To customize the web chat integration, follow these steps:
+- [Change how the web chat opens and closes](#web-chat-config-open-close)
+- [Change the conversation](#web-chat-config-convo)
+- [Change the look of the web chat](#web-chat-config-look)
 
-1. On the ![Integrations icon](images/integrations-icon.png) **Integrations** page, find the **Web chat** tile and click click **Open**. The **Open web chat** window opens.
+## Change how the web chat opens and closes
+{: #web-chat-config-open-close}
 
-1. In the **Environment** field, select **Draft** or **Live**, depending on which environment you want to configure the web chat widget in. Click **Confirm**.
+You can change the color of the launcher icon from the *Style* tab of the web chat configuration page. If you want to make more advanced customizations, you can make the following types of changes:
 
-    The **Web chat** page opens, showing the settings for the web chat integration in the selected environment.
+- Change the launcher icon that is used to open the web chat widget. For a tutorial that shows you how, see [Using a custom launcher](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-launcher){: external}.
+- Change how the web chat widget opens. For example, you might want to launch the web chat from some other button or process that exists on your website, or maybe open it in a different location, or at a different size. For a tutorial that shows you how, see [Render to a custom element](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-example-element){: external}.
+- Hide the launcher icon entirely and automatically start the web widget in open state, at its full length. For more information, see the [`openChatByDefault` method](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#configurationobject){: external}.
+- Hide the close button so users cannnot close the web chat widget. For more information, see the [`hideCloseButton` method](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#configurationobject){: external}.
 
-## Style
-{: #web-chat-customize-style}
+## Change the conversation
+{: #web-chat-config-convo}
 
-On the **Style** tab, you can customize the overall appearance of the web chat widget. You can make the following changes:
+The core of the conversation is defined in your actions. If you use more than one integration type, focus on defining an engaging conversation in the underlying actions flow. The same actions setup is used for all integrations. To customize the conversation for the web chat only, you can take the following actions:
 
-  - Set the assistant name. Click **Assistant's name as known by customers** to specify the name that is displayed in the header of the chat window. The name can be up to 64 characters in length.
+- Update the text of a message before it is sent or after it is received, such as to hide personally-identifiable information.
+- Pass contextual information, such as the customer's name, from the web chat to your actions. For examples of how to complete common tasks, see [Passing values](#web-chat-config-context).
+- Change the language that is used by the web chat. For more information, see [Global audience support](/docs/watson-assistant?topic=watson-assistant-customize-web-chat#customize-web-chat-global).
+- Render your own custom response types inside the web chat widget, including responses that incorporate code from your website at run time. For a tutorial that shows you how, see [Creating a custom response](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-user-defined-response){: external}.
+- Use React portals to render your custom response type as part of your application. For a tutorial that shows you how, see [Custom responses with React](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-react-portals){: external}.
 
-  - Customize the colors used in the web chat widget. You can set the following colors:
-  
-    - **Primary color**: The color of the web chat header.
-    - **Secondary color**: The color of the customer input message bubble.
-    - **Accent color**: The color of interactive elements such as the following:
-      - Web chat buttons such as the suggestions button and the "send message" button
-      - The border around the input text field (when in focus)
-      - The markers that appear beside the assistant’s messages
-      - The borders that appear around buttons and drop-down lists when customers select from options
-      - The home screen background
-      <!--- Pause response type not yet supported in actions --->
-      <!--- - Typing indicator that is shown to represent a pause response --->
+## Change the look of the web chat
+{: #web-chat-config-look}
 
-    Each color is specified as an HTML color code, such as `#FF33FC` for pink and `#329A1D` for green. To change a color, type the HTML color code you want to use, or click the dot next to the field and choose the color from the interactive color picker.
+You can make simple changes to the color of things like the text font and web chat header from the *Style* tab of the web chat configuration page. To make more extensive style changes, you can set the CSS style color theme to a different theme or specify your own theme.
 
-  - Enable or disable the **Built with IBM Watson** watermark that is displayed in the web chat widget. To disable the watermark, click to toggle the **IBM Watermark** switch to the off position. (The watermark cannot be disabled on Lite plans.)
+- You can choose to use a different base Carbon Design theme. The supported base themes are color themes that are defined by [IBM Carbon Design](https://www.carbondesignsystem.com/guidelines/color/usage/){: external}. For more information, see [Theming](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#theming){: external}.
+- Alternatively, you can set individual variables within the theme to customize specific UI elements. For example, the text that is displayed in the chat window uses the fonts `IBMPlexSans, Arial, Helvetica, sans-serif`. If you want to use a different font, you can specify it by using the `instance.updateCSSVariables()` method.
+- Apply style settings to user-defined response types. If you enable the web chat to return custom response types, be sure to apply existing or custom CSS classes to them. For more information, see [Custom content](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-render){: external}.
+- Change the style of the home screen that can be displayed when the web chat is opened. For more information about the home screen, see [Adding a home screen](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-home-screen). For more information about how to customize it, see [HTML content](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-render#html){: external}
 
-  - Provide an avatar image to represent your assistant or organization in the web chat header. Click **Add an avatar image** to add an image, or **Change avatar image** to change an image you have previously added.
+The web chat is embedded directly on your page, not inside an iframe. Therefore, the cascading style sheet (CSS) rules for your website can sometimes override the web chat CSS rules. The web chat applies aggressive CSS resets, but the resets can be affected if your website uses the `!important` property in elements where style is defined.
+{: note}
 
-    Specify the URL for a publicly accessible hosted image, such as a company or brand logo or an assistant avatar. The image file must be between 64 x 64 and 100 x 100 pixels in size.
+### Add user identity information
+{: #web-chat-config-userid}
 
-Style changes you make are immediately applied to the preview that is shown on the page, so you can see how your choices impact the style of the chat UI. However, no changes are applied to the environment until you click **Save and exit**.
+If you do not enable security, and you want to perform tasks where you need to know the user who submitted the input, then you must pass the user ID to the web chat integration.
 
-## Launcher
-{: #web-chat-customize-launcher}
+If you do enable security, you set the user ID in the JSON Web Token instead. For more information, see [Authenticating users](/docs/watson-assistant?topic=watson-assistant-web-chat-security#web-chat-security-authenticate).
 
-customize launcher
+Choose a non-human-identifiable ID. For example, do not use a person's email address as the `user_id`.
 
-## Home screen
-{: #web-chat-customize-home-screen}
+User information is used in the following ways:
 
-The home screen helps to ease your customers into a conversation with your assistant. You can add a greeting and a list of quick conversation starter questions for customers to click. For more information, see [Configuring the home screen](#deploy-web-chat-home-screen).
+- User-based service plans use the `user_id` associated with user input for billing purposes.
+<!--- See [User-based plans](/docs/assistant?topic=assistant-services-information#services-information-user-based-plans){: external}. --->
 
-If you don't want to use a home screen, go to the **Home screen** tab and toggle the switch to **Off**.
+- The ability to delete any data created by someone who requests to be forgotten requires that a `customer_id` be associated with the user input. When a `user_id` is defined, the product can reuse it to pass a `customer_id` parameter.
+    <!--- See [Labeling and deleting data](/docs/assistant?topic=assistant-information-security#information-security-gdpr-wa){: external}. --->
 
-By default, the web chat window shows a home screen that can welcome users and tell them how to interact with the assistant. The home screen replaces any greeting that would otherwise be sent by the *Greet customer* system action in an actions skill. If you prefer to use a *Greet customer* system action instead of the home screen, you can disable the home screen on the **Home screen** tab.
+    Because the `user_id` value that you submit is included in the `customer_id` value that is added to the `X-Watson-Metadata` header in each message request, the `user_id` syntax must meet the requirements for header fields as defined in [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2).
+    {: note}
 
-![An example of the home screen](images/home-screen.png)
+To support these user-based capabilities, add the [`updateUserID()` method](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateuserid){: external} in the code snippet before you paste it into your web page.
 
-1.  Add a greeting that is engaging and invites the user to interact with your assistant. A greeting is required.
+In the following example, the user ID `L12345` is added to the script.
 
-1.  Add three conversation starter messages.
-
-    These messages are displayed in the web chat as examples of the types of questions that customers can ask. Customers can click one of them to submit it to the assistant.
-
-    You must test each message that you add as a conversation starter. Use only questions that the assistant understands and knows how to answer well.
-
-    All three conversation starters are required.
-
-A developer can customize the home screen even more:
-
-- A **Get started** heading is displayed before the list of conversation starter messages. A developer can change the heading text by replacing the `homeScreen_conversationStarterLabel` in the web chat language strings file. For more information, see the [instance.updateLanguagePack() method](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatelanguagepack){: external} documentation.
-- You can use the web chat API to add other elements to the home screen page. For more information, see the [instance.writeableElements() method](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#writeableelements){: external} documentation.
-- For information about CSS helper classes that you can use to change the home screen style, see the [prebuilt templates](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-render#html){: external} documentation.
-
-## Live agent
-{: #web-chat-customize-live-agent}
-
-To configure support for transferring conversations to a service desk agent, click the **Live agent** tab. For more information, see [Adding service desk support](#deploy-web-chat-haa).
-
-## Suggestions
-{: #web-chat-customize-suggestions}
-
-The web chat gives your customers a way to reroute the conversation if they get stuck by showing them a list of intelligent suggestions, search results, and a path of contact for more help. Suggestions are enabled automatically. You can control how often suggestions are displayed and what they include. Click the **Suggestions** tab.
-<!--- For more information, see [Showing more suggestions](#deploy-web-chat-alternate). --->
-
-*Suggestions* give your customers a way to try something else when the current exchange with the assistant isn't delivering what they expect. A question mark icon ![Question mark icon](images/question-mark.png) is displayed in the web chat that customers can click at any time to see other topics that might be of interest or, if configured, to request support. Customers can click a suggested topic to submit it as input or click the **X** icon to close the suggestions list.
-
-If customers select a suggestion and the response is not helpful, they can open the suggestions list again to try a different suggestion. The input generated by the first choice is submitted and recorded as part of the conversation. However, any contextual information that is generated by the initial suggestion is reset when the subsequent suggestion is submitted.
-
-The suggestions are shown automatically in situations where the customer might otherwise become frustrated. For example, if a customer uses different wording to ask the same question multiple times in succession, and the same action is triggered each time, then related topic suggestions are shown in addition to the triggered action's response. The suggestions that are offered give the customer a quick way to get the conversation back on track.
-
-The suggestions list is populated with actions that are relevant in some way to the matched action. The actions are ones that the AI model considered to be possible alternatives, but that didn't meet the high confidence threshold that is required for an action to be listed as a disambiguation option. Any action can be shown as a suggestion, unless its **Ask clarifying question** setting is set to **Off**. For more information about the **Ask clarifying question** setting, see [Asking clarifying questions](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-ask-clarifying-question).
-
-To customize suggestions, complete the following steps:
-
-1.  Open the *Suggestions* tab.
-
-    The Suggestions feature is enabled automatically for new web chat integrations. If it's not enabled, set the Suggestions switch to **On**.
-
-    The *Include a connection to support* section is displayed where you can configure whether and how to give customers the ability to connect with support.
-1.  Decide when you want an option to connect with support to be shown in the suggestions list. The choices are:
-
-    - **Always**: Always shows the option to get support in the list of suggestions.
-    - **Never**: Never shows the option to get support in the list of suggestions.
-    - **After one failed attempt**: Adds the option to the list only if the customer reached a node with an `anything_else` condition in the previous conversation turn or reaches the same action for a second time in succession.
-
-1.  In the **Option label** field, add a label for the option.
-
-    The text in the **Option label** field has two functions:
-
-    - The text is shown in the suggestions list as an option for customers to select.
-    - When selected by a customer, the text is sent to your assistant as a new message. The label must be able to function as input that your action understands and knows how to handle.
-
-    By default, the option label `Connect with agent` is used. If your web chat is integrated with a service desk, this message initiates a conversation transfer, as long as your action is designed to handle transfer requests.
-
-    If your web chat is not integrated with a service desk, you can change the option label to a message that helps your customers reach whatever form of support you do offer. If you offer a toll-free support line, you might add `Get the support line phone number`. Or if you offer an online support request form, you might add `Open a support ticket`.
-
-    Whether you use the default option label or add your own, make sure your action is designed to recognize the message and respond to it appropriately.
-    <!--- For more information, see [Connecting customers with support](/docs/assistant?topic=assistant-dialog-support){: external}. --->
-
-## Security
-{: #web-chat-customize-security}
-
-To secure the web chat, click the **Security** tab. For more information, see [Securing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security).
-
+```html
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: 'YOUR_INTEGRATION_ID',
+      region: 'YOUR_REGION',
+      serviceInstanceID: 'YOUR_SERVICE_INSTANCE',
+      onLoad: function(instance) {
+        instance.updateUserID('L12345');
+        instance.render();
+        }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src='https://web-chat.global.assistant.dev.watson.appdomain.cloud/versions/' +
+      (window.watsonAssistantChatOptions.clientVersion || 'latest') +
+      '/WatsonAssistantChatEntry.js';
+    document.head.appendChild(t);
+  });
+</script>
+```
+{: codeblock}
