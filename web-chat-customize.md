@@ -28,7 +28,7 @@ subcollection: watson-assistant
 {{site.data.content.classiclink}}
 
 # Applying advanced customizations
-{: #web-chat-config}
+{: #web-chat-customize}
 
 Tailor the web chat to match your website and brand, and to behave in ways that meet your business needs.
 {: shortdesc}
