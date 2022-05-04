@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-05-03"
+lastupdated: "2022-05-04"
 
 subcollection: watson-assistant
 
@@ -69,10 +69,8 @@ On the **Style** tab, you can configure the overall appearance of the web chat w
         - The markers that appear beside the assistant’s messages
         - The borders that appear around buttons and drop-down lists when customers select from options
         - The home screen background
-        <!--- Pause response type not yet supported in actions --->
-        <!--- - Typing indicator that is shown to represent a pause response --->
 
-    Each color is specified as an HTML color code, such as `#FF33FC` for pink and `#329A1D` for green. To change a color, type the HTML color code you want to use, or click the dot next to the field and choose the color from the interactive color picker.
+    Each color is specified as an HTML hexadecimal color code, such as `#FF33FC` for pink and `#329A1D` for green. To change a color, type the HTML color code you want to use, or click the dot next to the field and choose the color from the interactive color picker.
 
 - Enable or disable the **Built with IBM Watson** watermark that is displayed in the web chat widget. To disable the watermark, click to toggle the **IBM Watermark** switch to the off position. (The watermark cannot be disabled on the Lite plan.)
 
@@ -92,29 +90,25 @@ The message you specify is immediately reflected by the launcher preview that is
 ## Home screen
 {: #web-chat-customize-home-screen}
 
-The home screen helps to ease your customers into a conversation with your assistant. You can add a greeting and a list of quick conversation starter questions for customers to click. For more information, see [Configuring the home screen](#deploy-web-chat-home-screen).
-
-If you don't want to use a home screen, go to the **Home screen** tab and toggle the switch to **Off**.
-
-By default, the web chat window shows a home screen that can welcome users and tell them how to interact with the assistant. The home screen replaces any greeting that would otherwise be sent by the *Greet customer* system action in an actions skill. If you prefer to use a *Greet customer* system action instead of the home screen, you can disable the home screen on the **Home screen** tab.
+On the **Home screen** tab, you can configure the contents of the home screen, which welcomes customers and helps them start the conversation with the assistant. The home screen replaces any greeting that would otherwise be sent by the *Greet customer* system action.
 
 ![An example of the home screen](images/home-screen.png)
 
-1. Add a greeting that is engaging and invites the user to interact with your assistant. A greeting is required.
+If you prefer to use a *Greet customer* system action instead of the home screen, you can disable it by clicking the toggle switch on the **Home screen** tab.
 
-1. Add three conversation starter messages.
+If you use the home screen, you must configure it to show content that is relevant to your customers:
 
-    These messages are displayed in the web chat as examples of the types of questions that customers can ask. Customers can click one of them to submit it to the assistant.
+- In the **Greeting message** field, type a greeting that is engaging and invites the user to interact with your assistant. This greeting is the first message your customers will see when they open the web chat window.
 
-    You must test each message that you add as a conversation starter. Use only questions that the assistant understands and knows how to answer well.
+- In the **Conversation starters** section, specify three conversation starter messages.
+
+    These messages are displayed on the home screen as options that customers can click to start the conversation (for example, `I need to reset my password` or `What is my account balance?`). Specify conversation starters that are likely to be useful to your customers, and that your assistant knows how to handle. 
+
+    Be sure to test each conversation starter. Use only messages that your assistant understands and knows how to answer well. Conversation starters cannot be longer than 35 characters.
 
     All three conversation starters are required.
 
-A developer can customize the home screen even more:
-
-- A **Get started** heading is displayed before the list of conversation starter messages. A developer can change the heading text by replacing the `homeScreen_conversationStarterLabel` in the web chat language strings file. For more information, see the [instance.updateLanguagePack() method](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatelanguagepack){: external} documentation.
-- You can use the web chat API to add other elements to the home screen page. For more information, see the [instance.writeableElements() method](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#writeableelements){: external} documentation.
-- For information about CSS helper classes that you can use to change the home screen style, see the [prebuilt templates](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-render#html){: external} documentation.
+The messages you specify are immediately reflected by the web chat preview that is shown on the page, and you can click the conversation starters to see how your assistant responds. However, no configuration changes are applied to the environment until you click **Save and exit**.
 
 ## Live agent
 {: #web-chat-customize-live-agent}
