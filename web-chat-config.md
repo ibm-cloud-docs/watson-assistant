@@ -37,11 +37,11 @@ Before you deploy the web chat widget to your production website, you will proba
 
 - The [assistant name](#web-chat-style) that you want to show to your customers
 - The contents of the [home screen](#web-chat-home-screen)
-- What [suggestions](#web-chat-suggestions) your assistant will offer if customers get stuck
+- The [suggestions](#web-chat-suggestions) your assistant will offer if customers get stuck
 
 You might also want to make additional configurations, such as changing the web chat colors to match your branding, changing the launcher greeting, or enabling encryption.
 
-If you are a developer, you can customize the web chat even more extensively by using the web chat API. With the API, you can customize the styling, change the behavior of the web chat widget and launcher, customize strings, modify message content, and more. For more information about using the web chat API, see [Heading](/docs/watson-assistant?topic=watson-assistant-topicid).
+If you are a developer, you can customize the web chat extensively by using the web chat API. With the API, you can customize the styling, change the behavior of the web chat widget and launcher, customize strings, modify message content, and more. For more information about using the web chat API, see [Customizing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-customize).
 {: tip}
 
 To change the web chat configuration, follow these steps:
@@ -52,7 +52,7 @@ To change the web chat configuration, follow these steps:
 
     The **Web chat** page opens, showing the settings for the web chat integration in the selected environment.
 
-## Style
+## Configuring style and appearance
 {: #web-chat-style}
 
 On the **Style** tab, you can configure the overall appearance of the web chat widget. You can make the following changes:
@@ -80,15 +80,15 @@ On the **Style** tab, you can configure the overall appearance of the web chat w
 
 Style changes you make are immediately reflected by the web chat preview that is shown on the page. However, no configuration changes are applied to the environment until you click **Save and exit**.
 
-## Launcher
-{: #web-chat-customize-launcher}
+## Configuring the launcher
+{: #web-chat-configure-launcher}
 
 On the **Launcher** tab, you can change the greeting text that is shown by the launcher that invites users to open the web chat. Separate greeting messages are configured for the desktop launcher and the mobile launcher.
 
 The message you specify is immediately reflected by the launcher preview that is shown on the page. However, no configuration changes are applied to the environment until you click **Save and exit**.
 
-## Home screen
-{: #web-chat-customize-home-screen}
+## Configuring the home screen
+{: #web-chat-configure-home-screen}
 
 On the **Home screen** tab, you can configure the contents of the home screen, which welcomes customers and helps them start the conversation with the assistant. The home screen replaces any greeting that would otherwise be sent by the *Greet customer* system action.
 
@@ -110,16 +110,8 @@ If you use the home screen, you must configure it to show content that is releva
 
 The messages you specify are immediately reflected by the web chat preview that is shown on the page, and you can click the conversation starters to see how your assistant responds. However, no configuration changes are applied to the environment until you click **Save and exit**.
 
-## Live agent
-{: #web-chat-customize-live-agent}
-
-To configure support for transferring conversations to a service desk agent, click the **Live agent** tab. For more information, see [Adding service desk support](#deploy-web-chat-haa).
-
-## Suggestions
-{: #web-chat-customize-suggestions}
-
-The web chat gives your customers a way to reroute the conversation if they get stuck by showing them a list of intelligent suggestions, search results, and a path of contact for more help. Suggestions are enabled automatically. You can control how often suggestions are displayed and what they include. Click the **Suggestions** tab.
-<!--- For more information, see [Showing more suggestions](#deploy-web-chat-alternate). --->
+## Configuring suggestions
+{: #web-chat-suggestions}
 
 *Suggestions* give your customers a way to try something else when the current exchange with the assistant isn't delivering what they expect. A question mark icon ![Question mark icon](images/question-mark.png) is displayed in the web chat that customers can click at any time to see other topics that might be of interest or, if configured, to request support. Customers can click a suggested topic to submit it as input or click the **X** icon to close the suggestions list.
 
@@ -129,35 +121,26 @@ The suggestions are shown automatically in situations where the customer might o
 
 The suggestions list is populated with actions that are relevant in some way to the matched action. The actions are ones that the AI model considered to be possible alternatives, but that didn't meet the high confidence threshold that is required for an action to be listed as a disambiguation option. Any action can be shown as a suggestion, unless its **Ask clarifying question** setting is set to **Off**. For more information about the **Ask clarifying question** setting, see [Asking clarifying questions](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-ask-clarifying-question).
 
-To customize suggestions, complete the following steps:
+To configure suggestions, complete the following steps:
 
-1. Open the *Suggestions* tab.
+1. Open the **Suggestions** tab.
 
-    The Suggestions feature is enabled automatically for new web chat integrations. If it's not enabled, set the Suggestions switch to **On**.
+    Suggestions are enabled automatically for new web chat integrations. If you don't want to use suggestions, toggle the switch to **Off**.
 
-    The *Include a connection to support* section is displayed where you can configure whether and how to give customers the ability to connect with support.
-1. Decide when you want an option to connect with support to be shown in the suggestions list. The choices are:
+1. In the **Include a connection to support** section, specify when you want an option to connect with support to be included in the list of suggestions. You can specify **Always**, **Never**, or **After one failed attempt**.
 
-    - **Always**: Always shows the option to get support in the list of suggestions.
-    - **Never**: Never shows the option to get support in the list of suggestions.
-    - **After one failed attempt**: Adds the option to the list only if the customer reached a node with an `anything_else` condition in the previous conversation turn or reaches the same action for a second time in succession.
+    **After one failed attempt**: Adds the option to the list only if the customer reached a node with an `anything_else` condition in the previous conversation turn or reaches the same action for a second time in succession.
 
-1. In the **Option label** field, add a label for the option.
+1. In the **Option label** field, type the text of the message that requests help from support. This message is shown as the label for the support option, which is included in the **Suggestions** window under the circumstances you specified in the previous step. If the customer clicks this option, the same message is sent to the assistant.
 
-    The text in the **Option label** field has two functions:
+    The message you specify should trigger an action that gives customers a way to connect with support. By default, the message `Connect with agent` is used. If your web chat is integrated with a service desk, this message initiates a transfer to a human agent. (For more information about integrating with a service desk, see [Adding service desk support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat-haa).)
 
-    - The text is shown in the suggestions list as an option for customers to select.
-    - When selected by a customer, the text is sent to your assistant as a new message. The label must be able to function as input that your action understands and knows how to handle.
+    If your web chat is not integrated with a service desk, specify a message that helps your customers reach whatever form of support you do offer. If you offer a toll-free support line, you might add `Get the support line phone number`. Or if you offer an online support request form, you might add `Open a support ticket`.
 
-    By default, the option label `Connect with agent` is used. If your web chat is integrated with a service desk, this message initiates a conversation transfer, as long as your action is designed to handle transfer requests.
-
-    If your web chat is not integrated with a service desk, you can change the option label to a message that helps your customers reach whatever form of support you do offer. If you offer a toll-free support line, you might add `Get the support line phone number`. Or if you offer an online support request form, you might add `Open a support ticket`.
-
-    Whether you use the default option label or add your own, make sure your action is designed to recognize the message and respond to it appropriately.
+    Whether you use the default support message or add your own, make sure your action is designed to recognize the message and respond to it appropriately.
     <!--- For more information, see [Connecting customers with support](/docs/assistant?topic=assistant-dialog-support){: external}. --->
 
 ## Security
-{: #web-chat-customize-security}
+{: #web-chat-configure-security}
 
 To secure the web chat, click the **Security** tab. For more information, see [Securing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security).
-

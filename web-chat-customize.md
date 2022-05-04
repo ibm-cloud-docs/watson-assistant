@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-10-21"
+  years: 2019, 2022
+lastupdated: "2022-05-04"
 
 subcollection: watson-assistant
 
@@ -27,7 +27,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Applying advanced customizations
+# Customizing the web chat
 {: #web-chat-customize}
 
 Tailor the web chat to match your website and brand, and to behave in ways that meet your business needs.
@@ -57,6 +57,14 @@ You can change the color of the launcher icon from the *Style* tab of the web ch
 - Change how the web chat widget opens. For example, you might want to launch the web chat from some other button or process that exists on your website, or maybe open it in a different location, or at a different size. For a tutorial that shows you how, see [Render to a custom element](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-example-element){: external}.
 - Hide the launcher icon entirely and automatically start the web widget in open state, at its full length. For more information, see the [`openChatByDefault` method](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#configurationobject){: external}.
 - Hide the close button so users cannnot close the web chat widget. For more information, see the [`hideCloseButton` method](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#configurationobject){: external}.
+
+## Change the home screen
+
+If enabled, the home screen greets the customer and shows a list of suggested conversation starters. You can customize the style and content of the home screen:
+
+- A **Get started** heading is displayed before the list of conversation starter messages. You change this heading text by replacing the `homeScreen_conversationStarterLabel` in the web chat language strings file. For more information, see the [instance.updateLanguagePack() method](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatelanguagepack){: external} documentation.
+- You can use the web chat API to add other elements to the home screen. For more information, see the [instance.writeableElements() method](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#writeableelements){: external} documentation.
+- You can use CSS helper classes to change the home screen style. For more information, see the [prebuilt templates](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-render#html){: external} documentation.
 
 ## Change the conversation
 {: #web-chat-config-convo}
