@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-06"
+lastupdated: "2022-05-05"
 
 subcollection: watson-assistant
 
@@ -140,7 +140,9 @@ To add a regex response:
 
     To write your own custom regular expression, select **Define custom regular expression** and then type your regex pattern in the **Regular expression** field. For more information on regular expression syntax, see [Syntax](https://github.com/google/re2/wiki/Syntax){: external}.
 
-    {{site.data.keyword.conversationshort}} uses the Google RE2 regular expression library to match regular expressions at run time. Regular expression syntax can vary between implementations, so make sure any regex patterns you write conform to the [RE2 syntax]([Syntax](https://github.com/google/re2/wiki/Syntax){: external}).
+    Only English characters can be used in a regular expression. If you need to use other characters in a regular expression, you must represent those characters in Unicode.
+
+    {{site.data.keyword.conversationshort}} uses the Google RE2 regular expression library to match regular expressions at run time. Regular expression syntax can vary between implementations, so make sure any regex patterns you write conform to the [RE2 syntax](https://github.com/google/re2/wiki/Syntax){: external}.
     {: note}
 
 1. If you want to specify multiple regex patterns for the response, click **Add regular expression** to add another field in which you can select or define an additional regular expression.
