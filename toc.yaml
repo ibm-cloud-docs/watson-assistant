@@ -83,7 +83,6 @@ toc:
             label: Advanced topics
             topics:
               - web-chat-customize.md
-              - customize-web-chat.md
               - web-chat-security.md
               - web-chat-service-desk-starter-kits.md
               - topic

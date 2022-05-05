@@ -263,7 +263,7 @@ To authenticate and specify a unique ID for each customer, add the user ID infor
     The user ID that is specified in the `sub` claim is also sent in the `customer_id` section of the `X-Watson-Metadata` HTTP header. The `customer_id` can be used to make requests to delete user data. Because the ID is sent in a header field, the syntax must meet the requirements for header fields as defined in [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2){: external} (all visible ASCII characters).
     <!--- For more information about deleting user data, see [Labeling and deleting data](/docs/assistant?topic=assistant-information-security#information-security-gdpr-wa){: external}. --->
 
-If you disable security, then you can use the `instance.updateUserID()` method to specify user IDs. For more information, see [Adding user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-config#web-chat-config-userid).
+If you disable security, then you can use the `instance.updateUserID()` method to specify user IDs. For more information, see [Adding user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-customize#web-chat-customize-userid).
 
 ## Logging out
 {: #web-chat-security-logout}
