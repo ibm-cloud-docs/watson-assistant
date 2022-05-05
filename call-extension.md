@@ -116,19 +116,38 @@ For example, this action step uses an expression to check the `availability` pro
 ![Extension variable in step condition](images/response-expression-condition.png)
 
 ## Checking success or failure
+{: #extension-check-success}
+
+You might want your assistant to be able to handle errors that occur when calling a custom extension. You can do this by checking the `Ran successfully` response variable that is returned along with the response from the call to the extension. This variable is a boolean (`true`/`false`) value.
+
+If you define step conditions that check the `Ran successfully` variable, you can create steps that enable your assistant to respond differently depending on whether the call to the extension succeeded. (For more information about step conditions, see [Step conditions](/docs/watson-assistant?topic=watson-assistant-step-conditions).)
+
+The following example shows a step condition that checks for a failure. By using this condition, you can create a step that tells the customer there was an error, and perhaps offers to connect to an agent for more help.
+
+![Step condition checking for extension failure](images/extension-check-failure.png)
+
+## Debugging failures
+{: #extension-debug}
+
+If your calls to an extension are failing, you might want to debug the problem by seeing detailed information about what is being returned from the external API. This is not information you would want to show to your customers, but for debugging purposes, you can create a step that uses expressions to show the response data.
+
+### Checking the HTTP status
 {: #extension-check-status}
 
-You might want your assistant to be able to handle errors that occur when calling a custom extension. You can do this by checking the HTTP status code that is returned as part of the response from the extension.
-{: shortdesc}
-
-If you define step conditions that check the status code, you can create steps that enable your assistant to respond differently depending on whether the call to the extension succeeded. (For more information about step conditions, see [Step conditions](/docs/watson-assistant?topic=watson-assistant-step-conditions).)
+One way of debugging failures is to check the HTTP status code. This code can help you determine if an error is being returned from the external service.
 
 There are many possible HTTP status codes, and different methods use different status codes to indicate various types of success or failure. To check the success or failure of a call to an extension, you need to know what HTTP status codes the external service returns. These status codes are specified in the OpenAPI document that describes the external API.
 {: important}
 
-To create a step condition that checks the status, follow these steps:
+To create an expression that retrieves the HTTP status code, follow these steps:
 
 1. Create or edit a step that comes after the call to the extension.
+
+
+
+## PICK UP HERE
+
+
 
 1. Click the condition field at the beginning of the step and select **with conditions** from the drop-down list.
 
