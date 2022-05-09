@@ -155,7 +155,7 @@ To create an expression that retrieves the HTTP status code, follow these steps:
 
 1. Select any variable that is a response value from the extension. (It doesn't matter which variable you select, as long as it is an extension response variable).
 
-    ![Response variable in step condition expression](images/extension-http-status-expression-1.png)
+    ![Response variable in expression](images/extension-http-status-expression.png)
 
     The expression is automatically updated to show a reference to the variable you selected, in the format `${step_xxx_result_y.body.variablename}`. For example, if you selected a response variable called `body.id`, the reference might be `${step_596_result_1.body.id}`.
 
@@ -168,6 +168,8 @@ To create an expression that retrieves the HTTP status code, follow these steps:
 1. In the **Assistant says** field, type an output message that references the variable you used to store the HTTP status. To reference the variable, type dollar sign (`$`) and select the session variable from the list.
 
     ![Output referencing HTTP status variable](images/extension-http-status-output.png)
+
+1. You can now test your action on the **Preview** page and see the HTTP status code in the assistant output after the call to the extension.
 
 ### Debugging the output
 {: #extension-debug-output}
