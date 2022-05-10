@@ -30,12 +30,10 @@ subcollection: watson-assistant
 # Customizing the web chat
 {: #web-chat-customize}
 
-The web chat integration provides a ready-to-use JavaScript script you can use to make your assistant available on your website with a minimum of HTML coding. You can optionally customize and extend this script to customize how the web chat widget looks and behaves.
+If you are comfortable with JavaScript code, you can extensively customize and extend the web chat by modifying the embed script and using the web chat API.
 {: shortdesc}
 
-For more information about how to deploy the web chat, see [Adding the web chat to your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
-
-For detailed information about how to customize and extend the web chat, see the web chat [developer documentation](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=){: external}.
+For detailed reference about the web chat API, see the web chat [developer documentation](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=){: external}.
 
 ## API overview
 {: #web-chat-customize-api}
