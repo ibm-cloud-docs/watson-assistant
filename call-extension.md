@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-03-18"
+lastupdated: "2022-05-10"
 
 subcollection: watson-assistant
 
@@ -122,7 +122,7 @@ You might want your assistant to be able to handle errors that occur when callin
 
 If you define step conditions that check the `Ran successfully` variable, you can create steps that enable your assistant to respond differently depending on whether the call to the extension succeeded. (For more information about step conditions, see [Step conditions](/docs/watson-assistant?topic=watson-assistant-step-conditions).)
 
-The following example shows a step condition that checks for a failure. By using this condition, you can create a step that tells the customer there was an error, and perhaps offers to connect to an agent for more help.
+The following example shows a step condition that checks for a failure from an extension in step 3. By using this condition, you can create a step that tells the customer there was an error, and perhaps offers to connect to an agent for more help.
 
 ![Step condition checking for extension failure](images/extension-check-failure.png)
 
