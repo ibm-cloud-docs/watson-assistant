@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-04-29"
+lastupdated: "2022-05-11"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,13 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 5 May 2022
+{: #watson-assistant-may052022}
+{: release-note}
+
+Success/failure variable for extensions
+:   Each call to a custom extension now returns a `Ran successfully` response variable, which you can use to check the success or failure of the call. For more information, see [Checking success or failure](/docs/watson-assistant?topic=watson-assistant-call-extension#extension-check-success).
 
 ## 28 April 2022
 {: #watson-assistant-apr282022}
