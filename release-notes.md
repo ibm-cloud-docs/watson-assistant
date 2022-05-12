@@ -52,13 +52,6 @@ Ability to upload and download example phrases and upload saved customer respons
 Support for custom extensions and dialog in Actions preview panel
 :   You can now view your entire assistant from the **Actions preview** panel, including custom extensions and dialog, if you enabled it. This allows you to have a complete view of how an action is working. For more information about previewing actions, see [Reviewing and debugging your actions](/docs/watson-assistant?topic=watson-assistant-review).
 
-Sign out due to inactivity setting
-:   {{site.data.keyword.conversationshort}} now uses the **Sign out due to inactivity setting** from Identity & Access Management (IAM). {{site.data.keyword.cloud_notm}} account owners can select the time it takes before an inactive user is signed out and their credentials are required again. The default is 2 hours.
-
-   An inactive user will see two messages. The first message alerts them about an upcoming session expiration and provides a choice to renew. If they remain inactive, a second session expiration message appears and they will need to log in again.
-
-   For more information, see [Setting the sign out due to inactivity duration](/docs/account?topic=account-iam-work-sessions&interface=ui#sessions-inactivity){: external}.
-
 ## 5 May 2022
 {: #watson-assistant-may052022}
 {: release-note}
