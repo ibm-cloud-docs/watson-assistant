@@ -30,10 +30,12 @@ subcollection: watson-assistant
 # Web chat overview
 {: #web-chat-overview}
 
-The web chat is a chat widget you can embed on your website, providing an easy-to-use chatbot interface for your customers. The web chat can help your customers with common questions and tasks, and can transfer customers to human agents.
+You can use the web chat integration to deploy your assistant on your website without writing any code. The web chat can help your customers start the conversation with common questions or tasks; it can display multimedia and interactive elements such as forms, and it can transfer customers to human agents for more help.
 {: shortdesc}
 
-For each assistant you create, the web chat integration provides a JavaScript code snippet that you can copy and paste into any web page where you want users to be able to ask your assistant for help. This script creates an instance of the web chat widget, saving you the time and effort that would be required to build your own custom user interface.
+For each assistant, the web chat integration provides a preconfigured JavaScript code snippet that you can copy and paste into any web page where you want users to be able to interact with the assistant. This script creates an instance of the web chat widget, saving you the time and effort that would be required to build your own custom user interface.
+
+## Why use the web chat?
 
 Building a custom user interface yourself would require spending time and effort solving typical UI problems. For example, you would need to design the layout and styling, keep up with browser changes, manage scrolling behavior, and validate input. The time you spend building and maintaining a custom UI is better spent building a high-quality assistant instead.
 
@@ -41,22 +43,16 @@ The web chat widget uses cutting-edge functionality from IBM Design and Research
 
 ## How the web chat works
 
-To learn more about web chat, watch the following 3-minute video.
+After you add the web chat script to your website, your customers will see a launcher icon that they can click to open the chat window and start a conversation with the assistant. The appearance of the launcher icon adapts to desktop and mobile browsers.
 
-![Web chat overview](https://www.youtube.com/embed/52bpMKVigGU){: video output="iframe" id="youtubeplayer" frameborder="0" width="560" height="315" webkitallowfullscreen mozallowfullscreen allowfullscreen}
+![web chat launcher in desktop browser](images/web-chat-desktop-highlighted.png)
 
-To read a transcript of the video, [open the video on YouTube.com](https://www.youtube.com/watch?v=52bpMKVigGU&feature=emb_imp_woyt), click the *More actions* icon, and then choose *Open transcript*.
+When a customer clicks the launcher, the web chat window opens, initially displaying the _home screen_. The home screen displays a greeting and a set of suggested conversation starters for common questions and problems. The customer can either click a conversation starter or type a message in the input field to start the conversation with the assistant.
 
-To learn more about how the web chat can help your business, read [the Medium blog post called Building a Virtual Assistant that Your Customers Want to Talk to](https://medium.com/ibm-watson/building-an-engaging-virtual-assistant-cf39cd0c3730){: external}.
+![web chat example home screen](images/web-chat-home-screen-lendyr.png)
 
-
-### (Miscellaneous details moved from elsewhere)
-
-![Plus or higher plans only](images/plus.png) For environments where private endpoints are in use, keep in mind that the web chat integration sends traffic over the internet.
-<!--- For more information, see [Private network endpoints](/docs/assistant?topic=assistant-security#security-private-endpoints){: external}.
-{: note} --->
-
-If you don't extend the session timeout setting for the assistant, the flow for the current session is restarted after 5 minutes of inactivity. This means that if a user stops interacting with the assistant, after 5 minutes, any context variable values that were set during the previous conversation are set to null or back to their initial values.
+The appearance and behavior of the launcher icon, the home screen, and most other aspects of the web chat can be configured and extensively customized to match your website style and branding. For more information, see [Configuring the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-config).
+{: tip}
 
 ## Launcher appearance and behavior
 {: #deploy-web-chat-launcher}
@@ -65,15 +61,17 @@ The web chat launcher welcomes and engages customers so they know where to find 
 
 ![An example of the initial launcher](images/web-chat-icon.png)
 
-After 15 seconds, the launcher expands to show a greeting message to the user. In this expanded state, a customer can still click the launcher to open the web chat. (If the customer reloads the page or navigates to a different page before the launcher has expanded, the 15-second timer restarts.) There are two slightly different appearances for this expanded state, depending on whether the user is using a desktop browser or a mobile browser. 
+After 15 seconds, the launcher expands to show a greeting message to the user. In this expanded state, a customer can still click the launcher to open the web chat. (If the customer reloads the page or navigates to a different page before the launcher has expanded, the 15-second timer restarts.)
 
-- For desktop browsers, the expanded launcher shows two primary buttons the customer can click to open the web chat, and a **Close** button that closes the launcher:
+The appearance of this expanded state differs slightly depending on whether the customer is using a desktop browser or a mobile browser:
+
+- For desktop browsers, the expanded launcher shows two primary buttons the customer can click to open the web chat, and a **Close** button that closes the launcher.
 
     ![An example of the desktop launcher](images/desktop-launcher.png)
 
     The expanded launcher remains in its expanded state even if the customer reloads the page or navigates to a different page. It stays in its expanded state until the customer either opens it by clicking on either of the two primary buttons, or closes it, at which point it returns to its initial small state for the rest of the session.
 
-- For mobile browsers, the launcher shows only a single primary button:
+- For mobile browsers, the launcher shows only a single primary button.
 
     ![An example of the mobile launcher](images/mobile-launcher.png)
 
@@ -81,22 +79,47 @@ After 15 seconds, the launcher expands to show a greeting message to the user. I
 
 After the next page refresh, if the launcher remains in its small state without being clicked, it bounces up and down to attract the customer's attention. The first bounce happens 15 seconds after the page refresh; if the customer still does not click the launcher, it bounces again 60 seconds later. (The timing of the second bounce might be affected if the user refreshes the page or navigates to a different page.) If the user still does not click the launcher, it does not bounce again.
 
-The color of the launcher is specified by the **Accent color** field on the **Style** tab of the web chat settings. To change the color, specify a new color using a standard hexadecimal RGB value.
+You can configure the color of the launcher, as well as the greeting message text, in the web chat settings. For more information, see [Configuring the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-config).
 
-You can customize the greeting message displayed by the launcher on the **Launcher** tab of the web chat settings. The settings include separate greeting messages for the desktop and mobile versions of the launcher.
+## Rendering assistant output
+
+In addition to plain text, {{site.data.keyword.conversationshort}} supports many response types that can be used to output multimedia and interactive elements. The web chat includes built-in support for a wide variety of response types:
+
+- **Text formatting**: The web chat supports formatting text using either Markdown or HTML. You can use text formatting to apply text highlighting such as italics, or to include elements like paragraphs and headings.
+- **URLs**: Valid URLS (such as `http://example.com`) are automatically rendered as clickable links. When a customer clicks a link in the web chat, the target website opens in a new browser tab.
+- **Options**: Options responses (when the assistant asks the customer to select from a set of choices) are automatically rendered as interactive elements. (By default, a set of fewer than five options is rendered as a set of clickable buttons; five or more options are rendered as a drop-down list.)
+- **Dates**: When the assistant asks the customer to specify a date, the web chat displays an interactive date picker. The customer can specify the date either by clicking the date picker or by typing a valid date value in the input field.
+- **Multimedia responses**: The web chat supports all multimedia response types (`audio`, `image`, and `video`).
+- **iframe**: The web chat supports the `iframe` response type, which embeds HTML content (such as a form or interactive map) directly in the web chat window.
+
+For more information about how the web chat handles specific response types, see the [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference#iframe).
+
+## Human agent transfer
+{: #deploy-web-chat-dialog}
+
+
+
+
+
+## Language support
+
 
 The language of the default text shown within the launcher depends on the locale configured for the web chat. For more information, see [Languages](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#languages){: external}. If you customize the greeting text, the text you provide is used regardless of the locale settings.
 {: note}
 
-## Rich responses
-{: #deploy-web-chat-dialog}
 
-The rich responses that you add to an action are displayed in the web chat as expected, with the following exceptions:
+## Technical details
 
-- **Connect to human agent**: If service desk support is enabled for the web chat, this response type triggers a chat transfer. If service desk support is not configured, this response type is ignored.
-- **Option**: If your option list contains up to four choices, they are displayed as buttons. If your list contains five or more options, then they are displayed in a drop-down list.
+The web chat is displayed on your web site by a short JavaScript code snippet, which calls additional JavaScript code that is hosted by IBM Cloud. The hosted code is automatically updated with new features and fixes, so by default you will always have the latest version. (You can optionally lock to a specific version if you prefer to control upgrades yourself.)
 
-<!--- For more information about rich response types, see [Rich responses](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-multimedia){: external}. --->
+![Plus or higher plans only](images/plus.png) For environments where private endpoints are in use, keep in mind that the web chat integration sends traffic over the internet.
+<!--- For more information, see [Private network endpoints](/docs/assistant?topic=assistant-security#security-private-endpoints){: external}.
+{: note} --->
+
+The code snippet that creates the web chat widget includes a configuration object, which you can modify to change the appearance and behavior of the web chat. The configuration object also specifies details that enable the web chat to connect to your assistant. If you are comfortable writing JavaScript code, you can extensively customize the web chat by modifying the code snippet and using the web chat API.
+
+The web chat uses the {{site.data.keyword.conversationshort}} v2 stateful API to communicate with the assistant. By default, the session ends and the conversation ends after 5 minutes of inactivity. This means that if a user stops interacting with the assistant, after 5 minutes, any context variable values that were set during the previous conversation are set to null or back to their initial values. You can change the inactivity timeout setting in the assistant settings (if allowed by your plan).
+
 
 ## Browser support
 {: #deploy-web-chat-browsers}
