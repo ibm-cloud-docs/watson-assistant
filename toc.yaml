@@ -150,10 +150,11 @@ toc:
             navtitle: Overview
           - compare-actions-dialog.md
           - activate-dialog.md
+          - migrate-intents-entities.md
           - dialog-call-action.md
           - dialog-analyze.md
           - dialog-publish.md
-          
+
   - navgroup:
       id: reference
       topics:

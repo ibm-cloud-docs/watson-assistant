@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-05-05"
+lastupdated: "2022-05-12"
 
 subcollection: watson-assistant
 
@@ -259,6 +259,46 @@ From this page, you can also edit or delete any existing saved customer response
 {: important}
 
 You can also create a saved customer response based on the customer response configuration within a step. If you have already configured a customer response in a step, click the **Save response for reuse** icon and specify a descriptive name for the saved customer response.
+
+### Uploading saved customer responses
+{: #uploading-saved-customer-response}
+
+If you have a large number of saved customer responses, you might find it easier to upload them from a comma-separated value (CSV) file than to define them one by one. If you are migrating entities from the classic {{site.data.keyword.conversationshort}} experience to saved customer responses in the new {{site.data.keyword.conversationshort}} experience, see [Migrating intents and entities](/docs/watson-assistant?topic=watson-assistant-migrate-intents-entities).
+
+1. Collect the saved customer responses into a CSV file. Save the CSV file with UTF-8 encoding and no byte order mark (BOM).
+
+    The required format for each line in the file is as follows:
+    ```
+    <savedResponse>,<value>,<synonyms>
+    ```
+    where `<savedResponse>` is the name of a saved customer response, `<value>` is a value for the saved customer response, and `<synonyms>` is a comma-separated list of synonyms for that value. For example:
+    ```
+    genres,science fiction,sci-fi,SF
+    genres,historical fiction,HF
+    genres,young adult,YA
+    genres,autobiography
+    genres,biography
+    genres,fantasy
+    locations,Adams Street
+    locations,Central
+    locations,South End
+    ```
+    Uploading a CSV file also supports patterns. Any string wrapped with `/` is considered a pattern, as opposed to a synonym. For example:
+    ```
+    ContactInfo,localPhone,/(\d{3})-(\d{4})/
+    ContactInfo,fullUSphone,/(\d{3})-(\d{3})-(\d{4})/
+    ContactInfo,internationalPhone,/^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$/
+    ContactInfo,email,/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/
+    ContactInfo,website,/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+    ```
+
+1. Go to the **Saved responses** page.
+
+1. Click the **Upload** icon ![Upload icon](images/upload-icon.png).
+
+1. Select a file from your computer. The maximum CSV file size is 10 MB. If your CSV file is larger, consider splitting it into multiple files and uploading them separately.
+
+    The file is validated and uploaded, and the system begins to train itself on the new data.
 
 ### Using saved customer responses in steps
 {: #using-saved-customer-response}
