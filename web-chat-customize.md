@@ -215,6 +215,6 @@ To avoid this problem, use a server-side first-party cookie in your web applicat
 
 For more information about billing, see [User-based plans explained](/docs/watson-assistant?topic=watson-assistant-services-information#services-information-user-based-plans).
 
-For more information about MAU limits per plan, see [Web chat integration limits](/docs/watson-assistant?topic=watson-assistant-web-chat-overview#web-chat-overview-limits).
+For more information about MAU limits per plan, see [Billing](/docs/watson-assistant?topic=watson-assistant-web-chat-overview#web-chat-overview-billing).
 
 For more information about deleting a user's data, see [Labeling and deleting data](/docs/watson-assistant?topic=watson-assistant-information-security#information-security-gdpr-wa).

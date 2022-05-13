@@ -104,14 +104,6 @@ Your assistant can then initiate a transfer in situations when the assistant is 
 
 For information about how to add a service desk integration to the web chat, see [Adding service desk support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat-haa).
 
-## Language support
-
-By default, the web chat displays hardcoded labels and messages in English, but support is built in for all of the languages supported by {{site.data.keyword.conversationshort}}. You can also choose from a wide selection of locales to customize the display of strings like dates and times for global audiences.
-
-In whichever language you are using, you can also customize the text of any hardcoded strings.
-
-For more information, see [Supporting global audiences](/docs/watson-assistant?topic=watson-assistant-web-chat-customize#web-chat-customize-global).
-
 ## Technical details
 
 The web chat is displayed on your web site by a short JavaScript code snippet, which calls additional JavaScript code that is hosted by IBM Cloud. The hosted code is automatically updated with new features and fixes, so by default you will always have the latest version. (You can optionally [lock to a specific version](/docs/watson-assistant?topic=watson-assistant-web-chat-customize) if you prefer to control upgrades yourself.)
@@ -124,7 +116,7 @@ The code snippet that creates the web chat widget includes a configuration objec
 
 The web chat uses the {{site.data.keyword.conversationshort}} v2 stateful API to communicate with the assistant. By default, the session ends and the conversation ends after 5 minutes of inactivity. This means that if a user stops interacting with the assistant, after 5 minutes, any context variable values that were set during the previous conversation are set to null or back to their initial values. You can change the inactivity timeout setting in the assistant settings (if allowed by your plan).
 
-## Browser support
+### Browser support
 {: #web-chat-overview-browsers}
 
 The web chat supports a variety of devices and platforms. As a general rule, if the last two versions of a browser account for more than 1% of all desktop or mobile traffic, the web chat supports that browser.
@@ -150,13 +142,22 @@ For optimal results when rendering the web chat on mobile devices, the `<head>` 
 ```
 {: codeblock}
 
-## Accessibility
+### Accessibility
 
 IBM strives to provide products with usable access for everyone, regardless of age or ability.
 
 The web chat integration complies with the [Web Content Accessibility 2.1 Level AA](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/){: external} standard. It is tested with both screen readers and automated tools on a continual basis.
 
-## Billing
+### Language support
+
+By default, the web chat displays hardcoded labels and messages in English, but support is built in for all of the languages supported by {{site.data.keyword.conversationshort}}. You can also choose from a wide selection of locales to customize the display of strings like dates and times for global audiences.
+
+In whichever language you are using, you can also customize the text of any hardcoded strings.
+
+For more information, see [Supporting global audiences](/docs/watson-assistant?topic=watson-assistant-web-chat-customize#web-chat-customize-global).
+
+### Billing
+{: #web-chat-overview-billing}
 
 Watson Assistant charges based on the number of unique monthly active users (MAU).
 
@@ -166,9 +167,6 @@ On Apple devices, the Intelligent Tracking Prevention feature automatically dele
 {: important}
 
 For information about how to customize the handling of user identity information for billing purposes, see [Managing user identity](/docs/watson-assistant?topic=watson-assistant-web-chat-customize#web-chat-customize-userid).
-
-### Web chat integration limits
-{: #web-chat-overview-limits}
 
 The usage is measured differently depending on the plan type. For Lite plans, usage is measured by the number of `/message` calls (API) are sent to the assistant from the web chat integration. For all other plans, usage is measured by the number of monthly active users (MAU) that the web chat interacts with. The maximum number of allowed MAUs differs depending on your {{site.data.keyword.conversationshort}} plan type.
 
