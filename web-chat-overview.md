@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-12"
+lastupdated: "2022-05-13"
 
 subcollection: watson-assistant
 
@@ -79,6 +79,8 @@ The appearance of this expanded state differs slightly depending on whether the 
 
 After the next page refresh, if the launcher remains in its small state without being clicked, it bounces up and down to attract the customer's attention. The first bounce happens 15 seconds after the page refresh; if the customer still does not click the launcher, it bounces again 60 seconds later. (The timing of the second bounce might be affected if the user refreshes the page or navigates to a different page.) If the user still does not click the launcher, it does not bounce again.
 
+The language of the default text shown within the launcher depends on the locale configured for the web chat. If you customize the greeting text, the text you provide is used regardless of the locale settings.
+
 You can configure the color of the launcher, as well as the greeting message text, in the web chat settings. For more information, see [Configuring the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-config).
 
 ## Rendering assistant output
@@ -104,8 +106,11 @@ For information about how to add a service desk integration to the web chat, see
 
 ## Language support
 
-The language of the default text shown within the launcher depends on the locale configured for the web chat. For more information, see [Languages](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#languages){: external}. If you customize the greeting text, the text you provide is used regardless of the locale settings.
-{: note}
+By default, the web chat displays hardcoded labels and messages in English, but support is built in for all of the languages supported by {{site.data.keyword.conversationshort}}. You can also choose from a wide selection of locales to customize the display of strings like dates and times for global audiences.
+
+In whichever language you are using, you can also customize the text of any hardcoded strings.
+
+For more information, see [Supporting global audiences](/docs/watson-assistant?topic=watson-assistant-web-chat-customize#web-chat-customize-global).
 
 ## Technical details
 
