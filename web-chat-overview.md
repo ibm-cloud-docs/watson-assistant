@@ -55,7 +55,7 @@ The appearance and behavior of the launcher icon, the home screen, and most othe
 {: tip}
 
 ## Launcher appearance and behavior
-{: #deploy-web-chat-launcher}
+{: #web-chat-overview-launcher}
 
 The web chat launcher welcomes and engages customers so they know where to find help if they need it. By default, the web chat launcher appears in a small initial state as a circle in the bottom right corner:
 
@@ -95,22 +95,21 @@ In addition to plain text, {{site.data.keyword.conversationshort}} supports many
 For more information about how the web chat handles specific response types, see the [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference#iframe).
 
 ## Human agent transfer
-{: #deploy-web-chat-dialog}
 
+The web chat supports transferring the customer to a human agent in situations the assistant can't handle. If you configure one of the supported service desk integrations, the web chat can open a separate chat window in which the customer can communicate with a human agent.
 
+Your assistant can then initiate a transfer in situations when the assistant is unable to handle a customer's requests. (For more information about initiating a transfer, see [Connecting to a human agent](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-human-agent).)
 
-
+For information about how to add a service desk integration to the web chat, see [Adding service desk support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat-haa).
 
 ## Language support
-
 
 The language of the default text shown within the launcher depends on the locale configured for the web chat. For more information, see [Languages](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#languages){: external}. If you customize the greeting text, the text you provide is used regardless of the locale settings.
 {: note}
 
-
 ## Technical details
 
-The web chat is displayed on your web site by a short JavaScript code snippet, which calls additional JavaScript code that is hosted by IBM Cloud. The hosted code is automatically updated with new features and fixes, so by default you will always have the latest version. (You can optionally lock to a specific version if you prefer to control upgrades yourself.)
+The web chat is displayed on your web site by a short JavaScript code snippet, which calls additional JavaScript code that is hosted by IBM Cloud. The hosted code is automatically updated with new features and fixes, so by default you will always have the latest version. (You can optionally [lock to a specific version](/docs/watson-assistant?topic=watson-assistant-web-chat-customize) if you prefer to control upgrades yourself.)
 
 ![Plus or higher plans only](images/plus.png) For environments where private endpoints are in use, keep in mind that the web chat integration sends traffic over the internet.
 <!--- For more information, see [Private network endpoints](/docs/assistant?topic=assistant-security#security-private-endpoints){: external}.
@@ -120,9 +119,8 @@ The code snippet that creates the web chat widget includes a configuration objec
 
 The web chat uses the {{site.data.keyword.conversationshort}} v2 stateful API to communicate with the assistant. By default, the session ends and the conversation ends after 5 minutes of inactivity. This means that if a user stops interacting with the assistant, after 5 minutes, any context variable values that were set during the previous conversation are set to null or back to their initial values. You can change the inactivity timeout setting in the assistant settings (if allowed by your plan).
 
-
 ## Browser support
-{: #deploy-web-chat-browsers}
+{: #web-chat-overview-browsers}
 
 The web chat supports a variety of devices and platforms. As a general rule, if the last two versions of a browser account for more than 1% of all desktop or mobile traffic, the web chat supports that browser.
 
@@ -148,26 +146,24 @@ For optimal results when rendering the web chat on mobile devices, the `<head>` 
 {: codeblock}
 
 ## Accessibility
-{: #deploy-web-chat-accessibility}
 
 IBM strives to provide products with usable access for everyone, regardless of age or ability.
 
-The web chat integration is enabled for [Web Content Accessibility 2.1 Level AA](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/){: external} compliance. It is tested with both screen readers and automated tools on a continual basis.
+The web chat integration complies with the [Web Content Accessibility 2.1 Level AA](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/){: external} standard. It is tested with both screen readers and automated tools on a continual basis.
 
 ## Billing
-{: #deploy-web-chat-billing}
 
 Watson Assistant charges based on the number of unique monthly active users (MAU).
 
 By default, the web chat creates a unique, anonymous ID the first time a new user starts a session. This identifier is stored in a first-party cookie, which remains active for 45 days. If the same user returns to your site and chats with your assistant again while this cookie is still active, the web chat integration recognizes the user and uses the same user ID. This means that you are charged only once per month for the same anonymous user.
 
-On Apple devices, the Intelligent Tracking Prevention feature might cause you to be billed multiple times within a month for the same user. You can avoid this problem by using a server-side cookie in your web application. For more information, see [Apple devices](/docs/watson-assistant?topic=watson-assistant-web-chat-customize#web-chat-customize-billing-apple).
-{: #note}
+On Apple devices, the Intelligent Tracking Prevention feature automatically deletes any client-side cookie after 7 days. This means that if an anonymous customer accesses your website and then visits again two weeks later, the two visits are treated as two different MAUs. For information about how to avoid this problem, see [Managing user identity](/docs/watson-assistant?topic=watson-assistant-web-chat-customize#web-chat-customize-userid).
+{: important}
 
-For non-anonymous users who log in to your website, you can customize the web chat code to pass in user IDs that you manage. For more information, see [Apple devices](/docs/watson-assistant?topic=watson-assistant-web-chat-customize#web-chat-customize-billing).
+For information about how to customize the handling of user identity information for billing purposes, see [Managing user identity](/docs/watson-assistant?topic=watson-assistant-web-chat-customize#web-chat-customize-userid).
 
 ### Web chat integration limits
-{: #deploy-web-chat-limits}
+{: #web-chat-overview-limits}
 
 The usage is measured differently depending on the plan type. For Lite plans, usage is measured by the number of `/message` calls (API) are sent to the assistant from the web chat integration. For all other plans, usage is measured by the number of monthly active users (MAU) that the web chat interacts with. The maximum number of allowed MAUs differs depending on your {{site.data.keyword.conversationshort}} plan type.
 
@@ -179,3 +175,4 @@ The usage is measured differently depending on the plan type. For Lite plans, us
 | Trial      |                  5,000 MAU |
 | Lite       | 10,000 API (approximately 1,000 MAU) |
 {: caption="Plan details" caption-side="top"}
+

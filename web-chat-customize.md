@@ -87,7 +87,7 @@ You can make simple changes to the color of things like the text font and web ch
 The web chat is embedded directly on your page, not inside an iframe. Therefore, the cascading style sheet (CSS) rules for your website can sometimes override the web chat CSS rules. The web chat applies aggressive CSS resets, but the resets can be affected if your website uses the `!important` property in elements where style is defined.
 {: note}
 
-### Add user identity information
+## Add user identity information
 {: #web-chat-customize-userid}
 
 If you do not enable security, and you want to perform tasks where you need to know the user who submitted the input, then you must pass the user ID to the web chat integration.
@@ -133,7 +133,7 @@ In the following example, the user ID `L12345` is added to the script.
 ```
 {: codeblock}
 
-## Global audience support
+## Supporting global audiences
 {: #web-chat-customize-global}
 
 You can build an assistant that understands customer messages in any of the languages that are supported by the service. <!-- For more information, see [Supported languages](/docs/watson-assistant?topic=watson-assistant-language-support).--> The responses from your assistant are defined by you and can be written in any language you want.
@@ -159,7 +159,7 @@ To configure the web chat for customers outside the US, follow these steps:
 
 1.  To change the text direction of the page from right to left, use the `direction` method. For more information, see [Configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#configurationobject){: external}.
 
-### Customizing phrases
+## Customizing phrases
 {: #web-chat-customize-phrasing}
 
 You can edit the hardcoded phrases that are displayed in the web chat to customize them for branding or style. Whether your web chat responds in English or another language, you can customize the wording that is used. For example, you might want to replace the phrase that says, `The live agent is typing` with the phrase, `A customer support agent is typing`.
@@ -194,8 +194,8 @@ To test the updates in a version release of the web chat before you apply the ve
 
 For more information about features that were introduced in previous web chat versions, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
-## Billing
-{: #web-chat-customize-billing}
+## Managing user identity
+{: #web-chat-customize-userid}
 
 Watson Assistant charges based on the number of unique monthly active users (MAU).
 
@@ -215,6 +215,6 @@ To avoid this problem, use a server-side first-party cookie in your web applicat
 
 For more information about billing, see [User-based plans explained](/docs/watson-assistant?topic=watson-assistant-services-information#services-information-user-based-plans).
 
-For more information about MAU limits per plan, see [Web chat integration limits](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-limits).
+For more information about MAU limits per plan, see [Web chat integration limits](/docs/watson-assistant?topic=watson-assistant-web-chat-overview#web-chat-overview-limits).
 
 For more information about deleting a user's data, see [Labeling and deleting data](/docs/watson-assistant?topic=watson-assistant-information-security#information-security-gdpr-wa).
