@@ -2,7 +2,7 @@
 
 copyright:
 years: 2015, 2021
-lastupdated: "2021-12-07"
+lastupdated: "2022-05-16"
 
 subcollection: watson-assistant
 
@@ -30,7 +30,7 @@ subcollection: watson-assistant
 The {{site.data.keyword.conversationshort}} expression language can be used to specify values that are independent of, or derived from, values that are collected in steps or stored in session variables. You can use an expression to define a step condition or to define the value of a session variable.
 {: shortdesc}
 
-The Watson Assistant expression language is based on the Spring Expression Language (SpEL), but with some important differences in syntax. For detailed background information about SpEL, see [Spring Expression Language (SpEL)](https://docs.spring.io/spring-framework/docs/5.2.13.RELEASE/spring-framework-reference/core.html#expressions).
+The Watson Assistant expression language is based on the Spring Expression Language (SpEL), but with some important differences in syntax. For detailed background information about SpEL, see [Spring Expression Language (SpEL)](https://docs.spring.io/spring-framework/docs/5.2.13.RELEASE/spring-framework-reference/core.html#expressions){: external}.
 {: note}
 
 You can use SpEL expressions in two ways:
