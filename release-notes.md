@@ -58,12 +58,14 @@ Ability to upload and download example phrases and upload saved customer respons
 
    The ability to upload example phrases and saved customer responses is also helpful if you're using the classic {{site.data.keyword.conversationshort}} and want to migrate your intents and entities to the new {{site.data.keyword.conversationshort}}. For more information, see [Migrating intents and entities](/docs/watson-assistant?topic=watson-assistant-migrate-intents-entities).
 
+<!---
 Sign out due to inactivity setting
 :   {{site.data.keyword.conversationshort}} now uses the **Sign out due to inactivity setting** from Identity & Access Management (IAM). {{site.data.keyword.cloud_notm}} account owners can select the time it takes before an inactive user is signed out and their credentials are required again. The default is 2 hours.
 
    An inactive user will see two messages. The first message alerts them about an upcoming session expiration and provides a choice to renew. If they remain inactive, a second session expiration message appears and they will need to log in again.
 
    For more information, see [Setting the sign out due to inactivity duration](/docs/account?topic=account-iam-work-sessions&interface=ui#sessions-inactivity){: external}.
+--->
 
 ## 5 May 2022
 {: #watson-assistant-may052022}
