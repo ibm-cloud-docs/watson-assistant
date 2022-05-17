@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-06"
+lastupdated: "2022-05-16"
 
 subcollection: watson-assistant
 
@@ -32,7 +32,7 @@ An action represents a business process that helps customers answer their questi
 
 A step condition is a boolean test, based on some runtime value; the step executes only if the test evaluates as true. This test can be applied to any variable, such as an action variable containing the customer response from a previous step. By defining step conditions, you can create multiple pathways through an action based on different possible runtime values.
 
-For more information about variables, see [Managing information during the conversation](/docs/watson-assistant?topic=watson-assistant-manage-info).
+For more information about variables, see [Using variables to manage conversation information](/docs/watson-assistant?topic=watson-assistant-manage-info).
 
 A basic step condition is expressed in the following form:
 

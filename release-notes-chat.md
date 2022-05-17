@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-05-16"
 
 subcollection: watson-assistant
 
@@ -39,6 +39,17 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Versioning](/docs/watson-assistant?topic=watson-assistant-web-chat-customize#web-chat-customize-versions).
+
+## 6.4.1
+{: #6.4.1}
+
+*Release date: 16 May 2022*
+
+- **Minimum size**: The minimum allowed size of the rendered web chat window has been reduced to satisfy the accessibility requirements defined by the [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/){: external} standard.
+
+- **Pop-up windows and tabs from iframes**: The web chat now allows pop-up windows and new tabs to be opened from content rendered inside `iframe` responses.
+
+- **Faster responses**: Responses received from the assistant are now displayed more quickly and without a **`...`** typing indicator.
 
 ## 6.4.0
 {: #6.4.0}
