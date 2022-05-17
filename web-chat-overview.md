@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-05-13"
+lastupdated: "2022-05-17"
 
 subcollection: watson-assistant
 
@@ -37,9 +37,11 @@ For each assistant, the web chat integration provides a preconfigured JavaScript
 
 ## Why use the web chat?
 
-Building a custom user interface yourself would require spending time and effort solving typical UI problems. For example, you would need to design the layout and styling, keep up with browser changes, manage scrolling behavior, and validate input. The time you spend building and maintaining a custom UI is better spent building a high-quality assistant instead.
+Building a custom user interface requires spending time and effort solving typical UI problems. For example, you need to design the layout and styling, keep up with browser changes, manage scrolling behavior, and validate input. The time you spend building and maintaining a custom UI is better spent building a high-quality assistant instead.
 
-The web chat widget uses cutting-edge functionality from IBM Design and Research to deliver an exceptional user experience. It is also extensively customizable, which means that you can take advantage of the web chat functionality while still maintaining consistency with your website style and branding.
+The web chat widget uses cutting-edge functionality from IBM Design and Research to engage your users when they need help, answer their questions quickly and efficiently, and provide fallback options so there is always a path to a solution. The web chat is easy for you to deploy and easy for customers to use it is secure and supports a wide range of desktop and mobile browsers.
+
+The web chat is also extensively customizable, which means that you can take advantage of the web chat functionality while still maintaining consistency with your website style and branding, adding custom UI elements, and integrating with external systems (such as live agent tools or CRM systems).
 
 ## How the web chat works
 
