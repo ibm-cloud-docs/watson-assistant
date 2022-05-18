@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-28"
+lastupdated: "2022-05-18"
 
 subcollection: watson-assistant
 
@@ -87,6 +87,8 @@ To add a custom extension to the assistant, follow these steps:
 1. **Optional:** Click the toggle switch in the **Add** column to remove any operation you do not want to include. If you expand the view of an operation, you can also enable or disable individual response properties. Any operation or response property you disable is not available to actions.
 
     An operation or property must be enabled in the draft environment to be visible in the action editor.
+
+    Because arrays are not supported as input parameters, any operation that requires an array parameter is automatically disabled and cannot be enabled.
     {: important}
 
 1. Click **Finish**.

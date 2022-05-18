@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-05"
+lastupdated: "2022-05-18"
 
 subcollection: watson-assistant
 
@@ -70,7 +70,7 @@ The OpenAPI document must satisfy the following requirements and restrictions:
 - [Relative URLs](https://swagger.io/docs/specification/api-host-and-base-path/#relative-urls){: external} are currently not supported.
 - Only `Basic`, `Bearer`, and `API key` authentication are supported.
 - Schemas defined using `anyOf`, `oneOf`, and `allOf` are currently not supported.
-- Arrays are not supported in request bodies. You can import a document that defines requests that take arrays as optional parameters, but the assistant will not be able to pass values for these parameters. You cannot import a document that includes operations that _require_ arrays as parameters.
+- Arrays are not supported in request bodies. If an operation takes arrays as optional parameters, the assistant will not be able to pass values for these parameters. Any operations that _require_ array parameters are disabled.
 - Any defined array properties are included in response bodies, but individual values inside an array are not mapped to action variables. These values can be accessed from an assistant only by writing expressions in the JSON editor.
 
 ## Building the custom extension
