@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-10-06"
+lastupdated: "2022-05-19"
 
 subcollection: watson-assistant
 
@@ -32,6 +32,7 @@ No matter how well your assistant is designed, sometimes customers can run into 
 {: shortdesc}
 
 ## How error conditions are handled
+{: #handle-errors-how-error-conditions-handled}
 
 There are several kinds of error situations your assistant might need to recover from:
 
@@ -56,7 +57,7 @@ By default, this action has two steps, each step conditioned on the *No action m
 
 - For the first three unrecognized messages, step 1 executes. This step simply outputs a message saying that the assistant did not recognize the user's input, and asking the user to try again. You can edit this step to change the message, or modify the step condition to change how many times the assistant responds with this message.
 
-  When the user sends input that successfully triggers an action, the *No action matches count* session variable is reset to 0.
+    When the user sends input that successfully triggers an action, the *No action matches count* session variable is reset to 0.
 
 - If the user tries more than three times but the assistant still doesn't understand, step 2 executes. Step 2 calls the *Fallback* action, which offers other options like connecting to a human agent. (For more information about the *Fallback* action, see [Fallback action](#fallback-action).)
 
@@ -64,15 +65,16 @@ You can edit the *No action matches* action just as you can any other action. Th
 {: tip}
 
 #### Adding examples of unsupported input
+{: #no-action-matches-add-examples}
 
 By default, the *No action matches* action is triggered only when the user's input does not match any defined action.
 
-If there are certain user requests that you can anticipate, but that your assistant does not support, you can add these requests as examples in the **Customer starts with** section of the *No action matches* action. Adding examples helps to ensure that these requests are sent directly to the *No action matches* action rather than triggering a different action by mistake.
+If there are certain user requests that you can anticipate, but that your assistant does not support, you can add these requests as example phrases in the **Customer starts with** section of the *No action matches* action. Adding example phrases helps to ensure that these requests are sent directly to the *No action matches* action rather than triggering a different action by mistake. You can also upload or download examples phrases in a comma-separated value (CSV) file, just like you can when building your own actions. For more information on uploading or downloading example phrases, see [Adding more examples](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-adding-more-examples).
 
 ### When your customer gives invalid answers
 {: #step-validation}
 
-When a step in an action asks your customer to answer questions or provide additional information, the assistant expects a particular response type, such as a number, date, or text string. (For more information about customer response types, see [Collecting information from your customer](/docs/watson-assistant?topic=watson-assistant-collect-info).) The assistant checks the customer's response to make sure it fits the expected response type; this process is called _validation_.
+When a step in an action asks your customer to answer questions or provide additional information, the assistant expects a particular response type, such as a number, date, or text string. (For more information about customer response types, see [Collecting information from your customer](/docs/watson-assistant?topic=watson-assistant-collect-info).) The assistant checks the customer's response to make sure it fits the expected response type; this process is called *validation*.
 
 For most customer response types, the assistant is able to understand valid responses provided in a variety of formats. For example, for a time value, `2:15 PM` and `a quarter past two in the afternoon` are both acceptable. But if the user provides a value that the assistant cannot interpret as matching the expected response type (for example, a response of `purple` when asked for a number), a validation error results.
 
@@ -80,6 +82,7 @@ When there is a validation error, the assistant asks the customer to try again. 
 After the third attempt, another invalid attempt triggers the *Fallback* action, which offers other options like connecting to a human agent. (For more information about the *Fallback* action, see [Fallback action](#fallback-action).)
 
 #### Customizing validation for a response
+{: #customize-validation}
 
 When you edit a step that expects a customer response, you can customize how validation errors are handled. Click **Edit validation** to see the validation options:
 
@@ -92,8 +95,9 @@ You can customize the following options:
 - Click **`+`** or **`-`**, or directly edit the number, to change how many consecutive tries the customer can make before the *Fallback* action is triggered.
 
 ### When your customer asks to speak to a human agent
+{: #fallback-human-agent}
 
-At any point in the conversation, your customer might ask to speak to a human agent. The built-in *Fallback* action is preconfigured with example input that detects such requests; you can edit the **Customer starts with** section of the *Fallback* action to add more examples.
+At any point in the conversation, your customer might ask to speak to a human agent. The built-in *Fallback* action is preconfigured with example input that detects such requests; you can edit the **Customer starts with** section of the *Fallback* action to add more examples. You can also upload or download examples phrases in a comma-separated value (CSV) file, just like you can when building your own actions. For more information on uploading or downloading example phrases, see [Adding more examples](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-adding-more-examples).
 
 ## Editing the fallback action
 {: #fallback-action}
