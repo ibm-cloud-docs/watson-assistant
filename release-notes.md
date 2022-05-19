@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-05-12"
+lastupdated: "2022-05-17"
 
 keywords: Watson Assistant release notes
 
@@ -38,6 +38,15 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+<!---
+## 19 May 2022
+{: #watson-assistant-may192022}
+{: release-note}
+
+Support for custom extensions and dialog in Actions preview panel
+:   You can now view your entire assistant from the **Actions preview** panel, including custom extensions and dialog, if you enabled it. This allows you to have a complete view of how an action is working. For more information about previewing actions, see [Reviewing and debugging your actions](/docs/watson-assistant?topic=watson-assistant-review).
+--->
+
 ## 12 May 2022
 {: #watson-assistant-may122022}
 {: release-note}
@@ -49,8 +58,14 @@ Ability to upload and download example phrases and upload saved customer respons
 
    The ability to upload example phrases and saved customer responses is also helpful if you're using the classic {{site.data.keyword.conversationshort}} and want to migrate your intents and entities to the new {{site.data.keyword.conversationshort}}. For more information, see [Migrating intents and entities](/docs/watson-assistant?topic=watson-assistant-migrate-intents-entities).
 
-Support for custom extensions and dialog in Actions preview panel
-:   You can now view your entire assistant from the **Actions preview** panel, including custom extensions and dialog, if you enabled it. This allows you to have a complete view of how an action is working. For more information about previewing actions, see [Reviewing and debugging your actions](/docs/watson-assistant?topic=watson-assistant-review).
+<!---
+Sign out due to inactivity setting
+:   {{site.data.keyword.conversationshort}} now uses the **Sign out due to inactivity setting** from Identity & Access Management (IAM). {{site.data.keyword.cloud_notm}} account owners can select the time it takes before an inactive user is signed out and their credentials are required again. The default is 2 hours.
+
+   An inactive user will see two messages. The first message alerts them about an upcoming session expiration and provides a choice to renew. If they remain inactive, a second session expiration message appears and they will need to log in again.
+
+   For more information, see [Setting the sign out due to inactivity duration](/docs/account?topic=account-iam-work-sessions&interface=ui#sessions-inactivity){: external}.
+--->
 
 ## 5 May 2022
 {: #watson-assistant-may052022}
