@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-05-19"
+lastupdated: "2022-05-17"
 
 keywords: Watson Assistant release notes
 
