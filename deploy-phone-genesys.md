@@ -219,29 +219,27 @@ Now that your Genesys Cloud environment can connect to Watson Assistant, you can
 
     ```json
     {
-      "output": {
-        "generic": [
-          {
-              "response_type": "connect_to_agent",
-              "transfer_info": {
-                "target": {
-                  "service_desk": {
-                    "sip": {
-                      "uri": "sip:+18883334444\\@example.com",
-                      "transfer_headers_send_method": "refer_to_header"
-                    }
+      "generic": [
+        {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {
+                "service_desk": {
+                  "sip": {
+                    "uri": "sip:+18883334444\\@example.com",
+                    "transfer_headers_send_method": "refer_to_header"
                   }
                 }
-              },
-              "agent_available": {
-                "message": "Ok, I'm transferring you to an agent"
-              },
-              "agent_unavailable": {
-                "message": ""
               }
-          }
-        ]
-      }
+            },
+            "agent_available": {
+              "message": "Ok, I'm transferring you to an agent"
+            },
+            "agent_unavailable": {
+              "message": ""
+            }
+        }
+      ]
     }
     ```
 

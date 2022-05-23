@@ -60,30 +60,28 @@ To specify a response in the JSON editor, insert the appropriate JSON objects in
 
 ```json
 {
-  "output": {
-    "generic":[
-      {
-        "response_type": "text",
-        "values": [
-          {
-            "text_expression": {
-              "concat": [
-                {
-                  "scalar": "This is a text response."
-                }
-              ]
-            }
+  "generic":[
+    {
+      "response_type": "text",
+      "values": [
+        {
+          "text_expression": {
+            "concat": [
+              {
+                "scalar": "This is a text response."
+              }
+            ]
           }
-        ]
-      },
-      {
-        "response_type": "image",
-        "source": "https://example.com/image.jpg",
-        "title": "Example image",
-        "description": "This is an image response."
-      }
-    ]
-  }
+        }
+      ]
+    },
+    {
+      "response_type": "image",
+      "source": "https://example.com/image.jpg",
+      "title": "Example image",
+      "description": "This is an image response."
+    }
+  ]
 }
 ```
 {: codeblock}
@@ -124,51 +122,49 @@ The following example shows step output that contains two responses: one intende
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "text",
-        "channels": [
-          {
-            "channel": "chat"
+  "generic": [
+    {
+      "response_type": "text",
+      "channels": [
+        {
+          "channel": "chat"
+        }
+      ],
+      "values": [
+        {
+          "text_expression": {
+            "concat": [
+              {
+                "scalar": "This output is intended for the <strong>web chat</strong>."
+              }
+            ]
           }
-        ],
-        "values": [
-          {
-            "text_expression": {
-              "concat": [
-                {
-                  "scalar": "This output is intended for the <strong>web chat</strong>."
-                }
-              ]
-            }
+        }
+      ]
+    },
+    {
+      "response_type": "text",
+      "channels": [
+        {
+          "channel": "slack"
+        },
+        {
+          "channel": "facebook"
+        }
+      ],
+      "values": [
+        {
+          "text_expression": {
+            "concat": [
+              {
+                "scalar": "This output is intended for either Slack or Facebook."
+              }
+            ]
           }
-        ]
-      },
-      {
-        "response_type": "text",
-        "channels": [
-          {
-            "channel": "slack"
-          },
-          {
-            "channel": "facebook"
-          }
-        ],
-        "values": [
-          {
-            "text_expression": {
-              "concat": [
-                {
-                  "scalar": "This output is intended for either Slack or Facebook."
-                }
-              ]
-            }
-          }
-        ]
-      }
-    ]
-  }
+        }
+      ]
+    }
+  ]
 }
 ```
 {: codeblock}

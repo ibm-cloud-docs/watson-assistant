@@ -61,20 +61,18 @@ The format of the `speech_to_text` response type is as follows:
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "speech_to_text",
-        "command_info": {
-          "type": "<command type>",
-          "parameters": {
-            "parameter name1": "parameter value",
-            "parameter name2": "parameter value"
-          }
+  "generic": [
+    {
+      "response_type": "speech_to_text",
+      "command_info": {
+        "type": "<command type>",
+        "parameters": {
+          "parameter name1": "parameter value",
+          "parameter name2": "parameter value"
         }
       }
-    ]
-  }
+    }
+  ]
 }
 ```
 {: codeblock}
@@ -125,26 +123,24 @@ To apply a custom language model to an action step, use the `speech_to_text` res
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "speech_to_text",
-        "command_info": {
-          "type": "configure",
-          "parameters": {
-            "narrowband_recognize": {
-              "x-watson-learning-opt-out": true,
-              "model": "en-US_NarrowbandModel",
-              "profanity_filter": true,
-              "smart_formatting": true,
-              "language_customization_id": "81d3630-ba58-11e7-aa4b-41bcd3f6f24d",
-              "acoustic_customization_id": "e4766090-ba51-11e7-be33-99bd3ac8fa93"
-            }
+  "generic": [
+    {
+      "response_type": "speech_to_text",
+      "command_info": {
+        "type": "configure",
+        "parameters": {
+          "narrowband_recognize": {
+            "x-watson-learning-opt-out": true,
+            "model": "en-US_NarrowbandModel",
+            "profanity_filter": true,
+            "smart_formatting": true,
+            "language_customization_id": "81d3630-ba58-11e7-aa4b-41bcd3f6f24d",
+            "acoustic_customization_id": "e4766090-ba51-11e7-be33-99bd3ac8fa93"
           }
         }
       }
-    ]
-  }
+    }
+  ]
 }
 ```
 {: codeblock}
@@ -169,24 +165,22 @@ This example shows how to specify a custom grammar during the conversation:
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "speech_to_text",
-        "command_info": {
-          "type": "configure",
-          "parameters": {
-            "update_strategy": "merge_once",
-            "narrowband_recognize": {
-              "x-watson-learning-opt-out": true,
-              "grammar_name": "names-abnf",
-              "language_customization_id": "81d3630-ba58-11e7-aa4b-41bcd3f6f24d"
-            }
+  "generic": [
+    {
+      "response_type": "speech_to_text",
+      "command_info": {
+        "type": "configure",
+        "parameters": {
+          "update_strategy": "merge_once",
+          "narrowband_recognize": {
+            "x-watson-learning-opt-out": true,
+            "grammar_name": "names-abnf",
+            "language_customization_id": "81d3630-ba58-11e7-aa4b-41bcd3f6f24d"
           }
         }
       }
-    ]
-  }
+    }
+  ]
 }
 ```
 {: codeblock}
@@ -202,22 +196,20 @@ In this example, the language model is switched to Spanish (`es-ES_NarrowbandMod
 ```json
 
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "speech_to_text",
-        "command_info": {
-          "type": "configure",
-          "parameters": {
-            "narrowband_recognize": {
-              "model": "es-ES_NarrowbandModel",
-              "smart_formatting": true
-            }
+  "generic": [
+    {
+      "response_type": "speech_to_text",
+      "command_info": {
+        "type": "configure",
+        "parameters": {
+          "narrowband_recognize": {
+            "model": "es-ES_NarrowbandModel",
+            "smart_formatting": true
           }
         }
       }
-    ]
-  }
+    }
+  ]
 }
 
 ```
@@ -229,22 +221,20 @@ The following example shows how to specify the use of a custom language model fo
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "speech_to_text",
-        "command_info": {
-          "type": "configure",
-          "parameters": {
-            "update_strategy": "merge_once",
-            "narrowband_recognize": {
-              "language_customization_id": "ao45vohgFuxyOQRgztu-02I10ut7aJcM-AdInT-VWgj3V" 
-            }
+  "generic": [
+    {
+      "response_type": "speech_to_text",
+      "command_info": {
+        "type": "configure",
+        "parameters": {
+          "update_strategy": "merge_once",
+          "narrowband_recognize": {
+            "language_customization_id": "ao45vohgFuxyOQRgztu-02I10ut7aJcM-AdInT-VWgj3V" 
           }
         }
       }
-    ]
-  }
+    }
+  ]
 }
 
 ```
@@ -262,20 +252,18 @@ The format of the `speech_to_text` response type is as follows:
 ```json
 
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "text_to_speech",
-        "command_info": {
-          "type": "<command type>",
-          "parameters": {
-            "parameter name": "parameter value",
-            "parameter name": "parameter value"
-          }
+  "generic": [
+    {
+      "response_type": "text_to_speech",
+      "command_info": {
+        "type": "<command type>",
+        "parameters": {
+          "parameter name": "parameter value",
+          "parameter name": "parameter value"
         }
       }
-    ]
-  }
+    }
+  ]
 }
 ```  
 {: codeblock}
@@ -315,21 +303,19 @@ This example shows how to specify a voice during the conversation:
 ```json
 
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "text_to_speech",
-        "command_info": {
-          "type": "configure",
-          "parameters": {
-            "synthesize": {
-              "voice": "en-GB_KateV3Voice"
-            }
+  "generic": [
+    {
+      "response_type": "text_to_speech",
+      "command_info": {
+        "type": "configure",
+        "parameters": {
+          "synthesize": {
+            "voice": "en-GB_KateV3Voice"
           }
         }
       }
-    ]
-  }
+    }
+  ]
 }
 
 ```
@@ -358,40 +344,38 @@ The following example shows a transfer that uses all of the configurable paramet
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "connect_to_agent",
-        "transfer_info": {
-          "target": {
-            "service_desk": {
-              "sip": {
-                "uri": "sip:user\\@domain.com",
-                "transfer_headers": [
-                  {
-                    "name": "Customer-Header1",
-                    "value": "Some-Custom-Info"
-                  },
-                  {
-                    "name": "User-to-User",
-                    "value": "XXXXXX"
-                  }
-                ],
-                "transfer_headers_send_method": "refer_to_header"
-              }
+  "generic": [
+    {
+      "response_type": "connect_to_agent",
+      "transfer_info": {
+        "target": {
+          "service_desk": {
+            "sip": {
+              "uri": "sip:user\\@domain.com",
+              "transfer_headers": [
+                {
+                  "name": "Customer-Header1",
+                  "value": "Some-Custom-Info"
+                },
+                {
+                  "name": "User-to-User",
+                  "value": "XXXXXX"
+                }
+              ],
+              "transfer_headers_send_method": "refer_to_header"
             }
           }
-        },
-        "agent_available": {
-          "message": "I'll transfer you to an agent"
-        },
-        "agent_unavailable": {
-          "message": "Sorry, I could not find an agent."
-        },
-        "message_to_human_agent": "The caller needs help resetting their password"
-      }
-    ]
-  }
+        }
+      },
+      "agent_available": {
+        "message": "I'll transfer you to an agent"
+      },
+      "agent_unavailable": {
+        "message": "Sorry, I could not find an agent."
+      },
+      "message_to_human_agent": "The caller needs help resetting their password"
+    }
+  ]
 }
 ```
 {: codeblock}
@@ -508,28 +492,26 @@ If you set `channel_options.voice_telephony.loop` to `true`, add a user-defined 
 The following example shows an `audio` response with `loop`=`true`, and a `user_defined` response specifying the `vgwActForceNoInputTurn` command.
 
 ```json
-{
-  "output": {
-    "generic": [
-      {
-        "user_defined": {
-          "vgwAction": {
-            "command": "vgwActForceNoInputTurn"
-          }
-        },
-        "response_type": "user_defined"
+{   
+  "generic": [
+    {
+      "user_defined": {
+        "vgwAction": {
+          "command": "vgwActForceNoInputTurn"
+        }
       },
-      {
-        "source": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Random_composition3.wav",
-        "response_type": "audio",
-        "channel_options": {
-          "voice_telephony": {
-            "loop": true
-          }
+      "response_type": "user_defined"
+    },
+    {
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Random_composition3.wav",
+      "response_type": "audio",
+      "channel_options": {
+        "voice_telephony": {
+          "loop": true
         }
       }
-    ]
-  }
+    }
+  ]
 }
 ```
 {: codeblock}
@@ -543,25 +525,23 @@ To start listening for tones as the user presses phone keys, use the `dtmf` resp
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "dtmf",
-        "command_info": {
-          "type": "<command type>",
-          "parameters": {
-            "parameter name": "parameter value",
-            "parameter name": "parameter value"
-          }
-        },
-        "channels": [
-          {
-            "channel": "voice_telephony"
-          }
-        ]
-      }
-    ]
-  }
+  "generic": [
+    {
+      "response_type": "dtmf",
+      "command_info": {
+        "type": "<command type>",
+        "parameters": {
+          "parameter name": "parameter value",
+          "parameter name": "parameter value"
+        }
+      },
+      "channels": [
+        {
+          "channel": "voice_telephony"
+        }
+      ]
+    }
+  ]
 }
 ```
 {: codeblock}
@@ -614,26 +594,24 @@ This example shows the `dtmf` response type with the `collect` command, used to 
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "dtmf",
-        "command_info": {
-          "type": "collect",
-          "parameters": {
-            "termination_key": "#",
-            "count": 16,
-            "ignore_speech": true
-          }
-        },
-        "channels": [
-          {
-            "channel": "voice_telephony"
-          }
-        ]
-      }
-    ]
-  }
+  "generic": [
+    {
+      "response_type": "dtmf",
+      "command_info": {
+        "type": "collect",
+        "parameters": {
+          "termination_key": "#",
+          "count": 16,
+          "ignore_speech": true
+        }
+      },
+      "channels": [
+        {
+          "channel": "voice_telephony"
+        }
+      ]
+    }
+  ]
 }
 ```
 {: codeblock}
@@ -642,33 +620,31 @@ This example shows the `dtmf` response type with the `send` command, used to sen
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "dtmf",
-        "command_info": {
-          "type": "send",
-          "parameters": {
-            "digits": [
-              {
-                "code": "9",
-                "volume": -8
-              },
-              {
-                "code": "11"
-              }
-            ],
-            "send_interval": 100
-          }
-        },
-        "channels": [
-          {
-            "channel": "voice_telephony"
-          }
-        ]
-      }
-    ]
-  }
+  "generic": [
+    {
+      "response_type": "dtmf",
+      "command_info": {
+        "type": "send",
+        "parameters": {
+          "digits": [
+            {
+              "code": "9",
+              "volume": -8
+            },
+            {
+              "code": "11"
+            }
+          ],
+          "send_interval": 100
+        }
+      },
+      "channels": [
+        {
+          "channel": "voice_telephony"
+        }
+      ]
+    }
+  ]
 }
 ```
 {: codeblock}
@@ -680,13 +656,11 @@ You can instruct your assistant end a phone call by using the `end_session` resp
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "end_session"
-      }
-    ]
-  }
+  "generic": [
+    {
+      "response_type": "end_session"
+    }
+  ]
 }
 ```
 {: codeblock}
@@ -697,29 +671,27 @@ This example shows the `end_session` response type with custom SIP headers:
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "end_session",
-        "channel_options": {
-          "voice_telephony": {
-            "sip": {
-              "headers": [
-                {
-                  "name": "Customer-Header1",
-                  "value": "Some-Custom-Info"
-                },
-                {
-                  "name": "User-to-User",
-                  "value": "XXXXXX"
-                }
-              ]
-            }
+  "generic": [
+    {
+      "response_type": "end_session",
+      "channel_options": {
+        "voice_telephony": {
+          "sip": {
+            "headers": [
+              {
+                "name": "Customer-Header1",
+                "value": "Some-Custom-Info"
+              },
+              {
+                "name": "User-to-User",
+                "value": "XXXXXX"
+              }
+            ]
           }
         }
       }
-    ]
-  }
+    }
+  ]
 }
 ```
 {: codeblock}
@@ -738,30 +710,28 @@ To send a specific message from an action step, use the `user_defined` response 
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "text",
-        "values": [
-          {
-            "text": "I will send you a text message now."
-          }
-        ],
-        "selection_policy": "sequential"
-      },
-      {
-        "response_type": "user_defined",
-        "user_defined": {
-          "vgwAction": {
-            "command": "vgwActSendSMS",
-            "parameters": {
-              "message": "Hey, this is Watson Assistant. To send me your street address, respond to this text message with your address."
-            }
+  "generic": [
+    {
+      "response_type": "text",
+      "values": [
+        {
+          "text": "I will send you a text message now."
+        }
+      ],
+      "selection_policy": "sequential"
+    },
+    {
+      "response_type": "user_defined",
+      "user_defined": {
+        "vgwAction": {
+          "command": "vgwActSendSMS",
+          "parameters": {
+            "message": "Hey, this is Watson Assistant. To send me your street address, respond to this text message with your address."
           }
         }
       }
-    ]
-  }
+    }
+  ]
 }
 ```
 {: codeblock}
@@ -808,22 +778,20 @@ This example shows two responses: first a text response, followed by an `end_ses
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "values": [
-          {
-            "text": "Goodbye."
-          }
-        ],
-        "response_type": "text",
-        "selection_policy": "sequential"
-      },
-      {
-        "response_type": "end_session"
-      }
-    ]
-  }
+  "generic": [
+    {
+      "values": [
+        {
+          "text": "Goodbye."
+        }
+      ],
+      "response_type": "text",
+      "selection_policy": "sequential"
+    },
+    {
+      "response_type": "end_session"
+    }
+  ]
 }
 ```
 {: codeblock}
