@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-05-23"
+lastupdated: "2022-05-24"
 
 subcollection: watson-assistant
 
@@ -41,7 +41,7 @@ Building a custom user interface requires spending time and effort solving typic
 
 The web chat widget uses cutting-edge functionality from IBM Design and Research to engage your users when they need help, answer their questions quickly and efficiently, and provide fallback options so there is always a path to a solution. The web chat is easy for you to deploy and easy for customers to use it is secure and supports a wide range of desktop and mobile browsers.
 
-The web chat is also extensively customizable, which means that you can take advantage of the web chat functionality while still maintaining consistency with your website style and branding, adding custom UI elements, and integrating with external systems (such as live agent tools or CRM systems).
+The web chat is also customizable, which means that you can take advantage of the web chat functionality while still maintaining consistency with your website style and branding, adding custom UI elements, and integrating with external systems (such as live agent tools or CRM systems).
 
 ## How the web chat works
 
