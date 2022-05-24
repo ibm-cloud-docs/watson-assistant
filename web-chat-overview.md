@@ -98,6 +98,8 @@ In addition to plain text, {{site.data.keyword.conversationshort}} supports many
 - **Multimedia responses**: The web chat supports all multimedia response types (`audio`, `image`, and `video`).
 - **iframe**: The web chat supports the `iframe` response type, which embeds HTML content (such as a form or interactive map) directly in the web chat window.
 
+In addition, a developer can extend the web chat to support custom responses using the `user_defined` response type.
+
 For more information about how the web chat handles specific response types, see the [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference#iframe).
 
 ## Human agent transfer
