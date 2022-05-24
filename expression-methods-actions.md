@@ -2,7 +2,7 @@
 
 copyright:
 years: 2015, 2021
-lastupdated: "2022-05-16"
+lastupdated: "2022-05-24"
 
 subcollection: watson-assistant
 
@@ -49,9 +49,7 @@ Session variables are created explicitly in the **Variables** section of the ste
 When you are editing an expression, you can type `$` to see a drop-down list of variables you can reference. Select a variable from the list to automatically insert the step ID or variable ID.
 
 ## Supported data types
-Expressions can use atomic JSON types (such as `integer`, `string`, `number`, and `boolean`), and compound data types (such as JSON arrays (`[]`) and objects (`{}`).
-
-. When specifying literal string values, you can use either single (`'`) or double (`"`) quotation marks.
+Expressions can use atomic JSON types (such as `integer`, `string`, `number`, and `boolean`), and compound data types (such as JSON arrays (`[]`) and objects (`{}`). When specifying literal string values, you can use either single (`'`) or double (`"`) quotation marks.
 
 Values that action steps collect from customers use customer response types such as date, time, currency, or percent. These values are stored as JSON objects in the following format:
 
