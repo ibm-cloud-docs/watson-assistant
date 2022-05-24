@@ -114,7 +114,7 @@ The web chat is displayed on your web site by a short JavaScript code snippet, w
 
 The code snippet that creates the web chat widget includes a configuration object, which you can modify to change the appearance and behavior of the web chat. The configuration object also specifies details that enable the web chat to connect to your assistant. If you are comfortable writing JavaScript code, you can extensively customize the web chat by modifying the code snippet and using the web chat API. For more information about the configuration object and the web chat API, see the [web chat developer documentation](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-overview){: external}.
 
-The web chat uses the {{site.data.keyword.conversationshort}} v2 stateful API to communicate with the assistant. If the customer stops interacting with the assistant, after the inactivity timeout for your assistant, any context variable values that were set during the previous conversation are set to null or back to their initial values. You can change the inactivity timeout setting in the assistant settings (if allowed by your plan).
+The web chat uses the {{site.data.keyword.conversationshort}} v2 stateful API to communicate with the assistant. If the customer stops interacting with the assistant for a period of time longer than the inactivity timeout for your assistant, the session ends. However, if the customer keeps the window open and later sends another message, the web chat recreates the session, making it possible to continue the conversation.
 
 ### Browser support
 {: #web-chat-overview-browsers}
