@@ -36,14 +36,16 @@ You can use the web chat integration to deploy your assistant on your website wi
 The web chat can help your customers start the conversation with common questions or tasks; it can display multimedia and interactive elements such as forms, and it can transfer customers to human agents for more help. A developer can customize the web chat to add even more capabilities.
 
 ## Why use the web chat?
+{: #web-chat-overview-benefits}
 
 Building a custom user interface requires spending time and effort solving typical UI problems. For example, you need to design the layout and styling, keep up with browser changes, manage scrolling behavior, validate input, and comply with accessibility requirements. The time you spend building and maintaining a custom UI is better spent building a high-quality assistant instead.
 
-The web chat widget uses cutting-edge functionality from IBM Design and Research to engage your users when they need help, answer their questions quickly and efficiently, and provide fallback options so there is always a path to a solution. The web chat is easy for you to deploy and easy for customers to use it is secure and supports a wide range of desktop and mobile browsers.
+The web chat widget uses cutting-edge functionality from IBM Design and Research to engage your users when they need help, answer their questions quickly and efficiently, and provide fallback options so there is always a path to a solution. The web chat is easy for you to deploy and easy for customers to use, it is secure, and it supports a wide range of desktop and mobile browsers.
 
 The web chat is also customizable, which means that you can take advantage of the web chat functionality while still maintaining consistency with your website style and branding, adding custom UI elements, and integrating with external systems (such as live agent tools or CRM systems).
 
 ## How the web chat works
+{: #web-chat-overview-architecture}
 
 For each assistant, the web chat integration provides a preconfigured JavaScript code snippet that you can copy and paste into any web page where you want users to be able to interact with the assistant.
 
@@ -88,6 +90,7 @@ The language of the default text shown within the launcher depends on the locale
 You can configure the color of the launcher, as well as the greeting message text, in the web chat settings. For more information, see [Configuring the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-config).
 
 ## Rendering assistant output
+{: #web-chat-overview-response-types}
 
 In addition to plain text, {{site.data.keyword.conversationshort}} supports many response types that can be used to output multimedia and interactive elements. The web chat includes built-in support for a wide variety of response types:
 
@@ -103,6 +106,7 @@ In addition, a developer can extend the web chat to support custom responses usi
 For more information about how the web chat handles specific response types, see the [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference#iframe).
 
 ## Human agent transfer
+{: #web-chat-overview-haa}
 
 The web chat supports transferring the customer to a human agent in situations the assistant can't handle. If you configure one of the supported service desk integrations, the web chat can open a separate chat window in which the customer can communicate with a human agent.
 
@@ -111,6 +115,7 @@ Your assistant can then initiate a transfer in situations when the assistant is 
 For information about how to add a service desk integration to the web chat, see [Adding service desk support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat-haa).
 
 ## Technical details
+{: #web-chat-overview-details}
 
 The web chat is displayed on your web site by a short JavaScript code snippet, which calls additional JavaScript code that is hosted by IBM Cloud. The hosted code is automatically updated with new features and fixes, so by default you will always have the latest version. (You can optionally [lock to a specific version](/docs/watson-assistant?topic=watson-assistant-web-chat-customize) if you prefer to control upgrades yourself.)
 
@@ -145,12 +150,14 @@ For optimal results when rendering the web chat on mobile devices, the `<head>` 
 {: codeblock}
 
 ### Accessibility
+{: #web-chat-overview-accessibility}
 
 IBM strives to provide products with usable access for everyone, regardless of age or ability.
 
 The web chat integration complies with the [Web Content Accessibility 2.1 Level AA](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/){: external} standard. It is tested with both screen readers and automated tools on a continual basis.
 
 ### Language support
+{: #web-chat-overview-global}
 
 By default, the web chat displays hardcoded labels and messages in English, but support is built in for all of the languages supported by {{site.data.keyword.conversationshort}}. You can also choose from a wide selection of locales to customize the display of strings like dates and times for global audiences.
 
