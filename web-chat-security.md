@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-01-20"
+lastupdated: "2022-05-25"
 
 subcollection: watson-assistant
 
@@ -297,6 +297,7 @@ The following example shows a complete CSP metadata tag:
 {: codeblock}
 
 ### Allowing elements
+{: #web-chat-security-allow-elements}
 
 If your CSP uses a nonce to add elements, such as `<script>` and `<style>` tags, to an allowlist, do not use `unsafe-inline` to allow all such elements. Instead, provide a nonce value to the web chat widget as a configuration option. The web chat will then set the nonce on any of the `<script>` and `<style>` elements that it generates dynamically.
 
