@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-03"
+lastupdated: "2022-05-25"
 
 subcollection: watson-assistant
 
@@ -53,6 +53,7 @@ You can group your work in separate containers that are called _environments_. Y
 Each new assistant comes with two environments: the draft environment and the live environment. The draft environment can be managed from the **Draft environment** page, and the live environment can be managed from the **Live environment** page. Your users interact with assistants on the live environment and cannot interact with assistants on the draft environment. The separation of these two environments allows you to ensure that any in-progress updates to the assistant do not get published. You do not want users to stumble upon an incomplete action that leads them to a dead end.
 
 ## The draft environment
+{: #publish-overview-draft}
 
 Use the **Draft environment** page to manage the draft environment. Your draft content is permanently connected to the draft environment, and you can preview this content from your customers' perspective on the **Preview** page. From the **Preview** page, you can also manage your draft web chat channel. All other draft environment integrations are managed from the **Draft environment** page. Use your draft integrations for testing, not for going live. These integrations are unique to the draft environment, and changes to draft integrations don't affect live integrations.
 
@@ -63,6 +64,7 @@ The **Assistant preview** pane on the **Preview** page shows what the web chat c
 For more information about previewing your assistant in the draft environment, see [Previewing and sharing your assistant](/docs/watson-assistant?topic=watson-assistant-preview-share).
 
 ## Publishing
+{: #publish-overview-publishing}
 
 When your content is ready to be exposed to your customers, you can publish from the **Publish** page. When you publish, you use the **Publish** page to move saved content from the draft environment to the live environment. Each time you publish, you create a new version name, such as V1 or V2.
 
@@ -73,6 +75,8 @@ When you publish your content, Watson Assistant creates a snapshot of the draft 
 You can make edits to your live environment either by editing your draft environment and publishing or by switching the version of your content on your live environment to another version. By default, the most recently published version of your content is connected to the live environment. The number of versions that can be maintained before they are deleted depends on the type of plan you have. If you reach the plan limit of versions you can have, the oldest version that isn't live is deleted when a new version is published.
 
 ## The live environment
+{: #publish-overview-live}
+
 Use the **Live environment** page to manage the live environment. This page indicates which content is live in the assistant and which channels that content is connected to. The left side of the page displays the channels where content is deployed, or where customers can interact with the assistant. The right side of the page displays the resolution methods, or how the assistant responds to customer questions or requests.
 
 ![Image of the Live environment page](images/live-environment-page.png)

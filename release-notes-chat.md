@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-05-16"
+lastupdated: "2022-05-25"
 
 subcollection: watson-assistant
 
@@ -119,7 +119,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 - **Launcher**: The new web chat launcher welcomes and engages customers so they know where to find help if they need it. For more information, see [Launcher appearance and behavior](/docs/watson-assistant?topic=watson-assistant-web-chat-overview#web-chat-architecture-launcher).
 
-- **Home screen**: The web chat home screen has been updated to have a more modern look. For more information about the home screen, see [Configuring the home screen](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-home-screen).
+- **Home screen**: The web chat home screen has been updated to have a more modern look. For more information about the home screen, see [Configuring the home screen](/docs/watson-assistant?topic=watson-assistant-web-chat-config#web-chat-configure-home-screen).
 
 - **Agent events**: New events are now fired by the web chat when interacting with a human agent using a service desk integration. If you are using a custom service desk integration based on the [starter kit](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}, you can use these events to create a pre-chat form before the agent escalation occurs, to create a post-chat form after the agent conversation ends, or to specify what happens if an agent isn’t available (like create a ticket submission form). For more information, see [Agent events summary](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#summary){: external}.
 

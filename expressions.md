@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-16"
+lastupdated: "2021-05-24"
 
 subcollection: watson-assistant
 
@@ -48,6 +48,8 @@ where:
 
 If the step condition is met, the step warns the user that the requested transfer will bring the savings account balance below the $50 minimum and incur a fee, and ask to confirm before proceeding.
 
+For reference, see [Expression language methods for actions](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions).
+
 To use an expression in a step condition:
 
 1.  From the step, click **Add condition**.
@@ -68,4 +70,3 @@ To use an expression to define a session variable value:
 
 1.  Add the expression that you want to use.
 
-<!-- For a full list of supported expressions, see XXXX.-->
