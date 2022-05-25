@@ -70,7 +70,7 @@ The core of the conversation is defined in your actions. If you use more than on
 
 - Update the text of a message before it is sent or after it is received, such as to hide personally-identifiable information.
 - Pass contextual information, such as the customer's name, from the web chat to your actions. For examples of how to complete common tasks, see [Passing values](#web-chat-config-context).
-- Change the language that is used by the web chat. For more information, see [Global audience support](/docs/watson-assistant?topic=watson-assistant-customize-web-chat#web-chat-customize-global).
+- Change the language that is used by the web chat. For more information, see [Supporting global audiences](#web-chat-customize-global).
 - Render your own custom response types inside the web chat widget, including responses that incorporate code from your website at run time. For a tutorial that shows you how, see [Creating a custom response](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-user-defined-response){: external}.
 - Use React portals to render your custom response type as part of your application. For a tutorial that shows you how, see [Custom responses with React](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-react-portals){: external}.
 
