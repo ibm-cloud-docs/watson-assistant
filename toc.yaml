@@ -70,6 +70,7 @@ toc:
           topics:
           - topic: web-chat-overview.md
             navtitle: Overview
+          - web-chat-architecture.md
           - deploy-web-chat.md
           - web-chat-config.md
           - topicgroup:
