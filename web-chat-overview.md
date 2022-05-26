@@ -46,7 +46,8 @@ The web chat is also customizable, which means that you can take advantage of th
 
 The following documentation topics provide more information about the capabilities of the web chat integration, how to configure and deploy it, and how to customize it.
 
-| ![GUI icon](images/gui.svg) If you are using the {{site.data.keyword.conversationshort}} user interface to build an assistant... | ![Development icon](images/development.svg) If you are a developer writing code to customize or extend an assistant... |
+| ![GUI icon](images/gui_icon.png)Domain expert | ![Development icon](images/development_icon.png)Developer |
 |-------|--------|
+| _Using the {{site.data.keyword.conversationshort}} user interface to build and deploy an assistant_ | _Writing code to customize or extend an assistant_ |
 | - item \n - item \n -item | - item \n - item \n -item |
 
