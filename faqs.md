@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2022-03-10"
+lastupdated: "2022-05-26"
 
 keywords: Watson Assistant frequently asked questions
 
@@ -69,7 +69,7 @@ IBM has no plans to discontinue the classic {{site.data.keyword.conversationshor
 {: #faq-integrations}
 {: faq}
 
-In the left navigation, click **Integrations** ![Integrations](images/integrations-icon.png). On the Integrations page, you can add search, channel, and extension integrations to your assistant. For more information, see [Adding integrations](docs/watson-assistant?topic=watson-assistant-deploy-integration-add).
+In the left navigation, click **Integrations** ![Integrations](images/integrations-icon.png). On the Integrations page, you can add search, channel, and extension integrations to your assistant. For more information, see [Adding integrations](/docs/watson-assistant?topic=watson-assistant-deploy-integration-add).
 
 ### Where is the Assistant ID found in the new product experience?
 {: #faq-assistant-id}
