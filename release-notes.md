@@ -43,7 +43,7 @@ This topic describes the new features, changes, and bug fixes in each release of
 {: release-note}
 
 Support for custom extensions and dialog in Actions preview panel
-:   You can now view your entire assistant from the **Actions preview** panel, including custom extensions and dialog, if you enabled it. This allows you to have a complete view of how an action is working. For more information about previewing actions, see [Reviewing and debugging your actions](/docs/watson-assistant?topic=watson-assistant-review).
+:   You can now view your entire assistant from the **Actions preview** panel, including custom extensions and dialog. This allows you to have a complete view of how an action is working. For more information about previewing actions, see [Reviewing and debugging your actions](/docs/watson-assistant?topic=watson-assistant-review).
 
 ## 19 May 2022
 {: #watson-assistant-may192022}
