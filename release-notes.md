@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-05-19"
+lastupdated: "2022-05-27"
 
 keywords: Watson Assistant release notes
 
@@ -38,16 +38,16 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 27 May 2022
+{: #watson-assistant-may272022}
+{: release-note}
 
+Support for custom extensions and dialog in Actions preview panel
+:   You can now view your entire assistant from the **Actions preview** panel, including custom extensions and dialog. This allows you to have a complete view of how an action is working. For more information about previewing actions, see [Reviewing and debugging your actions](/docs/watson-assistant?topic=watson-assistant-review).
 
 ## 19 May 2022
 {: #watson-assistant-may192022}
 {: release-note}
-
-<!---
-Support for custom extensions and dialog in Actions preview panel
-:   You can now view your entire assistant from the **Actions preview** panel, including custom extensions and dialog, if you enabled it. This allows you to have a complete view of how an action is working. For more information about previewing actions, see [Reviewing and debugging your actions](/docs/watson-assistant?topic=watson-assistant-review).
---->
 
 Sign out due to inactivity setting
 :   {{site.data.keyword.conversationshort}} now uses the **Sign out due to inactivity setting** from Identity & Access Management (IAM). {{site.data.keyword.cloud_notm}} account owners can select the time it takes before an inactive user is signed out and their credentials are required again. The default is 2 hours.
