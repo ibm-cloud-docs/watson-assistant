@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-05-11"
+lastupdated: "2022-05-31"
 
 subcollection: watson-assistant
 
@@ -37,9 +37,6 @@ An extension is an integration with an external service. By calling an extension
 For example, you might use an extension to interact with a ticketing or customer relationship management (CRM) system, or to retrieve real-time data such as mortgage rates or weather conditions. Response data from the extension is then available as action variables, which your assistant can use in the conversation.
 
 For information about how to build a custom extension, see [Build a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension).
-
-Calls to extensions cannot be tested using the assistant preview pane. To test an assistant that uses extensions, use the **Preview** page or a preview link. For more information, see [Previewing and sharing your assistant](/docs/watson-assistant?topic=watson-assistant-preview-share).
-{: #important}
 
 ## Calling the extension from a step
 {: #call-extension-from-step}
@@ -169,7 +166,7 @@ To create an expression that retrieves the HTTP status code, follow these steps:
 
     ![Output referencing HTTP status variable](images/extension-http-status-output.png)
 
-1. You can now test your action on the **Preview** page and see the HTTP status code in the assistant output after the call to the extension.
+1. You can now test your action and see the HTTP status code in the assistant output after the call to the extension.
 
 ### Debugging the output
 {: #extension-debug-output}
