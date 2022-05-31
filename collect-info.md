@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-05-05"
+lastupdated: "2022-05-23"
 
 subcollection: watson-assistant
 
@@ -28,7 +28,7 @@ subcollection: watson-assistant
 # Collecting information from your customers
 {: #collect-info}
 
-Many actions require multiple steps in order to collect all of the information required to complete the customer's request. When a step asks the customer for more information, the _customer response type_ defines what type of response is expected.
+Many actions require multiple steps in order to collect all of the information required to complete the customer's request. When a step asks the customer for more information, the *customer response type* defines what type of response is expected.
 {: shortdesc }
 
 In the step editor user interface, the middle portion of the step configuration defines the interaction between the assistant and the customer.
@@ -38,6 +38,7 @@ In the step editor user interface, the middle portion of the step configuration 
 The **Assistant says** field specifies the output the assistant sends to the customer. If this output is a question the user is expected to answer, that answer might be a number, a date, a name, or something else. You use the **Define customer response** field to specify what type of response is expected, based on the kind of information the assistant is asking for and how the customer is expected to specify it.
 
 ## Choosing a response type
+{: #choose-type}
 
 To choose the customer response type for a step, click **Define customer response** to expand the field. You can then select one of the following response types:
 
@@ -52,6 +53,7 @@ To choose the customer response type for a step, click **Define customer respons
 | [**Currency**](#customer-response-type-currency)  | An amount of money, including the unit.     | `$25`, `500 yen` |
 | [**Percent**](#customer-response-type-percent)   | A fractional numeric value expressed as a percentage. | `10%`, `50 percent` |
 | [**Free text**](#customer-response-type-free-text) | Any arbitrary text response. | `123 Main Street`, `John Q. Smith` |
+{: caption="Response types" caption-side="bottom"}
 
 ## Skipping a step
 {: #collect-info-skip-step}
@@ -66,7 +68,7 @@ The configuration information you must provide varies by response type.
 ### Options
 {: #customer-response-type-options}
 
-An _options_ response presents customers with a list of choices to select from. Use this response type when the cutomer's response must be one of a predefined set of known values. When you select an options response, you must then specify the valid options the assistant will display.
+An *options* response presents customers with a list of choices to select from. Use this response type when the customer's response must be one of a predefined set of known values. When you select an options response, you must then specify the valid options the assistant will display.
 
 The way in which these values are presented at run time depends upon how your customers connect to the assistant. In the web chat integration, the options are shown as clickable buttons (for 4 or fewer options) or as a drop-down list (for more than 5 options).
 
@@ -78,7 +80,7 @@ To disable the list:
 
 1. Move the **List options** toggle to off.
 
-You can optionally add _synonyms_ for each option by clicking **Add synonyms**. Synonyms are variations of an option value that customers might type. For each option that you add, add synonyms in a comma-separated list.
+You can optionally add *synonyms* for each option by clicking **Add synonyms**. Synonyms are variations of an option value that customers might type. For each option that you add, add synonyms in a comma-separated list.
 
 For example, you might define the following options:
 
@@ -99,7 +101,7 @@ You can save your configured options response for reuse in other steps. To save 
 ### Confirmation
 {: #customer-response-type-confirmation}
 
-A _confirmation_ response presents customers with the choices of either `Yes` or `No` as clickable buttons. Use this response type when the cutomer's response must be either Yes or No.
+A *confirmation* response presents customers with the choices of either `Yes` or `No` as clickable buttons. Use this response type when the customer's response must be either Yes or No.
 
 The following customer responses are recognized as `Yes`:
 - `yeah`
@@ -117,7 +119,7 @@ The following customer responses are recognized as `No`:
 ### Regex
 {: #customer-response-type-regex}
 
-A _regex_ response collects a text string that matches a pattern expressed as a regular expression. Use this response to capture a value that must conform to a particular pattern or format, such as an email address or telephone number.
+A *regex* response collects a text string that matches a pattern expressed as a regular expression. Use this response to capture a value that must conform to a particular pattern or format, such as an email address or telephone number.
 
 You can specify multiple regular expressions for a single response. For example, you might define multiple regex patterns that match part numbers from different vendors that use different formats. Input text for the response will be recognized if it matches any of the regex patterns you specify.
 
@@ -179,14 +181,14 @@ You can use the following regex patterns to recognize some common types of user 
 ### Number
 {: #customer-response-type-number}
 
-A _number_ response collects a single numeric value.
+A *number* response collects a single numeric value.
 
 The customer can specify the number value in either numerals (`100`) or words (`one hundred`). Negative and decimal values are recognized.
 
 ### Date
 {: #customer-response-type-date}
 
-A _date_ response collects a specific calendar date or a range of dates. The assistant can recognize dates expressed in a variety of formats. Valid examples include:
+A *date* response collects a specific calendar date or a range of dates. The assistant can recognize dates expressed in a variety of formats. Valid examples include:
 
 - `Today`
 - `Friday`
@@ -198,7 +200,7 @@ A _date_ response collects a specific calendar date or a range of dates. The ass
 ### Time
 {: #customer-response-type-time}
 
-A _time_ response collects a single time or a range of times. The assistant can recognize times expressed in a variety of formats. Valid examples include:
+A *time* response collects a single time or a range of times. The assistant can recognize times expressed in a variety of formats. Valid examples include:
 
 - `12:45PM`
 - `10:30`
@@ -210,7 +212,7 @@ A _time_ response collects a single time or a range of times. The assistant can 
 ### Currency
 {: #customer-response-type-currency}
 
-A _currency_ response collects a currency value, including the amount and the unit. The assistant can recognize currency values expressed in a variety of formats. Valid examples include:
+A *currency* response collects a currency value, including the amount and the unit. The assistant can recognize currency values expressed in a variety of formats. Valid examples include:
 
 - `$10.00`
 - `20 cents`
@@ -220,7 +222,7 @@ A _currency_ response collects a currency value, including the amount and the un
 ### Percent
 {: #customer-response-type-percent}
 
-A _percent_ response collects a fractional value expressed as a percentage. The assistant can recognize a percentage written using either the percent symbol (`%`) or the word `percent`). Valid examples include:
+A *percent* response collects a fractional value expressed as a percentage. The assistant can recognize a percentage written using either the percent symbol (`%`) or the word `percent`). Valid examples include:
 
 - `15%`
 - `10.5 percent`
@@ -228,7 +230,7 @@ A _percent_ response collects a fractional value expressed as a percentage. The 
 ### Free text
 {: #customer-response-type-free-text}
 
-A _free text_ response collects any arbitrary text string. Use this response for capturing any text, such as a name or address, or special instructions to be passed along. Valid examples include:
+A *free text* response collects any arbitrary text string. Use this response for capturing any text, such as a name or address, or special instructions to be passed along. Valid examples include:
 
 - `123 Main St.`
 - `John Q. Smith`
@@ -259,6 +261,46 @@ From this page, you can also edit or delete any existing saved customer response
 {: important}
 
 You can also create a saved customer response based on the customer response configuration within a step. If you have already configured a customer response in a step, click the **Save response for reuse** icon and specify a descriptive name for the saved customer response.
+
+### Uploading saved customer responses
+{: #uploading-saved-customer-response}
+
+If you have a large number of saved customer responses, you might find it easier to upload them from a comma-separated value (CSV) file than to define them one by one. If you are migrating entities from the classic {{site.data.keyword.conversationshort}} experience to saved customer responses in the new {{site.data.keyword.conversationshort}} experience, see [Migrating intents and entities](/docs/watson-assistant?topic=watson-assistant-migrate-intents-entities).
+
+1. Collect the saved customer responses into a CSV file. Save the CSV file with UTF-8 encoding and no byte order mark (BOM).
+
+    The required format for each line in the file is as follows:
+    ```text
+    <savedResponse>,<value>,<synonyms>
+    ```
+    where `<savedResponse>` is the name of a saved customer response, `<value>` is a value for the saved customer response, and `<synonyms>` is a comma-separated list of synonyms for that value. For example:
+    ```text
+    genres,science fiction,sci-fi,SF
+    genres,historical fiction,HF
+    genres,young adult,YA
+    genres,autobiography
+    genres,biography
+    genres,fantasy
+    locations,Adams Street
+    locations,Central
+    locations,South End
+    ```
+    Uploading a CSV file also supports patterns. Any string wrapped with `/` is considered a pattern, as opposed to a synonym. For example:
+    ```text
+    ContactInfo,localPhone,/(\d{3})-(\d{4})/
+    ContactInfo,fullUSphone,/(\d{3})-(\d{3})-(\d{4})/
+    ContactInfo,internationalPhone,/^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$/
+    ContactInfo,email,/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/
+    ContactInfo,website,/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+    ```
+
+1. Go to the **Saved responses** page.
+
+1. Click the **Upload** icon ![Upload icon](images/upload-icon.png).
+
+1. Select a file from your computer. The maximum CSV file size is 10 MB. If your CSV file is larger, consider splitting it into multiple files and uploading them separately.
+
+    The file is validated and uploaded, and the system begins to train itself on the new data.
 
 ### Using saved customer responses in steps
 {: #using-saved-customer-response}

@@ -2,7 +2,7 @@
 
 copyright:
 years: 2015, 2021
-lastupdated: "2021-12-07"
+lastupdated: "2022-05-24"
 
 subcollection: watson-assistant
 
@@ -30,7 +30,7 @@ subcollection: watson-assistant
 The {{site.data.keyword.conversationshort}} expression language can be used to specify values that are independent of, or derived from, values that are collected in steps or stored in session variables. You can use an expression to define a step condition or to define the value of a session variable.
 {: shortdesc}
 
-The Watson Assistant expression language is based on the Spring Expression Language (SpEL), but with some important differences in syntax. For detailed background information about SpEL, see [Spring Expression Language (SpEL)](https://docs.spring.io/spring-framework/docs/5.2.13.RELEASE/spring-framework-reference/core.html#expressions).
+The Watson Assistant expression language is based on the Spring Expression Language (SpEL), but with some important differences in syntax. For detailed background information about SpEL, see [Spring Expression Language (SpEL)](https://docs.spring.io/spring-framework/docs/5.2.13.RELEASE/spring-framework-reference/core.html#expressions){: external}.
 {: note}
 
 You can use SpEL expressions in two ways:
@@ -49,9 +49,7 @@ Session variables are created explicitly in the **Variables** section of the ste
 When you are editing an expression, you can type `$` to see a drop-down list of variables you can reference. Select a variable from the list to automatically insert the step ID or variable ID.
 
 ## Supported data types
-Expressions can use atomic JSON types (such as `integer`, `string`, `number`, and `boolean`), and compound data types (such as JSON arrays (`[]`) and objects (`{}`).
-
-. When specifying literal string values, you can use either single (`'`) or double (`"`) quotation marks.
+Expressions can use atomic JSON types (such as `integer`, `string`, `number`, and `boolean`), and compound data types (such as JSON arrays (`[]`) and objects (`{}`). When specifying literal string values, you can use either single (`'`) or double (`"`) quotation marks.
 
 Values that action steps collect from customers use customer response types such as date, time, currency, or percent. These values are stored as JSON objects in the following format:
 
