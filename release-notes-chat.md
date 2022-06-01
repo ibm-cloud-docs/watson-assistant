@@ -40,6 +40,15 @@ For information about new features and improvements to the core {{site.data.keyw
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Versioning](/docs/watson-assistant?topic=watson-assistant-web-chat-customize#web-chat-customize-versions).
 
+## 6.5.0
+{: #6.5.0}
+
+*Release date: 6 June 2022*
+
+- **New agent events**: New agent events have been added that allow you to hook into messages sent and received in the agent view. Learn more about [agent events](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#agent-summary){: external}.
+
+- Fixed a bug that would cause a deadlock when using an extension for the greeting message.
+
 ## 6.4.1
 {: #6.4.1}
 
