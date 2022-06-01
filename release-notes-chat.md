@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-05-25"
+lastupdated: "2022-06-06"
 
 subcollection: watson-assistant
 
@@ -45,9 +45,9 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 *Release date: 6 June 2022*
 
-- **New agent events**: New agent events have been added that allow you to hook into messages sent and received in the agent view. Learn more about [agent events](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#agent-summary){: external}.
+- **New agent events**: New events are now fired by the web chat when messages are sent or received during a conversation with a human agent using a service desk integration. For more information, see [Agent events summary](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#agent-summary){: external}.
 
-- Fixed a bug that would cause a deadlock when using an extension for the greeting message.
+- Bug fixes.
 
 ## 6.4.1
 {: #6.4.1}
