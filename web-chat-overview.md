@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-05-31"
+lastupdated: "2022-06-02"
 
 subcollection: watson-assistant
 
@@ -46,7 +46,7 @@ The web chat is also customizable, which means that you can take advantage of th
 
 ## What you can do with the web chat
 
-You can quickly deploy and test the web chat integration using the default configuration. However, before you go to production with your chatbot, you will need to configure the web chat to integrate with your website and better serve the needs of your customers. You can configure the web chat using the web chat integration settings in the {{site.data.keyword.conversationshort}} user interface.
+You can quickly deploy the web chat to your website (or even to a local test page) and see how it works. You can also use the web chat integration settings in the {{site.data.keyword.conversationshort}} user interface to configure the web chat for your website and your customers.
 
 If you are a developer, you can further customize and extend the web chat by writing code and using the web chat API.
 

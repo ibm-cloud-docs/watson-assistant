@@ -66,13 +66,20 @@ toc:
           - preview-share.md
           - publish.md
       - topicgroup:
-          label: Adding the assistant to your website
+          label: Adding the assistant to your website  
           topics:
           - topic: web-chat-overview.md
             navtitle: Overview
           - web-chat-architecture.md
           - deploy-web-chat.md
-          - web-chat-config.md
+          - topicgroup:
+            label: Configuring the web chat
+            topics:
+            - topic: web-chat-config.md
+              navtitle: Overview
+            - web-chat-style.md
+            - web-chat-home-screen.md
+            - web-chat-suggestions.md
           - topicgroup:
             label: Adding service desk support
             topics:
@@ -81,7 +88,7 @@ toc:
             - deploy-salesforce.md
             - deploy-zendesk.md
           - topicgroup:
-            label: Advanced topics
+            label: Customizing and extending the web chat
             topics:
               - web-chat-customize.md
               - web-chat-security.md
