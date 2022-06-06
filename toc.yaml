@@ -94,6 +94,10 @@ toc:
                 navtitle: Overview
               - web-chat-customize-open-close.md
               - web-chat-customize-home-screen.md
+              - web-chat-customize-conversation.md
+              - web-chat-customize-look.md
+              - web-chat-customize-userid.md
+              - web-chat-customize-global.md
               - web-chat-security.md
               - web-chat-service-desk-starter-kits.md
               - topic
