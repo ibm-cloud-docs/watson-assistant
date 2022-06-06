@@ -90,7 +90,10 @@ toc:
           - topicgroup:
             label: Customizing and extending the web chat
             topics:
-              - web-chat-customize.md
+              - topic: web-chat-customize.md
+                navtitle: Overview
+              - web-chat-customize-open-close.md
+              - web-chat-customize-home-screen.md
               - web-chat-security.md
               - web-chat-service-desk-starter-kits.md
               - topic
