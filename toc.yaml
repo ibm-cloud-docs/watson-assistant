@@ -170,6 +170,7 @@ toc:
       - response-types-reference.md
       - preview-runtime-errors.md
       - expression-methods-actions.md
+      - time-zones.md
       - phone-context.md
       - sms-reference.md
       - cdr-log-reference.md

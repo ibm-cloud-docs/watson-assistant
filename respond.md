@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-15"
+lastupdated: "2022-06-02"
 
 subcollection: watson-assistant
 
@@ -34,7 +34,7 @@ To create your assistant's response in a step, you use the **Assistant says** se
 
 You can enter a simple text response just by entering the text that you want your assistant to display to the user. You can also add formatting and web content, and you can reference user information using *variables*.
 
-## Formatting respsonses
+## Formatting responses
 {: #respond-formatting}
 
 Use the text editor tools to apply font styling, such as bold or italic, to the text or to add links.
@@ -98,4 +98,3 @@ To see if the assistant responses are formatted correctly, you can use **Preview
 In addition to text responses, you can use _response types_ to send responses that include multimedia or interactive elements, or to handle channel-specific interactions. To use most response types, you must use the JSON editor to directly edit the response object that your assistant sends to the channel.
 
 For more information about how to edit responses using the JSON editor, see [Defining responses using the JSON editor](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json).
-
