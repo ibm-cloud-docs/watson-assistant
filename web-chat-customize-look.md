@@ -27,7 +27,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-## Customizing the look of the web chat
+# Customizing the look of the web chat
 {: #web-chat-customize-look}
 
 You can make simple changes to the color of things like the text font and web chat header from the *Style* tab of the web chat configuration page. To make more extensive style changes, you can set the CSS style color theme to a different theme or specify your own theme.

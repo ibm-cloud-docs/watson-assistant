@@ -97,10 +97,11 @@ toc:
               - web-chat-customize-conversation.md
               - web-chat-customize-look.md
               - web-chat-customize-userid.md
+              - web-chat-customize-strings.md
               - web-chat-customize-global.md
               - web-chat-security.md
+              - web-chat-customize-versions.md
               - web-chat-service-desk-starter-kits.md
-              - topic
       - topicgroup:
           label: Deploying to other channels
           topics:

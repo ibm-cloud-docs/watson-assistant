@@ -27,7 +27,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Change the home screen
+# Customize the home screen
 {: #web-chat-customize-home-screen}
 
 If enabled, the home screen greets the customer and shows a list of suggested conversation starters. You can customize the style and content of the home screen:
