@@ -35,10 +35,10 @@ The web chat change log lists changes ordered by version number. For more inform
 
 For information about new features and improvements to the core {{site.data.keyword.conversationshort}} product, see [Release notes](/docs/watson-assistant?topic=watson-assistant-release-notes).
 
-## Controlling the version
+## Controlling the web chat version
 {: #release-notes-chat-version}
 
-If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Versioning](/docs/watson-assistant?topic=watson-assistant-web-chat-customize#web-chat-customize-versions).
+If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-versions).
 
 ## 6.4.1
 {: #6.4.1}
