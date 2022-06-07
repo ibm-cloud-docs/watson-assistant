@@ -49,8 +49,18 @@ The web chat API consists of several components:
 
 You can customize the web chat in the following ways:
 
-Changing how the web chat opens and closes
-:   You can change the appearance and behavior of the launcher, or remove the launcher and define a different way of opening the web chat window. For more information, see [Changing how the web chat opens and closes](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-open-close).
+Replace the default launcher
+:   To better integrate with your website, you might want to replace the built-in launcher icon with a different mechanism for opening the web chat. To hide the default launcher, set the [`showLauncher`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionsshowLauncher){: external} configuration option to `false`. To open the web chat based on some other interaction, use the [`openWindow`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#openwindow){: external} instance method.
+
+    For a tutorial that shows you how to implement a custom launcher, see [Using a custom launcher](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-launcher){: external}.
+
+Keep the web chat always open
+:    If you want to keep the web chat always open on your page, use the [`openChatByDefault`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionsopenChatByDefault){: external} configuration open to render the page with the chat window open, and the [`hideCloseButton`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionshideCloseButton){: external} option to prevent customers from closing it.
+
+Change where the web chat renders
+:   Your website design might require that you change where and how the web chat window renders on your website. For example, you might want it to appear in a different location, at a different size, or nested within another section of the page. To accomplish this, you can use the [`element`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionselement){: external} configuration option to specify a custom DOM element that will contain the web chat window at run time.
+
+    For a tutorial that shows how to do this, see [Render to a custom element](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-example-element){: external}.
 
 Customizing the home screen
 :   You can customize what is displayed in the home screen. For more information, see [Customizing the home screen](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-home-screen).
