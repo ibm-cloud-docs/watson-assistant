@@ -43,7 +43,7 @@ At a minimum, you should update at least the following basic settings for your a
 
 You might also want to make additional configurations, such as changing the web chat colors to match your branding, changing the launcher greeting, or enabling encryption.
 
-If you are a developer, you can customize the web chat extensively by using the web chat API. With the API, you can customize the styling, change the behavior of the web chat widget and launcher, customize strings, modify message content, and more. For more information about using the web chat API, see [Customizing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-customize).
+If you are a developer, you can customize the web chat by using the web chat API. With the API, you can customize the styling, change the behavior of the web chat widget and launcher, customize strings, modify message content, and more. For more information about using the web chat API, see [Customizing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-customize).
 {: tip}
 
 To change the web chat configuration, follow these steps:

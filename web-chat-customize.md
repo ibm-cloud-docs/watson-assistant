@@ -30,7 +30,7 @@ subcollection: watson-assistant
 # Web chat customization overview
 {: #web-chat-customize}
 
-If you are comfortable with JavaScript code, you can extensively customize and extend the web chat by modifying the embed script and using the web chat API.
+If you are comfortable with JavaScript code, you can customize and extend the web chat by modifying the embed script and using the web chat API.
 {: shortdesc}
 
 For detailed reference about the web chat API, see the web chat [developer documentation](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=){: external}.

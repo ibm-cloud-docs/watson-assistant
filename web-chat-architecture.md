@@ -41,7 +41,7 @@ When a customer clicks the launcher, the web chat window opens, initially displa
 
 ![web chat example home screen](images/web-chat-home-screen-lendyr.png)
 
-The appearance and behavior of the launcher icon, the home screen, and most other aspects of the web chat can be configured and extensively customized to match your website style and branding. For more information, see [Configuring the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-config).
+The appearance and behavior of the launcher icon, the home screen, and most other aspects of the web chat can be configured and customized to match your website style and branding. For more information, see [Configuring the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-config).
 {: tip}
 
 ## Launcher appearance and behavior
@@ -102,7 +102,7 @@ The web chat is displayed on your web site by a short JavaScript code snippet, w
 <!--- For more information, see [Private network endpoints](/docs/assistant?topic=assistant-security#security-private-endpoints){: external}.
 {: note} --->
 
-The code snippet that creates the web chat widget includes a configuration object, which you can modify to change the appearance and behavior of the web chat. The configuration object also specifies details that enable the web chat to connect to your assistant. If you are comfortable writing JavaScript code, you can extensively customize the web chat by modifying the code snippet and using the web chat API.
+The code snippet that creates the web chat widget includes a configuration object, which you can modify to change the appearance and behavior of the web chat. The configuration object also specifies details that enable the web chat to connect to your assistant. If you are comfortable writing JavaScript code, you can customize the web chat by modifying the code snippet and using the web chat API.
 
 The web chat uses the {{site.data.keyword.conversationshort}} v2 stateful API to communicate with the assistant. By default, the session ends and the conversation ends after 5 minutes of inactivity. This means that if a user stops interacting with the assistant, after 5 minutes, any context variable values that were set during the previous conversation are set to null or back to their initial values. You can change the inactivity timeout setting in the assistant settings (if allowed by your plan).
 

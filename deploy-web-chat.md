@@ -33,7 +33,7 @@ subcollection: watson-assistant
 To add the web chat widget to your website, all you need to do is embed a generated script element in your HTML source.
 {: shortdesc}
 
-The web chat integration is automatically included for every assistant, and is configured separately for the draft and live environments. You can extensively customize the appearance and behavior of the web chat, but you can quickly add it to your website using the default configuration.
+The web chat integration is automatically included for every assistant, and is configured separately for the draft and live environments.
 
 To add the web chat to your website, follow these steps:
 
