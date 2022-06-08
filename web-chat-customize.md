@@ -49,15 +49,15 @@ The web chat API consists of several components:
 
 You can customize the web chat in the following ways:
 
-Replace the default launcher
+Replacing the default launcher
 :   To better integrate with your website, you might want to replace the built-in launcher icon with a different mechanism for opening the web chat. To hide the default launcher, set the [`showLauncher`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionsshowLauncher){: external} configuration option to `false`. To open the web chat based on some other interaction, use the [`openWindow`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#openwindow){: external} instance method.
 
     For a tutorial that shows you how to implement a custom launcher, see [Using a custom launcher](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-launcher){: external}.
 
-Keep the web chat always open
+Keeping the web chat always open
 :    If you want to keep the web chat always open on your page, use the [`openChatByDefault`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionsopenChatByDefault){: external} configuration open to render the page with the chat window open, and the [`hideCloseButton`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionshideCloseButton){: external} option to prevent customers from closing it.
 
-Change where the web chat renders
+Changing where the web chat renders
 :   Your website design might require that you change where and how the web chat window renders on your website. For example, you might want it to appear in a different location, at a different size, or nested within another section of the page. To accomplish this, you can use the [`element`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionselement){: external} configuration option to specify a custom DOM element that will contain the web chat window at run time.
 
     For a tutorial that shows how to do this, see [Render to a custom element](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-example-element){: external}.
@@ -65,8 +65,15 @@ Change where the web chat renders
 Customizing the home screen
 :   You can customize what is displayed in the home screen. For more information, see [Customizing the home screen](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-home-screen).
 
-Customizing the conversation
-:   You can modify the information that is sent and received between the web chat and the assistant, and customize how assistant responses are displayed in the web chat. For more information, see [Customizing the conversation](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-conversation).
+Intercept and modify incoming or outgoing messages
+:   By [subscribing to events](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#summary){: external}, your code can intercept messages that are sent and received between the customer and the assistant, and even modify their content.
+
+    Subscribe to the [`pre:receive`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#prereceive){: external} event if you want to intercept a customer's message before it is sent to the assistant. For example, you might want to remove personally identifiable information from the message text or add context variables to the message payload.
+    
+    Subscribe to the [`pre:send`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#presend){: external} event if you want to intercept an incoming response from the assistant before it is shown to the customer. For example, you might want to add formatting, links, or other elements that are specific to the web chat.
+
+Rendering custom response types
+:   If your assistant sends specialized responses using a custom (`user_defined`) response type, you can implement a custom view to display these responses in the web chat window. For a tutorial that shows how to do this, see **?????**.
 
 Customizing the look of the web chat
 :   You can customize the style and appearance of the web chat beyond the options that are available from the **Style** tab in the web chat settings. For more information, see [Customizing the look of the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-look).

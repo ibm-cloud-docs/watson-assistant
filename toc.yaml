@@ -93,7 +93,6 @@ toc:
               - topic: web-chat-customize.md
                 navtitle: Overview
               - web-chat-customize-home-screen.md
-              - web-chat-customize-conversation.md
               - web-chat-customize-look.md
               - web-chat-customize-userid.md
               - web-chat-customize-strings.md
