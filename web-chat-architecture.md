@@ -28,7 +28,7 @@ subcollection: watson-assistant
 {{site.data.content.classiclink}}
 
 # How the web chat works
-{: #web-chat-architecture.md }
+{: #web-chat-architecture }
 
 The web chat provides an easy-to-use chatbot interface that you can add to your website without writing any code.
 {: shortdesc }

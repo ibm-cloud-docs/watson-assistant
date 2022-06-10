@@ -76,10 +76,16 @@ Rendering custom response types
 :   If your assistant sends specialized responses using a custom (`user_defined`) response type, you can implement a custom view to display these responses in the web chat window. For a tutorial that shows how to do this, see **?????**.
 
 Customizing the look of the web chat
-:   You can customize the style and appearance of the web chat beyond the options that are available from the **Style** tab in the web chat settings. For more information, see [Customizing the look of the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-look).
+:   You can customize the style and appearance of the web chat beyond the options that are available from the **Style** tab in the web chat settings:
+
+    - You can choose to use a different base Carbon Design theme. The supported base themes are color themes that are defined by [IBM Carbon Design](https://v10.carbondesignsystem.com/guidelines/color/usage/){: external}.
+
+    - You can also set individual variables within the theme to customize specific UI elements. For example, the text that is displayed in the chat window uses the fonts `IBMPlexSans, Arial, Helvetica, sans-serif`. If you want to use a different font, you can specify it by using the [`instance.updateCSSVariables()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecssvariables){: external} method.
+
+ For a tutorial that shows how to choose and customize a theme, see [Carbon themes](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-carbon-themes){: external}.
 
 Managing user identity information
-:   You can control the user identity information the web chat sends to the assistant. For more information, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-userid)
+:   You can control the user identity information the web chat sends to the assistant. For more information, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-userid).
 
 Customizing strings
 :   You can customize the strings that define the various labels and hardcoded phrases displayed by the web chat. For more information, see [Customizing strings](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-strings).
