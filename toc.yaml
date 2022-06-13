@@ -108,6 +108,7 @@ toc:
           - analytics-overview.md
           - analytics-action-completion.md
           - analytics-conversations.md
+          - segment-add.md
       - topicgroup:
           label: Administering your instance
           topics:
@@ -166,6 +167,7 @@ toc:
       - phone-context.md
       - sms-reference.md
       - cdr-log-reference.md
+      - segment-event-reference.md
       - topicgroup:
           label: Web chat API reference
           topics:

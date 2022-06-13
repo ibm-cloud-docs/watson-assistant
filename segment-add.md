@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-22"
+lastupdated: "2022-06-13"
 
 subcollection: watson-assistant
 
@@ -56,27 +56,27 @@ To add the Segment extension to your assistant, follow these steps:
 
     If you do not already have a Segment account, click **Sign up for free account** to create one. Verify your email address and complete your profile to activate your account.
 
-1. In the Segment web app, go to your workspace. In the **Sources** section, find the **Add IBM Watson Source** tile and click **Add Source**.
+1. In the Segment web app, go to your workspace. In the **Sources** section, find the **Add IBM Watson Assistant Source** tile and click **Add Source**.
 
-1. In the **Name** field, type a descriptive name for your {{site.data.keyword.conversationshort}} instance (for example, `Customer Care Assistant`). Click **Create**.
+1. In the **Source Name** field, type a descriptive name for your {{site.data.keyword.conversationshort}} instance (for example, `Customer Care Assistant`). Click **Create Source**.
 
 1. Click **Copy** to copy the generated key to the clipboard.
 
-1. Go back to the Segment integration settings in the {{site.data.keyword.conversationshort}} interface. In the **Segment key** field, paste the key you copied from the Segment web app in the previous step.
-
-1. Click **Connect**.
+1. Go back to the Segment integration settings in the {{site.data.keyword.conversationshort}} interface. In the **Segment key** field, paste the key you copied from the Segment web app in the previous step. Click **Next**.
 
 1. In the **Select events** step, review the list of events {{site.data.keyword.conversationshort}} can send to Segment.
 
     Each row in the table shows the name of a supported event, along with a brief description.
 
-    To see more information about an event, click the ![label](images/twistie.png) icon next to its row in the table. The expanded view of an event shows details about the properties included with each event.
+    <!--
+    To see more information about an event, click the ![label](images/twistie.png) icon next to its row in the table. The expanded view of an event shows details about the properties included with the event.
+    -->
 
 1. Click the checkboxes to select the events you want to send to Segment. Click **Next**.
 
-1. In the **Review & Confirm** step, review the configuration and click **Done**.
+1. In the **Review & Confirm** step, review the configuration and click **Finish**.
 
-The Segment extension is now connected to your assistant in the draft environment.
+The Segment extension is now connected to your assistant in the draft environment. Click **Close** to close the integration settings.
 
 ## Configuring the extension for the live environment
 
