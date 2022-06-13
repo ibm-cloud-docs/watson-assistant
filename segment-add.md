@@ -50,8 +50,6 @@ To add the Segment extension to your assistant, follow these steps:
     When you first add the Segment extension to an assistant, the configuration settings you provide are applied only to the draft environment. You must complete configuration for the draft environment before you can add the extension in the live environment.
     {: important}
 
-1. **TBD:** Confirming draft environment?
-
 1. In the **Connect** step, click the link to log in to your Segment account in another browser tab.
 
     If you do not already have a Segment account, click **Sign up for free account** to create one. Verify your email address and complete your profile to activate your account.
