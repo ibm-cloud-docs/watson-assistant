@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-03-18"
+lastupdated: "2022-05-31"
 
 subcollection: watson-assistant
 
@@ -37,9 +37,6 @@ An extension is an integration with an external service. By calling an extension
 For example, you might use an extension to interact with a ticketing or customer relationship management (CRM) system, or to retrieve real-time data such as mortgage rates or weather conditions. Response data from the extension is then available as action variables, which your assistant can use in the conversation.
 
 For information about how to build a custom extension, see [Build a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension).
-
-Calls to extensions cannot be tested using the assistant preview pane. To test an assistant that uses extensions, use the **Preview** page or a preview link. For more information, see [Previewing and sharing your assistant](/docs/watson-assistant?topic=watson-assistant-preview-share).
-{: #important}
 
 ## Calling the extension from a step
 {: #call-extension-from-step}
@@ -116,31 +113,46 @@ For example, this action step uses an expression to check the `availability` pro
 ![Extension variable in step condition](images/response-expression-condition.png)
 
 ## Checking success or failure
+{: #extension-check-success}
+
+You might want your assistant to be able to handle errors that occur when calling a custom extension. You can do this by checking the `Ran successfully` response variable that is returned along with the response from the call to the extension. This variable is a boolean (`true` or `false`) value.
+
+If you define step conditions that check the `Ran successfully` variable, you can create steps that enable your assistant to respond differently depending on whether the call to the extension succeeded. (For more information about step conditions, see [Step conditions](/docs/watson-assistant?topic=watson-assistant-step-conditions).)
+
+The following example shows a step condition that checks for a failure from an extension in step 3. By using this condition, you can create a step that tells the customer there was an error, and perhaps offers to connect to an agent for more help.
+
+![Step condition checking for extension failure](images/extension-check-failure.png)
+
+## Debugging failures
+{: #extension-debug}
+
+If your calls to an extension are failing, you might want to debug the problem by seeing detailed information about what is being returned from the external API. This is not information you would want to show to your customers, but for debugging purposes, you can create a step that uses expressions to show the response data.
+
+### Checking the HTTP status
 {: #extension-check-status}
 
-You might want your assistant to be able to handle errors that occur when calling a custom extension. You can do this by checking the HTTP status code that is returned as part of the response from the extension.
-{: shortdesc}
-
-If you define step conditions that check the status code, you can create steps that enable your assistant to respond differently depending on whether the call to the extension succeeded. (For more information about step conditions, see [Step conditions](/docs/watson-assistant?topic=watson-assistant-step-conditions).)
+One way of debugging failures is to check the HTTP status code. This code can help you determine if an error is being returned from the external service.
 
 There are many possible HTTP status codes, and different methods use different status codes to indicate various types of success or failure. To check the success or failure of a call to an extension, you need to know what HTTP status codes the external service returns. These status codes are specified in the OpenAPI document that describes the external API.
 {: important}
 
-To create a step condition that checks the status, follow these steps:
+To create an expression that retrieves the HTTP status code, follow these steps:
 
 1. Create or edit a step that comes after the call to the extension.
 
-1. Click the condition field at the beginning of the step and select **with conditions** from the drop-down list.
+1. Click the **Set variable values** ![Set variable values icon](images/set-variable-values.png) icon.
 
-1. Click the variable field and then select **Expression** from the drop-down list.
+1. Click **Set new value**.
 
-    ![Selecting expression in a step condition](images/extension-condition-expression-1.png)
+1. From the drop-down list, select the session variable you want to store the HTTP status code in. If you have not already created a variable for this purpose, click **New session variable** and specify a meaningful name (for example, `HTTP status`).
+
+1. Select **Expression** to write an expression to define the value for the session variable.
 
 1. In the expression field, type a dollar sign (`$`) to show the list of available variables.
 
 1. Select any variable that is a response value from the extension. (It doesn't matter which variable you select, as long as it is an extension response variable).
 
-    ![Response variable in step condition expression](images/extension-condition-expression-2.png)
+    ![Response variable in expression](images/extension-http-status-expression.png)
 
     The expression is automatically updated to show a reference to the variable you selected, in the format `${step_xxx_result_y.body.variablename}`. For example, if you selected a response variable called `body.id`, the reference might be `${step_596_result_1.body.id}`.
 
@@ -148,11 +160,13 @@ To create a step condition that checks the status, follow these steps:
 
 1. After the closing curly brace (`}`), add `.status`. The resulting reference identifies the status code returned from the call to the extension (for example, `${step_596_result_1}.status`).
 
-1. Complete the expression by adding the test you want to perform on the status code. For example, if you want your step to execute only in the event of a failure, you might check to see if the status code is not equal to 200 (the standard response code for most HTTP GET requests).
-
-    ![Expression in a step condition](images/extension-condition-expression-3.png)
-
     For more information about writing expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).
+
+1. In the **Assistant says** field, type an output message that references the variable you used to store the HTTP status. To reference the variable, type dollar sign (`$`) and select the session variable from the list.
+
+    ![Output referencing HTTP status variable](images/extension-http-status-output.png)
+
+1. You can now test your action and see the HTTP status code in the assistant output after the call to the extension.
 
 ### Debugging the output
 {: #extension-debug-output}

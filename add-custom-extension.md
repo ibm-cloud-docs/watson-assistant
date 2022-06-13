@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-18"
+lastupdated: "2022-06-03"
 
 subcollection: watson-assistant
 
@@ -67,11 +67,11 @@ To add a custom extension to the assistant, follow these steps:
 
      Click **Next**.
 
-1. In the **Review operations** step, review the operations supported by the extension.
+1. In the **Manage operations** step, review the operations supported by the extension and decide which operations you want to make available.
 
-    The **Review operations** table shows the operations that the assistant will be able to call from an action step. An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
+    The **Manage operations** table shows the operations that the assistant will be able to call from an action step. An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
 
-    ![Review operations table](images/extension-review-operations.png)
+    ![Manage operations table](images/extension-manage-operations.png)
 
     For each operation, a row in the table shows the following information:
 
@@ -83,6 +83,13 @@ To add a custom extension to the assistant, follow these steps:
 
     - **Request parameters**: The list of input parameters defined for the operation, along with the type of each parameter and whether the parameter is required or optional.
     - **Response properties**: The properties of the response body that will be mapped to variables the assistant can access.
+
+1. **Optional:** Click the toggle switch in the **Add** column to remove any operation you do not want to include. If you expand the view of an operation, you can also enable or disable individual response properties. Any operation or response property you disable is not available to actions.
+
+    An operation or property must be enabled in the draft environment to be visible in the action editor.
+
+    Because arrays are not supported as input parameters, any operation that requires an array parameter is automatically disabled and cannot be enabled.
+    {: important}
 
 1. Click **Finish**.
 
