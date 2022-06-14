@@ -99,6 +99,11 @@ toc:
             - deploy-salesforce.md
             - deploy-zendesk.md
             - web-chat-service-desk-starter-kits.md
+          - topicgroup:
+            label: Tutorials
+            topics:
+              - topic: web-chat-customize-custom-buttons.md
+                navtitle: Implementing custom option buttons
       - topicgroup:
           label: Deploying to other channels
           topics:

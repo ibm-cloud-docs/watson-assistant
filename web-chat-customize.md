@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-06"
+lastupdated: "2022-06-14"
 
 subcollection: watson-assistant
 
@@ -44,10 +44,34 @@ The web chat API consists of several components:
 - **Instance methods**: The web chat instance methods provide low-level control of the web chat widget. You can use the instance methods to implement custom behavior such as changing how the web chat widget opens, showing and hiding content, and setting identity information. For more information about the available instance methods, see [List of methods and properties](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#listofmethods){: external} in the web chat API reference.
 - **Events**: The web chat event system makes it possible for your website to respond to web chat events (such as opening or closing the web chat window, sending or receiving messages). By subscribing to events, you can implement custom behavior or even intercept and modify message content. For more information about the event system, see [Events](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events){: external} in the web chat API reference.
 
-## Customization tasks
+## Development tasks
 {: #web-chat-customize-tasks}
 
-You can customize the web chat in the following ways:
+You can use the web chat API to customize and extend the web chat in the following ways.
+
+### Web chat style and content
+{: #web-chat-customize-style}
+
+Customizing the look of the web chat
+:   You can customize the style and appearance of the web chat beyond the options that are available from the **Style** tab in the web chat settings:
+
+    - You can choose to use a different base Carbon Design theme. The supported base themes are color themes that are defined by [IBM Carbon Design](https://v10.carbondesignsystem.com/guidelines/color/usage/){: external}.
+
+    - You can also set individual variables within the theme to customize specific UI elements. For example, the text that is displayed in the chat window uses the fonts `IBMPlexSans, Arial, Helvetica, sans-serif`. If you want to use a different font, you can specify it by using the [`instance.updateCSSVariables()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecssvariables){: external} method.
+
+ For a tutorial that shows how to choose and customize a theme, see [Carbon themes](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-carbon-themes){: external}.
+
+Customizing the home screen
+:   You can customize what is displayed in the home screen. For more information, see [Customizing the home screen](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-home-screen).
+
+Customizing strings
+:   You can customize the strings that define the various labels and hardcoded phrases displayed by the web chat. For more information, see [Customizing strings](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-strings).
+
+Supporting global audiences
+:   You can change the language of the strings displayed by the web chat to match the language used by the assistant. For more information, see [Supporting global audiences](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-global).
+
+### Opening, closing, and rendering the web chat window
+{: #web-chat-customize-open}
 
 Replacing the default launcher
 :   To better integrate with your website, you might want to replace the built-in launcher icon with a different mechanism for opening the web chat. To hide the default launcher, set the [`showLauncher`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionsshowLauncher){: external} configuration option to `false`. To open the web chat based on some other interaction, use the [`openWindow`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#openwindow){: external} instance method.
@@ -62,8 +86,8 @@ Changing where the web chat renders
 
     For a tutorial that shows how to do this, see [Render to a custom element](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-example-element){: external}.
 
-Customizing the home screen
-:   You can customize what is displayed in the home screen. For more information, see [Customizing the home screen](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-home-screen).
+### Customizing the conversation
+{: #web-chat-customize-conversation}
 
 Intercept and modify incoming or outgoing messages
 :   By [subscribing to events](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#summary){: external}, your code can intercept messages that are sent and received between the customer and the assistant, and even modify their content.
@@ -72,33 +96,28 @@ Intercept and modify incoming or outgoing messages
     
     Subscribe to the [`pre:send`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#presend){: external} event if you want to intercept an incoming response from the assistant before it is shown to the customer. For example, you might want to add formatting, links, or other elements that are specific to the web chat.
 
+    **Tutorial:** For a tutorial showing how to use the `pre:receive` event to intercept and modify incoming messages, see [Tutorial: implementing custom option buttons in the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-custom-buttons).
+
 Rendering custom response types
-:   If your assistant sends specialized responses using a custom (`user_defined`) response type, you can implement a custom view to display these responses in the web chat window. For a tutorial that shows how to do this, see **?????**.
+:   If your assistant sends specialized responses using a custom (`user_defined`) response type, you can implement a custom view to display these responses in the web chat window.
 
-Customizing the look of the web chat
-:   You can customize the style and appearance of the web chat beyond the options that are available from the **Style** tab in the web chat settings:
+    **Tutorial:** For a tutorial showing how to render a custom response type as a replacement for the default options response, see [Tutorial: implementing custom option buttons in the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-custom-buttons).
 
-    - You can choose to use a different base Carbon Design theme. The supported base themes are color themes that are defined by [IBM Carbon Design](https://v10.carbondesignsystem.com/guidelines/color/usage/){: external}.
+Implementing a contact center integration
+:   You can use one of the web chat starter kits to integrate with a contact center (service desk) platform other than the ones available in as {{site.data.keyword.conversationshort}} integrations. For more information, see [Service desk starter kits](/docs/watson-assistant?topic=watson-assistant-web-chat-service-desk-starter-kits).
 
-    - You can also set individual variables within the theme to customize specific UI elements. For example, the text that is displayed in the chat window uses the fonts `IBMPlexSans, Arial, Helvetica, sans-serif`. If you want to use a different font, you can specify it by using the [`instance.updateCSSVariables()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecssvariables){: external} method.
-
- For a tutorial that shows how to choose and customize a theme, see [Carbon themes](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-carbon-themes){: external}.
+### Managing data
+{: #web-chat-customize-data}
 
 Managing user identity information
 :   You can control the user identity information the web chat sends to the assistant. For more information, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-userid).
 
-Customizing strings
-:   You can customize the strings that define the various labels and hardcoded phrases displayed by the web chat. For more information, see [Customizing strings](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-strings).
-
-Supporting global audiences
-:   You can change the language of the strings displayed by the web chat to match the language used by the assistant. For more information, see [Supporting global audiences](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-global).
+### Administration
+{: #web-chat-customize-admin}
 
 Securing the web chat
 :   You can secure the web chat to support user authentication and protect private data. For more information, see [Securing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security).
 
 Controlling the web chat version
 :   You can control which version of the web chat your website uses, in order to avoid unexpected changes when a new version is released. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-versions).
-
-Implementing a contact center integration
-:   You can use one of the web chat starter kits to integrate with a contact center (service desk) platform other than the ones available in as {{site.data.keyword.conversationshort}} integrations. For more information, see [Service desk starter kits](/docs/watson-assistant?topic=watson-assistant-web-chat-service-desk-starter-kits).
 
