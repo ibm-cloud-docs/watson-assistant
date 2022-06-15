@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-06"
+lastupdated: "2022-06-15"
 
 subcollection: watson-assistant
 
@@ -39,6 +39,13 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Versioning](/docs/watson-assistant?topic=watson-assistant-web-chat-customize#web-chat-customize-versions).
+
+## 6.5.1
+{: #6.5.1}
+
+*Release date: 15 June 2022*
+
+- Bug fix for the Zendesk integration.
 
 ## 6.5.0
 {: #6.5.0}
