@@ -56,7 +56,6 @@ The assistant determines when to change the conversation topic as follows:
 ## Enabling and disabling changing the topic
 {: #change-topic-enable}
 
-
 By default, the **Change conversation topic** feature is enabled for all assistants and actions. You don't have to do anything to take advantage of this feature.
 
 However, some processes are best completed without interruption, so you might want to disable this feature. You can do this either for all actions, or just for an individual action.
@@ -65,9 +64,9 @@ To disable changing the topic for all actions:
 
 1. From the **Actions** page of the assistant, click **Global settings** ![Gear icon](images/gear-icon-black.png).
 
-1. In the Global Settings window, click the **Change conversation topic** tab.
+1. On the **Change conversation topic** tab, set the switch to **Off**.
 
-1. Toggle the switch to **Off**.
+1. Click **Save**, and then click **Close**.
 
 To disable changing the topic for an individual action:
 

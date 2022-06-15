@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-05-12"
+lastupdated: "2022-06-15"
 
 subcollection: watson-assistant
 
@@ -50,9 +50,9 @@ After you enter the phrase, it is stored in **Customer starts with**, at the sta
 
 At this point, before even doing anything else with your action, you can already start checking if your assistant recognizes the starting phrase.
 
-1.  Click the **Preview** button.
-1.  Enter your first phrase, for example: `What are your store hours?`.
-1.  If you see `There are no additional steps for this action`, that means the action recognizes the phrase. (And it's because you haven't added anything else to your action.)
+1. Click the **Preview** button.
+1. Enter your first phrase, for example: `What are your store hours?`.
+1. If you see `There are no additional steps for this action`, that means the action recognizes the phrase. (And it's because you haven't added anything else to your action.)
 
     ![Preview](images/new-action-preview.png)
 
@@ -83,7 +83,7 @@ If you have a large number of example phrases, you might find it easier to uploa
 1. Collect the phrases into a CSV file. Save the CSV file with UTF-8 encoding and no byte order mark (BOM).
 
     - If you are creating a new CSV file to upload phrases, the format for each line in the file is as follows:
-        ```
+        ```text
         <phrase>
         ```
         where `<phrase>` is the text of a user example phrase. If you’re using a spreadsheet to create a CSV file, put all your phrases into column 1, as shown in the following example:
@@ -91,11 +91,11 @@ If you have a large number of example phrases, you might find it easier to uploa
         ![Example spreadsheet to upload phrases](images/uploading-phrases-spreadsheet.png)
 
     - If you [downloaded intents from the classic experience](/docs/watson-assistant?topic=watson-assistant-migrate-intents-entities#migrate-intents-download), the format for each line in the file is as follows:
-        ```
+        ```text
         <phrase>,<intent>
         ```
         where `<phrase>` is the text of a user example phrase, and `<intent>` is the name of the intent. For example:
-        ```
+        ```text
         Tell me the current weather conditions.,weather_conditions
         Is it raining?,weather_conditions
         What's the temperature?,weather_conditions
@@ -141,9 +141,9 @@ You can control things like the wording your assistant uses to introduce the cla
 
 To customize clarification, complete the following steps:
 
-1.  From the **Actions** page, click the **Global settings** icon ![Gear icon](images/gear-icon-blue.png) in the page header.
+1. From the **Actions** page, click the **Global settings** icon ![Gear icon](images/gear-icon-blue.png) in the page header.
 
-1.  On the **Ask clarifying question** tab, you can make the following changes:
+1. On the **Ask clarifying question** tab, you can make the following changes:
 
     - In the **Assistant says** field, edit the text that is displayed before the list of clarification choices.
 
@@ -154,7 +154,7 @@ To customize clarification, complete the following steps:
 
       This fallback choice gives customers a way to get out of the clarification process if it's not helping them. If you don't want to give customers a fallback choice, remove the text from the field.
 
-1.  Optionally, review and improve your action names.
+1. Optionally, review and improve your action names.
 
     If an action name is too long or doesn't reflect the purpose of the action, edit it. Use a name that is concise and represents the overall goal of the action, such as `Open an account` or `Cancel an order`.
 
@@ -172,11 +172,12 @@ To disable clarification for all actions:
 1.  Click **Save**, and then click **Close**.
 
 ### Excluding an action from clarifying questions
+{: #understand-questions-exclude-from-clarifying}
 
 You can also prevent a single action from being included in the list of choices during clarification. To exclude an action from clarification:
 
-1.  From the action editor, click the **Action settings** icon ![Gear icon](images/gear-icon-black.png)
-1.  In Action Settings, toggle the **Ask clarifying question** switch to **Off**.
+1. From the action editor, click the **Action settings** icon ![Gear icon](images/gear-icon-black.png)
+1. In Action Settings, toggle the **Ask clarifying question** switch to **Off**.
 
 ## Coordinating how multiple actions start
 {: #understand-questions-multiple-actions}
@@ -184,6 +185,8 @@ You can also prevent a single action from being included in the list of choices 
 As you work on your assistant, it's a good idea to coordinate customer phrase examples across multiple actions. It's important to distinguish how each action is triggered. When a user enters a question or request, the phrase is evaluated across all the **Customer starts with** examples in every action. If two actions have similar phrase examples, then the wrong action might get triggered by your user's question.
 
 ### Confidence scoring
+{: #understand-questions-confidence-scoring}
+
 Behind the scenes, Watson Assistant determines a confidence score for each phrase. The score is absolute, meaning that a confidence score is assigned based on a predetermined scale, and not relative to other customer phrases. This approach adds flexibility in case multiple questions or requests are detected in a single user input. It also means that the system might not trigger an action at all, if a phrase has a low confidence score. As confidence scores change, your action examples might need restructuring.
 
 To learn more about review and testing confidence scores, see [Action confidence score](/docs/watson-assistant?topic=watson-assistant-review#review-debug-confidence) in [Reviewing and debugging your work](/docs/watson-assistant?topic=watson-assistant-review).

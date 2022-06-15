@@ -52,9 +52,9 @@ Logs are stored for a different amount of time depending on your service plan. F
 
 To back up actions, download a JSON file and store it.
 
-1.  On the **Actions** page, click **Global settings** ![Gear icon](images/gear-icon-black.png).
+1. On the **Actions** page, click **Global settings** ![Gear icon](images/gear-icon-black.png).
 
-1.  On the **Upload/Download** tab, click the **Download** button.
+1. On the **Upload/Download** tab, click the **Download** button.
 
 ## Uploading
 {: #backup-restore-import}
@@ -64,13 +64,10 @@ To reinstate a backup copy of actions that you exported from another service ins
 If the {{site.data.keyword.conversationshort}} service changes between the time you export the actions and import it, due to functional updates that are regularly applied to instances in cloud-hosted continuous delivery environments, your imported actions might function differently than before.
 {: important}
 
-1.  On the **Actions** page, click **Global settings** ![Gear icon](images/gear-icon-black.png).
+1. On the **Actions** page, click **Global settings** ![Gear icon](images/gear-icon-black.png).
 
-1.  On the **Upload/Download** tab, drag and drop a JSON file onto the tab or click to select a file from your local system, then click **Upload**.
+1. On the **Upload/Download** tab, drag and drop a JSON file onto the tab or click to select a file from your local system, then click **Upload**.
 
     The imported JSON file must use UTF-8 encoding, without byte order mark (BOM) encoding. The JSON file cannot contain tabs, newlines, or carriage returns.
     {: important}
-
-    The maximum size for a skill JSON file is 10MB. If you need to import a larger skill, consider using the REST API. For more information, see the [API Reference](https://cloud.ibm.com/apidocs/assistant/assistant-v1#createworkspace){: external}.
-    {: tip}
 
