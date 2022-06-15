@@ -61,7 +61,7 @@ Because the rendering of an options response cannot be modified, we will do this
     }
     ```
 
-1. Create a handler for the [`customResponse`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external} event. This handler renders the custom buttons, using a custom `CardButton` style we can define in the CSS. (You can see the definition of this style in the [full example](/docs/watson-assistant?topic=watson-assistant-topicid){: external}.)
+1. Create a handler for the [`customResponse`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external} event. This handler renders the custom buttons, using a custom `CardButton` style we can define in the CSS. (You can see the definition of this style in the [full example](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/custom-buttons){: external}.)
 
     ```javascript
     function customResponseHandler(event) {
@@ -85,7 +85,7 @@ Because the rendering of an options response cannot be modified, we will do this
 
 3. Create a click handler to respond when the customer clicks on one of the custom buttons. In the handler, use the [`send()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#send){: external} instance method to send a message to the assistant, using the button label as the message text.
 
-    In addition, we're adding the custom CSS class `CardButton--selected` to the clicked button, changing its appearance to show that it was selected. ((This class is also defined in the [full example](/docs/watson-assistant?topic=watson-assistant-topicid){: external}.)
+    In addition, we're adding the custom CSS class `CardButton--selected` to the clicked button, changing its appearance to show that it was selected. (This class is also defined in the [full example](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/custom-buttons){: external}.)
 
     ```javascript
     function onClick(messageItem, button, fullMessage, itemIndex) {
