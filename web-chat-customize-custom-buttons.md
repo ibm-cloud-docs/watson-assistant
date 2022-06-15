@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-14"
+lastupdated: "2022-06-15"
 
 subcollection: watson-assistant
 
@@ -33,6 +33,9 @@ subcollection: watson-assistant
 This tutorial shows how you might replace the default rendering of an options response with your own custom clickable buttons.
 {: shortdesc}
 
+For a complete, working version of the example described in this tutorial, see [Custom buttons for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/custom-buttons){: external}.
+{: note}
+
 By default, the web chat always displays an options response as a set of clickable buttons (for 4 or fewer options) or as a drop-down list (for 5 or more more options). This example shows the default rendering of an options response with 3 options:
 
 ![Options response rendered as 3 buttons](images/web-chat-tutorial-custom-buttons-1.png)
@@ -42,9 +45,6 @@ For this tutorial, we will replace this default rendering with larger, card-styl
 ![Options response rendered as 3 custom card-style buttons](images/web-chat-tutorial-custom-buttons-2.png)
 
 Because the rendering of an options response cannot be modified, we will do this by intercepting any incoming options responses from the assistant and converting them into custom (`user_defined`) responses. We can then implement a custom rendering for these responses.
-
-For a complete, working version of the example described in this tutorial, see [Custom buttons for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/custom-buttons){: external}.
-{: note}
 
 1. Create a handler for the [`pre:receive`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#prereceive){: external} event. In this handler, look for any `option` responses in the message payload, and convert them into `user_defined` responses.
 
@@ -61,7 +61,7 @@ For a complete, working version of the example described in this tutorial, see [
     }
     ```
 
-1. Create a handler for the [`customResponse`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external} event. This handler renders the custom buttons, using a `CardButton` style we can define in the CSS.
+1. Create a handler for the [`customResponse`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external} event. This handler renders the custom buttons, using a custom `CardButton` style we can define in the CSS. (You can see the definition of this style in the [full example](/docs/watson-assistant?topic=watson-assistant-topicid){: external}.)
 
     ```javascript
     function customResponseHandler(event) {
@@ -85,7 +85,7 @@ For a complete, working version of the example described in this tutorial, see [
 
 3. Create a click handler to respond when the customer clicks on one of the custom buttons. In the handler, use the [`send()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#send){: external} instance method to send a message to the assistant, using the button label as the message text.
 
-    In addition, we're adding the CSS class `CardButton--selected` to the clicked button, changing its appearance to show that it was selected.
+    In addition, we're adding the custom CSS class `CardButton--selected` to the clicked button, changing its appearance to show that it was selected. ((This class is also defined in the [full example](/docs/watson-assistant?topic=watson-assistant-topicid){: external}.)
 
     ```javascript
     function onClick(messageItem, button, fullMessage, itemIndex) {
@@ -96,7 +96,7 @@ For a complete, working version of the example described in this tutorial, see [
 
 4. If the user reloads the page or navigates to a different page, the web chat reloads from the session history. If this happens, we want to preserve the "selected" state of any clicked buttons.
 
-    To do this, in the `onClick` handler, use the [`updateHistoryUserDefined`](/docs/watson-assistant?topic=watson-assistant-topicid){: external} instance method to store a variable in the session history that indicates which button was clicked.
+    To do this, in the `onClick` handler, use the [`updateHistoryUserDefined`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateHistoryUserDefined){: external} instance method to store a variable in the session history that indicates which button was clicked.
 
     ```javascript
     webChatInstance.updateHistoryUserDefined(fullMessage.id, { selectedIndex:     itemIndex });
