@@ -82,9 +82,9 @@ If necessary, you can disable changing the topic for all actions:
 
 **Algorithms versions** allows you to choose which version of {{site.data.keyword.conversationshort}} algorithms to apply to your future trainings. 
 
-You can choose to use the more stable and fully supported version of algorithms by selecting **Baseline**. This is the latest mature version that you may want to use for your live assistant. Or, you can choose **Beta** to preview and test what is coming. The capability in the beta version at any given time is likely to become the baseline version later on.
+You can choose to use the more stable and fully supported version of algorithms by selecting **Baseline**. This is the latest mature version that you might want to use for your live assistant. Or you can choose **Beta** to preview and test what is coming. The capability in the beta version at any given time is likely to become the baseline version later on.
 
-The baseline and beta versions are labeled with dates, for example, **Baseline (2022-06-01)** or **Beta (2022-06-10)**. This refers to the release of a specific baseline or beta version. You can consult the [{{site.data.keyword.conversationshort}} release notes](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes) for details of updates made in that algorithms version release.
+The baseline and beta versions are labeled with dates such as **Baseline (2022-06-01)** or **Beta (2022-06-10)**. This refers to the release of a specific baseline or beta version. You can consult the [{{site.data.keyword.conversationshort}} release notes](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes) for details of updates made in that algorithms version release.
 
 Algorithm version options are currently available for Chinese (Simplified), English, French, German, Italian, Portuguese, Spanish and the Universal Language model. Other languages use default algorithm versions.
 
@@ -127,5 +127,3 @@ On the **Upload/Download** tab, drag and drop a JSON file onto the tab or click 
 
 The imported JSON file must use UTF-8 encoding, without byte order mark (BOM) encoding. The JSON file cannot contain tabs, newlines, or carriage returns.
 {: important}
-
-
