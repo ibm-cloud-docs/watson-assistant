@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-01"
+lastupdated: "2022-06-16"
 
 subcollection: watson-assistant
 
@@ -118,7 +118,7 @@ To see these variables, click **Variables** in the navigation pane from the main
 ## Storing a value in a session variable
 {: #store-session-variable}
 
-Any action can store a value in a session variable so it is availble to other actions. To store a value in a session variable:
+Any action can store a value in a session variable so it is available to other actions. To store a value in a session variable:
 
 1. From within a step, choose the **Set variable values** ![Set variable values icon](images/set-variable-values.png) icon.
 

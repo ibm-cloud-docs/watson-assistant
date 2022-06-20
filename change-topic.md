@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-10-06"
+lastupdated: "2022-06-15"
 
 subcollection: watson-assistant
 
@@ -34,6 +34,7 @@ In general, an action is designed to lead a customer through a particular proces
 The **Change conversation topic** feature enables your assistant to handle these digressions, dynamically responding to the user by changing the conversation topic as needed.
 
 ## How changing the topic works
+{: #change-topic-how}
 
 This example shows a customer changing the conversation topic while entering credit-card information. When the assistant asks `What is your CVV number?`, the customer (who is new to credit cards) asks what a CVV is. The assistant is designed to handle this possibility, so it switches to a different action that answers the customer's question. It then continues where it left off.
 
@@ -53,6 +54,7 @@ The assistant determines when to change the conversation topic as follows:
 1. After the second action completes, the assistant returns to the original action, continuing with the step where the customer changed the topic. In the example, after answering the customer's question, the assistant returns to the original action and repeats the question `What is your CVV number?`.
 
 ## Enabling and disabling changing the topic
+{: #change-topic-enable}
 
 By default, the **Change conversation topic** feature is enabled for all assistants and actions. You don't have to do anything to take advantage of this feature.
 
@@ -60,14 +62,14 @@ However, some processes are best completed without interruption, so you might wa
 
 To disable changing the topic for all actions:
 
-1. From the **Actions** page of the assistant, click the **Global settings** icon ![Gear icon](images/gear-icon-blue.png).
+1. From the **Actions** page of the assistant, click **Global settings** ![Gear icon](images/gear-icon-black.png).
 
-1. In the Global Settings window, click the **Change conversation topic** tab.
+1. On the **Change conversation topic** tab, set the switch to **Off**.
 
-1. Toggle the switch to **Off**.
+1. Click **Save**, and then click **Close**.
 
 To disable changing the topic for an individual action:
 
-1. While editing the action, click the click the **Action settings** icon ![Gear icon](images/gear-icon-black.png).
+1. While editing the action, click **Action settings** ![Gear icon](images/gear-icon-black.png).
 
 1. In the Action Settings window, toggle the **Change conversation topic** switch to **Off**.
