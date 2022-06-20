@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-02"
+lastupdated: "2022-06-20"
 
 subcollection: watson-assistant
 
@@ -52,15 +52,9 @@ If you are a developer, you can further customize and extend the web chat by wri
 
 The following documentation topics provide more information about the capabilities of the web chat integration, how to configure and deploy it, and how to customize it.
 
-![GUI icon](images/gui_icon.png) **Configuring and deploying**: Information for domain experts who are using the {{site.data.keyword.conversationshort}} user interface to configure and deploy the web chat
+- [How the web chat works](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture.md): Overview of web chat capabilities and architecture
+- [Embedding the web chat on your page](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat): How to embed the web chat widget on your website
+- [Web chat setup](/docs/watson-assistant?topic=watson-assistant-web-chat-config): How to configure the web chat using the integration settings
+- [Web chat development](/docs/watson-assistant?topic=watson-assistant-web-chat-config): How to customize and extend the web chat by writing code
+- [Adding service desk support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat-haa): How to integrate the web chat with a contact center platform so you can connect your customers to human agents
 
-- [How the web chat works](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture.md)
-- [Embedding the web chat on your page](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat)
-- [Configuring the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-config)
-- [Adding service desk support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat-haa)
-
-![Development icon](images/development_icon.png) **Customizing**: Information for developers who are writing code to customize or extend the web chat
-
-- [Customizing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-customize)
-- [Securing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security)
-- [Service desk starter kits](/docs/watson-assistant?topic=watson-assistant-web-chat-service-desk-starter-kits)

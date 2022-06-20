@@ -27,13 +27,13 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Web chat configuration overview
+# Web chat setup overview
 {: #web-chat-config}
 
 You can modify the web chat integration settings to configure the styling and appearance of the web chat.
 {: shortdesc}
 
-You can quickly deploy and test the web chat integration using the default configuration. However, before you go to production with your chatbot, you will need to configure the web chat to integrate with your website and better serve the needs of your customers.
+You can quickly deploy and test the web chat integration using the default settings. However, before you go to production with your chatbot, you will need to configure the web chat to integrate with your website and better serve the needs of your customers.
 
 At a minimum, you should update at least the following basic settings for your assistant:
 
@@ -54,7 +54,7 @@ To change the web chat configuration, follow these steps:
 
     The **Web chat** page opens, showing the settings for the web chat integration in the selected environment.
 
-## Configuration tasks
+## Setup tasks
 {: #web-chat-config-tasks}
 
 You can configure the web chat in the following ways:

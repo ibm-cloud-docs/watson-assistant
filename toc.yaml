@@ -73,37 +73,41 @@ toc:
           - web-chat-architecture.md
           - deploy-web-chat.md
           - topicgroup:
-            label: Web chat setup
-            topics:
-            - topic: web-chat-config.md
-              navtitle: Overview
-            - web-chat-style.md
-            - web-chat-home-screen.md
-            - web-chat-suggestions.md
-          - topicgroup:
-            label: Web chat development
-            topics:
-              - topic: web-chat-customize.md
+              label: Web chat setup
+              topics:
+              - topic: web-chat-config.md
                 navtitle: Overview
-              - web-chat-customize-home-screen.md
-              - web-chat-customize-userid.md
-              - web-chat-customize-strings.md
-              - web-chat-customize-global.md
-              - web-chat-security.md
-              - web-chat-customize-versions.md
+              - web-chat-style.md
+              - web-chat-home-screen.md
+              - web-chat-suggestions.md
           - topicgroup:
-            label: Adding service desk support
-            topics:
-            - topic: web-chat-service-desk.md
-              navtitle: Overview
-            - deploy-salesforce.md
-            - deploy-zendesk.md
-            - web-chat-service-desk-starter-kits.md
+              label: Web chat development
+              topics:
+                - topic: web-chat-customize.md
+                  navtitle: Overview
+                - web-chat-customize-home-screen.md
+                - web-chat-customize-userid.md
+                - web-chat-customize-strings.md
+                - web-chat-customize-global.md
+                - web-chat-security.md
+                - web-chat-customize-versions.md
           - topicgroup:
-            label: Tutorials
-            topics:
-              - topic: web-chat-customize-custom-buttons.md
-                navtitle: Implementing custom option buttons
+              label: Adding service desk support
+              topics:
+              - topic: web-chat-service-desk.md
+                navtitle: Overview
+              - deploy-salesforce.md
+              - deploy-zendesk.md
+              - web-chat-service-desk-starter-kits.md
+          - topicgroup:
+              label: Tutorials
+              topics:
+                - topic: web-chat-customize-download-transcript.md
+                  navtitle: Providing a downloadable transcript
+                - topic: web-chat-customize-custom-buttons.md
+                  navtitle: Implementing custom option buttons
+                - topic: web-chat-customize-launcher-home-screen.md
+                  navtitle: Dynamically changing the launcher and home screen
       - topicgroup:
           label: Deploying to other channels
           topics:
