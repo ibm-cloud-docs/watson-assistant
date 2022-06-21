@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-20"
+lastupdated: "2022-06-21"
 
 subcollection: watson-assistant
 
@@ -85,6 +85,7 @@ Customizing the home screen {: #home-screen}
 :   The home screen greets the customer and shows a list of suggested conversation starters. You can customize the style and content of the home screen:
 
     - To add elements to the home screen, you can define custom HTML using the [`writeableElements.homeScreenAfterStartersElement`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#writeableelements){: external} theming variable.
+
     - To change the home screen style, use [CSS helper classes](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-render#helper_classes){: external}.
 
 Customizing strings {: #strings}
