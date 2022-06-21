@@ -82,13 +82,16 @@ Customizing the look of the web chat {: #look}
  ![development icon](images/development-icon.png) **Tutorial:** For a tutorial that shows how to choose and customize a theme, see [Carbon themes](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-carbon-themes){: external}.
 
 Customizing the home screen {: #home-screen}
-:   You can customize what is displayed in the home screen. For more information, see [Customizing the home screen](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-home-screen).
+:   The home screen greets the customer and shows a list of suggested conversation starters. You can customize the style and content of the home screen:
+
+    - To add elements to the home screen, you can define custom HTML using the [`writeableElements.homeScreenAfterStartersElement`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#writeableelements){: external} theming variable.
+    - To change the home screen style, use [CSS helper classes](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-render#helper_classes){: external}.
 
 Customizing strings {: #strings}
-:   You can customize the strings that define the various labels and hardcoded phrases displayed by the web chat. For more information, see [Customizing strings](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-strings).
+:   You can customize the strings that define the various labels and hardcoded phrases displayed by the web chat. To customize strings, use the [`updateLanguagePack()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatelanguagepack){: external} instance method to replace strings in the current language pack. For more information, see [Languages](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#languages){: external}.
 
 Supporting global audiences {: #global-audiences}
-:   You can change the language of the strings displayed by the web chat to match the language used by the assistant. For more information, see [Supporting global audiences](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-global).
+:   By default, the strings displayed by the web chat are in English. To change to a different language, use the [`updateLanguagePack()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatelanguagepack){: external} instance method to replace the current language pack with one of the available translated language packs. For more information, see [Supporting global audiences](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-global).
 
 ### Opening, closing, and rendering the web chat window
 {: #web-chat-customize-open}
