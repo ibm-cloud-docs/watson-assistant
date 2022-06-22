@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-05-19"
+lastupdated: "2022-06-21"
 
 subcollection: watson-assistant
 
@@ -96,11 +96,7 @@ For information about how to add a service desk integration to the web chat, see
 
 ## Technical details
 
-The web chat is displayed on your web site by a short JavaScript code snippet, which calls additional JavaScript code that is hosted by IBM Cloud. The hosted code is automatically updated with new features and fixes, so by default you will always have the latest version. (You can optionally [lock to a specific version](/docs/watson-assistant?topic=watson-assistant-web-chat-customize) if you prefer to control upgrades yourself.)
-
-![Plus or higher plans only](images/plus.png) For environments where private endpoints are in use, keep in mind that the web chat integration sends traffic over the internet.
-<!--- For more information, see [Private network endpoints](/docs/assistant?topic=assistant-security#security-private-endpoints){: external}.
-{: note} --->
+The web chat is displayed on your web site by a short JavaScript code snippet, which calls additional JavaScript code that is hosted by {{site.data.keyword.cloud_notm}}. The hosted code is automatically updated with new features and fixes, so by default you will always have the latest version. (You can optionally [lock to a specific version](/docs/watson-assistant?topic=watson-assistant-web-chat-customize) if you prefer to control upgrades yourself.)
 
 The code snippet that creates the web chat widget includes a configuration object, which you can modify to change the appearance and behavior of the web chat. The configuration object also specifies details that enable the web chat to connect to your assistant. If you are comfortable writing JavaScript code, you can customize the web chat by modifying the code snippet and using the web chat API.
 

@@ -79,7 +79,7 @@ Customizing the look of the web chat {: #look}
 
     - You can also set individual variables within the theme to customize specific UI elements. For example, the text that is displayed in the chat window uses the fonts `IBMPlexSans, Arial, Helvetica, sans-serif`. If you want to use a different font, you can specify it by using the [`instance.updateCSSVariables()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecssvariables){: external} method.
 
- ![development icon](images/development-icon.png) **Tutorial:** For a tutorial that shows how to choose and customize a theme, see [Carbon themes](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-carbon-themes){: external}.
+    ![development icon](images/development-icon.png) **Tutorial:** For a tutorial that shows how to choose and customize a theme, see [Carbon themes](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-carbon-themes){: external}.
 
 Customizing the home screen {: #home-screen}
 :   The home screen greets the customer and shows a list of suggested conversation starters. You can customize the style and content of the home screen:
@@ -123,25 +123,33 @@ Intercepting and modifying messages {: #modify-messages}
     ![development icon](images/development-icon.png) **Tutorial:** For a tutorial showing how to use the `pre:receive` event to intercept and modify incoming messages, see [Tutorial: implementing custom option buttons in the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-custom-buttons).
 
 Rendering custom response types {: #custom-response-types}
-:   If your assistant sends specialized responses using a custom (`user_defined`) response type, you can implement a custom view to display these responses in the web chat window.
+:   If your assistant sends specialized responses using a custom (`user_defined`) response type, you can implement a custom view to display these responses in the web chat window. To do this, subscribe to the [`customResponse`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external} event, which is fired each time a `user_defined` response is received. In your event handler method, you can then read the contents of the response and render the output using your own elements.
 
     ![development icon](images/development-icon.png) **Tutorial:** For a tutorial showing how to render a custom response type as a replacement for the default options response, see [Tutorial: implementing custom option buttons in the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-custom-buttons).
 
 Implementing a contact center integration {: #contact-center}
-:   You can use one of the web chat starter kits to integrate with a contact center (service desk) platform other than the ones available in as {{site.data.keyword.conversationshort}} integrations. For more information, see [Service desk starter kits](/docs/watson-assistant?topic=watson-assistant-web-chat-service-desk-starter-kits).
+:   You can use one of the web chat starter kits to integrate with a contact center (service desk) platform other than the ones available in as {{site.data.keyword.conversationshort}} integrations. Fully functional reference implementations are available for several contact center platforms; in addition, you can use a starter kit to develop a custom integration with the platform of your choice.
+
+    For more information, see [Service desk starter kits](/docs/watson-assistant?topic=watson-assistant-web-chat-service-desk-starter-kits).
 
 ### Managing data
 {: #web-chat-customize-data}
 
 Managing user identity information {: #user-id}
-:   You can control the user identity information the web chat sends to the assistant. For more information, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-userid).
+:   The web chat associates a user ID with each message it sends to the assistant; this user ID is used for user-based billing and other purposes. You can either allow the web chat to generate an anonymous ID for each user, or you can control the user ID yourself.
+
+    Depending on whether you have enabled security for the web chat, you can use either the [`updateUserID`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateuserid){: external} instance method or the [`updateIdentityToken`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateidentity){: external} method to specify user identity information.
+
+    For more information about how user identity information is specified and how it is used, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-userid).
 
 ### Administration
 {: #web-chat-customize-admin}
 
 Securing the web chat {: #secure-web-chat}
-:   You can secure the web chat to support user authentication and protect private data. For more information, see [Securing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security).
+:   To secure the web chat, you can use JSON Web Token (JWT) to authenticate users and encrypt private data. For more information, see [Securing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security).
 
 Controlling the web chat version {: #web-chat-version}
-:   You can control which version of the web chat your website uses, in order to avoid unexpected changes when a new version is released. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-versions).
+:   The web chat code hosted by {{site.data.keyword.cloud_notm}} is regularly updated with improvements and new features. By default, the embed script automatically uses the latest version of the web chat. To avoid unexpected changes that might affect your website, you might want to control which version of the web chat your website uses, giving you an opportunity to test each new version before you deploy in in production., in order to avoid unexpected changes when a new version is released.
+
+    For more information about web chat versioning, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-versions).
 
