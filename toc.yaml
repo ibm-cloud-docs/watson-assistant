@@ -67,7 +67,7 @@ toc:
           - preview-share.md
           - publish.md
       - topicgroup:
-          label: Adding the assistant to your website  
+          label: Adding the assistant to your website
           topics:
           - topic: web-chat-overview.md
             navtitle: Overview
@@ -107,8 +107,6 @@ toc:
                   navtitle: Providing a downloadable transcript
                 - topic: web-chat-customize-custom-buttons.md
                   navtitle: Implementing custom option buttons
-                - topic: web-chat-customize-launcher-home-screen.md
-                  navtitle: Dynamically changing the launcher and home screen
       - topicgroup:
           label: Deploying to other channels
           topics:

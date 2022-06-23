@@ -35,7 +35,7 @@ You can modify the web chat integration settings to configure the styling and ap
 
 You can quickly deploy and test the web chat integration using the default settings. However, before you go to production with your chatbot, you will need to configure the web chat to integrate with your website and better serve the needs of your customers.
 
-At a minimum, you should update at least the following basic settings for your assistant:
+At a minimum, you should update the following basic settings for your assistant:
 
 - The [assistant name](/docs/watson-assistant?topic=watson-assistant-web-chat-style) that you want to show to your customers
 - The contents of the [home screen](/docs/watson-assistant?topic=watson-assistant-web-chat-home-screen)
