@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-13"
+lastupdated: "2022-06-27"
 
 subcollection: watson-assistant
 
@@ -37,7 +37,7 @@ You can use the Segment extension to send {{site.data.keyword.conversationshort}
 ## Overview
 {: #segment-overview}
 
-Overview of Segment integration
+With this extension, you can use [Segment](https://segment.com/){: external} to capture and centralize data about your customers' behavior, including their interactions with your assistant. Events are sent from {{site.data.keyword.conversationshort}} to Segment, making them available to destinations such as data warehouses, raw data tools, and analytic tools.
 
 ## Adding the extension to the draft environment
 
