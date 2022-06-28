@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-16"
+lastupdated: "2022-06-24"
 keywords: settings
 subcollection: watson-assistant
 
@@ -31,7 +31,7 @@ subcollection: watson-assistant
 Use **Global settings** to configure features across all actions.
 {: shortdesc}
 
-On the **Actions** page, click **Global settings** ![Gear icon](images/gear-icon-black.png). 
+On the **Actions** page, click **Global settings** ![Gear icon](images/gear-icon-black.png).
 
 ![Global settings](images/global-settings.png)
 
@@ -53,7 +53,7 @@ On the **Ask clarifying question** tab, you can make the following changes:
 - In the **Assistant says** field, edit the text that is displayed before the list of clarification choices.
 
     The default text is *Did you mean:*. You can change it to something else, such as *What do you want to do?* or *Pick what to do next*.
-    
+
 - In the **Label for a fallback choice** field, edit the label that is displayed for the choice that customers can click when none of the other choices are quite right. When a user picks this choice, the *No action matches* system action is taken next.
 
     The label *None of the above* is used if you don't change it.  
@@ -80,13 +80,13 @@ If necessary, you can disable changing the topic for all actions:
 ## Algorithms versions
 {: #actions-global-settings-algorithms-versions}
 
-**Algorithms versions** allows you to choose which version of {{site.data.keyword.conversationshort}} algorithms to apply to your future trainings. 
+**Algorithms versions** allows you to choose which version of {{site.data.keyword.conversationshort}} algorithms to apply to your future trainings.
 
 You can choose to use the more stable and fully supported version of algorithms by selecting **Baseline**. This is the latest mature version that you might want to use for your live assistant. Or you can choose **Beta** to preview and test what is coming. The capability in the beta version at any given time is likely to become the baseline version later on.
 
 The baseline and beta versions are labeled with dates such as **Baseline (2022-06-01)** or **Beta (2022-06-10)**. This refers to the release of a specific baseline or beta version. You can consult the [{{site.data.keyword.conversationshort}} release notes](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes) for details of updates made in that algorithms version release.
 
-Algorithm version options are currently available for Chinese (Simplified), English, French, German, Italian, Portuguese, Spanish and the Universal Language model. Other languages use default algorithm versions.
+Algorithm version options are currently available for Chinese (Simplified), Chinese (Traditional), English, French, German, Japanese, Korean, Italian, Portuguese, Spanish and the Universal Language model. Other languages use default algorithm versions.
 
 ## Auto-save
 {: #actions-global-settings-auto-save}

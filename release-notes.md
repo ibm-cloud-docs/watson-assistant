@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-16"
+lastupdated: "2022-06-24"
 
 keywords: Watson Assistant release notes
 
@@ -38,11 +38,18 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 24 June 2022
+{: #assistant-jun242022}
+{: release-note}
+
+Algorithms versions available in more languages
+:   Algorithms version options are now available in Chinese (Traditional), Japanese, and Korean. Algorithms versions allows you to choose which version of {{site.data.keyword.conversationshort}} algorithms to apply to your future trainings. For more information, see [Algorithm versions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-algorithms-versions).
+
 ## 16 June 2022
 {: #watson-assistant-jun162022}
 {: release-note}
 
-Algorithms versions 
+Algorithms versions
 :   Algorithms versions allows you to choose which version of {{site.data.keyword.conversationshort}} algorithms to apply to your future trainings. You can choose to use the more stable and fully supported version of algorithms by selecting **Baseline**. This is the latest mature version that you may want to use for your live assistant. Or, you can choose **Beta** to preview and test what is coming. For more information, see [Algorithm versions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-algorithms-versions).
 
 Algorithm beta version (2022-06-10)
