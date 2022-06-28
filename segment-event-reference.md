@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2022-06-13"
+lastupdated: "2022-06-28"
 
 subcollection: watson-assistant
 
@@ -36,7 +36,7 @@ Only events generated using the {{site.data.keyword.conversationshort}} v2 API a
 ## Message Handled
 {: #segment-event-reference-message-handled}
 
-Need precise description (i.e. exactly when this event is sent).
+Sent when the assistant completes handling of a message.
 
 | Property          | Type     | Description |
 |-------------------|----------|-------------|
@@ -61,9 +61,10 @@ The following properties are included only for messages that were handled by an 
 | `actionCompletedReason` | String   | The reason the action completed (for example, `all_steps_done` or `fallback`.) |
 | `actionStarted`         | Boolean  | Whether processing of the action started during handling of the message. |
 | `actionTitle`           | String   | The title of the action that was visited during handling of the message (for example, `I want to pay my bill`). |
+| `actionsVisited`        | String[] | An array of strings listing the actions visited during handling of the message. |
 | `fallbackReason`        | String   | The reason why the fallback action was visisted (for example, escalated to human agent or no action matches). |
 | `handler`               | String   | The name of any handler that was called. |
-| `stepsVisited`          | String[] | An array of strings listing the steps visited during handling of the message. For steps of subactions, the step name is prefixed with the action name. |
+| `stepsVisited`          | String[] | An array of strings listing the steps visited during handling of the message. Each step name is prefixed with the action name. |
 | `subaction`             | String   | The name of any subaction that was called during handling of the message. |
 
 The following properties are included only for messages that were handled by a dialog skill:
@@ -77,7 +78,7 @@ The following properties are included only for messages that were handled by a d
 ## Action Started
 {: #segment-event-reference-action-started}
 
-Sent when processing of an action begins.
+Sent when processing of an action (including subactions) begins.
 
 | Property                | Type     | Description |
 |-------------------------|----------|-------------|
@@ -98,12 +99,13 @@ Sent when processing of an action begins.
 | `serviceInstance`       | String   | The IBM Watson Assistant service instance. |
 | `sessionId`             | String   | The ID of the session during which the message that started the action was sent. |
 | `skillsInvoked`         | String[] | An array of strings listing all skills that were invoked during handling of the message that started the action (for example, `main skill` or `actions skill`). |
+| `stepsVisited`          | String[] | An array of strings listing the steps visited during processing of the action. |
 | `subaction`             | String   | The name of any subaction that was called. |
 
 ## Action Completed
 {: #segment-event-reference-action-completed}
 
-Sent when processing of an action ends.
+Sent when processing of an action (including subactions) ends.
 
 | Property                | Type     | Description |
 |-------------------------|----------|-------------|
@@ -124,6 +126,7 @@ Sent when processing of an action ends.
 | `serviceInstance`       | String   | The IBM Watson Assistant service instance. |
 | `sessionId`             | String   | The ID of the session during which the message that started the action was sent. |
 | `skillsInvoked`         | String[] | An array of strings listing all skills that were invoked during handling of the message that started the action (for example, `main skill` or `actions skill`). |
+| `stepsVisited`          | String[] | An array of strings listing the steps visited during processing of the action. |
 | `subaction`             | String   | The name of any subaction that was called by the action. |
 
 ## Session Started
