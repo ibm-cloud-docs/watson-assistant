@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-03"
+lastupdated: "2022-06-27"
 
 subcollection: watson-assistant
 
@@ -72,6 +72,8 @@ The OpenAPI document must satisfy the following requirements and restrictions:
 - Schemas defined using `anyOf`, `oneOf`, and `allOf` are currently not supported.
 - Arrays are not supported in request bodies. If an operation takes arrays as optional parameters, the assistant will not be able to pass values for these parameters. Any operations that _require_ array parameters are disabled.
 - Any defined array properties are included in response bodies, but individual values inside an array are not mapped to action variables. These values can be accessed from an assistant only by writing expressions in the JSON editor.
+
+In addition, any call to the external API must complete within 30 seconds.
 
 ## Building the custom extension
 
