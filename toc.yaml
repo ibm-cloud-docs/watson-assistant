@@ -216,7 +216,6 @@ toc:
       topics:
       - faqs.md
       - troubleshoot.md
-      - feedback.md
       - topicgroup:
           label: Communities
           links:
