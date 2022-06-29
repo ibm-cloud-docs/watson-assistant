@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-28"
+lastupdated: "2022-06-29"
 
 subcollection: watson-assistant
 
@@ -28,7 +28,7 @@ subcollection: watson-assistant
 {{site.data.content.classiclink}}
 
 # Tutorial: Providing a downloadable conversation transcript
-{: #web-chat-customize-download-transcript}
+{: #web-chat-develop-download-transcript}
 
 You can customize the web chat to offer your customers the option of downloading a transcript of the conversation history.
 {: shortdesc}

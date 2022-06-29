@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-21"
+lastupdated: "2022-06-29"
 
 subcollection: watson-assistant
 
@@ -28,7 +28,7 @@ subcollection: watson-assistant
 {{site.data.content.classiclink}}
 
 # Managing user identity information
-{: #web-chat-customize-userid}
+{: #web-chat-develop-userid}
 
 Watson Assistant charges based on the number of unique monthly active users (MAU).
 
@@ -70,7 +70,7 @@ In the following example, the user ID `L12345` is added to the script.
 {: codeblock}
 
 ## Apple devices
-{: #web-chat-customize-billing-apple}
+{: #web-chat-develop-billing-apple}
 
 On Apple devices, the Intelligent Tracking Prevention feature automatically deletes any client-side cookie after 7 days. This means that if an anonymous customer accesses your website and then visits again two weeks later, the two visits are treated as two different MAUs.
 

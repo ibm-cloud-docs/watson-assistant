@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-15"
+lastupdated: "2022-06-29"
 
 subcollection: watson-assistant
 
@@ -28,7 +28,7 @@ subcollection: watson-assistant
 {{site.data.content.classiclink}}
 
 # Tutorial: implementing custom option buttons in the web chat
-{: #web-chat-customize-custom-buttons}
+{: #web-chat-develop-custom-buttons}
 
 This tutorial shows how you might replace the default rendering of an options response with your own custom clickable buttons.
 {: shortdesc}

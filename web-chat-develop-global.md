@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-06"
+lastupdated: "2022-06-29"
 
 subcollection: watson-assistant
 
@@ -28,7 +28,7 @@ subcollection: watson-assistant
 {{site.data.content.classiclink}}
 
 # Supporting global audiences
-{: #web-chat-customize-global}
+{: #web-chat-develop-global}
 
 You can build an assistant that understands customer messages in any of the languages that are supported by the service. <!-- For more information, see [Supported languages](/docs/watson-assistant?topic=watson-assistant-language-support).--> The responses from your assistant are defined by you and can be written in any language you want.
 

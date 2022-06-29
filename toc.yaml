@@ -84,14 +84,14 @@ toc:
           - topicgroup:
               label: Web chat development
               topics:
-                - topic: web-chat-customize.md
+                - topic: web-chat-develop.md
                   navtitle: Overview
-                - web-chat-customize-home-screen.md
-                - web-chat-customize-userid.md
-                - web-chat-customize-strings.md
-                - web-chat-customize-global.md
+                - web-chat-develop-home-screen.md
+                - web-chat-develop-userid.md
+                - web-chat-develop-strings.md
+                - web-chat-develop-global.md
                 - web-chat-security.md
-                - web-chat-customize-versions.md
+                - web-chat-develop-versions.md
           - topicgroup:
               label: Adding service desk support
               topics:
@@ -103,9 +103,9 @@ toc:
           - topicgroup:
               label: Tutorials
               topics:
-                - topic: web-chat-customize-download-transcript.md
+                - topic: web-chat-develop-download-transcript.md
                   navtitle: Providing a downloadable transcript
-                - topic: web-chat-customize-custom-buttons.md
+                - topic: web-chat-develop-custom-buttons.md
                   navtitle: Implementing custom option buttons
       - topicgroup:
           label: Deploying to other channels

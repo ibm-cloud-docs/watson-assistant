@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-05-25"
+lastupdated: "2022-06-29"
 
 subcollection: watson-assistant
 
@@ -95,4 +95,4 @@ To add the web chat to your website, follow these steps:
 
 You can now test your assistant and see its responses just as your customers would.
 
-Before you go to production with the web chat, however, you will probably want to customize it for your site and for the needs of your customers. For more information, see [Customizing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-customize).
+Before you go to production with the web chat, however, you will probably want to customize it for your site and for the needs of your customers. For more information, see [Web chat development overview](/docs/watson-assistant?topic=watson-assistant-web-chat-develop).

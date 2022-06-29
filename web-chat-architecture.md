@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-21"
+lastupdated: "2022-06-29"
 
 subcollection: watson-assistant
 
@@ -96,7 +96,7 @@ For information about how to add a service desk integration to the web chat, see
 
 ## Technical details
 
-The web chat is displayed on your web site by a short JavaScript code snippet, which calls additional JavaScript code that is hosted by {{site.data.keyword.cloud_notm}}. The hosted code is automatically updated with new features and fixes, so by default you will always have the latest version. (You can optionally [lock to a specific version](/docs/watson-assistant?topic=watson-assistant-web-chat-customize) if you prefer to control upgrades yourself.)
+The web chat is displayed on your web site by a short JavaScript code snippet, which calls additional JavaScript code that is hosted by {{site.data.keyword.cloud_notm}}. The hosted code is automatically updated with new features and fixes, so by default you will always have the latest version. (You can optionally [lock to a specific version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions) if you prefer to control upgrades yourself.)
 
 The code snippet that creates the web chat widget includes a configuration object, which you can modify to change the appearance and behavior of the web chat. The configuration object also specifies details that enable the web chat to connect to your assistant. If you are comfortable writing JavaScript code, you can customize the web chat by modifying the code snippet and using the web chat API.
 
@@ -140,7 +140,7 @@ By default, the web chat displays hardcoded labels and messages in English, but 
 
 In whichever language you are using, you can also customize the text of any hardcoded strings.
 
-For more information, see [Supporting global audiences](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-global).
+For more information, see [Supporting global audiences](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-global).
 
 ### Billing
 {: #web-chat-architecture-billing}
@@ -149,10 +149,10 @@ Watson Assistant charges based on the number of unique monthly active users (MAU
 
 By default, the web chat creates a unique, anonymous ID the first time a new user starts a session. This identifier is stored in a first-party cookie, which remains active for 45 days. If the same user returns to your site and chats with your assistant again while this cookie is still active, the web chat integration recognizes the user and uses the same user ID. This means that you are charged only once per month for the same anonymous user.
 
-On Apple devices, the Intelligent Tracking Prevention feature automatically deletes any client-side cookie after 7 days. This means that if an anonymous customer accesses your website and then visits again two weeks later, the two visits are treated as two different MAUs. For information about how to avoid this problem, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-userid).
+On Apple devices, the Intelligent Tracking Prevention feature automatically deletes any client-side cookie after 7 days. This means that if an anonymous customer accesses your website and then visits again two weeks later, the two visits are treated as two different MAUs. For information about how to avoid this problem, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-userid).
 {: important}
 
-For information about how to customize the handling of user identity information for billing purposes, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-customize-userid).
+For information about how to customize the handling of user identity information for billing purposes, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-userid).
 
 The usage is measured differently depending on the plan type. For Lite plans, usage is measured by the number of `/message` calls (API) are sent to the assistant from the web chat integration. For all other plans, usage is measured by the number of monthly active users (MAU) that the web chat interacts with. The maximum number of allowed MAUs differs depending on your {{site.data.keyword.conversationshort}} plan type.
 
