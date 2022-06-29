@@ -128,9 +128,9 @@ Rendering custom response types {: #custom-response-types}
     ![development icon](images/development-icon.png) **Tutorial:** For a tutorial showing how to render a custom response type as a replacement for the default options response, see [Tutorial: implementing custom option buttons in the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-custom-buttons).
 
 Implementing a contact center integration {: #contact-center}
-:   You can use one of the web chat starter kits to integrate with a contact center (service desk) platform other than the ones available in as {{site.data.keyword.conversationshort}} integrations. Fully functional reference implementations are available for several contact center platforms; in addition, you can use a starter kit to develop a custom integration with the platform of your choice.
+:   You can use one of the web chat starter kits to integrate with a contact center (service desk) platform other than the ones available in as built-in {{site.data.keyword.conversationshort}} integrations. Fully functional reference implementations are available for several contact center platforms; in addition, you can use a starter kit to develop a custom integration with the platform of your choice.
 
-    For more information, see [Contact center starter kits](/docs/watson-assistant?topic=watson-assistant-web-chat-service-desk-starter-kits).
+    For more information, see [Adding contact center support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat-haa).
 
 ### Managing data
 {: #web-chat-develop-data}

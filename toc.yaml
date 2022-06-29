@@ -99,7 +99,6 @@ toc:
                 navtitle: Overview
               - deploy-salesforce.md
               - deploy-zendesk.md
-              - web-chat-service-desk-starter-kits.md
           - topicgroup:
               label: Tutorials
               topics:
