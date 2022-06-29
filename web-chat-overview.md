@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-20"
+lastupdated: "2022-06-29"
 
 subcollection: watson-assistant
 
@@ -56,5 +56,5 @@ The following documentation topics provide more information about the capabiliti
 - [Embedding the web chat on your page](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat): How to embed the web chat widget on your website
 - [Web chat setup](/docs/watson-assistant?topic=watson-assistant-web-chat-config): How to configure the web chat using the integration settings
 - [Web chat development](/docs/watson-assistant?topic=watson-assistant-web-chat-config): How to customize and extend the web chat by writing code
-- [Adding service desk support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat-haa): How to integrate the web chat with a contact center platform so you can connect your customers to human agents
+- [Adding contact center support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat-haa): How to integrate the web chat with a contact center platform so you can connect your customers to human agents
 

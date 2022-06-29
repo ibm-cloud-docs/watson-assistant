@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-05-25"
+lastupdated: "2022-06-29"
 
 subcollection: watson-assistant
 
@@ -27,20 +27,14 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Adding service desk support
+# Adding contact center support
 {: #deploy-web-chat-haa}
 
-You can configure the web chat to transfer a customer to a human customer support agent if the customer asks for help from a person. The following service desk integrations are supported:
+You can configure the web chat to transfer a customer to a human customer support agent if the customer asks for help from a person. The following contact center (service desk) integrations are supported:
 
 - [Zendesk](/docs/watson-assistant?topic=watson-assistant-deploy-zendesk) {: #deploy-web-chat-zendesk}
 - [Salesforce](/docs/watson-assistant?topic=watson-assistant-deploy-salesforce) {: #deploy-web-chat-salesforce}
 
-If you are comfortable writing code, you can use the service desk starter kits to integrate with other service desks. Starter kits are available for the following service desks:
+If you are comfortable writing code, you can use the contact center starter kits to integrate with contact center platforms such as Genesys Cloud and Twilio Flex. You can also use a starter kit to develop your own integration with the contact center platform of your choice.
 
-- Genesys Cloud
-- NICE inContact
-- Twilio Flex
-- Kustomer
-- Build your own
-
-For more information, see [Service desk starter kits](/docs/watson-assistant?topic=watson-assistant-web-chat-service-desk-starter-kits).
+For more information, see [Contact center starter kits](/docs/watson-assistant?topic=watson-assistant-web-chat-service-desk-starter-kits).

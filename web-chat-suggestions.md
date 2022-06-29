@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-01"
+lastupdated: "2022-06-29"
 
 subcollection: watson-assistant
 
@@ -50,9 +50,9 @@ To configure suggestions, complete the following steps:
 
 1. In the **Option label** field, type the text of the message that requests help from support. This message is shown as the label for the support option, which is included in the **Suggestions** window under the circumstances you specified in the previous step. If the customer clicks this option, the same message is sent to the assistant.
 
-    The message you specify should trigger an action that gives customers a way to connect with support. By default, the message `Connect with agent` is used. If your web chat is integrated with a service desk, this message initiates a transfer to a human agent. (For more information about integrating with a service desk, see [Adding service desk support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat-haa).)
+    The message you specify should trigger an action that gives customers a way to connect with support. By default, the message `Connect with agent` is used. If your web chat is integrated with a contact center platform, this message initiates a transfer to a human agent. (For more information about integrating with a contact center, see [Adding contact center support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat-haa).)
 
-    If your web chat is not integrated with a service desk, specify a message that helps your customers reach whatever form of support you do offer. If you offer a toll-free support line, you might add `Get the support line phone number`. Or if you offer an online support request form, you might add `Open a support ticket`.
+    If your web chat is not integrated with a contact center, specify a message that helps your customers reach whatever form of support you do offer. If you offer a toll-free support line, you might add `Get the support line phone number`. Or if you offer an online support request form, you might add `Open a support ticket`.
 
     Whether you use the default support message or add your own, make sure your action is designed to recognize the message and respond to it appropriately.
     <!--- For more information, see [Connecting customers with support](/docs/assistant?topic=assistant-dialog-support){: external}. --->

@@ -65,7 +65,7 @@ Customizing the conversation
 Managing data
 :   - [Managing user identity information](#user-id)
 
-Administration
+Security and administration
 :   - [Securing the web chat](#secure-web-chat)
     - [Controlling the web chat version](#web-chat-version)
 
@@ -130,7 +130,7 @@ Rendering custom response types {: #custom-response-types}
 Implementing a contact center integration {: #contact-center}
 :   You can use one of the web chat starter kits to integrate with a contact center (service desk) platform other than the ones available in as {{site.data.keyword.conversationshort}} integrations. Fully functional reference implementations are available for several contact center platforms; in addition, you can use a starter kit to develop a custom integration with the platform of your choice.
 
-    For more information, see [Service desk starter kits](/docs/watson-assistant?topic=watson-assistant-web-chat-service-desk-starter-kits).
+    For more information, see [Contact center starter kits](/docs/watson-assistant?topic=watson-assistant-web-chat-service-desk-starter-kits).
 
 ### Managing data
 {: #web-chat-develop-data}
@@ -142,7 +142,7 @@ Managing user identity information {: #user-id}
 
     For more information about how user identity information is specified and how it is used, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-userid).
 
-### Administration
+### Security and administration
 {: #web-chat-develop-admin}
 
 Securing the web chat {: #secure-web-chat}

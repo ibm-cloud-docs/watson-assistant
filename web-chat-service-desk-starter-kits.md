@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-05-25"
+lastupdated: "2022-06-29"
 
 subcollection: watson-assistant
 
@@ -27,10 +27,10 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Service desk starter kits
+# Contact center starter kits
 {: #web-chat-service-desk-starter-kits}
 
-Fully functional reference implementations are provided for the following service desks:
+Fully functional reference implementations are provided for the following contact center platforms:
 
 - [Genesys Cloud](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/genesys/webChat){: external}
 - [NICE inContact](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/incontact/webChat){: external}
@@ -41,6 +41,6 @@ Fully functional reference implementations are provided for the following servic
 The starter kit reference implementations, while functional, are examples only, and have not been vetted for production use. You should perform robust testing before deploying these integrations in production.
 {: important}
 
-After you set up a service desk integration, you must update your actions to ensure they understand user requests to speak to someone and can transfer the conversation properly.
+After you set up a contact center integration, you must update your actions to ensure they understand user requests to speak to someone and can transfer the conversation properly.
 <!--- For more information, see [Adding chat transfer support](/docs/assistant?topic=assistant-dialog-support#dialog-support-transfers){: external}. --->
 

@@ -88,11 +88,11 @@ For more information about how the web chat handles specific response types, see
 
 ## Human agent transfer
 
-The web chat supports transferring the customer to a human agent in situations the assistant can't handle. If you configure one of the supported service desk integrations, the web chat can open a separate chat window in which the customer can communicate with a human agent.
+The web chat supports transferring the customer to a human agent in situations the assistant can't handle. If you configure one of the supported contact center integrations, the web chat can open a separate chat window in which the customer can communicate with a human agent.
 
 Your assistant can then initiate a transfer in situations when the assistant is unable to handle a customer's requests. (For more information about initiating a transfer, see [Connecting to a human agent](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-human-agent).)
 
-For information about how to add a service desk integration to the web chat, see [Adding service desk support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat-haa).
+For information about how to add a contact center integration to the web chat, see [Adding contact center support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat-haa).
 
 ## Technical details
 
