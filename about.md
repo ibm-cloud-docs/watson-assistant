@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-05-25"
+lastupdated: "2022-06-30"
 
 keywords: chatbot, live chatbot, omnichannel
 
