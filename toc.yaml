@@ -71,22 +71,41 @@ toc:
           topics:
           - topic: web-chat-overview.md
             navtitle: Overview
+          - web-chat-architecture.md
           - deploy-web-chat.md
-          - web-chat-config.md
           - topicgroup:
-            label: Adding service desk support
-            topics:
-            - topic: web-chat-service-desk.md
-              navtitle: Overview
-            - deploy-salesforce.md
-            - deploy-zendesk.md
+              label: Web chat setup
+              topics:
+              - topic: web-chat-config.md
+                navtitle: Overview
+              - web-chat-style.md
+              - web-chat-home-screen.md
+              - web-chat-suggestions.md
           - topicgroup:
-            label: Advanced topics
-            topics:
-              - web-chat-customize.md
-              - web-chat-security.md
-              - web-chat-service-desk-starter-kits.md
-              - topic
+              label: Web chat development
+              topics:
+                - topic: web-chat-develop.md
+                  navtitle: Overview
+                - web-chat-develop-home-screen.md
+                - web-chat-develop-userid.md
+                - web-chat-develop-strings.md
+                - web-chat-develop-global.md
+                - web-chat-security.md
+                - web-chat-develop-versions.md
+          - topicgroup:
+              label: Adding service desk support
+              topics:
+              - topic: web-chat-service-desk.md
+                navtitle: Overview
+              - deploy-salesforce.md
+              - deploy-zendesk.md
+          - topicgroup:
+              label: Tutorials
+              topics:
+                - topic: web-chat-develop-download-transcript.md
+                  navtitle: Providing a downloadable transcript
+                - topic: web-chat-develop-custom-buttons.md
+                  navtitle: Implementing custom option buttons
       - topicgroup:
           label: Deploying to other channels
           topics:
@@ -218,7 +237,6 @@ toc:
       topics:
       - faqs.md
       - troubleshoot.md
-      - feedback.md
       - topicgroup:
           label: Communities
           links:

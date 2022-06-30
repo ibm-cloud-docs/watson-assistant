@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-15"
+lastupdated: "2022-06-30"
 
 subcollection: watson-assistant
 
@@ -35,10 +35,10 @@ The web chat change log lists changes ordered by version number. For more inform
 
 For information about new features and improvements to the core {{site.data.keyword.conversationshort}} product, see [Release notes](/docs/watson-assistant?topic=watson-assistant-release-notes).
 
-## Controlling the version
+## Controlling the web chat version
 {: #release-notes-chat-version}
 
-If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Versioning](/docs/watson-assistant?topic=watson-assistant-web-chat-customize#web-chat-customize-versions).
+If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
 
 ## 6.5.1
 {: #6.5.1}
@@ -104,7 +104,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
     The animations for the web chat panels have also been improved to make the whole experience more seamless and cohesive.
 
-- **Launcher**: The new web chat launcher bounces on two different occasions to attract attention and encourage customer engagement. For more information, see [Launcher appearance and behavior](/docs/watson-assistant?topic=watson-assistant-web-chat-overview#web-chat-overview-launcher).
+- **Launcher**: The new web chat launcher bounces on two different occasions to attract attention and encourage customer engagement. For more information, see [Launcher appearance and behavior](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture#web-chat-architecture-launcher).
 
 - **Launcher**: Support has been added to control what text the launcher greets the user with, and when the greeting message is shown. For more information, see [Launcher](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#launcher){: external}.
 
@@ -133,7 +133,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 - **API version**: The web chat now uses the `2021-11-27` version of the {{site.data.keyword.conversationshort}} API. Previously it used the `2020-09-24` API version. For information about API changes that have been introduced since the `2020-09-24` version, see the release notes for [27 November 2021](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes#watson-assistant-nov272021) and [16 July 2021](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes#watson-assistant-jul162021).
 
-- **Launcher**: The new web chat launcher welcomes and engages customers so they know where to find help if they need it. For more information, see [Launcher appearance and behavior](/docs/watson-assistant?topic=watson-assistant-web-chat-overview#web-chat-overview-launcher).
+- **Launcher**: The new web chat launcher welcomes and engages customers so they know where to find help if they need it. For more information, see [Launcher appearance and behavior](/docs/watson-assistant?topic=watson-assistant-web-chat-overview#web-chat-architecture-launcher).
 
 - **Home screen**: The web chat home screen has been updated to have a more modern look. For more information about the home screen, see [Configuring the home screen](/docs/watson-assistant?topic=watson-assistant-web-chat-config#web-chat-configure-home-screen).
 
