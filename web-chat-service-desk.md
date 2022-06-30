@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-05-25"
+lastupdated: "2022-06-30"
 
 subcollection: watson-assistant
 
@@ -27,20 +27,30 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Adding service desk support
+# Adding contact center support
 {: #deploy-web-chat-haa}
 
-You can configure the web chat to transfer a customer to a human customer support agent if the customer asks for help from a person. The following service desk integrations are supported:
+You can configure the web chat to transfer a customer to a human customer support agent if the customer asks for help from a person. The following built-in contact center (service desk) integrations are available:
 
 - [Zendesk](/docs/watson-assistant?topic=watson-assistant-deploy-zendesk) {: #deploy-web-chat-zendesk}
 - [Salesforce](/docs/watson-assistant?topic=watson-assistant-deploy-salesforce) {: #deploy-web-chat-salesforce}
 
-If you are comfortable writing code, you can use the service desk starter kits to integrate with other service desks. Starter kits are available for the following service desks:
+## Contact center starter kits
+{: #deploy-web-chat-haa-starter-kits}
 
-- Genesys Cloud
-- NICE inContact
-- Twilio Flex
-- Kustomer
-- Build your own
+If you are comfortable writing code, you can use the contact center starter kits to integrate with additional contact center platforms, or to develop your own integration with the contact center platform of your choice.
 
-For more information, see [Service desk starter kits](/docs/watson-assistant?topic=watson-assistant-web-chat-service-desk-starter-kits).
+The starter kits are available from a [GitHub repo](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}. Fully functional reference implementations are provided for the following contact center platforms:
+
+- [Genesys Cloud](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/genesys/webChat){: external}
+- [NICE inContact](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/incontact/webChat){: external}
+- [Twilio Flex](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/flex/webChat){: external}
+- [Kustomer](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/kustomer/webChat){: external}
+- [Bring your own (starter kit)](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}
+
+The starter kit reference implementations, while functional, are examples only, and have not been vetted for production use. You should perform robust testing before deploying these integrations in production.
+{: important}
+
+After you set up a contact center integration, you must update your actions to ensure they understand user requests to speak to someone and can transfer the conversation properly.
+<!--- For more information, see [Adding chat transfer support](/docs/assistant?topic=assistant-dialog-support#dialog-support-transfers){: external}. --->
+
