@@ -33,7 +33,7 @@ subcollection: watson-assistant
 You can customize the web chat to offer your customers the option of downloading a transcript of the conversation history.
 {: shortdesc}
 
-For a complete, working version of the example described in this tutorial, see [Download history for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/web-chat-tutorials-integration-branch/integrations/webchat/examples/download-history){: external}.
+For a complete, working version of the example described in this tutorial, see [Download history for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/download-history){: external}.
 {: note}
 
 To support downloading a conversation transcript, this example adds a custom menu option to the overflow menu in the header of the chat window:
@@ -123,4 +123,4 @@ Clicking this menu option initiates downloading of a file containing the complet
     instance.updateCustomMenuOptions('bot', [{ text: 'Download history', handler: doDownload }]);
     ```
 
-For complete working code, see the [Download history for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/web-chat-tutorials-integration-branch/integrations/webchat/examples/download-history){: external} example.
+For complete working code, see the [Download history for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/download-history){: external} example.
