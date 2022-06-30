@@ -1,5 +1,6 @@
 
 
+
 # Integrating with phone and NICE CXone call center
 {: #deploy-phone-nicecxone}
 
@@ -29,17 +30,17 @@ To integrate your assistant with NICE CXone, follow these steps:
 
  1. In the Watson Assistant user interface, create a new phone integration. Specify the following information:
 
-    - When prompted, select **Use an existing phone number with an external provider**.
-
-    - Specify the phone number you allocated for the NICE CXone integration.
     - On the **Select contact center** tab, select NICE CXone.
     - Click **Next**.
     - On the **Connect to contact center** tab:
 	    - Enter the NICE CXone authentication endpoint in the **Authentication URL** field.  
 	    - Enter the NICE CXone *Admin* API endpoint in the **API URL** field.  
-	    - Enter the SIP header field name that contains the Contact ID in the **Contact ID** field. Optional. The default value is **X-ContactID**.
 	    - Enter the access key ID from the previous step in the **Access Key ID** field. 
 	    - Enter the access key secret you generated in the previous step in the **Access Key Secret** field. 
+    - Click **Next**.
+    - On the **Phone number** tab:
+	    - Specify the phone number you allocated for the NICE CXone integration.
+
     - Complete the phone integration setup process. (For more information, see [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone).)
 
 ### Configuring the NICE CXone script
