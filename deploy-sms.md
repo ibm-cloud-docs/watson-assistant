@@ -119,7 +119,7 @@ If you don't have a text messaging phone number, set up an *SMS with IntelePeer*
 1.  Go to the [IntelePeer website](https://www.intelepeer.com/){: external}.
 1.  Create an account or start a free trial.
 
-    When you get an IntelePeer phone number, it supports voice and SMS. If the number is not automatically enabled for SMS, you will need to enable it manually. Your new phone number is listed as an active number.
+    When you get an IntelePeer phone number, it supports voice and SMS. If the number is not automatically enabled for SMS, you will need to enable it manually. Your new phone number is listed as an active number. Refer to the [Atmosphere Messaging Quick Start Guide](https://docs.intelepeer.com/atmosphere/Content/Atmosphere-SMS-Messaging/Atmosphere-SMS-Messaging-Quick-Start-Guide.htm){: external}
 
 ### Set up the integration
 {: #deploy-sms-setup-intelepeer}
@@ -136,7 +136,7 @@ To set up the integration, complete the following steps:
 
 1.  From the [IntelePeer Atmosphere](https://atmosphere.intelepeer.com/home/){: external} site, copy the **API Authentication Token** value and store it temporarily, so you can paste it into the *SMS with IntelePeer* integration setup page in the upcoming steps.
 
-1.  From the [IntelePeer Customer Portal](https://customer.intelepeer.com/){: external} site, under the **My Applications** section, select **SMS API Management**. In the **SMS Management** title bar, click the gear icon, here you will set the SMS **Secret Input**. The Secret Input is used to prevent your webserver webhook from processing any inbound-SMS POST request that does not originate from IntelePeer. Copy the **Secret Input** value and store it temporarily, so you can paste it into the *SMS with IntelePeer* integration setup page in the upcoming steps.
+1.  From the [IntelePeer Customer Portal](https://customer.intelepeer.com/){: external} site, under the **My Applications** section, select **SMS API Management**. In the **SMS Management** title bar, click the gear icon, here you will set the SMS **Secret Input**. The Secret Input is used to prevent your webserver webhook from processing any inbound-SMS POST request that does not originate from IntelePeer. Set the **Secret Input** value here and remember it as you will need to use the value in the *SMS with IntelePeer* integration setup page in the upcoming steps.
 
 1.  Return to the *SMS with IntelePeer* integration setup page. Click **Next** to go to Step 1 of your *SMS with IntelePeer* integration setup.
 
