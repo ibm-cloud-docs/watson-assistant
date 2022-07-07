@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-07-08"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,16 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 8 July 2022
+{: #assistant-jul082022}
+{: release-note}
+
+Segment extension
+:   The Segment extension is now available. With this extension, you can use [Segment](https://segment.com/){: external} to capture and centralize data about your customers' behavior, including their interactions with your assistant. For more information, see [Sending events to Segment](/docs/watson-assistant?topic=watson-assistant-segment-add).
+
+Ability to duplicate an action
+:   You can now duplicate an action to reuse information in a new action. When you duplicate an action, everything in your action is duplicated except example phrases. To duplicate an action, click the overflow menu on the action you want to duplicate and select **Duplicate**. For more information, see [Duplicating an action](/docs/watson-assistant?topic=watson-assistant-build-actions-overview#build-actions-overview-manage-duplicate).
 
 ## 24 June 2022
 {: #assistant-jun242022}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-07-08"
 
 subcollection: watson-assistant
 
@@ -224,3 +224,13 @@ Start by typing `I want to withdraw money`. Try various permutations of your inp
 - Try including additonal information in your initial message. For example, try typing `I want to withdraw $50 from my savings account`. Confirm that the assistant does not ask you again to specify the information you already provided.
 
 That's it! You have built a simple action that includes multiple steps, collects information that it stores as action variables, and conditions its responses based on what your customer chooses. There is a lot more you can do with actions, but all of it is built on this basic pattern.
+
+## Managing actions
+{: #build-actions-overview-manage}
+
+<!-- Use different {{site.data.keyword.conversationshort}} capabilities to manage your actions workflow within a single assistant and between multiple assistants. -->
+
+### Duplicating an action
+{: #build-actions-overview-manage-duplicate}
+
+You can duplicate an action to reuse information in a new action. When you duplicate an action, everything in your action is duplicated except example phrases. To duplicate an action, click the overflow menu on the action you want to duplicate and select **Duplicate**.
