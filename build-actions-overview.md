@@ -233,4 +233,4 @@ That's it! You have built a simple action that includes multiple steps, collects
 ### Duplicating an action
 {: #build-actions-overview-manage-duplicate}
 
-You can duplicate an action to reuse information in a new action. When you duplicate an action, everything in your action is duplicated except example phrases. To duplicate an action, click the overflow menu on the action you want to duplicate and select **Duplicate**.
+You can duplicate an action to reuse information in a new action. When you duplicate an action, the new action includes everything except example phrases. Click the overflow menu on the action you want and select **Duplicate**.
