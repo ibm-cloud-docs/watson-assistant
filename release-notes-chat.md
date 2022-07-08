@@ -40,6 +40,13 @@ For information about new features and improvements to the core {{site.data.keyw
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
 
+## 6.5.2
+{: #6.5.2}
+
+*Release date: 11 July 2022*
+
+- Bug fix for Date picker response.
+
 ## 6.5.1
 {: #6.5.1}
 

@@ -38,6 +38,13 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 11 July 2022
+{: #assistant-jul112022}
+{: release-note}
+
+New Demo site
+: Explore our interactive demo site to learn how Watson Assistant can be used to build powerful, scalable experiences for your users. [See here to
+
 ## 24 June 2022
 {: #assistant-jun242022}
 {: release-note}

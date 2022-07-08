@@ -43,6 +43,8 @@ The new {{site.data.keyword.conversationshort}} experience, focused on using **a
 
 - Use a new suite of **analytics** to improve your assistant. Review which actions are being completed to see what your customers want help with, determine if your assistant understands and addresses customer needs, and decide how can you make your assistant better.
 
+- Explore our interactive demo site to learn how Watson Assistant can be used to build powerful, scalable experiences for your users. [See here to try it out](https://www.ibm.com/products/watson-assistant/demos/lendyr/demo.html).
+
 For more information about the new experience, see [FAQs about the new IBM Watson Assistant experience](/docs/watson-assistant?topic=watson-assistant-watson-assistant-faqs#faqs-new-experience).
 
 Visit [Getting started with {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-getting-started) for a tutorial series on building in the new experience.
