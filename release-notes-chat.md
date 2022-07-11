@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-07-11"
 
 subcollection: watson-assistant
 
@@ -45,7 +45,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 *Release date: 11 July 2022*
 
-- Bug fix for Date picker response.
+- Bug fix for `date` response type.
 
 ## 6.5.1
 {: #6.5.1}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-07-11"
 
 keywords: Watson Assistant release notes
 
@@ -43,7 +43,8 @@ This topic describes the new features, changes, and bug fixes in each release of
 {: release-note}
 
 New Demo site
-: Explore our interactive demo site to learn how Watson Assistant can be used to build powerful, scalable experiences for your users. [See here to
+: Explore our [interactive demo site](https://www.ibm.com/products/watson-assistant/demos/lendyr/demo.html){:external} to learn how {{site.data.keyword.conversationshort}}
+ can be used to build powerful, scalable experiences for your users.
 
 ## 24 June 2022
 {: #assistant-jun242022}
