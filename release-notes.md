@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-07-11"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,14 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 11 July 2022
+{: #assistant-jul112022}
+{: release-note}
+
+New Demo site
+: Explore our [interactive demo site](https://www.ibm.com/products/watson-assistant/demos/lendyr/demo.html){:external} to learn how {{site.data.keyword.conversationshort}}
+ can be used to build powerful, scalable experiences for your users.
 
 ## 24 June 2022
 {: #assistant-jun242022}
