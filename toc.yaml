@@ -106,6 +106,8 @@ toc:
                   navtitle: Providing a downloadable transcript
                 - topic: web-chat-develop-custom-buttons.md
                   navtitle: Implementing custom option buttons
+                - topic: web-chat-develop-content-carousel.md
+                  navtitle: Implementing a content carousel
       - topicgroup:
           label: Deploying to other channels
           topics:
