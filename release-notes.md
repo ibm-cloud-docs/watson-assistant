@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-07-11"
 
 keywords: Watson Assistant release notes
 
@@ -38,8 +38,23 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+
+<!--Segment extension
+:   The Segment extension is now available. With this extension, you can use [Segment](https://segment.com/){: external} to capture and centralize data about your customers' behavior, including their interactions with your assistant. For more information, see [Sending events to Segment](/docs/watson-assistant?topic=watson-assistant-segment-add).-->
+
+## 11 July 2022
+{: #watson-assistant-jul112022}
+{: release-note}
+
+Ability to duplicate an action
+:   You can duplicate an action to reuse information in a new action. When you duplicate an action, the new action includes everything except example phrases. Click the overflow menu on the action you want and select **Duplicate**.
+
+New Demo site
+: Explore our [interactive demo site](https://www.ibm.com/products/watson-assistant/demos/lendyr/demo.html){:external} to learn how {{site.data.keyword.conversationshort}}
+ can be used to build powerful, scalable experiences for your users.
+
 ## 24 June 2022
-{: #assistant-jun242022}
+{: #watson-assistant-jun242022}
 {: release-note}
 
 Algorithms versions available in more languages

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-05-02"
+lastupdated: "2022-07-11"
 
 subcollection: watson-assistant
 
@@ -42,6 +42,9 @@ The new {{site.data.keyword.conversationshort}} experience, focused on using **a
 - A new way to **publish** lets you review and debug your work in a draft environment before going live to your customers.
 
 - Use a new suite of **analytics** to improve your assistant. Review which actions are being completed to see what your customers want help with, determine if your assistant understands and addresses customer needs, and decide how can you make your assistant better.
+
+- Explore our [interactive demo site](https://www.ibm.com/products/watson-assistant/demos/lendyr/demo.html){:external} to learn how {{site.data.keyword.conversationshort}}
+ can be used to build powerful, scalable experiences for your users.
 
 For more information about the new experience, see [FAQs about the new IBM Watson Assistant experience](/docs/watson-assistant?topic=watson-assistant-watson-assistant-faqs#faqs-new-experience).
 
