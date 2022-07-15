@@ -27,13 +27,22 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Tutorial: implementing custom option buttons in the web chat
+# Tutorial: Rendering a custom response as a content carousel
 {: #web-chat-develop-content-carousel}
 
-This tutorial shows how you might replace the default rendering of an options response with your own custom clickable buttons.
+This tutorial shows how you might use custom responses to render information in the form of a content carousel.
 {: shortdesc}
 
-To use a custom response to display a content carousel, follow the steps below.
+For a complete, working version of the example described in this tutorial, see [Content carousel for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/content-carousel){: external}.
+{: note}
+
+A _content carousel_ (or _slider_) is a type of interactive element that shows options as a scrollable series of slides.
+
+{{site.data.keyword.conversationshort}} does not have a built-in response type for content carousels. But that isn't a problem: you can use the `user_defined` response type to send a custom response with the information you want to show, and extend the web chat to render the content carousel using standard JavaScript libraries.
+
+![Content carousel in web chat](images/web-chat-tutorial-content-carousel.png)
+
+This example shows how you can use the [Swiper](https://swiperjs.com/){: external} library to render a custom response as a content carousel.
 
 1. Add a step to your action that returns a `user_defined` response. Use the JSON editor to send the following response. This embeds the carousel data inside the `user_defined` object, but you could also put the data into skill variables that can be accessed by web chat from the context object.
 ```json
