@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-07-11"
+lastupdated: "2022-07-15"
 
 keywords: Watson Assistant release notes
 
@@ -38,9 +38,27 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+<!--## 19 July 2022
+{: #watson-assistant-jul192022}
+{: release-note}
 
-<!--Segment extension
-:   The Segment extension is now available. With this extension, you can use [Segment](https://segment.com/){: external} to capture and centralize data about your customers' behavior, including their interactions with your assistant. For more information, see [Sending events to Segment](/docs/watson-assistant?topic=watson-assistant-segment-add).-->
+Changes to publishing and environments
+:   You can now publish versions of your content without assigning to the live environment, allowing you to make continuous updates before customers see it in production. Also, the formerly separate pages for your draft and live environments now appear as tabs on a single *Environments* page, from which you can set up unique configurations for building and testing in the draft environment, and for your customers in the live environment. For more information, see the [Publishing overview](/docs/watson-assistant?topic=watson-assistant-publish-overview).
+
+Logs reader role
+:   Identity and Access Management now includes a new service role, **Logs Reader**, which lets you grant access to Analytics without assigning the Manager role. Use Logs Reader in combination with the Reader or Writer role to provide access to the Analytics page. For more information, see [Managing access](/docs/watson-assistant?topic=watson-assistant-access-control).-->
+
+## 15 July 2022
+{: #watson-assistant-jul152022}
+{: release-note}
+
+Segment extension
+:   The Segment extension is now available for Enterprise plans. With this extension, you can use [Segment](https://segment.com/){: external} to capture and centralize data about your customers' behavior, including their interactions with your assistant. For more information, see [Sending events to Segment](/docs/watson-assistant?topic=watson-assistant-segment-add).
+
+New expression property
+:   You can now use the `.literal` property to return the exact response that a customer specifies. This property is helpful if a customer uses a synonym of an option, and you want your assistant to respond with the exact phrase they specified. To set this property, click the **Set variable values** icon and assign a session variable to the step variable. Add the `.literal` property to the step variable. Use the session variable in the assistant's response to display the customer's input.
+
+    For example, suppose you have an option called `plant` that has `fern` as a synonym. A customer might say `buy a fern`. In this case, you can use the `.literal` property so the assistant's response uses the customer's input. Your assistant might respond, `Great! I see you want to buy a fern.`
 
 ## 11 July 2022
 {: #watson-assistant-jul112022}
@@ -49,9 +67,8 @@ This topic describes the new features, changes, and bug fixes in each release of
 Ability to duplicate an action
 :   You can duplicate an action to reuse information in a new action. When you duplicate an action, the new action includes everything except example phrases. Click the overflow menu on the action you want and select **Duplicate**.
 
-New Demo site
-: Explore our [interactive demo site](https://www.ibm.com/products/watson-assistant/demos/lendyr/demo.html){:external} to learn how {{site.data.keyword.conversationshort}}
- can be used to build powerful, scalable experiences for your users.
+New demo site
+:   Explore our [interactive demo site](https://www.ibm.com/products/watson-assistant/demos/lendyr/demo.html){: external} to learn how {{site.data.keyword.conversationshort}} can be used to build powerful, scalable experiences for your users.
 
 ## 24 June 2022
 {: #watson-assistant-jun242022}
