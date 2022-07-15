@@ -42,7 +42,9 @@ A _content carousel_ (or _slider_) is a type of interactive element that shows o
 
 ![Content carousel in web chat](images/web-chat-tutorial-content-carousel.png)
 
-This example shows how you can use the [Swiper](https://swiperjs.com/){: external} library to render a custom response as a content carousel.
+This example shows how you can use the [Swiper](https://swiperjs.com/){: external} library to render a custom response as a content carousel:
+
+1. In the action step that you want to create a content carousel, use the JSON editor to define a `user_defined` custom response. 
 
 1. Add a step to your action that returns a `user_defined` response. Use the JSON editor to send the following response. This embeds the carousel data inside the `user_defined` object, but you could also put the data into skill variables that can be accessed by web chat from the context object.
 ```json
