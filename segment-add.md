@@ -39,6 +39,8 @@ You can use the Segment extension to send {{site.data.keyword.conversationshort}
 
 With this extension, you can use [Segment](https://segment.com/){: external} to capture and centralize data about your customers' behavior, including their interactions with your assistant. Events are sent from {{site.data.keyword.conversationshort}} to Segment, making them available to destinations such as data warehouses, raw data tools, and analytic tools.
 
+For more information about the events that are sent to Segment, see [Segment event reference](/docs/watson-assistant?topic=watson-assistant-segment-event-reference).
+
 This feature is available only to Enterprise plan users.
 
 ## Adding the extension to the draft environment
@@ -68,10 +70,6 @@ To add the Segment extension to your assistant, follow these steps:
 
     Each row in the table shows the name of a supported event, along with a brief description.
 
-    <!--
-    To see more information about an event, click the ![label](images/twistie.png) icon next to its row in the table. The expanded view of an event shows details about the properties included with the event.
-    -->
-
 1. Click the checkboxes to select the events you want to send to Segment. Click **Next**.
 
 1. In the **Review & Confirm** step, review the configuration and click **Finish**.
@@ -90,4 +88,4 @@ To configure the Segment extension for the live environment, follow these steps:
 
 1. Repeat the configuration process, specifying the values you want to use for the live environment.
 
-The Segment extension is now available in the environments you have configured, , and events will be sent to the destinations configured in your Segment workspace.
+The Segment extension is now available in the environments you have configured, and events will be sent to the destinations configured in your Segment workspace. (For more information about the events that are sent to Segment, see [Segment event reference](/docs/watson-assistant?topic=watson-assistant-segment-event-reference).)
