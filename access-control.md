@@ -96,7 +96,7 @@ Another way to add users to your assistants is using Identity and Access Managem
     | Attribute type | Description |
     | - | - |
     | Assistant, Environment or Skill ID | ID value from Assistant or Environment settings |
-    | Region | Service instances in a specific region, for example, Dallas or London |
+    | Region | Service instances in a specific region (for example, Dallas or London) |
     | Resource type | Assistant ID or Skill ID |
     | Resource group | Choose a resource group you might have created |
     | Service instance | Specific service instance of {{site.data.keyword.conversationshort}} |
