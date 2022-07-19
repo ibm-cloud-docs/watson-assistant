@@ -31,7 +31,7 @@ subcollection: watson-assistant
 Publishing is a way to maintain a healthy lifecycle management process. You can create incremental versions of your content over time, making it easier to manage deployment of changes and roll back (revert) to prior versions if necessary.
 {: shortdesc}
 
-When you are ready to create a snapshot of your content and settings, you can publish from the **Publish** page. Each time you publish, you create a new version, such as V1 or V2. When you a publish a version, you can assign it to the live environment.
+When you are ready to create a snapshot of your content and settings, you can publish from the **Publish** page. Each time you publish, you create a new version, such as V1 or V2. When you publish a version, you can assign it to the live environment.
 
 ![Image of the Publish page](images/publish-page.png)
 
