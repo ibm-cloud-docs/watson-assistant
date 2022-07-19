@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-07"
+lastupdated: "2022-07-19"
 
 subcollection: watson-assistant
 
@@ -32,23 +32,28 @@ Internal review is a necessary step in any virtual assistant workflow. You need 
 {: shortdesc}
 
 ## Saving and editing your work in the draft environment
-Manage your draft environment from the **Draft environment** page, and preview customer interactions with your assistant from the **Preview** page. The assistant configurations on these pages cannot be seen by your customers. After you deploy your assistant to a live channel and publish your content, the assistant is live on its configured channels. Live channels are configured separately from draft channels so that you can test new channels in your draft environment before you deploy an assistant to them in the live environment. To learn more about {{site.data.keyword.conversationshort}} environments, see [Environments](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments).
+{: #preview-share-draft}
 
-As you edit your content from the **Actions** page, your changes are automatically reflected on the **Preview** page. This includes any saved changes that are made to your assistant’s integrations, including search or integrations with other platforms.
-
-![GIF of a user saving integrations](images/integrations.gif)
+The draft environment contains all your in-progress work in the **Actions**, **Preview**, and **Publish** pages. Use the **Draft environment** tab to manage the draft environment, including adding draft environment integrations (channels and extensions) that you can use for internal testing before going live. These integrations are unique to the draft environment, and changes to draft integrations don't affect the live environment.
 
 ## The Preview page
-Use the **Preview** page to test your assistant with your team. From this page, you can experience your assistant from your customer's perspective. On the **Preview** page, the **Assistant preview** pane is the interactive web chat widget where you can test out your assistant as if you were a customer. The content contained in the assistant is the content that you built into your actions or set up with the search integration. On the **Preview** page, you also find the following elements:
+{: #preview-share-preview-page}
+
+Use the **Preview** page to test your assistant. From this page, you can experience your assistant from your customer's perspective. The **Preview** page includes an interactive web chat widget where you can test out your assistant as if you were a customer. The content contained in the assistant is the content that you built into your actions or set up with the search integration. 
+
+On the **Preview** page, you also find the following elements:
+- **Change background website**: Change the background of the page so you can see what your assistant looks like on different web pages.
+- **Copy link to share**: Share an unauthenticated version of your assistant with your colleagues by sending them a link. For more information, see [Copying a link to share](#preview-share-link).
 - **Customize web chat**: Customize your draft web chat channel to match your brand or website.
-- **Copy link to share**: Share an unauthenticated version of your assistant with your colleagues by sending them a link.
-- **Add background website**: Change the background of the page so you can see what your assistant looks like on different web pages.
 
 ![Image of the Preview page](images/preview-page.png)
 
-## Previewing multiple channel integrations
-From the **Preview** page, you have the ability to test channels before you go live with them. For more information about adding channels to your assistant, see [Adding integrations](/docs/watson-assistant?topic=watson-assistant-deploy-integration-add). After you add channels to the assistant, they are accessible from the **Draft environment** page:
+## Copying a link to share
+{: #preview-share-link}
 
-![Image of the Draft environment panel](images/draft-environment-page.png)
+You can share an unauthenticated version of your assistant with your team by sending them a link. The link opens a sample web page with an an interactive web chat widget where you can test out your assistant as if you were a customer. This method of previewing lets you share your in-progress assistant with subject-matter experts in your organization without needing access to {{site.data.keyword.conversationshort}} itself. The experience is identical to using **Preview this environment** on the draft environment tab.
 
-These channels can be configured and deployed to test different mediums, such as websites and Slack channels, to ensure that your content appears in the way that you want it to. Do not use these channels for live deployments because they reflect the most recently edited content, not your published content.
+To share a link:
+1. On the **Preview** page, click **Copy link to share**.
+1. Send the link to your team.
+
