@@ -175,7 +175,7 @@ toc:
           - dialog-call-action.md
           - dialog-analyze.md
           - dialog-publish.md
-     - topicgroup:
+      - topicgroup:
           label: Early access features
           topics:
           - action-response-modes.md
