@@ -51,7 +51,7 @@ The number of versions that can be maintained depends on the type of plan you ha
 
 1. Enter a description of the version.
 
-1. Decide if you want to assign the version to the live environment. This step is optional if you want to create a snapshot version of your content without using it with customers.
+1. Decide whether you want to assign the version to the live environment. This step is optional if you want to create a snapshot version of your content without using it with customers.
 
 1. Click **Publish**:
 
