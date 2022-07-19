@@ -120,4 +120,4 @@ To revert to a previous version:
 
    ![Revert to a prior version](images/revert-version.png)
 
-1. After you revert, you can go to the **Actions** page to make any fixes or updates. When you're ready to publish, go to the **Publish** page and publish your updated content as a new version, for example, V3.
+1. After you revert, you can go to the **Actions** page to make any fixes or updates. When you're ready to publish, go to the **Publish** page and publish your updated content as a new version (for example, V3).
