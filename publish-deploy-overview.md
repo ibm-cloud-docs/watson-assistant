@@ -35,7 +35,7 @@ An assistant consists of three core elements:
 
 - **Content**: The conversation logic and words that are used to respond to your customer. Content is required for every assistant.
 - **Channels**: The location where your assistant interacts with your customers, such as the web chat interface on your website. At least one channel is required for every assistant.
-- **Extensions**: Add-ons to the end experience that help solve specific customer problems, for example, searching existing help content.
+- **Extensions**: Add-ons to the end experience that help solve specific customer problems (for example, searching existing help content).
 
 In general, you follow this high-level process throughout the life of your assistant:
 
