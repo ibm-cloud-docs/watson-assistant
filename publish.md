@@ -94,7 +94,7 @@ There are two ways to assign a verison to the live environment:
 - When you a publish a version, you have the option of assigning it to the live environment.
 - If you want to assign a version later, use the **Live environment** tab and click **Assign version**.
 
-Once a version has been assigned to the live environment, there are two ways you can switch to a different version:
+After a version has been assigned to the live environment, there are two ways you can switch to a different version:
 
 - When you a publish a version, you have the option of assigning it to the live environment, replacing the one that's already there.
 - Use the **Live environment** tab and click **Switch version**.
