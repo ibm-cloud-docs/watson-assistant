@@ -39,7 +39,7 @@ The draft environment contains all your in-progress work in the **Actions**, **P
 ## The Preview page
 {: #preview-share-preview-page}
 
-Use the **Preview** page to test your assistant. From this page, you can experience your assistant from your customer's perspective. The **Preview** page includes an interactive web chat widget where you can test out your assistant as if you were a customer. The content contained in the assistant is the content that you built into your actions or set up with the search integration. 
+Use the **Preview** page to test your assistant. From this page, you can experience your assistant from your customers' perspective. The **Preview** page includes an interactive web chat widget where you can test out your assistant as if you were a customer. The content contained in the assistant is the content that you built into your actions or set up with the search integration. 
 
 On the **Preview** page, you also find the following elements:
 - **Change background website**: Change the background of the page so you can see what your assistant looks like on different web pages.
@@ -56,4 +56,3 @@ You can share an unauthenticated version of your assistant with your team by sen
 To share a link:
 1. On the **Preview** page, click **Copy link to share**.
 1. Send the link to your team.
-
