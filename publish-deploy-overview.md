@@ -67,7 +67,7 @@ For more information about previewing your assistant in the draft environment, s
 ## Publishing
 {: #publish-overview-publishing}
 
-When you are ready to create a snapshot of your content and settings, you can publish from the **Publish** page. Each time you publish, you create a new version, such as V1 or V2. When you a publish a version, you can choose to assign it to the live environment.
+When you are ready to create a snapshot of your content and settings, you can publish from the **Publish** page. Each time you publish, you create a new version, such as V1 or V2. When you publish a version, you can choose to assign it to the live environment.
 
 ![Image of the Publish page](images/publish-page.png)
 
