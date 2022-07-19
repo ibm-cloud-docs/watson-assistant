@@ -37,7 +37,7 @@ When you are ready to create a snapshot of your content and settings, you can pu
 
 When you publish your content, {{site.data.keyword.conversationshort}} creates a snapshot of the draft content, resulting in a version. This version contains all of the content from actions, including settings and variables. Versions do not contain integration configurations or environment settings. Integration configurations and environment settings must be configured manually in each environment.
 
-The three most recent published versions appear in a list on the **Publish** page itself. Once you have more than three versions, you can click **View all** to see a list of all published versions.
+The three most recent published versions appear in a list on the **Publish** page itself. If you have more than three versions, you can click **View all** to see a list of all published versions.
 
 ![Image of published versions](images/published-versions.png)
 
