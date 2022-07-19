@@ -116,7 +116,7 @@ Another way to add users to your assistants is using Identity and Access Managem
 
     ![Invite button](images/access-summary.png){: caption="Invite button" caption-side="bottom"}
 
-The user you invited appears in your list with the status of **Processing**. After they accept the invite, status changes to **Active** and can now work on your assistants with you.
+The user you invited appears in your list with the status of **Processing**. After they accept the invite, status changes to **Active**, and the user can work on your assistants with you.
 
 ### Service roles
 {: #access-control-service-roles}
