@@ -45,7 +45,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 *Release date: 25 July 2022*
 
-- A new `servers` property has been added to the web chat configuration options. This new `servers` object exposes the `assistantURLPrefix` property which can be used if you need to set up a proxy between your users' brosers and Watson Assistant. For more information, see [Setting up a proxy](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#serversconfig){: external}.
+- A new `servers` property is now available in the web chat configuration options. You can use this property to set up a proxy between your users' browsers and {{site.data.keyword.conversationshort}}. For more information, see [Setting up a proxy](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#serversconfig){: external}.
 
 ## 6.5.2
 {: #6.5.2}
