@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-18"
+lastupdated: "2022-07-25"
 
 subcollection: watson-assistant
 
@@ -40,16 +40,22 @@ After you connect an integration and deploy to a channel, you make your assistan
 ![Image of the Live environment page](images/live-environment-page.png)
 
 ## Reviewing your connected channels
+{: #deploy-assistant-review-channels}
+
 Channels represent the locations or communication platforms where your assistant interacts with your users. Common examples of channels include the phone, a website, or Slack. If you do not connect your assistant to a channel, your users are not able to access the assistant.
 
 You can review your connected channels in the following two places:
 
-- **Draft environment** page: Channels that are connected to this environment are exposed only to your internal team for testing and not to your customers.
-- **Live environment** page: Channels that are connected to this environment represent the public-facing experience of your assistant and are exposed to your customers.
+- **Draft environment**: Channels that are connected to this environment are exposed only to your internal team for testing and not to your customers.
+- **Live environment**: Channels that are connected to this environment represent the public-facing experience of your assistant and are exposed to your customers.
 
-You can test integrations from the **Draft environment** page and interact with your draft web chat on the **Preview** page. When you first create a new assistant, the assistant automatically connects to the web chat channel in your live environment. However, the assistant itself is not available to your customers until you embed the web chat JavaScript in the header of your website. For more information, see [Adding the web chat to your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
+For more information on environments, see [Environments](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-publish-overview#environments).
+
+You can test integrations from the draft environment and interact with your draft web chat on the **Preview** page. When you first create a new assistant, the assistant automatically connects to the web chat channel in your live environment. However, the assistant itself is not available to your customers until you embed the web chat JavaScript in the header of your website. For more information, see [Adding the web chat to your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
 
 ## Connecting your assistant to a new channel
+{: #deploy-assistant-new-channel}
+
 All of the channels you can connect your assistant to are available in the **Integrations** catalog. Two types of integrations are available from the **Integrations** catalog:
 
 - Channels: The location where your assistant interacts with your users, for example, over the phone, on a website, or in Slack. At least one channel is required for every assistant.
@@ -65,16 +71,20 @@ You have multiple options for deploying your assistant, depending on how you wan
 - [Phone integration](/docs/watson-assistant?topic=watson-assistant-deploy-phone): The phone integration enables your assistant to converse with customers on the phone by using the IBM Watson Text to Speech and Speech to Text services. If your customer asks to speak to a person, the phone integration can transfer the call to an agent.
 
 ## Updating and managing channels
-Each channel has specific settings that you can adjust to adapt the end experience for your user. You can edit these settings by selecting the channel on the **Draft environment**, **Live environment**, or **Integrations** pages.
+{: #deploy-assistant-update-channels}
 
-If you make an update to a channel in the draft environment on the **Draft environment** page, the same channel in live environment is not affected on the **Live environment** page. Similarly, if you make an update to a channel in the live environment on the **Live environment** page, the same channel in draft environment is not affected on the **Draft environment** page. If you select a channel from the **Integrations** catalog, you are asked to select which environment you are editing:
+Each channel has specific settings that you can adjust to adapt the end experience for your user. You can edit these settings by selecting the channel in the draft or live environment, or in **Integrations**.
+
+If you make an update to a channel in the draft environment, the same channel in live environment is not affected in the live environment. Similarly, if you make an update to a channel in the live environment, the same channel in draft environment is not affected. If you select a channel from the **Integrations** page, you are asked to select which environment you are editing:
 
 ![GIF of the Integrations catalog](images/integrations-page.gif)
 
 For more information about editing your web chat integration, see [Basic web chat configuration](/docs/watson-assistant?topic=watson-assistant-web-chat-basics).
 
 ## Deleting channels
-To delete a channel, go to the **Integrations** catalog and use the overflow menu on the integration:
+{: #deploy-assistant-delete-channels}
+
+To delete a channel, go to the **Integrations** page and use the overflow menu on the integration:
 
 ![GIF of how to delete a channel](images/delete-channel.gif)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-12-03"
+lastupdated: "2022-07-25"
 
 keywords: pre webhook, prewebhook, pre-webhook
 
@@ -46,9 +46,7 @@ You can use a premessage webhook to do the following types of things:
 
 You can use this webhook in coordination with the postmessage webhook. For example, the postmessage webhook can do things like translate the response back into the customer's native language or add back information that was removed for privacy reasons. For more information, see [Making a call after processing a message](/docs/watson-assistant?topic=watson-assistant-webhook-post).
 
-<!-- If you want to perform a one-time action when certain conditions are met during a conversation, use a dialog webhook instead. For more information about the dialog webhook, see [Making a programmatic call from dialog](/docs/assistant?topic=assistant-dialog-webhooks). -->
-
-![Plus or higher plans only](images/plus.png) For environments where private endpoints are in use, keep in mind that a webhook sends traffic over the Internet. For more information, see [Private network endpoints](/docs/watson-assistant?topic=watson-assistant-security#security-private-endpoints).
+For environments where private endpoints are in use, keep in mind that a webhook sends traffic over the internet.
 {: note}
 
 ## Defining the webhook
@@ -70,7 +68,7 @@ Do not set up and test your webhook in a production environment where the assist
 
 To add the webhook details, complete the following steps:
 
-1. From your assistant, navigate to the page for the environment where you want to configure the webhook (**Draft environment** or **Live environment**).
+1. In your assistant, open the environment where you want to configure the webhook.
 
 1. Click the ![Environment settings icon](images/gear-icon-black.png) icon to open the environment settings.
 
