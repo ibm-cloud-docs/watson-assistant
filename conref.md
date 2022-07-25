@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2022-04-05"
+  years: 2021, 2022
+lastupdated: "2022-07-19"
 
 subcollection: watson-assistant
 
@@ -28,6 +28,10 @@ content-type: conref
 # Content references for watson-assistant
 {: #watson-assistant-conref}
 
-<!--This documentation is for the **new {{site.data.keyword.conversationfull}}** experience. To see the documentation for the classic {{site.data.keyword.conversationshort}}, please go [here](https://cloud.ibm.com/docs/assistant){: external}.
-{: important}-->
+<!--This documentation is for the **new {{site.data.keyword.conversationfull}}** experience. To see the documentation for the classic {{site.data.keyword.conversationshort}}, please go [here](https://cloud.ibm.com/docs/assistant){: external}.-->
+<!--{: important}-->
 {: #classiclink}
+
+This feature is available only to users enrolled in the early access program. To gain access to early access features, complete the [Early access to beta features form](https://form.asana.com/?k=I-mpQg3brwq-DP9DFwTN_Q&d=8612789739828).
+{: note}
+{: #earlyaccess}

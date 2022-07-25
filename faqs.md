@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2022-05-26"
+lastupdated: "2022-07-19"
 
 keywords: Watson Assistant frequently asked questions
 
@@ -75,17 +75,19 @@ In the left navigation, click **Integrations** ![Integrations](images/integratio
 {: #faq-assistant-id}
 {: faq}
 
-The assistant ID is now called the *environment ID*. The draft and live environments each have unique IDs. In either environment:
-1. Click **Settings**.
-2. In API Details, the ID is in the **Environment ID (Assistant ID)** field.
+The assistant ID can be found in **Assistant settings** and in the settings of the draft and live environments.
 
-For more information on environments, see [Environments](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments).
+In **Assistant settings**, the assistant ID is in the **Details** section.
+
+In either the draft or live environment, click **Settings**. The assistant ID is on the **API Details** tab.
 
 ## What do the draft and live tags mean?
 {: #faqs-draft-live-tags}
 {: faq}
 
-A `Draft` tag indicates that the information is linked to your draft environment, which means that you can preview these updates but they are not visible to your users. For more information about the draft environment, see [Previewing and sharing your assistant](/docs/watson-assistant?topic=watson-assistant-preview-share). A `Live` tag indicates that the information is linked to your live environment, which means that the content is available to your users to interact with. For more information about publishing to your live environment, see [Managing the live environment](/docs/watson-assistant?topic=watson-assistant-publish#managing-the-live-environment).
+A `Draft` tag indicates that the information is linked to your draft environment, which means that you can preview these updates but they are not visible to your users. A `Live` tag indicates that the information is linked to your live environment, which means that the content is available to your users to interact with.
+
+For more information on environments, see [Environments](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments).
 
 ## Why can't I log in?
 {: #faqs-cannot-login}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-04"
+lastupdated: "2022-07-19"
 
 subcollection: watson-assistant
 
@@ -41,9 +41,11 @@ To rename an assistant, follow these steps:
 
 1.  Open **Assistant settings**.
 
-1.  Enter a new name or description.
+1.  In **Details**, enter a new name or description.
 
 1.  Click **Save**.
+
+You can also access the *Assistant ID* in the **Details** section.{: note}
 
 ## Deleting an assistant
 {: #assistant-rename-delete-delete}
