@@ -163,7 +163,7 @@ If you chose to generate a free telephone number, your new number is displayed o
 
 ## Adding more phone numbers
 
-If using existing phone numbers you configured via a SIP trunk provider, you can add multiple numbers to the same phone integration.
+If you are using existing phone numbers you configured via a SIP trunk provider, you can add multiple numbers to the same phone integration.
 
 If you generated a free phone number, you cannot add more numbers.
 {: note}
