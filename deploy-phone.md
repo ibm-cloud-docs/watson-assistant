@@ -153,7 +153,7 @@ To set up the integration:
 
 <!-- If you want your assistant to be able to switch between voice and text during a customer interaction, enable both the phone and SMS with Twilio integrations. The integrations do not need to use the same third-party service provider. For more information, see [Integrating with *SMS with Twilio*](/docs/assistant?topic=assistant-deploy-sms){: external}. -->
 
-Any speech service charges incurred by the phone integration are billed with the {{site.data.keyword.conversationshort}} service plan as *voice add-on* charges. After the instances are created, you can access them directly from the IBM Cloud dashboard. Any use of speech instances that occur outside of your assistant are charged separately as speech service usage costs.
+Any speech service charges incurred by the phone integration are billed with the {{site.data.keyword.conversationshort}} service plan as *voice add-on* charges. After the instances are created, you can access them directly from the IBM Cloud dashboard. Any use of speech instances that occurs outside of your assistant is charged separately as speech service usage costs.
 {: important}
 
 The phone integration setup is now complete. On the **Phone** page, you can click the tabs to view or edit the phone integration.
@@ -163,7 +163,7 @@ If you chose to generate a free telephone number, your new number is displayed o
 
 ## Adding more phone numbers
 
-If using existing phone numbers you configured via a SIP trunk provider, you can add multiple numbers to the same phone integration.
+If you are using existing phone numbers you configured via a SIP trunk provider, you can add multiple numbers to the same phone integration.
 
 If you generated a free phone number, you cannot add more numbers.
 {: note}
@@ -203,4 +203,3 @@ The number of concurrent calls that your assistant can participate in at one tim
 | Plus             |               100 |
 | Trial            |                 5 |
 {: caption="Plan details" caption-side="top"}
-
