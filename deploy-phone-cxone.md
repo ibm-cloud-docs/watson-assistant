@@ -50,21 +50,19 @@ Ensure that you have the following actions and settings in the workflow for inte
 
 #### Connecting a caller to a Watson Assistant bot
 
--  Use a [Placecall](https://help.nice-incontact.com/content/studio/actions/placecall/placecall.htm) action to initiate an outbound call to Watson Assistant. In the **PhoneNumber** property enter the phone number you allocated for this integration. 
+-  [Sipputheader](https://help.nice-incontact.com/content/studio/actions/sipputheader/sipputheader.htm) action. In the **headerName** property enter `X-ContactID`. This header field will be included in outgoing SIP INVITE messages to Watson Assistant and will contain the Contact ID.
 
-The phone number must match the number you configured in **Use an existing phone number with an external provider** in the Watson Assistant user interface.
-{: note}
-
--  [Sipputheader](https://help.nice-incontact.com/content/studio/actions/sipputheader/sipputheader.htm) action. In the **headerName** property enter the name of the SIP header field that will contain the Contact ID. This header field will be included in outgoing SIP INVITE messages to Watson Assistant.  
-
-	**headerName** X-Contact-ID
+	**headerName** X-ContactID
 	**headerValue** {ContactId}
 
 
-The value in **headerName** must match the name you configured in the **Contact ID** field in the Watson Assistant user interface.
+**Sipputheader** must be executed before **Placecall**.
 {: note}
 
-**Sipputheader** must be executed before **Placecall**.
+
+-  Use a [Placecall](https://help.nice-incontact.com/content/studio/actions/placecall/placecall.htm) action to initiate an outbound call to Watson Assistant. In the **PhoneNumber** property enter the phone number you allocated for this integration. 
+
+The phone number must match the number you configured in **Use an existing phone number with an external provider** in the Watson Assistant user interface.
 {: note}
 
 ![Image of the outbound call flow](images/cxone-placecall.png)
