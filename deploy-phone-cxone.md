@@ -64,7 +64,7 @@ To generate NICE CXone access keys to use with your assistant:
 5. Click **Generate New Access Key**.
 6. Click **Show Secret Key**, and copy the secret key to a secure location. 
 
-    You cannot retrieve the secret key again once you complete the next step and **Save**. You will need to generate a new key if the current one is lost or forgotten.
+    You cannot retrieve the secret key again after you complete the next step and **Save**. You must generate a new key if the current one is lost or forgotten.
 
 7. Click **Save**.
 
