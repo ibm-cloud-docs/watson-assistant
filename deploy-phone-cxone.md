@@ -45,7 +45,7 @@ You must have a NICE CXone account and phone numbers allocated for this integrat
 
 1.  Go to the [NICE website](https://www.nice.com/){: external}.
 2.  Create an account.
-3.  Follow the instructions to get phone numbers; or select which to use for your contact center if you have existing ones.
+3.  Follow the instructions to get phone numbers or select existing phone numbers.
 
 ## Generate NICE CXone access keys
 {: #deploy-phone-cxone-accesskeys}
