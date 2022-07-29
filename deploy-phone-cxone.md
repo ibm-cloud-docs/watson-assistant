@@ -132,7 +132,7 @@ To integrate your assistant with NICE CXone:
 
     - If **Invalid**, check your credentials and enter each again.
 
-    - If credentials are correct, the **Save and exit** button becomes clickable.
+    - If the credentials are correct, the **Save and exit** button becomes clickable.
 
     Click **Save and exit**.
 
