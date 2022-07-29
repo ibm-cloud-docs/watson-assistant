@@ -83,7 +83,7 @@ To integrate your assistant with NICE CXone:
 
 3. On the **Phone** page, enter an **Integration name** and select **Integrate with your contact center**. 
 
-    Below **Set up a phone connection**, checkmarks record your progress with each step.
+    Below **Set up a phone connection**, check marks record your progress with each step.
     
     Click **Next**.
 
