@@ -50,11 +50,9 @@ The settings are:
 
 **Clarify when more than one action matches**: When your assistant finds that more than one action might fulfill a customer's request, it can automatically ask for clarification. Instead of guessing which action to use, your assistant shows a list of the possible actions to the customer and asks the customer to pick the right one.
 
-<!--Offer support option when asking a clarifying question
-When asking for clarification, the assistant can include a choice to connect to other support. If the customer picks this choice, the assistant uses your Fallback action.
+**Offer support option when asking a clarifying question**: When asking for clarification, the assistant can include a choice to connect to other support. If the customer picks this choice, the assistant uses your Fallback action.
 
-Step validation attempts before offering support
-If a customer provides invalid answers for a step in an action, the assistant can offer to connect to other support in the Fallback action. The step validation count measures how many invalid answers can occur before providing this choice.-->
+**Step validation attempts before offering support**: If a customer provides invalid answers for a step in an action, the assistant can offer to connect to other support in the Fallback action. The step validation count measures how many invalid answers can occur before providing this choice.
 
 This table shows the default settings for each mode. 
 
@@ -62,6 +60,8 @@ This table shows the default settings for each mode.
 | --- | --- | --- |
 | Clarify when one action matches | More often | Sometimes |
 | Clarify when more than one action matches | More often | Sometimes |
+| Offer support option when asking a clarifying question | More often | Sometimes |
+| Step validation attempts before offering support | 1 time | 3 times |
 {: caption="Default settings" caption-side="bottom"}
 
 ## Customize modes ![Enterprise plan](images/enterprise.png)
@@ -75,6 +75,8 @@ If you customize, here are the choices for each setting:
 | --- | --- |
 | Clarify when one action matches | More often, Sometimes, Less often |
 | Clarify when more than one action matches | More often, Sometimes, Less often |
+| Offer support option when asking a clarifying question | More often, Sometimes, Less often |
+| Step validation attempts before offering support | 1 time, 2 times, 3 times |
 {: caption="Mode customization choices" caption-side="bottom"}
 
 If you customize modes, be sure to test any changes.
