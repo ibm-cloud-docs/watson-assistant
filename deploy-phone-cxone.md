@@ -50,7 +50,7 @@ You must have a NICE CXone account and phone numbers allocated for this integrat
 ## Generate NICE CXone access keys
 {: #deploy-phone-cxone-accesskeys}
 
-Access keys are used for authentication in the back-end integration and consist of two parts: an Access Key ID and a Secret Access Key. 
+Access keys are used for authentication and consist of two parts: an access key ID and a secret access key. 
 
 To generate NICE CXone access keys to use with your assistant:
 
