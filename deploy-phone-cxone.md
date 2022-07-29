@@ -189,7 +189,7 @@ ASSIGN sessionKey = "{p1}"
 
 #### Displaying conversation history to a live agent
 
-Configure your script to provide a transcript of the assistant conversation to a live agent via pop-out window. This helps the agent better understand and address a customer's needs.
+Configure your script to provide a transcript of the assistant conversation to a live agent in a pop-out window. This helps the agent better understand and address a customer's needs.
 
 1. Add an [Onanswer](https://help.nice-incontact.com/content/studio/actions/onanswer/onanswer.htm) event to your script. The  **Onanswer** event is triggered when an agent answers the call. 
 
