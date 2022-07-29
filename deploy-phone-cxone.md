@@ -261,6 +261,6 @@ Use the following format:
 }
 ```
 
-Parameters listed in the `custom_data` are transferred to the [signal](https://developer.niceincontact.com/API/AdminAPI#/Contacts/Signal%20a%20Contact) REST API. 
+Parameters listed in the `custom_data` object are transferred to the [signal](https://developer.niceincontact.com/API/AdminAPI#/Contacts/Signal%20a%20Contact) REST API. 
 
 Supported parameters are `p2`, `p3`, ... `p9`. Note that `p1` is preserved and used by the phone integration for passing the session history key into the NICE CXone script. 
