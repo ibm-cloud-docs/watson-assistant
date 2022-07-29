@@ -91,7 +91,7 @@ To integrate your assistant with NICE CXone:
     
     Click **Next**.
 
-5. On the **Connect to contact center** page, enter:
+5. On the **Connect to contact center** page, specify the following values:
 	    - the **Authentication URL** from NICE CXone
 	    - the **API URL**, which is the *Admin* API endpoint from NICE CXone
 	    - the **Access key ID**
