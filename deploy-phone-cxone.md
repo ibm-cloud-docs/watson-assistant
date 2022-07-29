@@ -71,7 +71,7 @@ To generate NICE CXone access keys to use with your assistant:
 ## Set up the integration
 {: #deploy-phone-cxone-setup}
 
-You must have an assistant ready to deploy, your NICE CXone access keys, and phone numbers allocated for this integration to complete setup. 
+To complete setup, you must have an assistant ready to deploy, your NICE CXone access keys, and phone numbers allocated for this integration. 
 
 To integrate your assistant with NICE CXone:
 
