@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-12-08"
+lastupdated: "2022-07-25"
 
 keywords: log webhook
 
@@ -49,7 +49,7 @@ Add a log webhook to your assistant if you want to use an external service to lo
 
 The log webhook does not return anything to your assistant.
 
-For environments where private endpoints are in use, keep in mind that a webhook sends traffic over the Internet. <!-- For more information, see [Private network endpoints](/docs/assistant?topic=assistant-security#security-private-endpoints). -->
+For environments where private endpoints are in use, keep in mind that a webhook sends traffic over the internet.
 {: note}
 
 ## Defining the webhook
@@ -63,7 +63,7 @@ The programmatic call to the external service must meet these requirements:
 
 To add the webhook details, complete the following steps:
 
-1. From your assistant, navigate to the page for the environment where you want to configure the webhook (**Draft environment** or **Live environment**).
+1. In your assistant, open the environment where you want to configure the webhook.
 
 1. Click the ![Environment settings icon](images/gear-icon-black.png) icon to open the environment settings.
 
