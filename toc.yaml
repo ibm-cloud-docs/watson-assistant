@@ -107,17 +107,18 @@ toc:
                 - topic: web-chat-develop-custom-buttons.md
                   navtitle: Implementing custom option buttons
       - topicgroup:
+          label: Deploying for phone
+          topics:
+          - deploy-phone.md
+          - deploy-phone-cxone.md
+          - phone-config.md
+          - deploy-phone-flex.md
+          - deploy-phone-genesys.md
+      - topicgroup:
           label: Deploying to other channels
           topics:
           - deploy.md
           - deploy-integration-add.md
-          - topicgroup:
-              label: Deploying for phone
-              topics:
-              - deploy-phone.md
-              - phone-config.md
-              - deploy-phone-flex.md
-              - deploy-phone-genesys.md
           - deploy-facebook.md
           - deploy-slack.md
           - deploy-sms.md
