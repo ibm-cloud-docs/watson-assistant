@@ -33,6 +33,7 @@ Adding the phone integration to your assistant makes your assistant available to
 
 There are several ways to add the phone integration to your assistant:
 - You can generate a free phone number that is automatically provisioned from IntelePeer. This is available only with new phone integrations. If you have an existing phone integration, you must delete it and create a new one to switch to a free phone number.
+- You can connect to a contact center with live agents. For more information about setting up the integration, see [Integrating with phone and NICE CXone contact center](/docs/watson-assistant?topic=watson-assistant-deploy-phone-nicecxone).
 - You can use and connect an existing number by configuring a Session Initiation Protocol (SIP) trunk from a provider such as IntelePeer, Genesys, or Twilio.
 
 A SIP trunk is equivalent to an analog telephone line, except it uses Voice over Internet Protocol (VoIP) to transmit voice data and can support multiple concurrent calls. The trunk can connect to the public switched telephone network (PSTN) or your company's on-premises private branch exchange (PBX). 
