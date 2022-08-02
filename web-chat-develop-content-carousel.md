@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-01"
+lastupdated: "2022-08-02"
 
 subcollection: watson-assistant
 
@@ -82,7 +82,9 @@ This example shows how you can use the [Swiper](https://swiperjs.com/){: externa
     In this example, we are including the carousel data inside the `user_defined` response. Depending on the design of your assistant, another option would be to store the data in skill variables that can be accessed by web chat from the `context` object.
     {: note}
 
-1. Create a handler for the [`customResponse`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external} event. This handler renders the content carousel, using the styles defined by the Swiper library. (You can see the definitions of these styles in the [full example](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/content-carousel){: external}.) This function also relies on a helper function (`createSlides()`), which we will create in the next step.
+1. Create a handler for the [`customResponse`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external} event. This handler renders the content carousel, using the styles defined by the Swiper library. (You can see the definitions of these styles in the [full example](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/content-carousel){: external}.)
+
+This function also relies on a helper function (`createSlides()`), which we will create in the next step. (The complete code for this function also initializes the Swiper library; for more information, see the [full example](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/content-carousel){: external}.)
 
     ```javascript
     function carouselCustomResponseHandler(event, instance) {
@@ -108,73 +110,40 @@ This example shows how you can use the [Swiper](https://swiperjs.com/){: externa
       const slidesContainer = element.querySelector('.swiper-wrapper');
       createSlides(slidesContainer, message, instance);
 
-      // Initialize the Swiper library which is what we are using to control the carousel. We are using a custom pagination
-      // element to control pagination and navigation.
-      // eslint-disable-next-line no-new
-      new Swiper(element.querySelector('.swiper'), {
-        modules: [Navigation, Pagination, A11y],
-        keyboard: {
-          enabled: true,
-        },
-        pagination: {
-          el: element.querySelector('.Carousel__BulletContainer'),
-          clickable: true,
-          bulletClass: 'Carousel__Bullet',
-          bulletActiveClass: 'Carousel__Bullet--selected',
-          renderBullet,
-        },
-        navigation: {
-          prevEl: element.querySelector('.Carousel__NavigationPrevious'),
-          nextEl: element.querySelector('.Carousel__NavigationNext'),
-        },
-        slidesPerView: 'auto',
-        spaceBetween: 15,
-        centeredSlides: true,
-        rewind: true,
-      });
+    ...
+
     }
     ```
 
-1. Create the helper function that renders each slide in the content carousel. This function populates the slide using values retrieved from the custom response (`alt`, `url`, `title`, and `description`).
+1. Create the `createSlides()` helper function that renders each slide in the content carousel. This function retrieves the values from the custom response (`alt`, `url`, `title`, and `description`), and uses them to populate the HTML for the slide. (For the complete function, see the [full example](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/content-carousel){: external}.)
 
     ```javascript
-    function createSlides(slidesContainer, message, webChatInstance) {
-      const carouselData = message.user_defined.carousel_data;
+    carouselData.forEach((cardData) => {
+      const { url, title, description, alt } = cardData;
+      const cardElement = document.createElement('div');
+      cardElement.classList.add('swiper-slide');
 
-      // Create a slide for each credit card in the message custom data.
-      carouselData.forEach((cardData) => {
-        const { url, title, description, alt } = cardData;
-        const cardElement = document.createElement('div');
-        cardElement.classList.add('swiper-slide');
-
-        cardElement.innerHTML = `
-          <div class="bx--tile Carousel__Card">
-            <img class="Carousel__CardImage" src="${url}" alt="${alt}" />
-            <div class="Carousel__CardText">
-              <div class="Carousel__CardTitle">${title}</div>
-              <div class="Carousel__CardDescription">${description}</div>
-            </div>
-            <!-- Here you would use a link to your own page that shows more details about this card. -->
-            <a href="https://www.ibm.com" class="Carousel__CardButton bx--btn bx--btn--primary" target="_blank">
-              View more details
-            </a>
-            <!-- This button will send a message to the assisstant and web chat will respond with more info. -->
-            <button type="button" class="Carousel__CardButton Carousel__CardButtonMessage bx--btn bx--btn--primary">
-              Tell me more about this
-            </button>
+      cardElement.innerHTML = `
+        <div class="bx--tile Carousel__Card">
+          <img class="Carousel__CardImage" src="${url}" alt="${alt}" />
+          <div class="Carousel__CardText">
+            <div class="Carousel__CardTitle">${title}</div>
+            <div class="Carousel__CardDescription">${description}</div>
           </div>
-        `;
+          <!-- Here you would use a link to your own page that shows more details about this card. -->
+          <a href="https://www.ibm.com" class="Carousel__CardButton bx--btn bx--btn--primary" target="_blank">
+            View more details
+          </a>
+          <!-- This button will send a message to the assisstant and web chat will respond with more info. -->
+          <button type="button" class="Carousel__CardButton Carousel__CardButtonMessage bx--btn bx--btn--primary">
+            Tell me more about this
+          </button>
+        </div>
+      `;
 
-        // Add a click handler to the second link/button. This will send a silent message to the assistant to ask for
-        // more information about the given credit card.
-        const button = cardElement.querySelector('.Carousel__CardButtonMessage');
-        button.addEventListener('click', () => {
-          webChatInstance.send({ input: { text: `Tell me about ${title}` } }, { silent: true });
-        });
+      ...
 
-        slidesContainer.appendChild(cardElement);
       });
-    }
     ```
 
 1. In your `onLoad` event handler, use the [`on()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#on){: external} instance method to subscribe to the `customResponse` event, registering the `carouselCustomResponseHandler()` function as the callback.
