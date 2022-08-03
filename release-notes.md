@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-28"
+lastupdated: "2022-07-19"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,125 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 19 July 2022
+{: #watson-assistant-jul192022}
+{: release-note}
+
+Changes to publishing and environments
+:   You can now publish versions of your content without assigning to the live environment, allowing you to make continuous updates before customers see it in production. Also, the formerly separate pages for your draft and live environments now appear as tabs on a single *Environments* page, from which you can set up unique configurations for building and testing in the draft environment, and for your customers in the live environment. For more information, see the [Publishing overview](/docs/watson-assistant?topic=watson-assistant-publish-overview).
+
+Logs reader role
+:   Identity and Access Management now includes a new service role, **Logs Reader**, which lets you grant access to Analytics without assigning the Manager role. Use Logs Reader in combination with the Reader or Writer role to provide access to the Analytics page. For more information, see [Managing access](/docs/watson-assistant?topic=watson-assistant-access-control).
+
+## 15 July 2022
+{: #watson-assistant-jul152022}
+{: release-note}
+
+Segment extension
+:   The Segment extension is now available for Enterprise plans. With this extension, you can use [Segment](https://segment.com/){: external} to capture and centralize data about your customers' behavior, including their interactions with your assistant. For more information, see [Sending events to Segment](/docs/watson-assistant?topic=watson-assistant-segment-add).
+
+New expression property
+:   You can now use the `.literal` property to return the exact response that a customer specifies. This property is helpful if a customer uses a synonym of an option, and you want your assistant to respond with the exact phrase they specified. To set this property, click the **Set variable values** icon and assign a session variable to the step variable. Add the `.literal` property to the step variable. Use the session variable in the assistant's response to display the customer's input.
+
+    For example, suppose you have an option called `plant` that has `fern` as a synonym. A customer might say `buy a fern`. In this case, you can use the `.literal` property so the assistant's response uses the customer's input. Your assistant might respond, `Great! I see you want to buy a fern.`
+
+## 11 July 2022
+{: #watson-assistant-jul112022}
+{: release-note}
+
+Ability to duplicate an action
+:   You can duplicate an action to reuse information in a new action. When you duplicate an action, the new action includes everything except example phrases. Click the overflow menu on the action you want and select **Duplicate**.
+
+New demo site
+:   Explore our [interactive demo site](https://www.ibm.com/products/watson-assistant/demos/lendyr/demo.html){: external} to learn how {{site.data.keyword.conversationshort}} can be used to build powerful, scalable experiences for your users.
+
+## 24 June 2022
+{: #watson-assistant-jun242022}
+{: release-note}
+
+Algorithms versions available in more languages
+:   Algorithms version options are now available in Chinese (Traditional), Japanese, and Korean. Algorithms versions allows you to choose which version of {{site.data.keyword.conversationshort}} algorithms to apply to your future trainings. For more information, see [Algorithm versions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-algorithms-versions).
+
+## 16 June 2022
+{: #watson-assistant-jun162022}
+{: release-note}
+
+Algorithms versions
+:   Algorithms versions allows you to choose which version of {{site.data.keyword.conversationshort}} algorithms to apply to your future trainings. You can choose to use the more stable and fully supported version of algorithms by selecting **Baseline**. This is the latest mature version that you may want to use for your live assistant. Or, you can choose **Beta** to preview and test what is coming. For more information, see [Algorithm versions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-algorithms-versions).
+
+Algorithm beta version (2022-06-10)
+:   Algorithm beta version (2022-06-10) includes a new irrelevance detection algorithm to improve off-topic detection accuracy. Utterances with similar meanings are expected to have more similar confidences in comparison to previous irrelevance detection algorithms. For example, the training utterance `please suggest route from times square` has 100% confidence at runtime. Currently in IBM Cloud, the utterance `please suggest route from central park` gets a low confidence and could be flagged as irrelevant. With beta version (2022-06-10), the same utterance is expected to be predicted correctly with a ~46% confidence.
+
+## 3 June 2022
+{: #watson-assistant-jun032022}
+{: release-note}
+
+Extensions support for importing API document with unsupported methods
+:   When building a custom extension, you can now import an API document even if it contains operations with required array parameters, which are not supported. The unsupported operations are automatically disabled, but this does not affect other operations. (Previously, the entire API document was rejected if it contained unsupported operations.) For more information, see [Building a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension).
+
+## 27 May 2022
+{: #watson-assistant-may272022}
+{: release-note}
+
+Support for custom extensions and dialog in Actions preview panel
+:   You can now view your entire assistant from the **Actions preview** panel, including custom extensions and dialog. This allows you to have a complete view of how an action is working. For more information about previewing actions, see [Reviewing and debugging your actions](/docs/watson-assistant?topic=watson-assistant-review).
+
+## 19 May 2022
+{: #watson-assistant-may192022}
+{: release-note}
+
+Sign out due to inactivity setting
+:   {{site.data.keyword.conversationshort}} now uses the **Sign out due to inactivity setting** from Identity & Access Management (IAM). {{site.data.keyword.cloud_notm}} account owners can select the time it takes before an inactive user is signed out and their credentials are required again. The default is 2 hours.
+
+   An inactive user will see two messages. The first message alerts them about an upcoming session expiration and provides a choice to renew. If they remain inactive, a second session expiration message appears and they will need to log in again.
+
+   For more information, see [Setting the sign out due to inactivity duration](/docs/account?topic=account-iam-work-sessions&interface=ui#sessions-inactivity){: external}.
+
+## 12 May 2022
+{: #watson-assistant-may122022}
+{: release-note}
+
+Ability to upload and download example phrases and upload saved customer responses
+:   You can now upload and download example phrases from **Customer starts with** at the start of an action. This can be useful if you have a large number of example phrases and don't want to define them one by one. For more information, see [Adding more examples](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-adding-more-examples).
+
+   You can also now upload saved customer responses from the **Saved responses** page. For more information, see [Uploading saved customer responses](/docs/watson-assistant?topic=watson-assistant-collect-info#uploading-saved-customer-response).
+
+   The ability to upload example phrases and saved customer responses is also helpful if you're using the classic {{site.data.keyword.conversationshort}} and want to migrate your intents and entities to the new {{site.data.keyword.conversationshort}}. For more information, see [Migrating intents and entities](/docs/watson-assistant?topic=watson-assistant-migrate-intents-entities).
+
+## 5 May 2022
+{: #watson-assistant-may052022}
+{: release-note}
+
+Success/failure variable for extensions
+:   Each call to a custom extension now returns a `Ran successfully` response variable, which you can use to check the success or failure of the call. For more information, see [Checking success or failure](/docs/watson-assistant?topic=watson-assistant-call-extension#extension-check-success).
+
+## 28 April 2022
+{: #watson-assistant-apr282022}
+{: release-note}
+
+Definitive calculation for abandoned actions
+:   Abandonment is now definitively calculated for your actions. On the **Analytics** page, actions are no longer considered `Ongoing` in the action completion analysis. An action is considered abandoned if it was not completed after 1 hour of inactivity and doesn't meet the criteria for any other incompletion reason (escalated to agent, started a new action, or stuck on a step). This change applies only to actions data after April 26, 2022. For more information about action incompletion, see [Reasons for incompletion](/docs/watson-assistant?topic=watson-assistant-analytics-action-completion#incomplete-reasons).
+
+Managing operations in extensions
+:   When you add a custom extension to an assistant, you can now choose which operations and response properties will be available to actions. For more information, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
+
+## 21 April 2022
+{: #watson-assistant-apr212022}
+{: release-note}
+
+Ability to duplicate a step
+:   You can now duplicate a step so you don't have to re-create variable settings and customizations. Duplicating a step is helpful when you need to add a step similar to a previous step, but with minor modifications. For more information about how to duplicate a step, see [Duplicating a step](/docs/watson-assistant?topic=watson-assistant-build-actions-overview#build-actions-overview-duplicate-step).
+
+Markdown supported in action editor
+:   The action editor now supports basic Markdown syntax. As you type, the action editor renders the Markdown so you can see the content as your customers will when they interact with the assistant.
+
+## 5 April 2022
+{: #watson-assistant-apr052022}
+{: release-note}
+
+Dialog feature available
+:   The dialog feature is available. If you have a dialog-based assistant that was built using the classic {{site.data.keyword.conversationshort}}, you can now migrate your dialog skill to the new {{site.data.keyword.conversationshort}} experience. For more information, see [Migrating to the new experience](/docs/watson-assistant?topic=watson-assistant-migrate-overview).
 
 ## 28 March 2022
 {: #watson-assistant-mar282022}

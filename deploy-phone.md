@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-11-19"
+lastupdated: "2022-06-10"
 
 subcollection: watson-assistant
 
@@ -28,17 +28,17 @@ subcollection: watson-assistant
 # Integrating with phone ![Plus or higher plans only](images/plus.png)
 {: #deploy-phone}
 
-By adding the phone integration to your assistant, you can make your assistant available to customers over the phone.
+Adding the phone integration to your assistant makes your assistant available to customers over the phone.
 {: shortdesc}
 
-When you add the phone integration to your assistant, you can automatically generate a working phone number that is automatically connected to your assistant. Or, if you prefer, you can connect the assistant to your existing infrastructure by configuring an existing Session Initiation Protocol (SIP) trunk.
+There are several ways to add the phone integration to your assistant:
+- You can generate a free phone number that is automatically provisioned from IntelePeer. This is available only with new phone integrations. If you have an existing phone integration, you must delete it and create a new one to switch to a free phone number.
+- You can connect to a contact center with live agents. For more information about setting up the integration, see [Integrating with phone and NICE CXone contact center](/docs/watson-assistant?topic=watson-assistant-deploy-phone-nicecxone).
+- You can use and connect an existing number by configuring a Session Initiation Protocol (SIP) trunk from a provider such as IntelePeer, Genesys, or Twilio.
 
-A SIP trunk is equivalent to an analog telephone line, except it uses Voice over Internet Protocol (VoIP) to transmit voice data and can support multiple concurrent calls. The trunk can connect to the public switched telephone network (PSTN) or your company's on-premises private branch exchange (PBX). If you choose to generate a free phone number for your assistant, a SIP trunk is automatically provisioned from IntelePeer. You can also choose to use an existing SIP trunk from a provider such as IntelePeer, Genesys, or Twilio.
+A SIP trunk is equivalent to an analog telephone line, except it uses Voice over Internet Protocol (VoIP) to transmit voice data and can support multiple concurrent calls. The trunk can connect to the public switched telephone network (PSTN) or your company's on-premises private branch exchange (PBX). 
 
-Generating a free phone number is available only with new phone integrations. If you have an existing phone integration and you want to switch to a free phone number, you must delete the existing integration and create a new one.
-{: note}
-
-When your customer makes a phone call using the telephone number connected to your assistant, the phone integration makes it possible for your assistant to answer. The integration converts output from your assistant into voice audio by using the {{site.data.keyword.texttospeechfull}} service. The audio is sent to the telephone network through the SIP trunk. When the customer replies, the voice input is converted into text by using the {{site.data.keyword.speechtotextfull}} service.
+When a customer makes a phone call using the telephone number connected to your assistant, the phone integration makes it possible for your assistant to answer. The integration converts output from your assistant into voice audio by using the {{site.data.keyword.texttospeechfull}} service, and the audio is sent to the telephone network through the SIP trunk. When the customer replies, the voice input is converted into text by using the {{site.data.keyword.speechtotextfull}} service.
 
 This feature is available only to Plus or Enterprise plan users. <!--Note that {{site.data.keyword.speechtotextshort}} and {{site.data.keyword.texttospeechshort}} charges are included in the cost of a [monthly active user](/docs/assistant?topic=assistant-services-information#services-information-user-based-plans){: external} (MAU). -->
 
@@ -48,11 +48,11 @@ Depending on the architecture of your existing telephony infrastructure, there a
 ## Set up the integration
 {: #deploy-phone-setup}
 
-You must have Manager service level access to the instance. <!-- For more information about access levels, see [Managing access to resources](/docs/assistant?topic=assistant-access-control){: external}. -->
+You must have Manager role access to the instance and Viewer role access to the resource group to complete setup. For more information about access levels, see [Managing access](/docs/watson-assistant?topic=watson-assistant-access-control).
 
 <!--To watch a video that walks through the setup process, see [Phone and SMS Integration](https://community.ibm.com/community/user/watsonapps/viewdocument/phone-and-sms-integration?CommunityKey=7a3dc5ba-3018-452d-9a43-a49dc6819633&tab=librarydocuments){: external} in the *IBM Watson Apps Community*.-->
 
-To set up the integration, complete the following steps:
+To set up the integration:
 
 1. In the **Integrations** section on the main page for your assistant, click **Add integration**.
 
@@ -60,7 +60,7 @@ To set up the integration, complete the following steps:
 
 1. Click **Create**.
 
-1. Choose whether you want to generate a free phone number for your assistant or connect to an existing SIP trunk:
+1. Choose whether to generate a free phone number for your assistant or connect to an existing SIP trunk:
 
     - To generate a free phone number for your assistant, click **Generate a free phone number**.
 
@@ -80,23 +80,6 @@ To set up the integration, complete the following steps:
       Currently, only one primary phone number can be added during initial setup of the phone integration. You can add more phone numbers in the phone integration settings later.
 
       Click **Next**.
-
-<!--   You might have only the one phone that you created through your SIP trunk provider in the previous step, or you might have a set of numbers.
-
-    - If you have one phone number, add it to the field.
-
-      Specify the number by using the international phone number format: `+1 958 555 0123`. Do *not* surround the area code with parentheses, such as (958).
-
-    - If you have multiple phone numbers, click **Add**.
-
-      Add a phone number and an optional description, and then click the checkmark icon ![checkmark icon](images/phone-checkmark-save.png) to save the number.
-
-      - To add more phone numbers one by one, click the *add phone number* icon (![Add phone number][images/phone-integ-add-number.png]), and then specify the phone number and an optional description. Repeat to add more numbers.
-
-      {: important}
-
-     The phone numbers must be unique per phone integration. If you use Twilio as the SIP trunk provider, you can use the same phone number for the phone and text messaging integrations.
--->
 
 1. On the **Speech to Text** page, select the instance of the {{site.data.keyword.speechtotextshort}} service you want to use for the phone integration.
 
@@ -129,6 +112,23 @@ To set up the integration, complete the following steps:
 
     Click **Next**.
 
+<!--   You might have only the one phone that you created through your SIP trunk provider in the previous step, or you might have a set of numbers.
+
+    - If you have one phone number, add it to the field.
+
+      Specify the number by using the international phone number format: `+1 958 555 0123`. Do *not* surround the area code with parentheses, such as (958).
+
+    - If you have multiple phone numbers, click **Add**.
+
+      Add a phone number and an optional description, and then click the checkmark icon ![checkmark icon](images/phone-checkmark-save.png) to save the number.
+
+      - To add more phone numbers one by one, click the *add phone number* icon (![Add phone number][images/phone-integ-add-number.png]), and then specify the phone number and an optional description. Repeat to add more numbers.
+
+      {: important}
+
+     The phone numbers must be unique per phone integration. If you use Twilio as the SIP trunk provider, you can use the same phone number for the phone and text messaging integrations.
+-->
+
 <!--   Stop and create speech service instances yourself before you finish setting up the integration in the following cases:
 
     - If you have Lite plan instances of the speech services, the automatic creation process is not started. Consider deleting the lite plan instances or create Plus plan instances of the services.
@@ -141,7 +141,6 @@ To set up the integration, complete the following steps:
     If you want to use a model that was created in a different service instance, click **More options** to show all service instances that you can access as options. <!--For example, if you created specialized custom models that you want your assistant to use, you can find and select them.
 
 
-
     <!-- - **{{site.data.keyword.speechtotextshort}}**: Optionally choose a different {{site.data.keyword.speechtotextshort}} service language model to use to define the language your assistant will use when it transcribes what customers say.
 
       For example, indicate whether to use British or American English. The list shows options from {{site.data.keyword.speechtotextshort}} service instances that you can access. 
@@ -151,22 +150,21 @@ To set up the integration, complete the following steps:
 
       The list shows options from {{site.data.keyword.texttospeechshort}} service instances that you can access. 
       
-
 -->
 
 <!-- If you want your assistant to be able to switch between voice and text during a customer interaction, enable both the phone and SMS with Twilio integrations. The integrations do not need to use the same third-party service provider. For more information, see [Integrating with *SMS with Twilio*](/docs/assistant?topic=assistant-deploy-sms){: external}. -->
 
-Any speech service charges that are incurred by the phone integration are billed with the {{site.data.keyword.conversationshort}} service plan as *voice add-on* charges. After the instances are created, you can access them directly from the IBM Cloud dashboard. Any use of the speech instances that occurs outside of your assistant are charged separately as speech service usage costs.
+Any speech service charges incurred by the phone integration are billed with the {{site.data.keyword.conversationshort}} service plan as *voice add-on* charges. After the instances are created, you can access them directly from the IBM Cloud dashboard. Any use of speech instances that occurs outside of your assistant is charged separately as speech service usage costs.
 {: important}
 
 The phone integration setup is now complete. On the **Phone** page, you can click the tabs to view or edit the phone integration.
 
-If you chose to generate a free telephone number, your new number is displayed on the **Phone number** tab immediately. However, provisioning the new number so it is ready to use might take several minutes.
+If you chose to generate a free telephone number, your new number is displayed on the **Phone number** tab immediately. However, provisioning the new number might take several minutes.
 {: note}
 
 ## Adding more phone numbers
 
-If you are using existing phone numbers you configured using a SIP trunk provider, you can add multiple numbers to the same phone integration.
+If you are using existing phone numbers you configured via a SIP trunk provider, you can add multiple numbers to the same phone integration.
 
 If you generated a free phone number, you cannot add more numbers.
 {: note}
@@ -175,7 +173,7 @@ To add more phone numbers:
 
 1. In the phone integration settings, go to the **Phone number** tab.
 
-1. Use one of the following methods to add phone numbers:
+1. Use one of the following methods:
 
     - To add phone numbers one by one, type each number in the table, along with an optional description. Click the checkmark icon ![checkmark icon](images/phone-checkmark-save.png) to save each number.
 
@@ -194,7 +192,7 @@ If you want your assistant to be able to transfer a conversation to a live agent
 ## Phone integration limits
 {: #deploy-phone-limits}
 
-Any speech service charges that are incurred by the phone integration are included as *Voice add-on* charges in your {{site.data.keyword.conversationshort}} service plan usage. The Voice add-on use is charged separately and in addition to your service plan charges. 
+Any speech service charges incurred by the phone integration are included as *Voice add-on* charges in your {{site.data.keyword.conversationshort}} service plan usage. The Voice add-on use is charged separately and in addition to your service plan charges. 
 
 Plan usage is measured based on the number of monthly active users, where a user is identified by the caller's unique phone number. An MD5 hash is applied to the phone number and the 128-bit hash value is used for billing purposes.
 
@@ -206,4 +204,3 @@ The number of concurrent calls that your assistant can participate in at one tim
 | Plus             |               100 |
 | Trial            |                 5 |
 {: caption="Plan details" caption-side="top"}
-

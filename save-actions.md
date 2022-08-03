@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-10-06"
+  years: 2021, 2022
+lastupdated: "2022-06-15"
 
 subcollection: watson-assistant
 
@@ -51,15 +51,13 @@ If you want to disable auto-save, you can toggle it off:
 
 1. Open the **Actions** page.
 
-1. Click the **Global settings** icon ![Gear icon](images/gear-icon-blue.png).
+1. Click the **Global settings** icon ![Gear icon](images/gear-icon-black.png).
 
-1. In the Global Settings window, click the **Auto-save** tab.
+1. On the **Auto-save** tab, set the switch to **Off**.
 
-1. Toggle the switch to **Off**.
+1. Click **Save**, and then click **Close**.
 
-![Auto-save](/images/save-work-auto-save.png)
-
-### Avoiding conflicts
+## Avoiding conflicts
 {: #save-actions-conflicts}
 
 To avoid conflicts when saving, we recommend dividing work so that one person works on one action at a time.
@@ -67,12 +65,4 @@ To avoid conflicts when saving, we recommend dividing work so that one person wo
 Also, {{site.data.keyword.conversationshort}} prevents two users from working in an action with unsaved edits. If one user saves changes before a second user, this `Unable to save action` message may appear:
 
 ![Unable to save action](images/manage-team-unable-to-save.png)
-
-<!--## Hide in-progress work before publishing
-{: #manage-team-hide-work}-->
-
-<!--## Moving a group of actions from one assistant to another
-{: #manage-team-moving-actions}
-
-This will be via JSON import/export on the settings page.-->
 

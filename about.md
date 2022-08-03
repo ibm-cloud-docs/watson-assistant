@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-01-19"
+lastupdated: "2022-06-30"
 
 keywords: chatbot, live chatbot, omnichannel
 
@@ -85,7 +85,7 @@ Read more about these implementation steps by following these links:
 
 The {{site.data.keyword.conversationshort}} application requires the same level of browser software as is required by {{site.data.keyword.Bluemix_notm}}. For more information, see {{site.data.keyword.Bluemix_notm}} [Prerequisites](/docs/overview?topic=overview-prereqs-platform#browsers-platform){: external}. 
 
-For information about the web browsers that are supported by the web chat integration, see [Browser support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-browsers).
+For information about the web browsers that are supported by the web chat integration, see [Browser support](/docs/watson-assistant?topic=watson-assistant-web-chat-overview#web-chat-architecture-browsers).
 
 ## Language support
 {: #about-lang-support}

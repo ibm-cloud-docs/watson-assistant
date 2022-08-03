@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-24"
+lastupdated: "2022-07-25"
 
 subcollection: watson-assistant
 
@@ -35,10 +35,62 @@ The web chat change log lists changes ordered by version number. For more inform
 
 For information about new features and improvements to the core {{site.data.keyword.conversationshort}} product, see [Release notes](/docs/watson-assistant?topic=watson-assistant-release-notes).
 
-## Controlling the version
+## Controlling the web chat version
 {: #release-notes-chat-version}
 
-If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Versioning](/docs/watson-assistant?topic=watson-assistant-customize-web-chat#customize-web-chat-versions).
+If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 6.6.0
+{: #6.6.0}
+
+*Release date: 25 July 2022*
+
+- A new `servers` property is now available in the web chat configuration options. You can use this property to set up a proxy between your users' browsers and {{site.data.keyword.conversationshort}}. For more information, see [Setting up a proxy](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#serversconfig){: external}.
+
+## 6.5.2
+{: #6.5.2}
+
+*Release date: 11 July 2022*
+
+- Bug fix for `date` response type.
+
+## 6.5.1
+{: #6.5.1}
+
+*Release date: 15 June 2022*
+
+- Bug fix for the Zendesk integration.
+
+## 6.5.0
+{: #6.5.0}
+
+*Release date: 6 June 2022*
+
+- **New agent events**: New events are now fired by the web chat when messages are sent or received during a conversation with a human agent using a service desk integration. For more information, see [Agent events summary](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#agent-summary){: external}.
+
+- Bug fixes.
+
+## 6.4.1
+{: #6.4.1}
+
+*Release date: 16 May 2022*
+
+- **Minimum size**: The minimum allowed size of the rendered web chat window has been reduced to satisfy the accessibility requirements defined by the [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/){: external} standard.
+
+- **Pop-up windows and tabs from iframes**: The web chat now allows pop-up windows and new tabs to be opened from content rendered inside `iframe` responses.
+
+- **Faster responses**: Responses received from the assistant are now displayed more quickly and without a **`...`** typing indicator.
+
+## 6.4.0
+{: #6.4.0}
+
+*Release date: 18 April 2022*
+
+- **Date picker**: If you configure a step to collect a **Date** customer response, the step now uses the new `date` response type to request that the web chat display a graphical date picker the customer can use to select a date, as an alternative to typing the date in the input field. Existing steps do not automatically inherit this behavior; if you want to use the date picker, you must delete the existing Date response and then re-add it.
+
+- **Skip "connect to agent" card**: A new `serviceDesk.skipConnectAgentCard` configuration option is available. If this option is enabled, the web chat immediately connects to an agent when it receives a _Connect to agent_ response, without first displaying a card and waiting for the user to click.
+
+- **Close button**: A new `showCloseAndRestartButton` configuration option specifies whether the web chat interface shows an **`X`** (Close) button in addition to the existing **`-`** (Minimize) button. A customer can click this button to close the web chat, end the conversation, and end any conversation with a human agent. The chat transcript is also cleared, but any transcript of a conversation with a human agent is preserved.
 
 ## 6.3.0
 {: #6.3.0}
@@ -66,7 +118,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
     The animations for the web chat panels have also been improved to make the whole experience more seamless and cohesive.
 
-- **Launcher**: The new web chat launcher bounces on two different occasions to attract attention and encourage customer engagement. For more information, see [Launcher appearance and behavior](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-launcher).
+- **Launcher**: The new web chat launcher bounces on two different occasions to attract attention and encourage customer engagement. For more information, see [Launcher appearance and behavior](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture#web-chat-architecture-launcher).
 
 - **Launcher**: Support has been added to control what text the launcher greets the user with, and when the greeting message is shown. For more information, see [Launcher](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#launcher){: external}.
 
@@ -95,9 +147,9 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 - **API version**: The web chat now uses the `2021-11-27` version of the {{site.data.keyword.conversationshort}} API. Previously it used the `2020-09-24` API version. For information about API changes that have been introduced since the `2020-09-24` version, see the release notes for [27 November 2021](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes#watson-assistant-nov272021) and [16 July 2021](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes#watson-assistant-jul162021).
 
-- **Launcher**: The new web chat launcher welcomes and engages customers so they know where to find help if they need it. For more information, see [Launcher appearance and behavior](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-launcher).
+- **Launcher**: The new web chat launcher welcomes and engages customers so they know where to find help if they need it. For more information, see [Launcher appearance and behavior](/docs/watson-assistant?topic=watson-assistant-web-chat-overview#web-chat-architecture-launcher).
 
-- **Home screen**: The web chat home screen has been updated to have a more modern look. For more information about the home screen, see [Configuring the home screen](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-home-screen).
+- **Home screen**: The web chat home screen has been updated to have a more modern look. For more information about the home screen, see [Configuring the home screen](/docs/watson-assistant?topic=watson-assistant-web-chat-config#web-chat-configure-home-screen).
 
 - **Agent events**: New events are now fired by the web chat when interacting with a human agent using a service desk integration. If you are using a custom service desk integration based on the [starter kit](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}, you can use these events to create a pre-chat form before the agent escalation occurs, to create a post-chat form after the agent conversation ends, or to specify what happens if an agent isn’t available (like create a ticket submission form). For more information, see [Agent events summary](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#summary){: external}.
 

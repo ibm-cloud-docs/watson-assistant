@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-21"
+lastupdated: "2022-06-27"
 
 subcollection: watson-assistant
 
@@ -59,7 +59,7 @@ After this processing has completed, the custom extension becomes available as a
 
 To create a custom extension, you need access to an OpenAPI document that describes the REST API you want to integrate with. Many third-party services publish OpenAPI documents that describe their APIs, which you can download and import. For an API that your company maintains, you can use standard tools to create an OpenAPI document describing it.
 
-The [SwaggerHub](https://swagger.io/tools/swaggerhub/){: external} website offers an [OpenAPI 3.0 Tutorial](https://support.smartbear.com/swaggerhub/docs/tutorials/openapi-3-tutorial.html){: external}, as well as [tools](https://swagger.io/tools/){: external} you can use to develop and validate your OpenAPI document.
+The [SwaggerHub](https://swagger.io/tools/swaggerhub/){: external} website offers an [OpenAPI 3.0 Tutorial](https://support.smartbear.com/swaggerhub/docs/tutorials/openapi-3-tutorial.html){: external}, as well as [tools](https://swagger.io/tools/){: external} to help you develop and validate your OpenAPI document. You can use the online [Swagger editor](https://editor.swagger.io/){: external} to convert your OpenAPI document to the correct format and OpenAPI version.
 {: tip}
 
 The OpenAPI document must satisfy the following requirements and restrictions:
@@ -70,8 +70,10 @@ The OpenAPI document must satisfy the following requirements and restrictions:
 - [Relative URLs](https://swagger.io/docs/specification/api-host-and-base-path/#relative-urls){: external} are currently not supported.
 - Only `Basic`, `Bearer`, and `API key` authentication are supported.
 - Schemas defined using `anyOf`, `oneOf`, and `allOf` are currently not supported.
-- Arrays are not supported in request bodies. You can import a document that defines requests that take arrays as optional parameters, but the assistant will not be able to pass values for these parameters. You cannot import a document that includes operations that _require_ arrays as parameters.
+- Arrays are not supported in request bodies. If an operation takes arrays as optional parameters, the assistant will not be able to pass values for these parameters. Any operations that _require_ array parameters are disabled.
 - Any defined array properties are included in response bodies, but individual values inside an array are not mapped to action variables. These values can be accessed from an assistant only by writing expressions in the JSON editor.
+
+In addition, any call to the external API must complete within 30 seconds.
 
 ## Building the custom extension
 
@@ -116,8 +118,6 @@ To build a custom extension based on the API definition, follow these steps:
 
         - **Request parameters**: The list of input parameters defined for the operation, along with the type of each parameter and whether the parameter is required or optional.
         - **Response properties**: The properties of the response body that will be mapped to variables the assistant can access.
-
-    - The **Review schemas** table shows detailed information about the named schemas defined in the OpenAPI document.
 
 1. If you are satisfied with the extension, click **Finish**.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-05-16"
 
 subcollection: watson-assistant
 
@@ -32,7 +32,7 @@ An action represents a business process that helps customers answer their questi
 
 A step condition is a boolean test, based on some runtime value; the step executes only if the test evaluates as true. This test can be applied to any variable, such as an action variable containing the customer response from a previous step. By defining step conditions, you can create multiple pathways through an action based on different possible runtime values.
 
-For more information about variables, see [Managing information during the conversation](/docs/watson-assistant?topic=watson-assistant-manage-info).
+For more information about variables, see [Using variables to manage conversation information](/docs/watson-assistant?topic=watson-assistant-manage-info).
 
 A basic step condition is expressed in the following form:
 
@@ -100,7 +100,7 @@ An operator specifies the kind of test you are performing on a value in a condit
 
 | Response type                        | Operators                           |
 |--------------------------------------|-------------------------------------|
-| - Options\n- Free text               | - is\n- is not                      |
+| - Options\n- Free text\n- Regex      | - is\n- is not                      |
 | - Number\n- Currency\n- Percent      | - is defined\n- is not defined\n- is equal to (==)\n- is not equal to (≠)\n- is less than (&lt;)\n- is less than or equal to (&lt;=)\n- is greater than (&gt;)\n- is greater than or equal to (&gt;=) |
 | - Date                               | - is defined\n- is not defined\n- is on\n- is not on\n- is before\n- is after\n- is on or before\n- is on or after |
 | - Time                               | - is defined\n- is not defined\n- is at\n- is not at\n- is before\n- is after\n- is at or before\n- is at or after |

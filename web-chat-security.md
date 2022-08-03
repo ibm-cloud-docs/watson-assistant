@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-01-20"
+lastupdated: "2022-06-30"
 
 subcollection: watson-assistant
 
@@ -68,8 +68,9 @@ Before you enable security, complete the following steps:
     - `iss`: Represents the issuer of the JWT. This value is a case-sensitive string.
     - `sub`: Represents the principal that is the subject of the JWT. This value must either be scoped to be locally unique in the context of the issuer or be globally unique. The value you specify for `sub` is used as the `user_id`.
 
-      The user ID that is specified in the `sub` claim is also sent in the `customer_id` section of the `X-Watson-Metadata` HTTP header. The `customer_id` can be used to make requests to delete user data. Because the ID is sent in a header field, the syntax must meet the requirements for header fields as defined in [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2){: external} (all visible ASCII characters).
-      <!--- For more information about deleting user data, see [Labeling and deleting data](/docs/assistant?topic=assistant-information-security#information-security-gdpr-wa){: external}. --->
+        The user ID that is specified in the `sub` claim is also sent in the `customer_id` section of the `X-Watson-Metadata` HTTP header. The `customer_id` can be used to make requests to delete user data. Because the ID is sent in a header field, the syntax must meet the requirements for header fields as defined in [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2){: external} (all visible ASCII characters).
+        
+        For more information about deleting user data, see [Labeling and deleting data](/docs/watson-assistant?topic=watson-assistant-admin-securing#securing-gdpr-wa).
 
     - `exp`: Represents the expiration time on or after which the JWT cannot be accepted for processing. Many libraries set this value for you automatically. Set a short-lived `exp` claim with whatever library you use.
 
@@ -263,7 +264,7 @@ To authenticate and specify a unique ID for each customer, add the user ID infor
     The user ID that is specified in the `sub` claim is also sent in the `customer_id` section of the `X-Watson-Metadata` HTTP header. The `customer_id` can be used to make requests to delete user data. Because the ID is sent in a header field, the syntax must meet the requirements for header fields as defined in [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2){: external} (all visible ASCII characters).
     <!--- For more information about deleting user data, see [Labeling and deleting data](/docs/assistant?topic=assistant-information-security#information-security-gdpr-wa){: external}. --->
 
-If you disable security, then you can use the `instance.updateUserID()` method to specify user IDs. For more information, see [Adding user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-config#web-chat-config-userid).
+If you disable security, then you can use the `instance.updateUserID()` method to specify user IDs. For more information, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-userid).
 
 ## Logging out
 {: #web-chat-security-logout}
@@ -297,6 +298,7 @@ The following example shows a complete CSP metadata tag:
 {: codeblock}
 
 ### Allowing elements
+{: #web-chat-security-allow-elements}
 
 If your CSP uses a nonce to add elements, such as `<script>` and `<style>` tags, to an allowlist, do not use `unsafe-inline` to allow all such elements. Instead, provide a nonce value to the web chat widget as a configuration option. The web chat will then set the nonce on any of the `<script>` and `<style>` elements that it generates dynamically.
 

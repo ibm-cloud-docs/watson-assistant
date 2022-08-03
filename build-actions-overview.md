@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-10-25"
+  years: 2018, 2022
+lastupdated: "2022-07-11"
 
 subcollection: watson-assistant
 
@@ -31,10 +31,10 @@ subcollection: watson-assistant
 Like a human personal assistant, the assistant you build will help your customers perform tasks and answer questions. To accomplish this, you define actions for the assistant.
 {: shortdesc}
 
-An _action_ represents a discrete outcome you want your assistant to be able to accomplish in response to a user's request. An action comprises the interaction between a customer and the assistant about a particular question or request. This interation begins with the user input that starts the action (for example, `I want to withdraw money`). It might then include additional exchanges as the assistant gathers more information, and it ends when the assistant carries out the request or answers the customer's question.
+An _action_ represents a discrete outcome you want your assistant to be able to accomplish in response to a user's request. An action comprises the interaction between a customer and the assistant about a particular question or request. This interaction begins with the user input that starts the action (for example, `I want to withdraw money`). It might then include additional exchanges as the assistant gathers more information, and it ends when the assistant carries out the request or answers the customer's question.
 
 ## Creating and editing an action
-{: #build-actions-overview-creating}
+{: #build-actions-overview-create}
 
 To see how actions work and how you build one, let's go through an example.
 
@@ -48,7 +48,7 @@ Initially, you only need to specify one example of typical user input that start
 {: tip}
 
 ## Using the action editor
-{: #build-actions-overview-using}
+{: #build-actions-overview-use}
 
 After you create the action, the action editor opens.
 
@@ -62,7 +62,7 @@ The editor window shows the parts of an action:
 
 - The **Preview** button opens a pane that shows you how the assistant responds to customer input. You can preview the assistant at any time to see the effect of changes you have made.
 
-As you edit an action, your changes are automatically saved.
+The action editor supports basic Markdown syntax.
 {: tip}
 
 ## Steps
@@ -116,6 +116,23 @@ Let's edit step 1 to find out which account the customer wants to withdraw money
     ![Previewing action with one step](images/action-preview-one-step.png)
 
     As expected, the assistant now prompts you to select the account you want to withdraw money from.
+
+### Duplicating a step
+{: #build-actions-overview-duplicate-step}
+
+You can duplicate a step so you don't have to re-create variable settings and customizations. Duplicating a step is helpful when you need to add a step similar to a previous step, but with minor modifications.
+
+Complete the following steps to duplicate a step:
+
+1. Click the **Duplicate** icon on the step that you want to duplicate.
+
+    ![Duplicate button on a step](images/action-editor-duplicate-button.png)
+
+    A step appears immediately following the step that you duplicated. This step is identical to the duplicated step and displays a blue circle in the upper right to indicate that the step is a duplicate.
+
+    ![Duplicated step](images/action-preview-duplicate-step.png)
+
+1. Edit the information in the new step as necessary.
 
 ### Adding conditional steps
 {: #build-actions-overview-conditional-steps}
@@ -207,3 +224,13 @@ Start by typing `I want to withdraw money`. Try various permutations of your inp
 - Try including additonal information in your initial message. For example, try typing `I want to withdraw $50 from my savings account`. Confirm that the assistant does not ask you again to specify the information you already provided.
 
 That's it! You have built a simple action that includes multiple steps, collects information that it stores as action variables, and conditions its responses based on what your customer chooses. There is a lot more you can do with actions, but all of it is built on this basic pattern.
+
+## Managing actions
+{: #build-actions-overview-manage}
+
+<!-- Use different {{site.data.keyword.conversationshort}} capabilities to manage your actions workflow within a single assistant and between multiple assistants. -->
+
+### Duplicating an action
+{: #build-actions-overview-manage-duplicate}
+
+You can duplicate an action to reuse information in a new action. When you duplicate an action, the new action includes everything except example phrases. Click the overflow menu on the action you want and select **Duplicate**.

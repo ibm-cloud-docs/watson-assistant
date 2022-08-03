@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-10-01"
+  years: 2020, 2022
+lastupdated: "2022-06-30"
 
 subcollection: watson-assistant
 
@@ -45,7 +45,7 @@ There are multiple points at which a developer can customize and extend how the 
 
 - Customizing actions: By writing expressions and editing JSON data, you can extensively customize how an action evaluates step conditions, how it stores data, how it responds to customer input, and how it interacts with channels. (More information coming soon.)
 
-- [Customizing the web chat](/docs/watson-assistant?topic=watson-assistant-customize-web-chat): You can use the web chat API to extensively customize the appearance and behavior of the web chat.
+- [Web chat development overview](/docs/watson-assistant?topic=watson-assistant-web-chat-develop): You can use the web chat API to extensively customize the appearance and behavior of the web chat.
 
 - Customizing the phone integration: You can use commands and context variables to extensively configure how your assistant interacts with users using the phone integration. (More information coming soon.)
 

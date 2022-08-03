@@ -9,7 +9,7 @@ toc:
     href: /docs/watson-assistant
     product-page: https://ibm.com/cloud/watson-assistant
     path: watson-assistant
-    label: New Watson Assistant (managed)
+    label: Watson Assistant
 
 #  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
   entries:
@@ -18,6 +18,7 @@ toc:
       topics:
       - welcome-new-assistant.md
       - about.md
+      - getting-started.md
       - plan-assistant.md
       - topicgroup:
           label: Release notes
@@ -38,7 +39,6 @@ toc:
       topics:
       - topicgroup:
           label: Building your assistant
-
           topics:
           - topic: build-actions-overview.md
             navtitle: Overview
@@ -57,63 +57,79 @@ toc:
           - human-agent.md
           - save-actions.md
           - review.md
+          - actions-global-settings.md
           - assistant-add.md
           - assistant-rename-delete.md
       - topicgroup:
-          label: Publishing and deploying your assistant
+          label: Previewing and publishing
           topics:
           - publish-deploy-overview.md
           - preview-share.md
           - publish.md
-          - deploy.md
+      - topicgroup:
+          label: Adding the assistant to your website
+          topics:
+          - topic: web-chat-overview.md
+            navtitle: Overview
+          - web-chat-architecture.md
+          - deploy-web-chat.md
           - topicgroup:
-              label: Deploying to your website
+              label: Web chat setup
               topics:
-              - deploy-web-chat.md
-              - web-chat-config.md
-              - web-chat-security.md
+              - topic: web-chat-config.md
+                navtitle: Overview
+              - web-chat-style.md
+              - web-chat-home-screen.md
+              - web-chat-suggestions.md
+          - topicgroup:
+              label: Web chat development
+              topics:
+                - topic: web-chat-develop.md
+                  navtitle: Overview
+                - web-chat-develop-home-screen.md
+                - web-chat-develop-userid.md
+                - web-chat-develop-strings.md
+                - web-chat-develop-global.md
+                - web-chat-security.md
+                - web-chat-develop-versions.md
+          - topicgroup:
+              label: Adding service desk support
+              topics:
+              - topic: web-chat-service-desk.md
+                navtitle: Overview
               - deploy-salesforce.md
               - deploy-zendesk.md
-              links:
-              - link:
-                  label: Integrating with Genesys Cloud
-                  href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/genesys/webChat
-              - link:
-                  label: Integrating with NICE inContact
-                  href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/incontact/webChat
-              - link:
-                  label: Integrating with Twilio Flex
-                  href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/flex/webChat
-              - link:
-                  label: Integrating with Oracle B2C Service
-                  href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/oracle/webChat
-              - link:
-                  label: Integrating with Kustomer
-                  href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/kustomer/webChat
-              - link:
-                  label: Integrating with your own service desk
-                  href: https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter
           - topicgroup:
-              label: Deploying for phone
+              label: Tutorials
               topics:
-              - deploy-phone.md
-              - phone-config.md
-              - deploy-phone-flex.md
-              - deploy-phone-genesys.md
-          - topicgroup:
-              label: Deploying to other platforms
-              topics:
-              - deploy-integration-add.md
-              - deploy-facebook.md
-              - deploy-slack.md
-              - deploy-sms.md
-              - deploy-whatsapp.md
+                - topic: web-chat-develop-download-transcript.md
+                  navtitle: Providing a downloadable transcript
+                - topic: web-chat-develop-custom-buttons.md
+                  navtitle: Implementing custom option buttons
+      - topicgroup:
+          label: Deploying for phone
+          topics:
+          - deploy-phone.md
+          - deploy-phone-cxone.md
+          - phone-config.md
+          - deploy-phone-flex.md
+          - deploy-phone-genesys.md
+      - topicgroup:
+          label: Deploying to other channels
+          topics:
+          - deploy.md
+          - deploy-integration-add.md
+          - deploy-facebook.md
+          - deploy-slack.md
+          - deploy-sms.md
+          - deploy-whatsapp.md
       - topicgroup:
           label: Improving your assistant
           topics:
           - analytics-overview.md
           - analytics-action-completion.md
           - analytics-conversations.md
+          - segment-add.md
       - topicgroup:
           label: Administering your instance
           topics:
@@ -128,6 +144,7 @@ toc:
           - admin-failover.md
           - admin-beta.md
           - admin-language-support.md
+          - switch-experience.md
       - topicgroup:
           label: Customizing and developing
           topics:
@@ -137,7 +154,6 @@ toc:
           - topicgroup:
               label: Customizing channels
               topics:
-              - customize-web-chat.md
               - phone-actions.md
           - topicgroup:
               label: Extending your assistant with webhooks
@@ -149,6 +165,21 @@ toc:
               - webhook-log.md
           - build-custom-extension.md
           - add-custom-extension.md
+      - topicgroup:
+          label: Migrating to the new experience
+          topics:
+          - topic: migrate-overview.md
+            navtitle: Overview
+          - compare-actions-dialog.md
+          - activate-dialog.md
+          - migrate-intents-entities.md
+          - dialog-call-action.md
+          - dialog-analyze.md
+          - dialog-publish.md
+      - topicgroup:
+          label: Early access features
+          topics:
+          - action-response-modes.md
 
   - navgroup:
       id: reference
@@ -157,9 +188,11 @@ toc:
       - response-types-reference.md
       - preview-runtime-errors.md
       - expression-methods-actions.md
+      - time-zones.md
       - phone-context.md
       - sms-reference.md
       - cdr-log-reference.md
+      - segment-event-reference.md
       - topicgroup:
           label: Web chat API reference
           topics:
@@ -209,7 +242,6 @@ toc:
       topics:
       - faqs.md
       - troubleshoot.md
-      - feedback.md
       - topicgroup:
           label: Communities
           links:
@@ -217,8 +249,8 @@ toc:
               label: Stack Overflow
               href: https://stackoverflow.com/questions/tagged/watson-assistant
           - link:
-              label: IBM Watson Apps Community
-              href: https://community.ibm.com/community/user/watsonapps/communities/community-home?CommunityKey=7a3dc5ba-3018-452d-9a43-a49dc6819633
+              label: IBM Watson Natural Language AI Community
+              href: https://community.ibm.com/community/user/watsonai/communities/community-home?CommunityKey=7a3dc5ba-3018-452d-9a43-a49dc6819633
       - accessibility.md
       - browser-support.md
       - terms-notices.md
