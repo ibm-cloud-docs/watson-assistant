@@ -180,6 +180,7 @@ toc:
           label: Early access features
           topics:
           - action-response-modes.md
+          - multiple-environments.md
 
   - navgroup:
       id: reference
