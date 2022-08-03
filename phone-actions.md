@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-05-24"
+lastupdated: "2022-08-03"
 
 subcollection: watson-assistant
 
@@ -398,7 +398,9 @@ If you define a SIP URI as the transfer target, escape the at sign (`@`) in the 
 ```
 {: codeblock}
 
-###  Transferring upon hangup
+###  Transferring after hangup
+
+
 By default, the phone integration transfers calls by using a SIP `REFER` request. Depending on the IVR service provider, you might need to configure call transfer to use a SIP `BYE` request instead.
 Use the  `transfer_method`  attribute to specify how to transfer the call, using either  `refer`  or  `hangup`. When `transfer_method` is set to  `hangup` instead of `refer`, the behavior of the transfer action changes. Instead of sending a SIP `REFER` request, the phone integration plays back any associated text and then hangs up the call by sending a SIP `BYE` request.
 
@@ -407,31 +409,29 @@ After the hangup, the phone integration passes the transfer destination that is 
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "connect_to_agent",
-        "transfer_info": {
-          "target": {
-            "service_desk": {
-              "sip": {
-                "uri": "sip:user\\@domain.com",
-                "transfer_method": "hangup",
-                "transfer_target_header": "Transfer-Target"
-              }
+  "generic": [
+    {
+      "response_type": "connect_to_agent",
+      "transfer_info": {
+        "target": {
+          "service_desk": {
+            "sip": {
+              "uri": "sip:user\\@domain.com",
+              "transfer_method": "hangup",
+              "transfer_target_header": "Transfer-Target"
             }
-          },
-          "agent_available": {
-            "message": "Please hold on while I connect you with a live agent."
-          },
-          "agent_unavailable": {
-            "message": "Sorry, I could not find an agent."
-          },
-          "message_to_human_agent": "The caller needs help resetting their password"
+          }
         }
-      }
-    ]
-  }
+      },
+      "agent_available": {
+        "message": "Please hold on while I connect you with a live agent."
+      },
+      "agent_unavailable": {
+        "message": "Sorry, I could not find an agent."
+      },
+      "message_to_human_agent": "The caller needs help resetting their password"
+    }
+  ]
 }
 ```
 {: codeblock}
@@ -937,4 +937,3 @@ To remove a previously defined property, you must explicitly set it to an empty 
 
 ```
 {: codeblock}
-
