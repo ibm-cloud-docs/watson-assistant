@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-08-04"
 
 subcollection: watson-assistant
 
@@ -44,7 +44,7 @@ The **Action completion** page of {{site.data.keyword.conversationshort}} provid
 An action is considered complete when:
 - A final (end) step is reached
 - Search reached a final step
-- A subaction reached a final step, returns to a parent action, and the parent action ends because `End this action after subaction is completed` is selected
+- The action called another action with the `End this action after the other action is completed` option, and the other action has completed
 - Connect to agent transfer occurs according to the step response and without involving the [Fallback action](/docs/watson-assistant?topic=watson-assistant-handle-errors#fallback-action)
 - The last step of the action has been executed and there are no more steps to execute
 
@@ -55,7 +55,7 @@ An action is considered incomplete for these reasons:
 
 | Reason | Description |
 | ------ | ---------- |
-| Escalated to agent | The user explicitly asks for a human agent, triggering the [Fallback action](/docs/watson-assistant?topic=watson-assistant-handle-errors#fallback-action). For more information, see [When your customer asks to speak to a human agent](/docs/watson-assistant?topic=watson-assistant-handle-errors#when-your-customer-asks-to-speak-to-a-human-agent). Or, the user chooses human agent escalation from the list of [suggestions in web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-suggestions). |
+| Escalated to agent | The user explicitly asks for a human agent, triggering the [Fallback action](/docs/watson-assistant?topic=watson-assistant-handle-errors#fallback-action). For more information, see [When your customer asks to speak to a human agent](/docs/watson-assistant?topic=watson-assistant-handle-errors#when-your-customer-asks-to-speak-to-a-human-agent). Or, the user chooses human agent escalation from the list of [suggestions in web chat](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-alternate). |
 | Started a new action | The user changes the topic of the conversation, triggering another action, and either doesn't return to the original action or the other action is also incomplete. |
 | Stuck on a step |  Triggered during step validation where a user exceeds the maximum retries for the particular step. Default tries is set to 3, but you can change this setting. See [Customizing validation for a response](/docs/watson-assistant?topic=watson-assistant-handle-errors#customizing-validation-for-a-response) for more information. |
 | Abandoned | An action is considered abandoned if it was not completed after 1 hour of inactivity and doesn't meet the criteria for any other incompletion reason (escalated to agent, started a new action, or stuck on a step). |
