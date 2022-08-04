@@ -44,7 +44,7 @@ The **Action completion** page of {{site.data.keyword.conversationshort}} provid
 An action is considered complete when:
 - A final (end) step is reached
 - Search reached a final step
-- With `Go to another action`, the other action reached a final step, returns to a parent action, and the parent action ends because `End this action after the other action is completed` is selected
+- The action called another action with the `End this action after the other action is completed` option, and the other action has completed
 - Connect to agent transfer occurs according to the step response and without involving the [Fallback action](/docs/watson-assistant?topic=watson-assistant-handle-errors#fallback-action)
 - The last step of the action has been executed and there are no more steps to execute
 
