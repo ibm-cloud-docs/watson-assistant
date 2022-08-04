@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-02"
+lastupdated: "2022-08-04"
 
 subcollection: watson-assistant
 
@@ -38,7 +38,7 @@ For a complete, working version of the example described in this tutorial, see [
 
 A _content carousel_ (or _slider_) is a type of interactive element that shows options as a scrollable series of slides.
 
-{{site.data.keyword.conversationshort}} does not have a built-in response type for content carousels. But that isn't a problem: you can use the `user_defined` response type to send a custom response with the information you want to show, and extend the web chat to render the content carousel using standard JavaScript libraries.
+{{site.data.keyword.conversationshort}} does not have a built-in response type for content carousels. Instead, you can use the `user_defined` response type to send a custom response with the information you want to show, and extend the web chat to render the content carousel using standard JavaScript libraries.
 
 ![Content carousel in web chat](images/web-chat-tutorial-content-carousel.png)
 
@@ -84,7 +84,7 @@ This example shows how you can use the [Swiper](https://swiperjs.com/){: externa
 
 1. Create a handler for the [`customResponse`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external} event. This handler renders the content carousel, using the styles defined by the Swiper library. (You can see the definitions of these styles in the [full example](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/content-carousel){: external}.)
 
-This function also relies on a helper function (`createSlides()`), which we will create in the next step. (The complete code for this function also initializes the Swiper library; for more information, see the [full example](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/content-carousel){: external}.)
+    This function also relies on a helper function (`createSlides()`), which we will create in the next step. (The complete code for this function also initializes the Swiper library; for more information, see the [full example](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/content-carousel){: external}.)
 
     ```javascript
     function carouselCustomResponseHandler(event, instance) {
@@ -159,8 +159,8 @@ This function also relies on a helper function (`createSlides()`), which we will
       });
     ```
 
-In this example, we are checking the custom `user_defined_type` property of the custom response, and calling the `carouselCustomResponseHandler()` function only if the specified type is `carousel`. This is an optional check that shows how you might use a custom property to define multiple different custom responses (each with a different value for `user_defined_type`).
-{: note}
+    In this example, we are checking the custom `user_defined_type` property of the custom response, and calling the `carouselCustomResponseHandler()` function only if the specified type is `carousel`. This is an optional check that shows how you might use a custom property to define multiple different custom responses (each with a different value for `user_defined_type`).
+    {: note}
 
 For complete working code, see the [Content carousel for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/content-carousel){: external} example.
 
