@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-08-08"
 
 subcollection: watson-assistant
 
@@ -52,7 +52,7 @@ If you are a developer, you can further customize and extend the web chat by wri
 
 The following documentation topics provide more information about the capabilities of the web chat integration, how to configure and deploy it, and how to customize it.
 
-- [How the web chat works](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture.md): Overview of web chat capabilities and architecture
+- [How the web chat works](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture): Overview of web chat capabilities and architecture
 - [Embedding the web chat on your page](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat): How to embed the web chat widget on your website
 - [Web chat setup](/docs/watson-assistant?topic=watson-assistant-web-chat-config): How to configure the web chat using the integration settings
 - [Web chat development](/docs/watson-assistant?topic=watson-assistant-web-chat-config): How to customize and extend the web chat by writing code
