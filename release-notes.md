@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-08"
+lastupdated: "2022-08-05"
 
 keywords: Watson Assistant release notes
 
@@ -38,8 +38,8 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
-## 8 August 2022
-{: #watson-assistant-aug082022}
+## 5 August 2022
+{: #watson-assistant-aug052022}
 {: release-note}
 
 Initial value of session variables
