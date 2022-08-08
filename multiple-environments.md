@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-03"
+lastupdated: "2022-08-08"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,8 @@ subcollection: watson-assistant
 {:swift: .ph data-hd-programlang='swift'}
 
 {{site.data.content.classiclink}}
+
+{{site.data.content.earlyaccess}}
 
 # Multiple environments ![Enterprise plan](images/enterprise.png)
 {: #multiple-environments}
