@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-06-16"
+lastupdated: "2022-08-05"
 
 subcollection: watson-assistant
 
@@ -79,6 +79,8 @@ To add a session variable that can be accessed by any action:
 1. **Optional**: Add a type. This sets the response type of the variable. For more information about response types, see [Choosing a response type](/docs/watson-assistant?topic=watson-assistant-collect-info#choosing-a-response-type). From this field, you can also select any of the saved responses that you created. For more information about saved responses, see [Saving and reusing customer responses](/docs/watson-assistant?topic=watson-assistant-collect-info#saved-customer-responses).
 
 1. **Optional**: Add an initial value. This sets the starting value for the variable at the beginning of each user session. For example, suppose you have an assistant your customers can use to make purchases; you might initialize a *Payment due* variable with a starting value of 0, and then add to that value as the customer orders items.
+
+    You can set the initial value to an expression. To do this, click the **Use expression** toggle to enable support for expressions. For information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).
 
 1. **Optional**: Add a description.
 
