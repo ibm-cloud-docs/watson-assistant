@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-05"
+lastupdated: "2022-08-09"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,19 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 9 August 2022
+{: #watson-assistant-aug092022}
+{: release-note}
+
+New API methods
+:   The v2 API now supports new **Environments** and **Releases** methods:
+
+    - **Environments**: Retrieve information about the environments associated with an assistant.
+
+    - **Releases**: Retrieve information about the releases (versions) that have been published for an assistant, and assign an available release to an environment.
+
+For more information, see the V2 [API Reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2){: external}.
 
 ## 5 August 2022
 {: #watson-assistant-aug052022}
