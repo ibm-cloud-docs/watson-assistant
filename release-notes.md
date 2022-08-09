@@ -39,7 +39,7 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
 ## 9 August 2022
-{: #watson-assistant-august082022}
+{: #watson-assistant-aug092022}
 {: release-note}
 
 New API methods
