@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-08-11"
 keywords: settings
 subcollection: watson-assistant
 
@@ -86,7 +86,7 @@ You can choose to use the more stable and fully supported version of algorithms 
 
 The baseline and beta versions are labeled with dates such as **Baseline (2022-06-01)** or **Beta (2022-06-10)**. This refers to the release of a specific baseline or beta version. You can consult the [{{site.data.keyword.conversationshort}} release notes](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes) for details of updates made in that algorithms version release.
 
-Algorithm version options are currently available for Chinese (Simplified), Chinese (Traditional), English, French, German, Japanese, Korean, Italian, Portuguese, Spanish and the Universal Language model. Other languages use default algorithm versions.
+Algorithm version options are currently available for Arabic, Chinese (Simplified), Chinese (Traditional), Czech, Dutch, English, French, German, Japanese, Korean, Italian, Portuguese, and Spanish. The universal language model uses default algorithm versions.
 
 ## Auto-save
 {: #actions-global-settings-auto-save}
