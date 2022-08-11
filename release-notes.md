@@ -38,6 +38,16 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 12 August 2022
+{: #watson-assistant-aug122022}
+{: release-note}
+
+Actions templates
+:   When creating actions, you can choose a template that relates to the problem you’re trying to solve. Templates help tailor your actions to include items specific to your business need. The examples in each template can also help you to learn how actions work. Actions templates include features such as intents, entities, condition-based responses, synonyms, response validations, and agent fallback. For more information, see [Building actions from a template](/docs/watson-assistant?topic=watson-assistant-actions-templates).
+
+Channel name variable
+:   The `Channel name` integration variable lets you add step conditions using these channels: web chat, phone, SMS, WhatsApp, Slack, or Facebook Messenger. For more information, see [Adding conditions to a step](/docs/watson-assistant?topic=watson-assistant-step-conditions).
+
 ## 11 August 2022
 {: #watson-assistant-aug112022}
 {: release-note}
