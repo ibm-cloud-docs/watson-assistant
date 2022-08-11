@@ -42,6 +42,7 @@ toc:
           topics:
           - topic: build-actions-overview.md
             navtitle: Overview
+          - actions-templates.md
           - start-conversation.md
           - understand-questions.md
           - respond.md
@@ -182,6 +183,7 @@ toc:
           topics:
           - action-response-modes.md
           - multiple-environments.md
+          - trigger-phrases.md
 
   - navgroup:
       id: reference
