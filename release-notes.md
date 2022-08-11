@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-09"
+lastupdated: "2022-08-11"
 
 keywords: Watson Assistant release notes
 
@@ -38,6 +38,13 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 11 August 2022
+{: #watson-assistant-aug112022}
+{: release-note}
+
+Algorithms versions available in more languages
+:   Algorithms version options are now available in Arabic, Czech, and Dutch. Algorithms versions allows you to choose which version of {{site.data.keyword.conversationshort}} algorithms to apply to your future trainings. For more information, see [Algorithm versions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-algorithms-versions).
+
 ## 9 August 2022
 {: #watson-assistant-aug092022}
 {: release-note}
@@ -49,7 +56,7 @@ New API methods
 
     - **Releases**: Retrieve information about the releases (versions) that have been published for an assistant, and assign an available release to an environment.
 
-For more information, see the V2 [API Reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2){: external}.
+For more information, see the v2 [API Reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2){: external}.
 
 ## 5 August 2022
 {: #watson-assistant-aug052022}
