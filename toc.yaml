@@ -42,6 +42,7 @@ toc:
           topics:
           - topic: build-actions-overview.md
             navtitle: Overview
+          - actions-templates.md
           - start-conversation.md
           - understand-questions.md
           - respond.md
@@ -144,7 +145,6 @@ toc:
           - admin-backup-restore.md
           - admin-recovery.md
           - admin-failover.md
-          - admin-beta.md
           - admin-language-support.md
           - switch-experience.md
       - topicgroup:
@@ -183,6 +183,7 @@ toc:
           topics:
           - action-response-modes.md
           - multiple-environments.md
+          - trigger-phrases.md
 
   - navgroup:
       id: reference
