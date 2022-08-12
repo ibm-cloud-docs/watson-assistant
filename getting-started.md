@@ -62,5 +62,5 @@ These starting points in the documentation also help you get started:
 - [About {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-about)
 - [Planning your assistant](/docs/watson-assistant?topic=watson-assistant-plan-assistant)
 - [Overview: Editing actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview)
-- [Building actions with templates](/docs/watson-assistant?topic=watson-assistant-actions-templates)
+- [Building actions from a template](/docs/watson-assistant?topic=watson-assistant-actions-templates)
 
