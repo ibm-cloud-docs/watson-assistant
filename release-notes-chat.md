@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-14"
+lastupdated: "2022-08-15"
 
 subcollection: watson-assistant
 
@@ -43,7 +43,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 ## 6.6.2
 {: #6.6.2}
 
-*Release date: 14 August 2022*
+*Release date: 15 August 2022*
 
 - Bug fixes
 
