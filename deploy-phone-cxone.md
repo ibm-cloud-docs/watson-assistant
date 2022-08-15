@@ -184,7 +184,7 @@ For example, you can use the [Snippet](https://help.nice-incontact.com/content/s
 ASSIGN sessionKey = "{p1}"
 ```
 
-Use [Reqagent](https://help.nice-incontact.com/content/studio/actions/reqagent/reqagent.htm) to transfer a call to a live agent.
+Use [Reqagent](https://help.nice-incontact.com/content/studio/actions/reqagent/reqagent.htm){: external} to transfer a call to a live agent.
 
 ![Image of call transfer to a live agent](images/cxone-live-agent.png)
 
