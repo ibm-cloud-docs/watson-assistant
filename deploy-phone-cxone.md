@@ -224,7 +224,7 @@ In this example, when **Onrelease** is triggered, the script verifies whether th
 
 ![Image of call disconnect on failure](images/cxone-disconnect-on-failure.png)
 
-If the  **Hangup** action is executed and an [**Onrelease**](https://help.nice-incontact.com/content/studio/actions/onrelease/onrelease.htm) event action is present, CXone will hang up on the caller, and the script will jump to the  **OnRelease** action. Design your script so it can distinguish whether the **OnRelease** event is triggered due to a transfer or hangup. 
+If the  **Hangup** action is executed and an [**Onrelease**](https://help.nice-incontact.com/content/studio/actions/onrelease/onrelease.htm){: external} event action is present, CXone will hang up on the caller, and the script will jump to the  **OnRelease** action. Design your script so it can distinguish whether the **OnRelease** event is triggered due to a transfer or hangup. 
 
 
 ## Adding transfer support to your assistant 
