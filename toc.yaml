@@ -109,6 +109,8 @@ toc:
                   navtitle: Implementing custom option buttons
                 - topic: web-chat-develop-content-carousel.md
                   navtitle: Implementing a content carousel
+                - topic: web-chat-develop-set-context.md
+                  navtitle: Setting context variables
       - topicgroup:
           label: Deploying for phone
           topics:
