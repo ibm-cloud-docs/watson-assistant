@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-05"
+lastupdated: "2022-08-16"
 
 subcollection: watson-assistant
 
@@ -161,8 +161,6 @@ To customize clarification, complete the following steps:
 ### Disabling clarifying questions
 {: #understand-questions-disambiguation-disable}
 
-<!-- Every action that you add is used during clarification automatically. The system actions are not. -->
-
 You can disable clarifying questions for all actions.
 
 To disable clarification for all actions:
@@ -174,9 +172,18 @@ To disable clarification for all actions:
 ### Excluding an action from clarifying questions
 {: #understand-questions-exclude-from-clarifying}
 
-You can also prevent a single action from being included in the list of choices during clarification. To exclude an action from clarification:
+You can also prevent a single action from being used in a clarifying question. The effect of this choice depends on the confidence score for the action you exclude.
+
+If the action has the highest confidence score for a customer's question, no clarifying question is asked and the action is triggered.
+
+If the action doesn't have the highest confidence score, the action is excluded from the list of choices in the clarifying question.
+
+For more information about confidence scoring, see [Confidence scoring](#understand-questions-confidence-scoring).
+
+To exclude an action from clarification:
 
 1. From the action editor, click the **Action settings** icon ![Gear icon](images/gear-icon-black.png)
+
 1. In Action Settings, toggle the **Ask clarifying question** switch to **Off**.
 
 ## Coordinating how multiple actions start
