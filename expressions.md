@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-05-24"
+  years: 2018, 2022
+lastupdated: "2022-08-11"
 
 subcollection: watson-assistant
 
@@ -29,11 +29,19 @@ subcollection: watson-assistant
 {: #expressions}
 
 You can write _expressions_ to specify values that are independent of, or derived from, values that are collected in steps or stored in session variables. You can use an expression to define a step condition or to define the value of a session variable.
+{: shortdesc}
 
 The Watson Assistant expression language is based on the Spring Expression Language (SpEL), but with some important differences in syntax. For detailed background information about SpEL, see [Spring Expression Language (SpEL)](https://docs.spring.io/spring-framework/docs/5.2.13.RELEASE/spring-framework-reference/core.html#expressions){: external}.
 {: note}
 
-For example, you might use an expression to write simple math equations. Maybe a customer has $200 in a savings account and wants to transfer $150 from it to a new checking account. The funds transfer fee is $3, and the bank charges a fee when a savings account contains less than $50. You could create a step with a step condition that checks for this situation. The step condition would use an expression like this:
+For details about the methods you can use in expressions, see [Expression language methods for actions](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions).
+
+## Using an expression in a step condition
+{: #expression-step-condition}
+
+You can use an expression in a step condition if you want to condition a step on the result of a calculation based on information you have gathered during the conversation.
+
+For example, suppose a customer has $200 in a savings account and wants to transfer $150 from it to a new checking account. The funds transfer fee is $3, and the bank charges a fee when a savings account contains less than $50. You could create a step with a step condition that checks for this situation. The step condition would use an expression like this:
 
 ```text
 ${savings} - (${Step_232} + ${transfer_fee}) < 50
@@ -48,9 +56,7 @@ where:
 
 If the step condition is met, the step warns the user that the requested transfer will bring the savings account balance below the $50 minimum and incur a fee, and ask to confirm before proceeding.
 
-For reference, see [Expression language methods for actions](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions).
-
-To use an expression in a step condition:
+To use an expression in a step condition, follow these steps:
 
 1.  From the step, click **Add condition**.
 
@@ -60,13 +66,37 @@ To use an expression in a step condition:
 
 1.  Add the expression that you want to use.
 
-To use an expression to define a session variable value:
+## Using an expression to assign a value to a session variable
+{: #expression-variable}
 
-1.  From the step, choose the **Set variable values** icon, and then choose **Set variable values**. Click **Set new value**.
+You can use an expression when assigning a value to a session variable if you want the variable's value to be calculated based on other variables.
 
-1.  Choose the session variable that you want to define a value for. 
+For example, suppose you want to tell your customer the total cost of a purchase, including 6% sales tax and a flat $3.00 processing fee. To calculate the total cost, you could create a session variable and assign the value using an expression:
 
-1.  From the list of sources to derive the value from, click **Expression**.
+```text
+(${price} * 1.06) + 3
+```
 
-1.  Add the expression that you want to use.
+You can then reference this variable in the **Assistant says** field.
+
+To use an expression when assigning a value to a session variable, follow these steps:
+
+1. From within a step, choose the **Set variable values** ![Set variable values icon](images/set-variable-values.png) icon.
+
+1. Click **Set new value**.
+
+1. From the drop-down list, select the session variable you want to store the value in.
+
+1. Select **Expression**.
+
+1. **Optional:** Click the ![Expand icon](images/expression-editor-icon.png) **Expand** icon to open the expression editor window. (You can also type the expression directly in the field without opening the window, but the editor makes it easier to edit a longer or more complex expression.)
+
+1. To reference a variable in the expression, type type a dollar sign (`$`) and then select a variable from the list.
+
+    When you select a variable, the reference is inserted into your expression in the correct notation, referencing the variable using its variable ID rather than its display name (for example, `${step_773}` or `${customer_id}`). Do not edit this reference unless you want to refer to a different variable and you are sure of its variable ID.
+
+1. If you are using the expression editor, click **Apply** to save your changes and close the editor window.
+
+You can also use an expression to assign an initial value to a session variable. In the **Session variable** window, go to the **Initial value** field and click **Use expression**.
+{: note}
 

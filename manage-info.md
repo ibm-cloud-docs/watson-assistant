@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-08-12"
+lastupdated: "2022-08-18"
 
 subcollection: watson-assistant
 
@@ -76,11 +76,13 @@ To add a session variable that can be accessed by any action:
 
     As you add the name, an ID is generated for you. Any spaces in the name are replaced with underscores (_) in the ID.
 
-1. **Optional**: Add a type. This sets the response type of the variable. For more information about response types, see [Choosing a response type](/docs/watson-assistant?topic=watson-assistant-collect-info#choosing-a-response-type). From this field, you can also select any of the saved responses that you created. For more information about saved responses, see [Saving and reusing customer responses](/docs/watson-assistant?topic=watson-assistant-collect-info#saved-customer-responses).
+1. **Optional**: Add a type. This sets the response type of the variable. (For more information about response types, see [Choosing a response type](/docs/watson-assistant?topic=watson-assistant-collect-info#choosing-a-response-type).) If you do not select a type, the variable will be treated as a string by default.
+
+    From this field, you can also select any of the saved responses that you created. For more information about saved responses, see [Saving and reusing customer responses](/docs/watson-assistant?topic=watson-assistant-collect-info#saved-customer-responses).
+
+    In addition to the listed types, a variable can also be created as an array. To create an array variable, select **Any** as the type, and define an initial value using the expression `[]` to represent an empty array. (For more information about writing expression, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).)
 
 1. **Optional**: Add an initial value. This sets the starting value for the variable at the beginning of each user session. For example, suppose you have an assistant your customers can use to make purchases; you might initialize a *Payment due* variable with a starting value of 0, and then add to that value as the customer orders items.
-
-    You can set the initial value to an expression. To do this, click the **Use expression** toggle to enable support for expressions. For information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).
 
 1. **Optional**: Add a description.
 
@@ -115,13 +117,12 @@ To see these variables, click **Variables** in the navigation pane from the main
 |---------------|-------------|-------------|---------|
 | *Timezone*    | `timezone`  | The user's time zone as specified by the integration or API client. The default time zone (if not specified by the integration) is UTC. | `America/New_York` |
 | *Locale*      | `locale`    | The user's locale as set by the integration or API client. The locale can affect understanding and formatting of dates, times and numbers. | `en-gb` |
-| *Channel Name* | `channel_name` | The name of the channel that your user is interacting with. | `Web chat` |
 {: caption="Variables set by integration" caption-side="top"}
 
 ## Storing a value in a session variable
 {: #store-session-variable}
 
-Any action can store a value in a session variable so it is available to other actions. To store a value in a session variable:
+Any action can store a value in a session variable so it is availble to other actions. To store a value in a session variable:
 
 1. From within a step, choose the **Set variable values** ![Set variable values icon](images/set-variable-values.png) icon.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-05-31"
+lastupdated: "2022-08-18"
 
 subcollection: watson-assistant
 
@@ -61,7 +61,7 @@ To call a custom extension from an action:
 
     ![Setting a parameter value](images/extension-set-parameter.png)
 
-    Each parameter has a data type (such as _number_ or _string_). The variable you select must be compatible with the data type of the parameter; for more information, see [Compatible response types for parameters](#parameter-response-types).
+    Each parameter has a data type (such as _number_ or _string_). The variable you select must be compatible with the data type of the parameter; for more information, see [Compatible variables for parameters](#parameter-response-types).
 
     You must specify values for all required parameters before you can proceed.
 
@@ -75,10 +75,14 @@ The **And then** section of the step editor now shows an overview of the call to
 
 If you need to make changes, click **Edit extension** to reopen the **Extension setup** window.
 
-### Compatible response types for parameters
+### Compatible variables for parameters
 {: #parameter-response-types}
 
-Variables contain values that are derived from customer responses. When you assign a variable to a parameter, the variable you choose must have a customer response type that is compatible with the data type of the parameter. (for example, a _number_ parameter must be assigned a numeric value rather than text.)
+To pass an input parameter value for an operation, you must select a compatible action variable or session variable.
+
+An action variable contains a value that is based on a customer response in a previous step. A session variable might have a value based on a customer response or a value defined by an expression. (For more information about action variables and session variables, see [Using variables to manage conversation information](/docs/watson-assistant?topic=watson-assistant-manage-info).)
+
+When you assign a value to a parameter, the variable you choose must have a customer response type that is compatible with the data type of the parameter. (For example, a _number_ parameter must be assigned a numeric value rather than text.)
 
 The following table shows the possible customer response types and the parameter data type compatible with each.
 
@@ -93,6 +97,21 @@ The following table shows the possible customer response types and the parameter
 | Free text              | `string`                        |       |
 | Regex                  | `string`                        |       |
 {: caption="Compatible response types for parameters" caption-side="top"}
+
+#### Arrays
+
+In addition to the supported customer response types, a variable can also contain an array value. If you need to pass an array parameter to an operation, you must create an array session variable:
+
+1. Create a new session variable, either using the **Set variable values** icon in the step editor or from the **Variables > Created by you** page. (For more information about how to create a session variable, see [Creating a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable).)
+
+1. In the **Type** field, leave **Any** selected.
+
+1. In the **Initial value** field, click the **Use expression** toggle to enable it. Type an expression that defines an array value (such as `["New York", "London", "Tokyo"]`, `[123, 456, 789]`, or `[]`).
+
+Because this variable contains an array value, your actions can use expressions with array methods to access or modify the array values. For example, you might want to create a variable that initially contains an empty array (`[]`) and then use the `add()` method to build a list one element at a time. For more information about the array methods you can use in expressions, see [Array methods](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-arrays).
+{: note}
+
+You can now select this variable as the value for a parameter that requires an array.
 
 ## Accessing extension response data
 {: #extension-access-response}
@@ -111,6 +130,8 @@ Each variable represents a value from the response body. To make it easy to acce
 For example, this action step uses an expression to check the `availability` property in an extension response:
 
 ![Extension variable in step condition](images/response-expression-condition.png)
+
+If a response variable contains an array, you can write an expression that uses array methods to access the elements of the array. For example, you might use the `contains()` method in a step condition to test whether the array contains a particular value, or the `join()` method to format data from the array as a string you can include in an assistant response. For more information about array methods, see [Array methods](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-arrays).
 
 ## Checking success or failure
 {: #extension-check-success}
