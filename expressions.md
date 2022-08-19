@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-08-11"
+lastupdated: "2022-08-19"
 
 subcollection: watson-assistant
 
@@ -87,7 +87,7 @@ To use an expression when assigning a value to a session variable, follow these 
 
 1. From the drop-down list, select the session variable you want to store the value in.
 
-1. Select **Expression**.
+1. After **to**, select **Expression**.
 
 1. **Optional:** Click the ![Expand icon](images/expression-editor-icon.png) **Expand** icon to open the expression editor window. (You can also type the expression directly in the field without opening the window, but the editor makes it easier to edit a longer or more complex expression.)
 

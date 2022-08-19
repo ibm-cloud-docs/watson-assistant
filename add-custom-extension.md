@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-17"
+lastupdated: "2022-08-19"
 
 subcollection: watson-assistant
 
@@ -67,11 +67,11 @@ To add a custom extension to the assistant, follow these steps:
 
      Click **Next**.
 
-1. In the **Manage operations** step, review the operations supported by the extension and decide which operations you want to make available.
+1. In the **Review extension** step, review the operations supported by the extension.
 
-    The **Manage operations** table shows the operations that the assistant will be able to call from an action step. An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
+    The **Review operations** table shows the operations that the assistant will be able to call from an action step. An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
 
-    ![Manage operations table](images/extension-manage-operations.png)
+    ![Review operations table](images/extension-review-operations.png)
 
     For each operation, a row in the table shows the following information:
 
