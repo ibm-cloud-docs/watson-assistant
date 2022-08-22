@@ -2,7 +2,7 @@
 
 copyright:
 years: 2015, 2021
-lastupdated: "2022-08-17"
+lastupdated: "2022-08-18"
 
 subcollection: watson-assistant
 
@@ -82,7 +82,7 @@ now('Australia/Sydney').
 
 If the current date and time in the UTC time zone is `2021-11-26 11:41:00`, this example returns the string `2021-11-26 21:41:00`.
 
-For the list of supported time zones, see [Supported time zones](/docs/watson-assistant?topic=watson-assistant-time-zones).
+<!--- For the list of supported time zones, see [Supported time zones](/docs/watson-assistant?topic=watson-assistant-time-zones). --->
 
 ### `.reformatDateTime(String format)`
 {: #expression-methods-actions-dates-reformatDateTime}
@@ -489,7 +489,7 @@ ${step_297}.substring(5, ${step_297}.length())
 {: codeblock}
 
 If the action variable `${step_297}` contains the string `This is a string.`, this expression returns `is a text.`
-  
+
 ### String.toLowerCase()
 {: #expression-methods-actions-strings-toLowerCase}
 
@@ -525,7 +525,7 @@ ${step_297}.trim()
 {: codeblock}
 
 If the action variable `${step_297}` contains the string `   something is here    `, this method returns the string `something is here`.
-  
+
 ### java.lang.String support
 {: #expression-methods-actions-strings-java-lang-String}
 
