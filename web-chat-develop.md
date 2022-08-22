@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-08-22"
 
 subcollection: watson-assistant
 
@@ -56,6 +56,7 @@ Opening, closing, and rendering the web chat window
 :   - [Replacing the default launcher](#replace-launcher)
     - [Keeping the web chat always open](#keep-open)
     - [Changing where the web chat renders](#custom-element)
+    - [Adding the web chat to your mobile application](#mobile)
 
 Customizing the conversation
 :   - [Intercepting and modifying messages](#modify-messages)
@@ -109,6 +110,9 @@ Changing where the web chat renders {: #custom-element}
 :   Your website design might require that you change where and how the web chat window renders on your website. For example, you might want it to appear in a different location, at a different size, or nested within another section of the page. To accomplish this, you can use the [`element`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionselement){: external} configuration option to specify a custom DOM element that will contain the web chat window at run time.
 
     ![development icon](images/development-icon.png) **Tutorial:** For a tutorial that shows how to do this, see [Render to a custom element](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-example-element){: external}.
+
+Adding the web chat to your mobile application {: #mobile}
+:   You can use a WebView with a JavaScript bridge to add the web chat to your mobile application. For more information, see [Adding the web chat to your mobile application](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-mobile).
 
 ### Customizing the conversation
 {: #web-chat-develop-conversation}

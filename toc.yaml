@@ -93,6 +93,7 @@ toc:
                 - web-chat-develop-global.md
                 - web-chat-security.md
                 - web-chat-develop-versions.md
+                - web-chat-develop-mobile.md
           - topicgroup:
               label: Adding service desk support
               topics:
