@@ -65,7 +65,7 @@ The following properties are included only for messages that were handled by an 
 | `fallbackReason`        | String   | The reason why the fallback action was visisted (for example, escalated to human agent or no action matches). |
 | `handler`               | String   | The name of any handler that was called. |
 | `stepsVisited`          | String[] | An array of strings listing the steps visited during handling of the message. Each step name is prefixed with the action name. |
-| `subaction`             | String   | The name of any other action that was called by the action that was triggered the message. |
+| `subaction`             | String   | The name of any other action that was called by the action that was triggered by the message. |
 
 The following properties are included only for messages that were handled by a dialog skill:
 
@@ -100,7 +100,7 @@ Sent when processing of an action begins.
 | `sessionId`             | String   | The ID of the session during which the message that started the action was sent. |
 | `skillsInvoked`         | String[] | An array of strings listing all skills that were invoked during handling of the message that started the action (for example, `main skill` or `actions skill`). |
 | `stepsVisited`          | String[] | An array of strings listing the steps visited during processing of the action. |
-| `subaction`             | String   | The name of any other action that was called by the action that was triggered the message. |
+| `subaction`             | String   | The name of any other action that the action called during processing. |
 
 ## Action Completed
 {: #segment-event-reference-action-completed}
@@ -127,7 +127,7 @@ Sent when processing of an action ends.
 | `sessionId`             | String   | The ID of the session during which the message that started the action was sent. |
 | `skillsInvoked`         | String[] | An array of strings listing all skills that were invoked during handling of the message that started the action (for example, `main skill` or `actions skill`). |
 | `stepsVisited`          | String[] | An array of strings listing the steps visited during processing of the action. |
-| `subaction`             | String   | The name of any other action that was called by the action that was triggered the message. |
+| `subaction`             | String   | The name of any other action that the action called during processing. |
 
 ## Session Started
 {: #segment-event-reference-session-started}
