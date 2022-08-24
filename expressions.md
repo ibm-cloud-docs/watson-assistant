@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-08-19"
+lastupdated: "2022-08-24"
 
 subcollection: watson-assistant
 
@@ -91,7 +91,7 @@ To use an expression when assigning a value to a session variable, follow these 
 
 1. **Optional:** Click the ![Expand icon](images/expression-editor-icon.png) **Expand** icon to open the expression editor window. (You can also type the expression directly in the field without opening the window, but the editor makes it easier to edit a longer or more complex expression.)
 
-1. To reference a variable in the expression, type type a dollar sign (`$`) and then select a variable from the list.
+1. To reference a variable in the expression, type a dollar sign (`$`) and then select a variable from the list.
 
     When you select a variable, the reference is inserted into your expression in the correct notation, referencing the variable using its variable ID rather than its display name (for example, `${step_773}` or `${customer_id}`). Do not edit this reference unless you want to refer to a different variable and you are sure of its variable ID.
 
