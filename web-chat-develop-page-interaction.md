@@ -42,8 +42,8 @@ This example uses a custom response to render a button in the web chat that popu
 
 1. Create a handler for the [`customResponse`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external} event. This handler renders a custom button and creates a click handler for it. The click handler uses the `Document.createElement()` method to interact with the DOM and fill in a form field with the customer's account number.
 
-This example uses the hardcoded account number `1234567`. In a typical production assistant, your assistant would retrieve this value from a session variable or query it from an external system.
-{: note}
+    This example uses the hardcoded account number `1234567`. In a typical production assistant, your assistant would retrieve this value from a session variable or query it from an external system.
+    {: note}
 
     ```javascript
     function customResponseHandler(event) {
