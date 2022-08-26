@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-08-26"
 
 subcollection: watson-assistant
 
@@ -40,7 +40,7 @@ For a complete, working version of the example described in this tutorial, see [
 
 This example uses a custom response to render a button in the web chat that populates a form field with the customer's account number:
 
-1. Create a handler for the [`customResponse`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external} event. This handler renders a custom button and creates a click handler for it. The click handler uses the `Document.createElement()` method to interact with the DOM and fill in a form field with the customer's account number.
+1. Create a handler for the [`customResponse`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external} event. This handler renders a custom button and creates a click handler for it. The click handler uses the `Document.querySelector()` method to interact with the DOM and fill in a form field with the customer's account number.
 
     This example uses the hardcoded account number `1234567`. In a typical production assistant, your assistant would retrieve this value from a session variable or query it from an external system.
     {: note}
@@ -64,11 +64,20 @@ This example uses a custom response to render a button in the web chat that popu
 1. In your `onLoad` event handler, use the [`on()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#on){: external} instance method to subscribe to the `customResponse` event, registering the handler as the callback. This enables the assistant to send a custom response that displays the button for filling in the account number.
 
     ```javascript
-    instance.on({ type: 'customResponse', handler: customResponseHandler });
+    instance.on({
+      type: 'customResponse',
+      handler: (event, instance) => {
+        const { message } = event.data;
+        if (message.user_defined && 
+            message.user_defined.user_defined_type === 'fill_account_number') {
+              accountNumberResponseHandler(event, instance);
+            }
+      },
+    });
     ```
 
-    You can use a custom property to create multiple different custom responses for different purposes (for example, to show buttons that fill in different form fields). For an example of how to do this, see [Rendering a custom response as a content carousel](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-content-carousel).
-    {: tip}
+    In this example, we are checking the custom `user_defined_type` property of the custom response, and calling the `accountNumberResponseHandler()` function only if the specified type is `fill_account_number`. This is an optional check that shows how you might use a custom property to define multiple different custom responses (each with a different value for `user_defined_type`).
+    {: note}
 
 For complete working code, see the [Page interactions for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/page-interaction){: external} example.
 
