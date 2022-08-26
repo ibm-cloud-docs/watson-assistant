@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-08-22"
+lastupdated: "2022-08-26"
 
 subcollection: watson-assistant
 
@@ -84,7 +84,7 @@ A JavaScript bridge is a common pattern that can be used on all mobile platforms
 
 With a JavaScript bridge, events are sent between the mobile app and the WebView, and event listeners exist on both sides of the bridge to handle those events. Each event carries a message payload; because this payload is text-only, you must stringify and parse JSON objects to pass data back and forth.
 
-All interactions with a web chat instance must happen within the WebView. If your mobile application needs to call an instance method, you must call the instance by sending an event from the app to the WebView using the JavaScript bridge. Similarly, each event from a web chat instance includes a reference to the instance that sent it. (A web chat instance contains properties that cannot be stringified, so the instance itself cannot be passed through the JavaScript bridge.)
+If your mobile application needs to call a web chat instance method, you must call the method by sending an event from the app to the WebView using the JavaScript bridge. Similarly, if you need to run code in your mobile application in response to behavior in the web chat, you can send an event through the JavaScript bridge from the web chat to your mobile application.
 
 You can make use of the `user_defined` response type and the `customResponse` event to drive behavior on your mobile application. However, you must strip the `event.data.element` property from the event before you pass it through the JavaScript bridge. Removing this property is necessary because it contains an HTML element, which cannot be stringified. Any use of the `user_defined` response type to write new views into the web chat must be written in HTML and JavaScript and handled inside the WebView. (For more information about the `customResponse` event, see the [Web chat API reference](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external}.)
 
