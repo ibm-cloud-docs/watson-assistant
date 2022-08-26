@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-11"
+lastupdated: "2022-08-26"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,16 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 26 August 2022
+{: #watson-assistant-aug262022}
+{: release-note}
+
+New filter on the Analyze page
+:   You can now filter customer conversation data by the _Greet customer_ system action. From the Conversations tab of the Analyze page, open the Actions filter and select **Greet customer**. For more information, see [Filtering conversations](/docs/watson-assistant?topic=watson-assistant-analytics-conversations#analytics-conversations-filtering).
+
+Filter actions by name
+:   You can now find actions more easily. On the Actions page, you can filter actions by name. Click the search icon, then enter a search string. Your list of actions filters to match what you enter.
 
 ## 12 August 2022
 {: #watson-assistant-aug122022}
