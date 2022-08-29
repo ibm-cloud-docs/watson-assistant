@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-08-18"
+lastupdated: "2022-08-29"
 
 subcollection: watson-assistant
 
@@ -61,7 +61,7 @@ To call a custom extension from an action:
 
     ![Setting a parameter value](images/extension-set-parameter.png)
 
-    Each parameter has a data type (such as _number_ or _string_). The variable you select must be compatible with the data type of the parameter; for more information, see [Compatible variables for parameters](#parameter-response-types).
+    Each parameter has a data type (such as _number_ or _string_). The variable you select must be compatible with the data type of the parameter; for more information, see [Compatible variables for parameters](#parameter-variable-types).
 
     You must specify values for all required parameters before you can proceed.
 
@@ -76,13 +76,13 @@ The **And then** section of the step editor now shows an overview of the call to
 If you need to make changes, click **Edit extension** to reopen the **Extension setup** window.
 
 ### Compatible variables for parameters
-{: #parameter-response-types}
+{: #parameter-variable-types}
 
 To pass an input parameter value for an operation, you must select a compatible action variable or session variable.
 
 An action variable contains a value that is based on a customer response in a previous step. A session variable might have a value based on a customer response or a value defined by an expression. (For more information about action variables and session variables, see [Using variables to manage conversation information](/docs/watson-assistant?topic=watson-assistant-manage-info).)
 
-When you assign a value to a parameter, the variable you choose must have a customer response type that is compatible with the data type of the parameter. (For example, a _number_ parameter must be assigned a numeric value rather than text.)
+When you assign a value to a parameter, the variable you choose must be compatible with the data type of the parameter. (For example, a _number_ parameter must be assigned a numeric value rather than text.)
 
 The following table shows the possible customer response types and the parameter data type compatible with each.
 
