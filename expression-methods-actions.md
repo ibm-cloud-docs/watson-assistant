@@ -2,7 +2,7 @@
 
 copyright:
 years: 2015, 2021
-lastupdated: "2022-08-18"
+lastupdated: "2022-09-30"
 
 subcollection: watson-assistant
 
@@ -383,7 +383,7 @@ This method is designed to extract matches for different regex pattern groups, n
 In this example, the action variable is saving a string that matches the regex pattern group that you specify. In the expression, two regex patterns groups are defined, each one enclosed in parentheses. There is an inherent third group that is comprised of the two groups together. This is the first (groupIndex 0) regex group; it matches with a string that contains the full number group and text group together. The second regex group (groupIndex 1) matches with the first occurrence of a number group. The third group (groupIndex 2) matches with the first occurrence of a text group after a number group.
 
 ```text
-${step_297}.extract('([\d]+)(\b [A-Za-z]+)',n)
+${step_297}.extract('([\d]+)(\b [A-Za-z]+)', <n>)
 ```
 {: codeblock}
 
@@ -396,9 +396,9 @@ Hello 123 this is 456.
 
 the results are as follows:
 
-- When n=`0`, the value is `123 this`.
-- When n=`1`, the value is `123`.
-- When n=`2`, the value is `this`.
+- When `<n>`=`0`, the value is `123 this`.
+- When `<n>`=`1`, the value is `123`.
+- When `<n>`=`2`, the value is `this`.
 
 ### String.find(String regexp)
 {: #expression-methods-actions-strings-find}
@@ -424,7 +424,7 @@ As matches are found, they are added to what you can think of as an array of mat
 For example, the following example is looking for a group of numbers in an action variable.
 
 ```text
-${step_297}.getMatch('([\d]+)',1)
+${step_297}.getMatch('([\d]+)', 1)
 ```
 {: codeblock}
 
@@ -675,68 +675,28 @@ If `Items` is `['one', 'two', 'three']`, this example returns the integer `1` (i
 
 This method joins all values in this array to a string. Values are converted to string and delimited by the input delimiter.
 
-For this Dialog runtime context:
+For example, you might have a variable called `pizza_toppings` that contains the array `["pepperoni", "ham", "mushrooms"]`. The following expression converts this array into the string `pepperoni, ham, mushrooms`:
 
-```json
-{
-  "context": {
-    "toppings_array": ["onion", "olives", "ham"]
-  }
-}
+```text
+$toppings_array.join(', ')
 ```
-{: codeblock}
 
-Dialog node output:
-
-```json
-{
-  "output": {
-  "generic" : [
-    {
-      "values": [
-        {
-    "text": "This is the array: <? $toppings_array.join(';') ?>"
-        }
-      ],
-      "response_type": "text",
-      "selection_policy": "sequential"
-    }
-  ]
-  }
-}
-```
-{: codeblock}
-
-Result:
-
-```json
-This is the array: onion;olives;ham;
-```
-{: codeblock}
-
-If a user input mentions multiple toppings, and you defined an entity named `@toppings` that can recognize topping mentions, you could use the following expression in the response to list the toppings that were mentioned:
-
-```json
-So, you'd like <? @toppings.values.join(',') ?>.
-```
-{: codeblock}
-
-If you define a variable that stores multiple values in a JSON array, you can return a subset of values from the array, and then use the join() method to format them properly.
+If you use that expression to define the value of a variable, you can then reference that variable in your assistant output to create a human readable message (for example, `You have selected the following toppings: pepperoni, ham, mushrooms`).
 
 ### JSONArray.joinToArray(template)
 {: #expression-methods-actions-arrays-join-to-array}
 
 This method extracts information from each item in the array and builds a new array that is formatted according to the format you specify as a template. The template can be a string, a JSON object, or an array. The method returns an array of strings, an array of objects, or an array of arrays, depending on the type of the template.
 
-This method is useful for formatting information as a string you can return as part of a dialog response, or transforming data into a different structure so you can use it with an external API.
+This method is useful for formatting information as a string you can return as part of the output of a step, or for transforming data into a different structure so you can use it with an external API.
 
 In the template, you can reference values from the source array using the following syntax:
 
-    ```text
-    %e.{property}%
-    ```
+```text
+%e.{property}%
+```
 
-    where `{property}` represents the name of the property in the source array.
+where `{property}` represents the name of the property in the source array.
 
 For example, suppose your assistant has stored an array containing flight details in a session variable. The stored data might look like this:
 
@@ -781,9 +741,9 @@ For example, suppose your assistant has stored an array containing flight detail
 
 To build an array of strings that describe these flights in a user-readable form, you might use the following expression:
 
-    ```text
-    ${Flight_data}.joinToArray("%e.Flight% to %e.destination%")
-    ```
+```text
+${Flight_data}.joinToArray("%e.Flight% to %e.destination%")
+```
 
 This expression would return the following array of strings: `["Flight DL1040 to FCO","Flight DL1710 to LAX","DL4379 to LHR"]`.
 
