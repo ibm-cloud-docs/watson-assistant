@@ -112,6 +112,8 @@ toc:
                   navtitle: Implementing a content carousel
                 - topic: web-chat-develop-set-context.md
                   navtitle: Setting context variables
+                - topic: web-chat-develop-page-interaction.md
+                  navtitle: Interacting with the host web page
       - topicgroup:
           label: Deploying for phone
           topics:
