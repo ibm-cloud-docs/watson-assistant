@@ -740,7 +740,7 @@ For example, suppose your assistant has stored an array containing flight detail
 To build an array of strings that describe these flights in a user-readable form, you might use the following expression:
 
 ```text
-${Flight_data}.joinToArray("%e.Flight% to %e.destination%")
+${Flight_data}.joinToArray("Flight %e.flight% to %e.destination%")
 ```
 
 This expression would return the following array of strings: `["Flight DL1040 to FCO","Flight DL1710 to LAX","DL4379 to LHR"]`.
