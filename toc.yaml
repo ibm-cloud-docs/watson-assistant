@@ -131,6 +131,11 @@ toc:
           - deploy-slack.md
           - deploy-sms.md
           - deploy-whatsapp.md
+          - topicgroup:
+                label: Building a custom client
+                topics:
+                - api-client.md
+                - /watson/watson-using-sdks
       - topicgroup:
           label: Improving your assistant
           topics:
