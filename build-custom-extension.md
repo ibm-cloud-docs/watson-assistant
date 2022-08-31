@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-31"
+lastupdated: "2022-09-01"
 
 subcollection: watson-assistant
 
