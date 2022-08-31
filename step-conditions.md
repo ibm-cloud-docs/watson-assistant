@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-05-16"
+lastupdated: "2022-09-02"
 
 subcollection: watson-assistant
 
@@ -100,7 +100,8 @@ An operator specifies the kind of test you are performing on a value in a condit
 
 | Response type                        | Operators                           |
 |--------------------------------------|-------------------------------------|
-| - Options\n- Free text\n- Regex      | - is\n- is not                      |
-| - Number\n- Currency\n- Percent      | - is defined\n- is not defined\n- is equal to (==)\n- is not equal to (≠)\n- is less than (&lt;)\n- is less than or equal to (&lt;=)\n- is greater than (&gt;)\n- is greater than or equal to (&gt;=) |
+| - Options\n- Regex                   | - is\n- is not                      |
+| - Number\n- Currency\n- Percent     | - is defined\n- is not defined\n- is equal to (==)\n- is not equal to (≠)\n- is less than (&lt;)\n- is less than or equal to (&lt;=)\n- is greater than (&gt;)\n- is greater than or equal to (&gt;=) |
 | - Date                               | - is defined\n- is not defined\n- is on\n- is not on\n- is before\n- is after\n- is on or before\n- is on or after |
 | - Time                               | - is defined\n- is not defined\n- is at\n- is not at\n- is before\n- is after\n- is at or before\n- is at or after |
+| - Free text                          | - is\n- is not\n- contains\n- does not contain\n- matches\n- does not match |
