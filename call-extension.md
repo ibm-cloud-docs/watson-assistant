@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-08-29"
+lastupdated: "2022-08-31"
 
 subcollection: watson-assistant
 
@@ -25,8 +25,6 @@ subcollection: watson-assistant
 {:swift: .ph data-hd-programlang='swift'}
 {:table: .aria-labeledby="caption"}
 {:video: .video}
-
-{{site.data.content.classiclink}}
 
 # Calling a custom extension
 {: #call-extension}

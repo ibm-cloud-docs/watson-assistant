@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-08-24"
+lastupdated: "2022-08-31"
 
 subcollection: watson-assistant
 
@@ -22,8 +22,6 @@ subcollection: watson-assistant
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
-
-{{site.data.content.classiclink}}
 
 # Using variables to manage conversation information
 {: #manage-info}

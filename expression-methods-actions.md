@@ -2,7 +2,7 @@
 
 copyright:
 years: 2015, 2021
-lastupdated: "2022-09-30"
+lastupdated: "2022-08-31"
 
 subcollection: watson-assistant
 
@@ -21,8 +21,6 @@ subcollection: watson-assistant
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
-
-{{site.data.content.classiclink}}
 
 # Expression language methods for actions
 {: #expression-methods-actions}
