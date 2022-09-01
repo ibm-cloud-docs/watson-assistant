@@ -50,6 +50,9 @@ Conditioning on days of the week
 New operators available for building conditions
 :   Several new operators are available for building conditions in your actions. The free text response type now has the `contains`, `does not contain`, `matches`, and `does not match` operators available. For more information, see [Operators](/docs/watson-assistant?topic=watson-assistant-step-conditions#operators).
 
+Extensions support for arrays
+:   Custom extensions now support passing arrays as parameters and accessing arrays in response variables. For more information, see [Calling a custom extension](/docs/watson-assistant?topic=watson-assistant-call-extension).
+
 ## 26 August 2022
 {: #watson-assistant-aug262022}
 {: release-note}
