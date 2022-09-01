@@ -104,7 +104,7 @@ In addition to the supported customer response types, a variable can also contai
 
 1. In the **Type** field, leave **Any** selected.
 
-1. In the **Initial value** field, click the **Use expression** toggle to enable it. Type an expression that defines an array value (such as `["New York", "London", "Tokyo"]`, `[123, 456, 789]`, or `[]`).
+1. In the **Initial value** field, click the **Use expression** toggle to enable it. Enter an expression that defines an array value (such as `["New York", "London", "Tokyo"]`, `[123, 456, 789]`, or `[]`).
 
 Because this variable contains an array value, your actions can use expressions with array methods to access or modify the array values. For example, you might want to create a variable that initially contains an empty array (`[]`) and then use the `add()` method to build a list one element at a time. For more information about the array methods you can use in expressions, see [Array methods](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-arrays).
 {: note}
