@@ -743,7 +743,7 @@ To build an array of strings that describe these flights in a user-readable form
 ${Flight_data}.joinToArray("Flight %e.flight% to %e.destination%")
 ```
 
-This expression would return the following array of strings: `["Flight DL1040 to FCO","Flight DL1710 to LAX","DL4379 to LHR"]`.
+This expression would return the following array of strings: `["Flight DL1040 to FCO","Flight DL1710 to LAX","Flight DL4379 to LHR"]`.
 
 #### Complex templates
 {: #join-to-array-complex-template}

@@ -117,6 +117,7 @@ To see these variables, click **Variables** in the navigation pane from the main
 |---------------|-------------|-------------|---------|
 | *Timezone*    | `timezone`  | The user's time zone as specified by the integration or API client. The default time zone (if not specified by the integration) is UTC. | `America/New_York` |
 | *Locale*      | `locale`    | The user's locale as set by the integration or API client. The locale can affect understanding and formatting of dates, times and numbers. | `en-gb` |
+| *Channel Name* | `channel_name` | The name of the channel that your user is interacting with. | `Web chat` |
 {: caption="Variables set by integration" caption-side="top"}
 
 ## Storing a value in a session variable
