@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-09-01"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,18 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 1 September 2022
+{: #watson-assistant-sep012022}
+{: release-note}
+
+Conditioning on days of the week
+:   You can now condition a step on days of the week. This feature is available with the _date_ response type and the _Current date_ built-in variable.
+
+    For example, you might [define a customer response](/docs/watson-assistant?topic=watson-assistant-collect-info#choose-type) in step 1 with the date response type. When the customer responds to that step, they choose a date. You can then condition a later step on whether the date that the customer chose is Wednesday.
+
+New operators available for building conditions
+:   Several new operators are available for building conditions in your actions. The free text response type now has the `contains`, `does not contain`, `matches`, and `does not match` operators available. For more information, see [Operators](/docs/watson-assistant?topic=watson-assistant-step-conditions#operators).
 
 ## 26 August 2022
 {: #watson-assistant-aug262022}
