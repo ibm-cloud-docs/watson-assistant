@@ -643,7 +643,7 @@ The `get()` method is an alternative to using brackets (`[]`) to retrieve an ite
 ${Items}[1]
 ```
 
-Remember that if you are using a value specified by a customer to choose an item from an array, you might need to subtract 1 to convert to a zero-indexed value. For example, you might use an expression like `${Items}.get(${step_123} - 1)` to retrieve the intended value.
+If you are using a value specified by a customer to choose an item from an array, you might need to subtract 1 to convert to a zero-indexed value. For example, you might use an expression like `${Items}.get(${step_123} - 1)` to retrieve the intended value.
 {: note}
 
 ### Array.getRandomItem()
@@ -679,7 +679,7 @@ For example, you might have a variable called `pizza_toppings` that contains the
 $toppings_array.join(', ')
 ```
 
-If you use that expression to define the value of a variable, you can then reference that variable in your assistant output to create a human readable message (for example, `You have selected the following toppings: pepperoni, ham, mushrooms`).
+If you use that expression to define the value of a variable, you can then reference that variable in your assistant output to create a human-readable message (for example, `You have selected the following toppings: pepperoni, ham, mushrooms`).
 
 ### JSONArray.joinToArray(template)
 {: #expression-methods-actions-arrays-join-to-array}
@@ -701,7 +701,7 @@ For example, suppose your assistant has stored an array containing flight detail
 ```json
 "flights": [
       {
-        "flight": "DL1040",
+        "flight": "AZ1040",
         "origin": "JFK",
         "carrier": "Alitalia",
         "duration": 485,
@@ -723,7 +723,7 @@ For example, suppose your assistant has stored an array containing flight detail
         "departure_time": "07:00"
       },
       {
-        "flight": "DL4379",
+        "flight": "VS4379",
         "origin": "BOS",
         "carrier": "Virgin Atlantic",
         "duration": 385,
@@ -743,7 +743,7 @@ To build an array of strings that describe these flights in a user-readable form
 ${Flight_data}.joinToArray("Flight %e.flight% to %e.destination%")
 ```
 
-This expression would return the following array of strings: `["Flight DL1040 to FCO","Flight DL1710 to LAX","Flight DL4379 to LHR"]`.
+This expression would return the following array of strings: `["Flight AZ1040 to FCO","Flight DL1710 to LAX","Flight VS4379 to LHR"]`.
 
 #### Complex templates
 {: #join-to-array-complex-template}

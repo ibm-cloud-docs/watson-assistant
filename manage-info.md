@@ -82,7 +82,7 @@ To add a session variable that can be accessed by any action:
 
 1. **Optional**: Add an initial value. This sets the starting value for the variable at the beginning of each user session. For example, suppose you have an assistant your customers can use to make purchases; you might initialize a *Payment due* variable with a starting value of 0, and then add to that value as the customer orders items.
 
-    To specify a complex object or an array as the initial value, or to calculate the initial value based on other variables, you can write an expression. For more information about writing expression, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).)
+    To specify a complex object or an array as the initial value, or to calculate the initial value based on other variables, you can write an expression. For more information about writing expression, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).
 
 1. **Optional**: Add a description.
 
