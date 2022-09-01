@@ -42,6 +42,14 @@ This topic describes the new features, changes, and bug fixes in each release of
 {: #watson-assistant-sep012022}
 {: release-note}
 
+Conditioning on days of the week
+:   You can now condition a step on days of the week. This feature is available with the _date_ response type and the _Current date_ built-in variable.
+
+    For example, you might [define a customer response](/docs/watson-assistant?topic=watson-assistant-collect-info#choose-type) in step 1 with the date response type. When the customer responds to that step, they choose a date. You can then condition a later step on whether the date that the customer chose is Wednesday.
+
+New operators available for building conditions
+:   Several new operators are available for building conditions in your actions. The free text response type now has the `contains`, `does not contain`, `matches`, and `does not match` operators available. For more information, see [Operators](/docs/watson-assistant?topic=watson-assistant-step-conditions#operators).
+
 Extensions support for arrays
 :   Custom extensions now support passing arrays as parameters and accessing arrays in response variables. For more information, see [Calling a custom extension](/docs/watson-assistant?topic=watson-assistant-call-extension).
 
