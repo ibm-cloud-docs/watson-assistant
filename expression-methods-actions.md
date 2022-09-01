@@ -766,10 +766,10 @@ If you create a session variable called `Template`, and assign this template as 
 ${Flight_data}.joinToArray(${Template})
 ```
 
-At runtime, the response would look like this:
+At run time, the response would look like this:
 
 ```text
-Flight number: DL1040
+Flight number: AZ1040
 Airline: Alitalia
 Departure date: 2019-02-02
 Departure time: 16:45
@@ -781,7 +781,7 @@ Departure date: 2019-02-02
 Departure time: 07:00
 Arrival time: 10:19
 
-Flight number: DL4379
+Flight number: VS4379
 Airline: Virgin Atlantic
 Departure date: 2019-02-02
 Departure time: 21:40
