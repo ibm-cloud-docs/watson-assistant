@@ -30,7 +30,7 @@ subcollection: watson-assistant
 # Web chat development overview
 {: #web-chat-develop}
 
-If you are comfortable with JavaScript code, you can customize and extend the web chat by modifying the embed script and using the web chat API. You can also use a WebView to embed the web chat in your mobile app.
+If you are comfortable with JavaScript code, you can customize and extend the web chat by using the web chat API. You can also use a WebView to embed the web chat in your mobile app.
 {: shortdesc}
 
 To add the web chat widget to your website or a WebView in your mobile app, all you need to do is embed a generated script element in your HTML source (for more information about the embed script, see [Embedding the web chat on your page](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat)). Within this embed script, you can use the web chat API to customize or extend the web chat.
