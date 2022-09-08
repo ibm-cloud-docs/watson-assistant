@@ -31,7 +31,7 @@ subcollection: watson-assistant
 {: #web-chat-develop-page-interaction}
 
 You can use custom responses and events to enable the web chat to interact with the web page where it appears.
-{:shortdesc }
+{: shortdesc}
 
 For example, your customers might use your assistant to find information they need to complete a form. Rather than expecting the customer to then copy this information manually to the form, you can have the web chat automatically fill in the information.
 
