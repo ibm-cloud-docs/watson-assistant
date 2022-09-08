@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-08-22"
+lastupdated: "2022-09-08"
 
 subcollection: watson-assistant
 
@@ -30,7 +30,7 @@ subcollection: watson-assistant
 # Web chat development overview
 {: #web-chat-develop}
 
-If you are comfortable with JavaScript code, you can customize and extend the web chat by modifying the embed script and using the web chat API.
+If you are comfortable with JavaScript code, you can customize and extend the web chat by modifying the embed script and using the web chat API. You can also use a WebView to embed the web chat in your mobile app.
 {: shortdesc}
 
 The web chat API consists of several components:
