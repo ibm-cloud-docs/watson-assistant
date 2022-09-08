@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-09-08"
 
 subcollection: watson-assistant
 
@@ -74,3 +74,7 @@ You can share an unauthenticated version of your assistant with your team by sen
 To share a link:
 1. On the **Preview** page, click **Copy link to share**.
 1. Send the link to your team.
+
+The preview link is disabled is web chat security is enabled. For more information about web chat security, see [Securing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security).
+{: note}
+
