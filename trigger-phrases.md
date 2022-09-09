@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-09-08"
+lastupdated: "2022-09-09"
 
 subcollection: watson-assistant
 
@@ -27,8 +27,8 @@ subcollection: watson-assistant
 
 {{site.data.content.earlyaccess}}
 
-# Trigger word detected
-{: #trigger-word-detected}
+# Trigger words
+{: #trigger-words}
 
 Use the *Trigger word detected* action to add words or phrases to two separate groups. The first group connects customers with an agent. The second group shows customers a customizable warning message.
 {: shortdesc}
