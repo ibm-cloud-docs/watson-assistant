@@ -114,7 +114,7 @@ Initial value of session variables
 :   You can now set the initial value of a session variable to an expression. For more information, see [Creating a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable).
 
 Uploading intents
-:   If you created intents in the classic {{site.data.keyword.conversationshort}} experience, you can migrate your intents to actions in the new {{site.data.keyword.conversationshort}} experience. This can provide a helpful starting point when you are ready to start building actions in the new experience. For more information, see [Uploading intents as actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview#build-actions-overview-manage-upload-intents).
+:   If you created intents in the classic {{site.data.keyword.conversationshort}} experience, you can migrate your intents to actions in the new {{site.data.keyword.conversationshort}} experience. This can provide a helpful starting point when you are ready to start building actions in the new experience. For more information, see [Uploading intents as actions](/docs/watson-assistant?topic=watson-assistant-manage-actions#manage-actions-upload-intents).
 
 ## 19 July 2022
 {: #watson-assistant-jul192022}
