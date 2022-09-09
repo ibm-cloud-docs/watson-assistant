@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-09-08"
+lastupdated: "2022-09-09"
 
 subcollection: watson-assistant
 
@@ -76,14 +76,14 @@ const { IamAuthenticator } = require('ibm-watson/auth');
 
 // Create Assistant service object.
 const assistant = new AssistantV2({
-  version: '2020-09-24',
+  version: '2021-11-27',
   authenticator: new IamAuthenticator({
     apikey: '{apikey}', // replace with API key
   }),
   url: '{url}', // replace with URL
 });
 
-const assistantId = '{assistant_id}'; // replace with assistant ID
+const assistantId = '{environment_id}'; // replace with environment ID
 
 // Start conversation with empty message
 messageInput = {
@@ -100,25 +100,26 @@ function sendMessage(messageInput) {
       input: messageInput,
     })
     .then(res => {
-      processResponse(res.result);
+      processResult(res.result);
     })
     .catch(err => {
       console.log(err); // something went wrong
     });
 }
 
-// Process the response.
-function processResponse(response) {
-  // Display the output from assistant, if any. Supports only a single
-  // text response.
-  if (response.output.generic) {
-    if (response.output.generic.length > 0) {
-      if (response.output.generic[0].response_type === 'text') {
-        console.log(response.output.generic[0].text);
+// Process the result.
+function processResult(result) {
+  // Print responses from actions, if any. Supports only text responses.
+  if (result.output.generic) {
+    if (result.output.generic.length > 0) {
+      result.output.generic.forEach( response => {
+        if (response.response_type == 'text') {
+          console.log(response.text);
         }
-      }
+      });
     }
   }
+}
 ```
 {: codeblock}
 {: javascript}
@@ -140,15 +141,15 @@ assistant.set_service_url('{url}') # replace with service instance URL
 assistant_id = '{environment_id}' # replace with environment ID
 
 # Start conversation with empty message.
-message_response = assistant.message_stateless(
+result = assistant.message_stateless(
     assistant_id,
 ).get_result()
 
 # Print responses from actions, if any. Supports only text responses.
-if message_response['output']['generic']:
-    for assistant_response in message_response['output']['generic']:
-        if assistant_response['response_type'] == 'text':
-            print(assistant_response['text'])
+if result['output']['generic']:
+    for response in result['output']['generic']:
+        if response['response_type'] == 'text':
+            print(response['text'])
 ```
 {: codeblock}
 {: python}
@@ -259,14 +260,14 @@ const { IamAuthenticator } = require('ibm-watson/auth');
 
 // Create Assistant service object.
 const assistant = new AssistantV2({
-  version: '2020-09-24',
+  version: '2021-11-27',
   authenticator: new IamAuthenticator({
     apikey: '{apikey}', // replace with API key
   }),
-  url: '{urll}', // replace with URL
+  url: '{url}', // replace with URL
 });
-
-const assistantId = '{assistant_id}'; // replace with assistant ID
+  
+const assistantId = '{environment_id}'; // replace with environment ID
 
 // Start conversation with empty message
 messageInput = {
@@ -283,28 +284,24 @@ function sendMessage(messageInput) {
       input: messageInput,
     })
     .then(res => {
-      processResponse(res.result);
+      processResult(res.result);
     })
     .catch(err => {
       console.log(err); // something went wrong
     });
 }
 
-// Process the response.
-function processResponse(response) {
+// Process the result.
+function processResult(result) {
 
-  // If an intent was detected, log it out to the console.
-  if (response.output.intents.length > 0) {
-    console.log('Detected intent: #' + response.output.intents[0].intent);
-  }
-
-  // Display the output from assistant, if any. Supports only a single
-  // text response.
-  if (response.output.generic) {
-    if (response.output.generic.length > 0) {
-      if (response.output.generic[0].response_type === 'text') {
-        console.log(response.output.generic[0].text);
-      }
+  // Print responses from actions, if any. Supports only text responses.
+  if (result.output.generic) {
+    if (result.output.generic.length > 0) {
+      result.output.generic.forEach( response => {
+        if (response.response_type === 'text') {
+          console.log(response.text);
+        }  
+      });
     }
   }
 
@@ -347,20 +344,16 @@ message_input = {
 while message_input['text'] != 'quit':
 
     # Send message to assistant.
-    message_response = assistant.message_stateless(
+    result = assistant.message_stateless(
         assistant_id,
         input = message_input
     ).get_result()
 
-    # If an intent was detected, print it to the console.
-    if message_response['output']['intents']:
-        print('Detected intent: #' + message_response['output']['intents'][0]['intent'])
-
     # Print responses from actions, if any. Supports only text responses.
-    if message_response['output']['generic']:
-        for assistant_response in message_response['output']['generic']:
-            if assistant_response['response_type'] == 'text':
-                print(assistant_response['text'])
+    if result['output']['generic']:
+        for response in result['output']['generic']:
+            if response['response_type'] == 'text':
+                print(response['text'])
 
     # Prompt for next round of input.
     user_input = input('>> ')
@@ -439,7 +432,7 @@ public class AssistantSimpleExample {
 
 This version of the application begins the same way as before: sending an empty message to the assistant to start the conversation.
 
-The `processResponse()` function now displays any intent detected by the dialog skill, along with the output text. It then prompts for the next round of user input.
+The `processResult()` function displays the text of any responses received from the assistant. It then prompts for the next round of user input.
 {: javascript }
 
 It then displays the text of any responses received from the assistant, and it prompts for the next round of user input.
@@ -485,14 +478,14 @@ const { IamAuthenticator } = require('ibm-watson/auth');
 
 // Create Assistant service object.
 const assistant = new AssistantV2({
-  version: '2020-09-24',
+  version: '2021-11-27',
   authenticator: new IamAuthenticator({
     apikey: '{apikey}', // replace with API key
   }),
   url: '{url}', // replace with URL
 });
 
-const assistantId = '{assistant_id}'; // replace with assistant ID
+const assistantId = '{environment_id}'; // replace with environment ID
 
 // Start conversation with empty message
 messageInput = {
@@ -500,7 +493,7 @@ messageInput = {
   text: '',
 };
 context = {};
-sendMessage(messageInput, context);
+sendMessage(messageInput);
 
 // Send message to assistant.
 function sendMessage(messageInput, context) {
@@ -511,30 +504,26 @@ function sendMessage(messageInput, context) {
       context: context,
     })
     .then(res => {
-      processResponse(res.result);
+      processResult(res.result);
     })
     .catch(err => {
       console.log(err); // something went wrong
     });
 }
 
-// Process the response.
-function processResponse(response) {
+// Process the result.
+function processResult(result) {
 
-  let context = response.context;
+  let context = result.context;
 
-  // If an intent was detected, log it out to the console.
-  if (response.output.intents.length > 0) {
-    console.log('Detected intent: #' + response.output.intents[0].intent);
-  }
-
-  // Display the output from assistant, if any. Supports only a single
-  // text response.
-  if (response.output.generic) {
-    if (response.output.generic.length > 0) {
-      if (response.output.generic[0].response_type === 'text') {
-        console.log(response.output.generic[0].text);
-      }
+  // Print responses from actions, if any. Supports only text responses.
+  if (result.output.generic) {
+    if (result.output.generic.length > 0) {
+      result.output.generic.forEach( response => {
+        if (response.response_type === 'text') {
+          console.log(response.text);
+        }  
+      });
     }
   }
 
@@ -553,7 +542,7 @@ function processResponse(response) {
 {: javascript }
 
 ```python
-# Example 3: Preserves context to maintains state.
+# Example 3: Preserves context to maintain state.
 
 from ibm_watson import AssistantV2
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
@@ -585,19 +574,19 @@ context = {}
 while message_input['text'] != 'quit':
 
     # Send message to assistant.
-    message_response = assistant.message_stateless(
+    result = assistant.message_stateless(
         assistant_id,
         input = message_input,
         context = context
     ).get_result()
 
-    context = message_response['context']
+    context = result['context']
 
     # Print responses from actions, if any. Supports only text responses.
-    if message_response['output']['generic']:
-        for assistant_response in message_response['output']['generic']:
-            if assistant_response['response_type'] == 'text':
-                print(assistant_response['text'])
+    if result['output']['generic']:
+        for response in result['output']['generic']:
+            if response['response_type'] == 'text':
+                print(response['text'])
 
     # Prompt for next round of input.
     user_input = input('>> ')
