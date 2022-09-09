@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-09-08"
+lastupdated: "2022-09-09"
 
 subcollection: watson-assistant
 
@@ -75,6 +75,6 @@ To share a link:
 1. On the **Preview** page, click **Copy link to share**.
 1. Send the link to your team.
 
-The preview link is disabled is web chat security is enabled. For more information about web chat security, see [Securing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security).
+The preview link is not accessible if web chat security is enabled. For more information about web chat security, see [Securing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security).
 {: note}
 
