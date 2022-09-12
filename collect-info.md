@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-06-14"
+lastupdated: "2022-09-08"
 
 subcollection: watson-assistant
 
@@ -249,7 +249,7 @@ To create a saved customer response:
 
 1. Click **New saved response**.
 
-1. In the **Name** field, specify a descriptive name for the saved customer response configuration; this name should reflect the category of the information it collects. For example, you might use the name `Confirmation` for a response that recognizes multiple synonyms for "yes" and "no."
+1. In the **Name** field, specify a descriptive name for the saved customer response configuration; this name should reflect the category of the information it collects.
 
 1. Configure the details of the response as required. A saved response can be created only as an options response type. For more information about this response type, see [Customer response types](#customer-response-types).
 

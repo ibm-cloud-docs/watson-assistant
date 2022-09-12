@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-04-12"
+lastupdated: "2022-09-12"
 
 keywords: billing, data centers, MAU, monthly active users, service plans
 
@@ -74,12 +74,12 @@ The following features are available only to users of a Plus or Enterprise plan.
 - [Phone integration](/docs/watson-assistant?topic=watson-assistant-deploy-phone)
 - [Private endpoints](/docs/watson-assistant?topic=watson-assistant-security#security-private-endpoints)
 - [Search](/docs/watson-assistant?topic=watson-assistant-search-add)
+- [v2 Logs API](/apidocs/assistant/assistant-v2#listlogs){: external}
+- [Log webhook](/docs/watson-assistant?topic=watson-assistant-webhook-log)
 
 The following features are available only to users of Enterprise plans. ![Enterprise plan only](images/enterprise.png)
 
 - [Activity tracker](/docs/watson-assistant?topic=watson-assistant-at-events)
-- [v2 Logs API](/apidocs/assistant/assistant-v2#listlogs){: external}
-- [Log webhook](/docs/watson-assistant?topic=watson-assistant-webhook-log)
 
 The plan type of the service instance you are currently using is displayed in the page header. You can upgrade from one plan type to another. For more information, see [Upgrading](#admin-managing-plan-upgrade).
 

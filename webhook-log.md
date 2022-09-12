@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2022-07-25"
+  years: 2019, 2022
+lastupdated: "2022-09-12"
 
 keywords: log webhook
 
@@ -28,7 +28,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Logging activity with a webhook ![Enterprise plan only](images/enterprise.png)
+# Logging activity with a webhook ![Plus or higher plan only](images/plus.png)
 {: #webhook-log}
 
 You can log activity by making a call to an external service or application every time a customer submits input to the assistant.
@@ -36,7 +36,7 @@ You can log activity by making a call to an external service or application ever
 
 A webhook is a mechanism that allows you to call out to an external program based on events in your program.
 
-This feature is available only to Enterprise plan users.
+This feature is available only to Plus and Enterprise plan users.
 
 Add a log webhook to your assistant if you want to use an external service to log {{site.data.keyword.conversationshort}} activity. You can log two kinds of activity:
 
