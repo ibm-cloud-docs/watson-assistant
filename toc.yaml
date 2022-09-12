@@ -69,12 +69,11 @@ toc:
           - preview-share.md
           - publish.md
       - topicgroup:
-          label: Adding the assistant to your website
+          label: Deploying to your website or mobile app
           topics:
           - topic: web-chat-overview.md
             navtitle: Overview
           - web-chat-architecture.md
-          - deploy-web-chat.md
           - topicgroup:
               label: Web chat setup
               topics:
@@ -88,13 +87,14 @@ toc:
               topics:
                 - topic: web-chat-develop.md
                   navtitle: Overview
+                - deploy-web-chat.md
+                - web-chat-develop-mobile.md
                 - web-chat-develop-home-screen.md
                 - web-chat-develop-userid.md
                 - web-chat-develop-strings.md
                 - web-chat-develop-global.md
                 - web-chat-security.md
                 - web-chat-develop-versions.md
-                - web-chat-develop-mobile.md
           - topicgroup:
               label: Adding service desk support
               topics:
