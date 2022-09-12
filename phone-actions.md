@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-07-01"
+lastupdated: "2022-08-03"
 
 subcollection: watson-assistant
 
@@ -38,6 +38,7 @@ You can use response types to perform the following phone-specific actions:
 - [Transfer a call to a human agent](#phone-actions-transfer)
 - [Play hold music or a voice recording](#phone-actions-hold-music)
 - [Enable keypad entry](#phone-actions-dtmf)
+- [Transfer the conversation to the web chat integration](#phone-actions-transfer-channel)
 - [End the call](#phone-actions-hangup)
 - [Send a text message during a phone conversation](#phone-actions-sms)
 
@@ -384,14 +385,54 @@ The `connect_to_agent` response type supports the following phone-specific prope
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
-| `service_desk.sip.uri` | N/A | The SIP or telephone URI to transfer the call to, such as `sip:12345556789\\@myhost.com` or `tel:+18883334444` |
+| `service_desk.sip.uri` | N/A | The SIP or telephone URI to transfer the call to, such as `sip:12345556789\\@myhost.com` or `tel:+18883334444`. Optional when using the `hangup` method. |
+| `service_desk.sip.transfer_method` | `refer` | Determines how to transfer the call: \n - `refer`: The call is transferred by sending a SIP `REFER` request. This is the default value. \n -  `hangup`: The call is transferred by sending a SIP `BYE` request. |
+| `service_desk.sip.transfer_target_header` | `Transfer-Target` | The SIP header that contains the transfer target when a `BYE` request is used for transferring the call. This option is supported only in the `hangup` method. |
 | `service_desk.sip.transfer_headers` | N/A | A list of custom header field name/value pairs to be added to a transfer request |
-| `service_desk.sip.transfer_headers_send_method` | `custom_header` | The method by which the SIP transfer headers are sent: \n - `custom_header`: Sends the transfer headers as part of the SIP message. This is the default value. \n - `contact_header`: Sends the transfer headers in the `Contact` header. \n - `refer_to_header`: Sends the transfer headers in the `Refer-To` header. |
+| `service_desk.sip.transfer_headers_send_method` | `custom_header` | The method by which the SIP transfer headers are sent: \n - `custom_header`: Sends the transfer headers as part of the SIP message. This is the default value. \n - `contact_header`: Sends the transfer headers in the `Contact` header. This option is not supported in the `hangup` method. \n - `refer_to_header`: Sends the transfer headers in the `Refer-To` header. This option is not supported in the `hangup` method.|
 
 If you define a SIP URI as the transfer target, escape the at sign (`@`) in the URI by adding two backslashes (`\\`) in front of it. This is to prevent the string from being recognized as part of the entity shorthand syntax.
 
 ```json
     "uri": "sip:12345556789\\@myhost.com"
+```
+{: codeblock}
+
+###  Transferring after hangup
+
+
+By default, the phone integration transfers calls by using a SIP `REFER` request. Depending on the IVR service provider, you might need to configure call transfer to use a SIP `BYE` request instead.
+Use the  `transfer_method`  attribute to specify how to transfer the call, using either  `refer`  or  `hangup`. When `transfer_method` is set to  `hangup` instead of `refer`, the behavior of the transfer action changes. Instead of sending a SIP `REFER` request, the phone integration plays back any associated text and then hangs up the call by sending a SIP `BYE` request.
+
+After the hangup, the phone integration passes the transfer destination that is specified in the `url` attribute to the call anchor in the `BYE` message. The header field that contains the transfer target is determined by the  `transfer_target_header`  attribute. If the  `transfer_target_header`  attribute isn't specified, the phone integration uses `Transfer-Target`. 
+
+
+```json
+{
+  "generic": [
+    {
+      "response_type": "connect_to_agent",
+      "transfer_info": {
+        "target": {
+          "service_desk": {
+            "sip": {
+              "uri": "sip:user\\@domain.com",
+              "transfer_method": "hangup",
+              "transfer_target_header": "Transfer-Target"
+            }
+          }
+        }
+      },
+      "agent_available": {
+        "message": "Please hold on while I connect you with a live agent."
+      },
+      "agent_unavailable": {
+        "message": "Sorry, I could not find an agent."
+      },
+      "message_to_human_agent": "The caller needs help resetting their password"
+    }
+  ]
+}
 ```
 {: codeblock}
 
@@ -649,6 +690,46 @@ This example shows the `dtmf` response type with the `send` command, used to sen
 ```
 {: codeblock}
 
+
+## Transferring the conversation to the web chat integration
+{: #phone-actions-transfer-channel}
+
+You can transfer the caller from the current phone call to a [web chat](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat) session by using the `channel_transfer` response type. The assistant sends an SMS message to the caller that includes a URL that the caller can tap to load the web chat widget in the phone's browser. The web chat session displays the history of the phone call and can start the process of collecting information needed to complete the transaction. This can be useful in situations where the customer can provide information more easily in writing than by speaking (for example, changing an address).
+
+After the transfer has successfully completed, the caller can hang up the phone and continue the copnversation using the web chat.
+The `channel_transfer` response type can be used with the phone integration only if the *SMS with Twilio* integration is also configured for the assistant.
+
+
+```json
+{
+  "output": {
+    "generic": [
+      {
+        "response_type": "text",
+        "values": [
+          {
+            "text": "I will send you a text message now with a link to our website."
+          }
+        ],
+        "selection_policy": "sequential"
+      },
+      {
+        "response_type": "channel_transfer",
+        "message_to_user": "Click the link to connect with an agent using our website.",
+        "transfer_info": {
+          "target": {
+            "chat": {
+              "url": "https://example.com/webchat"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+```
+{: codeblock}
+
 ## Ending the call
 {: #phone-actions-hangup}
 
@@ -856,4 +937,3 @@ To remove a previously defined property, you must explicitly set it to an empty 
 
 ```
 {: codeblock}
-

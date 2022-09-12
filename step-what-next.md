@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-18"
+lastupdated: "2022-08-04"
 
 keywords: subaction, sub-action
 
@@ -79,33 +79,32 @@ There is no option to jump to a later step. Instead of jumping directly to a lat
 ## Go to another action
 {: #go-to-another-action}
 
-This option switches the conversation flow to another action. If you have a portion of an action flow that can be applied across multiple actions (for example, entering credit card information), you can use this capability to build it once and then call to it from each action that needs it. For example, as part of an action to place an order, you might call a subaction that enables a new customer to create an account.
+This option switches the conversation flow to another action. If you have a portion of an action flow that can be applied across multiple actions (for example, entering credit card information), you can use this capability to build it once and then call to it from each action that needs it. For example, as part of an action to place an order, you might call another action that enables a new customer to create an account.
 
-An action that is called from another action is referred to as a _subaction_.
-
-To call a subaction:
+To call another action
 
 1. In the **And then** field, select **Go to another action**.
 
 1. In the Settings window, click the **Go to** field and select the action you want to call.
 
-1. If you do not want to continue with the current action, click **End this action after subaction is completed**. You might use this option in cases where the customer has decided to do something different; in this case, you want the conversation flow to switch to the subaction and not return.
+1. If you do not want to continue with the current action, click **End this action after the other action is completed**. You might use this option in cases where the customer has decided to do something different; in this case, you want the conversation flow to switch to the other action and not return.
 
-    By default, the assistant returns to the current action after the subaction completes. Any action variables or session variables defined in the subaction are accessible from subsequent steps in the calling action.
+    By default, the assistant returns to the current action after the other action completes. Any action variables or session variables defined in the other action are accessible from subsequent steps in the calling action.
 
 1. Click **Apply**.
 
-### Passing values to a subaction
+### Passing values to another action
+{: #pass-values}
 
-Optionally, you can pass values to the subaction so the customer does not need to specify them again. For example, if your order-placement action has already collected the customer's name, you can then pass that information to the account-creation subaction. The step in the subaction that asks for the customer's name is skipped, and the value already specified is used instead.
+Optionally, you can pass values to another action so the customer does not need to specify them again. For example, if your order-placement action has already collected the customer's name, you can then pass that information to the account-creation action. The step in the account-creation action that asks for the customer's name is skipped, and the value already specified is used instead.
 
-To pass values to the subaction:
+To pass values to another action:
 
 1. Click **Edit passed values**.
 
-1. In the **Edit passed variables** window, click **Set value for subaction**.
+1. In the **Edit passed variables** window, click **Set value for the other action**.
 
-1. Select an action variable that you want to pass a value for. (The available action variables are based on the customer responses defined in the subaction.)
+1. Select an action variable that you want to pass a value for. (The available action variables are based on the customer responses defined in the other action.)
 
 1. Select the value you want to pass from the current action. You can select any available variable, or select **Expression** if you want to specify a different value.
 

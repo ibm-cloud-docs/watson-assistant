@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-05-02"
+lastupdated: "2022-08-12"
 
 keywords: assistant, omnichannel, virtual agent, virtual assistant, chatbot, conversation, watson assistant, watson conversation
 
@@ -62,4 +62,5 @@ These starting points in the documentation also help you get started:
 - [About {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-about)
 - [Planning your assistant](/docs/watson-assistant?topic=watson-assistant-plan-assistant)
 - [Overview: Editing actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview)
+- [Building actions from a template](/docs/watson-assistant?topic=watson-assistant-actions-templates)
 

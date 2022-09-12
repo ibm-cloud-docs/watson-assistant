@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-09-09"
 
 subcollection: watson-assistant
 
@@ -30,12 +30,12 @@ subcollection: watson-assistant
 # Securing the web chat
 {: #web-chat-security}
 
-Understand what you need to do to secure your web chat integration.
+You can configure the web chat to authenticate users and protect private data.
 {: shortdesc}
 
-Configure the web chat to authenticate users and send private data from your embedded web chat.
-
 All messages that are sent from the web chat are encrypted. When you enable security, your assistant takes an additional step to verify that messages originate from the web chat that is embedded in your website only.
+
+Enabling web chat security disables the shareable preview link. For more information about the preview link, see [Copying a link to share](/docs/watson-assistant?topic=watson-assistant-preview-share#preview-share-link).
 
 The web chat uses an RSA signature with SHA-256 (RS256) to encrypt communication. RS256 signatures use a sophisticated type of RSA encryption. An RSA key pair includes a private and a public key. The RSA private key is used to generate digital signatures, and the RSA public key is used to verify digital signatures. The complexity of the RSA algorithm that is used to scramble the message makes it nearly impossible to unscramble the message without the key.
 

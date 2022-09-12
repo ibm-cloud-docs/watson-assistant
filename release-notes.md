@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-09-09"
 
 keywords: Watson Assistant release notes
 
@@ -38,8 +38,118 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 9 September 2022
+{: #watson-assistant-sep092022}
+{: release-note}
+
+New operators available for building conditions
+:   Several new operators are available for building conditions in your actions. The options response type now has the `is any of` and `is none of` operators available. For more information, see [Operators](/docs/watson-assistant?topic=watson-assistant-step-conditions#operators).
+
+Copy actions to other assistants
+:   You can copy an action from one assistant to another. When you copy an action, references to other actions, variables, and saved responses are also copied. For more information, see [Managing actions](/docs/watson-assistant?topic=watson-assistant-manage-actions).
+
+Filter variables and saved responses by name
+:   You can now find variables and saved responses more easily. On the Actions page, you can filter variables you created or saved responses you added. Click the search icon, then enter a search string. Your list of variable or saved responses filters to match what you enter.
+
+## 1 September 2022
+{: #watson-assistant-sep012022}
+{: release-note}
+
+Conditioning on days of the week
+:   You can now condition a step on days of the week. This feature is available with the _date_ response type and the _Current date_ built-in variable.
+
+    For example, you might [define a customer response](/docs/watson-assistant?topic=watson-assistant-collect-info#choose-type) in step 1 with the date response type. When the customer responds to that step, they choose a date. You can then condition a later step on whether the date that the customer chose is Wednesday.
+
+New operators available for building conditions
+:   Several new operators are available for building conditions in your actions. The free text response type now has the `contains`, `does not contain`, `matches`, and `does not match` operators available. For more information, see [Operators](/docs/watson-assistant?topic=watson-assistant-step-conditions#operators).
+
+Extensions support for arrays
+:   Custom extensions now support passing arrays as parameters and accessing arrays in response variables. For more information, see [Calling a custom extension](/docs/watson-assistant?topic=watson-assistant-call-extension).
+
+## 26 August 2022
+{: #watson-assistant-aug262022}
+{: release-note}
+
+New filter on the Analyze page
+:   You can now filter customer conversation data by the _Greet customer_ system action. From the Conversations tab of the Analyze page, open the Actions filter and select **Greet customer**. For more information, see [Filtering conversations](/docs/watson-assistant?topic=watson-assistant-analytics-conversations#analytics-conversations-filtering).
+
+Filter actions by name
+:   You can now find actions more easily. On the Actions page, you can filter actions by name. Click the search icon, then enter a search string. Your list of actions filters to match what you enter.
+
+## 12 August 2022
+{: #watson-assistant-aug122022}
+{: release-note}
+
+Actions templates
+:   When creating actions, you can choose a template that relates to the problem you’re trying to solve. Templates help tailor your actions to include items specific to your business need. The examples in each template can also help you to learn how actions work. Actions templates include features such as intents, entities, condition-based responses, synonyms, response validations, and agent fallback. For more information, see [Building actions from a template](/docs/watson-assistant?topic=watson-assistant-actions-templates).
+
+Channel name variable
+:   The `Channel name` integration variable lets you add step conditions using these channels: web chat, phone, SMS, WhatsApp, Slack, or Facebook Messenger. For more information, see [Adding conditions to a step](/docs/watson-assistant?topic=watson-assistant-step-conditions).
+
+## 11 August 2022
+{: #watson-assistant-aug112022}
+{: release-note}
+
+Algorithms versions available in more languages
+:   Algorithms version options are now available in Arabic, Czech, and Dutch. Algorithms versions allows you to choose which version of {{site.data.keyword.conversationshort}} algorithms to apply to your future trainings. For more information, see [Algorithm versions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-algorithms-versions).
+
+## 9 August 2022
+{: #watson-assistant-aug092022}
+{: release-note}
+
+New API methods
+:   The v2 API now supports new **Environments** and **Releases** methods:
+
+    - **Environments**: Retrieve information about the environments associated with an assistant.
+
+    - **Releases**: Retrieve information about the releases (versions) that have been published for an assistant, and assign an available release to an environment.
+
+For more information, see the v2 [API Reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2){: external}.
+
+## 5 August 2022
+{: #watson-assistant-aug052022}
+{: release-note}
+
+Initial value of session variables
+:   You can now set the initial value of a session variable to an expression. For more information, see [Creating a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable).
+
+Uploading intents
+:   If you created intents in the classic {{site.data.keyword.conversationshort}} experience, you can migrate your intents to actions in the new {{site.data.keyword.conversationshort}} experience. This can provide a helpful starting point when you are ready to start building actions in the new experience. For more information, see [Uploading intents as actions](/docs/watson-assistant?topic=watson-assistant-manage-actions#manage-actions-upload-intents).
+
+## 19 July 2022
+{: #watson-assistant-jul192022}
+{: release-note}
+
+Changes to publishing and environments
+:   You can now publish versions of your content without assigning to the live environment, allowing you to make continuous updates before customers see it in production. Also, the formerly separate pages for your draft and live environments now appear as tabs on a single *Environments* page, from which you can set up unique configurations for building and testing in the draft environment, and for your customers in the live environment. For more information, see the [Publishing overview](/docs/watson-assistant?topic=watson-assistant-publish-overview).
+
+Logs reader role
+:   Identity and Access Management now includes a new service role, **Logs Reader**, which lets you grant access to Analytics without assigning the Manager role. Use Logs Reader in combination with the Reader or Writer role to provide access to the Analytics page. For more information, see [Managing access](/docs/watson-assistant?topic=watson-assistant-access-control).
+
+## 15 July 2022
+{: #watson-assistant-jul152022}
+{: release-note}
+
+Segment extension
+:   The Segment extension is now available for Enterprise plans. With this extension, you can use [Segment](https://segment.com/){: external} to capture and centralize data about your customers' behavior, including their interactions with your assistant. For more information, see [Sending events to Segment](/docs/watson-assistant?topic=watson-assistant-segment-add).
+
+New expression property
+:   You can now use the `.literal` property to return the exact response that a customer specifies. This property is helpful if a customer uses a synonym of an option, and you want your assistant to respond with the exact phrase they specified. To set this property, click the **Set variable values** icon and assign a session variable to the step variable. Add the `.literal` property to the step variable. Use the session variable in the assistant's response to display the customer's input.
+
+    For example, suppose you have an option called `plant` that has `fern` as a synonym. A customer might say `buy a fern`. In this case, you can use the `.literal` property so the assistant's response uses the customer's input. Your assistant might respond, `Great! I see you want to buy a fern.`
+
+## 11 July 2022
+{: #watson-assistant-jul112022}
+{: release-note}
+
+Ability to duplicate an action
+:   You can duplicate an action to reuse information in a new action. When you duplicate an action, the new action includes everything except example phrases. Click the overflow menu on the action you want and select **Duplicate**.
+
+New demo site
+:   Explore our [interactive demo site](https://www.ibm.com/products/watson-assistant/demos/lendyr/demo.html){: external} to learn how {{site.data.keyword.conversationshort}} can be used to build powerful, scalable experiences for your users.
+
 ## 24 June 2022
-{: #assistant-jun242022}
+{: #watson-assistant-jun242022}
 {: release-note}
 
 Algorithms versions available in more languages
@@ -479,7 +589,7 @@ Change to conversation skill choices
 {: release-note}
 
 Actions skill improvement
-: Actions now include a new choice, **Go to another action**, for what to do next in a step. Also called a subaction, this feature lets you can call one action from another action, to switch the conversation flow to another action to perform a certain task. If you have a portion of an action that can be applied across multiple use cases you can build it once and call to it from each action. This new option is available in the **And then** section of each step. For more information, see [Deciding what to do next](/docs/assistant?topic=assistant-actions#actions-what-next){: external}.
+: Actions now include a new choice, **Go to another action**, for what to do next in a step. This feature lets you can call one action from another action, to switch the conversation flow to another action to perform a certain task. If you have a portion of an action that can be applied across multiple use cases you can build it once and call to it from each action. This new option is available in the **And then** section of each step. For more information, see [Deciding what to do next](/docs/assistant?topic=assistant-actions#actions-what-next){: external}.
 
 ## 21 April 2021
 {: #watson-assistant-apr212021}

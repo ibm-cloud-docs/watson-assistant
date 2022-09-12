@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-12-08"
+  years: 2019, 2022
+lastupdated: "2022-09-12"
 
 keywords: log webhook
 
@@ -28,7 +28,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Logging activity with a webhook ![Enterprise plan only](images/enterprise.png)
+# Logging activity with a webhook ![Plus or higher plan only](images/plus.png)
 {: #webhook-log}
 
 You can log activity by making a call to an external service or application every time a customer submits input to the assistant.
@@ -36,7 +36,7 @@ You can log activity by making a call to an external service or application ever
 
 A webhook is a mechanism that allows you to call out to an external program based on events in your program.
 
-This feature is available only to Enterprise plan users.
+This feature is available only to Plus and Enterprise plan users.
 
 Add a log webhook to your assistant if you want to use an external service to log {{site.data.keyword.conversationshort}} activity. You can log two kinds of activity:
 
@@ -49,7 +49,7 @@ Add a log webhook to your assistant if you want to use an external service to lo
 
 The log webhook does not return anything to your assistant.
 
-For environments where private endpoints are in use, keep in mind that a webhook sends traffic over the Internet. <!-- For more information, see [Private network endpoints](/docs/assistant?topic=assistant-security#security-private-endpoints). -->
+For environments where private endpoints are in use, keep in mind that a webhook sends traffic over the internet.
 {: note}
 
 ## Defining the webhook
@@ -63,7 +63,7 @@ The programmatic call to the external service must meet these requirements:
 
 To add the webhook details, complete the following steps:
 
-1. From your assistant, navigate to the page for the environment where you want to configure the webhook (**Draft environment** or **Live environment**).
+1. In your assistant, open the environment where you want to configure the webhook.
 
 1. Click the ![Environment settings icon](images/gear-icon-black.png) icon to open the environment settings.
 

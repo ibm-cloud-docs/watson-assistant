@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-08-15"
 
 subcollection: watson-assistant
 
@@ -39,6 +39,34 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 6.6.2
+{: #6.6.2}
+
+*Release date: 15 August 2022*
+
+- Bug fixes
+
+## 6.6.1
+{: #6.6.1}
+
+*Release date: 8 August 2022*
+
+- The `servers` property now supports a new `webChatScriptPrefix` option. Use this property to configure a proxy between your users' browsers and the {{site.data.keyword.cloud_notm}} servers that host the web chat JavaScript code. For more information, see [Setting up a proxy](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#serversconfig){: external}.
+
+## 6.6.0
+{: #6.6.0}
+
+*Release date: 25 July 2022*
+
+- A new `servers` property is now available in the web chat configuration options. You can use this property to set up a proxy between your users' browsers and {{site.data.keyword.conversationshort}}. For more information, see [Setting up a proxy](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#serversconfig){: external}.
+
+## 6.5.2
+{: #6.5.2}
+
+*Release date: 11 July 2022*
+
+- Bug fix for `date` response type.
 
 ## 6.5.1
 {: #6.5.1}

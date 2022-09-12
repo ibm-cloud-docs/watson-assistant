@@ -42,6 +42,7 @@ toc:
           topics:
           - topic: build-actions-overview.md
             navtitle: Overview
+          - actions-templates.md
           - start-conversation.md
           - understand-questions.md
           - respond.md
@@ -58,6 +59,7 @@ toc:
           - save-actions.md
           - review.md
           - actions-global-settings.md
+          - manage-actions.md
           - assistant-add.md
           - assistant-rename-delete.md
       - topicgroup:
@@ -67,12 +69,11 @@ toc:
           - preview-share.md
           - publish.md
       - topicgroup:
-          label: Adding the assistant to your website
+          label: Deploying to your website or mobile app
           topics:
           - topic: web-chat-overview.md
             navtitle: Overview
           - web-chat-architecture.md
-          - deploy-web-chat.md
           - topicgroup:
               label: Web chat setup
               topics:
@@ -86,6 +87,8 @@ toc:
               topics:
                 - topic: web-chat-develop.md
                   navtitle: Overview
+                - deploy-web-chat.md
+                - web-chat-develop-mobile.md
                 - web-chat-develop-home-screen.md
                 - web-chat-develop-userid.md
                 - web-chat-develop-strings.md
@@ -106,18 +109,25 @@ toc:
                   navtitle: Providing a downloadable transcript
                 - topic: web-chat-develop-custom-buttons.md
                   navtitle: Implementing custom option buttons
+                - topic: web-chat-develop-content-carousel.md
+                  navtitle: Implementing a content carousel
+                - topic: web-chat-develop-set-context.md
+                  navtitle: Setting context variables
+                - topic: web-chat-develop-page-interaction.md
+                  navtitle: Interacting with the host web page
+      - topicgroup:
+          label: Deploying for phone
+          topics:
+          - deploy-phone.md
+          - deploy-phone-cxone.md
+          - phone-config.md
+          - deploy-phone-flex.md
+          - deploy-phone-genesys.md
       - topicgroup:
           label: Deploying to other channels
           topics:
           - deploy.md
           - deploy-integration-add.md
-          - topicgroup:
-              label: Deploying for phone
-              topics:
-              - deploy-phone.md
-              - phone-config.md
-              - deploy-phone-flex.md
-              - deploy-phone-genesys.md
           - deploy-facebook.md
           - deploy-slack.md
           - deploy-sms.md
@@ -128,6 +138,7 @@ toc:
           - analytics-overview.md
           - analytics-action-completion.md
           - analytics-conversations.md
+          - segment-add.md
       - topicgroup:
           label: Administering your instance
           topics:
@@ -140,7 +151,6 @@ toc:
           - admin-backup-restore.md
           - admin-recovery.md
           - admin-failover.md
-          - admin-beta.md
           - admin-language-support.md
           - switch-experience.md
       - topicgroup:
@@ -174,6 +184,12 @@ toc:
           - dialog-call-action.md
           - dialog-analyze.md
           - dialog-publish.md
+      - topicgroup:
+          label: Early access features
+          topics:
+          - action-response-modes.md
+          - multiple-environments.md
+          - trigger-phrases.md
 
   - navgroup:
       id: reference
@@ -186,6 +202,7 @@ toc:
       - phone-context.md
       - sms-reference.md
       - cdr-log-reference.md
+      - segment-event-reference.md
       - topicgroup:
           label: Web chat API reference
           topics:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-09-09"
 
 subcollection: watson-assistant
 
@@ -38,7 +38,7 @@ An _action_ represents a discrete outcome you want your assistant to be able to 
 
 To see how actions work and how you build one, let's go through an example.
 
-When you create a new action, {{site.data.keyword.conversationshort}} prompts you for an example of the customer input that starts the action. This text is also used as the default name for the action, but you can edit the action name later.
+When you create a new action from scratch, {{site.data.keyword.conversationshort}} prompts you for an example of the customer input that starts the action. This text is also used as the default name for the action, but you can edit the action name later.
 
 ![Prompt ](images/new-action-prompt.png)
 

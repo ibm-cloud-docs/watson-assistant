@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-06-15"
+lastupdated: "2022-08-16"
 
 subcollection: watson-assistant
 
@@ -78,7 +78,7 @@ By adding these phrases, your assistant learns when this is the right action for
 ### Uploading phrases
 {: #understand-questions-uploading-examples}
 
-If you have a large number of example phrases, you might find it easier to upload them from a comma-separated value (CSV) file than to define them one by one. If you are migrating intents from the classic {{site.data.keyword.conversationshort}} experience to example phrases in the new {{site.data.keyword.conversationshort}} experience, see [Migrating intents and entities](/docs/watson-assistant?topic=watson-assistant-migrate-intents-entities).
+If you have a large number of example phrases, you might find it easier to upload them from a comma-separated value (CSV) file than to define them one by one. If you are migrating intent information from the classic {{site.data.keyword.conversationshort}} experience to example phrases in the new {{site.data.keyword.conversationshort}} experience, see [Migrating intents and entities](/docs/watson-assistant?topic=watson-assistant-migrate-intents-entities).
 
 1. Collect the phrases into a CSV file. Save the CSV file with UTF-8 encoding and no byte order mark (BOM).
 
@@ -108,9 +108,9 @@ If you have a large number of example phrases, you might find it easier to uploa
 
 1. Click the **Upload** icon ![Upload icon](images/upload-icon.png).
 
-1. Select a file from your computer. The maximum CSV file size is 10 MB. If your CSV file is larger, consider splitting it into multiple files and uploading them separately.
+1. Select a file from your computer.
 
-    The file is validated and uploaded, and the system begins to train itself on the new data.
+    The file is validated and uploaded, and the system trains itself on the new data.
 
 ### Downloading phrases
 {: #understand-questions-downloading-examples}
@@ -161,8 +161,6 @@ To customize clarification, complete the following steps:
 ### Disabling clarifying questions
 {: #understand-questions-disambiguation-disable}
 
-<!-- Every action that you add is used during clarification automatically. The system actions are not. -->
-
 You can disable clarifying questions for all actions.
 
 To disable clarification for all actions:
@@ -174,9 +172,18 @@ To disable clarification for all actions:
 ### Excluding an action from clarifying questions
 {: #understand-questions-exclude-from-clarifying}
 
-You can also prevent a single action from being included in the list of choices during clarification. To exclude an action from clarification:
+You can also prevent a single action from being used in a clarifying question. The effect of this choice depends on the confidence score for the action you exclude.
+
+If the action has the highest confidence score for a customer's question, no clarifying question is asked and the action is triggered.
+
+If the action doesn't have the highest confidence score, the action is excluded from the list of choices in the clarifying question.
+
+For more information about confidence scoring, see [Confidence scoring](#understand-questions-confidence-scoring).
+
+To exclude an action from clarification:
 
 1. From the action editor, click the **Action settings** icon ![Gear icon](images/gear-icon-black.png)
+
 1. In Action Settings, toggle the **Ask clarifying question** switch to **Off**.
 
 ## Coordinating how multiple actions start

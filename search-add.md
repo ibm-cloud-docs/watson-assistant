@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-25"
+lastupdated: "2022-07-25"
 
 subcollection: watson-assistant
 
@@ -28,16 +28,13 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Adding a search integration ![Plus or higher plan only](images/plus.png)
+# Adding a search integration ![Plus](images/plus.png)![Enterprise plan](images/enterprise.png)
 {: #search-add}
 
 Put your subject matter expertise to work by adding search. The search integration gives your assistant access to corporate data collections that it can mine for answers.
 {: shortdesc}
 
 When a search integration is added, your assistant can route complex customer inquiries to the {{site.data.keyword.discoveryfull}} service. {{site.data.keyword.discoveryshort}} treats the user input as a search query. It finds information that is relevant to the query from an external data source and returns it to the assistant.
-
-This feature is available only to paid plan users.
-{: note}
 
 Add search to your assistant to prevent the assistant from having to say things like, `I'm sorry. I can't help you with that`. Instead, the assistant can query existing company documents or data to see whether any useful information can be found and shared with the customer.
 

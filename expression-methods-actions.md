@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2015, 2021
-lastupdated: "2022-05-24"
+years: 2015, 2022
+lastupdated: "2022-09-01"
 
 subcollection: watson-assistant
 
@@ -21,8 +21,6 @@ subcollection: watson-assistant
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
-
-{{site.data.content.classiclink}}
 
 # Expression language methods for actions
 {: #expression-methods-actions}
@@ -74,7 +72,7 @@ Several methods are available to work with date and time values.
 ### `now(String timezone)`
 {: #expression-methods-actions-now}
 
-The `now` method returns the current date and time for a specified time zone, in the format `yyyy-MM-dd HH:mm:ss`:
+The `now()` method returns the current date and time for a specified time zone, in the format `yyyy-MM-dd HH:mm:ss`:
 
 ```text
 now('Australia/Sydney').
@@ -82,7 +80,7 @@ now('Australia/Sydney').
 
 If the current date and time in the UTC time zone is `2021-11-26 11:41:00`, this example returns the string `2021-11-26 21:41:00`.
 
-For the list of supported time zones, see [Supported time zones](/docs/watson-assistant?topic=watson-assistant-time-zones).
+<!--- For the list of supported time zones, see [Supported time zones](/docs/watson-assistant?topic=watson-assistant-time-zones). --->
 
 ### `.reformatDateTime(String format)`
 {: #expression-methods-actions-dates-reformatDateTime}
@@ -377,13 +375,13 @@ ${step_297}.equalsIgnoreCase('Yes')
 
 This method returns a string from the input that matches the specified regular expression group pattern. It returns an empty string if no match is found.
 
-This method is designed to extract matches for different regex pattern groups, not different matches for a single regex pattern. To find different matches, see the [getMatch](#expression-methods-actions-strings-getMatch) method.
+This method is designed to extract matches for different regex pattern groups, not different matches for a single regex pattern. To find different matches, see the [getMatch()](#expression-methods-actions-strings-getMatch) method.
 {: note}
 
 In this example, the action variable is saving a string that matches the regex pattern group that you specify. In the expression, two regex patterns groups are defined, each one enclosed in parentheses. There is an inherent third group that is comprised of the two groups together. This is the first (groupIndex 0) regex group; it matches with a string that contains the full number group and text group together. The second regex group (groupIndex 1) matches with the first occurrence of a number group. The third group (groupIndex 2) matches with the first occurrence of a text group after a number group.
 
 ```text
-${step_297}.extract('([\d]+)(\b [A-Za-z]+)',n)
+${step_297}.extract('([\d]+)(\b [A-Za-z]+)', <n>)
 ```
 {: codeblock}
 
@@ -396,9 +394,9 @@ Hello 123 this is 456.
 
 the results are as follows:
 
-- When n=`0`, the value is `123 this`.
-- When n=`1`, the value is `123`.
-- When n=`2`, the value is `this`.
+- When `<n>`=`0`, the value is `123 this`.
+- When `<n>`=`1`, the value is `123`.
+- When `<n>`=`2`, the value is `this`.
 
 ### String.find(String regexp)
 {: #expression-methods-actions-strings-find}
@@ -424,7 +422,7 @@ As matches are found, they are added to what you can think of as an array of mat
 For example, the following example is looking for a group of numbers in an action variable.
 
 ```text
-${step_297}.getMatch('([\d]+)',1)
+${step_297}.getMatch('([\d]+)', 1)
 ```
 {: codeblock}
 
@@ -489,7 +487,7 @@ ${step_297}.substring(5, ${step_297}.length())
 {: codeblock}
 
 If the action variable `${step_297}` contains the string `This is a string.`, this expression returns `is a text.`
-  
+
 ### String.toLowerCase()
 {: #expression-methods-actions-strings-toLowerCase}
 
@@ -525,7 +523,7 @@ ${step_297}.trim()
 {: codeblock}
 
 If the action variable `${step_297}` contains the string `   something is here    `, this method returns the string `something is here`.
-  
+
 ### java.lang.String support
 {: #expression-methods-actions-strings-java-lang-String}
 
@@ -553,3 +551,301 @@ T(String).format('%.2f',${step_297})
 {: codeblock}
 
 If the `${step_297}` variable that needs to be formatted in US dollars is 4.5, the resulting string is `4.50`.
+
+## Array methods
+{: #expression-methods-actions-arrays}
+
+These methods help you work with arrays.
+
+### Array.add(value...)
+{: #expression-methods-actions-arrays-add}
+
+This method adds one or more new values to the array and returns `true` if the operation is successful.
+
+```text
+${Items}.add('four', 'five')
+```
+{: codeblock}
+
+If `Items` is `['one', 'two', 'three']`, this example updates it in place to become `['one', 'two', 'three', 'four', 'five']`.
+
+### Array.addAll(Array array)
+{: #expression-methods-actions-arrays-add-all}
+
+This method adds one array to another and returns `null`.
+
+```text
+${Items}.addAll(${New_items})
+```
+{: codeblock}
+
+If `Items` is `['one', 'two', 'three']` and `New_items` is `['four', 'five', 'six']`, this example updates `Items` in place to become `['one', 'two', 'three', 'four', 'five', 'six']`.
+
+### Array.append(value...)
+{: #expression-methods-actions-arrays-append}
+
+This method appends one or more new values to the array and returns the result as a new array. The original array is not modified.
+
+```text
+${Items}.append('four', 'five')
+```
+{: codeblock}
+
+If `Items` is `['one', 'two', 'three']`, this example returns the new array `['one', 'two', 'three', 'four', 'five']`.
+
+### Array.clear()
+{: #expression-methods-actions-arrays-clear}
+
+This method removes all values from the array and returns null.
+
+```text
+${Items}.clear()
+```
+
+After this expression is evaluated, `Items` is an empty array (`[]`).
+
+### Array.contains(value)
+{: #expression-methods-actions-arrays-contains}
+
+This method returns `true` if the array contains an item that is exactly equal to the input value. The specified value can be a string or a number.
+
+```text
+${Items}.contains(123)
+```
+
+If `Items` is `[123, 456, 789]`, this example returns `true`.
+
+### Array.containsIgnoreCase(value)
+{: #expression-methods-actions-arrays-contains-ignore-case}
+
+This method returns `true` if the array contains an item that is equal to the input value. Strings are matched regardless of whether the value is specified in uppercase or lowercase letters. The specified value can be a string or a number.
+
+```text
+${Items}.contains('two')
+```
+
+This example returns `true` if the `Items` array contains any capitalization of the string `two` (for example, `TWO` or `Two` would also match).
+
+### Array.get(Integer index)
+{: #expression-methods-actions-arrays-get}
+
+This method returns the item from the array that is at the specified index position. Note that arrays are zero-indexed, meaning that the first item in the array is at index position `0`.
+
+```text
+${Items}.get(1)
+```
+
+If `Items` is `['one', 'two', 'three']`, this example returns `two`.
+
+The `get()` method is an alternative to using brackets (`[]`) to retrieve an item from an array. The following example is also valid and returns the same result:
+
+```text
+${Items}[1]
+```
+
+If you are using a value specified by a customer to choose an item from an array, you might need to subtract 1 to convert to a zero-indexed value. For example, you might use an expression like `${Items}.get(${step_123} - 1)` to retrieve the intended value.
+{: note}
+
+### Array.getRandomItem()
+{: #expression-methods-actions-arrays-get-random-item}
+
+This method returns a randomly chosen item from the array.
+
+```text
+${Items}.getRandomItem()
+```
+
+If `Items` is `['one', 'two', 'three']`, this example returns `one`, `two`, or `three`, on a random basis.
+
+### Array.indexOf(value)
+{: #expression-methods-actions-arrays-index-of}
+
+This method returns the index position of the first occurrence of the input value in the array, or `-1` if the array does not contain the input value. The specified value can be a string or a number.
+
+```text
+${Items}.indexOf(`two`)
+```
+
+If `Items` is `['one', 'two', 'three']`, this example returns the integer `1` (indicating the second position in the zero-indexed array).
+
+### Array.join(String delimiter)
+{: #expression-methods-actions-join}
+
+This method joins all values in this array to a string. Values are converted to string and delimited by the input delimiter.
+
+For example, you might have a variable called `pizza_toppings` that contains the array `["pepperoni", "ham", "mushrooms"]`. The following expression converts this array into the string `pepperoni, ham, mushrooms`:
+
+```text
+$toppings_array.join(', ')
+```
+
+If you use that expression to define the value of a variable, you can then reference that variable in your assistant output to create a human-readable message (for example, `You have selected the following toppings: pepperoni, ham, mushrooms`).
+
+### JSONArray.joinToArray(template)
+{: #expression-methods-actions-arrays-join-to-array}
+
+This method extracts information from each item in the array and builds a new array that is formatted according to the format you specify as a template. The template can be a string, a JSON object, or an array. The method returns an array of strings, an array of objects, or an array of arrays, depending on the type of the template.
+
+This method is useful for formatting information as a string you can return as part of the output of a step, or for transforming data into a different structure so you can use it with an external API.
+
+In the template, you can reference values from the source array using the following syntax:
+
+```text
+%e.{property}%
+```
+
+where `{property}` represents the name of the property in the source array.
+
+For example, suppose your assistant has stored an array containing flight details in a session variable. The stored data might look like this:
+
+```json
+"flights": [
+      {
+        "flight": "AZ1040",
+        "origin": "JFK",
+        "carrier": "Alitalia",
+        "duration": 485,
+        "destination": "FCO",
+        "arrival_date": "2019-02-03",
+        "arrival_time": "07:00",
+        "departure_date": "2019-02-02",
+        "departure_time": "16:45"
+      },
+      {
+        "flight": "DL1710",
+        "origin": "JFK",
+        "carrier": "Delta",
+        "duration": 379,
+        "destination": "LAX",
+        "arrival_date": "2019-02-02",
+        "arrival_time": "10:19",
+        "departure_date": "2019-02-02",
+        "departure_time": "07:00"
+      },
+      {
+        "flight": "VS4379",
+        "origin": "BOS",
+        "carrier": "Virgin Atlantic",
+        "duration": 385,
+        "destination": "LHR",
+        "arrival_date": "2019-02-03",
+        "arrival_time": "09:05",
+        "departure_date": "2019-02-02",
+        "departure_time": "21:40"
+      }
+    ]
+```
+{: codeblock}
+
+To build an array of strings that describe these flights in a user-readable form, you might use the following expression:
+
+```text
+${Flight_data}.joinToArray("Flight %e.flight% to %e.destination%")
+```
+
+This expression would return the following array of strings: `["Flight AZ1040 to FCO","Flight DL1710 to LAX","Flight VS4379 to LHR"]`.
+
+#### Complex templates
+{: #join-to-array-complex-template}
+
+A more complex template might contain formatting that displays the information in a legible layout. For a complex template, you might want to store the template in a session variable, which you can then pass to the `joinToArray` method instead of a string.
+
+For example, this complex template contains a subset of the array elements, adding labels and formatting:
+
+```text
+<br/>Flight number: %e.flight% <br/> Airline: %e.carrier% <br/> Departure date: %e.departure_date% <br/> Departure time: %e.departure_time% <br/> Arrival time: %e.arrival_time% <br/>
+```
+{: codeblock}
+
+Make sure any formatting you use in your template is supported by the channel integration that will be displaying the assistant output.
+{: note}
+
+If you create a session variable called `Template`, and assign this template as its value, you can then use that variable in your expressions:
+
+```text
+${Flight_data}.joinToArray(${Template})
+```
+
+At run time, the response would look like this:
+
+```text
+Flight number: AZ1040
+Airline: Alitalia
+Departure date: 2019-02-02
+Departure time: 16:45
+Arrival time: 07:00
+
+Flight number: DL1710
+Airline: Delta
+Departure date: 2019-02-02
+Departure time: 07:00
+Arrival time: 10:19
+
+Flight number: VS4379
+Airline: Virgin Atlantic
+Departure date: 2019-02-02
+Departure time: 21:40
+Arrival time: 09:05
+```
+{: screen}
+
+#### JSON Object templates
+{: #join-to-array-object-template}
+
+Instead of a string, you can define a template as a JSON object. This provides a way to standardize the formatting of information from different systems, or transforming data into the format required for an external service.
+
+In this example, this template is defined as a JSON object that extracts flight details from the flight elements specified in the array stored in the `Flight data` session variable:
+
+```json
+{
+  "departure": "Flight %e.flight% departs on %e.departure_date% at %e.departure_time%.",
+  "arrival": "Flight %e.flight% arrives on %e.arrival_date% at %e.arrival_time%."
+}
+```
+{: codeblock}
+
+Using this template, the `joinToArray()` method returns a new array of objects with the specified structure.
+
+### Array.remove(Integer index)
+{: #expression-methods-actions-arrays-remove}
+
+This method removes the item in the specified index position from the array, and returns the updated array.
+
+```text
+${Items}.remove(1)
+```
+
+If `Items` is `['one', 'two', 'three']`, this example returns `['one', 'three']`. The original `Items` array is also modified in place.
+
+### Array.removeValue(value)
+{: #expression-methods-actions-arrays-remove-value}
+
+This method removes the first occurrence of the specified value from the array, and returns the updated array. The specified value can be a string or a number.
+
+```text
+${Items}.removeValue('two')
+```
+
+If `Items` is `['one', 'two', 'three']`, this example returns `['one', 'three']`. The original `Items` array is also modified in place.
+
+### Array.set(Integer index, value)
+{: #expression-methods-actions-arrays-set}
+
+This method replaces the item in the specified index position with the specified value, and returns the updated array.
+
+```text
+${Items}.set(2,'five')
+```
+
+If `Items` is `['one', 'two', 'three']`, this example returns `['one', 'two', 'five']`. The original `Items` array is also modified in place.
+
+### Array.size()
+{: #expression-methods-actions-arrays-size}
+
+This method returns the number of items in the array as an integer.
+
+```text
+${Items}.size()
+```
+
+If `Items` is `['one', 'two', 'three']`, this example returns `3`.
