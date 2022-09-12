@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-03"
+lastupdated: "2022-09-12"
 
 subcollection: watson-assistant
 
@@ -116,7 +116,7 @@ The draft and live environments each have settings. On either tab, click the **S
 
 **Webhooks**
 
-Settings for pre-message, post-message, and log webhooks (Enterprise plan only). For more information, see [Extending your assistant with webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview).
+Settings for pre-message, post-message, and log webhooks. For more information, see [Extending your assistant with webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview).
 
 **Inactivity timeout**
 
