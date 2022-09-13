@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-06-10"
+lastupdated: "2022-07-01"
 
 subcollection: watson-assistant
 
@@ -281,7 +281,7 @@ The log events that occur in the components that are used by the phone integrati
 
 For more information about setting up an instance, see [Provisioning an instance](/docs/log-analysis?topic=log-analysis-provision){: external}.
 
-Currently, the Phone and SMS with Twilio integrations are the only components of your assistant that write logs to the IBM Log Analysis dashboard.
+Currently, the Phone and SMS integrations are the only components of your assistant that write logs to the IBM Log Analysis dashboard.
 {: note}
 
 After you create the instance, get log information by completing the following steps:

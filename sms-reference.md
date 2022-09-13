@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-10-21"
+  years: 2020, 2022
+lastupdated: "2022-07-01"
 
 subcollection: watson-assistant
 
@@ -25,18 +25,18 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# *SMS with Twilio* integration reference
+# *SMS* integration reference
 {: #sms-reference}
 
 Add action commands to the message `context` object to manage the flow of conversations with customers who interact with your assistant by submitting SMS messages over the telephone.
 {: shortdesc}
 
-Learn about the supported commands and reserved context variables that are used by the *SMS with Twilio* integration.
+Learn about the supported commands and reserved context variables that are used by the *SMS* integration.
 
 ## Supported commands
 {: #sms-reference-actions}
 
-Each action consists of a `command` property, followed by an optional `parameter` property to define parameters for commands that require them. The commands that are described in the following table are supported by the *SMS with Twilio* integration.
+Each action consists of a `command` property, followed by an optional `parameter` property to define parameters for commands that require them. The commands that are described in the following table are supported by the *SMS* integration.
 
 | Action command | Description | Parameters |
 | ----- | ----- | ----- |
@@ -49,9 +49,9 @@ Each action consists of a `command` property, followed by an optional `parameter
 ## Reserved context variables
 {: #sms-reference-context-variables}
 
-The following table describes the context variables that have special meaning in the context of the *SMS with Twilio* integration. They should not be used for any purpose other than the documented use.
+The following table describes the context variables that have special meaning in the context of the *SMS* integration. They should not be used for any purpose other than the documented use.
 
-Table 2 describes the context variables that are set by your action. Table 3 describes the context variables that you can set by the *SMS with Twilio* integration.
+Table 2 describes the context variables that are set by your action. Table 3 describes the context variables that you can set by the *SMS* integration.
 
 ### Table 2. Context variables that are set by your action
 {: #sms-reference-context-variables-set-by-action}

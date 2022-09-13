@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-05-25"
+lastupdated: "2022-07-01"
 
 subcollection: watson-assistant
 
@@ -57,7 +57,7 @@ Follow these steps to add integrations to your assistant:
     - [Phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone)
     - [Facebook Messenger](/docs/watson-assistant?topic=watson-assistant-deploy-facebook)
     - [Slack](/docs/watson-assistant?topic=watson-assistant-deploy-slack)
-    - [SMS with Twilio](/docs/watson-assistant?topic=watson-assistant-deploy-sms)
+    - [SMS](/docs/watson-assistant?topic=watson-assistant-deploy-sms)
     - [WhatsApp with Twilio](/docs/watson-assistant?topic=watson-assistant-deploy-whatsapp)
     - [Search](/docs/watson-assistant?topic=watson-assistant-search-add)
 
