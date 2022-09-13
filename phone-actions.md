@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-08-03"
+lastupdated: "2022-09-12"
 
 subcollection: watson-assistant
 
@@ -826,7 +826,7 @@ You can specify any of the following parameters in the `parameters` object:
 | tenantPhoneNumber | string | The phone number that is associated with the tenant. The format of the number must match the format that is required by the SMS provider. If no `tenantPhoneNumber` value is provided, the tenant ID from the phone integration configuration for the active call is used. Optional. |
 | userPhoneNumber   | string | The phone number to send the SMS message to. The format of the number must match the format that is required by the SMS provider. If no `userPhoneNumber` value is provided, the voice caller's phone number from `From` header of the incoming SIP `INVITE` request is used. Optional. |
 
-If your *SMS* integration supports more than one SMS phone number, or you are using SIP trunk different from your SMS provider, be sure to specify the phone number that you want to use to send the text message. Otherwise, the text is sent using the same phone number that was called.
+If your *SMS* integration supports more than one SMS phone number, or you are using a SIP trunk different from your SMS provider, be sure to specify the phone number that you want to use to send the text message. Otherwise, the text is sent using the same phone number that was called.
 
 After the assistant receives an SMS message, a new conversation turn is initiated with the text input `vgwSMSMessage`. This input indicates that a message was received from the caller. The text of the customer's message is included as the value of the `vgwSMSMessage`context variable. 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-07-01"
+lastupdated: "2022-09-12"
 
 subcollection: watson-assistant
 
@@ -31,14 +31,14 @@ subcollection: watson-assistant
 Add a text messaging integration so your assistant can exchange messages with your customers.
 {: shortdesc}
 
-The Short Messaging Service (SMS) supports text-only messages. Typically, SMS restricts the text message length to 160 characters. The Multimedia Messaging Service (MMS) supports sending images and text messages that are over 160 characters in length. When you create a phone number with Twilio, MMS message support is included automatically. IntelePeer MMS message support is not yet available.
+The Short Messaging Service (SMS) supports text-only messages. Typically, SMS restricts the text message length to 160 characters. The Multimedia Messaging Service (MMS) supports sending images and text messages that are over 160 characters in length. When you create a phone number with Twilio, MMS message support is included automatically.<!-- IntelePeer MMS message support is not yet available.-->
 
-Customers send text messages to your hosted phone number. Twilio and IntelePeer use a messaging webhook that you set up to send a POST request with the text message body to your assistant. Each response from the assistant is sent back to Twilio or IntelePeer to be converted to an outbound SMS message that is sent to the customer. The responses are sent to the SMS Provider's API for processing. You provide your SMS Provider's authentication token information, which serve as your API access credentials.
+Customers send text messages to your hosted phone number. Twilio<!-- and IntelePeer use--> uses a messaging webhook that you set up to send a POST request with the text message body to your assistant. Each response from the assistant is sent back to Twilio<!-- or IntelePeer--> to be converted to an outbound SMS message that is sent to the customer. The responses are sent to the SMS Provider's API for processing. You provide your SMS Provider's authentication token information, which serve as your API access credentials.
 
 Refer to the following sections to set up the integration for your SMS provider:
 
 - [Integrating SMS with Twilio](#deploy-sms-twilio)
-- [Integrating SMS with IntelePeer](#deploy-sms-intelepeer)
+<!-- - [Integrating SMS with IntelePeer](#deploy-sms-intelepeer)-->
 
 If you want your assistant to be able to switch between voice and text during a customer interaction, enable both the phone and text messaging integrations. The integrations do not need to use the same third-party service provider. For more information, see [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone).
 
@@ -108,6 +108,7 @@ To set up the integration, complete the following steps:
 
 1.  Return to the *SMS with Twilio* integration setup page. Click **Finish**.
 
+<!--
 ## Integrating with *SMS with IntelePeer*
 : #deploy-sms-intelepeer}
 
@@ -161,6 +162,7 @@ To set up the integration, complete the following steps:
 1.  Click **Save**.
 
 1.  If you want to support multiple phone numbers, repeat the previous step for each phone number that you want to use.
+-->
 
 ## SMS Advanced configuration options
 {: #deploy-sms-advanced}
@@ -213,6 +215,6 @@ To migrate from {{site.data.keyword.iva_short}} to the {{site.data.keyword.conve
 
 1.  Do one of the following things:
 
-    - If your {{site.data.keyword.iva_short}} service instance uses an SMS service provider other than Twilio or IntelePeer, you cannot continue to use it. You must create an SMS account with Twilio or IntelePeer first. Complete the [Before you begin - Twilio](#deploy-sms-service-setup-twilio) or [Before you begin - IntelePeer](#deploy-sms-service-setup-intelepeer) steps to create the account. Next, set up the integration.
+    - If your {{site.data.keyword.iva_short}} service instance uses an SMS service provider other than Twilio<!-- or IntelePeer-->, you cannot continue to use it. You must create an SMS account with Twilio<!-- or IntelePeer--> first. Complete the [Before you begin - Twilio](#deploy-sms-service-setup-twilio)<!-- or [Before you begin - IntelePeer](#deploy-sms-service-setup-intelepeer)--> steps to create the account. Next, set up the integration.
 
-    - If your {{site.data.keyword.iva_short}} service instance uses Twilio or IntelePeer as its SMS provider, you can go directly to [Set up the integration - Twilio](#deploy-sms-setup-twilio) or [Set up the integration - IntelePeer](#deploy-sms-setup-intelepeer).
+    - If your {{site.data.keyword.iva_short}} service instance uses Twilio<!-- or IntelePeer--> as its SMS provider, you can go directly to [Set up the integration - Twilio](#deploy-sms-setup-twilio)<!-- or [Set up the integration - IntelePeer](#deploy-sms-setup-intelepeer)-->.
