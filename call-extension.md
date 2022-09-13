@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2022-09-01"
+  years: 2022
+lastupdated: "2022-09-13"
 
 subcollection: watson-assistant
 
@@ -102,7 +102,7 @@ In addition to the supported customer response types, a variable can also contai
 
 1. Create a new session variable, either using the **Set variable values** icon in the step editor or from the **Variables > Created by you** page. (For more information about how to create a session variable, see [Creating a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable).)
 
-1. In the **Type** field, leave **Any** selected.
+1. In the **Type** field, select **Any**.
 
 1. In the **Initial value** field, click the **Use expression** toggle to enable it. Enter an expression that defines an array value (such as `["New York", "London", "Tokyo"]`, `[123, 456, 789]`, or `[]`).
 
