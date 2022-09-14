@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-08-08"
+lastupdated: "2022-09-12"
 
 subcollection: watson-assistant
 
@@ -30,7 +30,7 @@ subcollection: watson-assistant
 # Web chat overview
 {: #web-chat-overview}
 
-You can use the web chat integration to deploy your assistant on your website without writing any code. The web chat integration provides an easy-to-use chatbot interface that can integrate seamlessly with your site, without requiring the time and effort that would be required to build your own custom user interface.
+You can use the web chat integration to deploy your assistant on your website or embed it as a WebView in your mobile app. The web chat integration provides an easy-to-use chatbot interface that can integrate seamlessly with your site, without requiring the time and effort that would be required to build your own custom user interface.
 {: shortdesc}
 
 The web chat can help your customers start the conversation with common questions or tasks; it can display multimedia and interactive elements such as forms, and it can transfer customers to human agents for more help. A developer can customize the web chat to add even more capabilities.
@@ -48,7 +48,7 @@ The web chat is also customizable, which means that you can take advantage of th
 
 You can quickly deploy the web chat to your website (or even to a local test page) and see how it works. You can also use the web chat integration settings in the {{site.data.keyword.conversationshort}} user interface to configure the web chat for your website and your customers.
 
-If you are a developer, you can further customize and extend the web chat by writing code and using the web chat API.
+If you are a developer, you can further customize and extend the web chat by writing code and using the web chat API. You can also use a WebView with a JavaScript bridge to add the web chat to your mobile app.
 
 The following documentation topics provide more information about the capabilities of the web chat integration, how to configure and deploy it, and how to customize it.
 

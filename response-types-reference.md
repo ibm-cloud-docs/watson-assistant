@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-05-25"
+lastupdated: "2022-07-01"
 
 subcollection: watson-assistant
 
@@ -338,7 +338,7 @@ Sends a command to the channel ending the session. This response type instructs 
 |-----------------------------------|-----------------------------------|
 | ![Yes](images/checkmark-icon.svg) |                                   |
 
-- The SMS with Twilio integration supports ending a session by using the `terminateSession` action command. <!-- For more information, see XXXX -->
+- The SMS integration supports ending a session by using the `terminateSession` action command. <!-- For more information, see XXXX -->
 
 ### Fields
 {: response-types-json-end-session-fields}
@@ -536,7 +536,7 @@ Pauses before sending the next message to the channel, and optionally sends a "u
 | ![Yes](images/checkmark-icon.svg) |                                   |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
 <!-- - With the phone integration, you can add a pause by using the `turn_settings.timeout_count` context variable (for more information, see [Context variables that are set by your dialog or actions](/docs/watson-assistant?topic=watson-assistant-phone-context#phone-context-variables-set-by-dialog)).
-- With the SMS with Twilio integration, you can add a pause by using the `vgwConversationResponseTimeout` context variable (for more information, see [Context variables that are set by your action](/docs/watson-assistant?topic=watson-assistant-sms-reference#sms-reference-context-variables-set-by-action).
+- With the SMS integration, you can add a pause by using the `vgwConversationResponseTimeout` context variable (for more information, see [Context variables that are set by your action](/docs/watson-assistant?topic=watson-assistant-sms-reference#sms-reference-context-variables-set-by-action).
 
 ### Fields
 {: response-types-json-pause-fields}
@@ -906,7 +906,7 @@ The user-defined response type is not displayed unless the channel has code to h
 | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg)*| ![Yes](images/checkmark-icon.svg)*| ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
 - With the phone integration, the `user_defined` response type is used to send legacy commands (for example, `vgwActForceNoInputTurn` or `vgwActSendSMS`). For more information, see [Handling phone interactions](/docs/watson-assistant?topic=watson-assistant-phone-actions).
-- With the SMS with Twilio integration, the `user_defined` response type is used to send action commands (for example, `terminateSession` or `smsActSendMedia`). <!-- For more information, see XXXX -->
+- With the SMS integration, the `user_defined` response type is used to send action commands (for example, `terminateSession` or `smsActSendMedia`). <!-- For more information, see XXXX -->
 
 ### Fields
 {: response-types-json-user-defined-fields}

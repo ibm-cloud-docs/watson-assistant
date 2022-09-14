@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-07-01"
 
 subcollection: watson-assistant
 
@@ -49,7 +49,7 @@ There are multiple points at which a developer can customize and extend how the 
 
 - Customizing the phone integration: You can use commands and context variables to extensively configure how your assistant interacts with users using the phone integration. (More information coming soon.)
 
-- Customizing the SMS with Twilio integration: You can use commands and context variables to customize how your assistant interacts with users using text messages. (More information coming soon.)
+- Customizing the SMS integration: You can use commands and context variables to customize how your assistant interacts with users using text messages. (More information coming soon.)
 
 - [Extending your assistant using webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview): You use webhooks to call external services that extend the capabilities of your assistant or log activity.
 
