@@ -52,12 +52,12 @@ If you don't have a text messaging phone number, set up an *SMS with Twilio* acc
 
 1.  Go to the [Twilio website](https://www.twilio.com/){: external}.
 1.  Create an account or start a free trial.
-1.  From the **Develop** tab, click **Phone numbers**.
-1.  Follow the instructions to get a phone number.
+1.  From the **Develop** tab in the sidebar, click **Phone Numbers**. If **Phone Numbers** is not present, go to the Search Bar at the top and search for 'Phone Numbers', then select **Buy a number**.
+1.  Follow the instructions to **Buy a number**.
 
     When you get a Twilio phone number, it supports voice, SMS, and MMS automatically. Your new phone number is listed as an active number.
 
-Keep the Twilio web page open in a web browser tab so you can refer to it again later.
+Keep the Twilio web page open in a web browser tab so you can refer to it again later. You can also pin **Phone Numbers** to the sidebar.
 {: tip}
 
 ### Set up the integration
@@ -69,7 +69,7 @@ To set up the integration, complete the following steps:
 
 1. Click **Add** on the *SMS with Twilio* tile.
 
-1. Click **Confirm**.
+1. Click **Add**.
 
 1.  From the Twilio site, click on your account name in the upper left menu to go to your account dashboard.
 
@@ -90,7 +90,7 @@ To set up the integration, complete the following steps:
 
     You will add this URI to the webhook configuration in Twilio. If you want to support more than one phone number, you must add the URI to the webhook for each phone number separately.
 
-1.  Go to your Twilio account web page. From the **Develop** tab, click **Phone Numbers > Manage > Active numbers**.
+1.  Go to your Twilio account web page. From the **Develop** tab in the sidebar, click **Phone Numbers > Manage > Active numbers**.
 
 1.  From the **Active Numbers** page, click one of your phone numbers.
 
@@ -102,9 +102,9 @@ To set up the integration, complete the following steps:
 
 1.  Click **Save**.
 
-1.  From the **Develop** tab, click **Messaging > Settings > Geo permissions**.
+1.  From the **Develop** tab in the sidebar, click **Messaging > Settings > Geo permissions**. If **Messaging** is not present, go to the Search Bar at the top and search for 'Messaging', then select **SMS Geographic Permissions**.
 
-1.  From the **Messaging geographic permissions** page, select the country codes of the phone numbers that can text your Twilio number. By default, no country codes are allowed to text your Twilio number.
+1.  From the **Messaging Geographic Permissions** page, select the country codes of the phone numbers that can text your Twilio number. By default, no country codes are allowed to text your Twilio number.
 
 1.  Return to the *SMS with Twilio* integration setup page. Click **Finish**.
 
