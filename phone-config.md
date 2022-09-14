@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-07-01"
+lastupdated: "2022-09-14"
 
 subcollection: watson-assistant
 
@@ -159,9 +159,10 @@ To set up a Twilio SIP trunk, complete the following steps:
 
 1.  Create a Twilio account on the [Twilio website](https://www.twilio.com/sip-trunking){: external}.
 
-1.  From the Twilio website, go to the *Elastic SIP Trunking* dashboard.
+1.  From the Twilio website, go to the *Elastic SIP Trunking* dashboard. If you do not see it on the sidebar, go to the Search Bar at the top and search for 'Elastic SIP Trunking', then select **Elastic SIP Trunks**.
 
-1.  Select *Trunks* from the navigation bar and create a SIP trunk. If you already have a SIP trunk, click the plus sign (+). Enter a name for your SIP trunk and click *Create*.
+
+1.  On the **Elastic SIP Trunks** page, click the *Create new SIP Trunk* button to create a SIP trunk. Enter a name for your SIP trunk and click *Create*. If you already have a SIP trunk, go to the next step.
 
 1.  From the Elastic SIP Trunks page, select your SIP trunk.
 
@@ -173,11 +174,9 @@ To set up a Twilio SIP trunk, complete the following steps:
 
 1.  Select *Numbers* from the navigation bar for your SIP trunk, and then do one of the following things:
   
-    - Click *Buy a Number*.
-    - If you already have a number, you can click the plus sign (+) to provision a new phone number in your region.
+    - Click *Add a number* and then *Buy a Number*.
+    - If you already have a number, you can click *Add a number* and then *Add an Existing Number*.
   
-1.  Assign the number to the SIP trunk you created by going back to the SIP trunk and clicking the number sign (#) icon.
-
 If you use a Lite or Trial Twilio account for testing purposes, then be sure to verify the transfer target. For more information, see the [Twilio documentation](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-){: external}.
 
 You cannot enable SIP authentication if you choose Twilio as your SIP trunk provider. Twilio doesn't support SIPS for originating calls.
