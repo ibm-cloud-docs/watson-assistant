@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-15"
 
 keywords: log webhook
 
@@ -37,6 +37,9 @@ You can log activity by making a call to an external service or application ever
 A webhook is a mechanism that allows you to call out to an external program based on events in your program.
 
 This feature is available only to Plus and Enterprise plan users.
+
+The Plus plan allows no more than 5 log webhooks per instance. This limit does not apply to Enterprise plan instances.
+{: note}
 
 Add a log webhook to your assistant if you want to use an external service to log {{site.data.keyword.conversationshort}} activity. You can log two kinds of activity:
 
