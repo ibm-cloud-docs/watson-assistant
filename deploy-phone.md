@@ -58,9 +58,9 @@ To set up the integration:
 
 1. On the **Phone** tile, click **Add**.
 
-1. On the popup window, click **Add** again.
+1. On the pop-up window, click **Add** again.
 
-1. Choose whether to generate a free phone number for your assistant, integrate with your contact center or connect to an existing SIP trunk:
+1. Choose whether to generate a free phone number for your assistant, integrate with your contact center, or connect to an existing SIP trunk:
 
     - To generate a free phone number for your assistant, click **Generate a free phone number**.
 
@@ -73,13 +73,13 @@ To set up the integration:
 
     Click **Next**.
 
-1. If you are integrating with a contact center, follow the instructions to configure the contact center (If you are generating a free phone number, skip this step).
+1. If you are integrating with a contact center, follow the instructions to configure the contact center. Skip this step if you are generating a free phone number.
 
     1. On the **Select contact center** page, select the tile of the connect center you would like to use.
     
-    1. On the **Connect to contact center** page, enter the required information to connect to the contact center. There is a **Test Connection** button on the page to validate the connection. Click **Next**.
+    1. On the **Connect to contact center** page, enter the required information. There is a **Test Connection** button on the page to validate the connection. Click **Next**.
 
-1. If you are using an existing phone number, follow the instructions to configure the SIP trunk. (If you are generating a free phone number, skip this step).
+1. If you are using an existing phone number, follow the instructions to configure the SIP trunk. Skip this step if you are generating a free phone number.
 
     1. On the **Bring your own SIP trunk** page, copy the SIP URI and assign it to your SIP trunk. Click **Next**.
 
