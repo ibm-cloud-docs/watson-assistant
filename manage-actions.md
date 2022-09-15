@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-09-09"
+lastupdated: "2022-09-15"
 
 subcollection: watson-assistant
 
@@ -59,6 +59,35 @@ To copy an action to another assistant:
    ![Copy to an assistant](images/manage-actions-copy-references.png)
 
 1. Click **Apply** to finish copying the action to the other assistant.
+
+## Uploading or downloading all actions
+{: #manage-actions-upload-download}
+
+You can upload or download all your actions as a JSON file. 
+
+### Downloading
+{: #manage-actions-global-settings-download}
+
+To back up all your actions, download a JSON file and store it. 
+
+1. On the **Actions** page, click **Global settings** ![Gear icon](images/gear-icon-black.png).
+
+1. On the **Upload/Download** tab, click the **Download** button.
+
+### Uploading
+{: #manage-actions-global-settings-upload}
+
+To reinstate a backup copy of actions that you exported from another service instance or environment, import the JSON file of the actions you exported.
+
+If the {{site.data.keyword.conversationshort}} service changes between the time you export the actions and import it, due to functional updates that are regularly applied to instances in cloud-hosted continuous delivery environments, your imported actions might function differently than before.
+{: important}
+
+1. On the **Actions** page, click **Global settings** ![Gear icon](images/gear-icon-black.png).
+
+1. On the **Upload/Download** tab, drag and drop a JSON file onto the tab or click to select a file from your local system, then click **Upload**.
+
+The imported JSON file must use UTF-8 encoding, without byte order mark (BOM) encoding. The JSON file cannot contain tabs, newlines, or carriage returns.
+{: important}
 
 ## Uploading intents as actions
 {: #manage-actions-upload-intents}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-09-08"
+lastupdated: "2022-09-15"
 
 subcollection: watson-assistant
 
@@ -55,10 +55,24 @@ To choose the customer response type for a step, click **Define customer respons
 | [**Free text**](#customer-response-type-free-text) | Any arbitrary text response. | `123 Main Street`, `John Q. Smith` |
 {: caption="Response types" caption-side="bottom"}
 
-## Skipping a step
+## Requiring or skipping a step
 {: #collect-info-skip-step}
 
-Although a customer response is associated with a particular step, the assistant can recognize the required information at any point during the action. For any step that expects a customer response, you can decide whether to explicitly ask for the information or to skip asking and apply information that the assistant has already recognized. For more information about skipping steps, see [Skipping steps](/docs/watson-assistant?topic=watson-assistant-skip-steps).
+Although a customer response is associated with a particular step, the assistant can recognize the required information at any point during the action. For any step that expects a customer response, you can decide whether to explicitly ask for the information or to use the default, which is to skip asking and apply information that the assistant has already recognized.
+
+Many steps ask the customer to answer a question (such as selecting which account to withdraw money from, or specifying the amount to withdraw). But if your customer has already answered this question, you don't want your assistant to ask for it again. For example, if the customer's initial input was `I want to withdraw money from my checking account`, the step that asks the user to select an account can (and probably should) be skipped.
+
+By default, steps are set to be skipped if the value for the step is provided in the user's input elsewhere in the action, either before or after the step itself. The assistant can recognize responses that apply to that step at any point in the conversation. 
+
+However, if your action asks for the same type of data in more than one step, use the **Always ask for this information** setting to prevent the assistant from making incorrect assumptions. For example, you might have an action in which one step asks for a hotel check-in date and another step asks for the check-out date. If you skip asking, the assistant can mistake the check-in date for the check-out date.
+
+To ensure a step is always used in the conversation with a customer:
+
+1. Click the **Settings** icon to open **Customer response settings**. 
+
+1, Click to enable the toggle **Always ask for this information, regardless of earlier messages**.
+
+1. Click **Apply**.
 
 ## Customer response types
 {: #customer-response-types}
