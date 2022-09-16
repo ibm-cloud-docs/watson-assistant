@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-10-25"
+  years: 2018, 2022
+lastupdated: "2022-09-16"
 
 subcollection: watson-assistant
 
@@ -50,7 +50,8 @@ You can locate specific conversations by filtering the list of conversations. Th
 You can filter by:
 
 - **Actions**: Select specific actions. You can choose one or more actions to review.
-- **Keyword**: Search for specific key terms, phrases, or words in the conversations.
+- **Keyword**: Search by session ID or for specific key terms, phrases, or words in the conversations. For more information about session IDs, see [session_id](/docs/watson-assistant?topic=watson-assistant-admin-managing-plan#admin-managing-plan-no-userid).
+
 - **Recognition**: Choose between recognized or unrecognized user questions or requests.
 - **Search**: Choose between requests that initiated a search or requests that produced no search results.
 

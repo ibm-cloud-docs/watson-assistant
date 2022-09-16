@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-09"
+lastupdated: "2022-09-16"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,15 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 16 September 2022
+{: #watson-assistant-sep162022}
+{: release-note}
+
+Session ID information on Analyze page
+:   Session ID information for conversations is now displayed on the Conversations tab of the Analyze page. You can also filter customer conversation data by the session ID. From the Conversations tab of the Analyze page, use the Keyword filter to search by session ID. For more information, see [Filtering conversations](/docs/watson-assistant?topic=watson-assistant-analytics-conversations#analytics-conversations-filtering).
+
+   The ability to filter on session ID has limited support for conversations that occurred before this feature release. For all conversations that occurred before 16 September 2022, you can filter only by a single session ID at a time.
 
 ## 9 September 2022
 {: #watson-assistant-sep092022}
