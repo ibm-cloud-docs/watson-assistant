@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-09-15"
+lastupdated: "2022-09-16"
 
 subcollection: watson-assistant
 
@@ -55,7 +55,7 @@ To choose the customer response type for a step, click **Define customer respons
 | [**Free text**](#customer-response-type-free-text) | Any arbitrary text response. | `123 Main Street`, `John Q. Smith` |
 {: caption="Response types" caption-side="bottom"}
 
-## Requiring or skipping a step
+## Requiring or skipping steps
 {: #collect-info-skip-step}
 
 Although a customer response is associated with a particular step, the assistant can recognize the required information at any point during the action. For any step that expects a customer response, you can decide whether to explicitly ask for the information or to use the default, which is to skip asking and apply information that the assistant has already recognized.
@@ -70,7 +70,7 @@ To ensure a step is always used in the conversation with a customer:
 
 1. Click the **Settings** icon to open **Customer response settings**. 
 
-1, Click to enable the toggle **Always ask for this information, regardless of earlier messages**.
+1. Click to enable the toggle **Always ask for this information, regardless of earlier messages**.
 
 1. Click **Apply**.
 
