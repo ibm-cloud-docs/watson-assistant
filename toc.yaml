@@ -119,8 +119,8 @@ toc:
           label: Deploying for phone
           topics:
           - deploy-phone.md
-          - deploy-phone-cxone.md
           - phone-config.md
+          - deploy-phone-cxone.md
           - deploy-phone-flex.md
           - deploy-phone-genesys.md
       - topicgroup:

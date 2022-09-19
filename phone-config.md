@@ -42,7 +42,7 @@ You can configure the phone integration to transfer the caller to a human agent 
 
 If, after you transfer the call to a human agent, the connection to the human agent fails for any reason, you can configure what to do.
 
-- **Transfer failure message**: Add the message you want the assistant to say to a caller if the transfer to a human agent fails. The message can be up to 1,024 characters in length.
+- **Transfer failure message**: Add the message you want the assistant to say to a caller if the transfer to a human agent fails. The message can be up to 150 characters in length.
 
 - **Disconnect call on transfer failure**: Choose whether to disconnect the call after the failure message. This option is enabled by default. If this option is disabled, when a call transfer fails, your assistant can disconnect or process a different action.
 
