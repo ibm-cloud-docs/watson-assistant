@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-09-09"
+lastupdated: "2022-09-19"
 
 subcollection: watson-assistant
 
@@ -169,30 +169,34 @@ import com.ibm.watson.assistant.v2.model.RuntimeResponseGeneric;
 import java.util.List;
 import java.util.logging.LogManager;
 
-public class AssistantSimpleExample {
+public class AssistantSimpleExample1 {
   public static void main(String[] args) {
 
     // Suppress log messages in stdout.
     LogManager.getLogManager().reset();
 
     // Create Assistant service object.
-    Authenticator authenticator = new IamAuthenticator("{apikey}"); // replace with API key
-    Assistant assistant = new Assistant("2020-09-24", authenticator);
-    assistant.setServiceUrl("{url}");
-    String assistantId = "{assistant_id}"; // replace with assistant ID
+    Authenticator authenticator = new IamAuthenticator.Builder()
+      .apikey("{apikey}") // replace with API key
+      .build();
+    Assistant assistant = new Assistant("2021-11-27", authenticator);
+    assistant.setServiceUrl("{url}"); // replace with URL
+    String assistantId = "{environment_id}"; // replace with environment ID
 
     // Start conversation with empty message.
     MessageStatelessOptions messageOptions = new MessageStatelessOptions.Builder(assistantId)
       .build();
-    MessageResponseStateless response = assistant.messageStateless(messageOptions)
+    MessageResponseStateless result = assistant.messageStateless(messageOptions)
       .execute()
       .getResult();
 
-    // Print the output from dialog, if any. Assumes a single text response.
-      List<RuntimeResponseGeneric> responseGeneric = response.getOutput().getGeneric();
+    // Print the output from actions, if any. Supports only text responses.
+      List<RuntimeResponseGeneric> responseGeneric = result.getOutput().getGeneric();
       if(responseGeneric.size() > 0) {
-        if(responseGeneric.get(0).responseType().equals("text")) {
-          System.out.println(responseGeneric.get(0).text());
+        for (int i = 0; i < responseGeneric.size(); i++) {
+          if(responseGeneric.get(i).responseType().equals("text")) {
+            System.out.println(responseGeneric.get(i).text());
+          }
         }
       }
   }
@@ -236,7 +240,7 @@ Paste the example code into a file named `AssistantSimpleExample.java`. You can 
 
 Assuming everything works as expected, the assistant returns the output from the assistant, which the app then prints to the console:
 
-```
+```text
 Welcome to the Watson Assistant example. What's your name?
 ```
 {: screen}
@@ -366,7 +370,7 @@ while message_input['text'] != 'quit':
 
 ```java
 /*
- * Example 2: Adds user input and detects intents.
+ * Example 2: Adds user input.
  */
 
 import com.ibm.cloud.sdk.core.security.Authenticator;
@@ -380,17 +384,19 @@ import com.ibm.watson.assistant.v2.model.RuntimeResponseGeneric;
 import java.util.List;
 import java.util.logging.LogManager;
 
-public class AssistantSimpleExample {
+public class AssistantSimpleExample2 {
   public static void main(String[] args) {
 
     // Suppress log messages in stdout.
     LogManager.getLogManager().reset();
 
     // Create Assistant service object.
-    Authenticator authenticator = new IamAuthenticator("{apikey}"); // replace with API key
-    Assistant assistant = new Assistant("2020-09-24", authenticator);
-    assistant.setServiceUrl("{url}");
-    String assistantId = "{assistant_id}"; // replace with assistant ID
+    Authenticator authenticator = new IamAuthenticator.Builder()
+      .apikey("{apikey}") // replace with API key
+      .build();
+    Assistant assistant = new Assistant("2021-11-27", authenticator);
+    assistant.setServiceUrl("{url}"); // replace with URL
+    String assistantId = "{environment_id}"; // replace with environment ID
 
     // Initialize with empty message to start the conversation.
     MessageInputStateless input = new MessageInputStateless.Builder()
@@ -404,15 +410,17 @@ public class AssistantSimpleExample {
       MessageStatelessOptions messageOptions = new MessageStatelessOptions.Builder(assistantId)
         .input(input)
         .build();
-      MessageResponseStateless response = assistant.messageStateless(messageOptions)
+      MessageResponseStateless result = assistant.messageStateless(messageOptions)
         .execute()
         .getResult();
 
-      // Print the output from dialog, if any. Assumes a single text response.
-      List<RuntimeResponseGeneric> responseGeneric = response.getOutput().getGeneric();
+      // Print the output from actions, if any. Supports only text responses.
+      List<RuntimeResponseGeneric> responseGeneric = result.getOutput().getGeneric();
       if(responseGeneric.size() > 0) {
-        if(responseGeneric.get(0).responseType().equals("text")) {
-          System.out.println(responseGeneric.get(0).text());
+        for (int i = 0; i < responseGeneric.size(); i++) {
+          if(responseGeneric.get(i).responseType().equals("text")) {
+            System.out.println(responseGeneric.get(i).text());
+          }
         }
       }
 
@@ -438,7 +446,7 @@ The `processResult()` function displays the text of any responses received from 
 It then displays the text of any responses received from the assistant, and it prompts for the next round of user input.
 {: python }
 
-It then displays any intent detected by the dialog along with the output text, and then it prompts for the next round of user input.
+It then displays the text of any responses received from the assistant, and it prompts for the next round of user input.
 {: java}
 
 Because we need a way to end the conversation, the client app is also watching for the literal command `quit` to indicate that the program should exit.
@@ -614,17 +622,19 @@ import com.ibm.watson.assistant.v2.model.RuntimeResponseGeneric;
 import java.util.List;
 import java.util.logging.LogManager;
 
-public class AssistantSimpleExample {
+public class AssistantSimpleExample3 {
   public static void main(String[] args) {
 
     // Suppress log messages in stdout.
     LogManager.getLogManager().reset();
 
     // Create Assistant service object.
-    Authenticator authenticator = new IamAuthenticator("{apikey}"); // replace with API key
-    Assistant assistant = new Assistant("2020-09-24", authenticator);
-    assistant.setServiceUrl("{url}");
-    String assistantId = "{assistant_id}"; // replace with assistant ID
+    Authenticator authenticator = new IamAuthenticator.Builder()
+      .apikey("{apikey}") // replace with API key
+      .build();
+    Assistant assistant = new Assistant("2021-11-27", authenticator);
+    assistant.setServiceUrl("{url}"); // replace with URL
+    String assistantId = "{environment_id}"; // replace with environment ID
 
     // Initialize with empty message to start the conversation.
     MessageInputStateless input = new MessageInputStateless.Builder()
@@ -641,23 +651,20 @@ public class AssistantSimpleExample {
         .input(input)
         .context(context)
         .build();
-      MessageResponseStateless response = assistant.messageStateless(messageOptions)
+
+      MessageResponseStateless result = assistant.messageStateless(messageOptions)
         .execute()
         .getResult();
 
-      context = response.getContext();
+      context = result.getContext();
 
-      // If an intent was detected, print it to the console.
-      List<RuntimeIntent> responseIntents = response.getOutput().getIntents();
-      if(responseIntents.size() > 0) {
-        System.out.println("Detected intent: #" + responseIntents.get(0).intent());
-      }
-
-      // Print the output from dialog, if any. Assumes a single text response.
-      List<RuntimeResponseGeneric> responseGeneric = response.getOutput().getGeneric();
+      // Print the output from actions, if any. Supports only text responses.
+      List<RuntimeResponseGeneric> responseGeneric = result.getOutput().getGeneric();
       if(responseGeneric.size() > 0) {
-        if(responseGeneric.get(0).responseType().equals("text")) {
-          System.out.println(responseGeneric.get(0).text());
+        for (int i = 0; i < responseGeneric.size(); i++) {
+          if(responseGeneric.get(i).responseType().equals("text")) {
+            System.out.println(responseGeneric.get(i).text());
+          }
         }
       }
 
@@ -668,6 +675,7 @@ public class AssistantSimpleExample {
         .messageType("text")
         .text(inputText)
         .build();
+
     } while(!input.text().equals("quit"));
   }
 }
