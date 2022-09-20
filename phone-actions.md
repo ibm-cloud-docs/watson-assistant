@@ -538,12 +538,12 @@ The following example shows an `audio` response with `loop`=`true`, and a `user_
 {   
   "generic": [
     {
+      "response_type": "user_defined",
       "user_defined": {
         "vgwAction": {
           "command": "vgwActForceNoInputTurn"
         }
-      },
-      "response_type": "user_defined"
+      }
     },
     {
       "source": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Random_composition3.wav",
@@ -863,12 +863,12 @@ This example shows two responses: first a text response, followed by an `end_ses
 {
   "generic": [
     {
+      "response_type": "text",
       "values": [
         {
           "text": "Goodbye."
         }
       ],
-      "response_type": "text",
       "selection_policy": "sequential"
     },
     {
