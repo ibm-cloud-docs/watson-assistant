@@ -41,6 +41,8 @@ You can use response types to perform the following phone-specific actions:
 - [Transfer the conversation to the web chat integration](#phone-actions-transfer-channel)
 - [End the call](#phone-actions-hangup)
 - [Send a text message during a phone conversation](#phone-actions-sms)
+- [Define a sequence of phone commands](#phone-actions-sequence)
+- [Inject custom values into CDR log events](#phone-actions-cdr-custom-data)
 
 In some cases, you might want to combine response types to perform multiple actions. For example, you might want to implement two-factor authentication by requesting phone keypad entry and sending a text message from the same action step. For more information, see [Defining a sequence of phone actions](#phone-actions-sequence).
 
