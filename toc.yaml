@@ -123,6 +123,7 @@ toc:
           - deploy-phone-cxone.md
           - deploy-phone-flex.md
           - deploy-phone-genesys.md
+          - phone-troubleshooting.md
       - topicgroup:
           label: Deploying to other channels
           topics:
