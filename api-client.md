@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-09-19"
+lastupdated: "2022-09-20"
 
 subcollection: watson-assistant
 
@@ -154,57 +154,6 @@ if result['output']['generic']:
 {: codeblock}
 {: python}
 
-```java
-/*
- * Example 1: Creates service object, sends initial message, and
- * receives response.
- */
-
-import com.ibm.cloud.sdk.core.security.Authenticator;
-import com.ibm.cloud.sdk.core.security.IamAuthenticator;
-import com.ibm.watson.assistant.v2.Assistant;
-import com.ibm.watson.assistant.v2.model.MessageResponseStateless;
-import com.ibm.watson.assistant.v2.model.MessageStatelessOptions;
-import com.ibm.watson.assistant.v2.model.RuntimeResponseGeneric;
-import java.util.List;
-import java.util.logging.LogManager;
-
-public class AssistantSimpleExample1 {
-  public static void main(String[] args) {
-
-    // Suppress log messages in stdout.
-    LogManager.getLogManager().reset();
-
-    // Create Assistant service object.
-    Authenticator authenticator = new IamAuthenticator.Builder()
-      .apikey("{apikey}") // replace with API key
-      .build();
-    Assistant assistant = new Assistant("2021-11-27", authenticator);
-    assistant.setServiceUrl("{url}"); // replace with URL
-    String assistantId = "{environment_id}"; // replace with environment ID
-
-    // Start conversation with empty message.
-    MessageStatelessOptions messageOptions = new MessageStatelessOptions.Builder(assistantId)
-      .build();
-    MessageResponseStateless result = assistant.messageStateless(messageOptions)
-      .execute()
-      .getResult();
-
-    // Print the output from actions, if any. Supports only text responses.
-      List<RuntimeResponseGeneric> responseGeneric = result.getOutput().getGeneric();
-      if(responseGeneric.size() > 0) {
-        for (int i = 0; i < responseGeneric.size(); i++) {
-          if(responseGeneric.get(i).responseType().equals("text")) {
-            System.out.println(responseGeneric.get(i).text());
-          }
-        }
-      }
-  }
-}
-```
-{: codeblock}
-{: java}
-
 The first step is to create a the service object, a sort of wrapper for the {{site.data.keyword.conversationshort}} service.
 
 You use the service object for sending input to, and receiving output from, the service. When you create the service object, you specify the API key for authentication, as well as the version of the {{site.data.keyword.conversationshort}} API you are using.
@@ -215,9 +164,6 @@ In this Node.js example, the service object is an instance of `AssistantV2`, sto
 In this Python example, the service object is an instance of `watson_developer_cloud.AssistantV2`, stored in the variable `assistant`. The Watson SDKs for other languages provide equivalent mechanisms for instantiating a service object.
 {: python}
 
-In this Java example, the service object is an instance of `Assistant`, stored in the variable `assistant`. The Watson SDKs for other languages provide equivalent mechanisms for instantiating a service object.
-{: java}
-
 After creating the service object, we use it to send a message to the assistant, using the stateless `message` method. In this example, the message is empty; we just want to trigger the *Greet customer* action to start the conversation, so we don't need any input text. We then print any text responses returned in the `generic` array in the returned output.
 
 Use the `node <filename.js>` command to run the example application.
@@ -226,17 +172,11 @@ Use the `node <filename.js>` command to run the example application.
 Use the `python3 <filename.py>` command to run the example application.
 {: python}
 
-Paste the example code into a file named `AssistantSimpleExample.java`. You can then compile and run it.
-{: java}
-
 **Note:** Make sure you have installed the Watson SDK for Node.js using `npm install ibm-watson`.
 {: javascript}
 
 **Note:** Make sure you have installed the Watson SDK for Python using `pip install --upgrade ibm-watson` or `easy_install --upgrade ibm-watson`.
 {: python}
-
-**Note:** Make sure you have installed the [Watson SDK for Java](https://github.com/watson-developer-cloud/java-sdk/blob/master/README.md){: external}.
-{: java}
 
 Assuming everything works as expected, the assistant returns the output from the assistant, which the app then prints to the console:
 
@@ -253,7 +193,6 @@ This output tells us that we have successfully communicated with the assistant a
 To be able to process user input, we need to add a user interface to our client application. For this example, we'll keep things simple and use standard input and output.
 <span class="ph style-scope doc-content" data-hd-programlang="javascript">We can use the Node.js prompt-sync module to do this. (You can install prompt-sync using `npm install prompt-sync`.)</span>
 <span class="ph style-scope doc-content" data-hd-programlang="python">We can use the Python 3 `input` function to do this.</span>
-<span class="ph style-scope doc-content" data-hd-programlang="java">We can use the Java `Console.readLine()` function to do this.</span>
 
 ```javascript
 // Example 2: Adds user input.
@@ -368,76 +307,6 @@ while message_input['text'] != 'quit':
 {: codeblock }
 {: python }
 
-```java
-/*
- * Example 2: Adds user input.
- */
-
-import com.ibm.cloud.sdk.core.security.Authenticator;
-import com.ibm.cloud.sdk.core.security.IamAuthenticator;
-import com.ibm.watson.assistant.v2.Assistant;
-import com.ibm.watson.assistant.v2.model.MessageInputStateless;
-import com.ibm.watson.assistant.v2.model.MessageResponseStateless;
-import com.ibm.watson.assistant.v2.model.MessageStatelessOptions;
-import com.ibm.watson.assistant.v2.model.RuntimeIntent;
-import com.ibm.watson.assistant.v2.model.RuntimeResponseGeneric;
-import java.util.List;
-import java.util.logging.LogManager;
-
-public class AssistantSimpleExample2 {
-  public static void main(String[] args) {
-
-    // Suppress log messages in stdout.
-    LogManager.getLogManager().reset();
-
-    // Create Assistant service object.
-    Authenticator authenticator = new IamAuthenticator.Builder()
-      .apikey("{apikey}") // replace with API key
-      .build();
-    Assistant assistant = new Assistant("2021-11-27", authenticator);
-    assistant.setServiceUrl("{url}"); // replace with URL
-    String assistantId = "{environment_id}"; // replace with environment ID
-
-    // Initialize with empty message to start the conversation.
-    MessageInputStateless input = new MessageInputStateless.Builder()
-      .messageType("text")
-      .text("")
-      .build();
-
-    // Main input/output loop
-    do {
-      // Send message to assistant.
-      MessageStatelessOptions messageOptions = new MessageStatelessOptions.Builder(assistantId)
-        .input(input)
-        .build();
-      MessageResponseStateless result = assistant.messageStateless(messageOptions)
-        .execute()
-        .getResult();
-
-      // Print the output from actions, if any. Supports only text responses.
-      List<RuntimeResponseGeneric> responseGeneric = result.getOutput().getGeneric();
-      if(responseGeneric.size() > 0) {
-        for (int i = 0; i < responseGeneric.size(); i++) {
-          if(responseGeneric.get(i).responseType().equals("text")) {
-            System.out.println(responseGeneric.get(i).text());
-          }
-        }
-      }
-
-      // Prompt for next round of input.
-      System.out.print(">> ");
-      String inputText = System.console().readLine();
-      input = new MessageInputStateless.Builder()
-        .messageType("text")
-        .text(inputText)
-        .build();
-    } while(!input.text().equals("quit"));
-  }
-}
-```
-{: codeblock }
-{: java }
-
 This version of the application begins the same way as before: sending an empty message to the assistant to start the conversation.
 
 The `processResult()` function displays the text of any responses received from the assistant. It then prompts for the next round of user input.
@@ -445,9 +314,6 @@ The `processResult()` function displays the text of any responses received from 
 
 It then displays the text of any responses received from the assistant, and it prompts for the next round of user input.
 {: python }
-
-It then displays the text of any responses received from the assistant, and it prompts for the next round of user input.
-{: java}
 
 Because we need a way to end the conversation, the client app is also watching for the literal command `quit` to indicate that the program should exit.
 
@@ -605,92 +471,11 @@ while message_input['text'] != 'quit':
 {: codeblock }
 {: python }
 
-```java
-/*
- * Example 3: Preserves context to maintain state.
- */
-
-import com.ibm.cloud.sdk.core.security.Authenticator;
-import com.ibm.cloud.sdk.core.security.IamAuthenticator;
-import com.ibm.watson.assistant.v2.Assistant;
-import com.ibm.watson.assistant.v2.model.MessageContextStateless;
-import com.ibm.watson.assistant.v2.model.MessageInputStateless;
-import com.ibm.watson.assistant.v2.model.MessageResponseStateless;
-import com.ibm.watson.assistant.v2.model.MessageStatelessOptions;
-import com.ibm.watson.assistant.v2.model.RuntimeIntent;
-import com.ibm.watson.assistant.v2.model.RuntimeResponseGeneric;
-import java.util.List;
-import java.util.logging.LogManager;
-
-public class AssistantSimpleExample3 {
-  public static void main(String[] args) {
-
-    // Suppress log messages in stdout.
-    LogManager.getLogManager().reset();
-
-    // Create Assistant service object.
-    Authenticator authenticator = new IamAuthenticator.Builder()
-      .apikey("{apikey}") // replace with API key
-      .build();
-    Assistant assistant = new Assistant("2021-11-27", authenticator);
-    assistant.setServiceUrl("{url}"); // replace with URL
-    String assistantId = "{environment_id}"; // replace with environment ID
-
-    // Initialize with empty message to start the conversation.
-    MessageInputStateless input = new MessageInputStateless.Builder()
-      .messageType("text")
-      .text("")
-      .build();
-    MessageContextStateless context = new MessageContextStateless.Builder()
-      .build();
-
-    // Main input/output loop
-    do {
-      // Send message to assistant.
-      MessageStatelessOptions messageOptions = new MessageStatelessOptions.Builder(assistantId)
-        .input(input)
-        .context(context)
-        .build();
-
-      MessageResponseStateless result = assistant.messageStateless(messageOptions)
-        .execute()
-        .getResult();
-
-      context = result.getContext();
-
-      // Print the output from actions, if any. Supports only text responses.
-      List<RuntimeResponseGeneric> responseGeneric = result.getOutput().getGeneric();
-      if(responseGeneric.size() > 0) {
-        for (int i = 0; i < responseGeneric.size(); i++) {
-          if(responseGeneric.get(i).responseType().equals("text")) {
-            System.out.println(responseGeneric.get(i).text());
-          }
-        }
-      }
-
-      // Prompt for next round of input.
-      System.out.print(">> ");
-      String inputText = System.console().readLine();
-      input = new MessageInputStateless.Builder()
-        .messageType("text")
-        .text(inputText)
-        .build();
-
-    } while(!input.text().equals("quit"));
-  }
-}
-```
-{: codeblock }
-{: java }
-
 The only change from the previous example is that we are now storing the context received from the assistant in a variable called `context`, and we're sending it back with the next round of user input:
 {: javascript }
 
 The only change from the previous example is that we are now storing the context received from the assistant in a variable called `context`, and we're sending it back with the next round of user input:
 {: python }
-
-The only change from the previous example is that we are now storing the context received from the assistant in a variable called `context`, and we're including it as part of the message options along with the next round of user input:
-{: java}
 
 ```javascript
   assistant
@@ -712,15 +497,6 @@ response = assistant.message_stateless(
 ```
 {: codeblock }
 {: python }
-
-```java
-MessageStatelessOptions messageOptions = new MessageStatelessOptions.Builder(assistantId)
-  .input(input)
-  .context(context)
-  .build();
-```
-{: codeblock }
-{: java }
 
 This ensures that the context is maintained from one turn to the next, so the {{site.data.keyword.conversationshort}} service no longer thinks every turn is the first:
 
