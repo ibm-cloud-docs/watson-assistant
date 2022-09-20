@@ -248,7 +248,7 @@ function processResult(result) {
     }
   }
 
-  // Prompt for the next round of input.
+  // Prompt for the next round of input unless skip_user_input is true.
   let newMessageFromUser = '';
   if (result.context.global.system.skip_user_input !== true) {
     newMessageFromUser = prompt('>> ');
@@ -302,7 +302,7 @@ while message_input['text'] != 'quit':
             if response['response_type'] == 'text':
                 print(response['text'])
 
-    # Prompt for next round of input.
+    # Prompt for the next round of input unless skip_user_input is True.
     if not result['context']['global']['system'].get('skip_user_input', False):
         user_input = input('>> ')
         message_input = {
@@ -320,7 +320,7 @@ The `processResult()` function displays the text of any responses received from 
 It then displays the text of any responses received from the assistant, and it prompts for the next round of user input.
 {: python }
 
-Our example checks for the global context variable `skip_user_input` and prompts for user input only if this variable is not set to true. The `skip_user_input` variable is set by the assistant in some situations where no user input is needed (for example, if the assistant has called an external service but is still waiting for the result). It's good practice always to make this check before prompting for user input.
+Our example checks for the global context variable `skip_user_input` and prompts for user input only if this variable is not set to <span class="ph style-scope doc-content" data-hd-programlang="javascript">`true`</span><span class="ph style-scope doc-content" data-hd-programlang="python">`True`</span>. The `skip_user_input` variable is set by the assistant in some situations where no user input is needed (for example, if the assistant has called an external service but is still waiting for the result). It's good practice always to make this check before prompting for user input.
 {: tip}
 
 Because we need a way to end the conversation, the client app is also watching for the literal command `quit` to indicate that the program should exit.
@@ -409,7 +409,7 @@ function processResult(result) {
     }
   }
 
-  // Prompt for the next round of input.
+  // Prompt for the next round of input unless skip_user_input is true.
   let newMessageFromUser = '';
   if (result.context.global.system.skip_user_input !== true) {
     newMessageFromUser = prompt('>> ');
@@ -474,7 +474,7 @@ while message_input['text'] != 'quit':
             if response['response_type'] == 'text':
                 print(response['text'])
 
-    # Prompt for next round of input.
+    # Prompt for the next round of input unless skip_user_input is True.
     if not result['context']['global']['system'].get('skip_user_input', False):
         user_input = input('>> ')
         message_input = {
