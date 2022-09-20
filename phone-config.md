@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-07-01"
+lastupdated: "2022-09-20"
 
 subcollection: watson-assistant
 
@@ -237,7 +237,7 @@ The phone integration provides a more seamless integration with your assistant. 
 - Outbound calling
 - Configuring backup locations
 - Event forwarding to save call detail reports in the IBM Cloudant for IBM Cloud database service <!-- Use the CDR API instead. -->
-- Reviewing the usage summary page. Use IBM Log Analysis instead. For more information, see [Viewing logs](/docs/watson-assistant?topic=watson-assistant-phone-troubleshooting#deploy-phone-config-logs).
+- Reviewing the usage summary page. Use IBM Log Analysis instead. For more information, see [Viewing logs](/docs/watson-assistant?topic=watson-assistant-phone-troubleshooting#phone-troubleshooting-logs).
 
 To migrate from {{site.data.keyword.iva_short}} to the {{site.data.keyword.conversationshort}} phone integration, complete the following steps:
 
@@ -266,3 +266,10 @@ Incoming calls to your assistant follow this path:
 1.  The assistant processes the input and calculates the best response. The response text from the assistant is sent to the {{site.data.keyword.texttospeechshort}} service to be converted to audio and the audio is sent back to the caller over the existing connection.
 1.  If the caller asks to speak to a person, the assistant can transfer the person to a call center. A SIP `REFER` request is sent to the SIP trunk provider so it can transfer the call to the call center SIP URI that is specified in the dialog node where the transfer action is configured.
 1.  When one of the participants of the call hangs up, a SIP `BYE` HTTP request is sent to the other participant.
+
+### Call Detail Records (CDRs)
+{: #deploy-phone-cdrs}
+
+The phone integration can generate call detail record (CDR) events, which contain summary information about a single call. Call detail records are configured through a webhook. For more information, see [Logging activity with a webhook](/docs/watson-assistant?topic=watson-assistant-webhook-log#webhook-log).
+
+For detailed information about the structure of the CDR event payload, see [CDR log event reference](/docs/watson-assistant?topic=watson-assistant-cdr-log-reference).

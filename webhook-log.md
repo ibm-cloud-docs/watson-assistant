@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-20"
 
 keywords: log webhook
 
@@ -45,7 +45,7 @@ Add a log webhook to your assistant if you want to use an external service to lo
     If you are using a custom channel, note that the log webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2#message). All built-in channel integrations use this API.
     {: important}
 
-- **Call detail records (CDRs)**: The log webhook is triggered after each telephone call a user makes to your assistant using the phone integration. A Call Detail Record (CDR) is a summary report that documents the details of a telephone call, including phone numbers, call length, latency, and other diagnostic information. CDR records are only available for assistants that use the phone integration.
+- **Call detail records (CDRs)**: The log webhook is triggered after each telephone call a user makes to your assistant using the phone integration. A Call Detail Record (CDR) is a summary report that documents the details of a telephone call, including phone numbers, call length, latency, and other diagnostic information. CDR records are only for assistants that use the phone integration.
 
 The log webhook does not return anything to your assistant.
 
@@ -63,9 +63,9 @@ The programmatic call to the external service must meet these requirements:
 
 To add the webhook details, complete the following steps:
 
-1. In your assistant, open the environment where you want to configure the webhook.
+1. In your assistant, go to **Environments** and open the environment where you want to configure the webhook.
 
-1. Click the ![Environment settings icon](images/gear-icon-black.png) icon to open the environment settings.
+1. On the **Environments** page, click the ![Environment settings icon](images/gear-icon-black.png) icon beside the environment title to open the environment settings.
 
 1. On the **Environment settings** page, click **Webhooks > Log webhook**.
 
@@ -99,9 +99,11 @@ Your webhook details are saved automatically.
 
 If you decide you do not want to log messages with a webhook, complete the following steps:
 
-1. From the assistant overview page, click the ![Overflow menu](images/kebab.png) icon, and then choose **Settings**.
+1. In your assistant, go to **Environments** and open the environment where you want to remove the webhook.
 
-1. Click **Webhooks > Log webhook**.
+1. On the **Environments** page, click the ![Environment settings icon](images/gear-icon-black.png) icon beside the environment title to open the environment settings.
+
+1. On the **Environment settings** page, click **Webhooks > Log webhook**.
 
 1. Do one of the following things:
 

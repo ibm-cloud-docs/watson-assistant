@@ -29,14 +29,14 @@ subcollection: watson-assistant
 {: #phone-troubleshooting}
 
 ## Troubleshooting
-{: #deploy-phone-config-troubleshooting}
+{: #phone-troubleshooting-tips}
 
 Find solutions to problems that you might encounter while using the integration.
 
 - If you get a *Forbidden* message, it means the phone number that you specified when you configured the integration cannot be verified. Make sure the number fully matches the SIP trunk phone number.
 
 ## Viewing logs
-{: #deploy-phone-config-logs}
+{: #phone-troubleshooting-logs}
 
 The log events that occur in the components that are used by the phone integration are written to IBM Log Analysis. To check the logs, create an instance and configure the platform logs to observe the region where your service instance is hosted.
 
