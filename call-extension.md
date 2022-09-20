@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-09-20"
 
 subcollection: watson-assistant
 
@@ -42,6 +42,13 @@ For information about how to build a custom extension, see [Build a custom exten
 To call a custom extension from an action:
 
 1. In the action editor, create or open the step from which you want to call the extension.
+
+1. **Optional:** In the **Assistant says** field, type a message to be shown to the customer while the extension is processing (for example, `Please wait while I retrieve your account balance...`). This can be useful for any extension that might be slow to respond.
+
+    If you specify assistant output in the **Assistant says** field, this output is sent to the channel with the global context variable `skip_user_input` set to `true`. This variable tells the channel to display the message but _not_ to prompt for customer input in reply. Instead, an empty message is sent, enabling the assistant to proceed to the next step, where the response from the extension is processed.
+
+    All built-in channel integrations (such as the web chat) respect the `skip_user_input` context variable. If you are using the API to develop a custom client, it is your responsibility to include logic checking for this variable. For more information, see [Processing user input](/docs/watson-assistant?topic=watson-assistant-api-client#api-client-process-input).
+    {: note}
 
 1. In the step editor, click **And then**.
 
