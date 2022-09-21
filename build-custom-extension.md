@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-09-01"
+lastupdated: "2022-09-21"
 
 subcollection: watson-assistant
 
@@ -51,6 +51,20 @@ When you create a custom extension, you import an OpenAPI document that describe
 After this processing has completed, the custom extension becomes available as a new integration that you can connect to the assistant in the draft or live environment. Your assistant can then use the extension to send requests to the external service based on conversations with your customers. Values included in the response from the service are then mapped to action variables, which can be accessed by subsequent action steps.
 
 (For more information about connecting a custom extension to an assistant, see [Add a custom extension](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).)
+
+### Plan limits
+
+The number of custom extensions you can create for each assistant depends on your plan. If you already have the maximum number of extensions in the integrations catalog, you must delete one before you can create a new one.
+
+| Plan       |   Extensions per assistant |
+|------------|---------------------------:|
+| Enterprise |                        100 |
+| Premium (legacy) |                  100 |
+| Plus       |                          5 |
+| Trial      |                          5 |
+| Lite       |                          1 |
+| Standard (legacy) |                   0 |
+{: caption="Extension limits by plan" caption-side="top"}
 
 ## Preparing the API definition
 {: #build-custom-extension-openapi-file}
