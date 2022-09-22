@@ -120,9 +120,9 @@ toc:
           topics:
           - deploy-phone.md
           - phone-config.md
+          - deploy-phone-genesys.md
           - deploy-phone-cxone.md
           - deploy-phone-flex.md
-          - deploy-phone-genesys.md
           - phone-troubleshooting.md
       - topicgroup:
           label: Deploying to other channels
