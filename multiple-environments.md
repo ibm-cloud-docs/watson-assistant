@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-08"
+lastupdated: "2022-09-12"
 
 subcollection: watson-assistant
 
@@ -154,7 +154,7 @@ This gives you access to see API details, configure webhook settings, change ina
 
 **Webhooks**
 
-Settings for pre-message, post-message, and log webhooks (Enterprise plan only). For more information, see [Extending your assistant with webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview).
+Settings for pre-message, post-message, and log webhooks. For more information, see [Extending your assistant with webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview).
 
 **Inactivity timeout**
 

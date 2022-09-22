@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-05"
+lastupdated: "2022-09-09"
 
 subcollection: watson-assistant
 
@@ -46,7 +46,7 @@ You can download intents to a CSV file, so you can then upload and reuse them as
 1. Specify the name and location in which to store the CSV file that is generated, and click **Save**.
 
 You can now perform the following tasks to migrate information to the new {{site.data.keyword.conversationshort}}:
-- Upload intents as actions. For more information, see [Uploading intents as actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview#build-actions-overview-manage-upload-intents).
+- Upload intents as actions. For more information, see [Uploading intents as actions](docs/watson-assistant?topic=watson-assistant-manage-actions#manage-actions-upload-intents).
 - Upload the examples from a single intent as example phrases for a specific action. For more information, see [Uploading phrases](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-uploading-examples).
 
 ## Downloading entities

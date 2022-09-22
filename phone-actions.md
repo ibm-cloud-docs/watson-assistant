@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-08-03"
+lastupdated: "2022-09-12"
 
 subcollection: watson-assistant
 
@@ -41,6 +41,8 @@ You can use response types to perform the following phone-specific actions:
 - [Transfer the conversation to the web chat integration](#phone-actions-transfer-channel)
 - [End the call](#phone-actions-hangup)
 - [Send a text message during a phone conversation](#phone-actions-sms)
+- [Define a sequence of phone commands](#phone-actions-sequence)
+- [Inject custom values into CDR log events](#phone-actions-cdr-custom-data)
 
 In some cases, you might want to combine response types to perform multiple actions. For example, you might want to implement two-factor authentication by requesting phone keypad entry and sending a text message from the same action step. For more information, see [Defining a sequence of phone actions](#phone-actions-sequence).
 
@@ -536,12 +538,12 @@ The following example shows an `audio` response with `loop`=`true`, and a `user_
 {   
   "generic": [
     {
+      "response_type": "user_defined",
       "user_defined": {
         "vgwAction": {
           "command": "vgwActForceNoInputTurn"
         }
-      },
-      "response_type": "user_defined"
+      }
     },
     {
       "source": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Random_composition3.wav",
@@ -782,7 +784,7 @@ This example shows the `end_session` response type with custom SIP headers:
 
 There are some situations when it is useful to be able to send a text message during an ongoing voice. For example, you might want the customer to specify a street address, which is easier to communicate accurately in writing than by transcribing voice input.
 
-Before you can send SMS messages during a phone call, you must set up the *SMS with Twilio* integration. For more information, see [Integrating with *SMS with Twilio*](/docs/watson-assistant?topic=watson-assistant-deploy-sms).
+Before you can send SMS messages during a phone call, you must set up the *SMS* integration. For more information, see [Integrating with *SMS*](/docs/watson-assistant?topic=watson-assistant-deploy-sms).
 {: note}
 
 When you exchange a text with a customer during a conversation, the assistant initiates the SMS message exchange. It sends a text message to the user and asks for the user to respond to it.
@@ -826,7 +828,7 @@ You can specify any of the following parameters in the `parameters` object:
 | tenantPhoneNumber | string | The phone number that is associated with the tenant. The format of the number must match the format that is required by the SMS provider. If no `tenantPhoneNumber` value is provided, the tenant ID from the phone integration configuration for the active call is used. Optional. |
 | userPhoneNumber   | string | The phone number to send the SMS message to. The format of the number must match the format that is required by the SMS provider. If no `userPhoneNumber` value is provided, the voice caller's phone number from `From` header of the incoming SIP `INVITE` request is used. Optional. |
 
-If your *SMS with Twilio* integration supports more than one SMS phone number, or you are using a non-Twilio SIP trunk, be sure to specify the phone number that you want to use to send the text message. Otherwise, the text is sent using the same phone number that was called.
+If your *SMS* integration supports more than one SMS phone number, or you are using a SIP trunk different from your SMS provider, be sure to specify the phone number that you want to use to send the text message. Otherwise, the text is sent using the same phone number that was called.
 
 After the assistant receives an SMS message, a new conversation turn is initiated with the text input `vgwSMSMessage`. This input indicates that a message was received from the caller. The text of the customer's message is included as the value of the `vgwSMSMessage`context variable. 
 
@@ -861,12 +863,12 @@ This example shows two responses: first a text response, followed by an `end_ses
 {
   "generic": [
     {
+      "response_type": "text",
       "values": [
         {
           "text": "Goodbye."
         }
       ],
-      "response_type": "text",
       "selection_policy": "sequential"
     },
     {

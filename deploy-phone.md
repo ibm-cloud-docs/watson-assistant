@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2022-06-10"
+  years: 2020, 2022
+lastupdated: "2022-09-01"
 
 subcollection: watson-assistant
 
@@ -31,10 +31,18 @@ subcollection: watson-assistant
 Adding the phone integration to your assistant makes your assistant available to customers over the phone.
 {: shortdesc}
 
+If an end user asks to speak to a person, the phone integration can transfer the call to an agent.
+
+Supported live agent and contact center integrations
+- Genesys
+- Twilio Flex
+- NICE CXone
+- Bring your own
+
 There are several ways to add the phone integration to your assistant:
 - You can generate a free phone number that is automatically provisioned from IntelePeer. This is available only with new phone integrations. If you have an existing phone integration, you must delete it and create a new one to switch to a free phone number.
 - You can connect to a contact center with live agents. For more information about setting up the integration, see [Integrating with phone and NICE CXone contact center](/docs/watson-assistant?topic=watson-assistant-deploy-phone-nicecxone).
-- You can use and connect an existing number by configuring a Session Initiation Protocol (SIP) trunk from a provider such as IntelePeer, Genesys, or Twilio.
+- You can use and connect an existing number by configuring a Session Initiation Protocol (SIP) trunk from a provider such as Genesys, IntelePeer, or Twilio.
 
 A SIP trunk is equivalent to an analog telephone line, except it uses Voice over Internet Protocol (VoIP) to transmit voice data and can support multiple concurrent calls. The trunk can connect to the public switched telephone network (PSTN) or your company's on-premises private branch exchange (PBX). 
 
@@ -54,32 +62,40 @@ You must have Manager role access to the instance and Viewer role access to the 
 
 To set up the integration:
 
-1. In the **Integrations** section on the main page for your assistant, click **Add integration**.
+1. In the **Integrations** section on the main page for your assistant under **Essential Channels**, you will see a tile for **Phone**.
 
-1. On the **Add integration** page, click **Phone**.
+1. On the **Phone** tile, click **Add**.
 
-1. Click **Create**.
+1. On the pop-up window, click **Add** again.
 
-1. Choose whether to generate a free phone number for your assistant or connect to an existing SIP trunk:
+1. Choose whether to generate a free phone number for your assistant, integrate with your contact center, or connect to an existing SIP trunk:
 
     - To generate a free phone number for your assistant, click **Generate a free phone number**.
 
       Generating a free phone number is supported only for {{site.data.keyword.conversationshort}} instances in the Dallas and Washington DC data centers.
       {: note}
 
+    - To integrate with a [contact center](/docs/watson-assistant?topic=watson-assistant-deploy-phone-nicecxone), click **Integrate with your contact center**.
+
     - To use an existing phone number you have already configured with a [SIP trunk provider](/docs/watson-assistant?topic=watson-assistant-deploy-phone-config#deploy-phone-config-sip-providers), click **Use an existing phone number with an external provider**.
 
     Click **Next**.
 
-1. If you are using an existing phone number, follow the instructions to configure the SIP trunk. (If you are generating a free phone number, skip this step).
+1. If you are integrating with a contact center, follow the instructions to configure the contact center. Skip this step if you are generating a free phone number.
+
+    1. On the **Select contact center** page, select the tile of the connect center you would like to use.
+    
+    1. On the **Connect to contact center** page, enter the required information. There is a **Test Connection** button on the page to validate the connection. Click **Next**.
+
+1. If you are using an existing phone number, follow the instructions to configure the SIP trunk. Skip this step if you are generating a free phone number.
 
     1. On the **Bring your own SIP trunk** page, copy the SIP URI and assign it to your SIP trunk. Click **Next**.
 
-    1. On the **Phone number** page, specify the phone number of the SIP trunk. Specify the number by using the international phone number format: `+1 958 555 0123`. Do not surround the area code with parentheses.
+1. On the **Phone number** page (only for **Integrate with your contact center** and **Use an existing phone number with an external provider**), specify the phone number of the SIP trunk. Specify the number by using the international phone number format: `+1 958 555 0123`. Do not surround the area code with parentheses.
 
-      Currently, only one primary phone number can be added during initial setup of the phone integration. You can add more phone numbers in the phone integration settings later.
+  Currently, only one primary phone number can be added during initial setup of the phone integration. You can add more phone numbers in the phone integration settings later.
 
-      Click **Next**.
+  Click **Next**.
 
 1. On the **Speech to Text** page, select the instance of the {{site.data.keyword.speechtotextshort}} service you want to use for the phone integration.
 
@@ -175,7 +191,7 @@ To add more phone numbers:
 
 1. Use one of the following methods:
 
-    - To add phone numbers one by one, type each number in the table, along with an optional description. Click the checkmark icon ![checkmark icon](images/phone-checkmark-save.png) to save each number.
+    - To add phone numbers one by one, click **Add phone number** in the table, and enter the phone number along with an optional description. Click the **Add** button to save the number.
 
     - To import a set of phone numbers that are stored in a comma-separated values (CSV) file, click the *Upload a CSV file* icon (![Add phone number][images/phone-integ-import-number.png]), and then find the CSV file that contains the list of phone numbers.
 
@@ -186,8 +202,8 @@ To add more phone numbers:
 
 If you want your assistant to be able to transfer a conversation to a live agent, you can connect your phone integration to a service desk system. For more information, see the instructions for the supported service desk platforms:
 
-- [Twilio Flex](/docs/watson-assistant?topic=watson-assistant-deploy-phone-flex)
 - [Genesys](/docs/watson-assistant?topic=watson-assistant-deploy-phone-genesys)
+- [Twilio Flex](/docs/watson-assistant?topic=watson-assistant-deploy-phone-flex)
 
 ## Phone integration limits
 {: #deploy-phone-limits}
