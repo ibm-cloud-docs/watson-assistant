@@ -32,8 +32,7 @@ Adding the phone integration to your assistant makes your assistant available to
 {: shortdesc}
 
 If an end user asks to speak to a person, the phone integration can transfer the call to an agent.
-
-Supported live agent and contact center integrations
+Supported live agent and contact center integrations:
 - Genesys
 - Twilio Flex
 - NICE CXone

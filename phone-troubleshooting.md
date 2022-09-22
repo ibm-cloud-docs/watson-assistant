@@ -25,7 +25,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Troubleshooting and Viewing Logs
+# Troubleshooting and Logs
 {: #phone-troubleshooting}
 
 ## Troubleshooting
@@ -33,7 +33,9 @@ subcollection: watson-assistant
 
 Find solutions to problems that you might encounter while using the integration.
 
-- If you get a *Forbidden* message, it means the phone number that you specified when you configured the integration cannot be verified. Make sure the number fully matches the SIP trunk phone number.
+- If you get a *Forbidden* message: This means the phone number that you specified when you configured the phone integration cannot be verified. Make sure the number fully matches the SIP trunk phone number.
+
+- There is a lot of latency between caller questions and Watson answers: This problem is most likely coming from latency that is caused by one of the Watson services. You can look at the Call Detail Record (CDR) to determine which service is misbehaving. For more information, see [Call Detail Records (CDRs)](#phone-troubleshooting-cdrs).
 
 ## Viewing logs
 {: #phone-troubleshooting-logs}
@@ -54,3 +56,13 @@ After you create the instance, get log information by completing the following s
 1.  The source name of the log events is *Watson*.
 
     You can apply filters or search the logs by values such as a phone number or instance ID.
+
+## Call Detail Records (CDRs)
+{: #phone-troubleshooting-cdrs}
+
+The phone integration can generate call detail record (CDR) events, which contain summary information about a single call. Call detail records are configured through a webhook. For more information, see [Logging activity with a webhook](/docs/watson-assistant?topic=watson-assistant-webhook-log#webhook-log).
+
+For detailed information about the structure of the CDR event payload, see [CDR log event reference](/docs/watson-assistant?topic=watson-assistant-cdr-log-reference).
+
+You can also inject custom data into the CDR event. For more information, see [Injecting custom values into CDR log events](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-cdr-custom-data).
+
