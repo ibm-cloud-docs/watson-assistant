@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-09-20"
+lastupdated: "2022-09-22"
 
 subcollection: watson-assistant
 
@@ -40,7 +40,7 @@ The example application we will create in this section implements several simple
 
 If you want to try this example yourself, first you need to set up the simple example assistant that the client will connect to:
 
-1. Download the actions <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/assistant/assistant-simple-example-v2.json" download="assistant-simple-example-v2.json">JSON file</a>.
+1. Download the actions <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/assistant/assistant-simple-example-actions.json" download="assistant-simple-example-actions.json">JSON file</a>.
 1. [Create an assistant](/docs/watson-assistant?topic=watson-assistant-assistant-add).
 1. In the new assistant, [open the global action settings](/docs/watson-assistant?topic=watson-assistant-actions-global-settings). Go to the **Upload/Download** tab and import the actions from the file you downloaded.
 
