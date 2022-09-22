@@ -33,7 +33,9 @@ subcollection: watson-assistant
 
 Find solutions to problems that you might encounter while using the integration.
 
-- If you get a *Forbidden* message, it means the phone number that you specified when you configured the integration cannot be verified. Make sure the number fully matches the SIP trunk phone number.
+- If you get a *Forbidden* message: This means the phone number that you specified when you configured the phone integration cannot be verified. Make sure the number fully matches the SIP trunk phone number.
+
+- There is a lot of latency between caller questions and Watson answers: This problem is most likely coming from latency that is caused by one of the Watson services. You can look at the Call Detail Record (CDR) to determine which service is misbehaving. For more information, see [Call Detail Records (CDRs)](#phone-troubleshooting-cdrs).
 
 ## Viewing logs
 {: #phone-troubleshooting-logs}
