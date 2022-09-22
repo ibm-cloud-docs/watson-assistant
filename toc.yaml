@@ -118,10 +118,11 @@ toc:
           label: Deploying for phone
           topics:
           - deploy-phone.md
-          - deploy-phone-cxone.md
           - phone-config.md
-          - deploy-phone-flex.md
           - deploy-phone-genesys.md
+          - deploy-phone-cxone.md
+          - deploy-phone-flex.md
+          - phone-troubleshooting.md
       - topicgroup:
           label: Deploying to other channels
           topics:
@@ -131,6 +132,7 @@ toc:
           - deploy-slack.md
           - deploy-sms.md
           - deploy-whatsapp.md
+          - deploy-custom-app.md
       - topicgroup:
           label: Improving your assistant
           topics:
@@ -172,6 +174,11 @@ toc:
               - webhook-log.md
           - build-custom-extension.md
           - add-custom-extension.md
+          - topicgroup:
+                label: Building a custom client
+                topics:
+                - api-client.md
+                - /watson/watson-using-sdks
       - topicgroup:
           label: Migrating to the new experience
           topics:

@@ -42,7 +42,13 @@ You can use response types to perform the following phone-specific actions:
 - [End the call](#phone-actions-hangup)
 - [Send a text message during a phone conversation](#phone-actions-sms)
 
-In some cases, you might want to combine response types to perform multiple actions. For example, you might want to implement two-factor authentication by requesting phone keypad entry and sending a text message from the same action step. For more information, see [Defining a sequence of phone actions](#phone-actions-sequence).
+In some cases, you might want to combine response types to perform multiple actions. For example, you might want to implement two-factor authentication by requesting phone keypad entry and sending a text message from the same action step. For more information, see the following:
+
+- [Define a sequence of phone commands](#phone-actions-sequence)
+
+You can also perform the following phone-specific actions:
+
+- [Inject custom values into CDR log events](#phone-actions-cdr-custom-data)
 
 For reference information about repsonse types, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference). <!-- For reference information about phone-specific context variables, see [Phone context variables](/docs/watson-assistant?topic=watson-assistant-phone-context). -->
 
@@ -536,12 +542,12 @@ The following example shows an `audio` response with `loop`=`true`, and a `user_
 {   
   "generic": [
     {
+      "response_type": "user_defined",
       "user_defined": {
         "vgwAction": {
           "command": "vgwActForceNoInputTurn"
         }
-      },
-      "response_type": "user_defined"
+      }
     },
     {
       "source": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Random_composition3.wav",
@@ -861,12 +867,12 @@ This example shows two responses: first a text response, followed by an `end_ses
 {
   "generic": [
     {
+      "response_type": "text",
       "values": [
         {
           "text": "Goodbye."
         }
       ],
-      "response_type": "text",
       "selection_policy": "sequential"
     },
     {

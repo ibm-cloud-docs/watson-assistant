@@ -31,10 +31,17 @@ subcollection: watson-assistant
 Adding the phone integration to your assistant makes your assistant available to customers over the phone.
 {: shortdesc}
 
+If an end user asks to speak to a person, the phone integration can transfer the call to an agent.
+Supported live agent and contact center integrations:
+- Genesys
+- Twilio Flex
+- NICE CXone
+- Bring your own
+
 There are several ways to add the phone integration to your assistant:
 - You can generate a free phone number that is automatically provisioned from IntelePeer. This is available only with new phone integrations. If you have an existing phone integration, you must delete it and create a new one to switch to a free phone number.
 - You can connect to a contact center with live agents. For more information about setting up the integration, see [Integrating with phone and NICE CXone contact center](/docs/watson-assistant?topic=watson-assistant-deploy-phone-nicecxone).
-- You can use and connect an existing number by configuring a Session Initiation Protocol (SIP) trunk from a provider such as IntelePeer, Genesys, or Twilio.
+- You can use and connect an existing number by configuring a Session Initiation Protocol (SIP) trunk from a provider such as Genesys, IntelePeer, or Twilio.
 
 A SIP trunk is equivalent to an analog telephone line, except it uses Voice over Internet Protocol (VoIP) to transmit voice data and can support multiple concurrent calls. The trunk can connect to the public switched telephone network (PSTN) or your company's on-premises private branch exchange (PBX). 
 
@@ -194,8 +201,8 @@ To add more phone numbers:
 
 If you want your assistant to be able to transfer a conversation to a live agent, you can connect your phone integration to a service desk system. For more information, see the instructions for the supported service desk platforms:
 
-- [Twilio Flex](/docs/watson-assistant?topic=watson-assistant-deploy-phone-flex)
 - [Genesys](/docs/watson-assistant?topic=watson-assistant-deploy-phone-genesys)
+- [Twilio Flex](/docs/watson-assistant?topic=watson-assistant-deploy-phone-flex)
 
 ## Phone integration limits
 {: #deploy-phone-limits}
