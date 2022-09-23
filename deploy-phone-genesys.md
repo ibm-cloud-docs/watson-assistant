@@ -134,7 +134,7 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
     - In the **Person** field, select yourself.
 
-1. In the Watson Assistant user interface, create a new phone integration. Specify the following information:
+1. In the Watson Assistant user interface, [create a new phone integration](/docs/watson-assistant?topic=watson-assistant-deploy-phone#deploy-phone-setup). Specify the following information:
 
     - When prompted, select **Use an existing phone number with an external provider**.
 
