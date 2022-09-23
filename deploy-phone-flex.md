@@ -46,15 +46,15 @@ To use this integration pattern, make sure you have the following:
 
 If you have not already added the phone integration to your assistant, follow these steps:
 
-1. From the Assistants page, click to open the assistant tile that you want to deploy.
+1. In the **Integrations** section on the main page for your assistant under **Essential Channels**, you will see a tile for **Phone**.
 
-1. From the Integrations section, click **Add integration**.
+1. On the **Phone** tile, click **Add**.
 
-1. Click **Phone**.
+1. On the pop-up window, click **Add** again.
 
-1. Click **Create**.
+1. Select **Use an existing phone number with an external provider**.
 
-1. Click **Close**.
+1. Complete the phone integration setup process. (For more information, see [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone).)
 
 For now, this is all you need to do. For more information about configuring the phone integration, see [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone).
 
