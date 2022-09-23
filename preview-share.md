@@ -51,7 +51,7 @@ On the **Preview** page, you also find the following elements:
 ## Copying a link to share
 {: #preview-share-link}
 
-You can share an unauthenticated version of your assistant with your team by sending them a link. The link opens a sample web page with an an interactive web chat widget where you can test out your assistant as if you were a customer. This method of previewing lets you share your in-progress assistant with subject-matter experts in your organization without needing access to {{site.data.keyword.conversationshort}} itself. The experience is identical to using **Preview this environment** on the draft environment tab.
+You can share an unauthenticated version of your assistant with your team by sending them a link. The link opens a sample web page with an interactive web chat widget where you can test out your assistant as if you were a customer. This method of previewing lets you share your in-progress assistant with subject-matter experts in your organization without needing access to {{site.data.keyword.conversationshort}} itself. The experience is identical to using **Preview this environment** on the draft environment tab.
 
 To share a link:
 1. On the **Preview** page, click **Copy link to share**.
@@ -63,7 +63,7 @@ The preview link is not accessible if web chat security is enabled. For more inf
 ## Changing background website
 {: #preview-change-background}
 
-You can visualize how your assistant would look like as a web chat widget on your organization's website. You can enter a URL or upload an image.
+You can visualize how your assistant would look as a web chat widget on your organization's website. You can enter a URL or upload an image.
 
 ### Entering a URL
 {: #preview-enter-URL}
@@ -77,7 +77,7 @@ To enter a URL:
 
 1. On the **Preview** page, click **Change background**. 
 1. Click **Enter URL**, then click **Continue**.
-1. Enter the path your website URL, for example, `https://www.example.com` or `example.com`.
+1. Enter the path of your website URL, for example, `https://www.example.com` or `example.com`.
 1. Click **Continue**.
 
 ### Uploading an image
