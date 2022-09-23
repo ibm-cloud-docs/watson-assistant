@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-16"
+lastupdated: "2022-09-23"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,13 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 23 September 2022
+{: #watson-assistant-sep232022}
+{: release-note}
+
+Upload an image as a preview background
+:   On the **Preview** page, you can now upload an image of your organization's website as a background. For more information, see [Previewing and sharing your assistant](/docs/watson-assistant?topic=watson-assistant-preview-share).
 
 ## 16 September 2022
 {: #watson-assistant-sep162022}
