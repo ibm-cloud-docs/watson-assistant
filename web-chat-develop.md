@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-23"
 
 subcollection: watson-assistant
 
@@ -42,6 +42,9 @@ The web chat API consists of several components:
 - **Events**: The web chat event system makes it possible for your website to respond to web chat events (such as opening or closing the web chat window, sending or receiving messages). By subscribing to events, you can implement custom behavior or even intercept and modify message content. For more information about the event system, see [Events](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events){: external} in the web chat API reference.
 
 For detailed reference information about the web chat API, see the web chat [developer documentation](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=){: external}.
+
+If you want to use the web chat API to customize your web chat implementation, you don't have to start from scratch. Tutorials are available that show examples of common web chat customizations. For more information, see [Web chat development tutorials](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-tutorials).
+{: tip}
 
 ## Development tasks
 {: #web-chat-develop-tasks}
