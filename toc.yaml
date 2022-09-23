@@ -104,6 +104,8 @@ toc:
           - topicgroup:
               label: Tutorials
               topics:
+                - topic: web-chat-develop-tutorials.md
+                  navtitle: Overview
                 - topic: web-chat-develop-download-transcript.md
                   navtitle: Providing a downloadable transcript
                 - topic: web-chat-develop-custom-buttons.md
