@@ -75,17 +75,11 @@ To complete setup, you must have an assistant ready to deploy, your NICE CXone a
 
 To integrate your assistant with NICE CXone:
 
-1. In the **Integrations** section on the main page for your assistant, click **Add integration**.
+1. In the **Integrations** section on the main page for your assistant under **Essential Channels**, you will see a tile for **Phone**.
 
-1. On the **Add integration** page, click **Phone**.
+1. On the **Phone** tile, click **Add**.
 
-    Click **Create**.
-
-1. On the **Phone** page, enter an **Integration name** and select **Integrate with your contact center**. 
-
-    Below **Set up a phone connection**, check marks record your progress with each step.
-    
-    Click **Next**.
+1. On the pop-up window, click **Add** again.
 
 1. Select **NICE CXone** on the **Select contact center** page.
     
