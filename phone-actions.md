@@ -550,8 +550,8 @@ The following example shows an `audio` response with `loop`=`true`, and a `user_
       }
     },
     {
-      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Random_composition3.wav",
       "response_type": "audio",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Random_composition3.wav",
       "channel_options": {
         "voice_telephony": {
           "loop": true

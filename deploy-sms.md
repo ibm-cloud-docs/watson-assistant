@@ -179,10 +179,28 @@ The **Advanced options** tab is available after you set up the *SMS* integration
 For the best customer experience, design your actions with the capabilities of the *SMS* integration in mind:
 
 - Do not include HTML elements in your text responses.
-- The *SMS* integration does not support chat transfers that are initiated with the *Connect to human agent* response type.
+- The *SMS* integration does not support chat transfers that are initiated with the *connect_to_agent* response type.
 <!-- Pause response type not yet supported in actions
 - The pause response type is ignored.
 -->
+- **Image**, **Audio**, **Video** response types allow sending a message containing media. A title and description are sent along with the attachment. Note that depending on the carrier and device of the end user these messages may not be successfully received. For a list of the supported content types for Twilio, see [Twilio: Accepted Content Types for Media](https://www.twilio.com/docs/sms/accepted-mime-types){: external}.
+
+For example:
+
+```json
+{   
+  "generic": [
+    {
+      "response_type": "image",
+      "source": "http://example.com/sample.jpg",
+      "title": "Sample Title",
+      "description": "Sample description"
+    }
+  ]
+}
+```
+{: codeblock}
+
 <!-- Search skill response type not yet supported in actions
 - You can include search skill response types in action nodes that the phone integration will send as a message. The message includes the introductory text (*I searched my knowledge base* and so on), and then the body of only the first search result.
 -->
