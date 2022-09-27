@@ -462,7 +462,7 @@ CSeq: 23 REFER
 Max-Forwards: 7
 Refer-To: sip:user@domain.com
 X-Watson-Assistant-Token: 8f817472-8c57-4117-850d-fdf4fd23ba7
-User-to-User: dev::latest::212033::0a64c30d-c558-4055-85ad-ef75ad6cc29d::978f1fd7-4e24-47d8-adb0-24a8a6eff69e::b5ffd6c2-902f-4658-b586-e3fc170a6cf3::7ad616a350cc48078f17e3ee3df551de;encoding=ascii
+User-to-User: 637573746f6d2d757365722d746f2d75736572;encoding=hex
 Contact: sip:a@atlanta.example.com
 Content-Length: 0
 ```
@@ -480,7 +480,7 @@ Call-ID: 898234234@agenta.atlanta.example.com
 CSeq: 93809823 REFER
 Max-Forwards: 70
 Refer-To: sip:user@domain.com
-User-to-User: 637573746f6d2d757365722d746f2d75736572;encoding=hex;
+User-to-User: 637573746f6d2d757365722d746f2d75736572;encoding=hex
 X-Watson-Assistant-Session-History-Key: dev::latest::212033::0a64c30d-c558-4055-85ad-ef75ad6cc29d::978f1fd7-4e24-47d8-adb0-24a8a6eff69e::b5ffd6c2-902f-4658-b586-e3fc170a6cf3::7ad616a350cc48078f17e3ee3df551de
 Contact: sip:a@atlanta.example.com
 Content-Length: 0
@@ -497,7 +497,7 @@ From: <sip:a@atlanta.example.com>;tag=193402342
 Call-ID: 898234234@agenta.atlanta.example.com
 CSeq: 23 REFER
 Max-Forwards: 70
-Refer-To: sip:user@domain.com?User-to-User=dev::latest::893499::dff9c274-adc4-4f63-93de-781166760bf8::978f1fd7-4e24-47d8-adb0-24a8a6eff69e::b5ffd6c2-902f-4658-b586-e3fc170a6cf3::7ad616a350cc48078f17e3ee3df551de%3Bencoding%3Dascii
+Refer-To: sip:user@domain.com?User-to-User=637573746f6d2d757365722d746f2d75736572%3Bencoding%3Dhex
 Contact: sip:a@atlanta.example.com
 Content-Length: 0
 ```
@@ -513,12 +513,15 @@ From: <sip:a@atlanta.example.com>;tag=193402342
 Call-ID: 898234234@agenta.atlanta.example.com
 CSeq: 93809823 REFER
 Max-Forwards: 70
-Refer-To: sip:user@domain.com?User-to-User=637573746f6d2d757365722d746f2d75736572%3Bencoding%3Dhe&X-Watson-Assistant-Session-History-Key=dev::latest::893499::dff9c274-adc4-4f63-93de-781166760bf8::978f1fd7-4e24-47d8-adb0-24a8a6eff69e::b5ffd6c2-902f-4658-b586-e3fc170a6cf3::7ad616a350cc48078f17e3ee3df551de
+Refer-To: sip:user@domain.com?User-to-User=637573746f6d2d757365722d746f2d75736572%3Bencoding%3Dhex&X-Watson-Assistant-Session-History-Key=dev::latest::893499::dff9c274-adc4-4f63-93de-781166760bf8::978f1fd7-4e24-47d8-adb0-24a8a6eff69e::b5ffd6c2-902f-4658-b586-e3fc170a6cf3::7ad616a350cc48078f17e3ee3df551de
 Contact: sip:a@atlanta.example.com
 Content-Length: 0
 
 ```
 {: codeblock}
+
+For Twilio Flex, the `User-to-User` header will use encoding=ascii.
+{: note}
 
 ## Playing hold music or a voice recording
 {: #phone-actions-hold-music}
