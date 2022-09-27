@@ -185,21 +185,7 @@ For the best customer experience, design your actions with the capabilities of t
 -->
 - **Image**, **Audio**, **Video** response types allow sending a message containing media. A title and description are sent along with the attachment. Note that depending on the carrier and device of the end user these messages may not be successfully received. For a list of the supported content types for Twilio, see [Twilio: Accepted Content Types for Media](https://www.twilio.com/docs/sms/accepted-mime-types){: external}.
 
-For example:
-
-```json
-{   
-  "generic": [
-    {
-      "response_type": "image",
-      "source": "https://example.com/image.jpg",
-      "title": "Example image",
-      "description": "This is an image response."
-    }
-  ]
-}
-```
-{: codeblock}
+For more information on these response types, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference).
 
 <!-- Search skill response type not yet supported in actions
 - You can include search skill response types in action nodes that the phone integration will send as a message. The message includes the introductory text (*I searched my knowledge base* and so on), and then the body of only the first search result.
