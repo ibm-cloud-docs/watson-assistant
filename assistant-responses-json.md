@@ -56,7 +56,7 @@ At run time, output containing multiple responses might be split into multiple m
 
 ### Adding responses
 
-To specify a response in the JSON editor, insert the appropriate JSON objects into the `output.generic` field of the step response. The following example shows output containing two responses of different types (text and an image):
+To specify a response in the JSON editor, insert the appropriate JSON objects into the `generic` field of the step response. The following example shows output containing two responses of different types (text and an image):
 
 ```json
 {

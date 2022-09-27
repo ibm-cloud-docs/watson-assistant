@@ -55,7 +55,7 @@ For reference information about repsonse types, see [Response types reference](/
 ## Adding phone-specific responses to your assistant
 {: #phone-actions-add}
 
-To initiate a voice-specific interaction from a an action step, add a response within the `output.generic` array using the appropriate response type. For more information about using the JSON editor to add responses, see [Defining responses using the JSON editor](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json).
+To initiate a voice-specific interaction from a an action step, add a response within the `generic` array using the appropriate response type. For more information about using the JSON editor to add responses, see [Defining responses using the JSON editor](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json).
 
 ## Applying advanced settings to the {{site.data.keyword.speechtotextshort}} service
 {: #phone-actions-speech-advanced}
@@ -708,30 +708,28 @@ The `channel_transfer` response type can be used with the phone integration only
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "text",
-        "values": [
-          {
-            "text": "I will send you a text message now with a link to our website."
-          }
-        ],
-        "selection_policy": "sequential"
-      },
-      {
-        "response_type": "channel_transfer",
-        "message_to_user": "Click the link to connect with an agent using our website.",
-        "transfer_info": {
-          "target": {
-            "chat": {
-              "url": "https://example.com/webchat"
-            }
+  "generic": [
+    {
+      "response_type": "text",
+      "values": [
+        {
+          "text": "I will send you a text message now with a link to our website."
+        }
+      ],
+      "selection_policy": "sequential"
+    },
+    {
+      "response_type": "channel_transfer",
+      "message_to_user": "Click the link to connect with an agent using our website.",
+      "transfer_info": {
+        "target": {
+          "chat": {
+            "url": "https://example.com/webchat"
           }
         }
       }
-    ]
-  }
+    }
+  ]
 }
 ```
 {: codeblock}
@@ -859,7 +857,7 @@ If the assistant is unable to send an SMS message to the caller, a new turn is i
 ## Defining a sequence of phone commands
 {: #phone-actions-sequence}
 
-If you want to run more than one command in succession, include multiple responses in the `output.generic` array. These commands are processed in the order in which they are specified in the array.
+If you want to run more than one command in succession, include multiple responses in the `generic` array. These commands are processed in the order in which they are specified in the array.
 
 This example shows two responses: first a text response, followed by an `end_session` response to end the call.
 
