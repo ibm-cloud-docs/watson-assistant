@@ -192,9 +192,9 @@ For example:
   "generic": [
     {
       "response_type": "image",
-      "source": "http://example.com/sample.jpg",
-      "title": "Sample Title",
-      "description": "Sample description"
+      "source": "https://example.com/image.jpg",
+      "title": "Example image",
+      "description": "This is an image response."
     }
   ]
 }
