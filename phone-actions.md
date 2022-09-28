@@ -50,12 +50,12 @@ You can also perform the following phone-specific actions:
 
 - [Inject custom values into CDR log events](#phone-actions-cdr-custom-data)
 
-For reference information about repsonse types, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference). <!-- For reference information about phone-specific context variables, see [Phone context variables](/docs/watson-assistant?topic=watson-assistant-phone-context). -->
+For reference information about response types, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference). <!-- For reference information about phone-specific context variables, see [Phone context variables](/docs/watson-assistant?topic=watson-assistant-phone-context). -->
 
 ## Adding phone-specific responses to your assistant
 {: #phone-actions-add}
 
-To initiate a voice-specific interaction from a an action step, add a response within the `output.generic` array using the appropriate response type. For more information about using the JSON editor to add responses, see [Defining responses using the JSON editor](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json).
+To initiate a voice-specific interaction from a an action step, add a response within the `generic` array using the appropriate response type. For more information about using the JSON editor to add responses, see [Defining responses using the JSON editor](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json).
 
 ## Applying advanced settings to the {{site.data.keyword.speechtotextshort}} service
 {: #phone-actions-speech-advanced}
@@ -462,7 +462,7 @@ CSeq: 23 REFER
 Max-Forwards: 7
 Refer-To: sip:user@domain.com
 X-Watson-Assistant-Token: 8f817472-8c57-4117-850d-fdf4fd23ba7
-User-to-User: dev::latest::212033::0a64c30d-c558-4055-85ad-ef75ad6cc29d::978f1fd7-4e24-47d8-adb0-24a8a6eff69e::b5ffd6c2-902f-4658-b586-e3fc170a6cf3::7ad616a350cc48078f17e3ee3df551de;encoding=ascii
+User-to-User: 637573746f6d2d757365722d746f2d75736572;encoding=hex
 Contact: sip:a@atlanta.example.com
 Content-Length: 0
 ```
@@ -480,7 +480,7 @@ Call-ID: 898234234@agenta.atlanta.example.com
 CSeq: 93809823 REFER
 Max-Forwards: 70
 Refer-To: sip:user@domain.com
-User-to-User: 637573746f6d2d757365722d746f2d75736572;encoding=hex;
+User-to-User: 637573746f6d2d757365722d746f2d75736572;encoding=hex
 X-Watson-Assistant-Session-History-Key: dev::latest::212033::0a64c30d-c558-4055-85ad-ef75ad6cc29d::978f1fd7-4e24-47d8-adb0-24a8a6eff69e::b5ffd6c2-902f-4658-b586-e3fc170a6cf3::7ad616a350cc48078f17e3ee3df551de
 Contact: sip:a@atlanta.example.com
 Content-Length: 0
@@ -497,7 +497,7 @@ From: <sip:a@atlanta.example.com>;tag=193402342
 Call-ID: 898234234@agenta.atlanta.example.com
 CSeq: 23 REFER
 Max-Forwards: 70
-Refer-To: sip:user@domain.com?User-to-User=dev::latest::893499::dff9c274-adc4-4f63-93de-781166760bf8::978f1fd7-4e24-47d8-adb0-24a8a6eff69e::b5ffd6c2-902f-4658-b586-e3fc170a6cf3::7ad616a350cc48078f17e3ee3df551de%3Bencoding%3Dascii
+Refer-To: sip:user@domain.com?User-to-User=637573746f6d2d757365722d746f2d75736572%3Bencoding%3Dhex
 Contact: sip:a@atlanta.example.com
 Content-Length: 0
 ```
@@ -513,12 +513,15 @@ From: <sip:a@atlanta.example.com>;tag=193402342
 Call-ID: 898234234@agenta.atlanta.example.com
 CSeq: 93809823 REFER
 Max-Forwards: 70
-Refer-To: sip:user@domain.com?User-to-User=637573746f6d2d757365722d746f2d75736572%3Bencoding%3Dhe&X-Watson-Assistant-Session-History-Key=dev::latest::893499::dff9c274-adc4-4f63-93de-781166760bf8::978f1fd7-4e24-47d8-adb0-24a8a6eff69e::b5ffd6c2-902f-4658-b586-e3fc170a6cf3::7ad616a350cc48078f17e3ee3df551de
+Refer-To: sip:user@domain.com?User-to-User=637573746f6d2d757365722d746f2d75736572%3Bencoding%3Dhex&X-Watson-Assistant-Session-History-Key=dev::latest::893499::dff9c274-adc4-4f63-93de-781166760bf8::978f1fd7-4e24-47d8-adb0-24a8a6eff69e::b5ffd6c2-902f-4658-b586-e3fc170a6cf3::7ad616a350cc48078f17e3ee3df551de
 Contact: sip:a@atlanta.example.com
 Content-Length: 0
 
 ```
 {: codeblock}
+
+For Twilio Flex, the `User-to-User` header will use encoding=ascii.
+{: note}
 
 ## Playing hold music or a voice recording
 {: #phone-actions-hold-music}
@@ -550,8 +553,8 @@ The following example shows an `audio` response with `loop`=`true`, and a `user_
       }
     },
     {
-      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Random_composition3.wav",
       "response_type": "audio",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Random_composition3.wav",
       "channel_options": {
         "voice_telephony": {
           "loop": true
@@ -708,30 +711,28 @@ The `channel_transfer` response type can be used with the phone integration only
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "text",
-        "values": [
-          {
-            "text": "I will send you a text message now with a link to our website."
-          }
-        ],
-        "selection_policy": "sequential"
-      },
-      {
-        "response_type": "channel_transfer",
-        "message_to_user": "Click the link to connect with an agent using our website.",
-        "transfer_info": {
-          "target": {
-            "chat": {
-              "url": "https://example.com/webchat"
-            }
+  "generic": [
+    {
+      "response_type": "text",
+      "values": [
+        {
+          "text": "I will send you a text message now with a link to our website."
+        }
+      ],
+      "selection_policy": "sequential"
+    },
+    {
+      "response_type": "channel_transfer",
+      "message_to_user": "Click the link to connect with an agent using our website.",
+      "transfer_info": {
+        "target": {
+          "chat": {
+            "url": "https://example.com/webchat"
           }
         }
       }
-    ]
-  }
+    }
+  ]
 }
 ```
 {: codeblock}
@@ -859,7 +860,7 @@ If the assistant is unable to send an SMS message to the caller, a new turn is i
 ## Defining a sequence of phone commands
 {: #phone-actions-sequence}
 
-If you want to run more than one command in succession, include multiple responses in the `output.generic` array. These commands are processed in the order in which they are specified in the array.
+If you want to run more than one command in succession, include multiple responses in the `generic` array. These commands are processed in the order in which they are specified in the array.
 
 This example shows two responses: first a text response, followed by an `end_session` response to end the call.
 

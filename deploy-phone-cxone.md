@@ -230,30 +230,29 @@ Use the following format:
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "connect_to_agent",
-        "transfer_info": {
-          "target": {
-            "nice_cxone": {
-              "custom_data": {
-                "p2": "test"
-              }
+  "generic": [
+    {
+      "response_type": "connect_to_agent",
+      "transfer_info": {
+        "target": {
+          "nice_cxone": {
+            "custom_data": {
+              "p2": "test"
             }
           }
-        },
-        "agent_available": {
-          "message": "Ok, I'm transferring you to an agent."
-        },
-        "agent_unavailable": {
-          "message": "Agent is unavailable."
         }
+      },
+      "agent_available": {
+        "message": "Ok, I'm transferring you to an agent."
+      },
+      "agent_unavailable": {
+        "message": "Agent is unavailable."
       }
-    ]
-  }
+    }
+  ]
 }
 ```
+{: codeblock}
 
 Parameters listed in the `custom_data` object are transferred to the [signal](https://developer.niceincontact.com/API/AdminAPI#/Contacts/Signal%20a%20Contact) REST API. 
 

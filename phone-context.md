@@ -49,14 +49,12 @@ The following tables describe the context variables that have special meaning in
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "text",
-        "text": "Hello"
-      }
-    ]
-  },
+  "generic": [
+    {
+      "response_type": "text",
+      "text": "Hello"
+    }
+  ],
   "context": {
     "integrations": {
       "voice_telephony": {
