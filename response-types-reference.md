@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-07-01"
+lastupdated: "2022-07-28"
 
 subcollection: watson-assistant
 
@@ -95,7 +95,6 @@ This example plays an audio clip with a title and descriptive text.
 ```
 {: codeblock}
 
-<!-- Channel transfer not yet supported in actions
 ## `channel_transfer`
 {: response-types-json-channel-transfer}
 
@@ -104,12 +103,12 @@ Requests that the conversation be transferred to a different channel integration
 ### Integration channel support
 {: response-types-json-channel-transfer-integrations}
 
-| SMS                               | Slack                             | Facebook                          | Whatsapp                          |
-|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
-| ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
+| Phone                              | SMS                               | Slack                             | Facebook                          | Whatsapp                          |
+|------------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
+| ![Yes](images/checkmark-icon.svg)  | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
-The indicated channel integrations support _initiating_ a channel transfer (currently, the web chat integration is the only supported transfer target).
-{: note}
+- The indicated channel integrations support _initiating_ a channel transfer (currently, the web chat integration is the only supported transfer target).
+- Initiating a channel transfer from the phone integration requires that the SMS integration also be configured.
 
 ### Fields
 {: response-types-json-channel-transfer-fields}
@@ -124,56 +123,53 @@ The indicated channel integrations support _initiating_ a channel transfer (curr
 ### Example
 {: response-types-json-channel-transfer-example}
 
-This example requests a transfer from Slack to web chat. In addition to the `channel_transfer` response, the output also includes a `text` response to be displayed by the web chat integration after the transfer. The use of the `channels` array ensures that the `channel_transfer` response is handled only by the Slack integration (before the transfer), and the `connect_to_agent` response only by the web chat integration (after the transfer). For more information about using `channels` to target specific integrations, see [Targeting specific integrations](#assistant-responses-json-target-integrations).
+This example requests a transfer from WhatsApp to the web chat. In addition to the `channel_transfer` response, the output also includes a `text` response to be displayed by the web chat integration after the transfer. The use of the `channels` array ensures that the `channel_transfer` response is handled only by the Slack integration (before the transfer), and the `connect_to_agent` response only by the web chat integration (after the transfer). For more information about using `channels` to target specific integrations, see [Targeting specific integrations](#assistant-responses-json-target-integrations).
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "channel_transfer",
-        "channels": [
-          {
-            "channel": "whatsapp"
-          }
-        ],
-        "message_to_user": "Click the link to connect with an agent using our website.",
-        "transfer_info": {
-          "target": {
-            "chat": {
-              "url": "https://example.com/webchat"
-            }
-          }
+  "generic": [
+    {
+      "response_type": "channel_transfer",
+      "channels": [
+        {
+          "channel": "whatsapp"
         }
-      },
-      {
-        "response_type": "connect_to_agent",
-        "channels": [
-          {
-            "channel": "chat"
-          }
-        ],
-        "message_to_human_agent": "User asked to speak to an agent.",
-        "agent_available": {
-          "message": "Please wait while I connect you to an agent."
-        },
-        "agent_unavailable": {
-          "message": "I'm sorry, but no agents are online at the moment. Please try again later."
-        },
-        "transfer_info": {
-          "target": {
-            "zendesk": {
-              "department": "Payments department"
-            }
+      ],
+      "message_to_user": "Click the link to connect with an agent using our website.",
+      "transfer_info": {
+        "target": {
+          "chat": {
+            "url": "https://example.com/webchat"
           }
         }
       }
-    ]
-  }
+    },
+    {
+      "response_type": "connect_to_agent",
+      "channels": [
+        {
+          "channel": "chat"
+        }
+      ],
+      "message_to_human_agent": "User asked to speak to an agent.",
+      "agent_available": {
+        "message": "Please wait while I connect you to an agent."
+      },
+      "agent_unavailable": {
+        "message": "I'm sorry, but no agents are online at the moment. Please try again later."
+      },
+      "transfer_info": {
+        "target": {
+          "zendesk": {
+            "department": "Payments department"
+          }
+        }
+      }
+    }
+  ]
 }
 ```
 {: codeblock}
--->
 
 ## `connect_to_agent`
 {: response-types-json-connect-to-agent}
