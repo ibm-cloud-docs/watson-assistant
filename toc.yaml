@@ -196,6 +196,7 @@ toc:
           label: Early access features
           topics:
           - action-response-modes.md
+          - boost-words.md
           - multiple-environments.md
           - trigger-phrases.md
 
