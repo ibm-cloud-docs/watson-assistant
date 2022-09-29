@@ -49,6 +49,7 @@ In some cases, you might want to combine response types to perform multiple acti
 You can also perform the following phone-specific actions:
 
 - [Inject custom values into CDR log events](#phone-actions-cdr-custom-data)
+- [Access phone integration context variables from your action](#phone-actions-access-context-variables)
 
 For reference information about response types, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference). <!-- For reference information about phone-specific context variables, see [Phone context variables](/docs/watson-assistant?topic=watson-assistant-phone-context). -->
 
@@ -944,3 +945,27 @@ To remove a previously defined property, you must explicitly set it to an empty 
 
 ```
 {: codeblock}
+
+## Access phone integration context variables from your action
+{: #phone-actions-access-context-variables}
+
+If you want to access the phone integration context variables, use the JSON editor to edit the context.
+
+The following example shows how to access the user phone number (i.e. the phone number that the call was received from):
+
+```json
+  "context": {
+    "variables": [
+      {
+        "value": {
+          "expression": "${system_integrations.voice_telephony.private.user_phone_number}.replace('+','')"
+        },
+        "skill_variable": "user_phone_number"
+      }
+    ]
+  }
+
+```
+{: codeblock}
+
+For more information about the phone integration context variables, see [Phone integration context variables](/docs/watson-assistant?topic=watson-assistant-phone-context).
