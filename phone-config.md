@@ -34,7 +34,7 @@ After you have set up the phone integration for your assistant, you can modify t
 ## Handling call and transfer failures
 {: #deploy-phone-config-failure}
 
-You can configure the phone integration to transfer the caller to a human agent if the phone connection fails for any reason. To transfer the caller to a human agent automatically, go to the **Live agent** tab in the phone integration settings, and make the following configuration selections:
+You can configure the phone integration to transfer the caller to a human agent if the phone connection fails for any reason. To transfer the caller to a human agent automatically, go to the **Advanced** tab in the phone integration settings, and make the following configuration selections:
 
 - **SIP target when a call fails**: Add the SIP endpoint for your support agent service. Specify a SIP or telephone URI for a general call queue that can redirect requests to other queues. For more information, see [Configuring backup call center support](#deploy-phone-config-transfer-service).
 
@@ -45,6 +45,8 @@ If, after you transfer the call to a human agent, the connection to the human ag
 - **Transfer failure message**: Add the message you want the assistant to say to a caller if the transfer to a human agent fails. The message can be up to 150 characters in length.
 
 - **Disconnect call on transfer failure**: Choose whether to disconnect the call after the failure message. This option is enabled by default. If this option is disabled, when a call transfer fails, your assistant can disconnect or process a different action.
+
+  If you choose to leave a call connected despite a transfer failure, Watson Assistant will initiate a new turn to determine the next step. It's important that the Assistant be configured with an Action or webhook that can handle this scenario.
 
 The phone integration supports disaster recovery by providing the ability to do a fast failover to another region instead of routing the call to a live agent when a service outage occurs. This is accomplished by sending a SIP 503 response to the upstream SIP trunking provider, instead of auto referring the call to a live agent when failures happen during the setup of a call. This 503 response can then be used by the SIP trunking provider to reroute the call to another region. If you want to take advantage of this capability, open a service ticket against the {{site.data.keyword.conversationshort}} service instance that requires disaster recovery.
 {: note}
