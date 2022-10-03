@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-09-09"
+lastupdated: "2022-10-03"
 
 subcollection: watson-assistant
 
@@ -33,20 +33,13 @@ subcollection: watson-assistant
 You can configure the web chat to authenticate users and protect private data.
 {: shortdesc}
 
-All messages that are sent from the web chat are encrypted. When you enable security, your assistant takes an additional step to verify that messages originate from the web chat that is embedded in your website only.
+All messages that are sent between the web chat and the assistant are encrypted using Transport Layer Security (TLS). However, there are additional steps you can take to further secure the web chat.
 
-Enabling web chat security disables the shareable preview link. For more information about the preview link, see [Copying a link to share](/docs/watson-assistant?topic=watson-assistant-preview-share#preview-share-link).
+- You can [digitally sign messages](#web-chat-security-task) from the web chat to ensure that they originate from your website. If you enable web chat security, all messages are authenticated using a JSON Web Token (JWT) signed with an RSA private key.
 
-The web chat uses an RSA signature with SHA-256 (RS256) to encrypt communication. RS256 signatures use a sophisticated type of RSA encryption. An RSA key pair includes a private and a public key. The RSA private key is used to generate digital signatures, and the RSA public key is used to verify digital signatures. The complexity of the RSA algorithm that is used to scramble the message makes it nearly impossible to unscramble the message without the key.
+- You can [prevent unauthorized access](#web-chat-security-encrypt) to sensitive customer information. With web chat security enabled, you can use a public key to encrypt sensitive information as part of the JWT payload. This information is stored only in private variables, which cannot be seen by customers and are never included in logs.
 
-The following diagram illustrates the requests that are sent back and forth to authenticate a request.
-
-![Shows the order in which requests are sent among your website, web chat, and the service](images/web-chat-security.png)
-
-You can implement the following security measures:
-
-- Ensure that messages sent from the web chat to your assistant come from your customers only
-- Send private data from the web chat to your assistant
+- You can [authenticate users](#web-chat-security-authenticate) by user ID, enabling your assistant to control access to functions that require authorization.
 
 ## Before you begin
 {: #web-chat-security-prereq}
@@ -102,8 +95,19 @@ Before you enable security, complete the following steps:
     ```
     {: codeblock}
 
+
+
+
+
+
+
 ## Enable security
 {: #web-chat-security-task}
+
+
+
+Enabling web chat security disables the shareable preview link. For more information about the preview link, see [Copying a link to share](/docs/watson-assistant?topic=watson-assistant-preview-share#preview-share-link).
+
 
 To enable security, complete the following steps:
 
@@ -332,3 +336,13 @@ window.watsonAssistantChatOptions = {
 The web chat integration undergoes tests and scans on a regular basis to find and address potential security issues, such as cross-site scripting (XSS) vulnerabilities.
 
 Be sure to run your own security reviews to see how the web chat fits in with your current website structure and policies. The web chat is hosted on your site and can inherit any vulnerabilities that your site has. Only serve content over HTTPS, use Content Security Policy (CSP), and implement other basic web security precautions.
+
+
+## Not sure what to do with this
+
+The web chat uses an RSA signature with SHA-256 (RS256) to encrypt communication. RS256 signatures use a sophisticated type of RSA encryption. An RSA key pair includes a private and a public key. The RSA private key is used to generate digital signatures, and the RSA public key is used to verify digital signatures. The complexity of the RSA algorithm that is used to scramble the message makes it nearly impossible to unscramble the message without the key.
+
+The following diagram illustrates the requests that are sent back and forth to authenticate a request.
+
+![Shows the order in which requests are sent among your website, web chat, and the service](images/web-chat-security.png)
+

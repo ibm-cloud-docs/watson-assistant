@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-10-03"
 
 subcollection: watson-assistant
 
@@ -74,4 +74,5 @@ Suggestions
 :   You can configure how and when the web chat offers offers suggestions to customers when the assistant isn't delivering what they expect. For more information, see [Configuring suggestions](/docs/watson-assistant?topic=watson-assistant-web-chat-suggestions).
 
 Security
-:   You can protect your users' information by enabling security on the **Security** tab. For more information about how web chat security works, see [Securing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security).
+:   You can protect your users' private information and prevent unauthorized messages to your assistant by enabling security on the **Security** tab. For more information about web chat security and how it works, see [Security](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture-security).
+
