@@ -407,7 +407,6 @@ If you define a SIP URI as the transfer target, escape the at sign (`@`) in the 
 
 ###  Transferring after hangup
 
-
 By default, the phone integration transfers calls by using a SIP `REFER` request. Depending on the IVR service provider, you might need to configure call transfer to use a SIP `BYE` request instead.
 Use the  `transfer_method`  attribute to specify how to transfer the call, using either  `refer`  or  `hangup`. When `transfer_method` is set to  `hangup` instead of `refer`, the behavior of the transfer action changes. Instead of sending a SIP `REFER` request, the phone integration plays back any associated text and then hangs up the call by sending a SIP `BYE` request.
 
@@ -442,6 +441,18 @@ After the hangup, the phone integration passes the transfer destination that is 
 }
 ```
 {: codeblock}
+
+
+### Transferring upon failure
+
+To configure transfer on failures, go to the **Advanced** tab in the phone integration settings. The following selections can be configured:
+
+- **Transfer failure message**
+
+- **Disconnect call on transfer failure**
+
+For more information, see [Handling call and transfer failures](/docs/watson-assistant?topic=watson-assistant-deploy-phone-config#deploy-phone-config-failure).
+
 
 ### Passing Watson Assistant Metadata in SIP Signaling
 
