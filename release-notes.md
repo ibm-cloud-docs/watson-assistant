@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-23"
+lastupdated: "2022-10-14"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,13 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 14 October 2022
+{: #watson-assistant-oct142022}
+{: release-note}
+
+Media responses
+:   The action editor now supports adding media and interactive responses in the **Assistant Says** field. For more information, see [Media responses](/docs/watson-assistant?topic=watson-assistant-respond-response-types).
 
 ## 23 September 2022
 {: #watson-assistant-sep232022}
