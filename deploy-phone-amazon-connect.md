@@ -2,6 +2,8 @@
 
 
 
+
+
 ---
 
 copyright:
@@ -47,18 +49,13 @@ You need a Plus or Enterprise Plan to use this feature.
 
 You must have an Amazon Connect instance and phone numbers allocated for your contact center.
 
-1.  Create an Amazon Chime Voice Connector under your AWS account. For more information, see [Creating an Amazon Chime Voice Connector](https://docs.aws.amazon.com/chime-sdk/latest/ag/voice-connectors.html#create-voicecon){: external}.
-1.  After you create an Amazon Chime Voice Connector, allocate phone numbers for your voice connector.
-1.  Open the [Amazon Chime console](https://chime.aws.amazon.com/){: external}.  
-1.  Click the **Phone numbers** tab and allocate phone numbers for your voice connector. For more information, see [Assigning and unassigning Amazon Chime Voice Connector phone numbers](https://docs.aws.amazon.com/chime-sdk/latest/ag/assign-voicecon.html).
 
-
-## Generate Amazon Connect access keys
+## Generate AWS access keys
 {: #deploy-phone-amazon-connect-accesskeys}
 
 Access keys are used for authentication and consist of two parts: an access key ID and a secret access key. 
 
-To generate Amazon Connect access keys to use with your assistant, see [AWS Account and Access Keys](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html){: external}.  
+To generate AWSaccess keys to use with your assistant, see [AWS Account and Access Keys](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html){: external}.  
 
 You cannot retrieve the secret key again after you complete the next step and **Save**. You must generate a new key if the current one is lost or forgotten.
 
@@ -66,7 +63,7 @@ You cannot retrieve the secret key again after you complete the next step and **
 ## Set up the integration
 {: #deploy-phone-amazon-connect-setup}
 
-To complete setup, you must have an assistant ready to deploy, your Amazon Connect access keys, and phone numbers allocated for this integration. 
+To complete setup, you must have an assistant ready to deploy, your AWSaccess keys, and phone numbers allocated for this integration. 
 
 To integrate your assistant with Amazon Connect:
 
@@ -121,15 +118,18 @@ To integrate your assistant with Amazon Connect:
 The connection between your assistant and Amazon Connect is complete. 
 
 
-### Complete your Amazon Chime Voice Connector configuration
+### Configure an Amazon Chime Voice Connector 
 
-After you create a {{site.data.keyword.conversationshort}} Phone integration, edit your Amazon Chime Voice Connector origination to allow outbound calls. 
-1.  Open the [Amazon Chime console](https://chime.aws.amazon.com/){: external}.  
-1.  Enable origination settings to control inbound calling to your {{site.data.keyword.conversationshort}} instance.
+After you create a {{site.data.keyword.conversationshort}} Phone integration, create an Amazon Chime Voice Connector.
 
+1.  Create an Amazon Chime Voice Connector under your AWS account. For more information, see [Creating an Amazon Chime Voice Connector](https://docs.aws.amazon.com/chime-sdk/latest/ag/create-voicecon.html){: external}.
+1.  Enable **Origination** settings to control inbound calling to your {{site.data.keyword.conversationshort}} instance.
+
+    In the **Inbound routes*** section, click **New** to add a new inbound route. 
     In the **Host** field enter the hostname you copied in the previous step when you created the {{site.data.keyword.conversationshort}} and Amazon Connect integration.
     In the **Port** field, enter 5061.
     Choose *TCP* from the **Protocol** drop-down list.
+    Enter **1** in the **Priority** field and **5** in the **Weight** field.
     Click **Add**.
     Click **Save**.
 
