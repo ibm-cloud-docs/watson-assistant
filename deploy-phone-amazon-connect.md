@@ -4,6 +4,7 @@
 
 
 
+
 ---
 
 copyright:
@@ -168,7 +169,7 @@ Select your Voice Connector and copy the value of **Voice Connector ARN**.
 
 #### Decide whether to disconnect a call or transfer the caller to a live agent 
 
-{{site.data.keyword.conversationshort}} passes to the contact flow the `SessionHistoryKey` attribute which can be used for branching the contact flow based on a comparison to the value of this attribute. When the attribute is set to `hangup`, it's an indication to disconnect the flow. Otherwise, the caller should be transferred to a live agent. Use the [Check contact attributes](https://docs.aws.amazon.com/connect/latest/adminguide/check-contact-attributes.html) flow block to branch the flow based on the `SessionHistoryKey` attribute. 
+Use the [Check contact attributes](https://docs.aws.amazon.com/connect/latest/adminguide/check-contact-attributes.html) flow block to branch the flow based on the `SessionHistoryKey` attribute. 
 
 1. In the **Attribute to check** property:
 	From the **Type** drop-down list,  select `User Defined`. In the **Attribute** field, type `$.Attributes.SessionHistoryKey`. 
@@ -180,11 +181,12 @@ Select your Voice Connector and copy the value of **Voice Connector ARN**.
 ![Image of the Check contact attributes block](images/phone-amazon-connect-check-contact-attributes.png)
 
 
+{{site.data.keyword.conversationshort}} passes to the contact flow the `SessionHistoryKey` attribute which can be used for branching the contact flow based on a comparison to the value of this attribute. When the attribute is set to `hangup`, it's an indication to disconnect the flow. Otherwise, the caller should be transferred to a live agent. 
+
 #### Displaying conversation history to a live agent
 
-Configure your contact flow to provide a transcript of the assistant conversation to a live agent in a pop-out window. This helps the agent better understand and address a customer's needs.
 
-{{site.data.keyword.conversationshort}} passes to the contact flow the `SessionHistoryKey` contact attribute. The session history key can be used to fetch the conversation history and present it to a _live agent_.
+
 Use the [Set contact attributes](https://docs.aws.amazon.com/connect/latest/adminguide/set-contact-attributes.html) flow block, to make contact attributes accessible by the Contact Control Panel (CCP).
 
 In the **Attribute to save** property, add the following attributes:
@@ -195,6 +197,11 @@ In the **Attribute to save** property, add the following attributes:
 
 
 ![Image of the Check contact attributes block](images/phone-amazon-connect-set-contact-attributes.png)
+
+{{site.data.keyword.conversationshort}} passes to the contact flow the `SessionHistoryKey` contact attribute. The session history key can be used to retrieve conversation history and present it to a live agent.
+
+This block configures your contact flow to provide a transcript of the assistant conversation to a live agent in a pop-out window. It helps the agent better understand and address a customer's needs.
+
 
 
 #### Transferring a caller to a live agent
