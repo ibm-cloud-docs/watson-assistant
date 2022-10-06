@@ -1,15 +1,8 @@
-
-
-
-
-
-
-
 ---
 
 copyright:
   years: 2022
-lastupdated: "2022-09-27"
+lastupdated: "2022-10-06"
 
 subcollection: watson-assistant
 
@@ -32,6 +25,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
+{{site.data.content.earlyaccess}}
 
 # Integrating with phone and Amazon Connect contact center![Plus or higher plans only](images/plus.png)
 {: #deploy-phone-amazon-connect}
@@ -120,6 +114,7 @@ The connection between your assistant and Amazon Connect is complete.
 
 
 ### Configure an Amazon Chime Voice Connector 
+{: #deploy-phone-amazon-connect-chime}
 
 After you create a {{site.data.keyword.conversationshort}} Phone integration, create an Amazon Chime Voice Connector.
 
@@ -136,6 +131,7 @@ After you create a {{site.data.keyword.conversationshort}} Phone integration, cr
 
 
 ### Create an Amazon Connect Flow
+{: #deploy-phone-amazon-connect-flow}
 
 A  _flow_  defines the customer experience with your contact center from start to finish. 
 
@@ -148,6 +144,7 @@ The following flow blocks and settings in the contact flow are necessary for int
 ![Image of the contact flow](images/phone-amazon-connect-contact-flow.png)
 
 #### Connecting a caller to your assistant
+{: #deploy-phone-amazon-connect-caller}
 
 Use the [Transfer to phone number](https://docs.aws.amazon.com/connect/latest/adminguide/transfer-to-phone-number.html) flow block to connect a caller to your {{site.data.keyword.conversationshort}} service instance. 
 
@@ -168,6 +165,7 @@ Select your Voice Connector and copy the value of **Voice Connector ARN**.
 ![Image of the transfer to phone number](images/phone-amazon-connect-transfer-to-phone.png)
 
 #### Decide whether to disconnect a call or transfer the caller to a live agent 
+{: #deploy-phone-amazon-connect-decide}
 
 Use the [Check contact attributes](https://docs.aws.amazon.com/connect/latest/adminguide/check-contact-attributes.html) flow block to branch the flow based on the `SessionHistoryKey` attribute. 
 
@@ -184,7 +182,7 @@ Use the [Check contact attributes](https://docs.aws.amazon.com/connect/latest/ad
 {{site.data.keyword.conversationshort}} passes to the contact flow the `SessionHistoryKey` attribute which can be used for branching the contact flow based on a comparison to the value of this attribute. When the attribute is set to `hangup`, it's an indication to disconnect the flow. Otherwise, the caller should be transferred to a live agent. 
 
 #### Displaying conversation history to a live agent
-
+{: #deploy-phone-amazon-connect-conversation}
 
 
 Use the [Set contact attributes](https://docs.aws.amazon.com/connect/latest/adminguide/set-contact-attributes.html) flow block, to make contact attributes accessible by the Contact Control Panel (CCP).
@@ -203,13 +201,14 @@ In the **Attribute to save** property, add the following attributes:
 This block configures your contact flow to provide a transcript of the assistant conversation to a live agent in a pop-out window. It helps the agent better understand and address a customer's needs.
 
 
-
 #### Transferring a caller to a live agent
+{: #deploy-phone-amazon-connect-caller}
 
 Use the [Set working queue](https://docs.aws.amazon.com/connect/latest/adminguide/set-working-queue.html) flow block to specify the queue to be used when **Transfer to queue** is invoked.
 Use the [Transfer to queue](https://docs.aws.amazon.com/connect/latest/adminguide/transfer-to-queue.html) to place the caller in a queue.
 
 #### Transferring to a live agent when an error occurs
+{: #deploy-phone-amazon-connect-error}
 
 The phone integration disconnects the call if an error occurs during a conversation by sending a `SIP BYE` request. 
 In that case, the `SessionHistoryKey` contact attribute is not passed to the contact flow. 
@@ -221,6 +220,7 @@ In that case, the `SessionHistoryKey` contact attribute is not passed to the con
 To receive calls in your instance, you need to claim a phone number. If you did not claim a number when you created your Amazon Connect instance, follow [these steps](https://docs.aws.amazon.com/connect/latest/adminguide/claim-phone-number.html) to claim one now. Attach the phone number to the contact flow you created for this integration.
 
 ### Complete your phone integration configuration
+{: #deploy-phone-amazon-connect-configuration}
 
 Open the {{site.data.keyword.conversationshort}} user interface and go to the phone integration you created earlier. On the **Phone number** page, enter the phone number you allocated for your Amazon Connect Contact Flow in the **Claim a phone number for your Amazon Connect Contact Flow** step. 
 
