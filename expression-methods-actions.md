@@ -72,7 +72,8 @@ Several methods are available to work with date and time values.
 ### `now(String timezone)`
 {: #expression-methods-actions-now}
 
-The `now()` method returns the current date and time for a specified time zone, in the format `yyyy-MM-dd HH:mm:ss 'GMT'XXX`, for example:
+The `now()` method returns the current date and time for a specified time zone, in the format `yyyy-MM-dd HH:mm:ss 'GMT'XXX`:
+
 
 ```text
 now('Australia/Sydney').
