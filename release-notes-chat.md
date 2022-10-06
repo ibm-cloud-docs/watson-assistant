@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-15"
+lastupdated: "2022-10-10"
 
 subcollection: watson-assistant
 
@@ -39,6 +39,23 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 6.7.0
+{: #6.7.0}
+
+*Release date: 10 October 2022*
+
+- **New `updateIsTypingCounter()` method**: The new `updateIsTypingCounter()` instance method allows you to change the display of the typing indicator.
+  
+  For more information, see [instance.updateIsTypingCounter()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateistypingcounter){: external}.
+- 
+- **New `updateBotUnreadIndicatorVisibility()` method**: The new `updateBotUnreadIndicatorVisibility()` instance method allows you to update the visibility of the unread indicator that appears on the launcher.
+  
+  For more information, see [instance.updateBotUnreadIndicatorVisibility()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatebotunreadindicatorvisibility){: external}.
+
+- Connect to Agent and custom cards now have rounded corners.
+
+- Bug fixes
 
 ## 6.6.2
 {: #6.6.2}
