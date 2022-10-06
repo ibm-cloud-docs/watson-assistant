@@ -81,7 +81,8 @@ now('Australia/Sydney').
 
 In this example, if the current date and time is `2021-11-26 11:41:00`, the returned string is `2021-11-26 21:41:00 GMT+10.00` or `2021-11-26 21:41:00 GMT+11.00` depending on daylight saving time.
 
-The output string format change above is applicable to date and time calculation methods as well, for example, if `<date>` string used is in the format `yyyy-MM-dd HH:mm:ss`, such as when using the method `today()`, then the output is in the same format `yyyy-MM-dd HH:mm:ss`. However, if the `<date>` string is in the format `yyyy-MM-dd HH:mm:ss 'GMT'XXX`, such when using the method `now()`, then the output will be in the format `yyyy-MM-dd HH:mm:ss 'GMT'XXX`.
+The output string format change above is applicable to date and time calculation methods as well. For example, if the `<date>` string used is in the format `yyyy-MM-dd HH:mm:ss`, such as when using the method `today()`, then the output is in the same format (`yyyy-MM-dd HH:mm:ss`). However, if the `<date>` string is in the format `yyyy-MM-dd HH:mm:ss 'GMT'XXX`, such when using the method `now()`, then the output will be in the format `yyyy-MM-dd HH:mm:ss 'GMT'XXX`.
+
 
 <!--- For the list of supported time zones, see [Supported time zones](/docs/watson-assistant?topic=watson-assistant-time-zones). --->
 
