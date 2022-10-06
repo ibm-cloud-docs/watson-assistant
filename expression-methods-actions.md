@@ -2,7 +2,7 @@
 
 copyright:
 years: 2015, 2022
-lastupdated: "2022-09-01"
+lastupdated: "2022-10-07"
 
 subcollection: watson-assistant
 
@@ -72,13 +72,15 @@ Several methods are available to work with date and time values.
 ### `now(String timezone)`
 {: #expression-methods-actions-now}
 
-The `now()` method returns the current date and time for a specified time zone, in the format `yyyy-MM-dd HH:mm:ss`:
+The `now()` method returns the current date and time for a specified time zone, in the format `yyyy-MM-dd HH:mm:ss 'GMT'XXX`, for example:
 
 ```text
 now('Australia/Sydney').
 ```
 
-If the current date and time in the UTC time zone is `2021-11-26 11:41:00`, this example returns the string `2021-11-26 21:41:00`.
+In this example, if the current date and time is `2021-11-26 11:41:00`, the returned string is `2021-11-26 21:41:00 GMT+10.00` or `2021-11-26 21:41:00 GMT+11.00` depending on daylight saving time.
+
+The output string format change above is applicable to date and time calculation methods as well, for example, if `<date>` string used is in the format `yyyy-MM-dd HH:mm:ss`, such as when using the method `today()`, then the output is in the same format `yyyy-MM-dd HH:mm:ss`. However, if the `<date>` string is in the format `yyyy-MM-dd HH:mm:ss 'GMT'XXX`, such when using the method `now()`, then the output will be in the format `yyyy-MM-dd HH:mm:ss 'GMT'XXX`.
 
 <!--- For the list of supported time zones, see [Supported time zones](/docs/watson-assistant?topic=watson-assistant-time-zones). --->
 
