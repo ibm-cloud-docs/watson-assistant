@@ -531,7 +531,6 @@ Pauses before sending the next message to the channel, and optionally sends a "u
 | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
 - With the phone integration, you can add a pause by using the `turn_settings.timeout_count` context variable (for more information, see [Context variables that are set by your dialog or actions](/docs/watson-assistant?topic=watson-assistant-phone-context#phone-context-variables-set-by-dialog)).
-- With the SMS integration, you can add a pause by using the `vgwConversationResponseTimeout` context variable (for more information, see [Context variables that are set by your action](/docs/watson-assistant?topic=watson-assistant-sms-reference#sms-reference-context-variables-set-by-action).
 
 ### Fields
 {: response-types-json-pause-fields}
