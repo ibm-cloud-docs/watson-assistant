@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-07-28"
+lastupdated: "2022-10-06"
 
 subcollection: watson-assistant
 
@@ -518,7 +518,6 @@ This example presents two options (`Buy something` and `Exit`).
 ```
 {: codeblock}
 
-<!-- Pause not yet supported in actions
 ## `pause`
 {: response-types-json-pause}
 
@@ -527,11 +526,11 @@ Pauses before sending the next message to the channel, and optionally sends a "u
 ### Integration channel support
 {: response-types-json-pause-integrations}
 
-| Web chat                          | Phone                             | SMS                               | Facebook                          | Whatsapp                          |
-|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
-| ![Yes](images/checkmark-icon.svg) |                                   |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
+| Web chat                          | Facebook                          | Whatsapp                          |
+|-----------------------------------|-----------------------------------|-----------------------------------|
+| ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
-<!-- - With the phone integration, you can add a pause by using the `turn_settings.timeout_count` context variable (for more information, see [Context variables that are set by your dialog or actions](/docs/watson-assistant?topic=watson-assistant-phone-context#phone-context-variables-set-by-dialog)).
+- With the phone integration, you can add a pause by using the `turn_settings.timeout_count` context variable (for more information, see [Context variables that are set by your dialog or actions](/docs/watson-assistant?topic=watson-assistant-phone-context#phone-context-variables-set-by-dialog)).
 - With the SMS integration, you can add a pause by using the `vgwConversationResponseTimeout` context variable (for more information, see [Context variables that are set by your action](/docs/watson-assistant?topic=watson-assistant-sms-reference#sms-reference-context-variables-set-by-action).
 
 ### Fields
@@ -562,7 +561,7 @@ This examples sends the "user is typing" event while pausing for 5 seconds.
 }
 ```
 {: codeblock}
--->
+
 
 <!-- Search not yet supported in actions. This also needs to be updated so it does not refer to search_skill (unless it is ultimately replaced by something else)
 ## `search`
