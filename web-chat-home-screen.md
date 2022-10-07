@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-10-07"
 
 subcollection: watson-assistant
 
@@ -40,12 +40,12 @@ If you use the home screen, you must configure it to show content that is releva
 
 - In the **Greeting message** field, type a greeting that is engaging and invites the user to interact with your assistant. This greeting is the first message your customers will see when they open the web chat window.
 
-- In the **Conversation starters** section, specify three conversation starter messages.
+- In the **Conversation starters** section, specify the conversation starter messages you want to be displayed on the home screen.
 
     These messages are displayed on the home screen as options that customers can click to start the conversation (for example, `I need to reset my password` or `What is my account balance?`). Specify conversation starters that are likely to be useful to your customers, and that your assistant knows how to handle. 
 
     Be sure to test each conversation starter. Use only messages that your assistant understands and knows how to answer well. Conversation starters cannot be longer than 35 characters.
 
-    All three conversation starters are required.
+    You can specify up to 5 conversation starters.
 
 The messages you specify are immediately reflected by the web chat preview that is shown on the page, and you can click the conversation starters to see how your assistant responds. However, no configuration changes are applied to the environment until you click **Save and exit**.
