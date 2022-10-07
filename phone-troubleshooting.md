@@ -35,7 +35,9 @@ Find solutions to problems that you might encounter while using the integration.
 
 - If you get a *Forbidden* message: This means the phone number that you specified when you configured the phone integration cannot be verified. Make sure the number fully matches the SIP trunk phone number.
 
-- There is a lot of latency between caller questions and Watson answers: This problem is most likely coming from latency that is caused by one of the Watson services. You can look at the Call Detail Record (CDR) to determine which service is misbehaving. For more information, see [Call Detail Records (CDRs)](#phone-troubleshooting-cdrs).
+- There is a lot of latency between caller questions and Watson answers: This problem is most likely coming from latency that is caused by one of the Watson services. You can view logs in IBM Log Analysis, see [Viewing logs](#phone-troubleshooting-logs). At the end of each call, you will see a `CWSGW0160I: Call was ended.` event. Expand on this entry to see a summary of the `max_response_milliseconds` as well as details of the `assistant_interaction_summaries`. This will help you identify which service the latency is coming from.
+
+  If your plan allows, you can also look at the Call Detail Record (CDR) to determine which service is misbehaving. For more information, see [Call Detail Records (CDRs)](#phone-troubleshooting-cdrs).
 
 ## Viewing logs
 {: #phone-troubleshooting-logs}
