@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-09-22"
+lastupdated: "2022-10-07"
 
 subcollection: watson-assistant
 
@@ -51,16 +51,13 @@ The example actions include a *Greet customer* action that asks the customer's n
 
 To access the {{site.data.keyword.conversationshort}} REST APIs, your application needs to be able to authenticate with {{site.data.keyword.Bluemix}} and connect to the assistant in the environment where it is deployed. You'll need to copy the service credentials and environment ID and paste them into your application code. You'll also need the URL for the location of your service instance (for example, `https://api.us-south.assistant.watson.cloud.ibm.com`).
 
-To access the service credentials and the environment ID from the {{site.data.keyword.conversationshort}} user interface, follow these steps:
+To find this information, follow these steps:
 
 1. Go to the **Environments** page and click the tab for the environment you want to connect to.
 
 1. Click the ![Environment settings icon](images/gear-icon-black.png) icon to open the environment settings.
 
-1. Select **API details** to see details for the environment, including the URL, assistant ID, and API key.
-
-The URL shown in the **Environment URL** field is an example URL for the `sessions` endpoint. You must edit this URL to remove everything after the instance ID. For more information about the service instance URL, see the [API reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2#endpoint-cloud){: external}. 
-{: note}
+1. Select **API details** to see details for the environment, including the service instance URL, environment ID, and API key.
 
 ## Communicating with the {{site.data.keyword.conversationshort}} service
 {: #api-client-communicate}
