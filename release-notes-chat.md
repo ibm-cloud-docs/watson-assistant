@@ -45,17 +45,13 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 *Release date: 10 October 2022*
 
-- **New `updateIsTypingCounter()` method**: The new `updateIsTypingCounter()` instance method allows you to change the display of the typing indicator.
-  
-  For more information, see [instance.updateIsTypingCounter()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateistypingcounter){: external}.
-- 
-- **New `updateBotUnreadIndicatorVisibility()` method**: The new `updateBotUnreadIndicatorVisibility()` instance method allows you to update the visibility of the unread indicator that appears on the launcher.
-  
-  For more information, see [instance.updateBotUnreadIndicatorVisibility()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatebotunreadindicatorvisibility){: external}.
+- **New `updateIsTypingCounter()` method**: The new `updateIsTypingCounter()` instance method updates the counter that determines whether the typing indicator is displayed. For more information, see [instance.updateIsTypingCounter()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateistypingcounter){: external}.
+
+- **New `updateBotUnreadIndicatorVisibility()` method**: The new `updateBotUnreadIndicatorVisibility()` instance method specifies whether the unread indicator on the launcher icon is shown or hidden. For more information, see [instance.updateBotUnreadIndicatorVisibility()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatebotunreadindicatorvisibility){: external}.
 
 - Connect to Agent and custom cards now have rounded corners.
 
-- Bug fixes
+- Bug fixes.
 
 ## 6.6.2
 {: #6.6.2}
