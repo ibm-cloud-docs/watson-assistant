@@ -44,28 +44,28 @@ All messages that are sent between the web chat and the assistant are encrypted 
 ## Before you begin
 {: #web-chat-security-prereq}
 
-The process you use to add the web chat to your website is simple. Its simplicity also means it can be misused. That's why it's important to verify that the messages sent to your assistant are coming from authorized users only.
-
 Before you enable security, complete the following steps:
 
-1.  Create a RS256 private/public key pair. {: #deploy-web-chat-security-origin}
+1. Create a RS256 private/public key pair. You can use a tool such as OpenSSL or PuTTYgen.
 
-    You can use a tool such as the OpenSSL command line or PuTTYgen.
+    For example, to create the key pair at a command prompt using OpenSSL, you would use the command `openssl genrsa -out key.pem 2048`.
 
-    - For example, to create the key pair: `openssl genrsa -out key.pem 2048`
 
-1.  Use your private key to sign a JSON Web Token (JWT). You will pass the token with the messages that are sent from your website as proof of their origin.
+
+
+
+1. Use your private key to sign a JSON Web Token (JWT). You will use the token to sign messages that are sent from your website as proof of their origin.
 
     The JWT payload must specify values for the following claims:
 
-    - `iss`: Represents the issuer of the JWT. This value is a case-sensitive string.
-    - `sub`: Represents the principal that is the subject of the JWT. This value must either be scoped to be locally unique in the context of the issuer or be globally unique. The value you specify for `sub` is used as the `user_id`.
+    - `iss`: The issuer of the JWT. This value is a case-sensitive string.
+    - `sub`: The principal that is the subject of the JWT. This value must either be scoped to be locally unique in the context of the issuer or be globally unique. The value you specify for `sub` is used as the `user_id`.
 
         The user ID that is specified in the `sub` claim is also sent in the `customer_id` section of the `X-Watson-Metadata` HTTP header. The `customer_id` can be used to make requests to delete user data. Because the ID is sent in a header field, the syntax must meet the requirements for header fields as defined in [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2){: external} (all visible ASCII characters).
         
         For more information about deleting user data, see [Labeling and deleting data](/docs/watson-assistant?topic=watson-assistant-admin-securing#securing-gdpr-wa).
 
-    - `exp`: Represents the expiration time on or after which the JWT cannot be accepted for processing. Many libraries set this value for you automatically. Set a short-lived `exp` claim with whatever library you use.
+    - `exp`: The expiration time on or after which the JWT cannot be accepted for processing. Many libraries set this value for you automatically. Set a short-lived `exp` claim with whatever library you use.
 
     For more information about JSON Web Tokens, see the [RFC7519](https://tools.ietf.org/html/rfc7519){: external} and [OpenID Connect 1.0](https://openid.net/specs/openid-connect-core-1_0.html){: external} specifications.
 
