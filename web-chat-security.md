@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-10-03"
+lastupdated: "2022-10-12"
 
 subcollection: watson-assistant
 
@@ -50,24 +50,21 @@ Before you enable security, complete the following steps:
 
     For example, to create the key pair at a command prompt using OpenSSL, you would use the command `openssl genrsa -out key.pem 2048`.
 
+1. Use the private key to sign a JSON Web Token (JWT). You will use this token to sign messages that are sent from your website as proof of their origin.
 
-
-
-
-1. Use your private key to sign a JSON Web Token (JWT). You will use the token to sign messages that are sent from your website as proof of their origin.
-
-    The JWT payload must specify values for the following claims:
+    The JWT payload must specify the following claims:
 
     - `iss`: The issuer of the JWT. This value is a case-sensitive string.
-    - `sub`: The principal that is the subject of the JWT. This value must either be scoped to be locally unique in the context of the issuer or be globally unique. The value you specify for `sub` is used as the `user_id`.
 
-        The user ID that is specified in the `sub` claim is also sent in the `customer_id` section of the `X-Watson-Metadata` HTTP header. The `customer_id` can be used to make requests to delete user data. Because the ID is sent in a header field, the syntax must meet the requirements for header fields as defined in [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2){: external} (all visible ASCII characters).
+    - `sub`: The principal that is the subject of the JWT. This value must either be scoped to be locally unique in the context of the issuer or be globally unique.
+    
+        The value you specify for `sub` is used as the user ID for messages signed with this token, which can affect billing. (For more information about user-based billing, see [User-based plans explained](/docs/watson-assistant?topic=watson-assistant-admin-managing-plan#admin-managing-plan-user-based)).
+
+        This same user ID is also used as the customer ID, which can be used to make requests to delete user data. Because the ID is sent in an HTTP header field, the syntax must meet the requirements for header fields as defined in [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2){: external} (all visible ASCII characters).
         
         For more information about deleting user data, see [Labeling and deleting data](/docs/watson-assistant?topic=watson-assistant-admin-securing#securing-gdpr-wa).
 
     - `exp`: The expiration time on or after which the JWT cannot be accepted for processing. Many libraries set this value for you automatically. Set a short-lived `exp` claim with whatever library you use.
-
-    For more information about JSON Web Tokens, see the [RFC7519](https://tools.ietf.org/html/rfc7519){: external} and [OpenID Connect 1.0](https://openid.net/specs/openid-connect-core-1_0.html){: external} specifications.
 
     Most programming languages offer JWT libraries that you can use to generate a token. The following NodeJS code sample illustrates how to generate a JWT token.
 
@@ -95,62 +92,57 @@ Before you enable security, complete the following steps:
     ```
     {: codeblock}
 
-
-
-
-
-
+For more information about JSON Web Tokens, see the [RFC7519](https://tools.ietf.org/html/rfc7519){: external} and [OpenID Connect 1.0](https://openid.net/specs/openid-connect-core-1_0.html){: external} specifications.
 
 ## Enable security
 {: #web-chat-security-task}
 
-
+Now that you have generated your JWT, you can enable web chat security.
 
 Enabling web chat security disables the shareable preview link. For more information about the preview link, see [Copying a link to share](/docs/watson-assistant?topic=watson-assistant-preview-share#preview-share-link).
-
+{: important}
 
 To enable security, complete the following steps:
 
-1.  From the **Security** tab of the web chat integration setup page in {{site.data.keyword.conversationshort}}, set the **Secure your web chat** switch to **On**.
+1. From the **Security** tab of the web chat integration settings, set the **Secure your web chat** switch to **On**.
 
-1.  Add your public key to the **Your public key** field.
+1. In the **Your public key** field, paste your public key.
 
-    The public key that you add is used to verify that data that claims to come from your web chat instance *is* coming from your web chat instance.
+    {{site.data.keyword.conversationshort}} uses the public key to verify that incoming messages originate from your website. Any messages that are not signed with the proper private key are rejected.
 
-1.  To prove that a message is coming from your website, each message that is submitted from your web chat implementation must include the JSON Web Token (JWT) that you created earlier.
+1. In your website HTML, update the web chat embed script to specify the JWT you generated. This token is used to sign each message sent from your website.
 
-    Add the token to the web chat code snippet that you embed in your website page. Specify the token in the `identityToken` property.
+    1. Specify the token in the [`identityToken`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionsidentitytoken){: external} property of the options object.
 
-    Starting with web chat version **3.2.0**, this step is optional. You do not have to add the `identityToken` property initially. You can skip this step as long as you perform the next step where you add the `identityTokenExpired` event. The event is fired when the web chat is first opened, and if a token wasn't provided, it obtains one from your handler at that time.
-    {: note}
+        ```html
+        <script>
+          window.watsonAssistantChatOptions = {
+              integrationID: 'YOUR_INTEGRATION_ID',
+              region: 'YOUR_REGION',
+              serviceInstanceID: 'YOUR_SERVICE_INSTANCE',
+              identityToken: 'YOUR_JWT',
+              onLoad: function(instance) {
+                instance.render();
+                }
+            };
+          setTimeout(function(){
+            const t=document.createElement('script');
+            t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+            document.head.appendChild(t);
+          });
+        </script>
+        ```
+        {: codeblock}
 
-    For example:
+        Starting with web chat version 3.2.0, this step is optional. Instead, you can complete the next step to provide the token using the `identityTokenExpired` event handler.
+        {: tip}
 
-    ```html
-    <script>
-      window.watsonAssistantChatOptions = {
-          integrationID: 'YOUR_INTEGRATION_ID',
-          region: 'YOUR_REGION',
-          serviceInstanceID: 'YOUR_SERVICE_INSTANCE',
-          identityToken: 'YOUR_JWT',
-          onLoad: function(instance) {
-            instance.render();
-            }
-        };
-      setTimeout(function(){
-        const t=document.createElement('script');
-        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
-        document.head.appendChild(t);
-      });
-    </script>
-    ```
-    {: codeblock}
+    1. In your `onLoad` event handler, use the [`on()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#on){: external} instance method to subscribe to the `identityTokenExpired` event. This event is fired in the following situations:
+    
+    - When the web chat opens, if no JWT was provided using the `identityToken` configuration option (web chat 3.2.0 and later only).
+    - When the JWT expires.
 
-    The JSON Web Token is automatically included on each subsequent request that is sent from the web chat until it expires.
-
-1.  You can add an event that is triggered when your token expires, or (starting with web chat version 3.2.0) when no token is specified initially. The event has a callback you can use to update the token and to process any messages that were queued for processing during the time the token was expired.
-
-    For example:
+    Use the event callback to provide a new token and to process any messages that were queued for processing during the time the token was expired:
 
     ```html
     <script>
@@ -179,6 +171,11 @@ To enable security, complete the following steps:
     </script>
     ```
     {: codeblock}
+
+    This step is required if you did not specify the JWT using the `identityToken` configuration option in the previuos step.
+    {: tip}
+
+    The JWT you specify is automatically used to sign each subsequent message that is sent from the web chat instance on your web site, until it expires.
 
 ### Passing sensitive data
 {: #web-chat-security-encrypt}
