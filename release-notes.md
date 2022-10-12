@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-23"
+lastupdated: "2022-10-11"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,24 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+<!--## 21 October 2022
+{: #watson-assistant-oct212022}
+{: release-note}
+
+Algorithm version updates
+:   The algorithm version setting for both actions and dialog now includes three choices: beta, latest, and previous. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).-->
+
+## 12 October 2022
+{: #watson-assistant-oct122022}
+{: release-note}
+
+`now()` method output includes time zone offset
+:   The string returned from the `now()` method now includes the time zone offset (such as `-05:00`). The new format is `yyyy-MM-dd HH:mm:ss 'GMT'XXX` (where `XXX` represents the time zone offset). This change enables accurate time zone computations when used with other date and time methods such as `before`, `after`, and `reformatDateTime`.
+
+    If you have an existing action or dialog that depends on the previous format, you can adapt it by reformatting the output using `now(timezone).reformatDateTime('yyyy-MM-dd HH:mm:ss')`.
+    
+    For more information, see [Expression language methods for actions](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-now).
 
 ## 23 September 2022
 {: #watson-assistant-sep232022}
