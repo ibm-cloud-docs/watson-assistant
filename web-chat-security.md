@@ -35,7 +35,7 @@ You can configure the web chat to authenticate users and protect private data.
 
 All messages that are sent between the web chat and the assistant are encrypted using Transport Layer Security (TLS). However, there are additional steps you can take to further secure the web chat.
 
-- You can [digitally sign messages](#web-chat-security-task) from the web chat to ensure that they originate from your website. If you enable web chat security, all messages are authenticated using a JSON Web Token (JWT) signed with an RSA private key.
+- You can [digitally sign messages](#web-chat-security-sign-messages) from the web chat to ensure that they originate from your website. If you enable web chat security, all messages are authenticated using a JSON Web Token (JWT) signed with an RSA private key.
 
 - You can [prevent unauthorized access](#web-chat-security-encrypt) to sensitive customer information. With web chat security enabled, you can use a public key to encrypt sensitive information as part of the JWT payload. This information is stored only in private variables, which cannot be seen by customers and are never included in logs.
 
@@ -95,7 +95,7 @@ Before you enable security, complete the following steps:
 For more information about JSON Web Tokens, see the [RFC7519](https://tools.ietf.org/html/rfc7519){: external} and [OpenID Connect 1.0](https://openid.net/specs/openid-connect-core-1_0.html){: external} specifications.
 
 ## Enable security
-{: #web-chat-security-task}
+{: #web-chat-security-enable}
 
 Now that you have generated your JWT, you can enable web chat security.
 
@@ -108,7 +108,7 @@ To enable security, complete the following steps:
 
 1. In the **Your public key** field, paste your public key.
 
-    {{site.data.keyword.conversationshort}} uses the public key to verify that incoming messages originate from your website. Any messages that are not signed with the proper private key are rejected.
+    {{site.data.keyword.conversationshort}} uses the public key to verify that incoming messages originate from your website.
 
 1. In your website HTML, update the web chat embed script to specify the JWT you generated. This token is used to sign each message sent from your website.
 
@@ -137,7 +137,16 @@ To enable security, complete the following steps:
         Starting with web chat version 3.2.0, this step is optional. Instead, you can complete the next step to provide the token using the `identityTokenExpired` event handler.
         {: tip}
 
-    1. In your `onLoad` event handler, use the [`on()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#on){: external} instance method to subscribe to the `identityTokenExpired` event. This event is fired in the following situations:
+After you enable security, you must complete the steps in the next section to digitally sign messages that are sent from your web chat instance.
+
+## Signing messages from the web chat
+{: #web-chat-security-sign-messages}
+
+After you have [enabled security](#web-chat-security-enable), you must update your web chat instance to digitally sign all messages using a JWT created with your private key. Any messages that are not signed with the proper private key are rejected.
+
+To sign web chat messages with a JWT, follow these steps:
+
+1. In your `onLoad` event handler, use the [`on()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#on){: external} instance method to subscribe to the `identityTokenExpired` event. This event is fired in the following situations:
     
     - When the web chat opens, if no JWT was provided using the `identityToken` configuration option (web chat 3.2.0 and later only).
     - When the JWT expires.
@@ -175,19 +184,24 @@ To enable security, complete the following steps:
     This step is required if you did not specify the JWT using the `identityToken` configuration option in the previuos step.
     {: tip}
 
-    The JWT you specify is automatically used to sign each subsequent message that is sent from the web chat instance on your web site, until it expires.
+The JWT you specify is automatically used to sign each subsequent message that is sent from the web chat instance on your web site, until it expires.
 
-### Passing sensitive data
+### Encrypting sensitive data
 {: #web-chat-security-encrypt}
 
-You can optionally copy the public key that is provided by IBM, and use it to add an additional level of encryption to support passing sensitive data from the web chat.
+By using the public key that is provided by IBM, you can add an additional level of encryption to prevent unauthorized access to sensitive data you send from the web chat.
 
 Use this method to send sensitive information in messages that come from your website, such as a information about a customer's loyalty level, a user ID, or security tokens to use in webhooks that you call from your actions. Information that is passed to your assistant in this way is stored in a private variable in your assistant. Private variables cannot be seen by customers and are never sent back to the web chat.
 
-For example, you might start a business process for a VIP customer that is different from the process you start for less important customers. You likely do not want non-VIPs to know that they are categorized as such. But you must pass this information to your action because it changes the route of the conversation. You can pass the customer MVP status as an encrypted variable. This private context variable will be available for use by the action, but not by anything else.
+For example, you might start a business process for a VIP customer that is different from the process you start for less important customers. You do not want non-VIPs to know that they are categorized as such, but you must pass this information to your action so it can change the flow of the conversation. To do this, you can pass the customer MVP status as an encrypted variable. This private context variable is available for use by the action, but not by anything else.
 
-1.  From the web chat configuration page, copy the public key from the **IBM provided public key** field.
-1.  From your website, write a function that signs a JSON Web Token.
+
+
+
+
+1. From the web chat configuration page, copy the public key from the **IBM provided public key** field. (This field is available only if [web chat security is enabled](#web-chat-security-enable).)
+
+1. From your website, write a function that signs a JSON Web Token.
 
     For example, the following NodeJS code snippet shows a function that accepts a userID and payload content and sends it to the web chat. If a payload is provided, its content is encrypted and signed with the IBM public key.
 
