@@ -44,6 +44,23 @@ This topic describes the new features, changes, and bug fixes in each release of
 
 Media responses
 :   The action editor now supports adding media and interactive responses in the **Assistant Says** field. For more information, see [Media responses](/docs/watson-assistant?topic=watson-assistant-respond-response-types).
+<!--## 21 October 2022
+{: #watson-assistant-oct212022}
+{: release-note}
+
+Algorithm version updates
+:   The algorithm version setting for both actions and dialog now includes three choices: beta, latest, and previous. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).-->
+
+## 12 October 2022
+{: #watson-assistant-oct122022}
+{: release-note}
+
+`now(String timezone)` method output includes time zone offset
+:   The string returned from the `now(String timezone)` method now includes the time zone offset (such as `-05:00`). The new format is `yyyy-MM-dd HH:mm:ss 'GMT'XXX` (where `XXX` represents the time zone offset). This change enables accurate time zone computations when used with other date and time methods such as `before`, `after`, and `reformatDateTime`.
+
+    If you have an existing action or dialog that depends on the previous format, you can adapt it by reformatting the output using `now(timezone).reformatDateTime('yyyy-MM-dd HH:mm:ss')`.
+    
+    For more information, see [Expression language methods for actions](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-now).
 
 ## 23 September 2022
 {: #watson-assistant-sep232022}

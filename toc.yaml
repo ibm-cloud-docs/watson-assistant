@@ -197,6 +197,7 @@ toc:
           topics:
           - action-response-modes.md
           - boost-words.md
+          - deploy-phone-amazon-connect.md
           - multiple-environments.md
           - trigger-phrases.md
 
