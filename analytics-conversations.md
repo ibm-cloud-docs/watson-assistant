@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-09-16"
+lastupdated: "2022-10-17"
 
 subcollection: watson-assistant
 
@@ -33,12 +33,15 @@ The **Conversations** page of {{site.data.keyword.conversationshort}} provides a
 
 Each timestamp represents a single conversation. The **Actions** column shows you how many actions, search queries, or unrecognized requests are included in that conversation. The **Requests** column includes the questions or requests the user entered that initiated an action, started a search query, or weren't recognized.
 
+If you have activated dialog in your assistant, the **Actions** column is replaced by a **Topics** column.
+{: note}
+
 ![Conversations page](images/analytics-conversations.png)
 
-## Choosing the time period
+## Choosing the environment and time period
 {: #analytics-conversations-time-period}
 
-To get started, choose the [environment](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments) (draft or live) and date range you want to analyze. All conversations reflect data based on the environment and the date range you select. When you change the enviornment or the date range, the conversations on the page update to reflect the new date range. You can also use **Refresh** ensure the latest data is shown.
+To get started, choose the [environment](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments) and date range you want to analyze. All conversations reflect data based on the environment and the date range you select. When you change the enviornment or the date range, the conversations on the page update to reflect the new date range. You can also use **Refresh** ensure the latest data is shown.
 
 ![Time period](images/analytics-conversations-time-period.png)
 
@@ -57,7 +60,13 @@ You can filter by:
 
 The Actions and Keyword filters always appear at the top of the page. To show the Recognition and Search filters, click the **Additional filters** icon.
 
+If you have activated dialog in your assistant, the **Actions** filter is replaced by a **Topics** filter.
+{: note}
+
 ![Conversation filters](images/analytics-conversations-filters.png)
+
+If you search for a specific session ID, enclose your search in quotation marks to ensure you receive an exact match on the full ID with its numbers and hyphen characters, for example: `"9015ab9a-2e13-4627-ae33-4179b1125cb5"`.
+{: note}
 
 ## Exploring conversations in detail
 {: #analytics-conversations-exploring}
