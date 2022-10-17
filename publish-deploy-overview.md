@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-10-17"
 
 subcollection: watson-assistant
 
@@ -116,8 +116,24 @@ The draft and live environments each have settings. On either tab, click the **S
 
 **Webhooks**
 
-Settings for pre-message, post-message, and log webhooks. For more information, see [Extending your assistant with webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview).
+Settings for pre-message, post-message, and log webhooks (Enterprise plan only). For more information, see [Extending your assistant with webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview).
 
 **Inactivity timeout**
 
-Specify the amount of time to wait after the user stops interacting with the assistant.
+Specify the amount of time to wait after the customer stops interacting with the assistant before ending the session.
+
+When a customer connects to your assistant through one of the built-in integrations, or through a custom client that uses the stateful `message` API, the session ends after the specified timeout interval.
+
+When the session ends, the assistant loses any contextual information that it saved during the conversation with the customer. For example, if the assistant asks for the customer's name and then calls the customer by that name throughout the rest of the conversation, then after the session ends and a new one begins, the assistant will start by asking for the customer's name again.
+
+The maximum inactivity timeout differs by service instance plan type. The following table lists the limits.
+
+| Service plan | Chat session default inactivity period | Chat session maximum inactivity period |
+|--------------|--------------------------------:|----------------------------:|
+| Enterprise   |                          1 hour |          168 hours (7 days) |
+| Premium (legacy) |                      1 hour |          168 hours (7 days) |
+| Plus         |                          1 hour |                    24 hours |
+| Trial        |                       5 minutes |                   5 minutes |
+| Lite         |                       5 minutes |                   5 minutes |
+{: caption="Service plan details" caption-side="top"}
+
