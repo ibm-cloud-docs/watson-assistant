@@ -43,7 +43,7 @@ This topic describes the new features, changes, and bug fixes in each release of
 {: release-note}
 
 Media responses
-:   The action editor now supports adding media and interactive responses in the **Assistant Says** field. For more information, see [Media responses](/docs/watson-assistant?topic=watson-assistant-respond-response-types).
+:   The action editor now supports adding media and interactive responses in the **Assistant Says** field. For more information, see [Media responses](/docs/watson-assistant?topic=watson-assistant-respond#respond-response-types).
 <!--## 21 October 2022
 {: #watson-assistant-oct212022}
 {: release-note}
