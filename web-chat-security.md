@@ -97,7 +97,7 @@ For more information about JSON Web Tokens, see the [RFC7519](https://tools.ietf
 ## Enable security
 {: #web-chat-security-enable}
 
-Now that you have generated your JWT, you can enable web chat security.
+After you [generate your JWT](#web-chat-security-prereq), you can enable web chat security.
 
 Enabling web chat security disables the shareable preview link. For more information about the preview link, see [Copying a link to share](/docs/watson-assistant?topic=watson-assistant-preview-share#preview-share-link).
 {: important}
@@ -186,10 +186,10 @@ To sign web chat messages with a JWT, follow these steps:
 
 The JWT you specify is automatically used to sign each subsequent message that is sent from the web chat instance on your web site, until it expires.
 
-### Authenticating users
+## Authenticating users
 {: #web-chat-security-authenticate}
 
-To authenticate and specify a unique ID for each customer, add the user ID information to the token.
+To authenticate and specify a unique ID for each customer, add the user ID information to the JWT.
 
 1. On the **Security** tab of the web chat integration settings, copy the public key from the **IBM provided public key** field.
 
@@ -220,7 +220,7 @@ To authenticate and specify a unique ID for each customer, add the user ID infor
 If you do not enable security, you can still specify user IDs for billing purposes. For more information, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-userid).
 {: tip}
 
-### Encrypting sensitive data
+## Encrypting sensitive data
 {: #web-chat-security-encrypt}
 
 By using the public key that is provided by IBM, you can add an additional level of encryption to prevent unauthorized access to sensitive data you send from the web chat.
