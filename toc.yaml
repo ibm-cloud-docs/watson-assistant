@@ -116,6 +116,8 @@ toc:
                   navtitle: Setting context variables
                 - topic: web-chat-develop-page-interaction.md
                   navtitle: Interacting with the host web page
+                - topic: web-chat-develop-security.md
+                  navtitle: Authenticating a user in the middle of a session
       - topicgroup:
           label: Deploying for phone
           topics:

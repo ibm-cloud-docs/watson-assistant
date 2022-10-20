@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-10-12"
+lastupdated: "2022-10-20"
 
 subcollection: watson-assistant
 
@@ -40,6 +40,8 @@ All messages that are sent between the web chat and the assistant are encrypted 
 - You can [authenticate users](#web-chat-security-authenticate) by user ID, enabling your assistant to control access to functions that require authorization.
 
 - You can [prevent unauthorized access](#web-chat-security-encrypt) to sensitive customer information. With web chat security enabled, you can use a public key to encrypt sensitive information as part of the JWT payload. This information is stored only in private variables, which cannot be seen by customers and are never included in logs.
+
+![development icon](images/development-icon.png) **Tutorial:** For a tutorial that shows an example of using web chat security to authenticate users and protect sensitive data, see [Tutorial: Authenticating a user in the middle of a session](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-security).
 
 ## Before you begin
 {: #web-chat-security-prereq}
@@ -210,7 +212,7 @@ To authenticate and specify a unique ID for each customer, add the user ID infor
     ```
     {: codeblock}
 
-    After you set the value of the `sub` claim to be the user's userID, you cannot change the claim to another user.
+    After you set the value of the `sub` claim to be the user's userID, you cannot change the claim to another user. If you need to add authenticated login information in the middle of a session, you can store it as part of the user payload. For an example of how to do this, see [Tutorial: Authenticating a user in the middle of a session](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-security).
     {: important}
 
     When the web chat integration receives a message signed with this JWT, it stores the user ID from the `sub` claim as `context.global.system.user_id`. For user-based plans, this user ID is used for billing purposes.
@@ -228,6 +230,9 @@ By using the public key that is provided by IBM, you can add an additional level
 Use this method to send sensitive information in messages that come from your website, such as a information about a customer's loyalty level, a user ID, or security tokens to use in webhooks that you call from your actions. Information that is passed to your assistant in this way is stored in a private variable in your assistant. Private variables cannot be seen by customers and are never sent back to the web chat.
 
 For example, you might start a business process for a VIP customer that is different from the process you start for less important customers. You do not want non-VIPs to know that they are categorized as such, but you must pass this information to your action so it can change the flow of the conversation. To do this, you can pass the customer MVP status as an encrypted variable. This private context variable is available for use by the action, but not by anything else.
+
+![development icon](images/development-icon.png) **Tutorial:** For a tutorial that shows an example of using web chat security to authenticate users and protect sensitive data, see [Tutorial: Authenticating a user in the middle of a session](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-security).
+{: tip}
 
 To encrypt sensitive data, follow these steps:
 
