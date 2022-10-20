@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-11"
+lastupdated: "2022-10-21"
 keywords: settings
 subcollection: watson-assistant
 
@@ -33,13 +33,11 @@ Use **Global settings** to configure features across all actions.
 
 On the **Actions** page, click **Global settings** ![Gear icon](images/gear-icon-black.png).
 
-![Global settings](images/global-settings.png)
-
 This page provides options, configurations, and tasks for the following:
 
 - [Ask clarifying question](#actions-global-settings-ask-clarifying-question)
 - [Change conversation topic](#actions-global-settings-change-conversation-topic)
-- [Algorithms versions](#actions-global-settings-algorithms-versions)
+- [Algorithms version](#actions-global-settings-algorithms-versions)
 - [Auto-save](#actions-global-settings-auto-save)
 - [Upload/Download](#actions-global-settings-upload-download)
 
@@ -77,16 +75,10 @@ If necessary, you can disable changing the topic for all actions:
 
 1. Click **Save**, and then click **Close**.
 
-## Algorithms versions
+## Algorithm version
 {: #actions-global-settings-algorithms-versions}
 
-**Algorithms versions** allows you to choose which version of {{site.data.keyword.conversationshort}} algorithms to apply to your future trainings.
-
-You can choose to use the more stable and fully supported version of algorithms by selecting **Baseline**. This is the latest mature version that you might want to use for your live assistant. Or you can choose **Beta** to preview and test what is coming. The capability in the beta version at any given time is likely to become the baseline version later on.
-
-The baseline and beta versions are labeled with dates such as **Baseline (2022-06-01)** or **Beta (2022-06-10)**. This refers to the release of a specific baseline or beta version. You can consult the [{{site.data.keyword.conversationshort}} release notes](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes) for details of updates made in that algorithms version release.
-
-Algorithm version options are currently available for Arabic, Chinese (Simplified), Chinese (Traditional), Czech, Dutch, English, French, German, Japanese, Korean, Italian, Portuguese, and Spanish. The universal language model uses default algorithm versions.
+**Algorithm version** allows you to choose which {{site.data.keyword.conversationshort}} algorithm to apply to your future trainings. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
 
 ## Auto-save
 {: #actions-global-settings-auto-save}
@@ -104,6 +96,8 @@ If you want to disable auto-save, you can toggle it off:
 1. On the **Auto-save** tab, set the switch to **Off**.
 
 1. Click **Save**, and then click **Close**.
+
+The auto-save setting is a user preference that applies to all assistants in your instance. Changing the setting applies only to you and doesn't affect other users. {: Note}
 
 ## Upload/Download
 {: #actions-global-settings-upload-download}
