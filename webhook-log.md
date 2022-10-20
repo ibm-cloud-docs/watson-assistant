@@ -28,7 +28,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Logging activity with a webhook ![Enterprise plan only](images/enterprise.png)
+# Logging activity with a webhook ![Plus or higher plan only](images/plus.png)
 {: #webhook-log}
 
 You can log activity by making a call to an external service or application every time a customer submits input to the assistant.
