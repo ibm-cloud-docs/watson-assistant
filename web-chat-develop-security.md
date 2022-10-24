@@ -129,3 +129,10 @@ ${system_integrations.chat.private.user_payload}.custom_user_id
 
 For complete working code, see the [Enabling security for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/web-chat-security){: external} example.
 
+## Security measures
+{: #web-chat-security-measures}
+
+The web chat integration undergoes tests and scans on a regular basis to find and address potential security issues, such as cross-site scripting (XSS) vulnerabilities.
+
+Be sure to run your own security reviews to see how the web chat fits in with your current website structure and policies. The web chat is hosted on your site and can inherit any vulnerabilities that your site has. Only serve content over HTTPS, use a Content Security Policy (CSP), and implement other basic web security precautions.
+

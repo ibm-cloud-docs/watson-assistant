@@ -82,6 +82,14 @@ toc:
               - web-chat-home-screen.md
               - web-chat-suggestions.md
           - topicgroup:
+              label: Web chat security
+              topics:
+                - topic: web-chat-security.md
+                  navtitle: Overview
+                - web-chat-security-enable.md
+                - web-chat-security-authenticate.md
+                - web-chat-security-encrypt.md
+          - topicgroup:
               label: Web chat development
               topics:
                 - topic: web-chat-develop.md
@@ -92,7 +100,6 @@ toc:
                 - web-chat-develop-userid.md
                 - web-chat-develop-strings.md
                 - web-chat-develop-global.md
-                - web-chat-security.md
                 - web-chat-develop-versions.md
           - topicgroup:
               label: Adding service desk support

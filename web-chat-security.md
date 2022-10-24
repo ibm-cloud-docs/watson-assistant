@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-10-20"
+lastupdated: "2022-11-01"
 
 subcollection: watson-assistant
 
@@ -27,314 +27,65 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Securing the web chat
+# Overview: Securing the web chat
 {: #web-chat-security}
 
-You can configure the web chat to authenticate users and protect private data.
+If you enable security, you can configure the web chat to authenticate users, protect private data, and restrict access to your assistant.
 {: shortdesc}
 
-All messages that are sent between the web chat and the assistant are encrypted using Transport Layer Security (TLS). However, there are additional steps you can take to further secure the web chat.
+## When to enable web chat security
+{: #web-chat-security-overview}
 
-- You can [digitally sign messages](#web-chat-security-sign-messages) from the web chat to ensure that they originate from your website. If you enable web chat security, all messages are authenticated using a JSON Web Token (JWT) signed with an RSA private key.
+All messages that are sent between the web chat and the assistant are encrypted using Transport Layer Security (TLS), which protects sensitive data as it travels through the network. However, there are still potential security exposures that you might need to protect against. By enabling the web chat security feature and updating your website code appropriately, you can add the following protections:
 
-- You can [authenticate users](#web-chat-security-authenticate) by user ID, enabling your assistant to control access to functions that require authorization.
+- You can prevent unauthorized websites from sending messages to your assistant, even if they copy your web chat embed script.
 
-- You can [prevent unauthorized access](#web-chat-security-encrypt) to sensitive customer information. With web chat security enabled, you can use a public key to encrypt sensitive information as part of the JWT payload. This information is stored only in private variables, which cannot be seen by customers and are never included in logs.
+- You can securely authenticate customers in order to control access to features of your assistant that require authorization.
 
-![development icon](images/development-icon.png) **Tutorial:** For a tutorial that shows an example of using web chat security to authenticate users and protect sensitive data, see [Tutorial: Authenticating a user in the middle of a session](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-security).
+- You can encrypt sensistive data so that customers cannot see it, while still allowing your assistant to access it.
 
-## Before you begin
-{: #web-chat-security-prereq}
+Web chat security uses JSON Web Tokens (JWTs), which are data objects that are sent with each message from your website to the {{site.data.keyword.conversationshort}} service. Because a JWT is digitally signed using a private encryption key that only you have, it ensures that each message originates with your website. The JWT payload can also be used to securely authenticate users and carry encrypted private data.
 
-Before you enable security, complete the following steps:
+For detailed information about JSON Web Tokens, see the [JWT specification](https://tools.ietf.org/html/rfc7519){: external}).
+{: tip}
 
-1. Create a RS256 private/public key pair. You can use a tool such as OpenSSL or PuTTYgen.
+## Steps for enabling web chat security
+{: #web-chat-security-steps }
 
-    For example, to create the key pair at a command prompt using OpenSSL, you would use the command `openssl genrsa -out key.pem 2048`.
+Implementing web chat security requires that a developer make changes to your website code. At a high level, the process of enabling security is as follows:
 
-1. Use the private key to sign a JSON Web Token (JWT). You will use this token to sign messages that are sent from your website as proof of their origin.
+1. In your web application code, implement a function that generates a JWT signed with your private encryption key.
 
-    The JWT payload must specify the following claims:
+1. In the web chat embed script on your website, use the web chat API to specify the generated JWT so it is included with all messages sent to the assistant.
 
-    - `iss`: The issuer of the JWT. This value is a case-sensitive string.
+1. Enable security in the web chat security settings and specify your public encryption key, which the web chat integration will use to verify that messages it receives were signed with your private key.
 
-    - `sub`: The principal that is the subject of the JWT. This value must either be scoped to be locally unique in the context of the issuer or be globally unique.
-    
-        The value you specify for `sub` is used as the user ID for messages signed with this token, which can affect billing. (For more information about user-based billing, see [User-based plans explained](/docs/watson-assistant?topic=watson-assistant-admin-managing-plan#admin-managing-plan-user-based)).
-
-        This same user ID is also used as the customer ID, which can be used to make requests to delete user data. Because the ID is sent in an HTTP header field, the syntax must meet the requirements for header fields as defined in [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2){: external} (all visible ASCII characters).
-        
-        For more information about deleting user data, see [Labeling and deleting data](/docs/watson-assistant?topic=watson-assistant-admin-securing#securing-gdpr-wa).
-
-    - `exp`: The expiration time on or after which the JWT cannot be accepted for processing. Many libraries set this value for you automatically. Set a short-lived `exp` claim with whatever library you use.
-
-    Most programming languages offer JWT libraries that you can use to generate a token. The following NodeJS code sample illustrates how to generate a JWT token.
-
-    ```javascript
-    // Sample NodeJS code on your server.
-    const jwt = require('jsonwebtoken');
-
-    /**
-     * Returns a signed JWT generated by RS256 algorithm.
-     */
-    function mockLogin() {
-        const payload = {
-            /*
-             * Even if this is an unauthenticated user, add a userID in the sub claim that can be used
-             * for billing purposes.
-             * This ID will help us keep track "unique users". For unauthenticated users, drop a
-             * cookie in the browser so you can make sure the user is counted uniquely across visits.
-             */
-            sub: 'some-user-id', // Required
-            iss: 'yourdomain.com' // Required
-        };
-        // The "expiresIn" option adds an "exp" claim to the payload.
-        return jwt.sign(payload, process.env.YOUR_PRIVATE_RSA_KEY, { algorithm: 'RS256', expiresIn: '10000ms' });
-    }
-    ```
-    {: codeblock}
-
-For more information about JSON Web Tokens, see the [RFC7519](https://tools.ietf.org/html/rfc7519){: external} and [OpenID Connect 1.0](https://openid.net/specs/openid-connect-core-1_0.html){: external} specifications.
-
-## Enable security
-{: #web-chat-security-enable}
-
-After you [generate your JWT](#web-chat-security-prereq), you can enable web chat security.
-
-Enabling web chat security disables the shareable preview link. For more information about the preview link, see [Copying a link to share](/docs/watson-assistant?topic=watson-assistant-preview-share#preview-share-link).
-{: important}
-
-To enable security, complete the following steps:
-
-1. On the **Security** tab of the web chat integration settings, set the **Secure your web chat** switch to **On**.
-
-1. In the **Your public key** field, paste your public key.
-
-    {{site.data.keyword.conversationshort}} uses the public key to verify that incoming messages originate from your website.
-
-1. In your website HTML, update the web chat embed script to specify the JWT you generated. This token is used to sign each message sent from your website.
-
-    1. Specify the token in the [`identityToken`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionsidentitytoken){: external} property of the options object.
-
-        ```html
-        <script>
-          window.watsonAssistantChatOptions = {
-              integrationID: 'YOUR_INTEGRATION_ID',
-              region: 'YOUR_REGION',
-              serviceInstanceID: 'YOUR_SERVICE_INSTANCE',
-              identityToken: 'YOUR_JWT',
-              onLoad: function(instance) {
-                instance.render();
-                }
-            };
-          setTimeout(function(){
-            const t=document.createElement('script');
-            t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
-            document.head.appendChild(t);
-          });
-        </script>
-        ```
-        {: codeblock}
-
-        Starting with web chat version 3.2.0, this step is optional. Instead, you can complete the next step to provide the token using the `identityTokenExpired` event handler.
-        {: tip}
-
-After you enable security, you must complete the steps in the next section to digitally sign messages that are sent from your web chat instance.
-
-## Signing messages from the web chat
-{: #web-chat-security-sign-messages}
-
-After you have [enabled security](#web-chat-security-enable), you must update your web chat instance to digitally sign all messages using a JWT created with your private key. Any messages that are not signed with the proper private key are rejected.
-
-To sign web chat messages with a JWT, follow these steps:
-
-1. In your `onLoad` event handler, use the [`on()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#on){: external} instance method to subscribe to the `identityTokenExpired` event. This event is fired in the following situations:
-    
-    - When the web chat opens, if no JWT was provided using the `identityToken` configuration option (web chat 3.2.0 and later only).
-    - When the JWT expires.
-
-    Use the event callback to provide a new token and to process any messages that were queued for processing during the time the token was expired:
-
-    ```html
-    <script>
-    window.watsonAssistantChatOptions = {
-      integrationID: 'YOUR_INTEGRATION_ID',
-      region: 'YOUR_REGION',
-      serviceInstanceID: 'YOUR_SERVICE_INSTANCE',
-      identityToken: 'YOUR_JWT',
-      onLoad: function(instance) {
-        instance.on({ type: 'identityTokenExpired', handler: function(event) {
-          // Perform whatever actions you need to take on your system to get a new token.
-          return new Promise(function(resolve, reject) {
-            // And then pass the new JWT into the callback and the service will resume processing messages.
-            event.identityToken = 'YOUR NEW JWT';
-            resolve();
-          });
-        }});
-        instance.render();
-      }
-    };
-    setTimeout(function(){
-        const t=document.createElement('script');
-        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
-        document.head.appendChild(t);
-      });
-    </script>
-    ```
-    {: codeblock}
-
-    This step is required if you did not specify the JWT using the `identityToken` configuration option in the previuos step.
-    {: tip}
-
-The JWT you specify is automatically used to sign each subsequent message that is sent from the web chat instance on your web site, until it expires.
-
-## Authenticating users
-{: #web-chat-security-authenticate}
-
-To authenticate and specify a unique ID for each customer, add the user ID information to the JWT.
-
-1. On the **Security** tab of the web chat integration settings, copy the public key from the **IBM provided public key** field.
-
-1. In the JavaScript function you use to create your JWT, use the customer's user ID as the value of the `sub` claim in the JWT payload.
-
-    For example, the following NodeJS code snippet set the customer's user ID to `L12345`.
-
-    ```javascript
-    // Example code snippet to include user ID in JWT.
-    function mockLogin() {
-      const payload = {
-        sub: 'L12345', // Required
-        iss: 'www.example.com' // Required
-      };
-      const token = jwt.sign(payload, process.env.YOUR_PRIVATE_RSA_KEY, { algorithm: 'RS256', expiresIn: '10000ms' });
-    return token;
-    }
-    ```
-    {: codeblock}
-
-    After you set the value of the `sub` claim to be the user's userID, you cannot change the claim to another user. If you need to add authenticated login information in the middle of a session, you can store it as part of the user payload. For an example of how to do this, see [Tutorial: Authenticating a user in the middle of a session](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-security).
+    After you enable web chat security, any message received by the web chat integration that is not accompanied by a properly signed JWT will be rejected.
     {: important}
 
-    When the web chat integration receives a message signed with this JWT, it stores the user ID from the `sub` claim as `context.global.system.user_id`. For user-based plans, this user ID is used for billing purposes.
+For detailed information about how to complete these steps, see [Enabling web chat security](/docs/watson-assistant?topic=watson-assistant-web-chat-security-enable).
 
-    The user ID that is specified in the `sub` claim is also sent in the `customer_id` section of the `X-Watson-Metadata` HTTP header. The customer ID can be used to make requests to delete user data. Because the ID is sent in a header field, the syntax must meet the requirements for header fields as defined in [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2){: external}. (For more information about deleting user data, see [Labeling and deleting data](/docs/watson-assistant?topic=watson-assistant-admin-securing#securing-gdpr-wa).)
+With web chat security enabled, you can optionally implement additional security measures as needed:
 
-If you do not enable security, you can still specify user IDs for billing purposes. For more information, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-userid).
-{: tip}
+- You can use JWTs to securely [authenticate customers](#web-chat-security-authenticate) by user ID, which makes it possible for your assistant to control access to functions that require authorization.
 
-## Encrypting sensitive data
-{: #web-chat-security-encrypt}
+    Without web chat security enabled, each customer who uses your assistant is identified only by the `user_id` property that is part of the message request. This is sufficient for identifying unique users for billing purposes, but it is not secure, because it could be modified.
 
-By using the public key that is provided by IBM, you can add an additional level of encryption to prevent unauthorized access to sensitive data you send from the web chat.
+    By encoding user identity information as part of the JWT payload, you can authenticate users securely. The JWT payload is encrypted and cannot be accessed or modified by the user.
 
-Use this method to send sensitive information in messages that come from your website, such as a information about a customer's loyalty level, a user ID, or security tokens to use in webhooks that you call from your actions. Information that is passed to your assistant in this way is stored in a private variable in your assistant. Private variables cannot be seen by customers and are never sent back to the web chat.
+    For more information about using JWTs for secure authentication, see [Authenticating users](/docs/watson-assistant?topic=watson-assistant-web-chat-security-authenticate).
 
-For example, you might start a business process for a VIP customer that is different from the process you start for less important customers. You do not want non-VIPs to know that they are categorized as such, but you must pass this information to your action so it can change the flow of the conversation. To do this, you can pass the customer MVP status as an encrypted variable. This private context variable is available for use by the action, but not by anything else.
+- You can [prevent unauthorized access](#web-chat-security-encrypt) to sensitive customer information by encrypting it and including it as part of the JWT user payload.
 
-![development icon](images/development-icon.png) **Tutorial:** For a tutorial that shows an example of using web chat security to authenticate users and protect sensitive data, see [Tutorial: Authenticating a user in the middle of a session](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-security).
-{: tip}
+    The user payload is a part of the JWT you can use to send information you want your assistant to have access to, but that you do not want customers to see. This information is stored only in private variables, which cannot be seen by customers and are never included in logs.
 
-To encrypt sensitive data, follow these steps:
+    For more information about using the user payload to protect sensitive information, see [Encrypting sensitive data](/docs/watson-assistant?topic=watson-assistant-web-chat-security-encrypt).
 
-1. On the **Security** tab of the web chat integration settings, copy the public key from the **IBM provided public key** field. (This field is available only if [web chat security is enabled](#web-chat-security-enable).)
+![development icon](images/development-icon.png) **Tutorial:** For a developer tutorial that shows an example of using web chat security to authenticate users and protect sensitive data, see [Tutorial: Authenticating a user in the middle of a session](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-security).
 
-1. In the JavaScript function you use to create your JWT, include in the payload a private claim called `user_payload`. Use this claim to contain the sensitive data, encrypted the data using the IBM public key.
-
-    For example, the following code snippet shows a function that accepts a userID and user payload. If a user payload is provided, its content is encrypted and signed with the IBM public key. (In this example, the public key is stored in an environment variable.)
-
-    ```javascript
-    // Example code snippet to encrypt sensitive data in JWT payload.
-    const jwt = require('jsonwebtoken');
-    const RSA = require('node-rsa');
-
-    const rsaKey = new RSA(process.env.PUBLIC_IBM_RSA_KEY);
-
-    /**
-    * Returns a signed JWT. Optionally, also adds an encrypted user payload
-    * as stringified JSON in a private claim.
-    */
-    function mockLogin(userID, userPayload) {
-    const payload = {
-      sub: userID, // Required
-      // The exp claim is automatically added by the jsonwebtoken library.
-    };
-    if (userPayload) {
-        // If there is a user payload, encrypt it using the IBM public key
-        // and base64 format.
-        payload.user_payload = rsaKey.encrypt(userPayload, 'base64');
-    }
-    const token = jwt.sign(payload, process.env.YOUR_PRIVATE_RSA_KEY, { algorithm: 'RS256', expiresIn: '10000ms' });
-    return token;
-    }
-    ```
-    {: codeblock}
-
-1. When the web chat integration receives a message signed with this JWT, the content of the `user_payload` claim is decrypted and saved as the `context.integrations.chat.private.user_payload` object. Because this is a private variable, it will not be included in logs.
-
-## Logging out
-{: #web-chat-security-logout}
-
-To log out a customer, you must destroy the web chat.
-
-If you reload the page when a customer logs out, call the [`destroySession()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#destroySession){: external} instance method to remove any reference to the current session from the browser's cookies and storage. If you do not call this method, information that is protected by the JWT is not at risk, but the web chat will try to connect to the previous session and fail.
-
-If you do not perform a full page reload when a customer logs out, call the [`destroy()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#destroy){: external} instance method. The `destroy` method removes the current instance of the web chat that is configured for the current userID from the DOM and browser memory. Next, call the [`destroySession()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#destroySession){: external} instance method.
-
-## Updating site security policies
-{: #web-chat-security-csp}
-
-If your website uses a Content Security Policy (CSP), you must update it to grant permission to the web chat.
-
-The following table lists the values to add to your CSP.
-
-| Property | Additional values |
-|----------|-------------------|
-| default-src	| 'self' *.watson.appdomain.cloud fonts.gstatic.com 'unsafe-inline' |
-| connect-src |	*.watsonplatform.net *.watson.appdomain.cloud |
-{: caption="CSP properties" caption-side="top"}
-
-The following example shows a complete CSP metadata tag:
-
-```html
-<meta
-  http-equiv="Content-Security-Policy"
-  content="default-src 'self' *.watson.appdomain.cloud fonts.gstatic.com 'unsafe-inline';connect-src *.watsonplatform.net *.watson.appdomain.cloud" />
-```
-{: codeblock}
-
-### Allowing elements
-{: #web-chat-security-allow-elements}
-
-If your CSP uses a nonce to add elements such as `<script>` and `<style>` tags to an allowlist, do not use `unsafe-inline` to allow all such elements. Instead, provide a nonce value to the web chat widget as a configuration option. The web chat will then set the nonce on any of the `<script>` and `<style>` elements that it generates dynamically.
-
-A CSP that passes a nonce to the web chat widget might look like this:
-
-<meta
-  http-equiv="Content-Security-Policy"
-  content="default-src 'self' *.watson.appdomain.cloud fonts.gstatic.com 'nonce-<server generated value>';connect-src *.watsonplatform.net *.watson.appdomain.cloud"
->
-
-You can pass the nonce to the web chat by editing the embed script as follows:
-
-```javascript
-window.watsonAssistantChatOptions = {
-  integrationID: "YOUR_INTEGRATION_ID",
-  region: "YOUR_REGION",
-  serviceInstanceID: "YOUR_SERVICE_INSTANCE",
-
-  cspNonce: "<server generated value>",
-
-  onLoad: function(instance) {
-    instance.render();
-  }
-};
-```
-{: codeblock}
-
-## Security measures
-{: #web-chat-security-measures}
+## Reviewing security
+{: #web-chat-security-review}
 
 The web chat integration undergoes tests and scans on a regular basis to find and address potential security issues, such as cross-site scripting (XSS) vulnerabilities.
 
 Be sure to run your own security reviews to see how the web chat fits in with your current website structure and policies. The web chat is hosted on your site and can inherit any vulnerabilities that your site has. Only serve content over HTTPS, use a Content Security Policy (CSP), and implement other basic web security precautions.
-
