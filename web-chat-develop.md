@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-09-23"
+lastupdated: "2022-10-07"
 
 subcollection: watson-assistant
 
@@ -88,7 +88,7 @@ Customizing the look of the web chat {: #look}
     ![development icon](images/development-icon.png) **Tutorial:** For a tutorial that shows how to choose and customize a theme, see [Carbon themes](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-carbon-themes){: external}.
 
 Customizing the home screen {: #home-screen}
-:   The home screen greets the customer and shows a list of suggested conversation starters. You can customize the style and content of the home screen:
+:   The home screen greets the customer and optionally shows a list of suggested conversation starters. You can customize the style and content of the home screen:
 
     - To add elements to the home screen, you can define custom HTML using the [`writeableElements.homeScreenAfterStartersElement`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#writeableelements){: external} theming variable.
 

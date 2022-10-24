@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-05-24"
+lastupdated: "2022-09-26"
 
 subcollection: watson-assistant
 
@@ -56,7 +56,7 @@ At run time, output containing multiple responses might be split into multiple m
 
 ### Adding responses
 
-To specify a response in the JSON editor, insert the appropriate JSON objects into the `output.generic` field of the step response. The following example shows output containing two responses of different types (text and an image):
+To specify a response in the JSON editor, insert the appropriate JSON objects into the `generic` field of the step response. The following example shows output containing two responses of different types (text and an image):
 
 ```json
 {
@@ -97,8 +97,7 @@ If you plan to deploy your assistant to multiple channels, you might want to sen
 
 This mechanism is useful if your conversation flow does not change based on the integration in use, and if you cannot know in advance what integration the response will be sent to at run time. By using `channels`, you can define a single step that supports all integrations, while still customizing the output for each channel. For example, you might want to customize the text formatting, or even send different response types, based on what the channel supports.
 
-<!-- Channel transfer not yet supported in actions
-Using `channels` is particularly useful in conjunction with the `channel_transfer` response type. Because the message output is processed both by the channel initiating the `transfer` and by the target channel, you can use `channels` to define responses that will only be processed by one or the other. (For more information, and an example, see [Channel transfer](#assistant-responses-json-channel-transfer).) -->
+Using `channels` is particularly useful in conjunction with the `channel_transfer` response type. Because the message output is processed both by the channel initiating the `transfer` and by the target channel, you can use `channels` to define responses that will only be processed by one or the other. (For more information, and an example, see [Channel transfer](#assistant-responses-json-channel-transfer).)
 
 To specify the integrations for which a response is intended, include the optional `channels` array as part of the response object. All response types support the `channels` array. This array contains one or more objects using the following syntax:
 
@@ -186,10 +185,9 @@ Not all channel integrations support all response types. For information about w
 `audio`
 :   Plays an audio clip specified by a URL.
 
-<!-- Channel transfer not yet supported in actions
 `channel_transfer`
 
-:   Requests that the conversation be transferred to a different integration. (Currently, only the web chat integration can be the target of a channel transfer.) -->
+:   Requests that the conversation be transferred to a different integration. (Currently, only the web chat integration can be the target of a channel transfer.)
 
 `connect_to_agent`
 :   Requests that the conversation be transferred to a human service desk agent for help.
@@ -251,6 +249,7 @@ The following table indicates which channel integrations support each type. For 
 | Response type    | Web chat                          | Phone                             | SMS                               | Slack                             | Facebook                          | Whatsapp                          |
 |------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
 | audio            | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
+| channel_transfer |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 | connect_to_agent | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   | ![Yes](images/checkmark-icon.svg) |
 | date             | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |                                   |
 | dtmf             |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |

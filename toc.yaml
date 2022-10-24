@@ -58,6 +58,7 @@ toc:
           - save-actions.md
           - review.md
           - actions-global-settings.md
+          - algorithm-version.md
           - manage-actions.md
           - assistant-add.md
           - assistant-rename-delete.md
@@ -196,6 +197,8 @@ toc:
           label: Early access features
           topics:
           - action-response-modes.md
+          - boost-words.md
+          - deploy-phone-amazon-connect.md
           - multiple-environments.md
           - trigger-phrases.md
 

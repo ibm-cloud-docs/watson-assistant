@@ -49,13 +49,14 @@ In some cases, you might want to combine response types to perform multiple acti
 You can also perform the following phone-specific actions:
 
 - [Inject custom values into CDR log events](#phone-actions-cdr-custom-data)
+- [Access phone integration context variables from your action](#phone-actions-access-context-variables)
 
-For reference information about repsonse types, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference). <!-- For reference information about phone-specific context variables, see [Phone context variables](/docs/watson-assistant?topic=watson-assistant-phone-context). -->
+For reference information about response types, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference). <!-- For reference information about phone-specific context variables, see [Phone context variables](/docs/watson-assistant?topic=watson-assistant-phone-context). -->
 
 ## Adding phone-specific responses to your assistant
 {: #phone-actions-add}
 
-To initiate a voice-specific interaction from a an action step, add a response within the `output.generic` array using the appropriate response type. For more information about using the JSON editor to add responses, see [Defining responses using the JSON editor](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json).
+To initiate a voice-specific interaction from a an action step, add a response within the `generic` array using the appropriate response type. For more information about using the JSON editor to add responses, see [Defining responses using the JSON editor](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json).
 
 ## Applying advanced settings to the {{site.data.keyword.speechtotextshort}} service
 {: #phone-actions-speech-advanced}
@@ -406,7 +407,6 @@ If you define a SIP URI as the transfer target, escape the at sign (`@`) in the 
 
 ###  Transferring after hangup
 
-
 By default, the phone integration transfers calls by using a SIP `REFER` request. Depending on the IVR service provider, you might need to configure call transfer to use a SIP `BYE` request instead.
 Use the  `transfer_method`  attribute to specify how to transfer the call, using either  `refer`  or  `hangup`. When `transfer_method` is set to  `hangup` instead of `refer`, the behavior of the transfer action changes. Instead of sending a SIP `REFER` request, the phone integration plays back any associated text and then hangs up the call by sending a SIP `BYE` request.
 
@@ -442,6 +442,18 @@ After the hangup, the phone integration passes the transfer destination that is 
 ```
 {: codeblock}
 
+
+### Transferring upon failure
+
+To configure transfer on failures, go to the **Advanced** tab in the phone integration settings. The following selections can be configured:
+
+- **Transfer failure message**
+
+- **Disconnect call on transfer failure**
+
+For more information, see [Handling call and transfer failures](/docs/watson-assistant?topic=watson-assistant-deploy-phone-config#deploy-phone-config-failure).
+
+
 ### Passing Watson Assistant Metadata in SIP Signaling
 
 To support loading the conversational history between the caller and {{site.data.keyword.conversationshort}}, the phone integration specifies a value for the `User-to-User` header as a key that can be used with the web chat integration. If `User-to-User` is specified in the `transfer_headers` list, the session history key is sent in the `X-Watson-Assistant-Session-History-Key` header.
@@ -462,7 +474,7 @@ CSeq: 23 REFER
 Max-Forwards: 7
 Refer-To: sip:user@domain.com
 X-Watson-Assistant-Token: 8f817472-8c57-4117-850d-fdf4fd23ba7
-User-to-User: dev::latest::212033::0a64c30d-c558-4055-85ad-ef75ad6cc29d::978f1fd7-4e24-47d8-adb0-24a8a6eff69e::b5ffd6c2-902f-4658-b586-e3fc170a6cf3::7ad616a350cc48078f17e3ee3df551de;encoding=ascii
+User-to-User: 637573746f6d2d757365722d746f2d75736572;encoding=hex
 Contact: sip:a@atlanta.example.com
 Content-Length: 0
 ```
@@ -480,7 +492,7 @@ Call-ID: 898234234@agenta.atlanta.example.com
 CSeq: 93809823 REFER
 Max-Forwards: 70
 Refer-To: sip:user@domain.com
-User-to-User: 637573746f6d2d757365722d746f2d75736572;encoding=hex;
+User-to-User: 637573746f6d2d757365722d746f2d75736572;encoding=hex
 X-Watson-Assistant-Session-History-Key: dev::latest::212033::0a64c30d-c558-4055-85ad-ef75ad6cc29d::978f1fd7-4e24-47d8-adb0-24a8a6eff69e::b5ffd6c2-902f-4658-b586-e3fc170a6cf3::7ad616a350cc48078f17e3ee3df551de
 Contact: sip:a@atlanta.example.com
 Content-Length: 0
@@ -497,7 +509,7 @@ From: <sip:a@atlanta.example.com>;tag=193402342
 Call-ID: 898234234@agenta.atlanta.example.com
 CSeq: 23 REFER
 Max-Forwards: 70
-Refer-To: sip:user@domain.com?User-to-User=dev::latest::893499::dff9c274-adc4-4f63-93de-781166760bf8::978f1fd7-4e24-47d8-adb0-24a8a6eff69e::b5ffd6c2-902f-4658-b586-e3fc170a6cf3::7ad616a350cc48078f17e3ee3df551de%3Bencoding%3Dascii
+Refer-To: sip:user@domain.com?User-to-User=637573746f6d2d757365722d746f2d75736572%3Bencoding%3Dhex
 Contact: sip:a@atlanta.example.com
 Content-Length: 0
 ```
@@ -513,12 +525,15 @@ From: <sip:a@atlanta.example.com>;tag=193402342
 Call-ID: 898234234@agenta.atlanta.example.com
 CSeq: 93809823 REFER
 Max-Forwards: 70
-Refer-To: sip:user@domain.com?User-to-User=637573746f6d2d757365722d746f2d75736572%3Bencoding%3Dhe&X-Watson-Assistant-Session-History-Key=dev::latest::893499::dff9c274-adc4-4f63-93de-781166760bf8::978f1fd7-4e24-47d8-adb0-24a8a6eff69e::b5ffd6c2-902f-4658-b586-e3fc170a6cf3::7ad616a350cc48078f17e3ee3df551de
+Refer-To: sip:user@domain.com?User-to-User=637573746f6d2d757365722d746f2d75736572%3Bencoding%3Dhex&X-Watson-Assistant-Session-History-Key=dev::latest::893499::dff9c274-adc4-4f63-93de-781166760bf8::978f1fd7-4e24-47d8-adb0-24a8a6eff69e::b5ffd6c2-902f-4658-b586-e3fc170a6cf3::7ad616a350cc48078f17e3ee3df551de
 Contact: sip:a@atlanta.example.com
 Content-Length: 0
 
 ```
 {: codeblock}
+
+For Twilio Flex, the `User-to-User` header will use encoding=ascii.
+{: note}
 
 ## Playing hold music or a voice recording
 {: #phone-actions-hold-music}
@@ -550,8 +565,8 @@ The following example shows an `audio` response with `loop`=`true`, and a `user_
       }
     },
     {
-      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Random_composition3.wav",
       "response_type": "audio",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Random_composition3.wav",
       "channel_options": {
         "voice_telephony": {
           "loop": true
@@ -708,30 +723,28 @@ The `channel_transfer` response type can be used with the phone integration only
 
 ```json
 {
-  "output": {
-    "generic": [
-      {
-        "response_type": "text",
-        "values": [
-          {
-            "text": "I will send you a text message now with a link to our website."
-          }
-        ],
-        "selection_policy": "sequential"
-      },
-      {
-        "response_type": "channel_transfer",
-        "message_to_user": "Click the link to connect with an agent using our website.",
-        "transfer_info": {
-          "target": {
-            "chat": {
-              "url": "https://example.com/webchat"
-            }
+  "generic": [
+    {
+      "response_type": "text",
+      "values": [
+        {
+          "text": "I will send you a text message now with a link to our website."
+        }
+      ],
+      "selection_policy": "sequential"
+    },
+    {
+      "response_type": "channel_transfer",
+      "message_to_user": "Click the link to connect with an agent using our website.",
+      "transfer_info": {
+        "target": {
+          "chat": {
+            "url": "https://example.com/webchat"
           }
         }
       }
-    ]
-  }
+    }
+  ]
 }
 ```
 {: codeblock}
@@ -859,7 +872,7 @@ If the assistant is unable to send an SMS message to the caller, a new turn is i
 ## Defining a sequence of phone commands
 {: #phone-actions-sequence}
 
-If you want to run more than one command in succession, include multiple responses in the `output.generic` array. These commands are processed in the order in which they are specified in the array.
+If you want to run more than one command in succession, include multiple responses in the `generic` array. These commands are processed in the order in which they are specified in the array.
 
 This example shows two responses: first a text response, followed by an `end_session` response to end the call.
 
@@ -943,3 +956,27 @@ To remove a previously defined property, you must explicitly set it to an empty 
 
 ```
 {: codeblock}
+
+## Access phone integration context variables from your action
+{: #phone-actions-access-context-variables}
+
+If you want to access the phone integration context variables, use the JSON editor to edit the context.
+
+The following example shows how to access the user phone number (i.e. the phone number that the call was received from):
+
+```json
+  "context": {
+    "variables": [
+      {
+        "value": {
+          "expression": "${system_integrations.voice_telephony.private.user_phone_number}.replace('+','')"
+        },
+        "skill_variable": "user_phone_number"
+      }
+    ]
+  }
+
+```
+{: codeblock}
+
+For more information about the phone integration context variables, see [Phone integration context variables](/docs/watson-assistant?topic=watson-assistant-phone-context).
