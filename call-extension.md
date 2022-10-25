@@ -170,25 +170,25 @@ If your calls to an extension are failing, you might want to debug the problem b
     You can also click the ![Extension inspector icon](images/extension-inspector-icon.png) icon to show or hide the extension inspector. However, you must click **Inspect** in the preview pane to show information about a particular call to an extension.
     {: tip}
 
-The extension inspector shows the following information about a call to an extension:
+    The extension inspector shows the following information about a call to an extension:
 
-Extension
-:   The name of the extension, as specified in the extension settings.
+    Extension
+    :   The name of the extension, as specified in the extension settings.
 
-Operation
-:   The operation that was called.
+    Operation
+    :   The operation that was called.
 
-Status
-:   The HTTP status code from the response. This code can help you determine if an error is being returned from the external service.
+    Status
+    :   The HTTP status code from the response. This code can help you determine if an error is being returned from the external service.
 
-    There are many possible HTTP status codes, and different methods use different status codes to indicate various types of success or failure. To check the success or failure of a call to an extension, you need to know what HTTP status codes the external service returns. These status codes are specified in the OpenAPI document that describes the external API.
-    {: important}
+        There are many possible HTTP status codes, and different methods use different status codes to indicate various types of success or failure. To check the success or failure of a call to an extension, you need to know what HTTP status codes the external service returns. These status codes are specified in the OpenAPI document that describes the external API.
+        {: important}
 
-Request parameters
-:   The input parameters that were sent to the external API as part of the request.
+    Request parameters
+    :   The input parameters that were sent to the external API as part of the request.
 
-Response properties
-:   The values of all properties included in the response from the external API. These are the values that are mapped to action variables after the call to the extension completes.
+    Response properties
+    :   The values of all properties included in the response from the external API. These are the values that are mapped to action variables after the call to the extension completes.
 
 1. Click the **Advanced** tab in the extension inspector if you want to see the raw HTTP request (in the form of a cURL command) and the complete JSON data of the response.
 
