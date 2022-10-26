@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-25"
+lastupdated: "2022-10-26"
 
 subcollection: watson-assistant
 
@@ -190,5 +190,7 @@ If your calls to an extension are failing, you might want to debug the problem b
     Response properties
     :   The values of all properties included in the response from the external API. These are the values that are mapped to action variables after the call to the extension completes.
 
-1. Click the **Advanced** tab in the extension inspector if you want to see the raw HTTP request (in the form of a cURL command) and the complete JSON data of the response.
+1. Click the **Advanced** tab in the extension inspector if you want to see the raw request and response data:
+    - The request is shown as a cURL command, which you can run at a command prompt or import into a tool such as [Postman](https://www.postman.com/){: external}. (For security reasons, the content of any `Authorization` header is not included.)
+    - The response is shown as the complete JSON data returned from the external API.
 
