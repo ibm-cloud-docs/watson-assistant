@@ -4,8 +4,6 @@ copyright:
   years: 2018, 2022
 lastupdated: "2022-08-04"
 
-keywords: subaction, sub-action
-
 subcollection: watson-assistant
 
 ---
