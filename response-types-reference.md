@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-06"
+lastupdated: "2022-10-27"
 
 subcollection: watson-assistant
 
@@ -530,7 +530,7 @@ Pauses before sending the next message to the channel, and optionally sends a "u
 |-----------------------------------|-----------------------------------|-----------------------------------|
 | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
-- With the phone integration, you can add a pause by using the `turn_settings.timeout_count` context variable (for more information, see [Context variables that are set by your dialog or actions](/docs/watson-assistant?topic=watson-assistant-phone-context#phone-context-variables-set-by-dialog)).
+- With the phone integration, you can add a pause by including the SSML `break` element in the assistant output. For more information, see the [{{site.data.keyword.texttospeechshort}} documentation](/docs/text-to-speech?topic=text-to-speech-elements#break_element){: external}.
 
 ### Fields
 {: response-types-json-pause-fields}
