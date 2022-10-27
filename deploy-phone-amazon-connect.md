@@ -135,7 +135,7 @@ After you create a {{site.data.keyword.conversationshort}} Phone integration, cr
 
 A  _flow_  defines the customer experience with your contact center from start to finish. 
 
-You can find here (TBD, provide a link to the Git repository) a sample flow so you can quickly set up and run a contact center. See [Import/export flows](https://docs.aws.amazon.com/connect/latest/adminguide/contact-flow-import-export.html) for importing the sample flow. 
+You can find a sample flow in the [Watson Assistant Toolkit repository](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/phone/amazon-connect/transfer_to_watson) that you can quickly set up and run a contact center. See [Import/export flows](https://docs.aws.amazon.com/connect/latest/adminguide/contact-flow-import-export.html) for importing the sample flow. 
 
 However, you may want to create custom flows for your specific scenario. See [Create Amazon Connect Flows](https://docs.aws.amazon.com/connect/latest/adminguide/connect-contact-flows.html) for creating an Amazon Connect flow. 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-23"
+lastupdated: "2022-10-21"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,24 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 21 October 2022
+{: #watson-assistant-oct212022}
+{: release-note}
+
+Algorithm version updates
+:   The algorithm version setting for both actions and dialog now includes three choices: beta, latest, and previous. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
+
+## 12 October 2022
+{: #watson-assistant-oct122022}
+{: release-note}
+
+`now(String timezone)` method output includes time zone offset
+:   The string returned from the `now(String timezone)` method now includes the time zone offset (such as `-05:00`). The new format is `yyyy-MM-dd HH:mm:ss 'GMT'XXX` (where `XXX` represents the time zone offset). This change enables accurate time zone computations when used with other date and time methods such as `before`, `after`, and `reformatDateTime`.
+
+    If you have an existing action or dialog that depends on the previous format, you can adapt it by reformatting the output using `now(timezone).reformatDateTime('yyyy-MM-dd HH:mm:ss')`.
+    
+    For more information, see [Expression language methods for actions](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-now).
 
 ## 23 September 2022
 {: #watson-assistant-sep232022}
@@ -106,8 +124,8 @@ Channel name variable
 {: #watson-assistant-aug112022}
 {: release-note}
 
-Algorithms versions available in more languages
-:   Algorithms version options are now available in Arabic, Czech, and Dutch. Algorithms versions allows you to choose which version of {{site.data.keyword.conversationshort}} algorithms to apply to your future trainings. For more information, see [Algorithm versions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-algorithms-versions).
+Algorithm version options available in more languages
+:   Algorithm version options are now available in Arabic, Czech, and Dutch. This allows you to choose which {{site.data.keyword.conversationshort}} algorithm to apply to your future trainings. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
 
 ## 9 August 2022
 {: #watson-assistant-aug092022}
@@ -168,15 +186,15 @@ New demo site
 {: #watson-assistant-jun242022}
 {: release-note}
 
-Algorithms versions available in more languages
-:   Algorithms version options are now available in Chinese (Traditional), Japanese, and Korean. Algorithms versions allows you to choose which version of {{site.data.keyword.conversationshort}} algorithms to apply to your future trainings. For more information, see [Algorithm versions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-algorithms-versions).
+Algorithm version options available in more languages
+:   Algorithm version options are now available in Chinese (Traditional), Japanese, and Korean. This allows you to choose which {{site.data.keyword.conversationshort}} algorithm to apply to your future trainings. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
 
 ## 16 June 2022
 {: #watson-assistant-jun162022}
 {: release-note}
 
-Algorithms versions
-:   Algorithms versions allows you to choose which version of {{site.data.keyword.conversationshort}} algorithms to apply to your future trainings. You can choose to use the more stable and fully supported version of algorithms by selecting **Baseline**. This is the latest mature version that you may want to use for your live assistant. Or, you can choose **Beta** to preview and test what is coming. For more information, see [Algorithm versions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-algorithms-versions).
+Algorithm version
+:   Algorithm version allows you to choose which {{site.data.keyword.conversationshort}} algorithm to apply to your future trainings. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
 
 Algorithm beta version (2022-06-10)
 :   Algorithm beta version (2022-06-10) includes a new irrelevance detection algorithm to improve off-topic detection accuracy. Utterances with similar meanings are expected to have more similar confidences in comparison to previous irrelevance detection algorithms. For example, the training utterance `please suggest route from times square` has 100% confidence at runtime. Currently in IBM Cloud, the utterance `please suggest route from central park` gets a low confidence and could be flagged as irrelevant. With beta version (2022-06-10), the same utterance is expected to be predicted correctly with a ~46% confidence.

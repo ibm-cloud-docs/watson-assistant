@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-10-07"
 
 subcollection: watson-assistant
 
@@ -37,7 +37,7 @@ After you add the web chat script to your website, your customers will see a lau
 
 ![web chat launcher in desktop browser](images/web-chat-desktop-highlighted.png)
 
-When a customer clicks the launcher, the web chat window opens, initially displaying the _home screen_. The home screen displays a greeting and a set of suggested conversation starters for common questions and problems. The customer can either click a conversation starter or type a message in the input field to start the conversation with the assistant.
+When a customer clicks the launcher, the web chat window opens, initially displaying the _home screen_. The home screen displays a greeting and an optional set of suggested conversation starters for common questions and problems. The customer can either click a conversation starter or type a message in the input field to start the conversation with the assistant.
 
 ![web chat example home screen](images/web-chat-home-screen-lendyr.png)
 

@@ -58,6 +58,7 @@ toc:
           - save-actions.md
           - review.md
           - actions-global-settings.md
+          - algorithm-version.md
           - manage-actions.md
           - assistant-add.md
           - assistant-rename-delete.md
