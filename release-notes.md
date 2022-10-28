@@ -2249,7 +2249,7 @@ Intent examples can directly reference entities
 {: release-note}
 
 {{site.data.keyword.conversationshort}} connector
-:   You can use the new {{site.data.keyword.conversationshort}} connector tool to connect your workspace to a Slack or Facebook Messenger app that you own, making it available as a chat bot that Slack or Facebook Messenger users can interact with. This tool is available only for the {{site.data.keyword.Bluemix_notm}} US South region.
+:   You can use the new {{site.data.keyword.conversationshort}} connector tool to connect your workspace to a Slack or Facebook Messenger app that you own, making it available as a chatbot that Slack or Facebook Messenger users can interact with. This tool is available only for the {{site.data.keyword.Bluemix_notm}} US South region.
 
 ## 3 November 2017
 {: #watson-assistant-nov032017}
