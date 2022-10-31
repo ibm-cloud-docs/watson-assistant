@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-26"
+lastupdated: "2022-10-31"
 
 subcollection: watson-assistant
 
@@ -159,7 +159,7 @@ If your calls to an extension are failing, you might want to debug the problem b
     You cannot access the extension inspector from the assistant preview on the **Preview** page, which shows only what a customer would see. Instead, use the preview feature that is part of the Actions page, which gives you access ot additional information.
     {: note}
 
-1. Interact your assistant as a customer would.
+1. Interact with your assistant as a customer would.
 
 1. Each time an extension is called, the preview pane shows a message giving you access to detailed information:
 
@@ -170,7 +170,7 @@ If your calls to an extension are failing, you might want to debug the problem b
     You can also click the ![Extension inspector icon](images/extension-inspector-icon.png) icon to show or hide the extension inspector. However, you must click **Inspect** in the preview pane to show information about a particular call to an extension.
     {: tip}
 
-    The extension inspector shows the following information about a call to an extension:
+    The **Overview** tab of the extension inspector shows the following information about a call to an extension:
 
     Extension
     :   The name of the extension, as specified in the extension settings.
@@ -189,6 +189,9 @@ If your calls to an extension are failing, you might want to debug the problem b
 
     Response properties
     :   The values of all properties included in the response from the external API. These are the values that are mapped to action variables after the call to the extension completes.
+
+    In the **Request parameters** and **Response properties** tables, long property names might be truncated to show only the last part of the JSON path. To see the complete path and property name, hover the mouse pointer over the property name in the table.
+    {: tip}
 
 1. Click the **Advanced** tab in the extension inspector if you want to see the raw request and response data:
     - The request is shown as a cURL command, which you can run at a command prompt or import into a tool such as [Postman](https://www.postman.com/){: external}. (For security reasons, the content of any `Authorization` header is not included.)
