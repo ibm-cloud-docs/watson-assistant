@@ -156,7 +156,7 @@ If your calls to an extension are failing, you might want to debug the problem b
 
 1. On the Actions page, or in the action editor, click **Preview** to open the Preview pane.
 
-    You cannot access the extension inspector from the assistant preview on the **Preview** page, which shows only what a customer would see. Instead, use the preview feature that is part of the Actions page, which gives you access ot additional information.
+    You cannot access the extension inspector from the assistant preview on the **Preview** page, which shows only what a customer would see. Instead, use the preview feature that is part of the Actions page, which gives you access to additional information.
     {: note}
 
 1. Interact with your assistant as a customer would.
