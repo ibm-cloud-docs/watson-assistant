@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-09-16"
+lastupdated: "2022-11-03"
 
 subcollection: watson-assistant
 
@@ -55,24 +55,63 @@ To choose the customer response type for a step, click **Define customer respons
 | [**Free text**](#customer-response-type-free-text) | Any arbitrary text response. | `123 Main Street`, `John Q. Smith` |
 {: caption="Response types" caption-side="bottom"}
 
-## Requiring or skipping steps
+## Skipping steps, always asking steps, or never asking steps
 {: #collect-info-skip-step}
 
-Although a customer response is associated with a particular step, the assistant can recognize the required information at any point during the action. For any step that expects a customer response, you can decide whether to explicitly ask for the information or to use the default, which is to skip asking and apply information that the assistant has already recognized.
+Although a customer response is associated with a particular step, the assistant can recognize the required information at any point during the action. By default, steps are set to be skipped if the value for the step is provided in the user's input elsewhere in the action, either before or after the step itself. The assistant can recognize responses that apply to that step at any point in the conversation. For example, if the customer's initial input was `I want to withdraw money from my checking account`, the step that asks the user to select an account can (and probably should) be skipped.
 
-Many steps ask the customer to answer a question (such as selecting which account to withdraw money from, or specifying the amount to withdraw). But if your customer has already answered this question, you don't want your assistant to ask for it again. For example, if the customer's initial input was `I want to withdraw money from my checking account`, the step that asks the user to select an account can (and probably should) be skipped.
+For any step that expects a customer response, you can decide whether to:
+- Skip asking if the answer is mentioned in previous messages. This is the default.
+- Always ask for this information, regardless of previous messages.
+- Never ask. Collect information from previous messages.
 
-By default, steps are set to be skipped if the value for the step is provided in the user's input elsewhere in the action, either before or after the step itself. The assistant can recognize responses that apply to that step at any point in the conversation. 
+### Always ask
+{: #collect-info-skip-step-always-ask}
 
-However, if your action asks for the same type of data in more than one step, use the **Always ask for this information** setting to prevent the assistant from making incorrect assumptions. For example, you might have an action in which one step asks for a hotel check-in date and another step asks for the check-out date. If you skip asking, the assistant can mistake the check-in date for the check-out date.
+If your action asks for the same type of data in more than one step, use the **Always ask for this information** setting to prevent the assistant from making incorrect assumptions. For example, you might have an action in which one step asks for a hotel check-in date and another step asks for the check-out date. If you skip asking, the assistant can mistake the check-in date for the check-out date.
 
-To ensure a step is always used in the conversation with a customer:
+To require that a step is always used in the conversation with a customer:
 
-1. Click the **Settings** icon to open **Customer response settings**. 
+1. In the customer response, click the **Settings** icon to open **Customer response settings**. 
 
-1. Click to enable the toggle **Always ask for this information, regardless of earlier messages**.
+   ![Customer response settings](images/collect-info-customer-response-settings.png)
+
+1. Choose **Always ask for this information, regardless of previous messages**.
 
 1. Click **Apply**.
+
+### Never ask
+{: #collect-info-skip-step-never-ask}
+
+There may be some situations where you need a step to never ask a question because you anticipate there might be redundant questions in the conversation.
+
+To set that a step is never asked in the conversation with a customer:
+
+1. In the customer response, click the **Settings** icon to open **Customer response settings**. 
+
+1. Choose **Never ask. Collect information from previous messages.**.
+
+1. Click **Apply**.
+
+#### Example
+{: #collect-info-skip-step-never-ask-example}
+
+This example explains when you might set a step to never ask for a response.
+
+You might have an action that responds to requests to file an insurance claim. If you expect customers to typically make a request about a specific type of claim, such as auto, home, or medical, you may not want to ask another question about what type. They may say `I need to file an auto claim` or `I want to make a home claim.`
+
+While you still need a step that collects the answer about what type of claim, you may not want or need to ask that explicit question, especially if your assistant is used with the phone integration. Instead, you can create a step with the claim options, but set it to never ask.
+
+This table shows how you could set up the steps. The last step is a catch-all in case the customer doesn't mention the claim type initially.
+
+| Step | Conditions | Assistant says | Customer response | Customer response setting | And then |
+| -- | -- | -- | -- | -- | -- |
+| 1 | None | What kind of claim? | Options: Automobile, Homeowner, Medical | Never ask | Continue to the next step |
+| 2 | Step 1 is Automobile | None | Click here to file an automobile claim | Skip (default) | End the action |
+| 3 | Step 1 is Homeowner | None | Click here to file a homeowner claim | Skip (default) | End the action |
+| 4 | Step 1 is Medical | None | Click here to file a medical claim | Skip (default) | End the action |
+| 5 | Step 1 is not defined (no claim type) | None | Click here to file an insurance claim | Skip (default) | End the action |
+{: caption="Example using the never ask response setting" caption-side="bottom"}
 
 ## Customer response types
 {: #customer-response-types}
