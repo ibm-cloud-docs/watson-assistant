@@ -98,7 +98,7 @@ To set that a step is never asked in the conversation with a customer:
 
 This example explains when you might set a step to never ask for a response.
 
-You might have an action that responds to requests to file an insurance claim. If you expect customers to typically make a request about a specific type of claim, such as auto, home, or medical, you may not want to ask another question about what type. They may say `I need to file an auto claim` or `I want to make a home claim.`
+You might have an action that responds to requests to file an insurance claim. If you expect customers to typically make a request about a specific type of claim, such as auto, home, or medical, you might not want to ask another question about what type. They might say `I need to file an auto claim` or `I want to make a home claim.`
 
 While you still need a step that collects the answer about what type of claim, you may not want or need to ask that explicit question, especially if your assistant is used with the phone integration. Instead, you can create a step with the claim options, but set it to never ask.
 
