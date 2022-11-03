@@ -58,7 +58,9 @@ To choose the customer response type for a step, click **Define customer respons
 ## Skipping steps, always asking steps, or never asking steps
 {: #collect-info-skip-step}
 
-Although a customer response is associated with a particular step, the assistant can recognize the required information at any point during the action. By default, steps are set to be skipped if the value for the step is provided in the user's input elsewhere in the action, either before or after the step itself. The assistant can recognize responses that apply to that step at any point in the conversation. For example, if the customer's initial input was `I want to withdraw money from my checking account`, the step that asks the user to select an account can (and probably should) be skipped.
+Although a customer response is associated with a particular step, the assistant can recognize the required information at any point during the action. By default, a step is set to be skipped if its value is already provided in the user's input. If the value is specificed after the step, the new value replaces the value specified in the step itself.
+
+For example, if the customer's initial input was `I want to withdraw money from my checking account`, a step that asks the user to select a bank account will be skipped because the customer already entered that information.
 
 For any step that expects a customer response, you can decide whether to:
 - Skip asking if the answer is mentioned in previous messages. This is the default.
