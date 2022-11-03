@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-21"
+lastupdated: "2022-11-03"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,19 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 3 November 2022
+{: #watson-assistant-nov032022}
+{: release-note}
+
+Never ask a step
+:   There may be some situations where you need a step to never ask a question because you anticipate there might be redundant questions in the conversation. A new setting, **Never ask**, is now available for any step that expects a customer response. For more information, see [Skipping steps, always asking steps, or never asking steps](/docs/watson-assistant?topic=watson-assistant-collect-info#collect-info-skip-step).
+
+Action notes
+:   You can now add free-form notes to each action. Within each action, you can use **Action notes** to add a description, documentation, comments, or any other annotations to help you keep track of your work as you build an action. For more information, see [Using the action editor](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-build-actions-overview#build-actions-overview-use).
+
+Variable values in Preview
+:  Viewing action variables in Preview has been improved. Now you can see the history of all action variables, rather than one action at a time. For more information, see [Variable values](/docs/watson-assistant?topic=watson-assistant-review#review-variable-values).
 
 ## 21 October 2022
 {: #watson-assistant-oct212022}

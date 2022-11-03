@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-09-09"
+lastupdated: "2022-11-03"
 
 subcollection: watson-assistant
 
@@ -62,6 +62,8 @@ The editor window shows the parts of an action:
 
 - The **Preview** button opens a pane that shows you how the assistant responds to customer input. You can preview the assistant at any time to see the effect of changes you have made.
 
+- The **Action notes** icon opens an area where you can add a description, documentation, comments, or any other annotations to help you keep track of your work as you build an action.
+
 The action editor supports basic Markdown syntax.
 {: tip}
 
@@ -107,8 +109,6 @@ Let's edit step 1 to find out which account the customer wants to withdraw money
 
     Navigate to **Option 2** and type `Checking`.
 
-1. For **Allow skipping or always ask?**, select **Skip if the customer already gave this information**. This option tells the assistant to skip this step if it recognizes that the customer already specified the account type previously; for example, if the initial customer input was `I want to withdraw money from my savings account`, we don't need to ask again.
-
     Click **Apply** to save the customer response.
 
 1. Now we can check to see if the step works like we expect. Click **Preview** to open the Preview pane, and type `I want to withdraw money`:
@@ -153,11 +153,13 @@ When a step asks for information from the user, the user's response is stored as
 
 1. In the **Assistant says** field, type `Withdrawals from checking accounts might incur a fee. Do you want to continue?`
 
-1. Click **Define customer response** and select **Options**. This time the options are simply `Yes` and `No`. Because we want to make sure the customer always agrees explicitly, select **Always ask for this information, regardless of earlier messages**.
-
-    ![Editing an Options response with Yes and No options](images/action-editor-options-yesno.png)
+1. Click **Define customer response** and select **Confirmation**, which has the choices `Yes` and `No`. 
 
     Click **Apply** to save the customer response.
+
+1. Because we want to make sure the customer always agrees explicitly, click the **Settings** icon to open **Customer response settings**, then select **Always ask for this information, regardless of earlier messages**.
+
+    ![Customer response settings](images/action-editor-customer-response-settings.png)
 
 Now we need another conditional step to handle the situation where the customer has decided not to continue.
 
