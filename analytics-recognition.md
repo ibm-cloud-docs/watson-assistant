@@ -38,7 +38,7 @@ The **Recognition** page lets you analyze unrecognized requests. You can use thi
 ## Viewing groups of unrecognized requests
 {: #analytics-recognition-view}
 
-You can view groups of unrecognized requests for the draft or live environment. Once there are at least 50 unrecognized requests in the last 30 days, {{site.data.keyword.conversationshort}} can evaluate the data and attempt to generate groups of similar requests. 
+You can view groups of unrecognized requests for the draft or live environment. If there are at least 50 unrecognized requests in the last 30 days, {{site.data.keyword.conversationshort}} can evaluate the data and attempt to generate groups of similar requests. 
 
 To generate a group, there needs to be at least 10 examples that have similar meaning, so:
 - The list of groups might not always appear
@@ -122,4 +122,3 @@ The CSV file includes this information:
 | Similarity Group Id | ID number for any further grouping by similarity, for example, 1, 2, and 3 if there are three similarity groups |
 | Example Id | ID number for the example within the group or similarity group |
 {: caption="Download group CSV file" caption-side="bottom"}
-
