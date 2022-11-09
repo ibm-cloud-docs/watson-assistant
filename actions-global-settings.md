@@ -37,7 +37,7 @@ This page provides options, configurations, and tasks for the following:
 
 - [Ask clarifying question](#actions-global-settings-ask-clarifying-question)
 - [Change conversation topic](#actions-global-settings-change-conversation-topic)
-- [Algorithms version](#actions-global-settings-algorithms-versions)
+- [Algorithm version](#actions-global-settings-algorithms-versions)
 - [Auto-save](#actions-global-settings-auto-save)
 - [Upload/Download](#actions-global-settings-upload-download)
 
@@ -97,7 +97,7 @@ If you want to disable auto-save, you can toggle it off:
 
 1. Click **Save**, and then click **Close**.
 
-The auto-save setting is a user preference that applies to all assistants in your instance. Changing the setting applies only to you and doesn't affect other users. {: Note}
+The auto-save setting is a user preference that applies to all assistants in your instance. Changing the setting applies only to you and doesn't affect other users. {: note}
 
 ## Upload/Download
 {: #actions-global-settings-upload-download}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-09-23"
+  years: 2019, 2022
+lastupdated: "2022-11-03"
 
 subcollection: watson-assistant
 
@@ -44,4 +44,8 @@ If you want to limit webhook processing so it happens only in certain situations
  
 You don't need to define a condition for the log webhook unless you want to filter the messages somehow. In most cases, the goal is to write out every message that is submitted, so the messages can be stored for as long as you want, and analyzed by an external application or service.
 
-You configure webhooks from the **Settings>Webhooks** page for the assistant.
+Webhooks are configured separately for each environment:
+
+1. Go to the **Environments** page and open the environment where you want to configure webhooks.
+
+1. On the **Environments** page, click the ![Environment settings icon](images/gear-icon-black.png) icon beside the environment title to open the environment settings.

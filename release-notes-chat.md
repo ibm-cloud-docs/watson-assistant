@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-11-07"
 
 subcollection: watson-assistant
 
@@ -39,6 +39,20 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 6.8.1
+{: #6.8.1}
+
+*Release date: 7 November 2022*
+
+- Bug fixes.
+
+## 6.8.0
+{: #6.8.0}
+
+*Release date: 31 October 2022*
+
+- Added support for sending pre-chat information to the Salesforce integration.
 
 ## 6.7.0
 {: #6.7.0}
