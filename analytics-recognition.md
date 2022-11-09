@@ -74,7 +74,7 @@ To create actions based on unrecognized requests:
 
    ![Grouped by similarity](images/analytics-unrecognized-grouped-by-similarity.png)
 
-   In a group named `expense reimbursement application`, requests might be further grouped by similarity, for example:
+   In a group named `expense reimbursement application`, requests might be further grouped by similarity. For example:
    - Problems logging into or launching the expense reimbursement application
    - Issues with expense reimbursement application crashing
    - Requests for help or assistance with the expense reimbursement application
