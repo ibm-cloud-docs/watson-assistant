@@ -87,7 +87,7 @@ To create actions based on unrecognized requests:
 
 1. After you make your selections, click **Create new action**.
 
-1. Enter a name for the action, or use the default, then click **Apply**.
+1. Enter a name for the action, or use the default, and then click **Apply**.
 
 1. The action editor opens with each of the unrecognized requests included as example phrases. You can now build an action to address these questions or issues.
 
