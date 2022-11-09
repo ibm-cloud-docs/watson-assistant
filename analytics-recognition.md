@@ -40,7 +40,7 @@ The **Recognition** page lets you analyze unrecognized requests. You can use thi
 
 You can view groups of unrecognized requests for the draft or live environment. If there are at least 50 unrecognized requests in the last 30 days, {{site.data.keyword.conversationshort}} can evaluate the data and attempt to generate groups of similar requests. 
 
-To generate a group, there needs to be at least 10 examples that have similar meaning, so:
+To generate a group, there need to be at least 10 examples that have similar meaning, so:
 - The list of groups might not always appear
 - The groups might not include all unrecognized requests
 
