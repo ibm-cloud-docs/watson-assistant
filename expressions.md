@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-09-01"
+lastupdated: "2022-11-10"
 
 subcollection: watson-assistant
 
@@ -22,6 +22,8 @@ subcollection: watson-assistant
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+
+{{site.data.content.classiclink}}
 
 # Writing expressions
 {: #expressions}
@@ -89,9 +91,29 @@ To use an expression when assigning a value to a session variable, follow these 
 
 1. **Optional:** Click the ![Expand icon](images/expression-editor-icon.png) **Expand** icon to open the expression editor window. (You can also type the expression directly in the field without opening the window, but the editor makes it easier to edit a longer or more complex expression.)
 
-1. To reference a variable in the expression, type a dollar sign (`$`) and then select a variable from the list.
+1. Write the expression you want to use.
+
+    - To reference a variable in the expression, type type a dollar sign (`$`) and then select a variable from the list.
 
     When you select a variable, the reference is inserted into your expression in the correct notation, referencing the variable using its variable ID rather than its display name (for example, `${step_773}` or `${customer_id}`). Do not edit this reference unless you want to refer to a different variable and you are sure of its variable ID.
+
+    - To define an array value, type the value using square brackets, with commas separating the items (for example, `[ "one", "two", "three" ]`).
+
+    - Use JSON notation to define compound objects in expressions. For example, the following expression assigns a complex JSON object as the value for a variable:
+
+        ```text
+        {
+          "name": {
+            "firstname": "John",
+            "lastname": "Doe"
+          },
+          "age": 36
+        }
+        ```
+
+        To refer to a child object contained in a JSON value, use dot notation to express the path to the object (for example, `${customer}.name.lastname`).
+
+    - Use expression language methods to manipulate values (for example, formatting a string or appending an item to an array). For more information about the supported methods for each data type, see [Expression language methods for actions](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions).
 
 1. If you are using the expression editor, click **Apply** to save your changes and close the editor window.
 
