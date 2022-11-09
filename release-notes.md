@@ -48,6 +48,9 @@ Use unrecognized requests to get action recommendations
 Dynamic options
 :   Within the options customer response, you can use the **dynamic** setting to generate the list when you need to ask questions that are potentially different each time and for each customer. You need to set up a list variable as the source of the options. For more information, see [Dynamic options](/docs/watson-assistant?topic=watson-assistant-dynamic-options).
 
+Extension inspector
+:   You can use the new extension inspector in the action editor **Preview** pane to debug problems with custom extensions. The extension inspector shows detailed information about what data is being sent to and returned from an external API. For more information, see [Debugging failures](/docs/watson-assistant?topic=watson-assistant-call-extension#extension-debug).
+
 ## 3 November 2022
 {: #watson-assistant-nov032022}
 {: release-note}
