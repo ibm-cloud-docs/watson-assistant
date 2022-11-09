@@ -141,6 +141,7 @@ toc:
           topics:
           - analytics-overview.md
           - analytics-action-completion.md
+          - analytics-recognition.md
           - analytics-conversations.md
           - segment-add.md
       - topicgroup:
