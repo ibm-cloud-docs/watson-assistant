@@ -141,6 +141,7 @@ toc:
           topics:
           - analytics-overview.md
           - analytics-action-completion.md
+          - analytics-recognition.md
           - analytics-conversations.md
           - segment-add.md
       - topicgroup:
@@ -162,6 +163,7 @@ toc:
           topics:
           - develop-overview.md
           - assistant-responses-json.md
+          - dynamic-options.md
           - expressions.md
           - topicgroup:
               label: Customizing channels
