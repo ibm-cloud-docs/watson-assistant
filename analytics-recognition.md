@@ -32,7 +32,7 @@ The **Recognition** page lets you analyze unrecognized requests. You can use thi
 {: shortdesc}
 
 *Recognition* measures the requests within a given time period that are recognized and successfully routed to an action. Customer requests are considered unrecognized if:
-- The request triggers the No Action Matches action
+- The request triggers the *No Action Matches* action
 - The assistant asks a clarifying question and the customer chooses `None of the above` 
 
 ## Viewing groups of unrecognized requests

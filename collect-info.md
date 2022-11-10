@@ -161,7 +161,7 @@ To disable the list:
 #### Dynamic list of options
 {: #customer-response-type-options-dynamic}
 
-Within the options customer response, you can use the **dynamic** setting to generate the list when you need to ask questions that are potentially different each time and for each customer. You need to set up a list variable as the source of the options. For more information, see [Dynamic options](/docs/watson-assistant?topic=watson-assistant-dynamic-options).
+Within the options customer response, you can use the **dynamic** setting to generate the list when you need to ask questions that are potentially different each time and for each customer. You need to set up a variable as the source of the options. For more information, see [Dynamic options](/docs/watson-assistant?topic=watson-assistant-dynamic-options).
 
 ### Confirmation
 {: #customer-response-type-confirmation}
