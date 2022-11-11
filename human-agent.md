@@ -33,7 +33,7 @@ Your assistant can do a lot, but there might be some situations when your custom
 
 To use this feature, your assistant must interact with customers using a **web chat** or **phone** integration. For more information, see [Deploying your assistant](/docs/watson-assistant?topic=watson-assistant-deploy-assistant).
 
-And you must add an integration to a service desk system before setting up live agent transfers to your assistant. The supported service desks depend upon how customers connect to your assistant (web chat or phone). For more information about integrating with a service desk, see [Basic web chat configuration](/docs/watson-assistant?topic=watson-assistant-web-chat-basics) and [Phone integration configuration](/docs/watson-assistant?topic=watson-assistant-deploy-phone-config).
+You must add an integration to a service desk system before setting up live agent transfers to your assistant. The supported service desks depend upon how customers connect to your assistant (web chat or phone). For more information about integrating with a service desk, see [Basic web chat configuration](/docs/watson-assistant?topic=watson-assistant-web-chat-basics) and [Phone integration configuration](/docs/watson-assistant?topic=watson-assistant-deploy-phone-config).
 
 Your agents can work with one of these supported service desk tools:
 - [Genesys](docs/watson-assistant?topic=watson-assistant-deploy-phone-genesys)
