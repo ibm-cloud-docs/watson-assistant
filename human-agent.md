@@ -72,7 +72,7 @@ Within any action, you can create a step that initiates a transfer to a live age
 
 1. In the **And then** field at the end of the step, select **Connect to agent**.
 
-1. In the Settings window, you can customize messages the assistant displays as part of the transfer:
+1. In the **Settings** window, you can customize messages the assistant displays as part of the transfer:
 
     ![Connect to agent settings](images/connect-agent-settings.png)
 
