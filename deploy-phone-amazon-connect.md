@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-06"
+lastupdated: "2022-11-14"
 
 subcollection: watson-assistant
 
@@ -228,7 +228,7 @@ Open the {{site.data.keyword.conversationshort}} user interface and go to the ph
 ## Adding transfer support to your assistant 
 {: #deploy-phone-amazon-connect-transfer}
 
-Configure your assistant to transfer calls to a live agent using the *Connect To Agent* response type. For instructions, see [Transferring a call to a human agent](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer).
+Configure your assistant to transfer calls to a live agent using the *Connect To Agent* response type. For instructions, see [Transferring a call to a live agent](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer).
 
 Use the following format:
 
