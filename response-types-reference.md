@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-14"
 
 subcollection: watson-assistant
 
@@ -174,7 +174,7 @@ This example requests a transfer from WhatsApp to the web chat. In addition to t
 ## `connect_to_agent`
 {: response-types-json-connect-to-agent}
 
-Requests that the conversation be transferred to a human service desk agent for help. Service desk support must be configured for the channel integration.
+Requests that the conversation be transferred to a live agent for help. Service desk support must be configured for the channel integration.
 
 ### Integration channel support
 {: response-types-json-connect-to-agent-integrations}
@@ -192,7 +192,7 @@ Requests that the conversation be transferred to a human service desk agent for 
 | Name                   | Type   | Description        | Required? |
 |------------------------|--------|--------------------|-----------|
 | response_type          | string | `connect_to_agent` | Y         |
-| message_to_human_agent | string | A message to display to the human agent to whom the conversation is being transferred. | Y |
+| message_to_human_agent | string | A message to display to the live agent to whom the conversation is being transferred. | Y |
 | agent_available        | string | A message to display to the user when agents are available.                            | Y |
 | agent_unavailable      | string | A message to display to the user when no agents are available.                         | Y |
 | transfer_info          | object | Information used by the web chat service desk integrations for routing the transfer.   | N |
@@ -202,7 +202,7 @@ Requests that the conversation be transferred to a human service desk agent for 
 ### Example
 {: response-types-json-connect-to-agent-example}
 
-This example requests a transfer to a human agent and specifies messages to be displayed both to the user and to the agent at the time of transfer.
+This example requests a transfer to a live agent and specifies messages to be displayed both to the user and to the agent at the time of transfer.
 
 ```json
 {

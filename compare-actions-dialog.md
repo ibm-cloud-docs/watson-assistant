@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-05-26"
+lastupdated: "2022-11-14"
 
 subcollection: watson-assistant
 
@@ -40,8 +40,8 @@ Using actions is the best choice when you want to approach the assistant with a 
 
 - The process of creating a conversational flow is easier. People who have expertise with customer care can write the words that your assistant says. With a simplified process anyone can build a conversation. You don't need knowledge about machine learning or programming.
 - Actions provide better visibility into the customer's interaction and satisfaction with the assistant. Because each task is discrete and has a clear beginning and ending, you can track user progress through a task and identify snags.
-- The conversation designer doesn't have to manage data collected during the conversation. By default, your assistant collects and stores information for the duration of the current action. You don't need to take extra steps to delete saved data or reset the conversation. But if you want, you can store certain types of information, such as the customer's name, for the duration of a conversation.
-- Many people can work at the same time in separate, self-contained actions. The order of actions within a conversation doesn't matter. Only the order of steps within an action matters. And the action author can use drag and drop to reorganize the steps in the action for optimal flow.
+- The conversation designer doesn't need to manage data collected during the conversation. By default, your assistant collects and stores information for the duration of the current action. You don't need to take extra steps to delete saved data or reset the conversation. But if you want, you can store certain types of information, such as the customer's name, for the duration of a conversation.
+- Many people can work at the same time in separate, self-contained actions. The order of actions within a conversation doesn't matter. Only the order of steps within an action matters. And the action author can use drag and drop to reorganize steps in the action for optimal flow.
 
 ## Dialog benefits
 {: #comparing-benefits-dialog}
@@ -61,7 +61,7 @@ If you are already familiar with dialog-based conversations, learn more about ho
 | Contextual entities | | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Collect numbers (@sys-number detection) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Detection of other system entities | | ![checkmark icon](../../icons/checkmark-icon.svg) |
-| Connect to human agent response type | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Connect to agent response type | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Free text response type | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Image response type | | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Options response type | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
