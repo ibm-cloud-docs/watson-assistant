@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-14"
 
 subcollection: watson-assistant
 
@@ -31,7 +31,7 @@ subcollection: watson-assistant
 In some situations, you might need to define your assistant's responses using the JSON editor. (For more information about assistant responses, see [Adding assistant responses](/docs/watson-assistant?topic=watson-assistant-respond)).
 {: shortdesc}
 
-To edit a response using the access the JSON editor, click the **Switch to JSON editor** icon ![Switch to JSON editor icon](images/json-editor-icon.png) in the corner of the **Assistant says** field. The JSON editor shows how the response is defined behind the scenes and sent to the channel.
+To edit a response using the JSON editor, click the **Switch to JSON editor** icon ![Switch to JSON editor icon](images/json-editor-icon.png) in the corner of the **Assistant says** field. The JSON editor shows how the response is defined behind the scenes and sent to the channel.
 
 ## Generic JSON format
 {: #assistant-responses-json-generic}
