@@ -164,7 +164,6 @@ toc:
           - develop-overview.md
           - assistant-responses-json.md
           - dynamic-options.md
-          - journeys.md
           - expressions.md
           - topicgroup:
               label: Customizing channels
