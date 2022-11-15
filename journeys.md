@@ -46,11 +46,6 @@ You might use a journey in situations like the following examples:
 
 - Promoting sales opportunities in your product to target users during specific marketing opportunities, such as offering a new rewards program to customers who are concerned about expenses
 
-<!-->
-For more information about deciding when to use journeys, see our [best practices guide](https://example.com){: external}.
-{: tip}
--->
-
 ## Creating a journey
 {: #journeys-create}
 
