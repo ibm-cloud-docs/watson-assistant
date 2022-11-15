@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-14"
+lastupdated: "2022-11-15"
 
 keywords: Watson Assistant release notes
 
@@ -40,6 +40,15 @@ This topic describes the new features, changes, and bug fixes in each release of
 
 <!--Use unrecognized requests to get action recommendations
 :   In **Analyze**, the new **Recognition** page lets you view groups of similar unrecognized requests. You can use the requests as example phrases in new or existing actions to address questions and issues that aren't being answered by your assistant. For information, see [Use unrecognized requests to get action recommendations](/docs/watson-assistant?topic=watson-assistant-analytics-recognition).-->
+
+## 15 November 2022
+{: #watson-assistant-nov152022}
+{: release-note}
+
+Journeys
+:   Beginning with web chat version 6.9.0, you can now create _journeys_ to guide your customers through tasks they can already complete on your website. A journey is an interactive, multipart response that can combine text, video, and images, presented in sequence in a small window superimposed over your website.
+
+    Journeys are available as a beta feature. For more information, see [Guiding customers with journeys](/docs/watson-assistant?topic=watson-assistant-journeys).
 
 ## 10 November 2022
 {: #watson-assistant-nov102022}
