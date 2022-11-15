@@ -46,7 +46,7 @@ This topic describes the new features, changes, and bug fixes in each release of
 {: release-note}
 
 Journeys
-:   Beginning with web chat version 6.9.0, you can now create _journeys_ to guide your customers through complex tasks or new features that your website already supports. A journey is an interactive, multipart response that can combine text, video, and images, presented in sequence in a small window superimposed over your website.
+:   Beginning with web chat version 6.9.0, you can now create _journeys_ to guide your customers through tasks they can already complete on your website. A journey is an interactive, multipart response that can combine text, video, and images, presented in sequence in a small window superimposed over your website.
 
     Journeys are available as a beta feature. For more information, see [Guiding customers with journeys](/docs/watson-assistant?topic=watson-assistant-journeys).
 
