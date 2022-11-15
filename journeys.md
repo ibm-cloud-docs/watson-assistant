@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-14"
+lastupdated: "2022-11-15"
 
 subcollection: watson-assistant
 
@@ -28,13 +28,13 @@ subcollection: watson-assistant
 # Guiding customers with journeys ![BETA](images/beta.png)
 {: #journeys}
 
-A journey is an interactive, multipart response that can combine text, video, and images presented in sequence. You can use a journey to guide your customers through a complex task, or to give them a tour of new features.
+A journey is an interactive response that you can use to guide your customers through a complex task, or to give them a tour of new features, taking advantage of capabilities your website already supports. A journey is a multipart response that can combine text, video, and images presented in sequence.
 {: shortdesc}
 
 This beta feature is available for evaluation and testing purposes but should not be used in production environments. Journeys require web chat version 6.9.0 or later.
 {: beta}
 
-A journey takes users through a series of responses that can explain a complex topic or illustrate a process. When the customer starts a journey, the chat window temporarily closes, and the web chat integration then presents the journey elements one at a time in a small window superimposed over your website, enabling your customers to navigate and use the website as they step through the journey. At any time during the journey, the customer can freely return to the assistant chat window and then resume the journey.
+When the customer starts a journey, the chat window temporarily closes. The web chat integration then presents the journey elements one step at a time in a small window superimposed over your website, enabling your customers to navigate and use the website as they step through the journey. At any time during the journey, the customer can freely return to the assistant chat window and then resume the journey.
 
 ![Image showing examples of journey](images/journeys_example.png)
 
