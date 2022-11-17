@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-14"
+lastupdated: "2022-11-16"
 
 subcollection: watson-assistant
 
@@ -22,8 +22,6 @@ subcollection: watson-assistant
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
-
-{{site.data.content.classiclink}}
 
 # Using {{site.data.keyword.at_full_notm}} to audit user activity ![Enterprise plan only](images/enterprise.png)
 {: #admin-auditing}
