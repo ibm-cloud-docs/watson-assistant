@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-11-17"
 
 subcollection: watson-assistant
 
@@ -110,9 +110,8 @@ The draft and live environments each have settings. On either tab, click the **S
 - Assistant ID
 - Environment name
 - Environment ID
-- Environment URL
-- Credentials name
-- API key
+- Service instance URL
+- Session URL
 
 **Webhooks**
 
