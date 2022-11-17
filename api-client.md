@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-10-07"
+lastupdated: "2022-11-17"
 
 subcollection: watson-assistant
 
@@ -57,7 +57,7 @@ To find this information, follow these steps:
 
 1. Click the ![Environment settings icon](images/gear-icon-black.png) icon to open the environment settings.
 
-1. Select **API details** to see details for the environment, including the service instance URL, environment ID, and API key.
+1. Select **API details** to see details for the environment, including the service instance URL and environment ID. To find the API key, follow the link in the **Service credentials** section.
 
 ## Communicating with the {{site.data.keyword.conversationshort}} service
 {: #api-client-communicate}
