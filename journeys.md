@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-15"
+lastupdated: "2022-11-16"
 
 subcollection: watson-assistant
 
@@ -101,7 +101,7 @@ As with assistant responses, the `response_type` property identifies the type of
     }
     ```
 
-    Markdown formatting and links are supported in `text` steps.
+    Markdown formatting and links are supported in `text` steps. For more information, see [Markdown formatting](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture#web-chat-architecture-markdown).
 
     Note that the structure of a `text` step in a journey is different from the `text` response type for assistant responses. Instead of an array of text values, only a single `text` component is supported.
     {: important}

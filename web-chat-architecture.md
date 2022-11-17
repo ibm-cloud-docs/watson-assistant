@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-10-07"
+lastupdated: "2022-11-16"
 
 subcollection: watson-assistant
 
@@ -77,7 +77,7 @@ You can configure the color of the launcher, as well as the greeting message tex
 
 In addition to plain text, {{site.data.keyword.conversationshort}} supports many response types that can be used to output multimedia and interactive elements. The web chat includes built-in support for a wide variety of response types:
 
-- **Text formatting**: The web chat supports formatting text using either Markdown or HTML. You can use text formatting to apply text highlighting such as italics, or to include elements like paragraphs and headings.
+- **Text formatting**: The web chat supports formatting text using either Markdown or HTML. For more information, see [Markdown formatting].(#web-chat-architecture-markdown).
 - **URLs**: Valid URLS (such as `http://example.com`) are automatically rendered as clickable links. When a customer clicks a link in the web chat, the target website opens in a new browser tab.
 - **Options**: Options responses (when the assistant asks the customer to select from a set of choices) are automatically rendered as interactive elements. (By default, a set of fewer than five options is rendered as a set of clickable buttons; five or more options are rendered as a drop-down list.)
 - **Dates**: When the assistant asks the customer to specify a date, the web chat displays an interactive date picker. The customer can specify the date either by clicking the date picker or by typing a valid date value in the input field.
@@ -85,6 +85,53 @@ In addition to plain text, {{site.data.keyword.conversationshort}} supports many
 - **iframe**: The web chat supports the `iframe` response type, which embeds HTML content (such as a form or interactive map) directly in the web chat window.
 
 For more information about how the web chat handles specific response types, see the [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference#iframe).
+
+### Markdown formatting
+{: #web-chat-architecture-markdown}
+
+In text responses from your assistant, you can use Markdown formatting to apply highlighting such as italics, or to include elements like paragraphs and headings. Some common examples of Markdown formatting include:
+
+- Headings:
+    ```text
+    # First-level heading
+
+    ## Second-level heading
+    ```
+
+- Highlighting:
+
+    ```text
+    This text includes *italic* and **bold** highlighting, as well as a `code` snippet.
+    ```
+
+- Lists:
+
+    ```text
+    - ordered
+    - list
+
+    1. bulleted
+    2. list
+    ```
+
+- Tables:
+
+    ```text
+    | Column 1 | Column 2 |
+    |----------|----------|
+    | Row      | One      |
+    | Row      | Two      |
+    ```
+
+- Links:
+
+    ```text
+    [This link](https://www.ibm.com/products/watson-assistant/demos/lendyr/demo.html) opens in a new tab.
+
+    [This link](https://www.ibm.com/products/watson-assistant/demos/lendyr/demo.html){{target=\"_self\" rel=\"noopener noreferrer\"}} opens in the same tab.
+    ```
+
+For detailed information about the Markdown format, see the [CommonMark specification](https://spec.commonmark.org/){: external}.
 
 ## Human agent transfer
 
