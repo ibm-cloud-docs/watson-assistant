@@ -77,7 +77,7 @@ You can configure the color of the launcher, as well as the greeting message tex
 
 In addition to plain text, {{site.data.keyword.conversationshort}} supports many response types that can be used to output multimedia and interactive elements. The web chat includes built-in support for a wide variety of response types:
 
-- **Text formatting**: The web chat supports formatting text using either Markdown or HTML. For more information, see [Markdown formatting].(#web-chat-architecture-markdown).
+- **Text formatting**: The web chat supports formatting text using either Markdown or HTML. For more information, see [Markdown formatting](#web-chat-architecture-markdown).
 - **URLs**: Valid URLS (such as `http://example.com`) are automatically rendered as clickable links. When a customer clicks a link in the web chat, the target website opens in a new browser tab.
 - **Options**: Options responses (when the assistant asks the customer to select from a set of choices) are automatically rendered as interactive elements. (By default, a set of fewer than five options is rendered as a set of clickable buttons; five or more options are rendered as a drop-down list.)
 - **Dates**: When the assistant asks the customer to specify a date, the web chat displays an interactive date picker. The customer can specify the date either by clicking the date picker or by typing a valid date value in the input field.
