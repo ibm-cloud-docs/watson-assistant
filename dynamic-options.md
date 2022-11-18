@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-10"
+lastupdated: "2022-11-17"
 
 subcollection: watson-assistant
 
@@ -25,11 +25,14 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Dynamic options
+# Dynamic options ![BETA](images/beta.png)
 {: #dynamic-options}
 
 An *options* response presents customers with a list of choices to select from. You can use the **dynamic** setting to generate the list from options that might be different each time.
 {: shortdesc}
+
+This beta feature is available for evaluation and testing purposes but should not be used in production environments.
+{: beta}
 
 Dynamic options are generated based on the data stored in a variable, which must be available to the step asking the question. The source variable must contain an array of values, each of which represents one of the options that will be presented to the customer. The items in the array can be simple values such as strings or numbers (for example, `[ "Raleigh", "Boston", "New York" ]`) or compound JSON objects.
 
@@ -52,11 +55,11 @@ To define a dynamic options customer response:
 
     - In the **Source variable** field, choose the variable that contains the array that defines the dynamic options (for example, the variable containing the response from a custom extension that you called in a previous step).
 
-    - In the **Option** field, write an expression that defines a template for the labels that customers will see. Each option is generated based on an item in the source array; use the dynamic variable `${item}` to represent the item.
+    - In the **Option** field, write an expression that defines a template for the options that will be listed. Each option is generated based on an item in the source array; use the dynamic variable `${item}` to represent the item.
 
         If the item is a compound JSON object, use dot notation to refer to a field in the object using its JSON path (for example, `${item}.name`).
 
-    - In the **Value** field, write an expression that defines the value that is sent to the assistant if the customer chooses the corresponding option. As with the label, use `${item}` to represent the item in the source array, and dot notation to refer to a field of a JSON object (for example, `${item}.id`).
+    - In the **Value** field, write an expression that identifies the selected option (such as a unique identifier). As with the label, use `${item}` to represent the item in the source array, and dot notation to refer to a field of a JSON object (for example, `${item}.id`).
 
 ## Mapping examples
 {: #dynamic-options-examples}
@@ -98,10 +101,7 @@ In the **Option** field, you might use the expression `${item}.name + " (" + ${i
 
 ![label](images/dynamic-options-complex-example.png)
 
-For the value, however, you would probably want to use the `id` field, which the action can use to call the extension and request details about a specific pet. In the **Value** field, you would use the expression `${item}.id`.
+For the value, however, you would probably want to use the `id` field, which is a unique identifier. In the **Value** field, you would use the expression `${item}.id`.
 
 Remember that you can use expression methods to manipulate values from the source variable in various ways. For example, you might have an action customers use to select a credit card for payment, but for security reasons you don't want to show the entire card number. You could write an expression that uses the `substring()` method to include only the last four digits of each card number (for example, `"Card ending in " + ${item}.card_number.substring(16, 20)`).
-
-In the web chat integration, when the customer selects an option, the option label appears in the chat (because this is meaningful to the customer). However, the actual customer input sent to the assistant is always the value you define in the **Value** field.
-{: note}
 

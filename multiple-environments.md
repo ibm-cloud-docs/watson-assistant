@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-11-17"
 
 subcollection: watson-assistant
 
@@ -148,9 +148,8 @@ This gives you access to see API details, configure webhook settings, change ina
 - Assistant ID
 - Environment name
 - Environment ID
-- Environment URL
-- Credentials name
-- API key
+- Service instance URL
+- Session URL
 
 **Webhooks**
 
