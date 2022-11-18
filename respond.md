@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-14"
+lastupdated: "2022-11-18"
 
 subcollection: watson-assistant
 
@@ -39,7 +39,7 @@ You can enter a simple text response just by entering the text that you want you
 
 Use the text editor tools to apply font styling, such as bold or italic, to the text or to add links.
 
-Behind the scenes, font styling and link syntax are stored in Markdown format. If you are using the web chat integration, standard HTML tagging is supported. Other integrations, such as for Facebook and Slack, don't support HTML.
+Behind the scenes, font styling and link syntax are stored in Markdown format. If you are using the web chat integration, HTML and Markdown tagging are supported (for more information, see [Markdown formatting](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture#web-chat-architecture-markdown)). Other integrations, such as for Facebook and Slack, don't support HTML.
 
 <!--- Behind the scenes, these three choices are stored using Markdown format.
 
