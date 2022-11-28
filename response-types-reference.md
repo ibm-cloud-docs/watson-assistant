@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-14"
+lastupdated: "2022-11-28"
 
 subcollection: watson-assistant
 
@@ -123,7 +123,7 @@ Requests that the conversation be transferred to a different channel integration
 ### Example
 {: response-types-json-channel-transfer-example}
 
-This example requests a transfer from WhatsApp to the web chat. In addition to the `channel_transfer` response, the output also includes a `text` response to be displayed by the web chat integration after the transfer. The use of the `channels` array ensures that the `channel_transfer` response is handled only by the Slack integration (before the transfer), and the `connect_to_agent` response only by the web chat integration (after the transfer). For more information about using `channels` to target specific integrations, see [Targeting specific integrations](#assistant-responses-json-target-integrations).
+This example requests a transfer from WhatsApp to the web chat. In addition to the `channel_transfer` response, the output also includes a `text` response to be displayed by the web chat integration after the transfer. The use of the `channels` array ensures that the `channel_transfer` response is handled only by the Whatsapp integration (before the transfer), and the `connect_to_agent` response only by the web chat integration (after the transfer). For more information about using `channels` to target specific integrations, see [Targeting specific integrations](#assistant-responses-json-target-integrations).
 
 ```json
 {
