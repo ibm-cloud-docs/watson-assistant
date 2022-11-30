@@ -65,6 +65,7 @@ A journey is defined using the `user_defined` response type, which is available 
     ```json
     "user_defined": {
       "user_defined_type": "IBM_BETA_JOURNEYS_TOUR",
+      "skip_card": true|false,
       "card_title": "{title}",
       "card_description": "{description}",
       "steps": [
@@ -77,6 +78,12 @@ A journey is defined using the `user_defined` response type, which is available 
 
     `user_defined_type`
     :   The specific type of user-defined response you are defining. To define a journey, always set this property to `IBM_BETA_JOURNEYS_TOUR`.
+
+    `skip_card`
+    :    An optional property that specifies whether the web chat should start the journey immediately without waiting for the customer to click the introductory card in the web chat window. (The default value is `false`.)
+
+        You can use this option to start a journey directly from your website, even if the web chat is not open. For more information, see [Starting a journey without opening the web chat](#journeys-no-web-chat).
+        {: tip}
 
     `card_title`
     :   The title to display on the introductory card that appears in the web chat when a journey is available (for example, `Website tour` or `Disputing a charge`).
@@ -192,6 +199,19 @@ The following example defines a journey that shows users how to dispute a charge
   ]
 }
 ```
+
+## Starting a journey without opening the web chat
+{: #journeys-no-web-chat}
+
+Although journeys are part of the web chat integration, you can make it possible for your customers to start a journey directly from your website without opening the web chat window at all. For example, you might want to include a **Show me** button on your website that customers can click to launch an interactive tour of the page.
+
+To start a journey without opening the web chat:
+
+1. In the action that sends the journey response, edit the JSON that defines the journey. Include `"skip_card": true` to bypass the introductory card.
+
+1. On your website, use the [`send()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#send){: external} instance method to send a message to the assistant that triggers the action that starts the journey (such as `Give me a tour`). Send the message in response to whatever event you want to use to trigger the journey (such as a button click or page load).
+
+Your customers can now start the interactive journey directly from your website without having to open the web chat first. (If the web chat window is opened later, the introductory card for the journey appears in the chat history.)
 
 ## Limitations
 {: #journeys-limitations}
