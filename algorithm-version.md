@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-21"
+lastupdated: "2022-11-30"
 
 subcollection: assistant
 
@@ -28,7 +28,7 @@ subcollection: assistant
 # Algorithm version
 {: #algorithm-version}
 
-The **Algorithm version** setting allows you to choose which {{site.data.keyword.conversationshort}} algorithm to apply to your future trainings.
+The **Algorithm version** setting allows you to choose which {{site.data.keyword.conversationshort}} algorithm is used for training.
 {: shortdesc}
 
 There are three choices:
@@ -55,3 +55,26 @@ To choose an algorithm version for dialog:
 The latest and previous versions have date labels such as **Latest (01-Jun-2022)** or **Previous (01-Jan-2022)**. See the [{{site.data.keyword.conversationshort}} release notes](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes) for details about each algorithm version release.
 
 Algorithm version choices are currently available for Arabic, Chinese (Simplified), Chinese (Traditional), Czech, Dutch, English, French, German, Japanese, Korean, Italian, Portuguese, and Spanish. The universal language model uses a default algorithm.
+
+## Instructions for {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull_notm}}
+![Cloud Pak for Data only](images/desktop.png) **{{site.data.keyword.icp4dfull_notm}} only**
+
+When upgrading your instance of {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull_notm}}, as long as your existing models have been trained using an algorithm version that is still supported, your models will not be retrained during or after the upgrade.
+
+New algorithm versions will be included in major releases (for example, 4.0.0 or 5.0.0) or minor releases (for example, 4.5.0 or 4.6.0). A monthly release might include a new algorithm version if there is more than 6 months between major or minor releases. Each algorithm version supports 2 major/minor releases or a maximum time of 12 months, whichever is first. For more information, see the [{{site.data.keyword.icp4dfull_notm}} Software Support Lifecycle Addendum](https://www.ibm.com/support/pages/ibm-cloud-pak-data-software-support-lifecycle-addendum){: external}
+
+Each new release includes full support for the version listed as **Latest** in the most recent prior release. This version is then labeled as **Previous** after you upgrade. In addition, each new release will support running models that were trained on the version prior to that so that upgrading won't impact your runtime. For example, if you upgrade from {{site.data.keyword.icp4dfull_notm}} 4.6 to 4.7, and were using **Latest (01-Jun-2022)** that version becomes listed as **Previous (01 June 2022)** and remains your selected version.
+
+### Automatic retraining
+{: #algorithm-version-auto-retrain}
+
+After your upgrade is complete, {{site.data.keyword.conversationshort}} performs automatic retraining for any assistant models that were trained using a version that is no longer supported. In this case, Watson Assistant will automatically retrain your assistant to the **Latest** version.  This automatic retraining is required to assure your ability to run your trained models in your next upgrade.
+
+### Best practices
+{: #algorithm-version-best-practices}
+
+It's recommended to use the **Latest** version in your production deployment. This is the default for newly-created assistants. During an upgrade, your settings don't automatically switch existing assistants to use the latest version. If prior to your upgrade you had selected **Latest**, your settings continue to use that version, now labeled as **Previous**. After you upgrade, it's recommended you choose **Latest** and run basic regression tests. 
+
+IBM performs robust testing on a variety of data sets to minimize impacts on existing assistants. But given the nature of machine learning models and the nuance and subtlety of natural languages processing, you may find some discrepancies from version to version. If you find a major issue through your tests, you have the ability to switch your settings and use **Previous** to return to the prior behavior.  In this event, we recommend you contact IBM and provide details of your test so that that IBM can support you in the steps to resolve the problem.
+
+It's also recommended that you try the **Beta** version in one of your test systems after you upgrade. This gives you early visibility to changes that are likely to be delivered in a future version, and will reduce the probability of negative impacts to your production systems. IBM values both positive and negative feedback from customers who use Beta. You will have the opportunity to shape how the algorithms function before the version is promoted to **Latest** in a future version. If you choose **Beta**, your assistant always trains on the most current beta version. 
