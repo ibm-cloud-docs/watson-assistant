@@ -30,6 +30,8 @@ subcollection: watson-assistant
 # Integrating with phone and Twilio Flex
 {: #deploy-phone-flex}
 
+![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+
 You can use the phone integration to help your customers over the phone and transfer them to live agents inside of Twilio Flex. If, in the course of a conversation with your assistant, a customer asks to speak to a person, you can transfer the conversation directly to a Twilio Flex agent.
 
 ## Before you begin
