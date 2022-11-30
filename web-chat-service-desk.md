@@ -30,6 +30,8 @@ subcollection: watson-assistant
 # Adding contact center support
 {: #deploy-web-chat-haa}
 
+![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+
 You can configure the web chat to transfer a customer to a human customer support agent if the customer asks for help from a person. The following built-in contact center (service desk) integrations are available:
 
 - [Zendesk](/docs/watson-assistant?topic=watson-assistant-deploy-zendesk) {: #deploy-web-chat-zendesk}
