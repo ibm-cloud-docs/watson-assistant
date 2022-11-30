@@ -28,6 +28,8 @@ subcollection: watson-assistant
 # Integrating with *SMS*
 {: #deploy-sms}
 
+![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+
 Add a text messaging integration so your assistant can exchange messages with your customers.
 {: shortdesc}
 

@@ -29,6 +29,8 @@ subcollection: watson-assistant
 # Integrating with phone and NICE CXone contact center ![Plus or higher plans only](images/plus.png)
 {: #deploy-phone-nicecxone}
 
+![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+
 Connect your assistant to a NICE CXone contact center with live agents. 
 {: shortdesc}
 
