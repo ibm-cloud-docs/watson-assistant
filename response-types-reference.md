@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-12-05"
 
 subcollection: watson-assistant
 
@@ -43,7 +43,7 @@ Plays an audio clip specified by a URL.
 ### Integration channel support
 {: response-types-json-audio-integrations}
 
-| Web chat                          | Phone                             | SMS                               | Slack                             | Facebook                          | Whatsapp                          |
+| Web chat                          | Phone                             | SMS                               | Slack                             | Facebook                          | WhatsApp                          |
 |-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
 | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
@@ -103,7 +103,7 @@ Requests that the conversation be transferred to a different channel integration
 ### Integration channel support
 {: response-types-json-channel-transfer-integrations}
 
-| Phone                              | SMS                               | Slack                             | Facebook                          | Whatsapp                          |
+| Phone                              | SMS                               | Slack                             | Facebook                          | WhatsApp                          |
 |------------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
 | ![Yes](images/checkmark-icon.svg)  | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
@@ -123,7 +123,7 @@ Requests that the conversation be transferred to a different channel integration
 ### Example
 {: response-types-json-channel-transfer-example}
 
-This example requests a transfer from WhatsApp to the web chat. In addition to the `channel_transfer` response, the output also includes a `text` response to be displayed by the web chat integration after the transfer. The use of the `channels` array ensures that the `channel_transfer` response is handled only by the Whatsapp integration (before the transfer), and the `connect_to_agent` response only by the web chat integration (after the transfer). For more information about using `channels` to target specific integrations, see [Targeting specific integrations](#assistant-responses-json-target-integrations).
+This example requests a transfer from WhatsApp to the web chat. In addition to the `channel_transfer` response, the output also includes a `text` response to be displayed by the web chat integration after the transfer. The use of the `channels` array ensures that the `channel_transfer` response is handled only by the WhatsApp integration (before the transfer), and the `connect_to_agent` response only by the web chat integration (after the transfer). For more information about using `channels` to target specific integrations, see [Targeting specific integrations](#assistant-responses-json-target-integrations).
 
 ```json
 {
@@ -179,7 +179,7 @@ Requests that the conversation be transferred to a live agent for help. Service 
 ### Integration channel support
 {: response-types-json-connect-to-agent-integrations}
 
-| Web chat                          | Phone                             | Whatsapp                          |
+| Web chat                          | Phone                             | WhatsApp                          |
 |-----------------------------------|-----------------------------------|-----------------------------------|
 | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
@@ -418,7 +418,7 @@ Displays an image specified by a URL.
 ### Integration channel support
 {: response-types-json-image-integrations}
 
-| Web chat                          | SMS                               | Slack                             | Facebook                          | Whatsapp                          |
+| Web chat                          | SMS                               | Slack                             | Facebook                          | WhatsApp                          |
 |-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
 | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
@@ -462,7 +462,7 @@ Presents a set of options (such as buttons or a drop-down list) that users can c
 ### Integration channel support
 {: response-types-json-option-integrations}
 
-| Web chat                          | Phone                             | SMS                               | Slack                             | Facebook                          | Whatsapp                          |
+| Web chat                          | Phone                             | SMS                               | Slack                             | Facebook                          | WhatsApp                          |
 |-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
 | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
@@ -526,7 +526,7 @@ Pauses before sending the next message to the channel, and optionally sends a "u
 ### Integration channel support
 {: response-types-json-pause-integrations}
 
-| Web chat                          | Facebook                          | Whatsapp                          |
+| Web chat                          | Facebook                          | WhatsApp                          |
 |-----------------------------------|-----------------------------------|-----------------------------------|
 | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
@@ -571,7 +571,7 @@ Calls the search skill linked to the assistant to retrieve results that are rele
 ### Integration channel support
 {: response-types-json-search-integrations}
 
-| Web chat                          | Phone                             | SMS                               | Slack                             | Facebook                          | Whatsapp                          |
+| Web chat                          | Phone                             | SMS                               | Slack                             | Facebook                          | WhatsApp                          |
 |-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
 | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
@@ -776,7 +776,7 @@ Displays text (or reads it aloud, for the phone integration). To add variety, yo
 ### Integration channel support
 {: response-types-json-text-integrations}
 
-| Web chat                          | Phone                             | SMS                               | Slack                             | Facebook                          | Whatsapp                          |
+| Web chat                          | Phone                             | SMS                               | Slack                             | Facebook                          | WhatsApp                          |
 |-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
 | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
@@ -895,7 +895,7 @@ The user-defined response type is not displayed unless the channel has code to h
 ### Integration channel support
 {: response-types-json-user-defined-integrations}
 
-| Web chat                          | Phone                             | SMS                               | Slack                             | Facebook                          | Whatsapp                          |
+| Web chat                          | Phone                             | SMS                               | Slack                             | Facebook                          | WhatsApp                          |
 |-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
 | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg)*| ![Yes](images/checkmark-icon.svg)*| ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
@@ -944,7 +944,7 @@ Displays a video specified by a URL.
 ### Integration channel support
 {: response-types-json-video-integrations}
 
-| Web chat                          | SMS                               | Slack                             | Facebook                          | Whatsapp                          |
+| Web chat                          | SMS                               | Slack                             | Facebook                          | WhatsApp                          |
 |-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
 | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 

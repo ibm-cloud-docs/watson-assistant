@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-12-05"
 
 subcollection: watson-assistant
 
@@ -39,7 +39,9 @@ You can enter a simple text response just by entering the text that you want you
 
 Use the text editor tools to apply font styling, such as bold or italic, to the text or to add links.
 
-Behind the scenes, font styling and link syntax are stored in Markdown format. If you are using the web chat integration, HTML and Markdown tagging are supported (for more information, see [Markdown formatting](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture#web-chat-architecture-markdown)). Other integrations, such as for Facebook and Slack, don't support HTML.
+Behind the scenes, font styling and link syntax are stored in Markdown format. If you are using the web chat integration, HTML and Markdown tagging are supported (for more information, see [Markdown formatting](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture#web-chat-architecture-markdown)).
+
+HTML tags (except for links) are automatically removed from text responses that are sent to the Facebook, WhatsApp, and Slack integrations, because those channels do not support HTML formatting. HTML tags are still handled appropriately in channels that support them (such as the web chat) and stored in the session history.
 
 <!--- Behind the scenes, these three choices are stored using Markdown format.
 
@@ -108,7 +110,7 @@ The *Image* response type is supported by the following channel integrations:
 - SMS
 - Slack
 - Facebook
-- Whatsapp
+- WhatsApp
 
 To add an *Image* response, complete the following steps:
 
@@ -138,7 +140,7 @@ The *Audio* response type is supported by the following channel integrations:
 - SMS
 - Slack
 - Facebook
-- Whatsapp
+- WhatsApp
 
 To add an *Audio* response, complete the following steps:
 
@@ -172,7 +174,7 @@ The *Video* response type is supported by the following channel integrations:
 - SMS
 - Slack
 - Facebook
-- Whatsapp
+- WhatsApp
 
 To add a *Video* response, complete the following steps:
 

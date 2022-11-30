@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-17"
+lastupdated: "2022-12-05"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,13 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 5 December 2022
+{: #watson-assistant-dec052022}
+{: release-note}
+
+Unsupported HTML removed from text responses in channel integrations
+:   HTML tags (except for links) are now automatically removed from text responses that are sent to the Facebook, WhatsApp, and Slack integrations, because those channels do not support HTML formatting. HTML tags are still handled appropriately in channels that support them (such as the web chat) and stored in the session history.
 
 ## 17 November 2022
 {: #watson-assistant-nov172022}
@@ -692,7 +699,7 @@ Actions skill improvement
 {: release-note}
 
 Deploy your assistant to WhatsApp - now generally available
-:   Make your assistant available through Whatsapp messaging so it can exchange messages with your customers where they are. This integration, which is now generally available, creates a connection between your assistant and WhatsApp by using Twilio as a provider. For more information, see [Integrating with WhatsApp](/docs/assistant?topic=assistant-deploy-whatsapp){: external}.
+:   Make your assistant available through WhatsApp messaging so it can exchange messages with your customers where they are. This integration, which is now generally available, creates a connection between your assistant and WhatsApp by using Twilio as a provider. For more information, see [Integrating with WhatsApp](/docs/assistant?topic=assistant-deploy-whatsapp){: external}.
 
 Web chat home screen now generally available
 :   Ease your customers into the conversation by adding a home screen to your web chat window. The home screen greets your customers and shows conversation starter messages that customers can click to easily start chatting with the assistant. For more information about the home screen feature, see [Configuring the home screen](/docs/assistant?topic=assistant-deploy-web-chat#deploy-web-chat-home-screen){: external}. The home screen feature is now enabled by default for all new web chat deployments. Also, you can now access context variables from the home screen. Note that initial context must be set using a `conversation_start` node. For more information, see [Starting the conversation](/docs/assistant?topic=assistant-dialog-start#dialog-start-welcome){: external}.
@@ -1023,7 +1030,7 @@ Skill import improvements
 {: release-note}
 
 Deploy your assistant to WhatsApp!
-:   Make your assistant available through Whatsapp messaging so it can exchange messages with your customers where they are. This beta integration creates a connection between your assistant and WhatsApp by using Twilio as a provider. For more information, see [Integrating with WhatsApp](/docs/assistant?topic=assistant-deploy-whatsapp){: external}.
+:   Make your assistant available through WhatsApp messaging so it can exchange messages with your customers where they are. This beta integration creates a connection between your assistant and WhatsApp by using Twilio as a provider. For more information, see [Integrating with WhatsApp](/docs/assistant?topic=assistant-deploy-whatsapp){: external}.
 
 ## 13 November 2020
 {: #watson-assistant-nov132020}
