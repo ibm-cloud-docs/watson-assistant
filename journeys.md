@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-12-05"
 
 subcollection: watson-assistant
 
@@ -45,6 +45,9 @@ You might use a journey in situations like the following examples:
 - Providing customers with step-by-step guidance for a complex task, like filing a claim or creating an account
 
 - Promoting sales opportunities in your product to target users during specific marketing opportunities, such as offering a new rewards program to customers who are concerned about expenses
+
+For more information about deciding when and how to use journeys, see our [best practices guide](https://medium.com/ibm-watson/best-practices-for-watson-assistant-journeys-993d16fb0ad0){: external}.
+{: tip}
 
 ## Creating a journey
 {: #journeys-create}
