@@ -45,6 +45,13 @@ This topic describes the new features, changes, and bug fixes in each release of
 Unsupported HTML removed from text responses in channel integrations
 :   HTML tags (except for links) are now automatically removed from text responses that are sent to the Facebook, WhatsApp, and Slack integrations, because those channels do not support HTML formatting. HTML tags are still handled appropriately in channels that support them (such as the web chat) and stored in the session history.
 
+## 2 December 2022
+{: #watson-assistant-dec022022}
+{: release-note}
+
+Pause response type
+:   Use a *Pause* response to have your assistant wait for a specified interval before displaying the next response. This pause might be to allow time for a request to complete, or simply to mimic the appearance of a live agent who might pause between responses. The pause can be of any duration from 1 to 10 seconds. For more information, see [Pause response](/docs/watson-assistant?topic=watson-assistant-respond#respond-pause-response).
+
 ## 17 November 2022
 {: #watson-assistant-nov172022}
 {: release-note}

@@ -28,6 +28,8 @@ subcollection: watson-assistant
 # Integrating with WhatsApp
 {: #deploy-whatsapp}
 
+![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+
 Integrate with WhatsApp messaging so your assistant can exchange messages with your customers where they are.
 {: shortdesc}
 

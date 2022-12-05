@@ -30,6 +30,8 @@ subcollection: watson-assistant
 # Integrating with phone and Genesys Cloud
 {: #deploy-phone-genesys}
 
+![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+
 You can use the phone integration to help your customers over the phone and transfer them to live agents inside of Genesys Cloud. If, in the course of a conversation with your assistant, a customer asks to speak to a person, you can transfer the conversation directly to a Genesys Cloud agent.
 
 ## Before you begin

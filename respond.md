@@ -257,3 +257,30 @@ Content loaded in an iframe by the web chat is _sandboxed_, meaning that it has 
 A script running inside a sandboxed iframe cannot make changes to any content content outside the iframe, _if_ the outer page and the iframe have different origins. Be careful if you use an *iframe* response to embed content that has the same origin as the the page where your web chat widget is hosted; in this situation the embedded content can defeat the sandboxing and gain access to content outside the frame. For more information about this potential vulnerability, see the `sandbox` attribute [documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox){: external}.
 {: note}
 
+## Pause response
+{: #respond-pause-response}
+
+Use a *Pause* response to have your assistant wait for a specified interval before displaying the next response. This pause might be to allow time for a request to complete, or simply to mimic the appearance of a live agent who might pause between responses. The pause can be of any duration from 1 to 10 seconds.
+
+A *Pause* response is typically used in combination with other responses. By default, a typing indicator animation appears during the pause in order to simulate a live agent.
+
+The *Pause* response type is supported by the following channel integrations:
+- Web chat
+- Facebook
+- WhatsApp
+
+With the phone channel, you can add a pause by including the SSML `break` element in the assistant output. For more information, see the [{{site.data.keyword.texttospeechshort}} documentation](/docs/text-to-speech?topic=text-to-speech-elements#break_element){: external}.
+{: note}
+
+To add a *Pause* response:
+
+1. In the **Assistant says** field, click the ![Pause](images/pause.png) **Pause** icon. 
+
+1. In the  **Duration** field, enter the length of time for the pause to last as a number of seconds.
+
+    The duration can't exceed 10 seconds. Customers are typically willing to wait about 8 seconds for someone to enter a response. 
+    
+1. The **Typing indicator** is set to **On** by default. You can set this to **Off** if you want.
+
+    Add another response type, such as a text response type, after the pause to clearly denote that the pause is over.
+    {: tip}

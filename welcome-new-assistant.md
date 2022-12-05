@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-07-11"
+lastupdated: "2022-11-30"
 
 subcollection: watson-assistant
 
@@ -55,3 +55,9 @@ Visit [Getting started with {{site.data.keyword.conversationshort}}](/docs/watso
 
 You can easily switch back and forth between the new experience and the classic experience. However, the new experience provides a simplified user interface, an improved deployment process, and access to the latest features. For more information, see [Migrating to the new experience](/docs/watson-assistant?topic=watson-assistant-migrate-overview). If you do need to switch, see [Switching between new and classic experiences](/docs/watson-assistant?topic=watson-assistant-switch-experience).
 
+## Using {{site.data.keyword.conversationshort}}
+
+{{site.data.keyword.conversationshort}} can be deployed as a managed cloud service or can be installed on premises. This documentation only applies to a managed cloud service or IBM Cloud Pak® for Data version 4.6 or later, and describes how to use the product regardless of how it is deployed. Information that applies exclusively to one deployment type is denoted by the appropriate icon:
+
+- ![Cloud Pak for Data only](images/desktop.png) **IBM Cloud Pak® for Data** version 4.6 or later for installed instances.
+- ![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud** for managed instances that are hosted by IBM Cloud.
