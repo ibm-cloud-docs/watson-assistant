@@ -28,6 +28,8 @@ subcollection: watson-assistant
 # Integrating with phone ![Plus or higher plans only](images/plus.png)
 {: #deploy-phone}
 
+![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+
 Adding the phone integration to your assistant makes your assistant available to customers over the phone.
 {: shortdesc}
 
