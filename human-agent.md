@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-11-11"
+  years: 2018, 2022
+lastupdated: "2022-12-05"
 
 subcollection: watson-assistant
 
@@ -36,11 +36,11 @@ To use this feature, your assistant must interact with customers using a **web c
 You must add an integration to a service desk system before setting up live agent transfers to your assistant. The supported service desks depend upon how customers connect to your assistant (web chat or phone). For more information about integrating with a service desk, see [Basic web chat configuration](/docs/watson-assistant?topic=watson-assistant-web-chat-basics) and [Phone integration configuration](/docs/watson-assistant?topic=watson-assistant-deploy-phone-config).
 
 Your agents can work with one of these supported service desk tools:
-- [Genesys](docs/watson-assistant?topic=watson-assistant-deploy-phone-genesys)
-- [NICE CXone](docs/watson-assistant?topic=watson-assistant-deploy-phone-nicecxone)
-- [Salesforce](docs/watson-assistant?topic=watson-assistant-deploy-salesforce)
-- [Twilio Flex](docs/watson-assistant?topic=watson-assistant-deploy-phone-flex)
-- [Zendesk](docs/watson-assistant?topic=watson-assistant-deploy-zendesk)
+- [Genesys](/docs/watson-assistant?topic=watson-assistant-deploy-phone-genesys)
+- [NICE CXone](/docs/watson-assistant?topic=watson-assistant-deploy-phone-nicecxone)
+- [Salesforce](/docs/watson-assistant?topic=watson-assistant-deploy-salesforce)
+- [Twilio Flex](/docs/watson-assistant?topic=watson-assistant-deploy-phone-flex)
+- [Zendesk](/docs/watson-assistant?topic=watson-assistant-deploy-zendesk)
 
 <!-- To see an example of how this works from the agent's perspective, watch this video showing a transfer to an agent using Genesys Cloud:
 
