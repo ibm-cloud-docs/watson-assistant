@@ -765,7 +765,7 @@ For example, suppose your assistant has stored an array containing flight detail
 ```
 {: codeblock}
 
-To build an array of strings that describe these flights in a user-readable form, you might use an following expression:
+To build an array of strings that describe these flights in a user-readable form, you might use the following expression:
 
 ```text
 ${Flight_data}.joinToArray("Flight %e.flight% to %e.destination%", true)
