@@ -2,7 +2,7 @@
 
 copyright:
 years: 2015, 2022
-lastupdated: "2022-10-06"
+lastupdated: "2022-12-06"
 
 subcollection: watson-assistant
 
@@ -492,6 +492,30 @@ ${step_297}.substring(5, ${step_297}.length())
 
 If the action variable `${step_297}` contains the string `This is a string.`, this expression returns `is a text.`
 
+### String.toJson()
+{: #expression-methods-actions-strings-toJson}
+
+This method parses a string that contains JSON data and returns a JSON object or array, as in this example:
+
+```
+${json_var}.toJson()
+```
+
+If the session variable `${json_var}` contains the following string:
+
+```string
+"{ \"firstname\": \"John\", \"lastname\": \"Doe\" }"
+```
+
+the `toJson()` method returns the following object:
+
+```json
+{
+  "firstname": "John",
+  "lastname": "Doe"
+}
+```
+
 ### String.toLowerCase()
 {: #expression-methods-actions-strings-toLowerCase}
 
@@ -685,7 +709,7 @@ $toppings_array.join(', ')
 
 If you use that expression to define the value of a variable, you can then reference that variable in your assistant output to create a human-readable message (for example, `You have selected the following toppings: pepperoni, ham, mushrooms`).
 
-### JSONArray.joinToArray(template)
+### JSONArray.joinToArray(template, retainDataType)
 {: #expression-methods-actions-arrays-join-to-array}
 
 This method extracts information from each item in the array and builds a new array that is formatted according to the format you specify as a template. The template can be a string, a JSON object, or an array. The method returns an array of strings, an array of objects, or an array of arrays, depending on the type of the template.
@@ -741,13 +765,16 @@ For example, suppose your assistant has stored an array containing flight detail
 ```
 {: codeblock}
 
-To build an array of strings that describe these flights in a user-readable form, you might use the following expression:
+To build an array of strings that describe these flights in a user-readable form, you might use an following expression:
 
 ```text
-${Flight_data}.joinToArray("Flight %e.flight% to %e.destination%")
+${Flight_data}.joinToArray("Flight %e.flight% to %e.destination%", true)
 ```
 
 This expression would return the following array of strings: `["Flight AZ1040 to FCO","Flight DL1710 to LAX","Flight VS4379 to LHR"]`.
+
+The optional `retainDataType` parameter specifies whether the method should preserve the data type of all input values in the returned array.
+If `retainDataType` is set to `false` or omitted, in some situations, strings in the input array might be converted to numbers in the returned array. For example, if the selected values from the input array are `"1"`, `"2"`, and `"3"`, the returned array might be `[ 1, 2, 3 ]`. To avoid unexpected type conversions, specify `true` for this parameter.
 
 #### Complex templates
 {: #join-to-array-complex-template}
