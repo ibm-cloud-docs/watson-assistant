@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-11-10"
+lastupdated: "2022-12-06"
 
 subcollection: watson-assistant
 
@@ -38,15 +38,25 @@ The **Recognition** page lets you analyze unrecognized requests. You can use thi
 ## Viewing groups of unrecognized requests
 {: #analytics-recognition-view}
 
-You can view groups of unrecognized requests for the draft or live environment. If there are at least 50 unrecognized requests in the last 30 days, {{site.data.keyword.conversationshort}} can evaluate the data and attempt to generate groups of similar requests. 
-
-To generate a group, there need to be at least 10 examples that have similar meaning, so:
-- The list of groups might not always appear
-- The groups might not include all unrecognized requests
-
-To refresh the groups, click the Refresh icon ![Refresh](images/analytics-refresh.png).
+You can view groups of unrecognized requests for the draft or live environment. {{site.data.keyword.conversationshort}} generates groups of similar unrecognized requests from the last 30 days so that you can decide whether to add the requests as example phrases to a new action.
 
 ![Unrecognized requests](images/analytics-unrecognized-groups.png)
+
+The algorithm that generates groups considers several factors in shaping the groups:
+- Unrecognized requests that have fewer than 3 or more than 35 significant words are removed from consideration. Common words such as `my` or `is`, or punctuation such as `?`, are not considered significant. Phrases that are too short or too long are usually not effective as example training phrases for your assistant.
+- The unrecognized requests are compared to the latest version of your actions so that requests that would no longer be unrecognized with your latest actions version are filtered out. 
+- Groups for which the request count is less than 10 are excluded.
+
+As a result of the algorithm:
+- A list of groups might not always appear
+- The groups might not include all unrecognized requests that you see on the **Conversations** page
+
+Several events cause your groups to be refreshed using the latest data:
+- The first time you visit the **Recognition** page for a specific environment, {{site.data.keyword.conversationshort}} generates groups
+- If at least 1 day has passed since the groups were last generated, or if you edit your actions in your draft environment, the groups are refreshed when you return to the **Recognition** page
+- You can refresh the groups using the **Refresh** icon ![Refresh](images/analytics-refresh.png)
+
+This table explains the details of the list of groups:
 
 | Column | Description |
 | --- | --- |
@@ -104,10 +114,16 @@ If a group lists related actions, you might focus on modifying them to address t
 
 ![Related actions](images/analytics-unrecognized-related-actions.png)
 
-### Downloading the group
+### Downloading groups
 {: #analytics-recognition-download-group}
 
-For each unrecognized requests group, you can download the data in a CSV file. To download, click the **Download group** icon.
+You can download all group data or individual group data in a CSV file.
+
+To download all group data, click the **Download groups** icon on the **Recognition** page.
+
+![Download groups](images/analytics-unrecognized-download-groups.png)
+
+To download data for an individual group, open the group, then click the **Download group** icon.
 
 ![Download group](images/analytics-unrecognized-download-group.png)
 
@@ -115,7 +131,7 @@ The CSV file includes this information:
 
 | Column | Description |
 | --- | --- |
-| Group | The name of the unrecognized requests group you downloaded |
+| Group | The name of the unrecognized requests group |
 | Example | Each verbatim request in the group |
 | Count | The number of times the unrecognized request is included in this group |
 | Group Id | ID number for the group |
