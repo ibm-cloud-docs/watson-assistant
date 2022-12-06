@@ -44,7 +44,7 @@ This topic describes the new features, changes, and bug fixes in each release of
 
 Updated expression methods
 :   The following new and updated methods are available in expressions:
-- The [`Array.joinToArray()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-arrays-join-to-array) method now supports a new boolean parameter you can use to specify that the data type of values from the input array should be preserved in the returned array.
+   - The [`Array.joinToArray()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-arrays-join-to-array) method now supports a new boolean parameter you can use to specify that the data type of values from the input array should be preserved in the returned array.
 - The new [`String.toJson()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-strings-toJson) method parses a string containing JSON data and returns a JSON object or array. This method is supported in both actions and dialog.
 
 ## 5 December 2022
