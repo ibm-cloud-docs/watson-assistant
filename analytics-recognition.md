@@ -43,7 +43,7 @@ You can view groups of unrecognized requests for the draft or live environment. 
 ![Unrecognized requests](images/analytics-unrecognized-groups.png)
 
 The algorithm that generates groups considers several factors in shaping the groups:
-- Unrecognized requests that have fewer than 3 or more than 35 significant words are removed from consideration. Common words such as `my` or `is`, or punctuation such as `?` are not considered significant. Phrases that are too short or too long are usually not effective as example training phrases for your assistant.
+- Unrecognized requests that have fewer than 3 or more than 35 significant words are removed from consideration. Common words such as `my` or `is`, or punctuation such as `?`, are not considered significant. Phrases that are too short or too long are usually not effective as example training phrases for your assistant.
 - The unrecognized requests are compared to the latest version of your actions so that requests that would no longer be unrecognized with your latest actions version are filtered out. 
 - Groups for which the request count is less than 10 are excluded.
 
