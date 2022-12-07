@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-12-07"
 
 keywords: chatbot, live chatbot, omnichannel
 
@@ -69,12 +69,8 @@ The assistant chooses the appropriate resolution from among these options:
 
 To see how {{site.data.keyword.conversationshort}} is helping enterprises cut costs and improve customer satisfaction today, read the [Independent study finds IBM Watson Assistant customers can accrue $23.9 million in benefits](https://www.ibm.com/blogs/watson/2020/03/independent-study-finds-ibm-watson-assistant-customers-accrued-23-9-million-in-benefits/){: external} blog on ibm.com.
 
-This documentation describes managed instances of {{site.data.keyword.conversationshort}} that are offered in IBM Cloud or in Cloud Pak for Data as a Service. If you are interested in on-premises or installed deployments, see [this documentation](/docs/assistant-data?topic=assistant-data-index).
-{: note}
-
 Read more about these implementation steps by following these links:
 
-- [Creating an assistant](/docs/watsonassistant?topic=watson-assistant-assistant-add)
 - [Building your assistant](/docs/watson-assistant?topic=watson-assistant-build-actions-overview)
 - [Publishing and deploying your assistant](/docs/watson-assistant?topic=watson-assistant-publish-overview)
 
