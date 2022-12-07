@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-12-06"
+lastupdated: "2022-12-07"
 
 keywords: Watson Assistant release notes
 
@@ -52,7 +52,7 @@ Updated expression methods
 {: release-note}
 
 Live integrations deleted in assistants created before June 24, 2022
-:   If you have assistants created before June 24, 2022, using the new {{site.data.keyword.conversationshort}} user experience, the live integrations for these assistants were mistakenly deleted during a software upgrade. We are working on restoring these deleted integrations.
+:   For assistants created before June 24, 2022, using the new {{site.data.keyword.conversationshort}} user experience, the live integrations for these assistants were mistakenly deleted during a software upgrade. These integrations should now be restored. If you are still experiencing issues, please contact IBM support.
 
 Unsupported HTML removed from text responses in channel integrations
 :   HTML tags (except for links) are now automatically removed from text responses that are sent to the Facebook, WhatsApp, and Slack integrations, because those channels do not support HTML formatting. HTML tags are still handled appropriately in channels that support them (such as the web chat) and stored in the session history.
