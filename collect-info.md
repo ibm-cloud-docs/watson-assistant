@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-09-16"
+lastupdated: "2022-11-10"
 
 subcollection: watson-assistant
 
@@ -55,24 +55,65 @@ To choose the customer response type for a step, click **Define customer respons
 | [**Free text**](#customer-response-type-free-text) | Any arbitrary text response. | `123 Main Street`, `John Q. Smith` |
 {: caption="Response types" caption-side="bottom"}
 
-## Requiring or skipping steps
+## Skipping steps, always asking steps, or never asking steps
 {: #collect-info-skip-step}
 
-Although a customer response is associated with a particular step, the assistant can recognize the required information at any point during the action. For any step that expects a customer response, you can decide whether to explicitly ask for the information or to use the default, which is to skip asking and apply information that the assistant has already recognized.
+Although a customer response is associated with a particular step, the assistant can recognize the required information at any point during the action. By default, a step is set to be skipped if its value is already provided in the user's input. If the value is specificed after the step, the new value replaces the value specified in the step itself.
 
-Many steps ask the customer to answer a question (such as selecting which account to withdraw money from, or specifying the amount to withdraw). But if your customer has already answered this question, you don't want your assistant to ask for it again. For example, if the customer's initial input was `I want to withdraw money from my checking account`, the step that asks the user to select an account can (and probably should) be skipped.
+For example, if the customer's initial input was `I want to withdraw money from my checking account`, a step that asks the user to select a bank account will be skipped because the customer already entered that information.
 
-By default, steps are set to be skipped if the value for the step is provided in the user's input elsewhere in the action, either before or after the step itself. The assistant can recognize responses that apply to that step at any point in the conversation. 
+For any step that expects a customer response, you can decide whether to:
+- Skip asking if the answer is mentioned in previous messages. This is the default.
+- Always ask for this information, regardless of previous messages.
+- Never ask. Collect information from previous messages.
 
-However, if your action asks for the same type of data in more than one step, use the **Always ask for this information** setting to prevent the assistant from making incorrect assumptions. For example, you might have an action in which one step asks for a hotel check-in date and another step asks for the check-out date. If you skip asking, the assistant can mistake the check-in date for the check-out date.
+### Always ask
+{: #collect-info-skip-step-always-ask}
 
-To ensure a step is always used in the conversation with a customer:
+If your action asks for the same type of data in more than one step, use the **Always ask for this information** setting to prevent the assistant from making incorrect assumptions. For example, you might have an action in which one step asks for a hotel check-in date and another step asks for the check-out date. If you skip asking, the assistant can mistake the check-in date for the check-out date.
 
-1. Click the **Settings** icon to open **Customer response settings**. 
+To require that a step is always used in the conversation with a customer:
 
-1. Click to enable the toggle **Always ask for this information, regardless of earlier messages**.
+1. In the customer response, click the **Settings** icon to open **Customer response settings**. 
+
+   ![Customer response settings](images/collect-info-customer-response-settings.png)
+
+1. Choose **Always ask for this information, regardless of previous messages**.
 
 1. Click **Apply**.
+
+### Never ask
+{: #collect-info-skip-step-never-ask}
+
+There may be some situations where you need a step to never ask a question because you anticipate there might be redundant questions in the conversation.
+
+To set that a step is never asked in the conversation with a customer:
+
+1. In the customer response, click the **Settings** icon to open **Customer response settings**. 
+
+1. Choose **Never ask. Collect information from previous messages.**.
+
+1. Click **Apply**.
+
+#### Example
+{: #collect-info-skip-step-never-ask-example}
+
+This example explains when you might set a step to never ask for a response.
+
+You might have an action that responds to requests to file an insurance claim. If you expect customers to typically make a request about a specific type of claim, such as auto, home, or medical, you might not want to ask another question about what type. They might say `I need to file an auto claim` or `I want to make a home claim.`
+
+Although you still need a step that collects the answer about the type of claim, you might not want or need to ask that explicit question, especially if your assistant is used with the phone integration. Instead, you can create a step with the claim options, but set it to never ask.
+
+This table shows how you could set up the steps. The last step is a catch-all in case the customer doesn't mention the claim type initially.
+
+| Step | Conditions | Assistant says | Customer response | Customer response setting | And then |
+| -- | -- | -- | -- | -- | -- |
+| 1 | None | What kind of claim? | Options: Automobile, Homeowner, Medical | Never ask | Continue to the next step |
+| 2 | Step 1 is Automobile | None | Click here to file an automobile claim | Skip (default) | End the action |
+| 3 | Step 1 is Homeowner | None | Click here to file a homeowner claim | Skip (default) | End the action |
+| 4 | Step 1 is Medical | None | Click here to file a medical claim | Skip (default) | End the action |
+| 5 | Step 1 is not defined (no claim type) | None | Click here to file an insurance claim | Skip (default) | End the action |
+{: caption="Example using the never ask response setting" caption-side="bottom"}
 
 ## Customer response types
 {: #customer-response-types}
@@ -82,21 +123,18 @@ The configuration information you must provide varies by response type.
 ### Options
 {: #customer-response-type-options}
 
-An *options* response presents customers with a list of choices to select from. Use this response type when the customer's response must be one of a predefined set of known values. When you select an options response, you must then specify the valid options the assistant will display.
+An *options* response presents customers with a list of choices to select from. The way in which these options are presented depends upon how your customers connect to the assistant. In the web chat integration, the options are shown as clickable buttons (for 4 or fewer options) or as a drop-down list (for more than 4 options).
 
-The way in which these values are presented at run time depends upon how your customers connect to the assistant. In the web chat integration, the options are shown as clickable buttons (for 4 or fewer options) or as a drop-down list (for more than 4 options).
+There are two ways to create the list:
+- Enter a list of options and synonyms
+- Generate a dynamic list from a variable
 
-If you have a very long list of options, such as all the states in the U.S., you can choose to not show options in a list. This can be useful to prevent a phone integration from reading a long list of options to the customer.
+#### Entering a list of options and synonyms
+{: #customer-response-type-options-static}
 
-To disable the list:
+Enter each choice in the **Option** fields. You can click **Add synonyms** to enter variations of an option value that customers might type. You can enter multiple synonyms in a comma-separated list.
 
-1. In the options customer response, click the **Settings** icon.
-
-1. Move the **List options** toggle to off.
-
-You can optionally add *synonyms* for each option by clicking **Add synonyms**. Synonyms are variations of an option value that customers might type. For each option that you add, add synonyms in a comma-separated list.
-
-For example, you might define the following options:
+For example, you might define the following options and synonyms:
 
 | Option value | Synonyms                         |
 |--------------|----------------------------------|
@@ -105,12 +143,25 @@ For example, you might define the following options:
 | Green        | lime, olive, forest        |
 {: caption="Options example" caption-side="top"}
 
-To select an option at run time, users can click an option button or list item, such as *Green*. Or they can type `Green` or one of its synonyms, such as `lime`.
+To select an option, customers can click an option button or list item, such as *Green*. Or they can type `Green` or one of its synonyms, such as `lime`.
 
 Synonyms are particularly useful for a response that might be skipped, because they enable the assistant to recognize an option the customer might have already chosen before seeing the list. For example, if the customer's original input was `I want to order a large coffee`, a synonym would enable the assistant to recognize `large` as equivalent to the actual size `Grande`.
 
-You can save your configured options response for reuse in other steps. To save a customer response, click the **Save response for reuse** icon. For more information about saved customer responses, see [Saving and reusing customer responses](#saved-customer-responses).
+You can save this configuration for reuse in other steps. To save a customer response, click the **Save response for reuse** icon. For more information about saved customer responses, see [Saving and reusing customer responses](#saved-customer-responses).
 {: tip}
+
+If you have a very long list of options, such as all the states in the U.S., you can choose to not show options in a list. This can be useful to prevent a phone integration from reading a long list of options to the customer.
+
+To disable the list:
+
+1. In the options customer response, click the **Settings** icon.
+
+1. Click the **Present options to the customer in a list** toggle to off.
+
+#### Dynamic list of options
+{: #customer-response-type-options-dynamic}
+
+Within the options customer response, you can use the **dynamic** setting to generate the list when you need to ask questions that are potentially different each time and for each customer. You need to set up a variable as the source of the options. For more information, see [Dynamic options](/docs/watson-assistant?topic=watson-assistant-dynamic-options).
 
 ### Confirmation
 {: #customer-response-type-confirmation}
@@ -256,6 +307,7 @@ A *free text* response collects any arbitrary text string. Use this response for
 There might be some questions that your assistant needs to ask in multiple different steps and actions. For example, a banking assistant might support many different actions, each of which requires that the customer specify an account number. A customer response might have a complex configuration (for example, it might have options with many synonyms). Instead of having to rebuild such a response over and over, you can save a customer response and reuse it wherever your assistant needs it.
 
 ### Creating a saved customer response
+{: #saved-customer-responses-create}
 
 To create a saved customer response:
 
@@ -269,12 +321,13 @@ To create a saved customer response:
 
 1. Click **Save**. The saved customer response now appears on the **Saved responses** page.
 
-1. In the **Type of response** field, select the customer response type.
+1. In the **Type of response** field, choose Options or Regex.
 
 From this page, you can also edit or delete any existing saved customer response. Keep in mind that any changes you make will apply to all instances of the customer response in any step that uses it. If you delete a saved customer response, any steps that use that response become invalid and must be corrected to use a different response type.
 {: important}
 
-You can also create a saved customer response based on the customer response configuration within a step. If you have already configured a customer response in a step, click the **Save response for reuse** icon and specify a descriptive name for the saved customer response.
+For the options and regex customer response types, you can also create a saved customer response based on the customer response configuration within a step. If you have already configured a customer response in a step, click the **Save response for reuse** icon and specify a descriptive name for the saved customer response. (This isn't available if you use the dynamic setting for an options response.)
+{: tip}
 
 ### Uploading saved customer responses
 {: #uploading-saved-customer-response}

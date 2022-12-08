@@ -58,6 +58,7 @@ toc:
           - save-actions.md
           - review.md
           - actions-global-settings.md
+          - algorithm-version.md
           - manage-actions.md
           - assistant-add.md
           - assistant-rename-delete.md
@@ -149,6 +150,7 @@ toc:
           topics:
           - analytics-overview.md
           - analytics-action-completion.md
+          - analytics-recognition.md
           - analytics-conversations.md
           - segment-add.md
       - topicgroup:
@@ -170,6 +172,8 @@ toc:
           topics:
           - develop-overview.md
           - assistant-responses-json.md
+          - dynamic-options.md
+          - journeys.md
           - expressions.md
           - topicgroup:
               label: Customizing channels
@@ -189,7 +193,7 @@ toc:
                 label: Building a custom client
                 topics:
                 - api-client.md
-                - /watson/watson-using-sdks
+                -  include: ../watson/getting-started-sdks.md
       - topicgroup:
           label: Migrating to the new experience
           topics:
@@ -205,6 +209,8 @@ toc:
           label: Early access features
           topics:
           - action-response-modes.md
+          - boost-words.md
+          - deploy-phone-amazon-connect.md
           - multiple-environments.md
           - trigger-phrases.md
 

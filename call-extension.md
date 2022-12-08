@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-09-22"
+lastupdated: "2022-11-10"
 
 subcollection: watson-assistant
 
@@ -152,57 +152,48 @@ The following example shows a step condition that checks for a failure from an e
 ## Debugging failures
 {: #extension-debug}
 
-If your calls to an extension are failing, you might want to debug the problem by seeing detailed information about what is being returned from the external API. This is not information you would want to show to your customers, but for debugging purposes, you can create a step that uses expressions to show the response data.
+If your calls to an extension are failing, you might want to debug the problem by seeing detailed information about what is being sent to and returned from the external API. To do this, you can use the extension inspector in the Preview pane:
 
-### Checking the HTTP status
-{: #extension-check-status}
+1. On the Actions page, or in the action editor, click **Preview** to open the Preview pane.
 
-One way of debugging failures is to check the HTTP status code. This code can help you determine if an error is being returned from the external service.
+    You cannot access the extension inspector from the assistant preview on the **Preview** page, which shows only what a customer would see. Instead, use the preview feature that is part of the Actions page, which gives you access to additional information.
+    {: note}
 
-There are many possible HTTP status codes, and different methods use different status codes to indicate various types of success or failure. To check the success or failure of a call to an extension, you need to know what HTTP status codes the external service returns. These status codes are specified in the OpenAPI document that describes the external API.
-{: important}
+1. Interact with your assistant as a customer would.
 
-To create an expression that retrieves the HTTP status code, follow these steps:
+1. Each time an extension is called, the preview pane shows a message giving you access to detailed information:
 
-1. Create or edit a step that comes after the call to the extension.
+    ![Extension message in the Preview pane](images/extension-preview-message.png)
 
-1. Click the **Set variable values** ![Set variable values icon](images/set-variable-values.png) icon.
+    Click **Inspect** to see details about the call to the extension.
+    
+    You can also click the ![Extension inspector icon](images/extension-inspector-icon.png) icon to show or hide the extension inspector. However, you must click **Inspect** in the preview pane to show information about a particular call to an extension.
+    {: tip}
 
-1. Click **Set new value**.
+    The **Overview** tab of the extension inspector shows the following information about a call to an extension:
 
-1. From the drop-down list, select the session variable you want to store the HTTP status code in. If you have not already created a variable for this purpose, click **New session variable** and specify a meaningful name (for example, `HTTP status`).
+    Extension
+    :   The name of the extension, as specified in the extension settings.
 
-1. Select **Expression** to write an expression to define the value for the session variable.
+    Operation
+    :   The operation that was called.
 
-1. In the expression field, type a dollar sign (`$`) to show the list of available variables.
+    Status
+    :   The HTTP status code from the response. This code can help you determine if an error is being returned from the external service.
 
-1. Select any variable that is a response value from the extension. (It doesn't matter which variable you select, as long as it is an extension response variable).
+        There are many possible HTTP status codes, and different methods use different status codes to indicate various types of success or failure. To check the success or failure of a call to an extension, you need to know what HTTP status codes the external service returns. These status codes are specified in the OpenAPI document that describes the external API.
+        {: important}
 
-    ![Response variable in expression](images/extension-http-status-expression.png)
+    Request parameters
+    :   The input parameters that were sent to the external API as part of the request.
 
-    The expression is automatically updated to show a reference to the variable you selected, in the format `${step_xxx_result_y.body.variablename}`. For example, if you selected a response variable called `body.id`, the reference might be `${step_596_result_1.body.id}`.
+    Response properties
+    :   The values of all properties included in the response from the external API. These are the values that are mapped to action variables after the call to the extension completes.
 
-1. Inside the curly braces, (`{}`), edit this reference to remove `.body.variablename`. You should be left with something like `${step_596_result_1}`.
+    In the **Request parameters** and **Response properties** tables, long property names might be truncated to show only the last part of the JSON path. To see the complete path and property name, hover the mouse pointer over the property name in the table.
+    {: tip}
 
-1. After the closing curly brace (`}`), add `.status`. The resulting reference identifies the status code returned from the call to the extension (for example, `${step_596_result_1}.status`).
+1. Click the **Advanced** tab in the extension inspector if you want to see the raw request and response data:
+    - The request is shown as a cURL command, which you can run at a command prompt or import into a tool such as [Postman](https://www.postman.com/){: external}. (For security reasons, the content of any `Authorization` header is not included.)
+    - The response is shown as the complete JSON data returned from the external API.
 
-    For more information about writing expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).
-
-1. In the **Assistant says** field, type an output message that references the variable you used to store the HTTP status. To reference the variable, type dollar sign (`$`) and select the session variable from the list.
-
-    ![Output referencing HTTP status variable](images/extension-http-status-output.png)
-
-1. You can now test your action and see the HTTP status code in the assistant output after the call to the extension.
-
-### Debugging the output
-{: #extension-debug-output}
-
-For debugging purposes, you might want your assistant to show the entire response it receives from the extension (including any error messages) in the output.
-
-To do this, create a step after the call to the extension, and in that step assign an expression to a session variable (for example, `response_body`). Construct the expression using the same method described in [the previous section](#extension-check-status), except specifying `.body` instead of `.status`.
-
-![expression to show response body](images/extension-debug-expression.png)
-
-You can then reference this variable in the **Assistant says** field to include the body of the response data in the output. If the call to the extension is successful, this shows the unformatted raw data received from the external service. In the event of a failure, it includes any error message that was received.
-
-For more information about creating and referencing variables, see [Using variables to manage conversation information](/docs/watson-assistant?topic=watson-assistant-manage-info).

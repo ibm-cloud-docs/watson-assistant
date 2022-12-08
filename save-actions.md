@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-06-15"
+lastupdated: "2022-10-26"
 
 subcollection: watson-assistant
 
@@ -56,6 +56,8 @@ If you want to disable auto-save, you can toggle it off:
 1. On the **Auto-save** tab, set the switch to **Off**.
 
 1. Click **Save**, and then click **Close**.
+
+The auto-save setting is a user preference that applies to all assistants in your instance. Changing the setting applies only to you and doesn't affect other users. {: note}
 
 ## Avoiding conflicts
 {: #save-actions-conflicts}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-15"
+lastupdated: "2022-11-14"
 
 subcollection: watson-assistant
 
@@ -28,6 +28,8 @@ subcollection: watson-assistant
 
 # Integrating with phone and NICE CXone contact center ![Plus or higher plans only](images/plus.png)
 {: #deploy-phone-nicecxone}
+
+![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
 
 Connect your assistant to a NICE CXone contact center with live agents. 
 {: shortdesc}
@@ -224,7 +226,7 @@ If the  **Hangup** action is executed and an [**Onrelease**](https://help.nice-i
 ## Adding transfer support to your assistant 
 {: #deploy-phone-cxone-transfer}
 
-Configure your assistant to transfer calls to an agent using the *Connect To Agent* response_type. For instructions, see [Transferring a call to a human agent](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer).
+Configure your assistant to transfer calls to an agent using the *Connect To Agent* response_type. For instructions, see [Transferring a call to a live agent](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer).
 
 Use the following format:
 

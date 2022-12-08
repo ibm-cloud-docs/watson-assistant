@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-08-17"
+lastupdated: "2022-11-03"
 
 subcollection: watson-assistant
 
@@ -133,6 +133,6 @@ Click the icon, and the editor shows the corresponding step in the background.
 
 Click **Variable values** to see the values stored in each variable during the conversation. The **Variable values** pane has two tabs, one for action variables and one for session variables. As you test your conversation in Preview, you can check that each variable is set correctly.
 
-![Variable values](images/rn-variable-values.png)
+![Variable values](images/variable-values-preview.png)
 
 To learn more about variables, see [Managing information during the conversation](/docs/watson-assistant?topic=watson-assistant-manage-info).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-23"
+lastupdated: "2022-12-07"
 
 keywords: Watson Assistant release notes
 
@@ -37,6 +37,89 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 6 December 2022
+{: #watson-assistant-dec062022}
+{: release-note}
+
+Updated expression methods
+:   The following new and updated methods are available in expressions:
+   - The [`Array.joinToArray()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-arrays-join-to-array) method now supports a new boolean parameter you can use to specify that the data type of values from the input array should be preserved in the returned array.
+   - The new [`String.toJson()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-strings-toJson) method parses a string containing JSON data and returns a JSON object or array. This method is supported in both actions and dialog.
+
+## 5 December 2022
+{: #watson-assistant-dec052022}
+{: release-note}
+
+Live integrations deleted in assistants created before June 24, 2022
+:   For assistants created before June 24, 2022, using the new {{site.data.keyword.conversationshort}} user experience, the live integrations for these assistants were mistakenly deleted during a software upgrade. These integrations should now be restored. If you are still experiencing issues, please contact IBM support.
+
+Unsupported HTML removed from text responses in channel integrations
+:   HTML tags (except for links) are now automatically removed from text responses that are sent to the Facebook, WhatsApp, and Slack integrations, because those channels do not support HTML formatting. HTML tags are still handled appropriately in channels that support them (such as the web chat) and stored in the session history.
+
+## 2 December 2022
+{: #watson-assistant-dec022022}
+{: release-note}
+
+Pause response type
+:   Use a *Pause* response to have your assistant wait for a specified interval before displaying the next response. This pause might be to allow time for a request to complete, or simply to mimic the appearance of a live agent who might pause between responses. The pause can be of any duration from 1 to 10 seconds. For more information, see [Pause response](/docs/watson-assistant?topic=watson-assistant-respond#respond-pause-response).
+
+## 17 November 2022
+{: #watson-assistant-nov172022}
+{: release-note}
+
+Use unrecognized requests to get action recommendations
+:   In **Analyze**, the new **Recognition** page lets you view groups of similar unrecognized requests. You can use the requests as example phrases in new or existing actions to address questions and issues that aren't being answered by your assistant. For information, see [Use unrecognized requests to get action recommendations](/docs/watson-assistant?topic=watson-assistant-analytics-recognition).
+
+## 15 November 2022
+{: #watson-assistant-nov152022}
+{: release-note}
+
+Journeys
+:   Beginning with web chat version 6.9.0, you can now create _journeys_ to guide your customers through tasks they can already complete on your website. A journey is an interactive, multipart response that can combine text, video, and images, presented in sequence in a small window superimposed over your website.
+
+    Journeys are available as a beta feature. For more information, see [Guiding customers with journeys](/docs/watson-assistant?topic=watson-assistant-journeys).
+
+## 10 November 2022
+{: #watson-assistant-nov102022}
+{: release-note}
+
+Dynamic options
+:   Within the options customer response, you can use the **dynamic** setting to generate the list when you need to ask questions that are potentially different each time and for each customer. You need to set up a list variable as the source of the options. For more information, see [Dynamic options](/docs/watson-assistant?topic=watson-assistant-dynamic-options).
+
+Extension inspector
+:   You can use the new extension inspector in the action editor **Preview** pane to debug problems with custom extensions. The extension inspector shows detailed information about what data is being sent to and returned from an external API. For more information, see [Debugging failures](/docs/watson-assistant?topic=watson-assistant-call-extension#extension-debug).
+
+## 3 November 2022
+{: #watson-assistant-nov032022}
+{: release-note}
+
+Never ask a step
+:   There may be some situations where you need a step to never ask a question because you anticipate there might be redundant questions in the conversation. A new setting, **Never ask**, is now available for any step that expects a customer response. For more information, see [Skipping steps, always asking steps, or never asking steps](/docs/watson-assistant?topic=watson-assistant-collect-info#collect-info-skip-step).
+
+Action notes
+:   You can now add free-form notes to each action. Within each action, you can use **Action notes** to add a description, documentation, comments, or any other annotations to help you keep track of your work as you build an action. For more information, see [Using the action editor](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-build-actions-overview#build-actions-overview-use).
+
+Variable values in Preview
+:  Viewing action variables in Preview has been improved. Now you can see the history of all action variables, rather than one action at a time. For more information, see [Variable values](/docs/watson-assistant?topic=watson-assistant-review#review-variable-values).
+
+## 21 October 2022
+{: #watson-assistant-oct212022}
+{: release-note}
+
+Algorithm version updates
+:   The algorithm version setting for both actions and dialog now includes three choices: beta, latest, and previous. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
+
+## 12 October 2022
+{: #watson-assistant-oct122022}
+{: release-note}
+
+`now(String timezone)` method output includes time zone offset
+:   The string returned from the `now(String timezone)` method now includes the time zone offset (such as `-05:00`). The new format is `yyyy-MM-dd HH:mm:ss 'GMT'XXX` (where `XXX` represents the time zone offset). This change enables accurate time zone computations when used with other date and time methods such as `before`, `after`, and `reformatDateTime`.
+
+    If you have an existing action or dialog that depends on the previous format, you can adapt it by reformatting the output using `now(timezone).reformatDateTime('yyyy-MM-dd HH:mm:ss')`.
+    
+    For more information, see [Expression language methods for actions](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-now).
 
 ## 23 September 2022
 {: #watson-assistant-sep232022}
@@ -106,8 +189,8 @@ Channel name variable
 {: #watson-assistant-aug112022}
 {: release-note}
 
-Algorithms versions available in more languages
-:   Algorithms version options are now available in Arabic, Czech, and Dutch. Algorithms versions allows you to choose which version of {{site.data.keyword.conversationshort}} algorithms to apply to your future trainings. For more information, see [Algorithm versions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-algorithms-versions).
+Algorithm version options available in more languages
+:   Algorithm version options are now available in Arabic, Czech, and Dutch. This allows you to choose which {{site.data.keyword.conversationshort}} algorithm to apply to your future trainings. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
 
 ## 9 August 2022
 {: #watson-assistant-aug092022}
@@ -168,15 +251,15 @@ New demo site
 {: #watson-assistant-jun242022}
 {: release-note}
 
-Algorithms versions available in more languages
-:   Algorithms version options are now available in Chinese (Traditional), Japanese, and Korean. Algorithms versions allows you to choose which version of {{site.data.keyword.conversationshort}} algorithms to apply to your future trainings. For more information, see [Algorithm versions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-algorithms-versions).
+Algorithm version options available in more languages
+:   Algorithm version options are now available in Chinese (Traditional), Japanese, and Korean. This allows you to choose which {{site.data.keyword.conversationshort}} algorithm to apply to your future trainings. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
 
 ## 16 June 2022
 {: #watson-assistant-jun162022}
 {: release-note}
 
-Algorithms versions
-:   Algorithms versions allows you to choose which version of {{site.data.keyword.conversationshort}} algorithms to apply to your future trainings. You can choose to use the more stable and fully supported version of algorithms by selecting **Baseline**. This is the latest mature version that you may want to use for your live assistant. Or, you can choose **Beta** to preview and test what is coming. For more information, see [Algorithm versions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-algorithms-versions).
+Algorithm version
+:   Algorithm version allows you to choose which {{site.data.keyword.conversationshort}} algorithm to apply to your future trainings. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
 
 Algorithm beta version (2022-06-10)
 :   Algorithm beta version (2022-06-10) includes a new irrelevance detection algorithm to improve off-topic detection accuracy. Utterances with similar meanings are expected to have more similar confidences in comparison to previous irrelevance detection algorithms. For example, the training utterance `please suggest route from times square` has 100% confidence at runtime. Currently in IBM Cloud, the utterance `please suggest route from central park` gets a low confidence and could be flagged as irrelevant. With beta version (2022-06-10), the same utterance is expected to be predicted correctly with a ~46% confidence.
@@ -635,7 +718,7 @@ Actions skill improvement
 {: release-note}
 
 Deploy your assistant to WhatsApp - now generally available
-:   Make your assistant available through Whatsapp messaging so it can exchange messages with your customers where they are. This integration, which is now generally available, creates a connection between your assistant and WhatsApp by using Twilio as a provider. For more information, see [Integrating with WhatsApp](/docs/assistant?topic=assistant-deploy-whatsapp){: external}.
+:   Make your assistant available through WhatsApp messaging so it can exchange messages with your customers where they are. This integration, which is now generally available, creates a connection between your assistant and WhatsApp by using Twilio as a provider. For more information, see [Integrating with WhatsApp](/docs/assistant?topic=assistant-deploy-whatsapp){: external}.
 
 Web chat home screen now generally available
 :   Ease your customers into the conversation by adding a home screen to your web chat window. The home screen greets your customers and shows conversation starter messages that customers can click to easily start chatting with the assistant. For more information about the home screen feature, see [Configuring the home screen](/docs/assistant?topic=assistant-deploy-web-chat#deploy-web-chat-home-screen){: external}. The home screen feature is now enabled by default for all new web chat deployments. Also, you can now access context variables from the home screen. Note that initial context must be set using a `conversation_start` node. For more information, see [Starting the conversation](/docs/assistant?topic=assistant-dialog-start#dialog-start-welcome){: external}.
@@ -966,7 +1049,7 @@ Skill import improvements
 {: release-note}
 
 Deploy your assistant to WhatsApp!
-:   Make your assistant available through Whatsapp messaging so it can exchange messages with your customers where they are. This beta integration creates a connection between your assistant and WhatsApp by using Twilio as a provider. For more information, see [Integrating with WhatsApp](/docs/assistant?topic=assistant-deploy-whatsapp){: external}.
+:   Make your assistant available through WhatsApp messaging so it can exchange messages with your customers where they are. This beta integration creates a connection between your assistant and WhatsApp by using Twilio as a provider. For more information, see [Integrating with WhatsApp](/docs/assistant?topic=assistant-deploy-whatsapp){: external}.
 
 ## 13 November 2020
 {: #watson-assistant-nov132020}
@@ -2231,7 +2314,7 @@ Intent examples can directly reference entities
 {: release-note}
 
 {{site.data.keyword.conversationshort}} connector
-:   You can use the new {{site.data.keyword.conversationshort}} connector tool to connect your workspace to a Slack or Facebook Messenger app that you own, making it available as a chat bot that Slack or Facebook Messenger users can interact with. This tool is available only for the {{site.data.keyword.Bluemix_notm}} US South region.
+:   You can use the new {{site.data.keyword.conversationshort}} connector tool to connect your workspace to a Slack or Facebook Messenger app that you own, making it available as a chatbot that Slack or Facebook Messenger users can interact with. This tool is available only for the {{site.data.keyword.Bluemix_notm}} US South region.
 
 ## 3 November 2017
 {: #watson-assistant-nov032017}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-26"
+lastupdated: "2022-12-05"
 
 subcollection: watson-assistant
 
@@ -31,7 +31,7 @@ subcollection: watson-assistant
 In some situations, you might need to define your assistant's responses using the JSON editor. (For more information about assistant responses, see [Adding assistant responses](/docs/watson-assistant?topic=watson-assistant-respond)).
 {: shortdesc}
 
-To edit a response using the access the JSON editor, click the **Switch to JSON editor** icon ![Switch to JSON editor icon](images/json-editor-icon.png) in the corner of the **Assistant says** field. The JSON editor shows how the response is defined behind the scenes and sent to the channel.
+To edit a response using the JSON editor, click the **Switch to JSON editor** icon ![Switch to JSON editor icon](images/json-editor-icon.png) in the corner of the **Assistant says** field. The JSON editor shows how the response is defined behind the scenes and sent to the channel.
 
 ## Generic JSON format
 {: #assistant-responses-json-generic}
@@ -210,10 +210,8 @@ Not all channel integrations support all response types. For information about w
 `option`
 :   Presents a set of options (such as buttons or a drop-down list) that users can choose from. The selected value is then sent to the assistant as user input.
 
-<!-- Pause not yet supported in actions
 `pause`
 :   Pauses before sending the next message to the channel, and optionally sends a "user is typing" event (for channels that support it).
--->
 
 <!-- Search response type not yet supported in actions
 `search`
@@ -246,7 +244,7 @@ Not all channel integrations support all response types. For information about w
 
 The following table indicates which channel integrations support each type. For additional information about any channel-specific limitations, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference).
 
-| Response type    | Web chat                          | Phone                             | SMS                               | Slack                             | Facebook                          | Whatsapp                          |
+| Response type    | Web chat                          | Phone                             | SMS                               | Slack                             | Facebook                          | WhatsApp                          |
 |------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
 | audio            | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 | channel_transfer |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
@@ -257,6 +255,7 @@ The following table indicates which channel integrations support each type. For 
 | iframe           | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   | ![Yes](images/checkmark-icon.svg) |                                   |
 | image            | ![Yes](images/checkmark-icon.svg) |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 | option           | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
+| pause            | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 | speech_to_text   |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |
 | start_activities |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |
 | stop_activities  |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |

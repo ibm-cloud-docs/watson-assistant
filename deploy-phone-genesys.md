@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-05-24"
+lastupdated: "2022-11-14"
 
 subcollection: watson-assistant
 
@@ -29,6 +29,8 @@ subcollection: watson-assistant
 
 # Integrating with phone and Genesys Cloud
 {: #deploy-phone-genesys}
+
+![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
 
 You can use the phone integration to help your customers over the phone and transfer them to live agents inside of Genesys Cloud. If, in the course of a conversation with your assistant, a customer asks to speak to a person, you can transfer the conversation directly to a Genesys Cloud agent.
 
@@ -120,7 +122,7 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
 1. Click **Save Outbound Routes**.
 
-1. Go to the **Simulate Call** tab and click the **Simulate Call** button. The trunk should be shown as operational. (No actual call is made during simulation.)
+1. Go to the **Simulate Call** tab and click the **Simulate Call** button. The trunk should be shown as operational. No actual call is made during simulation.
 
     ![Genesys simulate call](images/phone-genesys-simulate-call.png)
 
@@ -138,9 +140,9 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
     - When prompted, select **Use an existing phone number with an external provider**.
 
-    - Specify the phone number you assigned in the Genesys **Number Plans** setting. (Remember, this is not necessarily a real phone number; it is just the identifier you assigned.)
+    - Specify the phone number you assigned in the Genesys **Number Plans** setting. This is not necessarily a real phone number; it is just the identifier you assigned.
 
-    - Complete the phone integration setup process. (For more information, see [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone).)
+    - Complete the phone integration setup process. For more information, see [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone).
 
     - After the phone integration is set up, go to the **SIP trunk** tab and uncheck the **Don't place callers on hold while transferring to a live agent** option. 
 
@@ -151,9 +153,9 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 If you encounter any errors, click **Performance -> Interactions** and view the PCAP file to read the diagnostics.
 {: note}
 
-## Transferring to an agent
+## Transferring to a live agent
 
-Now that your Genesys Cloud environment can connect to Watson Assistant, you can set up the ability for your assistant to transfer calls back to your human agents. To do so, follow these steps:
+Now that your Genesys Cloud environment can connect to Watson Assistant, you can set up the ability for your assistant to transfer calls back to your live agents. To do so, follow these steps:
 
 1. In the Genesys Cloud console, go to **DID Numbers -> DID Ranges** and create a new range. Specify the following information:
 
@@ -175,7 +177,7 @@ Now that your Genesys Cloud environment can connect to Watson Assistant, you can
 
     1. Click **Save**.
 
-1. Create a simple call flow. (Your business might already have something more complex for routing.)
+1. Create a simple call flow. Your business might already have something more complex for routing.
 
     1. Click **Admin**.
 
@@ -213,7 +215,7 @@ Now that your Genesys Cloud environment can connect to Watson Assistant, you can
 
     1. Click **Save**.
 
-1. Make sure your assistant is configured to transfer calls to an agent using the *Connect To Agent* response_type. For more information about how to do this, see [Transferring a call to a human agent](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer).
+1. Make sure your assistant is configured to transfer calls to an agent using the *Connect To Agent* response_type. For more information about how to do this, see [Transferring a call to a live agent](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer).
 
     For the `sip.uri` parameter, use the DID number you created in Genesys Cloud, as well as the inbound SIP URI from your Genesys trunk. Use the following format:
 

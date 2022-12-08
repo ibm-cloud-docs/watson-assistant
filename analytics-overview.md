@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-11-11"
+lastupdated: "2022-11-10"
 
 subcollection: watson-assistant
 
@@ -84,7 +84,11 @@ One action can be triggered multiple times, so to better understand individual a
 
 The recognition chart provides you with a view into how many requests are matched to actions. This helps you to understand where you may have content gaps, where you might want to build new actions, or how existing actions aren't matching properly to user requests.
 
-To get more detail, click on *Unrecognized requests* to review the full conversations associated with requests that are not being recognized by the assistant.
+Customer requests are considered unrecognized if:
+- The request triggers the *No Action Matches* action
+- The assistant asks a clarifying question and the customer chooses `None of the above` 
+
+To get more detail, click on *Unrecognized requests* to review the requests that are not being recognized by the assistant, so you can create new actions that address questions and issues that aren't being answered.
 
 ## Most frequent, least frequent, and least completed
 {: #analytics-most-least}

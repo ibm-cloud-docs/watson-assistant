@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-11-14"
 
 subcollection: watson-assistant
 
@@ -35,7 +35,7 @@ You can use response types to perform the following phone-specific actions:
 
 - [Apply advanced settings to the {{site.data.keyword.speechtotextshort}} service](#phone-actions-speech-advanced)
 - [Apply advanced settings to the {{site.data.keyword.texttospeechshort}} service](#phone-actions-text-advanced)
-- [Transfer a call to a human agent](#phone-actions-transfer)
+- [Transfer a call to a live agent](#phone-actions-transfer)
 - [Play hold music or a voice recording](#phone-actions-hold-music)
 - [Enable keypad entry](#phone-actions-dtmf)
 - [Transfer the conversation to the web chat integration](#phone-actions-transfer-channel)
@@ -49,6 +49,7 @@ In some cases, you might want to combine response types to perform multiple acti
 You can also perform the following phone-specific actions:
 
 - [Inject custom values into CDR log events](#phone-actions-cdr-custom-data)
+- [Access phone integration context variables from your action](#phone-actions-access-context-variables)
 
 For reference information about response types, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference). <!-- For reference information about phone-specific context variables, see [Phone context variables](/docs/watson-assistant?topic=watson-assistant-phone-context). -->
 
@@ -122,7 +123,9 @@ When configuring dynamically from {{site.data.keyword.conversationshort}} using 
 ### Using a custom language model 
 {: #phone-actions-custom-language}
 
-When you set up the phone integration, you can configure the integration to use a custom language model all the time. However, you might want to use a standard language model most of the time, and specify a custom language model to use only for specific topics that your assistant is designed to help customers with. For example, you might want to use a custom model that specializes in medical terms for an action that helps with medical bills only. You can apply a custom language model for a specific branch of the conversation. 
+When you set up the phone integration, you can configure the integration to use a custom language model all the time. 
+
+However, you might want to use a standard language model most of the time, and specify a custom language model to use only for specific topics that your assistant is designed to help customers with. For example, you might want to use a custom model that specializes in medical terms for an action that helps with medical bills only. You can apply a custom language model for a specific branch of the conversation. 
 
 For more information, about custom language models, see [Creating a custom language model](/docs/speech-to-text?topic=speech-to-text-languageCreate){: external}.
 
@@ -333,17 +336,17 @@ In the `voice` parameter, specify the voice model that you want to use. For more
 The model you specify must be one that is supported by the {{site.data.keyword.texttospeechshort}} service instance that is configured for use with the integration.
 {: note}
 
-## Transferring a call to a human agent
+## Transferring a call to a live agent
 {: #phone-actions-transfer}
 
-When you configure the phone integration, you can optionally set up backup call center support, which makes it possible for the assistant to transfer a call to a human agent. You can use the *Connect to human agent* response type in an action step to initiate a transfer to a human agent at a specific point in the conversation. When a *Connect to human agent* response is sent to the phone integration, a SIP transfer is initiated using the SIP `REFER` message, as defined by [RFC 5589](https://datatracker.ietf.org/doc/html/rfc5589#section-6.1){: external}.
+When you configure the phone integration, you can optionally set up backup call center support, which makes it possible for the assistant to transfer a call to a human. You can use the *Connect to agent* response type in an action step to initiate a transfer to a live agent at a specific point in the conversation. When a *Connect to agent* response is sent to the phone integration, a SIP transfer is initiated using the SIP `REFER` message, as defined by [RFC 5589](https://datatracker.ietf.org/doc/html/rfc5589#section-6.1){: external}.
 
-For more information about initiating a transfer to a human agent during the conversation, see the following documentation:
+For more information about initiating a transfer to a live agent during the conversation, see the following documentation:
 
 - [Setting up live agent escalation](/docs/watson-assistant?topic=watson-assistant-deploy-phone)
 - [Defining responses using the JSON editor](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json)
 
-The phone integration supports additional parameters for the *Connect to human agent* response type. You can add these phone-specific parameters to the `connect_to_agent` response type using the JSON editor.
+The phone integration supports additional parameters for the *Connect to agent* response type. You can add these phone-specific parameters to the `connect_to_agent` response type using the JSON editor.
 
 The `connect_to_agent` response type supports the ability to specify the target transfer information under the `transfer_info` parameter.
 
@@ -406,7 +409,6 @@ If you define a SIP URI as the transfer target, escape the at sign (`@`) in the 
 
 ###  Transferring after hangup
 
-
 By default, the phone integration transfers calls by using a SIP `REFER` request. Depending on the IVR service provider, you might need to configure call transfer to use a SIP `BYE` request instead.
 Use the  `transfer_method`  attribute to specify how to transfer the call, using either  `refer`  or  `hangup`. When `transfer_method` is set to  `hangup` instead of `refer`, the behavior of the transfer action changes. Instead of sending a SIP `REFER` request, the phone integration plays back any associated text and then hangs up the call by sending a SIP `BYE` request.
 
@@ -441,6 +443,18 @@ After the hangup, the phone integration passes the transfer destination that is 
 }
 ```
 {: codeblock}
+
+
+### Transferring upon failure
+
+To configure transfer on failures, go to the **Advanced** tab in the phone integration settings. The following selections can be configured:
+
+- **Transfer failure message**
+
+- **Disconnect call on transfer failure**
+
+For more information, see [Handling call and transfer failures](/docs/watson-assistant?topic=watson-assistant-deploy-phone-config#deploy-phone-config-failure).
+
 
 ### Passing Watson Assistant Metadata in SIP Signaling
 
@@ -703,7 +717,11 @@ This example shows the `dtmf` response type with the `send` command, used to sen
 ## Transferring the conversation to the web chat integration
 {: #phone-actions-transfer-channel}
 
-You can transfer the caller from the current phone call to a [web chat](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat) session by using the `channel_transfer` response type. The assistant sends an SMS message to the caller that includes a URL that the caller can tap to load the web chat widget in the phone's browser. The web chat session displays the history of the phone call and can start the process of collecting information needed to complete the transaction. This can be useful in situations where the customer can provide information more easily in writing than by speaking (for example, changing an address).
+You can transfer the caller from the current phone call to a [web chat](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat) session by using the `channel_transfer` response type. 
+
+The assistant sends an SMS message to the caller that includes a URL that the caller can tap to load the web chat widget in the phone's browser. The web chat session displays the history of the phone call and can start the process of collecting information needed to complete the transaction. 
+
+This can be useful in situations where the customer can provide information more easily in writing than by speaking (for example, changing an address).
 
 After the transfer has successfully completed, the caller can hang up the phone and continue the copnversation using the web chat.
 The `channel_transfer` response type can be used with the phone integration only if the *SMS with Twilio* integration is also configured for the assistant.
@@ -944,3 +962,27 @@ To remove a previously defined property, you must explicitly set it to an empty 
 
 ```
 {: codeblock}
+
+## Access phone integration context variables from your action
+{: #phone-actions-access-context-variables}
+
+If you want to access the phone integration context variables, use the JSON editor to edit the context.
+
+The following example shows how to access the user phone number (i.e. the phone number that the call was received from):
+
+```json
+  "context": {
+    "variables": [
+      {
+        "value": {
+          "expression": "${system_integrations.voice_telephony.private.user_phone_number}.replace('+','')"
+        },
+        "skill_variable": "user_phone_number"
+      }
+    ]
+  }
+
+```
+{: codeblock}
+
+For more information about the phone integration context variables, see [Phone integration context variables](/docs/watson-assistant?topic=watson-assistant-phone-context).

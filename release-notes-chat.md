@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-15"
+lastupdated: "2022-12-05"
 
 subcollection: watson-assistant
 
@@ -23,8 +23,6 @@ subcollection: watson-assistant
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-{{site.data.content.classiclink}}
-
 # Web chat release notes
 {: #release-notes-chat}
 
@@ -39,6 +37,68 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 7.0.0
+{: #7.0.0}
+
+*Release date: 5 December 2022*
+
+- **Streamlined live agent handoff**: The live agent handoff experience has been streamlined and simplified. Instead of opening the live agent chat in a separate window, the web chat now shows the live agent entering the conversation in the same window.
+
+    Because of this change, the [`updateCustomMenuOptions`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecustommenuoptions){: external} instance method has changed to reflect the fact that there is now only a single view, with a single list of custom menu options. If you want to customize menu options only during a live agent chat, you can subscribe to the [`agent:pre:startChat`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#agentprestartchat){: external} and [`agent:endChat`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#agentendchat){: external} events to trigger your customizations.
+
+- **`agent:endChat` changes**: The [`agent:endChat`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#agentendchat){: external} event now also fires if the customer cancels a live agent request before the agent has joined. If you want to show a post-chat form only after a live agent chat, you can use the new `requestCancelled` flag on the event to determine whether the request was canceled.
+
+- **New configuration options**: The following new options are available in the configuration object:
+    - `serviceDesk.availabilityTimeoutSeconds`: Specifies how long the web chat waits for an available agent before automatically canceling the live agent request.
+    - `serviceDesk.disableAgentSessionHistory`: Disables storage of live agent chats in the session history. If this option is set to `true`, live agent chat history is not stored; this means that if the web chat is reloaded, the live agent chat history is lost.
+
+    For more information, see [Service desk options](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#servicedeskoptions){: external}.
+
+- **`elements` instance property**: A new [`elements`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#servicedeskoptions){: external} instance property provides methods you can use to apply CSS styles to individual elements used by the web chat. (Currently, only the main window is supported.)
+
+- **`skip_card` option for journeys**: The journeys beta feature has been updated to support a new `skip_card` property. You can use this property to start a journey immediately without waiting for the customer to click the introductory card, or even to start a journey from your website without opening the web chat at all. For more information, see [Guiding customers with journeys](/docs/watson-assistant?topic=watson-assistant-journeys).
+
+- **Path changes**: Some internal paths used for communication with the assistant have changed. If you have firewall or proxy rules that are configured to allow specific paths, you might need to update your configuration to allow the following paths:
+
+    - `/<SUBSCRIPTION_ID>/chat/<INTEGRATION_ID>/config`
+    - `/<SUBSCRIPTION_ID>/chat/<INTEGRATION_ID>/message`
+
+## 6.9.0
+{: #6.9.0}
+
+*Release data: 14 November 2022*
+
+- You can now create _journeys_ to guide your customers through tasks they can already complete on your website. A journey is an interactive, multipart response that can combine text, video, and images, presented in sequence in a small window superimposed over your website.
+
+    Journeys are available as a beta feature. For more information, see [Guiding customers with journeys](/docs/watson-assistant?topic=watson-assistant-journeys).
+
+## 6.8.1
+{: #6.8.1}
+
+*Release date: 7 November 2022*
+
+- Bug fixes.
+
+## 6.8.0
+{: #6.8.0}
+
+*Release date: 31 October 2022*
+
+- Added support for sending pre-chat information to the Salesforce integration.
+
+## 6.7.0
+{: #6.7.0}
+
+*Release date: 10 October 2022*
+
+- **New `updateIsTypingCounter()` method**: The new `updateIsTypingCounter()` instance method updates the counter that determines whether the typing indicator is displayed. For more information, see [instance.updateIsTypingCounter()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateistypingcounter){: external}.
+
+- **New `updateBotUnreadIndicatorVisibility()` method**: The new `updateBotUnreadIndicatorVisibility()` instance method specifies whether the unread indicator on the launcher icon is shown or hidden. For more information, see [instance.updateBotUnreadIndicatorVisibility()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatebotunreadindicatorvisibility){: external}.
+
+- Connect to Agent and custom cards now have rounded corners.
+
+- Bug fixes.
 
 ## 6.6.2
 {: #6.6.2}

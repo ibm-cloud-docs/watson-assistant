@@ -30,6 +30,8 @@ subcollection: watson-assistant
 # Integrating with Zendesk
 {: #deploy-zendesk}
 
+![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+
 Integrate your web chat with a Zendesk service desk solution so your customers always get the help they need.
 {: shortdesc}
 
