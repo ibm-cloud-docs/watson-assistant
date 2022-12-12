@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-12-05"
+lastupdated: "2022-12-12"
 
 subcollection: watson-assistant
 
@@ -639,7 +639,7 @@ For detailed information about how to this command, see [Applying advanced setti
 
 ### Example
 
-This example uses the `speech_to_text` response type with the `configure` command to change the language model used by the {{site.data.keyword.texttospeechshort}} service to Spanish, and to enable smart formatting.
+This example uses the `speech_to_text` response type with the `configure` command to change the language model used by the {{site.data.keyword.speechtotextshort}} service to Spanish, and to enable smart formatting.
 
 ```json
 {
