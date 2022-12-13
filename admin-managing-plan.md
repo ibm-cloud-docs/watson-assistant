@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-09-12"
+lastupdated: "2022-12-13"
 
 keywords: billing, data centers, MAU, monthly active users, service plans
 
@@ -25,8 +25,6 @@ subcollection: watson-assistant
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-{{site.data.content.classiclink}}
-
 # Managing your plan
 {: #admin-managing-plan}
 
@@ -45,41 +43,23 @@ For answers to common questions about subscriptions, see [How you're charged](/d
 
 Explore the {{site.data.keyword.conversationshort}} [service plan options](https://www.ibm.com/cloud/watson-assistant/pricing/){: external}.
 
-<!--### Artifact limits per plan
-{: #services-information-limits}
-
-Information about the artifact limits per plan is available from the topics that describe how to create the artifacts, so you can refer to the limits when you need to know them. Here are links to the topics:
-
-- [Actions](/docs/assistant?topic=assistant-actions#actions-limits){: external}
-- [Assistants](/docs/assistant?topic=assistant-assistant-add#assistant-add-limits){: external}
-- [Counterexamples](/docs/assistant?topic=assistant-irrelevance-detection#irrelevance-detection-limits){: external}
-- [Dialog nodes](/docs/assistant?topic=assistant-dialog-tasks#dialog-tasks-node-limits){: external}
-- [Entities](/docs/assistant?topic=assistant-entities#entities-limits){: external}
-- [Inactivity timeout](/docs/assistant?topic=assistant-assistant-settings#assistant-settings-session-limits){: external}
-- [Intents](/docs/assistant?topic=assistant-intents#intents-limits){: external}
-- [Integrations](/docs/assistant?topic=assistant-deploy-integration-add#deploy-integration-add-limits){: external}
-- [Logs](/docs/assistant?topic=assistant-logs#logs-limits){: external}
-- [Skills](/docs/assistant?topic=assistant-skill-add#skill-add-limits){: external}
-- [Versions](/docs/assistant?topic=assistant-versions#versions-limits){: external}
-- [Web chat integration](/docs/assistant?topic=assistant-deploy-web-chat#deploy-web-chat-limits){: external}-->
-
 ### Paid plan features
 {: #admin-managing-plan-paid}
 
 The following features are available only to users of a Plus or Enterprise plan. ![Plus or higher plans only](images/plus.png)
 
-<!--- [Autolearning](/docs/assistant?topic=assistant-autolearn){: external} ![Beta](images/beta.png)
-- [Intent conflict resolution](/docs/assistant?topic=assistant-intents#intents-resolve-conflicts){: external}
-- [Intent recommendations and intent user example recommendations](/docs/assistant?topic=assistant-intent-recommendations){: external}-->
 - [Phone integration](/docs/watson-assistant?topic=watson-assistant-deploy-phone)
-- [Private endpoints](/docs/watson-assistant?topic=watson-assistant-security#security-private-endpoints)
+- [Private endpoints](/docs/watson-assistant?topic=watson-assistant-admin-securing#security-private-endpoints)
 - [Search](/docs/watson-assistant?topic=watson-assistant-search-add)
 - [v2 Logs API](/apidocs/assistant/assistant-v2#listlogs){: external}
 - [Log webhook](/docs/watson-assistant?topic=watson-assistant-webhook-log)
+- [Autolearning](/docs/assistant?topic=assistant-autolearn){: external}
+- [Intent conflict resolution](/docs/assistant?topic=assistant-intents#intents-resolve-conflicts){: external}
+- [Intent recommendations and intent user example recommendations](/docs/assistant?topic=assistant-intent-recommendations){: external}
 
 The following features are available only to users of Enterprise plans. ![Enterprise plan only](images/enterprise.png)
 
-- [Activity tracker](/docs/watson-assistant?topic=watson-assistant-at-events)
+- [Activity tracker](/docs/watson-assistant?topic=watson-assistant-admin-auditing)
 
 The plan type of the service instance you are currently using is displayed in the page header. You can upgrade from one plan type to another. For more information, see [Upgrading](#admin-managing-plan-upgrade).
 
@@ -88,7 +68,7 @@ The plan type of the service instance you are currently using is displayed in th
 
 Unlike API-based plans, which measure usage by the number of API calls made during a month, the Plus and Enterprise plans measure usage by the number of monthly active users.
 
-For example, the Plus plan starts at $140 and covers from 0 to 1,000 monthly active users per service instance per billing period. A Plus plan service instance supports up to 100 assistants. For more details about what is supported by this plan and other plans, see {{site.data.keyword.conversationshort}} [service plan options](https://www.ibm.com/cloud/watson-assistant/pricing/){: external}.
+<!--For example, the Plus plan starts at $140 and covers from 0 to 1,000 monthly active users per service instance per billing period. A Plus plan service instance supports up to 100 assistants. For more details about what is supported by this plan and other plans, see {{site.data.keyword.conversationshort}} [service plan options](https://www.ibm.com/cloud/watson-assistant/pricing/){: external}.-->
 
 A *monthly active user (MAU)* is any unique user who has at least one meaningful interaction with your assistant or custom application over the calendar billing month. A meaningful interaction is an exchange in which a user sends a request to your service and your service responds. Welcome messages that are displayed at the start of a conversation are not charged.
 
@@ -114,8 +94,8 @@ In some older SDK versions, the `user_id` property is not supported as a top-lev
 
 For more information about the `user_id` property, see the API reference documentation:
   
-- [v2 stateless /message](https://cloud.ibm.com/apidocs/assistant-v2/assistant-v2#messagestateless)
-- [v2 stateful /message](https://cloud.ibm.com/apidocs/assistant-v2/assistant-v2#message)
+- [v2 stateless /message](https://cloud.ibm.com/apidocs/assistant-v2/assistant-v2#messagestateless){: external}
+- [v2 stateful /message](https://cloud.ibm.com/apidocs/assistant-v2/assistant-v2#message){: external}
 
 ### If the user ID is not specified
 {: #admin-managing-plan-no-userid}
@@ -131,7 +111,7 @@ If you are using a custom client application and do not set a `user_id` value, t
 
 For example, if the same person chats with your assistant on three separate occasions over the same billing period, how you represent that user in the API call impacts how the interactions are billed. If you identify the user interaction with a `user_id`, it counts as one use. If you identify the user interaction with a `session_id`, then it counts as three uses (because there is a separate session that is created for each interaction).
 
-Design any custom applications to capture a unique `user_id` or `session_id` and pass the information to {{site.data.keyword.conversationshort}}. Choose a non-human-identifiable ID that doesn't change throughout the customer lifecycle. For example, don't use a person's email address as the user ID. In fact, the `user_id` syntax must meet the requirements for header fields as defined in [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2).
+Design any custom applications to capture a unique `user_id` or `session_id` and pass the information to {{site.data.keyword.conversationshort}}. Choose a non-human-identifiable ID that doesn't change throughout the customer lifecycle. For example, don't use a person's email address as the user ID. In fact, the `user_id` syntax must meet the requirements for header fields as defined in [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2){: external}.
 
 The built-in integrations derive the user ID in the following ways: 
 
@@ -184,7 +164,7 @@ The page header shows the plan you are using today. To upgrade your plan, comple
 1. Do one of the following things:
 
    - **Trial plan only**: The number of days that are left in your trial is displayed in the page header. To upgrade your plan, click **Upgrade** from the page header before your trial period ends.
-   - For all other plan types, click the *User* icon ![user icon](images/user-icon.png) from the page header, and then choose **Upgrade** from the menu.
+   - For all other plan types, click **Manage** ![user icon](images/user-icon.png), and then choose **Upgrade** from the menu.
 
 1. From here, you can see other available plan options. For most plan types, you can step through the upgrade process yourself.
 
