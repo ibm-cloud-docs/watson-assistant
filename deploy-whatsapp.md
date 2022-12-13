@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-10-08"
+lastupdated: "2022-12-12"
 
 subcollection: watson-assistant
 
@@ -135,7 +135,7 @@ After WhatsApp grants permission for your Twilio phone number or number to acces
 
 1.  Go to your Twilio account web page and add the webhook that you copied to the Twilio configuration to complete the connection to the WhatsApp integration in Twilio.
 
-## Give your customers fast access to your assistant
+## Give customers fast access to your assistant
 {: #deploy-whatsapp-click-to-chat}
 
 You can add an icon to your web page that customers can click to start a conversation over WhatsApp with your assistant.
@@ -159,7 +159,7 @@ For the best customer experience, design your actions with the capabilities of t
 
 - A text response that contains more than 1,600 characters is broken up into multiple responses.
 - Do not include HTML elements in your text responses.
-- The WhatsApp with Twilio integration does not support chat transfers that are initiated with the *Connect to human agent* response type.
+- The WhatsApp with Twilio integration does not support chat transfers that are initiated with the *Connect to agent* response type.
 - If you use Markdown syntax, see the *Supported Markdown syntax* table.
 - To include a hypertext link in a text response, specify the URL directly. Do not use markdown syntax for links. For example, specify `Contact us at https://www.ibm.com.`
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-12-05"
+lastupdated: "2022-12-12"
 
 subcollection: watson-assistant
 
@@ -190,7 +190,7 @@ Not all channel integrations support all response types. For information about w
 :   Requests that the conversation be transferred to a different integration. (Currently, only the web chat integration can be the target of a channel transfer.)
 
 `connect_to_agent`
-:   Requests that the conversation be transferred to a human service desk agent for help.
+:   Requests that the conversation be transferred to a contact center with live agents for help.
 
 `date`
 :   Requests that the channel collect a date value from the customer (for example, by displaying an interactive calendar).
