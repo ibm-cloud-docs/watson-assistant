@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-09-01"
+lastupdated: "2022-12-12"
 
 subcollection: watson-assistant
 
@@ -201,7 +201,7 @@ To add more phone numbers:
 ## Setting up live agent escalation
 {: #deploy-phone-live-agent}
 
-If you want your assistant to be able to transfer a conversation to a live agent, you can connect your phone integration to a service desk system. For more information, see the instructions for the supported service desk platforms:
+If you want your assistant to be able to transfer a conversation to a live agent, you can connect your phone integration to a contact center. For more information, see instructions for the supported platform:
 
 - [Genesys](/docs/watson-assistant?topic=watson-assistant-deploy-phone-genesys)
 - [Twilio Flex](/docs/watson-assistant?topic=watson-assistant-deploy-phone-flex)
