@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-30"
+lastupdated: "2022-12-16"
 
 subcollection: assistant
 
@@ -25,10 +25,10 @@ subcollection: assistant
 {:swift: .ph data-hd-programlang='swift'}
 {:gif: data-image-type='gif'}
 
-# Algorithm version
+# Algorithm version and training
 {: #algorithm-version}
 
-The **Algorithm version** setting allows you to choose which {{site.data.keyword.conversationshort}} algorithm is used for training.
+The **Algorithm version** setting allows you to choose which {{site.data.keyword.conversationshort}} algorithm is used for training. Your assistant is trained when you update the content or settings, or through [automatic retraining](#algorithm-version-auto-retrain).
 {: shortdesc}
 
 There are three choices:
@@ -56,7 +56,27 @@ The latest and previous versions have date labels such as **Latest (01-Jun-2022)
 
 Algorithm version choices are currently available for Arabic, Chinese (Simplified), Chinese (Traditional), Czech, Dutch, English, French, German, Japanese, Korean, Italian, Portuguese, and Spanish. The universal language model uses a default algorithm.
 
+## Automatic retraining
+{: #algorithm-version-auto-retrain}
+
+![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+
+{{site.data.keyword.conversationshort}} was released as a service in July 2016. Since then, users have been creating and updating skills to meet their virtual assistant needs. Behind the scenes, {{site.data.keyword.conversationshort}} creates machine learning (ML) models to perform a variety of tasks on the user's behalf. 
+
+The primary ML models deal with action recognition, intent classification, and entity detection. For example, the model might detect what a user intends when saying `I want to open a checking account`, and what type of account the user is talking about.
+
+These ML models rely on a sophisticated infrastructure. There are many intricate components that are responsible for analyzing what the user has said, breaking down the user's input, and processing it so the ML model can more easily predict what the user is asking.
+
+Since {{site.data.keyword.conversationshort}} was first released, the product team has been making continuous updates to the algorithms that generate these sophisticated ML models. Older models have continued to function while running in the context of newer algorithms. Historically, the behavior of these existing ML model did not change unless the skill was updated, at which point the skill was retrained and a new model generated to replace the older one. This meant that many older models never benefited from improvements in our ML algorithms.
+
+{{site.data.keyword.conversationshort}} uses continuous retraining. The {{site.data.keyword.conversationshort}} service continually monitors all ML models, and automatically retrains those models that have not been retrained in the previous 6 months. {{site.data.keyword.conversationshort}} retrains using the selected algorithm version. If the version you had selected is no longer supported, {{site.data.keyword.conversationshort}} retrains using the version labeled as **Previous**. This means that your assistant will automatically have the supported technologies applied. Assistants that have been modified during the previous 6 months will not be affected.
+
+In most cases, this retraining will be seamless from an end-user point of view. The same inputs will result in the same actions, intents, and entities being detected. In some cases, the retraining might cause changes in accuracy.
+{: note}
+
 ## Instructions for {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull_notm}}
+{: #algorithm-version-cp4d-auto-retrain}
+
 ![Cloud Pak for Data only](images/desktop.png) **{{site.data.keyword.icp4dfull_notm}} only**
 
 When upgrading your instance of {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull_notm}}, as long as your existing models have been trained using an algorithm version that is still supported, your models will not be retrained during or after the upgrade.
@@ -65,15 +85,15 @@ New algorithm versions will be included in major releases (for example, 4.0.0 or
 
 Each new release includes full support for the version listed as **Latest** in the most recent prior release. This version is then labeled as **Previous** after you upgrade. In addition, each new release will support running models that were trained on the version prior to that so that upgrading won't impact your runtime. For example, if you upgrade from {{site.data.keyword.icp4dfull_notm}} 4.6 to 4.7, and were using **Latest (01-Jun-2022)** that version becomes listed as **Previous (01 June 2022)** and remains your selected version.
 
-### Automatic retraining
-{: #algorithm-version-auto-retrain}
+### Automatic retraining after upgrading
+{: #algorithm-version-cp4d-auto-retrain}
 
-After your upgrade is complete, {{site.data.keyword.conversationshort}} performs automatic retraining for any assistant models that were trained using a version that is no longer supported. In this case, Watson Assistant will automatically retrain your assistant to the **Latest** version.  This automatic retraining is required to assure your ability to run your trained models in your next upgrade.
+After your {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull_notm}} upgrade is complete, {{site.data.keyword.conversationshort}} performs automatic retraining for any assistant models that were trained using a version that is no longer supported. In this case, {{site.data.keyword.conversationshort}} automatically retrains your assistant to the **Latest** version.  This automatic retraining is required to assure your ability to run your trained models in your next upgrade.
 
 ### Best practices
-{: #algorithm-version-best-practices}
+{: #algorithm-version-cp4d-best-practices}
 
-It's recommended to use the **Latest** version in your production deployment. This is the default for newly-created assistants. During an upgrade, your settings don't automatically switch existing assistants to use the latest version. If prior to your upgrade you had selected **Latest**, your settings continue to use that version, now labeled as **Previous**. After you upgrade, it's recommended you choose **Latest** and run basic regression tests. 
+It's recommended to use the **Latest** version in your production deployment of {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull_notm}}. This is the default for newly-created assistants. During an upgrade, your settings don't automatically switch existing assistants to use the latest version. If prior to your upgrade you had selected **Latest**, your settings continue to use that version, now labeled as **Previous**. After you upgrade, it's recommended you choose **Latest** and run basic regression tests. 
 
 IBM performs robust testing on a variety of data sets to minimize impacts on existing assistants. But given the nature of machine learning models and the nuance and subtlety of natural languages processing, you may find some discrepancies from version to version. If you find a major issue through your tests, you have the ability to switch your settings and use **Previous** to return to the prior behavior.  In this event, we recommend you contact IBM and provide details of your test so that that IBM can support you in the steps to resolve the problem.
 
