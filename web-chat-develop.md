@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-10-07"
+  years: 2019, 2023
+lastupdated: "2023-01-09"
 
 subcollection: watson-assistant
 
@@ -33,6 +33,9 @@ subcollection: watson-assistant
 If you are comfortable with JavaScript code, you can customize and extend the web chat by using the web chat API. You can also use a WebView to embed the web chat in your mobile app.
 {: shortdesc}
 
+For detailed reference information about the web chat API, see the web chat [developer documentation](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=){: external}.
+{: tip}
+
 To add the web chat widget to your website or a WebView in your mobile app, all you need to do is embed a generated script element in your HTML source (for more information about the embed script, see [Embedding the web chat on your page](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat)). Within this embed script, you can use the web chat API to customize or extend the web chat.
 
 The web chat API consists of several components:
@@ -40,8 +43,6 @@ The web chat API consists of several components:
 - **Configuration object**: The embed script defines a configuration object named `watsonAssistantChatOptions`, which specifies configuration objects for the web chat widget. By editing the configuration object, you can customize the appearance and behavior of the web chat before it is rendered. For more information about the available configuration options, see [Configuration options object](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#configurationobject){: external} in the web API reference.
 - **Instance methods**: The web chat instance methods provide low-level control of the web chat widget. You can use the instance methods to implement custom behavior such as changing how the web chat widget opens, showing and hiding content, and setting identity information. For more information about the available instance methods, see [List of methods and properties](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#listofmethods){: external} in the web chat API reference.
 - **Events**: The web chat event system makes it possible for your website to respond to web chat events (such as opening or closing the web chat window, sending or receiving messages). By subscribing to events, you can implement custom behavior or even intercept and modify message content. For more information about the event system, see [Events](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events){: external} in the web chat API reference.
-
-For detailed reference information about the web chat API, see the web chat [developer documentation](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=){: external}.
 
 If you want to use the web chat API to customize your web chat implementation, you don't have to start from scratch. Tutorials are available that show examples of common web chat customizations. For more information, see [Web chat development tutorials](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-tutorials).
 {: tip}
