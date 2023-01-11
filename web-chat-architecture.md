@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-12-12"
 
 subcollection: watson-assistant
 
@@ -133,11 +133,11 @@ In text responses from your assistant, you can use Markdown formatting to apply 
 
 For detailed information about the Markdown format, see the [CommonMark specification](https://spec.commonmark.org/){: external}.
 
-## Human agent transfer
+## Live agent transfer
 
-The web chat supports transferring the customer to a human agent in situations the assistant can't handle. If you configure one of the supported contact center integrations, the web chat can open a separate chat window in which the customer can communicate with a human agent.
+The web chat supports transferring the customer to a human in situations the assistant can't handle. If you configure one of the supported contact center integrations, the web chat can open a separate chat window in which the customer can communicate with a live agent.
 
-Your assistant can then initiate a transfer in situations when the assistant is unable to handle a customer's requests. (For more information about initiating a transfer, see [Connecting to a human agent](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-human-agent).)
+Your assistant can then initiate a transfer in situations when the assistant is unable to handle a customer's requests. (For more information about initiating a transfer, see [Connecting to a live agent](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-human-agent).)
 
 For information about how to add a contact center integration to the web chat, see [Adding contact center support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat-haa).
 

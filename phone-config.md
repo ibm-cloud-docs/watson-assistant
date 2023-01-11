@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-09-14"
+lastupdated: "2022-12-12"
 
 subcollection: watson-assistant
 
@@ -42,9 +42,9 @@ You can configure the phone integration to transfer the caller to a human agent 
 
 - **Call failure message**: Add the message you want the assistant to say to a caller before it transfers the call to a human agent.
 
-If, after you transfer the call to a human agent, the connection to the human agent fails for any reason, you can configure what to do.
+If, after you transfer the call to a human, the connection to a live agent fails for any reason, you can configure what to do.
 
-- **Transfer failure message**: Add the message you want the assistant to say to a caller if the transfer to a human agent fails. The message can be up to 150 characters in length.
+- **Transfer failure message**: Add the message you want the assistant to say to a caller if transfer to a live agent fails. The message can be up to 150 characters in length.
 
 - **Disconnect call on transfer failure**: Choose whether to disconnect the call after the failure message. This option is enabled by default. If this option is disabled, when a call transfer fails, your assistant can disconnect or process a different action.
 
@@ -119,13 +119,13 @@ For more information about the SIP protocol, see [RFC 3261](https://tools.ietf.o
 ## Configuring backup call center support
 {: #deploy-phone-config-transfer-service}
 
-When you use the phone integration as the first line of assistance for customers, it's a good idea to have human backup available. You can design your assistant to transfer a call to a human in case the phone connection fails, or if a user asks to speak to someone.
+When you use the phone integration as the first line of assistance for customers, it's a good idea to have a live agent backup available. You can design your assistant to transfer a call to a human in case the phone connection fails, or if a user asks to speak to someone.
 
 Your company might already have one or more phone numbers that connect to an automatic call dispatcher (ACD) that can queue callers until an appropriate agent is available. If not, choose a call center service to use as your backup.
 
 A conversation cannot be transferred from one integration type to another. For example, if you use the web chat integration with service desk support, you cannot transfer a phone call to the service desk that is set up for the web chat.
 
-You must provide the call center SIP URI for the call center service you use. You must specify this information in your assistant when you enable a call transfer from a dialog node or action step. For more information, see [Transferring a call to a human agent](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer).
+You must provide the call center SIP URI for the call center service you use. You must specify this information in your assistant when you enable a call transfer from a dialog node or action step. For more information, see [Transferring a call to a live agent](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer).
 
 ## Optimize your actions for phone interaction
 {: #deploy-phone-config-actions}

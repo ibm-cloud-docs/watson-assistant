@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-12-05"
+lastupdated: "2022-12-12"
 
 subcollection: watson-assistant
 
@@ -183,7 +183,7 @@ Requests that the conversation be transferred to a live agent for help. Service 
 |-----------------------------------|-----------------------------------|-----------------------------------|
 | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
-- For information about adding service desk support to the web chat integration, see [Adding service desk support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat-haa).
+- For information about adding service desk support to the web chat integration, see [Adding contact center support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat-haa).
 - For information about adding service desk support to the phone integration, see [Configuring backup call center support](/docs/watson-assistant?topic=watson-assistant-deploy-phone-config#deploy-phone-config-transfer-service).
 
 ### Fields
@@ -639,7 +639,7 @@ For detailed information about how to this command, see [Applying advanced setti
 
 ### Example
 
-This example uses the `speech_to_text` response type with the `configure` command to change the language model used by the {{site.data.keyword.texttospeechshort}} service to Spanish, and to enable smart formatting.
+This example uses the `speech_to_text` response type with the `configure` command to change the language model used by the {{site.data.keyword.speechtotextshort}} service to Spanish, and to enable smart formatting.
 
 ```json
 {

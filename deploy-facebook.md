@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-12-13"
+lastupdated: "2022-12-12"
 
 subcollection: watson-assistant
 
@@ -52,7 +52,7 @@ There is currently no mechanism for identifying users who interact with the assi
 
 The rich responses that you add to the action are displayed in a Facebook app as expected, with the following exceptions:
 
-- **Connect to human agent**: This response type is ignored.
+- **Connect to live agent**: This response type is ignored.
 
 - **Image**: This response type embeds an image in the response. A title and description are not displayed before the image, whether or not you specify them.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-10-03"
+  years: 2019, 2023
+lastupdated: "2023-01-05"
 
 subcollection: watson-assistant
 
@@ -38,7 +38,7 @@ You can quickly deploy and test the web chat integration using the default setti
 At a minimum, you should update the following basic settings for your assistant:
 
 - The [assistant name](/docs/watson-assistant?topic=watson-assistant-web-chat-style) that you want to show to your customers
-- The contents of the [home screen](/docs/watson-assistant?topic=watson-assistant-web-chat-home-screen)
+- The contents of the [home screen](/docs/watson-assistant?topic=watson-assistant-web-chat-configure-home-screen)
 - The [suggestions](/docs/watson-assistant?topic=watson-assistant-web-chat-suggestions) your assistant will offer if customers get stuck
 
 You might also want to make additional configurations, such as changing the web chat colors to match your branding, changing the launcher greeting, or enabling encryption.
