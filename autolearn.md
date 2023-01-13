@@ -47,7 +47,7 @@ As your assistant learns over time, your customers get the best answer more ofte
 ## How autolearning works
 {: #autolearn-how-it-works}
 
-Before your assistant can learn from customer behavior, it must observe real conversation data. The conversations take place in a channel, such as web chat, or in a custom application. 
+Before your assistant can learn from customer behavior, it must observe real conversation data. The conversations take place in a channel such as the web chat, or in a custom application. 
 
 Logs of completed conversations from your live environment are the data source for observation. Your assistant analyzes the logs to gain insights. (It doesn't watch real-time clicks during a conversation.)
 
