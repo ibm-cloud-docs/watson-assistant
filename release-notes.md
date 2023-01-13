@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-12-07"
+  years: 2015, 2023
+lastupdated: "2022-01-13"
 
 keywords: Watson Assistant release notes
 
@@ -28,8 +28,6 @@ content-type: release-note
 {:swift: .ph data-hd-programlang='swift'}
 {:video: .video}
 
-{{site.data.content.classiclink}}
-
 # Release notes for Watson Assistant
 {: #watson-assistant-release-notes}
 
@@ -37,6 +35,20 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 12 January 2023
+{: #watson-assistant-jan122023}
+{: release-note}
+
+Autocorrection setting for actions
+:   The **Global settings** for actions now include an **Autocorrection** setting. *Autocorrection* fixes misspellings that users make in their requests. The corrected words are used to match to an action. 
+
+   While the setting is new, the autocorrection feature was already used automatically by all English-language assistants. Autocorrection is also available in French-language assistants, but is disabled by default. The autocorrection setting isn't available for any other languages. The new setting lets you disable or enable autocorrection if necessary.
+
+   For more information, see [Autocorrecting user input](/docs/watson-assistant?topic=watson-assistant-autocorrection).
+
+Improved experience when setting a variable value
+:   The dropdown list for setting a variable value within an action step has a new organization. The new list is intended to provide an improved experience.
 
 ## 6 December 2022
 {: #watson-assistant-dec062022}

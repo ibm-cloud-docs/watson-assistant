@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-10-21"
+  years: 2022, 2023
+lastupdated: "2023-01-13"
 keywords: settings
 subcollection: watson-assistant
 
@@ -23,8 +23,6 @@ subcollection: watson-assistant
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-{{site.data.content.classiclink}}
-
 # Global settings for actions
 {: #actions-global-settings}
 
@@ -37,6 +35,7 @@ This page provides options, configurations, and tasks for the following:
 
 - [Ask clarifying question](#actions-global-settings-ask-clarifying-question)
 - [Change conversation topic](#actions-global-settings-change-conversation-topic)
+- [Autocorrection](#actions-global-settings-autocorrection)
 - [Algorithm version](#actions-global-settings-algorithms-versions)
 - [Auto-save](#actions-global-settings-auto-save)
 - [Upload/Download](#actions-global-settings-upload-download)
@@ -74,6 +73,15 @@ If necessary, you can disable changing the topic for all actions:
 1. On the **Change conversation topic** tab, set the switch to **Off**.
 
 1. Click **Save**, and then click **Close**.
+
+## Autocorrection
+{: #actions-global-settings-autocorrection}
+
+*Autocorrection* fixes misspellings that users make in their requests. The corrected words are used to match to an action. 
+
+Autocorrection is enabled automatically for all English-language assistants. It is also available in French-language assistants, but is disabled by default. The autocorrection setting isn't available for any other languages.
+
+For more information, see [Autocorrecting user input](/docs/watson-assistant?topic=watson-assistant-autocorrection).
 
 ## Algorithm version
 {: #actions-global-settings-algorithms-versions}
