@@ -37,7 +37,7 @@ Autocorrection corrects user input in the following way:
 - Orignal input: `letme applt for a memberdhip`
 - Corrected input: `let me apply for a membership`
 
-When your assistant evaluates whether to correct the spelling of a word, it does not rely on a simple dictionary lookup process. Instead, it uses a combination of Natural Language Processing and probabalistic models to assess whether a term is, in fact, misspelled and should be corrected.
+When your assistant evaluates whether to correct the spelling of a word, it does not rely on a simple dictionary lookup process. Instead, it uses a combination of natural language processing and probabalistic models to assess whether a term is, in fact, misspelled and should be corrected.
 
 Autocorrection is enabled automatically for all English-language assistants. It is also available in French-language assistants, but is disabled by default. Autocorrection isn't available for any other languages.
 
