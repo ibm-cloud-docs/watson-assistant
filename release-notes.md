@@ -56,15 +56,15 @@ Improved experience when setting a variable value
 
 Updated expression methods
 :   The following new and updated methods are available in expressions:
-- The [`Array.joinToArray()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-arrays-join-to-array) method now supports a new boolean parameter you can use to specify that the data type of values from the input array should be preserved in the returned array.
-- The new [`String.toJson()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-strings-toJson) method parses a string containing JSON data and returns a JSON object or array. This method is supported in both actions and dialog.
+   - The [`Array.joinToArray()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-arrays-join-to-array) method now supports a new boolean parameter you can use to specify that the data type of values from the input array should be preserved in the returned array.
+   - The new [`String.toJson()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-strings-toJson) method parses a string containing JSON data and returns a JSON object or array. This method is supported in both actions and dialog.
 
 ## 5 December 2022
 {: #watson-assistant-dec052022}
 {: release-note}
 
 Live integrations deleted in assistants created before June 24, 2022
-:   If you have assistants created before June 24, 2022, using the new {{site.data.keyword.conversationshort}} user experience, the live integrations for these assistants were mistakenly deleted during a software upgrade. We are working on restoring these deleted integrations.
+:   For assistants created before June 24, 2022, using the new {{site.data.keyword.conversationshort}} user experience, the live integrations for these assistants were mistakenly deleted during a software upgrade. These integrations should now be restored. If you are still experiencing issues, please contact IBM support.
 
 Unsupported HTML removed from text responses in channel integrations
 :   HTML tags (except for links) are now automatically removed from text responses that are sent to the Facebook, WhatsApp, and Slack integrations, because those channels do not support HTML formatting. HTML tags are still handled appropriately in channels that support them (such as the web chat) and stored in the session history.
