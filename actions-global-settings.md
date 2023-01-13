@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-10-21"
+  years: 2022, 2023
+lastupdated: "2023-01-13"
 keywords: settings
 subcollection: watson-assistant
 
@@ -23,8 +23,6 @@ subcollection: watson-assistant
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-{{site.data.content.classiclink}}
-
 # Global settings for actions
 {: #actions-global-settings}
 
@@ -37,6 +35,7 @@ This page provides options, configurations, and tasks for the following:
 
 - [Ask clarifying question](#actions-global-settings-ask-clarifying-question)
 - [Change conversation topic](#actions-global-settings-change-conversation-topic)
+- [Autocorrection](#actions-global-settings-autocorrection)
 - [Algorithm version](#actions-global-settings-algorithms-versions)
 - [Auto-save](#actions-global-settings-auto-save)
 - [Upload/Download](#actions-global-settings-upload-download)
@@ -75,10 +74,25 @@ If necessary, you can disable changing the topic for all actions:
 
 1. Click **Save**, and then click **Close**.
 
-## Algorithm version
+## Autocorrection
+{: #actions-global-settings-autocorrection}
+
+*Autocorrection* fixes misspellings that users make in their requests. The corrected words are used to match to an action. 
+
+Autocorrection is enabled automatically for all English-language assistants. It is also available in French-language assistants, but is disabled by default. The autocorrection setting isn't available for any other languages.
+
+For more information, see [Autocorrecting user input](/docs/watson-assistant?topic=watson-assistant-autocorrection).
+
+## Algorithm versions
 {: #actions-global-settings-algorithms-versions}
 
-**Algorithm version** allows you to choose which {{site.data.keyword.conversationshort}} algorithm to apply to your future trainings. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
+**Algorithm versions** allow you to choose which version of {{site.data.keyword.conversationshort}} algorithms to apply to your future trainings. 
+
+You can choose to use the more stable and fully supported version of algorithms by selecting **Baseline**. This is the latest mature version that you might want to use for your live assistant. Or you can choose **Beta** to preview and test what is coming. The capability in the beta version at any given time is likely to become the baseline version later on.
+
+The baseline and beta versions are labeled with dates such as **Baseline (2022-06-01)** or **Beta (2022-06-10)**. This refers to the release of a specific baseline or beta version. You can consult the [{{site.data.keyword.conversationshort}} release notes](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes) for details of updates made in that algorithms version release.
+
+Algorithm version options are currently available for Arabic, Chinese (Simplified), Chinese (Traditional), Czech, Dutch, English, French, German, Japanese, Korean, Italian, Portuguese, and Spanish. The universal language model uses default algorithm versions.
 
 ## Auto-save
 {: #actions-global-settings-auto-save}

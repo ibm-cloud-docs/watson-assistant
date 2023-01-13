@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-12-07"
+  years: 2015, 2023
+lastupdated: "2022-01-13"
 
 keywords: Watson Assistant release notes
 
@@ -28,8 +28,6 @@ content-type: release-note
 {:swift: .ph data-hd-programlang='swift'}
 {:video: .video}
 
-{{site.data.content.classiclink}}
-
 # Release notes for Watson Assistant
 {: #watson-assistant-release-notes}
 
@@ -38,21 +36,35 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 12 January 2023
+{: #watson-assistant-jan122023}
+{: release-note}
+
+Autocorrection setting for actions
+:   The **Global settings** for actions now include an **Autocorrection** setting. *Autocorrection* fixes misspellings that users make in their requests. The corrected words are used to match to an action. 
+
+   While the setting is new, the autocorrection feature was already used automatically by all English-language assistants. Autocorrection is also available in French-language assistants, but is disabled by default. The autocorrection setting isn't available for any other languages. The new setting lets you disable or enable autocorrection if necessary.
+
+   For more information, see [Autocorrecting user input](/docs/watson-assistant?topic=watson-assistant-autocorrection).
+
+Improved experience when setting a variable value
+:   The dropdown list for setting a variable value within an action step has a new organization. The new list is intended to provide an improved experience.
+
 ## 6 December 2022
 {: #watson-assistant-dec062022}
 {: release-note}
 
 Updated expression methods
 :   The following new and updated methods are available in expressions:
-   - The [`Array.joinToArray()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-arrays-join-to-array) method now supports a new boolean parameter you can use to specify that the data type of values from the input array should be preserved in the returned array.
-   - The new [`String.toJson()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-strings-toJson) method parses a string containing JSON data and returns a JSON object or array. This method is supported in both actions and dialog.
+- The [`Array.joinToArray()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-arrays-join-to-array) method now supports a new boolean parameter you can use to specify that the data type of values from the input array should be preserved in the returned array.
+- The new [`String.toJson()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-strings-toJson) method parses a string containing JSON data and returns a JSON object or array. This method is supported in both actions and dialog.
 
 ## 5 December 2022
 {: #watson-assistant-dec052022}
 {: release-note}
 
 Live integrations deleted in assistants created before June 24, 2022
-:   For assistants created before June 24, 2022, using the new {{site.data.keyword.conversationshort}} user experience, the live integrations for these assistants were mistakenly deleted during a software upgrade. These integrations should now be restored. If you are still experiencing issues, please contact IBM support.
+:   If you have assistants created before June 24, 2022, using the new {{site.data.keyword.conversationshort}} user experience, the live integrations for these assistants were mistakenly deleted during a software upgrade. We are working on restoring these deleted integrations.
 
 Unsupported HTML removed from text responses in channel integrations
 :   HTML tags (except for links) are now automatically removed from text responses that are sent to the Facebook, WhatsApp, and Slack integrations, because those channels do not support HTML formatting. HTML tags are still handled appropriately in channels that support them (such as the web chat) and stored in the session history.
