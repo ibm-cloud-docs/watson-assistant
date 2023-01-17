@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-11-01"
+  years: 2019, 2023
+lastupdated: "2023-01-12"
 
 subcollection: watson-assistant
 
@@ -33,9 +33,6 @@ subcollection: watson-assistant
 If you enable security, you can configure the web chat to authenticate users, protect private data, and restrict access to your assistant.
 {: shortdesc}
 
-## When to enable web chat security
-{: #web-chat-security-overview}
-
 All messages that are sent between the web chat and the assistant are encrypted using Transport Layer Security (TLS), which protects sensitive data as it travels through the network. However, there are still potential security exposures that you might need to protect against. By enabling the web chat security feature and updating your website code appropriately, you can add the following protections:
 
 - You can prevent unauthorized websites from sending messages to your assistant, even if they copy your web chat embed script.
@@ -49,16 +46,13 @@ Web chat security uses JSON Web Tokens (JWTs), which are data objects that are s
 For detailed information about JSON Web Tokens, see the [JWT specification](https://tools.ietf.org/html/rfc7519){: external}).
 {: tip}
 
-## Steps for enabling web chat security
-{: #web-chat-security-steps }
+Enabling web chat security involves making the following customizations:
 
-Implementing web chat security requires that a developer make changes to your website code. At a high level, the process of enabling security is as follows:
+- Implementing web application server code that generates a JWT signed with your private encryption key
 
-1. In your web application code, implement a function that generates a JWT signed with your private encryption key.
+- Customizing the web chat configuration to provide the generated JWT
 
-1. In the web chat embed script on your website, use the web chat API to specify the generated JWT so it is included with all messages sent to the assistant.
-
-1. Enable security in the web chat security settings and specify your public encryption key, which the web chat integration will use to verify that messages it receives were signed with your private key.
+- Enabling security in the web chat security settings
 
     After you enable web chat security, any message received by the web chat integration that is not accompanied by a properly signed JWT will be rejected.
     {: important}
@@ -71,7 +65,7 @@ With web chat security enabled, you can optionally implement additional security
 
     Without web chat security enabled, each customer who uses your assistant is identified only by the `user_id` property that is part of the message request. This is sufficient for identifying unique users for billing purposes, but it is not secure, because it could be modified.
 
-    By encoding user identity information as part of the JWT payload, you can authenticate users securely. The JWT payload is encrypted and cannot be accessed or modified by the user.
+    By encoding user identity information as part of the JWT payload, you can authenticate users securely. The JWT is signed and cannot be modified by the user.
 
     For more information about using JWTs for secure authentication, see [Authenticating users](/docs/watson-assistant?topic=watson-assistant-web-chat-security-authenticate).
 
@@ -82,6 +76,59 @@ With web chat security enabled, you can optionally implement additional security
     For more information about using the user payload to protect sensitive information, see [Encrypting sensitive data](/docs/watson-assistant?topic=watson-assistant-web-chat-security-encrypt).
 
 ![development icon](images/development-icon.png) **Tutorial:** For a developer tutorial that shows an example of using web chat security to authenticate users and protect sensitive data, see [Tutorial: Authenticating a user in the middle of a session](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-security).
+
+## Updating site security policies
+{: #web-chat-security-csp}
+
+If your website uses a Content Security Policy (CSP), you must update it to grant permission to the web chat.
+
+The following table lists the values to add to your CSP.
+
+| Property | Additional values |
+|----------|-------------------|
+| default-src	| 'self' *.watson.appdomain.cloud fonts.gstatic.com 'unsafe-inline' |
+| connect-src |	*.watson.appdomain.cloud |
+{: caption="CSP properties" caption-side="top"}
+
+The following example shows a complete CSP metadata tag:
+
+```html
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self' *.watson.appdomain.cloud fonts.gstatic.com 'unsafe-inline';connect-src *.watson.appdomain.cloud" />
+```
+{: codeblock}
+
+### Allowing elements
+{: #web-chat-security-allow-elements}
+
+If your CSP uses a nonce to add elements such as `<script>` and `<style>` tags to an allowlist, do not use `unsafe-inline` to allow all such elements. Instead, provide a nonce value to the web chat widget as a configuration option. The web chat will then set the nonce on any of the `<script>` and `<style>` elements that it generates dynamically.
+
+A CSP that passes a nonce to the web chat widget might look like this:
+
+```html
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self' *.watson.appdomain.cloud fonts.gstatic.com 'nonce-<server generated value>';connect-src *.watson.appdomain.cloud"
+>
+```
+
+You can pass the nonce to the web chat by editing the embed script as follows:
+
+```javascript
+window.watsonAssistantChatOptions = {
+  integrationID: "YOUR_INTEGRATION_ID",
+  region: "YOUR_REGION",
+  serviceInstanceID: "YOUR_SERVICE_INSTANCE",
+
+  cspNonce: "<server generated value>",
+
+  onLoad: function(instance) {
+    instance.render();
+  }
+};
+```
+{: codeblock}
 
 ## Reviewing security
 {: #web-chat-security-review}

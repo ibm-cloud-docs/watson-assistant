@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-12-12"
+  years: 2019, 2023
+lastupdated: "2023-01-11"
 
 subcollection: watson-assistant
 
@@ -192,19 +192,9 @@ For more information, see [Supporting global audiences](/docs/watson-assistant?t
 ### Security
 {: #web-chat-architecture-security}
 
-By default, all messages that are sent between the web chat and the assistant are encrypted using Transport Layer Security (TLS).
+By default, all messages that are sent between the web chat and the assistant are encrypted using Transport Layer Security (TLS). You can enable the web chat security feature if you need more robust protection.
 
-The web chat code snippet you embed in your HTML includes unique codes that identify your web chat integration and your {{site.data.keyword.conversationshort}} service instance. However, these IDs are not considered secrets because they are visible to anyone who has access to your website. Anyone who has these IDs can send messages to your assistant and receive replies, but they cannot modify your assistant or otherwise access your IBM Cloud account.
-
-You can enable the web chat security feature if you need more robust protection. You might want to use web chat security if you have any of the following concerns:
-
-- You want to prevent message traffic to your assistant from anywhere other than your website. Keep in mind that unauthorized messages can affect billing.
-
-- You want to protect proprietary or sensitive information against unauthorized access.
-
-- You want to prevent access to internal data your assistant uses but that you do not want to be visible to customers.
-
-Enabling web chat security requires additional development work on your web application. For more information, see [Web chat security](/docs/watson-assistant?topic=watson-assistant-web-chat-security).
+Enabling the web chat security feature requires additional development work on your website. For more information, see [Web chat security](/docs/watson-assistant?topic=watson-assistant-web-chat-security).
 
 ### Billing
 {: #web-chat-architecture-billing}

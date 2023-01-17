@@ -30,7 +30,7 @@ subcollection: watson-assistant
 # Encrypting sensitive data
 {: #web-chat-security-encrypt}
 
-By using the public key that is provided by IBM, you can add an additional level of encryption to prevent unauthorized access to sensitive data you send from the web chat.
+By using the public key that is provided by IBM, you can add an additional level of encryption to hide sensitive data you send from the web chat.
 {: shortdesc}
 
 Use this method to send sensitive information in messages that come from your website, such as information about a customer's loyalty level, a user ID, or security tokens to use in webhooks that you call from your actions. Information that is passed to your assistant in this way is stored in a private context variable. (Private variables cannot be seen by customers and are never sent back to the web chat.)
