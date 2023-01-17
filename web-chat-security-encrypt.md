@@ -33,6 +33,9 @@ subcollection: watson-assistant
 By using the public key that is provided by IBM, you can add an additional level of encryption to hide sensitive data you send from the web chat.
 {: shortdesc}
 
+To use this method for encrypting data, you must first enable the web chat security feature. For more information, see [Enabling web chat security](/docs/watson-assistant?topic=watson-assistant-web-chat-security-enable).
+{: note}
+
 Use this method to send sensitive information in messages that come from your website, such as information about a customer's loyalty level, a user ID, or security tokens to use in webhooks that you call from your actions. Information that is passed to your assistant in this way is stored in a private context variable. (Private variables cannot be seen by customers and are never sent back to the web chat.)
 
 For example, you might start a business process for a VIP customer that is different from the process you start for less important customers. You do not want non-VIPs to know that they are categorized as such, but you must pass this information to your action so it can change the flow of the conversation. To do this, you can pass the customer MVP status as an encrypted variable. This private context variable is available for use by the action, but not by anything else.
@@ -60,9 +63,9 @@ To encrypt sensitive data, follow these steps:
     * as stringified JSON in a private claim.
     */
     function mockLogin(userID, userPayload) {
-    const payload = {
-      sub: userID, // Required
-      // The exp claim is automatically added by the jsonwebtoken library.
+      const payload = {
+        sub: userID, // Required
+        // The exp claim is automatically added by the jsonwebtoken library.
     };
     if (userPayload) {
         // If there is a user payload, encrypt it using the IBM public key
@@ -77,8 +80,6 @@ To encrypt sensitive data, follow these steps:
 
     The user payload must be valid JSON data. The web chat uses the default options of the [Node-RSA](https://www.npmjs.com/package/node-rsa){: external} library, which expects the encryption scheme `pkcs1_oaep` and the encryption encoding `base64`.
     {: tip}
-
-- For encrypted 
 
 1. When the web chat integration receives a message signed with this JWT, the content of the `user_payload` claim is decrypted and saved as the `context.integrations.chat.private.user_payload` object. Because this is a private variable, it will not be included in logs.
 
