@@ -58,6 +58,7 @@ toc:
           - save-actions.md
           - review.md
           - actions-global-settings.md
+          - autocorrection.md
           - algorithm-version.md
           - manage-actions.md
           - assistant-add.md
@@ -209,6 +210,7 @@ toc:
           label: Early access features
           topics:
           - action-response-modes.md
+          - autolearn.md
           - boost-words.md
           - deploy-phone-amazon-connect.md
           - multiple-environments.md
