@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-13"
+lastupdated: "2023-01-18"
 
 keywords: autocorrection, spelling correction, spell check
 
@@ -30,7 +30,7 @@ subcollection: watson-assistant
 # Autocorrecting user input
 {: #autocorrection}
 
-*Autocorrection* fixes misspellings that users make in their requests. The corrected words are used to match to an action.
+*Autocorrection* fixes misspellings that users make in their requests. The corrected words are used to match to an action or an intent.
 
 Autocorrection corrects user input in the following way:
 
