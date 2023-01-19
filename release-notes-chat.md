@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-12-05"
+  years: 2015, 2023
+lastupdated: "2023-01-17"
 
 subcollection: watson-assistant
 
@@ -37,6 +37,21 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 7.1.0
+{: #7.1.0}
+
+*Release date: 17 January 2023*
+
+- **Updated Zendesk agent app**: The agent app for Zendesk has been updated for compatibility with Zendesk workspaces.
+
+- In the service desk starter kits, the instance of the web chat integration has been added to the [`serviceDeskFactory` parameters](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/blob/main/src/common/types/serviceDesk.ts){: external} to make it accessible to custom service desk implementations.
+
+- **New instance methods**: The new [`elements.getMessageInput()`](https://web-chat.global.assistant.watson.appdomain.cloud/docs.html?to=api-instance-methods#elements-get-message-input){: external} and [`elements.getHomeScreenInput()`](https://web-chat.global.assistant.watson.appdomain.cloud/docs.html?to=api-instance-methods#elements-get-home-screen-input){: external} instance methods enable access to the input fields used by the customer to send messages. You can use these methods to change the input or to take action as the user is typing (for example, to implement for a type-ahead feature).
+
+- **New event**: The new [`agent:pre:sessionHistory`](https://web-chat.global.assistant.watson.appdomain.cloud/docs.html?to=api-events#agentpresessionhistory){: external} event enables you to filter potential PII from messages sent from a customer or service desk agent before the messages are sent to the assistant for storage in the session history.
+
+- **New property in web chat state object**: In the object returned from the [`getState()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#getState){: external} instance method, the new `isDebugEnabled` property indicates whether the web chat debug flag is set to `true`.
 
 ## 7.0.0
 {: #7.0.0}
