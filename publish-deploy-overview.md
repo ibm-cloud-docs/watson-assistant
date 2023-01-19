@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-11-17"
+  years: 2021, 2023
+lastupdated: "2023-01-19"
 
 subcollection: watson-assistant
 
@@ -107,15 +107,13 @@ For more information about publishing, see [Publishing your content](/docs/watso
 The draft and live environments each have settings. On either tab, click the **Settings** gear icon to open the settings. This gives you access to API details, webhook settings, and inactivity timeout.
 
 **API details** provide these values for each environment:
-- Assistant ID
 - Environment name
 - Environment ID
-- Service instance URL
 - Session URL
 
 **Webhooks**
 
-Settings for pre-message, post-message, and log webhooks (Enterprise plan only). For more information, see [Extending your assistant with webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview).
+Settings for pre-message, post-message, and log webhooks. For more information, see [Extending your assistant with webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview).
 
 **Inactivity timeout**
 
