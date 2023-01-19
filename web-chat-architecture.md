@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-12-12"
+  years: 2019, 2023
+lastupdated: "2023-01-19"
 
 subcollection: watson-assistant
 
@@ -188,6 +188,73 @@ By default, the web chat displays hardcoded labels and messages in English, but 
 In whichever language you are using, you can also customize the text of any hardcoded strings.
 
 For more information, see [Supporting global audiences](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-global).
+
+### Security
+{: #web-chat-architecture-security}
+
+By default, all messages that are sent between the web chat and the assistant are encrypted using Transport Layer Security (TLS). You can enable the web chat security feature if you need more robust protection.
+
+You can enable the web chat security feature for additional security, such as verifying message origin and authenticating users. Enabling the security feature requires additional development work on your website. For more information, see [Web chat security](/docs/watson-assistant?topic=watson-assistant-web-chat-security).
+
+#### Updating site security policies
+{: #web-chat-security-csp}
+
+If your website uses a Content Security Policy (CSP), you must update it to grant permission to the web chat.
+
+The following table lists the values to add to your CSP.
+
+| Property | Additional values |
+|----------|-------------------|
+| default-src	| 'self' *.watson.appdomain.cloud fonts.gstatic.com 'unsafe-inline' |
+| connect-src |	*.watson.appdomain.cloud |
+{: caption="CSP properties" caption-side="top"}
+
+The following example shows a complete CSP metadata tag:
+
+```html
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self' *.watson.appdomain.cloud fonts.gstatic.com 'unsafe-inline';connect-src *.watson.appdomain.cloud" />
+```
+{: codeblock}
+
+##### Allowing elements
+{: #web-chat-security-allow-elements}
+
+If your CSP uses a nonce to add elements such as `<script>` and `<style>` tags to an allowlist, do not use `unsafe-inline` to allow all such elements. Instead, provide a nonce value to the web chat widget as a configuration option. The web chat will then set the nonce on any of the `<script>` and `<style>` elements that it generates dynamically.
+
+A CSP that passes a nonce to the web chat widget might look like this:
+
+```html
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self' *.watson.appdomain.cloud fonts.gstatic.com 'nonce-<server generated value>';connect-src *.watson.appdomain.cloud"
+>
+```
+
+You can pass the nonce to the web chat by editing the embed script as follows:
+
+```javascript
+window.watsonAssistantChatOptions = {
+  integrationID: "YOUR_INTEGRATION_ID",
+  region: "YOUR_REGION",
+  serviceInstanceID: "YOUR_SERVICE_INSTANCE",
+
+  cspNonce: "<server generated value>",
+
+  onLoad: function(instance) {
+    instance.render();
+  }
+};
+```
+{: codeblock}
+
+#### Reviewing security
+{: #web-chat-security-review}
+
+The web chat integration undergoes tests and scans on a regular basis to find and address potential security issues, such as cross-site scripting (XSS) vulnerabilities.
+
+Be sure to run your own security reviews to see how the web chat fits in with your current website structure and policies. The web chat is hosted on your site and can inherit any vulnerabilities that your site has. Only serve content over HTTPS, use a Content Security Policy (CSP), and implement other basic web security precautions.
 
 ### Billing
 {: #web-chat-architecture-billing}
