@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-12-05"
+  years: 2022, 2023
+lastupdated: "2023-01-19"
 
 subcollection: watson-assistant
 
@@ -25,7 +25,7 @@ subcollection: watson-assistant
 
 {{site.data.content.classiclink}}
 
-# Dynamic options ![BETA](images/beta.png)
+# Dynamic options
 {: #dynamic-options}
 
 An *options* response presents customers with a list of choices to select from. You can use the **dynamic** setting to generate the list from options that might be different each time.

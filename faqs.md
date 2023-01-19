@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2022-07-19"
+  years: 2015, 2023
+lastupdated: "2023-01-19"
 
 keywords: Watson Assistant frequently asked questions
 
@@ -27,8 +27,6 @@ content-type: faq
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
-
-{{site.data.content.classiclink}}
 
 # FAQs for {{site.data.keyword.conversationfull}}
 {: #watson-assistant-faqs}
@@ -75,11 +73,9 @@ In the left navigation, click **Integrations** ![Integrations](images/integratio
 {: #faq-assistant-id}
 {: faq}
 
-The assistant ID can be found in **Assistant settings** and in the settings of the draft and live environments.
+The assistant ID can be found in **Assistant settings**.
 
 In **Assistant settings**, the assistant ID is in the **Details** section.
-
-In either the draft or live environment, click **Settings**. The assistant ID is on the **API Details** tab.
 
 ## What do the draft and live tags mean?
 {: #faqs-draft-live-tags}

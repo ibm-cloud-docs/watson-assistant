@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-11-17"
+  years: 2021, 2023
+lastupdated: "2023-01-19"
 
 subcollection: watson-assistant
 
@@ -145,10 +145,8 @@ Each environment has its own settings. On an environment tab, click the **Settin
 This gives you access to see API details, configure webhook settings, change inactivity timeout, and edit environment details.
 
 **API details** provide these values for each environment:
-- Assistant ID
 - Environment name
 - Environment ID
-- Service instance URL
 - Session URL
 
 **Webhooks**
