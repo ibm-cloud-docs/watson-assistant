@@ -30,7 +30,7 @@ subcollection: watson-assistant
 # Tutorial: Authenticating a user in the middle of a session
 {: #web-chat-develop-security}
 
-If you have web chat security enabled, you must set the customer's user ID at the beginning of the session as part of the JSON Web Token (JWT) you use to sign messages. However, you can still use a private variable to authenticate a user later in the session, even if you have already set the user ID to a generated (anonymous) value.
+If you have web chat security enabled, you must set a user ID for the customer at the beginning of the session as part of the JSON Web Token (JWT) you use to sign messages. For users who are not authenticated, this is typically a generated ID, and it cannot be changed after the JWT is created. However, you can use a private variable to authenticate a user later in the session.
 {: shortdesc}
 
 With web chat security enabled, the user ID associated with each message is based on the `sub` claim in the JWT payload. This value must be set at the beginning of the session, when the JWT is created, and cannot be changed during the life of the session. For unauthenticated (anonymous) users, you would typically use a generated ID, saved to a cookie, to ensure that each unique customer is counted only once for billing purposes.
@@ -129,10 +129,6 @@ ${system_integrations.chat.private.user_payload}.custom_user_id
 
 For complete working code, see the [Enabling security for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/web-chat-security){: external} example.
 
-## Security measures
-{: #web-chat-security-measures}
-
-The web chat integration undergoes tests and scans on a regular basis to find and address potential security issues, such as cross-site scripting (XSS) vulnerabilities.
-
-Be sure to run your own security reviews to see how the web chat fits in with your current website structure and policies. The web chat is hosted on your site and can inherit any vulnerabilities that your site has. Only serve content over HTTPS, use a Content Security Policy (CSP), and implement other basic web security precautions.
+If you are required to comply with GDPR requirements, you might need to persistently store any generated anonymous user IDs, especially for anonymous users who later log in with user credentials. Storing these user IDs makes it possible for you to later delete all data associated with an individual customer if requested to do so.
+{: important}
 

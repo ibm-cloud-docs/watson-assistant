@@ -92,7 +92,7 @@ function createJWT() {
 
 Now that you have implemented a function to generate a signed JWT, you must update your web chat instance to include the signed JWT with each message it sends. After you enable web chat security, any messages that are not signed with the proper private key are rejected.
 
-In your website HTML, update the web chat embed script to specify a new JWT at the beginning of each session, and also whenever the existing JWT expires. The simplest way to do this is to use the [`identityTokenExpired`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#identityexpired){: external} event to trigger generation of a new JWT. This event is fired in both of the following situations:
+In your website HTML, update the web chat embed script to specify a new JWT at the beginning of each session, and also whenever the existing JWT expires. The simplest way to do this is to subscribe to the [`identityTokenExpired`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#identityexpired){: external} event and generate a new JWT when that event is received. The `identityTokenExpired` event is fired in both of the following situations:
 
 - At the beginning of a new session, if no JWT was provided using the `identityToken` configuration option.
 
