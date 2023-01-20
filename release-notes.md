@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2022-01-13"
+lastupdated: "2022-01-20"
 
 keywords: Watson Assistant release notes
 
@@ -49,6 +49,13 @@ Autocorrection setting for actions
 
 Improved experience when setting a variable value
 :   The dropdown list for setting a variable value within an action step has a new organization. The new list is intended to provide an improved experience.
+
+## 11 January 2023
+{: #watson-assistant-jan112023}
+{: release-note}
+
+Algorithm version 01-Jun-2022 uses enhanced intent detection by default
+:   As of this date, the latest algorithm version dated 01-Jun-2022 now uses enhanced intent detection by default. You can notice small changes in intent detection behavior when changes are made to an assistant that previously didn't have enhanced intent detection enabled. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
 
 ## 6 December 2022
 {: #watson-assistant-dec062022}
@@ -946,9 +953,6 @@ Documentation update
 {: #watson-assistant-jan272021}
 {: release-note}
 
-Language support was expanded for intent recommendations
-:   The intent recommendations feature is now supported in Brazilian Portuguese, French, German, Italian, and Spanish dialog skills. For more information, see [Supported languages](/docs/assistant?topic=assistant-language-support){: external}.
-
 German language improvements
 :   A word decomposition function was added to the intent and entity recognition models for German-language dialog skills.
 
@@ -1251,9 +1255,6 @@ Salesforce support is generally available
 {: #watson-assistant-jun242020}
 {: release-note}
 
-Getting intent recommendations from assistant logs is generally available
-:   Use the chat log from one of your production assistants as the source for intent and intent user example recommendations. For more information, see [Getting help defining intents](/docs/assistant?topic=assistant-intent-recommendations){: external}.
-
 Get better answers from search skill
 :   The search skill now has a beta feature that limits the search results that are returned to include only those for which {{site.data.keyword.discoveryshort}} has calculated a 20% or higher confidence score. You can toggle the feature on or off from the *Refine results to return more selective answers* switch on the configuration page. You cannot change the confidence score threshold from 0.2. This beta feature is enabled by default. For more information, see [Creating a search skill](/docs/assistant?topic=assistant-skill-search-add){: external}.
 
@@ -1510,11 +1511,6 @@ Access control changes are coming
 ## 14 February 2020
 {: #watson-assistant-feb142020}
 {: release-note}
-
-Get intent recommendations from an assistant log
-:   You can now use the chat log from one of your production assistants as the source for intent and intent user example recommendations. See [Getting help defining intents](/docs/assistant?topic=assistant-intent-recommendations){: external}. This capability is a beta feature.
-
-    With the introduction of this feature, how CSV log files are stored also changed. Previously, a log CSV file that you uploaded to one skill was shared by all of the skills in that service instance. Now, a CSV file that you upload to one skill is available for use only by that one skill. For existing instances with CSV files, the shared CSV files are available to each of the skills in the instance. You can delete a CSV file from a skill that doesn't use it by managing the recommendation sources for the skill.
 
 More web chat color settings
 :   You can now specify the color of more elements of the web chat integration. For example, you can define one color for the web chat window header. You can define a different color for the user message bubble. And another color for interactive components, such as the launcher button for the chat.
@@ -1826,9 +1822,6 @@ Introducing search skill
 {: #watson-assistant-mar142019}
 {: release-note}
 
-Have Watson help you build intents
-:   Use Watson machine learning technology to help you choose the right intents for your assistant. Watson analyzes your existing call center log data to identify the customer questions and requests that occur most often. It then recommends intents and user examples you can use to train your assistant so it can recognize the same and similar requests in future. Once you determine the right intents to use, you can augment them and keep them up-to-date over time using the intent user example recommendations functionality, which is already available. For more information, see [Get help defining intents](/docs/assistant?topic=assistant-intent-recommendations){: external}.
-
 ## 4 March 2019
 {: #watson-assistant-mar042019}
 {: release-note}
@@ -1842,9 +1835,6 @@ Improve page is now called Analytics
 ## 1 March 2019
 {: #watson-assistant-mar012019}
 {: release-note}
-
-Japanese intent user example recommendations
-:   You can now upload a file that contains raw user inputs in Japanese, such as user inquiries from a call center log, that Watson can analyze and mine for intent user example candidates. See [Adding examples from log files](/docs/assistant?topic=assistant-intent-recommendations){: external}.
 
 ## 28 February 2019
 {: #watson-assistant-feb282019}
@@ -1979,9 +1969,6 @@ User-based Premium plan
     Existing Premium plan service instances are not impacted by this change; they continue to use API-based billing methods. Only existing Premium plan users will see the API-based plan listed as the *Premium (API)* plan option.
 
     See {{site.data.keyword.conversationshort}} [service plan options](https://www.ibm.com/cloud/watson-assistant/pricing/){: external} for more information about all available service plans.
-
-Intent user example recommendations
-:   You can upload a file that contains raw user inputs, such as user inquiries from a call center log, that Watson can analyze and mine for intent user example candidates. See [Adding examples from log files](/docs/assistant?topic=assistant-intent-recommendations#intent-recommendations-get-example-recommendations-task){: external}.
 
 ## 20 November 2018
 {: #watson-assistant-nov202018}
