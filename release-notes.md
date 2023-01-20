@@ -36,6 +36,13 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 18 January 2023
+{: #watson-assistant-jan182023}
+{: release-note}
+
+Algorithm version stability improvement
+:   As of this date, the **Latest (01 Jun 2022)** and **Beta** algorithm versions now have more stable behavior across retrained models, in the presence of overlapping entities (the same entity value belonging to more than one entity type). Previously, when there were overlapping entities definitions, confidences could differ across different retraining. With this improvement, you can expect to see similar confidences. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
+
 ## 12 January 2023
 {: #watson-assistant-jan122023}
 {: release-note}
