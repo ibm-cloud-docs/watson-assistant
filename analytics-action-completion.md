@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-11-14"
+  years: 2021, 2023
+lastupdated: "2023-01-23"
 
 subcollection: watson-assistant
 
@@ -23,8 +23,6 @@ subcollection: watson-assistant
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-{{site.data.content.classiclink}}
-
 # Understand your most and least successful actions
 {: #analytics-action-completion}
 
@@ -33,7 +31,7 @@ The **Action completion** page of {{site.data.keyword.conversationshort}} provid
 - Identify problem areas within actions
 - Investigate why users are having issues where they might escalate to a live agent, start a new action, get stuck on a step, or stop the conversation
 
-## Defintion of completion
+## Definition of completion
 {: #completion-definition}
 
 *Completion* measures how often within a given time period users reach the end step of an action.
