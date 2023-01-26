@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-01-13"
+lastupdated: "2023-01-27"
 keywords: settings
 subcollection: watson-assistant
 
@@ -36,6 +36,7 @@ This page provides options, configurations, and tasks for the following:
 - [Ask clarifying question](#actions-global-settings-ask-clarifying-question)
 - [Change conversation topic](#actions-global-settings-change-conversation-topic)
 - [Autocorrection](#actions-global-settings-autocorrection)
+- [Display formats](#actions-global-settings-display-formats)
 - [Algorithm version](#actions-global-settings-algorithms-versions)
 - [Auto-save](#actions-global-settings-auto-save)
 - [Upload/Download](#actions-global-settings-upload-download)
@@ -82,6 +83,25 @@ If necessary, you can disable changing the topic for all actions:
 Autocorrection is enabled automatically for all English-language assistants. It is also available in French-language assistants, but is disabled by default. The autocorrection setting isn't available for any other languages.
 
 For more information, see [Autocorrecting user input](/docs/watson-assistant?topic=watson-assistant-autocorrection).
+
+## Display formats
+{: #actions-global-settings-display-formats}
+
+**Display formats** lets you specify the display formats for variables that use date, time, numbers, currency, or percentages. You can also choose a default locale to use if one isn't provided by the client application. This lets you make sure that the format of a variable that's displayed in the web chat is what you want for your assistant. For example, you can choose to have the output of a time variable appear in HH:MM format instead of HH:MM:SS.
+
+Variables are formatted using a system default unless you specify otherwise.
+
+| <nobr>Display format setting</nobr> | Description | <nobr>English - United States (en-US) examples</nobr> |
+| ---- | ---- | ---- |
+| Locale | Choose a default locale for the assistant if one can't be determined. The locale you choose uses formats specific to that country and language. If you choose a locale, the date, time, number, currency, and percentage format fields change to show choices specific to that locale. The system default is `English - United States (en-US)`. | |
+| Date | For calendar dates, choose short, medium, long, full, YY/MM/DD, or YYYY/MM/DD | <ul><li>Short: `1/31/23`</li><li>Medium: `Jan 31, 2023`<li>Long: `January 31, 2023`</li><li>Full: `Tuesday, January 31, 2023`</li></ul> |
+| Time | For times, choose short or medium | <ul><li>Short: `1:53 PM`</li><li>Medium: `1:53:30 PM`</li></ul> |
+| Number fraction digits | Use the system default (up to 14 digits) or two digits | `10.12` |
+| Number delimiter | Use the system default, none, comma, or period | <ul><li>None: `2000.12`</li><li>Comma: `2,000.12`<li>Period: `2.000,12`</li></ul> |
+| Currency fraction digits | Use the system default (up to 14 digits) or two digits | `10.99` |
+| Currency symbol | Use the system default or choose a global symbol | `$10.99` |
+| <nobr>Percentage fraction digits</nobr> | Use the system default (up to 14 digits) or two digits | `10.75%` |
+
 
 ## Algorithm version
 {: #actions-global-settings-algorithms-versions}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2022-01-20"
+lastupdated: "2022-01-27"
 
 keywords: Watson Assistant release notes
 
@@ -35,6 +35,13 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 26 January 2023
+{: #watson-assistant-jan262023}
+{: release-note}
+
+Display formats for variables
+:   In **Global settings** for actions, **Display formats** lets you specify the display formats for variables that use date, time, numbers, currency, or percentages. You can also choose a default locale to use if one isn't provided by the client application. This lets you make sure that the format of a variable that's displayed in the web chat is what you want for your assistant. For example, you can choose to have the output of a time variable appear in HH:MM format instead of HH:MM:SS. For more information, see [Display formats](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-display-formats)
 
 ## 18 January 2023
 {: #watson-assistant-jan182023}
@@ -95,7 +102,7 @@ Pause response type
 {: release-note}
 
 Use unrecognized requests to get action recommendations
-:   In **Analyze**, the new **Recognition** page lets you view groups of similar unrecognized requests. You can use the requests as example phrases in new or existing actions to address questions and issues that aren't being answered by your assistant. For information, see [Use unrecognized requests to get action recommendations](/docs/watson-assistant?topic=watson-assistant-analytics-recognition).
+:   In **Analyze**, the new **Recognition** page lets you view groups of similar unrecognized requests. You can use the requests as example phrases in new or existing actions to address questions and issues that aren't being answered by your assistant. For more information, see [Use unrecognized requests to get action recommendations](/docs/watson-assistant?topic=watson-assistant-analytics-recognition).
 
 ## 15 November 2022
 {: #watson-assistant-nov152022}
