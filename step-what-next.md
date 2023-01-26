@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-08-04"
+  years: 2018, 2023
+lastupdated: "2023-01-26"
 
 subcollection: watson-assistant
 
@@ -121,7 +121,7 @@ This option indicates that the assistant should use the {{site.data.keyword.disc
 ## Connect to agent
 {: #connect-to-agent}
 
-This option indicates that the assistant should transfer the conversation to a human agent. For more information, see [Handing off to a human agent](/docs/watson-assistant?topic=watson-assistant-human-agent).
+This option indicates that the assistant should transfer the conversation to a human agent. For more information, see [Connecting to a live agent](/docs/watson-assistant?topic=watson-assistant-human-agent).
 
 ## End the action
 {: #end-action}
