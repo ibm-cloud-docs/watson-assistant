@@ -59,7 +59,7 @@ Properties contained in the `private` object are treated as private variables, w
 | `channel.name`                      | String | The name of the channel that is in use. One of the following values: \n - `Web chat` \n - `Phone` \n - `SMS` \n - `Whatsapp` \n - `Slack` \n - `Facebook Messenger` |
 | `channel.private.user.id`           | String | The ID of the user who is interacting with the assistant through the channel. This ID is specific to the channel and might be different from the user ID {{site.data.keyword.conversationshort}} uses for billing purposes. For more information, see [Channel user IDs](/docs/watson-assistant?topic=watson-assistant-expression-integration-variables-channel-userid). |
 | `channel.private.user.phone_number` | String | The phone number associated with the user. Set by the phone, SMS, and WhatsApp integrations. |
-{: caption="Properties of the `channel` object" caption-side="top"}
+{: caption="Properties of the channel object" caption-side="top"}
 
 ### Example JSON
 {: #expression-integration-variables-channel-example}
@@ -112,7 +112,7 @@ Included only if the web chat integration is in use.
 | `browser_info.user_agent`        | String | The content of the HTTP `User-Agent` request header. |
 | `browser_info.client_ip_address` | String | The IP address of the customer's computer. |
 | `browser_info.ip_address_list`   | Array  | Ann array IP addresses specified by HTTP `X-Forwarded-For` request headers. |
-{: caption="Properties of the `chat` object" caption-side="top"}
+{: caption="Properties of the chat object" caption-side="top"}
 
 ### Example JSON
 {: #expression-integration-variables-chat-example}
@@ -182,7 +182,7 @@ Properties contained in the `private` object are treated as private variables, w
 | `private.sip_to_uri`               | String  | The URI from the `To` header of the SIP request. |
 | `final_utterance_timeout_occurred` | Boolean | Set to `true` when the final utterance timeout has been reached. This timeout can be configured by sending the `final_utterance_timeout_count` property. |
 | `post_response_timeout_occurred`   | Boolean | Set to `true` when the final utterance timeout has been reached. This timeout can be configured by sending the `post_response_timeout_count` property. |
-{: caption="Response properties of the `voice_telephony` object" caption-side="top"}
+{: caption="Response properties of the voice_telephony object" caption-side="top"}
 
 ### Example response JSON
 {: #expression-integration-variables-phone-example-response}
@@ -213,7 +213,7 @@ Properties contained in the `private` object are treated as private variables, w
 | `post_response_timeout_count`   | Integer | The time (in milliseconds) to wait for a new utterance after the last response is played. If no utterance is received before the timeout occurs, the phone integration sends a message to the assistant that includes the `post_response_timeout_occurred` property set to `true`. |
 | `cdr_custom_data`               | Object  | A JSON object containing key/value pairs to be stored in the CDR record for the call. Each time this object is sent, its contents are merged with data sent previously during the call. |
 | `turn_settings.timeout_count`   | Integer | The time (in milliseconds) to wait for {{site.data.keyword.conversationshort}} to finish processing each conversation turn. |
-{: caption="Request properties of the `voice_telephony` object" caption-side="top"}
+{: caption="Request properties of the voice_telephony object" caption-side="top"}
 
 ### Example request JSON
 {: #expression-integration-variables-phone-example-request}
@@ -248,7 +248,7 @@ Properties contained in the `private` object are treated as private variables, w
 |-----------------------------|--------|-------------|
 | `assistant_phone_number`    | String | The phone number associated with with the {{site.data.keyword.conversationshort}} end of the conversation. |
 | `private.user_phone_number` | String | The phone number from which the customer's SMS message originated. |
-{: caption="Properties of the `text_messaging` object" caption-side="top"}
+{: caption="Properties of the text_messaging object" caption-side="top"}
 
 ### Example JSON
 {: #expression-integration-variables-sms-example}
@@ -278,7 +278,7 @@ Properties contained in the `private` object are treated as private variables, w
 |-----------------------------|--------|-------------|
 | `assistant_phone_number`    | String | The phone number associated with with the {{site.data.keyword.conversationshort}} end of the conversation. |
 | `private.user_phone_number` | String | The phone number from which the customer's WhatsApp message originated. |
-{: caption="Properties of the `whatsapp` object" caption-side="top"}
+{: caption="Properties of the whatsapp object" caption-side="top"}
 
 ### Example JSON
 {: #expression-integration-variables-sms-example}
