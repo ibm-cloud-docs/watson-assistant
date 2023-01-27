@@ -222,8 +222,8 @@ toc:
       - glossary.md
       - response-types-reference.md
       - preview-runtime-errors.md
-      - expression-global-variables.md
-      - expression-integration-variables.md
+      - global-variables.md
+      - integration-variables.md
       - expression-methods-actions.md
       - time-zones.md
       - phone-context.md
