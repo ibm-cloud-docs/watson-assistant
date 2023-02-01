@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2022-01-27"
+lastupdated: "2023-02-01"
 
 keywords: Watson Assistant release notes
 
@@ -35,6 +35,13 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 1 February 2023
+{: #watson-assistant-feb012023}
+{: release-note}
+
+Actions templates updated with new design and new choices
+:   The actions template catalog has a new design that lets you select multiple templates at the same time. It also has new and updated templates, including starter kits you can use with external services such as Google and HubSpot. For more information, see [Building actions from a template](/docs/watson-assistant?topic=watson-assistant-actions-templates).
 
 ## 26 January 2023
 {: #watson-assistant-jan262023}
