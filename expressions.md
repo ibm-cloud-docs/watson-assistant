@@ -143,7 +143,7 @@ You can use variables and standard math within JSON to create dynamic objects th
 {
   "temp_1": ${temp_1},
   "temp_2": ${temp_2},
-  "avg_temp": (${temp_1} + ${temp_2} / 2)
+  "avg_temp": (${temp_1} + ${temp_2}) / 2
 }
 ```
 
