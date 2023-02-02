@@ -28,7 +28,7 @@ subcollection: watson-assistant
 # Integrating with Slack
 {: #deploy-slack}
 
-![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 Slack is a cloud-based messaging application that helps people collaborate with one another.
 {: shortdesc}
