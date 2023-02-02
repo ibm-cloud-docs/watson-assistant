@@ -31,7 +31,7 @@ subcollection: watson-assistant
 # Sending events to Segment ![Enterprise plan only](images/enterprise.png)
 {: #segment-add}
 
-![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 You can use the Segment extension to send {{site.data.keyword.conversationshort}} events to Segment.
 {: shortdesc}
