@@ -16,7 +16,7 @@ subcollection: watson-assistant
 This tutorial shows how you can change the size and position of the web chat by rendering it in a custom element.
 {: shortdesc}
 
-For a complete, working version of the example described in this tutorial, see [Custom buttons for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/custom-element){: external}.
+For a complete, working version of the example described in this tutorial, see [Custom elements for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/custom-element){: external}.
 {: note}
 
 By default, the web chat interface on your website is rendered in a host `div` element that is styled to appear in a fixed location on the page. If you want to change the size or position of the web chat, you can specify a custom element as the host location for the web chat. This host element is used as the location for both the main web chat interface and for the web chat launcher (unless you are using a custom launcher).
