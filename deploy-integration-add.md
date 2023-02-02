@@ -29,7 +29,7 @@ subcollection: watson-assistant
 # Adding integrations
 {: #deploy-integration-add}
 
-![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 Add integrations to your assistant so that you can publish your bot to the channels where your customers go for help.
 {: shortdesc}
