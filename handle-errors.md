@@ -38,7 +38,7 @@ There are several kinds of error situations your assistant might need to recover
 - Your customer does not provide a valid response to a question
 - Your customer asks to talk to a live agent
 
-Your assistant has a built-in capabilities to detect error conditions and give customers the chance to correct them. In addition, the built-in *Fallback* action provides a way to automatically connect customers to a live agent if they need more help.
+Your assistant can detect error conditions and give customers the chance to correct them. In addition, the built-in *Fallback* action provides a way to automatically connect customers to a live agent if they need more help.
 
 ### When the assistant can't understand your customer's request
 {: #no-action-matches}
