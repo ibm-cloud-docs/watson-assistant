@@ -59,5 +59,5 @@ You can easily switch back and forth between the new experience and the classic 
 
 {{site.data.keyword.conversationshort}} can be deployed as a managed cloud service or can be installed on premises. This documentation only applies to a managed cloud service or IBM Cloud Pak® for Data version 4.6 or later, and describes how to use the product regardless of how it is deployed. Information that applies exclusively to one deployment type is denoted by the appropriate icon:
 
-- ![Cloud Pak for Data only](images/desktop.png) **IBM Cloud Pak® for Data** version 4.6 or later for installed instances.
-- ![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud** for managed instances that are hosted by IBM Cloud.
+- [IBM Cloud Pak for Data]{: tag-cp4d} **IBM Cloud Pak® for Data** version 4.6 or later for installed instances.
+- [IBM Cloud]{: tag-ibm-cloud} **IBM Cloud** for managed instances that are hosted by IBM Cloud.
