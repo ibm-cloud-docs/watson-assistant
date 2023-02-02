@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2022-05-19"
+  years: 2018, 2023
+lastupdated: "2023-02-02"
 
 subcollection: watson-assistant
 
@@ -23,8 +23,6 @@ subcollection: watson-assistant
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-{{site.data.content.classiclink}}
-
 # Providing options when a question or request can't be answered
 {: #handle-errors}
 
@@ -38,9 +36,9 @@ There are several kinds of error situations your assistant might need to recover
 
 - Your assistant cannot understand your customer's request
 - Your customer does not provide a valid response to a question
-- Your customer asks to talk to a human agent
+- Your customer asks to talk to a live agent
 
-Your assistant has a built-in capabilities to detect error conditions and give customers the chance to correct them. In addition, the built-in *Fallback* action provides a way to automatically connect customers to a human agent if they need more help.
+Your assistant can detect error conditions and give customers the chance to correct them. In addition, the built-in *Fallback* action provides a way to automatically connect customers to a live agent if they need more help.
 
 ### When the assistant can't understand your customer's request
 {: #no-action-matches}
@@ -51,7 +49,7 @@ But you can't anticipate every possible request, so sometimes customers will sen
 
 Unrecognized input of this sort triggers the built-in *No action matches* action. To see how this action works, click **Set by assistant** in the list of actions, and then click *No action matches*.
 
-![No action matches built-in action](images/no-action-matches.png)
+![No action matches built-in action](images/no-action-matches.png){: caption="No action matches built-in action" caption-side="bottom"}
 
 By default, this action has two steps, each step conditioned on the *No action matches count* session variable. This is a built-in variable that is automatically incremented with each consecutive unrecognized input. Therefore, the behavior of the *No action matches* action differs depending on how many times in a row the user has said something the assistant didn't understand:
 
@@ -59,7 +57,7 @@ By default, this action has two steps, each step conditioned on the *No action m
 
     When the user sends input that successfully triggers an action, the *No action matches count* session variable is reset to 0.
 
-- If the user tries more than three times but the assistant still doesn't understand, step 2 executes. Step 2 calls the *Fallback* action, which offers other options like connecting to a human agent. (For more information about the *Fallback* action, see [Fallback action](#fallback-action).)
+- If the user tries more than three times but the assistant still doesn't understand, step 2 executes. Step 2 calls the *Fallback* action, which offers other options like connecting to a live agent. For more information about the *Fallback* action, see [Editing the fallback action](#fallback-action).
 
 You can edit the *No action matches* action just as you can any other action. This includes changing the existing steps and adding or deleting steps. Note that if you change the *No action matches* action, you might accidentally break your assistant's ability to recover from errors in the conversation. If this happens, you can recreate the default steps based on the information in this section.
 {: tip}
@@ -79,14 +77,14 @@ When a step in an action asks your customer to answer questions or provide addit
 For most customer response types, the assistant is able to understand valid responses provided in a variety of formats. For example, for a time value, `2:15 PM` and `a quarter past two in the afternoon` are both acceptable. But if the user provides a value that the assistant cannot interpret as matching the expected response type (for example, a response of `purple` when asked for a number), a validation error results.
 
 When there is a validation error, the assistant asks the customer to try again. By default, the assistant allows three attempts to provide a valid response.
-After the third attempt, another invalid attempt triggers the *Fallback* action, which offers other options like connecting to a human agent. (For more information about the *Fallback* action, see [Fallback action](#fallback-action).)
+After the third attempt, another invalid attempt triggers the *Fallback* action, which offers other options like connecting to a live agent. For more information about the *Fallback* action, see [Editing the fallback action](#fallback-action).
 
 #### Customizing validation for a response
 {: #customize-validation}
 
 When you edit a step that expects a customer response, you can customize how validation errors are handled. Click **Edit validation** to see the validation options:
 
-![Edit validation window](images/validation.png)
+![Edit validation](images/validation.png){: caption="Edit validation" caption-side="bottom"}
 
 You can customize the following options:
 
@@ -94,10 +92,10 @@ You can customize the following options:
 
 - Click **`+`** or **`-`**, or directly edit the number, to change how many consecutive tries the customer can make before the *Fallback* action is triggered.
 
-### When your customer asks to speak to a human agent
+### When your customer asks to speak to a live agent
 {: #fallback-human-agent}
 
-At any point in the conversation, your customer might ask to speak to a human agent. The built-in *Fallback* action is preconfigured with example input that detects such requests; you can edit the **Customer starts with** section of the *Fallback* action to add more examples. You can also upload or download examples phrases in a comma-separated value (CSV) file, just like you can when building your own actions. For more information on uploading or downloading example phrases, see [Adding more examples](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-adding-more-examples).
+At any point in the conversation, your customer might ask to speak to a live agent. The built-in *Fallback* action is preconfigured with example input that detects such requests; you can edit the **Customer starts with** section of the *Fallback* action to add more examples. You can also upload or download examples phrases in a comma-separated value (CSV) file, just like you can when building your own actions. For more information on uploading or downloading example phrases, see [Adding more examples](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-adding-more-examples).
 
 ## Editing the fallback action
 {: #fallback-action}
@@ -106,12 +104,16 @@ The built-in *Fallback* action is automatically provided with each assistant and
 
 To edit the *Fallback* action, click **Set by assistant** in the list of actions, and then click *Fallback*.
 
-![Fallback built-in action](images/fallback-action.png)
+![Fallback built-in action](images/fallback-action.png){: caption="Fallback built-in action" caption-side="bottom"}
 
-Whenever the *Fallback* action is triggered, the assistant also sets a value for the *Fallback reason* session variable. This value indicates what kind of situation led to the *Fallback* action being triggered. By default, this variable can have one of three values:
+Whenever the *Fallback* action is triggered, the assistant also sets a value for the *Fallback reason* session variable. This value indicates what kind of situation led to the *Fallback* action being triggered. By default, this variable can have one of five values:
 
 - *Step validation failed*: The customer repeatedly gave answers that were not valid for the expected customer response type.
-- *Agent requested*: The customer directly asked to be connected to a human agent.
+- *Agent requested*: The customer directly asked to be connected to a live agent.
 - *No action matches*: The customer repeatedly made requests or asked questions that the assistant did not understand.
+- *Danger word detected*: The customer uses words or phrases that match the *Connect to agent* step in the *Trigger word detected* action. 
+- *Profanity detected*: The customer repeatedly used words or phrases that match the *Show warning* step in the *Trigger word detected* action.
 
-The *Fallback* action defines three conditional steps, one for each possible value of the *Fallback reason* variable. Each step sends a message to the customer, based on the error condition, and then uses the *Connect to human agent* feature to transfer the conversation to a human agent. (For more information about this feature, see [Handing off to a human agent](/docs/watson-assistant?topic=watson-assistant-human-agent).) You can modify these steps if you want to handle an error condition in a different way.
+For more information about the *Trigger word detected* action, see [Detecting trigger words](/docs/watson-assistant?topic=watson-assistant-trigger-words).
+
+The *Fallback* action defines five conditional steps, one for each possible value of the *Fallback reason* variable. Each step sends a message to the customer, based on the error condition, and then uses the *Connect to agent* feature to transfer the conversation to a live agent. (For more information about this feature, see [Connecting to a live agent](/docs/watson-assistant?topic=watson-assistant-human-agent).) You can modify these steps if you want to handle an error condition in a different way.

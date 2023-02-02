@@ -55,6 +55,7 @@ toc:
           - change-topic.md
           - handle-errors.md
           - human-agent.md
+          - trigger-phrases.md
           - save-actions.md
           - review.md
           - actions-global-settings.md
@@ -214,7 +215,6 @@ toc:
           - boost-words.md
           - deploy-phone-amazon-connect.md
           - multiple-environments.md
-          - trigger-phrases.md
 
   - navgroup:
       id: reference

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-02-02"
 
 subcollection: watson-assistant
 
@@ -30,6 +30,9 @@ When creating actions, you can choose a template that relates to the problem you
 {: shortdesc}
 
 Templates are available for different use cases, for example, booking a meeting, creating a support ticket, or making a payment. Templates include all the pieces that make up an action, such as steps, conditions, and different response types to collect customer answers.
+
+You can use templates in English-language assistants only.
+{: note}
 
 Some or all of these features are included as examples in action templates:
 
