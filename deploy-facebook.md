@@ -28,7 +28,7 @@ subcollection: watson-assistant
 # Integrating with Facebook Messenger
 {: #deploy-facebook}
 
-![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 Facebook Messenger is a messaging application that helps businesses and customers communicate directly with one another.
 {: shortdesc}
