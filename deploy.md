@@ -28,7 +28,7 @@ subcollection: watson-assistant
 # Deploying your assistant
 {: #deploy-assistant}
 
-![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 {{site.data.keyword.conversationshort}} routes your customer's questions and requests to the correct resolution source. However, before your assistant can properly route requests, you must complete the following steps:
 
