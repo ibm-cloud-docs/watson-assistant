@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-11-10"
+  years: 2018, 2023
+lastupdated: "2023-02-02"
 
 subcollection: watson-assistant
 
@@ -33,7 +33,7 @@ Many actions require multiple steps in order to collect all of the information r
 
 In the step editor user interface, the middle portion of the step configuration defines the interaction between the assistant and the customer.
 
-![Step editor with middle part highlighted](images/step-assistant-says.png)
+![Step editor with middle part highlighted](images/step-assistant-says.png){: caption="Step editor" caption-side="bottom"}
 
 The **Assistant says** field specifies the output the assistant sends to the customer. If this output is a question the user is expected to answer, that answer might be a number, a date, a name, or something else. You use the **Define customer response** field to specify what type of response is expected, based on the kind of information the assistant is asking for and how the customer is expected to specify it.
 
@@ -76,7 +76,7 @@ To require that a step is always used in the conversation with a customer:
 
 1. In the customer response, click the **Settings** icon to open **Customer response settings**. 
 
-   ![Customer response settings](images/collect-info-customer-response-settings.png)
+   ![Customer response settings](images/collect-info-customer-response-settings.png){: caption="Customer response settings" caption-side="bottom"}
 
 1. Choose **Always ask for this information, regardless of previous messages**.
 
@@ -216,11 +216,11 @@ To add a regex response:
 
     When you specify more than one regular expression, a **Name** field is displayed for each one. Use this field to give each regex pattern a unique name. You can use this name in subsequent step conditions to identify which regex pattern was matched.
 
-    ![Response with multiple regex patterns](images/regex-multiple.png)
+    ![Response with multiple regex patterns](images/regex-multiple.png){: caption="Response with multiple regex patterns" caption-side="bottom"}
 
 1. Test your regular expression by typing example input in the **Test** field. If any text within your input matches the regex patterns you have specified, the matching text is listed in the **Assistant recognizes:** field.
 
-    ![Match shown in regex test](images/regex-test-match.png)
+    ![Match shown in regex test](images/regex-test-match.png){: caption="Match shown in regex test" caption-side="bottom"}
 
     The **Test** feature in the step editor uses a browser-based regex engine to find matches in your test input. At run time, the assistant uses a different regex engine that might have different results, especially with complex patterns. Before deploying your assistant in production, always use the assistant preview to test any step that uses a regex response.
     {: note}
@@ -273,6 +273,8 @@ A *time* response collects a single time or a range of times. The assistant can 
 - `Now`
 - `at 10`
 - `from 5pm`
+- `4 o'clock`
+- `half past 4`
 
 ### Currency
 {: #customer-response-type-currency}
@@ -378,7 +380,7 @@ After you save a customer response, it becomes available as a response type for 
 
 1. In the list of customer response types, click **Saved** to see the available saved customer responses.
 
-    ![Step editor showing saved customer responses](images/step-editor-saved-responses-2.png)
+    ![Step editor showing saved customer responses](images/step-editor-saved-responses-2.png){: caption="Step editor" caption-side="bottom"}
 
 1. Click the saved response you want to use.
 
