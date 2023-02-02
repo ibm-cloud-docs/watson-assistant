@@ -28,7 +28,7 @@ subcollection: watson-assistant
 # Phone integration configuration
 {: #deploy-phone-config}
 
-![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 After you have set up the phone integration for your assistant, you can modify the phone integration settings to customize the call behavior.
 {: shortdesc}
