@@ -28,7 +28,7 @@ subcollection: watson-assistant
 # Integrating with a custom client app
 {: #deploy-custom-app}
 
-![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 If the available integration channels do not meet your needs, you can build your own client application as the interface between the assistant and your customers.
 {: shortdesc}
