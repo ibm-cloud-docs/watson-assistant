@@ -27,56 +27,56 @@ To use a custom element, follow these steps:
 
 1. In your website code, define the custom element where you want the web chat to be rendered. There are many ways of doing this, depending on the framework you are using. A simple example is to define an empty HTML element with an ID:
 
-```html
-<div id="WebChatContainer"></div>
-```
+    ```html
+    <div id="WebChatContainer"></div>
+    ```
 
 1. Get a reference to your custom element so you can reference it in the web chat configuration. To get a reference, use whatever mechanism makes sense for the library you are using. For example, you can save the reference returned from `document.createElement()`, or you can use a query function to look up the element in the DOM. This example looks up the element using the ID we assigned to it:
 
-```javascript
-const customElement = document.querySelector('#WebChatContainer');
-```
+    ```javascript
+    const customElement = document.querySelector('#WebChatContainer');
+    ```
 
 1. In the web chat embed script, set the `element` property, specifying the reference to your custom element.
 
-```javascript
-window.watsonAssistantChatOptions = {
-  integrationID: "YOUR_INTEGRATION_ID",
-  region: "YOUR_REGION",
-  serviceInstanceID: "YOUR_SERVICE_INSTANCE_ID",
-
-  // The important piece.
-  element: customElement,
-
-  onLoad: function(instance) {
-    instance.render();
-  }
-};
-```
+    ```javascript
+    window.watsonAssistantChatOptions = {
+      integrationID: "YOUR_INTEGRATION_ID",
+      region: "YOUR_REGION",
+      serviceInstanceID: "YOUR_SERVICE_INSTANCE_ID",
+    
+      // The important piece.
+      element: customElement,
+    
+      onLoad: function(instance) {
+        instance.render();
+      }
+    };
+    ```
 
 1. Make sure that the main web chat window is hidden by default. You can do this in the `onLoad` event handler, after `render` has been called. You must also add handlers to listen for the `window:open` and `window:close` events so the customer can open and close the web chat after the page loads.
 
-```javascript
-function onLoad(instance) {
-  instance.render();
-  instance.on({ type: 'window:close', handler: closeHandler });
-  instance.on({ type: 'window:open', handler: openHandler });
-  customElement.querySelector('.WACWidget').style.display = 'none';
-}
-```
+    ```javascript
+    function onLoad(instance) {
+      instance.render();
+      instance.on({ type: 'window:close', handler: closeHandler });
+      instance.on({ type: 'window:open', handler: openHandler });
+      customElement.querySelector('.WACWidget').style.display = 'none';
+    }
+    ```
 
 1. Create handlers to hide and show the main web chat window in response to the `window:open` and `window:close`. This example simply shows and hides the element; the [full example](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/webchat/examples/custom-element/client/javascript-animation/index.html){: example} shows how you can add animation effects.
 
-```javascript
-function closeHandler() {
-  const wacWidgetElement = customElement.querySelector('.WACWidget');
-  wacWidgetElement.style.display = 'none';
-}
-
-function openHandler() {
-  const wacWidgetElement = customElement.querySelector('.WACWidget');
-  wacWidgetElement.style.display = '';
-}
-```
+    ```javascript
+    function closeHandler() {
+      const wacWidgetElement = customElement.querySelector('.WACWidget');
+      wacWidgetElement.style.display = 'none';
+    }
+    
+    function openHandler() {
+      const wacWidgetElement = customElement.querySelector('.WACWidget');
+      wacWidgetElement.style.display = '';
+    }
+    ```
 
 For complete working code, see the [Custom elements for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/custom-element){: external} example.
