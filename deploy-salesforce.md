@@ -30,7 +30,7 @@ subcollection: watson-assistant
 # Integrating with Salesforce
 {: #deploy-salesforce}
 
-![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 Integrate your web chat with a Salesforce service desk solution so your customers always get the help they need.
 {: shortdesc}
