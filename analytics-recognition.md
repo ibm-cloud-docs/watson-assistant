@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-12-06"
+lastupdated: "2023-02-02"
 
 subcollection: watson-assistant
 
@@ -23,8 +23,6 @@ subcollection: watson-assistant
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-{{site.data.content.classiclink}}
-
 # Use unrecognized requests to get action recommendations
 {: #analytics-recognition}
 
@@ -43,9 +41,10 @@ You can view groups of unrecognized requests for the draft or live environment. 
 ![Unrecognized requests](images/analytics-unrecognized-groups.png)
 
 The algorithm that generates groups considers several factors in shaping the groups:
-- Unrecognized requests that have fewer than 3 or more than 35 significant words are removed from consideration. Common words such as `my` or `is`, or punctuation such as `?`, are not considered significant. Phrases that are too short or too long are usually not effective as example training phrases for your assistant.
+- Unrecognized requests that have fewer than 2 or more than 35 significant words are removed from consideration. Common words such as `my` or `is`, or punctuation such as `?`, are not considered significant. Phrases that are too short or too long are usually not effective as example training phrases for your assistant.
 - The unrecognized requests are compared to the latest version of your actions so that requests that would no longer be unrecognized with your latest actions version are filtered out. 
-- Groups for which the request count is less than 10 are excluded.
+- Groups for which the request count is less than 10 are excluded. But if this might result in less than 5 groups, the algorithm tries to produce groups that include more than 5 request counts until a total of 5 groups are produced.
+- If you only have a small volume of data, the algorithm allows examples closer to the existing training data for grouping.
 
 As a result of the algorithm:
 - A list of groups might not always appear

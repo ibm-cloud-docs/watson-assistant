@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-02-02"
 
 keywords: Watson Assistant release notes
 
@@ -35,6 +35,19 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 2 February 2023
+{: #watson-assistant-feb022023}
+{: release-note}
+
+Detect trigger words (beta)
+:   Use the **Trigger word detected** action to add words or phrases to two separate groups. The first group connects customers with an agent, when it’s important to for a customer to speak with a live agent rather than activate any further actions. The second group shows customers a customizable warning message, used to discourage customers from interacting with your assistant in unacceptable ways, such as using profanity. This action is included with all new assistants created as of this date. This is a beta feature that is available for evaluation and testing purposes. For more information, see [Detecting trigger words](/docs/watson-assistant?topic=watson-assistant-trigger-words).
+
+<!--Action conditions (beta)
+:   An action condition is a boolean test, based on some runtime value; the action executes only if the test evaluates as true. This test can be applied to any variable. By defining action conditions, you can do things such as control user access to actions or create date-specific actions. This is a beta feature that is available for evaluation and testing purposes. For more information, see [Adding conditions to an action](/docs/watson-assistant?topic=watson-assistant-action-conditions).-->
+
+Changes to unrecognized requests algorithm
+:   In **Analyze**, the **Recognition** page lets you view groups of similar unrecognized requests. You can use the requests as example phrases in new or existing actions to address questions and issues that aren't being answered by your assistant. With this release, the criteria for grouping the requests is relaxed for customers with lesser amounts of data. Also, the group names have been improved with better grammar and to be more representative of the requests. For more information, see [Use unrecognized requests to get action recommendations](/docs/watson-assistant?topic=watson-assistant-analytics-recognition).
 
 ## 1 February 2023
 {: #watson-assistant-feb012023}
