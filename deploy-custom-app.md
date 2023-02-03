@@ -24,11 +24,13 @@ subcollection: watson-assistant
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 {:video: .video}
+{:tag-ibm-cloud: .tag data-tag-color="blue"}
+{:tag-cp4d: .tag data-tag-color="magenta"}
 
 # Integrating with a custom client app
 {: #deploy-custom-app}
 
-![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 If the available integration channels do not meet your needs, you can build your own client application as the interface between the assistant and your customers.
 {: shortdesc}

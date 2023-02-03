@@ -22,13 +22,15 @@ subcollection: watson-assistant
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:tag-ibm-cloud: .tag data-tag-color="blue"}
+{:tag-cp4d: .tag data-tag-color="magenta"}
 
 {{site.data.content.classiclink}}
 
 # Integrating with WhatsApp
 {: #deploy-whatsapp}
 
-![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 Integrate with WhatsApp messaging so your assistant can exchange messages with your customers where they are.
 {: shortdesc}

@@ -22,13 +22,15 @@ subcollection: watson-assistant
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:tag-ibm-cloud: .tag data-tag-color="blue"}
+{:tag-cp4d: .tag data-tag-color="magenta"}
 
 {{site.data.content.classiclink}}
 
 # Integrating with *SMS*
 {: #deploy-sms}
 
-![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 Add a text messaging integration so your assistant can exchange messages with your customers.
 {: shortdesc}

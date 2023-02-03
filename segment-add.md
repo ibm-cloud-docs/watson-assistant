@@ -25,13 +25,15 @@ subcollection: watson-assistant
 {:swift: .ph data-hd-programlang='swift'}
 {:table: .aria-labeledby="caption"}
 {:video: .video}
+{:tag-ibm-cloud: .tag data-tag-color="blue"}
+{:tag-cp4d: .tag data-tag-color="magenta"}
 
 {{site.data.content.classiclink}}
 
 # Sending events to Segment ![Enterprise plan only](images/enterprise.png)
 {: #segment-add}
 
-![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 You can use the Segment extension to send {{site.data.keyword.conversationshort}} events to Segment.
 {: shortdesc}

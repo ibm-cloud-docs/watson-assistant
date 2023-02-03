@@ -24,13 +24,15 @@ subcollection: watson-assistant
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 {:video: .video}
+{:tag-ibm-cloud: .tag data-tag-color="blue"}
+{:tag-cp4d: .tag data-tag-color="magenta"}
 
 {{site.data.content.classiclink}}
 
 # Adding contact center support
 {: #deploy-web-chat-haa}
 
-![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 You can configure the web chat to transfer a customer to a human customer support agent if the customer asks for help from a person. The following built-in contact center (service desk) integrations are available:
 

@@ -22,6 +22,8 @@ subcollection: watson-assistant
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:tag-ibm-cloud: .tag data-tag-color="blue"}
+{:tag-cp4d: .tag data-tag-color="magenta"}
 
 {{site.data.content.classiclink}}
 
@@ -29,7 +31,7 @@ subcollection: watson-assistant
 # Integrating with phone and NICE CXone contact center ![Plus or higher plans only](images/plus.png)
 {: #deploy-phone-nicecxone}
 
-![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 Connect your assistant to a NICE CXone contact center with live agents. 
 {: shortdesc}
