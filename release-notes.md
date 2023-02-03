@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-02"
+lastupdated: "2023-02-03"
 
 keywords: Watson Assistant release notes
 
@@ -35,6 +35,13 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 3 February 2023
+{: #watson-assistant-feb032023}
+{: release-note}
+
+Action conditions (beta)
+:   An action condition is a boolean test, based on some runtime value; the action executes only if the test evaluates as true. This test can be applied to any variable. By defining action conditions, you can do things such as control user access to actions or create date-specific actions. This is a beta feature that is available for evaluation and testing purposes. For more information, see [Adding conditions to an action](/docs/watson-assistant?topic=watson-assistant-action-conditions).
 
 ## 2 February 2023
 {: #watson-assistant-feb022023}
