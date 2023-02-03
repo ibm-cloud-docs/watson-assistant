@@ -25,6 +25,8 @@ subcollection: watson-assistant
 {:swift: .ph data-hd-programlang='swift'}
 {:table: .aria-labeledby="caption"}
 {:video: .video}
+{:tag-ibm-cloud: .tag data-tag-color="blue"}
+{:tag-cp4d: .tag data-tag-color="magenta"}
 
 {{site.data.content.classiclink}}
 
