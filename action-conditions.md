@@ -71,7 +71,7 @@ To add an action condition:
 
 1. Select the operator representing the test you want to perform on the variable (for example, `is` or `is not`). The available operators for a particular value depend upon its data type. For more information, see [Operators](#action-conditions-operators).
 
-1. Select the value you want to evaluate the condition against. The values available depend upon the type of value you are testing. For example, an variable containing an options response can be tested against any of the defined options, and a date value can be tested against any date.
+1. Select the value you want to evaluate the condition against. The values available depend upon the type of value you are testing. For example, a variable containing an options response can be tested against any of the defined options, and a date value can be tested against any date.
 
    ![Conditions](images/action-conditions-editor.png){: caption="Conditions" caption-side="bottom"}
 
