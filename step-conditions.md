@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-09-09"
+  years: 2018, 2023
+lastupdated: "2023-02-03"
 
 subcollection: watson-assistant
 
@@ -68,18 +68,18 @@ To add a step condition:
 
     - Select the variable you want to test. You can select any of the following:
 
-      - An action variable storing the customer response from a previous step in the action.
-      - A session variable containing a value stored by any action.
-      - A built-in variable set by the assistant or by an integration.
+      - An action variable storing the customer response from a previous step in the action
+      - A session variable containing a value stored by any action
+      - A built-in variable set by the assistant or by an integration
 
       You can also define a complex condition by writing an expression defining some other value. For more information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).
       {: note}
 
     - Select the operator representing the test you want to perform on the variable (for example, `is` or `is not`). The available operators for a particular value depend upon its data type. (For more information, see [Operators](#step-conditions-operators).)
 
-    - Select the value you want to evaluate the test against. Again, the values available depend upon the type of value you are testing. For example, an variable containing an options response can be tested against any of the defined options, and a date value can be tested against any date.
+    - Select the value you want to evaluate the test against. Again, the values available depend upon the type of value you are testing. For example, a variable containing an options response can be tested against any of the defined options, and a date value can be tested against any date.
 
-1.  To add more than one condition to a step, after adding a condition, click **Add condition**.
+1.  To add more than one condition to a step, after adding a condition, click **New condition group**.
 
     One use case where using more than one condition is helpful is if you need to capture a value range. For example, maybe a requirement of opening a checking account is that the customer deposit at least $100 into the account at creation time. You might ask the customer if they want to transfer funds to the account, and if so, how much? To continue with the transfer, the transfer amount must be $100 or more, but cannot exceed $1000. You can add a step with the following conditions:
 
@@ -92,9 +92,10 @@ To add a step condition:
 
     You can use groups to build complex step conditions. Each group is evaluated true or false as a whole, and then these results are evaluated together. For example, you might build a step that executes only if all conditions in group 1 are true *or* any condition in group 2 is true. (Groups function like parentheses in the boolean conditions of many programming languages.)
 
-    After you add a group, you can define one or more conditions in the new group. Each conditional group is numbered. Between groups, choose **and** or **or** to indicate whether the conditions in both conditional groups or only one of them must be met for the step to be included in the conversational flow.
+    After you add a group, you can define one or more conditions in the new group. Between groups, choose **and** or **or** to indicate whether the conditions in both conditional groups or only one of them must be met for the step to be included in the conversational flow.
 
 ## Operators
+{: #step-conditions-operators}
 
 An operator specifies the kind of test you are performing on a value in a condition. The specific operators available in a condition depend on the customer response type of the value, as shown in the following table.
 
@@ -106,3 +107,4 @@ An operator specifies the kind of test you are performing on a value in a condit
 | - Date                               | - is defined\n- is not defined\n- is on (also allows specific day of the week)\n- is not on\n- is before\n- is after\n- is on or before\n- is on or after |
 | - Time                               | - is defined\n- is not defined\n- is at\n- is not at\n- is before\n- is after\n- is at or before\n- is at or after |
 | - Free text                          | - is\n- is not\n- contains\n- does not contain\n- matches\n- does not match |
+{: caption="Operators" caption-side="top"}
