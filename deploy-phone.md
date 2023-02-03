@@ -24,6 +24,8 @@ subcollection: watson-assistant
 {:swift: .ph data-hd-programlang='swift'}
 {:tag-ibm-cloud: .tag data-tag-color="blue"}
 {:tag-cp4d: .tag data-tag-color="magenta"}
+{:tag-ibm-cloud: .tag data-tag-color="blue"}
+{:tag-cp4d: .tag data-tag-color="magenta"}
 
 {{site.data.content.classiclink}}
 
