@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2015, 2022
-lastupdated: "2022-12-06"
+years: 2015, 2023
+lastupdated: "2023-02-08"
 
 subcollection: watson-assistant
 
@@ -712,7 +712,7 @@ If you use that expression to define the value of a variable, you can then refer
 ### JSONArray.joinToArray(template, retainDataType)
 {: #expression-methods-actions-arrays-join-to-array}
 
-This method extracts information from each item in the array and builds a new array that is formatted according to the format you specify as a template. The template can be a string, a JSON object, or an array. The method returns an array of strings, an array of objects, or an array of arrays, depending on the type of the template.
+This method extracts information from each item in the array and builds a new array that is formatted according to the template you specify. The template can be a string, a JSON object, or an array. The method returns an array of strings, an array of objects, or an array of arrays, depending on the type of template.
 
 This method is useful for formatting information as a string you can return as part of the output of a step, or for transforming data into a different structure so you can use it with an external API.
 
@@ -773,8 +773,7 @@ ${Flight_data}.joinToArray("Flight %e.flight% to %e.destination%", true)
 
 This expression would return the following array of strings: `["Flight AZ1040 to FCO","Flight DL1710 to LAX","Flight VS4379 to LHR"]`.
 
-The optional `retainDataType` parameter specifies whether the method should preserve the data type of all input values in the returned array.
-If `retainDataType` is set to `false` or omitted, in some situations, strings in the input array might be converted to numbers in the returned array. For example, if the selected values from the input array are `"1"`, `"2"`, and `"3"`, the returned array might be `[ 1, 2, 3 ]`. To avoid unexpected type conversions, specify `true` for this parameter.
+The optional `retainDataType` parameter specifies whether the method should preserve the data type of all input values in the returned array. If `retainDataType` is set to `false` or omitted, in some situations, strings in the input array might be converted to numbers in the returned array. For example, if the selected values from the input array are `"1"`, `"2"`, and `"3"`, the returned array might be `[ 1, 2, 3 ]`. To avoid unexpected type conversions, specify `true` for this parameter.
 
 #### Complex templates
 {: #join-to-array-complex-template}
@@ -823,9 +822,9 @@ Arrival time: 09:05
 #### JSON Object templates
 {: #join-to-array-object-template}
 
-Instead of a string, you can define a template as a JSON object. This provides a way to standardize the formatting of information from different systems, or transforming data into the format required for an external service.
+Instead of a string, you can define a template as a JSON object. This provides a way to standardize the formatting of information from different systems, or to transform data into the format required for an external service.
 
-In this example, this template is defined as a JSON object that extracts flight details from the flight elements specified in the array stored in the `Flight data` session variable:
+In this example, a template is defined as a JSON object that extracts flight details from the elements specified in the array stored in the `Flight data` session variable:
 
 ```json
 {
