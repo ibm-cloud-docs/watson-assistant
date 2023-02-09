@@ -38,6 +38,21 @@ For information about new features and improvements to the core {{site.data.keyw
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
 
+## 7.1.1
+{: #7.1.1}
+
+*Release date: 13 February 2023*
+
+- **New Journeys events**: The new [`tour:start`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#tourstart){: external}, [`tour:end`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#tourend){: external}, and [`tour:step`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#tourstep){: external} events have been added to provide you with better feedback as the user progress's through a Journey. These events could be used to navigate to a specific page when the user starts a tour or when they get to a certain step. They could also be used to show a survey after a tour has finished.
+
+- **New Journeys methods**: The new [`tours`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#tours){: external} object has been added to the web chats instance methods. The tours object contains the following methods [`tours.startTour()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#toursstarttour){: external}, [`tours.endTour()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#toursendtour){: external}, [`tours.goToNextStep()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods##toursgotonextstep){: external}, and [`tours.goToStep()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods##toursgotostep){: external}. These methods have been added to give you better control over the Journeys feature. The methods could be used to automatically progress to the next step in a tour if the user preforms a specific action, or to start a new tour if you realize the users goals have changed.
+
+- **Added Journey strings to the language pack**: The following items have been added to the language pack `"tour_resumeButton": "Resume"`, `"tour_restartButton": "Restart"`, `"tour_startButton": "Get started",`, and `"tour_doneButton": "Done"`. These strings can be updated by using the instance method to update the language pack [`updateLanguagePack()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatelanguagepack)
+
+- Bug fixes for Journeys
+
+    As a reminder, Journeys are available as a beta feature. For more information, see [Guiding customers with journeys](/docs/watson-assistant?topic=watson-assistant-journeys).
+
 ## 7.1.0
 {: #7.1.0}
 
@@ -47,9 +62,9 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 - In the service desk starter kits, the instance of the web chat integration has been added to the [`serviceDeskFactory` parameters](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/blob/main/src/common/types/serviceDesk.ts){: external} to make it accessible to custom service desk implementations.
 
-- **New instance methods**: The new [`elements.getMessageInput()`](https://web-chat.global.assistant.watson.appdomain.cloud/docs.html?to=api-instance-methods#elements-get-message-input){: external} and [`elements.getHomeScreenInput()`](https://web-chat.global.assistant.watson.appdomain.cloud/docs.html?to=api-instance-methods#elements-get-home-screen-input){: external} instance methods enable access to the input fields used by the customer to send messages. You can use these methods to change the input or to take action as the user is typing (for example, to implement for a type-ahead feature).
+- **New instance methods**: The new [`elements.getMessageInput()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#elements-get-message-input){: external} and [`elements.getHomeScreenInput()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#elements-get-home-screen-input){: external} instance methods enable access to the input fields used by the customer to send messages. You can use these methods to change the input or to take action as the user is typing (for example, to implement for a type-ahead feature).
 
-- **New event**: The new [`agent:pre:sessionHistory`](https://web-chat.global.assistant.watson.appdomain.cloud/docs.html?to=api-events#agentpresessionhistory){: external} event enables you to filter potential PII from messages sent from a customer or service desk agent before the messages are sent to the assistant for storage in the session history.
+- **New event**: The new [`agent:pre:sessionHistory`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#agentpresessionhistory){: external} event enables you to filter potential PII from messages sent from a customer or service desk agent before the messages are sent to the assistant for storage in the session history.
 
 - **New property in web chat state object**: In the object returned from the [`getState()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#getState){: external} instance method, the new `isDebugEnabled` property indicates whether the web chat debug flag is set to `true`.
 
