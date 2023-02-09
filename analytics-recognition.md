@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2023-02-02"
+lastupdated: "2023-02-09"
 
 subcollection: watson-assistant
 
@@ -28,6 +28,9 @@ subcollection: watson-assistant
 
 The **Recognition** page lets you analyze unrecognized requests. You can use this information to create new actions that address questions and issues that aren't being answered by your assistant.
 {: shortdesc}
+
+You analyze unrecognized requests in English-language assistants only.
+{: note}
 
 *Recognition* measures the requests within a given time period that are recognized and successfully routed to an action. Customer requests are considered unrecognized if:
 - The request triggers the *No Action Matches* action
