@@ -2,7 +2,7 @@
 
 copyright:
 years: 2015, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-02-09"
 
 subcollection: watson-assistant
 
@@ -490,7 +490,7 @@ ${step_297}.substring(5, ${step_297}.length())
 ```
 {: codeblock}
 
-If the action variable `${step_297}` contains the string `This is a string.`, this expression returns `is a text.`
+If the action variable `${step_297}` contains the string `This is a string.`, this expression returns `is a string.`
 
 ### String.toJson()
 {: #expression-methods-actions-strings-toJson}
