@@ -74,7 +74,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. On the same Microsoft Azure **Overview** page, click the hyperlink **Add a certificate or secret** next to Client Credentials. 
 
-1. On the **Certificates & secrets** page for token creation, click **New client secret**. Enter a description and then select **Recommended 180 days** from the drop-down list. Click **Add**.
+1. On the **Certificates & secrets** page for token creation, click **New client secret**. Enter a description and then select **Recommended 180 days**. Click **Add**.
 
 1. Copy the string under **Value** and paste into **Client secret value** on the **App registration** page of your {site.data.keyword.conversationshort} Microsoft Teams integration. Note: You *must* generate a new value before the current one expires on day 180.
 
@@ -87,13 +87,13 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. On the **Tell us about your bot** page, complete your bot profile. 
 
-1. Copy the generated endpoint from the **Create your bot** page of your {site.data.keyword.conversationshort} Microsoft Teams integration and paste into the **Messaging endpoint** field of **Configuration** section.
+1. Copy the generated endpoint from the **Create your bot** page of your {site.data.keyword.conversationshort} Microsoft Teams integration and paste into the **Messaging endpoint** field of the **Configuration** section.
 
 1. Select **Multi-Tenant** as the app type. 
 
 1. Copy and paste your app ID, and then click **Register**.
 
-1. On the **Connect to channels** page, click **Configure Microsoft Teams channel**, in the **Add a featured channel** section.
+1. On the **Connect to channels** page, click **Configure Microsoft Teams channel** in the **Add a featured channel** section.
 
 1. On the **Configure Microsoft Teams** page, specify options in the **Messaging**, **Calling**, and **Publish** tabs that fit your bot needs, and then click **Save**.
 
