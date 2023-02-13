@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-07-25"
+lastupdated: "2023-02-13"
 
 subcollection: watson-assistant
 
@@ -34,10 +34,10 @@ subcollection: watson-assistant
 
 {{site.data.keyword.conversationshort}} routes your customer's questions and requests to the correct resolution source. However, before your assistant can properly route requests, you must complete the following steps:
 
-1. Write content for your assistant
-1. Publish the content
-1. Connect an integration to your assistant
-1. Deploy the assistant to a channel
+1. Write content for your assistant.
+1. Publish the content.
+1. Connect an integration to your assistant.
+1. Deploy the assistant to a channel.
 
 After you connect an integration and deploy to a channel, you make your assistant available to your customers. You can find an overview visual of your progress toward completing these steps on the **Live environment** page:
 
