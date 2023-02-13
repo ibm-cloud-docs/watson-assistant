@@ -68,7 +68,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. On the **App registrations** page, click **New registration**. 
 
-1. To **Register an application**, enter a **Name**, select the **Multitenant** option that applies to your application, then click **Register**.
+1. On the **Register an application** page, enter a name, select the multi-tenant option that applies to you app, and then click **Register**.
 
 1. Copy the **Application (client) ID** from your app **Overview** page and paste into **App registration** of your {site.data.keyword.conversationshort} Microsoft Teams integration.
 
@@ -112,7 +112,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. Go to **App features** in the **Configure** section, select the feature called **Bot**. 
 
-1. To **Identify your bot**, **Select an existing bot** from the dropdown. 
+1. On the **Identify your bot** page, choose your bot in the **Select an existing bot** dropdown. 
 
 1. Tick the boxes **Personal**, **Team**, and **Group Chat** to **Select the scope in which people can use this command**, then click **Save**. Keep open.
 
@@ -135,7 +135,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. Click **Add** to finish.
 
-1. Test your actions and response types in **Chat** of your Teams app.
+1. Test your actions and response types in the **Chat** section of your Teams app.
 
 ## Response types
 {: #deploy-microsoft-teams-response-types}
@@ -144,5 +144,6 @@ These [response types](docs/watson-assistant?topic=watson-assistant-respond) are
 
 - date
 - image
-- options/suggestions
+- options
+- suggestions
 - text 
