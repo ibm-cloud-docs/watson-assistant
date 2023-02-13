@@ -131,7 +131,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. Go to [Microsoft Teams](https://teams.microsoft.com){: external}, and log in with your admin credentials.
 
-1. Click **Apps** in the sidebar menu, then **Manage your apps** and **Upload an app**. 
+1. Click **Apps** in the sidebar menu, and then click **Manage your apps** and **Upload an app**. 
 
 1. Select **Upload a custom app** and specify the app package .zip file you downloaded. 
 
