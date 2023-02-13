@@ -137,7 +137,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. Click **Add** to finish.
 
-1. Test your actions and response types in the **Chat** section of your Teams app.
+1. Test your actions and responses in the **Chat** section of your Teams app.
 
 ## Response types
 {: #deploy-microsoft-teams-response-types}
