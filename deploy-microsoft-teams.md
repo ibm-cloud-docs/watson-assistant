@@ -91,7 +91,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. Select **Multi-Tenant** as app type from the dropdown. 
 
-1. Copy and paste your **Application (client) ID**, then click **Register**.
+1. Copy and paste your **Application (client) ID**, and then click **Register**.
 
 1. To **Connect to channels** and **Add a featured channel**, click **Configure Microsoft Teams channel**. 
 
