@@ -44,7 +44,7 @@ Response variations
 :   In actions, you can add *response variations* so that your assistant can respond to the same request in different ways. You can choose to rotate through the response variations sequentially or in random order. For more information, see [Adding variations](/docs/watson-assistant/watson-assistant?topic=watson-assistant-respond#respond-variations).
 
 Microsoft Teams integration
-A [Microsoft Teams integration](/docs/watson-assistant?topic=watson-assistant-deploy-microsoft-teams) is now available to connect your assistant with the people, content, and tools that your business or community needs to chat, call, and collaborate. 
+:   A [Microsoft Teams integration](/docs/watson-assistant?topic=watson-assistant-deploy-microsoft-teams) is now available to connect your assistant with the people, content, and tools that your business or community needs to chat, call, and collaborate. 
 
 ## 3 February 2023
 {: #watson-assistant-feb032023}
