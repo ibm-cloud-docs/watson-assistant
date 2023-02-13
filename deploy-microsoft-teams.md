@@ -70,7 +70,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. To **Register an application**, enter a **Name**, select the **Multitenant** option that applies to your application, then click **Register**.
 
-1. Copy the **Application (client) ID** from your app **Overview** page and paste into **App registration** of your {site.data.keyword.conversationshort} Microsoft Teams integration.
+1. Copy the application ID from your Overview page of your app, and paste it into the **App registration** field of your {site.data.keyword.conversationshort} Microsoft Teams integration.
 
 1. On the same Microsoft Azure **Overview** page, click the hyperlink **Add a certificate or secret** next to Client Credentials. 
 
