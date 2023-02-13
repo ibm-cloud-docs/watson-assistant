@@ -146,6 +146,7 @@ toc:
           - deploy.md
           - deploy-integration-add.md
           - deploy-facebook.md
+          - deploy-microsoft-teams.md
           - deploy-slack.md
           - deploy-sms.md
           - deploy-whatsapp.md

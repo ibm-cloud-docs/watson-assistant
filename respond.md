@@ -195,6 +195,7 @@ The *Image* response type is supported by the following channel integrations:
 - Web chat
 - SMS
 - Slack
+- Microsoft Teams
 - Facebook
 - WhatsApp
 

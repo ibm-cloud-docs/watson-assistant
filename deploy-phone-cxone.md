@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-11-14"
+  years: 2022, 2023
+lastupdated: "2023-02-13"
 
 subcollection: watson-assistant
 
@@ -147,7 +147,7 @@ The following actions and settings in the workflow are necessary for integration
 
 #### Connecting a caller to your assistant
 
-1. Use the [Sipputheader](https://help.nice-incontact.com/content/studio/actions/sipputheader/sipputheader.htm) action. In the **headerName** property, enter the name of the SIP header field that will contain the Contact ID. This header field is included in outgoing SIP INVITE messages to {{site.data.keyword.conversationshort}}.  
+Use the [Sipputheader](https://help.nice-incontact.com/content/studio/actions/sipputheader/sipputheader.htm) action. In the **headerName** property, enter the name of the SIP header field that will contain the Contact ID. This header field is included in outgoing SIP INVITE messages to {{site.data.keyword.conversationshort}}.  
 
 - **headerName** X-Contact-ID
 - **headerValue** {ContactId}
@@ -155,7 +155,7 @@ The following actions and settings in the workflow are necessary for integration
 **Sipputheader** must be executed before **Placecall**.
 {: note}
 
-1. Use a [Placecall](https://help.nice-incontact.com/content/studio/actions/placecall/placecall.htm) action to initiate an outbound call to {{site.data.keyword.conversationshort}}. In the **PhoneNumber** property, enter the phone number you allocated for this integration. 
+Use a [Placecall](https://help.nice-incontact.com/content/studio/actions/placecall/placecall.htm) action to initiate an outbound call to {{site.data.keyword.conversationshort}}. In the **PhoneNumber** property, enter the phone number you allocated for this integration. 
 
 The phone number must match the number you configured in **Use an existing phone number with an external provider** in the {{site.data.keyword.conversationshort}} user interface.
 {: note}
