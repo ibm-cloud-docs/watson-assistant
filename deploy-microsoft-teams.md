@@ -68,9 +68,9 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. On the **App registrations** page, click **New registration**. 
 
-1. On the **Register an application** page, enter a name, select the multi-tenant option that applies to you app, and then click **Register**.
+1. On the **Register an application** page, enter a name, select the multi-tenant option that applies to your app, and then click **Register**.
 
-1. Copy the application ID from your Overview page of your app, and paste it into the **App registration** field of your {site.data.keyword.conversationshort} Microsoft Teams integration.
+1. Copy the application ID from the **Overview** page of your app, and paste it into the **App registration** field of your {site.data.keyword.conversationshort} Microsoft Teams integration.
 
 1. On the same Microsoft Azure **Overview** page, click the hyperlink **Add a certificate or secret** next to Client Credentials. 
 
@@ -87,15 +87,15 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. On the **Tell us about your bot** page, complete your bot profile. 
 
-1. Copy the generated endpoint from the **Create your bot** page of your {site.data.keyword.conversationshort} Microsoft Teams integration and paste into the **Messaging endpoint** field of **Configuration**.
+1. Copy the generated endpoint from the **Create your bot** page of your {site.data.keyword.conversationshort} Microsoft Teams integration and paste into the **Messaging endpoint** field of **Configuration** section.
 
-1. Select **Multi-Tenant** from the drop-down list. 
+1. Select **Multi-Tenant** as the app type. 
 
-1. Copy and paste your **Application (client) ID**, and then click **Register**.
+1. Copy and paste your app ID, and then click **Register**.
 
-1. To **Connect to channels** and **Add a featured channel**, click **Configure Microsoft Teams channel**. 
+1. On the **Connect to channels** page, click **Configure Microsoft Teams channel**, in the **Add a featured channel** section.
 
-1. To **Configure Microsoft Teams**, select options under **Messaging**, **Calling**, and **Publish** that fit your bot needs, and then click **Save**.
+1. On the **Configure Microsoft Teams** page, specify options in the **Messaging**, **Calling**, and **Publish** tabs that fit your bot needs, and then click **Save**.
 
 1. In your {site.data.keyword.conversationshort} Microsoft Teams integration, click **Next** to create your Teams app.
 
@@ -106,13 +106,13 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. On the **Apps** tab, click **New App**. 
 
-1. In the **Add app** popup, enter **Name** and click **Add**. 
+1. Enter a name, and click **Add**. 
 
-1. On the **Basic information** page, enter app names, app ID, descriptions, developer information, and app URLs, and then copy and paste the **Application (client) ID**. Click **Save**.
+1. On the **Basic information** page, enter app names, app ID, descriptions, developer information, and app URLs, and then copy and paste your app ID into **Application (client) ID**. Click **Save**.
 
-1. Go to **App features** in the **Configure** section and select the feature called **Bot**. 
+1. In the **Configure** section, select **App features**, and then **Bot**. 
 
-1. On the **Identify your bot** page, choose your bot in the **Select an existing bot** dropdown. 
+1. On the **Identify your bot** page, select your bot. 
 
 1. In the **Select the scope in which people can use this command** section, select **Personal**, **Team**, and **Group Chat**.
 
@@ -137,7 +137,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. Click **Add** to finish.
 
-1. Test your actions and response types in the **Chat** section of your Teams app.
+1. Test your actions and responses in the **Chat** section of your Teams app.
 
 ## Response types
 {: #deploy-microsoft-teams-response-types}
@@ -146,6 +146,6 @@ These [response types](docs/watson-assistant?topic=watson-assistant-respond) are
 
 - date
 - image
-- options
-- suggestions
+- option
+- suggestion
 - text 
