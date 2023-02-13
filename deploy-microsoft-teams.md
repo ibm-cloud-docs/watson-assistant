@@ -125,7 +125,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 ## Publishing your Teams app
 {: #deploy-microsoft-teams-publish}
 
-1. In the Microsoft Teams Developer Portal where you created and saved your Teams app, which should still be open, click **Publish** to publish your bot.
+1. In the Microsoft Teams Developer Portal window where you created and saved your Teams app, click **Publish** to publish your bot.
 
 1. Click **Download the app package**.
 
