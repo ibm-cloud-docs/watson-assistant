@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-12-05"
+  years: 2021, 2023
+lastupdated: "2023-02-13"
 
 subcollection: watson-assistant
 
@@ -78,6 +78,92 @@ To see if the assistant responses are formatted correctly, you can use **Preview
 - Reflect the user's intent in the response. Doing so assures users that the bot is understanding them, or if it is not, gives users a chance to correct a misunderstanding immediately.
 - Only include links to external sites in responses if the answer depends on data that changes frequently.
 - Word your responses carefully. You can change how someone reacts to your system based simply on how you phrase a response. Changing one line of text can prevent you from having to write multiple lines of code to implement a complex programmatic solution.
+
+## Adding variations
+{: #respond-variations}
+
+If your users return to your assistant frequently, they might be bored to see the same greetings and responses every time. You can add *response variations* so that your assistant can respond to the same request in different ways.
+
+You can choose to rotate through the response variations sequentially or in random order. By default, responses are rotated sequentially, as if they were chosen from an ordered list.
+
+To add response variations:
+
+1. In **Assistant says**, click the **Add response variations** icon ![Add response variations](images/response-variations-icon.png).
+
+1. For **Response variation type**, choose whether to rotate through the response variations sequentially or in random order. For more information see [Sequential or random](#respond-variations-sequential-random).
+
+   ![Response variations](images/response-variations-modal.png){: caption="Response variations" caption-side="bottom"}
+
+1. Add each variation into its own field. For example:
+
+   | Response number | Variation |
+   | -- | -- |
+   | Response 1 | How can I help you? |
+   | Response 2 | What can I do for you today? |
+   | Response 3 | Tell me what I can help with. |
+   | Response 4 | Can I help you? |
+{: caption="Response variation examples" caption-side="bottom"}
+
+1. When you're finished, click **Apply**. The variations appear as a block inside **Assistant says**. You can click the **Edit** icon to update the variations, or click the **Delete** icon to remove all the variations. Also, you can add multiple sets of response variations to a step.
+
+   ![Response variations in Assistant says](images/response-variations-assistant-says.png){: caption="Response variations in Assistant says" caption-side="bottom"}
+
+### Sequential or random
+{: #respond-variations-sequential-random}
+
+For **Response variation type**, you can choose **Sequential** or **Random**.
+
+**Sequential** returns the first response variation the first time the action is triggered, the second response variation the second time the action is triggered, and so on, in the same order as you entered the variations. This results in responses being returned in the following order when the node is processed:
+
+- First time:
+
+   ```screen
+   How can I help you?
+   ```
+
+- Second time:
+
+   ```screen
+   What can I do for you today?
+   ```
+
+- Third time:
+
+   ```screen
+   Tell me what I can help with.
+   ```
+
+- Fourth time:
+
+   ```screen
+   Can I help you?
+   ```
+
+**Random** selects variation the first time the action is triggered, and randomly selects another variation the next time, but without repeating the same variation consecutively. Here's an example of the order that responses might appear:
+
+- First time:
+
+   ```screen
+   Tell me what I can help with.
+   ```
+
+- Second time:
+
+   ```screen
+   Can I help you?
+   ```
+
+- Third time:
+
+   ```screen
+   How can I help you?
+   ```
+
+- Fourth time:
+
+   ```screen
+   What can I do for you today?
+   ```
 
 ## Media responses
 {: #respond-response-types}

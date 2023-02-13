@@ -2,7 +2,7 @@
 
 copyright:
 years: 2015, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-02-10"
 
 subcollection: watson-assistant
 
@@ -138,7 +138,7 @@ You can compare a date with another date, or a time with another time. You can a
 - Determines whether the date/time value is after or the same as the date/time argument.
 - Analogous to `.after()`.
 
-### .sameOrBefore(String date/time)
+### `.sameOrBefore(String date/time)`
 {: #expression-methods-actions-dates-sameOrBefore}
 
 - Determines whether the date/time value is before or the same as the date/time argument.
@@ -206,7 +206,7 @@ now().after($start_date) && now().before($end_date)
 ```
 {: codeblock}
 
-### java.util.Date support
+### `java.util.Date` support
 {: #expression-methods-actions-dates-java-util-date}
 
 In addition to the built-in methods, you can use standard methods of the `java.util.Date` class.
@@ -229,17 +229,17 @@ For information about recognizing numbers in customer responses, see [Choosing a
 
 If you want to change the decimal placement for a number (for example, to reformat a number as a currency value), see the [String format() method](#expression-methods-actions-strings-java-lang-String-format).
 
-### toDouble()
+### `toDouble()`
 {: #expression-methods-actions-numbers-toDouble}
 
 Converts the object or field to the Double number type. You can call this method on any object or field. If the conversion fails, `null` is returned.
 
-### toInt()
+### `toInt()`
 {: #expression-methods-actions-numbers-toInt}
 
 Converts the object or field to the Integer number type. You can call this method on any object or field. If the conversion fails, `null` is returned.
 
-### toLong()
+### `toLong()`
 {: #expression-methods-actions-numbers-toLong}
 
 Converts the object or field to the Long number type. You can call this method on any object or field. If the conversion fails, `null` is returned.
@@ -258,7 +258,7 @@ Use SpEL expressions to define standard math equations, where the operators are 
 | multiplication       | `*`        |
 | subraction           | `-`        |
 
-### java.lang.Math()
+### `java.lang.Math()`
 {: #expression-methods-actions-numbers-java-lang-math}
 
 You can use the functions of the java.lang.Math class to perform basic numeric operations.
@@ -288,7 +288,7 @@ You can use the the Class methods, including these:
 
 See the [java.lang.Math reference documentation](https://docs.oracle.com/javase/7/docs/api/java/lang/Math.html){: external} for information about other methods.
 
-### java.util.Random()
+### `java.util.Random()`
 {: #expression-methods-actions-numbers-java-util-random}
 
 Returns a random number. You can use any of the following syntax options:
@@ -324,7 +324,7 @@ These methods help you work with text.
 For details about the syntax to use in methods that involve regular expressions, see [RE2 Syntax reference](https://github.com/google/re2/wiki/Syntax){: external}.
 {: note}
 
-### String.append(Object)
+### `String.append(Object)`
 {: #expression-methods-actions-strings-append}
 
 This method appends an input object (as a string) to a string, and returns a modified string.
@@ -334,7 +334,7 @@ ${step_297}.append('next text')
 ```
 {: codeblock}
 
-### String.contains(String)
+### `String.contains(String)`
 {: #expression-methods-actions-strings-contains}
 
 This method returns `true` if the action variable or session variable contains a substring. This is useful in conditions.
@@ -344,7 +344,7 @@ ${step_297}.contains('Yes')
 ```
 {: codeblock}
 
-### String.endsWith(String)
+### `String.endsWith(String)`
 {: #expression-methods-actions-strings-endsWith}
 
 This method returns `true` if the string ends with the input substring.
@@ -354,7 +354,7 @@ ${step_297}.endsWith('?')
 ```
 {: codeblock}
 
-### String.equals(String)
+### `String.equals(String)`
 {: #expression-methods-actions-strings-equals}
 
 This method returns `true` if the specified string equals the action variable or session variable.
@@ -364,7 +364,7 @@ ${step_297}.equals('Yes')
 ```
 {: codeblock}
 
-### String.equalsIgnoreCase(String)
+### `String.equalsIgnoreCase(String)`
 {: #expression-methods-actions-strings-equals-ignore-case}
 
 This method returns `true` if the specified string equals the action variable or session variable irrespective of case.
@@ -374,7 +374,7 @@ ${step_297}.equalsIgnoreCase('Yes')
 ```
 {: codeblock}
 
-### String.extract(String regexp, Integer groupIndex)
+### `String.extract(String regexp, Integer groupIndex)`
 {: #expression-methods-actions-strings-extract}
 
 This method returns a string from the input that matches the specified regular expression group pattern. It returns an empty string if no match is found.
@@ -402,7 +402,7 @@ the results are as follows:
 - When `<n>`=`1`, the value is `123`.
 - When `<n>`=`2`, the value is `this`.
 
-### String.find(String regexp)
+### `String.find(String regexp)`
 {: #expression-methods-actions-strings-find}
 
 This method returns `true` if any segment of the string matches the input regular expression. You can call this method against a JSONArray or JSONObject element, and it will convert the array or object to a string before making the comparison.
@@ -416,7 +416,7 @@ ${step_297}.find('^[^\d]*[\d]{6}[^\d]*$')
 
 The condition is `true` because the numeric portion of the input text matches the regular expression `^[^\d]*[\d]{6}[^\d]*$`.
 
-### String.getMatch(String regexp, Integer matchIndex)
+### `String.getMatch(String regexp, Integer matchIndex)`
 {: #expression-methods-actions-strings-getMatch}
 
 This method returns a string that matches the occurrence of the specified regular expression pattern. This method returns an empty string if no match is found.
@@ -432,7 +432,7 @@ ${step_297}.getMatch('([\d]+)', 1)
 
 If the action variable `${step_297}` contains the string `hello 123 i said 456 and 8910`, this expression returns `456`.
 
-### String.isEmpty()
+### `String.isEmpty()`
 {: #expression-methods-actions-strings-isEmpty}
 
 This method returns `true` if the string is an empty string, but not `null`, as in this example:
@@ -442,7 +442,7 @@ ${step_297}.isEmpty()
 ```
 {: codeblock}
 
-### String.length()
+### `String.length()`
 {: #expression-methods-actions-strings-length}
 
 This method returns the character length of the string, as in this example:
@@ -454,7 +454,7 @@ ${step_297}.length()
 
 If the action variable `${step_297}` contains the string `Hello`, this expression returns 5.
 
-### String.matches(String regexp)
+### `String.matches(String regexp)`
 {: #expression-methods-actions-strings-matches}
 
 This method returns `true` if the string matches the input regular expression, as in the example:
@@ -466,7 +466,7 @@ ${step_297}.matches('^Hello$')
 
 If the action variable `${step_297}` contains the string `Hello`, this expression evaluates to `true`.
 
-### String.startsWith(String)
+### `String.startsWith(String)`
 {: #expression-methods-actions-strings-startsWith}
 
 This method returns `true` if the string starts with the specified substring, as in this example:
@@ -478,7 +478,7 @@ ${step_297}.startsWith('What')
 
 If the action variable `${step_297}` contains the string `What is your name?`, this expression returns `true`.
 
-### String.substring(Integer beginIndex, Integer endIndex)
+### `String.substring(Integer beginIndex, Integer endIndex)`
 {: #expression-methods-actions-strings-substring}
 
 This method returns a substring beginning with the character at `beginIndex` and ending with the character before `endIndex`. (The `endIndex` character itself is not included in the substring.) Note that the index values are zero-based, so the first character in the string is at index 0.
@@ -490,9 +490,9 @@ ${step_297}.substring(5, ${step_297}.length())
 ```
 {: codeblock}
 
-If the action variable `${step_297}` contains the string `This is a string.`, this expression returns `is a text.`
+If the action variable `${step_297}` contains the string `This is a string.`, this expression returns `is a string.`
 
-### String.toJson()
+### `String.toJson()`
 {: #expression-methods-actions-strings-toJson}
 
 This method parses a string that contains JSON data and returns a JSON object or array, as in this example:
@@ -516,7 +516,7 @@ the `toJson()` method returns the following object:
 }
 ```
 
-### String.toLowerCase()
+### `String.toLowerCase()`
 {: #expression-methods-actions-strings-toLowerCase}
 
 This method returns the specified string converted to lowercase letters, as in this example:
@@ -528,7 +528,7 @@ ${step_297}.toLowerCase()
 
 If the action variable `${step_297}` contains the string `This is A DOG!`, this expression returns the string `this is a dog!`.
 
-### String.toUpperCase()
+### `String.toUpperCase()`
 {: #expression-methods-actions-strings-toUpperCase}
 
 This method returns the original string converted to uppercase letters, as in this example:
@@ -540,7 +540,7 @@ ${step_297}.toUpperCase()
 
 If the action variable `${step_297}` contains the string `hi there`, this method returns the string `HI THERE`.
 
-### String.trim()
+### `String.trim()`
 {: #expression-methods-actions-strings-trim}
 
 This method trims any spaces at the beginning and end of a string and returns the modified string, as in this example:
@@ -552,12 +552,12 @@ ${step_297}.trim()
 
 If the action variable `${step_297}` contains the string `   something is here    `, this method returns the string `something is here`.
 
-### java.lang.String support
+### `java.lang.String` support
 {: #expression-methods-actions-strings-java-lang-String}
 
 In addition to the built-in methods, you can use standard methods of the `java.lang.String` class.
 
-#### java.lang.String.format()
+#### `java.lang.String.format()`
 {: #expression-methods-actions-strings-java-lang-String-format}
 
 You can apply the standard Java String `format()` method to text. For information about the syntax to use, see [Format String Syntax](https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html#syntax){: external}.
@@ -585,7 +585,7 @@ If the `${step_297}` variable that needs to be formatted in US dollars is 4.5, t
 
 These methods help you work with arrays.
 
-### Array.add(value...)
+### `Array.add(value...)`
 {: #expression-methods-actions-arrays-add}
 
 This method adds one or more new values to the array and returns `true` if the operation is successful.
@@ -597,7 +597,7 @@ ${Items}.add('four', 'five')
 
 If `Items` is `['one', 'two', 'three']`, this example updates it in place to become `['one', 'two', 'three', 'four', 'five']`.
 
-### Array.addAll(Array array)
+### `Array.addAll(Array array)`
 {: #expression-methods-actions-arrays-add-all}
 
 This method adds one array to another and returns `null`.
@@ -609,7 +609,7 @@ ${Items}.addAll(${New_items})
 
 If `Items` is `['one', 'two', 'three']` and `New_items` is `['four', 'five', 'six']`, this example updates `Items` in place to become `['one', 'two', 'three', 'four', 'five', 'six']`.
 
-### Array.append(value...)
+### `Array.append(value...)`
 {: #expression-methods-actions-arrays-append}
 
 This method appends one or more new values to the array and returns the result as a new array. The original array is not modified.
@@ -621,7 +621,7 @@ ${Items}.append('four', 'five')
 
 If `Items` is `['one', 'two', 'three']`, this example returns the new array `['one', 'two', 'three', 'four', 'five']`.
 
-### Array.clear()
+### `Array.clear()`
 {: #expression-methods-actions-arrays-clear}
 
 This method removes all values from the array and returns null.
@@ -632,7 +632,7 @@ ${Items}.clear()
 
 After this expression is evaluated, `Items` is an empty array (`[]`).
 
-### Array.contains(value)
+### `Array.contains(value)`
 {: #expression-methods-actions-arrays-contains}
 
 This method returns `true` if the array contains an item that is exactly equal to the input value. The specified value can be a string or a number.
@@ -643,7 +643,7 @@ ${Items}.contains(123)
 
 If `Items` is `[123, 456, 789]`, this example returns `true`.
 
-### Array.containsIgnoreCase(value)
+### `Array.containsIgnoreCase(value)`
 {: #expression-methods-actions-arrays-contains-ignore-case}
 
 This method returns `true` if the array contains an item that is equal to the input value. Strings are matched regardless of whether the value is specified in uppercase or lowercase letters. The specified value can be a string or a number.
@@ -654,7 +654,7 @@ ${Items}.contains('two')
 
 This example returns `true` if the `Items` array contains any capitalization of the string `two` (for example, `TWO` or `Two` would also match).
 
-### Array.get(Integer index)
+### `Array.get(Integer index)`
 {: #expression-methods-actions-arrays-get}
 
 This method returns the item from the array that is at the specified index position. Note that arrays are zero-indexed, meaning that the first item in the array is at index position `0`.
@@ -674,7 +674,7 @@ ${Items}[1]
 If you are using a value specified by a customer to choose an item from an array, you might need to subtract 1 to convert to a zero-indexed value. For example, you might use an expression like `${Items}.get(${step_123} - 1)` to retrieve the intended value.
 {: note}
 
-### Array.getRandomItem()
+### `Array.getRandomItem()`
 {: #expression-methods-actions-arrays-get-random-item}
 
 This method returns a randomly chosen item from the array.
@@ -685,7 +685,7 @@ ${Items}.getRandomItem()
 
 If `Items` is `['one', 'two', 'three']`, this example returns `one`, `two`, or `three`, on a random basis.
 
-### Array.indexOf(value)
+### `Array.indexOf(value)`
 {: #expression-methods-actions-arrays-index-of}
 
 This method returns the index position of the first occurrence of the input value in the array, or `-1` if the array does not contain the input value. The specified value can be a string or a number.
@@ -696,7 +696,7 @@ ${Items}.indexOf(`two`)
 
 If `Items` is `['one', 'two', 'three']`, this example returns the integer `1` (indicating the second position in the zero-indexed array).
 
-### Array.join(String delimiter)
+### `Array.join(String delimiter)`
 {: #expression-methods-actions-join}
 
 This method joins all values in this array to a string. Values are converted to string and delimited by the input delimiter.
@@ -709,7 +709,7 @@ $toppings_array.join(', ')
 
 If you use that expression to define the value of a variable, you can then reference that variable in your assistant output to create a human-readable message (for example, `You have selected the following toppings: pepperoni, ham, mushrooms`).
 
-### JSONArray.joinToArray(template, retainDataType)
+### `JSONArray.joinToArray(template, retainDataType)`
 {: #expression-methods-actions-arrays-join-to-array}
 
 This method extracts information from each item in the array and builds a new array that is formatted according to the template you specify. The template can be a string, a JSON object, or an array. The method returns an array of strings, an array of objects, or an array of arrays, depending on the type of template.
@@ -819,7 +819,7 @@ Arrival time: 09:05
 ```
 {: screen}
 
-#### JSON Object templates
+#### JSON templates
 {: #join-to-array-object-template}
 
 Instead of a string, you can define a template as a JSON object. This provides a way to standardize the formatting of information from different systems, or to transform data into the format required for an external service.
@@ -836,7 +836,7 @@ In this example, a template is defined as a JSON object that extracts flight det
 
 Using this template, the `joinToArray()` method returns a new array of objects with the specified structure.
 
-### Array.remove(Integer index)
+### `Array.remove(Integer index)`
 {: #expression-methods-actions-arrays-remove}
 
 This method removes the item in the specified index position from the array, and returns the updated array.
@@ -847,7 +847,7 @@ ${Items}.remove(1)
 
 If `Items` is `['one', 'two', 'three']`, this example returns `['one', 'three']`. The original `Items` array is also modified in place.
 
-### Array.removeValue(value)
+### `Array.removeValue(value)`
 {: #expression-methods-actions-arrays-remove-value}
 
 This method removes the first occurrence of the specified value from the array, and returns the updated array. The specified value can be a string or a number.
@@ -858,7 +858,7 @@ ${Items}.removeValue('two')
 
 If `Items` is `['one', 'two', 'three']`, this example returns `['one', 'three']`. The original `Items` array is also modified in place.
 
-### Array.set(Integer index, value)
+### `Array.set(Integer index, value)`
 {: #expression-methods-actions-arrays-set}
 
 This method replaces the item in the specified index position with the specified value, and returns the updated array.
@@ -869,7 +869,7 @@ ${Items}.set(2,'five')
 
 If `Items` is `['one', 'two', 'three']`, this example returns `['one', 'two', 'five']`. The original `Items` array is also modified in place.
 
-### Array.size()
+### `Array.size()`
 {: #expression-methods-actions-arrays-size}
 
 This method returns the number of items in the array as an integer.

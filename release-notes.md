@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-02-13"
 
 keywords: Watson Assistant release notes
 
@@ -35,6 +35,16 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 13 February 2023
+{: #watson-assistant-feb132023}
+{: release-note}
+
+Response variations
+:   In actions, you can add *response variations* so that your assistant can respond to the same request in different ways. You can choose to rotate through the response variations sequentially or in random order. For more information, see [Adding variations](/docs/watson-assistant/watson-assistant?topic=watson-assistant-respond#respond-variations).
+
+Microsoft Teams integration
+A [Microsoft Teams integration](/docs/watson-assistant?topic=watson-assistant-deploy-microsoft-teams) is now available to connect your assistant with the people, content, and tools that your business or community needs to chat, call, and collaborate. 
 
 ## 3 February 2023
 {: #watson-assistant-feb032023}
