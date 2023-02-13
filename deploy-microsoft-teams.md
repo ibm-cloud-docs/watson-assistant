@@ -95,7 +95,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. To **Connect to channels** and **Add a featured channel**, click **Configure Microsoft Teams channel**. 
 
-1. To **Configure Microsoft Teams**, select options under **Messaging**, **Calling**, and **Publish** that fit your bot needs, then **Save**.
+1. To **Configure Microsoft Teams**, select options under **Messaging**, **Calling**, and **Publish** that fit your bot needs, and then click **Save**.
 
 1. In your {site.data.keyword.conversationshort} Microsoft Teams integration, click **Next** to create your Teams app.
 
