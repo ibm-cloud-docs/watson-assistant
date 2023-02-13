@@ -89,7 +89,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. Copy the generated endpoint from the **Create your bot** page of your {site.data.keyword.conversationshort} Microsoft Teams integration and paste into the **Messaging endpoint** field of **Configuration**.
 
-1. Select **Multi-Tenant** as app type from the dropdown. 
+1. Select **Multi-Tenant** from the drop-down list. 
 
 1. Copy and paste your **Application (client) ID**, and then click **Register**.
 
