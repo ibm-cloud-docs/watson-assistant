@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-07-01"
+  years: 2015, 2023
+lastupdated: "2023-02-13"
 
 subcollection: watson-assistant
 
@@ -60,6 +60,7 @@ Follow these steps to add integrations to your assistant:
     - [Web chat](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat)
     - [Phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone)
     - [Facebook Messenger](/docs/watson-assistant?topic=watson-assistant-deploy-facebook)
+    - [Microsoft Teams](/docs/watson-assistant?topic=watson-assistant-deploy-microsoft-teams)
     - [Slack](/docs/watson-assistant?topic=watson-assistant-deploy-slack)
     - [SMS](/docs/watson-assistant?topic=watson-assistant-deploy-sms)
     - [WhatsApp with Twilio](/docs/watson-assistant?topic=watson-assistant-deploy-whatsapp)
@@ -79,11 +80,12 @@ Follow these steps to add integrations to your assistant:
     - [Bring your own (starter kit)](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}
 
     **Phone live agent integrations**
-    - [Phone with Twilio Flex](/docs/watson-assistant?topic=watson-assistant-deploy-phone-flex)
     - [Phone with Genesys Cloud](/docs/watson-assistant?topic=watson-assistant-deploy-phone-genesys)
+    - [Phone with NICE CXone](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-phone-nicecxone)
+    - [Phone with Twilio Flex](/docs/watson-assistant?topic=watson-assistant-deploy-phone-flex)
     - [Bring your own live agent integration](/docs/assistant?topic=assistant-deploy-phone#deploy-phone-transfer-service){: external}
 
-1.  Follow the instructions that are provided on the screen to complete the integration process.
+1.  Follow instructions provided on the screen to complete the integration process.
 
 ![Plus or higher plans only](images/plus.png) For environments where private endpoints are in use, keep in mind that these integrations send traffic over the internet.
 {: note}
@@ -96,6 +98,6 @@ Watch this 3-minute video to learn more about integrating your assistant with a 
 
 ![Overview of how live agent integrations work](https://www.youtube.com/embed/pJSCZLQVgCY){: video output="iframe" id="youtubeplayer" frameborder="0" width="560" height="315" webkitallowfullscreen mozallowfullscreen allowfullscreen}
 
-To read a transcript of the video, [open the video on YouTube.com](https://www.youtube.com/watch?v=pJSCZLQVgCY&feature=emb_imp_woyt), click the *More actions* icon, and then choose *Open transcript*.
+To read a transcript of the video, open the [video on YouTube.com](https://www.youtube.com/watch?v=pJSCZLQVgCY&feature=emb_imp_woyt), click the *More actions* icon, and then choose *Open transcript*.
 
-To learn about how live agent integrations with your assistant can benefit your business, [read this blog post](https://medium.com/ibm-watson/contact-center-post-394dff427c8){: external}.
+To learn about how live agent integrations with your assistant can benefit your business, read [Customer Service Just Got Smarter](https://medium.com/ibm-watson/contact-center-post-394dff427c8){: external}.
