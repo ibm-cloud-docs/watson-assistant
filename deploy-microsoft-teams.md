@@ -70,11 +70,11 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. On the **Register an application** page, enter a name, select the multi-tenant option that applies to you app, and then click **Register**.
 
-1. Copy the **Application (client) ID** from your app **Overview** page and paste into **App registration** of your {site.data.keyword.conversationshort} Microsoft Teams integration.
+1. Copy the application ID from your Overview page of your app, and paste it into the **App registration** field of your {site.data.keyword.conversationshort} Microsoft Teams integration.
 
 1. On the same Microsoft Azure **Overview** page, click the hyperlink **Add a certificate or secret** next to Client Credentials. 
 
-1. On the **Certificates & secrets** page for token creation, click **New client secret**. Enter a **description** and select **Recommended 180 days** from the dropdown, then **Add**.
+1. On the **Certificates & secrets** page for token creation, click **New client secret**. Enter a description and then select **Recommended 180 days** from the drop-down list. Click **Add**.
 
 1. Copy the string under **Value** and paste into **Client secret value** on the **App registration** page of your {site.data.keyword.conversationshort} Microsoft Teams integration. Note: You *must* generate a new value before the current one expires on day 180.
 
@@ -89,13 +89,13 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. Copy the generated endpoint from the **Create your bot** page of your {site.data.keyword.conversationshort} Microsoft Teams integration and paste into the **Messaging endpoint** field of **Configuration**.
 
-1. Select **Multi-Tenant** as app type from the dropdown. 
+1. Select **Multi-Tenant** from the drop-down list. 
 
-1. Copy and paste your **Application (client) ID**, then click **Register**.
+1. Copy and paste your **Application (client) ID**, and then click **Register**.
 
 1. To **Connect to channels** and **Add a featured channel**, click **Configure Microsoft Teams channel**. 
 
-1. To **Configure Microsoft Teams**, select options under **Messaging**, **Calling**, and **Publish** that fit your bot needs, then **Save**.
+1. To **Configure Microsoft Teams**, select options under **Messaging**, **Calling**, and **Publish** that fit your bot needs, and then click **Save**.
 
 1. In your {site.data.keyword.conversationshort} Microsoft Teams integration, click **Next** to create your Teams app.
 
@@ -108,30 +108,32 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. In the **Add app** popup, enter **Name** and click **Add**. 
 
-1. On the **Basic information** page, enter app names, app ID, descriptions, developer information, app URLs, and copy and paste the **Application (client) ID**. Click **Save**.
+1. On the **Basic information** page, enter app names, app ID, descriptions, developer information, and app URLs, and then copy and paste the **Application (client) ID**. Click **Save**.
 
-1. Go to **App features** in the **Configure** section, select the feature called **Bot**. 
+1. Go to **App features** in the **Configure** section and select the feature called **Bot**. 
 
 1. On the **Identify your bot** page, choose your bot in the **Select an existing bot** dropdown. 
 
-1. Tick the boxes **Personal**, **Team**, and **Group Chat** to **Select the scope in which people can use this command**, then click **Save**. Keep open.
+1. In the **Select the scope in which people can use this command** section, select **Personal**, **Team**, and **Group Chat**.
+
+1. Click **Save**, but keep the window open.
 
 1. In your {site.data.keyword.conversationshort} Microsoft Teams integration, click **Finish**.
 
-1. Click **Publish** in the upper-right corner to publish your bot. 
+1. Click **Publish** to publish your bot. 
 
 ## Publishing your Teams app
 {: #deploy-microsoft-teams-publish}
 
-1. In the Microsoft Teams Developer Portal where you created and saved your Teams app, which should still be open, click **Publish** to publish your bot.
+1. In the Microsoft Teams Developer Portal window where you created and saved your Teams app, click **Publish** to publish your bot.
 
 1. Click **Download the app package**.
 
 1. Go to [Microsoft Teams](https://teams.microsoft.com){: external}, and log in with your admin credentials.
 
-1. Click **Apps** in the sidebar menu, then **Manage your apps** and **Upload an app**. 
+1. Click **Apps** in the sidebar menu, and then click **Manage your apps** and **Upload an app**. 
 
-1. Select **Upload a custom app** in the popup, and upload the app package .zip file you downloaded. 
+1. Select **Upload a custom app** and specify the app package .zip file you downloaded. 
 
 1. Click **Add** to finish.
 
