@@ -108,7 +108,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. In the **Add app** popup, enter **Name** and click **Add**. 
 
-1. On the **Basic information** page, enter app names, app ID, descriptions, developer information, app URLs, and copy and paste the **Application (client) ID**. Click **Save**.
+1. On the **Basic information** page, enter app names, app ID, descriptions, developer information, and app URLs, and then copy and paste the **Application (client) ID**. Click **Save**.
 
 1. Go to **App features** in the **Configure** section, select the feature called **Bot**. 
 
