@@ -104,7 +104,7 @@ To add response variations:
    | Response 4 | Can I help you? |
 {: caption="Response variation examples" caption-side="bottom"}
 
-1. When you're finished, click **Apply**. The variations appears as a block inside **Assistant says**. You can click the **Edit** icon to update the variations, or click the **Delete** icon to remove all the variations. Also, you can add multiple sets of response variations to a step.
+1. When you're finished, click **Apply**. The variations appear as a block inside **Assistant says**. You can click the **Edit** icon to update the variations, or click the **Delete** icon to remove all the variations. Also, you can add multiple sets of response variations to a step.
 
    ![Response variations in Assistant says](images/response-variations-assistant-says.png){: caption="Response variations in Assistant says" caption-side="bottom"}
 
