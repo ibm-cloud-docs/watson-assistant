@@ -114,7 +114,9 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. To **Identify your bot**, **Select an existing bot** from the dropdown. 
 
-1. Tick the boxes **Personal**, **Team**, and **Group Chat** to **Select the scope in which people can use this command**, then click **Save**. Keep open.
+1. In the **Select the scope in which people can use this command** section, select **Personal**, **Team**, and **Group Chat**.
+
+1. Click **Save**, but keep the window open.
 
 1. In your {site.data.keyword.conversationshort} Microsoft Teams integration, click **Finish**.
 
