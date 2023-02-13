@@ -133,7 +133,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. Click **Apps** in the sidebar menu, then **Manage your apps** and **Upload an app**. 
 
-1. Select **Upload a custom app** in the popup, and upload the app package .zip file you downloaded. 
+1. Select **Upload a custom app** and specify the app package .zip file you downloaded. 
 
 1. Click **Add** to finish.
 
