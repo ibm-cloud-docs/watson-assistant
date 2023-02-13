@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-12-13"
+lastupdated: "2023-02-13"
 
 subcollection: watson-assistant
 
@@ -109,7 +109,7 @@ When integrated, depending on the events that you configure the assistant to sup
 
 The rich responses that you add to an action are displayed in a Slack channel as expected, with the following exceptions:
 
-- **Connect to human agent**: This response type is ignored.
+- **Connect to live agent**: This response type is ignored.
 
 - **Option**: This response type shows a list of options that the user can choose from.
 
