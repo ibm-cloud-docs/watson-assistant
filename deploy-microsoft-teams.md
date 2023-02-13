@@ -120,7 +120,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. In your {site.data.keyword.conversationshort} Microsoft Teams integration, click **Finish**.
 
-1. Click **Publish** in the upper-right corner to publish your bot. 
+1. Click **Publish** to publish your bot. 
 
 ## Publishing your Teams app
 {: #deploy-microsoft-teams-publish}
