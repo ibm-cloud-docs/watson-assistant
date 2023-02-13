@@ -146,6 +146,6 @@ These [response types](docs/watson-assistant?topic=watson-assistant-respond) are
 
 - date
 - image
-- options
+- option
 - suggestion
 - text 
