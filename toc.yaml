@@ -131,6 +131,8 @@ toc:
                   navtitle: Authenticating a user in the middle of a session
                 - topic: web-chat-develop-size-position.md
                   navtitle: Customizing the size and position of the web chat
+                - topic: web-chat-develop-pre-chat.md
+                  navtitle: Displaying a pre-chat or post-chat form
       - topicgroup:
           label: Deploying for phone
           topics:
