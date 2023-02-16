@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-09-01"
+  years: 2018, 2023
+lastupdated: "2023-02-16"
 
 subcollection: watson-assistant
 
@@ -129,21 +129,20 @@ Any action can store a value in a session variable so it is available to other a
 
 1. Click **Set new value**.
 
-1. From the drop-down list, select the session variable you want to store the value in. Note that the new value will replace any previous value stored in the variable.
+1. From the drop-down list, select the session variable that you want to store the value in. The new value replaces any previous value that is stored.
 
-    If you have not yet created the session variable you want to use, select **New variable**. You can then specify the details about the new session variable, which will be added to the list of session variables for the assistant. (For more information, see [Creating a session variable](#create-session-variable).)
+    If you have not yet created the session variable that you want to use, select **New variable**. You can then specify the details about the new session variable, which is added to the list of session variables for the assistant. For more information, see [Creating a session variable](#create-session-variable).
 
-    - From the main actions skill page, click to open the *Variables - Created by you* page. Click **New variable**.
+1. Select from the list to set the new value for the session variable. The choices that are listed match the type of variable that you want to set. For example, if you want to set a date variable, the choices are limited to other date variables.
 
-1. Select from the list to set the new value for the session variable:
+    - Select an action variable to use the value of a customer response in another step. 
 
-    - Select an action variable to use the value of a customer response. You can choose an action variable created by any previous step in the current action.
-
-    - Select another session variable to use its value. You can choose a session variable you created or one of the built-in variables.
+    - Select another session variable to use its value. You can choose a session variable that you created or one of the built-in variables.
 
     - Select **Expression** to write an expression to define the value for the session variable. For more information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).
 
 ## Using variables to manage conversation flow
+{: #manage-info-conversation-flow}
 
 One of the ways you can use variables is to choose the correct path through the conversation, based on customer responses and other values available at run time. You can do this by defining step conditions, which determine whether a specific step in an action is executed based on runtime conditions.
 
