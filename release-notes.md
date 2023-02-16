@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-13"
+lastupdated: "2023-02-16"
 
 keywords: Watson Assistant release notes
 
@@ -35,6 +35,16 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 16 February 2023
+{: #watson-assistant-feb162023}
+{: release-note}
+
+Setting variable value matches on type
+:   When you use **Set variable value** on an action step, the available choices now match by type. For example, if you want to set a date variable, the choices are limited to other date variables. Previously, all variables of all types were listed as choices. For more information, see [Storing a value in a session variable](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-manage-info#store-session-variable).
+
+Confirmation and free text response types setting default 
+:   The *Confirmation* and *Free text* response types are now set to **Always ask for this information** by default. For more information, see [Skipping steps, always asking steps, or never asking steps](/docs/watson-assistant?topic=watson-assistant-collect-info#collect-info-skip-step).
 
 ## 13 February 2023
 {: #watson-assistant-feb132023}
