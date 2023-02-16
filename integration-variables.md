@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-02-15"
 
 subcollection: watson-assistant
 
@@ -57,7 +57,7 @@ Properties contained in the `private` object are treated as private variables, w
 | Name                                | Type   | Description |
 |-------------------------------------|--------|-------------|
 | `channel.name`                      | String | The name of the channel that is in use. One of the following values: \n - `Web chat` \n - `Phone` \n - `SMS` \n - `Whatsapp` \n - `Slack` \n - `Facebook Messenger` |
-| `channel.private.user.id`           | String | The ID of the user who is interacting with the assistant through the channel. This ID is specific to the channel and might be different from the user ID {{site.data.keyword.conversationshort}} uses for billing purposes. For more information, see [Channel user IDs](/docs/watson-assistant?topic=watson-assistant-expression-integration-variables-channel-userid). |
+| `channel.private.user.id`           | String | The ID of the user who is interacting with the assistant through the channel. This ID is specific to the channel and might be different from the user ID {{site.data.keyword.conversationshort}} uses for billing purposes. For more information, see [Channel user IDs](#expression-integration-variables-channel-userid). |
 | `channel.private.user.phone_number` | String | The phone number associated with the user. Set by the phone, SMS, and WhatsApp integrations. |
 {: caption="Properties of the channel object" caption-side="top"}
 
@@ -88,7 +88,7 @@ The `channel.private.user.id` property, which is set by the channel integration,
 | Web chat | The user ID set by the web chat instance. For more information, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-userid). |
 | Slack    | The Slack member ID (for example, `U2147483697`). |
 | Facebook | The Facebook sender ID (for example, `4310101122439797`). |
-| Whatsapp | The customer's Whatsapp ID (for example, `whatsapp:+19845558087`). |
+| Whatsapp | The customer's phone number. |
 | Phone    | The customer's phone number. |
 | SMS with Twilio | The customer's phone number. |
 {: caption="Sources of the channel user ID" caption-side="top"}
@@ -147,16 +147,24 @@ Included only if the web chat integration is in use.
 ```
 {: codeblock}
 
-### Example expression
+### Example expressions
 {: #expression-integration-variables-chat-example-expression}
 
-This expression tests whether the customer is using the Chrome browser:
+- This expression tests whether the customer is using the Chrome browser:
 
-```
-${system_integrations}.chat.browser_info.browser_name.equals("chrome")
-```
+    ```text
+    ${system_integrations}.chat.browser_info.browser_name.equals("chrome")
+    ```
 
-You might specify this expression as the value for a boolean session variable, which you could then use in a step condition. For example, if your website supports only Chrome, you could have a step conditioned on this variable being `false` and has the following output: `I see you aren't using the Chrome browser. Some features of our website work only on Chrome.`
+    You might specify this expression as the value for a boolean session variable, which you could then use in a step condition. For example, if your website supports only Chrome, you could have a step conditioned on this variable being `false` and has the following output: `I see you aren't using the Chrome browser. Some features of our website work only on Chrome.`
+
+- This expression tests whether the current page URL contains the string `payment.html`:
+
+    ```text
+    ${system_integrations}.chat.browser_info.page_url.contains("payment.html")
+    ```
+
+    You might use this expression in a step condition in order to avoid telling customers to navigate to a page they are already viewing. For example, in an action for paying a bill, you could have a step conditioned on this variable being `false` and has the following output: `First, click **Pay bill** to navigate to the bill payment page.`
 
 ## `voice_telephony`
 {: #expression-integration-variables-phone}
@@ -290,6 +298,49 @@ Properties contained in the `private` object are treated as private variables, w
   },
   "assistant_phone_number":"+18885556789"
 }
+```
+{: codeblock}
+
+## `slack`
+{: #expression-integration-variables-slack}
+
+Included only if the Slack integration is in use.
+
+### Properties
+{: #expression-integration-variables-slack-properties}
+
+| Name                  | Type   | Description |
+|-----------------------|--------|-------------|
+| `team_id`    | String | The unique identifier of the Slack team. |
+| `channel_id` | String | The unique identifier of the Slack channel. |
+{: caption="Properties of the slack object" caption-side="top"}
+
+### Example JSON
+{: #expression-integration-variables-slack-example}
+
+```json
+"slack": {
+  "team_id":"T02F3KE542J",
+  "channel_id":"C4K3KTTRD"
+}
+```
+{: codeblock}
+
+## `facebook`
+{: #expression-integration-variables-facebook}
+
+Included only if the Facebook integration is in use.
+
+### Properties
+{: #expression-integration-variables-facebook-properties}
+
+No additional properties.
+
+### Example JSON
+{: #expression-integration-variables-facebook-example}
+
+```json
+"facebook": {}
 ```
 {: codeblock}
 
