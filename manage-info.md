@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-02-17"
 
 subcollection: watson-assistant
 
@@ -184,3 +184,11 @@ The default formats are as follows:
 
 When building an assistant response that includes variables, you concatenate multiple parts (text strings and variables). A single response can consist of no more than 30 concatenated parts (for example, 15 variables along with 15 text strings).
 {: note}
+
+### Referencing expressions
+{: #reference-variables-expressions}
+
+If you need to reference a dynamic value that is calculated using an expression, you must first assign this value to a session variable. (For more information about how to do this, see [Storing a value in a session variable](#store-session-variable).) You can then reference the session variable in the **Assistant says** field.
+
+Note that the `<?...?>` syntax for referencing expressions in assistant output is not supported in actions.
+
