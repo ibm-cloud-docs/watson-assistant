@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-01-19"
 
 subcollection: watson-assistant
 
@@ -194,9 +194,7 @@ For more information, see [Supporting global audiences](/docs/watson-assistant?t
 
 By default, all messages that are sent between the web chat and the assistant are encrypted using Transport Layer Security (TLS). You can enable the web chat security feature if you need more robust protection.
 
-The web chat embed script that you include on your website contains unique identifiers (such as the integration ID and service instance ID) that enable the web chat to connect with your assistant. These identifiers are not considered secret, and are visible to anyone who has access to your website.
-
-If you are concerned about unauthorized access to your assistant, you can enable the web chat security feature for additional security, such as verifying message origin and authenticating users. Enabling the security feature requires additional development work on your website. For more information, see [Web chat security](/docs/watson-assistant?topic=watson-assistant-web-chat-security).
+You can enable the web chat security feature for additional security, such as verifying message origin and authenticating users. Enabling the security feature requires additional development work on your website. For more information, see [Web chat security](/docs/watson-assistant?topic=watson-assistant-web-chat-security).
 
 #### Updating site security policies
 {: #web-chat-security-csp}
