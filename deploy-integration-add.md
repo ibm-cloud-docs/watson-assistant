@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-13"
+lastupdated: "2023-02-16"
 
 subcollection: watson-assistant
 
@@ -94,10 +94,6 @@ Follow these steps to add integrations to your assistant:
 ## How live agent integrations work
 {: #deploy-integration-live-agent-integrations}
 
-Watch this 3-minute video to learn more about integrating your assistant with a live agent integration, such as Zendesk.
-
-![Overview of how live agent integrations work](https://www.youtube.com/embed/pJSCZLQVgCY){: video output="iframe" id="youtubeplayer" frameborder="0" width="560" height="315" webkitallowfullscreen mozallowfullscreen allowfullscreen}
-
-To read a transcript of the video, open the [video on YouTube.com](https://www.youtube.com/watch?v=pJSCZLQVgCY&feature=emb_imp_woyt), click the *More actions* icon, and then choose *Open transcript*.
+Watch [Connecting Zendesk to Your Assistant](https://vimeo.com/799537903){: external}, a 4-minute video about integrating your assistant with a live agent integration, such as Zendesk.
 
 To learn about how live agent integrations with your assistant can benefit your business, read [Customer Service Just Got Smarter](https://medium.com/ibm-watson/contact-center-post-394dff427c8){: external}.
