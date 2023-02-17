@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-06-30"
+  years: 2019, 2023
+lastupdated: "2022-02-17"
 
 subcollection: watson-assistant
 
@@ -74,6 +74,9 @@ To add the web chat to your website, follow these steps:
     {: codeblock}
 
     Just copy this code into a file with the `.html` extension, and replace the `script` element with the embed script you copied in the previous step.
+
+    The identifiers in the embed script (such as `integrationID` `serviceInstanceID`) are not considered secret, and are visible to anyone who has access to your website. For more information, see [Security](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture#web-chat-architecture-security).
+    {: note}
 
 1.  If the system that hosts your website has limited Internet access (for example, if you use a proxy or firewall), make sure the following URLs are accessible:
 
