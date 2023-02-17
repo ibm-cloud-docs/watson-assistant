@@ -129,17 +129,22 @@ Any action can store a value in a session variable so it is available to other a
 
 1. Click **Set new value**.
 
-1. From the drop-down list, select the session variable that you want to store the value in. The new value replaces any previous value that is stored.
+1. In the **Set** drop-down list, select the session or integration variable that you want to store the value in. The new value replaces any previous value that is stored.
 
-    If you have not yet created the session variable that you want to use, select **New variable**. You can then specify the details about the new session variable, which is added to the list of session variables for the assistant. For more information, see [Creating a session variable](#create-session-variable).
+    If you haven't created the session variable that you want to use, select **New variable**. You can then specify the details about the new session variable, which is added to the list of session variables for the assistant. For more information, see [Creating a session variable](#create-session-variable).
 
-1. Select from the list to set the new value for the session variable. The choices that are listed match the type of variable that you want to set. For example, if you want to set a date variable, the choices are limited to other date variables.
+1. In the **To** drop-down list, the choices vary depending on the type of variable you're setting. Possible choices include:
 
-    - Select an action variable to use the value of a customer response in another step. 
-
-    - Select another session variable to use its value. You can choose a session variable that you created or one of the built-in variables.
-
-    - Select **Expression** to write an expression to define the value for the session variable. For more information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).
+   | Choice | Description |
+   | --- | --- |
+   | Scalar value by type | Set a specific value for each variable type. The choice varies depending on the variable type. For example, for a date variable, the choice is **Enter a date** and you can use a date picker to set a date. Other choices appear for Boolean, confirmation, currency, date, free text, number, percentage, and time. |
+   | Expression | Write an expression to define the value for the session variable. For more information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions). |
+   | Action variables | Select an action variable to use the value of a customer response in another step. The choices that are listed match the type of variable that you want to set. |
+   | Session variables | Select another session variable to use its value. The choices that are listed match the type of variable that you want to set. |
+   | Assistant variables | Select a built-in system variable to use its value. The choices that are listed match the type of variable that you want to set. |
+   | Integration variables | If you are setting an integration variable, you can choose other integration variables as the value. |
+   
+1. To set more variable values in the same step, click **Set new value**.
 
 ## Using variables to manage conversation flow
 {: #manage-info-conversation-flow}
