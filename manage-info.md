@@ -137,7 +137,7 @@ Any action can store a value in a session variable so it is available to other a
 
    | Choice | Description |
    | --- | --- |
-   | Scalar value by type | Set a specific value for each variable type. The choice varies depending on the variable type. For example, for a date variable, the choice is **Enter a date** and you can use a date picker to set a date. Other choices appear for Boolean, confirmation, currency, date, free text, number, percentage, and time. |
+   | Scalar value by type | Set a specific value for each variable type. The choice varies depending on the variable type. For example, for a date variable, the choice is **Enter a date**, and you can use a date picker to set a date. Other choices appear for Boolean, confirmation, currency, date, free text, number, percentage, and time. |
    | Expression | Write an expression to define the value for the session variable. For more information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions). |
    | Action variables | Select an action variable to use the value of a customer response in another step. The choices that are listed match the type of variable that you want to set. |
    | Session variables | Select another session variable to use its value. The choices that are listed match the type of variable that you want to set. |
