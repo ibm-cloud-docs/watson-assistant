@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-01-19"
+lastupdated: "2023-02-17"
 
 subcollection: watson-assistant
 
@@ -35,7 +35,7 @@ If you enable security, you can configure the web chat to authenticate users, pr
 
 All messages that are sent between the web chat and the assistant are encrypted using Transport Layer Security (TLS), which protects sensitive data as it travels through the network. However, there are still potential security exposures that you might need to protect against. By enabling the web chat security feature and updating your website code appropriately, you can add the following protections:
 
-- You can prevent unauthorized websites from sending messages to your assistant, even if they copy your web chat embed script.
+- You can prevent unauthorized websites from sending messages to your assistant, even if they copy your web chat embed script. (The unique identifiers in the embed script, such as the integration ID and service instance ID, are visible to anyone who has access to your website.)
 
 - You can securely authenticate customers in order to control access to features of your assistant that require authorization.
 
