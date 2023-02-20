@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-02-20"
 
 subcollection: watson-assistant
 
@@ -26,8 +26,6 @@ subcollection: watson-assistant
 {:table: .aria-labeledby="caption"}
 {:video: .video}
 
-{{site.data.content.classiclink}}
-
 # Adding a search integration ![Plus](images/plus.png)![Enterprise plan](images/enterprise.png)
 {: #search-add}
 
@@ -43,7 +41,9 @@ Add search to your assistant to prevent the assistant from having to say things 
 To show the exact answer highlighted in bold font, enable the *Emphasize the answer* feature that is available with {{site.data.keyword.discoveryshort}} v2 instances.
 {: tip}
 
-Watch [Adding Search to Your Assistant](https://vimeo.com/799536293){: external}, a 4-minute video that provides an overview of the search integration.
+Watch a 4-minute video that provides an overview of the search integration:
+
+![Zendesk Integration: {{site.data.keyword.conversationshort}}](https://video.ibm.com/embed/channel/23952663/video/wa-search){: video output="iframe" data-script="none" id="watsonmediaplayer" width="480" height="270" scrolling="no" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="border: 0 none transparent;"}
 
 To learn more about how search can benefit your business, [read this blog post](https://medium.com/ibm-watson/adding-search-to-watson-assistant-99e4e81839e5){: external}.
 
