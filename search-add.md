@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-21"
+lastupdated: "2023-02-22"
 
 subcollection: watson-assistant
 
@@ -156,7 +156,7 @@ If you decide not to continue using the Plus plan and don't want to pay for it, 
 
 If you want to change the configuration of the search result card later, open the search integration again, and make edits. You do not need to save changes as you make them; they are automatically applied. When you are happy with the search results, click **Save** to finish configuring the search integration.
 
-If you decide you want to connect to a different {{site.data.keyword.discoveryshort}} service instance or project, open the search integration and click ***Edit Discovery Settings**.  You can choose either a new project from the same instance, or a new instance and project.
+If you decide you want to connect to a different {{site.data.keyword.discoveryshort}} service instance or project, open the search integration and click ***Edit Discovery Settings**. You can choose either a new project from the same instance, or a new instance and project.
 
 ## Troubleshooting
 {: #search-add-troubleshoot}
