@@ -41,7 +41,7 @@ Create a Google Programmable Search Engine. Then, get its Search Engine ID and a
 
 Download the OpenAPI specification file: [google-custom-search-openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/google-custom-search/basic/google-custom-search-openapi.json){: external}. You use this file to add the extension to your assistant.
 
-The OpenAPI specification uses the following endpoint:
+The OpenAPI specification defines the following methods:
 
 - `GET /customsearch/v1`: Search for content over the entire web.
 - `GET /customsearch/v1/siterestrict`: Search for content over a specific collection of websites.
