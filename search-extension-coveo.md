@@ -34,7 +34,7 @@ To set up the extension for Coveo search:
 ## Add an API key
 {: #search-extension-coveo-api-key}
 
-In the Coveo Administration Console, add an API key. For detailed instructions, see [Add an API Key](https://docs.coveo.com/en/1718/manage-an-organization/manage-api-keys#add-an-api-key){: external} in the Coveo documentation. Ensure that the API key is set to enable search and allow `Execute queries`. 
+In the Coveo Administration Console, add an API key. For detailed instructions, see [Add an API Key](https://docs.coveo.com/en/1718/manage-an-organization/manage-api-keys#add-an-api-key){: external} in the Coveo documentation. Ensure that the API key is set to enable search and to allow `Execute queries`. 
 
 ## Download the OpenAPI specification
 {: #search-extension-coveo-open-api-specification}
