@@ -34,7 +34,7 @@ To set up the extension for NeuralSeek search:
 ## Set up {{site.data.keyword.discoveryfull}}
 {: #search-extension-neuralseek-discovery}
 
-1. You need an instance of [{{site.data.keyword.discoveryfull}}](https://cloud.ibm.com/catalog/services/watson-discovery){: external}. Be sure it is not an instance with important data that you are using for other purposes because NeuralSeek can modify your data as needed to make it more effective.
+1. You need an instance of [{{site.data.keyword.discoveryfull}}](https://cloud.ibm.com/catalog/services/watson-discovery){: external}. Because NeuralSeek can modify your data as needed to make it more effective, make sure it is not an instance with important data that you are using for other purposes.
 
 1. In {{site.data.keyword.discoveryshort}}, create a project and load the documents that you want to use.
 
