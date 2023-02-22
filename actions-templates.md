@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-02"
+lastupdated: "2023-02-22"
 
 subcollection: watson-assistant
 
@@ -26,7 +26,7 @@ subcollection: watson-assistant
 # Building actions from templates
 {: #actions-templates}
 
-When creating actions, you can choose a template that relates to the problem you’re trying to solve. Templates help tailor your actions to include items specific to your business need. The examples in each template can also help you to learn how actions work.
+When you create actions, you can choose a template that relates to the problem you’re trying to solve. Templates help tailor your actions to include items specific to your business need. The examples in each template can also help you to learn how actions work.
 {: shortdesc}
 
 Templates are available for different use cases, for example, booking a meeting, creating a support ticket, or making a payment. Templates include all the pieces that make up an action, such as steps, conditions, and different response types to collect customer answers.
@@ -37,18 +37,18 @@ You can use templates in English-language assistants only.
 Some or all of these features are included as examples in action templates:
 
 | Feature | Description | More information |
-| -- | -- | -- |
-| Step conditions | A step condition is a boolean test, based on a runtime value. The step executes only if the test evaluates as true. | [Adding conditions to a step](/docs/watson-assistant?topic=watson-assistant-step-conditions) |
+| --- | --- | --- |
+| Step conditions | A step condition is a Boolean test, based on a runtime value. The step is used only if the test evaluates as true. | [Adding conditions to a step](/docs/watson-assistant?topic=watson-assistant-step-conditions) |
 | Options synonyms | Synonyms are variations of an option value that customers might enter. | [Options](/docs/watson-assistant?topic=watson-assistant-collect-info#customer-response-type-options) |
 | Customized response validation | When you edit a step that expects a customer response, you can customize how validation errors are handled. | [When your customer gives invalid answers](/docs/watson-assistant?topic=watson-assistant-handle-errors#step-validation)
 | Action variables | When customers reply to your assistant, they share information about themselves and what they want. Your assistant remembers this information, and other information about a conversation, as variables. | [Using variables to manage conversation information](/docs/watson-assistant?topic=watson-assistant-manage-info) |
 | Session variables | A value that is not necessarily tied to a particular action can be stored as a session variable. Session variables are long-term memory: they persist throughout the user's interaction with the assistant, and your assistant can reference them from any action. | [Using variables to manage conversation information](/docs/watson-assistant?topic=watson-assistant-manage-info) |
-| Regex response type | A regex response collects a text string that matches a pattern expressed as a regular expression. Use this response to capture a value that must conform to a particular pattern or format, such as an email address or telephone number. | [Regex](/docs/watson-assistant?topic=watson-assistant-collect-info#customer-response-type-regex) |
- | Yes/No response type | A confirmation response presents customers with the choices of either Yes or No as clickable buttons. | [Confirmation](/docs/watson-assistant?topic=watson-assistant-collect-info#customer-response-type-confirmation) |
- | Connect to agent | If your assistant is integrated with one of the supported service desk systems, you can build in logic that will transfer the conversation to a live agent when necessary. | [Connecting to a live agent](/docs/watson-assistant?topic=watson-assistant-human-agent) |
+| Regex response type | A regex response collects a text string that matches a pattern that is expressed as a regular expression. Use this response to capture a value that must conform to a particular pattern or format, such as an email address or telephone number. | [Regex](/docs/watson-assistant?topic=watson-assistant-collect-info#customer-response-type-regex) |
+ | Yes/No response type | A confirmation response presents customers with the choices of either Yes or No as buttons. | [Confirmation](/docs/watson-assistant?topic=watson-assistant-collect-info#customer-response-type-confirmation) |
+ | Connect to agent | If your assistant is integrated with one of the supported service desk systems, you can build in logic that transfers the conversation to a live agent when necessary. | [Connecting to a live agent](/docs/watson-assistant?topic=watson-assistant-human-agent) |
  | Embedded video | Includes a video to display a how-to demonstration, promotional clip, or other video content. In the web chat, a video response renders as an embedded video player. | [Adding a Video response](/docs/watson-assistant?topic=watson-assistant-respond#respond-add-video) |
- | Customer responses referenced in URLs | In your assistant's output, you can reference variables in order to personalize a URL link, including information specific to the customer such as account number or email address | [Adding and referencing variables](/docs/watson-assistant?topic=watson-assistant-respond#respond-variables) |
- | Customized agent handoff information | If your assistant is integrated with one of the supported service desk systems, you can build in logic that will transfer the conversation to a live agent when necessary. You can customize messages the assistant displays as part of the transfer | [Connecting to a live agent](/docs/watson-assistant?topic=watson-assistant-human-agent) |
+ | Customer responses referenced in URLs | In your assistant's output, you can reference variables to personalize a URL link, including information specific to the customer such as account number or email address | [Adding and referencing variables](/docs/watson-assistant?topic=watson-assistant-respond#respond-variables) |
+ | Customized agent handoff information | If your assistant is integrated with one of the supported service desk systems, you can build in logic that transfers the conversation to a live agent when necessary. You can customize messages the assistant displays as part of the transfer | [Connecting to a live agent](/docs/watson-assistant?topic=watson-assistant-human-agent) |
 {: caption="Features" caption-side="bottom"}
 
 ## Creating actions from templates
@@ -58,13 +58,13 @@ To create actions from templates:
 
 1. Open the **Actions** page.
 
-1. If this is your first action, choose **Create a new action**. If you already have some actions, choose **New action**.
+1. If you have no actions, choose **Create a new action**. If you already have some actions, choose **New action**.
 
 1. On **Create an action**, choose **Quick start with templates**.
 
 <!--   ![Create an action](images/actions-templates-create.png){: caption="Create an action" caption-side="bottom"}-->
 
-1. On **Quick start with templates**, click a template to read details about what it does. Or, you can click the check box to select the template right away.
+1. On **Quick start with templates**, click a template to read details about what it does. Or, you can click the checkbox to select the template right away.
 
 <!--   ![Quick start with templates](images/actions-templates-quick-start-2.png){: caption="Quick start with templates" caption-side="bottom"}-->
 
@@ -72,25 +72,25 @@ To create actions from templates:
 
 <!--   ![Template details](images/actions-templates-review-2.png){: caption="Template details" caption-side="bottom"}-->
 
-1. Your list of selected templates includes all the ones you choose. You can select as many templates as you want. If you change your mind, click the trash can icon to remove a template from the list.
+1. Your list of selected templates includes all the ones that you chose. You can select as many templates as you want. If you change your mind, click the trash can icon to remove a template from the list.
 
 <!--   ![Selected templates](images/actions-templates-selected.png){: caption="Selected templates" caption-side="bottom"}-->
 
-1. When you're ready, click **Add templates**. Most templates add one action. Some starter kit templates add multiple actions, marked with an asterisk, that require additional setup. For more information, see [Starter kit extension setup](#actions-templates-extension-setup).
+1. When you're ready, click **Add templates**. Most templates add one action. Some starter kit templates add multiple actions, marked with an asterisk, that require setup. For more information, see [Starter kit extension setup](#actions-templates-extension-setup).
 
 1. In the actions editor, you can use a new action as-is, or modify it to fit your use case.
 
 <!--   ![New action](images/actions-templates-editor.png){: caption="New action" caption-side="bottom"}-->
 
-You can create multiple actions from the same template. For example, if you have already used the **Book a meeting** template to create an action, you can choose that template again. If the first action is still named **Book a meeting**, the new action is added with the name **Book a meeting (1)**.
+You can create multiple actions from the same template. For example, if you used the **Book a meeting** template to create an action, you can choose that template again. If the first action is still named **Book a meeting**, the new action is added with the name **Book a meeting (1)**.
 {: note}
 
 ## Preview actions
 {: #actions-templates-preview}
 
-Most action templates are complete. (Starter kit templates are marked with an asterisk and require additional setup.) You can try out an action right away even without making any changes. 
+Most action templates are complete. (Starter kit templates are marked with an asterisk and require setup.) You can try out an action right away even without making any changes. 
 
-To preview the action you created from a template:
+To preview the action that you created from a template:
 
 1. In the actions editor, click **Preview**.
 
@@ -102,7 +102,7 @@ To preview the action you created from a template:
 ## Starter kit extension setup
 {: #actions-templates-extension-setup}
 
-Starter kit templates add actions that can use extensions to connect to data and systems outside of {{site.data.keyword.conversationshort}}. When you add a starter kit template, the resulting actions and variables are marked with an asterisk. These require additional setup of an extension. To learn more about extensions in general, see [Build a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension).
+Starter kit templates add actions that can use extensions to connect to data and systems outside of {{site.data.keyword.conversationshort}}. When you add a starter kit template, the resulting actions and variables are marked with an asterisk. These require setup of an extension. To learn more about extensions in general, see [Build a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension).
 
 <!-- ![Starter kit actions](images/actions-templates-starter-kit.png){: caption="Starter kit actions" caption-side="bottom"}-->
 
@@ -121,84 +121,19 @@ This table lists each starter kit, a link to download an OpenAPI specification f
 ### Coveo search extension setup
 {: #actions-templates-extension-setup-coveo}
 
-To set up the extension for Coveo search:
-
-1. In the Coveo Administration Console, add an API key. For detailed instructions, see [Add an API Key](https://docs.coveo.com/en/1718/manage-an-organization/manage-api-keys#add-an-api-key){: external} in the Coveo documentation. Make sure the API key is set to enable search and allow `Execute queries`. 
-
-1. Download the OpenAPI specification file: [coveo.openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/coveo/coveo.openapi.json){: external}.
-
-1.  In your assistant, on the **Integrations** page, click **Build custom extension** and use the OpenAPI specification file to build a custom extension. For general instructions on building any custom extension, see [Building the custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#building-the-custom-extension).
-
-1. After you build the Coveo extension and it appears on your **Integrations** page, click **Add** to add it to your assistant. Use your Coveo API key to authenticate. For general instructions on adding any custom extension, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
-
-1. On the **Actions** page, edit the **Coveo search** action to use the extension. In step 3, click **Edit extension**. 
-
-1. In the **Extension** field, choose the Coveo extension you built. 
-
-1. In the **Operation** field, choose `Search request to Coveo search`.
-
-1. In the **Parameters** list, set `q` to `*query_text`.
-
-1. Close the **Coveo search** action.
-
-1. Click **Set by assistant** and open the **No action matches** action.
-
-1. Delete the two default steps, then add a new step. 
-
-1. In the new step, set **And then** to **Go to another action** and choose the **Coveo search** action.
-
-1. You might want to edit the **Fallback** action in the same way as **No action matches** if you aren't connecting your customers to a live agent, so that Fallback also uses Coveo search.
+To set up the extension for Coveo search, see [Coveo search extension setup](/docs/watson-assistant?topic=watson-assistant-search-extension-coveo).
 
 ### Google custom search extension setup
 {: #actions-templates-extension-setup-google}
 
-To set up the extension for Google custom search:
-
-1. Create a Google Programmable Search Engine, then get its Search Engine ID and an API key. For detailed instructions, see [Create Programmable Search Engine](https://developers.google.com/custom-search/v1/introduction#create_programmable_search_engine){: external} in the Google Programmable Search Engine documentation.
-
-1. Download the OpenAPI specification file: [google-custom-search-openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/google-custom-search/basic/google-custom-search-openapi.json){: external}.
-
-1.  In your assistant, on the **Integrations** page, click **Build custom extension** and use the OpenAPI specification file to build a custom extension. For general instructions on building any custom extension, see [Building the custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#building-the-custom-extension).
-
-1. After you build the Google custom search extension and it appears on your **Integrations** page, click **Add** to add it to your assistant. Use your Google programmable search engine API key to authenticate. For general instructions on adding any custom extension, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
-
-1. On the **Actions** page, edit the ***Google search** action to use the extension. In step 3, click **Edit extension**. 
-
-1. In the **Extension** field, choose the Google custom search extension you built.
-
-1. In the **Operation** field, choose either `Custom Search` or `Custom Search Site Restricted`.
-
-   This table compares the operations:
-
-   | Operation | Restrictions | Daily query limit |
-   | --- | --- | --- |
-   | Custom Search | Supports any number of websites indexed by Google | Yes |
-   | Custom Search Site Restricted | Restricted to searching 10 or fewer websites, each of which can have an unlimited number of pages | No |
-   {: caption="Operations" caption-side="bottom"}
-
-1. In the **Parameters** list, set the following:
-
-   - Set `q` to `*query_text`
-   - Set `cx` to `*cx`
-
-1. Click **Optional parameters** to expand the list. Set `num` to `*num_of_results`.
-
-1. Close the **Google search** action.
-
-1. Click **Set by assistant** and open the **No action matches** action.
-
-1. Delete the two default steps, then add a new step. 
-
-1. In the new step, set **And then** to **Go to another action** and choose the **Google search** action.
-
-1. You might want to edit the **Fallback** action in the same way as **No action matches** if you aren't connecting your customers to a live agent, so that Fallback also uses Google custom search.
+To set up the extension for Google custom search, see [Google custom search extension setup](/docs/watson-assistant?topic=watson-assistant-search-extension-google).
 
 ### HubSpot extension setup
 {: #actions-templates-extension-setup-hubspot}
 
 To set up the extension for HubSpot:
 
-1. In HubSpot, you need to create a developer account and then create a private app. The private app includes an access token you need for authentication. For detailed instructions, see [Getting private app access token](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/hubspot/readme.md#pre-req-1-getting-private-apps-access-token){: external} in the HubSpot Custom Extension starter kit GitHub repository.
+1. In HubSpot, you need to create a developer account and then create a private app. The private app includes an access token that you need for authentication. For detailed instructions, see [Getting private app access token](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/hubspot/readme.md#pre-req-1-getting-private-apps-access-token){: external} in the HubSpot Custom Extension starter kit GitHub repository.
 
 1. Your HubSpot account needs custom properties. Follow the instructions in [Adding Custom Properties in HubSpot](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/hubspot/readme.md#pre-req-2-adding-custom-properties-in-hubspot){: external} in the HubSpot Custom Extension starter kit GitHub repository.
 
@@ -208,7 +143,7 @@ To set up the extension for HubSpot:
 
 1. After you build the HubSpot custom search extension and it appears on your **Integrations** page, click **Add** to add it to your assistant. Use your HubSpot private app access token to authenticate. For general instructions on adding any custom extension, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension). 
 
-1. On the **Actions** page, edit each HubSpot action action to use the HubSpot extension in the **And then** section of different steps.
+1. On the **Actions** page, edit each HubSpot action to use the HubSpot extension in the **And then** section of different steps.
 
    This table explains the edit to each action:
 
@@ -221,52 +156,13 @@ To set up the extension for HubSpot:
    | *Delete a ticket | 2 | Archive Ticket | Set `ticketId` to `*ticketId` |
    {: caption="HubSpot use extension" caption-side="bottom"}
 
-In the ***Dispute an charge** action, `subject` and `hs_pipeline_stage` exist by default in HubSpot's ticketing schema. The action adds default values in step 4. The `subject` field in the API corresponds to the ticket name of a HubSpot ticket. The `hs_pipeline_stage` field in the API corresponds to the ticket status of a HubSpot ticket. We recommend submitting a value of `1` for the `hs_pipeline_stage` field, which will set the ticket status to `New`. 
+In the ***Dispute a charge** action, `subject` and `hs_pipeline_stage` exist by default in HubSpot's ticketing schema. The action adds default values in step 4. The `subject` field in the API corresponds to the ticket name of a HubSpot ticket. The `hs_pipeline_stage` field in the API corresponds to the ticket status of a HubSpot ticket. Submit a value of `1` for the `hs_pipeline_stage` field, which sets the ticket status to `New`. 
 {: note}
 
 ### NeuralSeek extension setup
 {: #actions-templates-extension-setup-neuralseek}
 
-To set up the extension for NeuralSeek:
-
-1. You need an instance of [{{site.data.keyword.discoveryfull}}](https://cloud.ibm.com/catalog/services/watson-discovery){: external}. Be sure that this is not an instance with important data that you are using for other purposes, because NeuralSeek can modify your data as needed to make it more effective.
-
-1. In {{site.data.keyword.discoveryshort}}, create a project and load the documents you want to use.
-
-1. You also need an instance of [NeuralSeek on IBM Cloud](https://cloud.ibm.com/catalog/services/neuralseek){: external}.
-
-1. In NeuralSeek, open the **Configure** page and enter your information in the **Discovery instance details** section.
-
-1. On the **Integrate** page, and click the **OpenAPI file** link to download the `NeuralSeek.json` OpenAPI specification file configured for your instance.
-
-1. Also on the **Integrate** page, copy the API key for NeuralSeek. Note that the API key for NeuralSeek is not the same as the API key for {{site.data.keyword.discoveryshort}} that you used on the **Configure** page. The API key for NeuralSeek is only available on the **Integrate** page.
-
-1. In your assistant, on the **Integrations** page, click **Build custom extension** and use the OpenAPI specification file to build a custom extension. For general instructions on building any custom extension, see [Building the custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#building-the-custom-extension).
-
-1. After you build the NeuralSeek extension and it appears on your **Integrations** page, click **Add** to add it to your assistant. Use your NeuralSeek API key to authenticate. For general instructions on adding any custom extension, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
-
-1. On the **Actions** page, edit the ***NeuralSeek search** action to use the extension. In step 3, click **Edit extension**. 
-
-1. In the **Extension** field, choose the NeuralSeek extension you built.
-
-1. In the **Operation** field, choose `Seek an answer from NeuralSeek`.
-
-1. In the **Parameters** list, set `question` to `*query_text`.
-
-1. Click **Optional parameters** to expand the list. Set the following:
-
-   - Set `context` to `*query_context`.
-   - You might want to also set the `language` parameter to an expression containing a 2-letter language code such as `en`.
-
-1. Close the ***NeuralSeek search** action.
-
-1. Click **Set by assistant** and open the **No action matches** action.
-
-1. Delete the two default steps, then add a new step. 
-
-1. In the new step, set **And then** to **Go to another action** and choose the **NeuralSeek search** action.
-
-1. You might want to edit the **Fallback** action in the same way as **No action matches** if you aren't connecting your customers to a live agent, so that Fallback also uses NeuralSeek.
+To set up the extension for NeuralSeek, see [NeuralSeek extension setup](/docs/watson-assistant?topic=watson-assistant-search-extension-neuralseek).
 
 ### ServiceNow extension setup
 {: #actions-templates-extension-setup-servicenow}
@@ -283,16 +179,16 @@ To set up the extension for ServiceNow:
 
 1. On the **Actions** page, edit the ***Create an incident report** action to use the extension. In step 5, click **Edit extension**. 
 
-1. In the **Extension** field, choose the ServiceNow extension you built.
+1. In the **Extension** field, choose the ServiceNow extension that you built.
 
 1. In the **Operation** field, choose `Create Incident`.
 
-1. In the **Parameters** list, set the following:
+1. In the **Parameters** list, set:
 
-   - Set `impact` to `*urgency`
-   - Set `urgency` to `*urgency`
-   - Set `assignment_group` to `*assignment_group`
-   - Set `short_description` to `1. Sure, we can help you create an incident report`
+   - `impact` to `*urgency`
+   - `urgency` to `*urgency`
+   -  `assignment_group` to `*assignment_group`
+   -  `short_description` to `1. Sure, we can help you create an incident report`
 
 ### Zendesk extension setup
 {: #actions-templates-extension-setup-zendesk}
@@ -311,7 +207,7 @@ To set up the extension for Zendesk:
 
 1. After you build the Zendesk extension and it appears on your **Integrations** page, click **Add** to add it to your assistant. Use your Zendesk username and password to authenticate. For general instructions on adding any custom extension, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
 
-1. On the **Actions** page, edit each Zendesk action action to use the Zendesk extension in the **And then** section of different steps.
+1. On the **Actions** page, edit each Zendesk action to use the Zendesk extension in the **And then** section of different steps.
 
    This table explains the edit to each action:
 
