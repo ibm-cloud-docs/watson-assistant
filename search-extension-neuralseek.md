@@ -96,5 +96,3 @@ Simple instructions for setting up NeuralSeek are available on the **Integrate**
 Issue a query to your assistant. If no action that matches that query, then it uses NeuralSeek to produce search results.
 
 For many use cases, NeuralSeek alone is enough to deploy an assistant. If you are happy with your assistant, you might want to deploy it for real-world use right away. Use the **Analyze** page in {{site.data.keyword.conversationshort}} or the **Curate** page in NeuralSeek to see what kinds of questions users are asking and actions for the common user requests. The **Curate** page can automate the creation of new actions and generate new example utterances that trigger those actions. It can also merge any existing actions with the actions that it generates so you can update an existing assistant. For more information, see the [NeuralSeek documentation](https://neuralseek.com/documentation){: external}
-
-NeuralSeek is remarkably accurate, but it is sometimes incorrect. Test any assistant before deployment.
