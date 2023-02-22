@@ -41,7 +41,7 @@ In the Coveo Administration Console, add an API key. For detailed instructions, 
 
 Download the OpenAPI specification file: [coveo.openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/coveo/coveo.openapi.json){: external}. You use this file to add the extension to your assistant.
 
-The OpenAPI specification uses the following endpoint:
+The OpenAPI specification defines the following method:
 
 - `GET /rest/search/v2`: Search for content in a set of sources or documents.
 
