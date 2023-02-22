@@ -246,7 +246,7 @@ To configure the search in {{site.data.keyword.discoveryshort}}, complete the fo
       1. Set the value of the variable by using an expression that looks like this: `<? input.text ?>`.
 
         This expression captures the complete message that was submitted by the customer. As a result, your variable captures the customer message that triggered this action.
-      1. Add the session variable to the *Custom query* field. For example, `${original_message}`
+      1. Add the session variable to the *Custom query* field (for example, `${original_message}`).
 
     - **Custom results filter**: Add a text string that defines information that must be present in any of the search results that are returned.
 
