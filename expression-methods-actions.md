@@ -718,7 +718,8 @@ The expression returns the following filtered array:
 [
    {
       "name":"Tokyo",
-      "population":9273000
+      "population":13988129
+
    },
    {
       "name":"Beijing",
