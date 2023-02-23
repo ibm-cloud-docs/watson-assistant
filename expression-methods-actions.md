@@ -708,7 +708,7 @@ For example, you might have an array of objects containing city names and their 
 If the source array is stored in a variable called `$cities`, the following exexpression returns a smaller array that contains only cities with populations greater than 5 million:
 
 ```text
-$cities.filter("city", "city.population > 5000000")
+${cities}.filter("city", "city.population > 5000000")
 ```
 {: codeblock}
 
@@ -731,7 +731,7 @@ The expression returns the following filtered array:
 Instead of a hardcoded comparison value, you could also filter based on a dynamic value stored in a variable. This example filters using a population value specified by a customer response in a previous step:
 
 ```text
-$cities.filter("city", "city.population > ${step_123}")
+${cities}.filter("city", "city.population > ${step_123}")
 ```
 {: codeblock}
 
