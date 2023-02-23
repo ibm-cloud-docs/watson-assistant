@@ -50,7 +50,15 @@ toc:
           - manage-info.md
           - step-conditions.md
           - step-what-next.md
-          - search-add.md
+          - topicgroup:
+             label: Adding search
+             topics:
+             - topic: search-overview.md
+               navtitle: Overview
+             - search-add.md
+             - search-extension-coveo.md
+             - search-extension-google-custom.md
+             - search-extension-neuralseek.md
           - call-extension.md
           - change-topic.md
           - handle-errors.md
