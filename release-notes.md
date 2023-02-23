@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-02-23"
 
 keywords: Watson Assistant release notes
 
@@ -35,6 +35,20 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 23 February 2023
+{: #watson-assistant-feb232023}
+{: release-note}
+
+Private variables excluded from logs
+:   Private context variables are no longer saved in logs or sent to external services using log webhooks. Private variables are any values stored inside the following objects:
+
+    - `context.integrations.*.private` (accessible from actions as `system_integrations.*.private`)
+    - `context.integrations.*.$private`
+    - `context.skills.*.user_defined.private`
+    - `context.skills.*.user_defined.$private`
+    - `context.private`
+    - `context.$private`
 
 ## 16 February 2023
 {: #watson-assistant-feb162023}
