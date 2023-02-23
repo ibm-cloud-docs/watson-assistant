@@ -702,7 +702,8 @@ For example, you might have an array of objects containing city names and their 
    },
    {
       "name":"Paris",
-      "population":2241346
+      "population":2165423
+
    }
 ]
 ```
