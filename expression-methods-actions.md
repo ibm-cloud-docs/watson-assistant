@@ -202,7 +202,7 @@ end_date = now().reformatDateTime('Y') + '-11-25'
 Then, in a step condition, you can indicate that you want to show the response only if the current date falls between the start and end dates that you defined as session variables:
 
 ```text
-now().after($start_date) && now().before($end_date)
+now().after(${start_date}) && now().before(${end_date})
 ```
 {: codeblock}
 
@@ -709,7 +709,7 @@ For example, you might have an array of objects containing city names and their 
 ```
 {: codeblock}
 
-If the source array is stored in a variable called `$cities`, the following exexpression returns a smaller array that contains only cities with populations greater than 5 million:
+If the source array is stored in a variable called `${cities}`, the following exexpression returns a smaller array that contains only cities with populations greater than 5 million:
 
 ```text
 ${cities}.filter("city", "city.population > 5000000")
@@ -794,7 +794,7 @@ This method joins all values in this array to a string. Values are converted to 
 For example, you might have a variable called `pizza_toppings` that contains the array `["pepperoni", "ham", "mushrooms"]`. The following expression converts this array into the string `pepperoni, ham, mushrooms`:
 
 ```text
-$toppings_array.join(', ')
+${toppings_array}.join(', ')
 ```
 
 If you use that expression to define the value of a variable, you can then reference that variable in your assistant output to create a human-readable message (for example, `You have selected the following toppings: pepperoni, ham, mushrooms`).
