@@ -2,7 +2,7 @@
 
 copyright:
 years: 2015, 2023
-lastupdated: "2023-02-10"
+lastupdated: "2023-02-23"
 
 subcollection: watson-assistant
 
@@ -571,7 +571,7 @@ T(java.lang.String).format('%d + %d equals %d', 1, 1, 2)
 
 The resulting string is `1 + 1 equals 2`.
 
-This examples changes the decimal placement for a number collected by a step:
+This example changes the decimal placement for a number collected by a step:
 
 ```java
 T(String).format('%.2f',${step_297})
@@ -657,59 +657,31 @@ This example returns `true` if the `Items` array contains any capitalization of 
 ### `Array.filter(temp_var, "temp_var.property operator comparison_value")`
 {: #expression-methods-actions-arrays-filter}
 
-
-
-
-
-Filters an array by comparing each array element value to a value you specify. This method is similar to a [collection projection](#dialog-methods-collection-projection). A collection projection returns a filtered array based on a name in an array element name-value pair. The filter method returns a filtered array based on a value in an array element name-value pair.
+Filters an array by comparing each array element to a value you specify, returning a new array that contains only the matching elements.
 
 The filter expression consists of the following values:
 
-- `temp`: Name of a variable that is used temporarily as each array element is evaluated. For example, `city`.
-- `property`: Element property that you want to compare to the `comparison_value`. Specify the property as a property of the temporary variable that you name in the first parameter. Use the syntax: `temp.property`. For example, if `latitude` is a valid element name for a name-value pair in the array, specify the property as `city.latitude`.
-- `operator`: Operator to use to compare the property value to the `comparison_value`.
+- `temp_var`: An arbitrary name for a temporary variable that is used to hold each array element as it is evaluated. For example, if the original array contains objects describing cities, you might use `city` as the temporary variable name.
 
-    Supported operators are:
+- `property`: The element property that you want to filter on. This must be a property of the elements in the source array. Specify the property as a property of `temp_var`, using the syntax `temp_var.property`. For example, if `latitude` is a valid property name for the source elements, you might specify the property as `city.latitude`.
 
-    <table>
-    <caption>Supported filter operators</caption>
-    <tr>
-      <th>Operator</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>`==`</td>
-      <td>Is equal to</td>
-    </tr>
-    <tr>
-      <td>`>`</td>
-      <td>Is greater than</td>
-    </tr>
-    <tr>
-      <td>`<`</td>
-      <td>Is less than</td>
-    </tr>
-    <tr>
-      <td>`>=`</td>
-      <td>Is greater than or equal to</td>
-    </tr>
-    <tr>
-      <td>`<=`</td>
-      <td>Is less than or equal to</td>
-    </tr>
-    <tr>
-      <td>`!=`</td>
-      <td>Is not equal to</td>
-    </tr>
-    </table>
+- `operator`: The operator to use to compare the property value to the comparison value. You can use any of the following operators:
 
-- `comparison_value`: Value that you want to compare each array element property value against. To specify a value that can change depending on the user input, use a context variable or entity as the value. If you specify a value that can vary, add logic to guarantee that the `comparison_value` value is valid at evaluation time or an error will occur.
+    | Operator | Description |
+    |----------|-------------|
+    | `==`     | Is equal to |
+    | `>`      | Is greater than |
+    | `<`      | Is less than |
+    | `>=`     | Is greater than or equal to |
+    | `<=`     | Is less than or equal to |
+    | `!=`     | Is not equal to |
+    {: caption="Supported filter operators" caption-side="top"}
 
-#### Filter example 1
+- `comparison_value`: The value that you want to compare each array element property value to. You can specify a literal value or reference a variable.
 
-For example, you can use the filter method to evaluate an array that contains a set of city names and their population numbers to return a smaller array that contains only cities with a population over 5 million.
+#### Filter examples
 
-The following `$cities` context variable contains an array of objects. Each object contains a `name` and `population` property.
+For example, you might have an array of objects containing city names and their population numbers:
 
 ```json
 [
@@ -733,9 +705,9 @@ The following `$cities` context variable contains an array of objects. Each obje
 ```
 {: codeblock}
 
-In the following example, the arbitrary temporary variable name is `city`. The SpEL expression filters the `$cities` array to include only cities with a population of over 5 million:
+If the source array is stored in a variable called `$cities`, the following exexpression returns a smaller array that contains only cities with populations greater than 5 million:
 
-```bash
+```text
 $cities.filter("city", "city.population > 5000000")
 ```
 {: codeblock}
@@ -756,83 +728,15 @@ The expression returns the following filtered array:
 ```
 {: codeblock}
 
-You can use a collection projection to create a new array that includes only the city names from the array returned by the filter method. You can then use the `join` method to display the two name element values from the array as a String, and separate the values with a comma and a space.
+Instead of a hardcoded comparison value, you could also filter based on a dynamic value stored in a variable. This example filters using a population value specified by a customer response in a previous step:
 
-```bash
-The cities with more than 5 million people include <?  T(String).join(", ",($cities.filter("city", "city.population > 5000000")).![name]) ?>.
+```text
+$cities.filter("city", "city.population > ${step_123}")
 ```
 {: codeblock}
 
-The resulting response is: `The cities with more than 5 million people include Tokyo, Beijing.`
-
-#### Filter example 2
-
-The power of the filter method is that you do not need to hard code the `comparison_value` value. In this example, the hard coded value of 5000000 is replaced with a context variable instead.
-
-In this example, the `$population_min` context variable contains the number `5000000`. The arbitrary temporary variable name is `city`. The SpEL expression filters the `$cities` array to include only cities with a population of over 5 million:
-
-```bash
-$cities.filter("city", "city.population > $population_min")
-```
-{: codeblock}
-
-The expression returns the following filtered array:
-
-```json
-[
-   {
-      "name":"Tokyo",
-      "population":9273000
-   },
-   {
-      "name":"Beijing",
-      "population":20693000
-   }
-]
-```
-{: codeblock}
-
-When comparing number values, be sure to set the context variable involved in the comparison to a valid value before the filter method is triggered. Note that `null` can be a valid value if the array element you are comparing it against might contain it. For example, if the population name and value pair for Tokyo is `"population":null`, and the comparison expression is `"city.population == $population_min"`, then `null` would be a valid value for the `$population_min` context variable.
+When comparing number values, be sure to set the context variable involved in the comparison to a valid value before the filter method is triggered. Note that `null` can be a valid value if the array element you are comparing it against might contain it.
 {: tip}
-
-You can use a dialog node response expression like this:
-
-```bash
-The cities with more than $population_min people include <?  T(String).join(", ",($cities.filter("city", "city.population > $population_min")).![name]) ?>.
-```
-{: codeblock}
-
-The resulting response is: `The cities with more than 5000000 people include Tokyo, Beijing.`
-
-#### Filter example 3
-
-In this example, an entity name is used as the `comparison_value`. The user input is, `What is the population of Tokyo?` The arbitrary temporary variable name is `y`. You created an entity named `@city` that recognizes city names, including `Tokyo`.
-
-```bash
-$cities.filter("y", "y.name == @city")
-```
-
-The expression returns the following array:
-
-```json
-[
-   {
-      "name":"Tokyo",
-      "population":9273000
-   }
-]
-```
-{: codeblock}
-
-You can use a collection project to get an array with only the population element from the original array, and then use the `get` method to return the value of the population element.
-
-```bash
-The population of @city is: <? ($cities.filter("y", "y.name == @city").![population]).get(0) ?>.
-```
-{: codeblock}
-
-The expression returns: `The population of Tokyo is 9273000.`
-
 
 ### `Array.get(Integer index)`
 {: #expression-methods-actions-arrays-get}
