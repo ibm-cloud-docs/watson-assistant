@@ -2,7 +2,7 @@
 
 copyright:
 years: 2015, 2023
-lastupdated: "2023-02-10"
+lastupdated: "2023-02-23"
 
 subcollection: watson-assistant
 
@@ -571,7 +571,7 @@ T(java.lang.String).format('%d + %d equals %d', 1, 1, 2)
 
 The resulting string is `1 + 1 equals 2`.
 
-This examples changes the decimal placement for a number collected by a step:
+This example changes the decimal placement for a number collected by a step:
 
 ```java
 T(String).format('%.2f',${step_297})
@@ -653,6 +653,96 @@ ${Items}.contains('two')
 ```
 
 This example returns `true` if the `Items` array contains any capitalization of the string `two` (for example, `TWO` or `Two` would also match).
+
+### `Array.filter(temp_var, "temp_var.property operator comparison_value")`
+{: #expression-methods-actions-arrays-filter}
+
+Filters an array by comparing each array element to a value you specify, returning a new array that contains only the matching elements.
+
+The filter expression consists of the following values:
+
+- `temp_var`: An arbitrary name for a temporary variable that is used to hold each array element as it is evaluated. For example, if the original array contains objects describing cities, you might use `city` as the temporary variable name.
+
+- `property`: The element property that you want to filter on. This must be a property of the elements in the source array. Specify the property as a property of `temp_var`, using the syntax `temp_var.property`. For example, if `latitude` is a valid property name for the source elements, you might specify the property as `city.latitude`.
+
+- `operator`: The operator to use to compare the property value to the comparison value. You can use any of the following operators:
+
+    | Operator | Description |
+    |----------|-------------|
+    | `==`     | Is equal to |
+    | `>`      | Is greater than |
+    | `<`      | Is less than |
+    | `>=`     | Is greater than or equal to |
+    | `<=`     | Is less than or equal to |
+    | `!=`     | Is not equal to |
+    {: caption="Supported filter operators" caption-side="top"}
+
+- `comparison_value`: The value that you want to compare each array element property value to. You can specify a literal value or reference a variable.
+
+#### Filter examples
+
+For example, you might have an array of objects containing city names and their population numbers:
+
+```json
+[
+   {
+      "name":"Tokyo",
+      "population":13988129
+
+   },
+   {
+      "name":"Rome",
+      "population":2860009
+
+   },
+   {
+      "name":"Beijing",
+      "population":21893095
+
+   },
+   {
+      "name":"Paris",
+      "population":2165423
+
+   }
+]
+```
+{: codeblock}
+
+If the source array is stored in a variable called `$cities`, the following exexpression returns a smaller array that contains only cities with populations greater than 5 million:
+
+```text
+${cities}.filter("city", "city.population > 5000000")
+```
+{: codeblock}
+
+The expression returns the following filtered array:
+
+```json
+[
+   {
+      "name":"Tokyo",
+      "population":13988129
+
+   },
+   {
+      "name":"Beijing",
+      "population":21893095
+
+   }
+]
+```
+{: codeblock}
+
+Instead of a hardcoded comparison value, you could also filter based on a dynamic value stored in a variable. This example filters using a population value specified by a customer response in a previous step:
+
+```text
+${cities}.filter("city", "city.population > ${step_123}")
+```
+{: codeblock}
+
+When comparing number values, be sure to set the context variable involved in the comparison to a valid value before the filter method is triggered. Note that `null` can be a valid value if the array element you are comparing it against might contain it.
+{: tip}
 
 ### `Array.get(Integer index)`
 {: #expression-methods-actions-arrays-get}
