@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-02-13"
+lastupdated: "2023-02-27"
 
 subcollection: watson-assistant
 
@@ -35,7 +35,7 @@ subcollection: watson-assistant
 Add a chatbot to Microsoft Teams to create and customize a productive hub where content, tools, and people come together to chat, meet, and collaborate. 
 {: shortdesc}
 
-After you [create an action](docs/watson-assistant?topic=watson-assistant-build-actions-overview), you can use this integration to connect your assistant with Microsoft Teams.
+After you [create an action](/docs/watson-assistant?topic=watson-assistant-build-actions-overview), you can use this integration to connect your assistant with Microsoft Teams.
 
 ## Before you begin
 {: #deploy-microsoft-teams-account}
@@ -142,7 +142,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 ## Response types
 {: #deploy-microsoft-teams-response-types}
 
-These [response types](docs/watson-assistant?topic=watson-assistant-respond) are supported and displayed as expected when your assistant is deployed for Microsoft Teams direct messages, channels, or group chats.
+These [response types](/docs/watson-assistant?topic=watson-assistant-respond) are supported and displayed as expected when your assistant is deployed for Microsoft Teams direct messages, channels, or group chats.
 
 - date
 - image
