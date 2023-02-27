@@ -123,7 +123,7 @@ The user that you invited appears in your list with the status of **Processing**
 
 A platform role controls a user's ability to open and work with a service instance in {{site.data.keyword.cloud_notm}}. 
 
-At a minimum, each user needs the*Viewer* platform role for a service instance
+At a minimum, each user needs the *Viewer* platform role for a service instance
 {: important}
 
 | Role | Open | Modify | Delete | Manage access |
