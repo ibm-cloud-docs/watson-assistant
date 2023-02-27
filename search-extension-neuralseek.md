@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-02-22"
+lastupdated: "2023-02-27"
 
 subcollection: watson-assistant
 
@@ -27,7 +27,7 @@ subcollection: watson-assistant
 # NeuralSeek extension setup
 {: #search-extension-neuralseek}
 
-[NeuralSeek](https://neuralneek.com){: external} by [Cerebral Blue](https://cerebralblue.com/){: external} is a combined search and natural-language generation system that is designed to [make conversational AI feel more conversational](https://garrettrowe.medium.com/making-conversational-ai-feel-more-conversational-8748009b3fda){: external}. It requires that you load all your content into [{{site.data.keyword.discoveryfull}}](https://cloud.ibm.com/catalog/services/watson-discovery){: external}. Then, when a user asks a question, it has {{site.data.keyword.discoveryshort}} search for multiple relevant documents and then it generates a natural-language answer that uses the contents of those documents. In some cases, the answer might be taken directly from a single document, and in others, the answer can include information from multiple sources that are combined into a single coherent statement. For each query, NeuralSeek returns a single answer and a confidence score. In most cases, it also returns a URL of a document that influenced the answer, which might be one of several documents.
+[NeuralSeek](https://neuralseek.com){: external} by [Cerebral Blue](https://cerebralblue.com/){: external} is a combined search and natural-language generation system that is designed to [make conversational AI feel more conversational](https://garrettrowe.medium.com/making-conversational-ai-feel-more-conversational-8748009b3fda){: external}. It requires that you load all your content into [{{site.data.keyword.discoveryfull}}](https://cloud.ibm.com/catalog/services/watson-discovery){: external}. Then, when a user asks a question, it has {{site.data.keyword.discoveryshort}} search for multiple relevant documents and then it generates a natural-language answer that uses the contents of those documents. In some cases, the answer might be taken directly from a single document, and in others, the answer can include information from multiple sources that are combined into a single coherent statement. For each query, NeuralSeek returns a single answer and a confidence score. In most cases, it also returns a URL of a document that influenced the answer, which might be one of several documents.
 
 To set up the extension for NeuralSeek search:
 
