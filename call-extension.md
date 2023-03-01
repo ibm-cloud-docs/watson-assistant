@@ -208,7 +208,7 @@ To correct the problem, follow these steps:
 
 1. Make sure the extension has been added to the assistant. (For more information, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).)
 
-1. In the action editor, edit the action step that calls the extension and check whether the call to the extension is correctly configured. If {{site.data.keyword.conversationshort}} recognizes the required extension, the extension configuration are automatically restored.
+1. In the action editor, edit the action step that calls the extension and check whether the call to the extension is correctly configured. If {{site.data.keyword.conversationshort}} recognizes the required extension, the extension configuration is automatically restored.
 
     If you see the message `Extension not fully configured`, this means that {{site.data.keyword.conversationshort}} did not find the required extension. Click **Edit extension**.
 
