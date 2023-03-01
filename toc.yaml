@@ -76,7 +76,8 @@ toc:
       - topicgroup:
           label: Previewing and publishing
           topics:
-          - publish-deploy-overview.md
+          - topic: publish-deploy-overview.md
+            navtitle: Overview
           - preview-share.md
           - publish.md
       - topicgroup:
