@@ -66,7 +66,7 @@ All of the channels you can connect your assistant to are available in the **Int
 
 When you add a channel to your assistant, at least two instances of the channel are created. One instance of the channel is connected to the draft environment and the other instance is connected to the live environment. If you are using [multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments), instances of the channel are added to your extra environments. To connect your assistant to a new channel, go to the **Integrations** catalog. For more information about adding integrations to your assistant, see [Adding integrations](/docs/watson-assistant?topic=watson-assistant-deploy-integration-add).
 
-Although a channel always exists in environments, you can configure your integration separately in each environment. For example, this allows you to test integrations on your draft environment before you go live with any integration configuration. After you add an integration, you must set it up if want to use it with your assistant. The **Finish setup** icon appears on any integration that you added but didn't yet set up.
+Although a channel always exists in environments, you can configure your integration separately in each environment. For example, this allows you to test integrations on your draft environment before you go live with any integration configuration. After you add an integration, you must set it up to use it with your assistant. The **Finish setup** icon appears on any integration that you added but didn't yet set up.
 
 You have multiple options for deploying your assistant, depending on how you want your customers to interact with it. In most cases, an assistant is deployed by using one of the following integrations:
 
