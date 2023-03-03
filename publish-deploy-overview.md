@@ -82,7 +82,7 @@ Use the **Live environment** tab to manage the live environment. This tab indica
 
 ![Live environment](images/live-environment-page.png){: caption="Live environment" caption-side="bottom"}
 
-The version of content that is displayed under **Resolution Methods** is the version that is connected to the live environment. 
+**Resolution Methods** shows the content version that is published to the live environment. 
 
 There are two ways to publish a version to the live environment:
 
