@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-09-01"
+  years: 2022, 2023
+lastupdated: "2023-03-03"
 
 subcollection: watson-assistant
 
@@ -32,13 +32,14 @@ subcollection: watson-assistant
 After you build a custom extension, you must add it to the assistant before it can be accessed by actions.
 {: shortdesc}
 
-Adding the extension to the assistant configures the extension for use within a particular environment (draft or live), and it makes the extension available so that it can be called from actions.
+Adding the extension to the assistant configures the extension for use within a particular environment, and it makes the extension available so that it can be called from actions.
 
 You can use different configuration details for each environment. For example, you might want to use the URL for a test server in the draft environment, but a production server in the live environment.
 
 For information about how to create a custom extension, see [Build a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension).
 
 ## Adding the extension to the draft environment
+{: #add-custom-extension-draft}
 
 To add a custom extension to the assistant, follow these steps:
 
@@ -89,6 +90,7 @@ To add a custom extension to the assistant, follow these steps:
 The extension is now connected to your assistant and available for use by actions in the draft environment.
 
 ## Configuring the extension for the live environment
+{: #add-custom-extension-live}
 
 To configure the extension for the live environment, follow these steps:
 
@@ -99,5 +101,8 @@ To configure the extension for the live environment, follow these steps:
 1. In the **Environment** field, select **Live**. Click **Confirm**.
 
 1. Repeat the configuration process, specifying the values you want to use for the live environment.
+
+   If you are using multiple environments, follow the same steps to configure the extension for each environment. For more information, see [Adding and using multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments).
+   {: note}
 
 The extension is now available in the environments you have configured, and it can be called from the assistant. For more information about how to call an extension from an action, see [Calling a custom extension](/docs/watson-assistant?topic=watson-assistant-call-extension).

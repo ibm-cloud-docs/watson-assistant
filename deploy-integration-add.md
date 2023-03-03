@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-03-03"
 
 subcollection: watson-assistant
 
@@ -26,12 +26,8 @@ subcollection: watson-assistant
 {:tag-ibm-cloud: .tag data-tag-color="blue"}
 {:tag-cp4d: .tag data-tag-color="magenta"}
 
-{{site.data.content.classiclink}}
-
 # Adding integrations
 {: #deploy-integration-add}
-
-[IBM Cloud]{: tag-ibm-cloud}
 
 Add integrations to your assistant so that you can publish your bot to the channels where your customers go for help.
 {: shortdesc}
@@ -40,7 +36,7 @@ To deploy an assistant to customers, a channel integration must be added. By def
 
 ![Image of the Integrations catalog](images/integrations-catalog.png)
 
-When you add an integration, that integration is added to both the draft and live environments. Use your draft environment to test draft content and integrations before you deploy your assistant to customers. For more information about adding integrations to your assistant, see [Adding integrations](/docs/watson-assistant?topic=watson-assistant-deploy-integration-add). After a live channel is added and configured, it is ready to deploy your assistant on its corresponding platform.
+When you add an integration, that integration is added to both the draft and live environments, or to all your enviroments if you are using [multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments). Test content and integrations before you deploy your assistant to customers. For more information about adding integrations to your assistant, see [Adding integrations](/docs/watson-assistant?topic=watson-assistant-deploy-integration-add). After a live channel is added and configured, it is ready to deploy your assistant on its corresponding platform.
 
 ## Add an integration
 {: #deploy-integration-add-task}

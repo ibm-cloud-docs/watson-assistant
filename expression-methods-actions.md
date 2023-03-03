@@ -2,7 +2,7 @@
 
 copyright:
 years: 2015, 2023
-lastupdated: "2023-02-23"
+lastupdated: "2023-03-03"
 
 subcollection: watson-assistant
 
@@ -256,7 +256,7 @@ Use SpEL expressions to define standard math equations, where the operators are 
 | addition             | `+`        |
 | division             | `/`        |
 | multiplication       | `*`        |
-| subraction           | `-`        |
+| subtraction          | `-`        |
 
 ### `java.lang.Math()`
 {: #expression-methods-actions-numbers-java-lang-math}
