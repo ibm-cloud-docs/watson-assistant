@@ -11,7 +11,7 @@ subcollection: watson-assistant
 {{site.data.keyword.attribute-definition-list}}
 
 # Tutorial: Customizing text elements based on the current page
-{: #web-chat-develop-size-position}
+{: #web-chat-develop-custom-text-for-page}
 
 This tutorial shows how you can dynamically customize the launcher or home screen text based on the page the user is currently viewing.
 {: shortdesc}
