@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-01-19"
+lastupdated: "2023-03-03"
 
 subcollection: watson-assistant
 
@@ -50,7 +50,7 @@ To change the web chat configuration, follow these steps:
 
 1. On the ![Integrations icon](images/integrations-icon.png) **Integrations** page, find the **Web chat** tile and click click **Open**. The **Open web chat** window opens.
 
-1. In the **Environment** field, select **Draft** or **Live**, depending on which environment you want to configure the web chat widget in. The web chat is configured separately for the draft and live environments. Click **Confirm**.
+1. In the **Environment** field, select the environment you want the web chat widget to connect to. Click **Confirm**.
 
     The **Web chat** page opens, showing the settings for the web chat integration in the selected environment.
 

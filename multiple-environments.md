@@ -2,39 +2,23 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-01-19"
+lastupdated: "2023-03-01"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
-{{site.data.content.classiclink}}
-
-{{site.data.content.earlyaccess}}
-
-# Multiple environments ![Enterprise plan](images/enterprise.png)
+# Adding and using multiple environments
 {: #multiple-environments}
 
-Each assistant has a draft and live environment. You can add up to three environments as a staging area to test your assistant before deployment. This lets you build content in the draft environment 
-and test published versions of your content in the extra environments.
+[Enterprise]{: tag-purple}
+
+Each assistant has a draft and live environment. For Enterprise plans, you can add up to three environments as a staging area to test your assistant before deployment. You can build content in the draft environment and test versions of your content in the extra environments.
 {: shortdesc}
 
-For more information about enviroments, see [Environments](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments).
+For more information about environments, see [Environments](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments).
 
 ## Adding environments
 {: #multiple-environments-add}
@@ -45,28 +29,28 @@ To add an environment:
 
 1. Open the **Environments** page and click **Add Environment**.
 
-   ![Add environment](images/multiple-env-add-button.png)
+   ![Add environment](images/multiple-env-add-button.png){: caption="Add environment" caption-side="bottom"}
 
 1. Enter a name and a description, then click **Save**. Names can't contain spaces or use any special characters.
 
-   ![Add an environment](images/multiple-env-add-modal.png)
+   ![Add an environment](images/multiple-env-add-modal.png){: caption="Add an environment" caption-side="bottom"}
 
-The new environment appears as an additional tab on your **Environments** page.
+The new environment appears as an extra tab on your **Environments** page.
 
-![Environment tab](images/multiple-env-tab.png)
+![Environment tab](images/multiple-env-tab.png){: caption="Environment tab" caption-side="bottom"}
 
 ## Using your environments
 {: #multiple-environments-using}
 
-You can use additional environments in your development and test process, before deploying an assistant for customer use.
+You can use extra environments in your development and test process before you deploy an assistant for customer use.
 
-Add extra environments to match your existing test-to-deploy process. For example, you could name and use five environments in a scenario like this:
+Add extra environments to match your existing test-to-deploy process. For example, you might name and use five environments in a scenario like this:
 
 | Environment | Used for |
 | --- | --- |
 | Draft | Conversation authors build actions and test as they work |
 | Review | Conduct an initial content review with stakeholders |
-| Test | Test assistant content on an configured channel |
+| Test | Test assistant content on a configured channel |
 | Staging | Use a staging website to test assistant content and channel configurations |
 | Live | Deploy for customer use |
 {: caption="Example" caption-side="top"}
@@ -74,56 +58,49 @@ Add extra environments to match your existing test-to-deploy process. For exampl
 ### Access control to environments
 {: #multiple-environments-access}
 
-You can control who can work in each environment. The settings for each environment has an environment ID that you can use in IBM Cloud Identity and Access Management (IAM) and set access by resource. For more information on access control, see [Managing access with Identity and Access Management](/docs/watson-assistant?topic=watson-assistant-access-control#access-control-iam). For more information on settings, see [Environment settings](#environment-settings).
+You can control who can work in each environment. Each environment has an ID that you can use in IBM Cloud Identity and Access Management (IAM) and set access by resource. For more information on access control, see [Managing access with Identity and Access Management](/docs/watson-assistant?topic=watson-assistant-access-control#access-control-iam). For more information on settings, see [Environment settings](#environment-settings).
 
 ## Publishing content to an environment
 {: #multiple-environments-publish}
 
-When publishing content, you have the option to assign it to one or more environments. For more information on publishing, see [Publishing your content](/docs/watson-assistant?topic=watson-assistant-publish).
+For more information, see [Publishing your content](/docs/watson-assistant?topic=watson-assistant-publish).
+
+To publish new changes from the draft environment to an environment:
 
 1. If changes are available to publish, click **Publish**. 
 
 1. Enter a description of the version.
 
-1. Decide whether you want to assign the version to one or more environments. This step is optional if you want to create a snapshot version of your content without using it in an environment right away.
-
-   ![Assign when publishing](images/multiple-env-publish-modal.png)
+1. Choose an environment.
 
 1. Click **Publish**.
 
-## Assigning or switching versions in an environment
-{: #multiple-environments-assign}
+To publish an existing version to an environment:
 
-There are two ways to assign a verison to an environment:
+1. On the **Environments** page, click the environment tab.
 
-- When you a publish a version, you have the option of assigning it to an environment.
-- If you want to assign a version later, open the environment tab. In Resolution Methods, click **Assign version** to assign content.
+1. In Resolution Methods, click **Switch version**.
 
-After a version has been assigned to an environment, there are two ways you can switch to a different version:
-
-- When you a publish a version, you have the option of assigning it to an environment, replacing the one that's already there.
-- Open the environment tab. In Resolution Methods, click **Switch version** in change content.
+1. Choose a version to publish, then click **Switch version**.
 
 ### Moving a version through multiple environments
 {: #multiple-environments-move}
 
-Here's an example of moving a content version through multiple environments to build, test, iterate, and deploy. 
-
-Using the same example environments as above, you could:
+This example explains moving a content version through multiple environments to build, test, iterate, and deploy. 
 
 | Environment | Activity |
 | --- | --- |
-| Draft | Create a version V3 of content |
-| Review | Assign version V3 for initial testing |
-| Test | Assign version V3 for further testing with a configured channel |
-| Staging | Assign version V3 for testing with an internal staging website |
-| Live | Deploy version V3 for customer use |
-| Live | Assign version V2 after a bug is found in version V3 |
+| Draft | Publish version V3 to Review environment |
+| Review | Conduct initial testing of V3 |
+| Test | Switch to version V3 for further testing with a configured channel |
+| Staging | Switch to version V3 for testing with an internal staging website |
+| Live | Switch to version V3 for customer use |
+| Live | Switch to version V2 after a bug is found in version V3 |
 | Draft | Revert to version V3 to fix the bug. For more information, see [Reverting to a previous version](/docs/watson-assistant?topic=watson-assistant-publish#publish-revert) |
-| Review | Assign version V4 for retesting |
-| Test | Assign version V4 for further retesting |
-| Staging | Assign version V4 for testing with an internal staging website |
-| Live | Deploy version V4 for customer use and bug fixed |
+| Draft | Publish version V4 to Review environment for retesting |
+| Test | Switch to version V4 for further retesting |
+| Staging | Switch to version V4 for testing with an internal staging website |
+| Live | Switch to version V4 for customer use |
 {: caption="Example" caption-side="top"}
 
 ## Previewing an environment
@@ -131,18 +108,16 @@ Using the same example environments as above, you could:
 
 On each environment tab, you can click **Preview this environment** to open another browser tab and preview your assistant as an interactive web chat widget. 
 
-![Preview](images/multiple-env-preview.png)
+![Preview](images/multiple-env-preview.png){: caption="Preview" caption-side="bottom"}
 
-You can share this unauthenticated version of your assistant with your team by sending them the link to the environment preview. This lets you share your in-progress assistant with subject-matter experts in your organization without needing access to {{site.data.keyword.conversationshort}} itself.
+You can share this unauthenticated version of your assistant with your team by sending them the link to the environment preview. Your subject-matter experts can test your in-progress assistant without needing access to {{site.data.keyword.conversationshort}} itself.
 
 ## Environment settings
 {: #multiple-environments-settings}
 
 Each environment has its own settings. On an environment tab, click the **Settings** gear icon to open the settings:
 
-![Environment settings](images/multiple-env-settings.png)
-
-This gives you access to see API details, configure webhook settings, change inactivity timeout, and edit environment details.
+![Environment settings](images/multiple-env-settings.png){: caption="Environment settings" caption-side="bottom"}
 
 **API details** provide these values for each environment:
 - Environment name
@@ -155,7 +130,7 @@ Settings for pre-message, post-message, and log webhooks. For more information, 
 
 **Inactivity timeout**
 
-Specify the amount of time to wait after the user stops interacting with the assistant.
+Specify the amount of time to wait after the customer stops interacting with the assistant before ending the session. The maximum inactivity timeout differs by service instance plan type. For more information, see [Environment settings](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-publish-overview#publish-overview-environment-settings).
 
 **Edit environment**
 

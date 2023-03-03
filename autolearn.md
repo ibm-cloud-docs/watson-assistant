@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-03-03"
 
 subcollection: watson-assistant
 
@@ -51,7 +51,7 @@ As your assistant learns over time, your customers get the best answer more ofte
 
 Before your assistant can learn from customer behavior, it must observe a significant amount of real conversation data. The conversations take place in a channel such as the web chat, or in a custom application. 
 
-Logs of completed conversations and user decisions from your live environment are the data source for observation. Your assistant analyzes the logs to gain insights. (It doesn't watch real-time clicks during a conversation.)
+Logs of conversations and user decisions from your live environment are the data source for observation. Your assistant analyzes the logs to gain insights. (It doesn't watch real-time clicks during a conversation.)
 
 When the assistant observes enough real conversation data from the live environment, it gains insights to help improve your assistant, providing a better customer experience.
 
