@@ -26,7 +26,7 @@ subcollection: watson-assistant
 # Allowing your customers to change the topic of the conversation
 {: #change-topic}
 
-In general, an action is designed to lead a customer through a particular process without any interruptions. However, in real life conversations almost never follow such a simple flow. In the middle of a conversation, customers might get distracted, ask questions about related issues, misunderstand something, or change their minds about what they want to do.
+In general, an action is designed to lead a customer through a particular process without any interruptions. However, real conversations almost never follow such a simple flow. In the middle of a conversation, customers might get distracted, ask questions about related issues, misunderstand something, or change their minds about what they want to do.
 {: shortdesc}
 
 The **Change conversation topic** feature enables your assistant to handle these digressions, dynamically responding to the user by changing the conversation topic as needed.
