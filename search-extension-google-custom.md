@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-02-22"
+lastupdated: "2023-03-03"
 
 subcollection: watson-assistant
 
@@ -66,6 +66,9 @@ For a typical assistant focused on a specific topic, it is usually only necessar
 {: #search-extension-google-template}
 
 1. If you haven't already, use **Quick start with templates** to add the Google custom search starter kit. The starter kit adds an action for use with Google custom search. For more information, see [Building actions with templates](/docs/watson-assistant?topic=watson-assistant-actions-templates).
+
+   **Quick start with templates** is available in English-language assistants only.
+   {: note}
 
 1. On the **Actions** page, edit the ***Google search** action to use the extension. In step 3, click **Edit extension**. 
 
