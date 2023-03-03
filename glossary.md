@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2022-07-25"
+  years: 2015, 2023
+lastupdated: "2023-03-03"
 
 subcollection: watson-assistant
 
@@ -38,7 +38,7 @@ subcollection: watson-assistant
 | Channel | The location where your assistant interacts with your users, for example, over the phone, on a website, or in Slack. At least one channel is required for every assistant. [Learn more](/docs/watson-assistant?topic=watson-assistant-deploy-assistant). |
 | Completion | Measures how often within a given time period users reach the end step of an action. [Learn more](/docs/watson-assistant?topic=watson-assistant-analytics-action-completion#complete-reasons). |
 | Content | The conversation logic and words that are used to respond to your customer. Content is required for every assistant. [Learn more](/docs/watson-assistant?topic=watson-assistant-build-actions-overview). |
-| Environment | You can group your work in separate containers that are called _environments_. Each environment contains its own content, channels, and extensions. Environments also have their own IDs, URLs, and service credentials that can be referenced by external services. Each new assistant comes with two environments: the draft environment and the live environment. Your customers interact with assistants on the live environment and cannot interact with assistants on the draft environment. The separation of these two environments allows you to build and iterate on your content separately from what your customers see. You do not want customers to stumble upon an incomplete action that leads them to a dead end. [Learn more](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments). |
+| Environment | You can group your work in separate containers that are called _environments_. Each environment contains its own content, channels, and extensions. Environments also have their own IDs, URLs, and service credentials that can be referenced by external services. Each new assistant comes with two environments: the draft environment and the live environment. Your customers interact with assistants on the live environment and cannot interact with assistants on the draft environment. The separation of these two environments allows you to build and iterate on your content separately from what your customers see. You do not want customers to stumble upon an incomplete action that leads them to a dead end. For Enterprise plans, you can add up to three environments as a staging area to test your assistant before deployment. You can build content in the draft environment and test versions of your content in the extra environments. [Learn more](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments). |
 | Escalation | If your assistant is integrated with one of the supported service desk systems, you can build in logic that transfers, or escalates, the conversation to a human when necessary. [Learn more](/docs/watson-assistant?topic=watson-assistant-human-agent). |
 | Incompletion | Reasons why an action is not completed by a user, including `escalated to agent`, `started a new action`, `stuck on a step`, or `abandoned or ongoing`. [Learn more](/docs/watson-assistant?topic=watson-assistant-analytics-action-completion#reasons-for-incompletion) |
 | Integrations | Add-ons to the end experience that help solve specific user problems, for example, connecting to a human agent or searching existing help content. Integrations are not required for an assistant, but they are recommended. [Learn more](/docs/watson-assistant?topic=watson-assistant-deploy-assistant). |

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2022-11-10"
+  years: 2018, 2023
+lastupdated: "2023-03-03"
 
 subcollection: watson-assistant
 
@@ -23,8 +23,6 @@ subcollection: watson-assistant
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-{{site.data.content.classiclink}}
-
 # Use analytics to review your entire assistant at a glance
 {: #analytics-overview}
 
@@ -42,7 +40,7 @@ To see analytics information, select **Analyze** in the navigation bar.
 ## Choosing the environment and date range
 {: #analytics-overview-time-period}
 
-To get started, choose the [environment](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments) (draft or live) and date range you want to analyze. All charts and cards reflect data based on the environment and the date range you select. When you change the environment or the date range, the charts and cards on the page update to reflect the new date range. You can also use **Refresh** ensure the latest data is shown.
+To get started, choose the [environment](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments) and date range you want to analyze. All charts and cards reflect data based on the environment and the date range you select. When you change the environment or the date range, the charts and cards on the page update to reflect the new date range. You can also use **Refresh** ensure the latest data is shown.
 
 ![Time period](images/analytics-time-period.png)
 

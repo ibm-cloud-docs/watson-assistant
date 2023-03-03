@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-22"
+lastupdated: "2023-03-03"
 
 subcollection: watson-assistant
 
@@ -210,7 +210,7 @@ After you add the search integration for the first time, it appears as a tile on
 
 ![Search in draft environment](images/search-draft-env.png)
 
-When you're ready, you can repeat the steps to add the search integration to your **Live environment**.
+When you're ready, you can repeat the steps to add the search integration to your **Live environment** or to other environments, if you're using [multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments).
 
 ![Search in live environment](images/search-live-env.png)
 

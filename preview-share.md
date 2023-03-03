@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-09-23"
+  years: 2021, 2023
+lastupdated: "2022-03-03"
 
 subcollection: watson-assistant
 
@@ -28,18 +28,18 @@ subcollection: watson-assistant
 # Previewing and sharing your assistant
 {: #preview-share}
 
-Internal review is a necessary step in any virtual assistant workflow. You need an environment that is free from customer interactions so your team can test your assistant. The draft environment should closely resemble the final experience that your users encounter so you can ensure that you are publishing the optimal end product.
+Internal review is a necessary step in any virtual assistant workflow. You need an environment without customer interactions so your team can test your assistant. The draft environment closely resembles the final experience that your users encounter so you can ensure that you are publishing the optimal end product.
 {: shortdesc}
 
 ## Saving and editing your work in the draft environment
 {: #preview-share-draft}
 
-The draft environment contains all your in-progress work in the **Actions**, **Preview**, and **Publish** pages. Use the **Draft environment** tab to manage the draft environment, including adding draft environment integrations (channels and extensions) that you can use for internal testing before going live. These integrations are unique to the draft environment, and changes to draft integrations don't affect the live environment.
+The draft environment contains all your in-progress work in the **Actions**, **Preview**, and **Publish** pages. Use the **Draft environment** tab to manage the draft environment, including adding draft environment integrations (channels and extensions) that you can use for internal testing before deployment. These integrations are unique to the draft environment, and changes to draft integrations don't affect the live environment.
 
 ## The Preview page
 {: #preview-share-preview-page}
 
-Use the **Preview** page to test your assistant. From this page, you can experience your assistant from your customers' perspective. The **Preview** page includes an interactive web chat widget where you can test out your assistant as if you were a customer. The content contained in the assistant is the content that you built into your actions or set up with the search integration. 
+Use the **Preview** page to test your assistant. You can experience your assistant from your customers' perspective. The **Preview** page includes an interactive web chat widget where you can test out your assistant as if you were a customer. The content that is contained in the assistant is the content that you built into your actions or set up with the search integration. 
 
 On the **Preview** page, you also find the following elements:
 - **Copy link to share**: Share an unauthenticated version of your assistant with your colleagues by sending them a link. For more information, see [Copying a link to share](#preview-share-link).
@@ -51,7 +51,7 @@ On the **Preview** page, you also find the following elements:
 ## Copying a link to share
 {: #preview-share-link}
 
-You can share an unauthenticated version of your assistant with your team by sending them a link. The link opens a sample web page with an interactive web chat widget where you can test out your assistant as if you were a customer. This method of previewing lets you share your in-progress assistant with subject-matter experts in your organization without needing access to {{site.data.keyword.conversationshort}} itself. The experience is identical to using **Preview this environment** on the draft environment tab.
+You can share an unauthenticated version of your assistant with your team by sending them a link. The link opens a sample web page with an interactive web chat widget where you can test out your assistant as if you were a customer. Your subject-matter experts can test your in-progress assistant without needing access to {{site.data.keyword.conversationshort}} itself. The experience is identical to using **Preview this environment** on the draft environment tab.
 
 To share a link:
 1. On the **Preview** page, click **Copy link to share**.
@@ -91,7 +91,7 @@ To upload an image:
 1. Click **Upload an image**, then click **Continue**.
 1. Drag a file or click to upload, then click **Change background**.
 
-Images are stored for 24 hours. A warning message may appear on the Preview page about the time limit expiration. To clear this message:
+Images are stored for 24 hours. A warning message might appear on the Preview page about the time limit expiration. To clear this message:
 
 1. On the **Preview** page, click **Change background**. 
 1. Click **Clear background setting**, then click **Continue**.

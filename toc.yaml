@@ -80,6 +80,7 @@ toc:
             navtitle: Overview
           - preview-share.md
           - publish.md
+          - multiple-environments.md
       - topicgroup:
           label: Deploying to your website or mobile app
           topics:
@@ -229,7 +230,6 @@ toc:
           - autolearn.md
           - boost-words.md
           - deploy-phone-amazon-connect.md
-          - multiple-environments.md
 
   - navgroup:
       id: reference
