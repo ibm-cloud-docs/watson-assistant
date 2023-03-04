@@ -19,7 +19,7 @@ The search integration searches for information from a data collection that you 
 
 {{site.data.keyword.discoveryshort}} is a service that crawls, converts, and normalizes your unstructured data. The product applies data analysis and cognitive intuition to enrich your data such that you can more easily find and retrieve meaningful information from it later. To read more about {{site.data.keyword.discoveryshort}}, see the [product documentation](/docs/discovery-data?topic=discovery-data-about){: external}.
 
-The search integration requires {{site.data.keyword.discoveryshort}} v2. When you create a Plus, Enterprise, or Premium plan instance on IBM Cloud, you get the new and improved version of {{site.data.keyword.discoveryshort}}. For more information, see [Getting the most from {{site.data.keyword.discoveryshort}}](/docs/discovery-data?topic=discovery-data-version-choose).
+The search integration requires {{site.data.keyword.discoveryshort}} v2. When you create a Plus, Enterprise, or Premium plan instance on IBM Cloud, you get the new and improved version of {{site.data.keyword.discoveryshort}}. For more information, see [Getting the most from {{site.data.keyword.discoveryshort}}](/docs/discovery-data?topic=discovery-data-version-choose){: external}.
 {: important}
 
 Typically, the type of data collection you add to {{site.data.keyword.discoveryshort}} and access from your assistant contains information that is owned by your company. This proprietary information can include FAQs, sales collateral, technical manuals, or papers written by subject matter experts. Mine this dense collection of proprietary information to find answers to customer questions quickly.
