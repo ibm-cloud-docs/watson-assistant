@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-11-10"
+  years: 2022, 2023
+lastupdated: "2023-03-01"
 
 subcollection: watson-assistant
 
@@ -197,3 +197,28 @@ If your calls to an extension are failing, you might want to debug the problem b
     - The request is shown as a cURL command, which you can run at a command prompt or import into a tool such as [Postman](https://www.postman.com/){: external}. (For security reasons, the content of any `Authorization` header is not included.)
     - The response is shown as the complete JSON data returned from the external API.
 
+## Reconfiguring a missing extension
+{: #extension-reconfig}
+
+An extension might become unavailable if someone removes it from the assistant on the **Integrations** page, or if the action is exported and then imported to a different assistant where the required extension is not configured. If this happens, any action step that calls the extension becomes invalid.
+
+To correct the problem, follow these steps:
+
+1. If necessary, recreate the extension using the same OpenAPI specification that was used before. (For more information, see [Building a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension).)
+
+1. Make sure the extension has been added to the assistant. (For more information, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).)
+
+1. In the action editor, edit the action step that calls the extension and check whether the call to the extension is correctly configured. If {{site.data.keyword.conversationshort}} recognizes the required extension, the extension configuration is automatically restored.
+
+    If you see the message `Extension not fully configured`, this means that {{site.data.keyword.conversationshort}} did not find the required extension. Click **Edit extension**.
+
+1. In the **Extension setup** window, select the extension you want to call. 
+
+    If {{site.data.keyword.conversationshort}} recognizes an available extension that was built using the same OpenAPI document, a message appears suggesting that you select this extension. However, you can select any available extension.
+    {: note}
+
+1. Verify that the correct values are specified in the **Operation** and **Parameters** fields.
+
+1. Click **Apply**.
+
+1. If you selected an extension that is not identical to the one that was used to build the action, you might need to modify subsequent steps that access the extension response properties. Check any later steps that refer to the response properties and make sure the references are still valid and correct.

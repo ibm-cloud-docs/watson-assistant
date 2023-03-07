@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-07-15"
+  years: 2022, 2023
+lastupdated: "2023-03-03"
 
 subcollection: watson-assistant
 
@@ -27,8 +27,6 @@ subcollection: watson-assistant
 {:video: .video}
 {:tag-ibm-cloud: .tag data-tag-color="blue"}
 {:tag-cp4d: .tag data-tag-color="magenta"}
-
-{{site.data.content.classiclink}}
 
 # Sending events to Segment ![Enterprise plan only](images/enterprise.png)
 {: #segment-add}
@@ -91,5 +89,8 @@ To configure the Segment extension for the live environment, follow these steps:
 1. In the **Environment** field, select **Live**. Click **Confirm**.
 
 1. Repeat the configuration process, specifying the values you want to use for the live environment.
+
+   If you are using multiple environments, follow the same steps to configure the extension for each environment. For more information, see [Adding and using multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments).
+   {: note}
 
 The Segment extension is now available in the environments you have configured, and events will be sent to the destinations configured in your Segment workspace. (For more information about the events that are sent to Segment, see [Segment event reference](/docs/watson-assistant?topic=watson-assistant-segment-event-reference).)

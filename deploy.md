@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2023-02-13"
+  years: 2021, 2023
+lastupdated: "2023-03-03"
 
 subcollection: watson-assistant
 
@@ -25,8 +25,6 @@ subcollection: watson-assistant
 {:tag-ibm-cloud: .tag data-tag-color="blue"}
 {:tag-cp4d: .tag data-tag-color="magenta"}
 
-{{site.data.content.classiclink}}
-
 # Deploying your assistant
 {: #deploy-assistant}
 
@@ -34,10 +32,10 @@ subcollection: watson-assistant
 
 {{site.data.keyword.conversationshort}} routes your customer's questions and requests to the correct resolution source. However, before your assistant can properly route requests, you must complete the following steps:
 
-1. Write content for your assistant.
-1. Publish the content.
-1. Connect an integration to your assistant.
-1. Deploy the assistant to a channel.
+1. Write content for your assistant
+1. Publish the content
+1. Connect an integration to your assistant
+1. Deploy the assistant to a channel
 
 After you connect an integration and deploy to a channel, you make your assistant available to your customers. You can find an overview visual of your progress toward completing these steps on the **Live environment** page:
 
@@ -48,12 +46,13 @@ After you connect an integration and deploy to a channel, you make your assistan
 
 Channels represent the locations or communication platforms where your assistant interacts with your users. Common examples of channels include the phone, a website, or Slack. If you do not connect your assistant to a channel, your users are not able to access the assistant.
 
-You can review your connected channels in the following two places:
+You can review your connected channels in your environments, for example:
 
 - **Draft environment**: Channels that are connected to this environment are exposed only to your internal team for testing and not to your customers.
 - **Live environment**: Channels that are connected to this environment represent the public-facing experience of your assistant and are exposed to your customers.
+- **Multiple enviroments**: If you are using [multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments), channels are exposed only to your internal team for testing and not to your customers.
 
-For more information on environments, see [Environments](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-publish-overview#environments).
+For more information on environments, see [Environments](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-publish-overview#environments) and [Adding and using multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments).
 
 You can test integrations from the draft environment and interact with your draft web chat on the **Preview** page. When you first create a new assistant, the assistant automatically connects to the web chat channel in your live environment. However, the assistant itself is not available to your customers until you embed the web chat JavaScript in the header of your website. For more information, see [Adding the web chat to your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
 
@@ -65,9 +64,9 @@ All of the channels you can connect your assistant to are available in the **Int
 - Channels: The location where your assistant interacts with your users, for example, over the phone, on a website, or in Slack. At least one channel is required for every assistant.
 - Extensions: Add-ons to the end experience that help solve specific user problems, for example, connecting to a human agent or searching existing help content. Extensions are not required for an assistant, but they are recommended.
 
-When you add a channel to your assistant, two instances of the channel are created. One instance of the channel is connected to the draft environment and the other instance is connected to the live environment. To connect your assistant to a new channel, go to the **Integrations** catalog. For more information about adding integrations to your assistant, see [Adding integrations](/docs/watson-assistant?topic=watson-assistant-deploy-integration-add).
+When you add a channel to your assistant, at least two instances of the channel are created. One instance of the channel is connected to the draft environment and the other instance is connected to the live environment. If you are using [multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments), instances of the channel are added to your extra environments. To connect your assistant to a new channel, go to the **Integrations** catalog. For more information about adding integrations to your assistant, see [Adding integrations](/docs/watson-assistant?topic=watson-assistant-deploy-integration-add).
 
-Although a channel always exists in both your draft and live environments, you can configure your integration separately between the draft and live environments. This allows you to test integrations on your draft environment before you go live with any integration configuration. After you add an integration, you must set it up if want to use it with your assistant. The **Finish setup** icon appears on any integration that you added but didn't yet set up:
+Although a channel always exists in environments, you can configure your integration separately in each environment. For example, this allows you to test integrations on your draft environment before you go live with any integration configuration. After you add an integration, you must set it up to use it with your assistant. The **Finish setup** icon appears on any integration that you added but didn't yet set up.
 
 You have multiple options for deploying your assistant, depending on how you want your customers to interact with it. In most cases, an assistant is deployed by using one of the following integrations:
 
@@ -77,11 +76,9 @@ You have multiple options for deploying your assistant, depending on how you wan
 ## Updating and managing channels
 {: #deploy-assistant-update-channels}
 
-Each channel has specific settings that you can adjust to adapt the end experience for your user. You can edit these settings by selecting the channel in the draft or live environment, or in **Integrations**.
+Each channel has specific settings that you can adjust to adapt the end experience for your user. You can edit these settings by selecting the channel in an environment, or in **Integrations**.
 
-If you make an update to a channel in the draft environment, the same channel in live environment is not affected in the live environment. Similarly, if you make an update to a channel in the live environment, the same channel in draft environment is not affected. If you select a channel from the **Integrations** page, you are asked to select which environment you are editing:
-
-![GIF of the Integrations catalog](images/integrations-page.gif)
+If you make an update to a channel in the draft environment, the same channel in live environment is not affected in the live environment. Similarly, if you make an update to a channel in the live environment, the same channel in draft environment is not affected. If you select a channel from the **Integrations** page, you are asked to select which environment you are editing.
 
 For more information about editing your web chat integration, see [Basic web chat configuration](/docs/watson-assistant?topic=watson-assistant-web-chat-basics).
 

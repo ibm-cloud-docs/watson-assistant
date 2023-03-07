@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2022-05-26"
+  years: 2020, 2023
+lastupdated: "2023-02-17"
 
 subcollection: watson-assistant
 
@@ -113,14 +113,14 @@ To set up a Zendesk service desk integration, complete the following steps:
 
 When you test the service desk integration, make sure there is at least one agent with `Online` status. Agent status is set to `Invisible` unless it is explicitly changed.
 
-Watch the following 4-minute video to see someone set up a connection to a Zendesk service desk.
+<!--Watch [Connecting Zendesk to Your Assistant](https://vimeo.com/799537903){: external}, a 4-minute video that provides an overview of setting up a connection to a Zendesk service desk.-->
+
+Watch a 4-minute video that provides an overview of setting up a connection to a Zendesk service desk:
+
+![Zendesk Integration: {{site.data.keyword.conversationshort}}](https://video.ibm.com/embed/channel/23952663/video/wa-zendesk){: video output="iframe" data-script="none" id="watsonmediaplayer" width="480" height="270" scrolling="no" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="border: 0 none transparent;"}
 
 The product user interface is slightly different from the interface that is shown in the video. However, the main steps are the same.
 {: note}
-
-![Setting up a Zendesk service desk connection](https://www.youtube.com/embed/hegheiqUqiM){: video output="iframe" id="youtubeplayer" frameborder="0" width="560" height="315" webkitallowfullscreen mozallowfullscreen allowfullscreen}
-
-To read a transcript of the video, [open the video on YouTube.com](https://www.youtube.com/watch?v=hegheiqUqiM&feature=emb_imp_woyt), click the *More actions* icon, and then choose *Open transcript*.
 
 ## Securing the transfer to Zendesk
 {: #deploy-zendesk-secure}

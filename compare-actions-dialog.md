@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-11-14"
+  years: 2020, 2023
+lastupdated: "2023-03-03"
 
 subcollection: watson-assistant
 
@@ -24,8 +24,6 @@ subcollection: watson-assistant
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 {:table: .aria-labeledby="caption"}
-
-{{site.data.content.classiclink}}
 
 # Comparing actions and dialog
 {: #comparing-actions-dialog}
@@ -63,7 +61,7 @@ If you are already familiar with dialog-based conversations, learn more about ho
 | Detection of other system entities | | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Connect to agent response type | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Free text response type | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
-| Image response type | | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Image response type | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Options response type | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Search skill response type | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Rich text editor for text responses | ![checkmark icon](../../icons/checkmark-icon.svg) | |
@@ -72,11 +70,11 @@ If you are already familiar with dialog-based conversations, learn more about ho
 | Support multiple users by notifying them when simultaneous edits are made to the skill | ![checkmark icon](../../icons/checkmark-icon.svg) | |
 | Use SpEL expressions | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Disambiguation | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
-| Digression support | | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Digression support | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Spelling correction | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Webhook (before or after every message) support | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
-| Webhook (from a node) support | | ![checkmark icon](../../icons/checkmark-icon.svg) |
-| Webhook (log all messages) support | | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Webhook (from a node) support | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Webhook (log all messages) support | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 {: row-headers}
 {: class="comparison-table"}
 {: caption="Conversational flow skill feature support" caption-side="top"}

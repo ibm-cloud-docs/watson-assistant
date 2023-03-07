@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-13"
+lastupdated: "2023-03-03"
 
 keywords: Watson Assistant release notes
 
@@ -35,6 +35,53 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 3 March 2023
+{: #watson-assistant-mar032023}
+{: release-note}
+
+Adding and using multiple environments
+:    Each assistant has a draft and live environment. For Enterprise plans, you can now add up to three environments as a staging area to test your assistant before deployment. You can build content in the draft environment and test versions of your content in the extra environments. For more information, see [Adding and using multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments).
+
+Confirmation to return to previous action
+:   If a customer digresses and changes to a new topic, assistants now ask a "yes or no" confirmation question that the customers want to return to the previous action. Previously, the assistant returned to the previous action without asking. New assistants are set to use this confirmation by default. For more information, see [Confirmation to return to previous topic](https://test.cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-change-topic#change-topic-confirmation).
+
+## 1 March 2023
+{: #watson-assistant-mar012023}
+{: release-note}
+
+Unrecognized requests group names
+:   This change improves the group names for unrecognized requests. For groups with examples phrased in the form of question, the group name can be more indicative of a question rather than a request. For more information, see [Use unrecognized requests to get action recommendations](/docs/watson-assistant?topic=watson-assistant-analytics-recognition).
+
+## 23 February 2023
+{: #watson-assistant-feb232023}
+{: release-note}
+
+Private variables excluded from logs
+:   Private context variables are no longer saved in logs or sent to external services using log webhooks. Private variables are any values stored inside the following objects:
+
+    - `context.integrations.*.private` (accessible from actions as `system_integrations.*.private`)
+    - `context.integrations.*.$private`
+    - `context.skills.*.user_defined.private`
+    - `context.skills.*.user_defined.$private`
+    - `context.private`
+    - `context.$private`
+
+## 16 February 2023
+{: #watson-assistant-feb162023}
+{: release-note}
+
+Improvements to setting variable values
+:   When you use **Set variable values** on an action step:
+
+   - The available choices now match by type. For example, if you want to set a date variable, the choices are limited to other date variables. Previously, all variables of all types were listed as choices. 
+   
+   - You can set a scalar value for each variable type. For example, you can set a specific date for a date variable or set a specific number for a number variable.
+
+   For more information, see [Storing a value in a session variable](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-manage-info#store-session-variable).
+
+Confirmation and free text response types setting default 
+:   The *Confirmation* and *Free text* response types are now set to **Always ask for this information** by default. For more information, see [Skipping steps, always asking steps, or never asking steps](/docs/watson-assistant?topic=watson-assistant-collect-info#collect-info-skip-step).
 
 ## 13 February 2023
 {: #watson-assistant-feb132023}
@@ -103,7 +150,7 @@ Improved experience when setting a variable value
 {: release-note}
 
 Algorithm version 01-Jun-2022 uses enhanced intent detection by default
-:   As of this date, the latest algorithm version dated 01-Jun-2022 now uses enhanced intent detection by default. You can notice small changes in intent detection behavior when changes are made to an assistant that previously didn't have enhanced intent detection enabled. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
+:   As of this date, the algorithm version **Latest (01-Jun-2022)** now uses enhanced intent detection by default. Before this change, some skills that did not include a specific algorithm version selection inadvertently used **Previous (01-Jan-2022)**. You can notice small changes in intent detection behavior when changes are made to an assistant that previously didn't have enhanced intent detection enabled. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
 
 ## 6 December 2022
 {: #watson-assistant-dec062022}

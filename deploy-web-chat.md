@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-06-30"
+  years: 2019, 2023
+lastupdated: "2023-03-03"
 
 subcollection: watson-assistant
 
@@ -25,21 +25,19 @@ subcollection: watson-assistant
 {:swift: .ph data-hd-programlang='swift'}
 {:video: .video}
 
-{{site.data.content.classiclink}}
-
 # Embedding the web chat on your page
 {: #deploy-web-chat}
 
 To add the web chat widget to your website, all you need to do is embed a generated script element in your HTML source.
 {: shortdesc}
 
-The web chat integration is automatically included for every assistant, and is configured separately for the draft and live environments.
+The web chat integration is automatically included for every assistant, and is configured separately for each environment.
 
 To add the web chat to your website, follow these steps:
 
 1. On the ![Integrations icon](images/integrations-icon.png) **Integrations** page, find the **Web chat** tile and click click **Open**. The **Open web chat** window opens.
 
-1. In the **Environment** field, select **Draft** or **Live**, depending on which environment you want the web chat widget to connect to. Click **Confirm**.
+1. In the **Environment** field, select the environment you want the web chat widget to connect to. Click **Confirm**.
 
     The **Web chat** page opens, showing the settings for the web chat integration in the selected environment.
 
@@ -74,6 +72,9 @@ To add the web chat to your website, follow these steps:
     {: codeblock}
 
     Just copy this code into a file with the `.html` extension, and replace the `script` element with the embed script you copied in the previous step.
+
+    The identifiers in the embed script (such as `integrationID` `serviceInstanceID`) are not considered secret, and are visible to anyone who has access to your website. For more information, see [Security](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture#web-chat-architecture-security).
+    {: note}
 
 1.  If the system that hosts your website has limited Internet access (for example, if you use a proxy or firewall), make sure the following URLs are accessible:
 

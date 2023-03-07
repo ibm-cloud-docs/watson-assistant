@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-09-01"
+  years: 2018, 2023
+lastupdated: "2023-02-22"
 
 subcollection: watson-assistant
 
@@ -101,14 +101,14 @@ To see these variables, click **Variables** in the navigation pane from the main
 
 **Set by assistant**:
 
-|  Variable name             | Variable ID | Description | Example |
+|  Variable name             | Variable ID | Description | Examples |
 |----------------------------|-------------|-------------|---------|
+| *Digressed from*              | `digressed_from`  | Last action before digressing (or null if not digressed) | Pay bill |
 | *Now*                      | `now`       | The current date and time in the user's time zone. | `2021-08-11T11:28:02` |
 | *Current time*             | `current_time` | The current time in the user's time zone.       | `11:28:02`            |
 | *Current date*             | `current_date` | The current date in the user's time zone.       | `2021-08-11`          |
-| *Last action*              | `last_action`  |                                                 |                       |
-| *Fallback reason*          | `fallback_reason` |                                              |                       |
-| *Assistant repeats itself* | `assistant_repeats_itself` |                                     |                       |
+| *Fallback reason*          | `fallback_reason` | The reason why a user is routed to the fallback action | Step validation failed - Agent requested - No action matches |
+| *No action matches count* | `no_action_matches_count` | This represents a count of customer's consecutive unrecognized input attempts | 3 |
 {: caption="Variables set by assistant" caption-side="top"}
 
 **Set by integration**:
@@ -129,21 +129,25 @@ Any action can store a value in a session variable so it is available to other a
 
 1. Click **Set new value**.
 
-1. From the drop-down list, select the session variable you want to store the value in. Note that the new value will replace any previous value stored in the variable.
+1. In the **Set** drop-down list, select the session or integration variable that you want to store the value in. The new value replaces any previous value that is stored.
 
-    If you have not yet created the session variable you want to use, select **New variable**. You can then specify the details about the new session variable, which will be added to the list of session variables for the assistant. (For more information, see [Creating a session variable](#create-session-variable).)
+    If you haven't created the session variable that you want to use, select **New variable**. You can then specify the details about the new session variable, which is added to the list of session variables for the assistant. For more information, see [Creating a session variable](#create-session-variable).
 
-    - From the main actions skill page, click to open the *Variables - Created by you* page. Click **New variable**.
+1. In the **To** drop-down list, the choices vary depending on the type of variable you're setting. Possible choices include:
 
-1. Select from the list to set the new value for the session variable:
-
-    - Select an action variable to use the value of a customer response. You can choose an action variable created by any previous step in the current action.
-
-    - Select another session variable to use its value. You can choose a session variable you created or one of the built-in variables.
-
-    - Select **Expression** to write an expression to define the value for the session variable. For more information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).
+   | Choice | Description |
+   | --- | --- |
+   | Scalar value by type | Set a specific value for each variable type. The choice varies depending on the variable type. For example, for a date variable, the choice is **Enter a date**, and you can use a date picker to set a date. Other choices appear for Boolean, confirmation, currency, date, free text, number, percentage, and time. |
+   | Expression | Write an expression to define the value for the session variable. For more information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions). |
+   | Action variables | Select an action variable to use the value of a customer response in another step. The choices that are listed match the type of variable that you want to set. |
+   | Session variables | Select another session variable to use its value. The choices that are listed match the type of variable that you want to set. |
+   | Assistant variables | Select a built-in system variable to use its value. The choices that are listed match the type of variable that you want to set. |
+   | Integration variables | If you are setting an integration variable, you can choose other integration variables as the value. |
+   
+1. To set more variable values in the same step, click **Set new value**.
 
 ## Using variables to manage conversation flow
+{: #manage-info-conversation-flow}
 
 One of the ways you can use variables is to choose the correct path through the conversation, based on customer responses and other values available at run time. You can do this by defining step conditions, which determine whether a specific step in an action is executed based on runtime conditions.
 
@@ -185,3 +189,11 @@ The default formats are as follows:
 
 When building an assistant response that includes variables, you concatenate multiple parts (text strings and variables). A single response can consist of no more than 30 concatenated parts (for example, 15 variables along with 15 text strings).
 {: note}
+
+### Referencing expressions
+{: #reference-variables-expressions}
+
+If you need to reference a dynamic value that is calculated using an expression, you must first assign this value to a session variable. (For more information about how to do this, see [Storing a value in a session variable](#store-session-variable).) You can then reference the session variable in the **Assistant says** field.
+
+Note that the `<?...?>` syntax for referencing expressions in assistant output is not supported in actions.
+

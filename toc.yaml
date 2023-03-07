@@ -50,7 +50,15 @@ toc:
           - manage-info.md
           - step-conditions.md
           - step-what-next.md
-          - search-add.md
+          - topicgroup:
+             label: Adding search
+             topics:
+             - topic: search-overview.md
+               navtitle: Overview
+             - search-add.md
+             - search-extension-coveo.md
+             - search-extension-google-custom.md
+             - search-extension-neuralseek.md
           - call-extension.md
           - change-topic.md
           - handle-errors.md
@@ -68,9 +76,11 @@ toc:
       - topicgroup:
           label: Previewing and publishing
           topics:
-          - publish-deploy-overview.md
+          - topic: publish-deploy-overview.md
+            navtitle: Overview
           - preview-share.md
           - publish.md
+          - multiple-environments.md
       - topicgroup:
           label: Deploying to your website or mobile app
           topics:
@@ -131,6 +141,10 @@ toc:
                   navtitle: Authenticating a user in the middle of a session
                 - topic: web-chat-develop-size-position.md
                   navtitle: Customizing the size and position of the web chat
+                - topic: web-chat-develop-pre-chat.md
+                  navtitle: Displaying a pre-chat or post-chat form
+                - topic: web-chat-develop-custom-text-for-page.md
+                  navtitle: Customizing text elements based on the current page
       - topicgroup:
           label: Deploying for phone
           topics:
@@ -218,7 +232,6 @@ toc:
           - autolearn.md
           - boost-words.md
           - deploy-phone-amazon-connect.md
-          - multiple-environments.md
 
   - navgroup:
       id: reference
