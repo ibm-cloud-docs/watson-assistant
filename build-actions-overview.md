@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-23"
+lastupdated: "2023-03-07"
 
 subcollection: watson-assistant
 
@@ -42,7 +42,7 @@ When you create a new action from scratch, {{site.data.keyword.conversationshort
 
 Type `I want to withdraw money` and then click **Save** to create the action.
 
-Initially, you need to specify only one example of typical user input that starts the action. You can add more examples of user input later. For more information, see [Understand your user's questions or requests](/docs/watson-assistant?topic=assistant-understand-questions)
+Initially, you need to specify only one example of typical user input that starts the action. You can add more examples of user input later. For more information, see [Understanding your users' questions or requests](/docs/watson-assistant?topic=watson-assistant-understand-questions).
 {: tip}
 
 ## Using the action editor
