@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-03"
+lastupdated: "2023-03-07"
 
 keywords: Watson Assistant release notes
 
@@ -36,12 +36,26 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 6 March 2023
+{: #watson-assistant-mar062023}
+{: release-note}
+
+Improvements to algorithm version beta
+:   Improvements to the current *Beta* algorithm version include:
+   - Relevant examples are expected to get higher confidence
+   - For Spanish-language assistants, intent detection is improved in the presence of direct entity references
+   - Intent detection is more stable regarding occurrence of numerics, such as postal codes
+   - Intent detection now accounts for fuzzy closed entity mentions
+   - For German-language assistants, intent detection is more robust in the presence of umlauts 
+
+   For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
+
 ## 3 March 2023
 {: #watson-assistant-mar032023}
 {: release-note}
 
 Adding and using multiple environments
-:    Each assistant has a draft and live environment. For Enterprise plans, you can now add up to three environments as a staging area to test your assistant before deployment. You can build content in the draft environment and test versions of your content in the extra environments. For more information, see [Adding and using multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments).
+:   Each assistant has a draft and live environment. For Enterprise plans, you can now add up to three environments as a staging area to test your assistant before deployment. You can build content in the draft environment and test versions of your content in the extra environments. For more information, see [Adding and using multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments).
 
 Confirmation to return to previous action
 :   If a customer digresses and changes to a new topic, assistants now ask a "yes or no" confirmation question that the customers want to return to the previous action. Previously, the assistant returned to the previous action without asking. New assistants are set to use this confirmation by default. For more information, see [Confirmation to return to previous topic](https://test.cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-change-topic#change-topic-confirmation).
