@@ -357,7 +357,7 @@ Included only if the Microsoft Teams integration is in use.
 
 | Name                                      | Type   | Description |
 |-------------------------------------------|--------|-------------|
-| `conversation_id.channel_conversation_id` | String | The unique identifier of the Microsoft Teams conversation. |
+| `conversation_id` | String | The unique identifier of the Microsoft Teams conversation. |
 {: caption="Properties of the teams object" caption-side="top"}
 
 ### Example JSON
@@ -365,9 +365,7 @@ Included only if the Microsoft Teams integration is in use.
 
 ```json
 "teams":{
-  "conversation_id":{
-    "channel_conversation_id":"a:1ATy08jyGkPGy2QdKIrGZL5u_o6fIUVDRKeIZtkIUAkQDC23FC9S97f18i-UNl-eISAfDWqoQeTbregvSE8jK0LNy6h9VssNcN3CsGG9guMiUB0EeSqxnnEFpAVzbkayR"
-  }
+  "conversation_id":"a:1ATy08jyGkPGy2QdKIrGZL5u_o6fIUVDRKeIZtkIUAkQDC23FC9S97f18i-UNl-eISAfDWqoQeTbregvSE8jK0LNy6h9VssNcN3CsGG9guMiUB0EeSqxnnEFpAVzbkayR"
 }
 ```
 {: codeblock}
