@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-15"
+lastupdated: "2023-03-07"
 
 subcollection: watson-assistant
 
@@ -29,7 +29,8 @@ The `system_integrations` object has the following structure:
     "private": {
       "user": {
         "id": "{user_id}",
-        "phone_number": "{phone_number}"
+        "phone_number": "{phone_number}",
+        "name": "{name}"
       }
     }
   },
@@ -38,7 +39,8 @@ The `system_integrations` object has the following structure:
   "text_messaging": {...},
   "whatsapp": {...},
   "slack": {...},
-  "facebook": {...}
+  "facebook": {...},
+  "teams": {...}
 }
 ```
 {: codeblock}
@@ -59,6 +61,7 @@ Properties contained in the `private` object are treated as private variables, w
 | `channel.name`                      | String | The name of the channel that is in use. One of the following values: \n - `Web chat` \n - `Phone` \n - `SMS` \n - `Whatsapp` \n - `Slack` \n - `Facebook Messenger` |
 | `channel.private.user.id`           | String | The ID of the user who is interacting with the assistant through the channel. This ID is specific to the channel and might be different from the user ID {{site.data.keyword.conversationshort}} uses for billing purposes. For more information, see [Channel user IDs](#expression-integration-variables-channel-userid). |
 | `channel.private.user.phone_number` | String | The phone number associated with the user. Set by the phone, SMS, and WhatsApp integrations. |
+| `channel.private.user.name`         | String | The name of the user who is interacting with the assistant through the channel. Set by the Microsoft Teams integration. |
 {: caption="Properties of the channel object" caption-side="top"}
 
 ### Example JSON
@@ -341,6 +344,29 @@ No additional properties.
 
 ```json
 "facebook": {}
+```
+{: codeblock}
+
+## `teams`
+{: #expression-integration-variables-teams}
+
+Included only if the Microsoft Teams integration is in use.
+
+### Properties
+{: #expression-integration-variables-teams-properties}
+
+| Name                                      | Type   | Description |
+|-------------------------------------------|--------|-------------|
+| `conversation_id` | String | The unique identifier of the Microsoft Teams conversation. |
+{: caption="Properties of the teams object" caption-side="top"}
+
+### Example JSON
+{: #expression-integration-variables-teams-example}
+
+```json
+"teams":{
+  "conversation_id":"a:1ATy08jyGkPGy2QdKIrGZL5u_o6fIUVDRKeIZtkIUAkQDC23FC9S97f18i-UNl-eISAfDWqoQeTbregvSE8jK0LNy6h9VssNcN3CsGG9guMiUB0EeSqxnnEFpAVzbkayR"
+}
 ```
 {: codeblock}
 
