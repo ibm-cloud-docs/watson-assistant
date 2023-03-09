@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-03-09"
 
 subcollection: watson-assistant
 
@@ -149,6 +149,38 @@ The following example shows a step condition that checks for a failure from an e
 
 ![Step condition checking for extension failure](images/extension-check-failure.png)
 
+## Conditioning on HTTP status
+{: #extension-condition-status}
+
+In addition to the `Ran successfully` variable, you might also want to create a step condition based on the HTTP status of the response. By doing this, you can create steps that handle the situation differently depending on the cause of the failure. For example, if the call failed because of a timeout error (HTTP status 408), you might want to retry the call.
+
+There are many possible HTTP status codes, and different methods use different status codes to indicate various types of success or failure. To condition on the HTTP status, you need to know what HTTP status codes the external service returns, and under what circumstances. These status codes are typically specified in the OpenAPI document that describes the external API.
+{: important}
+
+To create an step condition based on the HTTP status code, follow these steps:
+
+1. For the value you want to test, click **Expression**.
+
+1. In the expression field, type a dollar sign (`$`) to show the list of available variables.
+
+1. Select any variable that is a response value from the extension. (It doesn't matter which variable you select, as long as it is an extension response variable).
+
+    ![Response variable in expression](images/extension-http-status-expression.png)
+
+    The expression is automatically updated to show a reference to the variable you selected, in the format `${step_xxx_result_y.body.variablename}`. For example, if you selected a response variable called `body.id`, the reference might be `${step_596_result_1.body.id}`.
+
+1. Inside the curly braces, (`{}`), edit this reference to remove `.body.variablename`. You should be left with something like `${step_596_result_1}`.
+
+1. After the closing curly brace (`}`), add `.status`. The resulting reference identifies the status code returned from the call to the extension (for example, `${step_596_result_1}.status`).
+
+    For more information about writing expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).
+
+1. Complete the expression by adding an operator and a comparison value, so the expression evaluates to a Boolean (true/false) value. For example, the following expression tests for HTTP status 408, which indicates a timeout error:
+
+    ```text
+    ${step_549_result_1}.status==408
+    ```
+
 ## Debugging failures
 {: #extension-debug}
 
@@ -180,9 +212,6 @@ If your calls to an extension are failing, you might want to debug the problem b
 
     Status
     :   The HTTP status code from the response. This code can help you determine if an error is being returned from the external service.
-
-        There are many possible HTTP status codes, and different methods use different status codes to indicate various types of success or failure. To check the success or failure of a call to an extension, you need to know what HTTP status codes the external service returns. These status codes are specified in the OpenAPI document that describes the external API.
-        {: important}
 
     Request parameters
     :   The input parameters that were sent to the external API as part of the request.
