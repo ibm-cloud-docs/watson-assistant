@@ -109,7 +109,7 @@ These items aren't included in the activity log:
 - Uploading actions, intents, entities aren't included as created
 - Changing actions global settings
 - Reverting a version to draft
-- Activating or deactivating dialog isn't listed specifically, but are included as updates to environments
+- Activating or deactivating dialog (this is included as an update to environments)
 - Adding or deleting entity values and synonyms
 - Bulk deletion of intents or entities
 - Creating, updating, or deleting channel integrations
