@@ -61,7 +61,7 @@ Web chat style and content
 Opening, closing, and rendering the web chat window
 :   - [Replacing the default launcher](#replace-launcher)
     - [Keeping the web chat always open](#keep-open)
-    - [Changing where the web chat renders](#custom-element)
+    - [Changing the size or position of the web chat](#size-position)
     - [Adding the web chat to your mobile application](#mobile)
 
 Customizing the conversation
@@ -112,7 +112,7 @@ Replacing the default launcher {: #replace-launcher}
 Keeping the web chat always open {: #keep-open}
 :    If you want to keep the web chat always open on your page, use the [`openChatByDefault`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionsopenChatByDefault){: external} configuration open to render the page with the chat window open, and the [`hideCloseButton`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionshideCloseButton){: external} option to prevent customers from closing it.
 
-Changing where the web chat renders {: #custom-element}
+Changing the size or position of the web chat {: #size-position}
 :   Your website design might require that you change where and how the web chat window renders on your website. For example, you might want it to appear in a different position on the page, at a different size, or nested within another element on the page.
 
     To change the size of the web chat window, you can use the [updateCSSVariables()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecssvariables){: external} instance method to modify the CSS styling.
