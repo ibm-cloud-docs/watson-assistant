@@ -91,7 +91,7 @@ For the early access release, here's the current list of items and activity that
 | Saved Response Type | Created, Updated, Deleted | |
 | Version | Created, Published, Deleted | |
 | Environment | Created, Updated, Deleted | Dialog activation is tracked as an environment update. |
-| Intent | Created, Updated, Deleted | <ul><li>Each save (auto or manual) is tracked as an update.</li><li>Renamed intents retain the old name in previous entries and won't have a link.</li><li>Only individual deletions are included. Bulk deletions are not.</li></ul> |
+| Intent | Created, Updated, Deleted | <ul><li>Each save (auto or manual) is tracked as an update.</li><li>A renamed intent retains the old name in previous entries and won't have a link.</li><li>Only individual deletions are included. Bulk deletions are not.</li></ul> |
 | Entity | Created, Updated, Deleted | <ul><li>Each save (auto or manual) is tracked as an update.</li><li>Renamed entities retain the old name in previous entries and won't have a link.</li><li>Only individual deletions are included. Bulk deletions are not.</li></ul> |
 | Dialog Node | Created, Updated, Deleted | Each save (auto or manual) is tracked as an update. |
 | Search | Updated | |
