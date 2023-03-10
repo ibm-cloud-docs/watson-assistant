@@ -229,6 +229,7 @@ toc:
           label: Early access features
           topics:
           - action-response-modes.md
+          - activity-log.md
           - autolearn.md
           - boost-words.md
           - deploy-phone-amazon-connect.md
