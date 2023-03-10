@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-02"
+lastupdated: "2023-03-10"
 
 subcollection: watson-assistant
 
@@ -61,7 +61,7 @@ Web chat style and content
 Opening, closing, and rendering the web chat window
 :   - [Replacing the default launcher](#replace-launcher)
     - [Keeping the web chat always open](#keep-open)
-    - [Changing where the web chat renders](#custom-element)
+    - [Changing the size or position of the web chat](#size-position)
     - [Adding the web chat to your mobile application](#mobile)
 
 Customizing the conversation
@@ -84,7 +84,7 @@ Customizing the look of the web chat {: #look}
 
     - You can choose to use a different base Carbon Design theme. The supported base themes are color themes that are defined by [IBM Carbon Design](https://v10.carbondesignsystem.com/guidelines/color/usage/){: external}.
 
-    - You can also set individual variables within the theme to customize specific UI elements. For example, the text that is displayed in the chat window uses the fonts `IBMPlexSans, Arial, Helvetica, sans-serif`. If you want to use a different font, you can specify it by using the [`instance.updateCSSVariables()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecssvariables){: external} method.
+    - You can also set individual variables within the theme to customize specific UI elements. For example, the text that is displayed in the chat window uses the fonts `IBMPlexSans, Arial, Helvetica, sans-serif`. If you want to use a different font, you can specify it by using the [`updateCSSVariables()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecssvariables){: external} method.
 
     ![development icon](images/development-icon.png) **Tutorial:** For a tutorial that shows how to choose and customize a theme, see [Carbon themes](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-carbon-themes){: external}.
 
@@ -112,10 +112,14 @@ Replacing the default launcher {: #replace-launcher}
 Keeping the web chat always open {: #keep-open}
 :    If you want to keep the web chat always open on your page, use the [`openChatByDefault`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionsopenChatByDefault){: external} configuration open to render the page with the chat window open, and the [`hideCloseButton`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionshideCloseButton){: external} option to prevent customers from closing it.
 
-Changing where the web chat renders {: #custom-element}
-:   Your website design might require that you change where and how the web chat window renders on your website. For example, you might want it to appear in a different location, at a different size, or nested within another section of the page. To accomplish this, you can use the [`element`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionselement){: external} configuration option to specify a custom DOM element that will contain the web chat window at run time.
+Changing the size or position of the web chat {: #size-position}
+:   Your website design might require that you change where and how the web chat window renders on your website. For example, you might want it to appear in a different position on the page, at a different size, or nested within another element on the page.
 
-    ![development icon](images/development-icon.png) **Tutorial:** For a tutorial that shows how to do this, see [Tutorial: Customizing the size and position of the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-size-position).
+    To change the size of the web chat window, you can use the [updateCSSVariables()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecssvariables){: external} instance method to modify the CSS styling.
+
+    If you need to change the position of the web chat window, or you need to change the size beyond the limits allowed in the CSS, you can use a custom DOM element to contain the web chat window. To do this, use the [`element`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionselement){: external} configuration option.
+
+    ![development icon](images/development-icon.png) **Tutorial:** For a tutorial that shows how render the web chat in a custom element, see [Tutorial: Customizing the size and position of the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-size-position).
 
 Adding the web chat to your mobile application {: #mobile}
 :   You can use a WebView with a JavaScript bridge to add the web chat to your mobile application. For more information, see [Adding the web chat to your mobile application](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-mobile).
