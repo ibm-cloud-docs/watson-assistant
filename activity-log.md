@@ -97,7 +97,7 @@ For the early access release, here's the current list of items and activity that
 | Search | Updated | |
 {: caption="Items and activity" caption-side="top"}
 
-If an item triggered by the API, the activity log shows the account owner of the API key, even if the key is shared with another person who is triggered the event.
+If an item was triggered by the API, the activity log shows the account owner of the API key, even if the key is shared with another person who is triggered the event.
 {: note}
 
 ### What isn't included in the log
