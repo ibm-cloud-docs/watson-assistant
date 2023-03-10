@@ -47,7 +47,7 @@ The activity log includes these columns of data:
 | Column | Description |
 |---|---|
 | Item | Describes what was impacted by the change that was made within the assistant. For more information, see [Items and activity tracked](#activity-items). |
-| Details | Shows details about the item that was changed. For example, for an action, lists the specific action name and provides a link to open it. |
+| Details | Shows details about the item that was changed. For example, for an action, this column lists the specific action name and provides a link to open it. |
 | Activity | Describes the change that was made. For more information, see [Items and activity tracked](#activity-items). |
 | Environment | The environment in which the activity took place or the end destination of an activity. |
 | User | Email address of the user that made the change. |
