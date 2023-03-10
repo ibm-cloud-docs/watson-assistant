@@ -38,7 +38,7 @@ To access and view the log, users need at least the *Reader* service role for an
 For more information, see [Managing access](/docs/watson-assistant?topic=watson-assistant-access-control).
 
 ## Using the activity log
-{: #activity-log-access}
+{: #activity-log-using}
 
 To open the log, click the **Activity log** icon ![Activity log icon](images/time.svg). 
 
