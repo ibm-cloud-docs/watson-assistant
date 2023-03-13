@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: 2023-03-13
+lastupdated: "2023-03-13"
 
 keywords: Watson Assistant release notes
 
@@ -21,6 +21,8 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+
 
 ## 10 March 2023
 {: #watson-assistant-mar102023}
@@ -41,7 +43,7 @@ Improvements to algorithm version beta
    - Intent detection now accounts for fuzzy closed entity mentions
    - For German-language assistants, intent detection is more robust in the presence of umlauts 
 
-   For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
+   For more information, see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
 
 ## 3 March 2023
 {: #watson-assistant-mar032023}
@@ -136,7 +138,7 @@ Display formats for variables
 {: release-note}
 
 Algorithm version stability improvement
-:   As of this date, the **Latest (01 Jun 2022)** and **Beta** algorithm versions now have more stable behavior across retrained models, in the presence of overlapping entities (the same entity value belonging to more than one entity type). Previously, when there were overlapping entities definitions, confidences could differ across different retraining. With this improvement, you can expect to see similar confidences. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
+:   As of this date, the **Latest (01 Jun 2022)** and **Beta** algorithm versions now have more stable behavior across retrained models, in the presence of overlapping entities (the same entity value belonging to more than one entity type). Previously, when there were overlapping entities definitions, confidences could differ across different retraining. With this improvement, you can expect to see similar confidences. For more information, see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
 
 ## 12 January 2023
 {: #watson-assistant-jan122023}
@@ -157,7 +159,7 @@ Improved experience when setting a variable value
 {: release-note}
 
 Algorithm version 01-Jun-2022 uses enhanced intent detection by default
-:   As of this date, the algorithm version **Latest (01-Jun-2022)** now uses enhanced intent detection by default. Before this change, some skills that did not include a specific algorithm version selection inadvertently used **Previous (01-Jan-2022)**. You can notice small changes in intent detection behavior when changes are made to an assistant that previously didn't have enhanced intent detection enabled. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
+:   As of this date, the algorithm version **Latest (01-Jun-2022)** now uses enhanced intent detection by default. Before this change, some skills that did not include a specific algorithm version selection inadvertently used **Previous (01-Jan-2022)**. You can notice small changes in intent detection behavior when changes are made to an assistant that previously didn't have enhanced intent detection enabled. For more information, see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
 
 ## 6 December 2022
 {: #watson-assistant-dec062022}
@@ -229,7 +231,7 @@ Variable values in Preview
 {: release-note}
 
 Algorithm version updates
-:   The algorithm version setting for both actions and dialog now includes three choices: beta, latest, and previous. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
+:   The algorithm version setting for both actions and dialog now includes three choices: beta, latest, and previous. For more information, see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
 
 ## 12 October 2022
 {: #watson-assistant-oct122022}
@@ -311,7 +313,7 @@ Channel name variable
 {: release-note}
 
 Algorithm version options available in more languages
-:   Algorithm version options are now available in Arabic, Czech, and Dutch. This allows you to choose which {{site.data.keyword.conversationshort}} algorithm to apply to your future trainings. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
+:   Algorithm version options are now available in Arabic, Czech, and Dutch. This allows you to choose which {{site.data.keyword.conversationshort}} algorithm to apply to your future trainings. For more information, see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
 
 ## 9 August 2022
 {: #watson-assistant-aug092022}
@@ -373,14 +375,14 @@ New demo site
 {: release-note}
 
 Algorithm version options available in more languages
-:   Algorithm version options are now available in Chinese (Traditional), Japanese, and Korean. This allows you to choose which {{site.data.keyword.conversationshort}} algorithm to apply to your future trainings. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
+:   Algorithm version options are now available in Chinese (Traditional), Japanese, and Korean. This allows you to choose which {{site.data.keyword.conversationshort}} algorithm to apply to your future trainings. For more information, see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
 
 ## 16 June 2022
 {: #watson-assistant-jun162022}
 {: release-note}
 
 Algorithm version
-:   Algorithm version allows you to choose which {{site.data.keyword.conversationshort}} algorithm to apply to your future trainings. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
+:   Algorithm version allows you to choose which {{site.data.keyword.conversationshort}} algorithm to apply to your future trainings. For more information, see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
 
 Algorithm beta version (2022-06-10)
 :   Algorithm beta version (2022-06-10) includes a new irrelevance detection algorithm to improve off-topic detection accuracy. Utterances with similar meanings are expected to have more similar confidences in comparison to previous irrelevance detection algorithms. For example, the training utterance `please suggest route from times square` has 100% confidence at runtime. Currently in IBM Cloud, the utterance `please suggest route from central park` gets a low confidence and could be flagged as irrelevant. With beta version (2022-06-10), the same utterance is expected to be predicted correctly with a ~46% confidence.
