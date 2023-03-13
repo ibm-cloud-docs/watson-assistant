@@ -34,7 +34,7 @@ subcollection: watson-assistant
 
 Autocorrection corrects user input in the following way:
 
-- Orignal input: `letme applt for a memberdhip`
+- Original input: `letme applt for a memberdhip`
 - Corrected input: `let me apply for a membership`
 
 When your assistant evaluates whether to correct the spelling of a word, it does not rely on a simple dictionary lookup process. Instead, it uses a combination of natural language processing and probabalistic models to assess whether a term is, in fact, misspelled and should be corrected.
