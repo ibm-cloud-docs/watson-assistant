@@ -95,7 +95,7 @@ The `assistant_interaction_summaries` object contains the following properties:
 
 The objects in the `assistant_interaction_summaries.turns` array contain the following properties:
 
-| Prpoerty           | Type   | Description |
+| Property           | Type   | Description |
 |--------------------|--------|-------------|
 | `assistant.log_id` | String | A unique identifier for the logged event. This can be used to correlate between message logs and CDR events. |
 | `assistant.start_timestamp` | String | The time when the request was sent to the assistant, in ISO format (`yyyy-MM-ddTHH:mm:ss.SSSZ`). |

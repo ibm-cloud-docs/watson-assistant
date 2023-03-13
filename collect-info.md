@@ -242,7 +242,7 @@ You can use the following regex patterns to recognize some common types of user 
 | FedEx tracking number     | - `/(\b96\d{20}\b)&#124;(\b\d{15}\b)&#124;(\b\d{12}\b)/`\n- `/\b((98\d\d\d\d\d?\d\d\d\d&#124;98\d\d) ?\d\d\d\d ?\d\d\d\d( ?\d\d\d)?)\b/`\n - `/^[0-9]{15}$/` |
 {: caption="Example regex patterns" caption-side="bottom"}
 
-<!--| US Social Security number | `^(?!(000&#124;666&#124;9))\d{3}-(?!00)\d{2}-(?!0000)\d{4}$` |-->
+
 
 ### Number
 {: #customer-response-type-number}
@@ -391,5 +391,5 @@ To remove a saved response from a step, click the **Delete** ![Delete icon](imag
 
 To edit a saved response from a step, click **Edit response**. Keep in mind that if you edit a saved response, your changes affect all steps that use the response. If you want to edit the response only for the step you are editing, click the **Unlink from saved response** ![Unlink from saved response icon](images/unlink-response-icon.png) icon. After you unlink a response, any edits you make affect only the step you are editing; they do not affect any other steps, nor are they applied to the saved response.
 
-After you unlink a response, you cannot relink it. If you want to return to the saved response without your edits, delete the response, and then readd the original saved response. If you want to make your edited version of the response available for reuse, save it as a new saved response.
+After you unlink a response, you cannot relink it. If you want to return to the saved response without your edits, delete the response, and then read the original saved response. If you want to make your edited version of the response available for reuse, save it as a new saved response.
 {: tip}

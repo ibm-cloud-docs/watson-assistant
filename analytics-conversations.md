@@ -41,7 +41,7 @@ If you have activated dialog in your assistant, the **Actions** column is replac
 ## Choosing the environment and time period
 {: #analytics-conversations-time-period}
 
-To get started, choose the [environment](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments) and date range you want to analyze. All conversations reflect data based on the environment and the date range you select. When you change the enviornment or the date range, the conversations on the page update to reflect the new date range. You can also use **Refresh** ensure the latest data is shown.
+To get started, choose the [environment](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments) and date range you want to analyze. All conversations reflect data based on the environment and the date range you select. When you change the environnment or the date range, the conversations on the page update to reflect the new date range. You can also use **Refresh** ensure the latest data is shown.
 
 ![Time period](images/analytics-conversations-time-period.png)
 
