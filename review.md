@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: 2023-03-13
+lastupdated: "2023-03-13"
 
 subcollection: watson-assistant
 
@@ -15,14 +15,14 @@ subcollection: watson-assistant
 # Reviewing and debugging your actions
 {: #review}
 
-In this topic, learn how to test the conversation you have built into an action, to experience what your users see with your assistant. If there are any issues, learn how to debug the user’s experience.
+Learn how to test the conversation you built into an action, to experience what your users see with your assistant. If there are any issues, learn how to debug the user’s experience.
 
 ## Using Preview to test your action
 {: #review-test}
 
-As you make changes, test the action at any time to see whether the resulting interaction works as intended. **Preview**, which is a button on every action page, shows you what customers see if they interact with the action using web chat.
+As you make changes, test the action at any time to see whether the resulting interaction works as intended. **Preview**, which is a button on every action page, shows you what customers see when they use web chat to interact with the action.
 
-Before testing your action, make sure you have saved any new changes, and wait until the system has finished training. If the system is still training, a message is displayed that says so.
+Before you test your action, make sure you save any new changes, and wait until the system finishes training. If the system is still training, a message is displayed that says so.
 {: note}
 
 ![Preview button](images/review-preview-button.png){: caption="Preview button" caption-side="bottom"}
@@ -37,36 +37,36 @@ Before testing your action, make sure you have saved any new changes, and wait u
 
     ![Preview](images/review-preview.png){: caption="Preview" caption-side="bottom"}
     
-    If the assistant doesn't understand a phrase, you'll see the built-in action `No action matches`.
+    If the assistant doesn't understand a phrase, you see the built-in action `No action matches`.
 
 1.  Continue to converse with your assistant to see how the conversation flows.
 
 1.  To remove prior test utterances from the chat pane and start over, click the **Reset** icon. Not only are the test utterances and responses removed, but this action also clears the values of any variables that were set as a result of your previous interactions.
 
-Queries you submit through the Preview pane generate `/message` API calls, but they are not logged and do not incur charges.
+Queries that you submit through the Preview pane generate `/message` API calls, but they are not logged and do not incur charges.
 {: note}
 
 ### Saving changes before testing
 {: #review-save}
 
-**Preview** represents updates from the last time the assistant was saved. 
+**Preview** represents updates from the last time that the assistant was saved. 
 
 Changes are saved when you:
 -   Select the save icon
--   Click on a new step
+-   Click a new step
 -   Open Preview
 -   Reset Preview
 
 To learn more about saving changes, see [Saving your work](/docs/watson-assistant?topic=watson-assistant-save-work).
 
-If you make several edits without saving, the preview panel shows a message that you need to save before testing your changes. 
+If you make several edits without saving, the preview pane shows a message that you need to save before you test your changes. 
 
 ![Save your action](images/review-preview-save.png){: caption="Save your action" caption-side="bottom"}
 
 ## Using debug mode in Preview
 {: #review-debug}
 
-Preview has a debug mode you can turn on to see information that helps you understand why the assistant responds or doesn't respond to a particular input.
+Preview has a debug mode that you can turn on to see information that helps you understand why the assistant responds or doesn't respond to a particular input.
 
 Debug mode has four tools to analyze your action:
 
@@ -89,22 +89,22 @@ Completion options include ending:
 ### Action confidence score
 {: #review-debug-confidence}
 
-Every input you enter that can start a new action/conversation topic shows a confidence score icon. Hover over this icon to see a list of actions with different confidence scores.
+Every input that you enter that can start a new topic shows a confidence score icon. Hover over this icon to see a list of actions with different confidence scores.
 
-These scores represent the assistant’s confidence that the sentence or phrase you entered can be solved by the steps built into a specific action.
+These scores represent the assistant’s confidence that the sentence or phrase that you entered can be solved by the steps that are built into a specific action.
 
 ![Debug mode](images/rn-debug-confidence.png){: caption="Debug mode" caption-side="bottom"}
 
 The top score in green represents the action with the highest confidence and the one the assistant used.
 
-The remaining two are actions that were considered because of their confidence score, but weren't used because thee cofidence scores were lower.
+The remaining two are actions that were considered because of their confidence score, but weren't used because thee confidence scores were lower.
 
-If no action scores higher than 20% confidence, you'll see the built-in action `No action matches`.
+If no action scores higher than 20% confidence, you see the built-in action `No action matches`.
 
 ### Step locator
 {: #review-debug-step-locator}
 
-Sometimes you may find an error in the middle of a test conversation, and need to find which step and action is involved. A locator icon next to each assistant response lets you find the associated steps in the editor.
+Sometimes you might find an error in the middle of a test conversation, and need to find which step and action is involved. A locator icon next to each assistant response lets you find the associated steps in the editor.
 
 Click the icon, and the editor shows the corresponding step in the background.
 
@@ -113,7 +113,7 @@ Click the icon, and the editor shows the corresponding step in the background.
 ### Follow along
 {: #review-debug-follow-along}
 
-**Follow along** connects what you are seeing in Preview with what you have built in the action. As you interact with your assistant, the debug mode automatically opens each step in the background. That means you can fix an error as soon as you see it, because the editor is already open to the corresponding step.
+**Follow along** connects what you are seeing in Preview with what you built in the action. As you interact with your assistant, the debug mode automatically opens each step in the background. That means you can fix an error as soon as you see it, because the editor is already open to the corresponding step.
 
 ## Variable values in Preview
 {: #review-variable-values}
