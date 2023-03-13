@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-07"
+lastupdated: 2023-03-13
 
 keywords: Watson Assistant release notes
 
@@ -12,21 +12,7 @@ content-type: release-note
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for Watson Assistant
 {: #watson-assistant-release-notes}
@@ -35,6 +21,13 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 10 March 2023
+{: #watson-assistant-mar102023}
+{: release-note}
+
+Dialog session variables now available in Preview
+:   If you are using dialog in the new experience, you can now see session variables for dialog when debugging in Preview. For more information, see [Variable values in Preview](/docs/watson-assistant?topic=watson-assistant-review#review-variable-values).
 
 ## 6 March 2023
 {: #watson-assistant-mar062023}

@@ -1,27 +1,14 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2022-11-03"
+  years: 2021, 2023
+lastupdated: 2023-03-13
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 {{site.data.content.classiclink}}
 
@@ -38,7 +25,7 @@ As you make changes, test the action at any time to see whether the resulting in
 Before testing your action, make sure you have saved any new changes, and wait until the system has finished training. If the system is still training, a message is displayed that says so.
 {: note}
 
-![Preview button](images/review-preview-button.png)
+![Preview button](images/review-preview-button.png){: caption="Preview button" caption-side="bottom"}
 
 1.  Click **Preview**. The Greet customer action starts.
 
@@ -48,7 +35,7 @@ Before testing your action, make sure you have saved any new changes, and wait u
 
     The Preview pane names the action that was recognized in the input. 
 
-    ![Preview](images/review-preview.png)
+    ![Preview](images/review-preview.png){: caption="Preview" caption-side="bottom"}
     
     If the assistant doesn't understand a phrase, you'll see the built-in action `No action matches`.
 
@@ -74,7 +61,7 @@ To learn more about saving changes, see [Saving your work](/docs/watson-assistan
 
 If you make several edits without saving, the preview panel shows a message that you need to save before testing your changes. 
 
-![Save your action](images/review-preview-save.png)
+![Save your action](images/review-preview-save.png){: caption="Save your action" caption-side="bottom"}
 
 ## Using debug mode in Preview
 {: #review-debug}
@@ -106,7 +93,7 @@ Every input you enter that can start a new action/conversation topic shows a con
 
 These scores represent the assistant’s confidence that the sentence or phrase you entered can be solved by the steps built into a specific action.
 
-![Debug mode](images/rn-debug-confidence.png)
+![Debug mode](images/rn-debug-confidence.png){: caption="Debug mode" caption-side="bottom"}
 
 The top score in green represents the action with the highest confidence and the one the assistant used.
 
@@ -121,18 +108,25 @@ Sometimes you may find an error in the middle of a test conversation, and need t
 
 Click the icon, and the editor shows the corresponding step in the background.
 
-![Step locator](images/review-step-locator.png)
+![Step locator](images/review-step-locator.png){: caption="Step locator" caption-side="bottom"}
 
 ### Follow along
 {: #review-debug-follow-along}
 
 **Follow along** connects what you are seeing in Preview with what you have built in the action. As you interact with your assistant, the debug mode automatically opens each step in the background. That means you can fix an error as soon as you see it, because the editor is already open to the corresponding step.
 
-## Variable values
+## Variable values in Preview
 {: #review-variable-values}
 
-Click **Variable values** to see the values stored in each variable during the conversation. The **Variable values** pane has two tabs, one for action variables and one for session variables. As you test your conversation in Preview, you can check that each variable is set correctly.
+As you test your conversation in Preview, you can check that each variable is set correctly. Click **Variable values** to see the values stored in each variable during the conversation. The **Variable values** pane has two tabs, one for action variables and one for session variables. If you are using dialog, you can see session variables for both actions and dialog on the **Session variables** tab.
 
-![Variable values](images/variable-values-preview.png)
+![Variable values](images/variable-values-preview.png){: caption="Variable values" caption-side="bottom"}
 
 To learn more about variables, see [Managing information during the conversation](/docs/watson-assistant?topic=watson-assistant-manage-info).
+
+## Extension inspector in Preview
+{: #review-extension-inspector}
+
+If you are using a custom extension in your action, you can use the **Extension inspector** in Preview to debug. For more information, see [Debugging custom extensions](/docs/watson-assistant?topic=watson-assistant-call-extension#extension-debug)
+
+![Extension inspector](images/extension-inspector-preview.png){: caption="Extension inspector" caption-side="bottom"}
