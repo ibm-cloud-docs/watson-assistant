@@ -2,29 +2,13 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-09"
+lastupdated: "2023-03-14"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:preview: .preview}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:table: .aria-labeledby="caption"}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 # Calling a custom extension
 {: #call-extension}
@@ -164,8 +148,6 @@ To create an step condition based on the HTTP status code, follow these steps:
 1. In the expression field, type a dollar sign (`$`) to show the list of available variables.
 
 1. Select any variable that is a response value from the extension. (It doesn't matter which variable you select, as long as it is an extension response variable).
-
-    ![Response variable in expression](images/extension-http-status-expression.png)
 
     The expression is automatically updated to show a reference to the variable you selected, in the format `${step_xxx_result_y.body.variablename}`. For example, if you selected a response variable called `body.id`, the reference might be `${step_596_result_1.body.id}`.
 
