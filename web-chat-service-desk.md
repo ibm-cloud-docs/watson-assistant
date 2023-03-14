@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-03-13"
+lastupdated: "2023-03-14"
 
 subcollection: watson-assistant
 
@@ -32,6 +32,7 @@ The starter kits are available from a [GitHub repo](https://github.com/watson-de
 - [Twilio Flex](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/flex/webChat){: external}
 - [Kustomer](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/kustomer/webChat){: external}
 - [eGain Advisor Desktop](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/egain/webChat){: external}
+- [Enghouse Interactive CCaaS](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/enghouse){: external}
 - [Bring your own (starter kit)](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}
 
 The starter kit reference implementations, while functional, are examples only, and have not been vetted for production use. You should perform robust testing before deploying these integrations in production.
