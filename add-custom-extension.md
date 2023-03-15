@@ -2,29 +2,13 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-03"
+lastupdated: "2023-03-15"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:preview: .preview}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:table: .aria-labeledby="caption"}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 # Adding an extension to your assistant
 {: #add-custom-extension}
@@ -106,3 +90,19 @@ To configure the extension for the live environment, follow these steps:
    {: note}
 
 The extension is now available in the environments you have configured, and it can be called from the assistant. For more information about how to call an extension from an action, see [Calling a custom extension](/docs/watson-assistant?topic=watson-assistant-call-extension).
+
+## Plan limits
+{: #add-custom-extension-limits}
+
+The number of custom extensions you can add to an assistant depends on your plan. If you already added the maximum number of extensions to the assistant, you must remove one before you can add a new one.
+
+| Plan       |   Extensions per assistant |
+|------------|---------------------------:|
+| Enterprise |                        100 |
+| Premium (legacy) |                  100 |
+| Plus       |                         10 |
+| Trial      |                          5 |
+| Lite       |                          3 |
+| Standard (legacy) |                   0 |
+{: caption="Extension limits by plan" caption-side="top"}
+

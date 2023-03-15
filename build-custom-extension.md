@@ -2,29 +2,13 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-03"
+lastupdated: "2023-03-15"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:preview: .preview}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:table: .aria-labeledby="caption"}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 # Building a custom extension
 {: #build-custom-extension}
@@ -51,20 +35,6 @@ When you create a custom extension, you import an OpenAPI document that describe
 After this processing has completed, the custom extension becomes available as a new integration that you can connect to the assistant. Your assistant can then use the extension to send requests to the external service based on conversations with your customers. Values included in the response from the service are then mapped to action variables, which can be accessed by subsequent action steps.
 
 (For more information about connecting a custom extension to an assistant, see [Add a custom extension](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).)
-
-### Plan limits
-
-The number of custom extensions you can create for each assistant depends on your plan. If you already have the maximum number of extensions in the integrations catalog, you must delete one before you can create a new one.
-
-| Plan       |   Extensions per assistant |
-|------------|---------------------------:|
-| Enterprise |                        100 |
-| Premium (legacy) |                  100 |
-| Plus       |                          5 |
-| Trial      |                          5 |
-| Lite       |                          1 |
-| Standard (legacy) |                   0 |
-{: caption="Extension limits by plan" caption-side="top"}
 
 ## Preparing the API definition
 {: #build-custom-extension-openapi-file}
