@@ -89,7 +89,7 @@ To set that a step is never asked in the conversation with a customer:
 
 1. In the customer response, click the **Settings** icon to open **Customer response settings**. 
 
-1. Choose **Never ask. Collect information from previous messages.**.
+1. Choose **Never ask. Collect information from previous messages.**
 
 1. Click **Apply**.
 
@@ -211,7 +211,7 @@ To add a regex response:
 
     Only English characters can be used in a regular expression. If you need to use other characters in a regular expression, you must represent those characters in Unicode.
 
-    {{site.data.keyword.conversationshort}} uses the Google RE2 regular expression library to match regular expressions at run time. Regular expression syntax can vary between implementations, so ensure any regex patterns you write conform to the [RE2 syntax](https://github.com/google/re2/wiki/Syntax){: external}.
+    {{site.data.keyword.conversationshort}} uses the Google RE2 regular expression library to match regular expressions at run time. Regular expression syntax can vary between implementations, so ensure any regex patterns that you write conform to the [RE2 syntax](https://github.com/google/re2/wiki/Syntax){: external}.
     {: note}
 
 1. If you want to specify multiple regex patterns for the response, click **Add regular expression** to add another field in which you can select or define another regular expression.
