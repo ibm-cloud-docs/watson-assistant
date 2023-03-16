@@ -190,13 +190,11 @@ You can specify multiple regular expressions for a single response. For example,
 
 To add a regex response:
 
-
 1. Under **Define customer response** field, click **Regex**.
 
 1. In the **Edit response** window, click in the **Regular expression** field.
 
 1. Select one of the predefined regular expressions, or select **Define custom regular expression** to write your own.
-
 
 
     To use a predefined regular expression, select one of the following:
@@ -208,9 +206,7 @@ To add a regex response:
     For examples of other common patterns, see [Example regex patterns](#regex-examples).
     {: tip}
 
-    
     To write your own custom regular expression, select **Define custom regular expression** and then type your regex pattern in the **Regular expression** field. For more information on regular expression syntax, see [Syntax](https://github.com/google/re2/wiki/Syntax){: external}.
-    
     
 
     Only English characters can be used in a regular expression. If you need to use other characters in a regular expression, you must represent those characters in Unicode.
@@ -311,9 +307,7 @@ A *free text* response collects any arbitrary text string. Use this response for
 - `John Q. Smith`
 - `Please add extra sauce`
 
-
 The default setting for *Free text* is **Always ask for this information** and can't be modified. For more information, see [Skipping steps, always asking steps, or never asking steps](#collect-info-skip-step).
-
 
 
 ## Saving and reusing customer responses

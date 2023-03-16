@@ -54,9 +54,7 @@ The assistant determines when to change the conversation topic as follows:
 ## Enabling and disabling changing the topic
 {: #change-topic-enable}
 
-
 By default, the **Change conversation topic** feature is enabled for all assistants and actions.
-
 
 
 However, some processes are best completed without interruption, so you might want to disable this feature. You can disable for all actions, or just for an individual action.
