@@ -88,7 +88,7 @@ To change the confirmation settings:
 
 1. On the **Change conversation topic** tab, click the **Confirmation** section.
 
-Settings you can change are:
+Settings that you can change are:
 
 | Setting | Description |
 | --- | --- |
