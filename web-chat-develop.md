@@ -2,30 +2,13 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-03-10"
+lastupdated: "2023-03-16"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:preview: .preview}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:video: .video}
-
-{{site.data.content.classiclink}}
+{{site.data.keyword.attribute-definition-list}}
 
 # Web chat development overview
 {: #web-chat-develop}
@@ -79,6 +62,7 @@ Security and administration
 ### Web chat style and content
 {: #web-chat-develop-style}
 
+
 Customizing the look of the web chat {: #look}
 :   You can customize the style and appearance of the web chat beyond the options that are available from the **Style** tab in the web chat settings:
 
@@ -88,10 +72,15 @@ Customizing the look of the web chat {: #look}
 
     ![development icon](images/development-icon.png) **Tutorial:** For a tutorial that shows how to choose and customize a theme, see [Carbon themes](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-carbon-themes){: external}.
 
+
+
 Customizing the home screen {: #home-screen}
 :   The home screen greets the customer and optionally shows a list of suggested conversation starters. You can customize the style and content of the home screen:
 
+
     - To add elements to the home screen, you can define custom HTML using the [`writeableElements.homeScreenAfterStartersElement`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#writeableelements){: external} theming variable.
+
+
 
     - To change the home screen style, use [CSS helper classes](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-render#helper_classes){: external}.
 
