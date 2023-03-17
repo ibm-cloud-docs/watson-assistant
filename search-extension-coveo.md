@@ -87,3 +87,4 @@ For more information about the endpoints, see [Perform a Query](https://docs.cov
 {: #search-extension-coveo-using}
 
 Issue a query to your assistant. If no action that matches that query, then it uses Coveo to produce search results.
+
