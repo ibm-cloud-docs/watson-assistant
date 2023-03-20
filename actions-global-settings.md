@@ -2,26 +2,13 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-01-27"
+lastupdated: "2023-03-20"
 keywords: settings
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Global settings for actions
 {: #actions-global-settings}
@@ -29,16 +16,17 @@ subcollection: watson-assistant
 Use **Global settings** to configure features across all actions.
 {: shortdesc}
 
-On the **Actions** page, click **Global settings** ![Gear icon](images/gear-icon-black.png).
+On the **Actions** page, click **Global settings** ![Gear icon](../../icons/settings.svg).
 
 This page provides options, configurations, and tasks for the following:
 
 - [Ask clarifying question](#actions-global-settings-ask-clarifying-question)
+
 - [Change conversation topic](#actions-global-settings-change-conversation-topic)
 - [Autocorrection](#actions-global-settings-autocorrection)
 - [Display formats](#actions-global-settings-display-formats)
 - [Algorithm version](#actions-global-settings-algorithms-versions)
-- [Auto-save](#actions-global-settings-auto-save)
+
 - [Upload/Download](#actions-global-settings-upload-download)
 
 ## Ask clarifying question
@@ -63,6 +51,7 @@ If necessary, you can disable clarifying questions for all actions. To disable c
 1. On the **Ask clarifying question** tab, set the switch to **Off**.
 
 1. Click **Save**, and then click **Close**.
+
 
 ## Change conversation topic
 {: #actions-global-settings-change-conversation-topic}
@@ -103,29 +92,11 @@ Variables are formatted using a system default unless you specify otherwise.
 | <nobr>Percentage fraction digits</nobr> | Use the system default (up to 14 digits) or two digits | `10.75%` |
 
 
+
 ## Algorithm version
 {: #actions-global-settings-algorithms-versions}
 
 **Algorithm version** allows you to choose which {{site.data.keyword.conversationshort}} algorithm to apply to your future trainings. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
-
-## Auto-save
-{: #actions-global-settings-auto-save}
-
-When working on actions, your assistant automatically saves changes when you do one of the following:
-
-- Click on a new step
-- Open Preview
-- Reset Preview
-
-For more information, see [Saving your actions](/docs/watson-assistant?topic=watson-assistant-save-actions)
-
-If you want to disable auto-save, you can toggle it off:
-
-1. On the **Auto-save** tab, set the switch to **Off**.
-
-1. Click **Save**, and then click **Close**.
-
-The auto-save setting is a user preference that applies to all assistants in your instance. Changing the setting applies only to you and doesn't affect other users. {: note}
 
 ## Upload/Download
 {: #actions-global-settings-upload-download}

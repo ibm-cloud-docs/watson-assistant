@@ -2,26 +2,13 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-22"
+lastupdated: "2023-03-20"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Using variables to manage conversation information
 {: #manage-info}
@@ -39,7 +26,7 @@ Variables are a powerful tool you can use to build a better assistant. Variables
 
 A variable is simply a named container for a piece of information; by referencing this container by name, your assistant can store or retrieve the information at run time. For example, a variable called *account_balance* might store your customer's current account balance, a value your assistant can update or retrieve as needed.
 
-The data stored by a variable is characterized by the type of data it contains (such as text, a numeric value, a date, or even a list of multiple values); the operations you can perform with a variable vary depending on its data type. <!-- A complex variable can even contain calculations or calls to external services (for more information, see XXXXX). -->
+The data stored by a variable is characterized by the type of data it contains (such as text, a numeric value, a date, or even a list of multiple values); the operations you can perform with a variable vary depending on its data type. 
 
 ## Action variables and session variables
 
@@ -55,7 +42,7 @@ The data stored by a variable is characterized by the type of data it contains (
 
     Session variables can help you to modularize your assistant, because you can write a single action that collects information needed in multiple places. For example, you might have a greeting action that collects basic information about the customer and stores the responses in session variables, which any action can then access.
 
-    A session variable you create persists only for the duration of a single session. At the end of the session, the variable's value is cleared. How long a session lasts depends upon how your customers access your assistant, and how your assistant is configured. <!-- For more information about sessions, see XXXXX. -->
+    A session variable you create persists only for the duration of a single session. At the end of the session, the variable's value is cleared. How long a session lasts depends upon how your customers access your assistant, and how your assistant is configured. 
     {: note}
 
 ### Creating a session variable
@@ -125,7 +112,7 @@ To see these variables, click **Variables** in the navigation pane from the main
 
 Any action can store a value in a session variable so it is available to other actions. To store a value in a session variable:
 
-1. From within a step, choose the **Set variable values** ![Set variable values icon](images/set-variable-values.png) icon.
+1. From within a step, click **Set variable values**.
 
 1. Click **Set new value**.
 
@@ -172,7 +159,7 @@ To reference a variable in what your assistant says:
 
     ![Fallback value for session variables](images/rn-fallback-value.png)
 
-When you reference a variable, it appears using a default format in your assistant's response. The format of the variable might differ from the way the value is stored; for example, a date value of `2021-08-11` is formatted as `August 11, 2021` by default. <!-- (To learn how to change the format, see **[ADVANCED FORMATTING TOPIC]**.) -->
+When you reference a variable, it appears using a default format in your assistant's response. The format of the variable might differ from the way the value is stored; for example, a date value of `2021-08-11` is formatted as `August 11, 2021` by default. 
 
 The default formats are as follows:
 

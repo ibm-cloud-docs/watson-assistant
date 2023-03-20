@@ -2,27 +2,13 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-03"
+lastupdated: "2023-03-20"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 # NeuralSeek extension setup
 {: #search-extension-neuralseek}
@@ -59,28 +45,19 @@ Simple instructions for setting up NeuralSeek are available on the **Integrate**
 
 1. After you build the NeuralSeek extension and it appears on your **Integrations** page, click **Add** to add it to your assistant. Use your NeuralSeek API key to authenticate. For general instructions on adding any custom extension, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
 
-## Add and edit the NeuralSeek starter kit action template
+## Add the NeuralSeek starter kit action template
 {: #search-extension-neuralseek-template}
 
-1. If you haven't already, use **Quick start with templates** to add the NeuralSeek starter kit. The starter kit adds an action for use with NeuralSeek. For more information, see [Building actions with templates](/docs/watson-assistant?topic=watson-assistant-actions-templates).
+1. Open the **Actions** page.
+
+1. If you have no actions, choose **Create a new action**. If you already have some actions, choose **New action**.
+
+1. On **Create an action**, choose **Quick start with templates**.
 
    **Quick start with templates** is available in English-language assistants only.
    {: note}
 
-1. On the **Actions** page, edit the ***NeuralSeek search** action to use the extension. In step 3, click **Edit extension**. 
-
-1. In the **Extension** field, choose the NeuralSeek extension that you built.
-
-1. In the **Operation** field, choose `Seek an answer from NeuralSeek`.
-
-1. In the **Parameters** list, set `question` to `*query_text`.
-
-1. Click **Optional parameters** to expand the list. Set these parameters:
-
-   - Set `context` to `*query_context`.
-   - You might want to also set the `language` parameter to an expression that contains a 2-letter language code such as `en`.
-
-1. Close the ***NeuralSeek search** action.
+1. On **Quick start with templates**, add the **NeuralSeek search starter kit**.
 
 ## Edit system actions
 {: #search-extension-neuralseek-set-by-assistant}
@@ -99,4 +76,3 @@ Simple instructions for setting up NeuralSeek are available on the **Integrate**
 Issue a query to your assistant. If no action that matches that query, then it uses NeuralSeek to produce search results.
 
 For many use cases, NeuralSeek alone is enough to deploy an assistant. If you are happy with your assistant, you might want to deploy it for real-world use right away. Use the **Analyze** page in {{site.data.keyword.conversationshort}} or the **Curate** page in NeuralSeek to see what kinds of questions users are asking and actions for the common user requests. The **Curate** page can automate the creation of new actions and generate new example utterances that trigger those actions. It can also merge any existing actions with the actions that it generates so you can update an existing assistant. For more information, see the [NeuralSeek documentation](https://neuralseek.com/documentation){: external}
-
