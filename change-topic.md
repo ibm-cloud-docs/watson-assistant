@@ -8,20 +8,7 @@ subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Allowing your customers to change the topic of the conversation
 {: #change-topic}
@@ -72,6 +59,7 @@ To disable changing the topic for an individual action:
 1. Edit an action, then click **Action settings** ![Gear icon](../../icons/settings.svg).
 
 1. In the Action Settings window, toggle the **Change conversation topic** switch to **Off**.
+
 
 
 ## Confirmation to return to previous topic
