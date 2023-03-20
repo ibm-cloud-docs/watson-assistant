@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-03-16"
+lastupdated: "2023-03-20"
 
 subcollection: watson-assistant
 
@@ -62,25 +62,24 @@ Security and administration
 ### Web chat style and content
 {: #web-chat-develop-style}
 
-
 Customizing the look of the web chat {: #look}
-:   You can customize the style and appearance of the web chat beyond the options that are available from the **Style** tab in the web chat settings:
+:   If you want to customize the style and appearance of the web chat beyond the options that are available on the **Style** tab in the web chat settings, you can do so by choosing a different Carbon Design theme.
 
-    - You can choose to use a different base Carbon Design theme. The supported base themes are color themes that are defined by [IBM Carbon Design](https://v10.carbondesignsystem.com/guidelines/color/usage/){: external}.
+    The supported themes are color themes that are defined by [IBM Carbon Design](https://v10.carbondesignsystem.com/guidelines/color/usage/){: external}. To set the Carbon theme, use the [`carbonTheme`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionscarbonTheme){: external} configuration option.
 
-    - You can also set individual variables within the theme to customize specific UI elements. For example, the text that is displayed in the chat window uses the fonts `IBMPlexSans, Arial, Helvetica, sans-serif`. If you want to use a different font, you can specify it by using the [`updateCSSVariables()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecssvariables){: external} method.
-
-    ![development icon](images/development-icon.png) **Tutorial:** For a tutorial that shows how to choose and customize a theme, see [Carbon themes](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=tutorials-carbon-themes){: external}.
-
-
+    You can also set individual variables within the theme to customize specific UI elements. For example, the text that is displayed in the chat window uses the fonts `IBMPlexSans, Arial, Helvetica, sans-serif`. If you want to use a different font, you can specify it by using the [`updateCSSVariables()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecssvariables){: external} instance method.
 
 Customizing the home screen {: #home-screen}
 :   The home screen greets the customer and optionally shows a list of suggested conversation starters. You can customize the style and content of the home screen:
 
+    - To add elements to the home screen, you can define custom HTML using the [`writeableElements.homeScreenAfterStartersElement`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#writeableelements){: external} theming variable:
 
-    - To add elements to the home screen, you can define custom HTML using the [`writeableElements.homeScreenAfterStartersElement`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#writeableelements){: external} theming variable.
+        ```javascript
+        instance.writeableElements.homeScreenAfterStartersElement.innerHTML = 
+          '<div class="MyCustomClass">This is my custom element</div>';
+        ```
 
-
+        ![development icon](images/development-icon.png) **Example:** For a working example that shows how to add custom elements to the home screen, see [Home screen custom elements for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/home-screen-custom-element){: external}.
 
     - To change the home screen style, use [CSS helper classes](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-render#helper_classes){: external}.
 
