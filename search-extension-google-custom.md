@@ -2,27 +2,13 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-03"
+lastupdated: "2023-03-20"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 # Google custom search extension setup
 {: #search-extension-google}
@@ -62,36 +48,19 @@ For a typical assistant focused on a specific topic, it is usually only necessar
 
 1. After you build the Google custom search extension and it appears on your **Integrations** page, click **Add** to add it to your assistant. Use your Google programmable search engine API key to authenticate. For general instructions on adding any custom extension, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
 
-## Add and edit the Google custom search starter kit action template
+## Add the Google custom search starter kit action template
 {: #search-extension-google-template}
 
-1. If you haven't already, use **Quick start with templates** to add the Google custom search starter kit. The starter kit adds an action for use with Google custom search. For more information, see [Building actions with templates](/docs/watson-assistant?topic=watson-assistant-actions-templates).
+1. Open the **Actions** page.
+
+1. If you have no actions, choose **Create a new action**. If you already have some actions, choose **New action**.
+
+1. On **Create an action**, choose **Quick start with templates**.
 
    **Quick start with templates** is available in English-language assistants only.
    {: note}
 
-1. On the **Actions** page, edit the ***Google search** action to use the extension. In step 3, click **Edit extension**. 
-
-1. In the **Extension** field, choose the Google custom search extension that you built.
-
-1. In the **Operation** field, choose either `Custom Search` or `Custom Search Site Restricted`.
-
-   This table compares the operations:
-
-   | Operation | Restrictions | Daily query limit |
-   | --- | --- | --- |
-   | Custom Search | Supports any number of websites that are indexed by Google | Yes |
-   | Custom Search Site Restricted | Restricted to searching 10 or fewer websites, each of which can have an unlimited number of pages | No |
-   {: caption="Operations" caption-side="bottom"}
-
-1. In the **Parameters** list, set:
-
-   - `q` to `*query_text`
-   - `cx` to `*cx`
-
-1. Click **Optional parameters** to expand the list. Set `num` to `*num_of_results`.
-
-1. Close the **Google search** action.
+1. On **Quick start with templates**, add the Google custom search starter kit.
 
 ## Edit system actions
 {: #search-extension-google-set-by-assistant}
@@ -115,4 +84,3 @@ Issue a query to your assistant. If no action that matches that query, then it u
 {{site.data.keyword.conversationshort}} has a 100 kb limit on the size of information that is stored in context variables, which includes search results. If the results from your extension exceed that limit, the action can fail without any visible warning or error. Typically a long delay occurs and then there is no response. This failure rarely happens with the Google custom search extension, but it might happen if you are searching a site with large volumes of metadata that is returned by Google custom search. If you think that this might be a problem, try running the query in an API testing tool like curl, [Insomnia](https://insomnia.rest/), or [Postman](https://www.postman.com/). Check how many bytes of data you are getting as search results. If the total is at or near 100 kb, you might be able to work around the issue by reducing `num_of_results` and getting fewer results for each query or by excluding sites or pages with large volumes of metadata.
 
 For more information, see [Limit on Size of Search Results](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/watson-discovery/README.md#limit-on-size-of-search-results){: external} in a starter kit for {{site.data.keyword.discoveryfull}}. 
-

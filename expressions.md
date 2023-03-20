@@ -2,28 +2,13 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-03-20"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-
-{{site.data.content.classiclink}}
+{{site.data.keyword.attribute-definition-list}}
 
 # Writing expressions
 {: #expressions}
@@ -78,7 +63,7 @@ You can then reference this variable in the **Assistant says** field.
 
 To use an expression when assigning a value to a session variable, follow these steps:
 
-1. From within a step, choose the **Set variable values** ![Set variable values icon](images/set-variable-values.png) icon.
+1. From within a step, click **Set variable values**.
 
 1. Click **Set new value**.
 

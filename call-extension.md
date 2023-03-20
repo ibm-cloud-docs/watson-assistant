@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-14"
+lastupdated: "2023-03-20"
 
 subcollection: watson-assistant
 
@@ -91,7 +91,7 @@ The following table shows the possible customer response types and the parameter
 
 In addition to the supported customer response types, a variable can also contain an array value. If you need to pass an array parameter to an operation, you must create an array session variable:
 
-1. Create a new session variable, either using the **Set variable values** icon in the step editor or from the **Variables > Created by you** page. (For more information about how to create a session variable, see [Creating a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable).)
+1. Create a new session variable, either using **Set variable values** in the step editor or from the **Variables > Created by you** page. (For more information about how to create a session variable, see [Creating a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable).)
 
 1. In the **Type** field, select **Any**.
 

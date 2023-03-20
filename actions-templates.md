@@ -2,26 +2,13 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-22"
+lastupdated: "2023-03-20"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Building actions from templates
 {: #actions-templates}
@@ -62,25 +49,28 @@ To create actions from templates:
 
 1. On **Create an action**, choose **Quick start with templates**.
 
-
+   
 
 1. On **Quick start with templates**, click a template to read details about what it does. Or, you can click the checkbox to select the template right away.
 
+   If you choose a starter kit template, these actions require you to add a custom extension before you add the actions from the starter kit. For more information, see [Starter kit extension setup](#actions-templates-extension-setup).
+   {: important}
 
+   
 
 1. Review the details of the template, then click **Select this template**.
 
-
+   
 
 1. Your list of selected templates includes all the ones that you chose. You can select as many templates as you want. If you change your mind, click the trash can icon to remove a template from the list.
 
+   
 
-
-1. When you're ready, click **Add templates**. Most templates add one action. Some starter kit templates add multiple actions, marked with an asterisk, that require setup. For more information, see [Starter kit extension setup](#actions-templates-extension-setup).
+1. When you're ready, click **Add templates**.
 
 1. In the actions editor, you can use a new action as-is, or modify it to fit your use case.
 
-
+   
 
 You can create multiple actions from the same template. For example, if you used the **Book a meeting** template to create an action, you can choose that template again. If the first action is still named **Book a meeting**, the new action is added with the name **Book a meeting (1)**.
 {: note}
@@ -102,7 +92,10 @@ To preview the action that you created from a template:
 ## Starter kit extension setup
 {: #actions-templates-extension-setup}
 
-Starter kit templates add actions that can use extensions to connect to data and systems outside of {{site.data.keyword.conversationshort}}. When you add a starter kit template, the resulting actions and variables are marked with an asterisk. These require setup of an extension. To learn more about extensions in general, see [Build a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension).
+Starter kit templates add actions that can use extensions to connect to data and systems outside of {{site.data.keyword.conversationshort}}. To learn more about extensions in general, see [Build a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension).
+
+It's important to add the extension to your assistant first, so the starter kit actions can detect the installed extension. Don't add the starter kit actions without adding the extension first.
+{: important}
 
 
 
@@ -143,21 +136,13 @@ To set up the extension for HubSpot:
 
 1. After you build the HubSpot custom search extension and it appears on your **Integrations** page, click **Add** to add it to your assistant. Use your HubSpot private app access token to authenticate. For general instructions on adding any custom extension, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension). 
 
-1. On the **Actions** page, edit each HubSpot action to use the HubSpot extension in the **And then** section of different steps.
+1. Open the **Actions** page.
 
-   This table explains the edit to each action:
+1. If you have no actions, choose **Create a new action**. If you already have some actions, choose **New action**.
 
-   | Action | Step | Operation | Parameters |
-   | --- | --- | --- | --- |
-   | *Personalized greeting | 2 | Get Contact by ID | Set `contactId` to `1. Hi! Please tell me your customer ID ...` |
-   | *Dispute a charge | 4 | Create Ticket | <ul><li>Set `properties.subject` to `*subject`</li><li>Set `properties.charge_date` to `3. What was the date?`</li><li>Set `properties.charge_name` to `1. Sure, we can help you create a ticket`</li><li>Set `properties.charge_amount` to `2. How much was the charge for?`</li><li>Set `properties.hs_pipeline_stage` to `*hs_pipeline_stage`</li></ul> |
-   | *View all HubSpot tickets | 1 | List Tickets | Add an expression to set `limit` to `10` |
-   | *Check ticket status | 8 | Get Ticket Info | Set `ticketId` to `*ticketId` |
-   | *Delete a ticket | 2 | Archive Ticket | Set `ticketId` to `*ticketId` |
-   {: caption="HubSpot use extension" caption-side="bottom"}
+1. On **Create an action**, choose **Quick start with templates**.
 
-In the ***Dispute a charge** action, `subject` and `hs_pipeline_stage` exist by default in HubSpot's ticketing schema. The action adds default values in step 4. The `subject` field in the API corresponds to the ticket name of a HubSpot ticket. The `hs_pipeline_stage` field in the API corresponds to the ticket status of a HubSpot ticket. Submit a value of `1` for the `hs_pipeline_stage` field, which sets the ticket status to `New`. 
-{: note}
+1. On **Quick start with templates**, add the HubSpot starter kit.
 
 ### NeuralSeek extension setup
 {: #actions-templates-extension-setup-neuralseek}
@@ -177,18 +162,13 @@ To set up the extension for ServiceNow:
 
 1. After you build the ServiceNow extension and it appears on your **Integrations** page, click **Add** to add it to your assistant. Use your ServiceNow admin username and password to authenticate. Replace the default instance server variable with your own. For general instructions on adding any custom extension, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
 
-1. On the **Actions** page, edit the ***Create an incident report** action to use the extension. In step 5, click **Edit extension**. 
+1. Open the **Actions** page.
 
-1. In the **Extension** field, choose the ServiceNow extension that you built.
+1. If you have no actions, choose **Create a new action**. If you already have some actions, choose **New action**.
 
-1. In the **Operation** field, choose `Create Incident`.
+1. On **Create an action**, choose **Quick start with templates**.
 
-1. In the **Parameters** list, set:
-
-   - `impact` to `*urgency`
-   - `urgency` to `*urgency`
-   -  `assignment_group` to `*assignment_group`
-   -  `short_description` to `1. Sure, we can help you create an incident report`
+1. On **Quick start with templates**, add the ServiceNow starter kit.
 
 ### Zendesk extension setup
 {: #actions-templates-extension-setup-zendesk}
@@ -207,16 +187,10 @@ To set up the extension for Zendesk:
 
 1. After you build the Zendesk extension and it appears on your **Integrations** page, click **Add** to add it to your assistant. Use your Zendesk username and password to authenticate. For general instructions on adding any custom extension, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
 
-1. On the **Actions** page, edit each Zendesk action to use the Zendesk extension in the **And then** section of different steps.
+1. Open the **Actions** page.
 
-   This table explains the edit to each action:
+1. If you have no actions, choose **Create a new action**. If you already have some actions, choose **New action**.
 
-   | Action | Step | Operation | Parameters |
-   | --- | --- | --- | --- |
-   | *Create a Zendesk support ticket | 2 | Create Ticket | <ul><li>Set `request.subject` to `3. Thanks! Alright, in just a few words...`</li><li>Set `request.comment.body` to `4. I'm sorry to hear that ...`</li></ul> |
-   | *Update existing ticket | 3 | Update Ticket | Set `id` to `1. Let's get your ticket updated...` |
-   | *View all Zendesk tickets | 1 | List Tickets | None |
-   | *View comments on a ticket | 3 | Get Ticket Comments | Set `id` to `2. What's the ticket ID you're looking for?` |
-   {: caption="Zendesk use extension" caption-side="bottom"}
+1. On **Create an action**, choose **Quick start with templates**.
 
-
+1. On **Quick start with templates**, add the Zendesk starter kit.

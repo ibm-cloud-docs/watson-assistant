@@ -2,27 +2,13 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-03"
+lastupdated: "2023-03-20"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 # Coveo search extension setup
 {: #search-extension-coveo}
@@ -54,23 +40,19 @@ For more information about the endpoints, see [Perform a Query](https://docs.cov
 
 1. After you build the Coveo extension and it appears on your **Integrations** page, click **Add** to add it to your assistant. Use your Coveo API key to authenticate. For general instructions on adding any custom extension, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
 
-## Add and edit the Coveo search starter kit action template
+## Add the Coveo search starter kit action template
 {: #search-extension-coveo-template}
 
-1. If you haven't already, use **Quick start with templates** to add the Coveo search starter kit. The starter kit adds an action for use with Coveo search. For more information, see [Building actions with templates](/docs/watson-assistant?topic=watson-assistant-actions-templates).
+1. Open the **Actions** page.
+
+1. If you have no actions, choose **Create a new action**. If you already have some actions, choose **New action**.
+
+1. On **Create an action**, choose **Quick start with templates**.
 
    **Quick start with templates** is available in English-language assistants only.
    {: note}
 
-1. On the **Actions** page, edit the ***Coveo search** action to use the extension. In step 3, click **Edit extension**. 
-
-1. In the **Extension** field, choose the Coveo extension that you built. 
-
-1. In the **Operation** field, choose `Search request to Coveo search`.
-
-1. In the **Parameters** list, set `q` to `*query_text`.
-
-1. Close the **Coveo search** action.
+1. On **Quick start with templates**, add the Coveo search starter kit.
 
 ## Edit system actions
 {: #search-extension-coveo-set-by-assistant}
@@ -87,4 +69,3 @@ For more information about the endpoints, see [Perform a Query](https://docs.cov
 {: #search-extension-coveo-using}
 
 Issue a query to your assistant. If no action that matches that query, then it uses Coveo to produce search results.
-
