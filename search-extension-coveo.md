@@ -52,7 +52,7 @@ For more information about the endpoints, see [Perform a Query](https://docs.cov
    **Quick start with templates** is available in English-language assistants only.
    {: note}
 
-1. On **Quick start with templates**, add the **Coveo search starter kit**.
+1. On **Quick start with templates**, add the Coveo search starter kit.
 
 ## Edit system actions
 {: #search-extension-coveo-set-by-assistant}

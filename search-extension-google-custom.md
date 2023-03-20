@@ -60,7 +60,7 @@ For a typical assistant focused on a specific topic, it is usually only necessar
    **Quick start with templates** is available in English-language assistants only.
    {: note}
 
-1. On **Quick start with templates**, add the **Google custom search starter kit**.
+1. On **Quick start with templates**, add the Google custom search starter kit.
 
 ## Edit system actions
 {: #search-extension-google-set-by-assistant}

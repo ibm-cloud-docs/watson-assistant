@@ -142,7 +142,7 @@ To set up the extension for HubSpot:
 
 1. On **Create an action**, choose **Quick start with templates**.
 
-1. On **Quick start with templates**, add the **HubSpot starter kit**.
+1. On **Quick start with templates**, add the HubSpot starter kit.
 
 ### NeuralSeek extension setup
 {: #actions-templates-extension-setup-neuralseek}
@@ -168,7 +168,7 @@ To set up the extension for ServiceNow:
 
 1. On **Create an action**, choose **Quick start with templates**.
 
-1. On **Quick start with templates**, add the **ServiceNow starter kit**.
+1. On **Quick start with templates**, add the ServiceNow starter kit.
 
 ### Zendesk extension setup
 {: #actions-templates-extension-setup-zendesk}
@@ -193,4 +193,4 @@ To set up the extension for Zendesk:
 
 1. On **Create an action**, choose **Quick start with templates**.
 
-1. On **Quick start with templates**, add the **Zendesk starter kit**.
+1. On **Quick start with templates**, add the Zendesk starter kit.

@@ -57,7 +57,7 @@ Simple instructions for setting up NeuralSeek are available on the **Integrate**
    **Quick start with templates** is available in English-language assistants only.
    {: note}
 
-1. On **Quick start with templates**, add the **NeuralSeek search starter kit**.
+1. On **Quick start with templates**, add the NeuralSeek search starter kit.
 
 ## Edit system actions
 {: #search-extension-neuralseek-set-by-assistant}
