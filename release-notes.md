@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-03-21"
 
 keywords: Watson Assistant release notes
 
@@ -24,6 +24,12 @@ This topic describes the new features, changes, and bug fixes in each release of
 
 
 
+## 21 March 2023
+{: #watson-assistant-mar212023}
+{: release-note}
+
+Action response modes
+:   **Action response modes** is a beta feature that is available for evaluation and testing purposes. Choose a default *action response mode*, which modifies the assistant's behavior when asking clarifying questions. For more information, see [Action response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
 
 ## 16 March 2023
 {: #watson-assistant-mar162023}
