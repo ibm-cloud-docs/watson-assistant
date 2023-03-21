@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-03-21"
 keywords: settings
 subcollection: watson-assistant
 
@@ -20,8 +20,7 @@ On the **Actions** page, click **Global settings** ![Gear icon](../../icons/sett
 
 This page provides options, configurations, and tasks for the following:
 
-- [Ask clarifying question](#actions-global-settings-ask-clarifying-question)
-
+- [Action response modes](#actions-global-settings-response-modes)
 - [Change conversation topic](#actions-global-settings-change-conversation-topic)
 - [Autocorrection](#actions-global-settings-autocorrection)
 - [Display formats](#actions-global-settings-display-formats)
@@ -29,29 +28,14 @@ This page provides options, configurations, and tasks for the following:
 
 - [Upload/Download](#actions-global-settings-upload-download)
 
-## Ask clarifying question
-{: #actions-global-settings-ask-clarifying-question}
+## Action response modes
+{: #actions-global-settings-response-modes}
 
-When your assistant finds that more than one action might fulfill a customer's request, it can automatically ask for clarification. Instead of guessing which action to take, your assistant shows a list of the possible actions to the customer, and asks the customer to pick the right one. For more information, see [Asking clarifying questions](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-ask-clarifying-question).
+On the **Action response modes** tab, you can customize how an action asks clarifying questions.
 
-On the **Ask clarifying question** tab, you can make the following changes:
+In the **Customize modes** section, you can choose a response mode for each action. This lets you set how each action behaves. There are two modes: *clarifying* and *confident*. For more information, see [Action response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
 
-- In the **Assistant says** field, edit the text that is displayed before the list of clarification choices.
-
-    The default text is *Did you mean:*. You can change it to something else, such as *What do you want to do?* or *Pick what to do next*.
-
-- In the **Label for a fallback choice** field, edit the label that is displayed for the choice that customers can click when none of the other choices are quite right. When a user picks this choice, the *No action matches* system action is taken next.
-
-    The label *None of the above* is used if you don't change it.  
-
-    This fallback choice gives customers a way to get out of the clarification process if it's not helping them. If you don't want to give customers a fallback choice, remove the text from the field.
-
-If necessary, you can disable clarifying questions for all actions. To disable clarification for all actions:
-
-1. On the **Ask clarifying question** tab, set the switch to **Off**.
-
-1. Click **Save**, and then click **Close**.
-
+In the **Ask clarifying question** section, you can change settings like the wording your assistant uses to introduce the clarification list. For more information, see [Customizing clarification](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-disambiguation-config).
 
 ## Change conversation topic
 {: #actions-global-settings-change-conversation-topic}

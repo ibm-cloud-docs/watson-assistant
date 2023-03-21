@@ -68,6 +68,7 @@ toc:
           - save-actions.md
           - review.md
           - actions-global-settings.md
+          - action-response-modes.md
           - autocorrection.md
           - algorithm-version.md
           - manage-actions.md
@@ -228,7 +229,6 @@ toc:
       - topicgroup:
           label: Early access features
           topics:
-          - action-response-modes.md
           - activity-log.md
           - autolearn.md
           - boost-words.md
