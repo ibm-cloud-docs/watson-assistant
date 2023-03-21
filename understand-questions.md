@@ -1,45 +1,30 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-08-16"
+  years: 2021, 2023
+lastupdated: "2023-03-21"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-
-{{site.data.content.classiclink}}
+{{site.data.keyword.attribute-definition-list}}
 
 # Understanding your users' questions or requests
 {: #understand-questions}
 
-Actions represent the tasks or questions that your assistant can help customers with. Each action has a beginning and an end, making up a conversation between the assistant and a customer.  In this topic, learn how to begin an action, where it understands and recognizes a goal based on the words a customer uses to ask a question or make a request.
+Actions represent the tasks or questions that your assistant can help customers with. Each action has a beginning and an end, making up a conversation between the assistant and a customer. Learn how to begin an action, where it understands and recognizes a goal based on the words a customer uses to ask a question or make a request.
 
 ## Beginning an action
 {: #understand-questions-start}
 
 Each assistant can include as many actions as you need to have conversations with your users. You design each individual action to recognize a specific question or request, and when it does, the action starts.
 
-When you create a new action, your first task is to enter one phrase that a customer types or says to start the conversation about a specific topic. This phrase determines the problem your customer has or the question your user asks.
+When you create a new action, your first task is to enter one phrase that a customer types or says to start the conversation about a specific topic. This phrase determines the problem that your customer has or the question your user asks.
 
-To get going, you only need to enter one phrase, for example: `What are your store hours?`.
+To get going, you need to enter only one phrase, for example: `What are your store hours?`.
 
-<!--![New action](images/new-action-prompt.png)-->
+
 
 After you enter the phrase, it is stored in **Customer starts with**, at the start of the action.
 
@@ -48,7 +33,7 @@ After you enter the phrase, it is stored in **Customer starts with**, at the sta
 ## Testing your phrase
 {: #understand-questions-testing}
 
-At this point, before even doing anything else with your action, you can already start checking if your assistant recognizes the starting phrase.
+Before even doing anything else with your action, you can already start checking that your assistant recognizes the starting phrase.
 
 1. Click the **Preview** button.
 1. Enter your first phrase, for example: `What are your store hours?`.
@@ -63,7 +48,7 @@ At this point, before even doing anything else with your action, you can already
 ## Adding more examples
 {: #understand-questions-adding-more-examples}
 
-When you're creating a new action, one example phrase is enough to start with. You can build the rest of your action with steps before adding more example phrases. Once doing so, return to **Customer starts with** and add 10 or more variations of the same question or request, using words that your customers commonly use. For example:
+When you're creating a new action, one example phrase is enough to start with. You can build the rest of your action with steps before adding more example phrases. Then, return to **Customer starts with** and add 10 or more variations of the same question or request, using words that your customers commonly use. For example:
 
 - `Are you open on the weekend?`
 - `How late are you open today?`
@@ -73,12 +58,12 @@ When you're creating a new action, one example phrase is enough to start with. Y
 
 Each phrase can be up to 1,024 characters in length.
 
-By adding these phrases, your assistant learns when this is the right action for what a customer wants. The additional examples builds the training data that the machine learning engine of Watson Assistant uses to create a natural language processing model. The model is customized to understand your uniquely-defined actions.
+By adding these phrases, your assistant learns what is the right action for what a customer wants. The additional examples build the training data that the machine learning engine of Watson Assistant uses to create a natural language processing model. The model is customized to understand your uniquely defined actions.
 
 ### Uploading phrases
 {: #understand-questions-uploading-examples}
 
-If you have a large number of example phrases, you might find it easier to upload them from a comma-separated value (CSV) file than to define them one by one. If you are migrating intent information from the classic {{site.data.keyword.conversationshort}} experience to example phrases in the new {{site.data.keyword.conversationshort}} experience, see [Migrating intents and entities](/docs/watson-assistant?topic=watson-assistant-migrate-intents-entities).
+If you have many example phrases, you can upload them from a comma-separated value (CSV) file than to define them one by one. If you are migrating intent information from the classic {{site.data.keyword.conversationshort}} experience to example phrases in the new {{site.data.keyword.conversationshort}} experience, see [Migrating intents and entities](/docs/watson-assistant?topic=watson-assistant-migrate-intents-entities).
 
 1. Collect the phrases into a CSV file. Save the CSV file with UTF-8 encoding and no byte order mark (BOM).
 
@@ -86,7 +71,7 @@ If you have a large number of example phrases, you might find it easier to uploa
         ```text
         <phrase>
         ```
-        where `<phrase>` is the text of a user example phrase. If you’re using a spreadsheet to create a CSV file, put all your phrases into column 1, as shown in the following example:
+        Where `<phrase>` is the text of a user example phrase. If you’re using a spreadsheet to create a CSV file, put all your phrases into column 1, as shown in the following example:
 
         ![Example spreadsheet to upload phrases](images/uploading-phrases-spreadsheet.png)
 
@@ -94,7 +79,7 @@ If you have a large number of example phrases, you might find it easier to uploa
         ```text
         <phrase>,<intent>
         ```
-        where `<phrase>` is the text of a user example phrase, and `<intent>` is the name of the intent. For example:
+        Where `<phrase>` is the text of a user example phrase, and `<intent>` is the name of the intent. For example:
         ```text
         Tell me the current weather conditions.,weather_conditions
         Is it raining?,weather_conditions
@@ -130,33 +115,34 @@ When your assistant finds that more than one action might fulfill a customer's r
 
 ![Shows a sample conversation between a user and the assistant, where the assistant asks for clarification from the user.](images/disambig-demo.png)
 
-Any **Created by you** action that might match the customer's input can be included in the choices listed by a clarifying question. The **Set by assistant** actions are never included.
+Any **Created by you** action that might match the customer's input can be included in the choices that are listed by a clarifying question. The **Set by assistant** actions are never included.
 
 In the assistant output, the possible actions are listed by name. The default name for an action is the text of the first example message that you add to it (such as `I want to open an account`), but you can change this name to something more descriptive.
 
 ### Customizing clarification
 {: #understand-questions-disambiguation-config}
 
-You can control things like the wording your assistant uses to introduce the clarification list.
+To customize clarification, you can:
+- Choose a default *action response mode*, which modifies the assistant's behavior when asking questions. For more information, see [Action response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
+- Change settings like the wording your assistant uses to introduce the clarification list.
 
-To customize clarification, complete the following steps:
+To change settings, complete the following steps:
 
-1. From the **Actions** page, click the **Global settings** icon ![Gear icon](images/gear-icon-blue.png) in the page header.
+1. From the **Actions** page of the assistant, click **Global settings** ![Gear icon](../../icons/settings.svg).
 
-1. On the **Ask clarifying question** tab, you can make the following changes:
+1. On the **Action response modes** tab, you can make the following changes in the **Ask clarifying question** section:
 
-    - In the **Assistant says** field, edit the text that is displayed before the list of clarification choices.
+   | Field | Default text | Description |
+   |---|---|---|
+   | **Assistant says** | `Did you mean:` | The text that is displayed before the list of clarification choices. You can change it to something else, such as *What do you want to do?* or *Pick what to do next*. |
+   | **Connection to support** | `Connect to support` | The assistant can include a choice to connect to other support in the list of clarifying questions. If the customer picks this choice, the assistant uses your *Fallback* action. You can change it to something else, such as *Talk to a live agent* or *Search for the answer*. |
+   | **No action matches** | `None of the above` | The choice that customers can click when none of the other choices are right. If the customer picks this choice, the assistant uses your *No action matches* action. You can change it to something else, such as *I need something else* or *These aren't what I want*. Or, you can remove the text to omit offering this choice.
+   | **One action matches** | `Something else` | If an assistant prioritizes one action that it thinks matches the customer need, it can clarify the match by asking the customer to confirm. This choice accompanies the single action in case the customer needs something else. You can change it to something else, such as *I need something else* or *This isn't what I want*. |
+   {: caption="Ask clarifying question settings" caption-side="top"}
 
-      The default text is *Did you mean:*. You can change it to something else, such as *What do you want to do?* or *Pick what to do next*.
-    - In the **Label for a fallback choice** field, edit the label that is displayed for the choice that customers can click when none of the other choices are quite right. When a user picks this choice, the *No action matches* system action is taken next.
+1.  Click **Save**, and then click **Close**.
 
-      The label *None of the above* is used if you don't change it.  
-
-      This fallback choice gives customers a way to get out of the clarification process if it's not helping them. If you don't want to give customers a fallback choice, remove the text from the field.
-
-1. Optionally, review and improve your action names.
-
-    If an action name is too long or doesn't reflect the purpose of the action, edit it. Use a name that is concise and represents the overall goal of the action, such as `Open an account` or `Cancel an order`.
+1. Publish a new version of your assistant to the live environment to apply the customizations. For more information, see [Publishing your content](/docs/watson-assistant?topic=watson-assistant-publish).
 
 ### Disabling clarifying questions
 {: #understand-questions-disambiguation-disable}
@@ -165,24 +151,26 @@ You can disable clarifying questions for all actions.
 
 To disable clarification for all actions:
 
-1.  From the **Actions** page, click the **Global settings** icon ![Gear icon](images/gear-icon-blue.png) in the page header.
-1.  On the **Ask clarifying question** tab, set the switch to **Off**.
+1.  From the **Actions** page of the assistant, click **Global settings** ![Gear icon](../../icons/settings.svg).
+1.  On the **Action response modes** tab, in the **Customize modes** section, ensure that the Response modes switch is set to **Off**.
+1.  In the **Ask clarifying question** section, set the **Enable disambiguation** switch to **Off**.
 1.  Click **Save**, and then click **Close**.
+1. Publish a new version of your assistant to the live environment to disable clarification. For more information, see [Publishing your content](/docs/watson-assistant?topic=watson-assistant-publish).
 
 ### Excluding an action from clarifying questions
 {: #understand-questions-exclude-from-clarifying}
 
-You can also prevent a single action from being used in a clarifying question. The effect of this choice depends on the confidence score for the action you exclude.
+You can also prevent a single action from being used in a clarifying question. The effect of this choice depends on the confidence score for the action that you exclude.
 
-If the action has the highest confidence score for a customer's question, no clarifying question is asked and the action is triggered.
+If the action has the highest confidence score for a customer's question, no clarifying question is asked, and the action is triggered.
 
 If the action doesn't have the highest confidence score, the action is excluded from the list of choices in the clarifying question.
 
-For more information about confidence scoring, see [Confidence scoring](#understand-questions-confidence-scoring).
+For more information about confidence scores, see [Confidence scoring](#understand-questions-confidence-scoring).
 
 To exclude an action from clarification:
 
-1. From the action editor, click the **Action settings** icon ![Gear icon](images/gear-icon-black.png)
+1. From the action editor, click the **Action settings** icon ![Gear icon](../../icons/settings.svg).
 
 1. In Action Settings, toggle the **Ask clarifying question** switch to **Off**.
 
