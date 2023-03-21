@@ -1,29 +1,14 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-07-19"
+  years: 2018, 2023
+lastupdated: "2023-03-21"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-
-{{site.data.content.classiclink}}
+{{site.data.keyword.attribute-definition-list}}
 
 # Renaming or deleting assistants
 {: #assistant-rename-delete}
@@ -44,8 +29,6 @@ To rename an assistant, follow these steps:
 1.  In **Details**, enter a new name or description.
 
 1.  Click **Save**.
-
-You can also access the *Assistant ID* in the **Details** section.{: note}
 
 ## Deleting an assistant
 {: #assistant-rename-delete-delete}

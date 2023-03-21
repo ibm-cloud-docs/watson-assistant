@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-19"
+lastupdated: "2023-03-21"
 
 keywords: Watson Assistant frequently asked questions
 
@@ -12,21 +12,7 @@ content-type: faq
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:faq: data-hd-content-type='faq'}
+{{site.data.keyword.attribute-definition-list}}
 
 # FAQs for {{site.data.keyword.conversationfull}}
 {: #watson-assistant-faqs}
@@ -43,7 +29,6 @@ Find answers to frequently-asked questions and quick fixes for common problems.
 {: faq}
 
 The new {{site.data.keyword.conversationshort}} is an improved way to build, publish, and improve virtual assistants. In the new experience, you use actions to build conversations. Actions are a simple way for anyone, developer or not, to create assistants. For more information, see the [Getting Started guide](https://www.ibm.com/blogs/watson/2021/12/getting-started-with-the-new-watson-assistant-part-i-the-build-guide/){: external} or the [documentation](/docs/watson-assistant) for the new experience.
-
 
 ### Why can't I see the assistants I made with classic {{site.data.keyword.conversationshort}} in the new experience?
 {: #faq-classic-assistants}
@@ -75,7 +60,7 @@ In the left navigation, click **Integrations** ![Integrations](images/integratio
 
 The assistant ID can be found in **Assistant settings**.
 
-In **Assistant settings**, the assistant ID is in the **Details** section.
+In **Assistant settings**, the assistant ID is in the **Access control and API details** section.
 
 ## What do the draft and live tags mean?
 {: #faqs-draft-live-tags}

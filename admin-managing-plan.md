@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2022-12-13"
+  years: 2021, 2023
+lastupdated: "2023-03-21"
 
 keywords: billing, data centers, MAU, monthly active users, service plans
 
@@ -10,20 +10,7 @@ subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing your plan
 {: #admin-managing-plan}
@@ -55,7 +42,6 @@ The following features are available only to users of a Plus or Enterprise plan.
 - [Log webhook](/docs/watson-assistant?topic=watson-assistant-webhook-log)
 - [Autolearning](/docs/assistant?topic=assistant-autolearn){: external}
 - [Intent conflict resolution](/docs/assistant?topic=assistant-intents#intents-resolve-conflicts){: external}
-- [Intent recommendations and intent user example recommendations](/docs/assistant?topic=assistant-intent-recommendations){: external}
 
 The following features are available only to users of Enterprise plans. ![Enterprise plan only](images/enterprise.png)
 
@@ -68,7 +54,7 @@ The plan type of the service instance you are currently using is displayed in th
 
 Unlike API-based plans, which measure usage by the number of API calls made during a month, the Plus and Enterprise plans measure usage by the number of monthly active users.
 
-<!--For example, the Plus plan starts at $140 and covers from 0 to 1,000 monthly active users per service instance per billing period. A Plus plan service instance supports up to 100 assistants. For more details about what is supported by this plan and other plans, see {{site.data.keyword.conversationshort}} [service plan options](https://www.ibm.com/cloud/watson-assistant/pricing/){: external}.-->
+
 
 A *monthly active user (MAU)* is any unique user who has at least one meaningful interaction with your assistant or custom application over the calendar billing month. A meaningful interaction is an exchange in which a user sends a request to your service and your service responds. Welcome messages that are displayed at the start of a conversation are not charged.
 
@@ -124,7 +110,7 @@ Billing is managed per monthly active user per service instance. If a single use
 ### Test activity charges
 {: #admin-managing-plan-billing-testing}
 
-<!--When testing your skills and assistants, any messages that you submit in the "Try it out" pane are not charged.--> 
+ 
 Test messages that you send from the *Preview* button are charged. For the preview, a random `user_id` is generated and stored in a cookie. The multiple interactions that a single tester has with the assistant embedded in the preview are recognized as coming from a single user and are charged accordingly. If you are doing your own test, running a scripted regression test for example, use a single `user_id` for all of the calls within your regression test. Other uses are flagged as abuse.
 
 ### Handling anonymous users

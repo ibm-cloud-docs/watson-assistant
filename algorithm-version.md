@@ -1,29 +1,14 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-12-16"
+  years: 2015, 2023
+lastupdated: "2023-03-21"
 
-subcollection: assistant
+subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:preview: .preview}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:gif: data-image-type='gif'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Algorithm version and training
 {: #algorithm-version}
@@ -59,7 +44,7 @@ Algorithm version choices are currently available for Arabic, Chinese (Simplifie
 ## Automatic retraining
 {: #algorithm-version-auto-retrain}
 
-![IBM Cloud only](images/ibm-cloud.png) **IBM Cloud only**
+[IBM Cloud]{: tag-ibm-cloud}
 
 {{site.data.keyword.conversationshort}} was released as a service in July 2016. Since then, users have been creating and updating skills to meet their virtual assistant needs. Behind the scenes, {{site.data.keyword.conversationshort}} creates machine learning (ML) models to perform a variety of tasks on the user's behalf. 
 
@@ -75,9 +60,9 @@ In most cases, this retraining will be seamless from an end-user point of view. 
 {: note}
 
 ## Instructions for {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull_notm}}
-{: #algorithm-version-cp4d-auto-retrain}
+{: #algorithm-version-cp4d}
 
-![Cloud Pak for Data only](images/desktop.png) **{{site.data.keyword.icp4dfull_notm}} only**
+[IBM Cloud Pak for Data]{: tag-cp4d}
 
 When upgrading your instance of {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull_notm}}, as long as your existing models have been trained using an algorithm version that is still supported, your models will not be retrained during or after the upgrade.
 
