@@ -71,6 +71,7 @@ toc:
           - action-response-modes.md
           - autocorrection.md
           - algorithm-version.md
+          - autolearn.md
           - manage-actions.md
           - assistant-add.md
           - assistant-rename-delete.md
@@ -230,7 +231,6 @@ toc:
           label: Early access features
           topics:
           - activity-log.md
-          - autolearn.md
           - boost-words.md
           - deploy-phone-amazon-connect.md
 
