@@ -28,7 +28,7 @@ This topic describes the new features, changes, and bug fixes in each release of
 {: release-note}
 
 Autolearning
-:   **Autolearning** is a beta feature that is available for evaluation and testing purposes. Use autolearning to enable your assistant to learn from interactions with your customers and improve responses. For more information, see [Using autolearning to improve assistant responses](/docs/watson-assistant?topic=watson-assistant-autolearn). </draft>
+:   **Autolearning** is a beta feature that is available for evaluation and testing purposes in English-language assistants only. Use autolearning to enable your assistant to learn from interactions with your customers and improve responses. For more information, see [Using autolearning to improve assistant responses](/docs/watson-assistant?topic=watson-assistant-autolearn). </draft>
 
 ## 21 March 2023
 {: #watson-assistant-mar212023}

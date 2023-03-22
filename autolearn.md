@@ -16,7 +16,7 @@ subcollection: watson-assistant
 Use *autolearning* to enable your assistant to learn from interactions with your customers and improve responses.
 {: shortdesc}
 
-This is a beta feature that is available for evaluation and testing purposes n English-language assistants only.
+This is a beta feature that is available for evaluation and testing purposes in English-language assistants only.
 {: beta}
 
 When customers interact with your assistant, they often make choices. Your assistant can learn from these user decisions.
