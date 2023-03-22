@@ -2,41 +2,22 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-03-03"
+lastupdated: "2023-03-22"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:preview: .preview}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.content.earlyaccess}}
-
-# Autolearning
+# Using autolearning to improve assistant responses
 {: #autolearn}
-
-<!--# Using autolearning to improve assistant responses-->
 
 Use *autolearning* to enable your assistant to learn from interactions with your customers and improve responses.
 {: shortdesc}
 
-This beta feature is available in English-language assistants only.
-{: note}
+This is a beta feature that is available for evaluation and testing purposes n English-language assistants only.
+{: beta}
 
 When customers interact with your assistant, they often make choices. Your assistant can learn from these user decisions.
 
@@ -70,12 +51,11 @@ You can enable autolearning when the following conditions are met:
 
 To apply autolearning improvements to your assistant responses:
 
-1. On the **Actions** page, click **Global settings** ![Global settings](images/gear-icon-black.png).
+1. On the **Actions** page, click **Global settings** ![Gear icon](../../icons/settings.svg).
 
 1. Click the **Autolearning** tab.
 
-1. Set the **Autolearning in live environment** switch to **On**.
-<!--1. Set the **Use autolearning to modify responses with training from live environment** switch to **On**.-->
+1. Set the **Use autolearning to modify responses with training from live environment** switch to **On**.
 
 1. In the draft environment, you can preview your actions or your assistant. With autolearning set to **On**, preview in the draft environment uses the autolearning training from the live environment. For more information, see [Using Preview to test your action](/docs/watson-assistant?topic=watson-assistant-review#review-test) or [Previewing your assistant](/docs/watson-assistant?topic=watson-assistant-preview-share).
 

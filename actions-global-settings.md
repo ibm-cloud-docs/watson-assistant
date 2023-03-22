@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-03-22"
 keywords: settings
 subcollection: watson-assistant
 
@@ -25,7 +25,7 @@ This page provides options, configurations, and tasks for the following:
 - [Autocorrection](#actions-global-settings-autocorrection)
 - [Display formats](#actions-global-settings-display-formats)
 - [Algorithm version](#actions-global-settings-algorithms-versions)
-
+- [Autolearning](#actions-global-settings-autolearning)
 - [Upload/Download](#actions-global-settings-upload-download)
 
 ## Action response modes
@@ -75,7 +75,10 @@ Variables are formatted using a system default unless you specify otherwise.
 | Currency symbol | Use the system default or choose a global symbol | `$10.99` |
 | <nobr>Percentage fraction digits</nobr> | Use the system default (up to 14 digits) or two digits | `10.75%` |
 
+## Autolearning
+{: #actions-global-settings-autolearning}
 
+**Autolearning** enables your assistant to learn from interactions with your customers and improve responses. For more information, see [Using autolearning to improve assistant responses](/docs/watson-assistant?topic=watson-assistant-autolearn).
 
 ## Algorithm version
 {: #actions-global-settings-algorithms-versions}

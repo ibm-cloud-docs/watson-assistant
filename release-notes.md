@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-03-22"
 
 keywords: Watson Assistant release notes
 
@@ -23,6 +23,12 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
 
+## 22 March 2023
+{: #watson-assistant-mar222023}
+{: release-note}
+
+Autolearning
+:   **Autolearning** is a beta feature that is available for evaluation and testing purposes. Use autolearning to enable your assistant to learn from interactions with your customers and improve responses. For more information, see [Using autolearning to improve assistant responses](/docs/watson-assistant?topic=watson-assistant-autolearn). </draft>
 
 ## 21 March 2023
 {: #watson-assistant-mar212023}
@@ -30,6 +36,13 @@ This topic describes the new features, changes, and bug fixes in each release of
 
 Action response modes
 :   **Action response modes** is a beta feature that is available for evaluation and testing purposes. Choose a default *action response mode*, which modifies the assistant's behavior when asking clarifying questions. For more information, see [Action response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
+
+## 20 March 2023
+{: #watson-assistant-mar202023}
+{: release-note}
+
+Auto-save setting removed from Global Settings
+:  The **Auto-save** setting was removed from Global Settings. It was a user preference that allowed you to disable automatic saving of actions and applied to all assistants in your instance. Changing the setting applied only to you and didn't affect other users. Actions continue to be automatically saved as you work. For more information, see [Saving your actions](/docs/watson-assistant?topic=watson-assistant-save-actions).
 
 ## 16 March 2023
 {: #watson-assistant-mar162023}
