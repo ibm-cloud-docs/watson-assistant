@@ -1,29 +1,14 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-11-19"
+  years: 2015, 2023
+lastupdated: "2023-03-23"
 
-subcollection: assistant
+subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-
-{{site.data.content.classiclink}}
+{{site.data.keyword.attribute-definition-list}}
 
 # Filter query reference
 {: #filter-reference}
@@ -60,7 +45,7 @@ You can use the following operators in your filter query.
 
 | Operator | Description |
 |:-------------------:|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `:` | Fuzzy match query operator. Prefix the query term with `:` if you want to match any value that contains the query term, or a grammatical variant of the query term. Fuzzy matching is available for user input text, response output text, and entity values. |
+| `:` | Fuzzy match query operator. Prefix the query term with `:` if you want to match any value that contains the query term, or a grammatical variant of the query term. Fuzzy matching is available for user input text and entity values. |
 | `::` | Exact match query operator. Prefix the query term with `::` if you want to match only values that exactly equal the query term. |
 | `:!` | Negative fuzzy match query operator. Prefix the query term with `:!` if you want to match only values that do _not_ contain the query term or a grammatical variant of the query term. |
 | `::!` | Negative exact match query operator. Prefix the query term with `::!` if you want to match only values that do _not_ exactly match the query term. |
@@ -92,10 +77,7 @@ Similarly, you can filter on intents or entities sent as part of the request, as
 
 `request.input.intents:intent::hello`
 
-<!--Filtering on intents operates on all detected intents. To filter only on the detected intent with the highest confidence, you can use the `response.top_intent` shorthand syntax. For example:
 
-`response.top_intent::goodbye`
--->
 ### Filtering by other fields
 {: #filter-reference-fields}
 
@@ -108,7 +90,7 @@ To filter on another field in the log data, specify the location as a path ident
     }
   }
 ```
-<!-- {data-copy=false} -->
+
 
 Filtering is not available for all fields. You can filter on the following fields:
 
