@@ -2,25 +2,13 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-27"
+lastupdated: "2023-03-23"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing access
 {: #access-control}
@@ -94,15 +82,13 @@ Another way to add users to your assistants is using Identity and Access Managem
     | Resource attribute type | Description |
     | - | - |
     | Service Instance | Choose a specific service instance of {{site.data.keyword.conversationshort}} |
-    | Assistant, Environment, or Skill ID | Enter the ID value for the resource. Use **Assistant settings** to get the ID values for your assistant, environments, action skill, or dialog skill. |
+    | Assistant, Environment, or Skill ID | Enter the ID value for the resource. Use the **Access control and API Details** section in **Assistant settings** to get the ID values for your assistant, environments, action skill, or dialog skill. |
     | Resource Type | If you enter an ID value, choose Assistant ID, Environment ID, or Skill ID to identify the ID type |
     | Region | Choose a specific region (for example, Dallas or London) |
     | Resource Group | Enter or choose a resource group that you created |
     {: caption="Attribute types" caption-side="top"}
 
     ![Resources](images/access-resources.png){: caption="Resources" caption-side="bottom"}
-
-    
 
 1.	In **Roles and actions**, select the [service role](#access-control-service-roles) that you want the user to have. Service access controls what a person can do in {{site.data.keyword.conversationshort}}. Next, select the [platform role](#access-control-platform-roles) that you want the user to have. Platform access controls a person's ability to access a service instance in {{site.data.keyword.cloud_notm}}. Then, click **Review**.
 
