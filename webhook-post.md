@@ -25,7 +25,7 @@ If you are using a custom channel, note that the postmessage webhook works with 
 
 You can use a postmessage webhook to do things like extract custom responses from an external content repository. For example, you can define actions with custom IDs in the responses instead of text. The postmessage webhook can pass these IDs to an external database to retrieve stored text responses.
 
-You can use this webhook in coordination with the premessage webhook. For example, if you use the premessage webhook to strip personally identifiable information from the customer's input, you can use the postmessage webhook to add it back. Or if you use the premessage webhook to translate the customer's input to the language of the assistant, you can use the postmessage webhook to translate the response back into the customer's native language before is is returned. For more information, see [Making a call before processing a message](/docs/watson-assistant?topic=watson-assistant-webhook-pre).
+You can use this webhook in coordination with the premessage webhook. For example, if you use the premessage webhook to strip personally identifiable information from the customer's input, you can use the postmessage webhook to add it back. Or if you use the premessage webhook to translate the customer's input to the language of the assistant, you can use the postmessage webhook to translate the response back into the customer's native language before it is returned. For more information, see [Making a call before processing a message](/docs/watson-assistant?topic=watson-assistant-webhook-pre).
 
 
 
@@ -80,7 +80,8 @@ To add the webhook details, complete the following steps:
 
     It is the responsibility of the external service to check for and verify the secret. If the external service does not require a token, specify any string you want. You cannot leave this field empty.
 
-    
+    If you want to see the secret as you enter it, click on the **Show password** icon ![view icon](../../icons/view.svg) before you start typing. After you save the secret, the string is replaced by asterisks and can't be viewed again.
+    {: note}
 
 1. In the **Timeout** field, specify the length of time (in seconds) you want the assistant to wait for a response from the webhook before returning an error. The timeout duration cannot be shorter than 1 second or longer than 30 seconds.
 
@@ -95,7 +96,8 @@ To add the webhook details, complete the following steps:
 
     The service automatically sends an `Authorization` header with a JWT; you do not need to add one. If you want to handle authorization yourself, add your own authorization header and it will be used instead.
 
-    
+    After you save the header value, the string is replaced by asterisks and can't be viewed again. 
+    {: note}
 
 Your webhook details are saved automatically.
 
@@ -107,7 +109,7 @@ Do extensive testing of your webhook before you enable it for an assistant that 
 
 The webhook is triggered only when a message has been processed by your assistant, and a response is ready to be returned to the channel.
 
-If you enable the setting that returns an error when the webhook call fails, the processing of the assistant is halted entirely if the webhook encounters any issues. Take steps to test the process that you are calling on a regular basis so you are alerted if the external service is down, and can take actions to prevent all of the message responses from failing to be returned.
+If you enable the setting that returns an error when the webhook call fails, the processing of the assistant is halted entirely if the webhook encounters any issues. Take steps to test the process that you are calling regularly so you are alerted if the external service is down, and can take actions to prevent all of the message responses from failing to be returned.
 
 If you call an {{site.data.keyword.openwhisk_short}} web action, you can use the logging capability in {{site.data.keyword.openwhisk_short}} to help you troubleshoot your code. You can [download the command line interface](https://cloud.ibm.com/functions/learn/cli){: external}, and then enable logging with the [activation polling command](https://cloud.ibm.com/docs/cloud-functions-cli-plugin?topic=cloud-functions-cli-plugin-functions-cli#cli_activation_poll){: external}.
 {: tip}
