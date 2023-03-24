@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-09-15"
+  years: 2019, 2023
+lastupdated: "2023-03-24"
 
 keywords: log webhook
 
@@ -10,26 +10,12 @@ subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
-{{site.data.content.classiclink}}
-
-# Logging activity with a webhook ![Plus or higher plan only](images/plus.png)
+# Logging activity with a webhook
 {: #webhook-log}
+
+[Plus]{: tag-green}[Enterprise]{: tag-purple}
 
 You can log activity by making a call to an external service or application every time a customer submits input to the assistant.
 {: shortdesc}
@@ -86,6 +72,9 @@ To add the webhook details, complete the following steps:
 
     It is the responsibility of the external service to check for and verify the secret. If the external service does not require a token, specify any string you want. You cannot leave this field empty.
 
+    If you want to see the secret as you enter it, click on the **Show password** icon ![view icon](../../icons/view.svg) before you start typing. After you save the secret, the string is replaced by asterisks and can't be viewed again.
+    {: note}
+
 1. Click the appropriate checkboxes to select which kinds of activity you want to log:
 
     - To log messages and responses, select **Subscribe to conversation logs**.
@@ -94,6 +83,9 @@ To add the webhook details, complete the following steps:
 1. In the Headers section, add any headers that you want to pass to the service one at a time by clicking **Add header**.
 
     The service automatically sends an `Authorization` header with a JWT; you do not need to add one. If you want to handle authorization yourself, add your own authorization header and it will be used instead.
+
+    After you save the header value, the string is replaced by asterisks and can't be viewed again. 
+    {: note}
 
 Your webhook details are saved automatically.
 

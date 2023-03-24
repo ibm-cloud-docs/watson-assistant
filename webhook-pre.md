@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2022-07-25"
+  years: 2019, 2023
+lastupdated: "2023-03-24"
 
 keywords: pre webhook, prewebhook, pre-webhook
 
@@ -10,23 +10,7 @@ subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:video: .video}
-
-{{site.data.content.classiclink}}
+{{site.data.keyword.attribute-definition-list}}
 
 # Making a call before processing a message
 {: #webhook-pre}
@@ -107,6 +91,9 @@ To add the webhook details, complete the following steps:
 
     It is the responsibility of the external service to check for and verify the secret. If the external service does not require a token, specify any string you want. You cannot leave this field empty.
 
+    If you want to see the secret as you enter it, click on the **Show password** icon ![view icon](../../icons/view.svg) before you start typing. After you save the secret, the string is replaced by asterisks and can't be viewed again.
+    {: note}
+
     For more information about how this field is used, see [Webhook security](#webhook-pre-security).
 
 1. In the **Timeout** field, specify the length of time (in seconds) you want the assistant to wait for a response from the webhook before returning an error. The timeout duration cannot be shorter than 1 second or longer than 30 seconds.
@@ -121,6 +108,9 @@ To add the webhook details, complete the following steps:
     {: caption="Header example" caption-side="top"}
 
     The service automatically sends an `Authorization` header with a JWT; you do not need to add one. If you want to handle authorization yourself, add your own authorization header and it will be used instead.
+
+    After you save the header value, the string is replaced by asterisks and can't be viewed again. 
+    {: note}
 
 Your webhook details are saved automatically.
 
@@ -265,9 +255,7 @@ return {
 ```
 {: codeblock}
 
-To test the webhook, click **Preview**. In the preview panel, submit the text `Buenos días`. The assistant probably won't understand the input, and will return the response from your *Anything else* node. However, if you go to the Analytics page of your assistant and open the User conversations page, you can see what was submitted. Check the most recent user conversation. The log will show that the user input is `Buenos días (in es)`. The `es` in parentheses represents the language code for Spanish, so the webhook worked and recognized that the submitted text was a Spanish phrase.
-
-![Shows the Analytics>User conversations page with a logged conversation with Buenos días (in es) input](images/webhook-check-language.png)
+To test the webhook, click **Preview**. In the preview panel, submit the text `Buenos días`. The assistant probably won't understand the input, and will return the response from your *Anything else* node. However, if you go to the Analyze page of your assistant and open **Conversations**, you can see what was submitted. Check the most recent user conversation. The log will show that the user input is `Buenos días (in es)`. The `es` in parentheses represents the language code for Spanish, so the webhook worked and recognized that the submitted text was a Spanish phrase.
 
 ## Example 2
 {: #webhook-pre-example-translate}
@@ -376,7 +364,7 @@ return {
 ```
 {: codeblock}
 
-When you test the webhook in the preview panel, you can submit `Buenos días`, and the assistant responds as if you said `Good morning` in English. In fact, when you check the *Analytics>User conversations* page, the log shows that the user input was `Good morning`.
+When you test the webhook in the preview panel, you can submit `Buenos días`, and the assistant responds as if you said `Good morning` in English. In fact, when you check the Analyze page of your assistant and open **Conversations**, the log shows that the user input was `Good morning`.
 
 You can add a postmessage webhook to translate the message's response back into the customer's native language before it is displayed. For more information see [Example 2](/docs/watson-assistant?topic=watson-assistant-webhook-post#webhook-post-example-translate-back).
 
