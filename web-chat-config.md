@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-03-03"
+lastupdated: "2023-03-26"
 
 subcollection: watson-assistant
 
@@ -48,7 +48,7 @@ If you are a developer, you can customize the web chat by using the web chat API
 
 To change the web chat configuration, follow these steps:
 
-1. On the ![Integrations icon](images/integrations-icon.png) **Integrations** page, find the **Web chat** tile and click click **Open**. The **Open web chat** window opens.
+1. On the ![Integrations icon](images/integrations-icon.png) **Integrations** page, find the **Web chat** tile and click **Open**. The **Open web chat** window opens.
 
 1. In the **Environment** field, select the environment you want the web chat widget to connect to. Click **Confirm**.
 
