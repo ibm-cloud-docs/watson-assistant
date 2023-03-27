@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-15"
+lastupdated: "2023-03-27"
 
 subcollection: watson-assistant
 
@@ -50,7 +50,7 @@ The OpenAPI document must satisfy the following requirements and restrictions:
 - The document must be in JSON format (YAML is not supported). If you have a YAML document, you can use the online [Swagger editor](https://editor.swagger.io/) to convert it to JSON.
 - Each operation must have a clear and concise `summary`. The text of the summary is used in the UI to describe the operations that are available from an action, so it should be short and meaningful to someone who is building an assistant.
 - [Relative URLs](https://swagger.io/docs/specification/api-host-and-base-path/#relative-urls){: external} are currently not supported.
-- Only `Basic`, `Bearer`, and `API key` authentication are supported.
+- Only Basic, Bearer, and API key authentication are supported.
 - Schemas defined using `anyOf`, `oneOf`, and `allOf` are currently not supported.
 
 In addition, any call to the external API must complete within 30 seconds.
