@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-15"
+lastupdated: "2023-03-27"
 
 subcollection: watson-assistant
 
@@ -49,6 +49,7 @@ To add a custom extension to the assistant, follow these steps:
         The **Generated URL** message shows the full URL that the assistant will use, including the variable values.
 
      Click **Next**.
+
 
 1. In the **Review extension** step, review the operations supported by the extension.
 
