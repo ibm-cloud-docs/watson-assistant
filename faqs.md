@@ -60,7 +60,7 @@ In the left navigation, click **Integrations** ![Integrations](images/integratio
 
 The assistant ID can be found in **Assistant settings**.
 
-In **Assistant settings**, the assistant ID is in the **Access control and API Details** section.
+In **Assistant settings**, the assistant ID is in the **Access control and API details** section.
 
 ## What do the draft and live tags mean?
 {: #faqs-draft-live-tags}
