@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-08-15"
+  years: 2022, 2023
+lastupdated: "2023-03-29"
 
 subcollection: watson-assistant
 
@@ -83,5 +83,5 @@ To set the value of a context variable from the web chat, follow these steps:
 
 The assistant actions can now access the `User_Name` variable throughout the conversation.
 
-For complete working code see [the example in our GitHub repository](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/set-context){: external}.
+For complete working code, see the [Setting context variables for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/set-context){: external} example.
 
