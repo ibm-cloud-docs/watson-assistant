@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-03-23"
+lastupdated: "2023-03-29"
 
 subcollection: watson-assistant
 
@@ -82,7 +82,7 @@ Another way to add users to your assistants is using Identity and Access Managem
     | Resource attribute type | Description |
     | - | - |
     | Service Instance | Choose a specific service instance of {{site.data.keyword.conversationshort}} |
-    | Assistant, Environment, or Skill ID | Enter the ID value for the resource. Use the **Access control and API Details** section in **Assistant settings** to get the ID values for your assistant, environments, action skill, or dialog skill. |
+    | Assistant, Environment, or Skill ID | Enter the ID value for the resource. Use the **Access control and API Details**section in **Assistant settings** to get the ID values for your assistant, environments, action skill, or dialog skill. |
     | Resource Type | If you enter an ID value, choose Assistant ID, Environment ID, or Skill ID to identify the ID type |
     | Region | Choose a specific region (for example, Dallas or London) |
     | Resource Group | Enter or choose a resource group that you created |
