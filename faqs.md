@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-03-29"
 
 keywords: Watson Assistant frequently asked questions
 
