@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-03-30"
 
 subcollection: watson-assistant
 
@@ -13,6 +13,8 @@ subcollection: watson-assistant
 # Action response modes
 {: #action-response-modes}
 
+[IBM Cloud]{: tag-ibm-cloud}
+
 You can choose a response mode for each action. This lets you set how each action behaves. There are two modes: *clarifying* and *confident*.
 {: shortdesc}
 
@@ -20,7 +22,7 @@ You can choose a response mode for each action. This lets you set how each actio
 
 **Confident mode**: Take the next step. After you use analytics to improve your assistant, use the confident mode. Your assistant solves customer issues with authority and accuracy. An assistant is less likely to ask questions and is more likely to trigger actions that match. Use confident mode after you test and train actions.
 
-This is a beta feature that is available for evaluation and testing purposes.
+This is a beta feature that is available for evaluation and testing purposes on IBM Cloud only.
 {: beta}
 
 ## Settings
