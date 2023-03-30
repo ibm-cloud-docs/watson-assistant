@@ -29,6 +29,7 @@ Available days of activity depend on your plan.
 | Plus | 30 |
 | Enterprise | 90 |
 | Premium | 90 |
+{: caption="Plan information" caption-side="top"}
 
 ## User access to the activity log
 {: #activity-log-access}
