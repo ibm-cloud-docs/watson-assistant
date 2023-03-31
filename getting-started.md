@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-08-12"
+  years: 2015, 2023
+lastupdated: "2023-03-31"
 
 keywords: assistant, omnichannel, virtual agent, virtual assistant, chatbot, conversation, watson assistant, watson conversation
 
@@ -11,24 +11,7 @@ subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:hide-dashboard: .hide-dashboard}
-{:download: .download}
-{:video: .video}
-{:step: data-tutorial-type='step'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Getting started with {{site.data.keyword.conversationshort}}
 {: #getting-started}
@@ -52,11 +35,11 @@ For more information about the new experience, see [FAQs about the new IBM Watso
 
 This series of blog articles provides a tutorial to help you get started:
 
-- [Plan it](https://www.ibm.com/blogs/watson/2021/11/getting-started-with-the-new-watson-assistant-plan-it/){: external}
-- [Part I: The build guide](https://www.ibm.com/blogs/watson/2021/12/getting-started-with-the-new-watson-assistant-part-i-the-build-guide/){: external}
-- [Part II: Refine your assistant](https://www.ibm.com/blogs/watson/2021/12/getting-started-with-the-new-watson-assistant-part-ii-refine-your-assistant/){: external}
-- [Part III: Test and deploy](https://www.ibm.com/blogs/watson/2022/01/getting-started-with-the-new-watson-assistant-part-iii-test-and-deploy/){: external}
-- [Part IV: preview, draft, publish, live](https://www.ibm.com/blogs/watson/2022/02/getting-started-with-the-new-watson-assistant-part-iv-preview-draft-publish-live/){: external}
+- [Plan it](https://www.ibm.com/blog/getting-started-with-the-new-watson-assistant-plan-it/?c=Watson%20Assistant){: external}
+- [Part I: The build guide](https://www.ibm.com/blog/getting-started-with-the-new-watson-assistant-part-i-the-build-guide/?c=Watson%20Assistant){: external}
+- [Part II: Refine your assistant](https://www.ibm.com/blog/getting-started-with-the-new-watson-assistant-part-ii-refine-your-assistant/?c=Watson%20Assistant){: external}
+- [Part III: Test and deploy](https://www.ibm.com/blog/getting-started-with-the-new-watson-assistant-part-iii-test-and-deploy/?c=Watson%20Assistant){: external}
+- [Part IV: preview, draft, publish, live](https://www.ibm.com/blog/getting-started-with-the-new-watson-assistant-part-iv-preview-draft-publish-live/?c=Watson%20Assistant){: external}
 
 These starting points in the documentation also help you get started:
 - [About {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-about)
