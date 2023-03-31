@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-22"
+lastupdated: "2023-03-31"
 
 keywords: Watson Assistant release notes
 
@@ -308,7 +308,7 @@ New operators available for building conditions
 :   Several new operators are available for building conditions in your actions. The options response type now has the `is any of` and `is none of` operators available. For more information, see [Operators](/docs/watson-assistant?topic=watson-assistant-step-conditions#operators).
 
 Copy actions to other assistants
-:   You can copy an action from one assistant to another. When you copy an action, references to other actions, variables, and saved responses are also copied. For more information, see [Managing actions](/docs/watson-assistant?topic=watson-assistant-manage-actions).
+:   You can copy an action from one assistant to another. When you copy an action, references to other actions, variables, and saved responses are also copied. For more information, see [Copying an action to another assistant](/docs/watson-assistant?topic=watson-assistant-copy-action).
 
 Filter variables and saved responses by name
 :   You can now find variables and saved responses more easily. On the Actions page, you can filter variables you created or saved responses you added. Click the search icon, then enter a search string. Your list of variable or saved responses filters to match what you enter.
@@ -376,7 +376,7 @@ Initial value of session variables
 :   You can now set the initial value of a session variable to an expression. For more information, see [Creating a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable).
 
 Uploading intents
-:   If you created intents in the classic {{site.data.keyword.conversationshort}} experience, you can migrate your intents to actions in the new {{site.data.keyword.conversationshort}} experience. This can provide a helpful starting point when you are ready to start building actions in the new experience. For more information, see [Uploading intents as actions](/docs/watson-assistant?topic=watson-assistant-manage-actions#manage-actions-upload-intents).
+:   If you created intents in the classic {{site.data.keyword.conversationshort}} experience, you can migrate your intents to actions in the new {{site.data.keyword.conversationshort}} experience. This can provide a helpful starting point when you are ready to start building actions in the new experience. For more information, see [Uploading intents as actions](/docs/watson-assistant?topic=watson-assistant-upload-download-actions#upload-download-actions-upload-intents).
 
 ## 19 July 2022
 {: #watson-assistant-jul192022}
