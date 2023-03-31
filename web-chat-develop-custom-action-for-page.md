@@ -16,7 +16,7 @@ subcollection: watson-assistant
 This tutorial shows how you can dynamically customize the greeting action that is triggered by the web chat based on the page the user is currently viewing.
 {: shortdesc}
 
-For a complete, working version of the example described in this tutorial, see [Select greeting action for Watson Assistant web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/select-greeting-action){: external}.
+For a complete, working version of the example described in this tutorial, see [Select greeting action for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/select-greeting-action){: external}.
 {: note}
 
 If you do not have the home screen enabled, the default behavior when the web chat opens is to send an empty message to the assistant to start the conversation. This empty message triggers the _Greet customer_ action, which typically sends a welcome message.
