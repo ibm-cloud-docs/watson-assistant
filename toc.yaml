@@ -147,6 +147,8 @@ toc:
                   navtitle: Displaying a pre-chat or post-chat form
                 - topic: web-chat-develop-custom-text-for-page.md
                   navtitle: Customizing text elements based on the current page
+                - topic: web-chat-develop-custom-action-for-page.md
+                  navtitle: Customizing the greeting action based on the current page
       - topicgroup:
           label: Deploying for phone
           topics:
