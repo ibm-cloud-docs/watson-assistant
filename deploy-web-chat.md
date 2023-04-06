@@ -65,7 +65,7 @@ To add the web chat to your website, follow these steps:
     <body>
         <title>My Test Page</title>
         <p>The body of my page.</p>
-        
+        &lt;!-- copied script elements --&gt;
         </body>
     </html>
     ```
