@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-04-07"
 
 subcollection: watson-assistant
 
@@ -130,6 +130,7 @@ Any action can store a value in a session variable so it is available to other a
    | Session variables | Select another session variable to use its value. The choices that are listed match the type of variable that you want to set. |
    | Assistant variables | Select a built-in system variable to use its value. The choices that are listed match the type of variable that you want to set. |
    | Integration variables | If you are setting an integration variable, you can choose other integration variables as the value. |
+   {: caption="Set variable values" caption-side="top"}
    
 1. To set more variable values in the same step, click **Set new value**.
 
@@ -154,10 +155,6 @@ To reference a variable in what your assistant says:
 1. When you reach a point where you want to insert a reference to a variable, type a dollar sign (`$`) or click the *Insert a variable* icon (![Insert a variable icon](images/action-variable-icon.png)). A list appears showing the variables you can choose from.
 
 1. Click a variable to add a reference to it in the text.
-
-1. **Optional:** Click the variable in the text to add a fallback value. The fallback value is the value the assistant will use if a user-defined session variable does not contain a value.
-
-    ![Fallback value for session variables](images/rn-fallback-value.png)
 
 When you reference a variable, it appears using a default format in your assistant's response. The format of the variable might differ from the way the value is stored; for example, a date value of `2021-08-11` is formatted as `August 11, 2021` by default. 
 
