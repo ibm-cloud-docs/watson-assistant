@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-03-03"
+lastupdated: "2023-04-07"
 
 subcollection: watson-assistant
 
@@ -41,8 +41,7 @@ The assistant determines when to change the conversation topic as follows:
 ## Enabling and disabling changing the topic
 {: #change-topic-enable}
 
-By default, the **Change conversation topic** feature is enabled for all assistants and actions.
-
+By default, the **Change conversation topic** feature is enabled for all assistants and actions. (You need to enable the feature for steps that use a free text or regex response. For more information, see [Enabling changing the topic for free text and regex customer responses](#change-topic-free-text-regex).)
 
 However, some processes are best completed without interruption, so you might want to disable this feature. You can disable for all actions, or just for an individual action.
 
@@ -60,7 +59,30 @@ To disable changing the topic for an individual action:
 
 1. In the Action Settings window, toggle the **Change conversation topic** switch to **Off**.
 
+### Disabling returning to the original topic
+{: #change-topic-never-return}
 
+Even when you allow changing the topic, you might not want a customer to return to the previous topic. If you need to do this:
+
+1. Edit an action, then click **Action settings** ![Gear icon](../../icons/settings.svg).
+
+1. Keep the **Change conversation topic** toggle switched to **On**.
+
+1. Select the checkbox **Never return to original action after completing this action** to prevent the customer from returning to the previous action.
+
+### Enabling changing the topic for free text and regex customer responses
+{: #change-topic-free-text-regex}
+
+By default, changing the conversation topic works differently for free text and regex responses. Customers can't change topics when:
+
+- The assistant is asking for a free text response 
+- An utterance matches the pattern in a regex response
+
+ If you want a customer to be able to digress and change topics while entering a free text or regex answer:
+ 
+ 1. Within the step, click the **Settings** icon for the customer response.
+ 
+ 1. Enable the toggle **Allow customer to change topics during a free text response** or **Allow customer to change topics during a regex response**.
 
 ## Confirmation to return to previous topic
 {: #change-topic-confirmation}

@@ -2,26 +2,13 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-04-07"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Collecting information from your customers
 {: #collect-info}
@@ -190,12 +177,11 @@ You can specify multiple regular expressions for a single response. For example,
 
 To add a regex response:
 
-1. Under **Define customer response** field, click **Regex**.
+1. In **Define customer response**, click **Regex**.
 
-1. In the **Edit response** window, click in the **Regular expression** field.
+1. Click **Edit response**. 
 
-1. Select one of the predefined regular expressions, or select **Define custom regular expression** to write your own.
-
+1. In the **Regular expression** field, select one of the predefined regular expressions, or click **Define custom regular expression** to write your own.
 
     To use a predefined regular expression, select one of the following:
 
@@ -206,8 +192,7 @@ To add a regex response:
     For examples of other common patterns, see [Example regex patterns](#regex-examples).
     {: tip}
 
-    To write your own custom regular expression, select **Define custom regular expression** and then type your regex pattern in the **Regular expression** field. For more information on regular expression syntax, see [Syntax](https://github.com/google/re2/wiki/Syntax){: external}.
-    
+    For more information on regular expression syntax, see [Syntax](https://github.com/google/re2/wiki/Syntax){: external}.
 
     Only English characters can be used in a regular expression. If you need to use other characters in a regular expression, you must represent those characters in Unicode.
 
@@ -227,6 +212,9 @@ To add a regex response:
     The **Test** feature in the step editor uses a browser-based regex engine to find matches in your test input. At run time, the assistant uses a different regex engine that might have different results, especially with complex patterns. Before deploying your assistant in production, always use the assistant preview to test any step that uses a regex response.
     {: note}
 
+1. Click **Apply** when you're finished editing.
+
+1. By default, customers can't change topics when an utterance matches the pattern in a regex response. If you want a customer to be able to digress and change topics while entering a regex answer, click the **Settings** icon, then enable the toggle **Allow customer to change topics during a regex response**. For more information, see [Allowing your customers to change the topic of the conversation](/docs/watson-assistant?topic=watson-assistant-change-topic).
 
 You can save your configured regex response for reuse in other steps. For more information, see [Saving and reusing customer responses](#saved-customer-responses).
 {: tip}
@@ -307,8 +295,10 @@ A *free text* response collects any arbitrary text string. Use this response for
 - `John Q. Smith`
 - `Please add extra sauce`
 
-The default setting for *Free text* is **Always ask for this information** and can't be modified. For more information, see [Skipping steps, always asking steps, or never asking steps](#collect-info-skip-step).
+The free text response type has these default setttings:
 
+- **Customer response collection behavior** is **Always ask for this information** and can't be modified. For more information, see [Skipping steps, always asking steps, or never asking steps](#collect-info-skip-step).
+- **Change conversation topic** is disabled. If you want a customer to be able to digress and change topics while entering a free text answer, enable the toggle **Allow customer to change topics during a free text response**. For more information, see [Allowing your customers to change the topic of the conversation](/docs/watson-assistant?topic=watson-assistant-change-topic).
 
 ## Saving and reusing customer responses
 {: #saved-customer-responses}
