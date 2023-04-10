@@ -2,26 +2,13 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-13"
+lastupdated: "2023-04-10"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Web chat release notes
 {: #release-notes-chat}
@@ -37,6 +24,17 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 7.2.0
+{: #7.2.0}
+
+*Release date: 10 April 2023*
+
+- Added support for inline iframe responses. For more information, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference#iframe).
+
+- Redesigned the agent conversation experience.
+
+- Bug fixes.
 
 ## 7.1.1
 {: #7.1.1}
