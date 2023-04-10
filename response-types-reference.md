@@ -1,29 +1,14 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-12-12"
+  years: 2015, 2023
+lastupdated: "2023-04-10"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-
-{{site.data.content.classiclink}}
+{{site.data.keyword.attribute-definition-list}}
 
 # Response types reference
 {: #response-types-reference}
@@ -55,7 +40,7 @@ Plays an audio clip specified by a URL.
 | Name          | Type   | Description                        | Required? |
 |---------------|--------|------------------------------------|-----------|
 | response_type | string | `audio`                            | Y         |
-| source        | string | The `https:` URL of the audio clip. The URL can specify either an audio file or an audio clip on a supported hosting service. <!-- For more information, see [Adding an *Audio* response type](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-add-audio).--> | Y |
+| source        | string | The `https:` URL of the audio clip. The URL can specify either an audio file or an audio clip on a supported hosting service.  | Y |
 | title         | string | The title to show before the audio player.| N  |
 | description   | string | The text of the description that accompanies the audio player. | N |
 | alt_text      | string | Descriptive text that can be used for screen readers or other situations where the audio player cannot be seen. | N |
@@ -334,7 +319,7 @@ Sends a command to the channel ending the session. This response type instructs 
 |-----------------------------------|-----------------------------------|
 | ![Yes](images/checkmark-icon.svg) |                                   |
 
-- The SMS integration supports ending a session by using the `terminateSession` action command. <!-- For more information, see XXXX -->
+- The SMS integration supports ending a session by using the `terminateSession` action command. 
 
 ### Fields
 {: response-types-json-end-session-fields}
@@ -377,13 +362,15 @@ Embeds content from an external website as an HTML `iframe` element.
 ### Fields
 {: response-types-json-iframe-fields}
 
-| Name          | Type   | Description                        | Required? |
-|---------------|--------|------------------------------------|-----------|
-| response_type | string | `iframe`                           | Y         |
-| source        | string | The URL of the external content. The URL must specify content that is embeddable in an HTML `iframe` element. <!-- For more information, see [Adding an *iframe* response type](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-add-iframe).--> | Y |
-| title         | string | The title to show before the embedded content. | N |
-| description   | string | The text of the description that accompanies the embedded content. | N |
-| image_url     | string | The URL of an image that shows a preview of the embedded content. | N |
+| Name                                        | Type   | Description                        | Required? |
+|---------------------------------------------|--------|------------------------------------|-----------|
+| response_type                               | string | `iframe`                           | Y         |
+| source                                      | string | The URL of the external content. The URL must specify content that is embeddable in an HTML `iframe` element.  | Y |
+| title                                       | string | The title to show before the embedded content. | N |
+| description                                 | string | The text of the description that accompanies the embedded content. | N |
+| image_url                                   | string | The URL of an image that shows a preview of the embedded content. | N |
+| channel_options.chat.display                | string | The way web chat should render the response type (`inline` or `panel`). Default value is `panel` for this response type. | N |
+| channel_options.chat.dimensions.base_height | number | The base height (in pixels) to use to scale the content to a specific display size. This property only works when `display` is set to `inline`. | N |
 
 Note that different sites have varying restrictions for embedding content, and different processes for generating embeddable URLs. An embeddable URL is one that can be specified as the value of the `src` attribute of the `iframe` element.
 
@@ -562,52 +549,7 @@ This examples sends the "user is typing" event while pausing for 5 seconds.
 {: codeblock}
 
 
-<!-- Search not yet supported in actions. This also needs to be updated so it does not refer to search_skill (unless it is ultimately replaced by something else)
-## `search`
-{: response-types-json-search}
 
-Calls the search skill linked to the assistant to retrieve results that are relevant to the user's query.
-
-### Integration channel support
-{: response-types-json-search-integrations}
-
-| Web chat                          | Phone                             | SMS                               | Slack                             | Facebook                          | WhatsApp                          |
-|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
-| ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
-
-- The phone integration reads the introductory message (for example, `I found this information that might be helpful`), and then the body of only the first search result.
-
-### Fields
-{: response-types-json-search-skill-fields}
-
-| Name          | Type   | Description        | Required? |
-|---------------|--------|--------------------|-----------|
-| response_type | string | `search`           | Y         |
-| query         | string | The text to use for the search query. This string can be empty, in which case the user input is used as the query. | Y |
-| filter        | string | An optional filter that narrows the set of documents to be searched. | N |
-| query_type    | string | The type of search query to use (`natural_language` or `discovery_query_language`). | Y |
-| discovery_version | string | The version of the Discovery service API to use. The default is `2018-12-03`. | N |
-
-### Example
-{: response-types-json-search-skill-example}
-
-This examples uses the user input text to send a natural-language query to the search skill.
-
-```json
-{
-  "output": {
-    "generic": [
-      {
-        "response_type": "search_skill",
-        "query": "",
-        "query_type": "natural_language"
-      }
-    ]
-  }
-}
-```
-{: codeblock}
--->
 
 ## `speech_to_text`
 {: response-types-json-speech-to-text}
@@ -889,7 +831,7 @@ This example uses the `text_to_speech` response type with the `configure` comman
 
 A custom response type containing any JSON data the client or integration knows how to handle. For example, you might customize the web chat to display a special kind of card, or build a custom application to format responses using a table or chart.
 
-The user-defined response type is not displayed unless the channel has code to handle it. For more information about customizing the web chat, see [Applying advanced customizations](/docs/watson-assistant?topic=watson-assistant-web-chat-config). <!-- For more information about handling responses in a custom client app, see [Implementing responses](/docs/assistant?topic=assistant-api-dialog-responses).-->
+The user-defined response type is not displayed unless the channel has code to handle it. For more information about customizing the web chat, see [Applying advanced customizations](/docs/watson-assistant?topic=watson-assistant-web-chat-config). 
 {: note}
 
 ### Integration channel support
@@ -900,7 +842,7 @@ The user-defined response type is not displayed unless the channel has code to h
 | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg)*| ![Yes](images/checkmark-icon.svg)*| ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
 - With the phone integration, the `user_defined` response type is used to send legacy commands (for example, `vgwActForceNoInputTurn` or `vgwActSendSMS`). For more information, see [Handling phone interactions](/docs/watson-assistant?topic=watson-assistant-phone-actions).
-- With the SMS integration, the `user_defined` response type is used to send action commands (for example, `terminateSession` or `smsActSendMedia`). <!-- For more information, see XXXX -->
+- With the SMS integration, the `user_defined` response type is used to send action commands (for example, `terminateSession` or `smsActSendMedia`). 
 
 ### Fields
 {: response-types-json-user-defined-fields}
@@ -956,11 +898,11 @@ Displays a video specified by a URL.
 | Name          | Type   | Description                        | Required? |
 |---------------|--------|------------------------------------|-----------|
 | response_type | string | `video`                            | Y         |
-| source        | string | The `https:` URL of the video. The URL can specify either a video file or a streaming video on a supported hosting service. <!-- For more information, see [Adding a *Video* response type](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-add-video).--> | Y |
+| source        | string | The `https:` URL of the video. The URL can specify either a video file or a streaming video on a supported hosting service.  | Y |
 | title         | string | The title to show before the video.| N         |
 | description   | string | The text of the description that accompanies the video. | N |
 | alt_text      | string | Descriptive text that can be used for screen readers or other situations where the video cannot be seen. | N |
-| channel_options.chat.dimensions.base_height | string | The base height (in pixels) to use to scale the video to a specific display size. | N |
+| channel_options.chat.dimensions.base_height | number | The base height (in pixels) to use to scale the video to a specific display size. | N |
 
 The URL specified by the `source` property can be either of the following:
 
