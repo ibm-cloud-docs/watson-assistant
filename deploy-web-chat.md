@@ -2,28 +2,13 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-03-03"
+lastupdated: "2023-04-10"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:preview: .preview}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 # Embedding the web chat on your page
 {: #deploy-web-chat}
@@ -76,10 +61,7 @@ To add the web chat to your website, follow these steps:
     The identifiers in the embed script (such as `integrationID` `serviceInstanceID`) are not considered secret, and are visible to anyone who has access to your website. For more information, see [Security](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture#web-chat-architecture-security).
     {: note}
 
-1.  If the system that hosts your website has limited Internet access (for example, if you use a proxy or firewall), make sure the following URLs are accessible:
-
-    - `https://web-chat.global.assistant.watson.appdomain.cloud`: Hosts the code for the web chat widget, and is referenced by the script you embed on your website.
-    - `https://integrations.{location}.assistant.watson.appdomain.cloud`: Hosts the web chat server, which handles communication with your assistant. Replace `{location}` with the location of the data center where your service instance is located, which is part of the service endpoint URL. For more information, see [Finding and updating the endpoint URL](/docs/watson?topic=watson-endpoint-change#endpoint-find-update){: external}.
+1.  If the system that hosts your website has limited Internet access (for example, if you use a proxy or firewall), make sure the URLs that host the web chat are accessible. For more information, see [Access to web chat hosts](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture#web-chat-hosts).
 
 1.  Open the web page (or local test file) in your browser. You should see the launcher icon displayed on the page:
 
