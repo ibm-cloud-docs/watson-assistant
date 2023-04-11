@@ -22,15 +22,6 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
-## 7 April 2023
-{: #watson-assistant-apr072023}
-{: release-note}
-
-Allow changing topics in free text and regex responses
-:   By default, customers can't change topics when the assistant is asking for a free text response or when an utterance matches the pattern in a regex response. Now free text and regex customer response types have a setting to allow a user to digress and change topics. For more information, see [Enabling changing the topic for free text and regex customer responses](/docs/watson-assistant?topic=watson-assistant-change-topic#change-topic-free-text-regex).
-
-Never return choice when customer changes topics
-:   If a customer changes a topic during a conversation, there might be some situations when you might not want them to return to the previous action. If you need to do this, a new **Never return** choice is available in **Action settings**. For more information, see [Disabling returning to the original topic](/docs/watson-assistant?topic=watson-assistant-change-topic#change-topic-never-return).
 
 ## 22 March 2023
 {: #watson-assistant-mar222023}
