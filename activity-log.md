@@ -15,10 +15,11 @@ subcollection: watson-assistant
 # Activity log
 {: #activity-log}
 
-[Plus]{: tag-green}[Enterprise]{: tag-purple}[IBM Cloud]{: tag-ibm-cloud}
+[IBM Cloud]{: tag-ibm-cloud}[Plus]{: tag-green}[Enterprise]{: tag-purple}
 
 Use the *activity log* to track changes made in your assistant. It gives you visibility into the modifications that are made to your assistant. It is available for Plus plans and higher.
 {: shortdesc}
+
 
 
 ![Activity log](images/activity-log.png){: caption="Activity log" caption-side="bottom"}
