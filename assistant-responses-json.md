@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-12-12"
+  years: 2015, 2023
+lastupdated: “2023-04-16”
 
 subcollection: watson-assistant
 
@@ -88,7 +88,7 @@ To specify a response in the JSON editor, insert the appropriate JSON objects in
 
 For information about the available response types, see [Response types](#assistant-responses-json-response-types).
 
-<!-- If you are building your own custom channel application using the REST API, your app must implement each response type as appropriate. For more information, see [Implementing responses](/docs/assistant?topic=assistant-api-dialog-responses). -->
+
 
 ### Targeting specific integrations
 {: #assistant-responses-json-target-integrations}
@@ -112,7 +112,7 @@ The value of `<channel_name>` can be any of the following strings:
 
 - **`chat`**: Web chat
 - **`voice_telephony`**: Phone
-- **`text_messaging`**: SMS with Twilio
+- **`text_messaging`**: SMS
 - **`slack`**: Slack
 - **`facebook`**: Facebook Messenger
 - **`whatsapp`**: WhatsApp
@@ -170,9 +170,7 @@ The following example shows step output that contains two responses: one intende
 
 If the `channels` array is present, it must contain at least one channel object. Any integration that is not listed ignores the response. If the `channels` array is absent, all integrations handle the response.
 
-<!--
-**Note:** If you need to change the logic of your dialog flow based on which integration is in use, or based on context data that is specific to a particular integration, see [Adding custom dialog flows for integrations](/docs/assistant?topic=assistant-dialog-integrations).
--->
+
 
 ## Response types
 {: #assistant-responses-json-response-types}
@@ -213,10 +211,7 @@ Not all channel integrations support all response types. For information about w
 `pause`
 :   Pauses before sending the next message to the channel, and optionally sends a "user is typing" event (for channels that support it).
 
-<!-- Search response type not yet supported in actions
-`search`
-:   Calls the search integration linked to the assistant to retrieve results that are relevant to the user's query.
--->
+
 
 `speech_to_text`
 :   Sends a command to the {{site.data.keyword.speechtotextshort}} service instance used by the phone integration. These commands can dynamically change the configuration or behavior of the service during a conversation.
