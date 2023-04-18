@@ -191,6 +191,7 @@ toc:
             navtitle: Overview
           - access-control.md
           - admin-managing-plan.md
+          - activity-log.md
           - admin-auditing.md
           - admin-securing.md
           - admin-backup-restore.md
@@ -239,7 +240,6 @@ toc:
       - topicgroup:
           label: Early access features
           topics:
-          - activity-log.md
           - boost-words.md
 
   - navgroup:
