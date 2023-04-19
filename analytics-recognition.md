@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-03-30"
+lastupdated: "2023-04-19"
 
 subcollection: watson-assistant
 
@@ -13,12 +13,12 @@ subcollection: watson-assistant
 # Use unrecognized requests to get action recommendations
 {: #analytics-recognition}
 
-[IBM Cloud]{: tag-ibm-cloud}
+[IBM Cloud]{: tag-ibm-cloud}[Plus]{: tag-green}[Enterprise]{: tag-purple}
 
 The **Recognition** page lets you analyze unrecognized requests. You can use this information to create new actions that address questions and issues that aren't being answered by your assistant.
 {: shortdesc}
 
-You can analyze unrecognized requests in English-language assistants on IBM Cloud only.
+You can analyze unrecognized requests in English-language assistants on IBM Cloud only. You need a Plus plan or higher.
 {: note}
 
 *Recognition* measures the requests within a given time period that are recognized and successfully routed to an action. Customer requests are considered unrecognized if:
