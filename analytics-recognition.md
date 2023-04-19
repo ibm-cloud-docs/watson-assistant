@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-03-30"
+  years: 2022, 2023
+lastupdated: "2023-04-19"
 
 subcollection: watson-assistant
 
@@ -13,15 +13,15 @@ subcollection: watson-assistant
 # Use unrecognized requests to get action recommendations
 {: #analytics-recognition}
 
-[IBM Cloud]{: tag-ibm-cloud}
+[IBM Cloud]{: tag-ibm-cloud}[Plus]{: tag-green}[Enterprise]{: tag-purple}
 
-The **Recognition** page lets you analyze unrecognized requests. You can use this information to create new actions that address questions and issues that aren't being answered by your assistant.
+Use the **Recognition** page to analyze unrecognized requests. You can use this information to create new actions that address questions and issues that aren't being answered by your assistant.
 {: shortdesc}
 
-You can analyze unrecognized requests in English-language assistants on IBM Cloud only.
+You can analyze unrecognized requests in English-language assistants on IBM Cloud only. You need a Plus plan or higher.
 {: note}
 
-*Recognition* measures the requests within a given time period that are recognized and successfully routed to an action. Customer requests are considered unrecognized if:
+*Recognition* measures the requests within a time period that are recognized and successfully routed to an action. Customer requests are considered unrecognized if:
 - The request triggers the *No Action Matches* action
 - The assistant asks a clarifying question and the customer chooses `None of the above` 
 
@@ -30,22 +30,22 @@ You can analyze unrecognized requests in English-language assistants on IBM Clou
 
 You can view groups of unrecognized requests for the draft or live environment. {{site.data.keyword.conversationshort}} generates groups of similar unrecognized requests from the last 30 days so that you can decide whether to add the requests as example phrases to a new action.
 
-![Unrecognized requests](images/analytics-unrecognized-groups.png)
+![Unrecognized requests](images/analytics-unrecognized-groups.png){: caption="Unrecognized requests" caption-side="bottom"}
 
-The algorithm that generates groups considers several factors in shaping the groups:
+The algorithm that generates groups considers several factors in creating the groups:
 - Unrecognized requests that have fewer than 2 or more than 35 significant words are removed from consideration. Common words such as `my` or `is`, or punctuation such as `?`, are not considered significant. Phrases that are too short or too long are usually not effective as example training phrases for your assistant.
 - The unrecognized requests are compared to the latest version of your actions so that requests that would no longer be unrecognized with your latest actions version are filtered out. 
 - Groups for which the request count is less than 10 are excluded. But if this might result in less than 5 groups, the algorithm tries to produce groups that include more than 5 request counts until a total of 5 groups are produced.
-- If you only have a small volume of data, the algorithm allows examples closer to the existing training data for grouping.
+- If you have a small volume of data, the algorithm allows examples closer to the existing training data for grouping.
 
 As a result of the algorithm:
 - A list of groups might not always appear
 - The groups might not include all unrecognized requests that you see on the **Conversations** page
 
-Several events cause your groups to be refreshed using the latest data:
-- The first time you visit the **Recognition** page for a specific environment, {{site.data.keyword.conversationshort}} generates groups
-- If at least 1 day has passed since the groups were last generated, or if you edit your actions in your draft environment, the groups are refreshed when you return to the **Recognition** page
-- You can refresh the groups using the **Refresh** icon ![Refresh](images/analytics-refresh.png)
+Several events cause your groups to be refreshed by using the latest data:
+- The first time that you visit the **Recognition** page for a specific environment, {{site.data.keyword.conversationshort}} generates groups
+- If it has been at least 1 day since the groups were last generated, or if you edit your actions in your draft environment, the groups are refreshed when you return to the **Recognition** page
+- You can refresh the groups by using the **Refresh** icon ![Refresh](images/renew.svg)
 
 This table explains the details of the list of groups:
 
@@ -53,8 +53,8 @@ This table explains the details of the list of groups:
 | --- | --- |
 | Group | A name is generated based on the example phrases in the requests. |
 | Examples | Some of the unrecognized requests are shown as a preview. |
-| Request count | The number of unrecognized requests in the group. You should focus on groups with a higher count of unrecognized requests. |
-| Percentage | The percentage of unrecognized requests relative to the other groups. You should focus on groups with a higher percentage of unrecognized requests. |
+| Request count | The number of unrecognized requests in the group. Focus on groups with a higher count of unrecognized requests. |
+| Percentage | The percentage of unrecognized requests relative to the other groups. Focus on groups with a higher percentage of unrecognized requests. |
 {: caption="Unrecognized request groups list" caption-side="bottom"}
 
 ## Creating actions from unrecognized requests
@@ -71,28 +71,28 @@ To create actions based on unrecognized requests:
    | Related actions | Existing actions that you might modify to address the unrecognized request |
    {: caption="Unrecognized request group page" caption-side="bottom"}
 
-1. If {{site.data.keyword.conversationshort}} identifies additional similarities among the examples, you can click **Grouped by similarity** to further categorize the list.
+1. If {{site.data.keyword.conversationshort}} identifies more similarities among the examples, you can click **Grouped by similarity** to further categorize the list.
 
-   ![Grouped by similarity](images/analytics-unrecognized-grouped-by-similarity.png)
+   ![Grouped by similarity](images/analytics-unrecognized-grouped-by-similarity.png){: caption="Grouped by similarity" caption-side="bottom"}
 
    In a group named `expense reimbursement application`, requests might be further grouped by similarity. For example:
-   - Problems logging into or launching the expense reimbursement application
-   - Issues with expense reimbursement application crashing
+   - Problems logging in to or starting the expense reimbursement application
+   - Issues with crashes of the expense reimbursement application
    - Requests for help or assistance with the expense reimbursement application
 
-   This can help you decide to add one or more actions that correspond to what you want to cover with your assistant, rather than adding all requests to a single action.
+   These similarities can help you decide to add one or more actions that correspond to what you want to cover with your assistant, rather than adding all requests to a single action.
 
 1. You can click to select unrecognized requests that you want to use as example phrases in a new action.
 
-   ![Select requests](images/analytics-unrecognized-create-action.png)
+   ![Select requests](images/analytics-unrecognized-create-action.png){: caption="Select requests" caption-side="bottom"}
 
 1. After you make your selections, click **Create new action**.
 
 1. Enter a name for the action, or use the default, and then click **Apply**.
 
-1. The action editor opens with each of the unrecognized requests included as an example phrase. You can now build an action to address these questions or issues.
+1. The action editor opens with each of the unrecognized requests that are included as an example phrase. You can now build an action to address these questions or issues.
 
-   ![Customer starts with](images/analytics-unrecognized-new-action-phrases.png)
+   ![Customer starts with](images/analytics-unrecognized-new-action-phrases.png){: caption="Customer starts with" caption-side="bottom"}
 
 ### Modifying existing actions
 {: #analytics-recognition-modify-actions}
@@ -103,7 +103,7 @@ You can also use the unrecognized request groups to identify existing actions th
 
 If a group lists related actions, you might focus on modifying them to address the unrecognized request.
 
-![Related actions](images/analytics-unrecognized-related-actions.png)
+![Related actions](images/analytics-unrecognized-related-actions.png){: caption="Related actions starts" caption-side="bottom"}
 
 ### Downloading groups
 {: #analytics-recognition-download-group}
@@ -112,11 +112,11 @@ You can download all group data or individual group data in a CSV file.
 
 To download all group data, click the **Download groups** icon on the **Recognition** page.
 
-![Download groups](images/analytics-unrecognized-download-groups.png)
+![Download groups](images/analytics-unrecognized-download-groups.png){: caption="Download groups" caption-side="bottom"}
 
 To download data for an individual group, open the group, then click the **Download group** icon.
 
-![Download group](images/analytics-unrecognized-download-group.png)
+![Download group](images/analytics-unrecognized-download-group.png){: caption="Download group" caption-side="bottom"}
 
 The CSV file includes this information:
 
