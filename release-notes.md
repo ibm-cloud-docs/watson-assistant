@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-04-21"
 
 keywords: Watson Assistant release notes
 
@@ -21,6 +21,12 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 21 April 2023
+{: #watson-assistant-apr212023}
+{: release-note}
+Collections
+:   You can use a *collection* to organize your actions. You can put actions into folder-style groups based on whatever categorization you need at your organization, such as by use case, internal team, or status. For more information, see [Organizing actions in collections](/docs/watson-assistant?topic=watson-assistant-collections).
 
 ## 18 April 2023
 {: #watson-assistant-apr182023}
