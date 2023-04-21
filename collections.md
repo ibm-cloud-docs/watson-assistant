@@ -32,7 +32,7 @@ To add a collection:
 
 You can also add a collection and move actions into it at the same time:
 
-1. Select one or more actions by clicking the checkbox.
+1. Select one or more actions by clicking the checkbox next to each action that you want to include.
 
 1. Click **Add to new collection**.
 
@@ -47,7 +47,7 @@ You can move one or more actions into a collection. You can also move actions fr
 
 To move an action into an existing collection:
 
-1. Select one or more actions by clicking the checkbox.
+1. Select one or more actions by clicking the checkbox next to each action that you want to include.
 
 1. Click **Move to**.
 
@@ -57,7 +57,7 @@ To move actions from one collection to another:
 
 1. Open a collection.
 
-1. Select one or more actions by clicking the checkbox.
+1. Select one or more actions by clicking the checkbox next to each action that you want to include.
 
 1. Click **Move to**.
 
@@ -70,7 +70,7 @@ You can remove an action from a collection:
 
 1. Open a collection.
 
-1. Select one or more actions by clicking the checkbox.
+1. Select one or more actions by clicking the checkbox next to each action that you want to include.
 
 1. Click **Remove from collection**. 
 
