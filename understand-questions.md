@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-04-24"
 
 subcollection: watson-assistant
 
@@ -118,6 +118,8 @@ When your assistant finds that more than one action might fulfill a customer's r
 Any **Created by you** action that might match the customer's input can be included in the choices that are listed by a clarifying question. The **Set by assistant** actions are never included.
 
 In the assistant output, the possible actions are listed by name. The default name for an action is the text of the first example message that you add to it (such as `I want to open an account`), but you can change this name to something more descriptive.
+
+The order in which the actions are listed might change. In fact, the actions themselves that are included in the list might change. This behavior is intended. As part of development that is in progress to help the assistant learn automatically from user choices, the actions that are included and their order in the list is randomized on purpose. Randomizing the order helps to prevent bias that can be introduced by a percentage of people who always pick the first option without carefully reviewing all of their choices beforehand.
 
 ### Customizing clarification
 {: #understand-questions-disambiguation-config}
