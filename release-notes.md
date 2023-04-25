@@ -38,7 +38,7 @@ Collections
 {: #watson-assistant-apr182023}
 {: release-note}
 Activity log
-:   The **Activity log** is a beta feature that is available for evaluation and testing. Use the activity log to track changes made in your assistant. It gives you visibility into the modifications that are made to your assistant. It is available for Plus plans and higher. For more information, see [Activity log](/docs/watson-assistant?topic=watson-assistant-activity-log).
+:   The **Activity log** is a beta feature that is available for evaluation and testing. Use the activity log to track changes. It gives you visibility into the modifications that are made to your assistant. It is available for Plus plans and higher. For more information, see [Activity log](/docs/watson-assistant?topic=watson-assistant-activity-log).
 
 ## 16 April 2023
 {: #watson-assistant-apr162023}
