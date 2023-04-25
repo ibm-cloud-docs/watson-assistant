@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-04-25"
 
 subcollection: watson-assistant
 
@@ -15,7 +15,7 @@ subcollection: watson-assistant
 
 [IBM Cloud]{: tag-ibm-cloud}[Plus]{: tag-green}[Enterprise]{: tag-purple}
 
-Use the *activity log* to track changes made in your assistant. It gives you visibility into the modifications that are made to your assistant. It is available for Plus plans and higher.
+Use the *activity log* to track changes. It gives you visibility into the modifications that are made to your assistant. It is available for Plus plans and higher.
 {: shortdesc}
 
 The activity log is a beta feature that is available for evaluation and testing purposes on IBM Cloud only.
