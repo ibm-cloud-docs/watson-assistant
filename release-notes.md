@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-04-21"
+lastupdated: "2023-04-25"
 
 keywords: Watson Assistant release notes
 
@@ -21,6 +21,12 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 24 April 2023
+{: #watson-assistant-apr242023}
+{: release-note}
+Action response modes randomization behavior 
+:   The action response modes beta now uses the same randomization behavior during clarification that your actions have without response modes enabled. Previous to this change, when action response modes were enabled, the clarification feature no longer periodically modified the options for clarification. Randomizing the clarification helps prevent bias that can be introduced by a percentage of people who always pick the first option without carefully reviewing all of their choices beforehand. For more information, see [Action response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes) or [Asking clarifying questions](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-ask-clarifying-question).
 
 ## 21 April 2023
 {: #watson-assistant-apr212023}
