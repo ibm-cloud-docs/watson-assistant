@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-04-26"
 
 subcollection: watson-assistant
 
@@ -22,8 +22,6 @@ These variables are special system objects that require syntax different from th
 
 | Variable     | Description | Expression example |
 |--------------|-------------|---------|
-| `entities[]` | The `output.entities` array from the most recent `message` response.  | `entities[0].value` |
-| `intents[]`  | The `output.intents` array from the most recent `message` response. | `intents[0].confidence` |
 | `input`      | The `input` object from the most recent `message` request sent to the assistant. | `input.text` |
 | `output`     | The `output` object from the most recent `message` response. Currently, only `output.debug` is included. | `output.debug.turn_events[0]` |
 {: caption="Built-in global system variables" caption-side="top"}
