@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-11-14"
+  years: 2021, 2023
+lastupdated: “2023-04-27”
 
 subcollection: watson-assistant
 
@@ -74,8 +74,6 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
     Currently, SIPS and digest authentication are supported.
     {: note}
-
-    ![Genesys create trunk](images/phone-genesys-create-trunk.png)
 
 1. Under **SIP Access Control**, add the [IP addresses](/docs/watson-assistant?topic=watson-assistant-deploy-phone-config#deploy-phone-config-byost) for the data center where your assistant is located.
 
