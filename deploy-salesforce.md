@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-17"
+lastupdated: “2023-04-28”
 
 subcollection: watson-assistant
 
@@ -46,7 +46,7 @@ Salesforce is a customer relationship management solution that brings companies 
 
 To connect to a Salesforce service desk, your organization must have a Salesforce Service Cloud plan that supports Live Agent Chat. Chat support is available in Salesforce Service Cloud Unlimited and Enterprise plans. It is also available with Performance or Developer plans that were created after 14 June 2012.
 
-Your organization must have a [Salesforce chat app](https://help.salesforce.com/articleView?id=dev_tabsets.htm&type=5){: external} with the following characteristics:
+Your organization must have a [Salesforce chat app](https://help.salesforce.com/s/articleView?id=sf.essentials_chat_messaging.htm&type=5){: external} with the following characteristics:
 
 - Console navigation
 - Navigation items: Cases, Chat sessions, Chat transcripts
@@ -137,7 +137,7 @@ To set up a Salesforce service desk integration, complete the following steps:
 
 When you test the service desk integration, make sure there is at least one agent with `Available` status.
 
-<!--Watch [Connecting Salesforce to Your Assistant](https://vimeo.com/799537304){: external}, a 5-minute video that provides an overview of setting up a connection to a Salesforce service desk.-->
+
 
 Watch a 5-minute video that provides an overview of setting up a connection to a Salesforce service desk:
 
@@ -147,42 +147,13 @@ Watch a 5-minute video that provides an overview of setting up a connection to a
 {: #deploy-salesforce-action-prereq}
 
 Update an action to make sure it understands when users request to speak to a person, and can transfer the conversation properly.
-<!--- For more information, see [Adding chat transfer support](/docs/assistant?topic=assistant-dialog-support#dialog-support-transfers){: external}. --->
+
 
 ### Routing based on browser information
 {: #deploy-salesforce-routing-browser-info}
 
 When a customer interacts with the web chat, information about the current web browser session is collected. For example, the URL of the current page is collected. You can use this information to add custom routing rules to your actions. For example, if the customer is on the Products page when a transfer to a human is requested, you might want to route the chat transfer to agents who are experts in your product portfolio. If the customer is on the Returns page, you might want to route the chat transfer to agents who know how to help customers return merchandise.
 
-<!--- For more information, see [Web chat: Accessing browser information](/docs/assistant?topic=assistant-dialog-integrations#dialog-integrations-chat-browser-info){: external}. --->
 
-<!--- ### Routing by topic
-{: #deploy-salesforce-routing-topic}
 
-When you enable transfers to the Salesforce service desk, you copy and paste code snippets from Salesforce into the service desk transfer setup page. These code snippets define how transferred conversations are handled within Salesforce. Routing rules are included in the initial transfer configuration. The routing rules identify the queue of agents to which messages from the assistant are transferred by default.
 
-The code that you add to the setup page when you configure the service desk integration shares the following required information with {{site.data.keyword.conversationshort}}:
-
-- `organization_id`: Unique ID of the organization. A company can have more than one organization set up in Salesforce.
-- `chat_api_endpoint`: Salesforce API endpoint that is used by the integration to communicate with Salesforce.
-- `deployment_id`: Unique ID of the deployment. An organization can have multiple deployments.
-- `button_id`: Unique ID of a button, which defines the specific routing rules for incoming messages. Each deployment can have multiple buttons associated with it.
-
-To override the default routing rules, you must specify a new value for the `button_id`. Before you perform this procedure, find out the ID of the Salesforce button implementation with the alternative routing rules that you want to use.
-
-To add custom routing logic, complete the following steps:
-
-1.  From the *Dialog* page, find the root dialog node for the branch of the conversation that you want to route to a specific group of Salesforce agents which is distinct from the default group.
-
-1.  Find the dialog node in the branch where you want the transfer to take place, and then add the *Connect to human agent* response type as the dialog node response type.
-
-    For more information, see [Adding a *Connect to human agent* response type](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-add-connect-to-human-agent){: external}.
-
-1.  After you add the response type and customize the transfer messages, select *Salesforce* from the **Service desk routing** field.
-
-1.  In the **Button ID** field, add the `button_id` value for the alternate routing destination that you want the assistant to use for conversations about only this topic. For example, `5733i0000008yGz`.
-
-    Be sure to specify the exact right syntax for the `button_id` value. The value is not validated by the service as you add it to your dialog.
-    {: note}
-
-If the special routing that you apply fails to deliver the message for any reason, the routing preference that is specified in the Salesforce service desk setup page is used. If both routing preferences fail, the transferred message is treated like a new message in Salesforce. The standard Salesforce routing rules are followed. --->
