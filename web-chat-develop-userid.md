@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-06-30"
+  years: 2019, 2023
+lastupdated: “2023-04-28”
 
 subcollection: watson-assistant
 
@@ -78,9 +78,9 @@ To avoid this problem, use a server-side first-party cookie in your web applicat
 
 ## More information
 
-For more information about billing, see [User-based plans explained](/docs/watson-assistant?topic=watson-assistant-services-information#services-information-user-based-plans).
+For more information about billing, see [User-based plans explained](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-admin-managing-plan).
 
-For more information about MAU limits per plan, see [Billing](/docs/watson-assistant?topic=watson-assistant-web-chat-overview#web-chat-architecture-billing).
+For more information about MAU limits per plan, see [Pricing](https://www.ibm.com/products/watson-assistant/pricing).
 
-For more information about deleting a user's data, see [Labeling and deleting data](/docs/watson-assistant?topic=watson-assistant-information-security#information-security-gdpr-wa).
+For more information about deleting a user's data, see [Labeling and deleting data](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-admin-securing).
 
