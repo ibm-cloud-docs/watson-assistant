@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-12-07"
+  years: 2015, 2023
+lastupdated: "2023-05-01"
 
 keywords: chatbot, live chatbot, omnichannel
 
@@ -10,23 +10,7 @@ subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-
-{{site.data.content.classiclink}}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # About {{site.data.keyword.conversationshort}}
 {: #about}
@@ -47,7 +31,7 @@ Use {{site.data.keyword.conversationfull}} to build your own branded live chatbo
 
 This diagram illustrates how {{site.data.keyword.conversationfull}} delivers an exceptional, omnichannel customer experience:
 
-![Flow diagram of the service](images/arch-detail.png)
+![Flow diagram of the service](images/arch-detail.png){: caption="How it works" caption-side="top"}
 
 Customers interact with the assistant through one or more of these channels:
 
@@ -80,7 +64,7 @@ Read more about these implementation steps by following these links:
 
 The {{site.data.keyword.conversationshort}} application requires the same level of browser software as is required by {{site.data.keyword.Bluemix_notm}}. For more information, see {{site.data.keyword.Bluemix_notm}} [Prerequisites](/docs/overview?topic=overview-prereqs-platform#browsers-platform){: external}. 
 
-For information about the web browsers that are supported by the web chat integration, see [Browser support](/docs/watson-assistant?topic=watson-assistant-web-chat-overview#web-chat-architecture-browsers).
+For information about the web browsers that are supported by the web chat integration, see [Browser support](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture#web-chat-architecture-browsers).
 
 ## Language support
 {: #about-lang-support}
