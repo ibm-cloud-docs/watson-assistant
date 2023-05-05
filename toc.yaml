@@ -34,6 +34,11 @@ toc:
  #     - topic: topic-3.md
  #       navtitle: A shorter navtitle
 
+- navgroup:
+      id: tutorial
+      topics:
+      - tutorial-neuralseek.md
+
   - navgroup:
       id: howto
       topics:
