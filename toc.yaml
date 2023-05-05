@@ -26,15 +26,7 @@ toc:
           - release-notes.md
           - release-notes-chat.md
 
- # - navgroup:
- #     id: tutorial
- #     topics:
- #     - topic-1.md
- #     - topic-2.md
- #     - topic: topic-3.md
- #       navtitle: A shorter navtitle
-
-- navgroup:
+  - navgroup:
       id: tutorial
       topics:
       - tutorial-neuralseek.md
