@@ -77,7 +77,7 @@ For all customer responses except *free text*, you can customize the following o
 
 - Click **`+`** or **`-`**, or directly edit the number, to change how many consecutive tries the customer can make before the *Fallback* action is triggered. Or, if you have enabled [action response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes), you can use the number of step validation attempts from the action response mode that you are using.
 
-For numeric customer responses, you can customize the validation to check for a specific answer, such as a range of dates or a limited currency amount. Each choice is optional so that you can build a validation specific to the response.
+For date, time, and numeric customer responses, you can customize the validation to check for a specific answer, such as a range of dates or a limited currency amount. Each choice is optional so that you can build a validation specific to the response.
 
 | Response type | Validation choices |
 | --- | --- |

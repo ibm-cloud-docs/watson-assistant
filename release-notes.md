@@ -25,7 +25,7 @@ This topic describes the new features, changes, and bug fixes in each release of
 ## 5 May 2023
 {: #watson-assistant-may052023}
 {: release-note}
-New validation choices for numeric customer responses
+New validation choices for date, time, and numeric customer responses
 :   For *Number*, *Date*, *Time*, *Currency*, and *Percentage* customer responses, you can now customize the validation to check for a specific answer, such as a range of dates or a limited currency amount. For more information, see [Customizing validation for a response](/docs/watson-assistant?topic=watson-assistant-handle-errors#customize-validation).
 
 ## 3 May 2023
