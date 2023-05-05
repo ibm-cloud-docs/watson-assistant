@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-05-04"
+lastupdated: "2023-05-05"
 
 keywords: Watson Assistant release notes
 
@@ -21,6 +21,12 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 5 May 2023
+{: #watson-assistant-may052023}
+{: release-note}
+New validation choices for numeric customer responses
+:   For *Number*, *Date*, *Time*, *Currency*, and *Percentage* customer responses, you can now customize the validation to check for a specific answer, such as a range of dates or a limited currency amount. For more information, see [Customizing validation for a response](/docs/watson-assistant?topic=watson-assistant-handle-errors#customize-validation).
 
 ## 3 May 2023
 {: #watson-assistant-may032023}
