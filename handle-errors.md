@@ -2,26 +2,13 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-02"
+lastupdated: "2023-05-05"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Providing options when a question or request can't be answered
 {: #handle-errors}
@@ -82,15 +69,24 @@ After the third attempt, another invalid attempt triggers the *Fallback* action,
 #### Customizing validation for a response
 {: #customize-validation}
 
-When you edit a step that expects a customer response, you can customize how validation errors are handled. Click **Edit validation** to see the validation options:
+When you edit a step that expects a customer response, you can customize how validation errors are handled. Click **Edit validation** to see the validation options.
 
-![Edit validation](images/validation.png){: caption="Edit validation" caption-side="bottom"}
-
-You can customize the following options:
+For all customer responses except *free text*, you can customize the following options:
 
 - In the **Validation message** field, specify the text of the message the assistant sends when the customer's response doesn't match the expected response type. For example, the default validation error message for a numeric value is `I didn't catch that. Enter a number.` You might want to customize this message to be more specific (for example, `Enter the number of people in your group.`).
 
-- Click **`+`** or **`-`**, or directly edit the number, to change how many consecutive tries the customer can make before the *Fallback* action is triggered.
+- Click **`+`** or **`-`**, or directly edit the number, to change how many consecutive tries the customer can make before the *Fallback* action is triggered. Or, if you have enabled [action response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes), you can use the number of step validation attempts from the action response mode that you are using.
+
+For numeric customer responses, you can customize the validation to check for a specific answer, such as a range of dates or a limited currency amount. Each choice is optional so that you can build a validation specific to the response.
+
+| Response type | Validation choices |
+| --- | --- |
+| Number | Minimum, maximum |
+| Date | After date, before date, specific days of the week |
+| Time | Start time, end time |
+| Currency | Minimum, maximum |
+| Percentage | Minimum, maximum |
+{: caption="Validation choices" caption-side="top"}
 
 ### When your customer asks to speak to a live agent
 {: #fallback-human-agent}
