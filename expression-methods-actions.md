@@ -2,25 +2,13 @@
 
 copyright:
 years: 2015, 2023
-lastupdated: "2023-03-03"
+lastupdated: "2023-05-05"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Expression language methods for actions
 {: #expression-methods-actions}
@@ -84,7 +72,7 @@ In this example, if the current date and time is `2021-11-26 11:41:00`, the retu
 The output string format change above is applicable to date and time calculation methods as well. For example, if the `<date>` string used is in the format `yyyy-MM-dd HH:mm:ss`, such as when using the method `today()`, then the output is in the same format (`yyyy-MM-dd HH:mm:ss`). However, if the `<date>` string is in the format `yyyy-MM-dd HH:mm:ss 'GMT'XXX`, such when using the method `now()`, then the output will be in the format `yyyy-MM-dd HH:mm:ss 'GMT'XXX`.
 
 
-<!--- For the list of supported time zones, see [Supported time zones](/docs/watson-assistant?topic=watson-assistant-time-zones). --->
+
 
 ### `.reformatDateTime(String format)`
 {: #expression-methods-actions-dates-reformatDateTime}
@@ -98,7 +86,8 @@ This method returns a string formatted according to the specified format:
 
 To return the day of the week:
 
-- `E` for Tuesday
+- `EEEE` for Tuesday
+- `E` for Tue
 - `u` for day index (1 = Monday, ..., 7 = Sunday)
 
 For example, this expression returns the value 17:30:00 as `5:30 PM`:
