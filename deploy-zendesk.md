@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-05-08"
 
 subcollection: watson-assistant
 
@@ -34,102 +34,127 @@ subcollection: watson-assistant
 
 [IBM Cloud]{: tag-ibm-cloud}
 
-Integrate your web chat with a Zendesk service desk solution so your customers always get the help they need.
+Integrate web chat with a Zendesk service desk solution, so your customers always get the help they need.
 {: shortdesc}
 
-Integrate with a Zendesk service desk by deploying your assistant with the web chat integration. The web chat serves as the client interface for your assistant. If, in the course of a conversation with your assistant, a customer asks to speak to a person, you can transfer the conversation directly to a Zendesk agent.
+Connect to Zendesk by deploying your assistant with the web chat integration that serves as the client interface. If, in the course of a chat with your assistant, a customer asks to speak to a person, you can transfer the conversation directly to a live agent.
 
-Zendesk Chat lets you help customers in real time, which increases customer satisfaction. And satisfied customers are happier customers. To learn more about this service desk solution, see the [Zendesk website](https://www.zendesk.com/chat/){: external}.
-
-Zendesk Chat is an add-on to Zendesk Support. Zendesk Support puts all your customer support interactions in one place, so communication is seamless, personal, and efficient, which means more productive agents and satisfied customers.
+Zendesk allows you to assist customers in real time, which increases customer satisfaction. And satisfied customers are happier customers. To learn more about this service desk solution, see the [Zendesk website](https://www.zendesk.com/service/){: external}.
 
 ## Before you begin
 {: #deploy-zendesk-prereqs}
 
-1.  You must have a Zendesk account. If not, create one.
+1.  Sign up for or switch to a [Zendesk Service account with an Enterprise plan](https://www.zendesk.com/enterprise/){: external}, which is required.
 
-    A Zendesk Chat Enterprise plan is required.
-    {: important}
+1. Create a subdomain for your service desk. After you sign up and specify a subdomain, your Zendesk console is available from a URL with the syntax: `<subdomain>.zendesk.com`. For example, `ibm.zendesk.com`.
 
-1.  Decide whether you want to enable security.
+1.  Log in to your [Zendesk](https://www.zendesk.com/login/){: external} subdomain.
 
-    If you choose to enable security in Zendesk, you must collect the name and email address of each user. This information must be passed to the web chat so it can be provided to Zendesk when the conversation is transferred.
+1.  Open the Zendesk **Dashboard**.
+
+1.  Click the **Products** icon in the header, and then select the **Chat** icon.
+
+       ![Screen capture of the chat icon in the header.](images/zd-products-menu.png)
+
+1.  Click your profile, and then select **Check Connection**.
+
+       ![Screen capture of the Zendesk user interface to show where the profile is located.](images/zd-profile-menu.png)
+
+1.  Keep this open for the **Connect Zendesk to your assistant** step.
+
+       ![Screen capture of the connection dialog.](images/zd-account-key.png)
+
+You also need to decide whether to enable security for Zendesk after setup. More info at [Securing the transfer to Zendesk](#deploy-zendesk-secure).
 
 ## Setting up the Zendesk service desk connection
 {: #deploy-zendesk-task}
 
-To set up a Zendesk service desk integration, complete the following steps:
+In your {site.data.keyword.conversationshort}} install: 
 
-1.  Go to your web chat settings. For more information, see [Integrating the web chat with your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
+1.  Go to the **Integrations** page by clicking the integrations icon (![Integrations icon](images/integrations-icon.png)) in the left menu. For more information, see [Integrating the web chat with your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
 
-1.  From the web chat integration page in {{site.data.keyword.conversationshort}}, set the **Allow transfers to live agents** switch to **On**, and then choose **Zendesk** as the service desk type, and then click **Next**.
-1.  Add the account key for your Zendesk account, and then click **Next**. {: #deploy-zendesk-get-account-key}
+1.  Click **Web chat** and then click **Open**.
 
-    To get the account key for your Zendesk account, follow these steps:
+1.  Select an environment, and click **Confirm**.
 
-    - Log in to your Zendesk subdomain.
+1.  Go to the **Live agent** tab.
 
-    - Open the Zendesk Chat Dashboard.
+1.  Click **Zendesk**.
 
-       From the Zendesk Support dashboard, you can click the *Zendesk Products* icon in the header, and then click the *Chat* icon.
+### Connect Zendesk to your assistant 
+{: #deploy-zendesk-assistant}
 
-       ![Screen capture of the chat icon in the header.](images/zd-open-chat.png)
+In the **Live agent** tab of your Zendesk web chat integration:
 
-    - Click your profile, and then click *Check Connection*.
+1.  Toggle on **Transfers enabled**. Two tasks should display: **Connect Zendesk** and **Private app Install**.
 
-       ![Screen capture of the Zendesk user interface to show where the profile is located.](images/zd-status-dropdown.png)
-
-    - Copy the account key value.
+1.  Copy the **Account key** from your Zendesk account in the tab you kept open.
 
        ![Screen capture of the connection dialog.](images/zd-account-key.png)
 
-    - Return to the setup page in {{site.data.keyword.conversationshort}}, and then paste the key into the field.
+1.  Paste into the **Account key** field in your assistant.
 
-1.  Install the {{site.data.keyword.conversationshort}} private application in your Zendesk Chat subdomain. {: #deploy-zendesk-add-private-app}
+1.  Click **Connect account**. A checkmark indicates successful completion.
 
-    When you create a Zendesk Chat account, you specify a subdomain. Afterward, your Zendesk console is available from a URL with the syntax: `<subdomain>.zendesk.com`. For example, `ibm.zendesk.com`.
+### Install app in Zendesk
+{: #deploy-zendesk-add-private-app}
 
-    IBM provides an application that you can install in your Zendesk Chat domain. When a customer asks to speak to a person, your assistant will share a chat summary for the transferred conversation with the Zendesk agent by using this private app.
+IBM provides an application to install in your Zendesk Service subdomain. When a customer asks to speak to someone, your assistant shares a chat summary for the transferred conversation with the Zendesk agent via this private app.
 
-    - Download the Watson Assistant Zendesk application from the Zendesk Chat setup page in {{site.data.keyword.conversationshort}}.
+1.  Click **Private app Install**. 
 
-      On Safari, the application files are extracted from the ZIP file into a folder. To keep the file archived as a .zip file, so you can upload it later, edit the Safari preferences. Clear the *Open safe files after downloading* checkbox.
+2.  Click the arrow next to **Download the {site.data.keyword.conversationshort}} Zendesk app**. The app appears in the location of your downloads.
+
+      On Safari, application files are extracted from the ZIP file into a folder. To keep the file archived as a .zip file so you can upload it later, edit the Safari preferences. Clear the **Open safe files after downloading** checkbox.
       {: note}
 
-    - Log in to Zendesk with a user ID that has administrative privileges.
+1.  In your Zendesk install, click the **Products icon** and go to the **Admin Center**. 
 
-    - Install the Watson Assistant Zendesk app to your Zendesk Chat subdomain as a new private app.
+1.  Click **Apps and integrations**.
 
-      - First, make sure the Zendesk Agent Workspace is not enabled for your account: From the Zendesk navigation pane, go to *Settings*, and then click *Agents*. Deselect the *Enable the Zendesk Agent Workspace* checkbox.
-      - Then download the app. From the Chat dashboard navigation pane, expand *Settings*, and then click *Account*.
-      - Open the *App* tab.
-      - Click *Upload private app*, and then browse for the application file that you downloaded earlier.
+1.  Select **Zendesk Support apps**.
 
-      ![Screen capture of the Zendesk Account page where you can upload a private app.](images/zd-upload-app.png)
+1.  Click **Upload private app**.
 
-      For more information, see [Uploading and installing a private app in Zendesk Chat](https://developer.zendesk.com/documentation/apps/getting-started/uploading-and-installing-a-private-app/){: external}.
+1.  Click **Choose File**, select the app you downloaded from your Watson Assistant install, and click **Upload**.
 
-1.  Click **Save and exit** to finish setting up the connection to the Zendesk Chat service desk.
+1.  Click **Install**, if you agree to the Marketplace Terms of Use that display in the **Creating a new App** window. 
 
-When you test the service desk integration, make sure there is at least one agent with `Online` status. Agent status is set to `Invisible` unless it is explicitly changed.
+1.  Enter a name for your app in the **Title** field, and click **Install**. 
 
-<!--Watch [Connecting Zendesk to Your Assistant](https://vimeo.com/799537903){: external}, a 4-minute video that provides an overview of setting up a connection to a Zendesk service desk.-->
+The app is now listed at **My Apps** under **Private apps**, and can be enabled, disabled, or deleted. For more information, see [Uploading and installing a private app in Zendesk](https://developer.zendesk.com/documentation/apps/getting-started/uploading-and-installing-a-private-app/){: external}.
 
-Watch a 4-minute video that provides an overview of setting up a connection to a Zendesk service desk:
+When you test the service desk integration, ensure that there is at least one agent with `Online` status. Agent status is set to `Invisible` unless it is explicitly changed.
 
-![Zendesk Integration: {{site.data.keyword.conversationshort}}](https://video.ibm.com/embed/channel/23952663/video/wa-zendesk){: video output="iframe" data-script="none" id="watsonmediaplayer" width="480" height="270" scrolling="no" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="border: 0 none transparent;"}
 
-The product user interface is slightly different from the interface that is shown in the video. However, the main steps are the same.
-{: note}
+
+### Turn on Agent Workspace 
+{: #deploy-zendesk-agent-workspace}
+
+Zendesk Agent Workspace brings Zendesk Chat and Zendesk Support together, so all your customer interactions are in one place, and communication is seamless, personal, and efficient. That means more productive agents and happy customers.
+
+In Zendesk:
+
+1.  Click the **Products icon** and go to the **Admin Center**. 
+
+1.  Click **Workspaces**.
+
+1.  Click the **Turn on Agent Workspace** button. The green **On** box should display.
+
+Agent Workspace should now feature on several screens in Zendesk Support, including on the **Dashboard** with tickets, the **Visitors** page, and in the top menu as **Conversations** where agents can accept chats from customers waiting for assistance. 
+
 
 ## Securing the transfer to Zendesk
 {: #deploy-zendesk-secure}
 
-When you add security to your Zendesk integration, you ensure that the visitors you are helping are legitimate customers. Enabling visitor authentication also enables support for cross-domain traffic and cross-browser identification. For more information, see the [Zendesk documentation](https://support.zendesk.com/hc/en-us/articles/360022185314-Enabling-authenticated-visitors-in-the-Chat-widget).
+You must collect the name and email address of each user, if enabling security in Zendesk. This information must be passed to the web chat so it can be provided to Zendesk when the conversation is transferred.
+
+When you add security to your Zendesk integration, you ensure that the visitors you are helping are legitimate customers. Enabling visitor authentication also enables support for cross-domain traffic and cross-browser identification. For more information, see the [Enabling authenticated visitors in Zendesk](https://support.zendesk.com/hc/en-us/articles/360022185314-Enabling-authenticated-visitors-in-the-Chat-widget).
 
 Before you can secure the Zendesk connection, complete the following required tasks:
 
 1.  Secure the web chat. For more information see [Securing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security). {: #deploy-zendesk-secure-prereqs}
+
 1.  Encrypt sensitive information that you pass to the web chat.
 
     When you enable security in Zendesk, you must provide the name and email address of the current user with each request. Configure the web chat to pass this information in the payload.
@@ -224,33 +249,17 @@ To secure the Zendesk connection, complete the following steps:
 {: #deploy-zendesk-action-prereq}
 
 Update an action to make sure it understands when users request to speak to a person, and can transfer the conversation properly.
-<!--- For more information, see [Adding chat transfer support](/docs/assistant?topic=assistant-dialog-support#dialog-support-transfers){: external}. --->
+
 
 ### Routing based on browser information
 {: #deploy-zendesk-routing-browser-info}
 
-When a customer interacts with the web chat, information about the current web browser session is collected. For example, the URL of the current page is collected. You can use this information to add custom routing rules to your actions. For example, if the customer is on the Products page when a transfer to a human is requested, you might want to route the chat transfer to agents who are experts in your product portfolio. If the customer is on the Returns page, you might want to route the chat transfer to agents who know how to help customers return merchandise.
+When a customer interacts with the web chat, information about the current web browser session is collected. For example, the URL of the current page is collected. 
 
-<!--- For more information, see [Web chat: Accessing browser information](/docs/assistant?topic=assistant-dialog-integrations#dialog-integrations-chat-browser-info){: external}. --->
+You can use this information to add custom routing rules to your actions. For example, if the customer is on the Products page when a transfer to a human is requested, you might want to route the chat transfer to agents who are experts in your product portfolio. 
 
-<!--- ### Routing by topic
-{: #deploy-zendesk-routing-topic}
+If the customer is on the Returns page, you might want to route the chat transfer to agents who know how to help customers return merchandise.
 
-You can specify a routing preference for specific topics of conversation in your dialog. When specified, the chat is transferred to the department that you designate. You can choose a department that you know has agents who are best able to address the topic.
 
-Before you perform this procedure, determine which department you want users to be routed to.
 
-To add custom routing logic, complete the following steps:
 
-1.  From the *Dialog* page, find the root dialog node for the branch of the conversation that you want to route to a specific Zendesk department.
-
-1.  Find the dialog node in the branch where you want the transfer to take place, and then add the *Connect to human agent* response type as the dialog node response type.
-
-    For more information, see [Adding a *Connect to human agent* response type](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-add-connect-to-human-agent){: external}.
-
-1.  After you add the response type and customize the transfer messages, select *Zendesk* from the **Service desk routing** field.
-
-1.  In the **Department** field, add the department to which you want the assistant to transfer customers who want to discuss this topic. For example, `sales`.
-
-    Be sure to specify the exact right syntax for the department name. The value is not validated by the service as you add it to your dialog.
-    {: note} --->
