@@ -2,32 +2,13 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-05-08"
+lastupdated: "2023-05-11"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:preview: .preview}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:video: .video}
-{:tag-ibm-cloud: .tag data-tag-color="blue"}
-{:tag-cp4d: .tag data-tag-color="magenta"}
-
-{{site.data.content.classiclink}}
+{{site.data.keyword.attribute-definition-list}}
 
 # Integrating with Zendesk
 {: #deploy-zendesk}
@@ -69,7 +50,7 @@ You also need to decide whether to enable security for Zendesk after setup. More
 ## Setting up the Zendesk service desk connection
 {: #deploy-zendesk-task}
 
-In your {site.data.keyword.conversationshort}} install: 
+In your {{site.data.keyword.conversationshort}} install: 
 
 1.  Go to the **Integrations** page by clicking the integrations icon (![Integrations icon](images/integrations-icon.png)) in the left menu. For more information, see [Integrating the web chat with your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
 
@@ -103,7 +84,7 @@ IBM provides an application to install in your Zendesk Service subdomain. When a
 
 1.  Click **Private app Install**. 
 
-2.  Click the arrow next to **Download the {site.data.keyword.conversationshort}} Zendesk app**. The app appears in the location of your downloads.
+2.  Click the arrow next to **Download the {{site.data.keyword.conversationshort}} Zendesk app**. The app appears in the location of your downloads.
 
       On Safari, application files are extracted from the ZIP file into a folder. To keep the file archived as a .zip file so you can upload it later, edit the Safari preferences. Clear the **Open safe files after downloading** checkbox.
       {: note}
