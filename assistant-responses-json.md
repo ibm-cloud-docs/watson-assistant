@@ -2,36 +2,21 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: “2023-04-16”
+lastupdated: "2023-05-11"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
-{{site.data.content.classiclink}}
-
-# Defining responses using the JSON editor
+# Defining responses by using the JSON editor
 {: #assistant-responses-json}
 
-In some situations, you might need to define your assistant's responses using the JSON editor. (For more information about assistant responses, see [Adding assistant responses](/docs/watson-assistant?topic=watson-assistant-respond)).
+In some situations, you might need to define your assistant's responses by using the JSON editor. (For more information about assistant responses, see [Adding assistant responses](/docs/watson-assistant?topic=watson-assistant-respond)).
 {: shortdesc}
 
-To edit a response using the JSON editor, click the **Switch to JSON editor** icon ![Switch to JSON editor icon](images/json-editor-icon.png) in the corner of the **Assistant says** field. The JSON editor shows how the response is defined behind the scenes and sent to the channel.
+To edit a response by using the JSON editor, click the **Switch to JSON editor** icon ![Switch to JSON editor icon](images/json-editor-icon.png) in the **Assistant says** field. The JSON editor shows how the response is defined behind the scenes and sent to the channel.
 
 ## Generic JSON format
 {: #assistant-responses-json-generic}
@@ -45,18 +30,19 @@ If you open the JSON editor on a new, empty response, you see the following basi
 ```
 {: codeblock}
 
-The `generic` property defines an array of responses that will be sent to the channel when the step is executed. These term _generic_ refers to the fact that these responses are defined using a generic JSON format that is not specific to any channel. This format can accommodate various response types that are supported by multiple integrations, and can also be implemented by a custom client application that uses the REST API.
+The `generic` property defines an array of responses that are sent to the channel when the step is executed. The term _generic_ refers to the fact that these responses are defined by using a generic JSON format that is not specific to any channel. This format can accommodate various response types that are supported by multiple integrations, and can also be implemented by a custom client application that uses the REST API.
 
-The `generic` array for a step can contain multiple responses, and each response has a _response type_. A basic step that sends a simple text response typically includes only a single response with the response type `text`. However, many other response types are available, supporting multimedia and interactive content, as well as control over the behavior of some channel integrations.
+The `generic` array for a step can contain multiple responses, and each response has a _response type_. A basic step that sends a simple text response typically includes only a single response with the response type `text`. However, many other response types are available, supporting multimedia and interactive content, plus control over the behavior of some channel integrations.
 
-Although the `generic` format can be sent to any channel integration, not all channels support all response types, so a particular response might be ignored (or handled differently) by some channels. For information about which channels support which response types, see [Response types](#assistant-responses-json-response-types).
+Although the `generic` format can be sent to any channel integration, not all channels support all response types, so a particular response might be ignored (or handled differently) by some channels. For more information, see [Channel integration support for response types](#assistant-responses-json-integration-support).
 
-At run time, output containing multiple responses might be split into multiple message payloads. The channel integration sends these messages to the channel in sequence, but it is the responsibility of the channel to deliver these messages to the end user; this can be affected by network or server issues.
+At run time, output with multiple responses might be split into multiple message payloads. The channel integration sends these messages to the channel in sequence, but it is the responsibility of the channel to deliver these messages to the user; this can be affected by network or server issues.
 {: note}
 
 ### Adding responses
+{: #assistant-responses-json-add-responses}
 
-To specify a response in the JSON editor, insert the appropriate JSON objects into the `generic` field of the step response. The following example shows output containing two responses of different types (text and an image):
+To specify a response in the JSON editor, insert the appropriate JSON objects into the `generic` field of the step response. The following example shows output with two responses of different types (text and an image):
 
 ```json
 {
@@ -95,11 +81,11 @@ For information about the available response types, see [Response types](#assist
 
 If you plan to deploy your assistant to multiple channels, you might want to send different responses to different integrations based on the capabilities of each channel. The `channels` property of the generic response object provides a way to do this.
 
-This mechanism is useful if your conversation flow does not change based on the integration in use, and if you cannot know in advance what integration the response will be sent to at run time. By using `channels`, you can define a single step that supports all integrations, while still customizing the output for each channel. For example, you might want to customize the text formatting, or even send different response types, based on what the channel supports.
+This mechanism is useful if your conversation flow does not change based on the integration in use, and if you cannot know in advance what integration the response is sent to at run time. By using `channels`, you can define a single step that supports all integrations, while still customizing the output for each channel. For example, you might want to customize the text formatting, or even send different response types, based on what the channel supports.
 
-Using `channels` is particularly useful in conjunction with the `channel_transfer` response type. Because the message output is processed both by the channel initiating the `transfer` and by the target channel, you can use `channels` to define responses that will only be processed by one or the other. (For more information, and an example, see [Channel transfer](#assistant-responses-json-channel-transfer).)
+Using `channels` is useful along with the `channel_transfer` response type. Because the message output is processed both by the channel that initiates the `transfer` and by the target channel, you can use `channels` to define responses that are processed by one or the other. (For more information, and an example, see [Channel transfer](#assistant-responses-json-channel-transfer).)
 
-To specify the integrations for which a response is intended, include the optional `channels` array as part of the response object. All response types support the `channels` array. This array contains one or more objects using the following syntax:
+To specify the integrations for which a response is intended, include the optional `channels` array as part of the response object. All response types support the `channels` array. This array contains one or more objects by using the following syntax:
 
 ```json
 {
@@ -181,29 +167,28 @@ Not all channel integrations support all response types. For information about w
 {: note}
 
 `audio`
-:   Plays an audio clip specified by a URL.
+:   Plays an audio clip that is specified by a URL.
 
 `channel_transfer`
-
-:   Requests that the conversation be transferred to a different integration. (Currently, only the web chat integration can be the target of a channel transfer.)
+:   Requests that the conversation is transferred to a different integration. (Currently, only the web chat integration can be the target of a channel transfer.)
 
 `connect_to_agent`
-:   Requests that the conversation be transferred to a contact center with live agents for help.
+:   Requests that the conversation is transferred to a contact center with live agents for help.
 
 `date`
-:   Requests that the channel collect a date value from the customer (for example, by displaying an interactive calendar).
+:   Requests that the channel collects a date value from the customer (for example, by displaying an interactive calendar).
 
 `dtmf`
-:   Sends commands to the phone integration to control input or output using dual-tone multi-frequency (DTMF) signals. (DTMF is a protocol used to transmit the tones that are generated when a user presses keys on a push-button phone.)
+:   Sends commands to the phone integration to control input or output by using dual-tone multi-frequency (DTMF) signals. (DTMF is a protocol that is used to transmit the tones that are generated when a user presses keys on a push-button phone.)
 
 `end_session`
-:   Sends a command to the channel ending the session. This response type instructs the phone integration to hang up the call.
+:   Sends a command to the channel to end the session. This response type instructs the phone integration to hang up the call.
 
 `iframe`
 :   Embeds content from an external website as an HTML `iframe` element.
 
 `image`
-:   Displays an image specified by a URL.
+:   Displays an image that is specified by a URL.
 
 `option`
 :   Presents a set of options (such as buttons or a drop-down list) that users can choose from. The selected value is then sent to the assistant as user input.
@@ -217,10 +202,10 @@ Not all channel integrations support all response types. For information about w
 :   Sends a command to the {{site.data.keyword.speechtotextshort}} service instance used by the phone integration. These commands can dynamically change the configuration or behavior of the service during a conversation.
 
 `start_activities`
-:   Sends a command to a channel integration to start one or more activities that are specific to that channel. You can use this response type to restart any activity you previously stopped using the `stop_activities` response type.
+:   Sends a command to a channel integration to start one or more activities that are specific to that channel. You can use this response type to restart any activity you previously stopped by using the `stop_activities` response type.
 
 `stop_activities`
-:   Sends a command to a channel integration to stop one or more activities that are specific to that channel. The activities remain stopped until they are restarted using the `start_activities` response type.
+:   Sends a command to a channel integration to stop one or more activities that are specific to that channel. The activities remain stopped until they are restarted by using the `start_activities` response type.
 
 `text`
 :   Displays text (or reads it aloud, for the phone integration). To add variety, you can specify multiple alternative text responses. If you specify multiple responses, you can choose to rotate sequentially through the list, choose a response randomly, or output all specified responses.
@@ -229,10 +214,10 @@ Not all channel integrations support all response types. For information about w
 :   Sends a command to the {{site.data.keyword.texttospeechshort}} service instance used by the phone integration. These commands can dynamically change the configuration or behavior of the service during a conversation.
 
 `user_defined`
-:   A custom response type containing any JSON data the client or integration knows how to handle.
+:   A custom response type with any JSON data the client or integration knows how to handle.
 
 `video`
-:   Displays a video specified by a URL.
+:   Displays a video that is specified by a URL.
 
 ## Channel integration support for response types
 {: #assistant-responses-json-integration-support}
@@ -258,4 +243,4 @@ The following table indicates which channel integrations support each type. For 
 | text_to_speech   |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |
 | user_defined     | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 | video            | ![Yes](images/checkmark-icon.svg) |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
-
+{: caption="Channel integration support" caption-side="bottom"}
