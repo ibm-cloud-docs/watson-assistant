@@ -43,14 +43,7 @@ Behind the scenes, font styling and link syntax are stored in Markdown format. I
 
 HTML tags (except for links) are automatically removed from text responses that are sent to the Facebook, WhatsApp, and Slack integrations, because those channels do not support HTML formatting. HTML tags are still handled appropriately in channels that support them (such as the web chat) and stored in the session history.
 
-<!--- Behind the scenes, these three choices are stored using Markdown format.
 
-| Choice | Markdown | Example output |
-|------------|--------|---------|
-| Bold | `There's **no** crying in baseball.` | There's **no** crying in baseball. |
-| Italic | `We're talking about *practice*.` | We're talking about *practice*. |
-| Link | `Contact us at [ibm.com](https://www.ibm.com).` | Contact us at [ibm.com](https://www.ibm.com). |
-{: caption="Formatting" caption-side="top"} --->
 
 If you're using a custom client application that does not support Markdown, don't apply text styling to your text responses.
 {: note}
@@ -371,3 +364,4 @@ To add a *Pause* response:
 
     Add another response type, such as a text response type, after the pause to clearly denote that the pause is over.
     {: tip}
+
