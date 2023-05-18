@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-05-17"
+lastupdated: "2023-05-18"
 
 keywords: Watson Assistant release notes
 
@@ -38,6 +38,17 @@ Changes to the date and number formats in assistant responses
    These changes are the result of migrating the {{site.data.keyword.conversationshort}} platform to Java 17, where locale values are updated by using specifications in [CLDR 39](https://cldr.unicode.org/index/downloads/cldr-39){: external}. 
    
    To avoid or minimize the impact of similar changes in the future, you can use [Display formats](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-display-formats).
+
+## 17 May 2023
+{: #watson-assistant-may172023}
+{: release-note}
+
+Display iframe inline
+:   In the web chat, there are now two ways an iframe response can be included:
+   - As a preview card that describes the embedded content. Customers can click this card to display the frame and interact with the content.
+   - Inline, meaning within the conversation. This new option is good for smaller pieces of iframe content.
+
+   For more information, see [Adding an iframe response](/docs/watson-assistant?topic=watson-assistant-respond#respond-add-iframe).
 
 ## 15 May 2023
 {: #watson-assistant-may152023}
