@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-05-18"
+lastupdated: "2023-05-23"
 
 keywords: Watson Assistant release notes
 
@@ -97,6 +97,9 @@ Activity log
 {: release-note}
 Allow changing topics in free text and regex responses
 :   By default, customers can't change topics when the assistant is asking for a free text response or when an utterance matches the pattern in a regex response. Now free text and regex customer response types have a setting to allow a user to digress and change topics. For more information, see [Enabling changing the topic for free text and regex customer responses](/docs/watson-assistant?topic=watson-assistant-change-topic#change-topic-free-text-regex).
+
+Autolearning beta for dialog removed
+:   As of this release, the *autolearning* beta has been removed from the **Analytics** section in dialog. You can use actions to test a new and improved autolearning beta. For more information, see [Using autolearning to improve assistant responses](/docs/watson-assistant?topic=watson-assistant-autolearn){: external}.
 
 ## 7 April 2023
 {: #watson-assistant-apr072023}
