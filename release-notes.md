@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-05-23"
+lastupdated: "2023-05-24"
 
 keywords: Watson Assistant release notes
 
@@ -54,7 +54,7 @@ Display iframe inline
 {: #watson-assistant-may152023}
 {: release-note}
 Change to dialog skill context variables named `request`
-:   If your dialog skill used a context variable that is named `request`, it was removed from the response payload of any `/message` calls in the V1 or V2 API, or through the {{site.data.keyword.conversationshort}} user interface. After 15 May 2023, this behavior changes. {{site.data.keyword.conversationshort}} doesn't context variables that are named `request` from the response payload anymore.
+:   If your dialog skill used a context variable that is named `request`, it was removed from the response payload of any `/message` calls in the V1 or V2 API, or through the {{site.data.keyword.conversationshort}} user interface. After 15 May 2023, this behavior changes. {{site.data.keyword.conversationshort}} doesn't remove context variables that are named `request` from the response payload anymore.
 
 ## 5 May 2023
 {: #watson-assistant-may052023}
