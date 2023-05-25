@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-04-07"
+lastupdated: "2023-05-25"
 
 subcollection: watson-assistant
 
@@ -16,33 +16,33 @@ subcollection: watson-assistant
 When customers reply to your assistant, they share information about themselves and what they want. Your assistant remembers this information, and other information about a conversation, as *variables*. Your assistant can use variables to provide a more personalized and customized experience, and to get users quickly to the solutions they need.
 {: shortdesc}
 
-Variables are a powerful tool you can use to build a better assistant. Variables make possible all of the following benefits:
+Variables are a powerful tool that you can use to build a better assistant. Variables make possible all of the following benefits:
 
 - **Personalization.** The best virtual assistant experiences are targeted and personalized for each customer. When an assistant greets a customer by saying "Hello, Frank! Welcome back," it tells Frank that it remembers his name and that it has talked to him before. By storing this kind of information in variables and then referencing them in your assistant's output, you can personalize the conversation and help your assistant seem more human.
 
-- **Acceleration.** Over the course of a conversation, your customers will answer questions and make choices. These customer responses are stored as variables, which your assistant can then use to guide a conversation. By choosing the right steps and not wasting your customers' time, you can get them as quickly as possible to the right solution.
+- **Acceleration.** Over the course of a conversation, your customers answer questions and make choices. These customer responses are stored as variables, which your assistant can then use to guide a conversation. By choosing the right steps and not wasting your customers' time, you can get them as quickly as possible to the right solution.
 
-- **Modularity.** Some information might be useful for many different purposes (for example, a customer's current account balance or contact information). Rather than retrieving or recalculating this information in multiple locations, you can do so once, using a variable to store the result and then access it wherever you need it.
+- **Modularity.** Some information might be useful for many different purposes (for example, a customer's current account balance or contact information). Rather than retrieving or recalculating this information in multiple locations, you can do so once, by using a variable to store the result and then access it wherever you need it.
 
-A variable is simply a named container for a piece of information; by referencing this container by name, your assistant can store or retrieve the information at run time. For example, a variable called *account_balance* might store your customer's current account balance, a value your assistant can update or retrieve as needed.
+A variable is simply a named container for a piece of information; by referencing this container by name, your assistant can store or retrieve the information at run time. For example, a variable that is called *account_balance* might store your customer's current account balance, a value your assistant can update or retrieve as needed.
 
-The data stored by a variable is characterized by the type of data it contains (such as text, a numeric value, a date, or even a list of multiple values); the operations you can perform with a variable vary depending on its data type. 
+The data that is stored by a variable is characterized by the type of data that it contains, such as text, a numeric value, a date, or even a list of multiple values. The operations that you can perform with a variable vary depending on its data type.
 
 ## Action variables and session variables
 
 {{site.data.keyword.conversationshort}} supports two categories of variables:
 
-- **Action variables**: When a step collects information from the customer, the customer response is automatically stored in an *action variable*. You can think of action variables as short-term memory: they persist only for the duration of the current action.
+- **Action variables**: When a step collects information from the customer, the customer response is automatically stored in an *action variable*. You can think of action variables as short-term memory: they persist only during the current action.
 
     The name of an action variable is always the name of the step that defines the customer response. (You cannot change the name of an action variable.) For example, suppose you define a step that asks "When were you born?" and accepts a date value as a response. The customer response is automatically stored as an action variable called `When were you born?`, which you can then access from any subsequent step in the same action.
 
 - **Session variables**: A value that is not necessarily tied to a particular action can be stored as a *session variable*. Session variables are long-term memory: they persist throughout the user's interaction with the assistant, and your assistant can reference them from any action.
 
-    You can create a session variable to store the value from an action variable, if you want to keep the value available for other actions to use. You can also define a session variable based on another session variable, or using a value defined in an expression. In addition to variables you create, {{site.data.keyword.conversationshort}} provides a set of built-in session variables for global values like the current time and date.
+    You can create a session variable to store the value from an action variable, if you want to keep the value available for other actions to use. You can also define a session variable based on another session variable, or by using a value defined in an expression. In addition to variables you create, {{site.data.keyword.conversationshort}} provides a set of built-in session variables for global values like the current time and date.
 
-    Session variables can help you to modularize your assistant, because you can write a single action that collects information needed in multiple places. For example, you might have a greeting action that collects basic information about the customer and stores the responses in session variables, which any action can then access.
+    Session variables can help you to modularize your assistant because you can write a single action that collects information that is needed in multiple places. For example, you might have a greeting action that collects basic information about the customer and stores the responses in session variables, which any action can then access.
 
-    A session variable you create persists only for the duration of a single session. At the end of the session, the variable's value is cleared. How long a session lasts depends upon how your customers access your assistant, and how your assistant is configured. 
+    A session variable that you create persists only during a single session. At the end of the session, the variable's value is cleared. How long a session lasts depends upon how your customers access your assistant, and how your assistant is configured.
     {: note}
 
 ### Creating a session variable
@@ -50,7 +50,7 @@ The data stored by a variable is characterized by the type of data it contains (
 
 To add a session variable that can be accessed by any action:
 
-1. From the main actions page, click **Variables > Created by you** in the navigation pane. The list shows all session variables you have created for your assistant.
+1. From the **Actions** page, click **Variables > Created by you**. The list shows all session variables that you created for your assistant.
 
 1. Click **New variable**.
 
@@ -61,13 +61,13 @@ To add a session variable that can be accessed by any action:
 
     As you add the name, an ID is generated for you. Any spaces in the name are replaced with underscores (_) in the ID.
 
-1. **Optional**: Add a type. This sets the response type of the variable. (For more information about response types, see [Choosing a response type](/docs/watson-assistant?topic=watson-assistant-collect-info#choosing-a-response-type).)
+1. **Optional**: Add a type to set the response type of the variable. (For more information about response types, see [Choosing a response type](/docs/watson-assistant?topic=watson-assistant-collect-info#choosing-a-response-type).)
 
     From this field, you can also select any of the saved responses that you created. For more information about saved responses, see [Saving and reusing customer responses](/docs/watson-assistant?topic=watson-assistant-collect-info#saved-customer-responses).
 
-    In addition to the listed types, a variable can also be created as an array. To create an array variable, select **Any** as the type, and in the next step, define an initial value using the expression `[]` to represent an empty array.
+    In addition to the listed types, a variable can also be created as an array. To create an array variable, select **Any** as the type, and in the next step, define an initial value that uses the expression `[]` to represent an empty array.
 
-1. **Optional**: Add an initial value. This sets the starting value for the variable at the beginning of each user session. For example, suppose you have an assistant your customers can use to make purchases; you might initialize a *Payment due* variable with a starting value of 0, and then add to that value as the customer orders items.
+1. **Optional**: Add an initial value to set the starting value for the variable at the beginning of each user session. For example, your customers can use an assistant to make purchases. You might initialize a *Payment due* variable with a starting value of 0, and then add to that value as the customer orders items.
 
     To specify a complex object or an array as the initial value, or to calculate the initial value based on other variables, you can write an expression. For more information about writing expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).
 
@@ -80,7 +80,7 @@ To add a session variable that can be accessed by any action:
 
 In addition to the variables you create, {{site.data.keyword.conversationshort}} provides a set of built-in variables you can access from any action. At run time, these variables are automatically set with the appropriate values. For example, the *Current time* session variable always provides the current time in the user's time zone, at the time of the interaction with the customer.
 
-To see these variables, click **Variables** in the navigation pane from the main actions page.
+To see these variables, click **Variables** on the **Actions** page.
 
 - The **Set by assistant** page shows built-in session variables that are automatically provided for each assistant.
 
@@ -90,20 +90,20 @@ To see these variables, click **Variables** in the navigation pane from the main
 
 |  Variable name             | Variable ID | Description | Examples |
 |----------------------------|-------------|-------------|---------|
-| *Digressed from*              | `digressed_from`  | Last action before digressing (or null if not digressed) | Pay bill |
+| *Digressed from*              | `digressed_from`  | Last action before the customer digressed (or null if not digressed) | Pay bill |
 | *Now*                      | `now`       | The current date and time in the user's time zone. | `2021-08-11T11:28:02` |
 | *Current time*             | `current_time` | The current time in the user's time zone.       | `11:28:02`            |
 | *Current date*             | `current_date` | The current date in the user's time zone.       | `2021-08-11`          |
 | *Fallback reason*          | `fallback_reason` | The reason why a user is routed to the fallback action | Step validation failed - Agent requested - No action matches |
-| *No action matches count* | `no_action_matches_count` | This represents a count of customer's consecutive unrecognized input attempts | 3 |
+| *No action matches count* | `no_action_matches_count` | Represents a count of customer's consecutive unrecognized input attempts | 3 |
 {: caption="Variables set by assistant" caption-side="top"}
 
 **Set by integration**:
 
 | Variable name | Variable ID | Description | Example |
 |---------------|-------------|-------------|---------|
-| *Timezone*    | `timezone`  | The user's time zone as specified by the integration or API client. The default time zone (if not specified by the integration) is UTC. | `America/New_York` |
-| *Locale*      | `locale`    | The user's locale as set by the integration or API client. The locale can affect understanding and formatting of dates, times and numbers. | `en-gb` |
+| *Timezone*    | `timezone`  | The user's time zone as specified by the integration or API client. The default time zone (if not specified by the integration) is Coordinated Universal Time. | `America/New_York` |
+| *Locale*      | `locale`    | The user's locale as set by the integration or API client. The locale can affect understanding and formatting of dates, times, and numbers. | `en-gb` |
 | *Channel Name* | `channel_name` | The name of the channel that your user is interacting with. | `Web chat` |
 {: caption="Variables set by integration" caption-side="top"}
 
@@ -130,7 +130,7 @@ Any action can store a value in a session variable so it is available to other a
    | Session variables | Select another session variable to use its value. The choices that are listed match the type of variable that you want to set. |
    | Assistant variables | Select a built-in system variable to use its value. The choices that are listed match the type of variable that you want to set. |
    | Integration variables | If you are setting an integration variable, you can choose other integration variables as the value. |
-   {: caption="Set variable values" caption-side="top"}
+   {: caption="Set variable values" caption-side="bottom"}
    
 1. To set more variable values in the same step, click **Set new value**.
 
