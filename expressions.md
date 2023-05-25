@@ -78,6 +78,7 @@ To use an expression when assigning a value to a session variable, follow these 
 You can also use an expression to assign an initial value to a session variable. In the **Session variable** window, go to the **Initial value** field and click **Use expression**.
 {: tip}
 
+
 ## Expression syntax
 {: #expression-syntax}
 
