@@ -120,7 +120,6 @@ Any action can store a value in a session variable so it is available to other a
 
     If you haven't created the session variable that you want to use, select **New variable**. You can then specify the details about the new session variable, which is added to the list of session variables for the assistant. For more information, see [Creating a session variable](#create-session-variable).
 
-
 1. In the **To** drop-down list, the choices vary depending on the type of variable you're setting. Possible choices include:
 
    | Choice | Description |
