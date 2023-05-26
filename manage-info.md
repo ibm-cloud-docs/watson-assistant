@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-05-25"
+lastupdated: "2023-05-26"
 
 subcollection: watson-assistant
 
@@ -29,6 +29,7 @@ A variable is simply a named container for a piece of information; by referencin
 The data that is stored by a variable is characterized by the type of data that it contains, such as text, a numeric value, a date, or even a list of multiple values. The operations that you can perform with a variable vary depending on its data type.
 
 ## Action variables and session variables
+{: #manage-info-action-session-variables}
 
 {{site.data.keyword.conversationshort}} supports two categories of variables:
 
