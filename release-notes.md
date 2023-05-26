@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-05-25"
+lastupdated: "2023-05-26"
 
 keywords: Watson Assistant release notes
 
@@ -44,7 +44,7 @@ Changes to the date and number formats in assistant responses
 {: release-note}
 
 Differences in contextual entity detection for dialog skills with few annotations
-:   If you have 10 to 20 examples of contextual entities in your dialog skill, you might see differences in the entities detected due to updates made to address critical vulnerabilities. The impact of these differences is limited to only newly-trained models. Existing models are unaffected. You can mitigate these differences by annotating more examples. For more information, see [Annotation-based method](/docs/assistant?topic=assistant-entities#entities-annotations-overview).
+:   If you have 10 to 20 examples of contextual entities in your dialog skill, you might see differences in the entities detected due to updates made to address critical vulnerabilities. The impact of these differences is limited to only newly-trained models. Existing models are unaffected. You can mitigate these differences by annotating more examples. For more information, see [Annotation-based method](/docs/assistant?topic=assistant-entities#entities-annotations-overview){: external}.
 
 ## 17 May 2023
 {: #watson-assistant-may172023}
