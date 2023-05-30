@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-05-01"
+lastupdated: "2023-05-30"
 
 subcollection: watson-assistant
 
@@ -16,7 +16,7 @@ subcollection: watson-assistant
 Find out what's new in the web chat integration.
 {: shortdesc}
 
-The web chat change log lists changes ordered by version number. For more information about the web chat, see [Integrating the web chat with your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
+The web chat changelog lists changes ordered by version number. For more information about the web chat, see [Integrating the web chat with your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
 
 For information about new features and improvements to the core {{site.data.keyword.conversationshort}} product, see [Release notes](/docs/watson-assistant?topic=watson-assistant-release-notes).
 
@@ -24,6 +24,13 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 7.3.0
+{: #7.3.0}
+
+*Release date: 30 May 2023*
+
+- Bug fixes.
 
 ## 7.2.2
 {: #7.2.2}
