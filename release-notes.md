@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-05-26"
+lastupdated: "2023-05-30"
 
 keywords: Watson Assistant release notes
 
@@ -21,6 +21,19 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+
+## 29 May 2023
+{: #watson-assistant-may292023}
+{: release-note}
+
+New expression choice for setting a session variable
+:   Previously, to use an expression to set or modify a variable value, you needed to pick an existing variable or create a new one and select the expression option. Now you can use a new **Expression** choice to write an expression directly without first picking a variable. For more information, see [Storing a value in a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#store-session-variable).
+
+Changes to validation of OpenAPI specifications 
+:   When you build a custom extension, you work with OpenAPI specification files. This release includes changes to the validation of OpenAPI files, which might affect the connection between your actions and extensions 
+
+   You can import an action with references to a custom extension and {{site.data.keyword.conversationshort}} can automatically connect the action and extension. With the validation change, modifications to the OpenAPI specification for your custom extension might affect this automatic connection. For more information, see [Building a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension).
 
 ## 22 May 2023
 {: #watson-assistant-may222023}
