@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-05-25"
+lastupdated: "2023-05-30"
 
 subcollection: watson-assistant
 
@@ -78,6 +78,17 @@ To use an expression when assigning a value to a session variable, follow these 
 You can also use an expression to assign an initial value to a session variable. In the **Session variable** window, go to the **Initial value** field and click **Use expression**.
 {: tip}
 
+You can also write an expression directly without first picking a variable:
+
+1. From within a step, click **Set variable values**.
+
+1. Click **Set new value**.
+
+1. From the drop-down list, select **Expression**. 
+
+1. Type the expression you want to use.
+
+1. If you are using the expression editor, click **Apply** to save your changes and close the editor window.
 
 ## Expression syntax
 {: #expression-syntax}

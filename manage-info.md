@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-05-26"
+lastupdated: "2023-05-30"
 
 subcollection: watson-assistant
 
@@ -117,10 +117,16 @@ Any action can store a value in a session variable so it is available to other a
 
 1. Click **Set new value**.
 
-1. In the **Set** drop-down list, select the session or integration variable that you want to store the value in. The new value replaces any previous value that is stored.
+1. In the **Set** drop-down list, your choices are:
 
-    If you haven't created the session variable that you want to use, select **New variable**. You can then specify the details about the new session variable, which is added to the list of session variables for the assistant. For more information, see [Creating a session variable](#create-session-variable).
-
+   | Choice | Description |
+   | --- | --- |
+   | **Session variable** | The session variable that you want to store the value in. The new value replaces any previous value that is stored. |
+   | **Integration variable** | The session variable that you want to store the value in. The new value replaces any previous value that is stored. |
+   | **Expression** | Write an expression directly without first picking a variable. For more information, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions). |
+   | **+ New session variable** | You can create a new session variable, which is added to the list of session variables for the assistant. For more information, see [Creating a session variable](#create-session-variable). |
+   {: caption="Set variable values" caption-side="bottom"}
+   
 1. In the **To** drop-down list, the choices vary depending on the type of variable you're setting. Possible choices include:
 
    | Choice | Description |
