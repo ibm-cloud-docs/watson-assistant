@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-05-30"
+lastupdated: "2023-06-05"
 
 keywords: Watson Assistant release notes
 
@@ -22,6 +22,12 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 5 June 2023
+{: #watson-assistant-jun052023}
+{: release-note}
+
+Filtering the list of actions
+:   You can locate specific actions by filtering the list by subactions, by custom extension, or by variable. For more information, see [Filtering actions](/docs/watson-assistant?topic=watson-assistant-filter-actions).
 
 ## 29 May 2023
 {: #watson-assistant-may292023}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-06-02"
+lastupdated: "2023-06-05"
 
 subcollection: watson-assistant
 
@@ -64,6 +64,7 @@ Click the **Filter** icon ![Filter](../../icons/filter.svg) to filter the log. Y
 - Details
 - Activity
 - Environment
+- Environment ID
 - User (requires exact match)
 - Date range
 
@@ -86,15 +87,15 @@ For the early access release, here's the current list of items and activity that
 
 | Item | Activity | Notes |
 | --- | --- | --- |
-| Assistant | Created | |
+| Assistant | Created, Dialog activated, Dialog deactivated | |
 | Assistant Settings | Updated | |
 | Action | Created, Updated, Deleted | <ul><li>Each save (auto or manual) is tracked as an update.</li><li>Changes to action settings are tracked as an update.</li></ul> |
 | Variable | Created, Updated, Deleted | |
 | Saved Response Type | Created, Updated, Deleted | |
 | Version | Created, Published, Deleted | |
-| Environment | Created, Updated, Deleted | Dialog activation is tracked as an environment update. |
-| Intent | Created, Updated, Deleted | <ul><li>Each save (auto or manual) is tracked as an update.</li><li>A renamed intent retains the old name in previous entries and won't have a link.</li><li>Only individual deletions are included. Bulk deletions are not.</li></ul> |
-| Entity | Created, Updated, Deleted | <ul><li>Each save (auto or manual) is tracked as an update.</li><li>A renamed entity retains the old name in previous entries and won't have a link.</li><li>Only individual deletions are included. Bulk deletions are not.</li></ul> |
+| Environment | Created, Updated, Deleted | 
+| Intent | Created, Updated, Deleted | <ul><li>Each save (auto or manual) is tracked as an update.</li><li>A renamed intent retains the old name in previous entries and won't have a link.</li></ul> |
+| Entity | Created, Updated, Deleted | <ul><li>Each save (auto or manual) is tracked as an update.</li><li>A renamed entity retains the old name in previous entries and won't have a link.</li></ul> |
 | Dialog Node | Created, Updated, Deleted | Each save (auto or manual) is tracked as an update. |
 | Search | Updated | |
 {: caption="Items and activity" caption-side="top"}
@@ -111,8 +112,6 @@ These items aren't included in the activity log:
 - Uploading actions, intents, entities aren't included as created
 - Changing actions global settings
 - Reverting a version to draft
-- Activating or deactivating dialog (this is included as an update to environments)
 - Adding or deleting entity values and synonyms
-- Bulk deletion of intents or entities
 - Creating, updating, or deleting channel integrations
 - Creating, updating, or deleting custom extensions
