@@ -29,7 +29,7 @@ You can filter by:
 
 To filter by all or part of a name, make an entry in the **Filter by name** field. The list is filtered as you type.
 
-![Filter by name](images/filter-action-by-name.png)
+![Filter by name](images/filter-action-name.png)
 
 To filter by action, extension, or variable:
 
