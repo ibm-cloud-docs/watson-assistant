@@ -2,28 +2,13 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-01-26"
+lastupdated: "2023-06-06"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-
-{{site.data.content.classiclink}}
+{{site.data.keyword.attribute-definition-list}}
 
 # Choosing what to do at the end of a step
 {: #step-what-next}
@@ -100,13 +85,14 @@ To pass values to another action:
 
 1. Click **Edit passed values**.
 
-1. In the **Edit passed variables** window, click **Set value for the other action**.
+1. In the **Edit passed variables** window, click **Set new value**.
 
 1. Select an action variable that you want to pass a value for. (The available action variables are based on the customer responses defined in the other action.)
 
 1. Select the value you want to pass from the current action. You can select any available variable, or select **Expression** if you want to specify a different value.
 
 1. Click **Apply**.
+
 
 ## Use an extension
 {: #use-extension}
