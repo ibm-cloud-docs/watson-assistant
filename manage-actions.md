@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-05-17"
+lastupdated: "2023-06-07"
 
 subcollection: watson-assistant
 
@@ -21,4 +21,4 @@ Use different {{site.data.keyword.conversationshort}} capabilities to manage you
 | [Copying an action to another assistant](/docs/watson-assistant?topic=watson-assistant-copy-action) | Copy an action from one assistant to another. When you copy an action, references to other actions, variables, and saved responses are also copied. |
 | [Uploading or downloading all actions](/docs/watson-assistant?topic=watson-assistant-upload-download-actions) | Upload or download all your actions as a JSON file. | 
 | [Organizing actions in collections](/docs/watson-assistant?topic=watson-assistant-collections) | Use a collection to organize your actions. You can put actions into folder-style groups based on whatever categorization you need at your organization, such as by use case, internal team, or status. |
-{: caption="Filters" caption-side="bottom"}
+{: caption="Tasks" caption-side="bottom"}

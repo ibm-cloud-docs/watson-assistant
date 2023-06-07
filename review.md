@@ -10,7 +10,7 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.content.classiclink}}
+
 
 # Reviewing and debugging your actions
 {: #review}

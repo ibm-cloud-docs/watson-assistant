@@ -23,7 +23,7 @@ subcollection: watson-assistant
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-{{site.data.content.classiclink}}
+
 
 # Calling actions from a dialog
 {: #dialog-call-action}

@@ -25,7 +25,7 @@ subcollection: watson-assistant
 {:swift: .ph data-hd-programlang='swift'}
 {:video: .video}
 
-{{site.data.content.classiclink}}
+
 
 # Tutorial: implementing custom option buttons in the web chat
 {: #web-chat-develop-custom-buttons}
