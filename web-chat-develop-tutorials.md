@@ -25,7 +25,7 @@ subcollection: watson-assistant
 {:swift: .ph data-hd-programlang='swift'}
 {:video: .video}
 
-{{site.data.content.classiclink}}
+
 
 # Web chat development tutorials
 {: #web-chat-develop-tutorials}

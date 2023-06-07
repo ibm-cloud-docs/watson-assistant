@@ -22,7 +22,7 @@ subcollection: watson-assistant
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-{{site.data.content.classiclink}}
+
 
 # Deleting an integration
 {: #deploy-integration-delete}

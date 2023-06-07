@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: “2023-04-27”
+lastupdated: “2023-06-07”
 
 subcollection: watson-assistant
 
@@ -27,7 +27,7 @@ subcollection: watson-assistant
 {:tag-ibm-cloud: .tag data-tag-color="blue"}
 {:tag-cp4d: .tag data-tag-color="magenta"}
 
-{{site.data.content.classiclink}}
+
 
 # Integrating with phone and Genesys Cloud
 {: #deploy-phone-genesys}

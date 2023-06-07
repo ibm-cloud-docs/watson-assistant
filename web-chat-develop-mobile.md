@@ -25,7 +25,7 @@ subcollection: watson-assistant
 {:swift: .ph data-hd-programlang='swift'}
 {:video: .video}
 
-{{site.data.content.classiclink}}
+
 
 # Adding the web chat to your mobile application
 {: #web-chat-develop-mobile}

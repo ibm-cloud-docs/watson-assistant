@@ -23,7 +23,7 @@ subcollection: watson-assistant
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-{{site.data.content.classiclink}}
+
 
 # Migrating to the new experience
 {: #migrate-overview}

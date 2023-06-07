@@ -25,7 +25,7 @@ subcollection: watson-assistant
 {:swift: .ph data-hd-programlang='swift'}
 {:video: .video}
 
-{{site.data.content.classiclink}}
+
 
 # Tutorial: Interacting with the host web page
 {: #web-chat-develop-page-interaction}

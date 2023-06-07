@@ -25,7 +25,7 @@ subcollection: watson-assistant
 {:swift: .ph data-hd-programlang='swift'}
 {:video: .video}
 
-{{site.data.content.classiclink}}
+
 
 # Encrypting sensitive data
 {: #web-chat-security-encrypt}

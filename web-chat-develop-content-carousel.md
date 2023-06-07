@@ -25,7 +25,7 @@ subcollection: watson-assistant
 {:swift: .ph data-hd-programlang='swift'}
 {:video: .video}
 
-{{site.data.content.classiclink}}
+
 
 # Tutorial: Rendering a custom response as a content carousel
 {: #web-chat-develop-content-carousel}

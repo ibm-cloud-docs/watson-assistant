@@ -25,7 +25,7 @@ subcollection: watson-assistant
 {:tag-ibm-cloud: .tag data-tag-color="blue"}
 {:tag-cp4d: .tag data-tag-color="magenta"}
 
-{{site.data.content.classiclink}}
+
 
 # Integrating with WhatsApp
 {: #deploy-whatsapp}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-03-26"
+lastupdated: "2023-06-07"
 
 subcollection: watson-assistant
 
@@ -25,7 +25,7 @@ subcollection: watson-assistant
 {:swift: .ph data-hd-programlang='swift'}
 {:video: .video}
 
-{{site.data.content.classiclink}}
+
 
 # Web chat setup overview
 {: #web-chat-config}
