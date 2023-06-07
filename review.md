@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-03-13"
+lastupdated: "2023-06-07"
 
 subcollection: watson-assistant
 
@@ -24,8 +24,6 @@ As you make changes, test the action at any time to see whether the resulting in
 
 Before you test your action, make sure you save any new changes, and wait until the system finishes training. If the system is still training, a message is displayed that says so.
 {: note}
-
-![Preview button](images/review-preview-button.png){: caption="Preview button" caption-side="bottom"}
 
 1.  Click **Preview**. The Greet customer action starts.
 
