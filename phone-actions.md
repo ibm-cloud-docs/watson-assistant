@@ -51,7 +51,7 @@ You can also perform the following phone-specific actions:
 - [Inject custom values into CDR log events](#phone-actions-cdr-custom-data)
 - [Access phone integration context variables from your action](#phone-actions-access-context-variables)
 
-For reference information about response types, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference). <!-- For reference information about phone-specific context variables, see [Phone context variables](/docs/watson-assistant?topic=watson-assistant-phone-context). -->
+For reference information about response types, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference). 
 
 ## Adding phone-specific responses to your assistant
 {: #phone-actions-add}

@@ -130,11 +130,11 @@ This example shows how you can use the [Swiper](https://swiperjs.com/){: externa
             <div class="Carousel__CardTitle">${title}</div>
             <div class="Carousel__CardDescription">${description}</div>
           </div>
-          <!-- Here you would use a link to your own page that shows more details about this card. -->
+          
           <a href="https://www.ibm.com" class="Carousel__CardButton bx--btn bx--btn--primary" target="_blank">
             View more details
           </a>
-          <!-- This button will send a message to the assisstant and web chat will respond with more info. -->
+          
           <button type="button" class="Carousel__CardButton Carousel__CardButtonMessage bx--btn bx--btn--primary">
             Tell me more about this
           </button>

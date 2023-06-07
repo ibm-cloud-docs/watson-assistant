@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-05"
+lastupdated: "2023-06-07"
 
 subcollection: watson-assistant
 
@@ -13,6 +13,8 @@ subcollection: watson-assistant
 
 # Filtering actions
 {: #filter-actions}
+
+[IBM Cloud]{: tag-ibm-cloud}
 
 You can locate specific actions by filtering the list.
 {: shortdesc}
