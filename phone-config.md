@@ -144,7 +144,7 @@ For more information about using the search integration, see [Leveraging existin
 
 For more information about how to implement common actions from your dialog, see [Handling phone interactions](/docs/watson-assistant?topic=watson-assistant-phone-actions).
 
-<!-- If you want to use the same dialog for an assistant that you deploy to many different platforms, you can add custom responses per integration type. Add a conditioned response that tells the assistant to show the response only when the phone integration is being used. For more information, see [Building integration-specific responses](/docs/assistant?topic=assistant-dialog-integrations#dialog-integrations-condition-by-type){: external}. I don't have confidence this really works. We should confirm it works with the phonse integration channel before this goes into our public doc.  -->
+
 
 ## Setting up a SIP trunk
 {: #deploy-phone-config-sip-providers}
@@ -241,7 +241,7 @@ The phone integration provides a more seamless integration with your assistant. 
 
 - Outbound calling
 - Configuring backup locations
-- Event forwarding to save call detail reports in the IBM Cloudant for IBM Cloud database service <!-- Use the CDR API instead. -->
+- Event forwarding to save call detail reports in the IBM Cloudant for IBM Cloud database service 
 - Reviewing the usage summary page. Use IBM Log Analysis instead. For more information, see [Viewing logs](/docs/watson-assistant?topic=watson-assistant-phone-troubleshooting#phone-troubleshooting-logs).
 
 To migrate from {{site.data.keyword.iva_short}} to the {{site.data.keyword.conversationshort}} phone integration, complete the following steps:

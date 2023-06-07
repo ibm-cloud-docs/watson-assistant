@@ -42,9 +42,7 @@ Your agents can work with one of these supported service desk tools:
 - [Twilio Flex](/docs/watson-assistant?topic=watson-assistant-deploy-phone-flex)
 - [Zendesk](/docs/watson-assistant?topic=watson-assistant-deploy-zendesk)
 
-<!-- To see an example of how this works from the agent's perspective, watch this video showing a transfer to an agent using Genesys Cloud:
 
-![Transfer to human agent using Genesys Cloud](https://www.youtube.com/embed/8IbXBsCELRA){: video output="iframe" id="youtubeplayer" frameborder="0" width="560" height="315" webkitallowfullscreen mozallowfullscreen allowfullscreen}-->
 
 There are two basic scenarios when your assistant might need to transfer a conversation to a live agent:
 

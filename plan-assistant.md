@@ -71,22 +71,7 @@ The answer to common questions might already be documented somewhere in your org
 
 You can give your assistant access to this information by adding a [search integration](/docs/watson-assistant?topic=watson-assistant-search-add) to your assistant. The search integration uses {{site.data.keyword.discoveryfull}} to return smart answers to natural language questions.
 
-<!--- ## Give the right type of answer to meet the need
-{: #plan-responses}
 
-A conversational exchange is what your assistant does best, but your assistant can do other things too. The best response to a question might be a single answer with a link somewhere else. Think about the right way to answer customer questions; don't try to fit everything into one type of conversational exchange.
-
-The following table lists some examples.
-
-| Customer need | Best type of response |
-|---------------|-----------------------|
-| Get information about your store location | Your assistant answers with text (the store address) and an image (an area map). |
-| Activate a credit card | Your assistant can use a conversational flow to collect information for identity verification, and then call a webhook to submit the request to activate the card on the user's behalf. |
-| Complete a simple task that involves a complicated application | Your assistant can link them to a 2-minute video that illustrates how to complete the task. |
-| Learn about insurance plan details after the death of a loved one | Your assistant can connect the customer directly to a person who can show empathy and patience as the matter is addressed. |
-| Solve a problem that requires a long and involved procedure to fix | Instead of trying to walk the customer through the procedure step by step in conversation, your assistant can link to a help center that documents the full procedure in detail. |
-| The customer calls support and your assistant answers | Let's say the assistant needs many details from the customer before it can help. Instead of trying to prompt the customer for each piece of information and transcribe it, your assistant can switch to SMS text messaging. After years of interacting with bad interactive voice response (IVR) systems, many customers are more likely to yell `Agent` over and over than to engage in a long exchange. If you give them a chance to explain something in writing, they tend to do so willingly. |
-{: caption="Example of optimal response types" caption-side="top"} --->
 
 ## 5. Plan your handoff strategy
 {: #plan-handoff}
@@ -105,14 +90,6 @@ If you deploy by using the phone integration, you can reach a human agent only b
 ## Start building an assistant
 {: #plan-build}
 
-<!---Assemble a team with people who understand your customers and their needs, people who know how to interact with customers to reach the best outcomes. These subject matter experts can focus on designing an engaging conversational flow. In fact, the actions skill is designed with this type of expert in mind. The team can simultaneously build a conversational flow by defining discrete actions.
 
-If you have data scientists or team members with programming skills, you can take advantage of some advanced capabilities that require varying levels of development expertise. This set of users might prefer to build the conversational flow with a dialog skill because there is greater visibility into the individual components that make up the training data.
-
-So, which conversational skill type *should* you use?
-
-Use both. Leverage advanced capabilities that are available from a dialog skill and build individual actions to perform finite tasks that you want to support. You can call the actions in your actions skill from your dialog skill.
-
-For more information, see [Choosing a conversational skill](/docs/assistant?topic=assistant-skills-choose).--->
 
 If you're ready to start building an assistant, see [Editing actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview) for more information.

@@ -55,5 +55,5 @@ To configure suggestions, complete the following steps:
     If your web chat is not integrated with a contact center, specify a message that helps your customers reach whatever form of support you do offer. If you offer a toll-free support line, you might add `Get the support line phone number`. Or if you offer an online support request form, you might add `Open a support ticket`.
 
     Whether you use the default support message or add your own, make sure your action is designed to recognize the message and respond to it appropriately.
-    <!--- For more information, see [Connecting customers with support](/docs/assistant?topic=assistant-dialog-support){: external}. --->
+    
 

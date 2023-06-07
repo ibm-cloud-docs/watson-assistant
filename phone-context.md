@@ -33,46 +33,7 @@ You can use context variables to manage the flow of conversations with customers
 
 The following tables describe the context variables that have special meaning in the context of the phone integration. They should not be used for any purpose other than the documented use.
 
-<!--
-## Context variables that are set by your dialog or actions
-{: #phone-context-variables-set-by-dialog}
 
-| Name | Type | Description | Default |
-|------|------|-------------|---------|
-| `final_utterance_timeout_count` | Number | The time (in milliseconds) that the phone integration waits to receive a final utterance from the {{site.data.keyword.speechtotextshort}} service. The timeout occurs if the phone integration does not receive a final utterance within the specified time limit, even if hypotheses continue to be generated. When the timeout occurs, the phone integration sends {{site.data.keyword.conversationshort}} a text update that includes the word `vgwFinalUtteranceTimeout` to indicate that no final utterance was received. | N/A |
-| `post_response_timeout_count` | Number | The time (in milliseconds) to wait for a new utterance after the response is played back to the caller. When this timeout occurs, the phone integration channel sends a text message to the assistant that includes the word `vgwPostResponseTimeout` and sets the context variable `input.integrations.voice_telephony.post_response_timeout_occurred` to `true`. | 7000 |
-| `turn_settings.timeout_count` | Number | The time (in milliseconds) to wait for a response from {{site.data.keyword.conversationshort}}. If this time is exceeded, the phone integration tries again to contact {{site.data.keyword.conversationshort}}. If the service still can't be reached, the call fails. | N/A |
-| `cdr_custom_data` | object | Any JSON key/value pairs to collect and store with the CDR record at the end of the phone call. Each time this object is received, it is merged with any previously received `cdr_custom_data` context. | N/A |
-{: caption="Voice context variables set by the dialog or actions" caption-side="top"}
-
-### Example
-
-```json
-{
-  "generic": [
-    {
-      "response_type": "text",
-      "text": "Hello"
-    }
-  ],
-  "context": {
-    "integrations": {
-      "voice_telephony": {
-        "post_response_timeout_count": 10000,
-        "turn_settings": {
-          "timeout_count": 5000
-        },
-        "cdr_custom_data": {
-          "key1": "value1",
-          "key2": "value2"
-        }
-      }
-    }
-  }
-}
-```
-{: codeblock}
--->
 
 ## Context variables that are set by the phone channel
 {: #phone-context-variables-set-by-phone-channel}

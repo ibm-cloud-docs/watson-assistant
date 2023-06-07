@@ -85,12 +85,12 @@ Follow these steps to add integrations to your assistant:
 
 ![Plus or higher plans only](images/plus.png) For environments where private endpoints are in use, keep in mind that these integrations send traffic over the internet.
 {: note}
-<!--- For more information, see [Private network endpoints](https://cloud.ibm.com/docs/assistant?topic=assistant-security#security-private-endpoints). --->
+
 
 ## How live agent integrations work
 {: #deploy-integration-live-agent-integrations}
 
-<!--Watch [Connecting Zendesk to Your Assistant](https://vimeo.com/799537903){: external}, a 4-minute video about integrating your assistant with a live agent integration, such as Zendesk.-->
+
 
 Watch a 4-minute video about integrating your assistant with a live agent integration, such as Zendesk:
 
