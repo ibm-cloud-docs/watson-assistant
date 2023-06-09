@@ -971,7 +971,7 @@ Change to conversation skill choices
 {: release-note}
 
 Actions skill improvement
-: Actions now include a new choice, **Go to another action**, for what to do next in a step. This feature lets you can call one action from another action, to switch the conversation flow to another action to perform a certain task. If you have a portion of an action that can be applied across multiple use cases you can build it once and call to it from each action. This new option is available in the **And then** section of each step. For more information, see [Deciding what to do next](/docs/assistant?topic=assistant-actions#actions-what-next){: external}.
+:  Actions now include a new choice, **Go to a subaction**, for what to do next in a step. This feature lets you can call one action from another action, to switch the conversation flow to another action to perform a certain task. If you have a portion of an action that can be applied across multiple use cases you can build it once and call to it from each action. This new option is available in the **And then** section of each step. For more information, see [Go to a subaction](/docs/watson-assistant?topic=watson-assistant-step-what-next#go-to-another-action).
 
 ## 21 April 2021
 {: #watson-assistant-apr212021}

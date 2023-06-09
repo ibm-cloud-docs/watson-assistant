@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-06-09"
 
 subcollection: watson-assistant
 
@@ -66,7 +66,7 @@ Simple instructions for setting up NeuralSeek are available on the **Integrate**
 
 1. Delete the two default steps.
 
-1. Add a step. Set **And then** to **Go to another action** and choose the **NeuralSeek search** action.
+1. Add a step. Set **And then** to **Go to a subaction** and choose the **NeuralSeek search** action.
 
 1. If you aren't connecting your customers to a live agent, you might want to edit the **Fallback** action in the same way as **No action matches**.
 
