@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-06-05"
+lastupdated: "2023-06-09"
 
 keywords: Watson Assistant release notes
 
@@ -21,6 +21,16 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 8 June 2023
+{: #watson-assistant-jun082023}
+{: release-note}
+
+Edit step titles
+:  You can now add and edit titles for each step, which can help you more easily identify what a step does in an action. For more information, see [Editing actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview).
+
+New message when deleting a subaction
+:   If you delete an action that is a subaction, there is a new message that lists all the actions that call the subaction and asks you to confirm the deletion. The message helps you preserve dependencies between actions and subactions.
 
 ## 5 June 2023
 {: #watson-assistant-jun052023}

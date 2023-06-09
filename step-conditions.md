@@ -2,28 +2,13 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-06-09"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Adding conditions to a step
 {: #step-conditions}
@@ -56,13 +41,13 @@ To add a step condition:
 
 1.  Open the step. Click the condition field at the beginning of the step:
 
-    ![Step editor with condition field highlighted](images/step-condition.png)
+    ![Step editor with condition field highlighted](images/step-condition.png){: caption="Condition field" caption-side="bottom"}
 
 1. Select **with conditions** from the drop-down list. The **Conditions** section expands.
 
 1. By default, a single condition group, containing a single condition, is automatically created based on the action variable stored by the most recent customer response.
 
-    ![Editing a condition to select Checking as the value to check for](images/action-condition-edit.png)
+    ![Editing a condition to select Checking as the value to check for](images/action-condition-edit.png){: caption="Edit condition" caption-side="bottom"}
 
     You can click any part of the expression to edit it:
 
