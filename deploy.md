@@ -2,28 +2,13 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-03-03"
+lastupdated: "2023-06-09"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:tag-ibm-cloud: .tag data-tag-color="blue"}
-{:tag-cp4d: .tag data-tag-color="magenta"}
+{{site.data.keyword.attribute-definition-list}}
 
 # Deploying your assistant
 {: #deploy-assistant}
@@ -52,7 +37,7 @@ You can review your connected channels in your environments, for example:
 - **Live environment**: Channels that are connected to this environment represent the public-facing experience of your assistant and are exposed to your customers.
 - **Multiple enviroments**: If you are using [multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments), channels are exposed only to your internal team for testing and not to your customers.
 
-For more information on environments, see [Environments](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-publish-overview#environments) and [Adding and using multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments).
+For more information on environments, see [Environments](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments) and [Adding and using multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments).
 
 You can test integrations from the draft environment and interact with your draft web chat on the **Preview** page. When you first create a new assistant, the assistant automatically connects to the web chat channel in your live environment. However, the assistant itself is not available to your customers until you embed the web chat JavaScript in the header of your website. For more information, see [Adding the web chat to your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
 
@@ -80,7 +65,7 @@ Each channel has specific settings that you can adjust to adapt the end experien
 
 If you make an update to a channel in the draft environment, the same channel in live environment is not affected in the live environment. Similarly, if you make an update to a channel in the live environment, the same channel in draft environment is not affected. If you select a channel from the **Integrations** page, you are asked to select which environment you are editing.
 
-For more information about editing your web chat integration, see [Basic web chat configuration](/docs/watson-assistant?topic=watson-assistant-web-chat-basics).
+For more information about editing your web chat integration, see [Basic web chat configuration](/docs/watson-assistant?topic=watson-assistant-web-chat-overview).
 
 ## Deleting channels
 {: #deploy-assistant-delete-channels}
