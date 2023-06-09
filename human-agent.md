@@ -1,29 +1,14 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-12-05"
+  years: 2018, 2023
+lastupdated: "2023-06-09"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Connecting to a live agent
 {: #human-agent}
@@ -33,7 +18,7 @@ Your assistant can do a lot, but there might be some situations when your custom
 
 To use this feature, your assistant must interact with customers using a **web chat** or **phone** integration. For more information, see [Deploying your assistant](/docs/watson-assistant?topic=watson-assistant-deploy-assistant).
 
-You must add an integration to a service desk system before setting up live agent transfers to your assistant. The supported service desks depend upon how customers connect to your assistant (web chat or phone). For more information about integrating with a service desk, see [Basic web chat configuration](/docs/watson-assistant?topic=watson-assistant-web-chat-basics) and [Phone integration configuration](/docs/watson-assistant?topic=watson-assistant-deploy-phone-config).
+You must add an integration to a service desk system before setting up live agent transfers to your assistant. The supported service desks depend upon how customers connect to your assistant (web chat or phone). For more information about integrating with a service desk, see [Basic web chat configuration](/docs/watson-assistant?topic=watson-assistant-web-chat-overview) and [Phone integration configuration](/docs/watson-assistant?topic=watson-assistant-deploy-phone-config).
 
 Your agents can work with one of these supported service desk tools:
 - [Genesys](/docs/watson-assistant?topic=watson-assistant-deploy-phone-genesys)
@@ -88,6 +73,7 @@ If you want to edit the transfer settings later, click **Edit settings** in the 
 {: note}
 
 ## Fallback escalations
+{: #human-agent-fallback-escalations}
 
 Examples of fallback escalations include:
 
@@ -100,6 +86,7 @@ Fallback escalations use the _Fallback_ action, which is a built-in system actio
 For more information about this automatic error handling and the *Fallback* action, see [Handling errors in the conversation](/docs/watson-assistant?topic=watson-assistant-handle-errors).
 
 ## Testing the transfer in the Preview pane
+{: #human-agent-test-transfer}
 
 After you have configured an action to connect to a live agent, you can preview it by clicking **Preview**. Note that in the action Preview pane, no actual transfer takes place, but the *Connect to an agent* message confirms that it was correctly triggered.
 
