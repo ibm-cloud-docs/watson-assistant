@@ -2,31 +2,18 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-03-07"
+lastupdated: "2023-06-09"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Overview: Editing actions
 {: #build-actions-overview}
 
-Like a human personal assistant, the assistant you build helps your customers complete tasks and answer questions. To accomplish this, you define actions for the assistant.
+Like a human personal assistant, the assistant you build helps your customers complete tasks and answer questions. You build your assistant by defining actions.
 {: shortdesc}
 
 An _action_ represents a discrete outcome that you want your assistant to be able to accomplish in response to a user's request. An action comprises the interaction between a customer and the assistant about a particular question or request. This interaction begins with the user input that starts the action (for example, `I want to withdraw money`). It might then include more exchanges as the assistant gathers more information, and it ends when the assistant carries out the request or answers the customer's question.
@@ -38,7 +25,7 @@ To see how actions work and how you build one, let's go through an example.
 
 When you create a new action from scratch, {{site.data.keyword.conversationshort}} prompts you for an example of the customer input that starts the action. This text is also used as the default name for the action, but you can edit the action name later.
 
-![Prompt ](images/new-action-prompt.png)
+![New action ](images/new-action-prompt.png){: caption="New action" caption-side="bottom"}
 
 Type `I want to withdraw money` and then click **Save** to create the action.
 
@@ -50,7 +37,7 @@ Initially, you need to specify only one example of typical user input that start
 
 After you create the action, the action editor opens.
 
-![Action editor showing newly created action](images/action-editor-new-action.png)
+![Action editor showing newly created action](images/action-editor-new-action.png){: caption="Action editor" caption-side="bottom"}
 
 The editor window shows the parts of an action:
 
@@ -60,7 +47,7 @@ The editor window shows the parts of an action:
 
 - The **Preview** button opens a pane that shows you how the assistant responds to customer input. You can preview the assistant at any time to see the effect of changes you make.
 
-- The **Action notes** icon opens an area where you can add a description, documentation, comments, or any other annotations to help you keep track of your work as you build an action.
+- The **Action notes** icon opens an area where you can add a description, documentation, comments, or any other annotations to help you track your work as you build an action.
 
 The action editor supports basic Markdown syntax.
 {: tip}
@@ -81,29 +68,30 @@ Each of these follow-up questions represents a step in the action.
 {: #build-actions-overview-edit-step}
 
 Within a step, you define the following things:
-
-- Any conditions that determine whether the step is processed at run time. (By default, a step is always processed if matching user input is received.)
+- A step title that describes what the step does. The step title is optional.
+- Any conditions that determine whether the step is processed at run time. (By default, a step is always processed if the user input matches.)
 - What the assistant says to the customer when the step is processed.
 - Rules for how the customer can reply to what the assistant says (if any response is expected).
 - What to do after the step finishes.
 
-![Action editor showing parts of a step](images/action-editor-step-parts.png)
+![Action editor showing parts of a step](images/action-editor-step-parts.png){: caption="Step" caption-side="bottom"}
 
 Let's edit step 1 to find out which account the customer wants to withdraw money from:
+1. Click the **Edit step title** icon and enter the title **Determine account**.
 
-1. In the **Step 1 is taken** field, use the default value of **without conditions**. This step is always required for any withdrawal.
+1. In the **Is taken** field, use the default value of **without conditions**. This step is always required for any withdrawal.
 
 1. In the **Assistant says** field, type `Withdraw from which account?`.
 
 1. Click **Define customer response**.
 
-    ![Defining the customer response for a step](images/action-editor-define-response.png)
+    ![Defining the customer response for a step](images/action-editor-define-response.png){: caption="Define customer response" caption-side="bottom"}
 
     Because we are asking the user to select from a list of predefined choices, click **Options**. The Edit Response window opens.
 
-1. In the **Option 1** field, type `Savings`. As soon as you enter a value for option 1, a field appears for options 2.
+1. In the **Option 1** field, type `Savings`. As soon as you enter a value for option 1, a field appears for option 2.
 
-    ![Editing an Options response](images/action-editor-edit-options-response.png)
+    ![Editing an Options response](images/action-editor-edit-options-response.png){: caption="Edit response" caption-side="bottom"}
 
     Click **Option 2** and type `Checking`.
 
@@ -111,7 +99,7 @@ Let's edit step 1 to find out which account the customer wants to withdraw money
 
 1. Now we can check that the step works like we expect. Click **Preview** to open the Preview pane, and type `I want to withdraw money`:
 
-    ![Previewing action with one step](images/action-preview-one-step.png)
+    ![Previewing action with one step](images/action-preview-one-step.png){: caption="Preview" caption-side="bottom"}
 
     As expected, the assistant now prompts you to select the account you want to withdraw money from.
 
@@ -124,11 +112,11 @@ Complete the following steps to duplicate a step:
 
 1. Click the **Duplicate** icon on the step that you want to duplicate.
 
-    ![Duplicate button on a step](images/action-editor-duplicate-button.png)
+    ![Duplicate button on a step](images/action-editor-duplicate-button.png){: caption="Duplicate icon" caption-side="bottom"}
 
     A step appears immediately following the step that you duplicated. This step is identical to the duplicated step and displays a blue circle in the upper right to indicate that the step is a duplicate.
 
-    ![Duplicated step](images/action-preview-duplicate-step.png)
+    ![Duplicated step](images/action-preview-duplicate-step.png){: caption="Duplicated step" caption-side="bottom"}
 
 1. Edit the information in the new step as necessary.
 
@@ -143,11 +131,11 @@ When a step asks for information from the user, the user's response is stored as
 
 1. In the **Step 2 is taken** field, select **with conditions**. The **Conditions** section expands.
 
-    ![Action editor: specifying conditions](images/action-editor-conditions.png)
+    ![Action editor: specifying conditions](images/action-editor-conditions.png){: caption="Conditions" caption-side="bottom"}
 
 1. By default, a condition is automatically created based on the action variable that is stored by the previous step (`Withdraw from which account?`). However, by default it is checking for a value of `Savings`, which is not what we want. Click the value field and select `Checking` instead.
 
-    ![Editing a condition to select Checking as the value to check for](images/action-condition-edit.png)
+    ![Editing a condition to select Checking as the value to check for](images/action-condition-edit.png){: caption="Edit condition" caption-side="bottom"}
 
 1. In the **Assistant says** field, type `Withdrawals from checking accounts might incur a fee. Do you want to continue?`
 
@@ -157,7 +145,7 @@ When a step asks for information from the user, the user's response is stored as
 
 1. Because we want to make sure the customer always agrees explicitly, click the **Settings** icon to open **Customer response settings**, then select **Always ask for this information, regardless of earlier messages**.
 
-    ![Customer response settings](images/action-editor-customer-response-settings.png)
+    ![Customer response settings](images/action-editor-customer-response-settings.png){: caption="Customer response settings" caption-side="bottom"}
 
 Now we need another conditional step to handle the situation where the customer decides not to continue.
 
@@ -167,7 +155,7 @@ Now we need another conditional step to handle the situation where the customer 
 
 1. Edit the condition so it checks that the customer's response to step 2 was `No`.
 
-    ![Action editor: specifying conditions](images/action-editor-conditions-2.png)
+    ![Action editor: specifying conditions](images/action-editor-conditions-2.png){: caption="Edit conditions" caption-side="bottom"}
 
 1. In the **Assistant says** field, type `Canceling transaction.`.
 
@@ -185,14 +173,14 @@ We need one more piece of information before we can complete the customer's requ
 
 1. In the **Assistant says** field, type `How much do you want to withdraw?`.
 
-1. Click **Define customer response**. We need the customer to specify a monetary amount, so select **Currency**. There are no more details that you need to specify for a currency amount, so it is immediately added to the step.
+1. Click **Define customer response**. We need the customer to specify a monetary amount, so select **Currency**. 
 
 ### Finishing the action
 {: #build-actions-overview-finish-action}
 
-We now have all the information that we need. For our example, we're not going to implement any real logic for making a withdrawal, but we can send a final message summing up what we're doing.
+We now have all the information that we need. For our example, we're not going to implement any real logic for making a withdrawal, but we can send a final message to summarize what we're doing.
 
-To do this, we need to insert action variables (representing customer responses from previous steps) into our response. At run time, these action variables are replaced with the actual values supplied by the customer.
+To do this summary, we need to insert action variables (representing customer responses from previous steps) into our response. At run time, these action variables are replaced with the actual values that are supplied by the customer.
 
 1. Click **New step**.
 
@@ -207,13 +195,13 @@ To do this, we need to insert action variables (representing customer responses 
 
 1. Because this is the last step in the action, you don't need to specify any customer response.
 
-If you decide a step is no longer needed, you can delete it from the action. To delete a step, click the **Delete** ![Delete step icon](images/step-delete-icon.png) icon on the tile for the step.
+If you decide a step is no longer needed, you can delete it from the action. To delete a step, click the **Delete** ![Delete step icon](../../icons/delete.svg) icon on the tile for the step.
 {: tip}
 
 ## Testing the action
 {: #build-actions-overview-test}
 
-We can now test the action to make sure it's working. Click **Preview** to open the Preview pane. (If the text from a previous test is still shown, click the **Refresh** ![Preview refresh icon](images/preview-refresh-icon.png) icon to restart the conversation.)
+We can now test the action to make sure it's working. Click **Preview** to open the Preview pane. (If the text from a previous test is still shown, click the **Refresh** ![Preview refresh icon](../../icons/restart[].svg) icon to restart the conversation.)
 
 Start by typing `I want to withdraw money`. Try various permutations of your input to test how the assistant behaves:
 
