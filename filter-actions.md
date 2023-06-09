@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-07"
+lastupdated: "2023-06-09"
 
 subcollection: watson-assistant
 
@@ -24,7 +24,7 @@ You can filter by:
 | Filter | Description |
 | --- | --- |
 | Name | All or part of the action name |
-| Subaction | You can filter by subaction by: <ul><li>Choosing a subaction from the dropdown list. The list shows other actions that trigger, or call, that subaction in *Go to another action* at the end of a step.</li><li>Clicking the **Show all subactions** checkbox. The list shows actions that are triggered, or called, by other actions in *Go to another action* at the end of a step. |
+| Subaction | You can filter by subaction by: <ul><li>Choosing a subaction from the dropdown list. The list shows other actions that trigger, or call, that subaction in *Go to a subaction* at the end of a step.</li><li>Clicking the **Show all subactions** checkbox. The list shows actions that are triggered, or called, by other actions in *Go to a subaction* at the end of a step. |
 | Extension | Choose a custom extension to see all the actions that use it. Or, choose **Any** to see all the actions that use at least one custom extension. |
 | Variable |  Choose a variable to see all the actions that use it. |
 {: caption="Filters" caption-side="bottom"}

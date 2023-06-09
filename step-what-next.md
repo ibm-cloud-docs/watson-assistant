@@ -23,7 +23,7 @@ Select an option from the drop-down list. The following options are available:
 
 - [Continue to next step](#continue-to-next-step)
 - [Re-ask previous step(s)](#re-ask-previous-step)
-- [Go to another action](#go-to-another-action)
+- [Go to a subaction](#go-to-another-action)
 - [Use an extension](#use-extension)
 - [Search for the answer](#search-for-answer)
 - [Connect to agent](#connect-to-agent)
