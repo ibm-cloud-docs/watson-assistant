@@ -221,6 +221,8 @@ toc:
                 label: Building a custom client
                 topics:
                 - api-client.md
+                - api-migration.md
+                - api-context.md
                 -  include: ../watson/getting-started-sdks.md
       - topicgroup:
           label: Migrating to the new experience
