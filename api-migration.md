@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-06-12"
+lastupdated: "2023-06-13"
 
 subcollection: watson-assistant
 
@@ -60,6 +60,7 @@ After you have created an assistant, you can update your client application to u
    })
    ```
    {: codeblock}
+   {: javascript}
 
    ```python
    session_id = service.create_session(
@@ -67,6 +68,7 @@ After you have created an assistant, you can update your client application to u
    ).get_result()['session_id']
    ```
     {: codeblock }
+    {: python}
 
    ```java
    CreateSessionOptions createSessionOptions = new CreateSessionOptions.Builder(assistantId).build();
@@ -74,6 +76,7 @@ After you have created an assistant, you can update your client application to u
    String sessionId = session.getSessionId();
    ```
    {: codeblock}
+   {: java}
 
 1. Use the v2 [**Send user input to assistant**](https://{DomainName}/apidocs/assistant/assistant-v2#message){: external} method to send user input to the assistant. Instead of specifying the workspace ID as you did with the v1 API, you specify the assistant ID and the session ID:
 
@@ -86,26 +89,29 @@ After you have created an assistant, you can update your client application to u
      })
    ```
    {: codeblock}
+   {: javascript}
 
- ```python
-   response = service.message(
+   ```python
+    response = service.message(
        assistant_id,
        session_id,
        input = message_input
-   ).get_result()
-   ```
-   {: codeblock}
+    ).get_result()
+    ```
+    {: codeblock}
+    {: python}
 
    ```java
-   MessageInput input = new MessageInput.Builder().text(inputText).build();
-   MessageOptions messageOptions = new MessageOptions.Builder(assistantId, sessionId)
-     .input(input)
-     .build();
-   MessageResponse response = service.message(messageOptions)
-     .execute()
-     .getResult();
+    MessageInput input = new MessageInput.Builder().text(inputText).build();
+    MessageOptions messageOptions = new MessageOptions.Builder(assistantId, sessionId)
+      .input(input)
+      .build();
+    MessageResponse response = service.message(messageOptions)
+      .execute()
+      .getResult();
    ```
    {: codeblock}
+   {: java}
 
    The basic message structure has not changed; in particular, the user input is still sent as `input.text`.
 
@@ -119,6 +125,7 @@ After you have created an assistant, you can update your client application to u
      })
    ```
    {: codeblock}
+   {: javascript}
 
    ```python
    service.delete_session(
@@ -127,6 +134,7 @@ After you have created an assistant, you can update your client application to u
    )
    ```
    {: codeblock}
+   {: python}
 
    ```java
    DeleteSessionOptions deleteSessionOptions = new DeleteSessionOptions.Builder(assistantId, sessionId
@@ -134,6 +142,7 @@ After you have created an assistant, you can update your client application to u
    service.deleteSession(deleteSessionOptions).execute();
    ```
    {: codeblock}
+   {:java}
 
    If you do not explicitly delete the session, it will be automatically deleted after the configured timeout interval. The timeout duration depends on your plan.
 
