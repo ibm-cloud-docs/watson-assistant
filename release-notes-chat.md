@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-05-30"
+lastupdated: "2023-06-13"
 
 subcollection: watson-assistant
 
@@ -25,12 +25,20 @@ For information about new features and improvements to the core {{site.data.keyw
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
 
+## 7.4.0
+{: #7.4.0}
+
+*Release date: 12 June 2023*
+
+- Added CSS variables for customizing the launcher. For more information, see [`instance.updateCSSVariables`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecssvariables){: external}.
+
 ## 7.3.0
 {: #7.3.0}
 
 *Release date: 30 May 2023*
 
-- Bug fixes.
+- Released a beta of a contact center integration for Genesys Web Messenger, which currently only includes user information strings in English. For more information, see [`Genesys Web Messenger`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-genesys){: external}. 
+- Added beta support for file sharing with custom service desk integrations, which currently only includes user information strings in English. For more information, see [`Custom service desks`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd){: external}. 
 
 ## 7.2.2
 {: #7.2.2}
