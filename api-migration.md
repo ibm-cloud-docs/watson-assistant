@@ -142,7 +142,7 @@ After you have created an assistant, you can update your client application to u
    service.deleteSession(deleteSessionOptions).execute();
    ```
    {: codeblock}
-   {:java}
+   {: java}
 
    If you do not explicitly delete the session, it will be automatically deleted after the configured timeout interval. The timeout duration depends on your plan.
 
