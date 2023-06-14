@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-06-13"
+lastupdated: "2023-06-14"
 
 subcollection: watson-assistant
 
@@ -221,6 +221,7 @@ The output from this request includes not only the usual output, but also the co
   }
 }
 ```
+{: codeblock}
 
 ## Restoring conversation state
 {: #api-context-restore-state}
