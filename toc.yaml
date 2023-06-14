@@ -3,6 +3,7 @@
 toc:
   properties:
     subcollection: watson-assistant
+    service-name: assistant-basic
     version: 2
     category: ai
     audience: service
