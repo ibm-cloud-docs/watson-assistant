@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-06-13"
+lastupdated: "2023-06-14"
 
 keywords: Watson Assistant release notes
 
@@ -1894,12 +1894,6 @@ Testing improvement
 Error message when opening an instance
 :   When you launch {{site.data.keyword.conversationshort}} from the {{site.data.keyword.cloud}} dashboard, you might see an error message that says, `Module 'ui-router' is not available! You either misspelled the module name or forgot to load it.` You can ignore the message. Refresh the web browser page to close the notification.
 
-## 16 October 2019
-{: #watson-assistant-oct162019}
-{: release-note}
-
-The changes from 14 October are now available in Dallas.
-
 ## 14 October 2019
 {: #watson-assistant-oct142019}
 {: release-note}
@@ -1980,12 +1974,6 @@ New dialog method
 
 Introductory product tour
 :   For some first-time users, a new introductory product tour is shown that the user can choose to follow to perform the initial steps of creating an assistant.
-
-## 6 August 2019
-{: #watson-assistant-aug062019}
-{: release-note}
-
-- Webhook callouts and Dialog page improvements are available in Dallas.
 
 ## 1 August 2019
 {: #watson-assistant-aug012019}
@@ -2081,10 +2069,6 @@ Introducing search skill
 
     See [Building a search skill](/docs/assistant?topic=assistant-skill-search-add){: external} for more details.
 
-## 14 March 2019
-{: #watson-assistant-mar142019}
-{: release-note}
-
 ## 4 March 2019
 {: #watson-assistant-mar042019}
 {: release-note}
@@ -2094,10 +2078,6 @@ Simplified navigation
 
 Improve page is now called Analytics
 :   The informational metrics that Watson generates from conversations between your users and your assistant moved from the *Improve* tab of the sidebar to a new tab on the main skill page called **Analytics**.
-
-## 1 March 2019
-{: #watson-assistant-mar012019}
-{: release-note}
 
 ## 28 February 2019
 {: #watson-assistant-feb282019}
@@ -2503,9 +2483,10 @@ Dutch system entities (Beta)
 {: #watson-assistant-jan292018}
 {: release-note}
 
-- The {{site.data.keyword.conversationshort}} REST API now supports new request parameters:
-    - Use the `append` parameter when updating a workspace to indicate whether the new workspace data should be added to the existing data, rather than replacing it. For more information, see [Update workspace](https://cloud.ibm.com/apidocs/assistant/assistant-v1?curl=#update-workspace){: external}.
-    - Use the `nodes_visited_details` parameter when sending a message to indicate whether the response should include additional diagnostic information about the nodes that were visited during processing of the message. For more information, see [Send message](https://cloud.ibm.com/apidocs/assistant/assistant-v1?curl=#message){: external}.
+{{site.data.keyword.conversationshort}} REST API now supports new request parameters
+:   - Use the `append` parameter when updating a workspace to indicate whether the new workspace data should be added to the existing data, rather than replacing it. For more information, see [Update workspace](https://cloud.ibm.com/apidocs/assistant/assistant-v1?curl=#update-workspace){: external}.
+
+   - Use the `nodes_visited_details` parameter when sending a message to indicate whether the response should include additional diagnostic information about the nodes that were visited during processing of the message. For more information, see [Send message](https://cloud.ibm.com/apidocs/assistant/assistant-v1?curl=#message){: external}.
 
 ## 23 January 2018
 {: #watson-assistant-jan232018}
