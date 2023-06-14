@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-04-07"
+lastupdated: "2023-06-14"
 
 subcollection: watson-assistant
 
@@ -69,7 +69,6 @@ Even when you allow changing the topic, you might not want a customer to return 
 1. Keep the **Change conversation topic** toggle switched to **On**.
 
 1. Select the checkbox **Never return to original action after completing this action** to prevent the customer from returning to the previous action.
-
 ### Enabling changing the topic for free text and regex customer responses
 {: #change-topic-free-text-regex}
 

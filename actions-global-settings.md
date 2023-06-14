@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-22"
+lastupdated: "2023-06-14"
 keywords: settings
 subcollection: watson-assistant
 
@@ -47,6 +47,10 @@ If necessary, you can disable changing the topic for all actions:
 1. On the **Change conversation topic** tab, set the switch to **Off**.
 
 1. Click **Save**, and then click **Close**.
+## Confirmation to return to previous topic
+{: #actions-global-settings-change-topic-confirmation}
+
+By default, new assistants are set to ask a "yes or no" question to confirm that the customers want to return to the previous action. You can modify these settings in the Confirmation section. For more information, see [Confirmation to return to previous topic](/docs/watson-assistant?topic=watson-assistant-change-topic#change-topic-confirmation).
 
 ## Autocorrection
 {: #actions-global-settings-autocorrection}
