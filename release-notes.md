@@ -32,8 +32,8 @@ New API version
    - Invalid expressions in callouts to client actions are now replaced with empty strings
    - The default value of `async_callout` changes from `true` to `false`
 
-Custom extensions now support OAuth 2.0 authenication
-:   You can now use OAuth 2.0 authenication when building and adding custom extensions. For more information, see [Building a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension) and [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
+Custom extensions now support OAuth 2.0 authentication
+:   You can now use OAuth 2.0 authentication when you build and add custom extensions. For more information, see [Building a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension) and [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
 
 ## 8 June 2023
 {: #watson-assistant-jun082023}
