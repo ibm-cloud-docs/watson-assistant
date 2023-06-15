@@ -3,7 +3,7 @@
 toc:
   properties:
     subcollection: watson-assistant
-    service-name: conversation
+    service-name: assistant-basics
     version: 2
     category: ai
     audience: service
