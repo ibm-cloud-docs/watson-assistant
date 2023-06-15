@@ -1,3 +1,4 @@
+
 ---
 
 copyright:
@@ -21,6 +22,7 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
 ## 15 June 2023
 {: #watson-assistant-jun152023}
 {: release-note}
@@ -30,8 +32,8 @@ New API version
    - Invalid expressions in callouts to client actions are now replaced with empty strings
    - The default value of `async_callout` changes from `true` to `false`
 
-Custom extensions now support OAuth 2.0 authenication
-:   You can now use OAuth 2.0 authenication when building and adding custom extensions. For more information, see [Building a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension) and [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
+Custom extensions now support OAuth 2.0 authentication
+:   You can now use OAuth 2.0 authentication when you build and add custom extensions. For more information, see [Building a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension) and [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
 
 ## 8 June 2023
 {: #watson-assistant-jun082023}
@@ -3017,3 +3019,5 @@ General Availability
 
 Experimental release
 :   This Experimental release of the {{site.data.keyword.conversationshort}} introduces the user interface and enables you to work with workspaces, intents, and examples.
+
+
