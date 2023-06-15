@@ -61,7 +61,7 @@ In addition, any call to the external API must complete within 30 seconds.
 
 To build a custom extension based on the API definition, follow these steps:
 
-1. Go to the ![Integrations icon](images/integrations-icon.png) **Integrations** page.
+1. Go to the ![Integrations icon](images/integrations.svg) **Integrations** page.
 
 1. Scroll to the **Extensions** section and click **Build custom extension**.
 
