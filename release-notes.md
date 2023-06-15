@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-06-14"
+lastupdated: "2023-06-15"
 
 keywords: Watson Assistant release notes
 
@@ -21,6 +21,13 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+   ## 15 June 2023
+{: #watson-assistant-jun152023}
+{: release-note}
+
+Custom extensions now support OAuth 2.0 authenication
+:   You can now use OAuth 2.0 authenication when building and adding custom extensions. For more information, see [Building a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension) and [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
+
 ## 8 June 2023
 {: #watson-assistant-jun082023}
 {: release-note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-27"
+lastupdated: "2023-06-15"
 
 subcollection: watson-assistant
 
@@ -27,7 +27,7 @@ For information about how to create a custom extension, see [Build a custom exte
 
 To add a custom extension to the assistant, follow these steps:
 
-1. On the ![Integrations icon](images/integrations-icon.png) **Integrations** page, scroll to the **Extensions** section and find the tile for the custom extension you want to add.
+1. On the ![Integrations icon](images/integrations.svg) **Integrations** page, scroll to the **Extensions** section and find the tile for the custom extension you want to add.
 
 1. Click **Add**. Review the overview of the extension and click **Confirm** to configure it for your assistant.
 
@@ -36,24 +36,26 @@ To add a custom extension to the assistant, follow these steps:
 
 1. Read the information in the **Get started** step, and then click **Next**.
 
-1. In the **Authentication** step, specify the authentication and server information you want your assistant to use when calling the service.
+1. In the **Authentication** step, specify the authentication and server information you want your assistant to use when it calls the service.
 
-    - In the **Authentication type** field, select the type of authentication to use.
+    - In the **Authentication type** field, select the type of authentication to use (or **No authentication** if the API is not authenticated). The available authentication types are determined by the security schemes that are defined in the OpenAPI document.
 
-        Depending on the authentication type you select, you might also need to specify additional information (for example, **Username** and **Password** for HTTP basic authentication).
+    - Specify the additional information required for the authentication type you selected (such as the username and password, API key, bearer token, or OAuth 2.0 details).
+
+        For more information about configuring OAuth 2.0 authentication, see [OAuth 2.0 authentication](#add-custom-extension-oauth).
+        {: tip}
 
     - In the **Servers** field, select the server URL to use.
 
         If the selected URL contains any variables, also specify the values to use. Depending on how each variable is defined in the OpenAPI document, you can either select from a list of valid values or type the value to use in the field.
 
-        The **Generated URL** message shows the full URL that the assistant will use, including the variable values.
+        The **Generated URL** message shows the full URL that the assistant uses, including the variable values.
 
      Click **Next**.
 
+1. In the **Review extension** step, review the operations that are supported by the extension.
 
-1. In the **Review extension** step, review the operations supported by the extension.
-
-    The **Review operations** table shows the operations that the assistant will be able to call from an action step. An _operation_ is a request using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
+    The **Review operations** table shows the operations that the assistant is able to call from an action step. An _operation_ is a request by using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
 
     ![Review operations table](images/extension-review-operations.png)
 
@@ -63,10 +65,10 @@ To add a custom extension to the assistant, follow these steps:
     - **Method**: The HTTP method used to send the API request for the operation.
     - **Resource**: The path to the resource the operation acts upon.
 
-    To see more information about an operation, click the ![label](images/twistie.png) icon next to its row in the table. The following additional details are shown:
+    To see more information about an operation, click the ![label](images/twistie.png) icon next to its row in the table. The following details are shown:
 
     - **Request parameters**: The list of input parameters defined for the operation, along with the type of each parameter and whether the parameter is required or optional.
-    - **Response properties**: The properties of the response body that will be mapped to variables the assistant can access.
+    - **Response properties**: The properties of the response body that are mapped to variables the assistant can access.
 
 1. Click **Finish**.
 
@@ -74,23 +76,58 @@ To add a custom extension to the assistant, follow these steps:
 
 The extension is now connected to your assistant and available for use by actions in the draft environment.
 
+### OAuth 2.0 authentication
+{: #add-custom-extension-oauth}
+
+If you are configuring OAuth 2.0 authentication, the information you must provide depends upon the grant type.
+
+For more information about OAuth 2.0, see [OAuth 2.0](https://oauth.net/2/){: external}.
+{: tip}
+
+To complete the OAuth authentication setup, follow these steps:
+
+1. If you haven't already, register your application with the external API you want to access. Copy the client ID and client secret that is provided by the external API.
+
+1. In the **Grant type** field, select the grant type that you want to use. The available grant types are determined by the flows that are defined in the `securitySchemes` object in the OpenAPI document. Only the Password, Client Credentials, and Authorization Code grant types are supported.
+
+1. Specify the required values that were provided by the external API when you registered your application. The required values depend on the grant type:
+
+    | Grant type         | Required values |
+    |--------------------|-----------------|
+    | Authorization Code | - **Client ID** \n - **Client secret** |
+    | Password           | - **Client ID** \n - **Client secret** \n - **Username** \n - **Password** |
+    | Client Credentials | - **Client ID** \n - **Client secret** |
+
+1. If you are using the Authorization Code grant type, follow these steps:
+
+    1. Copy the redirect URL from the {{site.data.keyword.conversationshort}} extension settings page and paste it into the appropriate field on the application registration page for the external API. (The redirect URL is sometimes called the _callback URL_.)
+    
+    1. Click **Grant Access**. You are redirected to the authorization page on the website for the external service. Verify that the correct access is being granted and click to approve. You are then redirected back to the extension setup page by using the redirect URL.
+
+1. In the **Client authentication** field, specify whether the authentication credentials are sent in an HTTP header or as part of the request body. (Credentials that are sent in the request body use the `x-www-form-urlencoded` content type.) Select the option that is expected by the external service.
+
+1. In the **Header prefix** field, specify the prefix that precedes the access token in the `Authorization` header. (The default prefix is `Bearer`, which is typical for most applications.)
+
+If the external service supports the Refresh Token grant type, {{site.data.keyword.conversationshort}}  automatically obtains a new access token when the old one expires. If the OpenAPI document defines the `refreshUrl` attribute, the specified URL is used; otherwise, the `tokenUrl` URL is used.
+{: note}
+
 ## Configuring the extension for the live environment
 {: #add-custom-extension-live}
 
 To configure the extension for the live environment, follow these steps:
 
-1. On the ![Integrations icon](images/integrations-icon.png) **Integrations** page, scroll to the **Extensions** section and find the tile for the custom extension you want to add.
+1. On the ![Integrations icon](images/integrations.svg) **Integrations** page, scroll to the **Extensions** section and find the tile for the custom extension you want to add.
 
 1. Click **Open**. The **Open custom extension** window opens.
 
 1. In the **Environment** field, select **Live**. Click **Confirm**.
 
-1. Repeat the configuration process, specifying the values you want to use for the live environment.
+1. Repeat the configuration process, specifying the values that you want to use for the live environment.
 
    If you are using multiple environments, follow the same steps to configure the extension for each environment. For more information, see [Adding and using multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments).
    {: note}
 
-The extension is now available in the environments you have configured, and it can be called from the assistant. For more information about how to call an extension from an action, see [Calling a custom extension](/docs/watson-assistant?topic=watson-assistant-call-extension).
+The extension is now available in the environments that you configured, and it can be called from the assistant. For more information about how to call an extension from an action, see [Calling a custom extension](/docs/watson-assistant?topic=watson-assistant-call-extension).
 
 ## Plan limits
 {: #add-custom-extension-limits}
