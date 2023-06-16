@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-09"
+lastupdated: "2023-06-16"
 
 subcollection: watson-assistant
 
@@ -186,7 +186,7 @@ To do this summary, we need to insert action variables (representing customer re
 
 1. Now we need to build a confirmation message that says "OK, we will withdraw *amount* from your *account_type* account."
 
-    To create this response, type the text of the message in the **Assistant says** field, but in place of the variable values, click the **Insert a variable** ![Action variable icon](images/action-variable-icon.png) icon to insert references to action variables:
+    To create this response, type the text of the message in the **Assistant says** field, but in place of the variable values, click the **Insert a variable** ![Action variable icon](images/function-math.svg) icon to insert references to action variables:
 
     - For *amount*, select **4. How much do you want to withdraw?**.
     - For *account_type*, select **1. Withdraw from which account?**.
