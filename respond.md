@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-05-18"
+lastupdated: "2023-06-19"
 
 subcollection: watson-assistant
 
@@ -153,7 +153,7 @@ The action editor supports the following media response types:
 - **Audio**: Embeds an audio clip into the response. The source audio file must be hosted somewhere and have a URL that you can use to reference it. It cannot be a file that is stored in a directory that is not publicly accessible.
 - **iframe**: Embeds content from an external website, such as a form or other interactive component, directly within the chat. The source content must be publicly accessible using HTTP, and must be embeddable as an HTML `iframe` element.
 
-Different channel integrations have different capabilities for displaying media responses. To see which channel integrations support which response types, see [Channel integration support for response types](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json-integration-support).
+Different channel integrations have different capabilities for displaying media responses. To see which channel integrations support which response types, see [Channel integration support for response types](/docs/watson-assistant?topic=watson-assistant-response-types-reference).
 
 If you want to define different responses that are customized for different channels, you can do so by editing the response by using the JSON editor. For more information, see [Targeting specific integrations](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json#assistant-responses-json-target-integrations).
 
