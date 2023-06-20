@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-30"
+lastupdated: "2023-06-20"
 
 subcollection: watson-assistant
 
@@ -10,19 +10,19 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Action response modes
+# Response modes
 {: #action-response-modes}
 
 [IBM Cloud]{: tag-ibm-cloud}
 
-You can choose a response mode for each action. This lets you set how each action behaves. There are two modes: *clarifying* and *confident*.
+You can choose a response mode for each action to set how it behaves. The modes are *clarifying* and *confident*.
 {: shortdesc}
 
-**Clarifying mode**: Start here. In the clarifying mode, your assistant is eager to ask questions so you can ensure that your customer gets to the action they need. An assistant is more likely to ask questions to be sure an action matches what a customer is asking. This lets you be sure a new or untested action gets the training that it needs.
+**Clarifying mode**: Start here. In the clarifying mode, your assistant is eager to ask questions so you can ensure that your customer gets to the action they need. An assistant is more likely to ask questions to be sure an action matches what a customer is asking. A new or untested action gets the training that it needs.
 
 **Confident mode**: Take the next step. After you use analytics to improve your assistant, use the confident mode. Your assistant solves customer issues with authority and accuracy. An assistant is less likely to ask questions and is more likely to trigger actions that match. Use confident mode after you test and train actions.
 
-This is a beta feature that is available for evaluation and testing purposes on IBM Cloud only.
+Response modes are a beta feature that is available for evaluation and testing purposes on IBM Cloud only.
 {: beta}
 
 ## Settings
@@ -30,17 +30,17 @@ This is a beta feature that is available for evaluation and testing purposes on 
 
 Settings for the two modes are in the global settings. For more information, see [Global settings for actions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings).
 
-![Global settings](images/response-modes-global.png){: caption="Global settings" caption-side="bottom"}
+You can choose what mode to use when you create a new action. Clarifying mode is the default and is designed for use with new, untested actions that need training.
 
 The settings are:
 
-**Clarify when one action matches**: If an assistant prioritizes one action that it thinks matches the customer's request, it can clarify the match by asking the customer to confirm. This helps you ensure that the action is the right one and allows the customer to give input before proceeding. For example, if the assistant thinks that a single action named `Pay Bill` is the right one, it can clarify the choice by asking the customer `Did you mean: Pay Bill`.
+**Clarify when one action matches**: If an assistant prioritizes one action that it thinks matches the customer's request, it can clarify the match by asking the customer to confirm. This clarification helps you ensure that the action is the right one and allows the customer to give input before proceeding. For example, if the assistant thinks that a single action named `Pay Bill` is the right one, it can clarify the choice by asking the customer `Did you mean: Pay Bill`.
 
 **Clarify when more than one action matches**: When your assistant finds that more than one action might fulfill a customer's request, it can automatically ask for clarification. Instead of guessing which action to use, your assistant shows a list of the possible actions to the customer and asks the customer to pick the right one.
 
-**Offer support option when asking a clarifying question**: When asking for clarification, the assistant can include a choice to connect to other support. If the customer picks this choice, the assistant uses your Fallback action.
+**Offer support option when asking a clarifying question**: The assistant can include a choice to connect to other support. If the customer picks this choice, the assistant uses your Fallback action.
 
-**Step validation attempts before offering support**: If a customer provides invalid answers for a step in an action, the assistant can offer to connect to other support in the Fallback action. The step validation count measures how many invalid answers can occur before providing this choice.
+**Step validation attempts before offering support**: If a customer provides invalid answers for a step in an action, the assistant can offer to connect to other support in the Fallback action. The step validation count measures how many invalid answers can occur before the assistant provides this choice.
 
 This table shows the default settings for each mode. 
 
@@ -52,19 +52,12 @@ This table shows the default settings for each mode.
 | Step validation attempts before offering support | 1 time | 3 times |
 {: caption="Default settings" caption-side="bottom"}
 
-## Default for new actions
-{: #action-response-modes-default}
-
-In global settings for actions, you can choose what mode to use when you create a new action. Clarifying mode is the default and is designed for use with new, untested actions that need training.
-
-![Default for new actions](images/action-response-mode-default.png){: caption="Default for new actions" caption-side="bottom"}
-
 ## Choosing a mode for individual actions
 {: #action-response-modes-individual-actions}
 
-When editing an action, you can see the mode that it uses and change it if you need to.
+When you edit an action, you can see the mode that it uses and change it if you need to.
 
-1. Click the Action response mode icon ![Action response mode icon](images/action-response-mode-icon.png). The mode in use is checked.
+1. Click the Action response mode icon ![Action response mode icon](images/response-mode-icon.svg). The mode in use is checked.
 
    ![Action response mode](images/response-mode-modal.png){: caption="Action response mode" caption-side="bottom"}
 
@@ -81,9 +74,9 @@ To override system defaults:
 
 1. Set the **Override System Defaults** toggle to **On**. This toggle is available only for Enterprise plans.
 
-1. Use the dropdown menu to any of the settings for either mode.
+1. Use the menu to modify any of the settings for either mode.
 
-If you customize, here are the choices for each setting:
+If you customize, the choices for each setting are;
 
 | Setting | Choices |
 | --- | --- |

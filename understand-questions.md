@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-04-25"
+lastupdated: "2023-06-20"
 
 subcollection: watson-assistant
 
@@ -37,18 +37,18 @@ Before even doing anything else with your action, you can already start checking
 
 1. Click the **Preview** button.
 1. Enter your first phrase, for example: `What are your store hours?`.
-1. If you see `There are no additional steps for this action`, that means the action recognizes the phrase. (And it's because you haven't added anything else to your action.)
+1. If you see `There are no additional steps for this action` that means the action recognizes the phrase. (And it's because you didn't add anything else to your action.)
 
     ![Preview](images/new-action-preview.png)
 
-1. If the assistant doesn't understand the phrase, you'll see the built-in action `No action matches`. For more information, see [When the assistant can't understand your customer's request](https://test.cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches).
+1. If the assistant doesn't understand the phrase, you see the built-in action `No action matches`. For more information, see [When the assistant can't understand your customer's request](https://test.cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches).
 
     ![No action matches](images/new-action-preview-no-match.png)
 
 ## Adding more examples
 {: #understand-questions-adding-more-examples}
 
-When you're creating a new action, one example phrase is enough to start with. You can build the rest of your action with steps before adding more example phrases. Then, return to **Customer starts with** and add 10 or more variations of the same question or request, using words that your customers commonly use. For example:
+When you're creating a new action, one example phrase is enough to start with. You can build the rest of your action with steps before you add more example phrases. Then, return to **Customer starts with** and add 10 or more variations of the same question or request, by using words that your customers commonly use. For example:
 
 - `Are you open on the weekend?`
 - `How late are you open today?`
@@ -121,11 +121,11 @@ In the assistant output, the possible actions are listed by name. The default na
 
 The order in which the actions are listed might change. In fact, the actions themselves that are included in the list might change. This behavior is intended. As part of development that is in progress to help the assistant learn automatically from user choices, the actions that are included and their order in the list is randomized on purpose. Randomizing the order helps to prevent bias that can be introduced by a percentage of people who always pick the first option without carefully reviewing all of their choices beforehand.
 
-### Customizing clarification
+### Customizing clarifying questions
 {: #understand-questions-disambiguation-config}
 
 To customize clarification, you can:
-- Choose a default *action response mode*, which modifies the assistant's behavior when asking questions. For more information, see [Action response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
+- Choose a default *action response mode*, which modifies the assistant's behavior when it asks questions. For more information, see [Action response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
 - Change settings like the wording your assistant uses to introduce the clarification list.
 
 To change settings, complete the following steps:
@@ -136,10 +136,10 @@ To change settings, complete the following steps:
 
    | Field | Default text | Description |
    |---|---|---|
-   | **Assistant says** | `Did you mean:` | The text that is displayed before the list of clarification choices. You can change it to something else, such as *What do you want to do?* or *Pick what to do next*. |
-   | **Connection to support** | `Connect to support` | The assistant can include a choice to connect to other support in the list of clarifying questions. If the customer picks this choice, the assistant uses your *Fallback* action. You can change it to something else, such as *Talk to a live agent* or *Search for the answer*. |
-   | **No action matches** | `None of the above` | The choice that customers can click when none of the other choices are right. If the customer picks this choice, the assistant uses your *No action matches* action. You can change it to something else, such as *I need something else* or *These aren't what I want*. Or, you can remove the text to omit offering this choice.
-   | **One action matches** | `Something else` | If an assistant prioritizes one action that it thinks matches the customer need, it can clarify the match by asking the customer to confirm. This choice accompanies the single action in case the customer needs something else. You can change it to something else, such as *I need something else* or *This isn't what I want*. |
+   | **Assistant says** | `Did you mean:` | The text that is displayed before the list of clarification choices. You can change it to something else, such as `What do you want to do?` or `Pick what to do next`. |
+   | **Connection to support** | `Connect to support` | The assistant can include a choice to connect to other support in the list of clarifying questions. If the customer picks this choice, the assistant uses your *Fallback* action. You can change it to something else, such as `Talk to a live agent` or `Search for the answer`. |
+   | **No action matches** | `None of the above` | The choice that customers can click when none of the other choices are right. If the customer picks this choice, the assistant uses your *No action matches* action. You can change it to something else, such as `I need something else` or `These aren't what I want`. Or, you can remove the text to omit offering this choice.
+   | **One action matches** | `Something else` | If an assistant prioritizes one action that it thinks matches the customer need, it can clarify the match by asking the customer to confirm. This choice accompanies the single action in case the customer needs something else. You can change it to something else, such as `I need something else` or `This isn't what I want`. |
    {: caption="Ask clarifying question settings" caption-side="top"}
 
 1.  Click **Save**, and then click **Close**.
@@ -158,6 +158,7 @@ To disable clarification for all actions:
 1.  In the **Ask clarifying question** section, set the **Enable disambiguation** switch to **Off**.
 1.  Click **Save**, and then click **Close**.
 1. Publish a new version of your assistant to the live environment to disable clarification. For more information, see [Publishing your content](/docs/watson-assistant?topic=watson-assistant-publish).
+
 
 ### Excluding an action from clarifying questions
 {: #understand-questions-exclude-from-clarifying}

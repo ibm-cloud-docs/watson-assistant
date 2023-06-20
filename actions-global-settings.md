@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-14"
+lastupdated: "2023-06-20"
 keywords: settings
 subcollection: watson-assistant
 
@@ -18,9 +18,10 @@ Use **Global settings** to configure features across all actions.
 
 On the **Actions** page, click **Global settings** ![Gear icon](../../icons/settings.svg).
 
-This page provides options, configurations, and tasks for the following:
+Global settings provide options, configurations, and tasks for:
 
 - [Action response modes](#actions-global-settings-response-modes)
+
 - [Change conversation topic](#actions-global-settings-change-conversation-topic)
 - [Autocorrection](#actions-global-settings-autocorrection)
 - [Display formats](#actions-global-settings-display-formats)
@@ -33,9 +34,10 @@ This page provides options, configurations, and tasks for the following:
 
 On the **Action response modes** tab, you can customize how an action asks clarifying questions.
 
-In the **Customize modes** section, you can choose a response mode for each action. This lets you set how each action behaves. There are two modes: *clarifying* and *confident*. For more information, see [Action response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
+In the **Customize modes** section, you can choose a response mode for each action to set how it behaves. The two modes are *clarifying* and *confident*. For more information, see [Action response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
 
-In the **Ask clarifying question** section, you can change settings like the wording your assistant uses to introduce the clarification list. For more information, see [Customizing clarification](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-disambiguation-config).
+In the **Ask clarifying questions** section, you can change settings like the wording your assistant uses to introduce the clarification list. For more information, see [Customizing clarification](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-disambiguation-config).
+
 
 ## Change conversation topic
 {: #actions-global-settings-change-conversation-topic}
@@ -64,13 +66,13 @@ For more information, see [Autocorrecting user input](/docs/watson-assistant?top
 ## Display formats
 {: #actions-global-settings-display-formats}
 
-**Display formats** lets you specify the display formats for variables that use date, time, numbers, currency, or percentages. You can also choose a default locale to use if one isn't provided by the client application. This lets you make sure that the format of a variable that's displayed in the web chat is what you want for your assistant. For example, you can choose to have the output of a time variable appear in HH:MM format instead of HH:MM:SS.
+Use display formats for variables that use date, time, numbers, currency, or percentages. You can also choose a default locale to use if one isn't provided by the client application. You can ensure that the format of a variable in the web chat is what you want for your assistant. For example, you can choose to have the output of a time variable appear in HH:MM format instead of HH:MM:SS.
 
-Variables are formatted using a system default unless you specify otherwise.
+Variables are formatted by using a system default unless you specify otherwise.
 
 | <nobr>Display format setting</nobr> | Description | <nobr>English - United States (en-US) examples</nobr> |
 | ---- | ---- | ---- |
-| Locale | Choose a default locale for the assistant if one can't be determined. The locale you choose uses formats specific to that country and language. If you choose a locale, the date, time, number, currency, and percentage format fields change to show choices specific to that locale. The system default is `English - United States (en-US)`. | |
+| Locale | Choose a default locale for the assistant if one can't be determined. The locale that you choose uses formats specific to that country and language. If you choose a locale, the date, time, number, currency, and percentage format fields change to show choices specific to that locale. The system default is `English - United States (en-US)`. | |
 | Date | For calendar dates, choose short, medium, long, full, YY/MM/DD, or YYYY/MM/DD | <ul><li>Short: `1/31/23`</li><li>Medium: `Jan 31, 2023`<li>Long: `January 31, 2023`</li><li>Full: `Tuesday, January 31, 2023`</li></ul> |
 | Time | For times, choose short or medium | <ul><li>Short: `1:53 PM`</li><li>Medium: `1:53:30 PM`</li></ul> |
 | Number fraction digits | Use the system default (up to 14 digits) or two digits | `10.12` |
@@ -87,7 +89,7 @@ Variables are formatted using a system default unless you specify otherwise.
 ## Algorithm version
 {: #actions-global-settings-algorithms-versions}
 
-**Algorithm version** allows you to choose which {{site.data.keyword.conversationshort}} algorithm to apply to your future trainings. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
+Choose which {{site.data.keyword.conversationshort}} algorithm to apply to your future trainings. For more information, see [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
 
 ## Upload/Download
 {: #actions-global-settings-upload-download}
@@ -107,7 +109,7 @@ To reinstate a backup copy of actions that you exported from another service ins
 If the {{site.data.keyword.conversationshort}} service changes between the time you export the actions and import it, due to functional updates that are regularly applied to instances in cloud-hosted continuous delivery environments, your imported actions might function differently than before.
 {: important}
 
-On the **Upload/Download** tab, drag and drop a JSON file onto the tab or click to select a file from your local system, then click **Upload**.
+On the **Upload/Download** tab, drag a JSON file onto the tab or click to select a file from your local system, then click **Upload**.
 
 The imported JSON file must use UTF-8 encoding, without byte order mark (BOM) encoding. The JSON file cannot contain tabs, newlines, or carriage returns.
 {: important}
