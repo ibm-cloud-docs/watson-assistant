@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-03-27"
+lastupdated: "2023-06-20"
 
 subcollection: watson-assistant
 
@@ -62,6 +62,7 @@ To apply autolearning improvements to your assistant responses:
 1. In the draft environment, you can preview your actions or your assistant. With autolearning set to **On**, preview in the draft environment uses the autolearning training from the live environment. For more information, see [Using Preview to test your action](/docs/watson-assistant?topic=watson-assistant-review#review-test) or [Previewing your assistant](/docs/watson-assistant?topic=watson-assistant-preview-share).
 
 1. If you are happy with the results from testing the autolearning improvements in the draft environment, publish a new version of your assistant to the live environment to apply the improvements. For more information, see [Publishing your content](/docs/watson-assistant?topic=watson-assistant-publish).
+
 
 ## Learning from your data
 {: #autolearn-data}
