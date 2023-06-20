@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-06-07"
+lastupdated: "2023-06-20"
 
 subcollection: watson-assistant
 
@@ -115,7 +115,7 @@ To set up the integration, complete the following steps:
 1.  Return to the *SMS with Twilio* integration setup page. Click **Finish**.
 
 ## Integrating with *SMS with IntelePeer*
-: #deploy-sms-intelepeer}
+{: #deploy-sms-intelepeer}
 
 ### Before you begin
 {: #deploy-sms-service-setup-intelepeer}
