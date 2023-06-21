@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-06-15"
+lastupdated: "2023-06-21"
 
 keywords: Watson Assistant release notes
 
@@ -126,8 +126,8 @@ Algorithm version **Beta** provides improved intent detection and action matchin
 ## 24 April 2023
 {: #watson-assistant-apr242023}
 {: release-note}
-Action response modes randomization behavior 
-:   The action response modes beta now uses the same randomization behavior during clarification that your actions have without response modes enabled. Previous to this change, when action response modes were enabled, the clarification feature no longer periodically modified the options for clarification. Randomizing the clarification helps prevent bias that can be introduced by a percentage of people who always pick the first option without carefully reviewing all of their choices beforehand. For more information, see [Action response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes) or [Asking clarifying questions](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-ask-clarifying-question).
+Response modes randomization behavior 
+:   The response modes beta now uses the same randomization behavior during clarification that your actions have without response modes enabled. Previous to this change, when response modes were enabled, the clarification feature no longer periodically modified the options for clarification. Randomizing the clarification helps prevent bias that can be introduced by a percentage of people who always pick the first option without carefully reviewing all of their choices beforehand. For more information, see [Response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes) or [Asking clarifying questions](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-ask-clarifying-question).
 
 ## 21 April 2023
 {: #watson-assistant-apr212023}
@@ -167,8 +167,8 @@ Autolearning
 {: #watson-assistant-mar212023}
 {: release-note}
 
-Action response modes
-:   **Action response modes** is a beta feature that is available for evaluation and testing purposes. Choose a default *action response mode*, which modifies the assistant's behavior when asking clarifying questions. For more information, see [Action response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
+Response modes
+:   **Response modes** is a beta feature that is available for evaluation and testing purposes. Choose a default *response mode*, which modifies the assistant's behavior when asking clarifying questions. For more information, see [Response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
 
 ## 20 March 2023
 {: #watson-assistant-mar202023}

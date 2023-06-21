@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-06-20"
+lastupdated: "2023-06-21"
 
 subcollection: watson-assistant
 
@@ -69,7 +69,7 @@ To apply autolearning improvements to your assistant responses:
 
 Observations are made of only your customers' choices to improve only your assistant. These observations are not reused by IBM or shared in any way.
 
-This observed user choices data is separate from the log data for which metrics are displayed on the **Analyze** page. The observation data is also separate from the information that is collected in all but Enterprise plan service instances and used by IBM for general service improvements. You can opt out of such use by specifying an opt-out header in your `/message` API requests. For more information, see [Opting out of log data use](/docs/watson-assistant?topic=watson-assistant-admin-securing#securing-log-opt-out).
+This observed user choices data is separate from the log data for which metrics are displayed on the Analyze page. The observation data is also separate from the information that is collected in all but Enterprise plan service instances and used by IBM for general service improvements. You can opt out of such use by specifying an opt-out header in your `/message` API requests. For more information, see [Opting out of log data use](/docs/watson-assistant?topic=watson-assistant-admin-securing#securing-log-opt-out).
 
 To prevent your own assistant from applying what it learns by observing user choices to your assistant, disable autolearning:
 
