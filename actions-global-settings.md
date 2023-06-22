@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-20"
+lastupdated: "2023-06-22"
 keywords: settings
 subcollection: watson-assistant
 
@@ -20,8 +20,7 @@ On the **Actions** page, click **Global settings** ![Gear icon](../../icons/sett
 
 Global settings provide options, configurations, and tasks for:
 
-- [Action response modes](#actions-global-settings-response-modes)
-
+- [Clarifying questions](#actions-global-settings-response-modes)
 - [Change conversation topic](#actions-global-settings-change-conversation-topic)
 - [Autocorrection](#actions-global-settings-autocorrection)
 - [Display formats](#actions-global-settings-display-formats)
@@ -29,15 +28,17 @@ Global settings provide options, configurations, and tasks for:
 - [Autolearning](#actions-global-settings-autolearning)
 - [Upload/Download](#actions-global-settings-upload-download)
 
-## Action response modes
+## Clarifying questions
 {: #actions-global-settings-response-modes}
 
-On the **Action response modes** tab, you can customize how an action asks clarifying questions.
+On the **Clarifying questions** tab, you can customize how an action asks clarifying questions.
 
-In the **Customize modes** section, you can choose a response mode for each action to set how it behaves. The two modes are *clarifying* and *confident*. For more information, see [Action response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
+In the **Ask clarifying questions** section, you can:
+- Enable or disable if your assistant disambiguates (asks a clarifying question).
+- Modify the text that your assistant uses to introduce the clarification list or when no action matches.
+- Enable or disable response modes, and modify the text that your assistant uses with a response mode. If you enable response modes, you can use the **Customize modes** section to choose a response mode for each action to set how it behaves.
 
-In the **Ask clarifying questions** section, you can change settings like the wording your assistant uses to introduce the clarification list. For more information, see [Customizing clarification](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-disambiguation-config).
-
+For more information, see [Customizing clarifying questions](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-disambiguation-config) and [Response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
 
 ## Change conversation topic
 {: #actions-global-settings-change-conversation-topic}

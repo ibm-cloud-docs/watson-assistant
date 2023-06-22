@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-06-21"
+lastupdated: "2023-06-22"
 
 keywords: Watson Assistant release notes
 
@@ -15,13 +15,26 @@ content-type: release-note
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Release notes for Watson Assistant
+# Release notes for {{site.data.keyword.conversationshort}}
 {: #watson-assistant-release-notes}
 
 Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 21 June 2023
+{: #watson-assistant-jun212023}
+{: release-note}
+
+Autolearning now available for all languages
+:   Autolearning is now generally available for all languages and enabled by default in all new assistants. Your assistant can learn from interactions with your customers and improve responses. For more information, see [Using autolearning to improve assistant responses](/docs/watson-assistant?topic=watson-assistant-autolearn).
+
+See which actions use a specific variable
+:   The Variables page now includes a new *Actions count* column. You can click on the number in the column to see which actions use a variable. For more information, see [Creating a session variable](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable).
+
+Expression editor character limit increased
+:   The character limit in the expression editor has increased from 1,024 to 4,000. For more information, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).
 
 ## 15 June 2023
 {: #watson-assistant-jun152023}
