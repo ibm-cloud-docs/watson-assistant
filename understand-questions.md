@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-06-20"
+lastupdated: "2023-06-22"
 
 subcollection: watson-assistant
 
@@ -125,22 +125,28 @@ The order in which the actions are listed might change. In fact, the actions the
 {: #understand-questions-disambiguation-config}
 
 To customize clarification, you can:
-- Choose a default *action response mode*, which modifies the assistant's behavior when it asks questions. For more information, see [Action response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
-- Change settings like the wording your assistant uses to introduce the clarification list.
+- Change settings like the wording your assistant uses to introduce the clarification list or when no action matches.
+- Enable *response modes* to modify the assistant's behavior when it asks questions. For more information, see [Response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
 
 To change settings, complete the following steps:
 
 1. From the **Actions** page of the assistant, click **Global settings** ![Gear icon](../../icons/settings.svg).
 
-1. On the **Action response modes** tab, you can make the following changes in the **Ask clarifying question** section:
+1. On the **Clarifying questions** tab, you can edit the **Ask clarifying questions** section:
 
    | Field | Default text | Description |
    |---|---|---|
    | **Assistant says** | `Did you mean:` | The text that is displayed before the list of clarification choices. You can change it to something else, such as `What do you want to do?` or `Pick what to do next`. |
-   | **Connection to support** | `Connect to support` | The assistant can include a choice to connect to other support in the list of clarifying questions. If the customer picks this choice, the assistant uses your *Fallback* action. You can change it to something else, such as `Talk to a live agent` or `Search for the answer`. |
-   | **No action matches** | `None of the above` | The choice that customers can click when none of the other choices are right. If the customer picks this choice, the assistant uses your *No action matches* action. You can change it to something else, such as `I need something else` or `These aren't what I want`. Or, you can remove the text to omit offering this choice.
+   | **No action matches** | `None of the above` | The choice that customers can click when none of the other choices are right. If the customer picks this choice, the assistant uses your *No action matches* action. You can change it to something else, such as `I need something else` or `These aren't what I want`. Or, you can remove the text to omit offering this choice. |
+   {: caption="Ask clarifying question settings" caption-side="bottom"}
+   
+1. If you enable response modes, you can modify this text:
+   
+   | Field | Default text | Description |
+   |---|---|---|
    | **One action matches** | `Something else` | If an assistant prioritizes one action that it thinks matches the customer need, it can clarify the match by asking the customer to confirm. This choice accompanies the single action in case the customer needs something else. You can change it to something else, such as `I need something else` or `This isn't what I want`. |
-   {: caption="Ask clarifying question settings" caption-side="top"}
+      | **Connection to support** | `Connect to support` | The assistant can include a choice to connect to other support in the list of clarifying questions. If the customer picks this choice, the assistant uses your *Fallback* action. You can change it to something else, such as `Talk to a live agent` or `Search for the answer`. |
+   {: caption="Response modes settings" caption-side="bottom"}
 
 1.  Click **Save**, and then click **Close**.
 
@@ -154,11 +160,10 @@ You can disable clarifying questions for all actions.
 To disable clarification for all actions:
 
 1.  From the **Actions** page of the assistant, click **Global settings** ![Gear icon](../../icons/settings.svg).
-1.  On the **Action response modes** tab, in the **Customize modes** section, ensure that the Response modes switch is set to **Off**.
-1.  In the **Ask clarifying question** section, set the **Enable disambiguation** switch to **Off**.
+1.  On the **Clarifying questions** tab, ensure that the **Response modes** switch is set to **Off**.
+1.  Set the **Enable disambiguation** switch to **Off**.
 1.  Click **Save**, and then click **Close**.
 1. Publish a new version of your assistant to the live environment to disable clarification. For more information, see [Publishing your content](/docs/watson-assistant?topic=watson-assistant-publish).
-
 
 ### Excluding an action from clarifying questions
 {: #understand-questions-exclude-from-clarifying}

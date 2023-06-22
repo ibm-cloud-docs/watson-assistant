@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-06-21"
+lastupdated: "2023-06-22"
 
 subcollection: watson-assistant
 
@@ -17,9 +17,6 @@ subcollection: watson-assistant
 
 Use *autolearning* to enable your assistant to learn from interactions with your customers and improve responses.
 {: shortdesc}
-
-This is a beta feature that is available for evaluation and testing purposes on IBM Cloud in English-language assistants only.
-{: beta}
 
 When customers interact with your assistant, they often make choices. Your assistant can learn from these user decisions.
 
@@ -38,14 +35,14 @@ Logs of conversations and user decisions from your live environment are the data
 
 When the assistant observes enough real conversation data from the live environment, it gains insights to help improve your assistant, providing a better customer experience.
 
-When you publish your assistant to the live environment, autolearning starts training the assistant. To apply the autolearning improvements to your assistant's responses, [enable autolearning](#autolearn-task).
+When you publish your assistant to the live environment, autolearning starts training the assistant.
 
-## Enabling autolearning
+## Applying autolearning
 {: #autolearn-task}
 
-You can enable autolearning when the following conditions are met:
+You can apply autolearning when the following conditions are met:
 
-- **Ask clarifying question** is enabled in **Global settings**. For more information, see [Global settings for actions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings).
+- *Ask clarifying questions* is enabled in global settings. For more information, see [Asking clarifying questions](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-ask-clarifying-question).
 
 - You publish a version of your assistant to the live environment. For more information, see [Publishing your content](/docs/watson-assistant?topic=watson-assistant-publish).
 
@@ -57,12 +54,11 @@ To apply autolearning improvements to your assistant responses:
 
 1. Click the **Autolearning** tab.
 
-1. Set the **Use autolearning to modify responses with training from live environment** switch to **On**.
+1. Ensure the **Use autolearning to modify responses with training from live environment** switch is set to **On**.
 
 1. In the draft environment, you can preview your actions or your assistant. With autolearning set to **On**, preview in the draft environment uses the autolearning training from the live environment. For more information, see [Using Preview to test your action](/docs/watson-assistant?topic=watson-assistant-review#review-test) or [Previewing your assistant](/docs/watson-assistant?topic=watson-assistant-preview-share).
 
 1. If you are happy with the results from testing the autolearning improvements in the draft environment, publish a new version of your assistant to the live environment to apply the improvements. For more information, see [Publishing your content](/docs/watson-assistant?topic=watson-assistant-publish).
-
 
 ## Learning from your data
 {: #autolearn-data}
