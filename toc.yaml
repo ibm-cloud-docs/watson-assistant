@@ -161,6 +161,7 @@ toc:
           - deploy-phone-genesys.md
           - deploy-phone-cxone.md
           - deploy-phone-flex.md
+          - phone-actions.md
           - phone-troubleshooting.md
       - topicgroup:
           label: Deploying to other channels
@@ -204,10 +205,6 @@ toc:
           - dynamic-options.md
           - journeys.md
           - expressions.md
-          - topicgroup:
-              label: Customizing channels
-              topics:
-              - phone-actions.md
           - topicgroup:
               label: Extending your assistant with webhooks
               topics:
