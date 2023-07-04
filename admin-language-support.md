@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-06-06"
+lastupdated: "2023-07-04"
 
 keywords: global support, universal language, universal model, another language
 
@@ -74,7 +74,8 @@ Keep these tips in mind for integrations:
 | Korean | ko |
 | Portuguese (Brazilian) | pt-br |
 | Spanish | es |
-| Universal | xx |
+| Universal* | xx |
+*If you want to support conversations in a language for which Watson Assistant does not have a dedicated model, such as Russian, use Universal. 
 {: caption="Table 1. Supported languages" caption-side="top"}
 
 ## Feature support details
@@ -82,11 +83,11 @@ Keep these tips in mind for integrations:
 
 The following tables illustrate the level of language support available for product features.
 
-In the following tables, the level of language and feature support is indicated by these codes:
+The level of language and feature support is indicated by codes:
 
 - GA: The feature is generally available and supported for this language. Note that features might continue to be updated even after they are generally available.
-- Beta: The feature is supported only as a Beta release, and is still undergoing testing before it is made generally available in this language.
-- NA: Indicates that a feature is not available in this language.
+- Beta: The feature is supported only as a Beta release and is still undergoing testing before it is made generally available in this language.
+- NA: A feature is not available in this language.
 
 ### Content support details
 {: #admin-language-support-content}
