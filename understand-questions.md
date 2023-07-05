@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-06-22"
+lastupdated: "2023-07-05"
 
 subcollection: watson-assistant
 
@@ -24,11 +24,9 @@ When you create a new action, your first task is to enter one phrase that a cust
 
 To get going, you need to enter only one phrase, for example: `What are your store hours?`.
 
-
-
 After you enter the phrase, it is stored in **Customer starts with**, at the start of the action.
 
-![Customer starts with](images/customer-starts-with.png)
+![Customer starts with](images/customer-starts-with.png){: caption="Customer starts with" caption-side="bottom"}
 
 ## Testing your phrase
 {: #understand-questions-testing}
@@ -39,11 +37,11 @@ Before even doing anything else with your action, you can already start checking
 1. Enter your first phrase, for example: `What are your store hours?`.
 1. If you see `There are no additional steps for this action` that means the action recognizes the phrase. (And it's because you didn't add anything else to your action.)
 
-    ![Preview](images/new-action-preview.png)
+    ![Preview](images/new-action-preview.png){: caption="Preview" caption-side="bottom"}
 
 1. If the assistant doesn't understand the phrase, you see the built-in action `No action matches`. For more information, see [When the assistant can't understand your customer's request](https://test.cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches).
 
-    ![No action matches](images/new-action-preview-no-match.png)
+    ![No action matches](images/new-action-preview-no-match.png){: caption="No action matches" caption-side="bottom"}
 
 ## Adding more examples
 {: #understand-questions-adding-more-examples}
@@ -73,7 +71,7 @@ If you have many example phrases, you can upload them from a comma-separated val
         ```
         Where `<phrase>` is the text of a user example phrase. If you’re using a spreadsheet to create a CSV file, put all your phrases into column 1, as shown in the following example:
 
-        ![Example spreadsheet to upload phrases](images/uploading-phrases-spreadsheet.png)
+        ![Example spreadsheet to upload phrases](images/uploading-phrases-spreadsheet.png){: caption="Example spreadsheet" caption-side="bottom"}
 
     - If you [downloaded intents from the classic experience](/docs/watson-assistant?topic=watson-assistant-migrate-intents-entities#migrate-intents-download), the format for each line in the file is as follows:
         ```text
@@ -113,7 +111,7 @@ You can download your example phrases to a CSV file, so you can then upload and 
 
 When your assistant finds that more than one action might fulfill a customer's request, it can automatically ask for clarification. Instead of guessing which action to take, your assistant shows a list of the possible actions to the customer, and asks the customer to pick the right one.
 
-![Shows a sample conversation between a user and the assistant, where the assistant asks for clarification from the user.](images/disambig-demo.png)
+![Shows a sample conversation between a user and the assistant, where the assistant asks for clarification from the user.](images/disambig-demo.png){: caption="Sample conversation" caption-side="bottom"}
 
 Any **Created by you** action that might match the customer's input can be included in the choices that are listed by a clarifying question. The **Set by assistant** actions are never included.
 
