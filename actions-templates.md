@@ -97,8 +97,6 @@ Starter kit templates add actions that can use extensions to connect to data and
 It's important to add the extension to your assistant first, so the starter kit actions can detect the installed extension. Don't add the starter kit actions without adding the extension first.
 {: important}
 
-![Starter kit actions](images/actions-templates-starter-kit.png){: caption="Starter kit actions" caption-side="bottom"}
-
 This table lists each starter kit, a link to download an OpenAPI specification file that you need to set up the extension, and a link to setup instructions.
 
 | Starter kit | OpenAPI specification file | Setup instructions |
