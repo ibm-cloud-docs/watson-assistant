@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-07-05"
 
 subcollection: watson-assistant
 
@@ -49,28 +49,28 @@ To create actions from templates:
 
 1. On **Create an action**, choose **Quick start with templates**.
 
-   
+   ![Create an action](images/actions-templates-create.png){: caption="Create an action" caption-side="bottom"}
 
 1. On **Quick start with templates**, click a template to read details about what it does. Or, you can click the checkbox to select the template right away.
 
    If you choose a starter kit template, these actions require you to add a custom extension before you add the actions from the starter kit. For more information, see [Starter kit extension setup](#actions-templates-extension-setup).
    {: important}
 
-   
+   ![Quick start with templates](images/actions-templates-quick-start-2.png){: caption="Quick start with templates" caption-side="bottom"}
 
 1. Review the details of the template, then click **Select this template**.
 
-   
+   ![Template details](images/actions-templates-review-2.png){: caption="Template details" caption-side="bottom"}
 
 1. Your list of selected templates includes all the ones that you chose. You can select as many templates as you want. If you change your mind, click the trash can icon to remove a template from the list.
 
-   
+   ![Selected templates](images/actions-templates-selected.png){: caption="Selected templates" caption-side="bottom"}
 
 1. When you're ready, click **Add templates**.
 
 1. In the actions editor, you can use a new action as-is, or modify it to fit your use case.
 
-   
+   ![New action](images/actions-templates-editor.png){: caption="New action" caption-side="bottom"}
 
 You can create multiple actions from the same template. For example, if you used the **Book a meeting** template to create an action, you can choose that template again. If the first action is still named **Book a meeting**, the new action is added with the name **Book a meeting (1)**.
 {: note}
@@ -86,7 +86,7 @@ To preview the action that you created from a template:
 
 1. Try some of the example phrases from **Customer starts with** to see how the assistant responds.
 
-
+   ![Preview](images/actions-templates-preview.png){: caption="Preview" caption-side="bottom"}
 
 
 ## Starter kit extension setup
@@ -97,7 +97,7 @@ Starter kit templates add actions that can use extensions to connect to data and
 It's important to add the extension to your assistant first, so the starter kit actions can detect the installed extension. Don't add the starter kit actions without adding the extension first.
 {: important}
 
-
+![Starter kit actions](images/actions-templates-starter-kit.png){: caption="Starter kit actions" caption-side="bottom"}
 
 This table lists each starter kit, a link to download an OpenAPI specification file that you need to set up the extension, and a link to setup instructions.
 
