@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-01-19"
+lastupdated: "2023-07-06"
 
 subcollection: watson-assistant
 
@@ -30,26 +30,28 @@ subcollection: watson-assistant
 # Encrypting sensitive data
 {: #web-chat-security-encrypt}
 
-By using the public key that is provided by IBM, you can add an additional level of encryption to hide sensitive data you send from the web chat.
+By using the public key that is provided by IBM, you can add another level of encryption to hide sensitive data you send from the web chat.
 {: shortdesc}
 
 To use this method for encrypting data, you must first enable the web chat security feature. For more information, see [Enabling web chat security](/docs/watson-assistant?topic=watson-assistant-web-chat-security-enable).
 {: note}
 
-Use this method to send sensitive information in messages that come from your website, such as information about a customer's loyalty level, a user ID, or security tokens to use in webhooks that you call from your actions. Information that is passed to your assistant in this way is stored in a private context variable. (Private variables cannot be seen by customers and are never sent back to the web chat.)
+Use this method to send sensitive information in messages that come from your website, such as information about a customer's loyalty level, a user ID, or security tokens to use in webhooks that you call from actions. Information passed to your assistant in this way is stored in a private context variable. Private variables cannot be seen by customers and are never sent back to the web chat.
 
-For example, you might start a business process for a VIP customer that is different from the process you start for less important customers. You do not want non-VIPs to know that they are categorized as such, but you must pass this information to your action so it can change the flow of the conversation. To do this, you can pass the customer MVP status as an encrypted variable. This private context variable is available for use by the action, but not by anything else.
+For example, you might start a business process for a VIP customer that is different from the process you start for a standard customer. You do not want non-VIPs to know that they are categorized as such, but you must pass this information to your action so it can change the flow of the conversation. To do this, you can pass the customer MVP status as an encrypted variable. This private context variable is available for use by the action, but not by anything else.
 
 ![development icon](images/development-icon.png) **Tutorial:** For a tutorial that shows an example of using web chat security to authenticate users and protect sensitive data, see [Tutorial: Authenticating a user in the middle of a session](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-security).
 {: tip}
 
-To encrypt sensitive data, follow these steps:
+To encrypt sensitive data:
 
-1. On the **Security** tab of the web chat integration settings, copy the public key from the **IBM provided public key** field. (This field is available only if [web chat security is enabled](#web-chat-security-enable).)
+1. On the **Security** tab of the web chat integration settings, click the **Generate key** button. 
+
+1. Copy the public key that displays in the **IBM-provided public key** field. This field is available only if [web chat security is enabled](#web-chat-security-enable).
 
 1. In the JavaScript function you use to create your JWT, include in the payload a private claim called `user_payload`. Use this claim to contain the sensitive data, encrypted with the IBM public key.
 
-    For example, the following code snippet shows a function that accepts a userID and user payload. If a user payload is provided, its content is encrypted and signed with the IBM public key. (In this example, the public key is stored in an environment variable.)
+    The following code snippet shows a function that accepts a userID and user payload. If a user payload is provided, its content is encrypted and signed with the IBM public key. In this example, the public key is stored in an environment variable.
 
     ```javascript
     // Example code snippet to encrypt sensitive data in JWT payload.
