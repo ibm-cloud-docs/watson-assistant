@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-06-22"
+lastupdated: "2023-07-07"
 
 keywords: Watson Assistant release notes
 
@@ -21,7 +21,14 @@ content-type: release-note
 Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
-This topic describes the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 7 July 2023
+{: #watson-assistant-jul072023}
+{: release-note}
+
+SpEL expression of type 'intents[i].confidence' is deprecated in actions
+:   On or after July 10, 2023, this expression will evaluate to -1 with a warning log message. On or after July 17, 2023, usage of this expression will be removed and will result in an error.
 
 ## 21 June 2023
 {: #watson-assistant-jun212023}
