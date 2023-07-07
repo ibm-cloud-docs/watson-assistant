@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-18"
+lastupdated: "2023-07-07"
 
 keywords: autocorrection, spelling correction, spell check
 
@@ -10,22 +10,7 @@ subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:gif: data-image-type='gif'}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 # Autocorrecting user input
 {: #autocorrection}
@@ -52,7 +37,7 @@ If you find that a domain-specific term is being corrected that shouldn't be, yo
 
 If you are using actions in your assistant, follow these steps to disable autocorrection:
 
-1. On the **Actions** page, click **Global settings** ![Global settings](images/gear-icon-black.png).
+1. On the **Actions** page, click **Global settings** ![Gear icon](../../icons/settings.svg).
 
 1. Click the **Autocorrection** tab.
 
