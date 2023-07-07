@@ -68,7 +68,6 @@ After the third attempt, another invalid attempt triggers the *Fallback* action,
 
 #### Customizing validation for a response
 {: #customize-validation}
-
 When you edit a step that expects a customer response, you can customize how validation errors are handled. Click **Edit validation** to see the validation options.
 
 For all customer responses except *free text*, you can customize the following options:
