@@ -27,7 +27,7 @@ Release notes describe the new features, changes, and bug fixes in each release 
 {: #watson-assistant-jul072023}
 {: release-note}
 
-SpEL expression of type 'intents[i].confidence' is deprecated in actions
+SpEL expression of type `intents[i].confidence` is deprecated in actions
 :   On or after July 10, 2023, this expression will evaluate to -1 with a warning log message. On or after July 17, 2023, usage of this expression will be removed and will result in an error.
 
 ## 21 June 2023
