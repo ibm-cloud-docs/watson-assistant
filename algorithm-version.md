@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-07-07"
 
 subcollection: watson-assistant
 
@@ -23,7 +23,7 @@ There are three choices:
 
 To choose an algorithm version for actions:
 
-1. On the **Actions** page, click **Global settings** ![Gear icon](images/gear-icon-black.png).
+1. On the **Actions** page, click **Global settings** ![Gear icon](../../icons/settings.svg).
 
 1. Click the **Algorithm Version** tab.
 
