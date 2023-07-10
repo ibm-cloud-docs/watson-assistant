@@ -2,28 +2,13 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-01-19"
+lastupdated: "2023-07-10"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Dynamic options
 {: #dynamic-options}
