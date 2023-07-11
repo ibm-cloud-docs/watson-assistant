@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-07-11"
 
 keywords: Watson Assistant release notes
 
@@ -22,6 +22,12 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+## 10 July 2023
+{: #watson-assistant-jul102023}
+{: release-note}
+
+Changes to messages API
+:   The log message that is returned in the `/messages` API now has an optional list of strings to provide dynamic values. The `code` field in the log message now has more strings that are related to specific errors.
 
 ## 7 July 2023
 {: #watson-assistant-jul072023}
