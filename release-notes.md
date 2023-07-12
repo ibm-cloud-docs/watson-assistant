@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-07-11"
+lastupdated: "2023-07-12"
 
 keywords: Watson Assistant release notes
 
@@ -22,6 +22,18 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+## 12 July 2023
+{: #watson-assistant-jul122023}
+{: release-note}
+Algorithm version **Beta** provides improved intent detection and action matching for more languages
+:   The algorithm version **Beta** now provides improved intent detection and action matching for French, German, Portuguese (Brazilian), and Spanish. It includes a new foundation model that is trained using a transformer architecture to improve intent detection and action matching.
+
+   Improvements include:
+   - Improved robustness to variations in user inputs such as typos and different inflection forms
+   - Less training data required to reach the same level of performance compared to previous algorithms
+
+   For more information, see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version)
+
 ## 10 July 2023
 {: #watson-assistant-jul102023}
 {: release-note}
