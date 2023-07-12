@@ -97,7 +97,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. On the **Configure Microsoft Teams** page, specify options in the **Messaging**, **Calling**, and **Publish** tabs that fit your bot needs, and then click **Save**.
 
-1. In your {site.data.keyword.conversationshort} Microsoft Teams integration, click **Next** to create your Teams app.
+1. In your {{site.data.keyword.conversationshort}} Microsoft Teams integration, click **Next** to create your Teams app.
 
 ### Create your Teams app
 {: #deploy-microsoft-teams-app}
