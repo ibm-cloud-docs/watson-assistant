@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-05-08"
+lastupdated: "2023-07-12"
 
 keywords: Watson Assistant frequently asked questions
 
@@ -104,13 +104,19 @@ If you cannot view the API details or service credentials, it is likely that you
 {: #faqs-export-conversation}
 {: faq}
 
-You cannot directly export conversations from the conversation page. However, you can use the `/logs` API to list events from the transcripts of conversations that occurred between your users and your assistant. For more information, see the [API reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2#listlogs){: external}.
+You cannot directly export conversations from the conversation page. However, you can use the `/logs` API to list events from the transcripts of conversations that occurred between your users and your assistant. For more information, see the [V2 API reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2#listlogs){: external}. Or, you can use a Python script to export logs. For more information, see [export_logs_py](https://github.com/watson-developer-cloud/community/blob/master/watson-assistant/export_logs_py.py).
 
 ## Can I change my plan to a Lite plan?
 {: #faqs-downgrade-plan}
 {: faq}
 
 No, you cannot change from a Trial, Plus, or Standard plan to a Lite plan. And you cannot upgrade from a Trial to a Standard plan.
+
+## How many Lite plan instances of {{site.data.keyword.conversationshort}} can I create?
+{: #faqs-lite-plans}
+{: faq}
+
+You can have only one Lite plan instance of {{site.data.keyword.conversationshort}} per resource group.
 
 ## How do I create a webhook?
 {: #faqs-webhook-how}
@@ -153,3 +159,9 @@ To see your monthly active users (MAU):
 {: faq}
 
 With the V2 API and an Enterprise plan, you can use the Segment extension to see what browser was used to send the message. For more information, see [Sending events to Segment](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-segment-add).
+
+## Is it possible to increase the number of intents per skill
+{: #faqs-intents-number}
+{: faq}
+
+No, it is not possible to increase the number of intents per skill.
