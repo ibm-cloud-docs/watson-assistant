@@ -39,8 +39,8 @@ Algorithm version **Beta** provides improved intent detection and action matchin
 {: #watson-assistant-jul102023}
 {: release-note}
 
-Changes to messages API
-:   The log message that is returned in the `/messages` API now has an optional list of strings to provide dynamic values. The `code` field in the log message now has more strings that are related to specific errors.
+Change to message API
+:   When debug is enabled on the runtime (`/message`) API call, if a dialog processing error happens, more output is presented within the `output.debug.log_messages` attribute.
 
 ## 7 July 2023
 {: #watson-assistant-jul072023}
