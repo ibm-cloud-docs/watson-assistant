@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-02-27"
+lastupdated: "2023-07-12"
 
 subcollection: watson-assistant
 
@@ -118,7 +118,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. Click **Save**, but keep the window open.
 
-1. In your {site.data.keyword.conversationshort} Microsoft Teams integration, click **Finish**.
+1. In your {{site.data.keyword.conversationshort}}  Microsoft Teams integration, click **Finish**.
 
 1. Click **Publish** to publish your bot. 
 
