@@ -1,31 +1,14 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2022-12-12"
+  years: 2020, 2023
+lastupdated: "2023-07-12"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:tag-ibm-cloud: .tag data-tag-color="blue"}
-{:tag-cp4d: .tag data-tag-color="magenta"}
-
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Integrating with WhatsApp
 {: #deploy-whatsapp}
