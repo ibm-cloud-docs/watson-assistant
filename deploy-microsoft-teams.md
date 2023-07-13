@@ -2,30 +2,13 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-07-12"
+lastupdated: "2023-07-13"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:tag-ibm-cloud: .tag data-tag-color="blue"}
-{:tag-cp4d: .tag data-tag-color="magenta"}
-
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Integrating with Microsoft Teams
 {: #deploy-microsoft-teams}
@@ -70,13 +53,13 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. On the **Register an application** page, enter a name, select the multi-tenant option that applies to your app, and then click **Register**.
 
-1. Copy the application ID from the **Overview** page of your app, and paste it into the **App registration** field of your {site.data.keyword.conversationshort} Microsoft Teams integration.
+1. Copy the application ID from the **Overview** page of your app, and paste it into the **App registration** field of your {{site.data.keyword.conversationshort}} Microsoft Teams integration.
 
 1. On the same Microsoft Azure **Overview** page, click the hyperlink **Add a certificate or secret** next to Client Credentials. 
 
 1. On the **Certificates & secrets** page for token creation, click **New client secret**. Enter a description and then select **Recommended 180 days**. Click **Add**.
 
-1. Copy the string under **Value** and paste into **Client secret value** on the **App registration** page of your {site.data.keyword.conversationshort} Microsoft Teams integration. Note: You *must* generate a new value before the current one expires on day 180.
+1. Copy the string under **Value** and paste into **Client secret value** on the **App registration** page of your {{site.data.keyword.conversationshort}} Microsoft Teams integration. Note: You *must* generate a new value before the current one expires on day 180.
 
 1. Click **Next** to create your bot.
 
@@ -87,7 +70,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. On the **Tell us about your bot** page, complete your bot profile. 
 
-1. Copy the generated endpoint from the **Create your bot** page of your {site.data.keyword.conversationshort} Microsoft Teams integration and paste into the **Messaging endpoint** field of the **Configuration** section.
+1. Copy the generated endpoint from the **Create your bot** page of your {{site.data.keyword.conversationshort}} Microsoft Teams integration and paste into the **Messaging endpoint** field of the **Configuration** section.
 
 1. Select **Multi-Tenant** as the app type. 
 

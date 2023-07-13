@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-07-13"
 
 keywords: global support, universal language, universal model, another language
 
@@ -144,5 +144,6 @@ The system will provide the highest confidence scores in entities with exact mat
 You are expected to train the system with the proper characters and accents. For example, if you are expecting `barrió` as a response, then you should put `barrió` into the training set.
 
 Although not an accent mark, the same applies to words using, for example, the Spanish letter `ñ` vs. the letter `n`, such as "uña" vs. "una". In this case the letter `ñ` is not simply an `n` with an accent; it is a unique, Spanish-specific letter.
+
 
 
