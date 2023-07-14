@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-14"
+lastupdated: "2023-07-14"
 
 subcollection: watson-assistant
 
@@ -69,6 +69,19 @@ Even when you allow changing the topic, you might not want a customer to return 
 1. Keep the **Change conversation topic** toggle switched to **On**.
 
 1. Select the checkbox **Never return to original action after completing this action** to prevent the customer from returning to the previous action.
+
+### Allow change of topic between actions and dialog
+{: #change-topic-action-to-dialog}
+
+If you are using actions and dialog, you can ensure that customers can change topics between an action and a dialog node.
+
+This setting is available if you have activated dialog in Assistant settings. For more information, see [Activating dialog and migrating skills](/docs/watson-assistant?topic=watson-assistant-activate-dialog).
+{: note}
+
+1. Set the toggle **Change topics from actions to dialog** to **On**.
+
+1. Click **Save**, and then click **Close**.
+
 ### Enabling changing the topic for free text and regex customer responses
 {: #change-topic-free-text-regex}
 
