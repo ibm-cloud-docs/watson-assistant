@@ -1,4 +1,3 @@
-
 ---
 
 copyright:
@@ -35,6 +34,9 @@ Fallback option for dynamic options
 
 Allow change of topic between actions and dialog
 :   If you are using actions and dialog, there is a new setting you can use to ensure that customers can change topics between an action and a dialog node. For more information, see [Allow change of topic between actions and dialog](/docs/watson-assistant?topic=watson-assistant-change-topic#change-topic-action-to-dialog).
+
+Use multilingual downloads for translation
+:   You can enable the download of language data files, in CSV format, so you can translate training examples and assistant responses into other languages and use in other assistants. For more information, see [Using multilingual downloads for translation](/docs/watson-assistant?topic=watson-assistant-admin-language-support#admin-language-support-multilingual).
 
 ## 12 July 2023
 {: #watson-assistant-jul122023}
