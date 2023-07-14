@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-07-14"
 
 subcollection: watson-assistant
 
@@ -69,14 +69,20 @@ After the third attempt, another invalid attempt triggers the *Fallback* action,
 #### Customizing validation for a response
 {: #customize-validation}
 
-When you edit a step that expects a customer response, you can customize how validation errors are handled. Click **Edit validation** to see the validation options.
+When you edit a step that expects a customer response, you can customize how validation errors are handled. 
 
-For all customer responses except *free text*, you can customize the following options:
+1. Click **Edit validation** to see the validation options.
 
-- In the **Validation message** field, specify the text of the message the assistant sends when the customer's response doesn't match the expected response type. For example, the default validation error message for a numeric value is `I didn't catch that. Enter a number.` You might want to customize this message to be more specific (for example, `Enter the number of people in your group.`).
+1. For all customer responses except *free text*, you can customize the following options:
 
-- Click **`+`** or **`-`**, or directly edit the number, to change how many consecutive tries the customer can make before the *Fallback* action is triggered. Or, if you have enabled [response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes), you can use the number of step validation attempts from the  response mode that you are using.
+   - In the **Response 1** field, specify the text of the message the assistant sends when the customer's response doesn't match the expected response type. For example, the default validation error message for a numeric value is `I didn't catch that. Enter a number.` You might want to customize this message to be more specific, such as `Enter the number of people in your group.`
+   
+   - If you want to use several validation responses, click **Add Response** to add more validation messages. The number of validation responses you can enter depends upon the value in the **If attempts exceed** field.
 
+   - In the **If attempts exceed** field, click **`+`** or **`-`**, or directly edit the number, to change how many consecutive attempts the customer can make before the *Fallback* action is triggered. Or, if you enabled [response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes), you can use the number of step validation attempts from the response mode that you are using.
+   
+   - Select **Repeat Assistant Says response** if you want the customer to see or hear the original question. For example, following a validation message of `I’m sorry, please choose a day when we are open`, the assistant repeats `When do you want to visit? We are open Monday through Friday`.
+   
 For date, time, and numeric customer responses, you can customize the validation to check for a specific answer, such as a range of dates or a limited currency amount. Each choice is optional so that you can build a validation specific to the response.
 
 | Response type | Validation choices |
