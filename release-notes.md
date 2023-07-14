@@ -33,6 +33,9 @@ Multiple responses when customizing validation
 Fallback option for dynamic options
 :   The *dynamic options* response type now includes a fallback static choice, such as `None of the above`, if the options aren't what the customer wants. You can then add a step that is conditioned on this static option to provide further assistance. For more information, see [Dynamic options](/docs/watson-assistant?topic=watson-assistant-dynamic-options).
 
+Allow change of topic between actions and dialog
+:   If you are using actions and dialog, there is a new setting you can use to ensure that customers can change topics between an action and a dialog node. For more information, see [Allow change of topic between actions and dialog](/docs/watson-assistant?topic=watson-assistant-change-topic#change-topic-action-to-dialog).
+
 ## 12 July 2023
 {: #watson-assistant-jul122023}
 {: release-note}
