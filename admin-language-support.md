@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-07-14"
+lastupdated: "2023-07-17"
 
 keywords: global support, universal language, universal model, another language
 
@@ -78,7 +78,7 @@ Keep these tips in mind for integrations:
 | Spanish | es |
 | Universal* | xx |
 *If you want to support conversations in a language for which Watson Assistant does not have a dedicated model, such as Russian, use Universal. 
-{: caption="Table 1. Supported languages" caption-side="top"}
+{: caption="Supported languages" caption-side="top"}
 
 ## Feature support details
 {: #admin-language-support-tables}
@@ -108,7 +108,7 @@ The level of language and feature support is indicated by codes:
 | **Portuguese (Brazilian) (pt-br)** | GA | GA | GA |
 | **Spanish (es)**                   | GA | GA | GA |
 | **Universal (xx)**                 | GA | GA | GA |
-{: caption="Table 2. Content support details" caption-side="top"}
+{: caption="Content support details" caption-side="top"}
 
 The {{site.data.keyword.conversationshort}} service supports multiple languages as noted, but the user interface itself (such as descriptions and labels) is in English. All supported languages can be input and trained through the English interface.
 {: note}
@@ -158,7 +158,7 @@ To enable multilingual download:
 
 1. In the **Download/Upload** section, click **Enable multilingual download**. 
 
-   Enabling multilingual might take a few minutes minute to process, but you can work elsewhere in the assistant. The Download/Upload button is disabled until this process finishes. After the multilingual download is enabled in an assistant, it can't be disabled.
+   Enabling multilingual might take a few minutes to process, but you can work elsewhere in the assistant. The Download/Upload button is disabled until this process finishes. After the multilingual download is enabled in an assistant, it can't be disabled.
    {: note}
 
 1. Click **Download/Upload files**. 
@@ -167,7 +167,7 @@ To enable multilingual download:
 
 1. Select a published version, then click **Download**. You need at least one version for the download to be available.
 
-   Downloading your first file might take a few minutes minute to process, but you can work elsewhere in the assistant. The Download/Upload button is disabled until this process finishes.
+   Downloading your first file might take a few minutes to process, but you can work elsewhere in the assistant. The Download/Upload button is disabled until this process finishes.
    {: note}
 
 1. When the download finishes, your .zip file contains:
