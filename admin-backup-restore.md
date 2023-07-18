@@ -85,7 +85,7 @@ To upload your actions to the draft environment:
 
 To upload your dialog to the draft environment:
 
-1. On the **Dialog** page, click ***Upload/Download**.
+1. On the **Dialog** page, click **Upload/Download**.
 
 1. On the **Upload** tab, drag a JSON file onto the tab or click to select a file from your local system, then click **Upload**.
 
