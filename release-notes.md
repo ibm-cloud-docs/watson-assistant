@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-07-14"
+lastupdated: "2023-07-18"
 
 keywords: Watson Assistant release notes
 
@@ -21,7 +21,6 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
-
 ## 14 July 2023
 {: #watson-assistant-jul142023}
 {: release-note}
