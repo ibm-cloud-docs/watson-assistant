@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-07-18"
+lastupdated: "2023-07-21"
 
 keywords: Watson Assistant release notes
 
@@ -21,6 +21,14 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 20 July 2023
+{: #watson-assistant-jul202023}
+{: release-note}
+
+Action and collection names must now be unique
+:   With this release, each action name must be different from other actions, and each collection name must be different from other collections. If your existing actions or collections have duplicate names, a warning icon appears in the Status column. For more information, see [Overview: Editing actions](docs/watson-assistant?topic=watson-assistant-build-actions-overview) and [Organizing actions in collections](/docs/watson-assistant?topic=watson-assistant-collections).
+
 ## 14 July 2023
 {: #watson-assistant-jul142023}
 {: release-note}
