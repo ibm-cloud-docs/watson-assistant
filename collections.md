@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-07-18"
+lastupdated: "2023-07-21"
 
 subcollection: watson-assistant
 
@@ -22,8 +22,7 @@ To add a collection:
 
 1. From the **Actions** page of your assistant, click **New collection** ![Folder icon](images/folder--add.svg).
 
-1. Enter a collection name of up to 64 characters. Names don't need to be unique.
-
+1. Enter a collection name of up to 64 characters. Each collection name must be unique.
 
    ![New collection](images/collections-new.png){: caption="New collection" caption-side="bottom"}
 
