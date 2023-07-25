@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-14"
+lastupdated: "2023-07-25"
 
 subcollection: watson-assistant
 
@@ -72,6 +72,8 @@ Even when you allow changing the topic, you might not want a customer to return 
 
 ### Allow change of topic between actions and dialog
 {: #change-topic-action-to-dialog}
+
+[IBM Cloud]{: tag-ibm-cloud}
 
 If you are using actions and dialog, you can ensure that customers can change topics between an action and a dialog node.
 
