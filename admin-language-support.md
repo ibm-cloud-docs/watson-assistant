@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-07-17"
+lastupdated: "2023-07-25"
 
 keywords: global support, universal language, universal model, another language
 
@@ -137,6 +137,8 @@ Although not an accent mark, the same applies to words that use the Spanish lett
 
 ## Using multilingual downloads for translation
 {: #admin-language-support-multilingual}
+
+[IBM Cloud]{: tag-ibm-cloud}
 
 You can enable the download of language data files, in CSV format, so you can translate training examples and assistant responses into other languages and use in other assistants.
 
