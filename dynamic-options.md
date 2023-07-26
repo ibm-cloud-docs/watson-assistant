@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-25"
+lastupdated: "2023-07-26"
 
 subcollection: watson-assistant
 
@@ -43,9 +43,7 @@ To define a dynamic options customer response:
 
     - If the items in the array are JSON objects, the default mapping looks for a property called `label` and uses its value (if present) as the option. If the item does not include a `label` property, or you do not want to use the value of the `label` property as the option, you must write an expression to specify a mapping. You can use dot notation to refer to a property in the object using its JSON path (for example, `${item}.name`).
 
-[IBM Cloud]{: tag-ibm-cloud}
-
-1. **Optional:** Click **Add fallback option** to include a static choice, such as `None of the above`, if the options aren't what the customer wants. You can then add a step that is conditioned on this static option to provide further assistance. To add the condition, write a expression such as `${step_id}.value == "None of the above"`.
+1. [IBM Cloud]{: tag-ibm-cloud}**Optional:** Click **Add fallback option** to include a static choice, such as `None of the above`, if the options aren't what the customer wants. You can then add a step that is conditioned on this static option to provide further assistance. To add the condition, write a expression such as `${step_id}.value == "None of the above"`.
 
 ## Mapping examples
 {: #dynamic-options-examples}
