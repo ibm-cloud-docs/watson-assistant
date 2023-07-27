@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-07-27"
 
 keywords: autocorrection, spelling correction, spell check
 
@@ -15,7 +15,7 @@ subcollection: watson-assistant
 # Autocorrecting user input
 {: #autocorrection}
 
-*Autocorrection* fixes misspellings that users make in their requests. The corrected words are used to match to an action or an intent.
+*Autocorrection* fixes misspellings that users make in their requests. Corrected words are used to match to an action or an intent.
 
 Autocorrection corrects user input in the following way:
 
@@ -68,6 +68,7 @@ If there are misspelled terms that you expected your assistant to correct, but i
 To avoid overcorrection, your assistant does not correct the spelling of the following types of input:
 
 - Capitalized words
+- Words with an upper case character
 - Emojis
 - Locations, such as states and street addresses
 - Numbers and units of measurement or time
