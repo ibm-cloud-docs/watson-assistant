@@ -2,38 +2,23 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-02"
+lastupdated: "2023-07-28"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:beta: .beta}
+{{site.data.keyword.attribute-definition-list}}
 
 # Detecting trigger words
 {: #trigger-phrases}
 
+[IBM Cloud]{: tag-ibm-cloud}
+
 Use the *Trigger word detected* action to add words or phrases to two separate groups. The first group connects customers with an agent. The second group shows customers a customizable warning message.
 {: shortdesc}
 
-By default, this action has two steps&mdash;the *Connect to agent* step and the *Show warning* step. To see how this action works, click **Set by assistant** in the list of actions, and then click **Trigger word detected**.
-
-This is a beta feature that is available for evaluation and testing purposes.
-{: beta}
+By default, this action has two steps: the *Connect to agent* step and the *Show warning* step. To see how this action works, click **Set by assistant** in the list of actions, and then click **Trigger word detected**.
 
 ## Connect to agent
 {: #trigger-phrases-connect-to-agent}
@@ -44,7 +29,7 @@ For example, you might add `hurt` and `harm` as trigger words for the *Connect t
 
 ![Adding trigger words to the Connect to agent step](images/connect-to-agent-phrases.png){: caption="Adding trigger words to the Connect to agent step" caption-side="bottom"}
 
-In this example, a customer enters a word or phrase including `hurt` or `harm`, which triggers the *Fallback* action. Step 4 has:
+In this example, a customer enters a word or phrase that includes `hurt` or `harm`, which triggers the *Fallback* action. Step 4 has:
 - `Danger word detected` as the fallback reason.
 - The default message: `It seems this conversation would be best managed by a human agent. Let me connect you to one of our agents.` You can customize this message. 
 - **And then** set to **Connect to agent (action ends)**.
