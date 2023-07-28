@@ -33,7 +33,7 @@ Action conditions are now generally available
 :   An action condition is a Boolean test, based on some runtime value; the action runs only if the test evaluates as true. This test can be applied to any variable. By defining action conditions, you can do things such as control user access to actions or create date-specific actions. This was a beta feature that is now generally available. For more information, see [Adding conditions to an action](/docs/watson-assistant?topic=watson-assistant-action-conditions).
 
 New expression method to sort arrays
-:   The new [`Array.sort()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions&locale=en#expression-methods-actions-arrays-sort) method does an in-place sorting and returns the sorted array.</draft>
+:   The new [`Array.sort()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions&locale=en#expression-methods-actions-arrays-sort) method does an in-place sorting and returns the sorted array.
 
 ## 20 July 2023
 {: #watson-assistant-jul202023}
