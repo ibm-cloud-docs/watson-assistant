@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-07-05"
+lastupdated: "2023-07-28"
 
 subcollection: watson-assistant
 
@@ -136,6 +136,7 @@ To change settings, complete the following steps:
    |---|---|---|
    | **Assistant says** | `Did you mean:` | The text that is displayed before the list of clarification choices. You can change it to something else, such as `What do you want to do?` or `Pick what to do next`. |
    | **No action matches** | `None of the above` | The choice that customers can click when none of the other choices are right. If the customer picks this choice, the assistant uses your *No action matches* action. You can change it to something else, such as `I need something else` or `These aren't what I want`. Or, you can remove the text to omit offering this choice. |
+   
    {: caption="Ask clarifying question settings" caption-side="bottom"}
    
 1. If you enable response modes, you can modify this text:
