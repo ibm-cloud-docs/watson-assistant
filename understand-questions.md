@@ -33,7 +33,7 @@ After you enter the phrase, it is stored in **Customer starts with**, at the sta
 
 Before even doing anything else with your action, you can already start checking that your assistant recognizes the starting phrase.
 
-1. Click the **Preview** button.
+1. Click  **Preview**.
 1. Enter your first phrase, for example: `What are your store hours?`.
 1. If you see `There are no additional steps for this action` that means the action recognizes the phrase. (And it's because you didn't add anything else to your action.)
 
@@ -69,7 +69,7 @@ If you have many example phrases, you can upload them from a comma-separated val
         ```text
         <phrase>
         ```
-        Where `<phrase>` is the text of a user example phrase. If you’re using a spreadsheet to create a CSV file, put all your phrases into column 1, as shown in the following example:
+        where `<phrase>` is the text of a user example phrase. If you’re using a spreadsheet to create a CSV file, put all your phrases into column 1, as shown in the following example:
 
         ![Example spreadsheet to upload phrases](images/uploading-phrases-spreadsheet.png){: caption="Example spreadsheet" caption-side="bottom"}
 
@@ -135,8 +135,7 @@ To change settings, complete the following steps:
    | Field | Default text | Description |
    |---|---|---|
    | **Assistant says** | `Did you mean:` | The text that is displayed before the list of clarification choices. You can change it to something else, such as `What do you want to do?` or `Pick what to do next`. |
-   | **No action matches** | `None of the above` | The choice that customers can click when none of the other choices are right. If the customer picks this choice, the assistant uses your *No action matches* action. You can change it to something else, such as `I need something else` or `These aren't what I want`. Or, you can remove the text to omit offering this choice. |
-   
+   | **No action matches** | `None of the above` | The choice for customers when none of the other choices are right. You can change it to something else, such as `I need something else` or `These aren't what I want`. Or, you can remove the text to omit offering this choice. The result of this choice is different depending on the state of the action. If an action has not been triggered yet, the assistant uses the [No action matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches) action. If an action has been triggered and has not ended yet, the assistant uses the [validation settings for the step](/docs/watson-assistant?topic=watson-assistant-handle-errors#step-validation). |
    {: caption="Ask clarifying question settings" caption-side="bottom"}
    
 1. If you enable response modes, you can modify this text:
