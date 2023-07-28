@@ -2,7 +2,7 @@
 
 copyright:
 years: 2015, 2023
-lastupdated: "2023-07-21"
+lastupdated: "2023-07-28"
 
 subcollection: watson-assistant
 
@@ -967,3 +967,22 @@ ${Items}.size()
 
 If `Items` is `['one', 'two', 'three']`, this example returns `3`.
 
+### `Array.sort()`
+{: #expression-methods-actions-arrays-sort}
+
+This method does an in-place sorting and returns the sorted array. The default parameter is `ascending`. You can specify `descending` to change the sort order. Any other parameter entry is ignored and a log error appears.
+
+```text
+${Items}.sort("ascending")
+```
+
+The method compares numbers and strings. A number is always smaller than a string. Any other type is converted to string by default to compare. 
+
+For example:
+
+| Original array | Sorted array |
+| --- | --- |
+| [2,1,3,5,4,3,2] | [1,2,2,3,3,4,5] |
+| ["Banana", "Orange", "Apple", "Mango"] | ["Apple", "Banana", "Mango", "Orange"] |
+| [3, 2, 4, "1", "10", "12", "Banana", "Orange", 0, "Apple", "Mango"] | [0, 2, 3, 4, "1", "10", "12", "Apple", "Banana", "Mango", "Orange"] |
+{: caption="Sorting examples" caption-side="top"}

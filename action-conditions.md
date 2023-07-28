@@ -2,35 +2,20 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-07-28"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:beta: .beta}
+{{site.data.keyword.attribute-definition-list}}
 
 # Adding conditions to an action
 {: #action-conditions}
 
-An action condition is a boolean test, based on some runtime value; the action executes only if the test evaluates as true. This test can be applied to any variable. By defining action conditions, you can do things such as control user access to actions or create date-specific actions.
+[IBM Cloud]{: tag-ibm-cloud}
 
-This is a beta feature that is available for evaluation and testing purposes.
-{: beta}
+An action condition is a Boolean test, based on some runtime value; the action runs only if the test evaluates as true. This test can be applied to any variable. By defining action conditions, you can do things such as control user access to actions or create date-specific actions.
 
 For more information about variables, see [Using variables to manage conversation information](/docs/watson-assistant?topic=watson-assistant-manage-info).
 
@@ -50,7 +35,7 @@ For example, an action condition might read:
 
 In this example, `User category` can be a list of employees at your organization. This condition evaluates as true if the user is an active employee. If false, you can control access so that former employees can't use the action.
 
-Conditions can be grouped together to construct complex tests.
+Conditions can be grouped to construct complex tests.
 
 To add an action condition:
 
@@ -60,18 +45,18 @@ To add an action condition:
 
    ![Conditions](images/action-conditions-icon.png){: caption="Conditions" caption-side="bottom"}
 
-1. Choose the variable for the condition. You can select any of the following:
+1. Choose the variable for the condition. You can select:
 
-   - An action variable storing the customer response from a previous step in the action
-   - A session variable containing a value stored by any action
+   - An action variable with the customer response from a previous step in the action
+   - A session variable that contains a value that is stored by any action
    - A built-in variable set by the assistant or by an integration
 
-   You can also define a complex condition by writing an expression defining some other value. For more information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).
+   You can also define a complex condition by writing an expression that defines some other value. For more information about expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).
    {: note}
 
-1. Select the operator representing the test you want to perform on the variable (for example, `is` or `is not`). The available operators for a particular value depend upon its data type. For more information, see [Operators](#action-conditions-operators).
+1. Select the operator that represents the test that you want to perform on the variable (for example, `is` or `is not`). The available operators for a particular value depend upon its data type. For more information, see [Operators](#action-conditions-operators).
 
-1. Select the value you want to evaluate the condition against. The values available depend upon the type of value you are testing. For example, a variable containing an options response can be tested against any of the defined options, and a date value can be tested against any date.
+1. Select the value that you want to evaluate the condition against. The values available depend upon the type of value that you are testing. For example, a variable that contains an options response can be tested against any of the defined options, and a date value can be tested against any date.
 
    ![Conditions](images/action-conditions-editor.png){: caption="Conditions" caption-side="bottom"}
 
@@ -79,14 +64,14 @@ To add an action condition:
 
 1.  To add another group of conditions, click **New condition group**.
 
-    You can use groups to build complex action conditions. Each group is evaluated true or false as a whole, and then these results are evaluated together. For example, you might build an action that executes only if all conditions in group 1 are true *or* any condition in group 2 is true. (Groups function like parentheses in the boolean conditions of many programming languages.)
+    You can use groups to build complex action conditions. Each group is evaluated true or false as a whole, and then these results are evaluated together. For example, you might build an action that runs only if all conditions in group 1 are true *or* any condition in group 2 is true. (Groups function like parentheses in the Boolean conditions of many programming languages.)
 
     After you add a group, you can define one or more conditions in the new group. Between groups, choose **and** or **or** to indicate whether the conditions in both conditional groups or only one of them must be met for the step to be included in the conversational flow.
 
 ## Operators
 {: #action-conditions-operators}
 
-An operator specifies the kind of test you are performing on a value in a condition. The specific operators available in a condition depend on the customer response type of the value, as shown in the following table.
+An operator specifies the kind of test that you are performing on a value in a condition. The specific operators available in a condition depend on the customer response type of the value, as shown in the following table.
 
 | Response type                        | Operators                           |
 |--------------------------------------|-------------------------------------|

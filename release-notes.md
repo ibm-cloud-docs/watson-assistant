@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-07-21"
+lastupdated: "2023-07-28"
 
 keywords: Watson Assistant release notes
 
@@ -21,6 +21,19 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 27 July 2023
+{: watson-assistant-jul272023}
+{: release-note}
+
+Trigger word detected action is now generally available
+:   Use the **Trigger word detected** action to add words or phrases to two separate groups. The first group connects customers with an agent, when it’s important for a customer to speak with a live agent rather than activate any further actions. The second group shows customers a customizable warning message, used to discourage customers from interacting with your assistant in unacceptable ways, such as using profanity. This action is included with all new assistants created as of February 2, 2023. This was a beta feature that is now generally available. For more information, see [Detecting trigger words](/docs/watson-assistant?topic=watson-assistant-trigger-phrases).
+
+Action conditions are now generally available
+:   An action condition is a Boolean test, based on some runtime value; the action runs only if the test evaluates as true. This test can be applied to any variable. By defining action conditions, you can do things such as control user access to actions or create date-specific actions. This was a beta feature that is now generally available. For more information, see [Adding conditions to an action](/docs/watson-assistant?topic=watson-assistant-action-conditions).
+
+New expression method to sort arrays
+:   The new [`Array.sort()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions&locale=en#expression-methods-actions-arrays-sort) method does an in-place sorting and returns the sorted array.</draft>
 
 ## 20 July 2023
 {: #watson-assistant-jul202023}
