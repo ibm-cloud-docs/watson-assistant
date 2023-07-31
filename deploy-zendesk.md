@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-05-11"
+lastupdated: "2023-07-31"
 
 subcollection: watson-assistant
 
@@ -33,9 +33,7 @@ Zendesk allows you to assist customers in real time, which increases customer sa
 
 1.  Open the Zendesk **Dashboard**.
 
-1.  Click the **Products** icon in the header, and then select the **Chat** icon.
-
-       ![Screen capture of the chat icon in the header.](images/zd-products-menu.png)
+1.  Click the **Products** icon (four squares) in the header, and then select the **Chat** icon.
 
 1.  Click your profile, and then select **Check Connection**.
 
