@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-07-31"
 
 subcollection: watson-assistant
 
@@ -27,7 +27,7 @@ subcollection: watson-assistant
 
 
 
-# Overview: Securing the web chat
+# Overview: Securing a web chat
 {: #web-chat-security}
 
 If you enable security, you can configure the web chat to authenticate users, protect private data, and restrict access to your assistant.
@@ -37,9 +37,9 @@ All messages that are sent between the web chat and the assistant are encrypted 
 
 - You can prevent unauthorized websites from sending messages to your assistant, even if they copy your web chat embed script. (The unique identifiers in the embed script, such as the integration ID and service instance ID, are visible to anyone who has access to your website.)
 
-- You can securely authenticate customers in order to control access to features of your assistant that require authorization.
+- You can securely authenticate customers to control access to features of your assistant that require authorization.
 
-- You can encrypt sensistive data so that customers cannot see it, while still allowing your assistant to access it.
+- You can encrypt sensistive data so customers cannot see it, while still allowing your assistant to access it.
 
 Web chat security uses JSON Web Tokens (JWTs), which are data objects that are sent with each message from your website to the {{site.data.keyword.conversationshort}} service. Because a JWT is digitally signed using a private encryption key that only you have, it ensures that each message originates with your website. The JWT payload can also be used to securely authenticate users and carry encrypted private data.
 
@@ -71,7 +71,7 @@ With web chat security enabled, you can optionally implement additional security
 
 - You can [prevent unauthorized access](#web-chat-security-encrypt) to sensitive customer information by encrypting it and including it as part of the JWT user payload.
 
-    The user payload is a part of the JWT you can use to send information you want your assistant to have access to, but that you do not want customers to see. This information is stored only in private variables, which cannot be seen by customers and are never included in logs.
+    The user payload is a part of the JWT you can use to send information you want your assistant to have access to, but you do not want customers to see. This information is stored only in private variables, which cannot be seen by customers and are never included in logs.
 
     For more information about using the user payload to protect sensitive information, see [Encrypting sensitive data](/docs/watson-assistant?topic=watson-assistant-web-chat-security-encrypt).
 
