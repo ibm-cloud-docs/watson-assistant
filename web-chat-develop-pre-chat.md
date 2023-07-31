@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-07-31"
 
 subcollection: watson-assistant
 
@@ -25,43 +25,44 @@ When the web chat is opened or closed, it fires an [event](https://web-chat.glob
 
 By returning a promise that is resolved when the custom panel closes, you can pause the process of opening or closing the web chat until after the customer completes the form.
 
-This example shows how to create a pre-chat form. To create a post-chat form, follow the same steps, but subscribe to the `window:pre:close` event instead of the `window:open` event.
+This example shows how to create a pre-chat form. To create a post-chat form, follow the same steps, but use `!event.newViewState.mainWindow`.
 {: tip}
 
 To display a pre-chat form, follow these steps:
 
-1. Create a handler for the [`window:open`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#windowpreopen){: external} event, which is fired when the web chat opens. This handler uses the [`customPanels.getPanel()`](/docs/watson-assistant?topic=watson-assistant-topicid){: external} instance method to open a custom panel that will contain the pre-chat form.
+1. Create a handler for the [`view:change`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#viewchange){: external} event, which is fired when one of the view in web chat changes (such as when the main window opens). This handler uses the [`customPanels.getPanel()`](/docs/watson-assistant?topic=watson-assistant-topicid){: external} instance method to open a custom panel that contains the pre-chat form.
 
-    Your handler should return a promise that is resolved when the custom panel is closed. This prevents the web chat window from opening until after the pre-chat form is completed.
+    Your handler should return a promise that resolves when the custom panel is closed. This prevents the web chat main window from opening until after the pre-chat form is completed.
     {: tip}
 
     ```javascript
-    function windowOpenHandler(event, instance) {
-      return new Promise((resolve) => {
-        // Save a reference to the resolve function so we can resolve 
-        // this promise later.
-        promiseResolve = resolve;
-        createOpenPanel(event, instance);
-    
-        const customPanel = instance.customPanels.getPanel();
-        customPanel.open({ hidePanelHeader: true,
-                           disableAnimation: true });
-      });
+    function viewChangeHandler(event, instance) {
+      const mainWindowOpening = !event.oldViewState.mainWindow && event.newViewState.mainWindow;
+      if (mainWindowOpening) {
+        return new Promise((resolve) => {
+          promiseResolve = resolve;
+   
+          createOpenPanel(instance);
+          const customPanel = instance.customPanels.getPanel();
+          customPanel.open({ hidePanelHeader: true,
+                             disableAnimation: true });
+        });
+      }
     }
     ```
     {: codeblock}
 
-1. In your `onLoad` event handler, use the [`on()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#on){: external} instance method to subscribe to the `window:open` event, registering the handler as the callback.
+1. In your `onLoad` event handler, use the [`on()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#on){: external} instance method to subscribe to the `view:change` event, registering the handler as the callback.
 
     ```javascript
-    instance.on({ type: 'window:open', handler: windowOpenHandler });
+    instance.on({ type: 'view:change', handler: viewChangeHandler });
     ```
     {: codeblock}
 
 1. Create a function that creates the pre-chat form you want to show inside the custom panel. Make sure you resolve the promise when the user closes the panel.
 
     ```javascript
-    function createOpenPanel(event, instance) {
+    function createOpenPanel(instance) {
       const customPanel = instance.customPanels.getPanel();
       const { hostElement } = customPanel;
   

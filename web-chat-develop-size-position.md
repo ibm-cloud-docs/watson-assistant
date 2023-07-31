@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-02"
+lastupdated: "2023-07-31"
 
 subcollection: watson-assistant
 
@@ -54,26 +54,25 @@ To use a custom element, follow these steps:
     };
     ```
 
-1. Make sure that the main web chat window is hidden by default. You can do this in the `onLoad` event handler, after `render` has been called. You must also add handlers to listen for the `window:open` and `window:close` events so the customer can open and close the web chat after the page loads. In our example, we are using a CSS class called `HideWebChat` to do this (see the [full example](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/webchat/examples/custom-element/client/javascript-animation/index.html){: example} for the definition of this class):
+1. Make sure that the main web chat window is hidden by default. You can do this in the `onLoad` event handler, after `render` has been called. You must also add handlers to listen for the `view:change` event so the customer can open and close the web chat after the page loads. In our example, we are using a CSS class called `HideWebChat` to do this (see the [full example](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/webchat/examples/custom-element/client/javascript-animation/index.html){: example} for the definition of this class):
 
     ```javascript
     function onLoad(instance) {
       instance.render();
-      instance.on({ type: 'window:close', handler: closeHandler });
-      instance.on({ type: 'window:open', handler: openHandler });
+      instance.on({ type: 'view:change', handler: viewChangeHandler });
       instance.elements.getMainWindow().addClassName('HideWebChat');
     }
     ```
 
-1. Create handlers to hide and show the main web chat window in response to the `window:open` and `window:close`. This example simply shows and hides the element; the [full example](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/webchat/examples/custom-element/client/javascript-animation/index.html){: example} shows how you can add animation effects.
+1. Create handlers to hide and show the main web chat window in response to the `view:change` event. This example simply shows and hides the element; the [full example](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/webchat/examples/custom-element/client/javascript-animation/index.html){: example} shows how you can add animation effects.
 
     ```javascript
-    function closeHandler(event, instance) {
-      instance.elements.getMainWindow().addClassName('HideWebChat');
-    }
-    
-    function openHandler(event, instance) {
-      instance.elements.getMainWindow().removeClassName('HideWebChat');
+    function viewChangeHandler(event, instance) {
+      if (event.newViewState.mainWindow) {
+        instance.elements.getMainWindow().removeClassName('HideWebChat');
+      } else {
+        instance.elements.getMainWindow().addClassName('HideWebChat');
+      }
     }
     ```
 
