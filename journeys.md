@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-12-05"
+  years: 2022, 2023
+lastupdated: "2023-07-31"
 
 subcollection: watson-assistant
 
@@ -218,11 +218,11 @@ Your customers can now start the interactive journey directly from your website 
 
 This beta feature currently has the following limitations:
 
-- The preview pane does not support journeys. If you want to preview a journey, use the shareable preview link. (For more information about the preview link, see [Copying a link to share](/docs/watson-assistant?topic=watson-assistant-preview-share#preview-share-link).)
+- The preview pane does not support journeys. If you want to preview a journey, use the shareable preview link. For more information about the preview link, see [Copying a link to share](/docs/watson-assistant?topic=watson-assistant-preview-share#preview-share-link).
 
-- Journeys currently do not meet accessibility requirements.
+- Journeys do not meet accessibility requirements.
 
-- Journeys are not supported if you are using the [`element` configuration option](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#optionselement){: external} to render the web chat in a custom DOM element. 
+- Journeys use the `view:change` event or `changeView` method, and do not work with the `window:open` or `window:close` events or the `openWindow`, `closeWindow` and `toggleOpen` instance methods.
 
-- When the customer starts a journey, the web chat window temporarily closes, but will reopen when the journey finishes. If you are using the `window:close` event to trigger the display of a post-chat form, your code should check the value of the new `event.reason` parameter of the event and verify that it is not set to `open_tour`.
+- When the customer starts a journey, the web chat window temporarily closes but reopens when the journey finishes. If you are using the `view:change` event to trigger the display of a post-chat form, your code should check the value of the new `event.reason` or `event.newViewState.tour` parameter to decide if showing the form is appropriate.
 
