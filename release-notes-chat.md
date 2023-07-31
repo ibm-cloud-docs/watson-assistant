@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-06-13"
+lastupdated: "2023-07-31"
 
 subcollection: watson-assistant
 
@@ -25,20 +25,37 @@ For information about new features and improvements to the core {{site.data.keyw
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
 
+## 7.5.0
+{: #7.5.0}
+
+*Release date: 31 July 2023*
+
+- **New viewing options for the journeys beta feature**. With journeys/tours adding a third view to web chat -- the other two views being the launcher and main window -- we moved away from methods and events that focused on opening and closing the main window. These events were deprecated in favor of a more generic "view change" system that includes a new [`instance.changeView`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#changeView){: external} method, and [`view:pre:change`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#viewprechange){: external} and [`view:change`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#viewchange){: external} events. You now have more flexibility and can open multiple views at the same time.
+
+    Window methods and events are supported for existing assistants. If you add tours to your assistant, or are using tours, your window events and methods may not work as expected and may not be supported. If you wish to add tours to your assistant, you need to update your custom code to use the new view change methods and events.
+
+    The current window methods and events are still supported for existing web chats and assistants but are deprecated and will be removed in a future version. For more information, see [`Migrating from window to view events and methods`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#windowviewmigration){: external}
+
+- **New Genesys Web Messenger service desk integration** The service desk integration for Genesys Web Messenger is no longer in beta, and now includes support for user information strings in languages besides English. For more information, see [`Genesys Web Messenger`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-genesys){: external}. 
+
+- **New NICE CXone service desk integration** The service desk integration for NICE CXone Digital First Omnichannel has been released. For more information, see [`NICE CXone Digital First Omnichannel`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-nice){: external}. 
+
+- **Added a restart button**: A new `showRestartButton` configuration option specifies whether the web chat interface should display a restart button in the header, in addition to the existing **`-`** (Minimize) button. A customer can click this button to end the conversation or end any conversation with a human agent, while keeping the chat open. The chat transcript is cleared, but any transcript of a conversation with a human agent is preserved. For more information, see [`showRestartButton`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration)
+
 ## 7.4.0
 {: #7.4.0}
 
 *Release date: 12 June 2023*
 
-- Added CSS variables for customizing the launcher. For more information, see [`instance.updateCSSVariables`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecssvariables){: external}.
+- **Added CSS variables for customizing the launcher**. For more information, see [`instance.updateCSSVariables`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecssvariables){: external}.
 
 ## 7.3.0
 {: #7.3.0}
 
 *Release date: 30 May 2023*
 
-- Released a beta of a contact center integration for Genesys Web Messenger, which currently only includes user information strings in English. For more information, see [`Genesys Web Messenger`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-genesys){: external}. 
-- Added beta support for file sharing with custom service desk integrations, which currently only includes user information strings in English. For more information, see [`Custom service desks`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd){: external}. 
+- **Released a beta of Genesys Web Messenger service desk integration**, which currently only includes user information strings in English. For more information, see [`Genesys Web Messenger`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-genesys){: external}. 
+- **Added beta support for file sharing with custom service desk integrations** which currently only includes user information strings in English. For more information, see [`Custom service desks`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd){: external}. 
 
 ## 7.2.2
 {: #7.2.2}
