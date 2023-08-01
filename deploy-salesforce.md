@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-06-07"
+lastupdated: "2023-08-01"
 
 subcollection: watson-assistant
 
@@ -39,7 +39,7 @@ Integrate your web chat with a Salesforce service desk solution so your customer
 
 Integrate with a Salesforce service desk by deploying your assistant with the web chat integration. The web chat serves as the client interface for your assistant. If, in the course of a conversation with your assistant, a customer asks to speak to a person, you can transfer the conversation directly to a Salesforce agent.
 
-Salesforce is a customer relationship management solution that brings companies and customers together. It is one integrated CRM platform that gives all your departments, including marketing, sales, commerce, and service, a single, shared view of every customer.
+Salesforce is a customer relationship management solution that brings companies and customers together. It is an integrated CRM platform that gives all your departments, including marketing, sales, commerce, and service, a single and shared view of every customer.
 
 ## Before you begin
 {: #deploy-salesforce-prereqs}
@@ -56,7 +56,7 @@ Your organization must have a [Salesforce chat app](https://help.salesforce.com/
 - Routing must be configured for the chat button. See [Chat routing options](https://help.salesforce.com/articleView?id=live_agent_chat_routing_options.htm&type=5){: external}.
 - If you choose omni-channel routing, be sure to include omni-channel as a utility in the chat app. See [Omni-Channel](https://help.salesforce.com/articleView?id=omnichannel_intro.htm&type=5){: external}.
 
-You must have a level of access to your Salesforce service desk deployment that allows you to do the following things:
+You must have a level of access to your Salesforce service desk deployment that allows you to do the following:
 
 - Edit the chat app
 - Get chat deployment and button code details
@@ -81,11 +81,11 @@ To set up a Salesforce service desk integration, complete the following steps:
 
     - Get the deployment code for your Salesforce Agent Configuration chat deployment.
 
-      Go to the Salesforce **Feature Settings>Service>Chat>Deployments** page. Find your organization's deployment. Scroll to the end of the chat deployment configuration page and copy the *Deployment Code* snippet.
+      Go to the Salesforce **Feature Settings > Service > Chat > Deployments** page. Find your organization's deployment. Scroll to the end of the chat deployment configuration page and copy the *Deployment Code* snippet.
     - Paste the deployment code snippet into the **Deployment code** field in the {{site.data.keyword.conversationshort}} Salesforce configuration page.
     - Get the Chat Button code.
 
-      Go to the Salesforce **Feature Settings>Service>Chat>Chat Buttons & Invitations** page. Find your organization's button implementation. Scroll to the end of the page, and then copy the *Chat Button Code* snippet.
+      Go to the Salesforce **Feature Settings > Service > Chat > Chat Buttons & Invitations** page. Find your organization's button implementation. Scroll to the end of the page, and then copy the *Chat Button Code* snippet.
     - Paste the chat button code snippet into the **Chat button code** field in the {{site.data.keyword.conversationshort}} Salesforce configuration page, and then click **Next**.
 
 1.  Add a chat app that enables the Salesforce agent to see a history of the chat. To do so, create a Visualforce page, and then add a chat app to the page. {: #deploy-salesforce-add-visualforce-page}
@@ -99,7 +99,7 @@ To set up a Salesforce service desk integration, complete the following steps:
 
     See [Create Custom Fields](https://help.salesforce.com/articleView?id=adding_fields.htm&type=5){: external}.
 
-    From the Salesforce **Data>Objects and Fields>Object Manager>Chat Transcript>Fields & Relationships** page, create the following custom fields:
+    From the Salesforce **Data >Objects and Fields > Object Manager > Chat Transcript > Fields & Relationships** page, create the following custom fields:
 
     - **Token**: Stores a {{site.data.keyword.conversationshort}} authentication token that secures the communication between Salesforce and your assistant.
 
