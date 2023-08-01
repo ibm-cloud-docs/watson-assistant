@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-07-31"
+lastupdated: "2023-08-01"
 
 subcollection: watson-assistant
 
@@ -30,32 +30,38 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 *Release date: 31 July 2023*
 
-- **New viewing options for the journeys beta feature**. With journeys/tours adding a third view to web chat -- the other two views being the launcher and main window -- we moved away from methods and events that focused on opening and closing the main window. These events were deprecated in favor of a more generic "view change" system that includes a new [`instance.changeView`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#changeView){: external} method, and [`view:pre:change`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#viewprechange){: external} and [`view:change`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#viewchange){: external} events. You now have more flexibility and can open multiple views at the same time.
+- **New viewing options for the journeys beta feature**. With journeys/tours adding a third view to web chat -- the other two views being the launcher and main window -- we moved away from methods and events that focused on opening and closing the main window. These events were deprecated in favor of a more generic "view change" system that includes a new [instance.changeView](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#changeView){: external} method, and [view:pre:change](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#viewprechange){: external} and [view:change](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#viewchange){: external} events. You now have more flexibility and can open multiple views at the same time.
 
     Window methods and events are supported for existing assistants. If you add tours to your assistant, or are using tours, your window events and methods may not work as expected and may not be supported. If you wish to add tours to your assistant, you need to update your custom code to use the new view change methods and events.
 
-    The current window methods and events are still supported for existing web chats and assistants but are deprecated and will be removed in a future version. For more information, see [`Migrating from window to view events and methods`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#windowviewmigration){: external}
+    The current window methods and events are still supported for existing web chats and assistants but are deprecated and will be removed in a future version. For more information, see [Migrating from window to view events and methods](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#windowviewmigration){: external}.
 
-- **New Genesys Web Messenger service desk integration** The service desk integration for Genesys Web Messenger is no longer in beta, and now includes support for user information strings in languages besides English. For more information, see [`Genesys Web Messenger`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-genesys){: external}. 
+- **New Genesys Web Messenger service desk integration** The service desk integration for Genesys Web Messenger is no longer in beta, and now includes support for user information strings in languages besides English. For more information, see [Genesys Web Messenger](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-genesys){: external}. 
 
-- **New NICE CXone service desk integration** The service desk integration for NICE CXone Digital First Omnichannel has been released. For more information, see [`NICE CXone Digital First Omnichannel`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-nice){: external}. 
+- **New NICE CXone service desk integration** The service desk integration for NICE CXone Digital First Omnichannel has been released. For more information, see [NICE CXone Digital First Omnichannel](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-nice){: external}. 
 
-- **Added a restart button**: A new `showRestartButton` configuration option specifies whether the web chat interface should display a restart button in the header, in addition to the existing **`-`** (Minimize) button. A customer can click this button to end the conversation or end any conversation with a human agent, while keeping the chat open. The chat transcript is cleared, but any transcript of a conversation with a human agent is preserved. For more information, see [`showRestartButton`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration)
+- **Added a restart button**: A new `showRestartButton` configuration option specifies whether the web chat interface should display a restart button in the header, in addition to the existing **`-`** (Minimize) button. A customer can click this button to end the conversation or end any conversation with a human agent, while keeping the chat open. The chat transcript is cleared, but any transcript of a conversation with a human agent is preserved. For more information, see [showRestartButton](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration){: external}.
+
+- **Carbon charts**: [Carbon charts](https://v10.carbondesignsystem.com/data-visualization/getting-started/){: external} are now supported in custom responses.
+
+- **Reconnecting with a custom service desk integration**: Web chat now provides support to custom service desk integrations to allow them to reconnect the user to an agent when web chat is reloaded. For more information, see [Reconnecting sessions](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd#reconnect){: external}.
+
+- **Screen sharing with a custom service desk integration**: Web chat now provides support to custom service desk integrations to allow them to give the user options to agree to or stop a screen sharing session with a service desk. Note that the actual screen sharing capability is not provided by web chat; it must be provided by the service desk integration. [Screen sharing](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd#screen-sharing){: external}.
 
 ## 7.4.0
 {: #7.4.0}
 
 *Release date: 12 June 2023*
 
-- **Added CSS variables for customizing the launcher**. For more information, see [`instance.updateCSSVariables`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecssvariables){: external}.
+- **Added CSS variables for customizing the launcher**. For more information, see [instance.updateCSSVariables](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecssvariables){: external}.
 
 ## 7.3.0
 {: #7.3.0}
 
 *Release date: 30 May 2023*
 
-- **Released a beta of Genesys Web Messenger service desk integration**, which currently only includes user information strings in English. For more information, see [`Genesys Web Messenger`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-genesys){: external}. 
-- **Added beta support for file sharing with custom service desk integrations** which currently only includes user information strings in English. For more information, see [`Custom service desks`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd){: external}. 
+- **Released a beta of Genesys Web Messenger service desk integration**, which currently only includes user information strings in English. For more information, see [Genesys Web Messenger](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-genesys){: external}. 
+- **Added beta support for file sharing with custom service desk integrations** which currently only includes user information strings in English. For more information, see [Custom service desks](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd){: external}. 
 
 ## 7.2.2
 {: #7.2.2}
@@ -87,11 +93,11 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 *Release date: 13 February 2023*
 
-- **New journey events**: The new [`tour:start`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#tourstart){: external}, [`tour:end`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#tourend){: external}, and [`tour:step`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#tourstep){: external} events provide details about the user's progress through a journey (also known as a *tour*). These events can be used to navigate to a specific page when the user starts a journey or reaches a certain step, or to show a survey after a journey ends.
+- **New journey events**: The new [tour:start](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#tourstart){: external}, [tour:end](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#tourend){: external}, and [tour:step](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#tourstep){: external} events provide details about the user's progress through a journey (also known as a *tour*). These events can be used to navigate to a specific page when the user starts a journey or reaches a certain step, or to show a survey after a journey ends.
 
-- **New journey instance methods**: The new [`tours`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#tours){: external} object supports instance methods that provide better control over journeys. You can use these methods to start or end a journey, or to automatically navigate through a journey in response to user actions.
+- **New journey instance methods**: The new [tours](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#tours){: external} object supports instance methods that provide better control over journeys. You can use these methods to start or end a journey, or to automatically navigate through a journey in response to user actions.
 
-- **Added journey strings to the language pack**: New strings for journeys have been added to the language pack. You can modify the strings in the language pack by using the [`updateLanguagePack()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatelanguagepack){: external} instance method. For more information about language packs, see [Languages](/docs/watson-assistant?topic=watson-assistant-topicid){: external}.
+- **Added journey strings to the language pack**: New strings for journeys have been added to the language pack. You can modify the strings in the language pack by using the [updateLanguagePack()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatelanguagepack){: external} instance method. For more information about language packs, see [Languages](/docs/watson-assistant?topic=watson-assistant-topicid){: external}.
 
 For more information about the journeys beta feature, see [Guiding customers with journeys](/docs/watson-assistant?topic=watson-assistant-journeys).
 
@@ -102,13 +108,13 @@ For more information about the journeys beta feature, see [Guiding customers wit
 
 - **Updated Zendesk agent app**: The agent app for Zendesk has been updated for compatibility with Zendesk workspaces.
 
-- In the service desk starter kits, the instance of the web chat integration has been added to the [`serviceDeskFactory` parameters](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/blob/main/src/common/types/serviceDesk.ts){: external} to make it accessible to custom service desk implementations.
+- In the service desk starter kits, the instance of the web chat integration has been added to the [serviceDeskFactory parameters](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/blob/main/src/common/types/serviceDesk.ts){: external} to make it accessible to custom service desk implementations.
 
-- **New instance methods**: The new [`elements.getMessageInput()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#elements-get-message-input){: external} and [`elements.getHomeScreenInput()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#elements-get-home-screen-input){: external} instance methods enable access to the input fields used by the customer to send messages. You can use these methods to change the input or to take action as the user is typing (for example, to implement for a type-ahead feature).
+- **New instance methods**: The new [elements.getMessageInput()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#elements-get-message-input){: external} and [elements.getHomeScreenInput()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#elements-get-home-screen-input){: external} instance methods enable access to the input fields used by the customer to send messages. You can use these methods to change the input or to take action as the user is typing (for example, to implement for a type-ahead feature).
 
-- **New event**: The new [`agent:pre:sessionHistory`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#agentpresessionhistory){: external} event enables you to filter potential PII from messages sent from a customer or service desk agent before the messages are sent to the assistant for storage in the session history.
+- **New event**: The new [agent:pre:sessionHistory](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#agentpresessionhistory){: external} event enables you to filter potential PII from messages sent from a customer or service desk agent before the messages are sent to the assistant for storage in the session history.
 
-- **New property in web chat state object**: In the object returned from the [`getState()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#getState){: external} instance method, the new `isDebugEnabled` property indicates whether the web chat debug flag is set to `true`.
+- **New property in web chat state object**: In the object returned from the [getState()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#getState){: external} instance method, the new `isDebugEnabled` property indicates whether the web chat debug flag is set to `true`.
 
 ## 7.0.0
 {: #7.0.0}
@@ -117,9 +123,9 @@ For more information about the journeys beta feature, see [Guiding customers wit
 
 - **Streamlined live agent handoff**: The live agent handoff experience has been streamlined and simplified. Instead of opening the live agent chat in a separate window, the web chat now shows the live agent entering the conversation in the same window.
 
-    Because of this change, the [`updateCustomMenuOptions`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecustommenuoptions){: external} instance method has changed to reflect the fact that there is now only a single view, with a single list of custom menu options. If you want to customize menu options only during a live agent chat, you can subscribe to the [`agent:pre:startChat`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#agentprestartchat){: external} and [`agent:endChat`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#agentendchat){: external} events to trigger your customizations.
+    Because of this change, the [updateCustomMenuOptions](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecustommenuoptions){: external} instance method has changed to reflect the fact that there is now only a single view, with a single list of custom menu options. If you want to customize menu options only during a live agent chat, you can subscribe to the [agent:pre:startChat](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#agentprestartchat){: external} and [agent:endChat](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#agentendchat){: external} events to trigger your customizations.
 
-- **`agent:endChat` changes**: The [`agent:endChat`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#agentendchat){: external} event now also fires if the customer cancels a live agent request before the agent has joined. If you want to show a post-chat form only after a live agent chat, you can use the new `requestCancelled` flag on the event to determine whether the request was canceled.
+- **`agent:endChat` changes**: The [agent:endChat](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#agentendchat){: external} event now also fires if the customer cancels a live agent request before the agent has joined. If you want to show a post-chat form only after a live agent chat, you can use the new `requestCancelled` flag on the event to determine whether the request was canceled.
 
 - **New configuration options**: The following new options are available in the configuration object:
     - `serviceDesk.availabilityTimeoutSeconds`: Specifies how long the web chat waits for an available agent before automatically canceling the live agent request.
@@ -127,7 +133,7 @@ For more information about the journeys beta feature, see [Guiding customers wit
 
     For more information, see [Service desk options](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#servicedeskoptions){: external}.
 
-- **`elements` instance property**: A new [`elements`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#servicedeskoptions){: external} instance property provides methods you can use to apply CSS styles to individual elements used by the web chat. (Currently, only the main window is supported.)
+- **`elements` instance property**: A new [elements](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#servicedeskoptions){: external} instance property provides methods you can use to apply CSS styles to individual elements used by the web chat. (Currently, only the main window is supported.)
 
 - **`skip_card` option for journeys**: The journeys beta feature has been updated to support a new `skip_card` property. You can use this property to start a journey immediately without waiting for the customer to click the introductory card, or even to start a journey from your website without opening the web chat at all. For more information, see [Guiding customers with journeys](/docs/watson-assistant?topic=watson-assistant-journeys).
 
@@ -247,9 +253,9 @@ For more information about the journeys beta feature, see [Guiding customers wit
 
 - **New `restartConversation()` method**: The new `restartConversation()` instance method restarts the conversation with the assistant by clearing the web chat transcript and starting a new session. It also fires two new events (`pre:restartConversation` and `restartConversation`).
 
-    For more information, see [instance.restartConversation()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#restartconversation){: external}, [`pre:restartConversation`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#prerestartconversation){: external}, and [`restartConversation`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#restartconversation){: external}.
+    For more information, see [instance.restartConversation()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#restartconversation){: external}, [pre:restartConversation](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#prerestartconversation){: external}, and [restartConversation](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#restartconversation){: external}.
   
-- **New `agentEndConversation()` method**: The new `agentEndConversation()` instance method immediately ends the conversation with a human agent without requesting confirmation from the user. For more information, see [`instance.agentEndConversation()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#agentendconversation){: external}.
+- **New `agentEndConversation()` method**: The new `agentEndConversation()` instance method immediately ends the conversation with a human agent without requesting confirmation from the user. For more information, see [instance.agentEndConversation()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#agentendconversation){: external}.
 
 - Bug fixes.
 
@@ -369,7 +375,7 @@ For more information about the journeys beta feature, see [Guiding customers wit
 
 - **CSS improvements**: Support for CSS styles has been improved to change the way the web chat resets styles in areas where you can include your own custom content, such as user-defined responses and writeable elements. The new approach better protects custom content from accidental style overrides. For more information about custom content and CSS classes, see [Theming &amp; custom content](https://web-chat.global.assistant.watson.cloud.ibm.com/testfest.html?to=api-render){: external}.
 
-    If you have any custom content (such as user-defined responses or writeable elements), verify that any styling is still rendering as you expect. Consider using the new [`ibm-web-chat--default-styles` class](https://web-chat.global.assistant.watson.cloud.ibm.com/testfest.html?to=api-render#helper_classes){: external} to maintain consistency with the web chat default styles.
+    If you have any custom content (such as user-defined responses or writeable elements), verify that any styling is still rendering as you expect. Consider using the new [ibm-web-chat--default-styles class](https://web-chat.global.assistant.watson.cloud.ibm.com/testfest.html?to=api-render#helper_classes){: external} to maintain consistency with the web chat default styles.
     {: note}
 
 - **Support for Carbon components**: As part of the new styling support, you can now use [Carbon components](https://www.carbondesignsystem.com/components/overview/){: external} in user-defined responses and web chat writeable elements. These components will inherit any theming customizations you have made to the web chat.
