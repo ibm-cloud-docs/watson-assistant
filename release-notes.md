@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-01"
+lastupdated: "2023-08-02"
 
 keywords: Watson Assistant release notes
 
@@ -34,6 +34,13 @@ Action conditions are now generally available
 
 New expression method to sort arrays
 :   The new [`Array.sort()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions&locale=en#expression-methods-actions-arrays-sort) method does an in-place sorting and returns the sorted array.
+
+## 24 July 2023
+{: watson-assistant-jul242023}
+{: release-note}
+
+OAuth 2.0 custom flow support for extensions
+:   Any grant type that starts with `x-` is supported for OAuth 2.0 authentication. For more information, see [Preparing the API definition](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-build-custom-extension#build-custom-extension-openapi-file) and [OAuth 2.0 Authentication](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-add-custom-extension#add-custom-extension-oauth).
 
 ## 20 July 2023
 {: #watson-assistant-jul202023}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-15"
+lastupdated: "2023-08-02"
 
 subcollection: watson-assistant
 
@@ -88,15 +88,19 @@ To complete the OAuth authentication setup, follow these steps:
 
 1. If you haven't already, register your application with the external API you want to access. Copy the client ID and client secret that is provided by the external API.
 
-1. In the **Grant type** field, select the grant type that you want to use. The available grant types are determined by the flows that are defined in the `securitySchemes` object in the OpenAPI document. Only the Password, Client Credentials, and Authorization Code grant types are supported.
+1. In the **Grant type** field, select the grant type that you want to use. Available grant types are determined by flows that are defined in the `securitySchemes` object in the OpenAPI document. Authorization Code, Client Credentials, Password, and custom grant types that start with `x-` are supported.
+
+   The OAuth2 custom grant type `x-`<any custom name> is used by the [IBM IAM authentication mechanism](https://cloud.ibm.com/docs/account?topic=account-iamoverview) and by [watsonx](https://www.ibm.com/watsonx).
+   {: note}
 
 1. Specify the required values that were provided by the external API when you registered your application. The required values depend on the grant type:
 
     | Grant type         | Required values |
     |--------------------|-----------------|
     | Authorization Code | - **Client ID** \n - **Client secret** |
-    | Password           | - **Client ID** \n - **Client secret** \n - **Username** \n - **Password** |
     | Client Credentials | - **Client ID** \n - **Client secret** |
+    | Password           | - **Client ID** \n - **Client secret** \n - **Username** \n - **Password** |
+    | x-<any custom name>| - **A list of secret fields mentioned in the openAPI spec file** |
 
 1. If you are using the Authorization Code grant type, follow these steps:
 
@@ -107,6 +111,11 @@ To complete the OAuth authentication setup, follow these steps:
 1. In the **Client authentication** field, specify whether the authentication credentials are sent in an HTTP header or as part of the request body. (Credentials that are sent in the request body use the `x-www-form-urlencoded` content type.) Select the option that is expected by the external service.
 
 1. In the **Header prefix** field, specify the prefix that precedes the access token in the `Authorization` header. (The default prefix is `Bearer`, which is typical for most applications.)
+
+1. If you are using the custom grant type `x-`<any custom name> (for example, x-apikey), follow these steps:
+
+    1. Add the secret values associated with the secret fields.
+    1. Add the optional param values, if any. 
 
 If the external service supports the Refresh Token grant type, {{site.data.keyword.conversationshort}}  automatically obtains a new access token when the old one expires. If the OpenAPI document defines the `refreshUrl` attribute, the specified URL is used; otherwise, the `tokenUrl` URL is used.
 {: note}
