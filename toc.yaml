@@ -127,6 +127,7 @@ toc:
               - topic: web-chat-service-desk.md
                 navtitle: Overview
               - deploy-genesys.md
+              - deploy-nice-cxone.md
               - deploy-salesforce.md
               - deploy-zendesk.md
           - topicgroup:
