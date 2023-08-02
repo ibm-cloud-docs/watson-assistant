@@ -10,7 +10,7 @@ subcollection: watson-assistant
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Integrating with Genesys Messenger
+# Integrating with Genesys
 {: #deploy-genesys}
 
 [IBM Cloud]{: tag-ibm-cloud}
