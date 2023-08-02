@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-08-02"
 
 subcollection: watson-assistant
 
@@ -26,7 +26,9 @@ The [{{site.data.keyword.conversationshort}} extension starter kit](https://gith
 
 OpenAPI (formerly known as Swagger) is an open standard for describing and documenting REST APIs. An OpenAPI document defines the resources and operations that are supported by an API, including request parameters and response data, along with details such as server URLs and authentication methods.
 
-An OpenAPI document describes a REST API in terms of _paths_ and _operations_. A path identifies a particular resource that can be accessed by using the API (for example, a hotel reservation or a customer record). An _operation_ defines a particular action that can be performed on that resource (such as creating, retrieving, updating, or deleting it). The OpenAPI document specifies all of the details for each operation, including the HTTP method that is used, request parameters, the data included in the request body, and the structure of the response body.
+An OpenAPI document describes a REST API in terms of _paths_ and _operations_. A path identifies a particular resource that can be accessed by using the API (for example, a hotel reservation or a customer record). An _operation_ defines a particular action that can be performed on that resource (such as creating, retrieving, updating, or deleting it). 
+
+The OpenAPI document specifies all of the details for each operation, including the HTTP method that is used, request parameters, the data included in the request body, and the structure of the response body.
 
 For more information about the OpenAPI specification, see [OpenAPI Specification](https://swagger.io/specification/){: external}.
 
@@ -51,7 +53,7 @@ The OpenAPI document must satisfy the following requirements and restrictions:
 - Each operation must have a clear and concise `summary`. The summary text is used in the UI to describe the operations that are available from an action, so it should be short and meaningful to someone who is building an assistant.
 - [Relative URLs](https://swagger.io/docs/specification/api-host-and-base-path/#relative-urls){: external} are currently not supported.
 - Only Basic, Bearer, OAuth 2.0, and API key authentication are supported.
-- For OAuth 2.0 authentication, only the Password, Client Credentials, and Authorization Code grant types are supported.
+- For OAuth 2.0 authentication, Authorization Code, Client Credentials, Password, and custom grant types that starts with `x-` are supported. Note that `x-`<any custom name> is used by the [IBM IAM authentication mechanism](https://cloud.ibm.com/docs/account?topic=account-iamoverview) and by [watsonx](https://www.ibm.com/watsonx).
 - Schemas that are defined by using `anyOf`, `oneOf`, and `allOf` are currently not supported.
 
 In addition, any call to the external API must complete within 30 seconds.
@@ -76,7 +78,7 @@ To build a custom extension based on the API definition, follow these steps:
 
 1. In the **Import OpenAPI** step, click or drag to add the OpenAPI document that describes the REST API you want to integrate with.
 
-    If you encounter an error when you try to import the JSON file, make sure the file satisfies all of the requirements that are listed in [Preparing the API definition](##build-custom-extension-openapi-file). Edit the file to correct errors or remove unsupported features. Click the **X** to clear the error message, and try the import again.
+    If you encounter an error when you try to import the JSON file, make sure the file satisfies all requirements listed in [Preparing the API definition](##build-custom-extension-openapi-file). Edit the file to correct errors or remove unsupported features. Click the **X** to clear the error message, and try the import again.
 
     After you import the file successfully, click **Next**.
 
