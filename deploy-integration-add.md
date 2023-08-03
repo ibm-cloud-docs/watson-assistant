@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-03"
+lastupdated: "2023-08-03"
 
 subcollection: watson-assistant
 
@@ -65,14 +65,17 @@ Follow these steps to add integrations to your assistant:
     You can also set up live agent integrations by going to the **Live agent** tab from the **Web chat** tile. The options include:
 
     **Web chat live agent integrations**
+    - [Web chat with Genesys Web Messenger](/docs/watson-assistant?topic=watson-assistant-deploy-genesys)
+    - [Web chat with NICE CXone Digital First Omnichannal Live Chat](/docs/watson-assistant?topic=watson-assistant-deploy-nice-cxone)
     - [Web chat with Salesforce support](/docs/watson-assistant?topic=watson-assistant-deploy-salesforce)
     - [Web chat with Zendesk support](/docs/watson-assistant?topic=watson-assistant-deploy-zendesk)
 
     **Web chat live agent reference implementations**
     - [Genesys Cloud](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/genesys/webChat){: external}
-    - [NICE inContact](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/incontact/webChat){: external}
-    - [Twilio Flex](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/flex/webChat){: external}
     - [Kustomer](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/kustomer/webChat){: external}
+    - [NICE inContact](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/incontact/webChat){: external}
+    - [Oracle Cloud B2C](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/oracle/webChat){: external}
+    - [Twilio Flex](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/flex/webChat){: external}
     - [Bring your own (starter kit)](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}
 
     **Phone live agent integrations**
