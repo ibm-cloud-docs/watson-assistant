@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-08-02"
+lastupdated: "2023-08-03"
 
 subcollection: watson-assistant
 
@@ -79,7 +79,7 @@ To embed web chat inside Genesys and give your live agents access to the convers
 
 1. Set the **Grant Type** to **Token Implicit Grant**.
 
-1. Add **https://web-chat.global.assistant.watson.appdomain.cloud/serviceDesks/genesysAgentApp.html?clientID=YOUR_CLIENT_ID&environment=YOUR_ENVIRONMENT** as a redirect URL.
+1. Add https://web-chat.global.assistant.watson.appdomain.cloud/serviceDesks/genesysAgentApp.html?clientID=YOUR_CLIENT_ID&environment=YOUR_ENVIRONMENT as a redirect URL.
 
 1. Replace **YOUR_CLIENT_ID** with the **OAuth client ID**, and **YOUR_ENVIRONMENT** with the Genesys **environment value** from the embed code. Note that the client ID is unavailable when creating the OAuth client; you need to first create the client, and then add the redirect URL to it.
 
@@ -88,7 +88,7 @@ To embed web chat inside Genesys and give your live agents access to the convers
 
 1. Go to the **Integrations** page in Genesys, click the **+Integrations** button, select your integration, and then click **Install**. 
 
-1. Set the **Application URL** to **https://web-chat.global.assistant.watson.appdomain.cloud/serviceDesks/genesysAgentApp.html?clientID=YOUR_CLIENT_ID&environment=YOUR_ENVIRONMENT&conversationID={{pcConversationId}}** 
+1. Set the **Application URL** to https://web-chat.global.assistant.watson.appdomain.cloud/serviceDesks/genesysAgentApp.html?clientID=YOUR_CLIENT_ID&environment=YOUR_ENVIRONMENT&conversationID={{pcConversationId}}
 
 1. Replace **YOUR_CLIENT_ID** with the **OAuth client ID**, and **YOUR_ENVIRONMENT** with the Genesys **environment value** from the embed code. Note that the **conversationID={{pcConversationId}}** value is correct as is, and Genesys will replace **{{pcConversationId}}** with the current conversation ID when a live agent opens the widget.
 
