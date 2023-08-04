@@ -45,5 +45,5 @@ You can easily switch back and forth between the new experience and the classic 
 {{site.data.keyword.conversationshort}} can be deployed as a managed cloud service or can be installed on premises. This documentation applies to a managed cloud service on {{site.data.keyword.cloud_notm}} or installed on {{site.data.keyword.icp4dshort}} version 4.6 or later, and describes how to use the product regardless of how it is deployed. Information that applies exclusively to one deployment type is denoted by the appropriate tag:
 
 - [{{site.data.keyword.cloud_notm}}]{: tag-ibm-cloud} for managed instances
-- [{{site.data.keyword.icp4d_notm}}]{: tag-cp4d} version 4.6 or later for installed instances
+- [{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d} version 4.6 or later for installed instances
 
