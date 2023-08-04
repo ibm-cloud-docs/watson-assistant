@@ -1001,7 +1001,7 @@ If `currentAction` is true:
 | Actions only | The transform excludes all messages where `n`is true, which indicates that a customer question triggered a new base action. 
 | Dialog only  | `currentAction` is ignored and the transform includes the entire contents of the `session history` variable.
 | Dialog and action | The transform includes everything in the `session_history` variable since the most recent start of an action, regardless of whether any dialog nodes are triggered. |
-{: caption="Sorting examples" caption-side="bottom"}
+{: caption="If `currentAction` is true" caption-side="bottom"}
 
 The `n : true` flags are not included in the output of transform.
 
