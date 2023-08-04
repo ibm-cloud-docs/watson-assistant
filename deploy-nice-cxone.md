@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-08-02"
+lastupdated: "2023-08-04"
 
 subcollection: watson-assistant
 
@@ -25,7 +25,7 @@ NICE CXone allows your team to assist customers in real time, which increases cu
 ## Before you begin
 {: #deploy-nice-cxone-prereqs}
 
-You need to sign up for a NICE CXone account, or have an existing one, and [contact the NICE CXone team](https://www.nice.com/contact-us) to select a service relevant to your needs and compatible with Digital First Omnichannel (DFO) Live Chat.
+You need to sign up for a NICE CXone account, or have an existing one, and [contact the NICE CXone team](https://www.nice.com/contact-us) to access and use Digital First Omnichannel (DFO) Live Chat.
 
 An OAuth provider is required, if only allowing [authenticated users](#deploy-nice-cxone-authenticate).
 
