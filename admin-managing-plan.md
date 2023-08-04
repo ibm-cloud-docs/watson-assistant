@@ -151,7 +151,8 @@ The page header shows the plan that you are using today. To upgrade your plan, c
 1. Do one of the following things:
 
    - **Trial plan only**: The number of days that are left in your trial is displayed in the page header. To upgrade your plan, click **Upgrade** from the page header before your trial period ends.
-   - For all other plan types, click **Manage** ![user icon](images/user-icon.png), and then choose **Upgrade** from the menu.
+
+   - For all other plan types, click **Manage** ![user icon](/images/user--avatar.svg), and then choose **Upgrade** from the menu.
 
 1. From here, you can see other available plan options. For most plan types, you can step through the upgrade process yourself.
 
