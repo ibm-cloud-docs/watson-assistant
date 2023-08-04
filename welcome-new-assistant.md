@@ -1,31 +1,14 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-11-30"
+  years: 2018, 2023
+lastupdated: "2023-08-04"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:tag-ibm-cloud: .tag data-tag-color="blue"}
-{:tag-cp4d: .tag data-tag-color="magenta"}
-
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Welcome to the new {{site.data.keyword.conversationshort}}
 {: #welcome-new-assistant}
@@ -59,7 +42,8 @@ You can easily switch back and forth between the new experience and the classic 
 
 ## Using {{site.data.keyword.conversationshort}}
 
-{{site.data.keyword.conversationshort}} can be deployed as a managed cloud service or can be installed on premises. This documentation only applies to a managed cloud service or IBM Cloud Pak® for Data version 4.6 or later, and describes how to use the product regardless of how it is deployed. Information that applies exclusively to one deployment type is denoted by the appropriate tag:
+{{site.data.keyword.conversationshort}} can be deployed as a managed cloud service or can be installed on premises. This documentation applies to a managed cloud service on {{site.data.keyword.cloud_notm}} or installed on {{site.data.keyword.icp4dshort}} version 4.6 or later, and describes how to use the product regardless of how it is deployed. Information that applies exclusively to one deployment type is denoted by the appropriate tag:
 
-- [IBM Cloud Pak for Data]{: tag-cp4d} **IBM Cloud Pak® for Data** version 4.6 or later for installed instances.
-- [IBM Cloud]{: tag-ibm-cloud} **IBM Cloud** for managed instances that are hosted by IBM Cloud.
+- [{{site.data.keyword.cloud_notm}}]{: tag-ibm-cloud} for managed instances
+- [{{site.data.keyword.icp4dshort}}]{: tag-cp4d} version 4.6 or later for installed instances
+
