@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-03-03"
+lastupdated: "2023-08-04"
 
 subcollection: watson-assistant
 
@@ -99,18 +99,24 @@ For more information about publishing, see [Publishing your content](/docs/watso
 ## Environment settings
 {: #publish-overview-environment-settings}
 
-The draft and live environments each have settings. On either tab, click the **Settings** gear icon to open the settings.
+Each environment has its own settings. Click the **Settings** gear icon ![Gear icon](../../icons/settings.svg) to open the settings.
 
-**API details** provide these values for each environment:
+### API details
+{: #publish-overview-environment-settings-api}
+
+API details provide these values for each environment:
 - Environment name
 - Environment ID
 - Session URL
+- A link to the IBM Cloud console to see the service credentials for your instance
 
-**Webhooks**
+### Webhooks
+{: #publish-overview-environment-settings-webhooks}
 
 Settings for pre-message, post-message, and log webhooks. For more information, see [Extending your assistant with webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview).
 
-**Inactivity timeout**
+### Inactivity timeout
+{: #publish-overview-environment-settings-inactivity}
 
 Specify the amount of time to wait after the customer stops interacting with the assistant before ending the session.
 
@@ -127,4 +133,34 @@ The maximum inactivity timeout differs by service instance plan type. The follow
 | Plus         |                          1 hour |                    24 hours |
 | Trial        |                       5 minutes |                   5 minutes |
 | Lite         |                       5 minutes |                   5 minutes |
-{: caption="Service plan details" caption-side="top"}
+{: caption="Service plan details" caption-side="bottom"}
+
+### Session history
+{: #publish-overview-environment-settings-session-history}
+
+For each environment, you can record the recent messages from the conversation for each customer, for use with the [`session_history` variable](/docs/watson-assistant?topic=watson-assistant-manage-info#built-in-variables). Messages are recorded for both actions and dialog.
+
+If you are using the classic experience, these settings are located in **Assistant settings** for your assistant.
+{: note}
+
+Session history might be used to:
+- Provide a summary of the conversation to a live agent during a transfer
+- Use a search extension to find an answer by using a summary of the conversation rather than just the most recent utterance
+- Call a generative AI extension to generate an answer based on a summary
+
+The recent messages session history includes:
+
+- The last 24 messages
+- 512 characters per message
+- 2048 characters total
+  
+The contents of the `session_history` use this syntax, for example: `[{u : 'book a flight', n : true}, {a : 'sure! from where?'}]`
+
+| Syntax | Description |
+| --- | --- |
+| `u` | Question or reply from a customer (user) |
+| `n` | Indicates that a customer question triggered a new base action, which is an action other than a subaction or digression. |
+| `a` | Question or reply from the assistant |
+{: caption="Syntax" caption-side="bottom"}
+
+You can also write an expression to transform the output of the variable. For more information, see [Array.transform](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-arrays-transform).
