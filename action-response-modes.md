@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-20"
+lastupdated: "2023-08-04"
 
 subcollection: watson-assistant
 
@@ -63,14 +63,18 @@ When you edit an action, you can see the mode that it uses and change it if you 
 
 1. Click the other mode if you want to change it, and then click **Save response mode**.
 
-## Override system defaults modes
+## Override system defaults
 {: #action-response-modes-customize}
 
 [Enterprise]{: tag-purple}
 
-For Lite and Plus plans, the default settings can’t be changed. For Enterprise plans, you can override system defaults to customize each mode in global settings for actions.
+For Lite and Plus plans, the default settings can’t be changed. For Enterprise plans, you can override system defaults to customize each mode.
 
 To override system defaults:
+
+1. On the **Actions** page, click **Global settings** ![Gear icon](../../icons/settings.svg).
+
+1. On the **Clarifying questions** tab, click **Customize modes**.
 
 1. Set the **Override System Defaults** toggle to **On**. This toggle is available only for Enterprise plans.
 
