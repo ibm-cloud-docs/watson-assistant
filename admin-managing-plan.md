@@ -60,7 +60,7 @@ A *monthly active user (MAU)* is any unique user who has at least one meaningful
 
 A unique user is recognized by the user ID that is associated with the person that interacts with your assistant. The web chat and other built-in integrations set this property for you automatically.
 
-You can calculate MAUs on your own, for both {{site.data.keyword.cloud_notm}} and {{site.data.keyword.icp4d_notm}}. To calculate MAUs, use the [logs](/apidocs/assistant-v2#listlogs) endpoint to export conversations. For a particular month, count the number of unique user IDs found in the results. User IDs with more than 50 messages (API calls) in a month are counted more than once for every 50 messages. In a typical use case, where each user ID represents a customer conversing with an assistant, the average number of messages per user are less than 50 messages.
+You can calculate MAUs on your own, for both {{site.data.keyword.cloud_notm}} and {{site.data.keyword.icp4dfull_notm}}. To calculate MAUs, use the [logs](/apidocs/assistant-v2#listlogs) endpoint to export conversations. For a particular month, count the number of unique user IDs found in the results. User IDs with more than 50 messages (API calls) in a month are counted more than once for every 50 messages. In a typical use case, where each user ID represents a customer conversing with an assistant, the average number of messages per user are less than 50 messages.
 
 ### Specifying the user ID with the REST API
 {: #admin-managing-plan-userid-api}
