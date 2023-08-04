@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-08-04"
 
 subcollection: watson-assistant
 
@@ -101,7 +101,7 @@ This example explains moving a content version through multiple environments to 
 | Test | Switch to version V4 for further retesting |
 | Staging | Switch to version V4 for testing with an internal staging website |
 | Live | Switch to version V4 for customer use |
-{: caption="Example" caption-side="top"}
+{: caption="Example" caption-side="bottom"}
 
 ## Previewing an environment
 {: #multiple-environments-preview}
@@ -115,27 +115,14 @@ You can share this unauthenticated version of your assistant with your team by s
 ## Environment settings
 {: #multiple-environments-settings}
 
-Each environment has its own settings. On an environment tab, click the **Settings** gear icon to open the settings:
+Each environment has its own settings. Click the **Settings** gear icon ![Gear icon](../../icons/settings.svg) to open the settings. 
 
-![Environment settings](images/multiple-env-settings.png){: caption="Environment settings" caption-side="bottom"}
-
-**API details** provide these values for each environment:
-- Environment name
-- Environment ID
-- Session URL
-
-**Webhooks**
-
-Settings for pre-message, post-message, and log webhooks. For more information, see [Extending your assistant with webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview).
-
-**Inactivity timeout**
-
-Specify the amount of time to wait after the customer stops interacting with the assistant before ending the session. The maximum inactivity timeout differs by service instance plan type. For more information, see [Environment settings](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-publish-overview#publish-overview-environment-settings).
-
-**Edit environment**
-
-Change the name or description of the environment. Names can't contain spaces or use any special characters.
-
-**Delete environment**
-
-If necessary, you can remove the environment. Any channel or extension configurations are removed. Deleting an environment doesn't delete any published content versions. They remain in your list of published versions.
+| Setting | Description |
+| --- | --- |
+| API Details | Environment name and ID, session URL, and a link to the IBM Cloud console to see the service credentials for your instance |
+| Webhooks | Settings for pre-message, post-message, and log webhooks. For more information, see [Extending your assistant with webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview). |
+| Inactivity timeout | Specify the amount of time to wait after the customer stops interacting with the assistant before the session ends. The maximum inactivity timeout differs by service instance plan type. For more information, see [Inactivity timeout](/docs/watson-assistant?topic=watson-assistant-publish-overview#publish-overview-environment-settings-inactivity). |
+| Session history | For each environment, you can record the recent messages from the conversation for each customer, for use with the [`session_history` variable](/docs/watson-assistant?topic=watson-assistant-manage-info#built-in-variables). For more information, see [Session history](/docs/watson-assistant?topic=watson-assistant-publish-overview#publish-overview-environment-settings-session-history). |
+| Edit environment | Change the name or description of the environment. Names can't contain spaces or use any special characters. |
+| Delete environment | If necessary, you can remove the environment. Any channel or extension configurations are removed. Deleting an environment doesn't delete any published content versions. They remain in your list of published versions. |
+{: caption="Example" caption-side="bottom"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-02"
+lastupdated: "2023-08-04"
 
 keywords: Watson Assistant release notes
 
@@ -21,6 +21,15 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+## 3 Aug 2023
+{: #watson-assistant-aug032023}
+{: release-note}
+
+Session history variable
+:   You can record a summary of the recent messages from a conversation for each customer, for use with the `session_history` variable. Session history might be used to provide a summary of the conversation to a live agent during a transfer or call a generative AI extension to generate an answer based on a summary. For more information, see [Session history](/docs/watson-assistant?topic=watson-assistant-publish-overview#publish-overview-environment-settings-session-history).
+
+Synonym recommendations discontinued
+:   Synonym recommendations for entities, in the classic experience for dialog skills, are discontinued as of this release.
 
 ## 27 July 2023
 {: watson-assistant-jul272023}
@@ -36,11 +45,11 @@ New expression method to sort arrays
 :   The new [`Array.sort()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions&locale=en#expression-methods-actions-arrays-sort) method does an in-place sorting and returns the sorted array.
 
 ## 24 July 2023
-{: watson-assistant-jul242023}
+{: #watson-assistant-jul242023}
 {: release-note}
 
 OAuth 2.0 custom flow support for extensions
-:   Any grant type that starts with `x-` is supported for OAuth 2.0 authentication. For more information, see [Preparing the API definition](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-build-custom-extension#build-custom-extension-openapi-file) and [OAuth 2.0 Authentication](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-add-custom-extension#add-custom-extension-oauth).
+:   Any grant type that starts with `x-` is supported for OAuth 2.0 authentication. For more information, see [Preparing the API definition](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#build-custom-extension-openapi-file) and [OAuth 2.0 Authentication](/docs/watson-assistant?topic=watson-assistant-add-custom-extension#add-custom-extension-oauth).
 
 ## 20 July 2023
 {: #watson-assistant-jul202023}
