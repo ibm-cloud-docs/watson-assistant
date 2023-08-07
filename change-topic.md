@@ -96,7 +96,7 @@ If you want a customer to be able to digress and change topics while entering a 
  
 1. Within the step, click the **Settings** icon for the customer response.
  
-1. Enable the toggle **Allow customer to change topics during a free text response** or **Allow customer to change topics during a regex response.**.
+1. Enable the toggle **Allow customer to change topics during a free text response** or **Allow customer to change topics during a regex response**.
 
 ## Confirmation to return to previous topic
 {: #change-topic-confirmation}
