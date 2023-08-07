@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-25"
+lastupdated: "2023-08-07"
 
 subcollection: watson-assistant
 
@@ -92,11 +92,11 @@ By default, changing the conversation topic works differently for free text and 
 - The assistant is asking for a free text response 
 - An utterance matches the pattern in a regex response
 
- If you want a customer to be able to digress and change topics while entering a free text or regex answer:
+If you want a customer to be able to digress and change topics while entering a free text or regex answer:
  
- 1. Within the step, click the **Settings** icon for the customer response.
+1. Within the step, click the **Settings** icon for the customer response.
  
- 1. Enable the toggle **Allow customer to change topics during a free text response** or **Allow customer to change topics during a regex response**.
+1. Enable the toggle **Allow customer to change topics during a free text response** or **Allow customer to change topics during a regex response**.
 
 ## Confirmation to return to previous topic
 {: #change-topic-confirmation}
