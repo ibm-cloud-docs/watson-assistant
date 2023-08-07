@@ -845,11 +845,11 @@ Draft and Live Environment pages
 {: release-note}
 
 New API version
-:   The current API version is now `2021-11-01`. This version introduces the following changes:
+:   The current API version is now `2021-11-01`. This version includes the following changes:
 
    - Currency and percentage values are stored as `system_type` objects in actions. Previously, they were stored as atomic numbers.
    - The `$skip_user_input` flag is now in `contex.global.system.skip_user_input`. Previously, it was in `context.skills.["skill-reference"].user_defined.skip_user_input`.
-   - When an expression is evaluated, the result is no longer subject to a SpEL evaluation. As a result, actions no longer supports inline SpEL expressions such as `<? code ?>` or variable references such as `<? ${variable_name} ?>`. These are all superseded by the rich text editor's validated JSON serialization. Previously, you could write dynamic SpEL expressions such as `<? 1+1 ?>` to a scalar value and expect the result to be `2`. Now the corresponding expression construct must be used, for example, `"expression": "1+1"`.
+   - When an expression is evaluated, the result is no longer subject to a SpEL evaluation. As a result, actions no longer support inline SpEL expressions such as `<? code ?>` or variable references such as `<? ${variable_name} ?>`. These are all superseded by the rich text editor's validated JSON serialization. Previously, you could write dynamic SpEL expressions such as `<? 1+1 ?>` to a scalar value and expect the result to be `2`. Now the corresponding expression construct must be used, for example, `"expression": "1+1"`.
 
 Add variables to links
 :   When including a link in an assistant response, you can now access and use variables. In the URL field for a link, type a dollar sign (`$`) character to see a list of variables to choose from.
