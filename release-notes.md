@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-04"
+lastupdated: "2023-08-07"
 
 keywords: Watson Assistant release notes
 
@@ -839,6 +839,17 @@ Preview page update
 
 Draft and Live Environment pages
 :   Two pages, **Draft environment** and **Live environment**, help you to see how your channels and resolution methods are connected, both for testing/preview and for live deployment. The Draft environment page is new as of this release. The Live environment page was previously named Connect. For more information, see [Overview: Publishing and deploying your assistant](/docs/watson-assistant?topic=watson-assistant-publish-overview).
+
+## 1 November 2021
+{: #watson-assistant-nov012021}
+{: release-note}
+
+New API version
+:   The current API version is now `2021-11-01`. This version introduces the following changes:
+
+   - Currency and percentage values are stored as `system_type` objects in actions. Previously, they were stored as atomic numbers.
+   - The `$skip_user_input` flag is now in `contex.global.system.skip_user_input`. Previously, it was in `context.skills.["skill-reference"].user_defined.skip_user_input`.
+   - When an expression is evaluated, the result is no longer subject to a SpEL evaluation. As a result, actions no longer supports inline SpEL expressions such as `<? code ?>` or variable references such as `<? ${variable_name} ?>`. These are all superseded by the rich text editor's validated JSON serialization. Previously, you could write dynamic SpEL expressions such as `<? 1+1 ?>` to a scalar value and expect the result to be `2`. Now the corresponding expression construct must be used, for example, `"expression": "1+1"`.
 
 Add variables to links
 :   When including a link in an assistant response, you can now access and use variables. In the URL field for a link, type a dollar sign (`$`) character to see a list of variables to choose from.
