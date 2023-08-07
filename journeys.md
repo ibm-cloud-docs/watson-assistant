@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-31"
+lastupdated: "2023-08-07"
 
 subcollection: watson-assistant
 
@@ -220,9 +220,7 @@ This beta feature currently has the following limitations:
 
 - The preview pane does not support journeys. If you want to preview a journey, use the shareable preview link. For more information about the preview link, see [Copying a link to share](/docs/watson-assistant?topic=watson-assistant-preview-share#preview-share-link).
 
-- Journeys do not meet accessibility requirements.
-
 - Journeys use the `view:change` event or `changeView` method, and do not work with the `window:open` or `window:close` events or the `openWindow`, `closeWindow` and `toggleOpen` instance methods.
 
-- When the customer starts a journey, the web chat window temporarily closes but reopens when the journey finishes. If you are using the `view:change` event to trigger the display of a post-chat form, your code should check the value of the new `event.reason` or `event.newViewState.tour` parameter to decide if showing the form is appropriate.
+- When the customer starts a journey, the web chat window closes. If you are using the `view:change` event to trigger the display of a post-chat form, your code should check the value of the new `event.reason` or `event.newViewState.tour` parameter to decide if showing the form is appropriate.
 
