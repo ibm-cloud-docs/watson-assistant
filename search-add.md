@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-03-03"
+lastupdated: "2023-08-08"
 
 subcollection: watson-assistant
 
@@ -19,7 +19,7 @@ The search integration searches for information from a data collection that you 
 
 {{site.data.keyword.discoveryshort}} is a service that crawls, converts, and normalizes your unstructured data. The product applies data analysis and cognitive intuition to enrich your data such that you can more easily find and retrieve meaningful information from it later. To read more about {{site.data.keyword.discoveryshort}}, see the [product documentation](/docs/discovery-data?topic=discovery-data-about){: external}.
 
-The search integration requires {{site.data.keyword.discoveryshort}} v2. When you create a Plus, Enterprise, or Premium plan instance on IBM Cloud, you get the new and improved version of {{site.data.keyword.discoveryshort}}. For more information, see [Getting the most from {{site.data.keyword.discoveryshort}}](/docs/discovery-data?topic=discovery-data-version-choose){: external}.
+The search integration requires {{site.data.keyword.discoveryshort}} v2. For more information, see [Getting the most from {{site.data.keyword.discoveryshort}}](/docs/discovery-data?topic=discovery-data-version-choose){: external}.
 {: important}
 
 Typically, the type of data collection you add to {{site.data.keyword.discoveryshort}} and access from your assistant contains information that is owned by your company. This proprietary information can include FAQs, sales collateral, technical manuals, or papers written by subject matter experts. Mine this dense collection of proprietary information to find answers to customer questions quickly.
@@ -31,19 +31,12 @@ Watch a 4-minute video that provides an overview of the search integration:
 ## Before you begin
 {: #search-add-prereqs}
 
-1.  Before you begin, you must set up a {{site.data.keyword.discoveryshort}} v2 instance.
+Before you begin, you must set up a {{site.data.keyword.discoveryshort}} v2 instance on {{site.data.keyword.cloud_notm}} or installed on {{site.data.keyword.icp4dfull_notm}}. For {{site.data.keyword.cloud_notm}}, you need at least a Plus plan {{site.data.keyword.discoveryshort}} service instance. Go to the [{{site.data.keyword.discoveryshort}}](https://cloud.ibm.com/catalog/services/watson-discovery){: external} page in the {{site.data.keyword.cloud_notm}} catalog and create a Plus plan service instance.
 
-    You can do this at no cost by using a Plus plan, which offers a 30-day trial. However, to create a Plus plan instance of the service, you must have a paid account (where you provide credit card details).
-
-1.  Create a Plus plan {{site.data.keyword.discoveryshort}} service instance.
-
-    Go to the [{{site.data.keyword.discoveryshort}}](https://cloud.ibm.com/catalog/services/watson-discovery){: external} page in the {{site.data.keyword.cloud_notm}} catalog and create a Plus plan service instance.
-
-If you decide not to continue using the Plus plan and don't want to pay for it, delete the Plus plan service instance before the 30-day trial period ends.
-{: important}
-
-## Create the search integration
+## Create the search integration or search skill
 {: #search-add-task}
+
+To create a search integration:
 
 1.  From the assistant where you want to add search, click **Integrations**.
 
@@ -52,7 +45,19 @@ If you decide not to continue using the Plus plan and don't want to pay for it, 
 
 1.  In the **Extensions** section, locate Search, click **Add**, then click **Confirm**.
 
-1.  Next, connect to a {{site.data.keyword.discoveryshort}} service instance.
+If you are using the classic experience, add a search skill:
+
+1.  From the assistant where you want to add the skill, click **Add search skill**.
+
+1.  Take one of the following actions:
+
+    - To create a new search skill, stay on the *Create skill* tab.
+
+    - If you have created a search skill already, the *Add existing skill* tab is displayed, and you can click to add an existing skill.
+
+1.  Specify the details for the new skill:
+    - **Name**: A name no more than 64 characters in length. A name is required.
+    - **Description**: An optional description no more than 128 characters in length.
 
 ## Connect to an existing {{site.data.keyword.discoveryshort}} instance
 {: #search-add-connect-discovery}
@@ -111,7 +116,7 @@ If you decide not to continue using the Plus plan and don't want to pay for it, 
 
     - **URL**: This field can be populated with any footer content that you want to include at the end of the search result.
 
-       For example, you might want to include a hypertext link to the original data object in its data source. Most online data sources provide self-referencing public URLs for objects in the store to support direct access. If you add a URL, it must be valid and reachable. If it is not, the Slack integration doesn't include the URL in its response and the Facebook integration doesn't return any response.
+       For example, you might want to include a hypertext link to the original data object in its data source. Most online data sources provide self-referencing public URLs for objects in the store to support direct access. If you add a URL, it must be valid and reachable. If it is not, the Slack integration doesn't include the URL in its response, and the Facebook integration doesn't return any response.
 
        The Facebook and Slack integrations can successfully display the search result response when the URL field is empty.
   
@@ -209,7 +214,7 @@ Review this information for help with common tasks.
 ## Next steps
 {: #search-add-next-steps}
 
-After you add the search integration for the first time, it appears as a tile on the **Draft environment** page. Click  the tile to see or edit the search configuration.
+After you add the search integration for the first time, it appears as a tile on the **Draft environment** page. Click the tile to see or edit the search configuration.
 
 ![Search in draft environment](images/search-draft-env.png)
 
@@ -261,8 +266,6 @@ To configure the search in {{site.data.keyword.discoveryshort}}, complete the fo
 
       - To filter results to include only documents that mention `Boston, MA`, specify `enriched_text.entities.text:"Boston, MA"`.
 
-      - To filter results to include only documents that mention a city name that you saved in a context variable named `$destination`, you can specify `enriched_text.entities.text:$destination`.
-
     If you add both a query and a filter value, the filter parameter is applied first to filter the data collection documents and cache the results. The query parameter then ranks the cached results.
 
 1.  If you want the search for an answer to be the last step in the action, select **End the action after returning results**.
@@ -274,7 +277,56 @@ To configure the search in {{site.data.keyword.discoveryshort}}, complete the fo
 
 After you configure search, you can send test queries to see the search results that get returned from {{site.data.keyword.discoveryshort}} by using the Preview page.
 
-To test the full experience that customers have when they ask questions that are either answered by the action or trigger a search, use the *Preview*  for your assistant.
+To test the full experience that customers have when they ask questions that are either answered by the action or trigger a search, use the *Preview* for your assistant.
+
+## Test the search skill in the classic experience
+{: #search-skill-add-test}
+
+If you are using a search skill in the classic experience, you can send test queries to see the search results that get returned from {{site.data.keyword.discoveryshort}} by using the Preview pane of the search skill.
+
+To test the full experience that customers will have when they ask questions that are either answered by the dialog or trigger a search, use the *Preview* button for your assistant.
+
+You cannot test the full end-to-end user experience from the dialog "Try it out" pane. The search skill is configured separately and attached to an assistant. The dialog skill has no way of knowing the details of the search, and therefore cannot show search results in its "Try it out" pane.
+{: important}
+
+Configure at least one integration channel to test the search skill. In the channel, enter queries that trigger the search. If you initiate any type of search from your dialog, test the dialog to ensure that the search is triggered as expected. If you are not using search response types, test that a search is triggered only when no existing dialog nodes can address the user input. And any time a search is triggered, ensure that it returns meaningful results.
+
+### Sending more requests to the search skill
+{: #search-skill-add-increase-flow}
+
+If you want the dialog skill to respond less often and to send more queries to the search skill instead, you can configure the dialog to do so.
+
+You must add both a dialog skill and search skill to your assistant for this approach to work.
+
+Follow this procedure to make it less likely that the dialog will respond by resetting the confidence level threshold from the default setting of 0.2 to 0.5. Changing the confidence level threshold to 0.5 instructs your assistant to not respond with an answer from the dialog unless the assistant is more than 50% confident that the dialog can understand the user's intent and can address it.
+
+1.  From the *Dialog* page of your dialog skill, make sure that the last node in the dialog tree has an `anything_else` condition.
+
+    Whenever this node is processed, the search skill is triggered.
+
+1.  Add a folder to the dialog. Position the folder before the first dialog node that you want to de-emphasize. Add the following condition to the folder:
+
+    `intents[0].confidence > 0.5`
+
+    This condition is applied to all of the nodes in the folder. The condition tells your assistant to process the nodes in the folder only if your assistant is at least 50% confident that it knows the user's intent.
+
+1.  Move any dialog nodes that you do not want your assistant to process often into the folder.
+
+After changing the dialog, test the assistant to make sure the search skill is triggered as often as you want it to be.
+
+An alternative approach is to teach the dialog about topics to ignore. To do so, you can add utterances that you want the assistant to send to the search skill immediately as test utterances in the dialog skill's "Try it out" pane. You can then select the **Mark as irrelevant** option within the "Try it out" pane to teach the dialog not to respond to this utterance or others like it. For more information, see [Teaching your assistant about topics to ignore](/docs/assistant?topic=assistant-logs#logs-mark-irrelevant).
+
+### Disabling the search skill
+{: #search-skill-add-disable}
+
+You can disable the search skill from being triggered.
+
+You might want to do so temporarily, while you are setting up the integration. Or you might want to only ever trigger a search for specific user queries that you can identify within the dialog, and use a search skill response type to answer.
+
+To prevent the search skill from being triggered, complete the following steps:
+
+1.  From the **Assistants** page, click the menu for your assistant, and then choose **Settings**.
+1.  Open the *Search skill* page, and then set the switch to **Disabled**.
 
 ## Use search when no action matches
 {: #search-no-action-matches}
