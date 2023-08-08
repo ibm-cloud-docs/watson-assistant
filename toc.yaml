@@ -43,6 +43,7 @@ toc:
           - respond.md
           - collect-info.md
           - manage-info.md
+          - action-conditions.md
           - step-conditions.md
           - step-what-next.md
           - topicgroup:
@@ -68,7 +69,6 @@ toc:
           - change-topic.md
           - handle-errors.md
           - human-agent.md
-          - action-conditions.md
           - trigger-phrases.md
           - save-actions.md
           - review.md
