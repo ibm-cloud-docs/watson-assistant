@@ -269,31 +269,6 @@ toc:
           label: REST API reference
           href: https://cloud.ibm.com/apidocs/assistant/assistant-v2
       - filter-reference.md
-#     - topicgroup:
-#          label: Advanced topics
-#          topic:
-#          - expressions.md
-#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
-#  Links to your command line reference docs should be included in the Reference navigation group.
-#  - navgroup:
-#      id: reference
-#      topics:
-#      - topicgroup:
-#          label: API reference
-#          links:
-#          - link:
-#              label: Catalog Management
-#              href: https://cloud.ibm.com/apidocs/resource-catalog/private-catalog
-#          - link:
-#              label: Enterprise Management
-#              href: https://{DomainName}/apidocs/enterprise-apis/enterprise
-#      - topicgroup:
-#          label: Command reference
-#          topics:
-#          - /cli/cli-manage-catalogs-plugin
-#          - /cli/cli-ibmcloud_commands_services
-#          - /cli/cli-ibmcloud_commands_account
-#      - topic-6.md
   - navgroup:
       id: help
       topics:
