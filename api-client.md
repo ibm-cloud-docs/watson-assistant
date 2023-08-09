@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-11-17"
+  years: 2019, 2023
+lastupdated: "2023-08-09"
 
 subcollection: watson-assistant
 
@@ -31,14 +31,14 @@ subcollection: watson-assistant
 If none of the built-in integrations meet your requirements, you can deploy your assistant by developing a custom client application that interacts with your users and communicates with the {{site.data.keyword.conversationfull}} service.
 {: shortdesc}
 
-The Watson SDKs help you write code that interacts with {{site.data.keyword.conversationshort}}. For more information about the SDKs, see [Watson SDKs](/docs/assistant?topic=watson-using-sdks).
+The Watson SDKs help you write code that interacts with {{site.data.keyword.conversationshort}}. For more information about the SDKs, see [Watson SDKs](https://cloud.ibm.com/developer/watson/sdks-and-tools).
 
 ## Setting up the assistant
 {: #api-client-setup}
 
-The example application we will create in this section implements several simple functions to illustrate how a client application interacts with {{site.data.keyword.conversationshort}}. The application code will collect input and send it to an assistant, which sends responses the application will display to the user.
+The example application we create in this section implements several simple functions to illustrate how a client application interacts with {{site.data.keyword.conversationshort}}. The application code will collect input and send it to an assistant, which sends responses the application will display to the user.
 
-If you want to try this example yourself, first you need to set up the simple example assistant that the client will connect to:
+To try this example yourself, you first need to set up the simple example assistant that the client will connect to:
 
 1. Download the actions <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/assistant/assistant-simple-example-actions.json" download="assistant-simple-example-actions.json">JSON file</a>.
 1. [Create an assistant](/docs/watson-assistant?topic=watson-assistant-assistant-add).
@@ -51,7 +51,7 @@ The example actions include a *Greet customer* action that asks the customer's n
 
 To access the {{site.data.keyword.conversationshort}} REST APIs, your application needs to be able to authenticate with {{site.data.keyword.Bluemix}} and connect to the assistant in the environment where it is deployed. You'll need to copy the service credentials and environment ID and paste them into your application code. You'll also need the URL for the location of your service instance (for example, `https://api.us-south.assistant.watson.cloud.ibm.com`).
 
-To find this information, follow these steps:
+To find this information:
 
 1. Go to the **Environments** page and click the tab for the environment you want to connect to.
 
