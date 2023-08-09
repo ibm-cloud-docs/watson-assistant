@@ -2,7 +2,7 @@
 
 copyright:
 years: 2015, 2023
-lastupdated: "2023-08-04"
+lastupdated: "2023-08-09"
 
 subcollection: watson-assistant
 
@@ -986,33 +986,3 @@ For example:
 | ["Banana", "Orange", "Apple", "Mango"] | ["Apple", "Banana", "Mango", "Orange"] |
 | [3, 2, 4, "1", "10", "12", "Banana", "Orange", 0, "Apple", "Mango"] | [0, 2, 3, 4, "1", "10", "12", "Apple", "Banana", "Mango", "Orange"] |
 {: caption="Sorting examples" caption-side="bottom"}
-
-### `Array.transform()`
-{: #expression-methods-actions-arrays-transform}
-
-This method is used with the [`session_history` variable](/docs/watson-assistant?topic=watson-assistant-manage-info#built-in-variables) only. You can transform the output of the variable to match a specific generative AI system. 
-
-The signature is `transform(String rolePrefix, String userPrefix, String assistantPrefix, optional Boolean currentAction=false)`. Customer messages are in the form `{$rolePrefix: $userPrefix, "content": $content}`. Assistant messages are in the form `{$rolePrefix: $assistantPrefix, "content": $content}`.
-
-If `currentAction` is true:
-
-| Assistant uses | Description |
-| --- | --- |
-| Actions only | The transform excludes all messages where `n`is true, which indicates that a customer question triggered a new base action. 
-| Dialog only  | `currentAction` is ignored and the transform includes the entire contents of the `session history` variable.
-| Dialog and actions | The transform includes everything in the `session_history` variable since the most recent start of an action, regardless of whether any dialog nodes are triggered. |
-{: caption="If currentAction is true" caption-side="bottom"}
-
-The `n : true` flags are not included in the output of transform.
-
-This example produces OpenAI chat format:
-
-```text
-${system_session_history}.transform("role", "user", "assistant")
-```
-
-This example produces Google PaLM2 chat format:
-
-```text
-${system_session_history}.transform("author", "USER", "AI")
-```
