@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-04-10"
+lastupdated: "2023-08-09"
 
 subcollection: watson-assistant
 
@@ -13,20 +13,20 @@ subcollection: watson-assistant
 # Embedding the web chat on your page
 {: #deploy-web-chat}
 
-To add the web chat widget to your website, all you need to do is embed a generated script element in your HTML source.
+To add the web chat widget to your website, you need to embed a generated script element in your HTML source.
 {: shortdesc}
 
 The web chat integration is automatically included for every assistant, and is configured separately for each environment.
 
-To add the web chat to your website, follow these steps:
+To add the web chat to your website:
 
-1. On the ![Integrations icon](images/integrations-icon.png) **Integrations** page, find the **Web chat** tile and click click **Open**. The **Open web chat** window opens.
+1. On the ![Integrations icon](images/integrations-icon.png) **Integrations** page, find the **Web chat** tile and click **Open**. The **Open web chat** window opens.
 
 1. In the **Environment** field, select the environment you want the web chat widget to connect to. Click **Confirm**.
 
     The **Web chat** page opens, showing the settings for the web chat integration in the selected environment.
 
-    The preview pane shows what the web chat will look like when it is embedded in a web page. If you see a message that starts with, `There is an error`, you probably haven't added any actions to your assistant yet. After you add an action, you can test the conversation from the preview pane.
+    The preview pane shows what the web chat will look like when embedded in a web page. If you see a message that starts with, `There is an error`, you probably haven't added any actions to your assistant yet. After you add an action, you can test the conversation from the preview pane.
     {: tip}
 
 1.  Click the **Embed** tab.
@@ -56,7 +56,7 @@ To add the web chat to your website, follow these steps:
     ```
     {: codeblock}
 
-    Just copy this code into a file with the `.html` extension, and replace the `script` element with the embed script you copied in the previous step.
+    Copy this code into a file with the `.html` extension, and replace the `script` element with the embed script you copied in the previous step.
 
     The identifiers in the embed script (such as `integrationID` `serviceInstanceID`) are not considered secret, and are visible to anyone who has access to your website. For more information, see [Security](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture#web-chat-architecture-security).
     {: note}
