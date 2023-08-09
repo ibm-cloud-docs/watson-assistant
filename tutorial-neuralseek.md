@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-05"
+lastupdated: "2023-08-08"
 
 subcollection: watson-assistant
 content-type: tutorial
@@ -146,7 +146,7 @@ Both Lite and Trial plan {{site.data.keyword.conversationshort}} service instanc
 
 1.  From a new web browser tab, return to the {{site.data.keyword.cloud_notm}} catalog.
 
-    Keep the {{site.data.keyword.discoveryshort}} page open in a separate tab so you can switch easiily between the two applications.
+    Keep the {{site.data.keyword.discoveryshort}} page open in a separate tab, so you can switch between the two applications.
     {: tip}
 
 1.  From the [{{site.data.keyword.conversationshort}}](https://cloud.ibm.com/catalog/services/watson-assistant){: external} resource page in the {{site.data.keyword.cloud_notm}} catalog, create a Trial plan {{site.data.keyword.conversationshort}} service instance in the Dallas location.
@@ -245,7 +245,7 @@ You can use a search extension in {{site.data.keyword.conversationshort}} to con
 
 1.  From a new web browser tab, return to the {{site.data.keyword.cloud_notm}} catalog.
 
-    Keep the pages to the other services open in separate tabs so you can switch easiily among the different service instances.
+    Keep the pages to the other services open in separate tabs, so you can switch between the different service instances.
     {: tip}
 
 1.  From the [NeuralSeek](https://cloud.ibm.com/catalog/services/neuralseek){: external} resource page in the {{site.data.keyword.cloud_notm}} catalog, create a Lite plan service instance.
