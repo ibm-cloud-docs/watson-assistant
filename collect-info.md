@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-04-07"
+lastupdated: "2023-08-10"
 
 subcollection: watson-assistant
 
@@ -214,7 +214,7 @@ To add a regex response:
 
 1. Click **Apply** when you're finished editing.
 
-1. By default, customers can't change topics when an utterance matches the pattern in a regex response. If you want a customer to be able to digress and change topics while entering a regex answer, click the **Settings** icon, then enable the toggle **Allow customer to change topics during a regex response**. For more information, see [Allowing your customers to change the topic of the conversation](/docs/watson-assistant?topic=watson-assistant-change-topic).
+1. By default, customers can't change topics when an utterance matches the pattern in a regex response. If you want a customer to be able to digress with a regex response, click the **Settings** icon, then enable the toggle **Allow customer to change topics before evaluating a regex response**. This gives the customer a chance to change topics before the assistant checks the regex pattern. For more information, see [Allowing your customers to change the topic of the conversation](/docs/watson-assistant?topic=watson-assistant-change-topic).
 
 You can save your configured regex response for reuse in other steps. For more information, see [Saving and reusing customer responses](#saved-customer-responses).
 {: tip}
