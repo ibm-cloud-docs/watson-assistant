@@ -41,7 +41,6 @@ In the **Ask clarifying questions** section, you can:
 
 For more information, see [Customizing clarifying questions](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-disambiguation-config) and [Response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
 
-
 ## Change conversation topic
 {: #actions-global-settings-change-conversation-topic}
 
