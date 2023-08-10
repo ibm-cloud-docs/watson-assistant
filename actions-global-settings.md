@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-14"
+lastupdated: "2023-08-10"
 
 keywords: settings
 subcollection: watson-assistant
@@ -40,6 +40,7 @@ In the **Ask clarifying questions** section, you can:
 - Enable or disable response modes, and modify the text that your assistant uses with a response mode. If you enable response modes, you can use the **Customize modes** section to choose a response mode for each action to set how it behaves.
 
 For more information, see [Customizing clarifying questions](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-disambiguation-config) and [Response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
+
 
 ## Change conversation topic
 {: #actions-global-settings-change-conversation-topic}
