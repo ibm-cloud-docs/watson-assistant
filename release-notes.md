@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-09"
+lastupdated: "2023-08-11"
 
 keywords: Watson Assistant release notes
 
@@ -21,6 +21,20 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+## 10 Aug 2023
+{: #watson-assistant-aug102023}
+{: release-note}
+Algorithm version **Beta** provides improved intent detection and action matching for more languages
+:   The algorithm version **Beta** now provides improved intent detection and action matching for Arabic, Chinese (Simplified), Chinese (Traditional), Czech, Dutch, Italian, Japanese, and Korean. It includes a new foundation model that is trained using a transformer architecture to improve intent detection and action matching.
+
+   Improvements include:
+   - Improved robustness to variations in user inputs such as typos and different inflection forms
+   - Less training data required to reach the same level of performance compared to previous algorithms
+
+   For more information, see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version)
+
+Session history variable
+:   You can record a summary of the recent messages from a conversation for each customer, for use with the `session_history` variable. Session history might be used to provide a summary of the conversation to a live agent during a transfer or call a generative AI extension to generate an answer based on a summary. For more information, see [Session history](/docs/watson-assistant?topic=watson-assistant-publish-overview#publish-overview-environment-settings-session-history).
 
 ## 3 Aug 2023
 {: #watson-assistant-aug032023}
