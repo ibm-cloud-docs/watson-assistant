@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-09"
+lastupdated: "2023-08-16"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,7 @@ subcollection: watson-assistant
 # Connecting to a live agent
 {: #human-agent}
 
-Your assistant can do a lot, but there might be some situations when your customers need help from a human. If your assistant is integrated with one of the supported service desk systems, you can build in logic that will transfer the conversation to a live agent when necessary. This is referred to as an _escalation_.
+Your assistant can do a lot, but there might be situations when customers need help from a human. If your assistant is integrated with one of the supported service desk systems, you can build in logic that transfers the conversation to a live agent when necessary. This is referred to as an _escalation_.
 {: shortdesc}
 
 To use this feature, your assistant must interact with customers using a **web chat** or **phone** integration. For more information, see [Deploying your assistant](/docs/watson-assistant?topic=watson-assistant-deploy-assistant).
@@ -26,6 +26,7 @@ Your agents can work with one of these supported service desk tools:
 - [Salesforce](/docs/watson-assistant?topic=watson-assistant-deploy-salesforce)
 - [Twilio Flex](/docs/watson-assistant?topic=watson-assistant-deploy-phone-flex)
 - [Zendesk](/docs/watson-assistant?topic=watson-assistant-deploy-zendesk)
+- [Bring your own - starter kit](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}  and [Bring your own service desk to Watson Assistant (blog)](https://medium.com/ibm-watson/bring-your-own-service-desk-to-watson-assistant-b39bc920075c){: external} 
 
 
 
@@ -42,10 +43,10 @@ When the assistant initiates a transfer, the agent receives a notification withi
 
 Examples of planned escalations might include the following:
 
-- The customer asks for a service that cannot be completed without the assistance of a live agent
-- The customer needs help with a sensitive subject that requires a human touch, such as asking about bereavement benefits or resolving a complaint
+- The customer asks for a service that cannot be completed without the assistance of a live agent.
+- The customer needs help with a sensitive subject that requires a human touch, such as asking about bereavement benefits or resolving a complaint.
 
-To set up a planned escalation, you build an action that can recognize a specific situation that requires a live agent. An example would be an action that is triggered by customer input `I want to pay my bill` (you might want to let live agents handle payments).
+To set up a planned escalation, you build an action that can recognize a specific situation that requires a live agent. An example would be an action that is triggered by customer input `I want to pay my bill` (you might want to let live agents handle payments for security reasons).
 
 Within any action, you can create a step that initiates a transfer to a live agent:
 
