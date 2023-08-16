@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-12-12"
+  years: 2020, 2023
+lastupdated: "2023-08-16"
 
 subcollection: watson-assistant
 
@@ -38,11 +38,11 @@ After you have set up the phone integration for your assistant, you can modify t
 ## Handling call and transfer failures
 {: #deploy-phone-config-failure}
 
-You can configure the phone integration to transfer the caller to a human agent if the phone connection fails for any reason. To transfer the caller to a human agent automatically, go to the **Advanced** tab in the phone integration settings, and make the following configuration selections:
+You can configure the phone integration to transfer the caller to a live agent if the phone connection fails for any reason. To transfer the caller to a human automatically, go to the **Advanced** tab in the phone integration settings, and make the following configuration selections:
 
-- **SIP target when a call fails**: Add the SIP endpoint for your support agent service. Specify a SIP or telephone URI for a general call queue that can redirect requests to other queues. For more information, see [Configuring backup call center support](#deploy-phone-config-transfer-service).
+- **SIP target when a call fails**: Add the SIP endpoint for your support agent service. Specify a SIP or telephone URI for a general call queue that can redirect requests to other queues. For more information, see [Configuring a backup service desk solution](#deploy-phone-config-transfer-service).
 
-- **Call failure message**: Add the message you want the assistant to say to a caller before it transfers the call to a human agent.
+- **Call failure message**: Add the message you want the assistant to say to a caller before it transfers the call to a live agent.
 
 If, after you transfer the call to a human, the connection to a live agent fails for any reason, you can configure what to do.
 
@@ -50,7 +50,7 @@ If, after you transfer the call to a human, the connection to a live agent fails
 
 - **Disconnect call on transfer failure**: Choose whether to disconnect the call after the failure message. This option is enabled by default. If this option is disabled, when a call transfer fails, your assistant can disconnect or process a different action.
 
-  If you choose to leave a call connected despite a transfer failure, Watson Assistant will initiate a new turn to determine the next step. It's important that the Assistant be configured with an Action or webhook that can handle this scenario.
+  If you choose to leave a call connected despite a transfer failure, Watson Assistant initiates a new turn to determine the next step. It's important that the Assistant be configured with an Action or webhook that can handle this scenario.
 
 The phone integration supports disaster recovery by providing the ability to do a fast failover to another region instead of routing the call to a live agent when a service outage occurs. This is accomplished by sending a SIP 503 response to the upstream SIP trunking provider, instead of auto referring the call to a live agent when failures happen during the setup of a call. This 503 response can then be used by the SIP trunking provider to reroute the call to another region. If you want to take advantage of this capability, open a service ticket against the {{site.data.keyword.conversationshort}} service instance that requires disaster recovery.
 {: note}
@@ -108,7 +108,7 @@ To configure how your assistant interacts with a SIP trunk from an external prov
 
     You can then reference these headers in your assistant. For example, you might check the header value in a step condition to determine the next step. You can also use these headers when searching the assistant logs; for example, you might search for a custom header to find all the messages associated with particular account.
 
-- **Disable the ring that callers will hear while the assistant is contacted**: Choose whether you want the caller to hear a signal that indicates that the assistant is being contacted. 
+- **Disable the ring that callers hear while the assistant is contacted**: Choose whether you want the caller to hear a signal that indicates the assistant is being contacted. 
 
     A `180 Ringing` response is sent from the assistant back to the SIP trunk provider while your assistant processes the incoming call invitation. The ringing response is sent by default.
 
@@ -118,16 +118,16 @@ To configure how your assistant interacts with a SIP trunk from an external prov
 
 For more information about the SIP protocol, see [RFC 3261](https://tools.ietf.org/html/rfc3261){: external} and about the RTP protocol, see [RFC 3550](https://tools.ietf.org/html/rfc3550){: external}.
 
-## Configuring backup call center support
+## Configuring a backup service desk solution
 {: #deploy-phone-config-transfer-service}
 
 When you use the phone integration as the first line of assistance for customers, it's a good idea to have a live agent backup available. You can design your assistant to transfer a call to a human in case the phone connection fails, or if a user asks to speak to someone.
 
-Your company might already have one or more phone numbers that connect to an automatic call dispatcher (ACD) that can queue callers until an appropriate agent is available. If not, choose a call center service to use as your backup.
+Your company might already have one or more phone numbers that connect to an automatic call dispatcher (ACD), which can queue callers until an appropriate agent is available. If not, choose a service desk solution to use as your backup.
 
 A conversation cannot be transferred from one integration type to another. For example, if you use the web chat integration with service desk support, you cannot transfer a phone call to the service desk that is set up for the web chat.
 
-You must provide the call center SIP URI for the call center service you use. You must specify this information in your assistant when you enable a call transfer from a dialog node or action step. For more information, see [Transferring a call to a live agent](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer).
+You must provide the service desk SIP URI for the service desk support solution you use. You must specify this information in your assistant when you enable a call transfer from a dialog node or action step. For more information, see [Transferring a call to a live agent](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer).
 
 ## Optimize your actions for phone interaction
 {: #deploy-phone-config-actions}
