@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-07-31"
+lastupdated: "2023-08-17"
 
 subcollection: watson-assistant
 
@@ -39,16 +39,16 @@ Zendesk allows you to assist customers in real time, which increases customer sa
 
        ![Screen capture of the Zendesk user interface to show where the profile is located.](images/zd-profile-menu.png)
 
-1.  Keep this open for the **Connect Zendesk to your assistant** step.
+1.  Keep this screen open for the **Connect Zendesk to your assistant** step.
 
        ![Screen capture of the connection dialog.](images/zd-account-key.png)
 
-You also need to decide whether to enable security for Zendesk after setup. More info at [Securing the transfer to Zendesk](#deploy-zendesk-secure).
+You also need to decide whether to enable security for Zendesk after setup. More information at [Securing the transfer to Zendesk](#deploy-zendesk-secure).
 
 ## Setting up the Zendesk service desk connection
 {: #deploy-zendesk-task}
 
-In your {{site.data.keyword.conversationshort}} install: 
+In your {{site.data.keyword.conversationshort}} installation: 
 
 1.  Go to the **Integrations** page by clicking the integrations icon (![Integrations icon](images/integrations-icon.png)) in the left menu. For more information, see [Integrating the web chat with your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
 
@@ -65,9 +65,9 @@ In your {{site.data.keyword.conversationshort}} install:
 
 In the **Live agent** tab of your Zendesk web chat integration:
 
-1.  Toggle on **Transfers enabled**. Two tasks should display: **Connect Zendesk** and **Private app Install**.
+1.  Toggle **Transfers enabled**. Two tasks should display: **Connect Zendesk** and **Private app Install**.
 
-1.  Copy the **Account key** from your Zendesk account in the tab you kept open.
+1.  Copy the **Account key** from your Zendesk account in the tab that you kept open.
 
        ![Screen capture of the connection dialog.](images/zd-account-key.png)
 
@@ -78,7 +78,7 @@ In the **Live agent** tab of your Zendesk web chat integration:
 ### Install app in Zendesk
 {: #deploy-zendesk-add-private-app}
 
-IBM provides an application to install in your Zendesk Service subdomain. When a customer asks to speak to someone, your assistant shares a chat summary for the transferred conversation with the Zendesk agent via this private app.
+IBM provides an application to install in your Zendesk Service subdomain. When a customer asks to speak to someone, your assistant shares a chat summary for the transferred conversation with the Zendesk agent using this private app.
 
 1.  Click **Private app Install**. 
 
@@ -87,7 +87,7 @@ IBM provides an application to install in your Zendesk Service subdomain. When a
       On Safari, application files are extracted from the ZIP file into a folder. To keep the file archived as a .zip file so you can upload it later, edit the Safari preferences. Clear the **Open safe files after downloading** checkbox.
       {: note}
 
-1.  In your Zendesk install, click the **Products icon** and go to the **Admin Center**. 
+1.  In your Zendesk installation, click the **Products icon** and go to the **Admin Center**. 
 
 1.  Click **Apps and integrations**.
 
@@ -95,7 +95,7 @@ IBM provides an application to install in your Zendesk Service subdomain. When a
 
 1.  Click **Upload private app**.
 
-1.  Click **Choose File**, select the app you downloaded from your Watson Assistant install, and click **Upload**.
+1.  Click **Choose File**, select the app that you downloaded from your Watson Assistant installation, and click **Upload**.
 
 1.  Click **Install**, if you agree to the Marketplace Terms of Use that display in the **Creating a new App** window. 
 
@@ -120,7 +120,7 @@ In Zendesk:
 
 1.  Click the **Turn on Agent Workspace** button. The green **On** box should display.
 
-Agent Workspace should now feature on several screens in Zendesk Support, including on the **Dashboard** with tickets, the **Visitors** page, and in the top menu as **Conversations** where agents can accept chats from customers waiting for assistance. 
+Agent Workspace should now feature on several screens in Zendesk Support, including on the **Dashboard** with tickets, the **Visitors** page, and in the menu as **Conversations** where agents can accept chats from customers waiting for assistance. 
 
 
 ## Securing the transfer to Zendesk
@@ -132,7 +132,7 @@ When you add security to your Zendesk integration, you ensure that the visitors 
 
 Before you can secure the Zendesk connection, complete the following required tasks:
 
-1.  Secure the web chat. For more information see [Securing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security). {: #deploy-zendesk-secure-prereqs}
+1.  Secure the web chat. For more information, see [Securing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security). {: #deploy-zendesk-secure-prereqs}
 
 1.  Encrypt sensitive information that you pass to the web chat.
 
@@ -152,7 +152,7 @@ Before you can secure the Zendesk connection, complete the following required ta
 
     For more information, see [Passing sensitive data](/docs/watson-assistant?topic=watson-assistant-web-chat-security#web-chat-security-encrypt).
 
-    Zendesk also expects `iat` and `external_id` name and value pairs. However, there's no need for you to provide this information. IBM automatically provides a JWT that contains these values.
+    Zendesk also expects `iat` and `external_id` name and value pairs. However, there is no need for you to provide this information. IBM automatically provides a JWT that contains these values.
 
     For example:
 
@@ -208,7 +208,7 @@ To secure the Zendesk connection, complete the following steps:
 
 1.  Decide whether to allow unidentified users to access Zendesk. {: #deploy-zendesk-secure-anonymous}
 
-    The web chat integration allows anonymous users to initiate chats. However, as soon as you enable visitor authentication, Zendesk requires that the name and email of each user be provided. If you try to connect without passing the required information, the connection will be refused.
+    The web chat integration allows anonymous users to initiate chats. However, as soon as you enable visitor authentication, Zendesk requires that the name and email of each user be provided. If you try to connect without passing the required information, a connection is refused.
 
     If you want to allow anonymous users to connect to Zendesk, you can provide fictitious name and email data. Write a function to populate the two fields with fictitious name and email values.
 
@@ -235,7 +235,7 @@ Update an action to make sure it understands when users request to speak to a pe
 
 When a customer interacts with the web chat, information about the current web browser session is collected. For example, the URL of the current page is collected. 
 
-You can use this information to add custom routing rules to your actions. For example, if the customer is on the Products page when a transfer to a human is requested, you might want to route the chat transfer to agents who are experts in your product portfolio. 
+You can use this information to add custom routing rules to your actions. For example, if the customer is on the Products page when a transfer to a human is requested, you can route the chat to agents who are experts in your product portfolio. 
 
 If the customer is on the Returns page, you might want to route the chat transfer to agents who know how to help customers return merchandise.
 
