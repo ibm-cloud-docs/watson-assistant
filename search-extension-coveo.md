@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-06-09"
+lastupdated: "2023-08-18"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,7 @@ subcollection: watson-assistant
 # Coveo search extension setup
 {: #search-extension-coveo}
 
-You can use [Coveo](https://www.coveo.com) to create and manage source documents. The [Coveo Search API](https://docs.coveo.com/en/52/build-a-search-ui/use-the-search-api) can issue search queries on an index. It is a configurable search that you can customize based on your use case. You can access Coveo search through an extension to your assistant.
+You can use [Coveo](https://www.coveo.com){: external} to create and manage source documents. The [Coveo Search API](https://docs.coveo.com/en/52/build-a-search-ui/use-the-search-api){: external} can issue search queries on an index. It is a configurable search that you can customize based on your use case. You can access Coveo search through an extension to your assistant.
 
 To set up the extension for Coveo search:
 
@@ -31,12 +31,12 @@ The OpenAPI specification defines the following method:
 
 - `GET /rest/search/v2`: Search for content in a set of sources or documents.
 
-For more information about the endpoints, see [Perform a Query](https://docs.coveo.com/en/1445/build-a-search-ui/perform-a-query) in the Coveo documentation.
+For more information about the endpoints, see [Perform a Query](https://docs.coveo.com/en/1445/build-a-search-ui/perform-a-query){: external} in the Coveo documentation.
 
 ## Create and add extension
 {: #search-extension-coveo-add-extension}
 
-1.  In your assistant, on the **Integrations** page, click **Build custom extension** and use the OpenAPI specification file to build a custom extension. For general instructions on building any custom extension, see [Building the custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#building-the-custom-extension).
+1. In your assistant, on the **Integrations** page, click **Build custom extension** and use the OpenAPI specification file to build a custom extension. For general instructions on building any custom extension, see [Building the custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#building-the-custom-extension).
 
 1. After you build the Coveo extension and it appears on your **Integrations** page, click **Add** to add it to your assistant. Use your Coveo API key to authenticate. For general instructions on adding any custom extension, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
 
