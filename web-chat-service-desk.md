@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-08-03"
+lastupdated: "2023-08-18"
 
 subcollection: watson-assistant
 
@@ -26,7 +26,7 @@ You can configure the web chat to transfer a customer to a live agent if the cus
 ## Contact center starter kits
 {: #deploy-web-chat-haa-starter-kits}
 
-If you are comfortable writing code, you can use starter kits to integrate with additional service desk platforms, or to develop your own integration with the service desk platform of your choice.
+If you are comfortable writing code, you can use starter kits to integrate with service desk platforms, or to develop an integration with the service desk platform of your choice.
 
 The starter kits are available from a [GitHub repo](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}. Fully functional reference implementations are provided for the following contact center platforms:
 
@@ -39,7 +39,7 @@ The starter kits are available from a [GitHub repo](https://github.com/watson-de
 - [Twilio Flex](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/flex/webChat){: external}
 - [Bring your own (starter kit)](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}
 
-The starter kit reference implementations, while functional, are examples only, and have not been vetted for production use. You should perform robust testing before deploying these integrations in production.
+The starter kit reference implementations, while functional, are examples only, and are not vetted for production use. You should perform robust testing before deploying integrations in production.
 {: important}
 
 After you set up a service desk integration, you must update your actions to ensure they understand user requests to speak to someone and can transfer the conversation properly.
