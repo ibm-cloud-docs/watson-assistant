@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-11"
+lastupdated: "2023-08-18"
 
 keywords: Watson Assistant release notes
 
@@ -69,7 +69,7 @@ OAuth 2.0 custom flow support for extensions
 {: release-note}
 
 Action and collection names must now be unique
-:   With this release, each action name must be different from other actions, and each collection name must be different from other collections. If your existing actions or collections have duplicate names, a warning icon appears in the Status column. For more information, see [Overview: Editing actions](docs/watson-assistant?topic=watson-assistant-build-actions-overview) and [Organizing actions in collections](/docs/watson-assistant?topic=watson-assistant-collections).
+:   With this release, each action name must be different from other actions, and each collection name must be different from other collections. If your existing actions or collections have duplicate names, a warning icon appears in the Status column. For more information, see [Overview: Editing actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview) and [Organizing actions in collections](/docs/watson-assistant?topic=watson-assistant-collections).
 
 ## 14 July 2023
 {: #watson-assistant-jul142023}
@@ -497,7 +497,7 @@ Never ask a step
 :   There may be some situations where you need a step to never ask a question because you anticipate there might be redundant questions in the conversation. A new setting, **Never ask**, is now available for any step that expects a customer response. For more information, see [Skipping steps, always asking steps, or never asking steps](/docs/watson-assistant?topic=watson-assistant-collect-info#collect-info-skip-step).
 
 Action notes
-:   You can now add free-form notes to each action. Within each action, you can use **Action notes** to add a description, documentation, comments, or any other annotations to help you keep track of your work as you build an action. For more information, see [Using the action editor](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-build-actions-overview#build-actions-overview-use).
+:   You can now add free-form notes to each action. Within each action, you can use **Action notes** to add a description, documentation, comments, or any other annotations to help you keep track of your work as you build an action. For more information, see [Using the action editor](/docs/watson-assistant?topic=watson-assistant-build-actions-overview#build-actions-overview-use).
 
 Variable values in Preview
 :  Viewing action variables in Preview has been improved. Now you can see the history of all action variables, rather than one action at a time. For more information, see [Variable values](/docs/watson-assistant?topic=watson-assistant-review#review-variable-values).
@@ -1251,7 +1251,7 @@ Session history now generally available
 
     Two new history events, [history:begin](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#historybegin){: external} and [history:end](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#historyend){: external} announce the beginning and end of the history of a reloaded session. These events can be used to view the messages that are being reloaded. The history:begin event allows you to edit the messages before they are displayed.
 
-    See this example for more information on saving the state of [customResponse](https://web-chat.global.assistant.watson.cloud.ibm.com/testfest.html?to=api-events#customresponse){: external} types in session history.
+    See this example for more information on saving the state of [customResponse](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external} types in session history.
 
 Channel switching
 :   You can now create a dialog response type to functionally generate a connect-to-agent response within channels other than web chat. If a user is in a channel such as Slack or Facebook, they can trigger a channel transfer response type. The user receives a link that forwards them to your organization's website where a connection to an agent response can be started within web chat. For more information, see [Adding a Channel transfer response type](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-add-channel-transfer){: external}.
@@ -1883,7 +1883,7 @@ March 2020 deprecation notice
 {: release-note}
 
 {{site.data.keyword.conversationfull}} is available in {{site.data.keyword.icp4dfull_notm}}
-:   The service can be installed on-premises in environments where {{site.data.keyword.icp4dfull_notm}} 2.5 is installed on OpenShift or standalone. See the [{{site.data.keyword.icp4dfull_notm}} documentation](https://www.ibm.com/support/knowledgecenter/SSQNUZ_2.5.0/cpd/svc/watson/assistant-overview.html){: external} for more information.
+:   The service can be installed on-premises in environments where {{site.data.keyword.icp4dfull_notm}} 2.5 is installed on OpenShift or standalone. Version 2.5 has been deprecated, and documentation is no longer online; we recommened [upgrading to the latest version](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.7.x?topic=upgrading). 
 
 ## 26 February 2020
 {: #watson-assistant-feb262020}
