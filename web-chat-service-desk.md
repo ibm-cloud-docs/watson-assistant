@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-08-18"
+lastupdated: "2023-08-20"
 
 subcollection: watson-assistant
 
@@ -39,7 +39,7 @@ The starter kits are available from a [GitHub repo](https://github.com/watson-de
 - [Twilio Flex](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/flex/webChat){: external}
 - [Bring your own (starter kit)](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}
 
-The starter kit reference implementations, while functional, are examples only, and are not vetted for production use. You should perform robust testing before deploying integrations in production.
+The starter kit reference implementations, while functional, are examples only, and are not vetted for production use. You need to perform robust testing before deploying integrations in production.
 {: important}
 
 After you set up a service desk integration, you must update your actions to ensure they understand user requests to speak to someone and can transfer the conversation properly.
