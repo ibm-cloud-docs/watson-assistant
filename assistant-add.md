@@ -38,7 +38,7 @@ If you need to add more assistants, follow these steps:
 
 1.  Add details about the new assistant.
 
-    - **Assistant name** (Requiired): Enter a name no more than 100 characters in length. 
+    - **Assistant name** (Required): Enter a name no more than 100 characters in length. 
     - **Description** (Optional): Enter a description no more than 200 characters in length.
     - **Assistant language**: Select a language for the assistant to use in conversations. For more information, see [language support](/docs/watson-assistant?topic=watson-assistant-admin-language-support).
 
