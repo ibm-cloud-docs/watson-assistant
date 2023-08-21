@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-04-10"
+lastupdated: "2023-08-21"
 
 subcollection: watson-assistant
 
@@ -390,7 +390,13 @@ This example embeds an iframe with a title and description.
       "response_type": "iframe",
       "source": "https://example.com/embeddable/example",
       "title": "Example iframe",
-      "description": "An example of embeddable content returned as an iframe response."
+      "description": "An example of embeddable content returned as an iframe response.",
+      "channel_options": {
+        "chat": {
+          "display": "inline",
+          "base_height": 180
+        }
+      }
     }
   ]
 }
