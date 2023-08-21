@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-18"
+lastupdated: "2023-08-21"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,19 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 7.6.0
+{: #7.6.0}
+
+*Release date: 21 August 2023*
+
+- **Added transaction ID to `onError` function**. The information provided in the `onError` config function now contains the transaction ID in the `transactionID` property when some errors communicating with {{site.data.keyword.conversationshort}} occur. For more information, see [Listening for errors](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#onerrordetail){: external}.
+
+- Fixed bug that occurred when sending two messages to an extension without waiting.
+
+- Fixed bug where the web chat launcher did not render when canceling the `window:open` event during session history.
+
+- Bug fixes.
 
 ## 7.5.0
 {: #7.5.0}
@@ -47,6 +60,8 @@ If you want to evaluate changes that are introduced in a web chat release before
 - **Reconnecting with a custom service desk integration**: Web chat now provides support to custom service desk integrations to allow them to reconnect the user to an agent when web chat is reloaded. For more information, see [Reconnecting sessions](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd#reconnect){: external}.
 
 - **Screen sharing with a custom service desk integration**: Web chat now provides support to custom service desk integrations to allow them to give the user options to agree to or stop a screen sharing session with a service desk. Note that the actual screen sharing capability is not provided by web chat; it must be provided by the service desk integration. [Screen sharing](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd#screen-sharing){: external}.
+
+- The `history` property in message objects have a newly added `from_history` property that indicates if the message came from session history. See our documentation on [Message object extensions](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#messageextensions).
 
 ## 7.4.0
 {: #7.4.0}
