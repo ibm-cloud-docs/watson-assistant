@@ -123,7 +123,7 @@ For more information about the journeys beta feature, see [Guiding customers wit
 
 - **Updated Zendesk agent app**: The agent app for Zendesk has been updated for compatibility with Zendesk workspaces.
 
-- In the service desk starter kits, the instance of the web chat integration has been added to the [serviceDeskFactory parameters](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/blob/main/src/common/types/serviceDesk.ts){: external} to make it accessible to custom service desk implementations.
+- In the service desk starter kits, the instance of the web chat integration has been added to the [serviceDeskFactory parameters](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd){: external} to make it accessible to custom service desk implementations.
 
 - **New instance methods**: The new [elements.getMessageInput()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#elements-get-message-input){: external} and [elements.getHomeScreenInput()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#elements-get-home-screen-input){: external} instance methods enable access to the input fields used by the customer to send messages. You can use these methods to change the input or to take action as the user is typing (for example, to implement for a type-ahead feature).
 
