@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-02-08"
+  years: 2018, 2023
+lastupdated: "2023-08-21"
 
 subcollection: watson-assistant
 
@@ -32,15 +32,15 @@ You can create multiple assistants in your instance. The number of assistants yo
 
 If you need to add more assistants, follow these steps:
 
-1.  In the top navigation, click the name of your current assistant, then choose **Create New**:
+1.  In the top navigation, click the name of your current assistant, and then choose **Create New**.
 
     ![Create new](images/assistant-add-create-new.png)
 
-1.  Add details about the new assistant:
+1.  Add details about the new assistant.
 
-    - **Assistant name**: A name no more than 100 characters in length. A name is required.
-    - **Description**: An optional description no more than 200 characters in length.
-    - **Assistant language**: The language the assistant uses in conversations. Learn more about [language support](/docs/watson-assistant?topic=watson-assistant-admin-language-support).
+    - **Assistant name** (Requiired): Enter a name no more than 100 characters in length. 
+    - **Description** (Optional): Enter a description no more than 200 characters in length.
+    - **Assistant language**: Select a language for the assistant to use in conversations. For more information, see [language support](/docs/watson-assistant?topic=watson-assistant-admin-language-support).
 
 1.  Click **Create assistant**.
 
@@ -52,4 +52,4 @@ To switch to another assistant in your instance:
 
     ![Switch assistants](images/assistant-add-switch.png)
 
-1.  Choose the assistant you want to open.
+1.  Choose the assistant that you want to open.
