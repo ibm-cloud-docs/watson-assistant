@@ -4,8 +4,6 @@ copyright:
   years: 2015, 2023
 lastupdated: "2023-08-22"
 
-keywords: {{site.data.keyword.conversationshort}} release notes
-
 subcollection: watson-assistant
 
 content-type: release-note
