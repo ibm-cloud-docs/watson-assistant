@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-08-17"
+lastupdated: "2023-08-22"
 
 subcollection: watson-assistant
 
@@ -30,7 +30,7 @@ You need:
 - A Genesys Cloud license, as listed in **Prerequisites** at [Getting started with web messaging](https://help.mypurecloud.com/articles/get-started-with-web-messaging)
 - An OAuth provider, only if allowing [authenticated users](#deploy-genesys-authenticate) (Optional)
 
-The Watson Assistant web chat integration only supports Genesys Messenger, not the older Genesys web chat widget. 
+The {{site.data.keyword.conversationshort}} web chat integration only supports Genesys Messenger, not the older Genesys web chat widget. 
 {: note} 
 
 ## Setting up Genesys Messenger with your assistant

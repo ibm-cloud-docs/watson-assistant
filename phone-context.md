@@ -46,7 +46,7 @@ The following tables describe the context variables that have special meaning in
 | `private.sip_request_uri` | string | The SIP request URI that started the conversation session. |
 | `private.sip_to_uri` | string | The SIP `To` URI associated with the conversation session. |
 | `private.user_phone_number` | string | The phone number that the call was received from. |
-| `assistant_phone_number` | string | The phone number associated with the Watson Assistant side that received the phone call. | 
+| `assistant_phone_number` | string | The phone number associated with the {{site.data.keyword.conversationshort}} side that received the phone call. | 
 {: caption="Context variables set by the phone channel" caption-side="top"}
 
 ## Input parameters that are set by the phone channel

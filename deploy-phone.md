@@ -53,7 +53,7 @@ When a customer makes a phone call using the telephone number connected to your 
 
 This feature is available only to Plus or Enterprise plan users. 
 
-Depending on the architecture of your existing telephony infrastructure, there are multiple ways you might integrate it with Watson Assistant. For more information about common integration patterns, read the blog post [Hey Watson, can I have your number?](https://medium.com/ibm-watson/hey-watson-can-i-have-your-number-7de8fc7621ed) on Medium.
+Depending on the architecture of your existing telephony infrastructure, there are multiple ways you might integrate it with {{site.data.keyword.conversationshort}}. For more information about common integration patterns, read the blog post [Hey Watson, can I have your number?](https://medium.com/ibm-watson/hey-watson-can-i-have-your-number-7de8fc7621ed) on Medium.
 {: tip}
 
 ## Set up the integration

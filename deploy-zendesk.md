@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-08-17"
+lastupdated: "2023-08-22"
 
 subcollection: watson-assistant
 
@@ -95,7 +95,7 @@ IBM provides an application to install in your Zendesk Service subdomain. When a
 
 1.  Click **Upload private app**.
 
-1.  Click **Choose File**, select the app that you downloaded from your Watson Assistant installation, and click **Upload**.
+1.  Click **Choose File**, select the app that you downloaded from your {{site.data.keyword.conversationshort}} install, and click **Upload**.
 
 1.  Click **Install**, if you agree to the Marketplace Terms of Use that display in the **Creating a new App** window. 
 

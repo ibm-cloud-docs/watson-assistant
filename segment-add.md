@@ -60,7 +60,7 @@ To add the Segment extension to your assistant, follow these steps:
 
     If you do not already have a Segment account, click **Sign up for free account** to create one. Verify your email address and complete your profile to activate your account.
 
-1. In the Segment web app, go to your workspace. In the **Sources** section, find the **Add IBM Watson Assistant Source** tile and click **Add Source**.
+1. In the Segment web app, go to your workspace. In the **Sources** section, find the **Add IBM {{site.data.keyword.conversationshort}} Source** tile and click **Add Source**.
 
 1. In the **Source Name** field, type a descriptive name for your {{site.data.keyword.conversationshort}} instance (for example, `Customer Care Assistant`). Click **Create Source**.
 

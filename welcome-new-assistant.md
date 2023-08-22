@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-07"
+lastupdated: "2023-08-22"
 
 subcollection: watson-assistant
 
@@ -31,7 +31,7 @@ The new {{site.data.keyword.conversationshort}} experience, focused on using **a
 - Explore our [interactive demo site](https://www.ibm.com/products/watson-assistant/demos/lendyr/demo.html){:external} to learn how {{site.data.keyword.conversationshort}}
  can be used to build powerful, scalable experiences for your users.
 
-For more information about the new experience, see [FAQs about the new IBM Watson Assistant experience](/docs/watson-assistant?topic=watson-assistant-watson-assistant-faqs#faqs-new-experience).
+For more information about the new experience, see [FAQs about the new IBM {{site.data.keyword.conversationshort}} experience](/docs/watson-assistant?topic=watson-assistant-watson-assistant-faqs#faqs-new-experience).
 
 Visit [Getting started with {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-getting-started) for a tutorial series on building in the new experience.
 

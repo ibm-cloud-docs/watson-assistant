@@ -48,7 +48,7 @@ Sent when the assistant completes handling of a message.
 | `environment`     | String   | The environment in which the message was handled (such as `draft` or `live`.) |
 | `language`        | String   | The language of the assistant. |
 | `pageUrl`         | String   | The URL of the web page from which the message was sent. |
-| `serviceInstance` | String   | The IBM Watson Assistant service instance. |
+| `serviceInstance` | String   | The IBM {{site.data.keyword.conversationshort}} service instance. |
 | `sessionId`       | String   | The ID of the session during which the message was handled. |
 | `skillsInvoked`   | String[] | An array of strings listing all skills that were invoked during handling of the message (for example, `main skill` or `actions skill`). |
 
@@ -96,7 +96,7 @@ Sent when processing of an action begins.
 | `handler`               | String   | The name of any handler that was called. |
 | `language`              | String   | The language of the assistant. |
 | `pageUrl`               | String   | The URL of the web page from which the message that triggered the action was sent. |
-| `serviceInstance`       | String   | The IBM Watson Assistant service instance. |
+| `serviceInstance`       | String   | The IBM {{site.data.keyword.conversationshort}} service instance. |
 | `sessionId`             | String   | The ID of the session during which the message that started the action was sent. |
 | `skillsInvoked`         | String[] | An array of strings listing all skills that were invoked during handling of the message that started the action (for example, `main skill` or `actions skill`). |
 | `stepsVisited`          | String[] | An array of strings listing the steps visited during processing of the action. |
@@ -123,7 +123,7 @@ Sent when processing of an action ends.
 | `handler`               | String   | The name of any handler that was called by the action. |
 | `language`              | String   | The language of the assistant. |
 | `pageUrl`               | String   | The URL of the web page from which the message that triggered the action was sent. |
-| `serviceInstance`       | String   | The IBM Watson Assistant service instance. |
+| `serviceInstance`       | String   | The IBM {{site.data.keyword.conversationshort}} service instance. |
 | `sessionId`             | String   | The ID of the session during which the message that started the action was sent. |
 | `skillsInvoked`         | String[] | An array of strings listing all skills that were invoked during handling of the message that started the action (for example, `main skill` or `actions skill`). |
 | `stepsVisited`          | String[] | An array of strings listing the steps visited during processing of the action. |
@@ -145,6 +145,6 @@ Sent when a new session is started.
 | `device`          | String   | The type of device that was used to send the message that started the session. |
 | `environment`     | String   | The environment in which the session was started (such as `draft` or `live`.) |
 | `pageUrl`         | String   | The URL of the web page from which the message that started the session was sent. |
-| `serviceInstance` | String   | The IBM Watson Assistant service instance. |
+| `serviceInstance` | String   | The IBM {{site.data.keyword.conversationshort}} service instance. |
 | `sessionId`       | String   | The ID of the session. |
 

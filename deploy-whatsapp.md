@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-07-12"
+lastupdated: "2023-08-22"
 
 subcollection: watson-assistant
 
@@ -133,7 +133,7 @@ To add an icon to your web page, complete the following steps:
 
     Specify a message that you know your assistant can answer in a useful way.
 
-1.  Copy the **Embed link** and add it to your web page. Consider adding text in front of the icon that explains what the icon does. For example, you might add a `<span>` HTML tag in front of the icon's `<span>` element that says `Have a question? Ask Watson Assistant for help`.
+1.  Copy the **Embed link** and add it to your web page. Consider adding text in front of the icon that explains what the icon does. For example, you might add a `<span>` HTML tag in front of the icon's `<span>` element that says `Have a question? Ask {{site.data.keyword.conversationshort}} for help`.
 
     When a user clicks the icon on your web page, it opens a WhatsApp messaging session that is connected to your assistant, and adds the text you specify into the user's text field, ready to be submitted.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-05-30"
+lastupdated: "2023-08-22"
 
 subcollection: watson-assistant
 
@@ -93,7 +93,7 @@ You can also write an expression directly without first picking a variable:
 ## Expression syntax
 {: #expression-syntax}
 
-The Watson Assistant expression language is based on the Spring Expression Language (SpEL), but with some important differences in syntax. For detailed background information about SpEL, see [Spring Expression Language (SpEL)](https://docs.spring.io/spring-framework/docs/5.2.13.RELEASE/spring-framework-reference/core.html#expressions){: external}.
+The {{site.data.keyword.conversationshort}} expression language is based on the Spring Expression Language (SpEL), but with some important differences in syntax. For detailed background information about SpEL, see [Spring Expression Language (SpEL)](https://docs.spring.io/spring-framework/docs/5.2.13.RELEASE/spring-framework-reference/core.html#expressions){: external}.
 
 ### Variables
 {: #expression-syntax-variables}

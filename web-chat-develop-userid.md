@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: “2023-06-07”
+lastupdated: “2023-08-22”
 
 subcollection: watson-assistant
 
@@ -30,7 +30,7 @@ subcollection: watson-assistant
 # Managing user identity information
 {: #web-chat-develop-userid}
 
-Watson Assistant charges based on the number of unique monthly active users (MAU).
+{{site.data.keyword.conversationshort}} charges based on the number of unique monthly active users (MAU).
 
 If you do not pass an identifier for the user when the session begins, the web chat creates one for you. It creates a first-party cookie with a generated anonymous ID. The cookie remains active for 45 days. If the same user returns to your site later in the month and chats with your assistant again, the web chat integration recognizes the user. And you are charged only once when the same anonymous user interacts with your assistant multiple times in a single month.
 

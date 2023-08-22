@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-07-17"
+lastupdated: "2023-08-22"
 
 subcollection: watson-assistant
 
@@ -257,7 +257,7 @@ Be sure to run your own security reviews to see how the web chat fits in with yo
 ### Billing
 {: #web-chat-architecture-billing}
 
-Watson Assistant charges based on the number of unique monthly active users (MAU).
+{{site.data.keyword.conversationshort}} charges based on the number of unique monthly active users (MAU).
 
 By default, the web chat creates a unique, anonymous ID the first time a new user starts a session. This identifier is stored in a first-party cookie, which remains active for 45 days. If the same user returns to your site and chats with your assistant again while this cookie is still active, the web chat integration recognizes the user and uses the same user ID. This means that you are charged only once per month for the same anonymous user.
 

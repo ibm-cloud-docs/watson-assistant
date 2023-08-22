@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-11-14"
+  years: 2020, 2023
+lastupdated: "2023-08-22"
 
 subcollection: watson-assistant
 
@@ -456,7 +456,7 @@ To configure transfer on failures, go to the **Advanced** tab in the phone integ
 For more information, see [Handling call and transfer failures](/docs/watson-assistant?topic=watson-assistant-deploy-phone-config#deploy-phone-config-failure).
 
 
-### Passing Watson Assistant Metadata in SIP Signaling
+### Passing {{site.data.keyword.conversationshort}} Metadata in SIP Signaling
 
 To support loading the conversational history between the caller and {{site.data.keyword.conversationshort}}, the phone integration specifies a value for the `User-to-User` header as a key that can be used with the web chat integration. If `User-to-User` is specified in the `transfer_headers` list, the session history key is sent in the `X-Watson-Assistant-Session-History-Key` header.
 
@@ -832,7 +832,7 @@ To send a specific message from an action step, use the `user_defined` response 
         "vgwAction": {
           "command": "vgwActSendSMS",
           "parameters": {
-            "message": "Hey, this is Watson Assistant. To send me your street address, respond to this text message with your address."
+            "message": "Hey, this is {{site.data.keyword.conversationshort}}. To send me your street address, respond to this text message with your address."
           }
         }
       }

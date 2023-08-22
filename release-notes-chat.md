@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-21"
+lastupdated: "2023-08-22"
 
 subcollection: watson-assistant
 
@@ -522,7 +522,7 @@ For more information about the new methods, see [Instance methods](https://web-c
 *Release date: 3 December 2020*
 
 - The translated strings in the [language files](https://github.com/watson-developer-cloud/assistant-web-chat/tree/main/languages) were revised and improved.
-- An error message is shown now if a Java Web Token (JWT) that is provided with an incoming message is invalid. If the first JWT fails when the web chat opens, an error message is displayed in place of the web chat window that says, `There was an error communicating with Watson Assistant`. If the initial JWT is valid, but the token for a subsequent message is invalid, a more discreet error message is displayed in response to the insecure input.
+- An error message is shown now if a Java Web Token (JWT) that is provided with an incoming message is invalid. If the first JWT fails when the web chat opens, an error message is displayed in place of the web chat window that says, `There was an error communicating with {{site.data.keyword.conversationshort}}`. If the initial JWT is valid, but the token for a subsequent message is invalid, a more discreet error message is displayed in response to the insecure input.
 - Bug fixes.
 
 ## 3.3.0

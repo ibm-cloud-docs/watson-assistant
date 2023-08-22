@@ -41,14 +41,14 @@ For more information about the **Analyze** page and how to use analytics with ac
 ## Action completion tab
 {: #dialog-analyze-action-completion}
 
-The **Action completion** page of Watson Assistant provides an overview of how all your assistant's actions are doing. If the dialog feature is enabled, the **Action completion** tab is relevant only if a dialog node triggers an action. If your assistant uses only a dialog, then this tab will be empty.
+The **Action completion** page of {{site.data.keyword.conversationshort}} provides an overview of how all your assistant's actions are doing. If the dialog feature is enabled, the **Action completion** tab is relevant only if a dialog node triggers an action. If your assistant uses only a dialog, then this tab will be empty.
 
 For more information about understanding action completion with actions, see [Understand your most and least successful actions](/docs/watson-assistant?topic=watson-assistant-analytics-action-completion).
 
 ## Conversations tab
 {: #dialog-analyze-conversations}
 
-The **Conversations** page of Watson Assistant provides a history of conversations between users and a deployed assistant. You can use this history to improve how your assistants understand and respond to user requests.
+The **Conversations** page of {{site.data.keyword.conversationshort}} provides a history of conversations between users and a deployed assistant. You can use this history to improve how your assistants understand and respond to user requests.
 
 From the **Conversations** page, an intent that directly calls an action is displayed in the **Topics** column. For example, you might set up an intent called `#buy_takeout` in the dialog, and that intent calls the `order pizza` action. This conversation topic is listed as `#buy_takeout > order pizza` in the **Topics** column.
 
