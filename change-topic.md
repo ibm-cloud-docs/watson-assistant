@@ -38,8 +38,7 @@ The assistant determines when to change the conversation topic as follows:
 
 1. After the second action completes, the assistant asks the customer if they want to return to the original action. If they say `Yes`, the assistant continues with the step where the customer changed the topic. In the example, the assistant returns to the original action and repeats the question `What is your CVV number?`.
 
-If an action starts and has not ended, meaning it hasn't reached its step set to *End the action*, then a customer can't digress into that action while it is still in progress. For example, if a customer starts an action, changes the topic to start another action, and then changes the topic again, any in-progress action won't be available for a topic switch.
-{: note}
+
 
 ## Enabling and disabling changing the topic
 {: #change-topic-enable}
