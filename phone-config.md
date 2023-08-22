@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-08-16"
+lastupdated: "2023-08-22"
 
 subcollection: watson-assistant
 
@@ -50,7 +50,8 @@ If, after you transfer the call to a human, the connection to a live agent fails
 
 - **Disconnect call on transfer failure**: Choose whether to disconnect the call after the failure message. This option is enabled by default. If this option is disabled, when a call transfer fails, your assistant can disconnect or process a different action.
 
-  If you choose to leave a call connected despite a transfer failure, Watson Assistant initiates a new turn to determine the next step. It's important that the Assistant be configured with an Action or webhook that can handle this scenario.
+
+  If you choose to leave a call connected despite a transfer failure, {{site.data.keyword.conversationshort}} initiates a new turn to determine the next step. It's important that the Assistant be configured with an Action or webhook that can handle this scenario.
 
 The phone integration supports disaster recovery by providing the ability to do a fast failover to another region instead of routing the call to a live agent when a service outage occurs. This is accomplished by sending a SIP 503 response to the upstream SIP trunking provider, instead of auto referring the call to a live agent when failures happen during the setup of a call. This 503 response can then be used by the SIP trunking provider to reroute the call to another region. If you want to take advantage of this capability, open a service ticket against the {{site.data.keyword.conversationshort}} service instance that requires disaster recovery.
 {: note}
@@ -66,7 +67,7 @@ You can add security to the phone connection by going to the **Advanced options*
 
     When SIP authentication is required, all inbound traffic (meaning requests from the SIP provider to your assistant) is authenticated using SIP digest authentication, and must be sent using Transport Layer Security (TLS). If this option is selected, the SIP digest user name and password must be configured, and the SIP trunk being used to connect to Assistant must be configured to use only TLS.
 
-    If you use Twilio as your SIP trunk provider, you cannot enable SIP authentication for outbound SIP trunks to Watson Assistant.
+    If you use Twilio as your SIP trunk provider, you cannot enable SIP authentication for outbound SIP trunks to {{site.data.keyword.conversationshort}}.
     {: important}
 
 ## Applying advanced SIP trunk configuration settings
@@ -205,7 +206,7 @@ The SIP trunk provider sets up a SIP trunk for your voice traffic, and manages a
 
 1. Click **Customer success** as the case type.
 
-1. For **Subject**, enter `SIP trunk provider setup for Watson Assistant`.
+1. For **Subject**, enter `SIP trunk provider setup for {{site.data.keyword.conversationshort}}`.
 
 1. Include the following information in the description:
 

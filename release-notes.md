@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-18"
+lastupdated: "2023-08-22"
 
-keywords: Watson Assistant release notes
+keywords: {{site.data.keyword.conversationshort}} release notes
 
 subcollection: watson-assistant
 
@@ -872,7 +872,7 @@ Add variables to links
 {: release-note}
 
 Facebook and Slack integrations now available
-:   The new Watson Assistant now includes integrations for [Facebook Messenger](/docs/watson-assistant?topic=watson-assistant-deploy-facebook) and [Slack](/docs/watson-assistant?topic=watson-assistant-deploy-slack).
+:   The new {{site.data.keyword.conversationshort}} now includes integrations for [Facebook Messenger](/docs/watson-assistant?topic=watson-assistant-deploy-facebook) and [Slack](/docs/watson-assistant?topic=watson-assistant-deploy-slack).
 
 Analytics for draft and live environments
 :   The **Analyze** page now lets you see analytics data for either the draft or live environments. For more information, see [Use analytics to review your entire assistant at a glance](/docs/watson-assistant?topic=watson-assistant-analytics-overview).
@@ -881,8 +881,8 @@ Analytics for draft and live environments
 {: #watson-assistant-oct072021}
 {: release-note}
 
-The new Watson Assistant
-:   The new Watson Assistant is now available! This new experience, focused on using **actions** to build customer conversations, is designed to make it simple enough for *anyone* to build a virtual assistant. Building, testing, publishing, and analyzing your assistant can all now be done in one simple and intuitive interface.
+The new {{site.data.keyword.conversationshort}}
+:   The new {{site.data.keyword.conversationshort}} is now available! This new experience, focused on using **actions** to build customer conversations, is designed to make it simple enough for *anyone* to build a virtual assistant. Building, testing, publishing, and analyzing your assistant can all now be done in one simple and intuitive interface.
 
     - New **navigation** provides a workflow for building, previewing, publishing, and analyzing your assistant.
     - Each assistant has a **home page** with a task list to help you get started.
@@ -891,7 +891,7 @@ The new Watson Assistant
     - Use a new suite of **analytics** to improve your assistant. Review which actions are being completed to see what your customers want help with, determine if your assistant understands and addresses customer needs, and decide how can you make your assistant better.
     - New **[documentation](/docs/watson-assistant)** focuses on the workflow of building, deploying, and improving your assistant.
 
-Older release notes might link to the [documentation for the classic Watson Assistant experience](/docs/assistant){: external}.
+Older release notes might link to the [documentation for the classic {{site.data.keyword.conversationshort}} experience](/docs/assistant){: external}.
 
 ## 21 September 2021
 {: #watson-assistant-sep212021}

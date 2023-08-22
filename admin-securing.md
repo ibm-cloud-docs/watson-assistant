@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-08-22"
 
 subcollection: watson-assistant
 
@@ -54,7 +54,7 @@ To prevent IBM from using your log data for general service improvements, comple
 
     For more information, see [Configuration](https://integrations.us-south.assistant.watson.cloud.ibm.com/web/developer-documentation/api-configuration){: external}.
 
-## Labeling and deleting data in Watson Assistant
+## Labeling and deleting data in {{site.data.keyword.conversationshort}}
 {: #securing-gdpr-wa}
 
 Do not add personal data to the training data (actions and steps, including user examples) that you create. In particular, be sure to remove any personally-identifiable information from files that contain real user utterances that you upload to mine for user example recommendations.
@@ -149,7 +149,7 @@ For more information, see the [API reference](/apidocs/assistant/assistant-v2#de
 ## Web chat usage data
 {: #web-chat-data}
 
-The Watson Assistant web chat sends limited usage data to the [Amplitude service](https://amplitude.com/){: external}. When the web chat widget is being interacted with by a user, we track the features that are being used, and events such as how many times the widget is opened and how many users start conversations. This information does not include Assistant training data or the content of any chat interactions. The information being sent to Amplitude is not Content as defined in the Cloud Service Agreement (CSA); it is Account Usage Information as described in Section 9.d of the CSA and is handled accordingly as described in the [IBM Privacy Statement](https://www.ibm.com/privacy){: external}. The purpose of this information gathering is limited to establishing statistics about use and effectiveness of the web chat and making general improvements.
+The {{site.data.keyword.conversationshort}} web chat sends limited usage data to the [Amplitude service](https://amplitude.com/){: external}. When the web chat widget is being interacted with by a user, we track the features that are being used, and events such as how many times the widget is opened and how many users start conversations. This information does not include Assistant training data or the content of any chat interactions. The information being sent to Amplitude is not Content as defined in the Cloud Service Agreement (CSA); it is Account Usage Information as described in Section 9.d of the CSA and is handled accordingly as described in the [IBM Privacy Statement](https://www.ibm.com/privacy){: external}. The purpose of this information gathering is limited to establishing statistics about use and effectiveness of the web chat and making general improvements.
 
 ## Private network endpoints
 {: #security-private-endpoints}

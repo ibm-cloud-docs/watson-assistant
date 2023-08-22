@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-07-25"
+lastupdated: "2023-08-22"
 
 keywords: global support, universal language, universal model, another language
 
@@ -77,7 +77,7 @@ Keep these tips in mind for integrations:
 | Portuguese (Brazilian) | pt-br |
 | Spanish | es |
 | Universal* | xx |
-*If you want to support conversations in a language for which Watson Assistant does not have a dedicated model, such as Russian, use Universal. 
+*If you want to support conversations in a language for which {{site.data.keyword.conversationshort}} does not have a dedicated model, such as Russian, use Universal. 
 {: caption="Supported languages" caption-side="top"}
 
 ## Feature support details

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: “2023-08-16”
+lastupdated: “2023-08-22”
 
 subcollection: watson-assistant
 
@@ -66,7 +66,7 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
 1. Under **Outbound**, scroll to the **SIP Servers or Proxies** section. Specify the following information:
 
-    - In the **Hostname or IP Address** field, type the SIP URI (not including `sips:`) from your Watson Assistant phone integration settings.
+    - In the **Hostname or IP Address** field, type the SIP URI (not including `sips:`) from your {{site.data.keyword.conversationshort}} phone integration settings.
 
     - In the **Port** field, type `5060`.
     
@@ -112,9 +112,10 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
 1. Click **Outbound Routes**. You can either edit the default outbound route or create a new one. Specify the following information:
 
-    - In the **External Trunks** field, click **Select External Trunks**. Select the trunk that you created for Watson Assistant.
 
-    - In the **Classifications** field, add the applicable classifications. This should at least include `National` and the classification that you created for Watson Assistant earlier. (The `National` route is used only to simulate the call in order to make sure the trunk is operational.)
+    - In the **External Trunks** field, click **Select External Trunks**. Select the trunk that you created for {{site.data.keyword.conversationshort}}.
+
+    - In the **Classifications** field, add the applicable classifications. This should at least include `National` and the classification you created for {{site.data.keyword.conversationshort}} earlier. (The `National` route is used only to simulate the call in order to make sure the trunk is operational.)
 
     - Toggle the **State** switch to **Enabled**.
 
@@ -136,7 +137,7 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
     - In the **Person** field, select yourself.
 
-1. In the Watson Assistant user interface, [create a new phone integration](/docs/watson-assistant?topic=watson-assistant-deploy-phone#deploy-phone-setup). Specify the following information:
+1. In the {{site.data.keyword.conversationshort}} user interface, [create a new phone integration](/docs/watson-assistant?topic=watson-assistant-deploy-phone#deploy-phone-setup). Specify the following information:
 
     - When prompted, select **Use an existing phone number with an external provider**.
 
@@ -148,14 +149,14 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
 1. In the Genesys Cloud console, click the circle in the upper left corner. Select **Phone**, and then choose the phone you created in the **Phone management** section. Set yourself as available. The phone icon on the left should now be active.
 
-1. Click **`+`** to start a new call. Specify the number you assigned to Watson Assistant and then click **Dial**. You should now hear your assistant speak.
+1. Click **`+`** to start a new call. Specify the number you assigned to {{site.data.keyword.conversationshort}} and then click **Dial**. You should now hear your assistant speak.
 
 If you encounter any errors, click **Performance -> Interactions** and view the PCAP file to read the diagnostics.
 {: note}
 
 ## Transferring to a live agent
 
-Now that your Genesys Cloud environment can connect to Watson Assistant, you can set up the ability for your assistant to transfer calls back to your live agents. To do so, follow these steps:
+Now that your Genesys Cloud environment can connect to {{site.data.keyword.conversationshort}}, you can set up the ability for your assistant to transfer calls back to your live agents. To do so, follow these steps:
 
 1. In the Genesys Cloud console, go to **DID Numbers -> DID Ranges** and create a new range. Specify the following information:
 
@@ -245,7 +246,7 @@ Now that your Genesys Cloud environment can connect to Watson Assistant, you can
     }
     ```
 
-    Make sure you use the `\\` escape characters so Watson Assistant does not misinterpret the `@` as part of the entity shorthand syntax.
+    Make sure you use the `\\` escape characters so {{site.data.keyword.conversationshort}} does not misinterpret the `@` as part of the entity shorthand syntax.
     {: note}
 
 1. Make a test call and say something that initiates a transfer to an agent. In your Genesys Cloud console, you should see the transfer take place.

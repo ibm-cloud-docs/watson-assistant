@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-07-28"
+lastupdated: "2023-08-22"
 
 subcollection: watson-assistant
 
@@ -56,7 +56,7 @@ When you're creating a new action, one example phrase is enough to start with. Y
 
 Each phrase can be up to 1,024 characters in length.
 
-By adding these phrases, your assistant learns what is the right action for what a customer wants. The additional examples build the training data that the machine learning engine of Watson Assistant uses to create a natural language processing model. The model is customized to understand your uniquely defined actions.
+By adding these phrases, your assistant learns what is the right action for what a customer wants. The additional examples build the training data that the machine learning engine of {{site.data.keyword.conversationshort}} uses to create a natural language processing model. The model is customized to understand your uniquely defined actions.
 
 ### Uploading phrases
 {: #understand-questions-uploading-examples}
@@ -188,6 +188,6 @@ As you work on your assistant, it's a good idea to coordinate customer phrase ex
 ### Confidence scoring
 {: #understand-questions-confidence-scoring}
 
-Behind the scenes, Watson Assistant determines a confidence score for each phrase. The score is absolute, meaning that a confidence score is assigned based on a predetermined scale, and not relative to other customer phrases. This approach adds flexibility in case multiple questions or requests are detected in a single user input. It also means that the system might not trigger an action at all, if a phrase has a low confidence score. As confidence scores change, your action examples might need restructuring.
+Behind the scenes, {{site.data.keyword.conversationshort}} determines a confidence score for each phrase. The score is absolute, meaning that a confidence score is assigned based on a predetermined scale, and not relative to other customer phrases. This approach adds flexibility in case multiple questions or requests are detected in a single user input. It also means that the system might not trigger an action at all, if a phrase has a low confidence score. As confidence scores change, your action examples might need restructuring.
 
 To learn more about review and testing confidence scores, see [Action confidence score](/docs/watson-assistant?topic=watson-assistant-review#review-debug-confidence) in [Reviewing and debugging your work](/docs/watson-assistant?topic=watson-assistant-review).

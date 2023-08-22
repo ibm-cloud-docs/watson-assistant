@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-31"
-
-keywords: assistant, omnichannel, virtual agent, virtual assistant, chatbot, conversation, watson assistant, watson conversation
+lastupdated: "2023-08-22"
 
 subcollection: watson-assistant
 
@@ -28,7 +26,7 @@ The new {{site.data.keyword.conversationshort}} experience, focused on using **a
 
 - Use a new suite of **analytics** to improve your assistant. Review which actions are being completed to see what your customers want help with, determine if your assistant understands and addresses customer needs, and decide how can you make your assistant better.
 
-For more information about the new experience, see [FAQs about the new IBM Watson Assistant experience](/docs/watson-assistant?topic=watson-assistant-watson-assistant-faqs#faqs-new-experience).
+For more information about the new experience, see [FAQs about the new IBM {{site.data.keyword.conversationshort}} experience](/docs/watson-assistant?topic=watson-assistant-watson-assistant-faqs#faqs-new-experience).
 
 ## Tutorial
 {: #getting-started-tutorial}
