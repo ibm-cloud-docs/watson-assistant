@@ -22,8 +22,8 @@ The following nodes are created for you automatically:
 
 - **Welcome**: The first node. It contains a greeting that is displayed to your users when they first engage with your assistant. You can edit the greeting.
 
-This node is not triggered in dialog flows that are initiated by users. For example, dialogs used in integrations with channels such as Facebook or Slack skip nodes with the `welcome` special condition.
-{: note}
+   This node is not triggered in dialog flows that are initiated by users. For example, dialogs used in integrations with channels such as Facebook or Slack skip nodes with the `welcome` special condition.
+   {: note}
 
 - **Anything else**: The final node. It contains phrases that are used to reply to users when their input is not recognized. You can replace the responses that are provided or add more responses with a similar meaning to add variety to the conversation. You can also choose whether you want your assistant to return each response that is defined in turn or return them in random order.
 
@@ -81,7 +81,7 @@ For more information about these built-in nodes, see [Starting and ending the di
 
 1.  **Optional**: If you want this node to be considered when users are shown a set of node choices at run time, and asked to pick the one that best matches their goal, then add a short description of the user goal handled by this node to the **external node name** field. For example, *Open an account*.
 
-    ![Plus or higher plans only](images/plus.png) The *external node name* field is only displayed only to users of paid plans. See [Disambiguation](/docs/assistant?topic=assistant-dialog-runtime#dialog-runtime-disambiguation) for more details.
+    [Plus]{: tag-green} The *external node name* field is only displayed only to users of paid plans. See [Disambiguation](/docs/assistant?topic=assistant-dialog-runtime#dialog-runtime-disambiguation) for more details.
 
 1.  To add more nodes, select a node in the tree, and then click the **More** ![More icon](images/overflow-menu--vertical.svg) icon.
 
@@ -265,7 +265,7 @@ To change the sequence in which individual text responses are returned, complete
 1.  Add each variation of the response into its own response variation field. For example:
 
    | Response variations |
-   | --- | --- |
+   | --- |
    | Hello. |
    | Hi. |
    | Howdy! |
@@ -337,7 +337,7 @@ In addition to the default response type of **Text**, for which you specify the 
 - **iframe**: Embeds content from an external website, such as a form or other interactive component, directly within the chat. The source content must be publicly accessible using HTTP, and must be embeddable as an HTML `iframe` element.
 - **Option**: Adds a list of one or more options. When a user clicks one of the options, an associated user input value is sent to your assistant. How options are rendered can differ depending on the number of options and where you deploy the dialog.
 - **Pause**: Forces the application to wait for a specified number of milliseconds before continuing with processing. You can choose to show an indicator that the assistant is working on typing a response. Use this response type if you need to perform an action that might take some time.
-- **Search skill**: ![Plus or higher plans only](images/plus.png) Searches an external data source for relevant information to return to the user. The data source that is searched is a {{site.data.keyword.discoveryshort}} service data collection that you configure when you add a search skill to the assistant that uses this dialog skill.
+- **Search skill**: [Plus]{: tag-green} Searches an external data source for relevant information to return to the user. The data source that is searched is a {{site.data.keyword.discoveryshort}} service data collection that you configure when you add a search skill to the assistant that uses this dialog skill.
 - **User-defined**: If you use the JSON editor to define the response, you can create your own user-defined response type. For more information, see [Defining responses using the JSON editor](/docs/assistant?topic=assistant-dialog-responses-json).
 
 Different integrations have different capabilities for displaying rich responses. If you want to define different responses that are customized for different channels, you can do so by editing the response using the JSON editor. For more information, see [Targeting specific integrations](/docs/assistant?topic=assistant-dialog-responses-json#dialog-responses-json-target-integrations).
@@ -353,11 +353,7 @@ To add a rich response, complete the following steps:
     - [**Image**](#dialog-overview-add-image)
     - [**Option**](#dialog-overview-add-option)
     - [**Pause**](#dialog-overview-add-pause)
-    - [**Search skill**](#dialog-overview-add-search-skill) ![Plus or higher plans only](images/plus.png) 
-    
-      This response type is only visible to users of paid plans.
-      {: note}
-
+    - [**Search skill**](#dialog-overview-add-search-skill) [Plus]{: tag-green}
     - [**Text**](#dialog-overview-simple-text)
 
 1.  To add another response type to the current response, click **Add response type**.
@@ -404,7 +400,7 @@ To add a *Connect to human agent* response type, complete the following steps:
     - Add routing information that is meaningful to the service desk you are using.
       
       | Service desk type | Routing information | Description |
-      | --- | --- |
+      | --- | --- | --- |
       | Salesforce | Button ID | Specify a valid button ID from your Salesforce deployment. |
       | Zendesk | Department | Specify a valid department name from your Zendesk account. |
       {: caption="Service desk routing options" caption-side="bottom"}
@@ -712,7 +708,7 @@ To add a *Pause* response type, complete the following steps:
 
 This response type does not render in the "Try it out" pane. You must access a node that uses this response type from a test deployment to see how your users will experience it. For more information, see [Testing your assistant from a web page](/docs/assistant?topic=assistant-deploy-web-link).
 
-### Adding a *Search skill* response type ![Plus or higher plan only](images/plus.png)
+### Adding a *Search skill* response type [Plus]{: tag-green}
 {: #dialog-overview-add-search-skill}
 
 If you have existing customer-facing material, such as an FAQ, a product catalog, or sales material that can answer questions that customers often ask, put that information to use. You can trigger a search of the existing material in real time to get the latest and most up-to-date answer for your customers. 

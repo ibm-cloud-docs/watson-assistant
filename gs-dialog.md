@@ -76,7 +76,7 @@ You created a dialog node that is triggered by the `welcome` condition. (`welcom
 
 You can test your dialog at any time to verify the dialog. Let's test it now.
 
-- Click the ![Try it](images/try-it.png) button to open the *Try it out* pane. You should see your welcome message.
+- Click the **Try it** button to open the *Try it out* pane. You should see your welcome message.
 
 ### Adding nodes to handle intents
 {: #gs-adding-nodes-to-handle-intents}
@@ -110,7 +110,7 @@ Now let's add nodes between the `Welcome` node and the `Anything else` node that
 
 You built a simple dialog to recognize and respond to both greeting and ending inputs. Let's see how well it works.
 
-1.  Click the ![Try it](images/try-it.png) button to open the "Try it out" pane.
+1.  Click the **Try it** button to open the "Try it out" pane.
 
 1.  In the text field, type `Hello` and then press Enter. The output indicates that the `#General_Greetings` intent was recognized, and the appropriate response (`Good day to you.`) is displayed.
 
