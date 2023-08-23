@@ -1,32 +1,14 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-05-24"
+  years: 2021, 2023
+lastupdated: "2023-08-23"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:preview: .preview}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:video: .video}
-{:tag-ibm-cloud: .tag data-tag-color="blue"}
-{:tag-cp4d: .tag data-tag-color="magenta"}
-
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Integrating with phone and Twilio Flex
@@ -38,7 +20,7 @@ You can use the phone integration to help your customers over the phone and tran
 
 ## Before you begin
 
-To use this integration pattern, make sure you have the following:
+To use this integration pattern, you need:
 
 - {{site.data.keyword.conversationshort}} Plus or Enterprise Plan (required for phone integration)
 - A Twilio account with the following products:
@@ -48,7 +30,9 @@ To use this integration pattern, make sure you have the following:
 
 ## Adding the {{site.data.keyword.conversationshort}} phone integration
 
-If you have not already added the phone integration to your assistant, follow these steps:
+You can skip this section if you already added the phone integration to your assistant.
+
+If you need to add the phone integration, follow these steps.
 
 1. In the **Integrations** section on the main page for your assistant under **Essential Channels**, you will see a tile for **Phone**.
 
@@ -64,13 +48,15 @@ For now, this is all you need to do. For more information about configuring the 
 
 ## Adding the Twilio Flex Project
 
-If you don't already have a Twilio Flex project, you can create one by following these steps:
+A new or an existing Twilio Flex project is required.
 
-1. From the project drop-down menu, click **Create New Project**. Specify a name for the project and verify your account information.
+If you need a Twilio Flex project, you can create one using these steps.
 
-1. On the welcome page, select Flex as the Twilio product for your new project. Fill out the questionnaire and then click **Get Started with Twilio**.
+1. From the project drop-down menu, click **Create New Project**. Specify a name for the project, and verify your account information.
 
-    After your Flex project has been provisioned, return to the [Twilio console](https://www.twilio.com/console){: external}. Make sure you have selected the correct project from the drop-down list.
+1. On the welcome page, select **Flex** as the Twilio product for your new project. Complete the questionnaire, and then click **Get Started with Twilio**.
+
+    After your Flex project is provisioned, return to the [Twilio console](https://www.twilio.com/console){: external}. Make sure you selected the correct project from the drop-down list.
 
 1. In the navigation menu, click the **All Products & Services** icon.
 
@@ -80,7 +66,7 @@ If you don't already have a Twilio Flex project, you can create one by following
 
 ## Creating the call flow
 
-After you have your phone integration and Twilio Flex project configured, you must create a call flow with Twilio Studio and provision (or port) the phone number you want your assistant to work with.
+After your phone integration and Twilio Flex project are configured, you must create a call-flow with Twilio Studio and provision (or port) the phone number you want your assistant to work with.
 
 To create the call flow:
 
@@ -90,15 +76,13 @@ To create the call flow:
 
 1. Click **+** to create a new flow.
 
-1. Name the new flow and then click **Next**.
+1. Name the new flow, and then click **Next**.
 
-1. Select **Start From Scratch** and then click **Next**.
-
-1. At this point you should have a **Trigger** widget at the top of your flow canvas.
+1. Select **Start From Scratch**, and then click **Next**. A **Trigger** widget appears in your flow canvas.
 
 1. Click the **Trigger** widget.
 
-1. Make note of the value from the **WEBHOOK URL** field. You will need this value in a subsequent step.
+1. Make note of the value from the **WEBHOOK URL** field. You need this value in a subsequent step.
 
 
 ## Configuring the phone number
@@ -111,7 +95,7 @@ To create the call flow:
 
 1. In the **Active Numbers** list, click the new phone number.
 
-1. Under **Voice and Fax**, configure the following settings:
+1. Under **Voice and Fax**, configure these settings.
 
     - For **CONFIGURE WITH** field, select **Webhook, TwiML Bins, Functions, Studio, or Proxy**.
 
@@ -119,9 +103,9 @@ To create the call flow:
 
     - For **PRIMARY HANDLER FAILS**, select **Studio Flow**. Select your flow from the drop-down list.
 
-1. Go to the {{site.data.keyword.conversationshort}} user interface, open the phone integration settings for your assistant.
+1. Go to the {{site.data.keyword.conversationshort}} user interface, and open the phone integration settings for your assistant.
 
-1. In the **Phone number** field, type the phone number you configured in Flex Studio.
+1. In the **Phone number** field, type the phone number that you configured in Flex Studio.
 
 1. Click **Save and exit**.
 
@@ -135,15 +119,15 @@ You can now test that your phone number is connected to your flow by triggering 
 
 1. Connect the **Incoming call** node on your **Trigger** widget to your **Say/Play** widget.
 
-1. Call your phone number. You should hear your Twilio flow respond with your test phrase.
+1. Call your phone number. You should hear Twilio flow respond with your test phrase.
 
 1. Delete the **Say/Play** widget and continue to the next step. 
 
-1. If this test did not work as expected, double check your phone number configuration to make sure its attached to your flow.
+1. If this test did not work as expected, double-check your phone number configuration to ensure it is attached to your flow.
 
 ## Creating a Twilio function to handle incoming calls
 
-Now we need to configure the call flow to direct inbound calls to the assistant using a Twilio function. Follow these steps:
+Now you need to configure the call-flow to direct inbound calls to the assistant by using a Twilio function. Follow these steps:
 
 1. In the navigation menu, click the **All Products & Services** icon.
 
@@ -153,7 +137,7 @@ Now we need to configure the call flow to direct inbound calls to the assistant 
 
 1. Click **Add** > **Add Function** to add a new function to your service. Name the new function `/receive-call`.
 
-1. Replace the template in your `/receive-call` function with the following code:
+1. Replace the template in your `/receive-call` function with this code:
 
     ```javascript
     exports.handler = function(context, event, callback) {
@@ -169,7 +153,7 @@ Now we need to configure the call flow to direct inbound calls to the assistant 
     }
     ```
 
-    - Replace `{sip_uri_hostname}` with the hostname portion of your  assistant's phone integration SIP URI (everything that comes after `sips:`).. Note that Twilio does not support `SIPS` URIs, but does support secure SIP trunking by appending `;secure=true` to the SIP URI.
+    - Replace `{sip_uri_hostname}` with the hostname portion of your  assistant's phone integration SIP URI (everything that comes after `sips:`). Note: Twilio does not support `SIPS` URIs, but does support secure SIP trunking by appending `;secure=true` to the SIP URI.
 
 1. Click **Save**.
 
@@ -177,13 +161,13 @@ Now we need to configure the call flow to direct inbound calls to the assistant 
 
 ## Redirecting to the incoming call handler 
 
-In this section you will use a TwiML **Redirect**** widget in your Studio Flow editor to call out to the `/receive-call` function created in the previous section.
+Use a TwiML **Redirect** widget in your Studio Flow editor to call out to the `/receive-call` function created in the previous section.
 
 1. Add a **TwiML Redirect** widget to your Studio Flow canvas. 
 
 1. Connect the Incoming Call trigger to your **TwiML Redirect** widget.
 
-1. Configure the **TwiML Redirect** widget with the URL for the `/receive-call` function you created in the previous section.
+1. Configure the **TwiML Redirect** widget with the URL for the `/receive-call` function that you created in the previous section.
 
 1. Your flow should now redirect to {{site.data.keyword.conversationshort}} when receiving an inbound call. 
 
@@ -191,15 +175,15 @@ In this section you will use a TwiML **Redirect**** widget in your Studio Flow e
 
 ## Creating a Twilio function to handle transfers from assistant
 
-We also need to configure the call flow to handle calls being transferred from the assistant back to Twilio Flex, for cases when when customers ask to speak to an agent. To show this, we will use a **Say/Play** after the **TwiML Redirect** widget to show that the call is transferred back to the flow from {{site.data.keyword.conversationshort}}. Note that there are many things like queuing the call for a live agent that can happen at this point. These will be discussed below.
+You also need to configure the call-flow to handle calls transferred from the assistant back to Twilio Flex, for cases when customers ask to speak to an agent. Use a **Say/Play** after the **TwiML Redirect** widget to show that the call is transferred back to the flow from {{site.data.keyword.conversationshort}}. Many options are possible at this point, such as queuing the call for a live agent, and are discussed in this section.
 
-1. Add a new **Say/Play** widget to your canvas and configure it with a phrase like `Transfer from Watsom complete`.
+1. Add a **Say/Play** widget to your canvas, and configure it with a phrase such as, `Transfer from Watsom complete`.
 
 1. Connect the **Return** node on the **TwiML Redirect** widget to your **Say/Play** widget.
 
 1. Click the **Trigger** widget.
 
-1. Copy the value from the **WEBHOOK URL** field. You will need this value in a subsequent step.
+1. Copy the value from the **WEBHOOK URL** field. You need this value in a subsequent step.
 
 1. On the Twilio Functions page, click **Add** > **Add Function** to add another new function to your service. Name this new function `/refer-handler`.
 
@@ -261,7 +245,7 @@ We also need to configure the call flow to handle calls being transferred from t
     }
     ```
 
-    Replace `{webhook_url}` with the **WEBHOOK URL** value you copied from the **Trigger** widget in your Studio Flow.
+    Replace `{webhook_url}` with the **WEBHOOK URL** value that you copied from the **Trigger** widget in your Studio Flow.
 
 1. Click **Save**.
 
@@ -275,9 +259,9 @@ Now we need to configure the assistant to transfer calls to Twilio Flex when a c
 
 1. In the {{site.data.keyword.conversationshort}} user interface, open the dialog skill of your assistant.
 
-1. Add a node with the condition you want to trigger your assistant to transfer customers to an agent.
+1. Add a node with the condition that triggers your assistant to transfer customers to an agent.
 
-1. Add a text response to the node, and specify the text you want your assistant to say to your customers before it transfers them to an agent.
+1. Add a text response to the node, and specify the text that you want your assistant to say before it transfers customers to an agent.
 
 1. Open the JSON editor for the response.
 
@@ -309,7 +293,7 @@ Now we need to configure the assistant to transfer calls to Twilio Flex when a c
 }
 ```
 
-Note that this example does not show how to use the context passed from {{site.data.keyword.conversationshort}} to Twilio Flex. You can reference the User-to-User information from within the Twilio Flex flow as follows:
+This example does not show how to use the context that is passed from {{site.data.keyword.conversationshort}} to Twilio Flex. You can reference the User-to-User information from within the Twilio Flex flow:
 
 ```json
 {
@@ -327,14 +311,15 @@ where `redirect_1` is the name of your redirect widget. For example, if you set 
 
 ## Test your assistant
 
-Your assistant should now be able to answer phone calls to your phone number and transfer calls back to your Twilio Flex flow. To test your assistant:
+Your assistant should now be able to answer calls to your phone number and transfer calls back to your Twilio Flex flow. To test your assistant:
 
 1. Call your phone number. When the assistant responds, ask for an agent.
 
-1. At this point you should hear the phrase configured in the **Say/Play** widget (such as "Transfer from Watson complete").
+1. You should hear the phrase configured in the **Say/Play** widget (such as, "Transfer from Watson complete").
 
-1. If the transfer fails, use the console log to follow the flow of the call as it moves from the flow to the `/receive-call` handler, to {{site.data.keyword.conversationshort}}, to the refer-handler and back to your Twilio Flex flow.
+1. If the transfer fails, use the console log to follow the flow of the call as it moves from the flow to the `/receive-call` handler, to {{site.data.keyword.conversationshort}}, to the refer-handler, and then back to your Twilio Flex flow.
  
 
 ###  Share the conversation history with service desk agents 
-To enable the service desk agent to get a quick view of the conversation history between the visitor and the assistant, set up the {{site.data.keyword.conversationshort}} Agent App app for your Twilio Flex environment. For more information, see the documentation for the [Twilio Flex {{site.data.keyword.conversationshort}} Agent App](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/flex/agentApp){: external}.
+
+To enable service desk agents to get a quick view of the conversation history between visitor and assistant, set up the {{site.data.keyword.conversationshort}} Agent App app for your Twilio Flex environment. For more information, see documentation at the [Twilio Flex {{site.data.keyword.conversationshort}} Agent App](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/flex/agentApp){: external}.
