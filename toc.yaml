@@ -33,7 +33,7 @@ toc:
       id: howto
       topics:
       - topicgroup:
-          label: Building your assistant
+          label: Building your assistant with actions
           topics:
           - topic: build-actions-overview.md
             navtitle: Overview
