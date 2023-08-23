@@ -65,7 +65,9 @@ To disable changing the topic for an individual action:
 ### Disabling returning to the original topic
 {: #change-topic-never-return}
 
-Even when you allow changing the topic, you might not want a customer to return to the previous topic. If you need to do this:
+Even when you allow changing the topic, you might not want a customer to return to the previous topic. 
+
+To disable returning to the original topic:
 
 1. Edit an action, then click **Action settings** ![Gear icon](../../icons/settings.svg).
 
@@ -80,7 +82,7 @@ Even when you allow changing the topic, you might not want a customer to return 
 
 If you are using actions and dialog, you can ensure that customers can change topics between an action and a dialog node.
 
-This setting is available if you have activated dialog in Assistant settings. For more information, see [Activating dialog and migrating skills](/docs/watson-assistant?topic=watson-assistant-activate-dialog).
+This setting is available if you activate dialog in Assistant settings. For more information, see [Activating dialog and migrating skills](/docs/watson-assistant?topic=watson-assistant-activate-dialog).
 {: note}
 
 1. Set the toggle **Change topics from actions to dialog** to **On**.
@@ -95,7 +97,7 @@ By default, changing the conversation topic works differently for free text and 
 - The assistant is asking for a free text response 
 - An utterance matches the pattern in a regex response
 
-If you want a customer to be able to digress and change topics while entering a free text or regex answer:
+If you want a customer to be able to digress and change topics when they enter a free text or regex answer:
  
 1. Within the step, click the **Settings** icon for the customer response.
  
