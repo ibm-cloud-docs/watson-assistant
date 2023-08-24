@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-22"
+lastupdated: "2023-08-24"
 
 subcollection: watson-assistant
 
@@ -76,7 +76,7 @@ Action and collection names must now be unique
 Multiple responses when customizing validation
 :    When you edit validation for a customer response, you can now include several validation responses. For more information, see [Customizing validation for a response](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-handle-errors#customize-validation).
 
-Fallback option for dynamic options
+Fallback choice for dynamic options
 :   The *dynamic options* response type now includes a fallback static choice, such as `None of the above`, if the options aren't what the customer wants. You can then add a step that is conditioned on this static option to provide further assistance. For more information, see [Dynamic options](/docs/watson-assistant?topic=watson-assistant-dynamic-options).
 
 Allow change of topic between actions and dialog
