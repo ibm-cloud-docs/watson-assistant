@@ -8,7 +8,7 @@ subcollection: watson-assistant
 
 ---
 
-{{{site.data.keyword.attribute-definition-list}}
+{{site.data.keyword.attribute-definition-list}}
 
 # Adding more assistants
 {: #assistant-add}
