@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-22"
+lastupdated: "2023-08-24"
 
 subcollection: watson-assistant
 
@@ -49,9 +49,9 @@ If you want to evaluate changes that are introduced in a web chat release before
 
     The current window methods and events are still supported for existing web chats and assistants but are deprecated and will be removed in a future version. For more information, see [Migrating from window to view events and methods](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#windowviewmigration){: external}.
 
-- **New Genesys Web Messenger service desk integration** The service desk integration for Genesys Web Messenger is no longer in beta, and now includes support for user information strings in languages besides English. For more information, see [Integrating with Genesys Web Messenger](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-genesys)
+- **New Genesys Web Messenger service desk integration** The service desk integration for Genesys Web Messenger is no longer in beta, and now includes support for user information strings in languages besides English. For more information, see [Integrating with Genesys Web Messenger](/docs/watson-assistant?topic=watson-assistant-deploy-genesys)
 
-- **New NICE CXone service desk integration** The service desk integration for NICE CXone Digital First Omnichannel has been released. For more information, see [Integratng wwith NICE CXone Digital First Omnichannel](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-nice-cxone)
+- **New NICE CXone service desk integration** The service desk integration for NICE CXone Digital First Omnichannel has been released. For more information, see [Integratng wwith NICE CXone Digital First Omnichannel](/docs/watson-assistant?topic=watson-assistant-deploy-nice-cxone)
 
 - **Added a restart button**: A new `showRestartButton` configuration option specifies whether the web chat interface should display a restart button in the header, in addition to the existing **`-`** (Minimize) button. A customer can click this button to end the conversation or end any conversation with a human agent, while keeping the chat open. The chat transcript is cleared, but any transcript of a conversation with a human agent is preserved. For more information, see [showRestartButton](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration){: external}.
 
