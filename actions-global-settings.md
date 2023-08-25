@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-10"
+lastupdated: "2023-08-25"
 
 keywords: settings
 subcollection: watson-assistant
@@ -39,7 +39,12 @@ In the **Ask clarifying questions** section, you can:
 - Modify the text that your assistant uses to introduce the clarification list or when no action matches.
 - Enable or disable response modes, and modify the text that your assistant uses with a response mode. If you enable response modes, you can use the **Customize modes** section to choose a response mode for each action to set how it behaves.
 
-For more information, see [Customizing clarifying questions](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-disambiguation-config) and [Response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
+In the **No action matches** section, you can affect how often your assistant routes customers to the *No action matches* action when input is unrecognized.
+
+For more information, see:
+- [Customizing clarifying questions](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-disambiguation-config)
+- [Response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes)
+- [When the assistant can't understand your customer's request](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches)
 
 ## Change conversation topic
 {: #actions-global-settings-change-conversation-topic}
