@@ -23,6 +23,9 @@ Release notes describe the new features, changes, and bug fixes in each release 
 {: #watson-assistant-aug242023}
 {: release-note}
 
+See who last edited a collection or action
+:   Starting with this release, you can see who last edited a collection or action. On the Actions page, you can hover on the values in the Last edited column to see the email address of the person who last modified the collection or action. This information is available for edits as of August 24, 2023.
+
 Change to response mode default settings
 :    As of this release, the default settings for *Step validation attempts before offering support* have changed. In *Clarifying* mode, the default is now 2 instead of 1. In *Confident* mode, the default is now 4 instead of 3. For Enterprise plans, the customization choices are now 2 times, 3 times, and 4 times instead of 1 time, 2 times, and 3 times. For more information, see [Response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
 
