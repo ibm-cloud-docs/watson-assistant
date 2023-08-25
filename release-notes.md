@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-24"
+lastupdated: "2023-08-25"
 
 subcollection: watson-assistant
 
@@ -19,6 +19,15 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+## 24 Aug 2023
+{: #watson-assistant-aug242023}
+{: release-note}
+
+Change to response mode default settings
+:    As of this release, the default settings for *Step validation attempts before offering support* have changed. In *Clarifying* mode, the default is now 2 instead of 1. In *Confident* mode, the default is now 4 instead of 3. For Enterprise plans, the customization choices are now 2 times, 3 times, and 4 times instead of 1 time, 2 times, and 3 times. For more information, see [Response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes).
+
+Change to id values in multilingual downloads for translation
+:   As of this release, there is a change to the `id` values in the multilingual downloads for translation. If you have used the multilingual download before, you need to download a new CSV file to match the IDs in your assistant. For more information, see [Using multilingual downloads for translation](/docs/watson-assistant?topic=watson-assistant-admin-language-support#admin-language-support-multilingual).
 
 ## 10 Aug 2023
 {: #watson-assistant-aug102023}
