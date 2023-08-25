@@ -28,7 +28,11 @@ toc:
   - navgroup:
       id: tutorial
       topics:
-      - tutorial-neuralseek.md
+      - tutorial-neuralseek.md</draft>
+      - topicgroup:
+          label: Dialog tutorials
+          topics:
+          - gs-dialog.md</draft>
   - navgroup:
       id: howto
       topics:
