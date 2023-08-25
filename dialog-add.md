@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-24"
+lastupdated: "2023-08-25"
 
 keywords: import workspace, import JSON, export JSON, upload JSON, download JSON, collaborate
 
@@ -90,3 +90,41 @@ You can add one dialog skill to an assistant. You must open the assistant tile a
     Click the skill that you want to add from the available skills that are displayed.
 
 When you add a dialog skill from here, you get the development version. If you want to add a specific skill version, add it from the skill's *Versions* page instead.
+
+### Actions skill in the classic experience
+{: #skill-add-actions-skill}
+
+If you're using the classic experience, you can add an actions skill instead of a dialog skill. Actions represent the tasks you want your assistant to help your customers with.
+
+Each action contains a series of steps that represent individual exchanges with a customer. Building the conversation that your assistant has with your customers is fundamentally about deciding which steps, or which user interactions, are required to complete an action. After you identify the list of steps, you can then focus on writing engaging content to turn each interaction into a positive experience for your customer.
+
+If you're interested in using actions, the new experience of {{site.data.keyword.conversationshort}} is recommended, rather than using an actions skill in the classic experience. The new experience provides a simplified user interface, an improved deployment process, and access to the latest features. For more information, see [Overview: Editing actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview).
+
+### Search skill in the classic experience
+{: #skill-add-search-skill}
+
+[Plus]{: tag-green}[Enterprise]{: tag-purple}
+
+When {{site.data.keyword.conversationshort}} doesn't have an explicit solution to a problem, it routes the user question to a search skill to find an answer from across your disparate sources of self-service content. The search skill interacts with the {{site.data.keyword.discoveryfull}} service to extract this information from a configured data collection.
+
+If you already use the {{site.data.keyword.discoveryshort}} service, you can mine your existing data collections for source material that you can share with customers to address their questions.
+
+For more information, see [{{site.data.keyword.discoveryfull}} search integration setup](/docs/watson-assistant?topic=watson-assistant-search-add).
+
+### Skill limits
+{: #skill-add-limits}
+
+The number of skills you can create depends on your {{site.data.keyword.conversationshort}} plan type. Any sample dialog skills that are available for you to use do not count toward your limit unless you use them. A skill version does not count as a skill.
+
+| Plan | Maximum number of skills of each type per service instance |
+| --- | --- |
+| Enterprise | 100 |
+| Premium (legacy) | 100 |
+| Plus | 50 |
+| Trial | 50 |
+| Standard (legacy) | 20 |
+| Lite | 5 |
+{: caption="Plan details" caption-side="bottom"}
+
+After 30 days of inactivity, an unused skill in a Lite plan service instance might be deleted to free up space.
+{: note}
