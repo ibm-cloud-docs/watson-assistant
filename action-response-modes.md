@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-22"
+lastupdated: "2023-08-25"
 
 subcollection: watson-assistant
 
@@ -49,8 +49,7 @@ This table shows the default settings for each mode.
 | Clarify when one action matches | More often | Sometimes |
 | Clarify when more than one action matches | More often | Sometimes |
 | Offer support option when asking a clarifying question | More often | Sometimes |
-| Step validation attempts before offering support | 1 time | 3 times |
-
+| Step validation attempts before offering support | 2 times | 4 times |
 {: caption="Default settings" caption-side="bottom"}
 
 ## Choosing a mode for individual actions
@@ -88,8 +87,7 @@ If you customize, the choices for each setting are;
 | Clarify when one action matches | More often, Sometimes, Less often |
 | Clarify when more than one action matches | More often, Sometimes, Less often |
 | Offer support option when asking a clarifying question | More often, Sometimes, Less often |
-| Step validation attempts before offering support | 1 time, 2 times, 3 times |
-
+| Step validation attempts before offering support | 2 times, 3 times, 4 times |
 {: caption="Mode customization choices" caption-side="bottom"}
 
 If you customize modes, be sure to test any changes.
