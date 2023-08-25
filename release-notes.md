@@ -19,6 +19,14 @@ Find out what's new in {{site.data.keyword.conversationfull}}.
 {: shortdesc}
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 25 Aug 2023
+{: #watson-assistant-aug252023}
+{: release-note}
+
+Setting for when to use *No action matches*
+:   You can use a new global setting for actions to change how often your assistant routes customers to the *No action matches* action. By setting this threshold, you can affect when the assistant fetches answers from a search integration, triggers the *Fallback* action, or switches topics. This is a beta feature that is available for evaluation and testing purposes. For more information, see [When the assistant can't understand your customer's request](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches).
+
 ## 24 Aug 2023
 {: #watson-assistant-aug242023}
 {: release-note}

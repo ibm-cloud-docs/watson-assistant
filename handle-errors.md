@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-22"
+lastupdated: "2023-08-25"
 
 subcollection: watson-assistant
 
@@ -49,6 +49,18 @@ By default, this action has two steps, each step conditioned on the *No action m
 You can edit the *No action matches* action just as you can any other action. This includes changing the existing steps and adding or deleting steps. Note that if you change the *No action matches* action, you might accidentally break your assistant's ability to recover from errors in the conversation. If this happens, you can recreate the default steps based on the information in this section.
 {: tip}
 
+You can set how often customers are routed to *No action matches* by changing a global setting for actions. [IBM Cloud]{: tag-ibm-cloud}
+
+This setting is a beta feature that is available for evaluation and testing purposes on IBM Cloud only.
+{: beta}
+
+1. From the **Actions** page of the assistant, click **Global settings** ![Gear icon](../../icons/settings.svg).
+
+1. On the **Clarifying questions** tab, you can edit the **No action matches** section. The choices are:
+
+   - Rarely (default)
+   - Sometimes
+   - More often
 
 #### Adding examples of unsupported input
 {: #no-action-matches-add-examples}
