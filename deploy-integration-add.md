@@ -2,29 +2,14 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-03"
+lastupdated: "2023-08-27"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:video: .video}
-{:tag-ibm-cloud: .tag data-tag-color="blue"}
-{:tag-cp4d: .tag data-tag-color="magenta"}
+{{site.data.keyword.attribute-definition-list}}
+
 
 # Adding integrations
 {: #deploy-integration-add}
@@ -36,7 +21,7 @@ To deploy an assistant to customers, a channel integration must be added. By def
 
 ![Image of the Integrations catalog](images/integrations-catalog.png)
 
-When you add an integration, that integration is added to both the draft and live environments, or to all your enviroments if you are using [multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments). Test content and integrations before you deploy your assistant to customers. For more information about adding integrations to your assistant, see [Adding integrations](/docs/watson-assistant?topic=watson-assistant-deploy-integration-add). After a live channel is added and configured, it is ready to deploy your assistant on its corresponding platform.
+When you add an integration, that integration is added to both the draft and live environments, or to all your environments if you are using [multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments). Test content and integrations before you deploy your assistant to customers. For more information about adding integrations to your assistant, see [Adding integrations](/docs/watson-assistant?topic=watson-assistant-deploy-integration-add). After a live channel is added and configured, it is ready to deploy your assistant on its corresponding platform.
 
 ## Add an integration
 {: #deploy-integration-add-task}
@@ -47,7 +32,7 @@ Follow these steps to add integrations to your assistant:
 
 1.  Scroll to see available integrations.
 
-    **Why do I have the *Web chat* integration?** This integration is provisioned and added automatically to your first assistant only.
+    **Why do I have the *web chat* integration?** This integration is provisioned and added automatically to your first assistant only.
 
     {{site.data.keyword.conversationshort}} comes with the web chat integration, which is an engaging and fully extensible front-end client that can be added to your website in minutes. It is designed to handle advanced conversational scenarios, including rich responses, such as images, video, and iframes, suggestions when the user gets stuck, and live agent escalation.
 
@@ -62,11 +47,11 @@ Follow these steps to add integrations to your assistant:
     - [WhatsApp with Twilio](/docs/watson-assistant?topic=watson-assistant-deploy-whatsapp)
     - [Search](/docs/watson-assistant?topic=watson-assistant-search-add)
 
-    You can also set up live agent integrations by going to the **Live agent** tab from the **Web chat** tile. The options include:
+    You can also set up live agent integrations by going to the **Live agent** tab from the **web chat** tile. The options include:
 
     **Web chat live agent integrations**
     - [Web chat with Genesys Web Messenger](/docs/watson-assistant?topic=watson-assistant-deploy-genesys)
-    - [Web chat with NICE CXone Digital First Omnichannal Live Chat](/docs/watson-assistant?topic=watson-assistant-deploy-nice-cxone)
+    - [Web chat with NICE CXone Digital First Omnichannel Live Chat](/docs/watson-assistant?topic=watson-assistant-deploy-nice-cxone)
     - [Web chat with Salesforce support](/docs/watson-assistant?topic=watson-assistant-deploy-salesforce)
     - [Web chat with Zendesk support](/docs/watson-assistant?topic=watson-assistant-deploy-zendesk)
 
@@ -84,7 +69,7 @@ Follow these steps to add integrations to your assistant:
     - [Phone with Twilio Flex](/docs/watson-assistant?topic=watson-assistant-deploy-phone-flex)
     - [Bring your own live agent integration](/docs/assistant?topic=assistant-deploy-phone#deploy-phone-transfer-service){: external}
 
-1.  Follow instructions provided on the screen to complete the integration process.
+1.  Follow the instructions provided on screen to complete the integration process.
 
 ![Plus or higher plans only](images/plus.png) For environments where private endpoints are in use, keep in mind that these integrations send traffic over the internet.
 {: note}
