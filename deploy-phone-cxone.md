@@ -2,30 +2,13 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-13"
+lastupdated: "2023-08-27"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:tag-ibm-cloud: .tag data-tag-color="blue"}
-{:tag-cp4d: .tag data-tag-color="magenta"}
-
-
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Integrating with phone and NICE CXone contact center ![Plus or higher plans only](images/plus.png)
@@ -38,14 +21,14 @@ Connect your assistant to a NICE CXone contact center with live agents.
 
 Transfer customers from a chat with your assistant to live agents who can help them by phone. If customers ask to speak to someone, your assistant can forward them directly to customer support with the conversation history.
 
-This integration creates a connection between your assistant and a contact center using NICE CXone.
+This integration creates a connection between your assistant and a contact center with NICE CXone.
 
 You need a Plus or Enterprise Plan to use this feature.
 
 ## Before you begin
 {: #deploy-phone-cxone-account}
 
-You must have a NICE CXone account and phone numbers allocated for this integration. 
+You must have a NICE CXone account and phone numbers that are allocated for this integration. 
 
 1.  Go to the [NICE website](https://www.nice.com/){: external}.
 2.  Create an account.
@@ -62,7 +45,7 @@ To generate NICE CXone access keys to use with your assistant:
 
 1. Click the app selector  ![](https://help.nice-incontact.com/content/resources/images/icons/appselectoricon.png) and select  **Admin**.
 
-1. Click  **Users**, and then locate and click the user account you want to use for the integration.
+1. Click  **Users**, and then locate and click the user account that you want to use for the integration.
 
 1. Click the **Access Keys** tab.
 1. Click **Generate New Access Key**.
@@ -79,7 +62,7 @@ To complete setup, you must have an assistant ready to deploy, your NICE CXone a
 
 To integrate your assistant with NICE CXone:
 
-1. In the **Integrations** section on the main page for your assistant under **Essential Channels**, you will see a tile for **Phone**.
+1. In the **Integrations** section on the main page for your assistant under **Essential Channels**, you see a tile for **Phone**.
 
 1. On the **Phone** tile, click **Add**.
 
@@ -93,23 +76,23 @@ To integrate your assistant with NICE CXone:
 	    - the **Authentication URL** from NICE CXone
 	    - the **API URL**, which is the *Admin* API endpoint from NICE CXone
 	    - the **Access key ID**
-	    - the **Access key secret** 
+	    - the **Access key secret**.
     
     Click **Test connection** to verify the credentials. 
     
     Click **Next**.
 
-1. On the **Phone number** page, enter a phone number you allocated for the NICE CXone integration. You can add more phone numbers later.
+1. On the **Phone number** page, enter a phone number that you allocated for the NICE CXone integration. You can add more phone numbers later.
 
     Click **Next**.
 
-1. On the **Speech to Text** page, select the instance of the {{site.data.keyword.speechtotextshort}} service you want to use.
+1. On the **Speech to Text** page, select the instance of the {{site.data.keyword.speechtotextshort}} service that you want to use.
 
-    - If you have existing {{site.data.keyword.speechtotextshort}} instances, select the instance you want to use from the list.
+    - If you have existing {{site.data.keyword.speechtotextshort}} instances, select the instance from the list.
 
     - If you do not have any existing {{site.data.keyword.speechtotextshort}} instances, click **Create new instance** to create a new Plus or Enterprise instance.
 
-1. In the **Choose your Speech to Text language model** field, select the language you want to use.
+1. In the **Choose your Speech to Text language model** field, select the language that you want to use.
 
     The list of language models is automatically filtered to use the same language as your assistant. To see all language models, toggle the **Filter models based on assistant language** switch to **Off**.
 
@@ -120,15 +103,15 @@ To integrate your assistant with NICE CXone:
 
     Click **Next**.
 
-1. On the **Text to Speech** page, select the instance of the {{site.data.keyword.texttospeechshort}} service you want to use.
+1. On the **Text to Speech** page, select the instance of the {{site.data.keyword.texttospeechshort}} service that you want to use.
 
-    - If you have existing {{site.data.keyword.texttospeechshort}} instances, select the instance you want to use from the list.
+    - If you have existing {{site.data.keyword.texttospeechshort}} instances, select the instance from the list.
 
     - If you do not have any existing {{site.data.keyword.texttospeechshort}} instances, click **Create new instance** to create a new Standard instance.
 
     Click **Next**.
 
-1. On the **Contact center integrations** page, click **Test connection** below the setup information you entered.
+1. On the **Contact center integrations** page, click **Test connection** near the setup information you entered.
 
     - If **Invalid**, check your credentials and enter each again.
 
@@ -147,7 +130,7 @@ The following actions and settings in the workflow are necessary for integration
 
 #### Connecting a caller to your assistant
 
-Use the [Sipputheader](https://help.nice-incontact.com/content/studio/actions/sipputheader/sipputheader.htm) action. In the **headerName** property, enter the name of the SIP header field that will contain the Contact ID. This header field is included in outgoing SIP INVITE messages to {{site.data.keyword.conversationshort}}.  
+Use the [Sipputheader](https://help.nice-incontact.com/content/studio/actions/sipputheader/sipputheader.htm) action. In the **headerName** property, enter the name of the SIP header field that contains the Contact ID. This header field is included in outgoing SIP INVITE messages to {{site.data.keyword.conversationshort}}.  
 
 - **headerName** X-Contact-ID
 - **headerValue** {ContactId}
@@ -155,9 +138,9 @@ Use the [Sipputheader](https://help.nice-incontact.com/content/studio/actions/si
 **Sipputheader** must be executed before **Placecall**.
 {: note}
 
-Use a [Placecall](https://help.nice-incontact.com/content/studio/actions/placecall/placecall.htm) action to initiate an outbound call to {{site.data.keyword.conversationshort}}. In the **PhoneNumber** property, enter the phone number you allocated for this integration. 
+Use a [Placecall](https://help.nice-incontact.com/content/studio/actions/placecall/placecall.htm) action to initiate an outbound call to {{site.data.keyword.conversationshort}}. In the **PhoneNumber** property, enter the phone number that you allocated for this integration. 
 
-The phone number must match the number you configured in **Use an existing phone number with an external provider** in the {{site.data.keyword.conversationshort}} user interface.
+The phone number must match the number that you configured in **Use an existing phone number with an external provider** in the {{site.data.keyword.conversationshort}} user interface.
 {: note}
 
 ![Image of the outbound call flow](images/cxone-placecall.png)
@@ -188,7 +171,7 @@ Use [Reqagent](https://help.nice-incontact.com/content/studio/actions/reqagent/r
 
 #### Displaying conversation history to a live agent
 
-Configure your script to provide a transcript of the assistant conversation to a live agent in a pop-out window. This helps the agent better understand and address a customer's needs.
+Configure your script to provide a transcript of the assistant conversation to a live agent in a pop-out window, so the agent can better understand and address a customer's needs.
 
 1. Add an [Onanswer](https://help.nice-incontact.com/content/studio/actions/onanswer/onanswer.htm) event to your script. The  **Onanswer** event is triggered when an agent answers the call. 
 
@@ -222,13 +205,13 @@ In this example, when **Onrelease** is triggered, the script verifies whether th
 
 ![Image of call disconnect on failure](images/cxone-disconnect-on-failure.png)
 
-If the  **Hangup** action is executed and an [**Onrelease**](https://help.nice-incontact.com/content/studio/actions/onrelease/onrelease.htm){: external} event action is present, CXone will hang up on the caller, and the script will jump to the  **OnRelease** action. Design your script so it can distinguish whether the **OnRelease** event is triggered due to a transfer or hangup. 
+If the  **Hangup** action is executed and an [**Onrelease**](https://help.nice-incontact.com/content/studio/actions/onrelease/onrelease.htm){: external} event action is present, CXone hangs up on the caller, and the script jumps to the  **OnRelease** action. Design your script so it can distinguish whether the **OnRelease** event is triggered due to a transfer or hangup. 
 
 
 ## Adding transfer support to your assistant 
 {: #deploy-phone-cxone-transfer}
 
-Configure your assistant to transfer calls to an agent using the *Connect To Agent* response_type. For instructions, see [Transferring a call to a live agent](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer).
+Use the *Connect To Agent* response_type to configure your assistant to transfer calls to an agent. For instructions, see [Transferring a call to a live agent](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer).
 
 Use the following format:
 
@@ -260,4 +243,4 @@ Use the following format:
 
 Parameters listed in the `custom_data` object are transferred to the [signal](https://developer.niceincontact.com/API/AdminAPI#/Contacts/Signal%20a%20Contact) REST API. 
 
-Supported parameters are `p2`, `p3`, ... `p9`. Note that `p1` is preserved and used by the phone integration for passing the session history key into the NICE CXone script. 
+Supported parameters are `p2`, `p3`, ... `p9`. `p1` is preserved and used by the phone integration for passing the session history key into the NICE CXone script. 
