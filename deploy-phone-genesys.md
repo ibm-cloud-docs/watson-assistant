@@ -2,32 +2,13 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: “2023-08-22”
+lastupdated: “2023-08-27”
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:preview: .preview}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:video: .video}
-{:tag-ibm-cloud: .tag data-tag-color="blue"}
-{:tag-cp4d: .tag data-tag-color="magenta"}
-
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Integrating with phone and Genesys Cloud
 {: #deploy-phone-genesys}
@@ -38,11 +19,11 @@ You can use the phone integration to help your customers over the phone and tran
 
 ## Before you begin
 
-To use this integration pattern, make sure you have the following:
+To use this integration pattern, you need:
 
-- {{site.data.keyword.conversationshort}} Plus or Enterprise Plan (required for phone integration)
-- A working assistant that you are ready to deploy
-- A Genesys Cloud account
+- {{site.data.keyword.conversationshort}} Plus or Enterprise Plan (required for phone integration).
+- A working assistant that you are ready to deploy.
+- A Genesys Cloud account.
 
 ## Integrating with Genesys Cloud
 
@@ -93,15 +74,15 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
 1. Under **Sites**, select the existing site that you want to use this trunk with. To create a new site, specify a name and location and click **Create**.
 
-1. Click **Number plans**. Create a new number plan and specify the following information:
+1. Click **Number plans**. Create a number plan and specify the following information:
 
     - In the **Number Plan Name** field, type a descriptive name (for example, `Watson`).
 
     - For **Match type**, select **E. 164 Number List**.
 
-    - In the **Numbers** field, type a number in the **Start** and **End** fields. This does not need to be a real number; you can make up any number to use as an identifier to assign to Watson. Specify the same number in both fields.
+    - In the **Numbers** field, type a number in the **Start** and **End** fields. You can make up any number to use as an identifier to assign to Watson. Specify the same number in both fields.
  
-      To create a PSTN number you can give to your clients, you must create a Direct Inward Dialing (DID) or Bring Your Own Carrier (BYOC) number. For more information about how to do this, see the Genesys documentation.
+      To create a PSTN number you can give to your clients, you must create a Direct Inward Dialing (DID) or Bring Your Own Carrier (BYOC) number. For more information, see the Genesys documentation.
       {: note}
 
     - 1. In the **Classification** field, type a classification name (for example, `Watson`).
@@ -115,7 +96,7 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
     - In the **External Trunks** field, click **Select External Trunks**. Select the trunk that you created for {{site.data.keyword.conversationshort}}.
 
-    - In the **Classifications** field, add the applicable classifications. This should at least include `National` and the classification you created for {{site.data.keyword.conversationshort}} earlier. (The `National` route is used only to simulate the call in order to make sure the trunk is operational.)
+    - In the **Classifications** field, add the applicable classifications. You need to include `National` and the classification you created for {{site.data.keyword.conversationshort}} earlier. (The `National` route is used only to simulate the call in order to make sure the trunk is operational.)
 
     - Toggle the **State** switch to **Enabled**.
 
@@ -123,7 +104,7 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
 1. Click **Save Outbound Routes**.
 
-1. Go to the **Simulate Call** tab and click the **Simulate Call** button. The trunk should be shown as operational. No actual call is made during simulation.
+1. Go to the **Simulate Call** tab, and click the **Simulate Call** button. The trunk should show as operational. No actual call is made during the simulation.
 
     ![Genesys simulate call](images/phone-genesys-simulate-call.png)
 
@@ -133,7 +114,7 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
     - In the **Base Settings** field, select **WebRTCPhone**.
 
-    - In the **Site** field, select the site you want to use.
+    - In the **Site** field, select the site that you want to use.
 
     - In the **Person** field, select yourself.
 
@@ -141,17 +122,17 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
     - When prompted, select **Use an existing phone number with an external provider**.
 
-    - Specify the phone number that you assigned in the Genesys **Number Plans** setting. This is not necessarily a real phone number; it is just the identifier you assigned.
+    - Specify the phone number that you assigned in the Genesys **Number Plans** setting. It is not necessarily a real phone number; it is an identifier you assigned.
 
     - Complete the phone integration setup process. For more information, see [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone).
 
-    - After the phone integration is set up, go to the **SIP trunk** tab and uncheck the **Don't place callers on hold while transferring to a live agent** option. 
+    - After the phone integration is set up, go to the **SIP trunk** tab and deselect the **Don't place callers on hold while transferring to a live agent** option. 
 
-1. In the Genesys Cloud console, click the circle in the upper left corner. Select **Phone**, and then choose the phone you created in the **Phone management** section. Set yourself as available. The phone icon on the left should now be active.
+1. In the Genesys Cloud console, click the circle in the upper left. Select **Phone**, and then choose the phone that you created in the **Phone management** section. Set yourself as available. The phone icon on the left is now active.
 
-1. Click **`+`** to start a new call. Specify the number you assigned to {{site.data.keyword.conversationshort}} and then click **Dial**. You should now hear your assistant speak.
+1. Click **`+`** to start a new call. Specify the number that you assigned to {{site.data.keyword.conversationshort}}, and then click **Dial**. You should hear your assistant speak.
 
-If you encounter any errors, click **Performance -> Interactions** and view the PCAP file to read the diagnostics.
+If you encounter errors, click **Performance -> Interactions** and view the PCAP file to read the diagnostics.
 {: note}
 
 ## Transferring to a live agent
@@ -166,13 +147,13 @@ Now that your Genesys Cloud environment can connect to {{site.data.keyword.conve
 
     - In the **Service Provider** field, type a descriptive name (for example, `Watson`).
 
-1. If you have not already set up a queue to enable callers to wait for available agents, follow these steps to create a simple one now:
+1. If you did not set up a queue to enable callers to wait for available agents, follow these steps to create a simple one.
 
     1. Click **Admin**.
 
     1. Under **Contact Center**, click **Queues**.
 
-    1. Create a new queue and give it a descriptive name.
+    1. Create a queue, and give it a descriptive name.
 
     1. Add yourself as a member.
 
@@ -198,7 +179,7 @@ Now that your Genesys Cloud environment can connect to {{site.data.keyword.conve
 
     1. Select the queue that you want to use.
 
-    1. In the toolbox, click the **Disconnect** widget and drag it into the action after **Failure**. (This disconnects the call if the transfer fails.)
+    1. In the toolbox, click the **Disconnect** widget and drag it into the action after **Failure**. (This tool disconnects the call if transfer fails.)
 
     1. Click the three dots under **Reusable tasks** and click **Set this as the starting task**. You can remove the **Initial Greeting** because your assistant speaks before handing off the call.
 
@@ -216,7 +197,7 @@ Now that your Genesys Cloud environment can connect to {{site.data.keyword.conve
 
     1. Click **Save**.
 
-1. Make sure your assistant is configured to transfer calls to an agent that uses the *Connect To Agent* response_type. For more information about how to do this, see [Transferring a call to a live agent](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer).
+1. Make sure that your assistant is configured to transfer calls to an agent using the *Connect To Agent* response_type. For more information, see [Transferring a call to a live agent](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer).
 
     For the `sip.uri` parameter, use the DID number that you created in Genesys Cloud, and the inbound SIP URI from your Genesys trunk. Use the following format:
 
@@ -249,7 +230,7 @@ Now that your Genesys Cloud environment can connect to {{site.data.keyword.conve
     Make sure you use the `\\` escape characters so {{site.data.keyword.conversationshort}} does not misinterpret the `@` as part of the entity shorthand syntax.
     {: note}
 
-1. Make a test call and say something that initiates a transfer to an agent. In your Genesys Cloud console, you should see the transfer take place.
+1. Make a test call and say something that initiates a transfer to an agent. In your Genesys Cloud console, you can see the transfer take place.
 
 
 ###  Share the conversation history with service desk agents
