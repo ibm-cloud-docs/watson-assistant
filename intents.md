@@ -278,7 +278,7 @@ You can view the uploaded intents and the corresponding examples on the **Intent
 ## Resolving intent conflicts
 {: #intents-resolve-conflicts}
 
-Plus]{: tag-green}[Enterprise]{: tag-purple}
+[Plus]{: tag-green}[Enterprise]{: tag-purple}
 
 The {{site.data.keyword.conversationshort}} application detects a conflict when two or more intent examples in *separate* intents are so similar that {{site.data.keyword.conversationshort}} is confused as to which intent to use.
 
