@@ -13,7 +13,7 @@ subcollection: watson-assistant
 # Adding more assistants
 {: #assistant-add}
 
-You can create multiple assistants in your instance. The number of assistants you can create depends on your {{site.data.keyword.conversationshort}} [plan type](https://www.ibm.com/products/watsonx-assistant/pricing/){: external}. There is also a limit of 100 assistants per service instance.
+You can create multiple assistants in your instance. The number of assistants you can create depends on your {{site.data.keyword.conversationshort}} [plan type](https://www.ibm.com/products/watsonx-assistant/pricing){: external}. There is also a limit of 100 assistants per service instance.
 
 If you need to add more assistants, follow these steps:
 
