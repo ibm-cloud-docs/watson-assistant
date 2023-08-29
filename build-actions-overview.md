@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-21"
+lastupdated: "2023-08-29"
 
 subcollection: watson-assistant
 
@@ -216,7 +216,7 @@ That's it! You built a simple action that includes multiple steps, collects info
 ## Action limits
 {: #build-actions-limits}
 
-The number of actions, steps, and variables you can create depends on your {{site.data.keyword.conversationshort}} [plan type](https://www.ibm.com/products/watson-assistant/pricing/){: external}.
+The number of actions, steps, and variables you can create depends on your {{site.data.keyword.conversationshort}} [plan type](https://www.ibm.com/products/watsonx-assistant/pricing/){: external}.
 
 | Plan | Actions | Steps | Variables |
 |---|---:|---:|---:|

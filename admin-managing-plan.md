@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-08-08"
+lastupdated: "2023-08-29"
 
 keywords: billing, data centers, MAU, monthly active users, service plans
 
@@ -28,7 +28,7 @@ The metrics that are used for billing purposes differ based on your plan type. Y
 
 For answers to common questions about subscriptions, see [How you're charged](/docs/billing-usage?topic=billing-usage-charges){: external}.
 
-Explore the {{site.data.keyword.conversationshort}} [service plan options](https://www.ibm.com/cloud/watson-assistant/pricing/){: external}.
+Explore the {{site.data.keyword.conversationshort}} [service plan options](https://www.ibm.com/cloud/watsonx-assistant/pricing/){: external}.
 
 ### Paid plan features
 {: #admin-managing-plan-paid}
@@ -144,7 +144,7 @@ You can create {{site.data.keyword.conversationshort}} service instances that ar
 ## Upgrading your plan
 {: #admin-managing-plan-upgrade}
 
-You can explore the {{site.data.keyword.conversationshort}} [service plan options](https://www.ibm.com/cloud/watson-assistant/pricing/){: external} to decide which plan is best for you.
+You can explore the {{site.data.keyword.conversationshort}} [service plan options](https://www.ibm.com/cloud/watsonx-assistant/pricing/){: external} to decide which plan is best for you.
 
 The page header shows the plan that you are using today. To upgrade your plan, complete these steps:
 

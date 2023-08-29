@@ -2,29 +2,13 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: “2023-08-22”
+lastupdated: “2023-08-29”
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:preview: .preview}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:video: .video}
-
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Managing user identity information
@@ -80,7 +64,7 @@ To avoid this problem, use a server-side first-party cookie in your web applicat
 
 For more information about billing, see [User-based plans explained](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-admin-managing-plan).
 
-For more information about MAU limits per plan, see [Pricing](https://www.ibm.com/products/watson-assistant/pricing).
+For more information about MAU limits per plan, see [Pricing](https://www.ibm.com/products/watsonx-assistant/pricing).
 
 For more information about deleting a user's data, see [Labeling and deleting data](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-admin-securing).
 
