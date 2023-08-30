@@ -160,6 +160,7 @@ toc:
           topics:
           - deploy-phone.md
           - phone-config.md
+          - deploy-phone-private.md
           - deploy-phone-genesys.md
           - deploy-phone-cxone.md
           - deploy-phone-flex.md
