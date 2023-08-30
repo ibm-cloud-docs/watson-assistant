@@ -904,7 +904,6 @@ Departure date: 2019-02-02
 Departure time: 21:40
 Arrival time: 09:05
 ```
-{: screen}
 
 #### JSON templates
 {: #join-to-array-object-template}
@@ -918,10 +917,32 @@ In this example, a template is defined as a JSON object that extracts flight det
   "departure": "Flight %e.flight% departs on %e.departure_date% at %e.departure_time%.",
   "arrival": "Flight %e.flight% arrives on %e.arrival_date% at %e.arrival_time%."
 }
-```
-{: codeblock}
 
 Using this template, the `joinToArray()` method returns a new array of objects with the specified structure.
+
+1. Define the JSON template in a session variable named Template.
+2. Use the joinToArray() method with the template variable:
+    ${Flight_data}.joinToArray(${Template})
+
+  At runtime, the response would look like this:
+Flight number: AZ1040
+Airline: Alitalia
+Departure date: 2019-02-02
+Departure time: 16:45
+Arrival time: 07:00
+
+Flight number: DL1710
+Airline: Delta
+Departure date: 2019-02-02
+Departure time: 07:00
+Arrival time: 10:19
+
+Flight number: VS4379
+Airline: Virgin Atlantic
+Departure date: 2019-02-02
+Departure time: 21:40
+Arrival time: 09:05
+
 
 ### `Array.remove(Integer index)`
 {: #expression-methods-actions-arrays-remove}
