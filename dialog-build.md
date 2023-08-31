@@ -27,7 +27,7 @@ The dialog is represented graphically in {{site.data.keyword.conversationshort}}
 
 Each dialog node contains, at a minimum, a condition and a response.
 
-![Shows user input going to a box that contains the statement If: CONDITION, Then: RESPONSE](images/node1-empty.svg){: caption="Empty node" caption-side="bottom"}
+![Shows user input going to a box that contains the statement If: CONDITION, Then: RESPONSE](images/node1-empty.png{: caption="Empty node" caption-side="bottom"}
 
 - Condition: Specifies the information that must be present in the user input for this node in the dialog to be triggered. The information is typically a specific intent. It might also be an entity type, an entity value, or a context variable value. For more information, see [Conditions](/docs/watson-assistant?topic=watson-assistant-dialog-overview#dialog-overview-conditions).
 - Response: The utterance that your assistant uses to respond to the user. The response can also be configured to show an image or a list of options, or to trigger programmatic actions. For more information, see [Responses](/docs/watson-assistant?topic=watson-assistant-dialog-overview#dialog-overview-responses).
@@ -36,24 +36,24 @@ You can think of the node as having an if/then construction: if this condition i
 
 For example, the following node is triggered if the natural language processing function of your assistant determines that the user input contains the `#cupcake-menu` intent. As a result of the node being triggered, your assistant responds with an appropriate answer.
 
-![Shows the user asking about cupcake flavors. The If condition is #cupcake-menu and the Then response is a list of cupcake flavors.](images/node1-simple.svg){: caption="Simple condition and response" caption-side="bottom"}
+![Shows the user asking about cupcake flavors. The If condition is #cupcake-menu and the Then response is a list of cupcake flavors.](images/node1-simple.png){: caption="Simple condition and response" caption-side="bottom"}
 
 A single node with one condition and response can handle simple user requests. But, more often than not, users have more sophisticated questions or want help with more complex tasks. You can add child nodes that ask the user to provide any additional information that your assistant needs.
 
-![Shows that the first node in the dialog asks which type of cupcake the user wants, gluten-free or regular, and has two child nodes that provide a different response depending on the user's answer.](images/node1-children.svg){: caption="Node with child nodes" caption-side="bottom"}
+![Shows that the first node in the dialog asks which type of cupcake the user wants, gluten-free or regular, and has two child nodes that provide a different response depending on the user's answer.](images/node1-children.png){: caption="Node with child nodes" caption-side="bottom"}
 
 ## Dialog flow
 {: #dialog-build-flow}
 
 The dialog that you create is processed by your assistant from the first node in the tree to the last.
 
-![Arrow points down next to 3 nodes to show that dialog flows from the first node to the last](images/node-flow-down.svg){: caption="Node flow" caption-side="bottom"}
+![Arrow points down next to 3 nodes to show that dialog flows from the first node to the last](images/node-flow-down.png){: caption="Node flow" caption-side="bottom"}
 
 As it travels down the tree, if your assistant finds a condition that is met, it triggers that node. It then moves along the triggered node to check the user input against any child node conditions. As it checks the child nodes, it moves again from the first child node to the last.
 
 Your assistant continues to work its way through the dialog tree from first to last node, along each triggered node, then from first to last child node, and along each triggered child node until it reaches the last node in the branch it is following.
 
-![Shows arrow 1 pointing from the first root node to the last, arrow 2 pointing from along the length of a triggered node, and arrow 3 pointing from the first to the last child nodes of the triggered node.](images/node-flow.svg){: caption="Node flow" caption-side="bottom"}
+![Shows arrow 1 pointing from the first root node to the last, arrow 2 pointing from along the length of a triggered node, and arrow 3 pointing from the first to the last child nodes of the triggered node.](images/node-flow.png){: caption="Node flow" caption-side="bottom"}
 
 When you start to build the dialog, you must determine the branches to include, and where to place them. The order of the branches is important because nodes are evaluated from first to last. The first root node whose condition matches the input is used; any nodes that come later in the tree are not triggered.
 
