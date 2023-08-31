@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: “2023-08-27”
+lastupdated: “2023-08-31”
 
 subcollection: watson-assistant
 
@@ -18,6 +18,7 @@ subcollection: watson-assistant
 You can use the phone integration to help your customers over the phone and transfer them to live agents inside of Genesys Cloud. If, in the course of a conversation with your assistant, a customer asks to speak to a person, you can transfer the conversation directly to a Genesys Cloud agent.
 
 ## Before you begin
+{: #deploy-phone-genesys-prereq}
 
 To use this integration pattern, you need:
 
@@ -26,6 +27,7 @@ To use this integration pattern, you need:
 - A Genesys Cloud account.
 
 ## Integrating with Genesys Cloud
+{: #deploy-phone-genesys-cloud-setup}
 
 To integrate your assistant with Genesys Cloud, follow these steps:
 
@@ -136,6 +138,7 @@ If you encounter errors, click **Performance -> Interactions** and view the PCAP
 {: note}
 
 ## Transferring to a live agent
+{: #deploy-phone-genesys-liveagent}
 
 Now that your Genesys Cloud environment can connect to {{site.data.keyword.conversationshort}}, you can set up the ability for your assistant to transfer calls back to your live agents. To do so, follow these steps:
 
@@ -234,4 +237,6 @@ Now that your Genesys Cloud environment can connect to {{site.data.keyword.conve
 
 
 ###  Share the conversation history with service desk agents
-To enable the service desk agent to get a quick view of the conversation history between the visitor and the assistant, set up the {{site.data.keyword.conversationshort}} Agent App app for your Genesys Pure Cloud Environment. For more information, see the documentation for the [Genesys starter kit](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/genesys/agentApp){: external}.
+{: #deploy-phone-genesys-convo-history}
+
+To enable the service desk agent to get a quick view of the conversation history between the visitor and the assistant, set up the {{site.data.keyword.conversationshort}} Agent App app for your Genesys Pure Cloud Environment. For more information, see the [Genesys starter kit](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/genesys/agentApp){: external}.
