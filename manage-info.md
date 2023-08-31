@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-11"
+lastupdated: "2023-08-31"
 
 subcollection: watson-assistant
 
@@ -97,7 +97,7 @@ To see these variables, click **Variables** on the **Actions** page.
 | *Current date*             | `current_date` | The current date in the user's time zone.       | `2021-08-11`          |
 | *Fallback reason*          | `fallback_reason` | The reason why a user is routed to the fallback action | Step validation failed - Agent requested - No action matches |
 | *No action matches count* | `no_action_matches_count` | Represents a count of customer's consecutive unrecognized input attempts | 3 |
-| *Session history* | session_history | The 24 most recent messages from the customer’s conversation. For more information, see [Session history](/docs/watson-assistant?topic=watson-assistant-publish-overview#publish-overview-environment-settings-session-history) | [{u : 'book a flight', n : true}, {a : 'sure! from where?'}] |
+| *Session history* [IBM Cloud]{: tag-ibm-cloud} | session_history | The 24 most recent messages from the customer’s conversation. For more information, see [Session history](/docs/watson-assistant?topic=watson-assistant-publish-overview#publish-overview-environment-settings-session-history) | [{u : 'book a flight', n : true}, {a : 'sure! from where?'}] |
 {: caption="Variables set by assistant" caption-side="top"}
 
 **Set by integration**:
