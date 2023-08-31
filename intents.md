@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-28"
+lastupdated: "2023-08-31"
 
 keywords: intent, intent conflicts, annotate
 
@@ -18,7 +18,7 @@ subcollection: watson-assistant
 ***Intents*** are purposes or goals that are expressed in a customer's input, such as answering a question or processing a bill payment. By recognizing the intent expressed in a customer's input, the {{site.data.keyword.conversationshort}} service can choose the correct dialog flow for responding to it.
 {: shortdesc}
 
-To learn more about creating intents, watch the following 2 1/2-minute video.
+To learn more about creating intents, watch the following video.
 
 ![Intents: {{site.data.keyword.conversationshort}}](https://video.ibm.com/embed/channel/23952663/video/wa-intents){: video output="iframe" data-script="none" id="watsonmediaplayer" width="480" height="270" scrolling="no" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="border: 0 none transparent;"}
 
@@ -33,9 +33,9 @@ To learn more about creating intents, watch the following 2 1/2-minute video.
 
     After you decide which business requests that you want your application to handle for your customers, you must teach {{site.data.keyword.conversationshort}} about them. For each business goal (such as `#buy_something`), you must provide at least 5 examples of utterances that your customers typically use to indicate their goal. For example, `I want to make a purchase.`
   
-    Ideally, find real-world user utterance examples that you can extract from existing business processes. The user examples should be tailored to your specific business. For example, if you are an insurance company, a user example might look more like this, `I want to buy a new XYZ insurance plan.`
+    Ideally, find real-world user utterance examples that you can extract from existing business processes. Tailor the user examples to your specific business. For example, if you are an insurance company, a user example might look more like this, `I want to buy a new XYZ insurance plan.`
   
-    The examples that you provide are used by your assistant to build a machine learning model that can recognize the same and similar types of utterances and map them to the appropriate intent.
+    Your assistant uses the examples that you provide to build a machine learning model that can recognize the same and similar types of utterances and map them to the appropriate intent.
 
 Start with a few intents, and test them as you iteratively expand the scope of the application.
 
@@ -54,10 +54,10 @@ Start with a few intents, and test them as you iteratively expand the scope of t
         - `#pay_bill`
         - `#escalate_to_agent`
 
-    A number sign `#` is prepended to the intent name automatically to help identify the term as an intent. You do not need to add it.
+    A number sign `#` prefix is included in the intent name automatically to help identify the term as an intent. You do not need to add it.
     {: tip}
 
-    Keep the name as short as possible. It's easier to read in the "Try it out" pane and conversation logs if you keep the intent name short and concise.
+    Keep the name as short as possible for readability in the "Try it out" pane and conversation logs.
 
     Optionally add a description of the intent in the **Description** field.
 
@@ -73,7 +73,7 @@ Start with a few intents, and test them as you iteratively expand the scope of t
     To learn about the impact of including references to entities in your user examples, see [How entity references are treated](#intents-entity-references).
     {: tip}
 
-    Intent names and example text can be exposed in URLs when an application interacts with {{site.data.keyword.conversationshort}}. Do not include sensitive or personal information in these artifacts.
+    Intent names and example text can be shown in URLs when an application interacts with {{site.data.keyword.conversationshort}}. Do not include sensitive or personal information in these artifacts.
     {: important}
 
 1.  Click **Add example** to save the user example.
@@ -87,12 +87,12 @@ Start with a few intents, and test them as you iteratively expand the scope of t
 
 1.  When you are done adding examples, click ![Close arrow](images/close_arrow.png) to finish creating the intent.
 
-The system begins to train itself on the intent and user examples you added.
+The system trains itself on the intent and user examples you added.
 
 *Important*:
 - Intent example data should be representative and typical of data that your users provide. Examples can be collected from actual user data, or from people who are experts in your specific field. The representative and accurate nature of the data is important.
 - Both training and test data (for evaluation purposes) should reflect the distribution of intents in real usage. Generally, more frequent intents have relatively more examples, and better response coverage.
-- You can include punctuation in the example text, as long as it appears naturally. If you believe that some users express their intents with examples that include punctuation, and some users will not, include both versions. Generally, the more coverage for various patterns, the better the response.
+- You can include punctuation in the example text if it appears naturally. If you believe that some users express their intents with examples that include punctuation, and some users will not, include both versions. Generally, the more coverage for various patterns, the better the response.
 
 ## How entity references are treated
 {: #intents-entity-references}
@@ -106,12 +106,12 @@ When you include an entity mention in a user example, the machine learning model
 ### Referencing entity values and synonyms in intent examples
 {: #intents-related-entities}
 
-If you have defined, or plan to define, entities that are related to this intent, mention the entity values or synonyms in some of the examples. Doing so helps to establish a relationship between the intent and entities. It is a weak relationship, but it does inform the model.
+If you define, or plan to define, entities that are related to this intent, mention the entity values or synonyms in some of the examples. Doing so helps to establish a relationship between the intent and entities. It is a weak relationship, but it does inform the model.
 
 ### Annotated mentions
 {: #intents-annotated-mentions}
 
-As you define entities, you can annotate mentions of the entity directly from your existing intent user examples. A relationship that you identify in this way between the intent and the entity is *not* used by the intent classification model. However, when you add the mention to the entity, it is also added to that entity as new value. And when you add the mention to an existing entity value, it is also added to that entity value as new synonym. Intent classification does use these types of dictionary references in intent user examples to establish a weak reference between an intent and an entity.
+As you define entities, you can annotate mentions of the entity directly from your existing intent user examples. A relationship that you identify in this way between the intent and the entity is *not* used by the intent classification model. However, when you add the mention to the entity, it is also added to that entity as new value. And when you add the mention to an existing entity value, it is also added to that entity value as a new synonym. Intent classification does use these types of dictionary references in intent user examples to establish a weak reference between an intent and an entity.
 
 ### Directly referencing an entity name in an intent example
 {: #intents-entity-as-example}
@@ -140,13 +140,13 @@ Defining one example intent with an `@Entity` that has 10 values that are define
 ## Testing your intents
 {: #intents-test}
 
-After you have finished creating new intents, you can test the system to see if it recognizes your intents as you expect.
+After you finish creating new intents, you can test the system to see if it recognizes your intents as you expect.
 
 1.  Click **Try it**. 
 
 1.  In the "Try it out" pane, enter a question or other text string and press Enter to see which intent is recognized. If the wrong intent is recognized, you can improve your model by adding this text as an example to the correct intent.
 
-    If you have recently made changes in your skill, you might see a message that indicates that the system is still retraining. If you see this message, wait until training completes before testing:
+    If you make recent changes in your skill, you might see a message that indicates that the system is still retraining. If you see this message, wait until training completes before testing:
     {: tip}
 
     ![Screen capture showing retraining message](images/training.png){: caption="Training message" caption-side="bottom"}
@@ -167,7 +167,7 @@ If your intents are not being correctly recognized, consider making the followin
 
 - Add the unrecognized text as an example to the correct intent.
 - Move existing examples from one intent to another.
-- Consider whether your intents are too similar, and redefine them as appropriate.
+- Consider whether your intents are too similar, and redefine them.
 
 ## Absolute scoring
 {: #intents-absolute-scoring}
@@ -200,8 +200,6 @@ You can click any intent in the list to open it for editing. You can make the fo
 - Add, edit, or delete examples.
 - Move an example to a different intent.
 
-You can tab from the intent name to each example.
-
 1.  To move or delete an example, click the checkbox that is associated with it, and then click **Move** or **Delete**.
 
     ![Screen capture showing how to move or delete an example](images/move_example.png){: caption="Move or delete example" caption-side="bottom"}
@@ -217,7 +215,7 @@ Use the Search feature to find user examples, intent names, and descriptions.
 
 1.  Submit a search term or phrase.
 
-    The first time you search for something, you might get a message that says the skill is being indexed. If so, wait a minute, and then resubmit the search term.
+    The first time that you search for something, you might get a message that says the skill is being indexed. If so, wait a minute, and then resubmit the search term.
 
     Intents that contain your search term are displayed.
 
@@ -230,7 +228,7 @@ You can download a number of intents to a CSV file, so you can then upload and r
 
 1.  Go to the **Intents** page.
 
-    - To download all intents, meaning the intents listed on this and any additional pages, do not select any individual intents. Instead, click the *Download all intents* icon. ![Download all intents icon](images/download-all.png)
+    - To download all intents, meaning the intents that are listed on this and any additional pages, do not select any individual intents. Instead, click the *Download all intents* icon. ![Download all intents icon](images/download-all.png)
 
     - To download the intents that are listed on the current page only, select the checkbox in the header. This action selects all of the intents on the current page. Click the *Download* icon. ![Download icon](images/download.png)
 
@@ -241,7 +239,7 @@ You can download a number of intents to a CSV file, so you can then upload and r
 ## Uploading intents and examples
 {: #intents-import}
 
-If you have a large number of intents and examples, you might find it easier to upload them from a comma-separated value (CSV) file than to define them one by one. Be sure to remove any personal data from the user examples that you include in the file.
+If you have many intents and examples, you might find it easier to upload them from a comma-separated value (CSV) file than to define them one by one. Be sure to remove any personal data from the user examples that you include in the file.
 
 1.  Collect the intents and examples into a CSV file, or export them from a spreadsheet to a CSV file. The required format for each line in the file is as follows:
 
@@ -271,7 +269,7 @@ If you have a large number of intents and examples, you might find it easier to 
 
 1.  Click **Upload**.
 
-    The file is validated and uploaded, and the system begins to train itself on the new data.
+    The file is validated and uploaded, and the system trains itself on the new data.
 
 You can view the uploaded intents and the corresponding examples on the **Intents** tab. You might need to refresh the page to see the new intents and examples.
 
@@ -305,11 +303,11 @@ To resolve conflicts:
 
     ![Shows the Move menu with a list of one intent options](images/intent-move-conflict.png){: caption="Move user example" caption-side="bottom"}
 
-    When deciding where to put an example, look for the intent that has synonymous, or nearly synonymous, examples. 
+    When you decide where to put an example, look for the intent that has synonymous, or nearly synonymous, examples. 
     
-    If the exact same example is used by the other intent already, the move action only removes the example from the current intent. It does not add the same example to the other intent twice.
+    If the exact same example is used by the other intent already, the move action removes the example from the current intent. It does not add the same example to the other intent twice.
 
-1.  After moving or deleting the example, click **Submit** to resolve the conflict.
+1.  After you move or delete the example, click **Submit** to resolve the conflict.
 
     ![Shows a resolved conflict](images/intent-submit-conflict.png){: caption="Resolved conflict" caption-side="bottom"}
 
@@ -327,7 +325,7 @@ By deleting intents that you are also deleting all associated examples, and thes
 
 1.  Go to the **Intents** page
 
-    - To delete all intents, meaning the intents listed on this and any additional pages, do not select any individual intents. Instead, click the *Delete all intents* icon. ![Delete option](images/delete-c10.png)
+    - To delete all intents, meaning the intents that are listed on this and any additional pages, do not select any individual intents. Instead, click the *Delete all intents* icon. ![Delete option](images/delete-c10.png)
 
     - To delete the intents that are listed on the current page only, select the checkbox in the header. This action selects all of the intents that are listed on the current page. Click **Delete**.
 
