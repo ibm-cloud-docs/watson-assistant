@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-23"
+lastupdated: "2023-08-31"
 
 subcollection: watson-assistant
 
@@ -77,8 +77,6 @@ To disable returning to the original topic:
 
 ### Allow change of topic between actions and dialog
 {: #change-topic-action-to-dialog}
-
-[IBM Cloud]{: tag-ibm-cloud}
 
 If you are using actions and dialog, you can ensure that customers can change topics between an action and a dialog node.
 
