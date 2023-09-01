@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-10"
+lastupdated: "2023-09-01"
 
 subcollection: watson-assistant
 
@@ -331,7 +331,7 @@ For the options and regex customer response types, you can also create a saved c
 ### Uploading saved customer responses
 {: #uploading-saved-customer-response}
 
-If you have many saved customer responses, you can upload them from a comma-separated value (CSV) file than to define them one by one. If you are migrating entities from the classic {{site.data.keyword.conversationshort}} experience to saved customer responses in the new {{site.data.keyword.conversationshort}} experience, see [Migrating intents and entities](/docs/watson-assistant?topic=watson-assistant-migrate-intents-entities).
+If you have many saved customer responses, you can upload them from a comma-separated value (CSV) file than to define them one by one. If you are migrating entities from the classic experience to saved customer responses in the new experience, see [Migrating intents and entities](/docs/watson-assistant?topic=watson-assistant-migrate-intents-entities).
 
 1. Collect the saved customer responses into a CSV file. Save the CSV file with UTF-8 encoding and no byte order mark (BOM).
 

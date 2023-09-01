@@ -28,7 +28,7 @@ subcollection: watson-assistant
 # Migrating intents and entities
 {: #migrate-intents-entities}
 
-You can migrate your intents and entities from the classic {{site.data.keyword.conversationshort}} experience to the new {{site.data.keyword.conversationshort}} experience.
+You can migrate your intents and entities from the classic experience to the new experience.
 {: shortdesc }
 
 ## Downloading intents
