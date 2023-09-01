@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-07-12"
+lastupdated: "2023-09-01"
 
 keywords: Watson Assistant frequently asked questions
 
@@ -30,23 +30,23 @@ Find answers to frequently-asked questions and quick fixes for common problems.
 
 The new {{site.data.keyword.conversationshort}} is an improved way to build, publish, and improve virtual assistants. In the new experience, you use actions to build conversations. Actions are a simple way for anyone to create assistants. For more information, see the [Getting Started guide](https://www.ibm.com/blogs/watson/2021/12/getting-started-with-the-new-watson-assistant-part-i-the-build-guide/){: external} or the [documentation](/docs/watson-assistant) for the new experience.
 
-### Why can't I see the assistants that I made with classic {{site.data.keyword.conversationshort}} in the new experience?
+### Why can't I see the assistants that I made with the classic experience in the new experience?
 {: #faq-classic-assistants}
 {: faq}
 
 The new {{site.data.keyword.conversationshort}} is a clean slate in the same IBM Cloud instance as your classic experience. Assistants that you created in one experience don't appear in the other. However, you can switch back and forth between experiences without losing any work. For more information, see [Switching the experience](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant#welcome-new-assistant-switch-experience).
 
-### What happens when I switch between the classic and new {{site.data.keyword.conversationshort}} experiences?
+### What happens when I switch between the classic and new experiences?
 {: #faq-switching}
 {: faq}
 
 The assistants that you create in one experience don't transfer to the other. However, you can switch experiences, return to your work, and create or use assistants. You don't lose anything by switching. Changing experiences doesn't affect other users in the same instance. For more information, see [Switching the experience](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant#welcome-new-assistant-switch-experience).
 
-### Is the classic {{site.data.keyword.conversationshort}} experience going away?
+### Is the classic experience going away?
 {: #faq-classic-lifecycle}
 {: faq}
 
-IBM has no plans to discontinue the classic {{site.data.keyword.conversationshort}} experience. However, we encourage you to explore the benefits and capabilities in the new {{site.data.keyword.conversationshort}}. For more information, see the [Getting Started guide](https://www.ibm.com/blogs/watson/2021/12/getting-started-with-the-new-watson-assistant-part-i-the-build-guide/){: external} or the [documentation](/docs/watson-assistant) for the new experience.
+IBM has no plans to discontinue the classic experience. However, we encourage you to explore the benefits and capabilities in the new {{site.data.keyword.conversationshort}}. For more information, see the [Getting Started guide](https://www.ibm.com/blogs/watson/2021/12/getting-started-with-the-new-watson-assistant-part-i-the-build-guide/){: external} or the [documentation](/docs/watson-assistant) for the new experience.
 
 ### Where are the search skill and channel integrations in the new {{site.data.keyword.conversationshort}} experience? 
 {: #faq-integrations}
