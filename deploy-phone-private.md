@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-08-30"
+lastupdated: "2023-09-04"
 
 keywords: directlink, private path, transit gateway, voice integration
 
@@ -39,7 +39,7 @@ Designed for security, performance, and cost-effectiveness, Private Path uses Tr
     - If you need to connect Classic Infrastructure or Direct Link to the Transit Gateway, use **Local routing**.
     - If you need to connect a VPC to the Transit Gateway, use **Global routing**.
 
-1. Select a region from the **Choose location** dropdown. The location needs be close to resource for Classic Infrastructure or Direct Link, and where the VPC resides for a VPC.
+1. Select a region from the **Choose location** dropdown. The location needs to be close to resource for Classic Infrastructure or Direct Link, and where the VPC resides for a VPC.
 
 ### Set up your connections
 {: #deploy-phone-private-connections}
@@ -51,9 +51,9 @@ You can add or edit connections after the Transit Gateway is provisioned. Setup 
 
 Use Connection 1 to set up the network connection.
 
-1. In the **Network connection** dropdown, select Classic infrastructure, Direct Link, or VPC. 
+1. In the **Network connection** dropdown, select **Classic infrastructure, Direct Link, or VPC**. 
 
-1. Select **Add new connection in this account** for Connection reach. 
+1. Select **Add new connection in this account** for **Connection reach**. 
 
 1. Connect your network. 
 
@@ -79,11 +79,11 @@ Create Connection 2 to add your Watson connection.
 ### Apply prefix filtering
 {: #deploy-phone-private-filtering}
 
-You need to apply prefix filtering so relevant subnets are advertised. 
+You need to apply prefix filtering to advertise the relevant subnets. 
 
-1. Click the menu icon.
+1. Click the **menu icon**.
 
-1. Select Prefix filtering.
+1. Select **Prefix filtering**.
 
 1. Click the **Create prefix filter +** button, and list the subnets that require the connection.
 
