@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-08-18"
+lastupdated: "2023-09-05"
 
 subcollection: watson-assistant
 
@@ -25,7 +25,7 @@ In the Coveo Administration Console, add an API key. For detailed instructions, 
 ## Download the OpenAPI specification
 {: #search-extension-coveo-open-api-specification}
 
-Download the OpenAPI specification file: [coveo.openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/coveo/coveo.openapi.json){: external}. You use this file to add the extension to your assistant.
+Download the OpenAPI specification file: [coveo.openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/coveo/coveo.openapi.json){: external}. Use this file to add the extension to your assistant.
 
 The OpenAPI specification defines the following method:
 
@@ -33,21 +33,21 @@ The OpenAPI specification defines the following method:
 
 For more information about the endpoints, see [Perform a Query](https://docs.coveo.com/en/1445/build-a-search-ui/perform-a-query){: external} in the Coveo documentation.
 
-## Create and add extension
+## Create and add the extension
 {: #search-extension-coveo-add-extension}
 
 1. In your assistant, on the **Integrations** page, click **Build custom extension** and use the OpenAPI specification file to build a custom extension. For general instructions on building any custom extension, see [Building the custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#building-the-custom-extension).
 
-1. After you build the Coveo extension and it appears on your **Integrations** page, click **Add** to add it to your assistant. Use your Coveo API key to authenticate. For general instructions on adding any custom extension, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
+1. After you build the Coveo extension, and it appears on your **Integrations** page, click **Add** to add it to your assistant. Use your Coveo API key to authenticate. For general instructions on adding any custom extension, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
 
 ## Add the Coveo search starter kit action template
 {: #search-extension-coveo-template}
 
 1. Open the **Actions** page.
 
-1. If you have no actions, choose **Create a new action**. If you already have some actions, choose **New action**.
+1. If you have no actions, select **Create a new action**. If you already have some actions, select **New action**.
 
-1. On **Create an action**, choose **Quick start with templates**.
+1. On **Create an action**, select **Quick start with templates**.
 
    **Quick start with templates** is available in English-language assistants only.
    {: note}
@@ -61,11 +61,11 @@ For more information about the endpoints, see [Perform a Query](https://docs.cov
 
 1. Delete the two default steps.  
 
-1. Add a step. Set **And then** to **Go to a subaction** and choose the **Coveo search** action.
+1. Add a step. Set **And then** to **Go to a subaction**, and select the **Coveo search** action.
 
-1. If you aren't connecting your customers to a live agent, you might want to edit the **Fallback** action in the same way as **No action matches**.
+1. If you are not connecting your customers to a live agent, you might want to edit the **Fallback** action in the same way as **No action matches**.
 
 ## Using your Coveo search extension
 {: #search-extension-coveo-using}
 
-Issue a query to your assistant. If no action that matches that query, then it uses Coveo to produce search results.
+Issue a query to your assistant. If no action matches that query, then it uses Coveo to produce search results.
