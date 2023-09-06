@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-08-22"
+lastupdated: "2023-09-06"
 
 subcollection: watson-assistant
 
@@ -33,7 +33,7 @@ Zendesk allows you to assist customers in real time, which increases customer sa
 
 1.  Open the Zendesk **Dashboard**.
 
-1.  Click the **Products** icon (four squares) in the header, and then select the **Chat** icon.
+1.  Click the **Products** icon (four blocks) in the header, and then select the **Chat** icon.
 
 1.  Click your profile, and then select **Check Connection**.
 
@@ -65,7 +65,7 @@ In your {{site.data.keyword.conversationshort}} installation:
 
 In the **Live agent** tab of your Zendesk web chat integration:
 
-1.  Toggle **Transfers enabled**. Two tasks should display: **Connect Zendesk** and **Private app Install**.
+1.  Toggle **Transfers enabled**. Two tasks should be displayed: **Connect Zendesk** and **Private app Install**.
 
 1.  Copy the **Account key** from your Zendesk account in the tab that you kept open.
 
@@ -78,13 +78,13 @@ In the **Live agent** tab of your Zendesk web chat integration:
 ### Install app in Zendesk
 {: #deploy-zendesk-add-private-app}
 
-IBM provides an application to install in your Zendesk Service subdomain. When a customer asks to speak to someone, your assistant shares a chat summary for the transferred conversation with the Zendesk agent using this private app.
+IBM provides an application to install in your Zendesk Service subdomain. When a customer asks to speak to someone, your assistant shares a chat summary for the transferred conversation with the Zendesk agent by using this private app.
 
 1.  Click **Private app Install**. 
 
 2.  Click the arrow next to **Download the {{site.data.keyword.conversationshort}} Zendesk app**. The app appears in the location of your downloads.
 
-      On Safari, application files are extracted from the ZIP file into a folder. To keep the file archived as a .zip file so you can upload it later, edit the Safari preferences. Clear the **Open safe files after downloading** checkbox.
+      On Safari, application files are extracted from the ZIP file into a folder. To keep the file archived as a .zip file so you can upload it later, edit your Safari preferences. Clear the **Open safe files after downloading** checkbox.
       {: note}
 
 1.  In your Zendesk installation, click the **Products icon** and go to the **Admin Center**. 
@@ -95,7 +95,7 @@ IBM provides an application to install in your Zendesk Service subdomain. When a
 
 1.  Click **Upload private app**.
 
-1.  Click **Choose File**, select the app that you downloaded from your {{site.data.keyword.conversationshort}} install, and click **Upload**.
+1.  Click **Choose File**, select the app that you downloaded from your {{site.data.keyword.conversationshort}} installation, and click **Upload**.
 
 1.  Click **Install**, if you agree to the Marketplace Terms of Use that display in the **Creating a new App** window. 
 
@@ -118,7 +118,7 @@ In Zendesk:
 
 1.  Click **Workspaces**.
 
-1.  Click the **Turn on Agent Workspace** button. The green **On** box should display.
+1.  Click the **Turn on Agent Workspace** button. The green **On** box displays.
 
 Agent Workspace should now feature on several screens in Zendesk Support, including on the **Dashboard** with tickets, the **Visitors** page, and in the menu as **Conversations** where agents can accept chats from customers waiting for assistance. 
 
@@ -126,7 +126,7 @@ Agent Workspace should now feature on several screens in Zendesk Support, includ
 ## Securing the transfer to Zendesk
 {: #deploy-zendesk-secure}
 
-You must collect the name and email address of each user, if enabling security in Zendesk. This information must be passed to the web chat so it can be provided to Zendesk when the conversation is transferred.
+You must collect the name and email address of each user if enabling security in Zendesk. This information must be passed to the web chat so it can be provided to Zendesk when the conversation is transferred.
 
 When you add security to your Zendesk integration, you ensure that the visitors you are helping are legitimate customers. Enabling visitor authentication also enables support for cross-domain traffic and cross-browser identification. For more information, see the [Enabling authenticated visitors in Zendesk](https://support.zendesk.com/hc/en-us/articles/360022185314-Enabling-authenticated-visitors-in-the-Chat-widget).
 
@@ -152,7 +152,7 @@ Before you can secure the Zendesk connection, complete the following required ta
 
     For more information, see [Passing sensitive data](/docs/watson-assistant?topic=watson-assistant-web-chat-security#web-chat-security-encrypt).
 
-    Zendesk also expects `iat` and `external_id` name and value pairs. However, there is no need for you to provide this information. IBM automatically provides a JWT that contains these values.
+    Zendesk also expects `iat` and `external_id` name and value pairs. However, you need not provide this information. IBM automatically provides a JWT that contains these values.
 
     For example:
 
@@ -222,7 +222,7 @@ To secure the Zendesk connection, complete the following steps:
     ```
     {: codeblock}
 
-    After writing a function that ensures that name and email values are always provided, set the *Authenticate anonymous user chat transfers* switch to **On**.
+    After you write a function to ensure that name and email values are always provided, set the *Authenticate anonymous user chat transfers* switch to **On**.
 
 ## Adding transfer support to your actions
 {: #deploy-zendesk-action-prereq}
