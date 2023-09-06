@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-08-08"
+lastupdated: "2023-09-06"
 
 subcollection: watson-assistant
 
@@ -31,7 +31,10 @@ Watch a 4-minute video that provides an overview of the search integration:
 ## Before you begin
 {: #search-add-prereqs}
 
-Before you begin, you must set up a {{site.data.keyword.discoveryshort}} v2 instance on {{site.data.keyword.cloud_notm}} or installed on {{site.data.keyword.icp4dfull_notm}}. For {{site.data.keyword.cloud_notm}}, you need at least a Plus plan {{site.data.keyword.discoveryshort}} service instance. Go to the [{{site.data.keyword.discoveryshort}}](https://cloud.ibm.com/catalog/services/watson-discovery){: external} page in the {{site.data.keyword.cloud_notm}} catalog and create a Plus plan service instance.
+Before you begin, you must: 
+- Set up a {{site.data.keyword.discoveryshort}} v2 instance on {{site.data.keyword.cloud_notm}} or installed on {{site.data.keyword.icp4dfull_notm}}. 
+- Have at least a Plus plan {{site.data.keyword.discoveryshort}} service instance for {{site.data.keyword.cloud_notm}}. Go to the [{{site.data.keyword.discoveryshort}}](https://cloud.ibm.com/catalog/services/watson-discovery){: external} page in the {{site.data.keyword.cloud_notm}} catalog and create a Plus plan service instance.
+- Use public endpoints. Private endpoints are currently not supported for the new {{site.data.keyword.conversationshort}} or classic {{site.data.keyword.assistant_classic_short}}.
 
 ## Create the search integration or search skill
 {: #search-add-task}
