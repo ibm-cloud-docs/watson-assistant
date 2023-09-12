@@ -2,11 +2,11 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-25"
+lastupdated: "2023-09-12"
 
 keywords: import workspace, import JSON, export JSON, upload JSON, download JSON, collaborate
 
-subcollection: assistant
+subcollection: watson-assistant
 
 ---
 
