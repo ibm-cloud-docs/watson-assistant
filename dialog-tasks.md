@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-08"
+lastupdated: "2023-09-12"
 
 keywords: dialog node limits, copying a node, moving a node, adding a folder
 
-subcollection: assistant
+subcollection: watson-assistant
 
 ---
 

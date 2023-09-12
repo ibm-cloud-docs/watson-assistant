@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-23"
+lastupdated: "2023-09-12"
 
 keywords: building a dialog, condition, response, options, jump, jump-to, multiline, response variations
 
-subcollection: assistant
+subcollection: watson-assistant
 
 ---
 
