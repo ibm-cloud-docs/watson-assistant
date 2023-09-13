@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-12"
+lastupdated: "2023-09-13"
 
 keywords: slot, slots
 
@@ -22,15 +22,15 @@ Add slots to a dialog node to gather multiple pieces of information from a user 
 
 Use slots to get the information you need before you can respond accurately to the user. For example, if users ask about operating hours, but the hours differ by store location, you might ask a follow-up question about which store location they plan to visit before you answer. You can then add response conditions that take the provided location information into account.
 
-![Asks for location information before answering the question, When do you open](images/op-hours.svg){: caption="Ask for location" caption-side="bottom"}
+![Asks for location information before answering the question, When do you open](images/op-hours.png){: caption="Ask for location" caption-side="bottom"}
 
 Slots can help you to collect multiple pieces of information that you need to complete a complex task for a user, such as making a dinner reservation.
 
-![Shows four slots that prompt for the information needed to make a dinner reservation.](images/reservation.svg){: caption="Four slots for reservation" caption-side="bottom"}
+![Shows four slots that prompt for the information needed to make a dinner reservation.](images/reservation.png){: caption="Four slots for reservation" caption-side="bottom"}
 
 The user might provide values for multiple slots at once. For example, the input might include the information `There will be 6 of us dining at 7 PM`. This one input contains two of the missing required values: the number of guests and time of the reservation. Your assistant recognizes and stores both of them, each one in its corresponding slot. It then displays the prompt that is associated with the next empty slot.
 
-![Shows that two slots are filled, and the service prompts for the remaining one.](images/pass-in-info.svg){: caption="Two slots filled" caption-side="bottom"}
+![Shows that two slots are filled, and the service prompts for the remaining one.](images/pass-in-info.png){: caption="Two slots filled" caption-side="bottom"}
 
 Slots make it possible for your assistant to answer follow-up questions without having to reestablish the user's goal. For example, a user might ask for a weather forecast, then ask a follow-up question about weather in another location or on a different day. If you save the required forecast variables, such as location and day, in slots, then if a user asks a follow-up question with new variable values, you can overwrite the slot values with the new values provided, and give a response that reflects the new information. For more information about how to call an external service from a dialog, see [Making programmatic calls from a dialog node](/docs/watson-assistant?topic=watson-assistant-dialog-webhooks).
 
@@ -83,7 +83,7 @@ Using slots produces a more natural dialog flow between the user and your assist
          - [**Option**](/docs/watson-assistant?topic=watson-assistant-dialog-overview#dialog-overview-add-option)
          - [**Pause**](/docs/watson-assistant?topic=watson-assistant-dialog-overview#dialog-overview-add-pause)
          - [**Search skill**](/docs/watson-assistant?topic=watson-assistant-dialog-overview#dialog-overview-add-search-skill) [Plus]{: tag-green}
-          - [**Text**](/docs/watson-assistant?topic=watson-assistant-dialog-overview#dialog-overview-simple-text)
+         - [**Text**](/docs/watson-assistant?topic=watson-assistant-dialog-overview#dialog-overview-simple-text)
 
     This table shows example slot values for a node that helps users place a pizza order by collecting two pieces of information, the pizza size and delivery time.
 
@@ -116,7 +116,7 @@ Using slots produces a more natural dialog flow between the user and your assist
       If you make a slot optional, reference its context variable in the node-level response text if you can word it such that it makes sense even if no value is provided for the slot. For example, you might word a summary statement like this, `I am ordering a $size $dietary pizza for delivery at $time.` The resulting text makes sense whether the dietary restriction information, such as `gluten-free` or `dairy-free`, is provided or not. The result is either, `I am ordering a large gluten-free pizza for delivery at 3:00PM.` or `I am ordering a large pizza for delivery at 3:00PM.`
       {: tip}
 
-    - **Conditional**: If you want a slot to be enabled only under certain conditions, then you can add a condition to it. For example, if slot 1 asks for a meeting start time, slot 2 captures the meeting duration, and slot 3 captures the end time, then you might want to enable slot 3 only if a value for slot 2 is not provided. To make a slot conditional, edit the slot, and then from the **More** ![More icon](images/overflow-menu--vertical.svg) menu, select **Enable condition**. Define the condition that must be met for the slot to be enabled.
+    - **Conditional**: If you want a slot to be enabled only under certain conditions, then you can add a condition to it. For example, if slot 1 asks for a meeting start time, slot 2 captures the meeting duration, and slot 3 captures the end time, then you might want to enable slot 3 only if a value for slot 2 is not provided. To make a slot conditional, edit the slot, and then from the **More** ![More icon](images/overflow-menu--vertical.png) menu, select **Enable condition**. Define the condition that must be met for the slot to be enabled.
 
        You can condition on the value of a context variable from an earlier slot because the order in which the slots are listed is the order in which they are evaluated. However, condition on a slot context variable that you can be confident contains a value when this slot is evaluated. The earlier slot must be a required slot, for example.
        {: tip}
@@ -125,7 +125,7 @@ Using slots produces a more natural dialog flow between the user and your assist
 
     For example, the user might ask about the tomato sauce recipe or where you get your ingredients. To handle such off-topic questions, click the **Manage handlers** link and add a condition and response for each anticipated question.
 
-    ![Shows a user ask about the sauce recipe. The response is, I'll take it to my grave'.](images/sauce.svg){: caption="Off-topic question" caption-side="bottom"}
+    ![Shows a user ask about the sauce recipe. The response is, I'll take it to my grave'.](images/sauce.png){: caption="Off-topic question" caption-side="bottom"}
 
     After responding to the off-topic question, the prompt that is associated with the current empty slot is displayed.
 
