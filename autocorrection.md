@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-07-27"
+lastupdated: "2023-09-18"
 
 keywords: autocorrection, spelling correction, spell check
 
@@ -22,7 +22,7 @@ Autocorrection corrects user input in the following way:
 - Original input: `letme applt for a memberdhip`
 - Corrected input: `let me apply for a membership`
 
-When your assistant evaluates whether to correct the spelling of a word, it does not rely on a simple dictionary lookup process. Instead, it uses a combination of natural language processing and probabalistic models to assess whether a term is, in fact, misspelled and should be corrected.
+When your assistant evaluates whether to correct the spelling of a word, it does not rely on a simple dictionary lookup process. Instead, it uses a combination of natural language processing and probabilistic models to assess whether a term is, in fact, misspelled and should be corrected.
 
 Autocorrection is enabled automatically for all English-language assistants. It is also available in French-language assistants, but is disabled by default. Autocorrection isn't available for any other languages.
 
@@ -32,7 +32,7 @@ Autocorrection is enabled automatically for all English-language assistants. It 
 
 If necessary, you can disable autocorrection for your assistant. 
 
-If you find that a domain-specific term is being corrected that shouldn't be, you can prevent the correction from happening by adding the term or phrase to your training data. For more details, see [Autocorrection rules](#autocorrection-rules).
+If you find that a domain-specific term is being corrected that shouldn't be, you can prevent the correction from happening by adding the term or phrase to your training data. For more information, see [Autocorrection rules](#autocorrection-rules).
 {: note}
 
 If you are using actions in your assistant, follow these steps to disable autocorrection:
@@ -52,7 +52,7 @@ If you are using dialog in your assistant, follow these steps to disable autocor
 ## Testing autocorrection in dialog
 {: #autocorrection-test}
 
-If you are using dialog, you can test autocorrection using **Try it out**.
+If you are using dialog, you can test autocorrection by using **Try it out**.
 
 1.  In **Try it out**, enter a request that includes some misspelled words.
 
@@ -68,11 +68,11 @@ If there are misspelled terms that you expected your assistant to correct, but i
 To avoid overcorrection, your assistant does not correct the spelling of the following types of input:
 
 - Capitalized words
-- Words with an upper case character
+- Words with an uppercase character
 - Emojis
 - Locations, such as states and street addresses
 - Numbers and units of measurement or time
-- Proper nouns, such as common first names or company names
+- Proper nouns, such as common given names or company names
 - Text within quotation marks
 - Words containing special characters, such as hyphens (-), asterisks (*), ampersands (&), or at signs (@), including those used in email addresses or URLs.
 - Words that *belong*, meaning words that have implied significance because they occur in your action steps or dialog entity values, entity synonyms, or intent user examples.
