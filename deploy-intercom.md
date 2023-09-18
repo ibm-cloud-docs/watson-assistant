@@ -13,13 +13,14 @@ subcollection: watson-assistant
 # Integrating with Intercom
 {: #deploy-intercom}
 
+## Classic experience only
+The Intercom integration is available in only in the classic experience for use with a dialog skill. The Intercom integration is not available in the new experience.
+{: attention}
+
 Intercom is a customer messaging platform that helps drive business growth through better relationships throughout the customer lifecycle.
 {: shortdesc}
 
 You can integrate your assistant with an Intercom application to enable the app to seamlessly pass user conversations between your assistant and live agents.
-
-The Intercom integration is available in only in the classic experience for use with a dialog skill. The Intercom integration is not available in the new experience.
-{: important}
 
 If you integrate the assistant with Intercom, the Intercom application becomes the client-facing application for your skill. All interactions with users are initiated through and managed by Intercom.
 
