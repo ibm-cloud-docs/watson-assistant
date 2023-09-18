@@ -14,7 +14,7 @@ subcollection: watson-assistant
 {: #deploy-intercom}
 
 ## Classic experience only
-The Intercom integration is available in only in the classic experience for use with a dialog skill. The Intercom integration is not available in the new experience.
+The Intercom integration is available in only in the classic experience for use with a dialog skill. The Intercom integration isn't available in the new experience.
 {: attention}
 
 Intercom is a customer messaging platform that helps drive business growth through better relationships throughout the customer lifecycle.
