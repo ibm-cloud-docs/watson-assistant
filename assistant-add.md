@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-09-11"
+lastupdated: "2023-09-18"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,15 @@ subcollection: watson-assistant
 # Adding more assistants
 {: #assistant-add}
 
-You can create multiple assistants in your instance. The number of assistants you can create depends on your {{site.data.keyword.conversationshort}} [plan type](https://www.ibm.com/products/watsonx-assistant/pricing){: external}.
+You can create multiple assistants in your instance. The number of assistants you can create depends on your plan.
+
+| Plan | Assistants per instance |
+| --- | --- |
+| Enterprise | 30 |
+| Plus | 10 |
+| Trial | 10 |
+| Lite |  3 |
+{: caption="Service plan details" caption-side="bottom"}
 
 If you need to add more assistants, follow these steps:
 
