@@ -177,6 +177,7 @@ toc:
           - deploy-sms.md
           - deploy-whatsapp.md
           - deploy-custom-app.md
+          - deploy-intercom.md
       - topicgroup:
           label: Improving your assistant
           topics:
