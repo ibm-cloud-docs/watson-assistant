@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-09-03"
+lastupdated: "2023-09-19"
 
 keywords: phone, phone interactions, custom language model, custom grammar, advanced settings
 
@@ -835,18 +835,24 @@ You can specify any of the following parameters in the `parameters` object:
 | mediaURL          | list   | A list of URLs for media files to be sent with the message as MMS attachments. Optional. |
 | tenantPhoneNumber | string | The phone number that is associated with the tenant. The format of the number must match the format that is required by the SMS provider. If no `tenantPhoneNumber` value is provided, the tenant ID from the phone integration configuration for the active call is used. Optional. |
 | userPhoneNumber   | string | The phone number to send the SMS message to. The format of the number must match the format that is required by the SMS provider. If no `userPhoneNumber` value is provided, the voice caller's phone number from `From` header of the incoming SIP `INVITE` request is used. Optional. |
+| setAsInputText    | boolean | Whether to send a sms message from the user in `input.text`. If you specify `true`, the sms message from the user will be sent in `input.text`. 
+Otherwise, `input.text` will be set to `vgwSMSMessage` and the SMS message will be sent as an integration variable and a context variable. Optional. Default: false. |
 
 If your *SMS* integration supports more than one SMS phone number, or you are using a SIP trunk different from your SMS provider, be sure to specify the phone number that you want to use to send the text message. Otherwise, the text is sent by using the same phone number that was called.
 
-After the assistant receives an SMS message, a new conversation turn is initiated with the text input `vgwSMSMessage`. This input indicates that a message was received from the caller. The text of the customer's message is included as the value of the `vgwSMSMessage`context variable. 
+After the assistant receives an SMS message, a new conversation turn is initiated with the text input `vgwSMSMessage`. This input indicates that a message was received from the caller. The text of the customer's message is included as the value of the `vgwSMSMessage`context variable and the `sms_message` integration variable. 
 
 If the assistant is unable to send an SMS message to the caller, a new turn is initiated with the text input `vgwSMSFailed`. This input indicates that an SMS message could not be sent to the caller. You can design your assistant to handle such a failure by creating actions that are triggered by the input text `vgwSMSFailed`.
 
 ``` json
 {
   "input": {
-    "message_type": "text",
-    "text": "vgwSMSMessage"
+    "text": "vgwSMSMessage",
+    "integrations": {
+      "voice_telephony": {
+        "sms_message": "230 Leigh Farm rd"
+      }
+    }
   },
   "context": {
     "skills": {
@@ -856,8 +862,34 @@ If the assistant is unable to send an SMS message to the caller, a new turn is i
         }
       }
     }
+  }
 }
 ```
+
+Here's an example of a turn request when `setAsInputText` is set to `true`:
+
+``` json
+{
+  "input": {
+    "text": "230 Leigh Farm rd",
+    "integrations": {
+      "voice_telephony": {
+        "sms_message": "230 Leigh Farm rd"
+      }
+    }
+  },
+  "context": {
+    "skills": {
+      "main skill": {
+        "user_defined": {
+          "vgwSMSMessage": "1545 Lexington Ave."
+        }
+      }
+    }
+  }
+}
+```
+
 {: codeblock}
 
 ## Defining a sequence of phone commands

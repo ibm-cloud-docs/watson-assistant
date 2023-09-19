@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-08-31"
+lastupdated: "2023-09-19"
 
 keywords: phone, context variables, input parameters
 
@@ -51,6 +51,7 @@ The following input parameters are only valid for the current conversation turn.
 | `is_dtmf` | boolean | Whether the input to {{site.data.keyword.conversationshort}} is dual-tone multi-frequency signaling (DTMF). |
 | `speech_to_text_result` | object | The final response from the {{site.data.keyword.speechtotextshort}} service in JSON format, including the transcript and confidence score for the lead hypothesis and any alternatives. The format matches exactly the format that is received from the {{site.data.keyword.speechtotextshort}} service. (For more information, see the [{{site.data.keyword.speechtotextshort}} API documentation](https://cloud.ibm.com/apidocs/speech-to-text#recognize){: external}.) |
 {: caption="Input parameters set by the phone channel" caption-side="top"}
+| `sms_message` | string | A SMS message received from the caller. |
 
 ### Example
 
