@@ -79,8 +79,9 @@ Keep these tips in mind for integrations:
 | Portuguese (Brazilian) | pt-br |
 | Spanish | es |
 | Universal* | xx |
-*If you want to support conversations in a language for which {{site.data.keyword.conversationshort}} does not have a dedicated model, such as Russian, use Universal. 
 {: caption="Supported languages" caption-side="top"}
+
+*If you want to support conversations in a language for which {{site.data.keyword.conversationshort}} does not have a dedicated model, such as Russian, use Universal. 
 
 ## Changing an assistant language
 {: #admin-language-support-change-language}
@@ -100,7 +101,7 @@ The system provides the highest confidence scores in entities with exact matches
 
 You are expected to train the system with the proper characters and accents. For example, if you are expecting `barrió` as a response, put `barrió` into the training set.
 
-Although not an accent mark, the same applies to words that use the Spanish letter `ñ` versus the letter `n`, such as "uña" versus "una". In this case, the letter `ñ` is not simply an `n` with an accent; it is a unique, Spanish-specific letter.
+Although not an accent mark, the same applies to words that use the Spanish letter `ñ` versus the letter `n`, such as "uña" versus "una". In this case, the letter `ñ` is not an `n` with an accent; it is a unique, Spanish-specific letter.
 
 ## Using multilingual downloads for translation
 {: #admin-language-support-multilingual}
@@ -185,24 +186,24 @@ To upload to a language-specific assistant:
 ## Content language support
 {: #admin-language-support-content}
 
-There is full language support for content in actions, dialog, and the search integration.
+These languages are supported for content in actions, dialog, and the search integration.
 
 | Language | Actions | Dialog | Search integration |
 | --- |:---:|:---:|:---:|
-| English (en) | ../../icons/checkmark-icon.svg |  ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
-| Arabic (ar) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
-| Chinese (Simplified) (zh-cn) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
-| Chinese (Traditional) (zh-tw) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
-| Czech (cs) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
-| Dutch (nl) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
-| French (fr) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
-| German (de) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
-| Italian (it) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
-| Japanese (ja) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
-| Korean (ko) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
-| Portuguese (Brazilian) (pt-br) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
-| Spanish (es) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
-| Universal (xx)  | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| English (en) | ![checkmark icon](../../icons/checkmark-icon.svg) |  ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Arabic (ar) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Chinese (Simplified) (zh-cn) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Chinese (Traditional) (zh-tw) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Czech (cs) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Dutch (nl) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| French (fr) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| German (de) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Italian (it) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Japanese (ja) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Korean (ko) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Portuguese (Brazilian) (pt-br) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Spanish (es) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Universal (xx)  | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 {: caption="Content support details" caption-side="top"}
 
 The {{site.data.keyword.conversationshort}} service supports multiple languages as noted, but the user interface itself (such as descriptions and labels) is in English. All supported languages can be input and trained through the English interface.
@@ -223,19 +224,19 @@ For these dialog features, language support differs depending on the language.
 
 | Language | [Content Catalog](/docs/watson-assistant?topic=watson-assistant-catalog) | [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version ) |
 | --- |:---:|:---:|
-| English (en) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
-| Arabic (ar) | ../../icons/checkmark-icon.svg (except Covid-19) | ../../icons/checkmark-icon.svg |
-| Chinese (Simplified) (zh-cn) |  | ../../icons/checkmark-icon.svg |
-| Chinese (Traditional) (zh-tw) |  | ../../icons/checkmark-icon.svg |
-| Czech (cs) |  | ../../icons/checkmark-icon.svg |
-| Dutch (nl) |  | ../../icons/checkmark-icon.svg |
-| French (fr) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
-| German (de) | ../../icons/checkmark-icon.svg (except Covid-19) | ../../icons/checkmark-icon.svg |
-| Italian (it) | ../../icons/checkmark-icon.svg (except Covid-19) | ../../icons/checkmark-icon.svg |
-| Japanese (ja) | ../../icons/checkmark-icon.svg (except Covid-19) | ../../icons/checkmark-icon.svg |
-| Korean (ko) |  | ../../icons/checkmark-icon.svg |
-| Portuguese (Brazilian) (pt-br) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
-| Spanish (es) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| English (en) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Arabic (ar) | ![checkmark icon](../../icons/checkmark-icon.svg) (except Covid-19) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Chinese (Simplified) (zh-cn) |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Chinese (Traditional) (zh-tw) |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Czech (cs) |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Dutch (nl) |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| French (fr) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| German (de) | ![checkmark icon](../../icons/checkmark-icon.svg) (except Covid-19) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Italian (it) | ![checkmark icon](../../icons/checkmark-icon.svg) (except Covid-19) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Japanese (ja) | ![checkmark icon](../../icons/checkmark-icon.svg) (except Covid-19) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Korean (ko) |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Portuguese (Brazilian) (pt-br) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Spanish (es) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Universal (xx) |  |  |
 {: caption="Table 3. Intent feature support details" caption-side="bottom"}
 
@@ -244,20 +245,20 @@ For these dialog features, language support differs depending on the language.
 
 | Language | [Dictionary-based entity support](/docs/watson-assistant?topic=watson-assistant-entities#entities-create-dictionary-based) | [Fuzzy matching (*Misspelling*)](/docs/watson-assistant?topic=watson-assistant-entities#entities-fuzzy-matching) | [Fuzzy matching (*Stemming*)](/docs/watson-assistant?topic=watson-assistant-entities#entities-fuzzy-matching) | [Fuzzy matching (*Partial match*)](/docs/watson-assistant?topic=watson-assistant-entities#entities-fuzzy-matching) | [Autocorrection](/docs/watson-assistant?topic=watson-assistant-autocorrection) |
 | --- |:---:|:---:|:---:|:---:|:---:|
-| English (en) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
-| Arabic (ar) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |  |
-| Chinese (Simplified) (zh-cn) | ../../icons/checkmark-icon.svg |  |  |  |  |
-| Chinese (Traditional) (zh-tw) | ../../icons/checkmark-icon.svg |  |  |  |  |
-| Czech (cs) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |
-| Dutch (nl) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |  |
-| French (fr) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  | Beta |
-| German (de) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |
-| Italian (it) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |  |
-| Japanese (ja) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |  |
-| Korean (ko) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |  |
-| Portuguese (Brazilian) (pt-br) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |  |
-| Spanish (es) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |  |
-| Universal (xx) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |  |
+| English (en) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Arabic (ar) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |  |
+| Chinese (Simplified) (zh-cn) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |  |  |
+| Chinese (Traditional) (zh-tw) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |  |  |
+| Czech (cs) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |
+| Dutch (nl) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |  |
+| French (fr) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |  | Beta |
+| German (de) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |
+| Italian (it) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |  |
+| Japanese (ja) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |  |
+| Korean (ko) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |  |
+| Portuguese (Brazilian) (pt-br) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |  |
+| Spanish (es) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |  |
+| Universal (xx) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |  |
 {: caption="Table 4. User input processing support details" caption-side="bottom"}
 
 ### Entity feature support
@@ -265,18 +266,18 @@ For these dialog features, language support differs depending on the language.
 
 | Language | [Contextual entities](/docs/watson-assistant?topic=watson-assistant-entities#entities-create-annotation-based) | [System entities](/docs/watson-assistant?topic=watson-assistant-system-entities) |
 | --- |:---|:---:|
-| English (en)                   | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
-| Arabic (ar)                    |  | ../../icons/checkmark-icon.svg |
-| Chinese (Simplified) (zh-cn)   |  | ../../icons/checkmark-icon.svg |
-| Chinese (Traditional) (zh-tw)  |  | ../../icons/checkmark-icon.svg |
-| Czech (cs)                     |  | ../../icons/checkmark-icon.svg |
-| Dutch (nl)                     |  | ../../icons/checkmark-icon.svg |
-| French (fr)                    | Beta | ../../icons/checkmark-icon.svg |
-| German (de)                    |  | ../../icons/checkmark-icon.svg |
-| Italian (it)                   |  | ../../icons/checkmark-icon.svg |
-| Japanese (ja)                  |  | ../../icons/checkmark-icon.svg |
-| Korean (ko)                    |  | ../../icons/checkmark-icon.svg |
-| Portuguese (Brazilian) (pt-br) |  | ../../icons/checkmark-icon.svg |
-| Spanish (es)                   |  | ../../icons/checkmark-icon.svg |
-| Universal (xx)                 |  | ../../icons/checkmark-icon.svg |
+| English (en)                   | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Arabic (ar)                    |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Chinese (Simplified) (zh-cn)   |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Chinese (Traditional) (zh-tw)  |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Czech (cs)                     |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Dutch (nl)                     |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| French (fr)                    | Beta | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| German (de)                    |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Italian (it)                   |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Japanese (ja)                  |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Korean (ko)                    |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Portuguese (Brazilian) (pt-br) |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Spanish (es)                   |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Universal (xx)                 |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
 {: caption="Table 5. Entity feature support details" caption-side="bottom"}
