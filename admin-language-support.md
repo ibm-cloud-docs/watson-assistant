@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-31"
+lastupdated: "2023-09-20"
 
 keywords: global support, universal language, universal model, another language
 
@@ -17,13 +17,13 @@ subcollection: watson-assistant
 
 Your customers come from all around the globe. You need an assistant that can talk to them in their own language and in a familiar style. Choose the approach that best fits your business needs.
 
-- **Quickest solution**: The simplest way to add language support is to author the assistant in a single language. You can translate each message that is sent to your assistant from the customer's local language to the assistant language. Later you can translate each response from the assistant language back to the customer's local language.
+- Quickest solution: The simplest way to add language support is to author the assistant in a single language. You can translate each message that is sent to your assistant from the customer's local language to the assistant language. Later you can translate each response from the assistant language back to the customer's local language.
 
     This approach simplifies the process of authoring and maintaining the conversation. You can build one assistant and use it for all languages. However, the intention and meaning of the customer message can be lost in the translation.
 
     For more information about webhooks you can use for translation, see [Webhook overview](/docs/watson-assistant?topic=watson-assistant-webhook-overview).
 
-- **Most precise solution**: If you have the time and resources, the best user experience can be achieved when you build multiple assistants, one for each language that you want to support. {{site.data.keyword.conversationshort}} has built-in support for all languages. Use one of 13 language-specific models or the universal model, which adapts to any other language you want to support.
+- Most precise solution: If you have the time and resources, the best user experience can be achieved when you build multiple assistants, one for each language that you want to support. {{site.data.keyword.conversationshort}} has built-in support for all languages. Use one of 13 language-specific models or the universal model, which adapts to any other language you want to support.
 
     When you build an assistant that is dedicated to a language, a language-specific classifier model is used by the assistant. The precision of the model means that your assistant can better understand and recognize the goals of even the most colloquial message from a customer.
 
@@ -40,7 +40,9 @@ An assistant that uses the universal language model applies a set of shared ling
 
 The universal language classifier can adapt to a single language per assistant. It cannot be used to support multiple languages within a single assistant. However, you can use the universal language model in one assistant to support one language, such as Russian, and in another assistant to support another language, such as Hindi. The key is to add enough training examples or intent user examples in your target language to teach the model about the unique syntactic and grammatical rules of the language.
 
-Use the universal language model when you want to create a conversation in a language where no model is available, and which is unique enough that an existing model is insufficient.
+Use the universal language model when you want to create a conversation in a language where no model is available, and which is unique enough that an existing model is insufficient. 
+
+As you follow the normal steps to design a conversational flow, you teach the universal language model about the language you want your skill to support. It is by adding training data that is written in the target language that the universal model is constructed.
 
 For more information about feature support in the universal language model, see [Supported languages](#admin-language-support-codes).
 
@@ -49,9 +51,9 @@ For more information about feature support in the universal language model, see 
 
 Keep these tips in mind for integrations:
 
-- **Phone integration**: If you want to deploy an assistant that uses the universal language model, you must connect to custom Speech service language models that can understand the language you're using. For more information about supported language models, see the [Speech to Text](/docs/speech-to-text?topic=speech-to-text-models#modelsList){: external} and [Text to Speech](/docs/text-to-speech?topic=text-to-speech-voices#languageVoices){: external} documentation.
-- **Search integration**: If you build an assistant that specializes in a single language, be sure to connect it to data collections that are written in that language. For more information about the languages that are supported by {{site.data.keyword.discoveryshort}}, see [Language support](/docs/discovery-data?topic=discovery-data-language-support){: external}.
-- **Web chat**: Web chat has some hardcoded strings that you can customize to reflect your target language. For more information, see [Supporting global audiences](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-global).
+- Phone integration: If you want to deploy an assistant that uses the universal language model, you must connect to custom Speech service language models that can understand the language you're using. For more information about supported language models, see the [Speech to Text](/docs/speech-to-text?topic=speech-to-text-models#modelsList){: external} and [Text to Speech](/docs/text-to-speech?topic=text-to-speech-voices#languageVoices){: external} documentation.
+- Search integration: If you build an assistant that specializes in a single language, be sure to connect it to data collections that are written in that language. For more information about the languages that are supported by {{site.data.keyword.discoveryshort}}, see [Language support](/docs/discovery-data?topic=discovery-data-language-support){: external}.
+- Web chat: Web chat has some hardcoded strings that you can customize to reflect your target language. For more information, see [Supporting global audiences](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-global).
 
 ## Supported languages
 {: #admin-language-support-codes}
@@ -61,14 +63,14 @@ Keep these tips in mind for integrations:
 
 {{site.data.keyword.conversationshort}} has classifier models that are designed specifically to support conversations in the following languages:
 
-| Language | Language code |
-|----------|---------------|
+| Language | Code |
+| --- | --- |
+| English | en-us |
 | Arabic | ar |
 | Chinese (Simplified) | zh-cn |
 | Chinese (Traditional) | zh-tw |
 | Czech | cs |
 | Dutch | nl |
-| English | en-us |
 | French | fr |
 | German | de |
 | Italian | it |
@@ -79,41 +81,6 @@ Keep these tips in mind for integrations:
 | Universal* | xx |
 *If you want to support conversations in a language for which {{site.data.keyword.conversationshort}} does not have a dedicated model, such as Russian, use Universal. 
 {: caption="Supported languages" caption-side="top"}
-
-## Feature support details
-{: #admin-language-support-tables}
-
-The level of language and feature support is indicated by codes:
-
-- GA: The feature is generally available and supported for this language. Features might continue to be updated even after they are generally available.
-- Beta: The feature is supported only as a Beta release and is still undergoing testing before it is made generally available in this language.
-- NA: A feature is not available in this language.
-
-### Content support details
-{: #admin-language-support-content}
-
-| Language | **Actions** | **Dialog** | **Search** |
-| --- |:---:|:---:|:---:|
-| **English (en)**                   | GA |  GA | GA |
-| **Arabic (ar)**                    | GA | GA | GA |
-| **Chinese (Simplified) (zh-cn)**   | GA | GA | GA |
-| **Chinese (Traditional) (zh-tw)**  | GA | GA | GA |
-| **Czech (cs)**                     | GA | GA | GA |
-| **Dutch (nl)**                     | GA | GA | GA |
-| **French (fr)**                    | GA | GA | GA |
-| **German (de)**                    | GA | GA | GA |
-| **Italian (it)**                   | GA | GA | GA |
-| **Japanese (ja)**                  | GA | GA | GA |
-| **Korean (ko)**                    | GA | GA | GA |
-| **Portuguese (Brazilian) (pt-br)** | GA | GA | GA |
-| **Spanish (es)**                   | GA | GA | GA |
-| **Universal (xx)**                 | GA | GA | GA |
-{: caption="Content support details" caption-side="top"}
-
-The {{site.data.keyword.conversationshort}} service supports multiple languages as noted, but the user interface itself (such as descriptions and labels) is in English. All supported languages can be input and trained through the English interface.
-{: note}
-
-GB18030 compliance: GB18030 is a Chinese standard that specifies an extended code page for use in the Chinese market. This code page standard is important for the software industry because the China National Information Technology Standardization Technical Committee mandates that any software application that is released for the Chinese market after September 1, 2001, be enabled for GB18030. The {{site.data.keyword.conversationshort}} service supports this encoding, and is certified GB18030-compliant
 
 ## Changing an assistant language
 {: #admin-language-support-change-language}
@@ -154,18 +121,18 @@ The overview of the multilingual process is:
 
 To enable multilingual download:
 
-1. Open **Assistant settings**.
+1. Open Assistant settings.
 
-1. In the **Download/Upload** section, click **Enable multilingual download**. 
+1. In the Download/Upload section, click Enable multilingual download. 
 
    Enabling multilingual might take a few minutes to process, but you can work elsewhere in the assistant. The Download/Upload button is disabled until this process finishes. After the multilingual download is enabled in an assistant, it can't be disabled.
    {: note}
 
-1. Click **Download/Upload files**. 
+1. Click Download/Upload files. 
 
-1. On the **Download** tab, choose **Multilingual file package**.
+1. On the Download tab, choose Multilingual file package.
 
-1. Select a published version, then click **Download**. You need at least one version for the download to be available.
+1. Select a published version, then click Download. You need at least one version for the download to be available.
 
    Downloading your first file might take a few minutes to process, but you can work elsewhere in the assistant. The Download/Upload button is disabled until this process finishes.
    {: note}
@@ -202,15 +169,114 @@ To upload to a language-specific assistant:
 
 1. Create or switch to a destination assistant that uses the language for your translations. 
 
-1. In the destination assistant, open **Assistant settings**.
+1. In the destination assistant, open Assistant settings.
 
 1. If you translated dialog training and responses, ensure that dialog is active in the destination assistant.
 
-1. In the **Download/Upload** section, click **Download/Upload files**.
+1. In the Download/Upload section, click Download/Upload files.
 
    You don't need to enable multilingual download in the destination assistant.
    {: note}
 
-1. On the **Upload** tab, choose **Multilingual file package**.
+1. On the Upload tab, choose Multilingual file package.
 
-1. Attach your multilingual .zip file package, then click **Upload**. The translated content is added to your draft environment, so you can work on publishing the translated assistant.
+1. Attach your multilingual .zip file package, then click Upload. The translated content is added to your draft environment, so you can work on publishing the translated assistant.
+
+## Content language support
+{: #admin-language-support-content}
+
+There is full language support for content in actions, dialog, and the search integration.
+
+| Language | Actions | Dialog | Search integration |
+| --- |:---:|:---:|:---:|
+| English (en) | ../../icons/checkmark-icon.svg |  ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| Arabic (ar) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| Chinese (Simplified) (zh-cn) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| Chinese (Traditional) (zh-tw) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| Czech (cs) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| Dutch (nl) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| French (fr) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| German (de) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| Italian (it) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| Japanese (ja) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| Korean (ko) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| Portuguese (Brazilian) (pt-br) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| Spanish (es) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| Universal (xx)  | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+{: caption="Content support details" caption-side="top"}
+
+The {{site.data.keyword.conversationshort}} service supports multiple languages as noted, but the user interface itself (such as descriptions and labels) is in English. All supported languages can be input and trained through the English interface.
+{: note}
+
+GB18030 compliance: GB18030 is a Chinese standard that specifies an extended code page for use in the Chinese market. This code page standard is important for the software industry because the China National Information Technology Standardization Technical Committee mandates that any software application that is released for the Chinese market after September 1, 2001, be enabled for GB18030. The {{site.data.keyword.conversationshort}} service supports this encoding, and is certified GB18030-compliant
+
+## Dialog language support
+{: #language-support-dialog}
+
+For these dialog features, language support differs depending on the language.
+- [Intent feature support](#language-support-intents)
+- [User input processing support](#language-support-input)
+- [Entity feature support](#language-support-entities)
+
+### Intent feature support
+{: #language-support-intents}
+
+| Language | [Content Catalog](/docs/watson-assistant?topic=watson-assistant-catalog) | [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version ) |
+| --- |:---:|:---:|
+| English (en) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| Arabic (ar) | ../../icons/checkmark-icon.svg (except Covid-19) | ../../icons/checkmark-icon.svg |
+| Chinese (Simplified) (zh-cn) |  | ../../icons/checkmark-icon.svg |
+| Chinese (Traditional) (zh-tw) |  | ../../icons/checkmark-icon.svg |
+| Czech (cs) |  | ../../icons/checkmark-icon.svg |
+| Dutch (nl) |  | ../../icons/checkmark-icon.svg |
+| French (fr) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| German (de) | ../../icons/checkmark-icon.svg (except Covid-19) | ../../icons/checkmark-icon.svg |
+| Italian (it) | ../../icons/checkmark-icon.svg (except Covid-19) | ../../icons/checkmark-icon.svg |
+| Japanese (ja) | ../../icons/checkmark-icon.svg (except Covid-19) | ../../icons/checkmark-icon.svg |
+| Korean (ko) |  | ../../icons/checkmark-icon.svg |
+| Portuguese (Brazilian) (pt-br) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| Spanish (es) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| Universal (xx) |  |  |
+{: caption="Table 3. Intent feature support details" caption-side="bottom"}
+
+### User input processing support
+{: #language-support-input}
+
+| Language | [Dictionary-based entity support](/docs/watson-assistant?topic=watson-assistant-entities#entities-create-dictionary-based) | [Fuzzy matching (*Misspelling*)](/docs/watson-assistant?topic=watson-assistant-entities#entities-fuzzy-matching) | [Fuzzy matching (*Stemming*)](/docs/watson-assistant?topic=watson-assistant-entities#entities-fuzzy-matching) | [Fuzzy matching (*Partial match*)](/docs/watson-assistant?topic=watson-assistant-entities#entities-fuzzy-matching) | [Autocorrection](/docs/watson-assistant?topic=watson-assistant-autocorrection) |
+| --- |:---:|:---:|:---:|:---:|:---:|
+| English (en) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| Arabic (ar) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |  |
+| Chinese (Simplified) (zh-cn) | ../../icons/checkmark-icon.svg |  |  |  |  |
+| Chinese (Traditional) (zh-tw) | ../../icons/checkmark-icon.svg |  |  |  |  |
+| Czech (cs) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |
+| Dutch (nl) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |  |
+| French (fr) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  | Beta |
+| German (de) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |
+| Italian (it) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |  |
+| Japanese (ja) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |  |
+| Korean (ko) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |  |
+| Portuguese (Brazilian) (pt-br) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |  |
+| Spanish (es) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |  |
+| Universal (xx) | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |  |  |  |
+{: caption="Table 4. User input processing support details" caption-side="bottom"}
+
+### Entity feature support
+{: #language-support-entities}
+
+| Language | [Contextual entities](/docs/watson-assistant?topic=watson-assistant-entities#entities-create-annotation-based) | [System entities](/docs/watson-assistant?topic=watson-assistant-system-entities) |
+| --- |:---|:---:|
+| English (en)                   | ../../icons/checkmark-icon.svg | ../../icons/checkmark-icon.svg |
+| Arabic (ar)                    |  | ../../icons/checkmark-icon.svg |
+| Chinese (Simplified) (zh-cn)   |  | ../../icons/checkmark-icon.svg |
+| Chinese (Traditional) (zh-tw)  |  | ../../icons/checkmark-icon.svg |
+| Czech (cs)                     |  | ../../icons/checkmark-icon.svg |
+| Dutch (nl)                     |  | ../../icons/checkmark-icon.svg |
+| French (fr)                    | Beta | ../../icons/checkmark-icon.svg |
+| German (de)                    |  | ../../icons/checkmark-icon.svg |
+| Italian (it)                   |  | ../../icons/checkmark-icon.svg |
+| Japanese (ja)                  |  | ../../icons/checkmark-icon.svg |
+| Korean (ko)                    |  | ../../icons/checkmark-icon.svg |
+| Portuguese (Brazilian) (pt-br) |  | ../../icons/checkmark-icon.svg |
+| Spanish (es)                   |  | ../../icons/checkmark-icon.svg |
+| Universal (xx)                 |  | ../../icons/checkmark-icon.svg |
+{: caption="Table 5. Entity feature support details" caption-side="bottom"}
