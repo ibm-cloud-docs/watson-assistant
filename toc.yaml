@@ -77,8 +77,6 @@ toc:
           - autocorrection.md
           - algorithm-version.md
           - autolearn.md
-          - assistant-add.md
-          - assistant-rename-delete.md
       - topicgroup:
           label: Previewing and publishing
           topics:
@@ -186,6 +184,8 @@ toc:
           - analytics-recognition.md
           - analytics-conversations.md
           - segment-add.md
+      - assistant-add.md
+      - assistant-rename-delete.md
       - topicgroup:
           label: Administering your instance
           topics:
