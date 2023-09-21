@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-09-18"
+lastupdated: "2023-09-21"
 
 subcollection: watson-assistant
 
@@ -108,3 +108,4 @@ To download a dialog skill version, complete the following steps:
 1.  From the skill menu, click **Versions**.
 1.  Click the **Click to view actions** ![Click to view actions](images/overflow-menu--vertical.svg) icon from the version that you want to download, and then choose **Download**.
 1.  Specify a name for the JSON file and where to save it, and then click **Save**.
+

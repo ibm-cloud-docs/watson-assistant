@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-18"
+lastupdated: "2023-09-21"
 
 keywords: entity, entity value, contextual entity, dictionary entity, pattern entity, entity synonym, annotate mentions
 
@@ -463,3 +463,4 @@ When you delete an entity, you remove any values, synonyms, patterns, or annotat
     ![Delete button](images/entities-delete-button.png)
 
     - To delete one or more specific entities, select the entities that you want to delete, and then click the **Delete** button.
+

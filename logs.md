@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-20"
+lastupdated: "2023-09-21"
 
 keywords: mark as irrelevant, counterexample, data source, deployment ID, log retention
 
@@ -166,3 +166,4 @@ If you use data from another data source, any improvements you make to the model
 It is important to help your assistant stay focused on the types of customer questions and business transactions that you designed it to handle. You can use information that is collected from real customer conversations to highlight subjects that you do not want your assistant to even attempt to address.
 
 For more information, see [Defining what's irrelevant](/docs/watson-assistant?topic=watson-assistant-irrelevance-detection).
+

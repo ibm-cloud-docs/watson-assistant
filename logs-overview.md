@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-20"
+lastupdated: "2023-09-21"
 
 subcollection: watson-assistant
 
@@ -119,3 +119,4 @@ You can also view the intents and entities that were recognized most often durin
 - *Top entities* are also shown in a list. You can select an entity to open the **User conversations** page with the date range that is filtered to match the data you are viewing, and the entity that is filtered to match the selected entity.
 
 See [Improve your skill](/docs/watson-assistant?topic=watson-assistant-logs) for tips on how to edit intents and entities based on discoveries you make by reviewing the intents and entities that your assistant recognizes.
+
