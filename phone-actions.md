@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-09-19"
+lastupdated: "2023-09-21"
 
 keywords: phone, phone interactions, custom language model, custom grammar, advanced settings
 
@@ -1003,3 +1003,4 @@ The following example shows how to access the user phone number (the phone numbe
 {: codeblock}
 
 For more information, see [Phone integration context variables](/docs/watson-assistant?topic=watson-assistant-phone-context).
+

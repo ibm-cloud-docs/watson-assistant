@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-09-19"
+lastupdated: "2023-09-21"
 
 keywords: phone, context variables, input parameters
 
@@ -109,4 +109,5 @@ The following input parameters are only valid for the current conversation turn.
 }
 ```
 {: codeblock}
+
 

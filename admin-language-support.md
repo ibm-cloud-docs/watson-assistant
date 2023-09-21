@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-20"
+lastupdated: "2023-09-21"
 
 keywords: global support, universal language, universal model, another language
 
@@ -281,3 +281,4 @@ For these dialog features, language support differs depending on the language.
 | Spanish (es)                   |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Universal (xx)                 |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
 {: caption="Table 5. Entity feature support details" caption-side="bottom"}
+

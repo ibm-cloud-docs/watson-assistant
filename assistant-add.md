@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-09-18"
+lastupdated: "2023-09-21"
 
 subcollection: watson-assistant
 
@@ -64,3 +64,4 @@ To switch to another assistant in your instance:
     ![Switch assistants](images/assistant-add-switch.png){: caption="Switch assistants" caption-side="bottom"}
 
 1.  Choose the assistant that you want to open.
+

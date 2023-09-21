@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-20"
+lastupdated: "2023-09-21"
 
 subcollection: watson-assistant
 
@@ -3140,3 +3140,4 @@ General Availability
 
 Experimental release
 :   This Experimental release introduces the user interface and enables you to work with workspaces, intents, and examples.
+

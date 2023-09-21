@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-20"
+lastupdated: "2023-09-21"
 
 subcollection: watson-assistant
 
@@ -56,3 +56,4 @@ The best way to build an assistant that understands your domain and the specific
 {: #irrelevance-detection-limits}
 
 The maximum number of counterexamples that you can create for any plan type is 25,000.
+

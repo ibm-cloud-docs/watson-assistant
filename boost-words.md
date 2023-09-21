@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-09-18"
+lastupdated: "2023-09-21"
 
 subcollection: watson-assistant
 
@@ -39,4 +39,5 @@ To add boost words or phrases to an action:
 You can use **Preview** to test recognition of boost words. If a boost word or phrase matches, you can see `Boost word detected` in the Preview pane.
 
 ![Boost preview](images/boost-preview.png)
+
 
