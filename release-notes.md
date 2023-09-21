@@ -223,18 +223,21 @@ Display iframe inline
 ## 15 May 2023
 {: #watson-assistant-may152023}
 {: release-note}
+
 Change to dialog skill context variables named `request`
 :   If your dialog skill used a context variable that is named `request`, it was removed from the response payload of any `/message` calls in the V1 or V2 API, or through the {{site.data.keyword.conversationshort}} user interface. After 15 May 2023, this behavior changes. {{site.data.keyword.conversationshort}} doesn't remove context variables that are named `request` from the response payload anymore.
 
 ## 5 May 2023
 {: #watson-assistant-may052023}
 {: release-note}
+
 New validation choices for date, time, and numeric customer responses
 :   For *Number*, *Date*, *Time*, *Currency*, and *Percentage* customer responses, you can now customize the validation to check for a specific answer, such as a range of dates or a limited currency amount. For more information, see [Customizing validation for a response](/docs/watson-assistant?topic=watson-assistant-handle-errors#customize-validation).
 
 ## 3 May 2023
 {: #watson-assistant-may032023}
 {: release-note}
+
 Algorithm version **Beta** provides improved intent detection and action matching
 :   The algorithm version **Beta** now provides improved intent detection and action matching. It includes a new foundation model that is trained using a transformer architecture to improve intent detection and action matching for English.
 
@@ -247,24 +250,28 @@ Algorithm version **Beta** provides improved intent detection and action matchin
 ## 24 April 2023
 {: #watson-assistant-apr242023}
 {: release-note}
+
 Response modes randomization behavior 
 :   The response modes beta now uses the same randomization behavior during clarification that your actions have without response modes enabled. Previous to this change, when response modes were enabled, the clarification feature no longer periodically modified the options for clarification. Randomizing the clarification helps prevent bias that can be introduced by a percentage of people who always pick the first option without carefully reviewing all of their choices beforehand. For more information, see [Response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes) or [Asking clarifying questions](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-ask-clarifying-question).
 
 ## 21 April 2023
 {: #watson-assistant-apr212023}
 {: release-note}
+
 Collections
 :   You can use a *collection* to organize your actions. You can put actions into folder-style groups based on whatever categorization you need at your organization, such as by use case, internal team, or status. For more information, see [Organizing actions in collections](/docs/watson-assistant?topic=watson-assistant-collections).
 
 ## 18 April 2023
 {: #watson-assistant-apr182023}
 {: release-note}
+
 Activity log
 :   The **Activity log** is a beta feature that is available for evaluation and testing. Use the activity log to track changes. It gives you visibility into the modifications that are made to your assistant. It is available for Plus plans and higher. For more information, see [Activity log](/docs/watson-assistant?topic=watson-assistant-activity-log).
 
 ## 16 April 2023
 {: #watson-assistant-apr162023}
 {: release-note}
+
 Allow changing topics in free text and regex responses
 :   By default, customers can't change topics when the assistant is asking for a free text response or when an utterance matches the pattern in a regex response. Now free text and regex customer response types have a setting to allow a user to digress and change topics. For more information, see [Enabling changing the topic for free text and regex customer responses](/docs/watson-assistant?topic=watson-assistant-change-topic#change-topic-free-text-regex).
 
@@ -274,6 +281,7 @@ Autolearning beta for dialog removed
 ## 7 April 2023
 {: #watson-assistant-apr072023}
 {: release-note}
+
 Never return choice when customer changes topics
 :   If a customer changes a topic during a conversation, there might be some situations when you might not want them to return to the previous action. If you need to do this, a new **Never return** choice is available in **Action settings**. For more information, see [Disabling returning to the original topic](/docs/watson-assistant?topic=watson-assistant-change-topic#change-topic-never-return).
 
@@ -425,7 +433,13 @@ Actions templates updated with new design and new choices
 {: release-note}
 
 Display formats for variables
-:   In **Global settings** for actions, **Display formats** lets you specify the display formats for variables that use date, time, numbers, currency, or percentages. You can also choose a default locale to use if one isn't provided by the client application. This lets you make sure that the format of a variable that's displayed in the web chat is what you want for your assistant. For example, you can choose to have the output of a time variable appear in HH:MM format instead of HH:MM:SS. For more information, see [Display formats](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-display-formats)
+:   In **Global settings** for actions, **Display formats** lets you specify the display formats for variables that use date, time, numbers, currency, or percentages. You can also choose a default locale to use if one isn't provided by the client application. This lets you make sure that the format of a variable that's displayed in the web chat is what you want for your assistant. For example, you can choose to have the output of a time variable appear in HH:MM format instead of HH:MM:SS. For more information, see [Display formats](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-display-formats).
+
+{: #watson-assistant-jan262023}
+{: release-note}
+
+Intent recommendations and intent user example recommendations discontinued
+:   As of this release, intent recommendations and intent user example recommendations are discontinued in dialog skills in the classic experience. **Intent recommendations** has been removed from the **Intents** page and **Recommended examples** has been removed from intents. You can [use unrecognized requests to get action recommendations](/docs/watson-assistant?topic=watson-assistant-analytics-recognition){: external}.
 
 ## 18 January 2023
 {: #watson-assistant-jan182023}
@@ -553,6 +567,15 @@ Session ID information on Analyze page
 :   Session ID information for conversations is now displayed on the Conversations tab of the Analyze page. You can also filter customer conversation data by the session ID. From the Conversations tab of the Analyze page, use the Keyword filter to search by session ID. For more information, see [Filtering conversations](/docs/watson-assistant?topic=watson-assistant-analytics-conversations#analytics-conversations-filtering).
 
    The ability to filter on session ID has limited support for conversations that occurred before this feature release. For all conversations that occurred before 16 September 2022, you can filter only by a single session ID at a time.
+
+## 12 September 2022
+{: #watson-assistant-sep122022}
+{: release-note}
+
+Fix for fuzzy matching in German
+:   In some cases, German closed entities were incorrectly matching shorter values over longer values. For example, suppose that you defined two entity values, `Pflege` and `Pflegegeld` in one entity. If a customer accidentally input `Pflegegelb`, the assistant would incorrectly match with `Pflege` rather than `Pflegegeld`.
+
+   With this fix, the `Pflegegelb` input value would correctly match `Pflegegeld`, not `Pflege`. For more information, see [How fuzzy matching works](/docs/assistant?topic=assistant-entities#entities-fuzzy-matching).
 
 ## 9 September 2022
 {: #watson-assistant-sep092022}
@@ -2355,7 +2378,7 @@ User-based Premium plan
 {: #watson-assistant-nov202018}
 {: release-note}
 
-**Recommendations are discontinued
+Recommendations are discontinued
 :   The Recomendations section on the Improve tab was removed. Recommendations was a beta feature available to Premium plan users only. It recommended actions that users could take to improve their training data. Instead of consolidating recommendations in one place, recommendations are now being made available from the parts of the tool where you make actual training data changes. For example, while adding entity synonyms, you can now opt to see a list of synonymous terms that are recommended by Watson.
 
 ## 9 November 2018
