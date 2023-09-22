@@ -174,10 +174,10 @@ Included only if the web chat integration is in use.
 
 Included only if the phone integration is in use.
 
-The `voice_telephony` object contains both response and request properties. Response properties are output values that are set by the phone integration and provide information about the call. Request properties are input values that you can modify in your actions to send logging data or to change configuration options for the call.
+The `voice_telephony` object contains both response and request properties. Request properties are values that are set by the phone integration and provide information about the call. Response properties are input values that you can modify in your actions to send logging data or to change configuration options for the call.
 
-### Response properties (set by the phone integration)
-{: #expression-integration-variables-phone-properties-response}
+### Request properties (set by the phone integration)
+{: #expression-integration-variables-phone-properties-request}
 
 Properties contained in the `private` object are treated as private variables, which are not included in logs.
 {: note}
@@ -193,10 +193,10 @@ Properties contained in the `private` object are treated as private variables, w
 | `private.sip_to_uri`               | String  | The URI from the `To` header of the SIP request. |
 | `final_utterance_timeout_occurred` | Boolean | Set to `true` when the final utterance timeout has been reached. This timeout can be configured by sending the `final_utterance_timeout_count` property. |
 | `post_response_timeout_occurred`   | Boolean | Set to `true` when the final utterance timeout has been reached. This timeout can be configured by sending the `post_response_timeout_count` property. |
-{: caption="Response properties of the voice_telephony object" caption-side="top"}
+{: caption="Request properties of the voice_telephony object" caption-side="top"}
 
-### Example response JSON
-{: #expression-integration-variables-phone-example-response}
+### Example request JSON
+{: #expression-integration-variables-phone-example-request}
 
 ```json
 "voice_telephony": {
@@ -215,8 +215,8 @@ Properties contained in the `private` object are treated as private variables, w
 }
 ```
 
-### Request properties (set by the assistant)
-{: #expression-integration-variables-phone-properties-request}
+### Response properties (set by the assistant)
+{: #expression-integration-variables-phone-properties-response}
 
 | Name                            | Type    | Description |
 |---------------------------------|---------|-------------|
@@ -224,10 +224,10 @@ Properties contained in the `private` object are treated as private variables, w
 | `post_response_timeout_count`   | Integer | The time (in milliseconds) to wait for a new utterance after the last response is played. If no utterance is received before the timeout occurs, the phone integration sends a message to the assistant that includes the `post_response_timeout_occurred` property set to `true`. |
 | `cdr_custom_data`               | Object  | A JSON object containing key/value pairs to be stored in the CDR record for the call. Each time this object is sent, its contents are merged with data sent previously during the call. |
 | `turn_settings.timeout_count`   | Integer | The time (in milliseconds) to wait for {{site.data.keyword.conversationshort}} to finish processing each conversation turn. |
-{: caption="Request properties of the voice_telephony object" caption-side="top"}
+{: caption="Response properties of the voice_telephony object" caption-side="top"}
 
-### Example request JSON
-{: #expression-integration-variables-phone-example-request}
+### Example response JSON
+{: #expression-integration-variables-phone-example-response}
 
 ```json
 "voice_telephony" : {
