@@ -38,7 +38,7 @@ To access the {{site.data.keyword.conversationshort}} REST APIs, your applicatio
 
 To find this information:
 
-1. Go to the **Environments** page and click the tab for the environment you want to connect to.
+1. Go to the **Environments** page and choose he environment you want to connect to.
 
 1. Click the ![Environment settings icon](images/gear-icon-black.png) icon to open the environment settings.
 
