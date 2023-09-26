@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-27"
+lastupdated: "2023-09-25"
 
 subcollection: watson-assistant
 
@@ -73,8 +73,6 @@ To integrate your assistant with NICE CXone:
     Click **Next**.
 
 1. On the **Connect to contact center** page, specify the following values:
-	    - the **Authentication URL** from NICE CXone
-	    - the **API URL**, which is the *Admin* API endpoint from NICE CXone
 	    - the **Access key ID**
 	    - the **Access key secret**.
     
@@ -132,7 +130,7 @@ The following actions and settings in the workflow are necessary for integration
 
 Use the [Sipputheader](https://help.nice-incontact.com/content/studio/actions/sipputheader/sipputheader.htm) action. In the **headerName** property, enter the name of the SIP header field that contains the Contact ID. This header field is included in outgoing SIP INVITE messages to {{site.data.keyword.conversationshort}}.  
 
-- **headerName** X-Contact-ID
+- **headerName** X-ContactID
 - **headerValue** {ContactId}
 
 **Sipputheader** must be executed before **Placecall**.
