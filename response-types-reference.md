@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-21"
+lastupdated: "2023-09-26"
 
 subcollection: watson-assistant
 
@@ -23,7 +23,7 @@ The following response types are supported in the JSON editor.
 ## `audio`
 {: response-types-json-audio}
 
-Plays an audio clip specified by a URL.
+Plays an audio clip that is specified by a URL.
 
 ### Integration channel support
 {: response-types-json-audio-integrations}
