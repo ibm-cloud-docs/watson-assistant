@@ -15,6 +15,9 @@ subcollection: watson-assistant
 
 To make a programmatic call, define a webhook that sends a POST request callout to an external application that performs a programmatic function. You can then start the webhook from one or more dialog nodes.
 
+If you are using actions instead of dialog, you can use a custom extension to make programmatic calls. For more information, see [Calling a custom extension](/docs/watson-assistant?topic=watson-assistant-call-extension).
+{: note}
+
 A webhook is a mechanism that you can use to call out to an external program based on an event in your program. When used in a dialog, a webhook is triggered when the assistant processes a node with a webhook that is enabled. The webhook collects data that you specify or that you collect from the user during the conversation and save in context variables. It sends the data as part of an HTTP POST request to the URL that you specify as part of your webhook definition. The URL that receives the webhook is the listener. It performs a predefined action that uses the information that you pass to it as specified in the webhook definition, and can optionally return a response.
 
 You can use a webhook to do the following types of things:
