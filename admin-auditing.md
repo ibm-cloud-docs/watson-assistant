@@ -139,5 +139,5 @@ Any of the update events include this additional information in a `requestData.u
 This example from an `assistant.update` event shows a name change:
 
 ```code
-"update":[{"updateType":"Name changed","nameAttribute":"name","newValue”:”Banking Bot 2},{“updateType":"Metadata changed","attributesUpdated":["description","language"]}],"environment":"draft"},
-
+"update":[{"updateType":"Name changed","nameAttribute":"name","newValue”:”Banking Bot 2},{“updateType":"Metadata changed","attributesUpdated":["description","language"]}],{"environment":"draft"},
+```
