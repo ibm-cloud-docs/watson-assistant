@@ -1,32 +1,19 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-11-16"
+  years: 2022, 2023
+lastupdated: "2023-09-27"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
-# Using {{site.data.keyword.at_full_notm}} to audit user activity ![Enterprise plan only](images/enterprise.png)
+# Using {{site.data.keyword.at_full_notm}} to audit user activity
 {: #admin-auditing}
 
-![IBM Cloud only](images/ibm-cloud.png) **{{site.data.keyword.cloud_notm}} only**
+[IBM Cloud]{: tag-ibm-cloud}[Enterprise]{: tag-purple}
 
 You can use the {{site.data.keyword.at_full_notm}} service to track how users and applications interact with {{site.data.keyword.conversationfull}} in {{site.data.keyword.cloud}}. This applies to both the classic and new experiences of {{site.data.keyword.conversationshort}}.
 {: shortdesc}
@@ -68,7 +55,7 @@ In {{site.data.keyword.at_full_notm}}, each event has the prefix `conversation.`
 | `catalog_integration.create` | creates a custom extension |
 | `catalog_integration.delete` | deletes a custom extension |
 | `catalog_integration.update` | updates a custom extension |
-| `counterexample.create` | marks test user input in the "Try it out" pane as being irrelevant or corrects the categorization of a user input that was incorrectly assigned to an intent by marking it as irrelevant |
+| `counterexample.create` | marks test user input in "Try it out" as being irrelevant or corrects the categorization of a user input that was incorrectly assigned to an intent by marking it as irrelevant |
 | `counterexample.delete` | deletes a counterexample |
 | `counterexample.update` | edits a counterexample |
 | `data.delete` | deletes multiple training data items, such as multiple entities or intents |
@@ -136,7 +123,7 @@ In {{site.data.keyword.at_full_notm}}, each event has the prefix `conversation.`
 | `value.update` | edits an entity value |
 | `workspace.create` | creates a workspace |
 | `workspace.delete` | deletes a workspace |
-| `workspace.update` | makes changes to a workspace |
+| `workspace.update` | edits a workspace |
 {: caption="Table 1. Activity that generates events" caption-side="top"}
 
 ## Additional information for update events
