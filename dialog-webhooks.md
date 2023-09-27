@@ -8,7 +8,7 @@ subcollection: watson-assistant
 
 ---
 
-{{{site.data.keyword.attribute-definition-list}}
+{{site.data.keyword.attribute-definition-list}}
 
 # Making a programmatic call from dialog
 {: #dialog-webhooks}
@@ -25,7 +25,7 @@ You can use a webhook to do the following types of things:
 - Trigger an SMS notification.
 - Trigger an {{site.data.keyword.openwhisk}} web action.
 
-You cannot use a webhook to call a {{site.data.keyword.openwhisk_short}} action that uses token-based Identity and Access Management (IAM) authentication. However, you can make a call to a secured {{site.data.keyword.openwhisk_short}} web action. For more information, see [Calling a {{site.data.keyword.openwhisk}} web action](#dialog-webhooks-cf-web-action).
+You cannot use a webhook to call a {{site.data.keyword.openwhisk_short}} action that uses token-based Identity and Access Management (IAM) authentication. However, you can make a call to a secured {{site.data.keyword.openwhisk_short}} web action. For more information, see [Calling an {{site.data.keyword.openwhisk}} web action](#dialog-webhooks-cf-web-action).
 {: important}
 
 For information about how to call a client application, see [Requesting client actions](/docs/watson-assistant?topic=watson-assistant-dialog-actions-client).
@@ -122,7 +122,7 @@ To use a webhook from a dialog node, you must enable webhooks on the node, and t
    In more complex use cases, you might collect information during a conversation with a user about their travel plans, for example. You can collect dates and destination information and save it in context variables that you can pass to an external application as parameters.
   
    | Key | Value |
-   | --- | --- | --- |
+   | --- | --- | 
    | depart_date | $departure | 
    | arrive_date | $arrival | 
    | origin | $origin | 
@@ -153,7 +153,7 @@ To use a webhook from a dialog node, you must enable webhooks on the node, and t
       Use a SpEL expression that extracts only the translated text value.
 
       | Condition | Response | 
-      | --- | --- | --- |
+      | --- | --- |
       | $webhook_result_1 | Your words in Spanish: <? $webhook_result_1.translations[0].translation ?>. | 
       | anything_else | The call to the external application failed. Please try again later. | 
       {: caption="Conditional responses example" caption-side="bottom"}
@@ -180,7 +180,7 @@ Test whether certain user inputs can generate errors in the callout, and build i
 
 | Condition | Response |
 |-----------|----------|
-| output.webhook_error | The callout generated this error: <? output.webhook_error.webhook_result_1 ?>. |
+| output.webhook_error | The callout generated this error: `<? output.webhook_error.webhook_result_1 ?>` |
 {: caption="Conditional response example" caption-side="bottom"}
 
 For example, you might not be authenticating the request properly (401), or you might be trying to pass a parameter with a name that is already in use by the external application. Test the webhook to discover and fix these types of errors before you deploy the webhook.
