@@ -217,6 +217,7 @@ toc:
               - webhook-pre.md
               - webhook-post.md
               - webhook-log.md
+              - dialog-webhooks.md
           - build-custom-extension.md
           - add-custom-extension.md
           - topicgroup:

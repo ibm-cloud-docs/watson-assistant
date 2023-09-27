@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-25"
+lastupdated: "2023-09-27"
 
 keywords: settings
 subcollection: watson-assistant
@@ -100,6 +100,7 @@ Variables are formatted by using a system default unless you specify otherwise.
 | Currency fraction digits | Use the system default (up to 14 digits) or two digits | `10.99` |
 | Currency symbol | Use the system default or choose a global symbol | `$10.99` |
 | <nobr>Percentage fraction digits</nobr> | Use the system default (up to 14 digits) or two digits | `10.75%` |
+{: caption="Display format settings" caption-side="bottom"}
 
 ## Autolearning
 {: #actions-global-settings-autolearning}

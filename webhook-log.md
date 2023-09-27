@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-03-24"
+lastupdated: "2023-09-27"
 
 keywords: log webhook
 
@@ -20,21 +20,21 @@ subcollection: watson-assistant
 You can log activity by making a call to an external service or application every time a customer submits input to the assistant.
 {: shortdesc}
 
-A webhook is a mechanism that allows you to call out to an external program based on events in your program.
+A webhook is a mechanism that you can use to call out to an external program based on events in your program.
 
 This feature is available only to Plus and Enterprise plan users.
 
 The Plus plan allows no more than 5 log webhooks per instance. This limit does not apply to Enterprise plan instances.
 {: note}
 
-Add a log webhook to your assistant if you want to use an external service to log {{site.data.keyword.conversationshort}} activity. You can log two kinds of activity:
+Add a log webhook to your assistant if you want to use an external service to log activity. You can log two kinds of activity:
 
-- **Messages and responses**: The log webhook is triggered each time the assistant responds to customer input. You can use this option as an alternative to the built-in analytics feature to handle logging yourself. (For more information about the built-in analytics support, see [Review your entire assistant at a glance](/docs/watson-assistant?topic=watson-assistant-analytics-overview).)
+- **Messages and responses**: The log webhook is triggered each time that the assistant responds to customer input. You can use this option as an alternative to the built-in analytics feature to handle logging yourself. (For more information about the built-in analytics support, see [Review your entire assistant at a glance](/docs/watson-assistant?topic=watson-assistant-analytics-overview).)
   
-    If you are using a custom channel, note that the log webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2#message). All built-in channel integrations use this API.
+    If you are using a custom channel, the log webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2#message). All built-in channel integrations use this API.
     {: important}
 
-- **Call detail records (CDRs)**: The log webhook is triggered after each telephone call a user makes to your assistant using the phone integration. A Call Detail Record (CDR) is a summary report that documents the details of a telephone call, including phone numbers, call length, latency, and other diagnostic information. CDR records are only for assistants that use the phone integration.
+- **Call detail records (CDRs)**: The log webhook is triggered after each telephone call a user makes to your assistant that uses the phone integration. A Call Detail Record (CDR) is a summary report that documents the details of a telephone call, including phone numbers, call length, latency, and other diagnostic information. CDR records are only for assistants that use the phone integration.
 
 The log webhook does not return anything to your assistant.
 
@@ -52,17 +52,23 @@ The programmatic call to the external service must meet these requirements:
 
 To add the webhook details, complete the following steps:
 
-1. In your assistant, go to **Environments** and open the environment where you want to configure the webhook.
+1. In your assistant, open the environment where you want to configure the webhook.
 
-1. On the **Environments** page, click the ![Environment settings icon](images/gear-icon-black.png) icon beside the environment title to open the environment settings.
+1. Click the ![Environment settings icon](images/../../icons/settings.svg) icon to open the environment settings.
 
-1. On the **Environment settings** page, click **Webhooks > Log webhook**.
+1. On the **Environment settings** page, click **Log webhook**.
 
-1. Set the *Log webhook* switch to **Enabled**.
+   1.  Or, if you're using the classic experience, open the **Assistants** page.
+   
+   1. For the assistant you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Settings**.
+
+   1.  Click **Webhooks**, then click **Log webhook**.
+
+1. Set the **Log webhook** switch to **Enabled**.
 
     If you cannot enable the webhook, you might need to upgrade your service plan.
 
-1. In the **URL** field, add the URL for the external application to which you want to send HTTP POST request callouts (for example, `https://example.com/my_log_service`.
+1. In the **URL** field, add the URL for the external application to which you want to send HTTP POST request callouts. For example, `https://example.com/my_log_service`.
 
     You must specify a URL that uses the SSL protocol, so specify a URL that begins with `https`.
 
@@ -70,9 +76,9 @@ To add the webhook details, complete the following steps:
 
     The secret must be specified as a text string, such as `purple unicorn`.  The maximum length is 1,024 characters. You cannot specify a context variable.
 
-    It is the responsibility of the external service to check for and verify the secret. If the external service does not require a token, specify any string you want. You cannot leave this field empty.
+    It is the responsibility of the external service to check for and verify the secret. If the external service does not require a token, specify any string that you want. You cannot leave this field empty.
 
-    If you want to see the secret as you enter it, click on the **Show password** icon ![view icon](../../icons/view.svg) before you start typing. After you save the secret, the string is replaced by asterisks and can't be viewed again.
+    If you want to see the secret as you enter it, click the **Show password** icon ![view icon](../../icons/view.svg) before you start typing. After you save the secret, the string is replaced by asterisks and can't be viewed again.
     {: note}
 
 1. Click the appropriate checkboxes to select which kinds of activity you want to log:
@@ -82,7 +88,7 @@ To add the webhook details, complete the following steps:
 
 1. In the Headers section, add any headers that you want to pass to the service one at a time by clicking **Add header**.
 
-    The service automatically sends an `Authorization` header with a JWT; you do not need to add one. If you want to handle authorization yourself, add your own authorization header and it will be used instead.
+    The service automatically sends an `Authorization` header with a JWT; you do not need to add one. If you want to handle authorization yourself, add your own authorization header and it is used instead.
 
     After you save the header value, the string is replaced by asterisks and can't be viewed again. 
     {: note}
@@ -94,15 +100,21 @@ Your webhook details are saved automatically.
 
 If you decide you do not want to log messages with a webhook, complete the following steps:
 
-1. In your assistant, go to **Environments** and open the environment where you want to remove the webhook.
+1. In your assistant, go to **Environments** and open the environment where you want to configure the webhook.
 
-1. On the **Environments** page, click the ![Environment settings icon](images/gear-icon-black.png) icon beside the environment title to open the environment settings.
+1. Click the ![Environment settings icon](images/../../icons/settings.svg) icon to open the environment settings.
 
-1. On the **Environment settings** page, click **Webhooks > Log webhook**.
+1. On the **Environment settings** page, click **Log webhook**.
+
+   1.  Or, if you're using the classic experience, open the **Assistants** page.
+   
+   1. For the assistant you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Settings**.
+
+   1.  Click **Webhooks**, then click **Log webhook**.
 
 1. Do one of the following things:
 
-    - To change the webhook that you want to call, click **Delete webhook** to delete the currently specified URL and secret. You can then add a new URL and other details.
+    - To change the webhook that you want to call, click **Delete webhook** to delete the currently specified URL and secret. You can then add a URL and other details.
     - To stop calling a webhook to log every message and response, click the *Log webhook* switch to disable the webhook altogether.
 
 ## Webhook security
@@ -110,7 +122,7 @@ If you decide you do not want to log messages with a webhook, complete the follo
 
 To authenticate the webhook request, verify the JSON Web Token (JWT) that is sent with the request. The webhook microservice automatically generates a JWT and sends it in the `Authorization` header with each webhook call. It is your responsibility to add code to the external service that verifies the JWT.
 
-For example, if you specify `purple unicorn` in the **Secret** field, you might add code similar to this:
+For example, if you specify `purple unicorn` in the **Secret** field, you might add code such as:
 
 ```javascript
 const jwt = require('jsonwebtoken');
@@ -127,7 +139,7 @@ try {
 ## Webhook request body
 {: #webhook-log-request-body}
 
-The request body the webhook sends to the external service is a JSON object with the following structure:
+The request body that the webhook sends to the external service is a JSON object with the following structure:
 
 ```json
 {
@@ -148,7 +160,7 @@ The `payload` object contains the event data to be logged. The structure of the 
 ### Message event payload
 {: #webhook-log-request-body-message}
 
-For `message_logged` events, the `payload` object contains data about a message request sent to the assistant and the message response returned to the integration or client application. For more information about the fields that are part of message requests and responses, see the [API reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2#message).
+For `message_logged` events, the `payload` object contains data about a message request that is sent to the assistant and the message response that is returned to the integration or client application. For more information about the fields that are part of message requests and responses, see the [API reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2#message).
 
 The log webhook payload might include data that is not currently supported by the API. Any fields that are not defined in the API reference documentation are subject to change.
 {: important}
@@ -303,4 +315,4 @@ For `cdr_logged` events, the `payload` object contains data about a Call Detail 
 ```
 {: codeblock}
 
-For detailed information about the structure of the CDR event payload, see [CDR log event reference](/docs/watson-assistant?topic=watson-assistant-cdr-log-reference).
+For more information about the structure of the CDR event payload, see [CDR log event reference](/docs/watson-assistant?topic=watson-assistant-cdr-log-reference).
