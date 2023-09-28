@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-21"
+lastupdated: "2023-09-28"
 
 keywords: entity, entity value, contextual entity, dictionary entity, pattern entity, entity synonym, annotate mentions
 
@@ -386,8 +386,6 @@ You can download a number of entities to a CSV file, so you can then upload and 
     - To download all entities, do not select any individual entities. Instead, click the **Download all entities** icon ![Download all entities icon](../../icons/download.svg).
 
     - To download the entities that are listed on the current page only, select the checkbox in the header. This action selects all of the entities on the current page. Then, click the **Download** button.
-
-    [Download button](images/entities-download-button.png)
 
     - To download one or more specific entities, select the entities that you want to download, and then click the **Download** button.
 
