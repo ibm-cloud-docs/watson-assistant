@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-31"
+lastupdated: "2023-09-28"
 
 subcollection: watson-assistant
 
@@ -24,13 +24,13 @@ Intents that you add from the catalog are meant to provide a starting point. Add
 
 1.  Open the **Content Catalog** page.
 
-    ![Screen capture showing available catalogs](images/catalog-overview.png){: caption="Content catalogs" caption-side="bottom"}
+    ![Screen capture that shows available catalogs](images/catalog-overview.png){: caption="Content catalogs" caption-side="bottom"}
 
 1.  Select a content catalog, such as *Banking*, to see the intents that are provided with it.
 
-    ![Screen capture showing Banking category intents](images/catalog-open.png){: caption="Intents" caption-side="bottom"}
+    ![Screen capture that shows Banking category intents](images/catalog-open.png){: caption="Intents" caption-side="bottom"}
 
-    Intents that are added from a content catalog are distinguishable from other intents by their names. Each intent name is has a prefix with the content catalog name.
+    Intents that are added from a content catalog are distinguishable from other intents by their names. Each intent name has a prefix with the content catalog name.
 
 1.  Add a content catalog by clicking **Add content +**.
 
@@ -44,7 +44,7 @@ After you add a catalog, the intents become part of your training data. If IBM m
 
 Like any other intent, after you add content catalog intents to your skill, you can make the following changes to them:
 
-- Rename intents
-- Delete intents
-- Add, edit, or delete intent user examples
-- Move an example to a different intent
+- Rename intents.
+- Delete intents.
+- Add, edit, or delete intent user examples.
+- Move an example to a different intent.
