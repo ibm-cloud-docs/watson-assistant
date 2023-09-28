@@ -357,7 +357,7 @@ For more information about the disambiguation feature, see [Disambiguation](/doc
 This feature is available only to users with a paid plan.
 {: tip}
 
-The `search` response type is used by a search skill to return the results from a {{site.data.keyword.discoveryfull}} search. A `search` response includes an array of `results`, each of which provides information about a match that is returned from the {{site.data.keyword.discoveryshort}} search query:
+The `search` response type is used by a search skill to return the results from an {{site.data.keyword.discoveryfull}} search. A `search` response includes an array of `results`, each of which provides information about a match that is returned from the {{site.data.keyword.discoveryshort}} search query:
 
 ```json
 {
