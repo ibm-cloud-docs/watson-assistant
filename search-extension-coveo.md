@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-09-05"
+lastupdated: "2023-09-28"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,7 @@ subcollection: watson-assistant
 # Coveo search extension setup
 {: #search-extension-coveo}
 
-You can use [Coveo](https://www.coveo.com){: external} to create and manage source documents. The [Coveo Search API](https://docs.coveo.com/en/52/build-a-search-ui/use-the-search-api){: external} can issue search queries on an index. It is a configurable search that you can customize based on your use case. You can access Coveo search through an extension to your assistant.
+You can use [Coveo](https://www.coveo.com/){: external} to create and manage source documents. The [Coveo Search API](https://docs.coveo.com/en/52/build-a-search-ui/use-the-search-api){: external} can issue search queries on an index. It is a configurable search that you can customize based on your use case. You can access Coveo search through an extension to your assistant.
 
 To set up the extension for Coveo search:
 
