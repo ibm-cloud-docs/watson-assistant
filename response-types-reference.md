@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-26"
+lastupdated: "2023-09-28"
 
 subcollection: watson-assistant
 
@@ -16,7 +16,7 @@ subcollection: watson-assistant
 You can use the JSON editor to specify responses of many different types.
 {: shortdesc}
 
-For more information about using response types in the JSON editor, see [Defining responses using the JSON editor](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json).
+For more information, see [Defining responses with the JSON editor](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json).
 
 The following response types are supported in the JSON editor.
 
@@ -44,17 +44,17 @@ Plays an audio clip that is specified by a URL.
 | title         | string | The title to show before the audio player.| N  |
 | description   | string | The text of the description that accompanies the audio player. | N |
 | alt_text      | string | Descriptive text that can be used for screen readers or other situations where the audio player cannot be seen. | N |
-| channel_options.voice_telephony.loop | string | Whether the audio clip should repeat indefinitely (phone integration only). | N |
+| channel_options.voice_telephony.loop | string | Whether the audio clip repeats indefinitely (phone integration only). | N |
 
-The URL specified by the `source` property can be either of the following:
+The URL specified by the `source` property can be one of the following:
 
-- The URL of an audio file in any standard format such as MP3 or WAV. In the web chat, the linked audio clip will render as an embedded audio player.
+- The URL of an audio file in any standard format such as MP3 or WAV. In the web chat, the linked audio clip renders as an embedded audio player.
 
-- The URL of an audio clip on a supported streaming service. In the web chat, the linked audio clip will render using the embeddable player for the hosting service.
+- The URL of an audio clip on a supported streaming service. In the web chat, the linked audio clip  renders by using the embeddable player for the hosting service.
 
-    Specify the URL you would use to access the audio file in yourbrowser (for example, `https://soundcloud.com/ibmresearchfallen-star-amped`). You do not need to convert the URL to anembeddable form; the web chat will do this automatically.
+    Specify the URL that you use to access the audio file in your browser (for example, `https://soundcloud.com/ibmresearchfallen-star-amped`). The web chat automatically converts the URL to an embeddable form.
 
-    You can embed audio hosted on the following services:
+    You can embed audio hosted on a supported service:
     - [SoundCloud](https://soundcloud.com){: external}
     - [Mixcloud](https://mixcloud.com){: external}
 
@@ -93,7 +93,7 @@ Requests that the conversation be transferred to a different channel integration
 | ![Yes](images/checkmark-icon.svg)  | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
 - The indicated channel integrations support _initiating_ a channel transfer (currently, the web chat integration is the only supported transfer target).
-- Initiating a channel transfer from the phone integration requires that the SMS integration also be configured.
+- Initiating a channel transfer from the phone integration requires that the SMS integration is also configured.
 
 ### Fields
 {: response-types-json-channel-transfer-fields}
@@ -103,12 +103,12 @@ Requests that the conversation be transferred to a different channel integration
 | response_type | string | `channel_transfer` | Y         |
 | message_to_user | string | A message to display to the user before the link for initiating the transfer. | Y |
 | transfer_info | object | Information used by an integration to transfer the conversation to a different channel. | Y |
-| transfer_info.target.chat | string | The URL for the website hosting the web chat to which the conversation is to be transferred. | Y |
+| transfer_info.target.chat | string | URL for the website that hosts the web chat to which the conversation is transferred. | Y |
 
 ### Example
 {: response-types-json-channel-transfer-example}
 
-This example requests a transfer from WhatsApp to the web chat. In addition to the `channel_transfer` response, the output also includes a `text` response to be displayed by the web chat integration after the transfer. The use of the `channels` array ensures that the `channel_transfer` response is handled only by the WhatsApp integration (before the transfer), and the `connect_to_agent` response only by the web chat integration (after the transfer). For more information about using `channels` to target specific integrations, see [Targeting specific integrations](#assistant-responses-json-target-integrations).
+This example requests a transfer from WhatsApp to the web chat. In addition to the `channel_transfer` response, the output also includes a `text` response to be displayed by the web chat integration after the transfer. The use of the `channels` array ensures that the `channel_transfer` response is handled only by the WhatsApp integration (before the transfer), and the `connect_to_agent` response only by the web chat integration (after the transfer). For more information, see [Targeting specific integrations](#assistant-responses-json-target-integrations).
 
 ```json
 {
@@ -180,7 +180,7 @@ Requests that the conversation be transferred to a live agent for help. Service 
 | message_to_human_agent | string | A message to display to the live agent to whom the conversation is being transferred. | Y |
 | agent_available        | string | A message to display to the user when agents are available.                            | Y |
 | agent_unavailable      | string | A message to display to the user when no agents are available.                         | Y |
-| transfer_info          | object | Information used by the web chat service desk integrations for routing the transfer.   | N |
+| transfer_info          | object | Information that is used by the web chat service desk integrations for routing the transfer.   | N |
 | transfer_info.target.zendesk.department | string | A valid department from your Zendesk account.                         | N |
 | transfer_info.target.salesforce.button_id | string | A valid button ID from your Salesforce deployment.                  | N |
 
@@ -210,7 +210,7 @@ This example requests a transfer to a live agent and specifies messages to be di
 ## `date`
 {: response-types-json-date}
 
-Displays an interactive date picker the customer can use to specify a date value.
+Displays an interactive date picker that a customer can use to specify a date value.
 
 ### Integration channel support
 {: response-types-json-date-integrations}
@@ -231,7 +231,7 @@ Displays an interactive date picker the customer can use to specify a date value
 ### Example
 {: response-types-json-connect-to-agent-example}
 
-This example sends a text response asking the user to specify a date, and then shows an interactive date picker.
+This example sends a text response that asks the user to specify a date, and then shows an interactive date picker.
 
 ```json
 {
@@ -251,7 +251,7 @@ This example sends a text response asking the user to specify a date, and then s
 ## `dtmf`
 {: response-types-json-dtmf}
 
-Sends commands to the phone integration to control input or output using dual-tone multi-frequency (DTMF) signals. (DTMF is a protocol used to transmit the tones that are generated when a user presses keys on a push-button phone.)
+Sends commands to the phone integration to control input or output with dual-tone multi-frequency (DTMF) signals. (DTMF is a protocol that transmits tones, which are generated when a user presses keys on a push-button phone.)
 
 ### Integration channel support
 {: response-types-json-dtmf-integrations}
@@ -268,7 +268,7 @@ Sends commands to the phone integration to control input or output using dual-to
 | response_type | string | `dtmf`             | Y         |
 | command_info  | object | Information specifying the DTMF command to send to the phone integration. | Y |
 | command_info.type | string | The DTMF command to send (`collect`, `disable_barge_in`, `enable_barge_in`, or `send`). | Y |
-| command_info.parameters | object | See [Handling phone interactions](/docs/watson-assistant?topic=phone-actions) | N |
+| command_info.parameters | object | See [Handling phone interactions](/docs/watson-assistant?topic=phone-actions). | N |
 
 The `command_info.type` field can specify any of the following supported commands:
 
@@ -281,7 +281,7 @@ For detailed information about how to use each of these commands, see [Handling 
 
 ### Example
 
-This example shows the `dtmf` response type with the `collect` command, used to collect DTMF input. For more information, including examples of other DTMF commands, see [Handling phone interactions](/docs/watson-assistant?topic=watson-assistant-phone-actions).
+This example shows the `dtmf` response type with the `collect` command, used to collect DTMF input. For more information, see [Handling phone interactions](/docs/watson-assistant?topic=watson-assistant-phone-actions).
 
 ```json
 {
@@ -310,7 +310,7 @@ This example shows the `dtmf` response type with the `collect` command, used to 
 ## `end_session`
 {: response-types-json-end-session}
 
-Sends a command to the channel ending the session. This response type instructs the phone integration to hang up the call.
+Sends a command to the channel that ends the session. This response type instructs the phone integration to hang up the call.
 
 ### Integration channel support
 {: response-types-json-end-session-integrations}
@@ -369,12 +369,12 @@ Embeds content from an external website as an HTML `iframe` element.
 | title                                       | string | The title to show before the embedded content. | N |
 | description                                 | string | The text of the description that accompanies the embedded content. | N |
 | image_url                                   | string | The URL of an image that shows a preview of the embedded content. | N |
-| channel_options.chat.display                | string | The way web chat should render the response type (`inline` or `panel`). Default value is `panel` for this response type. | N |
+| channel_options.chat.display                | string | The way web chat renders the response type (`inline` or `panel`). Default value is `panel` for this response type. | N |
 | channel_options.chat.dimensions.base_height | number | The base height (in pixels) to use to scale the content to a specific display size. This property only works when `display` is set to `inline`. | N |
 
 Note that different sites have varying restrictions for embedding content, and different processes for generating embeddable URLs. An embeddable URL is one that can be specified as the value of the `src` attribute of the `iframe` element.
 
-For example, to embed an interactive map using Google Maps, you can use the Google Maps Embed API. (For more information, see [The Maps Embed API overview](https://developers.google.com/maps/documentation/embed/get-started){: external}.) Other sites have different processes for creating embeddable content.
+For example, to embed an interactive map with Google Maps, you can use the Google Maps Embed API. (For more information, see [The Maps Embed API overview](https://developers.google.com/maps/documentation/embed/get-started){: external}.) Other sites have different processes for creating embeddable content.
 
 For technical details about using `Content-Security-Policy: frame-src` to allow embedding of your website content, see [CSP: frame-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-src){: external}.
 
@@ -406,7 +406,7 @@ This example embeds an iframe with a title and description.
 ## `image`
 {: response-types-json-image}
 
-Displays an image specified by a URL.
+Displays an image that is specified by a URL.
 
 ### Integration channel support
 {: response-types-json-image-integrations}
@@ -450,7 +450,7 @@ This example displays an image with a title and descriptive text.
 ## `option`
 {: response-types-json-option}
 
-Presents a set of options (such as buttons or a drop-down list) that users can choose from. The selected value is then sent to the assistant as user input. An `options` response is automatically defined when you choose the **Options** customer response type for a step (for more information, see [Collecting information from your customers](/docs/watson-assistant?topic=watson-assistant-collect-info)).
+Presents a set of options (such as buttons or a drop-down list) that users can choose from. The selected value is then sent to the assistant as user input. An `options` response is automatically defined when you choose the **Options** customer response type for a step. For more information, see [Collecting information from your customers](/docs/watson-assistant?topic=watson-assistant-collect-info).
 
 ### Integration channel support
 {: response-types-json-option-integrations}
@@ -459,7 +459,7 @@ Presents a set of options (such as buttons or a drop-down list) that users can c
 |-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
 | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
-- The way in which options are presented varies depending on the channel integration. The `preference` field is supported when possible, but not all channels support drop-down lists or buttons.
+- How options are presented varies by channel integration. The `preference` field is supported when possible, but not all channels support drop-down lists or buttons.
 
 ### Fields
 {: response-types-json-option-fields}
@@ -470,10 +470,10 @@ Presents a set of options (such as buttons or a drop-down list) that users can c
 | title         | string | The title to show before the options. | Y       |
 | description   | string | The text of the description that accompanies the options. | N |
 | preference    | string | The preferred type of control to display, if supported by the channel (`dropdown` or `button`). | N |
-| options       | list   | A list of key/value pairs specifying the options from which the user can choose. | Y |
+| options       | list   | A list of key-value pairs that specify options from which a user can choose. | Y |
 | options[].label | string | The user-facing label for the option. | Y     |
-| options[].value | object | An object defining the response that will be sent to the {{site.data.keyword.conversationshort}} service if the user selects the option. | Y |
-| options[].value.input | object | An object that includes the message input corresponding to the option, including input text and any other field that is a valid part of a {{site.data.keyword.conversationshort}} message. For more information about the structure of message input, see the [API Reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2?curl=#message){: external}. | N |
+| options[].value | object | An object that defines the response sent to the {{site.data.keyword.conversationshort}} service if the user selects the option. | Y |
+| options[].value.input | object | An object that includes the message input corresponding to the option, including input text and any other field that is a valid part of a {{site.data.keyword.conversationshort}} message. For more information, see the [API Reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2?curl=#message){: external}. | N |
 
 ### Example
 {: response-types-json-option-example}
@@ -514,7 +514,7 @@ This example presents two options (`Buy something` and `Exit`).
 ## `pause`
 {: response-types-json-pause}
 
-Pauses before sending the next message to the channel, and optionally sends a "user is typing" event (for channels that support it).
+Pauses prior to sending the next message to the channel, and optionally sends a "user is typing" event (for channels that support it).
 
 ### Integration channel support
 {: response-types-json-pause-integrations}
@@ -537,7 +537,7 @@ Pauses before sending the next message to the channel, and optionally sends a "u
 ### Example
 {: response-types-json-pause-example}
 
-This examples sends the "user is typing" event while pausing for 5 seconds.
+This example sends the "user is typing" event and pauses for 5 seconds.
 
 ```json
 {
@@ -587,7 +587,7 @@ For detailed information about how to this command, see [Applying advanced setti
 
 ### Example
 
-This example uses the `speech_to_text` response type with the `configure` command to change the language model used by the {{site.data.keyword.speechtotextshort}} service to Spanish, and to enable smart formatting.
+This example uses the `speech_to_text` response type with the `configure` command to change the language model from the {{site.data.keyword.speechtotextshort}} service to Spanish, and to enable smart formatting.
 
 ```json
 {
@@ -617,7 +617,7 @@ This example uses the `speech_to_text` response type with the `configure` comman
 ## `start_activities`
 {: response-types-json-start-activities}
 
-Sends a command to a channel integration to start one or more activities that are specific to that channel. You can use this response type to restart any activity you previously stopped using the `stop_activities` response type.
+Sends a command to a channel integration to start one or more activities that are specific to that channel. You can use this response type to restart any activity you previously stopped with the `stop_activities` response type.
 
 ### Integration channel support
 {: response-types-json-start-activities-integrations}
@@ -632,13 +632,13 @@ Sends a command to a channel integration to start one or more activities that ar
 | Name          | Type   | Description        | Required? |
 |---------------|--------|--------------------|-----------|
 | response_type | string | `start_activities` | Y         |
-| activities    | list   | A list of objects identifying the activities to start. | Y |
+| activities    | list   | A list of objects that identify the activities to start. | Y |
 | activities[].type | string | The name of the activity to start. | Y |
 
 Currently, the following activities for the phone integration can be started:
 
-- `speech_to_text_recognition`: Starts recognizing speech. Streaming audio to the {{site.data.keyword.speechtotextshort}} service is resumed.
-- `dtmf_collection`: Starts processing of inbound DTMF signals.
+- `speech_to_text_recognition`: Recognizes speech. Streaming audio to the {{site.data.keyword.speechtotextshort}} service is resumed.
+- `dtmf_collection`: Processes inbound DTMF signals.
 
 ### Example
 
@@ -668,7 +668,7 @@ This example uses the `start_activities` response type to restart recognizing sp
 ## `stop_activities`
 {: response-types-json-stop-activities}
 
-Sends a command to a channel integration to stop one or more activities that are specific to that channel. The activities remain stopped until they are restarted using the `start_activities` response type.
+Sends a command to a channel integration to stop one or more activities that are specific to that channel. The activities remain stopped until they are restarted with the `start_activities` response type.
 
 ### Integration channel support
 {: response-types-json-stop-activities-integrations}
@@ -683,7 +683,7 @@ Sends a command to a channel integration to stop one or more activities that are
 | Name          | Type   | Description        | Required? |
 |---------------|--------|--------------------|-----------|
 | response_type | string | `stop_activities`  | Y         |
-| activities    | list   | A list of objects identifying the activities to stop. | Y |
+| activities    | list   | A list of objects that identify the activities to stop. | Y |
 | activities[].type | string | The name of the activity to stop. | Y |
 
 Currently, the following activities for the phone integration can be stopped:
@@ -734,8 +734,8 @@ Displays text (or reads it aloud, for the phone integration). To add variety, yo
 | Name          | Type   | Description        | Required? |
 |---------------|--------|--------------------|-----------|
 | response_type | string | `text`             | Y         |
-| values        | list   | A list of one or more objects defining text response. | Y |
-| values.[_n_].text_expression | object | An object describing the text of the response. | N |
+| values        | list   | A list of one or more objects that define text response. | Y |
+| values.[_n_].text_expression | object | An object that describes the text of the response. | N |
 | values.[_n_].text_expression.concat | list | A list of objects that form components of the text response. These objects can include scalar text strings and references to variables. | N |
 | selection_policy | string | How a response is selected from the list, if more than one response is specified. The possible values are `sequential`, `random`, and `multiline`. | N |
 | delimiter     | string | The delimiter to output as a separator between responses. Used only when `selection_policy`=`multiline`. The default delimiter is newline (`\n`). | N |
@@ -743,7 +743,7 @@ Displays text (or reads it aloud, for the phone integration). To add variety, yo
 ### Example
 {: response-types-json-text-example}
 
-This examples displays a greeting message to the user.
+This example displays a greeting message to the user.
 
 ```json
 {
@@ -835,9 +835,9 @@ This example uses the `text_to_speech` response type with the `configure` comman
 ## `user_defined`
 {: response-types-json-user-defined}
 
-A custom response type containing any JSON data the client or integration knows how to handle. For example, you might customize the web chat to display a special kind of card, or build a custom application to format responses using a table or chart.
+A custom response type with any JSON data that the client or integration knows how to handle. For example, you might customize the web chat to display a special kind of card, or build a custom application to format responses with a table or chart.
 
-The user-defined response type is not displayed unless the channel has code to handle it. For more information about customizing the web chat, see [Applying advanced customizations](/docs/watson-assistant?topic=watson-assistant-web-chat-config). 
+The user-defined response type is not displayed unless the channel has code to handle it. For more information, see [Applying advanced customizations](/docs/watson-assistant?topic=watson-assistant-web-chat-config). 
 {: note}
 
 ### Integration channel support
@@ -861,7 +861,7 @@ The user-defined response type is not displayed unless the channel has code to h
 ### Example
 {: response-types-json-user-defined-example}
 
-This examples shows a generic example of a user-defined response. The `user_defined` object can contain any valid JSON data.
+This example shows a generic example of a user-defined response. The `user_defined` object can contain any valid JSON data.
 
 ```json
 {
@@ -887,7 +887,7 @@ This examples shows a generic example of a user-defined response. The `user_defi
 ## `video`
 {: response-types-json-video}
 
-Displays a video specified by a URL.
+Displays a video that is specified by a URL.
 
 ### Integration channel support
 {: response-types-json-video-integrations}
@@ -896,7 +896,7 @@ Displays a video specified by a URL.
 |-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
 | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
-- Some channel integrations do not video titles or descriptions.
+- Some channel integrations do not display video titles or descriptions.
 
 ### Fields
 {: response-types-json-video-fields}
@@ -904,23 +904,23 @@ Displays a video specified by a URL.
 | Name          | Type   | Description                        | Required? |
 |---------------|--------|------------------------------------|-----------|
 | response_type | string | `video`                            | Y         |
-| source        | string | The `https:` URL of the video. The URL can specify either a video file or a streaming video on a supported hosting service.  | Y |
+| source        | string | The `https:` URL of the video. The URL can specify a video file or a streaming video on a supported hosting service.  | Y |
 | title         | string | The title to show before the video.| N         |
 | description   | string | The text of the description that accompanies the video. | N |
 | alt_text      | string | Descriptive text that can be used for screen readers or other situations where the video cannot be seen. | N |
 | channel_options.chat.dimensions.base_height | number | The base height (in pixels) to use to scale the video to a specific display size. | N |
 
-The URL specified by the `source` property can be either of the following:
+The URL specified with the `source` property can be one of the following:
 
-- The URL of a video file in a standard format such as MPEG or AVI. In the web chat, the linked video will render as an embedded video player.
+- The URL of a video file in a standard format such as MPEG or AVI. In the web chat, the linked video renders as an embedded video player.
 
     HLS (`.m3u8`) and DASH (MPD) streaming videos are not supported.
 
-- The URL of a video hosted on a supported video hosting service. In the web chat, the linked video will render using the embeddable player for the hosting service.
+- The URL of a video from a supported service. In the web chat, the linked video renders with the embeddable player for the hosting service.
 
-    Specify the URL you would use to view the video in your browser (for example, `https://www.youtube.com/watch?v=52bpMKVigGU`). You do not need to convert the URL to an embeddable form; the web chat will do this automatically.
+    Specify the URL of the video you want to view in your browser (for example, `https://www.youtube.com/watch?v=52bpMKVigGU`). The web chat automatically converts the URL to an embeddable form.
 
-    You can embed videos hosted on the following services:
+    You can embed videos from the following services:
     - [YouTube](https://youtube.com){: external}
     - [Facebook](https://facebook.com){: external}
     - [Vimeo](https://vimeo.com){: external}
@@ -932,7 +932,7 @@ The URL specified by the `source` property can be either of the following:
 ### Example
 {: response-types-json-video-example}
 
-This example displays an video with a title and descriptive text.
+This example displays a video with a title and descriptive text.
 
 ```json
 {
