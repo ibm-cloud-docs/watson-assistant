@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-09-21"
+lastupdated: "2023-09-29"
 
 subcollection: watson-assistant
 
@@ -16,7 +16,7 @@ subcollection: watson-assistant
 [Plus]{: tag-green}[Enterprise]{: tag-purple}
 
 In the classic experience only, skill versions help you manage the workflow of a dialog skill development project. In the new experience, dialog can be included in your published versions of your content. For more information, see [Publishing your content](/docs/watson-assistant?topic=watson-assistant-publish).
-{: Important}
+{: important}
 
 Create a skill version to capture a snapshot of the training data (intents and entities) and dialog in the skill at key points during the development process. Being able to save an in-progress skill at a specific point in time is especially useful as you start to fine-tune your assistant. You often need to make a change and see the impact before you can determine whether the change improves or lessens the effectiveness of the assistant. Based on your findings from a test environment deployment, you can make an informed decision about whether to deploy a change to an assistant that is deployed in a production environment.
 
