@@ -315,9 +315,9 @@ To change the sequence in which individual text responses are returned, complete
 
      Third time:
      ```text
-    Hello.
-    ```
-    {: screen}
+     Hello.
+     ```
+     {: screen}
 
 ### Rich responses
 {: #dialog-overview-multimedia}

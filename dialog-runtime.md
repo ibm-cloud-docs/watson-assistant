@@ -94,13 +94,13 @@ Disambiguation is enabled automatically for all new dialog skills. You can chang
 
 To edit the disambiguation settings, complete the following steps:
 
-1.  In **Options**, click **Disambiguation**.
-1.  In the **Disambiguation message** field, add text to show before the list of dialog node options. For example, *What do you want to do?*
-1.  In the **Anything else** field, add text to display as an extra option that users can pick if none of the other dialog node options reflect what the user wants to do. For example, *None of the above*.
+1. In **Options**, click **Disambiguation**.
+1. In the **Disambiguation message** field, add text to show before the list of dialog node options. For example, *What do you want to do?*
+1. In the **Anything else** field, add text to display as an extra option that users can pick if none of the other dialog node options reflect what the user wants to do. For example, *None of the above*.
 
     Keep the message short, so it displays inline with the other options. The message must be fewer than 512 characters. For information about what your assistant does if a user chooses this option, see [Handling none of the above](#dialog-runtime-handle-none).
 
-1.  If you want to limit the number of disambiguation options that can be displayed to a user, then in the **Maximum number of suggestions** field, specify a number between 2 and 5. 
+1. If you want to limit the number of disambiguation options that can be displayed to a user, then in the **Maximum number of suggestions** field, specify a number between 2 and 5. 
 
 Your changes are automatically saved.
 
@@ -145,7 +145,7 @@ You can prevent every node in a dialog or an individual dialog node from being i
 
 To disable disambiguation entirely: 
 
-1.  In **Options**, click **Disambiguation**.
+1. In **Options**, click **Disambiguation**.
 
 1. Set the switch to **Off**.
 
@@ -172,34 +172,35 @@ For example, you might have a node that matches the `#stolen_card` intent. Whene
 
 To design your dialog to prioritize a single node over disambiguation, complete the following steps:
 
-1.  In the node that conditions on the intent, click **Customize** to enable multiple conditioned responses.
+1. In the node that conditions on the intent, click **Customize** to enable multiple conditioned responses.
 
-1.  Add a conditioned response with the following condition:
+1. Add a conditioned response with the following condition:
 
-    `intent.confidence > n`
+   `intent.confidence > n`
+   
+   where `n` is a confidence score that makes sense for your training data. For example:
+   
+   `intent.confidence > 0.7`
 
-    where `n` is a confidence score that makes sense for your training data. For example:
-
-    `intent.confidence > 0.7`
-
-1.  Move the response up to be first in the list of conditioned responses.
-1.  Click the gear icon to customize the conditioned response.
-1.  In the Assistant responds section, open the context editor.
-1.  Add the following context variable:
+1. Move the response up to be first in the list of conditioned responses.
+1. Click the gear icon to customize the conditioned response.
+1. In the Assistant responds section, open the context editor.
+1. Add the following context variable:
 
    | Variable | Value |
    | --- | --- |
    | `system` | `{"prevent_disambiguation":true}`|
    {: caption="Context variable" caption-side="bottom"}
 
-1.  Click **Save**.
+1. Click **Save**.
 
-    Alternatively, you can add a root-level node with a condition such as:
+   Alternatively, you can add a root-level node with a condition such as:
+   
+   `#stolen_card && intent.confidence > 0.7`
+   
+   Place this node higher in the tree than the node that conditions on `#stolen_card`, which allows the node to be included in a disambiguation list.
 
-    `#stolen_card && intent.confidence > 0.7`
-
-    Place this node higher in the tree than the node that conditions on `#stolen_card`, which allows the node to be included in a disambiguation list.
-1.  Test your dialog. Make sure that the node's response is returned instead of a disambiguation list when the appropriate confidence score threshold is met.
+1. Test your dialog. Make sure that the node's response is returned instead of a disambiguation list when the appropriate confidence score threshold is met.
 
 ### Handling none of the above
 {: #dialog-runtime-handle-none}
@@ -232,11 +233,11 @@ This behavior is intended. As part of development that is in progress to help th
 
 To test disambiguation, complete the following steps:
 
-1.  From the "Try it out" pane, enter a test utterance that is a good candidate for disambiguation, meaning two or more of your dialog nodes are configured to address utterances like it.
+1. From the "Try it out" pane, enter a test utterance that is a good candidate for disambiguation, meaning two or more of your dialog nodes are configured to address utterances like it.
 
-1.  If the response doesn't contain a list of dialog node options for you to choose from, check that you added summary information to the node name (or external node name) fields.
+1. If the response doesn't contain a list of dialog node options for you to choose from, check that you added summary information to the node name (or external node name) fields.
 
-1.  If disambiguation is still not triggered, it might be that the confidence scores for the nodes are not as close in value as you thought.
+1. If disambiguation is still not triggered, it might be that the confidence scores for the nodes are not as close in value as you thought.
 
     - To see the confidence scores of the top three intents that were detected in the input, hover over the eye icon in the "Try it out" pane.
 
@@ -250,9 +251,9 @@ To test disambiguation, complete the following steps:
 
     - To see details for all of the artifacts, including other properties such as context variable value at the time of the call, inspect the entire API response. See [Viewing API call details](/docs/watson-assistant?topic=watson-assistant-message-anatomy#message-anatomy-inspect-api).
 
-1.  Temporarily remove the description in the *name* field (or *external node name* field) for at least one of the nodes that you anticipate as a disambiguation option.
+1. Temporarily remove the description in the *name* field (or *external node name* field) for at least one of the nodes that you anticipate as a disambiguation option.
 
-1.  Enter the test utterance into the "Try it out" pane again.
+1. Enter the test utterance into the "Try it out" pane again.
 
    If you added the `<? intents ?>` expression to the response, then the text includes a list of the intents that your assistant recognized in the test utterance, and includes the confidence score for each one.
 
@@ -297,9 +298,9 @@ You do not define the start and end of a digression. The user is entirely in con
 
 To change the digression behavior for an individual node, complete the following steps:
 
-1.  Click the node to open its edit view.
+1. Click the node to open its edit view.
 
-1.  Click **Customize**, and then click the **Digressions** tab.
+1. Click **Customize**, and then click the **Digressions** tab.
 
     The configuration options differ depending on whether the node you are editing is a root node, a child node, a node with children, or a node with slots.
 
@@ -331,9 +332,9 @@ To change the digression behavior for an individual node, complete the following
 
     - When digressions into the node are enabled, choose whether the dialog must go back to the dialog flow that it digressed away from. After the current node's branch is done being processed, the dialog flow goes back to the interrupted node. To make the dialog return afterward, select **Return after digression**.
 
-1.  Click **Apply**.
+1. Click **Apply**.
 
-1.  Use the "Try it out" pane to test the digression behavior.
+1. Use the "Try it out" pane to test the digression behavior.
 
     Again, you cannot define the start and end of a digression. The user controls where and when digressions happen. You can apply settings that determine how a single node participates in one. Because digressions are so unpredictable, it is hard to know how your configuration decisions impact the overall conversation. To truly see the impact of the choices you made, you must test the dialog.
 
@@ -394,10 +395,10 @@ When a flow digresses into a root node, it follows the course of the dialog that
 
 To disable digressions into a root node altogether, complete the following steps:
 
-1.  Click to open the root node that you want to edit.
-1.  Click **Customize**, and then click the **Digressions** tab.
-1.  Set the **Allow digressions into this node** to **Off**.
-1.  Click **Apply**.
+1. Click to open the root node that you want to edit.
+1. Click **Customize**, and then click the **Digressions** tab.
+1. Set the **Allow digressions into this node** to **Off**.
+1. Click **Apply**.
 
 If you decide that you want to prevent digressions into several root nodes, but do not want to edit each one individually, you can add the nodes to a folder. From the *Customize* page of the folder, you can set the **Allow digressions into this node** switch to **Off** to apply the configuration to all of the nodes. For more information, see [Organizing the dialog with folders](/docs/watson-assistant?topic=watson-assistant-dialog-tasks#dialog-tasks-folders).
 
