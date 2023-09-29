@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-12"
+lastupdated: "2023-09-29"
 
 keywords: dialog node limits, copying a node, moving a node, adding a folder
 
@@ -33,18 +33,16 @@ Queries that you submit through the "Try it out" pane generate `/message` API ca
 
     The chat window indicates what intents and entities were recognized in the input.
 
-    ![Screen capture of test dialog output](images/test_dialog_output.png){: caption="Test dialog output" caption-side="bottom"}
+    ![Screen capture of test dialog output](images/test_intents.png){: caption="Test dialog output" caption-side="bottom"}
 
-1.  To see the top intents that were recognized, hover over the eye icon that is displayed next to the intent with the highest confidence score.
-
-    ![Screen capture of the eye icon that is shown next to the top-most recognizes intent](images/tryit-intent-details.png){: caption="Eye icon" caption-side="bottom"}
+1.  To see the top intents that were recognized, hover over the eye icon ![Eye icon](images/view.svg) that is displayed next to the intent with the highest confidence score.
 
 1.  If the response is not what you expected it to be, you can take the following actions from the "Try it out" pane:
     
     - If you want to edit an entity that is recognized in the input, click the entity name to open it in the Entities page. 
     - If the wrong intent is recognized, you can click the arrow next to the intent name to correct it or mark the topic as irrelevant. For more information, see [Making training data improvements](/docs/watson-assistant?topic=watson-assistant-logs#logs-fix-data).
 
-1.  If you want to know which node in the dialog tree triggered a response, click the **Location** ![Location](images/location.png) icon next to it. 
+1.  If you want to know which node in the dialog tree triggered a response, click the location icon ![Location](images/location.svg) next to it. 
 
     The source node is given focus and the route that your assistant traversed through the tree to get to it is highlighted. It remains highlighted until you perform another action, such as entering a new test input.
 
@@ -82,16 +80,16 @@ Change the dialog to address the issues you see when testing:
 
 You can search the dialog to find one or more dialog nodes that mention a word or phrase.
 
-1.  Select the Search icon: ![Search icon](images/search_icon.png)
+1.  Select the Search icon ![Search icon](images/search.svg).
 
 1.  Enter a search term or phrase.
 
     The first time that you search, an index is created. You might be asked to wait while the text in your dialog nodes is indexed.
     {: note}
 
-Nodes containing your search term, with corresponding examples, are shown. Select any result to open it for editing.
+   Nodes containing your search term, with corresponding examples, are shown. Select any result to open it for editing.
 
-![Intent search return](images/search_dialog.png){: caption="Search dialog" caption-side="bottom"}
+   ![Intent search return](images/search_dialog.png){: caption="Search dialog" caption-side="bottom"}
 
 ## Copying a dialog node
 {: #dialog-tasks-copy-node}
@@ -100,7 +98,8 @@ You can duplicate a node to create an exact copy of it as a peer node directly a
 
 When you duplicate a node that has child nodes, the child nodes are duplicated also. The copied child nodes have the exact same names as the original child nodes. The only way to distinguish a copied child node from an original child node is the `copy` reference in the parent node name.
 
-1.  On the node you want to copy, click the **More** ![More icon](images/overflow-menu--vertical.svg) icon, and then select **Duplicate**.
+1.  On the node you want to copy, click the **Node options** icon ![Node options](images/overflow-menu--vertical.svg), and then select **Duplicate**.
+
 1.  Consider renaming the copied nodes or editing their conditions to make them distinct.
 
 ## Moving a dialog node
@@ -110,7 +109,8 @@ Each node that you create can be moved elsewhere in the dialog tree.
 
 You might want to move a previously created node to another area of the flow to change the conversation. You can move nodes to become siblings or peers in another branch.
 
-1.  On the node you want to move, click the **More** ![More icon](images/overflow-menu--vertical.svg) icon, and then select **Move**.
+1.  On the node you want to move, click the **Node options** icon ![Node options](images/overflow-menu--vertical.svg), and then select **Move**.
+
 1.  Select a target node that is located in the tree near where you want to move this node. Choose whether to place this node before or after the target node, or to make it a child of the target node.
 
 ## Organizing the dialog with folders
@@ -135,13 +135,13 @@ Folders have no impact on the order in which nodes are evaluated. Nodes continue
 
 To add a folder to a dialog tree, complete the following steps:
 
-1.  From the tree view of the **Dialog** tab, click **Add folder**.
+1.  From the tree view of dialog, click **Add folder**.
 
     The folder is added to the end of the dialog tree, just before the **Anything else** node. Unless an existing node in the tree is selected, in which case, it is added after the selected node.
 
-    If you want to add the folder elsewhere in the tree, from the node before the spot where you want to add it, click the **More** ![More icon](images/overflow-menu--vertical.svg) icon, and then select **Add folder**.
+    If you want to add the folder elsewhere in the tree, from the node before the spot where you want to add it, click the **Node options** icon ![Node options](images/overflow-menu--vertical.svg), and then select **Add folder**.
 
-    You can add a folder after a child node within an existing dialog branch. To do so, click the **More** ![More icon](images/overflow-menu--vertical.svg) icon on the child node, and then select **Add folder**.
+    You can add a folder after a child node within an existing dialog branch. To do so, click the **Node options** icon ![Node options](images/overflow-menu--vertical.svg) on the child node, and then select **Add folder**.
 
     The folder is opened in edit view.
 
@@ -155,12 +155,12 @@ To add a folder to a dialog tree, complete the following steps:
 
     - To add existing dialog nodes to the folder, you must move them to the folder one at a time.
 
-      On the node that you want to move, click the **More** ![More icon](images/overflow-menu--vertical.svg) icon, select **Move**, and then click the folder. Select **To folder** as the move-to target.
+      On the node that you want to move, click the **Node options** icon ![Node options](images/overflow-menu--vertical.svg), select **Move**, and then click the folder. Select **To folder** as the move-to target.
 
       As you move nodes, they are added at the start of the tree within the folder. Therefore, if you want to retain the order of a set of consecutive root dialog nodes, for example, move them starting with the last node first.
       {: tip}
 
-    - To add a dialog node to the folder, click the **More** ![More icon](images/overflow-menu--vertical.svg) icon on the folder, and then select **Add node to folder**.
+    - To add a dialog node to the folder, click the **Node options** icon ![Node options](images/overflow-menu--vertical.svg) on the folder, and then select **Add node to folder**.
 
       The dialog node is added to the end of the dialog tree within the folder.
 
@@ -173,7 +173,7 @@ To delete a folder, complete the following steps:
 
 1.  From the tree view of the **Dialog** tab, find the folder that you want to delete.
 
-1.  Click the **More** ![More icon](images/overflow-menu--vertical.svg) icon on the folder, and then select **Delete**.
+1.  Click the **Node options** icon ![Node options](images/overflow-menu--vertical.svg) on the folder, and then select **Delete**.
 
 1.  Do one of the following things:
 

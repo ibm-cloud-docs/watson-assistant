@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-28"
+lastupdated: "2023-09-29"
 
 keywords: entity, entity value, contextual entity, dictionary entity, pattern entity, entity synonym, annotate mentions
 
@@ -361,13 +361,11 @@ If you change the entity type from `synonym` to `pattern`, or vice versa, the ex
 
 Use the Search feature to find entity names, values, and synonyms. System entities are not searchable.
 
-1.  From the **Entities** page, click the Search icon.
-
-   ![Search icon](images/entities-search-icon.png){: caption="Search icon" caption-side="bottom"}
+1.  From the **Entities** page, click the Search icon ![Search icon](images/search.svg).
 
 1.  Enter a search term or phrase. You can also select **Include partial match**.
 
-    The first time that you search for something, you might get a message that says the skill is being indexed. If so, wait a minute, and then resubmit the search term.
+    The first time that you search for something, you might get a message that says the content is being indexed. If so, wait a minute, and then resubmit the search term.
 
 1. Entities containing your search term, with corresponding examples, are shown.
 
@@ -438,9 +436,9 @@ Entity annotations are not included in the upload of an entity CSV file. You mus
     Save the CSV file with UTF-8 encoding and no byte order mark (BOM). The maximum CSV file size is 10 MB. If your CSV file is larger, consider splitting it into multiple files and uploading them separately. Open your dialog skill and then click the **Entities** tab.
     {: tip}
 
-1.  Click the **Upload** icon.
+1.  Click the **Upload** icon ![Upload icon](../../icons/upload.svg).
 
-1.  Drag a file, or browse to select a file from your computer, and then click the **Upload entities** icon ![Upload icon](../../icons/upload.svg).
+1.  Drag a file, or browse to select a file from your computer, and then click **Upload entities**. 
 
     The file is validated and uploaded, and the system trains itself on the new data. You can view the uploaded entities on the Entities page.
 
@@ -454,11 +452,9 @@ When you delete an entity, you remove any values, synonyms, patterns, or annotat
 
 1.  Go to the **Entities** page.
 
-    - To delete all entities, do not select any individual entities. Instead, click the **Delete all entities** icon ![Delete all entities icon](../../icons/delete.svg)
+    - To delete all entities, do not select any individual entities. Instead, click the **Delete all entities** icon ![Delete all entities icon](../../icons/delete.svg).
 
     - To delete the entities that are listed on the current page only, select the checkbox in the header. This action selects all of the entities that are listed on the current page. Then, click the **Delete** button.
-
-    ![Delete button](images/entities-delete-button.png)
 
     - To delete one or more specific entities, select the entities that you want to delete, and then click the **Delete** button.
 

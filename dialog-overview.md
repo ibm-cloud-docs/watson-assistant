@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-12"
+lastupdated: "2023-09-29"
 
 keywords: building a dialog, condition, response, options, jump, jump-to, multiline, response variations
 
@@ -233,21 +233,21 @@ If you want a single text response to include multiple lines separated by carria
 
 1.  Add each line that you want to show to the user as a separate sentence into its own response variation field. For example:
 
-| Response variations |
-| --- |
-| Hi. |
-| How are you today? |
-{: caption="Multiple line response" caption-side="bottom"}
+   | Response variations |
+   | --- |
+   | Hi. |
+   | How are you today? |
+   {: caption="Multiple line response" caption-side="bottom"}
 
 1.  For the response variation setting, choose **multiline**.
 
-When the response is shown to the user, both response variations are displayed, one on each line, like this:
+   When the response is shown to the user, both response variations are displayed, one on each line, like this:
 
-```text
-Hi.
-How are you today?
-```
-{: screen}
+   ```text
+   Hi.
+   How are you today?
+   ```
+   {: screen}
 
 #### Adding variety
 {: #dialog-overview-add-variety}
@@ -262,7 +262,7 @@ You can choose to rotate through the response variations sequentially or in rand
 
 To change the sequence in which individual text responses are returned, complete the following steps:
 
-1.  Add each variation of the response into its own response variation field. For example:
+1. Add each variation of the response into its own response variation field. For example:
 
    | Response variations |
    | --- |
@@ -273,54 +273,51 @@ To change the sequence in which individual text responses are returned, complete
 
 1.  For the response variation setting, choose one of the following settings:
 
-    - **sequential**: The system returns the first response variation the first time the dialog node is triggered, the second response variation the second time the node is triggered, and so on, in the same order as you define the variations in the node.
+   - **sequential**: The system returns the first response variation the first time the dialog node is triggered, the second response variation the second time the node is triggered, and so on, in the same order as you define the variations in the node.
 
       Results in responses being returned in the following order when the node is processed:
 
-      - First time:
+      First time:
 
-        ```text
-        Hello.
-        ```
-        {: screen}
+      ```text
+      Hello.
+      ```
+      {: screen}
 
-      - Second time:
+     Second time:
 
-        ```text
-        Hi.
-        ```
-        {: screen}
+     ```text
+     Hi.
+     ```
+     {: screen}
 
-      - Third time:
-        ```text
-        Howdy!
-        ```
-        {: screen}
+     Third time:
+     ```text
+     Howdy!
+     ```
+     {: screen}
 
-    - **random**: The system randomly selects a text string from the variations list the first time the dialog node is triggered, and randomly selects another variation the next time, but without repeating the same text string consecutively.
+   - **random**: The system randomly selects a text string from the variations list the first time the dialog node is triggered, and randomly selects another variation the next time, but without repeating the same text string consecutively.
 
       Example of the order that responses might be returned in when the node is processed:
 
-      - First time:
+     First time:
+     ```text
+     Howdy!
+     ```
+     {: screen}
 
-        ```text
-        Howdy!
-        ```
-        {: screen}
+     Second time:
+     ```text
+     Hi.
+     ```
+     {: screen}
 
-      - Second time:
-
-        ```text
-        Hi.
-        ```
-        {: screen}
-
-      - Third time:
-
-        ```text
-        Hello.
-        ```
-        {: screen}
+     Third time:
+     ```text
+     Hello.
+     ```
+     {: screen}
 
 ### Rich responses
 {: #dialog-overview-multimedia}
@@ -708,8 +705,10 @@ To add a *Pause* response type, complete the following steps:
 
 This response type does not render in the "Try it out" pane. You must access a node that uses this response type from a test deployment to see how your users will experience it. For more information, see [Testing your assistant from a web page](/docs/assistant?topic=assistant-deploy-web-link).
 
-### Adding a *Search skill* response type [Plus]{: tag-green}
+### Adding a *Search skill* response type 
 {: #dialog-overview-add-search-skill}
+
+[Plus]{: tag-green}
 
 If you have existing customer-facing material, such as an FAQ, a product catalog, or sales material that can answer questions that customers often ask, put that information to use. You can trigger a search of the existing material in real time to get the latest and most up-to-date answer for your customers. 
 
@@ -787,7 +786,7 @@ To add conditional responses to a node, complete the following steps:
 1.  Click **Customize**, and then set the **Multiple conditioned responses** switch to **On**.
 
     The node response section changes to show a pair of condition and response fields. You can add a condition and a response into them.
-1.  To customize a response further, click the **Edit response** ![Edit response](images/edit-slot.png) icon next to the response.
+1.  To customize a response further, click the **Customize response** ![Customize response](images/slot-icon.svg) icon next to the response.
 
     You must open the response for editing to complete the following tasks:
 

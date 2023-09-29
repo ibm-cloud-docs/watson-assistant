@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-06"
+lastupdated: "2023-09-29"
 
 keywords: context, context variable
 
@@ -51,7 +51,7 @@ Pass information from the application to the dialog by setting a context variabl
 
 For example, your application can set a $time_of_day context variable, and pass it to the dialog that can use the information to tailor the greeting it shows to the user.
 
-![Shows a Welcome node that uses response conditions to check for the value of the $time_of_day context variable that is passed to the dialog from the application.](images/set-context.svg){: caption="Time of day context" caption-side="bottom"}
+![Shows a Welcome node that uses response conditions to check for the value of the $time_of_day context variable that is passed to the dialog from the application.](images/set-context.png){: caption="Time of day context" caption-side="bottom"}
 
 In this example, the dialog knows that the application sets the variable to one of these values: *morning*, *afternoon*, or *evening*. It can check for each value, and depending on which value is present, return the appropriate greeting. If the variable is not passed or has a value that does not match one of the expected values, then a more generic greeting is displayed to the user.
 
@@ -62,7 +62,7 @@ The dialog can also add context variables to pass information from one node to a
 
 For example, in one node you might ask users for their name, and in a later node address them by name.
 
-![Shows an introductions node that asks the user for their name, and stores it as a context variable. The next node refers to the user by name by using the $username context variable.](images/set-context-username.svg){: caption="Pass context from one node to another" caption-side="bottom"}
+![Shows an introductions node that asks the user for their name, and stores it as a context variable. The next node refers to the user by name by using the $username context variable.](images/set-context-username.png){: caption="Pass context from one node to another" caption-side="bottom"}
 
 In this example, the system entity @name is used to extract the user's name from the input if the user provides one. In the JSON editor, the username context variable is defined and set to the @name value. In a subsequent node, the $username context variable is included in the response to address the user by name.
 
@@ -76,8 +76,6 @@ Define a context variable by adding the variable name to the **Variable** field 
 1.  Go to the *Assistant responds* section and click the menu icon ![Overflow menu icon](images/overflow-menu--vertical.svg).
 
 1.  Click **Open context editor**.
-
-      ![Shows the Open context editor menu option that is selected from the list](images/open-context-editor.png){: caption="Context editor" caption-side="bottom"}
 
 1.  Add the variable name and value pair to the **Variable** and **Value** fields.
 
@@ -195,35 +193,31 @@ Instead, use a slightly more complex expression to avoid having to rely on the v
 
 For more information about slots, see [Gathering information with slots](/docs/watson-assistant?topic=watson-assistant-dialog-slots).
 
-1.  Open the node with slots in the edit view.
+To add a context variable that is processed after a response condition for a slot is met:
 
-    - To add a context variable that is processed after a response condition for a slot is met:
+1. Open the node with slots in the edit view.
+1.  Click the **Customize slot** icon ![Customize slot](images/slot-icon.svg).
+1.  Click the **Options** icon ![Options](images/overflow-menu--vertical.svg), and then select **Enable condition**.
+1.  Click the **Customize handler** icon ![Edit slot](images/slot-icon.svg) next to the response with which you want to associate the context variable.
+1.  Click the **Options** icon ![Options](images/overflow-menu--vertical.svg) in the Assistant responds section, and then click **Open context editor**.
+1.  Add the variable name and value pair to the **Variable** and **Value** fields.
 
-      1.  Click the *Edit slot* icon ![Edit slot](images/edit-slot.png).
-      1.  Click the *Options* icon ![Options](images/overflow-menu--vertical.svg), and then select **Enable conditional responses**.
-      1.  Click the *Edit response* icon ![Edit slot](images/edit-slot.png) next to the response with which you want to associate the context variable.
-      1.  Click the *Options* icon ![Options](images/overflow-menu--vertical.svg) in the response section, and then click **Open context editor**.
-      1.  Add the variable name and value pair to the **Variable** and **Value** fields.
+To add a context variable that is set or updated after a slot condition is met, complete the following steps:
 
-      ![Shows how to access the JSON editor associated with the conditional response for a slot.](images/contextvar-json-slot-multi-response.png){: caption="JSON editor" caption-side="bottom"}
+1. Open the node with slots in the edit view.
+1.  Click the **Customize slot** icon ![Customize slot](images/slot-icon.svg).
+1.  Click the **Options** icon ![Options](images/overflow-menu--vertical.svg), and then select **Enable condition**.
+1.  Add the variable name and value pair in JSON format.
 
-    - To add a context variable that is set or updated after a slot condition is met, complete the following steps:
+   ```json
+   {
+   "time_of_day": "morning"
+   }
+   ```
+   {: codeblock}
 
-      1.  Click the *Edit slot* icon ![Edit response](images/edit-slot.png).
-      1.  From the *Options* ![Advanced response](images/overflow-menu--vertical.svg) menu in the *Configure slot* view header, click **Open JSON editor**.
-      1.  Add the variable name and value pair in JSON format.
-
-          ```json
-          {
-            "time_of_day": "morning"
-          }
-          ```
-          {: codeblock}
-
-       Currently, you can't use the context editor to define context variables that are set during this phase of dialog node evaluation. You must use the JSON editor instead. For more information about using the JSON editor, see [Context variables in the JSON editor](#dialog-runtime-context-var-json).
-       {: note}
-
-      ![Shows how to access the JSON editor associated with a slot condition.](images/contextvar-json-slot-condition.png){: caption="JSON editor slot condition" caption-side="bottom"}
+   You can't use the context editor to define context variables that are set during this phase of dialog node evaluation. You must use the JSON editor instead. For more information about using the JSON editor, see [Context variables in the JSON editor](#dialog-runtime-context-var-json).
+   {: note}
 
 ## Context variables in the JSON editor
 {: #dialog-runtime-context-var-json}
@@ -267,13 +261,9 @@ To define a context variable in JSON format, complete the following steps:
     Any existing context variable values that are defined for this node are displayed in a set of corresponding **Variable** and **Value** fields. If you do not want them to be displayed in the edit view of the node, you must close the context editor. You can close the editor from the same menu that is used to open the JSON editor; the following steps describe how to access the menu.
     {: note}
 
-1.  Click the *Options* icon ![Advanced response](images/overflow-menu--vertical.svg) that is associated with the response, and then click **Open JSON editor**.
+1.  Click the **Options** icon ![Options](images/overflow-menu--vertical.svg) for the assistant response, and then click **Open JSON editor**.
 
-    ![Shows how to access the JSON editor associated with a standard node response.](images/contextvar-json-response.png){: caption="JSON editor" caption-side="bottom"}
-
-    If the **Multiple responses** setting is **On** for the node, then you must first click the **Edit response** ![Edit response](images/edit-slot.png) icon for the response with which you want to associate the context variable.
-
-    ![Shows how to access the JSON editor associated with a standard node that has multiple conditional responses that are enabled for it.](images/contextvar-json-multi-response.png){: caption="JSON editor" caption-side="bottom"}
+    If the **Multiple conditioned responses** setting is enabled for the node, then you must first click the **Customize response** ![Customize response](images/slot-icon.svg) icon for the response with which you want to associate the context variable.
 
 1.  Add a `"context":{}` block if one is not present.
 

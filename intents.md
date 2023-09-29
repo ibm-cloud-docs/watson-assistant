@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-31"
+lastupdated: "2023-09-29"
 
 keywords: intent, intent conflicts, annotate
 
@@ -15,12 +15,8 @@ subcollection: watson-assistant
 # Creating intents
 {: #intents}
 
-***Intents*** are purposes or goals that are expressed in a customer's input, such as answering a question or processing a bill payment. By recognizing the intent expressed in a customer's input, the {{site.data.keyword.conversationshort}} service can choose the correct dialog flow for responding to it.
+*Intents* are purposes or goals that are expressed in a customer's input, such as answering a question or processing a bill payment. By recognizing the intent expressed in a customer's input, the {{site.data.keyword.conversationshort}} service can choose the correct dialog flow for responding to it.
 {: shortdesc}
-
-To learn more about creating intents, watch the following video.
-
-![Intents: {{site.data.keyword.conversationshort}}](https://video.ibm.com/embed/channel/23952663/video/wa-intents){: video output="iframe" data-script="none" id="watsonmediaplayer" width="480" height="270" scrolling="no" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="border: 0 none transparent;"}
 
 ## Intent creation overview
 {: #intents-described}
@@ -42,7 +38,7 @@ Start with a few intents, and test them as you iteratively expand the scope of t
 ## Creating intents
 {: #intents-create-task}
 
-1.  Open your dialog skill. The skill opens to the **Intents** page.
+1.  Click **Intents**.
 
 1.  Select **Create intent**.
 
@@ -85,7 +81,7 @@ Start with a few intents, and test them as you iteratively expand the scope of t
     Provide at least five examples for each intent.
     {: important}
 
-1.  When you are done adding examples, click ![Close arrow](images/close_arrow.png) to finish creating the intent.
+1.  When you are done adding examples, click the close arrow ![Close arrow](images/arrow--left.svg) to finish creating the intent.
 
 The system trains itself on the intent and user examples you added.
 
@@ -149,8 +145,6 @@ After you finish creating new intents, you can test the system to see if it reco
     If you make recent changes in your skill, you might see a message that indicates that the system is still retraining. If you see this message, wait until training completes before testing:
     {: tip}
 
-    ![Screen capture showing retraining message](images/training.png){: caption="Training message" caption-side="bottom"}
-
     The response indicates which intent was recognized from your input.
 
     ![Screen capture of testing intents](images/test_intents.png){: caption="Test intents" caption-side="bottom"}
@@ -195,27 +189,25 @@ The number of intents and examples you can create depends on your {{site.data.ke
 
 You can click any intent in the list to open it for editing. You can make the following changes:
 
-- Rename the intent.
-- Delete the intent.
-- Add, edit, or delete examples.
-- Move an example to a different intent.
+- Rename the intent
+- Delete the intent
+- Add, edit, or delete examples
+- Move examples to a different intent
 
-1.  To move or delete an example, click the checkbox that is associated with it, and then click **Move** or **Delete**.
+To move or delete an example, click the checkbox that is associated with it, and then click **Move** or **Delete**.
 
-    ![Screen capture showing how to move or delete an example](images/move_example.png){: caption="Move or delete example" caption-side="bottom"}
+![Screen capture showing how to move or delete an example](images/move_example.png){: caption="Move or delete example" caption-side="bottom"}
 
 ## Searching intents
 {: #intents-search}
 
 Use the Search feature to find user examples, intent names, and descriptions.
 
-1.  From the **Intents** page, click the *Search* icon.
+1.  From the **Intents** page, click the Search icon ![Search icon](images/search.svg).
 
-    ![Search icon in the Intents page header](images/intent-search.png){: caption="Search icon" caption-side="bottom"}
+1.  Submit a search term or phrase. You can also select **Include partial match**.
 
-1.  Submit a search term or phrase.
-
-    The first time that you search for something, you might get a message that says the skill is being indexed. If so, wait a minute, and then resubmit the search term.
+    The first time that you search for something, you might get a message that says the content is being indexed. If so, wait a minute, and then resubmit the search term.
 
     Intents that contain your search term are displayed.
 
@@ -228,11 +220,11 @@ You can download a number of intents to a CSV file, so you can then upload and r
 
 1.  Go to the **Intents** page.
 
-    - To download all intents, meaning the intents that are listed on this and any additional pages, do not select any individual intents. Instead, click the *Download all intents* icon. ![Download all intents icon](images/download-all.png)
+   - To download all intents, meaning the intents that are listed on this and any additional pages, do not select any individual intents. Instead, click the *Download all intents* icon ![Download all intents icon](../../icons/download.svg).
 
-    - To download the intents that are listed on the current page only, select the checkbox in the header. This action selects all of the intents on the current page. Click the *Download* icon. ![Download icon](images/download.png)
+   - To download the intents that are listed on the current page only, select the checkbox in the header. This action selects all of the intents on the current page. Then, click the **Download** button.
 
-    - To download one or more specific intents, select the intents that you want to download, and then click the *Download* icon. ![Download icon](images/download.png).
+   - To download one or more specific intents, select the intents that you want to download, and then click the **Download** button.
 
 1.  Specify the name and location in which to store the CSV file that is generated, and then click **Save**.
 
@@ -261,59 +253,17 @@ If you have many intents and examples, you might find it easier to upload them f
 
     **Important:** Save the CSV file with UTF-8 encoding and no byte order mark (BOM).
 
-1.  From the **Intents** page, click the *Upload* icon ![Upload icon](images/upload.png).
+1.  From the **Intents** page, click the **Upload intents** icon ![Upload icon](../../icons/upload.svg).
     
 1.  Drag a file or browse to select a file from your computer.
 
     **Important:** The maximum CSV file size is 10 MB. If your CSV file is larger, consider splitting it into multiple files and uploading them separately.
 
-1.  Click **Upload**.
+1.  Click **Upload intents**.
 
     The file is validated and uploaded, and the system trains itself on the new data.
 
 You can view the uploaded intents and the corresponding examples on the **Intents** tab. You might need to refresh the page to see the new intents and examples.
-
-## Resolving intent conflicts
-{: #intents-resolve-conflicts}
-
-[Plus]{: tag-green}[Enterprise]{: tag-purple}
-
-The {{site.data.keyword.conversationshort}} application detects a conflict when two or more intent examples in *separate* intents are so similar that {{site.data.keyword.conversationshort}} is confused as to which intent to use.
-
-To resolve conflicts:
-
-1.  From the **Intents** page, review any intents with conflicts.
-
-    ![Shows an intent list with a conflict](images/intent-conflicts.png){: caption="Intent conflicts" caption-side="bottom"}
-
-1.  Click an intent with a conflict to open it. Find the user example that is causing the conflict, and then click **Resolve conflicts**.
-
-    ![Shows an intent with a user example list where one of the user examples has a Resolve conflicts button](images/intent-resolve-conflicts.png){: caption="Resolve conflicts" caption-side="bottom"}
-
-1.  Choose whether to delete the example from the intent or to move it to another intent.
-
-    ![Shows the intent conflict details page](images/intent-fix-conflict.png){: caption="Conflict details" caption-side="bottom"}
-
-    Similar user examples are displayed for each intent. These examples are not necessarily in conflict. They are shown to give you a quick view of the other types of user examples that are defined for each intent. It provides you with context that can help you make a more informed decision.
-
-    Keep each intent as distinct and focused on one goal as possible. If you have two intents with multiple user examples that overlap, maybe you don't need two separate intents. You can move or delete user examples that don't directly overlap into one intent, and then delete the other.
-    {: tip}
-
-1.  To move a user example, click **Move**, and then click the intent where you want to move the example.
-
-    ![Shows the Move menu with a list of one intent options](images/intent-move-conflict.png){: caption="Move user example" caption-side="bottom"}
-
-    When you decide where to put an example, look for the intent that has synonymous, or nearly synonymous, examples. 
-    
-    If the exact same example is used by the other intent already, the move action removes the example from the current intent. It does not add the same example to the other intent twice.
-
-1.  After you move or delete the example, click **Submit** to resolve the conflict.
-
-    ![Shows a resolved conflict](images/intent-submit-conflict.png){: caption="Resolved conflict" caption-side="bottom"}
-
-    The *Reset* reverts your changes. Click the **x** to close the page without submitting your changes.
-
-1.  Repeat the previous steps to resolve other intents with conflicts.
 
 ## Deleting intents
 {: #intents-delete}
@@ -330,5 +280,3 @@ By deleting intents that you are also deleting all associated examples, and thes
     - To delete the intents that are listed on the current page only, select the checkbox in the header. This action selects all of the intents that are listed on the current page. Click **Delete**.
 
     - To delete one or more specific intents, select the intents that you want to delete, and then click **Delete**.
-
-      ![Shows that an intent was selected and the delete icon is in focus](images/intent-delete.png){: caption="Intent selected for deletion" caption-side="bottom"}

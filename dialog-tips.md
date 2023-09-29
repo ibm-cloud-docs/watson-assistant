@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-31"
+lastupdated: "2023-09-29"
 
 subcollection: watson-assistant
 
@@ -121,7 +121,7 @@ To store the value of a pattern entity in a context variable, append `.literal` 
 
 | Variable | Value |
 | --- | --- |
-| email | <? @email.literal ?> |
+| email | `<? @email.literal ?>` |
 {: caption="Append .literal" caption-side="bottom"}
 
 To store the text from a single group in a pattern entity with groups defined, specify the array number of the group that you want to store. For example, assume that the entity pattern is defined as follows for the @phone_number entity. (Remember, the parentheses denote pattern groups):
