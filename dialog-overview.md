@@ -315,9 +315,9 @@ To change the sequence in which individual text responses are returned, complete
 
      Third time:
      ```text
-        Hello.
-      ```
-      {: screen}
+    Hello.
+    ```
+    {: screen}
 
 ### Rich responses
 {: #dialog-overview-multimedia}
@@ -786,7 +786,7 @@ To add conditional responses to a node, complete the following steps:
 1.  Click **Customize**, and then set the **Multiple conditioned responses** switch to **On**.
 
     The node response section changes to show a pair of condition and response fields. You can add a condition and a response into them.
-1.  To customize a response further, click the **Edit response** ![Edit response](images/edit-slot.png) icon next to the response.
+1.  To customize a response further, click the **Customize response** ![Customize response](images/slot-icon.svg) icon next to the response.
 
     You must open the response for editing to complete the following tasks:
 

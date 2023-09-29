@@ -157,7 +157,7 @@ To prevent a single dialog node from being included in the disambiguation list:
 
 1. Set the **Show node name** switch to **Off**.
 
-   - [Plus]{: tag-green} If you added a node summary description to the **external node name** field instead of the *name* field, remove it.
+   [Plus]{: tag-green} If you added a node summary description to the **external node name** field instead of the *name* field, remove it.
   
     The *external node name* field serves two purposes. It provides information about the node to customers when it is included in a disambiguation list. It also describes the node in a chat summary that is shared with service desk agents when a conversation is transferred to a person. The *external node name* field is only visible in skills that are part of a paid plan instance. If the *external node name* field contains text, its text is used, whether or not there is text in the *name* field.
 
@@ -342,50 +342,50 @@ The #reservation and #cuisine nodes represent two dialog branches that can parti
 ### Digression usage tips
 {: #dialog-runtime-digress-tips}
 
-- **Custom return message**: For any nodes where you enable returns from digressions away, consider adding wording that tells users where they are returning to when they left off in a previous dialog flow. In your text response, use a special syntax to add two versions of the response.
+**Custom return message**: For any nodes where you enable returns from digressions away, consider adding wording that tells users where they are returning to when they left off in a previous dialog flow. In your text response, use a special syntax to add two versions of the response.
 
-   If you don't add a message, the same text response is displayed a second time to tell users that they returned to the node they digressed away from. You can make it clearer to users that they returned to the original conversation thread by specifying a unique message to be displayed when they return.
+If you don't add a message, the same text response is displayed a second time to tell users that they returned to the node they digressed away from. You can make it clearer to users that they returned to the original conversation thread by specifying a unique message to be displayed when they return.
 
-   For example, if the original text response for the node is, `What's the order number?`, then you might want to display a message like, `Now let's get back to where we left off. What is the order number?` when users return to the node.
+For example, if the original text response for the node is, `What's the order number?`, then you might want to display a message like, `Now let's get back to where we left off. What is the order number?` when users return to the node.
 
-   To do so, use the following syntax to specify the node text response:
+To do so, use the following syntax to specify the node text response:
 
-   `<? (returning_from_digression)? "post-digression message" : "first-time message" ?>`
+`<? (returning_from_digression)? "post-digression message" : "first-time message" ?>`
 
-   For example:
+For example:
 
-   ```bash
-   <? (returning_from_digression)? "Now, let's get back to where we left off.
-   What is the order number?" : "What's the order number?" ?>
-   ```
-   {: codeblock}
+```bash
+<? (returning_from_digression)? "Now, let's get back to where we left off.
+What is the order number?" : "What's the order number?" ?>
+```
+{: codeblock}
 
-   You cannot include SpEL expressions or shorthand syntax in the text responses that you add. In fact, you cannot use shorthand syntax at all. Instead, you must build the message by concatenating the text strings and full SpEL expression syntax together to form the full response.
-   {: note}
+You cannot include SpEL expressions or shorthand syntax in the text responses that you add. In fact, you cannot use shorthand syntax at all. Instead, you must build the message by concatenating the text strings and full SpEL expression syntax together to form the full response.
+{: note}
   
-   For example, use the following syntax to include a context variable in a text response that you would normally specify as `What can I do for you, $username?`:
+For example, use the following syntax to include a context variable in a text response that you would normally specify as `What can I do for you, $username?`:
 
-   ```bash
-   <? (returning_from_digression)? "Where were we, " +
-   context["username"] + "? Oh right, I was asking what can I do
-   for you today." : "What can I do for you today, " +
-   context["username"] + "?" ?>
-   ```
+```bash
+<? (returning_from_digression)? "Where were we, " +
+context["username"] + "? Oh right, I was asking what can I do
+for you today." : "What can I do for you today, " +
+context["username"] + "?" ?>
+```
 
-   For full SpEL expression syntax details, see [Expression for accessing objects](/docs/watson-assistant?topic=watson-assistant-expression-language#expression-language-shorthand-syntax).
+For full SpEL expression syntax details, see [Expression for accessing objects](/docs/watson-assistant?topic=watson-assistant-expression-language#expression-language-shorthand-syntax).
 
-- **Preventing returns**: In some cases, you might want to prevent a return to the interrupted conversation flow based on a choice the user makes in the current dialog flow. You can use special syntax to prevent a return from a specific node.
+**Preventing returns**: In some cases, you might want to prevent a return to the interrupted conversation flow based on a choice the user makes in the current dialog flow. You can use special syntax to prevent a return from a specific node.
 
-   For example, you might have a node that conditions on `#General_Connect_To_Agent` or a similar intent. When triggered, if you want to get the user's confirmation before you transfer them to an external service, you might add a response such as `Do you want me to transfer you to an agent now?`. You might add two child nodes that condition on `#yes` and `#no`.
+For example, you might have a node that conditions on `#General_Connect_To_Agent` or a similar intent. When triggered, if you want to get the user's confirmation before you transfer them to an external service, you might add a response such as `Do you want me to transfer you to an agent now?`. You might add two child nodes that condition on `#yes` and `#no`.
   
-   The best way to manage digressions for this type of branch is to set the root node to allow digression returns. However, on the `#yes` node, include the SpEL expression `<? clearDialogStack() ?>` in the response. For example:
+The best way to manage digressions for this type of branch is to set the root node to allow digression returns. However, on the `#yes` node, include the SpEL expression `<? clearDialogStack() ?>` in the response. For example:
    
-   ```bash
-   OK. I will transfer you now. <? clearDialogStack() ?>
-   ```
-   {: codeblock}
+```bash
+OK. I will transfer you now. <? clearDialogStack() ?>
+```
+{: codeblock}
    
-   This SpEL expression prevents the digression return from happening from this node. When a confirmation is requested, if the user says yes, the proper response is displayed, and the dialog flow that was interrupted is not resumed. If the user says no, then the user is returned to the flow that was interrupted.
+This SpEL expression prevents the digression return from happening from this node. When a confirmation is requested, if the user says yes, the proper response is displayed, and the dialog flow that was interrupted is not resumed. If the user says no, then the user is returned to the flow that was interrupted.
 
 ### Disabling digressions into a root node
 {: #dialog-runtime-disable-digressions}

@@ -87,9 +87,9 @@ You can search the dialog to find one or more dialog nodes that mention a word o
     The first time that you search, an index is created. You might be asked to wait while the text in your dialog nodes is indexed.
     {: note}
 
-Nodes containing your search term, with corresponding examples, are shown. Select any result to open it for editing.
+   Nodes containing your search term, with corresponding examples, are shown. Select any result to open it for editing.
 
-![Intent search return](images/search_dialog.png){: caption="Search dialog" caption-side="bottom"}
+   ![Intent search return](images/search_dialog.png){: caption="Search dialog" caption-side="bottom"}
 
 ## Copying a dialog node
 {: #dialog-tasks-copy-node}

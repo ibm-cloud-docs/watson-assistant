@@ -15,7 +15,7 @@ subcollection: watson-assistant
 # Creating intents
 {: #intents}
 
-***Intents*** are purposes or goals that are expressed in a customer's input, such as answering a question or processing a bill payment. By recognizing the intent expressed in a customer's input, the {{site.data.keyword.conversationshort}} service can choose the correct dialog flow for responding to it.
+*Intents* are purposes or goals that are expressed in a customer's input, such as answering a question or processing a bill payment. By recognizing the intent expressed in a customer's input, the {{site.data.keyword.conversationshort}} service can choose the correct dialog flow for responding to it.
 {: shortdesc}
 
 ## Intent creation overview
@@ -38,7 +38,7 @@ Start with a few intents, and test them as you iteratively expand the scope of t
 ## Creating intents
 {: #intents-create-task}
 
-1.  Open your dialog skill. The skill opens to the **Intents** page.
+1.  Click **Intents**.
 
 1.  Select **Create intent**.
 
@@ -81,7 +81,7 @@ Start with a few intents, and test them as you iteratively expand the scope of t
     Provide at least five examples for each intent.
     {: important}
 
-1.  When you are done adding examples, click ![Close arrow](images/close_arrow.png) to finish creating the intent.
+1.  When you are done adding examples, click the close arrow ![Close arrow](images/arrow--left.svg) to finish creating the intent.
 
 The system trains itself on the intent and user examples you added.
 
@@ -222,9 +222,9 @@ You can download a number of intents to a CSV file, so you can then upload and r
 
    - To download all intents, meaning the intents that are listed on this and any additional pages, do not select any individual intents. Instead, click the *Download all intents* icon ![Download all intents icon](../../icons/download.svg).
 
-    - To download the intents that are listed on the current page only, select the checkbox in the header. This action selects all of the intents on the current page. Then, click the **Download** button.
+   - To download the intents that are listed on the current page only, select the checkbox in the header. This action selects all of the intents on the current page. Then, click the **Download** button.
 
-    - To download one or more specific intents, select the intents that you want to download, and then click the **Download** button.
+   - To download one or more specific intents, select the intents that you want to download, and then click the **Download** button.
 
 1.  Specify the name and location in which to store the CSV file that is generated, and then click **Save**.
 
