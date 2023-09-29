@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-09-04"
+lastupdated: "2023-09-29"
 
 keywords: directlink, private path, transit gateway, voice integration
 
@@ -61,10 +61,10 @@ Use Connection 1 to set up the network connection.
     - For Direct Link, select your Direct Link from **Existing direct links**. 
     - For VPC, select a city for **Region**, and select your VPC from **Available connections**. 
 
-#### Watson connection
-{: #deploy-phone-private-watson}
+#### Connection to {{site.data.keyword.conversationshort}}
+{: #deploy-phone-private-connection-assistant}
 
-Create Connection 2 to add your Watson connection. 
+Create Connection 2 to add the connection to your {{site.data.keyword.conversationshort}}. 
 
 1. Click the **Add connection +** button to create Connection 2.
 
@@ -87,21 +87,11 @@ You need to apply prefix filtering to advertise the relevant subnets.
 
 1. Click the **Create prefix filter +** button, and list the subnets that require the connection.
 
-### Watson team approval
+### IBM team approval
 {: #deploy-phone-private-approval}
 
-Contact your IBM Watson team to approve the connection creation. 
+Contact your IBM team to approve the private connection creation to {{site.data.keyword.conversationshort}}. 
 
 Webhook and voice connectivity with the Transit Gateway integration is established over NAT IP/subnets that are provided by the Watson team. The NAT IP/subnet is on 192.168.x.x address space. 
-
-
-
-
-
-
-
-
-
-
 
 
