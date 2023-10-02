@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-29"
+lastupdated: "2023-10-02"
 
 keywords: building a dialog, condition, response, options, jump, jump-to, multiline, response variations
 
@@ -29,11 +29,11 @@ The following nodes are created for you automatically:
 
 For more information about these built-in nodes, see [Starting and ending the dialog](/docs/assistant?topic=assistant-dialog-start).
 
-1.  To add more nodes to the dialog tree, click **Add node**.
+1. To add more nodes to the dialog tree, click **Add node**.
 
     Your new node is added after the *Welcome* node and before the *Anything else* node.
 
-1.  Add a name to the node. 
+1. Add a name to the node. 
 
     Use a short, customer-friendly description of what the node does as its name. For example, `Open an account`, `Get policy information`, or `Get a weather forecast`.
 
@@ -42,7 +42,7 @@ For more information about these built-in nodes, see [Starting and ending the di
     This node name is shown to customers or service desk personnel to express the purpose of this branch of the dialog, so take some time to add a name that is concise and descriptive.
     {: tip}
 
-1.  In the **If assistant recognizes** field, enter a condition that, when met, triggers your assistant to process the node. 
+1. In the **If assistant recognizes** field, enter a condition that, when met, triggers your assistant to process the node. 
 
     To start off, you typically want to add an intent as the condition. For example, if you add `#open_account` here, it means that you want the response that you will specify in this node to be returned to the user if the user input indicates that the user wants to open an account.
 
@@ -65,25 +65,25 @@ For more information about these built-in nodes, see [Starting and ending the di
 
     For more information about how to test for values in conditions, see [Conditions](#dialog-overview-conditions).
 
-1.  **Optional**: If you want to collect multiple pieces of information from the user in this node, then click **Customize** and enable **Slots**. See [Gathering information with slots](/docs/assistant?topic=assistant-dialog-slots) for more details.
+1. **Optional**: If you want to collect multiple pieces of information from the user in this node, then click **Customize** and enable **Slots**. See [Gathering information with slots](/docs/assistant?topic=assistant-dialog-slots) for more details.
 
-1.  Enter a response.
+1. Enter a response.
 
     - Add the text or multimedia elements that you want your assistant to display to the user as a response.
     - If you want to define different responses based on certain conditions, then click **Customize** and enable **Multiple responses**.
     - For information about conditional responses, rich responses, or how to add variety to responses, see [Responses](#dialog-overview-responses).
 
-1.  Specify what to do after the current node is processed. You can choose from the following options:
+1. Specify what to do after the current node is processed. You can choose from the following options:
 
     - **Wait for user input**: Your assistant pauses until new input is provided by the user.
     - **Skip user input**: Your assistant jumps directly to the first child node. This option is only available if the current node has at least one child node.
     - **Jump to**: Your assistant continues the dialog by processing the node you specify. You can choose whether your assistant should evaluate the target node's condition or skip directly to the target node's response. See [Configuring the Jump to action](#dialog-overview-jump-to-config) for more details.
 
-1.  **Optional**: If you want this node to be considered when users are shown a set of node choices at run time, and asked to pick the one that best matches their goal, then add a short description of the user goal handled by this node to the **external node name** field. For example, *Open an account*.
+1. **Optional**: If you want this node to be considered when users are shown a set of node choices at run time, and asked to pick the one that best matches their goal, then add a short description of the user goal handled by this node to the **external node name** field. For example, *Open an account*.
 
     [Plus]{: tag-green} The *external node name* field is only displayed only to users of paid plans. See [Disambiguation](/docs/assistant?topic=assistant-dialog-runtime#dialog-runtime-disambiguation) for more details.
 
-1.  To add more nodes, select a node in the tree, and then click the **More** ![More icon](images/overflow-menu--vertical.svg) icon.
+1. To add more nodes, select a node in the tree, and then click the **More** ![More icon](images/overflow-menu--vertical.svg) icon.
 
     - To create a peer node that is checked next if the condition for the existing node is not met, select **Add node below**.
     - To create a peer node that is checked before the condition for the existing node is checked, select **Add node above**.
@@ -92,7 +92,7 @@ For more information about these built-in nodes, see [Starting and ending the di
 
     For more information about the order in which dialog nodes are processed, see [Dialog overview](/docs/assistant?topic=assistant-dialog-build#dialog-build-flow).
 
-1.  Test the dialog as you build it.
+1. Test the dialog as you build it.
 
     See [Testing your dialog](/docs/assistant?topic=assistant-dialog-tasks#dialog-tasks-test) for more information.
 
@@ -231,7 +231,7 @@ The "Try it out" pane, assistant *Preview*, and *web chat* integration support H
 
 If you want a single text response to include multiple lines separated by carriage returns, then follow these steps:
 
-1.  Add each line that you want to show to the user as a separate sentence into its own response variation field. For example:
+1. Add each line that you want to show to the user as a separate sentence into its own response variation field. For example:
 
    | Response variations |
    | --- |
@@ -239,7 +239,7 @@ If you want a single text response to include multiple lines separated by carria
    | How are you today? |
    {: caption="Multiple line response" caption-side="bottom"}
 
-1.  For the response variation setting, choose **multiline**.
+1. For the response variation setting, choose **multiline**.
 
    When the response is shown to the user, both response variations are displayed, one on each line, like this:
 
@@ -271,7 +271,7 @@ To change the sequence in which individual text responses are returned, complete
    | Howdy! |
    {: caption="Varying responses" caption-side="bottom"}
 
-1.  For the response variation setting, choose one of the following settings:
+1. For the response variation setting, choose one of the following settings:
 
    - **sequential**: The system returns the first response variation the first time the dialog node is triggered, the second response variation the second time the node is triggered, and so on, in the same order as you define the variations in the node.
 
@@ -341,7 +341,7 @@ Different integrations have different capabilities for displaying rich responses
 
 To add a rich response, complete the following steps:
 
-1.  Click the dropdown menu in the **Assistant responds** field to choose a response type, and then provide any required information.
+1. Click the dropdown menu in the **Assistant responds** field to choose a response type, and then provide any required information.
 
     For more information, see the following sections:
 
@@ -353,7 +353,7 @@ To add a rich response, complete the following steps:
     - [**Search skill**](#dialog-overview-add-search-skill) [Plus]{: tag-green}
     - [**Text**](#dialog-overview-simple-text)
 
-1.  To add another response type to the current response, click **Add response type**.
+1. To add another response type to the current response, click **Add response type**.
 
     You might want to add multiple response types to a single response to provide a richer answer to a user query. For example, if a user asks for store locations, you could show a map and display a button for each store location that the user can click to get address details. To build that type of response, you can use a combination of image, options, and text response types. Another example is using a text response type before a pause response type so you can warn users before pausing the dialog.
 
@@ -366,7 +366,7 @@ To add a rich response, complete the following steps:
     Do not add more than one option response type to a single dialog node because both lists are displayed at once, but the customer can choose an option from only one of them.
     {: note}
 
-1.  If you added more than one response type, you can click the **Move** up or down arrows to arrange the response types in the order you want your assistant to process them.
+1. If you added more than one response type, you can click the **Move** up or down arrows to arrange the response types in the order you want your assistant to process them.
 
 ### Adding a *Connect to human agent* response type
 {: #dialog-overview-add-connect-to-human-agent}
@@ -378,11 +378,11 @@ If you want to take advantage of the *containment* metric to track your assistan
 
 To add a *Connect to human agent* response type, complete the following steps:
 
-1.  From the dialog node where you want to add the response type, click the dropdown menu in the **Assistant responds** field, and then choose **Connect to human agent**.
+1. From the dialog node where you want to add the response type, click the dropdown menu in the **Assistant responds** field, and then choose **Connect to human agent**.
 
-1.  **Optional**. Add a message to share with the human agent to whom the conversation is transferred in the **Message to human agent** field.
+1. **Optional**. Add a message to share with the human agent to whom the conversation is transferred in the **Message to human agent** field.
 
-1.  Add a message to show to the customer to explain that they are being transferred. 
+1. Add a message to show to the customer to explain that they are being transferred. 
 
     You can add a message to show when agents are available and a message to show when agents are unavailable. Each message can be up to 320 characters in length.
 
@@ -391,7 +391,7 @@ To add a *Connect to human agent* response type, complete the following steps:
     If you use this response type in multiple nodes and want to use the same custom text each time, but don't want to have to edit each node individually, you can change the default text that is used by the web chat. To change the default messages, edit the [language source file](https://github.com/watson-developer-cloud/assistant-web-chat/tree/master/languages){: external}. Look for the `default_agent_availableMessage` and `default_agent_unavailableMessage` values. For more information about how to change web chat text, see [Languages](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#languages){: external}.
     {: tip}
 
-1.  **Optional**: If the channel where you deploy the assistant is integrated with a service desk, you can add initial routing information to pass with the transfer request.
+1. **Optional**: If the channel where you deploy the assistant is integrated with a service desk, you can add initial routing information to pass with the transfer request.
 
     - Pick the integration type from the **Service desk routing** field.
     - Add routing information that is meaningful to the service desk you are using.
@@ -423,9 +423,9 @@ Other integrations ignore the *Channel transfer* response type.
 
 To add a *Channel transfer* response type, complete the following steps:
 
-1.  From the dialog node where you want to add the response type, click the dropdown menu in the **Assistant responds** field, and then choose **Channel transfer**.
+1. From the dialog node where you want to add the response type, click the dropdown menu in the **Assistant responds** field, and then choose **Channel transfer**.
 
-1.  **Optional**. In the **Message before link to web chat** field, edit the introductory message to display to the user (in the originating channel) before the link that initiates the transfer. By default, this message is `OK, click this link for additional help. Chat will continue on a new web page.`
+1. **Optional**. In the **Message before link to web chat** field, edit the introductory message to display to the user (in the originating channel) before the link that initiates the transfer. By default, this message is `OK, click this link for additional help. Chat will continue on a new web page.`
 
 1. In the **URL to web chat** field, type the URL for your website where the web chat widget is embedded.
 
@@ -440,9 +440,9 @@ Sometimes a picture is worth a thousand words. Include images in your response t
 
 To add an *Image* response type, complete the following steps:
 
-1.  Choose **Image**.
+1. Choose **Image**.
 
-1.  Add the full URL to the hosted image file into the **Image source** field.
+1. Add the full URL to the hosted image file into the **Image source** field.
 
     The image must be in .jpg, .gif, or .png format. The image file must be stored in a location that is publicly addressable by an `https:` URL.
 
@@ -462,9 +462,9 @@ Include videos in your response to share how-to demonstrations, promotional clip
 
 To add a *Video* response type, complete the following steps:
 
-1.  Choose **Video**.
+1. Choose **Video**.
 
-1.  Add the full URL to the hosted video into the **Video source** field:
+1. Add the full URL to the hosted video into the **Video source** field:
 
     - To link directly to a video file, specify the URL to a file in any standard format such as MPEG or AVI. In the web chat, the linked video will render as an embedded video player.
 
@@ -492,7 +492,7 @@ To add a *Video* response type, complete the following steps:
 
     If you want to scale the video to a specific display size, specify a number in the **Base height** field.
 
-1.  The **Video** response type is supported in the web chat, Facebook, WhatsApp, Slack, and SMS integrations. 
+1. The **Video** response type is supported in the web chat, Facebook, WhatsApp, Slack, and SMS integrations. 
 
 ### Adding an *Audio* response type
 {: #dialog-overview-add-audio}
@@ -501,9 +501,9 @@ Include audio clips in your response to share spoken-word or other audible conte
 
 To add an *Audio* response type, complete the following steps:
 
-1.  Choose **Audio**.
+1. Choose **Audio**.
 
-1.  Add the full URL to the hosted audio clip into the **Audio source** field:
+1. Add the full URL to the hosted audio clip into the **Audio source** field:
 
     - To link directly to an audio file, specify the URL to a file in any standard format such as MP3 or WAV. In the web chat, the linked audio clip will render as an embedded audio player.
 
@@ -526,7 +526,7 @@ To add an *Audio* response type, complete the following steps:
     The **Loop** option is currently supported only by the phone integration. This option has no effect if you are using the web chat integration or any other channel.
     {: note}
 
-1.  The **Audio** response type is supported in the web chat, Facebook, WhatsApp, Slack, SMS, and phone integrations. 
+1. The **Audio** response type is supported in the web chat, Facebook, WhatsApp, Slack, SMS, and phone integrations. 
 
 
 ### Adding an *iframe* response type
@@ -543,9 +543,9 @@ In the web chat, an iframe response renders as a preview card that describes the
 
 To add an *iframe* response type, complete the following steps:
 
-1.  Choose **iframe**.
+1. Choose **iframe**.
 
-1.  Add the full URL to the external content in the **iframe source** field.
+1. Add the full URL to the external content in the **iframe source** field.
 
     The URL must specify content that is embeddable in an HTML `iframe` element. Different sites have varying restrictions for embedding content, and different processes for generating embeddable URLs. An embeddable URL is one that can be specified as the value of the `src` attribute of the `iframe` element.
 
@@ -553,11 +553,11 @@ To add an *iframe* response type, complete the following steps:
 
     For technical details about using `Content-Security-Policy: frame-src` to allow embedding of your website content, see [CSP: frame-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-src){: external}.
 
-1.  Optionally add a descriptive title in the **Title** field.
+1. Optionally add a descriptive title in the **Title** field.
 
     In the web chat, this title will be displayed in the preview card before the customer clicks to render the external content. (If you do not specify a title, the web chat will attempt to retrieve metadata from the specified URL and display the title of the content as specified at the source.)
     
-1.  The **iframe** response type is supported in the web chat and Facebook integrations.
+1. The **iframe** response type is supported in the web chat and Facebook integrations.
 
 In the "Try it out" pane, the iframe is rendered immediately, without the preview card. To see how the web chat renders your response, use the assistant **Preview** page.
 {: note}
@@ -599,15 +599,15 @@ Otherwise, the options are displayed as a list.
 
 To add an *Option* response type, complete the following steps:
 
-1.  From the dialog node where you want to add the response type, click the dropdown menu in the **Assistant responds** field, and then choose **Option**.
+1. From the dialog node where you want to add the response type, click the dropdown menu in the **Assistant responds** field, and then choose **Option**.
 
-1.  Click **Add option**.
+1. Click **Add option**.
 
-1.  In the **List label** field, enter the option to display in the list. 
+1. In the **List label** field, enter the option to display in the list. 
 
     The label must be less than 2,048 characters in length.
 
-1.  In the corresponding **Value** field, enter the user input to pass to your assistant when this option is selected. 
+1. In the corresponding **Value** field, enter the user input to pass to your assistant when this option is selected. 
 
     The value must be less than 2,048 characters in length. 
     
@@ -616,21 +616,21 @@ To add an *Option* response type, complete the following steps:
 
     Specify a value that you know will trigger the correct intent when it is submitted. For example, it might be a user example from the training data for the intent.
 
-1.  Repeat the previous steps to add more options to the list.
+1. Repeat the previous steps to add more options to the list.
 
     You can add up to 20 options.
 
-1.  Add a list introduction in the **Title** field. The title can ask the user to pick from the list of options.
+1. Add a list introduction in the **Title** field. The title can ask the user to pick from the list of options.
 
     Some integration channels do not display the title.
     {: note}
 
-1.  Optionally, add additional information in the **Description** field. If specified, the description is displayed after the title and before the option list.
+1. Optionally, add additional information in the **Description** field. If specified, the description is displayed after the title and before the option list.
 
     Some integration channels do not display the description.
     {: note}
 
-1.  **Optional**: If you want to indicate a preference for how the options are displayed, as buttons or in a list, you can add a `preference` property for the response.
+1. **Optional**: If you want to indicate a preference for how the options are displayed, as buttons or in a list, you can add a `preference` property for the response.
       
     To do so, open the JSON editor for the response, and then add a `preference` name and value pair before the `response_type` name and value pair. You can set the preference to `dropdown` or `button`.
 
@@ -694,9 +694,9 @@ Add a pause response type to give the assistant time to respond. For example, yo
 
 To add a *Pause* response type, complete the following steps:
 
-1.  From the dialog node where you want to add the response type, click the dropdown menu in the **Assistant responds** field, and then choose **Pause**. 
+1. From the dialog node where you want to add the response type, click the dropdown menu in the **Assistant responds** field, and then choose **Pause**. 
 
-1.  Add the length of time for the pause to last as a number of milliseconds (ms) to the **Duration** field.
+1. Add the length of time for the pause to last as a number of milliseconds (ms) to the **Duration** field.
 
     The value cannot exceed 10,000 ms. Users are typically willing to wait about 8 seconds (8,000 ms) for someone to enter a response. To prevent a typing indicator from being displayed during the pause, choose **Off**.
 
@@ -716,11 +716,11 @@ To use the search skill response type, you must create a search skill and add it
 
 To add a *Search skill* response type, complete the following steps:
 
-1.  From the dialog node where you want to add the response type, click the dropdown menu in the **Assistant responds** field, and then choose **Search skill**.
+1. From the dialog node where you want to add the response type, click the dropdown menu in the **Assistant responds** field, and then choose **Search skill**.
 
     Indicates that you want to search an external data source for a relevant response.
 
-1.  To edit the search query to pass to the {{site.data.keyword.discoveryshort}} service, click **Customize**, and then fill in the following fields:
+1. To edit the search query to pass to the {{site.data.keyword.discoveryshort}} service, click **Customize**, and then fill in the following fields:
 
     - **Query**: Optional. You can specify a specific query in natural language to pass to {{site.data.keyword.discoveryshort}}. If you do not add a query, then the customer's exact input text is passed as the query.
 
@@ -744,7 +744,7 @@ To add a *Search skill* response type, complete the following steps:
 
       If you add both a query and a filter value, the filter parameter is applied first to filter the data collection documents and cache the results. The query parameter then ranks the cached results.
 
-1.  **Optional**: Change the query type that is used for the search. 
+1. **Optional**: Change the query type that is used for the search. 
 
     The search skill sends a natural language query to {{site.data.keyword.discoveryshort}} automatically. If you want to use the {{site.data.keyword.discoveryshort}} query language instead, you can specify it. To do so, open the JSON editor for the node response.
 
@@ -783,10 +783,10 @@ This single node now provides the equivalent function of four separate nodes.
 
 To add conditional responses to a node, complete the following steps:
 
-1.  Click **Customize**, and then set the **Multiple conditioned responses** switch to **On**.
+1. Click **Customize**, and then set the **Multiple conditioned responses** switch to **On**.
 
     The node response section changes to show a pair of condition and response fields. You can add a condition and a response into them.
-1.  To customize a response further, click the **Customize response** ![Customize response](images/slot-icon.svg) icon next to the response.
+1. To customize a response further, click the **Customize response** ![Customize response](images/slot-icon.svg) icon next to the response.
 
     You must open the response for editing to complete the following tasks:
 
@@ -796,7 +796,7 @@ To add conditional responses to a node, complete the following steps:
 
       A **Jump to** action that is configured for the node is not processed until all of the conditional responses are processed. Therefore, if a conditional response is configured to jump to another node, and the conditional response is triggered, then the jump configured for the node is never processed, and so does not occur.
 
-1.  Click **Add response** to add another conditional response.
+1. Click **Add response** to add another conditional response.
 
 The conditions within a node are evaluated in order, just as nodes are.  Be sure that your conditional responses are listed in the correct order.  If you need to change the order, select a condition and response pair and move it up or down in the list using the arrows that are displayed.
 
