@@ -243,6 +243,30 @@ toc:
           - dialog-analyze.md
           - dialog-publish.md
       - topicgroup:
+          label: Building your assistant with dialog
+          topics: 
+             - dialog-add.md
+             - dev-process.md
+             - topicgroup:
+                label: Defining goals for your assistant to address
+                topics:
+                - intents.md
+                - catalog.md
+             - topicgroup:
+                label: Building a conversational flow 
+                topics:
+                - dialog-build.md
+                - dialog-overview.md
+                - dialog-start.md
+                - dialog-support.md
+                - dialog-tips.md
+                - dialog-runtime-context.md
+                - dialog-tasks.md
+                - dialog-runtime.md
+                - dialog-slots.md
+             - entities.md
+             - versions.md 
+      - topicgroup:
           label: Early access features
           topics:
           - boost-words.md
