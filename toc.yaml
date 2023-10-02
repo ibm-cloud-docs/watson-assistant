@@ -265,7 +265,14 @@ toc:
                 - dialog-runtime.md
                 - dialog-slots.md
              - entities.md
-             - versions.md 
+             - versions.md
+             - topicgroup:
+                label: Analytics (classic experience)
+                topics:
+                - logs-overview.md
+                - logs.md
+                - irrelevance-detection.md
+                - logs-resources.md 
       - topicgroup:
           label: Early access features
           topics:
