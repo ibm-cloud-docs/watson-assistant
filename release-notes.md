@@ -907,7 +907,7 @@ Add variables to links
 {: release-note}
 
 Facebook and Slack integrations now available
-:   {{site.data.keyword.conversationfull} now includes integrations for [Facebook Messenger](/docs/watson-assistant?topic=watson-assistant-deploy-facebook) and [Slack](/docs/watson-assistant?topic=watson-assistant-deploy-slack).
+:   {{site.data.keyword.conversationfull}} now includes integrations for [Facebook Messenger](/docs/watson-assistant?topic=watson-assistant-deploy-facebook) and [Slack](/docs/watson-assistant?topic=watson-assistant-deploy-slack).
 
 Analytics for draft and live environments
 :   The **Analyze** page now lets you see analytics data for either the draft or live environments. For more information, see [Use analytics to review your entire assistant at a glance](/docs/watson-assistant?topic=watson-assistant-analytics-overview).
