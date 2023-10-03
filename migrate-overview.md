@@ -33,7 +33,7 @@ If you are using an older product instance, you might still be using the classic
 
 You can freely switch which experience you see without losing any of your work or affecting other users of the instance.
 
-For more information about how to switch between the classic experience and {{site.data.keyword.conversationshort}}, see [Switching the experience](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant#welcome-new-assistant-switch-experience).
+For more information about how to switch between the classic experience and {{site.data.keyword.conversationshort}}, see [Switching between {{site.data.keyword.conversationshort}} and the classic experience](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant#welcome-new-assistant-switch-experience).
 
 Consider the following questions to decide which experience you want to use:
 
