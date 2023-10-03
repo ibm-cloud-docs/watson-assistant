@@ -38,7 +38,7 @@ Each approach has pros and cons. Considerations specific to {{site.data.keyword.
 ### Analytics
 {: #admin-failover-analytics}
 
-{{site.data.keyword.conversationfull} analytics provide overview statistics on the number of interactions with users and containment rates. Analytics doesn't cumulate statistics across regions. With an active/passive topology, this approach to analytics is sufficient. However, using an active/active topology likely requires you to use [webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview) to gather interaction data, and build custom data warehouses and reports to understand total usage.
+{{site.data.keyword.conversationfull}} analytics provide overview statistics on the number of interactions with users and containment rates. Analytics doesn't cumulate statistics across regions. With an active/passive topology, this approach to analytics is sufficient. However, using an active/active topology likely requires you to use [webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview) to gather interaction data, and build custom data warehouses and reports to understand total usage.
 
 ### Session history for web chat and the v2 api
 {: #admin-failover-session-history}
@@ -74,7 +74,7 @@ The SIP trunking provider plays an important role in detecting and managing a fa
 
 Phone integration failures have two types. The first type is a full outage where the session border controllers in all 3 regional zones become unreachable. This type of outage is easier to detect and handle because the SIP trunking provider is immediately notified by SIP timeouts that the call fails and can be configured to either automatically fail over or the call routing can be manually reconfigured at the SIP trunking provider to direct traffic away from the failed region toward the passive backup region. If a failover is automated and a regional backup is enabled, it is always best to try a different zone first and redirect traffic to the passive backup region only if a preconfigured number of failures occur within a short period. This prevents an unnecessary failover between regions if only a short outage occurs. 
 
-{{site.data.keyword.conversationfull} provides a round-robin fully qualified domain name (FQDN) that includes the IP addresses for each zone in the region. Many SIP trunking providers automatically retry each IP in the FQDN when failures occur. To support disaster recovery, the service provider might need to configure two separate SIP trunks, one for each region, and only when all the zones in a single region fail should the call be switched to the backup region. It's important to set the SIP INVITE failure timeouts at the SIP trunking provider low enough to avoid long call setup latencies when a failover is occurring. 
+{{site.data.keyword.conversationfull}} provides a round-robin fully qualified domain name (FQDN) that includes the IP addresses for each zone in the region. Many SIP trunking providers automatically retry each IP in the FQDN when failures occur. To support disaster recovery, the service provider might need to configure two separate SIP trunks, one for each region, and only when all the zones in a single region fail should the call be switched to the backup region. It's important to set the SIP INVITE failure timeouts at the SIP trunking provider low enough to avoid long call setup latencies when a failover is occurring. 
 
 ### Partial outage
 {: #admin-failover-phone-partial-outage}
