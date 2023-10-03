@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-08"
+lastupdated: "2023-10-03"
 
 subcollection: watson-assistant
 
@@ -32,7 +32,7 @@ The OpenAPI document specifies all of the details for each operation, including 
 
 For more information about the OpenAPI specification, see [OpenAPI Specification](https://swagger.io/specification/){: external}.
 
-When you create a custom extension, you import an OpenAPI document that describes the REST API of an external service. {{site.data.keyword.conversationshort}} parses the OpenAPI document to identify the operations supported by the external service, along with information about the input parameters and response for each operation and supported authentication methods.
+When you create a custom extension, you import an OpenAPI document that describes the REST API of an external service. {{site.data.keyword.conversationfull}} parses the OpenAPI document to identify the operations supported by the external service, along with information about the input parameters and response for each operation and supported authentication methods.
 
 After this processing is complete, the custom extension becomes available as a new integration that you can connect to the assistant. Your assistant can then use the extension to send requests to the external service based on conversations with your customers. Values that are included in the response from the service are then mapped to action variables, which can be accessed by subsequent action steps.
 

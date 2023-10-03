@@ -53,7 +53,7 @@ You can visualize how your assistant would look as a web chat widget on your org
 ### Entering a URL
 {: #preview-enter-URL}
 
-You can enter a URL of your organization's website. {{site.data.keyword.conversationshort}} captures an image of your website to use as the **Preview** page background. 
+You can enter a URL of your organization's website. Your assistant captures an image of your website to use as the **Preview** page background. 
 
 Your website must be publicly available to all users. Private or intranet sites can’t be accessed. Any login, splash, cookie, or warning screens might be captured in the image.
 {: note}

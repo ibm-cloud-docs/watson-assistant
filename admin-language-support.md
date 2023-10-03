@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-21"
+lastupdated: "2023-10-03"
 
 keywords: global support, universal language, universal model, another language
 
@@ -23,7 +23,7 @@ Your customers come from all around the globe. You need an assistant that can ta
 
     For more information about webhooks you can use for translation, see [Webhook overview](/docs/watson-assistant?topic=watson-assistant-webhook-overview).
 
-- Most precise solution: If you have the time and resources, the best user experience can be achieved when you build multiple assistants, one for each language that you want to support. {{site.data.keyword.conversationshort}} has built-in support for all languages. Use one of 13 language-specific models or the universal model, which adapts to any other language you want to support.
+- Most precise solution: If you have the time and resources, the best user experience can be achieved when you build multiple assistants, one for each language that you want to support. {{site.data.keyword.conversationfull}} has built-in support for all languages. Use one of 13 language-specific models or the universal model, which adapts to any other language you want to support.
 
     When you build an assistant that is dedicated to a language, a language-specific classifier model is used by the assistant. The precision of the model means that your assistant can better understand and recognize the goals of even the most colloquial message from a customer.
 

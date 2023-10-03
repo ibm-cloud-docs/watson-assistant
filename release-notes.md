@@ -222,7 +222,7 @@ Display iframe inline
 {: release-note}
 
 Change to dialog skill context variables named `request`
-:   If your dialog skill used a context variable that is named `request`, it was removed from the response payload of any `/message` calls in the V1 or V2 API, or through the {{site.data.keyword.conversationshort}} user interface. After 15 May 2023, this behavior changes. {{site.data.keyword.conversationshort}} doesn't remove context variables that are named `request` from the response payload anymore.
+:   If your dialog skill used a context variable that is named `request`, it was removed from the response payload of any `/message` calls in the V1 or V2 API, or through the {{site.data.keyword.conversationshort}} user interface. After 15 May 2023, this behavior changes. Your assistant doesn't remove context variables that are named `request` from the response payload anymore.
 
 ## 5 May 2023
 {: #watson-assistant-may052023}

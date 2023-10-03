@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-08-31"
+lastupdated: "2023-10-03"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,7 @@ subcollection: watson-assistant
 # Overview: Previewing and publishing
 {: #publish-overview}
 
-After you build an assistant, you can test to make sure it works as you intended before you make it available to customers. {{site.data.keyword.conversationshort}} makes it straightforward to preview your assistant in a closed environment and manage exactly what you make available to customers.
+After you build an assistant, you can test to make sure it works as you intended before you make it available to customers. {{site.data.keyword.conversationfull}} makes it straightforward to preview your assistant in a closed environment and manage exactly what you make available to customers.
 {: shortdesc}
 
 An assistant consists of three core elements:

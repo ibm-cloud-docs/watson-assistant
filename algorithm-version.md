@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-10-03"
 
 subcollection: watson-assistant
 
@@ -54,7 +54,7 @@ These ML models rely on a sophisticated infrastructure. There are many intricate
 
 Since {{site.data.keyword.conversationshort}} was first released, the product team has been making continuous updates to the algorithms that generate these sophisticated ML models. Older models have continued to function while running in the context of newer algorithms. Historically, the behavior of these existing ML model did not change unless the skill was updated, at which point the skill was retrained and a new model generated to replace the older one. This meant that many older models never benefited from improvements in our ML algorithms.
 
-{{site.data.keyword.conversationshort}} uses continuous retraining. The {{site.data.keyword.conversationshort}} service continually monitors all ML models, and automatically retrains those models that have not been retrained in the previous 6 months. {{site.data.keyword.conversationshort}} retrains using the selected algorithm version. If the version you had selected is no longer supported, {{site.data.keyword.conversationshort}} retrains using the version labeled as **Previous**. This means that your assistant will automatically have the supported technologies applied. Assistants that have been modified during the previous 6 months will not be affected.
+{{site.data.keyword.conversationfull}} uses continuous retraining. The {{site.data.keyword.conversationshort}} service continually monitors all ML models, and automatically retrains those models that have not been retrained in the previous 6 months. Your assistant retrains using the selected algorithm version. If the version you had selected is no longer supported, {{site.data.keyword.conversationshort}} retrains using the version labeled as **Previous**. This means that your assistant will automatically have the supported technologies applied. Assistants that have been modified during the previous 6 months will not be affected.
 
 In most cases, this retraining will be seamless from an end-user point of view. The same inputs will result in the same actions, intents, and entities being detected. In some cases, the retraining might cause changes in accuracy.
 {: note}

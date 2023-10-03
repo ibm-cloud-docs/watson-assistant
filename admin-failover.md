@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021,2023
-lastupdated: "2023-09-21"
+lastupdated: "2023-10-03"
 
 subcollection: watson-assistant
 
@@ -48,7 +48,7 @@ Session history allows your web chats to maintain conversation history and conte
 ### Billing
 {: #admin-failover-billing}
 
-IBM calculates your bill based on the IBM Cloud Account. {{site.data.keyword.conversationshort}} calculates monthly average user (MAU) metrics by aggregating within a specific service instance as follows:
+IBM calculates your bill based on the IBM Cloud Account. {{site.data.keyword.conversationfull}} calculates monthly average user (MAU) metrics by aggregating within a specific service instance as follows:
 - The same MAU used in 2 different assistant resources in the **same** service instance counts as 1 MAU
 - The same MAU used in 2 different assistant resources in **different** service instances counts as 2 MAUs
 
