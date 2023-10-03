@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015,  2023
-lastupdated: "2023-09-20"
+lastupdated: "2023-10-03"
 
 subcollection: watson-assistant
 
@@ -36,12 +36,12 @@ Analysis notebooks are available for:
 - Standard Python tools
 
 {{site.data.keyword.DSX_short}} provides an environment where you can:
-- Choose the tools that you need to analyze and visualize data
-- Cleanse and shape data
-- Ingest streaming data
+- Choose the tools that you need to analyze and visualize data.
+- Cleanse and shape data.
+- Ingest streaming data.
 - Create, train, and deploy machine learning models. 
 
-For more information, see the [product documentation](https://dataplatform.cloud.ibm.com/docs/content/svc-welcome/wsl.html?context=cpdaas){: external} for more details.
+For more information, see the [product documentation](https://dataplatform.cloud.ibm.com/docs/content/svc-welcome/wsl.html?context=cpdaas){: external}.
 
 The [Watson Assistant Continuous Improvement Best Practices Guide](https://github.com/watson-developer-cloud/assistant-improve-recommendations-notebook/raw/master/notebook/IBM%20Watson%20Assistant%20Continuous%20Improvement%20Best%20Practices.pdf){: external} describes how to get the most out of these notebooks.
 
@@ -63,15 +63,15 @@ If you choose to use the notebooks that are designed for use with {{site.data.ke
 
     Early in the development process, use the **Dialog skill analysis for Watson Assistant** notebook to help you get started. The notebook: 
 
-    - Examines the terms that are correlated with each intent in your training data to find anomalies that might identify problems that you can investigate
-    - Uses a blind test set that you provide to calculate performance on statistical metrics like Accuracy, Precision, Recall, and F1
-    - Offers advanced features that you can use to find the causes of common issues such as why some sentences are often misidentified
+    - Examines the terms that are correlated with each intent in your training data to find anomalies that might identify problems that you can investigate.
+    - Uses a blind test set that you provide to calculate performance on statistical metrics like Accuracy, Precision, Recall, and F1.
+    - Offers advanced features that you can use to find the causes of common issues, such as why some sentences are often misidentified.
 
-    To learn more about how this notebook can help you improve your dialog, read this [Medium.com blog post](https://medium.com/ibm-watson/announcing-dialog-skill-analysis-for-watson-assistant-83cdfb968178){: external}.
+    To learn more about how this notebook can help you improve your dialog, read [Dialog skill analysis](https://medium.com/ibm-watson/announcing-dialog-skill-analysis-for-watson-assistant-83cdfb968178){: external}.
 
 1.  After you deploy a version of the assistant and collect conversation log data, run the **Measure Watson Assistant Performance** notebook.
 
-1.  Follow the step-by-step instructions provided with the notebooks to analyze a subset of the dialog exchanges from the logs.
+1.  Follow the step-by-step instructions provided with the notebook to analyze a subset of the dialog exchanges from the logs.
 
     Run the following notebook first:
 
@@ -88,7 +88,7 @@ If you choose to use the notebooks that are designed for use with {{site.data.ke
     - **Effectiveness**: Provides a deeper analysis of your logs to help you understand the steps that you can take to improve your assistant.
 1.  Use the **Dialog Flow Analysis for Watson Assistant** notebook to review your dialog. The notebook can help you pinpoint the dialog nodes where customers most frequently abandon the conversation. 
 
-    For more information about how this notebook can help you analyze and assess abandonment, read this [Medium.com blog post](https://medium.com/ibm-watson/do-you-know-where-and-why-users-drop-off-the-conversation-6246e99baddc){: external}.
+    For more information about how this notebook can help you analyze and assess abandonment, see [Do you know where and why users drop off the conversation?](https://medium.com/ibm-watson/do-you-know-where-and-why-users-drop-off-the-conversation-6246e99baddc){: external}.
 
 This process helps you to understand the steps you can take to improve your assistant.
 
@@ -106,14 +106,14 @@ The [Watson Assistant Continuous Improvement Best Practices Guide](https://githu
 ## Using the logs API
 {: #logs-resources-api}
 
-You can use the `/logs` API to list events from the transcripts of conversations that occurred between your users and your assistant. For conversations created by using the v2 `/message` API, use the instance-level endpoint to [list log events in all workspaces](https://cloud.ibm.com/apidocs/assistant/assistant-v1#listalllogs){: external}, and then filter by Assistant ID. For more information about filtering logs, see [Filter query reference](/docs/watson-assistant?topic=watson-assistant-filter-reference).
+You can use the `/logs` API to list events from the transcripts of conversations that occurred between your users and your assistant. For conversations created with the v2 `/message` API, use the instance-level endpoint to [list log events in all workspaces](https://cloud.ibm.com/apidocs/assistant/assistant-v1#listalllogs){: external}, and then filter by Assistant ID. For more information, see [Filter query reference](/docs/watson-assistant?topic=watson-assistant-filter-reference).
 
 The API logs messages that are exchanged in conversations that are defined by a dialog skill only.
 {: important}
 
 The number of days that logs are stored differs by service plan type. For more information, see [Log limits](/docs/watson-assistant?topic=watson-assistant-logs#logs-limits).
 
-For a Python script you can run to export logs and convert them to CSV format, download the `export_logs_py.py` file from the [Watson Assistant GitHub)](https://github.com/watson-developer-cloud/community/blob/master/watson-assistant/export_logs_py.py){: external} repository.
+For a Python script you can run to export logs and convert them to CSV format, download the `export_logs_py.py` file from the [Watson Assistant GitHub repository)](https://github.com/watson-developer-cloud/community/blob/master/watson-assistant/export_logs_py.py){: external}.
 
 ## Understanding terminology
 {: #logs-resources-terminology}
@@ -127,7 +127,7 @@ First, review the definitions of terms that are associated with {{site.data.keyw
 | Conversation |  A set of messages that an individual user sends to your assistant, and the messages your assistant sends back. |
 | Conversation ID |  Unique identifier that is added to individual message calls to link related message exchanges together. App developers that use the V1 version of the {{site.data.keyword.assistant_classic_short}} API add this value to the message calls in a conversation by including the ID in the metadata of the context object. |
 | Customer ID |  A unique ID that can be used to label customer data such that it can be deleted if the customer requests the removal of their data. |
-| Deployment ID |  A unique label that app developers using the V1 version of the {{site.data.keyword.assistant_classic_short}} API pass with each user message to help identify the deployment environment that produced the message. |
+| Deployment ID |  A unique label that app developers of the {{site.data.keyword.assistant_classic_short}} API V1 version pass with each user message to help identify the deployment environment that produced the message. |
 | Instance |  Your deployment of {{site.data.keyword.assistant_classic_short}}, accessible with unique credentials. A {{site.data.keassistant_classic_shortnshort}} instance might contain multiple assistants. |
 | Message |  A message is a single utterance that a user sends to the assistant. |
 | Skill ID |  The unique identifier of a skill. |
@@ -141,12 +141,12 @@ The **User ID** property is not equivalent to the **Customer ID** property, thou
 ## Associating message data with a user for deletion
 {: #logs-resources-customer_id}
 
-There might come a time when you want to completely remove a set of your user's data from a {{site.data.keyword.assistant_classic_short}} instance. When the delete feature is used, then the Overview metrics doesn't include those deleted messages; for example, there will be fewer Total Conversations.
+There may be cases when you want to completely remove a set of your user's data from a {{site.data.keyword.assistant_classic_short}} instance. When the delete feature is used, the Overview metrics don't include those deleted messages, and results in fewer Total Conversations.
 
 ### Before you begin
 {: #logs-resources-delete-customer-id-prereqs}
 
-To delete messages for one or more individuals, you first need to associate a message with a unique **Customer ID** for each individual. To specify the **Customer ID** for any message sent by using the `/message` API, include the `X-Watson-Metadata: customer_id` property in your header. You can pass multiple **Customer ID** entries with semicolon separated `field=value` pairs, by using `customer_id`, as in the following example:
+To delete messages for one or more individuals, you first need to associate a message with a unique **Customer ID** for each individual. To specify the **Customer ID** for any message that is sent with the `/message` API, include the `X-Watson-Metadata: customer_id` property in your header. You can pass multiple **Customer ID** entries with semicolon separated `field=value` pairs, by using `customer_id`, as in the following example:
 
 ```sh
 curl -X POST -u "apikey:3Df... ...Y7Pc9" \

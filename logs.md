@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-21"
+lastupdated: "2023-10-02"
 
 keywords: mark as irrelevant, counterexample, data source, deployment ID, log retention
 
@@ -12,7 +12,7 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Improve your dialog skill
+# Improving your dialog skill
 {: #logs}
 
 ## Classic experience only
