@@ -34,10 +34,10 @@ For more information, see [FAQs about {{site.data.keyword.conversationshort}}](/
 
 Visit [Getting started with {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-getting-started) for a tutorial series on building in {{site.data.keyword.conversationshort}}.
 
-## Switching the experience
+## Switching between {{site.data.keyword.conversationshort}} and the classic experience
 {: #welcome-new-assistant-switch-experience}
 
-You can easily switch back and forth between {{site.data.keyword.conversationshort}} and the classic experience. However, {{site.data.keyword.conversationshort}} provides a simplified user interface, an improved deployment process, and access to the latest features. For more information, see [Migrating to {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-migrate-overview). If you do need to switch, see [Switching between new and classic experiences](/docs/watson-assistant?topic=watson-assistant-switch-experience).
+You can easily switch back and forth between {{site.data.keyword.conversationshort}} and the classic experience. However, {{site.data.keyword.conversationshort}} provides a simplified user interface, an improved deployment process, and access to the latest features. For more information, see [Migrating to {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-migrate-overview). If you do need to switch, see [Switching between {{site.data.keyword.conversationshort}} and the classic experience](/docs/watson-assistant?topic=watson-assistant-switch-experience).
 
 ## Using {{site.data.keyword.conversationshort}}
 {: #welcome-new-assistant-using}

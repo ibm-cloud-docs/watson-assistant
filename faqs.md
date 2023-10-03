@@ -34,13 +34,13 @@ Find answers to frequently-asked questions and quick fixes for common problems.
 {: #faq-classic-assistants}
 {: faq}
 
-{{site.data.keyword.conversationfull}} is a clean slate in the same IBM Cloud instance as your classic experience. Assistants that you created in one experience don't appear in the other. However, you can switch back and forth between experiences without losing any work. For more information, see [Switching the experience](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant#welcome-new-assistant-switch-experience).
+{{site.data.keyword.conversationfull}} is a clean slate in the same IBM Cloud instance as your classic experience. Assistants that you created in one experience don't appear in the other. However, you can switch back and forth between experiences without losing any work. For more information, see [Switching between {{site.data.keyword.conversationshort}} and the classic experience](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant#welcome-new-assistant-switch-experience).
 
-### What happens when I switch between the classic and new experiences?
+### What happens when I switch between the classic experience and {{site.data.keyword.conversationshort}}?
 {: #faq-switching}
 {: faq}
 
-The assistants that you create in one experience don't transfer to the other. However, you can switch experiences, return to your work, and create or use assistants. You don't lose anything by switching. Changing experiences doesn't affect other users in the same instance. For more information, see [Switching the experience](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant#welcome-new-assistant-switch-experience).
+The assistants that you create in one experience don't transfer to the other. However, you can switch experiences, return to your work, and create or use assistants. You don't lose anything by switching. Changing experiences doesn't affect other users in the same instance. For more information, see [Switching between {{site.data.keyword.conversationshort}} and the classic experience](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant#welcome-new-assistant-switch-experience).
 
 ### Is the classic experience going away?
 {: #faq-classic-lifecycle}
