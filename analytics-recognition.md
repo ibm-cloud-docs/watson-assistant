@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-04-19"
+lastupdated: "2023-10-03"
 
 subcollection: watson-assistant
 
@@ -28,7 +28,7 @@ You can analyze unrecognized requests in English-language assistants on IBM Clou
 ## Viewing groups of unrecognized requests
 {: #analytics-recognition-view}
 
-You can view groups of unrecognized requests for the draft or live environment. {{site.data.keyword.conversationshort}} generates groups of similar unrecognized requests from the last 30 days so that you can decide whether to add the requests as example phrases to a new action.
+You can view groups of unrecognized requests for the draft or live environment. {{site.data.keyword.conversationfull}} generates groups of similar unrecognized requests from the last 30 days so that you can decide whether to add the requests as example phrases to a new action.
 
 ![Unrecognized requests](images/analytics-unrecognized-groups.png){: caption="Unrecognized requests" caption-side="bottom"}
 
