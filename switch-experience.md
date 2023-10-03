@@ -1,38 +1,23 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-05-02"
+  years: 2022, 2023
+lastupdated: "2023-10-03"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
-
-
-# Switching between new and classic experiences
+# Switching between {{site.data.keyword.conversationshort}} and the classic experience
 {: #switch-experience}
 
-You can easily switch back and forth between the new experience and the classic experience. However, the new experience provides a simplified user interface, an improved deployment process, and access to the latest features. For more information, see [Migrating to the new experience](/docs/watson-assistant?topic=watson-assistant-migrate-overview).
+You can easily switch back and forth between {{site.data.keyword.conversationshort}} and the classic experience. However, {{site.data.keyword.conversationshort}} provides a simplified user interface, an improved deployment process, and access to the latest features. For more information, see [Migrating to {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-migrate-overview).
 
 To switch between the new and classic experiences, following these steps:
 
-1. From the {{site.data.keyword.conversationshort}} interface, click the **Manage** ![Manage icon](images/user-icon.png) icon to open your account menu.
+1. From the {{site.data.keyword.conversationshort}} interface, click the **Manage** ![Manage icon](images/user--avatar.svg) icon to open your account menu.
 
 1. Select **Switch to classic experience** or **Switch to new experience** from the account menu.
 

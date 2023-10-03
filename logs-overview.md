@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-21"
+lastupdated: "2023-10-03"
 
 subcollection: watson-assistant
 
@@ -15,7 +15,7 @@ subcollection: watson-assistant
 {: #logs-overview}
 
 ## Classic experience only
-This information applies to dialog skill analytics in the classic experience. For information about analytics in the new experience, see [Use analytics to review your entire assistant at a glance](/docs/watson-assistant?topic=watson-assistant-analytics-overview). 
+This information applies to dialog skill analytics in the classic experience. For information about analytics in {{site.data.keyword.conversationshort}}, see [Use analytics to review your entire assistant at a glance](/docs/watson-assistant?topic=watson-assistant-analytics-overview). 
 {: attention}
 
 The Analytics overview page provides a summary of the interactions between users and your assistant.

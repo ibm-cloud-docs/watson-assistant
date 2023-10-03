@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-09-01"
+lastupdated: "2023-10-03"
 
 subcollection: watson-assistant
 
@@ -42,7 +42,7 @@ The imported JSON file must use UTF-8 encoding, without byte order mark (BOM) en
 ## Uploading intents as actions
 {: #upload-download-actions-upload-intents}
 
-If you created intents in the classic experience, you can migrate your intents to actions in the new {{site.data.keyword.conversationshort}} experience. When you upload intents, each intent is created as a new action. All phrases corresponding to an intent are created as example phrases for the new action. This can provide a helpful starting point when you are ready to start building actions in the new experience.
+If you created intents in the classic experience, you can migrate your intents to actions. When you upload intents, each intent is created as a new action. All phrases corresponding to an intent are created as example phrases for the new action. This can provide a helpful starting point when you are ready to start building actions.
 
 1. Download the intents that you want to migrate to actions from the classic experience. For more information, see [Downloading intents](/docs/watson-assistant?topic=watson-assistant-migrate-intents-entities#migrate-intents-download). The format for each line in the file is as follows:
     ```text
