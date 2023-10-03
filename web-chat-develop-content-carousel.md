@@ -1,31 +1,14 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-08-04"
+  years: 2022, 2023
+lastupdated: "2023-10-03"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:preview: .preview}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:video: .video}
-
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Tutorial: Rendering a custom response as a content carousel
 {: #web-chat-develop-content-carousel}
@@ -33,18 +16,18 @@ subcollection: watson-assistant
 This tutorial shows how you might use custom responses to render information in the form of a content carousel.
 {: shortdesc}
 
-For a complete, working version of the example described in this tutorial, see [Content carousel for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/content-carousel){: external}.
+For a complete, working version of the example that is described in this tutorial, see [Content carousel for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/content-carousel){: external}.
 {: note}
 
 A _content carousel_ (or _slider_) is a type of interactive element that shows options as a scrollable series of slides.
 
-{{site.data.keyword.conversationshort}} does not have a built-in response type for content carousels. Instead, you can use the `user_defined` response type to send a custom response with the information you want to show, and extend the web chat to render the content carousel using standard JavaScript libraries.
+{{site.data.keyword.conversationshort}} does not have a built-in response type for content carousels. Instead, you can use the `user_defined` response type to send a custom response with the information you want to show, and extend the web chat to render the content carousel by using standard JavaScript libraries.
 
-![Content carousel in web chat](images/web-chat-tutorial-content-carousel.png)
+![Content carousel in web chat](images/web-chat-tutorial-content-carousel.png){: caption="Content carousel" caption-side="bottom"}
 
 This example shows how you can use the [Swiper](https://swiperjs.com/){: external} library to render a custom response as a content carousel.
 
-1. In the action step that you want to create a content carousel, use the JSON editor to define a `user_defined` custom response, which can contain any data you want to include. Inside the response, specify the data required for populating the content carousel. In this example, we're sending information about various types of credit cards, which we will display in a custom response:
+1. In the action step that you want to create a content carousel, use the JSON editor to define a `user_defined` custom response, which can contain any data that you want to include. Inside the response, specify the data that is required for populating the content carousel. In this example, we're sending information about various types of credit cards, which we display in a custom response:
 
     ```json
     {
@@ -82,9 +65,9 @@ This example shows how you can use the [Swiper](https://swiperjs.com/){: externa
     In this example, we are including the carousel data inside the `user_defined` response. Depending on the design of your assistant, another option would be to store the data in skill variables that can be accessed by web chat from the `context` object.
     {: note}
 
-1. Create a handler for the [`customResponse`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external} event. This handler renders the content carousel, using the styles defined by the Swiper library. (You can see the definitions of these styles in the [full example](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/content-carousel){: external}.)
+1. Create a handler for the [`customResponse`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external} event. This handler renders the content carousel, by using the styles defined by the Swiper library. (You can see the definitions of these styles in the [full example](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/content-carousel){: external}.)
 
-    This function also relies on a helper function (`createSlides()`), which we will create in the next step. (The complete code for this function also initializes the Swiper library; for more information, see the [full example](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/content-carousel){: external}.)
+    This function also relies on a helper function (`createSlides()`), which we will create in the next step. The complete code for this function also initializes the Swiper library. For more information, see the [full example](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/content-carousel){: external}.
 
     ```javascript
     function carouselCustomResponseHandler(event, instance) {
@@ -159,7 +142,7 @@ This example shows how you can use the [Swiper](https://swiperjs.com/){: externa
       });
     ```
 
-    In this example, we are checking the custom `user_defined_type` property of the custom response, and calling the `carouselCustomResponseHandler()` function only if the specified type is `carousel`. This is an optional check that shows how you might use a custom property to define multiple different custom responses (each with a different value for `user_defined_type`).
+    In this example, we are checking the custom `user_defined_type` property of the custom response, and calling the `carouselCustomResponseHandler()` function only if the specified type is `carousel`. This optional check shows how you might use a custom property to define multiple different custom responses (each with a different value for `user_defined_type`).
     {: note}
 
 For complete working code, see the [Content carousel for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/content-carousel){: external} example.

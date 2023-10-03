@@ -1,31 +1,14 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-06-30"
+  years: 2022, 2023
+lastupdated: "2023-10-03"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:preview: .preview}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:video: .video}
-
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Tutorial: Providing a downloadable conversation transcript
 {: #web-chat-develop-download-transcript}
@@ -33,16 +16,16 @@ subcollection: watson-assistant
 You can customize the web chat to offer your customers the option of downloading a transcript of the conversation history.
 {: shortdesc}
 
-For a complete, working version of the example described in this tutorial, see [Download history for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/download-history){: external}.
+For a complete, working version of the example that is described in this tutorial, see [Download history for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/download-history){: external}.
 {: note}
 
 To support downloading a conversation transcript, this example adds a custom menu option to the overflow menu in the header of the chat window:
 
-![Screen capture showing "Download history" menu option](images/web-chat-download-history.png)
+![Screen capture showing "Download transcript" menu option](images/web-chat-download-history.png){: caption="Download transcript" caption-side="bottom"}
 
-Clicking this menu option initiates downloading of a file containing the complete conversation history in comma-separated values (CSV) format.
+Clicking this menu option initiates downloading of a file that contains the complete conversation history in comma-separated values (CSV) format.
 
-1. Create a handler for the [`send`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#send){: external} and [`receive`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#receive){: external} events. In this handler, save each incoming or outgoing message in a list (`messages`) in order to maintain a history of the conversation.
+1. Create a handler for the [`send`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#send){: external} and [`receive`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#receive){: external} events. In this handler, save each incoming or outgoing message in a list (`messages`) to maintain a history of the conversation.
 
     ```javascript
     const messages = [];
@@ -68,7 +51,7 @@ Clicking this menu option initiates downloading of a file containing the complet
     instance.on({ type: 'history:begin', handler: saveHistory });
     ```
 
-1. Create a function that converts the messages saved in the `messages` list to the format you want to provide in the downloaded file. Note that this conversion needs to accommodate any response types that the conversation might include (such as text, images, options, or transfers to a human agent).
+1. Create a function that converts the messages that are saved in the `messages` list to the format you want to provide in the downloaded file. This conversion needs to accommodate any response types that the conversation might include (such as text, images, options, or transfers to a human agent).
 
     In this example, we convert the messages into a CSV file format that can be opened with an application such as Microsoft Excel. The first column in each line is a label that indicates whether the message originated from the customer (`You`) or from the assistant (`Lendyr`).
 
@@ -99,7 +82,7 @@ Clicking this menu option initiates downloading of a file containing the complet
     }
     ```
 
-1. Create a function that initiates the download of the conversation history file. This function calls the `createDownload()` function to generate the content to download. It then simulates clicking a link to start the download, using a file name generated from the current date.
+1. Create a function that initiates the download of the conversation history file. This function calls the `createDownload()` function to generate the content to download. It then simulates clicking a link to start the download, by using a file name generated from the current date.
 
     ```javascript
     function doDownload() {
