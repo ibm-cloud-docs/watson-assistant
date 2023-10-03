@@ -46,7 +46,7 @@ Algorithm version choices are currently available for Arabic, Chinese (Simplifie
 
 [IBM Cloud]{: tag-ibm-cloud}
 
-{{site.data.keyword.conversationshort}} was released as a service in July 2016. Since then, users have been creating and updating skills to meet their virtual assistant needs. Behind the scenes, {{site.data.keyword.conversationshort}} creates machine learning (ML) models to perform a variety of tasks on the user's behalf. 
+{{site.data.keyword.conversationfull}} was released as a service in July 2016. Since then, users have been creating and updating skills to meet their virtual assistant needs. Behind the scenes, {{site.data.keyword.conversationshort}} creates machine learning (ML) models to perform a variety of tasks on the user's behalf. 
 
 The primary ML models deal with action recognition, intent classification, and entity detection. For example, the model might detect what a user intends when saying `I want to open a checking account`, and what type of account the user is talking about.
 

@@ -717,7 +717,7 @@ Support for custom extensions and dialog in Actions preview panel
 {: release-note}
 
 Sign out due to inactivity setting
-:   {{site.data.keyword.conversationshort}} now uses the **Sign out due to inactivity setting** from Identity & Access Management (IAM). {{site.data.keyword.cloud_notm}} account owners can select the time it takes before an inactive user is signed out and their credentials are required again. The default is 2 hours.
+:   {{site.data.keyword.conversationfull}} now uses the **Sign out due to inactivity setting** from Identity & Access Management (IAM). {{site.data.keyword.cloud_notm}} account owners can select the time it takes before an inactive user is signed out and their credentials are required again. The default is 2 hours.
 
    An inactive user will see two messages. The first message alerts them about an upcoming session expiration and provides a choice to renew. If they remain inactive, a second session expiration message appears and they will need to log in again.
 
@@ -821,7 +821,7 @@ Links in assistant responses can be configured to open in a new tab
 All instances now default to new experience
 :    All new instances of {{site.data.keyword.conversationshort}} now direct users to the new product experience by default.
 
-    {{site.data.keyword.conversationshort}} has been completely overhauled to simplify the end-to-end process of building and deploying a virtual assistant, reducing time to launch and enabling nontechnical authors to create virtual assistants without involving developers. For more information about {{site.data.keyword.conversationshort}}, and instructions for switching between the new and old experiences, see [Welcome to {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant).
+    {{site.data.keyword.conversationfull}} has been completely overhauled to simplify the end-to-end process of building and deploying a virtual assistant, reducing time to launch and enabling nontechnical authors to create virtual assistants without involving developers. For more information about {{site.data.keyword.conversationshort}}, and instructions for switching between experiences, see [Welcome to {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant).
 
     If you would like to send us feedback on {{site.data.keyword.conversationshort}}, please use [this form](https://form.asana.com/?k=vvRdQAmGMFAeEGRryhTA2w&d=8612789739828){: external}.
 
@@ -850,7 +850,7 @@ New setting for options customer response type
 {: release-note}
 
 Apache Log4j security vulnerability updates
-:   {{site.data.keyword.conversationshort}} upgraded to using Log4j version 2.17.0, which addresses all of the Critical severity and High severity Log4j CVEs, specifically CVE-2021-45105, CVE-2021-45046, and CVE-2021-44228.
+:   {{site.data.keyword.conversationfull}} upgraded to using Log4j version 2.17.0, which addresses all of the Critical severity and High severity Log4j CVEs, specifically CVE-2021-45105, CVE-2021-45046, and CVE-2021-44228.
 
 ## 3 December 2021
 {: #watson-assistant-dec032021}

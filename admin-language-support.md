@@ -58,10 +58,7 @@ Keep these tips in mind for integrations:
 ## Supported languages
 {: #admin-language-support-codes}
 
-{{site.data.keyword.conversationshort}} supports individual features to varying degrees per language.
-{: shortdesc}
-
-{{site.data.keyword.conversationshort}} has classifier models that are designed specifically to support conversations in the following languages:
+{{site.data.keyword.conversationfull}} supports individual features to varying degrees per language. It has classifier models that are designed specifically to support conversations in the following languages:
 
 | Language | Code |
 | --- | --- |

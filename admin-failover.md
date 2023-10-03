@@ -33,12 +33,12 @@ Each approach has pros and cons. Considerations specific to {{site.data.keyword.
 ## Considerations
 {: #admin-failover-considerations}
 
-{{site.data.keyword.conversationshort}} instances in one region are unaware of instances in a second region, which can affect some features and capabilities in {{site.data.keyword.conversationshort}}.
+{{site.data.keyword.conversationfull}} instances in one region are unaware of instances in a second region, which can affect some features and capabilities in {{site.data.keyword.conversationshort}}.
 
 ### Analytics
 {: #admin-failover-analytics}
 
-{{site.data.keyword.conversationshort}} analytics provide overview statistics on the number of interactions with users and containment rates. Analytics doesn't cumulate statistics across regions. With an active/passive topology, this approach to analytics is sufficient. However, using an active/active topology likely requires you to use [webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview) to gather interaction data, and build custom data warehouses and reports to understand total usage.
+{{site.data.keyword.conversationfull} analytics provide overview statistics on the number of interactions with users and containment rates. Analytics doesn't cumulate statistics across regions. With an active/passive topology, this approach to analytics is sufficient. However, using an active/active topology likely requires you to use [webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview) to gather interaction data, and build custom data warehouses and reports to understand total usage.
 
 ### Session history for web chat and the v2 api
 {: #admin-failover-session-history}
@@ -57,7 +57,7 @@ For an **active/active** topology, under the worst case scenario, the MAU count 
 ## Phone integration
 {: #admin-failover-phone}
 
-A {{site.data.keyword.conversationshort}} phone integration in one region is unaware of a phone integration in a different region. You need to ensure that your assistants are identically configured in both regions. You also need to rely on the upstream SIP trunking provider to detect and manage failing over between regions.
+A phone integration in one region is unaware of a phone integration in a different region. You need to ensure that your assistants are identically configured in both regions. You also need to rely on the upstream SIP trunking provider to detect and manage failing over between regions.
 
 ### Monitoring
 {: #admin-failover-phone-monitoring}
@@ -74,16 +74,16 @@ The SIP trunking provider plays an important role in detecting and managing a fa
 
 Phone integration failures have two types. The first type is a full outage where the session border controllers in all 3 regional zones become unreachable. This type of outage is easier to detect and handle because the SIP trunking provider is immediately notified by SIP timeouts that the call fails and can be configured to either automatically fail over or the call routing can be manually reconfigured at the SIP trunking provider to direct traffic away from the failed region toward the passive backup region. If a failover is automated and a regional backup is enabled, it is always best to try a different zone first and redirect traffic to the passive backup region only if a preconfigured number of failures occur within a short period. This prevents an unnecessary failover between regions if only a short outage occurs. 
 
-{{site.data.keyword.conversationshort}} provides a round-robin fully qualified domain name (FQDN) that includes the IP addresses for each zone in the region. Many SIP trunking providers automatically retry each IP in the FQDN when failures occur. To support disaster recovery, the service provider might need to configure two separate SIP trunks, one for each region, and only when all the zones in a single region fail should the call be switched to the backup region. It's important to set the SIP INVITE failure timeouts at the SIP trunking provider low enough to avoid long call setup latencies when a failover is occurring. 
+{{site.data.keyword.conversationfull} provides a round-robin fully qualified domain name (FQDN) that includes the IP addresses for each zone in the region. Many SIP trunking providers automatically retry each IP in the FQDN when failures occur. To support disaster recovery, the service provider might need to configure two separate SIP trunks, one for each region, and only when all the zones in a single region fail should the call be switched to the backup region. It's important to set the SIP INVITE failure timeouts at the SIP trunking provider low enough to avoid long call setup latencies when a failover is occurring. 
 
 ### Partial outage
 {: #admin-failover-phone-partial-outage}
 
 The second type of failure is a partial service outage within the region. A partial outage is much harder to detect and manage because of the large number of variations in service failures that can occur within a region. In some cases, small issues affect the performance characteristics of the call but not cause the call to fail. 
 
-For issues that ultimately cause a call to fail, two ways {{site.data.keyword.conversationshort}} can handle the call. The first is to accept the call and then transfer it to a configured default SIP URI. You can configure this setting in the {{site.data.keyword.conversationshort}} phone integration and is also used for mid-call failures. The default transfer target SIP URI is defined in the **SIP target when a call fails** field that is on the Advanced tab of the phone integration configuration.
+For issues that ultimately cause a call to fail, there are two ways your assistant can handle the call. The first is to accept the call and then transfer it to a configured default SIP URI. You can configure this setting in the phone integration and is also used for mid-call failures. The default transfer target SIP URI is defined in the **SIP target when a call fails** field that is on the Advanced tab of the phone integration configuration.
 
-The phone integration can also be configured to respond to a SIP INVITE with a SIP 500 (service unavailable) message if an outage is detected during call setup instead of transferring a call to a live agent. A SIP 500 can then be used to redirect the call to another zone, or if many SIP 500s are received, to another region. Using a SIP 500 INVITE error is a better way to signal a failure to an upstream SIP trunking provider because it gives the provider a way to reroute the call. Using only the default transfer target to handle call failures is acceptable for low call volume scenarios but can result in large numbers of calls that are directed to a customer contact center when bigger call volumes are handled by {{site.data.keyword.conversationshort}}. To enable this 500 error response capability for a specific {{site.data.keyword.conversationshort}} instance, you need to make a request to IBM. 
+The phone integration can also be configured to respond to a SIP INVITE with a SIP 500 (service unavailable) message if an outage is detected during call setup instead of transferring a call to a live agent. A SIP 500 can then be used to redirect the call to another zone, or if many SIP 500s are received, to another region. Using a SIP 500 INVITE error is a better way to signal a failure to an upstream SIP trunking provider because it gives the provider a way to reroute the call. Using only the default transfer target to handle call failures is acceptable for low call volume scenarios but can result in large numbers of calls that are directed to a customer contact center when bigger call volumes are handled by your assistant. To enable this 500 error response capability for a specific instance, you need to make a request to IBM. 
 
 You should plan for both full and partial service outages. A good first step is to plan for a manual failover between regions before you enable automation. You need a complete replica of {{site.data.keyword.conversationshort}} in both regions, including all custom speech model training. When automation is enabled, it is best to start with a strategy for detecting and failing over to the passive backup region when a complete regional outage is detected. After implementation, develop a strategy to deal with partial outages, which should cover most of the failure conditions that can occur with a phone integration deployment.
 
@@ -134,13 +134,12 @@ For a successful failover:
 - Training data changes should be synchronized across regions. Avoid pushing changes delayed over a large window of time (such as days) to mitigate the risk of algorithm changes that are deployed by {{site.data.keyword.conversationshort}} in between regions being updated.
 - The same IBM Cloud account should be used for the service instances across regions to maintain a single overall bill for services.
 - The client applications should support:
-    - {{site.data.keyword.conversationshort}} API hostname
+    - {{site.data.keyword.conversationfull}} API hostname
     - Service instance credentials
     - v1: workspace_id
     - v2: assistant_id
 
 Although it does not affect the runtime flow of calling `/message`, if you are using fine-grained access control that uses IBM Identity and Access Management (IAM), make sure that the IAM policies are synchronized across the regions. 
-
 IAM is a global service, but the custom resources (assistants and skills) used by {{site.data.keyword.conversationshort}} access control means each region, which has specific resources, requires specific policies.
 
 For an **active/passive** topology, some form of a [circuit break pattern](https://martinfowler.com/bliki/CircuitBreaker.html) can be used. A single service instance in a region is used exclusively unless errors are detected. At that point, the system can respond by updating the relevant failover metadata to route traffic to the service instance in the other region. When a failover happens, you can decide to continue using the new region as the active instance, or if you want to resume using the initial region when it stabilizes. 
