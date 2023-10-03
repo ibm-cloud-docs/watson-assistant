@@ -232,7 +232,7 @@ toc:
                 - api-input-attachments.md
                 -  include: ../watson/getting-started-sdks.md
       - topicgroup:
-          label: Migrating to {{site.data.keyword.conversationshort}}
+          label: Migrating to watsonx Assistant
           topics:
           - topic: migrate-overview.md
             navtitle: Overview

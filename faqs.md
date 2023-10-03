@@ -14,7 +14,7 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQs for {{site.data.keyword.conversationfull}}
+# FAQs for {{site.data.keyword.conversationshort}}
 {: #watson-assistant-faqs}
 
 Find answers to frequently-asked questions and quick fixes for common problems.
@@ -62,7 +62,7 @@ The assistant ID can be found in **Assistant settings**.
 
 In **Assistant settings**, the assistant ID is in the **Assistant IDs and API details** section.
 
-## What do the draft and live tags mean?
+### What do the draft and live tags mean?
 {: #faqs-draft-live-tags}
 {: faq}
 
