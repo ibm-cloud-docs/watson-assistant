@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-09-21"
+lastupdated: "2023-10-03"
 
 subcollection: watson-assistant
 
@@ -39,7 +39,7 @@ If you need to add more assistants, follow these steps:
 
 If you're using the classic experience, follow these steps to add an assistant:
 
-1.  Click the **Assistants** icon ![Assistants menu icon](images/chat.svg).
+1.  Click the **Assistants** icon ![Assistants menu icon](images/chat.svg) to open the Assistants page.
 
 1.  Click **Create assistant**.
 
@@ -65,3 +65,8 @@ To switch to another assistant in your instance:
 
 1.  Choose the assistant that you want to open.
 
+If you're using the classic experience, follow these steps to switch assistants:
+
+1. Click the **Assistants** icon ![Assistants menu icon](images/chat.svg) to open the Assistants page.
+
+1. Choose an assistant you want to open. 

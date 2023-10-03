@@ -2,28 +2,13 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2022-03-03"
+lastupdated: "2023-10-03"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Previewing and sharing your assistant
 {: #preview-share}
@@ -83,7 +68,7 @@ To enter a URL:
 ### Uploading an image
 {: #preview-upload-image}
 
-You can upload an image of your organization's website. Images are stored for 24 hours. Maximum file size is 1 MB. Supported file types are JPEG and PNG.
+You can upload an image of your organization's website. Images are stored for 24 hours. The maximum file size is 1 MB. Supported file types are JPEG and PNG.
 
 To upload an image:
 

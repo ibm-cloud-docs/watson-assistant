@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-22"
+lastupdated: "2023-10-03"
 
 keywords: chatbot, live chatbot, omnichannel
 
@@ -23,7 +23,7 @@ Use {{site.data.keyword.conversationfull}} to build your own branded live chatbo
 | *Create AI-driven conversational flows* | Your assistant uses industry-leading AI capabilities to understand questions that your customers ask in natural language. It uses machine learning models that are custom-built from your data to deliver accurate answers in real time. |
 | *Embed existing help content* | You already know the answers to customer questions? Put your subject matter expertise to work. Add a search integration with {{site.data.keyword.discoveryfull}} to give your assistant access to corporate data collections that it can mine for answers. |
 | *Connect to your customer service teams* | If customers need more help or want to discuss a topic that requires a personal touch, connect them to human agents from your existing service desk provider. |
-| *Bring the assistant to your customers, where they are* | Configure one or more built-in integrations to quickly publish your assistant on popular social media platforms such as Slack, Facebook Messenger, Intercom, or WhatsApp. Turn the assistant into a member of your customer support call center team, where it can answer the phone and address simple requests so its human teammates can focus on more nuanced customer needs. Make your assistant the go-to help resource for customers by adding it as a chat widget to your company website. If none of the built-in integrations fit your needs, use the APIs to build your own custom app. |
+| *Bring the assistant to your customers, where they are* | Configure one or more built-in integrations to quickly publish your assistant on popular social media platforms such as Slack, Facebook Messenger, Intercom, or WhatsApp. Turn the assistant into a member of your customer support call center team, where it can answer the phone and address simple requests so live agents can address specific customer needs. Make your assistant the goto help resource for customers by adding it as a chat widget to your company website. If none of the built-in integrations fit your needs, use the APIs to build your own custom app. |
 | *Track customer engagement and satisfaction* | Use built-in metrics to analyze logs from conversations between customers and your assistant to gauge how well it's doing and identify areas for improvement. |
 
 ## How it works
@@ -35,18 +35,18 @@ This diagram illustrates how {{site.data.keyword.conversationfull}} delivers an 
 
 Customers interact with the assistant through one or more of these channels:
 
-- A web chat that you embed in your company website and that can transfer complex requests to a customer support representative.
+- A web chat that you embed in your company website and that can transfer complex requests to a customer support representative
 - An existing social-media messaging platform, such as Slack, Facebook Messenger, or WhatsApp
 - A phone call or text message
 - A custom application that you develop, such as a mobile app or a robot with a voice interface
 
 The **assistant** receives a message from a customer and sends it down the appropriate resolution path. 
 
-If you want to preprocess incoming messages, this is where you can use webhooks to inject logic that calls an external service that can process the messages before the assistant routes them. Likewise, you can process responses from the assistant before they are returned to the customer.
+If you want to preprocess incoming messages, you can use webhooks to inject logic that calls an external service that can process the messages before the assistant routes them. Likewise, you can process responses from the assistant before they are returned to the customer.
 
 The assistant chooses the appropriate resolution from among these options:
 
-- An **action** interprets the customer's message further, then directs the flow of the conversation. The action gathers any information it needs to respond or perform a transaction on the customer's behalf.
+- An **action** interprets the customer's message further, then directs the flow of the conversation. The action gathers any information that it needs to respond or perform a transaction on the customer's behalf.
 
 - A **search integration** uses existing FAQ or other curated content that you own to find relevant answers to customer questions.
 
