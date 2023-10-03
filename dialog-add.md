@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-09-12"
+lastupdated: "2023-10-03"
 
 keywords: import workspace, import JSON, export JSON, upload JSON, download JSON, collaborate
 
@@ -17,13 +17,13 @@ subcollection: watson-assistant
 
 You can add one dialog skill to an assistant.
 
-- If you are using the new experience, you need to [activate dialog](#activate-dialog-activating).
+- If you are using {{site.data.keyword.conversationshort}}, you need to [activate dialog](#activate-dialog-activating).
 - If you are using the classic experience, you [create a dialog skill](#skill-dialog-add-task).
 
 ## Activating dialog
 {: #activate-dialog-activating}
 
-To activate the dialog feature in the new experience:
+To activate the dialog feature in {{site.data.keyword.conversationshort}}:
 
 1.  Create or open an assistant where you want to use a dialog as the primary conversation with users.
 
@@ -98,7 +98,7 @@ If you're using the classic experience, you can add an actions skill instead of 
 
 Each action contains a series of steps that represent individual exchanges with a customer. Building the conversation that your assistant has with your customers is fundamentally about deciding which steps, or which user interactions, are required to complete an action. After you identify the list of steps, you can then focus on writing engaging content to turn each interaction into a positive experience for your customer.
 
-If you're interested in using actions, the new experience of {{site.data.keyword.conversationshort}} is recommended, rather than using an actions skill in the classic experience. The new experience provides a simplified user interface, an improved deployment process, and access to the latest features. For more information, see [Overview: Editing actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview).
+If you're interested in using actions, {{site.data.keyword.conversationshort}} is recommended, rather than using an actions skill in the classic experience. {{site.data.keyword.conversationfull}} provides a simplified user interface, an improved deployment process, and access to the latest features. For more information, see [Overview: Editing actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview).
 
 ### Search skill in the classic experience
 {: #skill-add-search-skill}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-24"
+lastupdated: "2023-10-03"
 
 subcollection: watson-assistant
 
@@ -18,7 +18,7 @@ To use an existing dialog skill, you need to activate the dialog feature in your
 ## Activating dialog
 {: #activate-dialog-activating}
 
-To activate the dialog feature in the new experience:
+To activate the dialog feature:
 
 1.  Create or open an assistant where you want to use a dialog as the primary conversation with users.
 
@@ -37,13 +37,13 @@ Once you activate the dialog feature, it takes precedence over actions. You can 
 ## Migrating existing skills
 {: #activate-dialog-upload}
 
-Once the dialog feature is activated, you can start a new dialog conversation from scratch if you want. But, you probably have an existing dialog skill that you want to migrate into the new {{site.data.keyword.conversationshort}}.
+Once the dialog feature is activated, you can start a new dialog conversation from scratch if you want. But, you probably have an existing dialog skill that you want to migrate into {{site.data.keyword.conversationshort}}.
 
 To migrate an existing dialog skill:
 
 1.  Use the classic experience to [download your dialog skill](/docs/assistant?topic=assistant-skill-tasks#skill-tasks-download){: external} in JSON format. 
 
-1.  In the new {{site.data.keyword.conversationshort}}, open the **Dialog** page.
+1.  In {{site.data.keyword.conversationshort}}, open the **Dialog** page.
 
 1.  In **Options**, choose **Upload / Download**.
 

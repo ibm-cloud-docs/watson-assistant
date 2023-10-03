@@ -15,9 +15,6 @@ content-type: release-note
 # Release notes for {{site.data.keyword.conversationshort}}
 {: #watson-assistant-release-notes}
 
-Find out what's new in {{site.data.keyword.conversationfull}}.
-{: shortdesc}
-
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
 ## 25 Aug 2023
@@ -331,7 +328,7 @@ New algorithm version **Latest (20 Dec 2022)** provides improved irrelevance det
 {: release-note}
 
 Dialog session variables now available in Preview
-:   If you are using dialog in the new experience, you can now see session variables for dialog when debugging in Preview. For more information, see [Variable values in Preview](/docs/watson-assistant?topic=watson-assistant-review#review-variable-values).
+:   If you are using dialog in {{site.data.keyword.conversationshort}}, you can now see session variables for dialog when debugging in Preview. For more information, see [Variable values in Preview](/docs/watson-assistant?topic=watson-assistant-review#review-variable-values).
 
 ## 6 March 2023
 {: #watson-assistant-mar062023}
@@ -481,9 +478,6 @@ Updated expression methods
 ## 5 December 2022
 {: #watson-assistant-dec052022}
 {: release-note}
-
-Live integrations deleted in assistants created before June 24, 2022
-:   For assistants created before June 24, 2022, using the new {{site.data.keyword.conversationshort}} user experience, the live integrations for these assistants were mistakenly deleted during a software upgrade. These integrations should now be restored. If you are still experiencing issues, please contact IBM support.
 
 Unsupported HTML removed from text responses in channel integrations
 :   HTML tags (except for links) are now automatically removed from text responses that are sent to the Facebook, WhatsApp, and Slack integrations, because those channels do not support HTML formatting. HTML tags are still handled appropriately in channels that support them (such as the web chat) and stored in the session history.
@@ -653,7 +647,7 @@ Initial value of session variables
 :   You can now set the initial value of a session variable to an expression. For more information, see [Creating a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable).
 
 Uploading intents
-:   If you created intents in the classic {{site.data.keyword.conversationshort}} experience, you can migrate your intents to actions in the new {{site.data.keyword.conversationshort}} experience. This can provide a helpful starting point when you are ready to start building actions in the new experience. For more information, see [Uploading intents as actions](/docs/watson-assistant?topic=watson-assistant-upload-download-actions#upload-download-actions-upload-intents).
+:   If you created intents in the classic experience, you can migrate your intents to actions in {{site.data.keyword.conversationshort}}. This can provide a helpful starting point when you are ready to start building actions. For more information, see [Uploading intents as actions](/docs/watson-assistant?topic=watson-assistant-upload-download-actions#upload-download-actions-upload-intents).
 
 ## 19 July 2022
 {: #watson-assistant-jul192022}
@@ -738,7 +732,7 @@ Ability to upload and download example phrases and upload saved customer respons
 
    You can also now upload saved customer responses from the **Saved responses** page. For more information, see [Uploading saved customer responses](/docs/watson-assistant?topic=watson-assistant-collect-info#uploading-saved-customer-response).
 
-   The ability to upload example phrases and saved customer responses is also helpful if you're using the classic {{site.data.keyword.conversationshort}} and want to migrate your intents and entities to the new {{site.data.keyword.conversationshort}}. For more information, see [Migrating intents and entities](/docs/watson-assistant?topic=watson-assistant-migrate-intents-entities).
+   The ability to upload example phrases and saved customer responses is also helpful if you're using the classic experience and want to migrate your intents and entities to {{site.data.keyword.conversationshort}}. For more information, see [Migrating intents and entities](/docs/watson-assistant?topic=watson-assistant-migrate-intents-entities).
 
 ## 5 May 2022
 {: #watson-assistant-may052022}
@@ -772,7 +766,7 @@ Markdown supported in action editor
 {: release-note}
 
 Dialog feature available
-:   The dialog feature is available. If you have a dialog-based assistant that was built using the classic {{site.data.keyword.conversationshort}}, you can now migrate your dialog skill to the new {{site.data.keyword.conversationshort}} experience. For more information, see [Migrating to the new experience](/docs/watson-assistant?topic=watson-assistant-migrate-overview).
+:   The dialog feature is available. If you have a dialog-based assistant that was built using the classic experience, you can now migrate your dialog skill to {{site.data.keyword.conversationshort}}. For more information, see [Migrating to {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-migrate-overview).
 
 ## 28 March 2022
 {: #watson-assistant-mar282022}
@@ -827,9 +821,9 @@ Links in assistant responses can be configured to open in a new tab
 All instances now default to new experience
 :    All new instances of {{site.data.keyword.conversationshort}} now direct users to the new product experience by default.
 
-    {{site.data.keyword.conversationshort}} has been completely overhauled to simplify the end-to-end process of building and deploying a virtual assistant, reducing time to launch and enabling nontechnical authors to create virtual assistants without involving developers. For more information about the new {{site.data.keyword.conversationshort}}, and instructions for switching between the new and old experiences, see [Welcome to the new {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant).
+    {{site.data.keyword.conversationshort}} has been completely overhauled to simplify the end-to-end process of building and deploying a virtual assistant, reducing time to launch and enabling nontechnical authors to create virtual assistants without involving developers. For more information about {{site.data.keyword.conversationshort}}, and instructions for switching between the new and old experiences, see [Welcome to {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant).
 
-    If you would like to send us feedback on the new experience, please use [this form](https://form.asana.com/?k=vvRdQAmGMFAeEGRryhTA2w&d=8612789739828){: external}.
+    If you would like to send us feedback on {{site.data.keyword.conversationshort}}, please use [this form](https://form.asana.com/?k=vvRdQAmGMFAeEGRryhTA2w&d=8612789739828){: external}.
 
 ## 3 February 2022
 {: #watson-assistant-feb032022}
@@ -866,7 +860,7 @@ Configure webhook timeout
 :   From the **Pre-message webhook** and **Post-message webhook** configuration pages, you can configure the webhook timeout length from a minimum of 1 second to a maximum of 30 seconds. For more information, see [Extending your assistant with webhooks](/docs/watson-assistant?topic=watson-assistant-webhook-overview).
 
 User-based switching between {{site.data.keyword.conversationshort}} experiences
-:   Previously, switching between the new {{site.data.keyword.conversationshort}} experience and the classic {{site.data.keyword.conversationshort}} experience was instance-based. For example, if a user switched from the classic experience to the new experience, all users of that {{site.data.keyword.conversationshort}} instance were switched to the new experience. Now, switching between the experiences is user-based. So, any user of a {{site.data.keyword.conversationshort}} instance can switch between the new and classic experiences, and other users of that {{site.data.keyword.conversationshort}} instance are not affected.
+:   Previously, switching between {{site.data.keyword.conversationshort}} and the classic experience was instance-based. For example, if a user switched from the classic experience to {{site.data.keyword.conversationshort}}, all users of that instance were switched to {{site.data.keyword.conversationshort}}. Now, switching between the experiences is user-based. So, any user of an instance can switch between the new and classic experiences, and other users of that instance are not affected.
 
 ## 27 November 2021
 {: #watson-assistant-nov272021}
@@ -913,7 +907,7 @@ Add variables to links
 {: release-note}
 
 Facebook and Slack integrations now available
-:   The new {{site.data.keyword.conversationshort}} now includes integrations for [Facebook Messenger](/docs/watson-assistant?topic=watson-assistant-deploy-facebook) and [Slack](/docs/watson-assistant?topic=watson-assistant-deploy-slack).
+:   {{site.data.keyword.conversationfull}} now includes integrations for [Facebook Messenger](/docs/watson-assistant?topic=watson-assistant-deploy-facebook) and [Slack](/docs/watson-assistant?topic=watson-assistant-deploy-slack).
 
 Analytics for draft and live environments
 :   The **Analyze** page now lets you see analytics data for either the draft or live environments. For more information, see [Use analytics to review your entire assistant at a glance](/docs/watson-assistant?topic=watson-assistant-analytics-overview).
@@ -922,8 +916,8 @@ Analytics for draft and live environments
 {: #watson-assistant-oct072021}
 {: release-note}
 
-The new {{site.data.keyword.conversationshort}}
-:   The new {{site.data.keyword.conversationshort}} is now available! This new experience, focused on using **actions** to build customer conversations, is designed to make it simple enough for *anyone* to build a virtual assistant. Building, testing, publishing, and analyzing your assistant can all now be done in one simple and intuitive interface.
+Introducing {{site.data.keyword.conversationshort}}
+:   This new experience, focused on using **actions** to build customer conversations, is designed to make it simple enough for *anyone* to build a virtual assistant. Building, testing, publishing, and analyzing your assistant can all now be done in one simple and intuitive interface.
 
     - New **navigation** provides a workflow for building, previewing, publishing, and analyzing your assistant.
     - Each assistant has a **home page** with a task list to help you get started.

@@ -28,7 +28,7 @@ subcollection: watson-assistant
 # Calling actions from a dialog
 {: #dialog-call-action}
 
-In the new {{site.data.keyword.conversationshort}}, you can use actions with your primary dialog conversation. A dialog feature takes precedence over actions. You can use actions to supplement a dialog-based conversation, but the dialog drives the conversation with users to match their requests.
+In {{site.data.keyword.conversationshort}}, you can use actions with your primary dialog conversation. A dialog feature takes precedence over actions. You can use actions to supplement a dialog-based conversation, but the dialog drives the conversation with users to match their requests.
 
 A dialog node calls an action to perform a task and then return to the dialog. From a single dialog node, you can make a call to either a webhook or an action, not both. Choose the approach that best suits your needs:
 

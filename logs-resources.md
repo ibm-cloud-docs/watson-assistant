@@ -14,7 +14,7 @@ subcollection: watson-assistant
 {: #logs-resources}
 
 ## Classic experience only
-This information applies to dialog skill analytics in the classic experience. For information about analytics in the new experience, see [Use analytics to review your entire assistant at a glance](/docs/watson-assistant?topic=watson-assistant-analytics-overview). 
+This information applies to dialog skill analytics in the classic experience. For information about analytics in {{site.data.keyword.conversationshort}}, see [Use analytics to review your entire assistant at a glance](/docs/watson-assistant?topic=watson-assistant-analytics-overview). 
 {: attention}
 
 Learn about notebooks and APIs that you can use to access and analyze log data.

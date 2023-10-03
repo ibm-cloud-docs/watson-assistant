@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-22"
+lastupdated: "2023-10-03"
 
 subcollection: watson-assistant
 
@@ -14,7 +14,7 @@ subcollection: watson-assistant
 # Getting started with {{site.data.keyword.conversationshort}}
 {: #getting-started}
 
-The new {{site.data.keyword.conversationshort}} experience, focused on using **actions** to build customer conversations, is designed to make it simple enough for *anyone* to build a virtual assistant. Building, testing,  publishing, and analyzing your assistant can all now be done in one simple and intuitive interface.
+{{site.data.keyword.conversationfull}}, focused on using **actions** to build customer conversations, is designed to make it simple enough for *anyone* to build a virtual assistant. Building, testing,  publishing, and analyzing your assistant can all now be done in one simple and intuitive interface.
 
 - New **navigation** provides a workflow for building, previewing, publishing, and analyzing your assistant. 
 
@@ -26,7 +26,7 @@ The new {{site.data.keyword.conversationshort}} experience, focused on using **a
 
 - Use a new suite of **analytics** to improve your assistant. Review which actions are being completed to see what your customers want help with, determine if your assistant understands and addresses customer needs, and decide how can you make your assistant better.
 
-For more information about the new experience, see [FAQs about the new IBM {{site.data.keyword.conversationshort}} experience](/docs/watson-assistant?topic=watson-assistant-watson-assistant-faqs#faqs-new-experience).
+For more information, see [FAQs about {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-watson-assistant-faqs#faqs-new-experience).
 
 ## Tutorial
 {: #getting-started-tutorial}

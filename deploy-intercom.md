@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-21"
+lastupdated: "2023-10-03"
 
 subcollection: watson-assistant
 
@@ -14,7 +14,7 @@ subcollection: watson-assistant
 {: #deploy-intercom}
 
 ## Classic experience only
-The Intercom integration is available in only in the classic experience for use with a dialog skill. The Intercom integration isn't available in the new experience.
+The Intercom integration is available in only in the classic experience for use with a dialog skill. The Intercom integration isn't available in {{site.data.keyword.conversationshort}}.
 {: attention}
 
 Intercom is a customer messaging platform that helps drive business growth through better relationships throughout the customer lifecycle.

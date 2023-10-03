@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-08-22"
+lastupdated: "2023-10-03"
 
 subcollection: watson-assistant
 
@@ -26,4 +26,4 @@ These topics cover several tasks and areas involved with administering your inst
 | [High availability and disaster recovery](/docs/watson-assistant?topic=watson-assistant-admin-recovery) | {{site.data.keyword.conversationshort}} is highly available within multiple {{site.data.keyword.cloud}} locations (for example, Dallas and Washington, DC). However, recovering from potential disasters that affect an entire location requires planning and preparation. |
 | [Failover options](/docs/watson-assistant?topic=watson-assistant-admin-failover) | This topic explains some actions you can take to increase the availability of {{site.data.keyword.conversationshort}} for your organization. |
 | [Adding support for global audiences](/docs/watson-assistant?topic=watson-assistant-admin-language-support) | {{site.data.keyword.conversationshort}} supports individual features to varying degrees per language. |
-| [Switching between new and classic experiences](/docs/watson-assistant?topic=watson-assistant-switch-experience) | You can easily switch back and forth between the new experience and the classic experience. |
+| [Switching between new and classic experiences](/docs/watson-assistant?topic=watson-assistant-switch-experience) | You can easily switch back and forth between {{site.data.keyword.conversationshort}} and the classic experience. |

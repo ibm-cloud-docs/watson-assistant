@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-04-07"
+lastupdated: "2023-10-03"
 
 subcollection: watson-assistant
 
@@ -19,7 +19,7 @@ If you need to collaborate with others on your assistants, you can quickly add u
 ## Adding users from the Manage menu
 {: #access-control-add-users}
 
-In the new {{site.data.keyword.conversationshort}}, each assistant contains all the draft and live resolution methods (actions and search integration) and channels you add (such as web chat, Facebook, or Slack). The simplest way to provide access is to add users to your {{site.data.keyword.conversationshort}} service instance with manager access to all assistants. Users get all the privileges that they need to build and deploy any assistant.
+In {{site.data.keyword.conversationshort}}, each assistant contains all the draft and live resolution methods (actions and search integration) and channels you add (such as web chat, Facebook, or Slack). The simplest way to provide access is to add users to your {{site.data.keyword.conversationshort}} service instance with manager access to all assistants. Users get all the privileges that they need to build and deploy any assistant.
 
 To quickly add users with manager access to all assistants, complete the following steps:
 
