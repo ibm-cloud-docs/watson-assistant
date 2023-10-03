@@ -15,9 +15,6 @@ content-type: release-note
 # Release notes for {{site.data.keyword.conversationshort}}
 {: #watson-assistant-release-notes}
 
-Find out what's new in {{site.data.keyword.conversationfull}}.
-{: shortdesc}
-
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
 ## 25 Aug 2023
@@ -919,8 +916,8 @@ Analytics for draft and live environments
 {: #watson-assistant-oct072021}
 {: release-note}
 
-{{site.data.keyword.conversationfull}}
-:   {{site.data.keyword.conversationfull}} is now available! This new experience, focused on using **actions** to build customer conversations, is designed to make it simple enough for *anyone* to build a virtual assistant. Building, testing, publishing, and analyzing your assistant can all now be done in one simple and intuitive interface.
+Introducing {{site.data.keyword.conversationshort}}
+:   This new experience, focused on using **actions** to build customer conversations, is designed to make it simple enough for *anyone* to build a virtual assistant. Building, testing, publishing, and analyzing your assistant can all now be done in one simple and intuitive interface.
 
     - New **navigation** provides a workflow for building, previewing, publishing, and analyzing your assistant.
     - Each assistant has a **home page** with a task list to help you get started.
