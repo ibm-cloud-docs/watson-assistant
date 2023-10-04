@@ -52,11 +52,11 @@ The following example shows an embed script that includes these configuration op
   <body>
     <script>
       window.watsonAssistantChatOptions = {
-        // A UUID like '1d7e34d5-3952-4b86-90eb-7c7232b9b540' included in the embed code provided in Watson Assistant.
+        // A UUID like '1d7e34d5-3952-4b86-90eb-7c7232b9b540' included in the embed code.
         integrationID: "YOUR_INTEGRATION_ID",
         // Your assistants region e.g. 'us-south', 'us-east', 'jp-tok' 'au-syd', 'eu-gb', 'eu-de', etc.
         region: "YOUR_REGION",
-        // A UUID like '6435434b-b3e1-4f70-8eff-7149d43d938b' included in the embed code provided in Watson Assistant.
+        // A UUID like '6435434b-b3e1-4f70-8eff-7149d43d938b' included in the embed code.
         serviceInstanceID: "YOUR_SERVICE_INSTANCE_ID",
         // The callback function that is called after the widget instance has been created.
         onLoad: function(instance) {

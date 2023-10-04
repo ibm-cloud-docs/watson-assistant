@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-09-27"
+lastupdated: "2023-10-04"
 
 subcollection: watson-assistant
 
@@ -262,4 +262,4 @@ Use the following tips when you call a {{site.data.keyword.openwhisk_short}} web
 ## Updating output.generic with a webhook
 {: #dialog-webhooks-outputgeneric}
 
-You can use a webhook to update `output.generic` and provide dynamic responses. For more information, see the blog article [How to Dynamically Add Response Options to Dialog Nodes in Watson Assistant](https://medium.com/ibm-data-ai/how-to-dynamically-add-response-options-to-dialog-nodes-in-watson-assistant-e14c5e08beca){: external}.
+You can use a webhook to update `output.generic` and provide dynamic responses. For more information, see the blog article [How to Dynamically Add Response Options to Dialog Nodes](https://medium.com/ibm-data-ai/how-to-dynamically-add-response-options-to-dialog-nodes-in-watson-assistant-e14c5e08beca){: external}.

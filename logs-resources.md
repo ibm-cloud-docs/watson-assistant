@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015,  2023
-lastupdated: "2023-10-03"
+lastupdated: "2023-10-04"
 
 subcollection: watson-assistant
 
@@ -43,17 +43,17 @@ Analysis notebooks are available for:
 
 For more information, see the [product documentation](https://dataplatform.cloud.ibm.com/docs/content/svc-welcome/wsl.html?context=cpdaas){: external}.
 
-The [Watson Assistant Continuous Improvement Best Practices Guide](https://github.com/watson-developer-cloud/assistant-improve-recommendations-notebook/raw/master/notebook/IBM%20Watson%20Assistant%20Continuous%20Improvement%20Best%20Practices.pdf){: external} describes how to get the most out of these notebooks.
+The [{{site.data.keyword.conversationshort}} Continuous Improvement Best Practices Guide](https://github.com/watson-developer-cloud/assistant-improve-recommendations-notebook/raw/master/notebook/IBM%20Watson%20Assistant%20Continuous%20Improvement%20Best%20Practices.pdf){: external} describes how to get the most out of these notebooks.
 
 ### Using the notebooks with {{site.data.keyword.DSX}}
 {: #logs-resources-notebooks-studio}
 
 The following notebooks are available:
 
-- [Dialog skill analysis for Watson Assistant](https://dataplatform.cloud.ibm.com/exchange/public/entry/view/4d77701840fcb2f21587e39fdb887049){: external}
-- [Measure Watson Assistant Performance](https://dataplatform.cloud.ibm.com/exchange/public/entry/view/133dfc4cd1480bbe4eaa78d3f635e568){: external}.
-- [Analyze Watson Assistant Effectiveness](https://dataplatform.cloud.ibm.com/exchange/public/entry/view/133dfc4cd1480bbe4eaa78d3f636921c){: external}
-- [Dialog Flow Analysis for Watson Assistant](https://dataplatform.cloud.ibm.com/exchange/public/entry/view/013c690997e27f3a8d9133265327a9e5){: external}
+- [Dialog skill analysis for {{site.data.keyword.conversationshort}}](https://dataplatform.cloud.ibm.com/exchange/public/entry/view/4d77701840fcb2f21587e39fdb887049){: external}
+- [Measure {{site.data.keyword.conversationshort}} Performance](https://dataplatform.cloud.ibm.com/exchange/public/entry/view/133dfc4cd1480bbe4eaa78d3f635e568){: external}.
+- [Analyze {{site.data.keyword.conversationshort}} Effectiveness](https://dataplatform.cloud.ibm.com/exchange/public/entry/view/133dfc4cd1480bbe4eaa78d3f636921c){: external}
+- [Dialog Flow Analysis for {{site.data.keyword.conversationshort}}](https://dataplatform.cloud.ibm.com/exchange/public/entry/view/013c690997e27f3a8d9133265327a9e5){: external}
 
 If you choose to use the notebooks that are designed for use with {{site.data.keyword.DSX}}, the steps are:
 
@@ -61,7 +61,7 @@ If you choose to use the notebooks that are designed for use with {{site.data.ke
 
 1.  From the {{site.data.keyword.DSX}} community, choose a notebook.
 
-    Early in the development process, use the **Dialog skill analysis for Watson Assistant** notebook to help you get started. The notebook: 
+    Early in the development process, use the **Dialog skill analysis for {{site.data.keyword.conversationshort}}** notebook to help you get started. The notebook: 
 
     - Examines the terms that are correlated with each intent in your training data to find anomalies that might identify problems that you can investigate.
     - Uses a blind test set that you provide to calculate performance on statistical metrics like Accuracy, Precision, Recall, and F1.
@@ -69,7 +69,7 @@ If you choose to use the notebooks that are designed for use with {{site.data.ke
 
     To learn more about how this notebook can help you improve your dialog, read [Dialog skill analysis](https://medium.com/ibm-watson/announcing-dialog-skill-analysis-for-watson-assistant-83cdfb968178){: external}.
 
-1.  After you deploy a version of the assistant and collect conversation log data, run the **Measure Watson Assistant Performance** notebook.
+1.  After you deploy a version of the assistant and collect conversation log data, run the **Measure {{site.data.keyword.conversationshort}} Performance** notebook.
 
 1.  Follow the step-by-step instructions provided with the notebook to analyze a subset of the dialog exchanges from the logs.
 
@@ -83,10 +83,10 @@ If you choose to use the notebooks that are designed for use with {{site.data.ke
 
     For example, indicate whether a response is correct. If correct, mark whether it is helpful. If a response is incorrect, then identify the root cause, the wrong intent or entity was detected, for example, or the wrong dialog node was triggered. After you identify the root cause, indicate what is the correct choice.
 
-1.  Feed the annotated spreadsheet to the **Analyze Watson Assistant Effectiveness** notebook.
+1.  Feed the annotated spreadsheet to the **Analyze {{site.data.keyword.conversationshort}} Effectiveness** notebook.
 
     - **Effectiveness**: Provides a deeper analysis of your logs to help you understand the steps that you can take to improve your assistant.
-1.  Use the **Dialog Flow Analysis for Watson Assistant** notebook to review your dialog. The notebook can help you pinpoint the dialog nodes where customers most frequently abandon the conversation. 
+1.  Use the **Dialog Flow Analysis for {{site.data.keyword.conversationshort}}** notebook to review your dialog. The notebook can help you pinpoint the dialog nodes where customers most frequently abandon the conversation. 
 
     For more information about how this notebook can help you analyze and assess abandonment, see [Do you know where and why users drop off the conversation?](https://medium.com/ibm-watson/do-you-know-where-and-why-users-drop-off-the-conversation-6246e99baddc){: external}.
 
@@ -97,11 +97,11 @@ This process helps you to understand the steps you can take to improve your assi
 
 If you choose to use standard Python tools to run the notebooks, you can get the notebooks from GitHub.
 
-- [Dialog Skill Analysis for Watson Assistant](https://github.com/watson-developer-cloud/assistant-dialog-skill-analysis){: external}
-- [Watson Assistant Recommendation notebooks (Measure and Analyze Effectiveness)](https://github.com/watson-developer-cloud/assistant-improve-recommendations-notebook){: external}
-- [Watson Assistant Dialog Flow Analysis notebook](https://github.com/watson-developer-cloud/assistant-dialog-flow-analysis){: external}
+- [Dialog Skill Analysis for {{site.data.keyword.conversationshort}}](https://github.com/watson-developer-cloud/assistant-dialog-skill-analysis){: external}
+- [{{site.data.keyword.conversationfull}} Recommendation notebooks (Measure and Analyze Effectiveness)](https://github.com/watson-developer-cloud/assistant-improve-recommendations-notebook){: external}
+- [{{site.data.keyword.conversationfull}} Dialog Flow Analysis notebook](https://github.com/watson-developer-cloud/assistant-dialog-flow-analysis){: external}
 
-The [Watson Assistant Continuous Improvement Best Practices Guide](https://github.com/watson-developer-cloud/assistant-improve-recommendations-notebook/raw/master/notebook/IBM%20Watson%20Assistant%20Continuous%20Improvement%20Best%20Practices.pdf){: external} outlines which notebook to use at each stage of your improvement process.
+The [{{site.data.keyword.conversationshort} Continuous Improvement Best Practices Guide](https://github.com/watson-developer-cloud/assistant-improve-recommendations-notebook/raw/master/notebook/IBM%20Watson%20Assistant%20Continuous%20Improvement%20Best%20Practices.pdf){: external} outlines which notebook to use at each stage of your improvement process.
 
 ## Using the logs API
 {: #logs-resources-api}
@@ -113,7 +113,7 @@ The API logs messages that are exchanged in conversations that are defined by a 
 
 The number of days that logs are stored differs by service plan type. For more information, see [Log limits](/docs/watson-assistant?topic=watson-assistant-logs#logs-limits).
 
-For a Python script you can run to export logs and convert them to CSV format, download the `export_logs_py.py` file from the [Watson Assistant GitHub repository)](https://github.com/watson-developer-cloud/community/blob/master/watson-assistant/export_logs_py.py){: external}.
+For a Python script you can run to export logs and convert them to CSV format, download the `export_logs_py.py` file from the [{{site.data.keyword.conversationshort} GitHub repository)](https://github.com/watson-developer-cloud/community/blob/master/watson-assistant/export_logs_py.py){: external}.
 
 ## Understanding terminology
 {: #logs-resources-terminology}

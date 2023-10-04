@@ -1,2 +1,2 @@
 # watson-assistant
-Documentation repository for 2021 release of Watson Assistant
+Documentation repository for {{site.data.keyword.conversationshort}}

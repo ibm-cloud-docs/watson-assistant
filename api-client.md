@@ -163,7 +163,7 @@ Use the `python3 <filename.py>` command to run the example application.
 Assuming everything works as expected, the assistant returns the output from the assistant, which the app then prints to the console:
 
 ```text
-Welcome to the {{site.data.keyword.conversationshort}} example. What's your name?
+Welcome to the watsonx Assistant example. What's your name?
 ```
 {: screen}
 
@@ -497,7 +497,7 @@ response = assistant.message_stateless(
 This ensures that the context is maintained from one turn to the next, so the {{site.data.keyword.conversationshort}} service no longer thinks every turn is the first:
 
 ```text
-Welcome to the Watson Assistant example. What's your name?
+Welcome to the watsonx Assistant example. What's your name?
 >> Robert
 Hi, Robert! How can I help you?
 >> I want to make an appointment.
@@ -508,7 +508,6 @@ What time works for you?
 OK, Robert. You have an appointment for 10:00 AM on Sep 12. See you then!
 ```
 {: screen}
-
 
 Success! The application now uses the {{site.data.keyword.conversationshort}} service to understand natural-language input, and it displays the appropriate responses.
 

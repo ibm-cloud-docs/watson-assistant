@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-16"
+lastupdated: "2023-10-04"
 
 subcollection: watson-assistant
 
@@ -26,7 +26,7 @@ Your agents can work with one of these supported service desk tools:
 - [Salesforce](/docs/watson-assistant?topic=watson-assistant-deploy-salesforce)
 - [Twilio Flex](/docs/watson-assistant?topic=watson-assistant-deploy-phone-flex)
 - [Zendesk](/docs/watson-assistant?topic=watson-assistant-deploy-zendesk)
-- [Bring your own - starter kit](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}  and [Bring your own service desk to Watson Assistant (blog)](https://medium.com/ibm-watson/bring-your-own-service-desk-to-watson-assistant-b39bc920075c){: external} 
+- [Bring your own - starter kit](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}  and [Bring your own service desk](https://medium.com/ibm-watson/bring-your-own-service-desk-to-watson-assistant-b39bc920075c){: external} 
 
 
 
