@@ -101,7 +101,7 @@ If you choose to use standard Python tools to run the notebooks, you can get the
 - [{{site.data.keyword.conversationfull}} Recommendation notebooks (Measure and Analyze Effectiveness)](https://github.com/watson-developer-cloud/assistant-improve-recommendations-notebook){: external}
 - [{{site.data.keyword.conversationfull}} Dialog Flow Analysis notebook](https://github.com/watson-developer-cloud/assistant-dialog-flow-analysis){: external}
 
-The [{{site.data.keyword.conversationshort} Continuous Improvement Best Practices Guide](https://github.com/watson-developer-cloud/assistant-improve-recommendations-notebook/raw/master/notebook/IBM%20Watson%20Assistant%20Continuous%20Improvement%20Best%20Practices.pdf){: external} outlines which notebook to use at each stage of your improvement process.
+The [{{site.data.keyword.conversationshort}} Continuous Improvement Best Practices Guide](https://github.com/watson-developer-cloud/assistant-improve-recommendations-notebook/raw/master/notebook/IBM%20Watson%20Assistant%20Continuous%20Improvement%20Best%20Practices.pdf){: external} outlines which notebook to use at each stage of your improvement process.
 
 ## Using the logs API
 {: #logs-resources-api}
@@ -113,7 +113,7 @@ The API logs messages that are exchanged in conversations that are defined by a 
 
 The number of days that logs are stored differs by service plan type. For more information, see [Log limits](/docs/watson-assistant?topic=watson-assistant-logs#logs-limits).
 
-For a Python script you can run to export logs and convert them to CSV format, download the `export_logs_py.py` file from the [{{site.data.keyword.conversationshort} GitHub repository)](https://github.com/watson-developer-cloud/community/blob/master/watson-assistant/export_logs_py.py){: external}.
+For a Python script you can run to export logs and convert them to CSV format, download the `export_logs_py.py` file from the [{{site.data.keyword.conversationshort}} GitHub repository)](https://github.com/watson-developer-cloud/community/blob/master/watson-assistant/export_logs_py.py){: external}.
 
 ## Understanding terminology
 {: #logs-resources-terminology}
