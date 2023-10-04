@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-09-21"
+lastupdated: "2023-10-04"
 
 subcollection: watson-assistant
 
@@ -10,12 +10,15 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Boost words
+# Boost words ![BETA](images/beta.png)
 {: #boost-words}
 
 Use *boost words* to enter keywords or phrases to help the assistant recognize what a customer wants. If a customer's input includes matches the boost words or phrases, the assistant can be more confident to use an action. 
 
 Boost words or phrases are used in addition to example phrases. They can contain only letters, underscores, hyphens, spaces, or dots. They must start with an alphanumeric character. Words or phrases can't be entered more than once per action, but you can use the same boost words or phrases across multiple actions.
+
+This beta feature is available for evaluation and testing purposes only.
+{: beta}
 
 To add boost words or phrases to an action:
 
