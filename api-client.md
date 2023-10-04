@@ -40,7 +40,7 @@ To find this information:
 
 1. Go to the **Environments** page and choose he environment you want to connect to.
 
-1. Click the ![Environment settings icon](images/gear-icon-black.png) icon to open the environment settings.
+1. Click the **Settings** icon ![Gear icon](../../icons/settings.svg) icon to open the environment settings.
 
 1. Select **API details** to see details for the environment, including the service instance URL and environment ID. To find the API key, follow the link in the **Service credentials** section.
 
