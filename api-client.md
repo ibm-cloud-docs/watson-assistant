@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-09-25"
+lastupdated: "2023-10-04"
 
 subcollection: watson-assistant
 
@@ -163,7 +163,7 @@ Use the `python3 <filename.py>` command to run the example application.
 Assuming everything works as expected, the assistant returns the output from the assistant, which the app then prints to the console:
 
 ```text
-Welcome to the Watson Assistant example. What's your name?
+Welcome to the watsonx Assistant example. What's your name?
 ```
 {: screen}
 
@@ -310,7 +310,7 @@ Because we need a way to end the conversation, the client app is also watching f
 But something still isn't right:
 
 ```
-Welcome to the Watson Assistant example. What's your name?
+Welcome to the watsonx Assistant example. What's your name?
 >> Robert
 I'm afraid I don't understand. Please rephrase your question.
 >> I want to make an appointment.
@@ -497,7 +497,7 @@ response = assistant.message_stateless(
 This ensures that the context is maintained from one turn to the next, so the {{site.data.keyword.conversationshort}} service no longer thinks every turn is the first:
 
 ```text
-Welcome to the Watson Assistant example. What's your name?
+Welcome to the watsonx Assistant example. What's your name?
 >> Robert
 Hi, Robert! How can I help you?
 >> I want to make an appointment.

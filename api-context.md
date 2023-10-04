@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-06-14"
+lastupdated: "2023-10-04"
 
 subcollection: watson-assistant
 
@@ -192,7 +192,7 @@ The output from this request includes not only the usual output, but also the co
     "generic": [
       {
         "response_type": "text",
-        "text": "Welcome to the Watson Assistant example!"
+        "text": "Welcome to the watsonx Assistant example!"
       }
     ],
     "intents": [

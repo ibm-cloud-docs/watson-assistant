@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-08-23"
+lastupdated: "2023-10-04"
 
 subcollection: watson-assistant
 
@@ -191,11 +191,11 @@ You also need to configure the call-flow to handle calls transferred from the as
 
     ```javascript
     exports.handler = function(context, event, callback) {
-      // This function handler will handle the SIP REFER back from the Watson Assistant Phone Integration.
+      // This function handler will handle the SIP REFER back from the Phone Integration.
       // Before handing the call back to Twilio, it will extract the session history key from the
       // User-to-User header that's part of the SIP REFER Refer-To header. This session history key
       // is a string that is used to load the agent application in order to share the transcripts of the caller
-      // with Watson Assistant to the agent.
+      // with the agent.
       // See https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/blob/main/docs/AGENT_APP.md
       const VoiceResponse = require('twilio').twiml.VoiceResponse;
       
