@@ -12,7 +12,7 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Conversational search
+# Conversational search ![BETA](images/beta.png)
 {: #conversational-search}
 
 Use *conversational search* with the {{site.data.keyword.discoveryfull}} search integration setup to help your assistant extract an answer from the highest-ranked query results and return a text response to the user.
@@ -21,6 +21,8 @@ When you enable this feature, search results are provided to an IBM watsonx gene
 
 This beta feature is available for evaluation and testing purposes, and is not to be used in production environments. The watsonx generative AI model is currently hosted in the US.
 {: important}
+
+To request early access, complete this [signup form](https://form.asana.com/?k=U0gIIpwhM2_LY8r8LC_qDw&d=8612789739828).
 
 ## Before you begin
 {: #conversational-search-requirements}
