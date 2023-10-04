@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-25"
+lastupdated: "2023-10-04"
 
 subcollection: watson-assistant
 
@@ -10,7 +10,7 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Response modes
+# Response modes ![BETA](images/beta.png)
 {: #action-response-modes}
 
 [IBM Cloud]{: tag-ibm-cloud}
