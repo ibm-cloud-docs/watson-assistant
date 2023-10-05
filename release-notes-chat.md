@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-24"
+lastupdated: "2023-10-05"
 
 subcollection: watson-assistant
 
@@ -25,12 +25,27 @@ For information about new features and improvements to the core {{site.data.keyw
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
 
+## 7.7.0
+{: #7.7.0}
+
+*Release date: 5 October 2023*
+
+- **Added `fullWidth` to custom responses**: The `customResponse` event includes a `fullWidth` property that can be set to indicate to web that the custom response needs to be rendered full width in the main window. For more information, see [customResponse event](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external}.
+
+- **Longer message input is allowed**: The maximum number of characters allowed in the message input field is increased from 300 to 2048.
+
+- **File uploads to Salesforce**: The Salesforce integration supports the ability for end users to upload files to an agent when the agent requests a file from the user. If your website has a content security policy, you may need to add `*.salesforce.com` to allow web chat to connect to the Salesforce endpoint used for uploading files.
+
+- **Reconnecting to Salesforce agents**: The Salesforce integration automatically reconnects the user to the agent if web chat reloads while a user is engaged in conversation with an agent.
+
+- **New branding**: The IBM watermark reflects the new IBM watsonx brand.
+
 ## 7.6.0
 {: #7.6.0}
 
 *Release date: 21 August 2023*
 
-- **Added transaction ID to `onError` function**. The information provided in the `onError` config function now contains the transaction ID in the `transactionID` property when some errors communicating with {{site.data.keyword.conversationshort}} occur. For more information, see [Listening for errors](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#onerrordetail){: external}.
+- **Added transaction ID to `onError` function:** Information provided in the `onError` config function contains the transaction ID in the `transactionID` property when some errors communicating with {{site.data.keyword.conversationshort}} occur. For more information, see [Listening for errors](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#onerrordetail){: external}.
 
 - Fixed bug that occurred when sending two messages to an extension without waiting.
 
@@ -43,32 +58,32 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 *Release date: 31 July 2023*
 
-- **New viewing options for the journeys beta feature**. With journeys/tours adding a third view to web chat -- the other two views being the launcher and main window -- we moved away from methods and events that focused on opening and closing the main window. These events were deprecated in favor of a more generic "view change" system that includes a new [instance.changeView](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#changeView){: external} method, and [view:pre:change](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#viewprechange){: external} and [view:change](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#viewchange){: external} events. You now have more flexibility and can open multiple views at the same time.
+- **New viewing options for the Journeys beta feature**: With Journeys adding a third view to web chat -- the other two views being the launcher and main window -- we moved away from methods and events that focused on opening and closing the main window. These events were deprecated in favor of a more generic view change system that includes a new [instance.changeView](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#changeView){: external} method, and [view:pre:change](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#viewprechange){: external} and [view:change](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#viewchange){: external} events. You have more flexibility and can open multiple views at the same time.
 
     Window methods and events are supported for existing assistants. If you add tours to your assistant, or are using tours, your window events and methods may not work as expected and may not be supported. If you wish to add tours to your assistant, you need to update your custom code to use the new view change methods and events.
 
     The current window methods and events are still supported for existing web chats and assistants but are deprecated and will be removed in a future version. For more information, see [Migrating from window to view events and methods](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#windowviewmigration){: external}.
 
-- **New Genesys Web Messenger service desk integration** The service desk integration for Genesys Web Messenger is no longer in beta, and now includes support for user information strings in languages besides English. For more information, see [Integrating with Genesys Web Messenger](/docs/watson-assistant?topic=watson-assistant-deploy-genesys)
+- **New Genesys Web Messenger service desk integration**: The service desk integration for Genesys Web Messenger is no longer in beta, and now includes support for user information strings in more languages. For more information, see [Integrating with Genesys Web Messenger](/docs/watson-assistant?topic=watson-assistant-deploy-genesys).
 
-- **New NICE CXone service desk integration** The service desk integration for NICE CXone Digital First Omnichannel has been released. For more information, see [Integratng wwith NICE CXone Digital First Omnichannel](/docs/watson-assistant?topic=watson-assistant-deploy-nice-cxone)
+- **New NICE CXone service desk integration**: The service desk integration for NICE CXone Digital First Omnichannel is released. For more information, see [Integratng wwith NICE CXone Digital First Omnichannel](/docs/watson-assistant?topic=watson-assistant-deploy-nice-cxone).
 
-- **Added a restart button**: A new `showRestartButton` configuration option specifies whether the web chat interface should display a restart button in the header, in addition to the existing **`-`** (Minimize) button. A customer can click this button to end the conversation or end any conversation with a human agent, while keeping the chat open. The chat transcript is cleared, but any transcript of a conversation with a human agent is preserved. For more information, see [showRestartButton](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration){: external}.
+- **Added a restart button**: A new `showRestartButton` configuration option specifies whether the web chat interface needs to display a restart button in the header, in addition to the existing **`-`** (Minimize) button. A customer can click this button to end the conversation or end any conversation with a live agent, while keeping the chat open. The chat transcript is cleared, but any transcript of a conversation with a live agent is preserved. For more information, see [showRestartButton](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration){: external}.
 
-- **Carbon charts**: [Carbon charts](https://v10.carbondesignsystem.com/data-visualization/getting-started/){: external} are now supported in custom responses.
+- **Carbon charts**: [Carbon charts](https://v10.carbondesignsystem.com/data-visualization/getting-started/){: external} are supported in custom responses.
 
 - **Reconnecting with a custom service desk integration**: Web chat now provides support to custom service desk integrations to allow them to reconnect the user to an agent when web chat is reloaded. For more information, see [Reconnecting sessions](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd#reconnect){: external}.
 
-- **Screen sharing with a custom service desk integration**: Web chat now provides support to custom service desk integrations to allow them to give the user options to agree to or stop a screen sharing session with a service desk. Note that the actual screen sharing capability is not provided by web chat; it must be provided by the service desk integration. [Screen sharing](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd#screen-sharing){: external}.
+- **Screen sharing with a custom service desk integration**: Web chat provides support to custom service desk integrations to allow and to give the user options to agree to or stop a screen-sharing session with a service desk. Note that the actual screen sharing capability is not provided by web chat; it must be provided by the service desk integration. [Screen sharing](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd#screen-sharing){: external}.
 
-- The `history` property in message objects have a newly added `from_history` property that indicates if the message came from session history. See our documentation on [Message object extensions](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#messageextensions).
+- The `history` property in message objects have a newly added `from_history` property that indicates if the message came from session history. For more information, see [Message object extensions](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#messageextensions){: external}.
 
 ## 7.4.0
 {: #7.4.0}
 
 *Release date: 12 June 2023*
 
-- **Added CSS variables for customizing the launcher**. For more information, see [instance.updateCSSVariables](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecssvariables){: external}.
+- **Added CSS variables for customizing the launcher**: For more information, see [instance.updateCSSVariables](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatecssvariables){: external}.
 
 ## 7.3.0
 {: #7.3.0}
