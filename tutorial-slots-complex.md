@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-01-15"
+  years: 2015, 2023
+lastupdated: "2023-10-06"
 
 subcollection: watson-assistant
 content-type: tutorial
@@ -300,7 +300,7 @@ You might want to design your dialog to call an external reservation system and 
 
 1. Click the **Intents** tab to return to the Intents page. Add the following intents and example utterances.
 
-- `#yes`
+   `#yes`
 
    ```json
    Yes
@@ -315,7 +315,7 @@ You might want to design your dialog to call an external reservation system and 
 
    ![Shows the yes intent](images/slots-yes-intent.png){: caption="Yes intent" caption-side="bottom"}
 
-- `#no`
+   `#no`
 
    ```json
    No
@@ -380,7 +380,7 @@ You might want to design your dialog to call an external reservation system and 
 
 1. Click **Save**.
 
-1. Now that you have confirmation responses for slot values, and you ask for everything at once, you might notice that the individual slot responses are displayed before the confirmation slot response is displayed, which can appear repetitive. Edit the slot found responses to prevent them from being displayed under certain conditions.
+Now that you have confirmation responses for slot values, and you ask for everything at once, you might notice that the individual slot responses are displayed before the confirmation slot response is displayed, which can appear repetitive. Edit the slot found responses to prevent them from being displayed under certain conditions.
 
 1. Click the **Customize slot** icon ![Customize slot](images/slot-icon.svg) for the `@sys-date` slot.
 
@@ -518,8 +518,7 @@ To add a conditional response for the node:
    | You | I want to make a reservation. |
    | Assistant | I can make a reservation for you. Just tell me the day and time of the reservation, and how many people will be dining. |
    | You | It's for 5 people |
-   | Assistant |
-   | Ok. The reservation is for 5 guests. What day would you like to come in? |
+   | Assistant | Ok. The reservation is for 5 guests. What day would you like to come in? |
    | You | Never mind |
    | Assistant | Ok, we'll stop there. No reservation will be made. I look forward to helping you with your next reservation. Have a good day. |
    {: caption="Script details" caption-side="bottom"}
