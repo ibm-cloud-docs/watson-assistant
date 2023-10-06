@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-03"
+lastupdated: "2023-10-06"
 
-subcollection: assistant
+subcollection: watson-assistant
 content-type: tutorial
 account-plan: lite
 completion-time: 30m
@@ -113,17 +113,17 @@ The node that you add collects the information that is required to make a reserv
 
    | Check for | Save it as | If not present, ask |
    | --- | --- | --- |
-   | @sys-date | $date | What day would you like to come in? |
-   | @sys-time | $time | What time do you want for the reservation? |
-   | @sys-number | $guests | How many people will be dining? |
+   | `@sys-date` | `$date` | What day would you like to come in? |
+   | `@sys-time` | `$time` | What time do you want for the reservation? |
+   | `@sys-number`| `$guests` | How many people will be dining? |
    {: caption="Slot details" caption-side="bottom"}
     
 
-1. In the **Assistant responds** section, enter the text response `OK. I am making you a reservation for $guests on $date at $time`.
+1. In **Assistant responds**, enter the text response `OK. I am making you a reservation for $guests on $date at $time`.
 
     ![Shows what each slot and the response look like in the tool when filled in as specified.](images/slots-simple-node.png){: caption="Slots and response" caption-side="bottom"}
 
-1. Click ![Close](images/close-x.svg) to close the node edit view.
+1. Click the close icon ![Close](images/close-x.svg) to close the node edit view.
 
 ## Test the dialog
 {: #tutorial-slots-test}
@@ -158,4 +158,4 @@ You created a node with slots that can capture the information necessary to rese
 ## Next steps
 {: #tutorial-slots-next-steps}
 
-Improve the experience of users who interact with the node. Complete the follow-on tutorial, [Improving a node with slots](/docs/watson-assistant?topic=watson-assistant-tutorial-slots-complex). It covers simple improvements, such as how to reformat the date (2021-04-09) and time (17:00:00) values that are returned by the system. It also covers more complex tasks, such as what to do if the user does not provide the type of value that your dialog expects for a slot.
+Improve the experience of users who interact with the node. Complete the follow-on tutorial, [Improving a node with slots](/docs/watson-assistant?topic=watson-assistant-tutorial-slots-complex). It covers simple improvements, such as how to reformat the date (`2021-04-09`) and time (`17:00:00`) values that are returned by the system. It also covers more complex tasks, such as what to do if the user does not provide the type of value that your dialog expects for a slot.
