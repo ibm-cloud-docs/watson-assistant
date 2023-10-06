@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-10-03"
+lastupdated: "2023-10-06"
 
 subcollection: watson-assistant
 
@@ -42,7 +42,7 @@ You can easily switch back and forth between {{site.data.keyword.conversationsho
 ## Using {{site.data.keyword.conversationshort}}
 {: #welcome-new-assistant-using}
 
-{{site.data.keyword.conversationfull}} can be deployed as a managed cloud service or can be installed on premises. This documentation applies to a managed cloud service on {{site.data.keyword.cloud_notm}} or installed on {{site.data.keyword.icp4dfull_notm}} version 4.6 or later, and describes how to use the product regardless of how it is deployed. Information that applies exclusively to one deployment type is denoted by the appropriate tag:
+{{site.data.keyword.conversationfull}} can be deployed as a managed cloud service or can be installed on premises. This documentation applies to a managed service on {{site.data.keyword.cloud_notm}} or installed on {{site.data.keyword.icp4dfull_notm}}, and describes how to use the product regardless of how it is deployed. Information that applies exclusively to one deployment type is denoted by the appropriate tag:
 
 - [{{site.data.keyword.cloud_notm}}]{: tag-ibm-cloud} for managed instances
 - [{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d} version 4.6 or later for installed instances
