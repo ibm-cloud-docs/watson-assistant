@@ -2,9 +2,9 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-09-29"
+lastupdated: "2023-10-06"
 
-keywords: directlink, private path, transit gateway, voice integration
+keywords: directlink, private path, transit gateway
 
 subcollection: watson-assistant
 
@@ -20,6 +20,11 @@ subcollection: watson-assistant
 You can establish {{site.data.keyword.conversationshort}} webhook and voice communication with Private Path instead of a public network. 
 
 Designed for security, performance, and cost-effectiveness, Private Path uses Transit Gateway by way of network address translation (NAT) IP/subnet. Transit Gateway provides private network connectivity across IBM Cloud accounts and currently supports Classic Infrastructure, Direct Link, and virtual private cloud (VPC).
+
+### Before you begin
+{: #deploy-phone-private-approval}
+
+To use Private Path, your business case must be reviewed and approved prior to setting up the connection to {{site.data.keyword.conversationshort}}. Contact your IBM team to start the process. 
 
 ## Setting up Private Path
 {: #deploy-phone-private-path}
@@ -86,11 +91,6 @@ You need to apply prefix filtering to advertise the relevant subnets.
 1. Select **Prefix filtering**.
 
 1. Click the **Create prefix filter +** button, and list the subnets that require the connection.
-
-### IBM team approval
-{: #deploy-phone-private-approval}
-
-Contact your IBM team to approve the private connection creation to {{site.data.keyword.conversationshort}}. 
 
 Webhook and voice connectivity with the Transit Gateway integration is established over NAT IP/subnets that are provided by the Watson team. The NAT IP/subnet is on 192.168.x.x address space. 
 
