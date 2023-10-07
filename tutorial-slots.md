@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-06"
+lastupdated: "2023-10-07"
 
 subcollection: watson-assistant
 content-type: tutorial
@@ -146,9 +146,9 @@ The node that you add collects the information that is required to make a reserv
 
     The assistant recognizes the value, and uses it to fill the $guests context variable for the third slot. Now that all of the slots are filled, it shows the node response, `OK. I am making you a reservation for 6 on 2021-04-09 at 17:00:00.`
 
-![Shows a test dialog in the Try it out pane that successfully fills in the node slots.](images/slots-test-simple-node.png){: caption="Node slots" caption-side="bottom"}
+   ![Shows a test dialog in the Try it out pane that successfully fills in the node slots.](images/slots-test-simple-node.png){: caption="Node slots" caption-side="bottom"}
 
-It worked! You created a node with slots.
+   It worked! You created a node with slots.
 
 ## Summary
 {: #tutorial-slots-summary}
