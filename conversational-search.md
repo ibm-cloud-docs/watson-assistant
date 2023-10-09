@@ -28,7 +28,7 @@ To use conversational search, you must enroll in the early access program and co
 ## Before you begin
 {: #conversational-search-requirements}
 
-To use conversational search, you need to have the {{site.data.keyword.discoveryshort}} search integration. For more information, see [{{site.data.keyword.discoveryfull}} search integration setup](/docs/watson-assistant?topic=search-add).
+You need to have the {{site.data.keyword.discoveryshort}} search integration to enable the conversational search feature. For more information, see [{{site.data.keyword.discoveryfull}} search integration setup](/docs/watson-assistant?topic=search-add).
 
 ## Conversational search setup
 {: #conversational-search-setup}
