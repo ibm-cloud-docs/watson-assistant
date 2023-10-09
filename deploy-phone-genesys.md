@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: “2023-08-31”
+lastupdated: “2023-10-09”
 
 subcollection: watson-assistant
 
@@ -45,13 +45,15 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
     - In the **Inbound SIP Termination Identifier** field, specify any name that you want to use (for example, `Watson`). This value is not used for now, but it is required by Genesys Cloud.
 
+    - In the **Protocol** field, select *TLS*.
+
     ![Genesys create trunk](images/phone-genesys-create-trunk.png)
 
-1. Under **Outbound**, scroll to the **SIP Servers or Proxies** section. Specify the following information:
+1. Under **Outbound**, scroll to the **SIP Servers or Proxies** section. 
 
     - In the **Hostname or IP Address** field, type the SIP URI (not including `sips:`) from your {{site.data.keyword.conversationshort}} phone integration settings.
 
-    - In the **Port** field, type `5060`.
+    - In the **Port** field, type `5061`.
     
     Click the **`+`** button.
 
@@ -60,9 +62,16 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
 1. Under **SIP Access Control**, add the [IP addresses](/docs/watson-assistant?topic=watson-assistant-deploy-phone-config#deploy-phone-config-byost) for the data center where your assistant is located.
 
-1. Under **Identity**, specify the following information:
+    | Data center | IP addresses                                    |
+    |-------------|-------------------------------------------------|
+    | US-South    | 67.228.108.82\n169.63.5.162\n150.239.30.146     |
+    | US-East     | 52.116.100.158\n169.61.70.162\n169.59.136.194   |
+    | EU-DE       | 161.156.178.162\n169.50.56.146\n149.81.86.82    |
+    | EU-GB       | 158.176.120.162\n141.125.102.34\n158.175.99.34  |
+    | AU-SYD      | 168.1.47.2\n135.90.86.50\n168.1.106.130         |
+    | JP-TOK      | 165.192.69.82\n128.168.105.178\n161.202.149.162 |
 
-    - Toggle the **Address Omit + Prefix** switch to **Disabled**.
+1. Under **Identity**, toggle the **Address Omit + Prefix** switch to **Disabled**.
 
       ![Disable address omit + prefix](images/phone-genesys-address-omit-disabled.png)
 
@@ -70,11 +79,15 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
     ![Genesys select codec](images/phone-genesys-select-codec.png)
 
-1. Under **Protocol**, enable **Take Back and Transfer**.
+1. Under **Protocol**
+
+    - In the **Header/Invite** section, toggle the **Conversation Headers** swtich to **Enabled**.
+
+    - Enable **Take Back and Transfer**.
 
 1. Click **Save External Trunk**.
 
-1. Under **Sites**, select the existing site that you want to use this trunk with. To create a new site, specify a name and location and click **Create**.
+1. Under **Sites**, select the existing site that you want to use this trunk with. To create a new site, specify a name and location, and click **Create**.
 
 1. Click **Number plans**. Create a number plan and specify the following information:
 
@@ -95,10 +108,9 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
 1. Click **Outbound Routes**. You can either edit the default outbound route or create a new one. Specify the following information:
 
-
     - In the **External Trunks** field, click **Select External Trunks**. Select the trunk that you created for {{site.data.keyword.conversationshort}}.
 
-    - In the **Classifications** field, add the applicable classifications. You need to include `National` and the classification you created for {{site.data.keyword.conversationshort}} earlier. (The `National` route is used only to simulate the call in order to make sure the trunk is operational.)
+    - In the **Classifications** field, add the applicable classifications. You need to include `National` and the classification you created for {{site.data.keyword.conversationshort}} earlier. (The `National` route is used only to simulate the call to ensure that the trunk is operational.)
 
     - Toggle the **State** switch to **Enabled**.
 
@@ -110,9 +122,9 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
     ![Genesys simulate call](images/phone-genesys-simulate-call.png)
 
-1. Go to **Phone Management** and click **Create new**. Specify the following information:
+1. Go to **Phone Management** and click **Create new**. 
 
-    - In the **Phone Name** field, specify a descriptive name.
+    - In the **Phone Name** field, enter a descriptive name.
 
     - In the **Base Settings** field, select **WebRTCPhone**.
 
@@ -120,11 +132,11 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
     - In the **Person** field, select yourself.
 
-1. In the {{site.data.keyword.conversationshort}} user interface, [create a new phone integration](/docs/watson-assistant?topic=watson-assistant-deploy-phone#deploy-phone-setup). Specify the following information:
+1. In the {{site.data.keyword.conversationshort}} user interface, [create a new phone integration](/docs/watson-assistant?topic=watson-assistant-deploy-phone#deploy-phone-setup). 
 
     - When prompted, select **Use an existing phone number with an external provider**.
 
-    - Specify the phone number that you assigned in the Genesys **Number Plans** setting. It is not necessarily a real phone number; it is an identifier you assigned.
+    - Enter the phone number that you assigned in the Genesys **Number Plans** setting. It is not necessarily a real phone number; it is an identifier you assigned.
 
     - Complete the phone integration setup process. For more information, see [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone).
 
@@ -140,17 +152,17 @@ If you encounter errors, click **Performance -> Interactions** and view the PCAP
 ## Transferring to a live agent
 {: #deploy-phone-genesys-liveagent}
 
-Now that your Genesys Cloud environment can connect to {{site.data.keyword.conversationshort}}, you can set up the ability for your assistant to transfer calls back to your live agents. To do so, follow these steps:
+Now that your Genesys Cloud environment can connect to {{site.data.keyword.conversationshort}}, you can set up the ability for your assistant to transfer calls back to your live agents. 
 
-1. In the Genesys Cloud console, go to **DID Numbers -> DID Ranges** and create a new range. Specify the following information:
+1. In the Genesys Cloud console, go to **DID Numbers -> DID Ranges** and create a new range. 
 
-    - In the **DID Start** and **DID End** fields, specify a phone number. (Once again, you do not need to use a real phone number; you can make up an identifier for your Genesys environment, such as `1-888-888-1234`.)
+    - In the **DID Start** and **DID End** fields, specify a phone number. (You do not need to use a real phone number; you can make up an identifier for your Genesys environment, such as `1-888-888-1234`.)
 
     ![Genesys create range](images/phone-genesys-create-range.png)
 
-    - In the **Service Provider** field, type a descriptive name (for example, `Watson`).
+    - In the **Service Provider** field, enter a descriptive name (for example, `Watson`).
 
-1. If you did not set up a queue to enable callers to wait for available agents, follow these steps to create a simple one.
+1. If you did not set up a queue to enable callers to wait for available agents, follow these steps to create one.
 
     1. Click **Admin**.
 
@@ -175,6 +187,8 @@ Now that your Genesys Cloud environment can connect to {{site.data.keyword.conve
     1. In the toolbox, click **Task** and drag it into **Reusable Tasks**.
 
       ![Genesys task](images/phone-genesys-task.png)
+
+    1. From your toolbox under **Data**, drag a **Set Participant Data** widget into the first action. Click on the widget and specify an attribute named **uuiData**. For the value to assign, choose the **Expression** type and enter `Call . UUIData`.
 
     1. From your toolbox, under **Transfer**, drag the **Transfer to ACD** widget into the first action.
 
