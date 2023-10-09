@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-03"
+lastupdated: "2023-10-09"
 
 subcollection: watson-assistant
 
@@ -16,6 +16,13 @@ content-type: release-note
 {: #watson-assistant-release-notes}
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 8 October 2023
+{: #watson-assistant-oct082023}
+{: release-note}
+
+Introducing {{site.data.keyword.conversationshort}}
+:   {{site.data.keyword.assistant_classic_full}} is renamed. It is now called {{site.data.keyword.conversationfull}}.
 
 ## 25 Aug 2023
 {: #watson-assistant-aug252023}
