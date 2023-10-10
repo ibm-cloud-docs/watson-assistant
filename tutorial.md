@@ -18,7 +18,7 @@ completion-time: 2h
 {: toc-content-type="tutorial"}
 {: toc-completion-time="2h"}
 
-In this tutorial, you use the {{site.data.keyword.assistant_classic_short}} service to create a dialog for an assistant that helps users with inquiries about a fictitious restaurant called *Truck Stop Gourmand*.
+In this tutorial, you create a dialog for an assistant that helps users with inquiries about a fictitious restaurant called *Truck Stop Gourmand*.
 {: shortdesc}
 
 ## Learning objectives
@@ -43,7 +43,7 @@ This tutorial takes approximately 2 to 3 hours to complete.
 
 Before you begin, complete the [Getting started with dialog tutorial](/docs/watson-assistant?topic=watson-assistant-gs-dialog).
 
-You use the dialog skill that you created, and add nodes to the simple dialog that you built as part of the getting started exercise.
+You use the dialog that you created, and add nodes to the simple dialog that you built as part of the getting started exercise.
 
 ## Plan the dialog
 {: #tutorial-plan}
@@ -790,3 +790,8 @@ Test whether your assistant can recognize and save a user's name, and then refer
    Your assistant recognizes the `Greet customers` intent and says, `Good day to you, Jane!`. It uses the conditional response that includes the user's name because the `$username` context variable contains a value at the time that the greeting node is triggered.
 
 You can add a conditional response that conditions on and includes the user's name for any other responses where personalization would add value to the conversation.
+
+## Summary
+{: #tutorial-summary}
+
+You created a more complex dialog that reacts to questions and requests from the customer.
