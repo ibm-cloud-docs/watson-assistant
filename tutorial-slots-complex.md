@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-06"
+lastupdated: "2023-10-10"
 
 subcollection: watson-assistant
 content-type: tutorial
@@ -120,7 +120,7 @@ In this step, you learn how to prompt for everything at once.
 
 1. Back in the node edit view, scroll down to the newly added **If no slots are pre-filled, ask this first** section. Add the following initial prompt for the node, `I can make a reservation for you. Just tell me the day and time of the reservation, and how many people will be dining.`
 
-1. Click ![Close](images/close-x.svg) to close the node edit view.
+1. Click the **Close** icon ![Close](images/close-x.svg) to close the node edit view.
 
 1. Test this change from the "Try it out" pane. Open the pane, and then click **Clear** to nullify the slot context variable values from the previous test.
 
@@ -298,7 +298,9 @@ You might want to design your dialog to call an external reservation system and 
 
 1. The confirmation slot expects a Yes or No answer from the user. You must teach the dialog to be able to recognize a Yes or No intent in the user input first.
 
-1. Click the **Intents** tab to return to the Intents page. Add the following intents and example utterances.
+1. Click the **Intents** tab to return to the Intents page. 
+
+1.  Add the following intents and example utterances.
 
    `#yes`
 
@@ -542,7 +544,7 @@ For the `$time` information, you define a follow-up statement that is displayed 
    | `$counter` | `0` |
    {: caption="Set context" caption-side="bottom"}
 
-1. Click the close icon ![Close](images/close-x.svg) to close the node edit view.
+1. Click the **Close** icon ![Close](images/close-x.svg) to close the node edit view.
 
 1. From the tree view, click to edit the node with slots. 
 

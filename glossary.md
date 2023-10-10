@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-06-06"
+lastupdated: "2023-10-10"
 
 subcollection: watson-assistant
 
@@ -33,7 +33,7 @@ subcollection: watson-assistant
 | Response | To create your assistant's response in an action step, you use the *Assistant says* section. This represents the text or speech the assistant delivers to a user at a particular step. Depending on the step, you can add a complete answer to a user's question or ask a follow-up question. [Learn more](/docs/watson-assistant?topic=watson-assistant-respond). |
 | Step | A step that you add to an action represents a single interaction or exchange of information with a customer, a turn in the conversation. [Learn more](/docs/watson-assistant?topic=watson-assistant-build-actions-overview#steps). |
 | Subaction | An action that is called from another action is referred to as a _subaction_. [Learn more](/docs/watson-assistant?topic=watson-assistant-step-what-next#go-to-another-action). |
-| Training |  To set up a Watson instance with components that enable the system to function in a particular domain (for example: corpus content, training data that generates machine learning models, programmatic algorithms, annotators, or other ground truth components) and then making improvements and updates to these components based on accuracy analysis. |
+| Training |  To set up an instance with components that enable the system to function in a particular domain (for example: corpus content, training data that generates machine learning models, programmatic algorithms, annotators, or other ground truth components) and then making improvements and updates to these components based on accuracy analysis. |
 | Variable | A variable is data that a customer shares with the assistant, which is collected and saved so it can be referenced later. In actions, you can collect *action* and *session* variables. [Learn more](/docs/watson-assistant?topic=watson-assistant-manage-info#action-variables-and-session-variables). |
 | Web chat | A channel that you can use to embed your assistant in your company website. [Learn more](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat). |
 | Webhook | A mechanism for calling out to an external program during a conversation. For example, your assistant can call an external service to translate a string from English to French and back again in the course of the conversation. [Learn more](/docs/watson-assistant?topic=watson-assistant-webhook-overview). |

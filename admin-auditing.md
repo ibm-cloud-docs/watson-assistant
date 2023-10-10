@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-09-27"
+lastupdated: "2023-10-10"
 
 subcollection: watson-assistant
 
@@ -88,9 +88,6 @@ In {{site.data.keyword.at_full_notm}}, each event has the prefix `conversation.`
 | `processor.create` | creates a processor |
 | `processor.delete` | deletes a processor |
 | `processor.update` | updates a processor |
-| `recommendationfile.create` | uploads a CSV file of utterances to a skill from which Watson can derive intent recommendations |
-| `recommendationfile.delete` | deletes a CSV file of utterances that is used to derive intent recommendations from a skill.  |
-| `recommendationsources.update` | updates a CSV file or assistant log that is being used as the source for intent recommendations |
 | `release.create` | create a version from content in the draft environment |
 | `release.delete` | delete a version |
 | `release.deploy` | publish a version to an environment |

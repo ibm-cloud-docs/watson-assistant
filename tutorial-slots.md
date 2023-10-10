@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-07"
+lastupdated: "2023-10-10"
 
 subcollection: watson-assistant
 content-type: tutorial
@@ -46,7 +46,8 @@ Before you begin, complete the [Getting Started tutorial](/docs/watson-assistant
 
 Add an intent, which is the purpose or goal that is expressed in user input. You add a #reservation intent that recognizes user input that indicates that the user wants to make a restaurant reservation.
 
-1. On the **Intents** page, click **Add intent**.
+1. On the **Intents** page, click **Create intent**.
+
 1. Add the following intent name, and then click **Create intent**:
 
     ```text
@@ -62,7 +63,7 @@ Add an intent, which is the purpose or goal that is expressed in user input. You
     ```
     {: screen}
 
-1. Add these additional examples to help Watson recognize the `#reservation` intent.
+1. Add these additional examples to help your assistant recognize the `#reservation` intent.
 
     ```text
     I want to reserve a table for dinner
@@ -74,7 +75,7 @@ Add an intent, which is the purpose or goal that is expressed in user input. You
     ```
     {: screen}
 
-1. Click the **Close** ![Close arrow](images/arrow--left.svg) icon to finish adding the `#reservation` intent and its example utterances.
+1. Click the **Close** arrow ![Close arrow](images/arrow--left.svg) to finish adding the `#reservation` intent and its example utterances.
 
 ## Add entities
 {: #tutorial-slots-add-entity}
@@ -82,7 +83,6 @@ Add an intent, which is the purpose or goal that is expressed in user input. You
 
 An entity definition includes a set of entity *values* that represent vocabulary that is often used in the context of an intent. By defining entities, you can help your assistant identify references in the user input that are related to intents of interest. In this step, you enable system entities that can recognize references to time, date, and numbers.
 
-1. Click **Entities** to open the Entities page.
 1. Enable system entities that can recognize date, time, and number references in user input. Click **System entities**, and then turn on these entities:
 
     - `@sys-time`
@@ -123,13 +123,14 @@ The node that you add collects the information that is required to make a reserv
 
     ![Shows what each slot and the response look like in the tool when filled in as specified.](images/slots-simple-node.png){: caption="Slots and response" caption-side="bottom"}
 
-1. Click the close icon ![Close](images/close-x.svg) to close the node edit view.
+1. Click the **Close** icon ![Close](images/close-x.svg) to close the node edit view.
 
 ## Test the dialog
 {: #tutorial-slots-test}
 {: step}
 
 1. Click **Try it**.
+
 1. Type `i want to make a reservation`.
 
     The assistant recognizes the #reservation intent, and it responds with the prompt for the first slot `What day would you like to come in?`.
