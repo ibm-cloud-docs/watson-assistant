@@ -41,7 +41,7 @@ This tutorial takes approximately 2 to 3 hours to complete.
 ### Prerequisite
 {: #tutorial-prereqs}
 
-Before you begin, complete the [Getting Started tutorial](/docs/watson-assistant?topic=watson-assistant-getting-started).
+Before you begin, complete the [Getting started with dialog tutorial](/docs/watson-assistant?topic=watson-assistant-gs-dialog).
 
 You use the dialog skill that you created, and add nodes to the simple dialog that you built as part of the getting started exercise.
 
@@ -785,8 +785,8 @@ Test whether your assistant can recognize and save a user's name, and then refer
 
    Your assistant saves `Jane` in the `$username` variable and responds `Hello, Jane! It's lovely to meet you. How can I help you today?`.
 
-1. To test the *Greet customers** node, enter `Hello.`.
+1. To test the `Greet customers` node, enter `Hello.`.
 
-   Your assistant recognizes the *Greet customers* intent and says, `Good day to you, Jane!`. It uses the conditional response that includes the user's name because the `$username` context variable contains a value at the time that the greeting node is triggered.
+   Your assistant recognizes the `Greet customers` intent and says, `Good day to you, Jane!`. It uses the conditional response that includes the user's name because the `$username` context variable contains a value at the time that the greeting node is triggered.
 
 You can add a conditional response that conditions on and includes the user's name for any other responses where personalization would add value to the conversation.
