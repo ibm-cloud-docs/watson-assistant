@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-09"
+lastupdated: "2023-10-10"
 
 keywords: conversational search
 
@@ -23,7 +23,7 @@ Use *conversational search* with the {{site.data.keyword.discoveryfull}} search 
 
 When you enable this feature, search results are provided to an IBM watsonx generative AI model that produces a conversational reply to a user's question. 
 
-This beta feature is available for evaluation and testing purposes only. The watsonx generative AI model is currently hosted in the US.
+This beta feature is available in English for evaluation and testing purposes only. The watsonx generative AI model is currently hosted in the US.
 {: beta}
 
 To use conversational search, you must have a Plus or Enterprise plan and enroll in the early access program with this [signup form](https://form.asana.com/?k=U0gIIpwhM2_LY8r8LC_qDw&d=8612789739828){: external}.
