@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-10"
+lastupdated: "2023-10-11"
 
 subcollection: watson-assistant
 content-type: tutorial
@@ -13,7 +13,7 @@ completion-time: 20m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Understanding dialog skill digressions
+# Understanding digressions in dialog
 {: #tutorial-digressions}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="20m"}
