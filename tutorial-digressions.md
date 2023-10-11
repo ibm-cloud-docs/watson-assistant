@@ -37,7 +37,7 @@ This tutorial takes approximately 20 minutes to complete.
 
 ## Step 1: Get the Digressions Showcase dialog
 {: #tutorial-digressions-import-json}
-{ :step}
+{: step}
 
 You use the *Digression Showcase* dialog as an example in this tutorial. 
 
@@ -63,7 +63,7 @@ If you are using a dialog skill in the classic experience:
 
 ## Step 2: Temporarily digressing away from dialog
 {: #tutorial-digressions-temporarily-digress-away}
-{ :step}
+{: step}
 
 Digressions allow users to break away from a dialog branch to temporarily change the topic before they return to the original dialog flow. In this step, you start to book a restaurant reservation, then digress away to ask for the restaurant's hours. The assistant provides opening hours information, then returns to the restaurant booking dialog flow.
 
@@ -97,7 +97,7 @@ You digressed away from and returned to a dialog flow.
 
 ## Step 3: Disabling slot digressions
 {: #tutorial-digressions-disable-slot}
-{ :step}
+{: step}
 
 In this step, you edit the digression setting for the restaurant booking node to prevent users from digressing away from it, and see how the setting change impacts the dialog flow.
 
@@ -135,7 +135,7 @@ You prevented the user from digressing away from the restaurant booking process.
 
 ## Step 4: Digressing to a node that does not return
 {: #tutorial-digressions-digress-without-return}
-{ :step}
+{: step}
 
 You can configure a dialog node to not go back to the node that your assistant digressed away from for the current node to be processed. To demonstrate this configuration, you change the digression setting for the restaurant hours node. In Step 2, after you digress from the restaurant booking node to go to the restaurant opening hours node, your assistant returns to the restaurant booking node to continue with the reservation. In this exercise, after you change the setting, you digress from the **Job opportunities** node to ask for  opening hours and see that your assistant does not return to where it left off.
 
