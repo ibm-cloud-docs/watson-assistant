@@ -272,7 +272,15 @@ toc:
                 - logs-overview.md
                 - logs.md
                 - irrelevance-detection.md
-                - logs-resources.md 
+                - logs-resources.md
+             - topicgroup:
+                label: Dialog tutorials
+                topics:
+                - gs-dialog.md
+                - tutorial.md
+                - tutorial-slots.md
+                - tutorial-slots-complex.md
+                - tutorial-digressions.md
       - topicgroup:
           label: Early access features
           topics:
