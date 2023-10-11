@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-06-20"
+lastupdated: "2023-10-11"
 
 subcollection: watson-assistant
 
@@ -55,9 +55,9 @@ If you want your assistant to be able to switch between voice and text during a 
 If you don't have a text messaging phone number, set up an *SMS with Twilio* account and get a phone number.
 
 1.  Go to the [Twilio website](https://www.twilio.com/){: external}.
-1.  Create an account or start a free trial.
+1.  Create an account. Free trial accounts cannot be used for this integration.
 1.  From the **Develop** tab in the sidebar, click **Phone Numbers**. If **Phone Numbers** is not present, go to the Search Bar at the top and search for 'Phone Numbers', then select **Buy a number**.
-1.  Follow the instructions to **Buy a number**.
+1.  Follow the instructions to **Buy a number**. If you want to use this number only for testing purposes, buy a toll-free number. Otherwise, follow the [A2P 10DLC registration procedure](https://support.twilio.com/hc/en-us/articles/1260800720410-What-is-A2P-10DLC-). 
 
     When you get a Twilio phone number, it supports voice, SMS, and MMS automatically. Your new phone number is listed as an active number.
 
