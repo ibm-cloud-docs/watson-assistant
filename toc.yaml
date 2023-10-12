@@ -281,6 +281,14 @@ toc:
                 - tutorial-slots.md
                 - tutorial-slots-complex.md
                 - tutorial-digressions.md
+             - topicgroup:
+                label: Dialog development
+                topics:
+                - message-anatomy.md
+                - dialog-integrations.md
+                - dialog-sms-actions.md
+                - dialog-actions-client.md
+                - api-dialog-modify.md
       - topicgroup:
           label: Early access features
           topics:
