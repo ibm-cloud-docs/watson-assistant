@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-28"
+lastupdated: "2023-10-12"
 
 subcollection: watson-assistant
 
@@ -10,7 +10,7 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Response types reference for actions
+# Response types reference
 {: #response-types-reference}
 
 You can use the JSON editor to specify responses of many different types.
