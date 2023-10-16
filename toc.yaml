@@ -303,6 +303,8 @@ toc:
       - global-variables.md
       - integration-variables.md
       - expression-methods-actions.md
+      - dialog-methods.md
+      - expression-language.md
       - time-zones.md
       - phone-context.md
       - sms-reference.md
