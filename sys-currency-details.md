@@ -262,7 +262,7 @@ The following sections list the currencies that [`@sys-currency`](/docs/watson-a
 
 | Currency code | Example of recognized values (case insensitive)  |
 |---------------|----------------------------|
-|| USD | `$` |
+| USD | `$` |
 | GBP | `£` |
 | INR | `₹` |
 | EUR | `€` |
@@ -275,14 +275,14 @@ The following sections list the currencies that [`@sys-currency`](/docs/watson-a
 
 | Currency code | Example of recognized values (case insensitive)  |
 |---------------|----------------------------|
-| USD | '$','usd' |
-| CAD | '$','c$','ca$','can$','cad' |
-| AUD | 'a$','au$','aud' |
-| CHF | 'chf' |
-| GBP | '£','gbp','quid' |
-| INR | '₹','inr','rs','rs.' |
-| EUR | '€','eur' |
-| JPY | '¥','jpy' |
-| MXN | 'mxn' |
-| RUB | '₽','rub' |
+| USD | `$`,`usd` |
+| CAD | `$`,`c$`,`ca$`,`can$`,`cad` |
+| AUD | `a$`,`au$`,`aud` |
+| CHF | `chf` |
+| GBP | `£`,`gbp`,`quid` |
+| INR | `₹`,`inr`,`rs`,`rs.` |
+| EUR | `€`,`eur` |
+| JPY | `¥`,`jpy` |
+| MXN | `mxn` |
+| RUB | `₽`,`rub` |
 {: caption="Universal model currencies" caption-side="bottom"}

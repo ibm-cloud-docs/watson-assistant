@@ -326,6 +326,13 @@ toc:
           label: REST API reference
           href: https://cloud.ibm.com/apidocs/assistant/assistant-v2
       - filter-reference.md
+      - topicgroup:
+          label: System entities
+          topics:
+          - system-entities.md
+          - time-zones.md
+          - sys-date-festivals.md
+          - sys-currency-details.md
   - navgroup:
       id: help
       topics:
