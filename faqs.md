@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-03"
+lastupdated: "2023-10-17"
 
 keywords: Watson Assistant frequently asked questions
 
@@ -42,11 +42,11 @@ Find answers to frequently-asked questions and quick fixes for common problems.
 
 The assistants that you create in one experience don't transfer to the other. However, you can switch experiences, return to your work, and create or use assistants. You don't lose anything by switching. Changing experiences doesn't affect other users in the same instance. For more information, see [Switching between {{site.data.keyword.conversationshort}} and the classic experience](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant#welcome-new-assistant-switch-experience).
 
-### Is the classic experience going away?
+### Is the classic experience still available?
 {: #faq-classic-lifecycle}
 {: faq}
 
-IBM has no plans to discontinue the classic experience. However, we encourage you to explore the benefits and capabilities in {{site.data.keyword.conversationshort}}. For more information, see the [Getting Started guide](https://www.ibm.com/blogs/watson/2021/12/getting-started-with-the-new-watson-assistant-part-i-the-build-guide/){: external} or the [documentation](/docs/watson-assistant) for {{site.data.keyword.conversationshort}}.
+IBM has no plans to discontinue the classic experience. However, we encourage you to explore the benefits and capabilities in {{site.data.keyword.conversationshort}}. For more information, see the [Getting Started guide](https://www.ibm.com/blogs/watson/2021/12/getting-started-with-the-new-watson-assistant-part-i-the-build-guide/){: external}. You can also continue to use dialog in {{site.data.keyword.conversationshort}}. For more information, see [Migrating to {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-migrate-overview).
 
 ### Where are the search skill and channel integrations in {{site.data.keyword.conversationshort}}? 
 {: #faq-integrations}
@@ -74,10 +74,10 @@ For more information, see [Environments](/docs/watson-assistant?topic=watson-ass
 {: #faqs-cannot-login}
 {: faq}
 
-If you are having trouble logging in to a service instance or see messages about tokens, such as `unable to fetch access token` or `400 bad request - header or cookie too large`, it might mean that you need to clear your browser cache. Open a private browser window, and then try again.
+If you can't log in to a service instance or see messages about tokens, such as `unable to fetch access token` or `400 bad request - header or cookie too large`, it might mean that you need to clear your browser cache. Open a private browser window, and then try again.
 
-- If accessing the page by using a private browsing window fixes the issue, then consider always using a private window or clear the cache of your browser. You can typically find an option for clearing the cache or deleting cookies in the browser's privacy and security settings.
-- If accessing the page by using a private browsing window doesn't fix the issue, then try deleting the API key for the instance and creating a new one.
+- If the private browsing window fixes the issue, then consider always using a private window or clear the cache of your browser. You can typically find an option for clearing the cache or deleting cookies in the browser's privacy and security settings.
+- If the private browsing window doesn't fix the issue, then try deleting the API key for the instance and creating a new one.
 
 ## Why am I being asked to log in repeatedly?
 {: #faqs-login-repeatedly}
@@ -100,11 +100,41 @@ To view the **Analytics** page, you must have a service role of Manager and a pl
 
 If you cannot view the API details or service credentials, it is likely that you do not have Manager access to the service instance in which the resource was created. Only people with Manager access to the instance can use the service credentials.
 
+## Why can't I edit intents, entities, or dialog nodes?
+{: #faqs-edit-skill}
+{: faq}
+
+To edit a dialog, you must have Writer service access to the service instance and a platform role of at least Viewer. For more information about access roles and how to request an access role change, see [Managing access to resources](/docs/watson-assistant?topic=watson-assistant-access-control).
+
 ## Can I export the user conversations from the Analytics page?
 {: #faqs-export-conversation}
 {: faq}
 
 You cannot directly export conversations from the conversation page. However, you can use the `/logs` API to list events from the transcripts of conversations that occurred between your users and your assistant. For more information, see the [V2 API reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2#listlogs){: external}. Or, you can use a Python script to export logs. For more information, see [export_logs_py](https://github.com/watson-developer-cloud/community/blob/master/watson-assistant/export_logs_py.py){: external}.
+
+## Can I export and import dialog nodes?
+{: #faqs-nodes}
+{: faq}
+
+No, you cannot export and import dialog nodes from the product user interface.
+
+If you want to copy dialog nodes from one dialog into another dialog, follow these steps:
+
+1.  Download as JSON files both the dialog that you want to copy the dialog nodes from and the dialog that you want to copy the nodes to.
+1.  In a text editor, open the JSON file for the dialog that you want to copy the dialog nodes from.
+1.  Find the `dialog_nodes` array, and copy it.
+1.  In a text editor, open the JSON file for the dialog skill that you want to copy the dialog nodes to, and then paste the `dialog_nodes` array into it.
+1.  Import the JSON file that you edited in the previous step to create a new dialog skill with the dialog nodes you wanted.
+
+## Is it possible to recover a deleted dialog?
+{: #faqs-delete-workspace}
+{: faq}
+
+Regularly back up data to prevent problems that might arise from inadvertent deletions. If you do not have a backup, there is a short window of time during which a deleted dialog might be recoverable. Immediately following the deletion, [open a case](/docs/get-support?topic=get-support-open-case) with Support to determine if the data can be recovered. Include the following information in your case:
+
+- Skill ID
+- Instance ID or name
+- Region where the service instance is hosted from which the dialog was deleted
 
 ## Can I change my plan to a Lite plan?
 {: #faqs-downgrade-plan}
@@ -118,11 +148,18 @@ No, you cannot change from a Trial, Plus, or Standard plan to a Lite plan. And y
 
 You can have only one Lite plan instance of {{site.data.keyword.conversationshort}} per resource group.
 
+## How long are log files kept?
+{: #faqs-assistant-logs}
+{: faq}
+
+The length of time for which messages are retained depends on your service plan. For more information, see [Log limits](/docs/watson-assistant?topic=watson-assistant-logs#logs-limits).
+
 ## How do I create a webhook?
 {: #faqs-webhook-how}
 {: faq}
 
 To define a webhook and add its details, go to the **Live environment** page and open the **Environment settings** page. From the **Environment settings** page, click **Webhooks > Pre-message webhook**. You can add details about your webhook. For more information, see [Making a call before processing a message](/docs/watson-assistant?topic=watson-assistant-webhook-pre).
+
 
 ## Can I have more than one entry in the URL field for a webhook?
 {: #faqs-webhook-url}
@@ -130,11 +167,37 @@ To define a webhook and add its details, go to the **Live environment** page and
 
 No, you can define only one webhook URL for an action. For more information, see [Defining the webhook](/docs/watson-assistant?topic=watson-assistant-webhook-pre#webhook-pre-create).
 
+## Can I extend the webhook time limit?
+{: #faqs-webhook-timeout}
+{: faq}
+
+No. The service that you call from the webhook must return a response in 8 seconds or less, or the call is canceled. You cannot increase this time limit.
+
 ## Is there a range of IP addresses that are being used by a webhook?
 {: #faqs-webhook-ip}
 {: faq}
 
-Unfortunately, the IP address ranges from which {{site.data.keyword.conversationshort}} might call a webhook URL are subject to change, which in turn prevent using them in any static firewall configuration.  Use the https transport and specify an authorization header to control access to the webhook.
+Unfortunately, the IP address ranges from which {{site.data.keyword.conversationshort}} might call a webhook URL are subject to change, which in turn prevent using them in any static firewall configuration. Use the https transport and specify an authorization header to control access to the webhook.
+
+## Why did I receive the message “Query cancelled” when I import a dialog?
+{: #faqs-query-cancel}
+{: faq}
+
+This message is displayed when the dialog import stops because artifacts in the dialog, such as dialog nodes or synonyms, exceed the plan limits.
+
+If a timeout occurs due to the size of the dialog but no plan limits are exceeded, you can reduce the number of elements that are imported:
+
+1.	Make a copy of the JSON file that you are trying to import.
+1.	Open the copy of the JSON file in an editor, and delete the `entities` array.
+1.	Import the edited JSON file as a new skill.
+1.	If this step is successful, edit the original copy of the JSON file.
+1.	Remove the `dialog_nodes`, `intents`, and `counterexamples` arrays.
+1.	Update the skill by using the API. Be sure to include the workspace ID and the `append=true` flag, as in this example:
+
+```curl
+curl -X POST -H "content-type: application/json" -H "accept: application/json" -u "apikey:{apikey}" -d@./skill.json "url/api/v1/workspaces/{workspace_id}?version=2019-02-28&append=true"
+```
+{: codeblock}
 
 ## What do I do if the training process seems stuck?
 {: #faqs-stuck-training}
@@ -153,6 +216,14 @@ To see your monthly active users (MAU):
 1.  For {{site.data.keyword.conversationshort}}, select **View Plans**.
 1.  Under **Time Frame**, select the month that you need.
 1.  Select your Plus plans or Plus Trial plans to see monthly active users and the API calls.
+
+## Error: New Off Topic not supported
+{: #faqs-offtopic-error}
+{: faq}
+
+You see the error `New Off Topic not supported` after you edit the JSON file for a dialog and changing the skill language from English to another language.
+
+To resolve this issue, modify the JSON file by setting `off_topic` to `false`. For more information about this feature, see [Defining what's irrelevant](/docs/watson-assistant?topic=watson-assistant-irrelevance-detection).
 
 ## Can I see what web browser users are using with {{site.data.keyword.conversationshort}}?
 {: #faqs-user-browser}
