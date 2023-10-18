@@ -18,7 +18,7 @@ subcollection: watson-assistant
 Use the **Recognition** page to analyze unrecognized requests. You can use this information to create new actions that address questions and issues that aren't being answered by your assistant.
 {: shortdesc}
 
-You can analyze the unrecognized requests in assistants that you created for the English, Spanish, and Brazilian Portuguese languages if you are in the Plus or higher plans of {{site.data.keyword.conversationshort}}.
+You can analyze unrecognized requests in English-language assistants on IBM Cloud only. You need a Plus plan or higher.
 {: note}
 
 *Recognition* measures the requests within a time period that are recognized and successfully routed to an action. Customer requests are considered unrecognized if:
