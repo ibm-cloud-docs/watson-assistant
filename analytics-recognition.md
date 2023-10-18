@@ -21,6 +21,7 @@ Use the **Recognition** page to analyze unrecognized requests. You can use this 
 You can analyze unrecognized requests in English-language assistants on IBM Cloud only. You need a Plus plan or higher.
 {: note}
 
+
 *Recognition* measures the requests within a time period that are recognized and successfully routed to an action. Customer requests are considered unrecognized if:
 - The request triggers the *No Action Matches* action
 - The assistant asks a clarifying question and the customer chooses `None of the above` 
