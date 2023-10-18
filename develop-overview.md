@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-03"
+lastupdated: "2023-10-18"
 
 subcollection: watson-assistant
 
@@ -18,7 +18,7 @@ The {{site.data.keyword.conversationshort}} user interface makes it easy to buil
 
 A deployed assistant includes numerous components that work together to deliver the help your customers need over the channels they use.
 
-![{{site.data.keyword.conversationshort}} architecture diagram](images/arch-detail.png){: caption="Architecture" caption-side="bottom"}
+![{{site.data.keyword.conversationshort}} architecture diagram](images/arch-detail.svg){: caption="Architecture" caption-side="bottom"}
 
 - Customers interact with the assistant by using a **channel** such as the web chat or phone integration.
 

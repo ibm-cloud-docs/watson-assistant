@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-09"
+lastupdated: "2023-10-18"
 
 subcollection: watson-assistant
 
@@ -16,6 +16,13 @@ content-type: release-note
 {: #watson-assistant-release-notes}
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 18 October 2023
+{: #watson-assistant-oct182023}
+{: release-note}
+
+Improvements to dialog search
+:   When you search intents, entities, and dialog nodes, accuracy is improved and sensitivity is adjusted. Now, the language matches the language of the created resources for highest accuracy. For example, searching for Japanese keywords should be done in a v1 workspace or v2 dialog with Japanese as the language set. A potential workaround is to allow partial matches. Also, searches are for exact matches, so the search engine is sensitive to underscores (_) and extra spaces in the keyword.
 
 ## 8 October 2023
 {: #watson-assistant-oct082023}

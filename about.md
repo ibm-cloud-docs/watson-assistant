@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-03"
+lastupdated: "2023-10-18"
 
 keywords: chatbot, live chatbot, omnichannel
 
@@ -31,7 +31,7 @@ Use {{site.data.keyword.conversationfull}} to build your own branded live chatbo
 
 This diagram illustrates how {{site.data.keyword.conversationfull}} delivers an exceptional, omnichannel customer experience:
 
-![Flow diagram of the service](images/arch-detail.png){: caption="How it works" caption-side="top"}
+![Flow diagram of the service](images/arch-detail.svg){: caption="How it works" caption-side="top"}
 
 Customers interact with the assistant through one or more of these channels:
 
