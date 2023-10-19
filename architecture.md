@@ -121,7 +121,7 @@ The microservices use the following resources:
 - **MinIO**: MinIO is an object storage service that implements the Amazon S3 API. It is used by the language understanding pipeline microservices (NLU, Master, TAS, ED-MM, and the training pods) to store and load trained models for intent and entity classification. Data is stored in the `nlclassifier-icp` bucket. In {{site.data.keyword.assistant_classic_short}}, MinIO is often referred to as `COS`, which stands for Cloud Object Storage. For more information, see [MinIO](#architecture-minio).
 
 #### Architecture changes
-{}: #architecture-changes}
+{: #architecture-changes}
 
 - **1.5.0**: The following changes to the architecture occurred with this release:
 
@@ -229,7 +229,7 @@ The following table lists the configuration settings that are used by the Store 
 | Configuration setting name | Description | Default value |
 |----------------------------|-------------|---------------|
 | global.postgres.store.auth.user | Username that is used by the Store microservice | `store_icp_${release-name}` |
-| global.postgres.store.auth.authSecretName | Name of the Kubernetes secret with password for the Store user. The default value is null because a password is randomly generated. | null |
+| global.postgres.store.auth.authSecretName | Name of the Kubernetes secret with password for the Store user. The default value is null because a password is randomly generated. | `null` |
 | global.postgres.store.database | Name of the database that is used by the Store microservice | `conversation_icp_${release-name}` |
 {: caption="Postrgres datasource configuration settings" caption-side="top"}
 
