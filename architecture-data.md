@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-19"
+lastupdated: "2023-10-20"
 
 subcollection: watson-assistant
 
@@ -11,7 +11,9 @@ subcollection: watson-assistant
 {{site.data.keyword.attribute-definition-list}}
 
 # Service architecture
-{: #architecture}
+{: #architecture-data}
+
+[{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d}
 
 Learn about the components that comprise the service on {{site.data.keyword.icp4dfull}} and how data flows through the service.
 {: shortdesc}

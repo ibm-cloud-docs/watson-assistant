@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-18"
+lastupdated: "2023-10-20"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,9 @@ content-type: release-note
 {{site.data.keyword.attribute-definition-list}}
 
 # Release notes for {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}}
-{: #release-notes}
+{: #release-notes-data}
+
+[{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d}
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.assistant_classic_full}} for {{site.data.keyword.icp4dfull}}.
 {: shortdesc}

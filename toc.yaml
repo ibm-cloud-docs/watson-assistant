@@ -290,6 +290,14 @@ toc:
                 - dialog-actions-client.md
                 - api-dialog-modify.md
       - topicgroup:
+          label: Installing on Cloud Pak for Data
+          topics:
+          - install-data.md
+          - architecture-data.md
+          - backup-data.md
+          - troubleshoot-data.md
+          - cos-importer-data.md
+      - topicgroup:
           label: Early access features
           topics:
           - boost-words.md
