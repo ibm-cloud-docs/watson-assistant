@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-18"
+lastupdated: "2023-10-20"
 
 subcollection: watson-assistant
 
@@ -20,6 +20,9 @@ Release notes describe the new features, changes, and bug fixes in each release 
 ## 18 October 2023
 {: #watson-assistant-oct182023}
 {: release-note}
+
+Unrecognized requests analysis for new languages
+:  The unrecognized requests analysis is now available for two more languages, Spanish and Brazilian Portuguese. You can access this only for assistants on IBM Cloud if you are in the Plus or higher plan. For more information, see [Use unrecognized requests to get action recommendations](/docs/watson-assistant?topic=watson-assistant-analytics-recognition).
 
 Improvements to dialog search
 :   When you search intents, entities, and dialog nodes, accuracy is improved and sensitivity is adjusted. Now, the language matches the language of the created resources for highest accuracy. For example, searching for Japanese keywords should be done in a v1 workspace or v2 dialog with Japanese as the language set. A potential workaround is to allow partial matches. Also, searches are for exact matches, so the search engine is sensitive to underscores (_) and extra spaces in the keyword.
