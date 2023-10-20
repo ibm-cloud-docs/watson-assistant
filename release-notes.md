@@ -21,7 +21,7 @@ Release notes describe the new features, changes, and bug fixes in each release 
 {: #watson-assistant-oct182023}
 {: release-note}
 
-Unrecognized requests analysis for new langauges
+Unrecognized requests analysis for new languages
 :  The unrecognized requests analysis is now available for two more languages, Spanish and Brazilian Portuguese. You can access this only for assistants on IBM Cloud if you are in the Plus or higher plan. For more information, see [Use unrecognized requests to get action recommendations](/docs/watson-assistant?topic=watson-assistant-analytics-recognition).
 
 Improvements to dialog search
