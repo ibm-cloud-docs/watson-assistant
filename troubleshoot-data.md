@@ -731,11 +731,11 @@ If you are installing the Redis operator with an IBM Cloud Pak foundational serv
       
       1. Run the following command to confirm that the operator is installed:
       
-      ```text
-      oc get pod -n $OPERATOR_NS -l app.kubernetes.io/name=ibm-cloud-databases-redis-operator \
-      -o jsonpath='{.items[0].status.phase} {"\n"}'
-      ```
-      {: codeblock}
+         ```text
+         oc get pod -n $OPERATOR_NS -l app.kubernetes.io/name=ibm-cloud-databases-redis-operator \
+         -o jsonpath='{.items[0].status.phase} {"\n"}'
+         ```
+         {: codeblock}
 
 ## 4.0.4
 {: #troubleshoot-404}
@@ -761,21 +761,21 @@ If your installation uses the IBM Entitled Registry to pull images, complete the
 
 1. Edit and save the CR.
 
-    1. Run the following command to edit the CR. In the command, replace `INSTANCE_NAME` with the name of the instance:
-    
+   1. Run the following command to edit the CR. In the command, replace `INSTANCE_NAME` with the name of the instance:
+   
       ```text
       oc edit wa INSTANCE_NAME
       ```
       {: codeblock}
-
-      1. Edit the CR by adding the following lines:
-
+       
+   1. Edit the CR by adding the following lines:
+   
       ```text
       appConfigOverrides:
          container_images:
          integrations:
-             image: cp.icr.io/cp/watson-assistant/servicedesk-integration
-             tag: 20220106-143142-0ea3fbf7-wa_icp_4.0.5-signed@sha256:7078fdba4ab0b69dbb93f47836fd9fcb7cfb12f103662fef0d9d1058d2553910
+            image: cp.icr.io/cp/watson-assistant/servicedesk-integration
+            tag: 20220106-143142-0ea3fbf7-wa_icp_4.0.5-signed@sha256:7078fdba4ab0b69dbb93f47836fd9fcb7cfb12f103662fef0d9d1058d2553910
       ```
       {: codeblock}
 
