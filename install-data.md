@@ -93,5 +93,3 @@ The following table describes which versions of {{site.data.keyword.assistant_cl
 | 1.5.0 | 3.0.1 | 3.11 |
 {: caption="Support matrix" caption-side="top"}
 
-
-N/A means `not applicable`.
