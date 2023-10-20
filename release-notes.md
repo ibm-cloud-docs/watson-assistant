@@ -17,16 +17,12 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
-## 19 October 2023
-{: #watson-assistant-oct192023}
+## 18 October 2023
+{: #watson-assistant-oct182023}
 {: release-note}
 
 Unrecognized requests analysis for new langauges
 :  The unrecognized requests analysis is now available for two more languages, Spanish and Brazilian Portuguese. You can access this only for assistants on IBM Cloud if you are in the Plus or higher plan. For more information, see [Use unrecognized requests to get action recommendations](/docs/watson-assistant?topic=watson-assistant-analytics-recognition).
-
-## 18 October 2023
-{: #watson-assistant-oct182023}
-{: release-note}
 
 Improvements to dialog search
 :   When you search intents, entities, and dialog nodes, accuracy is improved and sensitivity is adjusted. Now, the language matches the language of the created resources for highest accuracy. For example, searching for Japanese keywords should be done in a v1 workspace or v2 dialog with Japanese as the language set. A potential workaround is to allow partial matches. Also, searches are for exact matches, so the search engine is sensitive to underscores (_) and extra spaces in the keyword.
