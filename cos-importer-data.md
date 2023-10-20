@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-19"
+lastupdated: "2023-10-20"
 
 subcollection: watson-assistant
 
@@ -11,7 +11,9 @@ subcollection: watson-assistant
 {{site.data.keyword.attribute-definition-list}}
 
 # Using the Cloud Object Storage importer to migrate chat logs
-{: #cos-importer}
+{: #cos-importer-data}
+
+[{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d}
 
 You can use the Cloud Object Storage importer service to migrate your chat logs from one installation to another.
 

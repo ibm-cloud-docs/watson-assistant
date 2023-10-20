@@ -25,6 +25,7 @@ toc:
           topics:
           - release-notes.md
           - release-notes-chat.md
+          - release-notes-data.md
   - navgroup:
       id: tutorial
       topics:
@@ -289,6 +290,14 @@ toc:
                 - dialog-sms-actions.md
                 - dialog-actions-client.md
                 - api-dialog-modify.md
+      - topicgroup:
+          label: Installing on Cloud Pak for Data
+          topics:
+          - install-data.md
+          - architecture-data.md
+          - backup-data.md
+          - troubleshoot-data.md
+          - cos-importer-data.md
       - topicgroup:
           label: Early access features
           topics:

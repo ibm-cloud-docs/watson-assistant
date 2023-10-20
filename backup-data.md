@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-19"
+lastupdated: "2023-10-20"
 
 subcollection: watson-assistant
 
@@ -11,7 +11,9 @@ subcollection: watson-assistant
 {{site.data.keyword.attribute-definition-list}}
 
 # Backing up and restoring data for {{site.data.keyword.icp4dfull_notm}}
-{: #backup}
+{: #backup-data}
+
+[{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d}
 
 You can back up and restore the data that is associated with your installation in {{site.data.keyword.icp4dfull_notm}}.
 {: shortdesc}
