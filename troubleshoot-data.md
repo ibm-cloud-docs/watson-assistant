@@ -723,19 +723,19 @@ If you are installing the Redis operator with an IBM Cloud Pak foundational serv
 1. Validate that the operator was successfully created.
 
    1. Run the following command to confirm that the subscription was applied:
-
-   ```text
-   oc get sub -n $OPERATOR_NS  ibm-cloud-databases-redis-operator -o jsonpath='{.status.installedCSV} {"\n"}'
-   ```
-   {: codeblock}
-
-   1. Run the following command to confirm that the operator is installed:
    
-   ```text
-   oc get pod -n $OPERATOR_NS -l app.kubernetes.io/name=ibm-cloud-databases-redis-operator \
-   -o jsonpath='{.items[0].status.phase} {"\n"}'
-   ```
-   {: codeblock}
+      ```text
+      oc get sub -n $OPERATOR_NS  ibm-cloud-databases-redis-operator -o jsonpath='{.status.installedCSV} {"\n"}'
+      ```
+      {: codeblock}
+      
+      1. Run the following command to confirm that the operator is installed:
+      
+      ```text
+      oc get pod -n $OPERATOR_NS -l app.kubernetes.io/name=ibm-cloud-databases-redis-operator \
+      -o jsonpath='{.items[0].status.phase} {"\n"}'
+      ```
+      {: codeblock}
 
 ## 4.0.4
 {: #troubleshoot-404}
@@ -763,21 +763,21 @@ If your installation uses the IBM Entitled Registry to pull images, complete the
 
     1. Run the following command to edit the CR. In the command, replace `INSTANCE_NAME` with the name of the instance:
     
-    ```text
-    oc edit wa INSTANCE_NAME
-    ```
-    {: codeblock}
+      ```text
+      oc edit wa INSTANCE_NAME
+      ```
+      {: codeblock}
 
-    1. Edit the CR by adding the following lines:
+      1. Edit the CR by adding the following lines:
 
-    ```text
-    appConfigOverrides:
-      container_images:
-      integrations:
-        image: cp.icr.io/cp/watson-assistant/servicedesk-integration
-        tag: 20220106-143142-0ea3fbf7-wa_icp_4.0.5-signed@sha256:7078fdba4ab0b69dbb93f47836fd9fcb7cfb12f103662fef0d9d1058d2553910
-    ```
-    {: codeblock}
+      ```text
+      appConfigOverrides:
+         container_images:
+         integrations:
+             image: cp.icr.io/cp/watson-assistant/servicedesk-integration
+             tag: 20220106-143142-0ea3fbf7-wa_icp_4.0.5-signed@sha256:7078fdba4ab0b69dbb93f47836fd9fcb7cfb12f103662fef0d9d1058d2553910
+      ```
+      {: codeblock}
 
 1. Wait for the operator to pick up the change and start a new integrations pod. This might take up to 10 minutes.
 
@@ -797,21 +797,21 @@ If your installation uses the IBM Entitled Registry to pull images, complete the
 
 If your installation uses a private Docker registry to pull images, complete the following steps to download and push the new integrations image to your private Docker registry and add an override entry to the CR:
 
-1.  Edit the CSV file to add the new integrations image.
+1. Edit the CSV file to add the new integrations image.
 
-    1. Run the following command to open the CSV file:
+   1. Run the following command to open the CSV file:
     
-    ```text
-    vi $OFFLINEDIR/ibm-watson-assistant-4.0.4-images.csv
-    ```
-    {: codeblock}
+      ```text
+      vi $OFFLINEDIR/ibm-watson-assistant-4.0.4-images.csv
+      ```
+      {: codeblock}
 
-    1. Add the following line to the CSV file immediately after the existing integrations image:
-
-    ```text
-    cp.icr.io,cp/watson-assistant/servicedesk-integration,20220106-143142-0ea3fbf7-wa_icp_4.0.5-signed,sha256:7078fdba4ab0b69dbb93f47836fd9fcb7cfb12f103662fef0d9d1058d2553910,IMAGE,linux,x86_64,"",0,CASE,"",ibm_wa_4_0_0;ibm_wa_4_0_2;ibm_wa_4_0_4;vLatest
-    ```
-    {: codeblock}
+   1. Add the following line to the CSV file immediately after the existing integrations image:
+   
+      ```text
+      cp.icr.io,cp/watson-assistant/servicedesk-integration,20220106-143142-0ea3fbf7-wa_icp_4.0.5-signed,sha256:7078fdba4ab0b69dbb93f47836fd9fcb7cfb12f103662fef0d9d1058d2553910,IMAGE,linux,x86_64,"",0,CASE,"",ibm_wa_4_0_0;ibm_wa_4_0_2;ibm_wa_4_0_4;vLatest
+      ```
+      {: codeblock}
 
 1. Mirror the image again by using the commands that you used to download and push all the images, for example:
 
@@ -833,23 +833,23 @@ If your installation uses a private Docker registry to pull images, complete the
 
 1. Edit and save the CR.
 
-    1. Run the following command to edit the CR. In the command, replace `INSTANCE_NAME` with the name of the instance:
+   1. Run the following command to edit the CR. In the command, replace `INSTANCE_NAME` with the name of the instance:
+   
+      ```text
+      oc edit wa INSTANCE_NAME
+      ```
+      {: codeblock}
 
-    ```text
-    oc edit wa INSTANCE_NAME
-    ```
-    {: codeblock}
-
-    1. Edit the CR by adding the following lines:
-
-    ```text
-    appConfigOverrides:
-      container_images:
-      integrations:
-        image: cp.icr.io/cp/watson-assistant/servicedesk-integration
-        tag: 20220106-143142-0ea3fbf7-wa_icp_4.0.5-signed@sha256:7078fdba4ab0b69dbb93f47836fd9fcb7cfb12f103662fef0d9d1058d2553910
-    ```
-    {: codeblock}
+   1. Edit the CR by adding the following lines:
+   
+      ```text
+      appConfigOverrides:
+         container_images:
+         integrations:
+            image: cp.icr.io/cp/watson-assistant/servicedesk-integration
+            tag: 20220106-143142-0ea3fbf7-wa_icp_4.0.5-signed@sha256:7078fdba4ab0b69dbb93f47836fd9fcb7cfb12f103662fef0d9d1058d2553910
+      ```
+      {: codeblock}
 
 1. Wait for the operator to pick up the change and start a new integrations pod. This might take up to 10 minutes.
 
@@ -972,14 +972,14 @@ The search skill, which is the integration with the {{site.data.keyword.discover
 
 First, check the logs of the search skill pods to confirm whether this issue applies to you.
 
-1.  Run the following command to list the search skill pods:
+1. Run the following command to list the search skill pods:
 
     ```text
     oc get pods -l component=skill-search
     ```
     {: codeblock}
 
-1.  Run the following command to check the logs for the following exception:
+1. Run the following command to check the logs for the following exception:
 
     ```text
     oc logs -l component=skill-search | grep "IBMCertPathBuilderException"
@@ -1000,21 +1000,21 @@ First, check the logs of the search skill pods to confirm whether this issue app
 
 To fix the search skill, you inject the CA that signed your TLS certificate into the Java truststore that is used by the search skill. The search skill pods are then able to validate your certificate and communicate with the {{site.data.keyword.discoveryfull}} service.
 
-1.  First, get your certificate. You might have this certificate, but in these steps you can retrieve the certificate directly from the cluster.
+1. First, get your certificate. You might have this certificate, but in these steps you can retrieve the certificate directly from the cluster.
 
     1. Run the following command to check that the secret exists:
-
-    ```text
-    oc get secret external-tls-secret
-    ```
-    {: codeblock}
+    
+       ```text
+       oc get secret external-tls-secret
+       ```
+       {: codeblock}
 
     1. Run the following command to retrieve the certificate chain from the secret:
-
-    ```text
-    oc get secret external-tls-secret --output jsonpath='{.data.cert\.crt}' | base64 -d | tee ingress_cert_chain.crt
-    ```
-    {: codeblock}
+    
+       ```text
+       oc get secret external-tls-secret --output jsonpath='{.data.cert\.crt}' | base64 -d | tee ingress_cert_chain.crt
+       ```
+       {: codeblock}
 
     1. Extract the CA certificate. 
     
@@ -1024,127 +1024,127 @@ To fix the search skill, you inject the CA that signed your TLS certificate into
     
     1. Save this certificate in the `ingress_ca.crt` file. When you save the `ingress_ca.crt` file, the `-----BEGIN CERTIFICATE-----` line must be the first line of the file, and the `-----END CERTIFICATE-----` line must be the last line of the file.
 
-1.  Retrieve the truststore that is used by the search skill pods.
+1. Retrieve the truststore that is used by the search skill pods.
 
-    1. Run the following command to list the search skill pods:
+   1. Run the following command to list the search skill pods:
+   
+      ```text
+      oc get pods -l component=skill-search
+      ```
+      {: codeblock}
 
-    ```text
-    oc get pods -l component=skill-search
-    ```
-    {: codeblock}
+   1. Run the following command to set the `SEARCH_SKILL_POD` environment variable with the search skill pod name:
+    
+      ```text
+      SEARCH_SKILL_POD="$(oc get pods -l component=skill-search --output custom-columns=NAME:.metadata.name --no-headers | head -n 1
+      ```
+      {: codeblock}
 
-    1. Run the following command to set the `SEARCH_SKILL_POD` environment variable with the search skill pod name:
+   1. Run the following command to see the selected pod:
+   
+      ```text
+      echo "Selected search skill pod: ${SEARCH_SKILL_POD}"
+      ```
+      {: codeblock}
 
-    ```text
-    SEARCH_SKILL_POD="$(oc get pods -l component=skill-search --output custom-columns=NAME:.metadata.name --no-headers | head -n 1)"
-    ```
-    {: codeblock}
+   1. Retrieve the truststore file. The `cacerts` file is the default truststore that is used by Java. It contains the list of the certificate authorities that Java trusts by default. Run the following command to copy the binary `cacerts` file from the pod into your current directory:
+   
+      ```text
+      oc cp ${SEARCH_SKILL_POD}:/opt/ibm/java/jre/lib/security/cacerts cacerts
+      ```
+      {: codeblock}
 
-    1. Run the following command to see the selected pod:
+1. Run the following command to inject the `ingress_ca.crt` file into the `cacerts` file:
 
-    ```text
-    echo "Selected search skill pod: ${SEARCH_SKILL_POD}"
-    ```
-    {: codeblock}
+      ```text
+      keytool -import -trustcacerts -keystore cacerts -storepass changeit -alias customer_ca -file ingress_ca.crt
+      ```
+      {: codeblock}
+      
+      You can run the `keytool -list -keystore cacerts -storepass changeit | grep customer_ca -A 1` command to check that your CA certificate is included in the `cacerts` file.
+      {: tip}
 
-    1. Retrieve the truststore file. The `cacerts` file is the default truststore that is used by Java. It contains the list of the certificate authorities that Java trusts by default. Run the following command to copy the binary `cacerts` file from the pod into your current directory:
+1. Run the following command to create the configmap that contains the updated `cacerts` file:
 
-    ```text
-    oc cp ${SEARCH_SKILL_POD}:/opt/ibm/java/jre/lib/security/cacerts cacerts
-    ```
-    {: codeblock}
+   ```text
+   oc create configmap watson-assistant-skill-cacerts --from-file=cacerts
+   ```
+   {: codeblock}
+   
+   Because the `cacerts` file is binary, the output of the `oc describe configmap watson-assistant-skill-cacerts` command shows an empty data section. To check whether the updated `cacerts` file is present in the configmap, run the `oc get configmap watson-assistant-skill-cacerts --output yaml` command.
 
-1.  Run the following command to inject the `ingress_ca.crt` file into the `cacerts` file:
+1. Override the `cacerts` file in the search skill pods. In this step, you configure the operator to override the `cacerts` file in the search skill pods with the updated `cacerts` file. In the following example file, the instance is called `watson-assistant---wa`. Replace this value with the name of your instance:
 
-    ```text
-    keytool -import -trustcacerts -keystore cacerts -storepass changeit -alias customer_ca -file ingress_ca.crt
-    ```
-    {: codeblock}
-
-    You can run the `keytool -list -keystore cacerts -storepass changeit | grep customer_ca -A 1` command to check that your CA certificate is included in the `cacerts` file.
-    {: tip}
-
-1.  Run the following command to create the configmap that contains the updated `cacerts` file:
-
-    ```text
-    oc create configmap watson-assistant-skill-cacerts --from-file=cacerts
-    ```
-    {: codeblock}
-
-    Because the `cacerts` file is binary, the output of the `oc describe configmap watson-assistant-skill-cacerts` command shows an empty data section. To check whether the updated `cacerts` file is present in the configmap, run the `oc get configmap watson-assistant-skill-cacerts --output yaml` command.
-
-1.  Override the `cacerts` file in the search skill pods. In this step, you configure the operator to override the `cacerts` file in the search skill pods with the updated `cacerts` file. In the following example file, the instance is called `watson-assistant---wa`. Replace this value with the name of your instance:
-
-    ```text
-    cat <<EOF | oc apply -f -
-    kind: TemporaryPatch
-    apiVersion: com.ibm.oppy/v1
-    metadata:
+   ```text
+   cat <<EOF | oc apply -f -
+   kind: TemporaryPatch
+   apiVersion: com.ibm.oppy/v1
+   metadata:
       name: watson-assistant---wa-skill-cert
-    spec:
+   spec:
       apiVersion: com.ibm.watson.watson-assistant/v1
       kind: WatsonAssistantSkillSearch
       name: "watson-assistant---wa"    # Replace this with the name of your Watson Assistance instance
       patchType: patchStrategicMerge
       patch:
-        "skill-search":
-          deployment:
-            spec:
-              template:
-                spec:
-                  volumes:
-                   - name: updated-cacerts
-                     configMap:
-                       name: watson-assistant-skill-cacerts
-                       defaultMode: 420
-                  containers:
-                  - name: skill-search
-                    volumeMounts:
-                    - name: updated-cacerts
-                      mountPath: /opt/ibm/java/jre/lib/security/cacerts
-                      subPath: cacerts
-    EOF
-    ```  
-    {: codeblock}
+         "skill-search":
+            deployment:
+               spec:
+                  template:
+                     spec:
+                        volumes:
+                           - name: updated-cacerts
+                              configMap:
+                                 name: watson-assistant-skill-cacerts
+                                 defaultMode: 420
+                        containers:
+                        - name: skill-search
+                           volumeMounts:
+                           - name: updated-cacerts
+                              mountPath: /opt/ibm/java/jre/lib/security/cacerts
+                              subPath: cacerts
+   EOF
+   ```  
+   {: codeblock}
 
-1.  Wait until new search skill pods are created. It might take up to 10 minutes before the updates take effect.
+1. Wait until new search skill pods are created. It might take up to 10 minutes before the updates take effect.
 
-1.  Check that the search skill feature is working as expected.
+1. Check that the search skill feature is working as expected.
 
 ### Disable Horizontal Pod Autoscaling and set a maximum number of master pods
 {: #troubleshoot-150-disable-hpa}
 
 Horizontal Pod Autoscaling (HPA) is enabled automatically. As a result, the number of replicas changes dynamically in the range of 1 to 10 replicas. You can disable HPA if you want to limit the maximum number of master pods or if you're concerned about master pods being created and deleted too frequently.
 
-1.  Disable HPA for the `master` microservice by running the following command. In these steps, substitute your instance name for the `INSTANCE_NAME` variable:
+1. Disable HPA for the `master` microservice by running the following command. In these steps, substitute your instance name for the `INSTANCE_NAME` variable:
 
     ```text
     oc patch wa ${INSTANCE_NAME} --type='json' --patch='[{"op": "add", "path": "/appConfigOverrides/clu", "value":{"master":{"autoscaling":{"enabled":false}}}}]'
     ```
     {: codeblock}
 
-1.  Wait until the information propagates into the operator:
+1. Wait until the information propagates into the operator:
 
     ```text
     sleep 600
     ```
     {: screen}
 
-1.  Run the following command to remove HPA for the `master` microservice:
+1. Run the following command to remove HPA for the `master` microservice:
 
     ```text
     oc delete hpa ${INSTANCE_NAME}-master
     ```
     {: codeblock}
 
-1.  Wait for about 30 seconds:
+1. Wait for about 30 seconds:
 
     ```text
     sleep 30
     ```
     {: screen}
 
-1.  Scale down the `master` microservice to the number of replicas that you want. In the following example, the `master` microservice is scaled down to two replicas:
+1. Scale down the `master` microservice to the number of replicas that you want. In the following example, the `master` microservice is scaled down to two replicas:
 
     ```text
     oc scale deploy ${INSTANCE_NAME}-master --replicas=2
@@ -1168,7 +1168,7 @@ This patch includes:
 
 Here are steps to resize Redis statefulset memory and cpu values after applying [cpd-watson-assistant-1.5.0-patch-1](https://www.ibm.com/support/pages/node/6240164){: external}.
 
-1.  Use `oc get wa` to see your instance name:
+1. Use `oc get wa` to see your instance name:
 
     ```text
     oc get wa
@@ -1177,14 +1177,14 @@ Here are steps to resize Redis statefulset memory and cpu values after applying 
     ```
     {: codeblock}
 
-1.  Export your instance name as a variable that you can use in each step, for example:
+1. Export your instance name as a variable that you can use in each step, for example:
 
     ```text
     export INSTANCENAME=watson-assistant---wa-qa
     ```
     {: codeblock}
 
-1.  Change the `updateStrategy` in both Redis statefulsets to type `RollingUpdate`:
+1. Change the `updateStrategy` in both Redis statefulsets to type `RollingUpdate`:
 
     ```text
     oc patch statefulset c-$INSTANCENAME-redis-m -p '{"spec":{"updateStrategy":{"type":"RollingUpdate"}}}'
@@ -1192,31 +1192,31 @@ Here are steps to resize Redis statefulset memory and cpu values after applying 
     ```
     {: codeblock}
 
-1.  Update the Redis statefulsets with the resized cpu and memory values:
+1. Update the Redis statefulsets with the resized cpu and memory values:
 
    - Member CPU
 
-       ```text
-       oc patch statefulset c-$INSTANCENAME-redis-m --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/1/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/2/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/3/resources/requests/cpu", "value":"50m"}]'
-       ```
-       {: codeblock}
-
-   - Member memory
-    
       ```text
-       oc patch statefulset c-$INSTANCENAME-redis-m --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/1/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/2/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/3/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/0/resources/requests/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/1/resources/requests/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/2/resources/requests/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/3/resources/requests/memory", "value":"256Mi"}]'
-       ```
-       {: codeblock}
-
-   - Sentinel CPU
-
-      ```text
-      oc patch statefulset c-$INSTANCENAME-redis-s --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/1/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/2/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/3/resources/requests/cpu", "value":"50m"}]'
+      oc patch statefulset c-$INSTANCENAME-redis-m --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/1/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/2/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/3/resources/requests/cpu", "value":"50m"}]'
       ```
       {: codeblock}
 
-   - Sentinel memory
+   - Member memory
+   
+      ```text
+      oc patch statefulset c-$INSTANCENAME-redis-m --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/1/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/2/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/3/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/0/resources/requests/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/1/resources/requests/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/2/resources/requests/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/3/resources/requests/memory", "value":"256Mi"}]'
+      ```
+      {: codeblock}
+      
+   - Sentinel CPU
+   
+   ```text
+   oc patch statefulset c-$INSTANCENAME-redis-s --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/1/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/2/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/3/resources/requests/cpu", "value":"50m"}]'
+   ```
+   {: codeblock}
 
+   - Sentinel memory
+   
       ```text
       oc patch statefulset c-$INSTANCENAME-redis-s --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/1/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/2/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/3/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/0/resources/requests/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/1/resources/requests/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/2/resources/requests/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/3/resources/requests/memory", "value":"256Mi"}]'
       ```
