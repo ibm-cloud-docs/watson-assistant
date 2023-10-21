@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-20"
+lastupdated: "2023-10-21"
 
 subcollection: watson-assistant
 
@@ -729,13 +729,13 @@ If you are installing the Redis operator with an IBM Cloud Pak foundational serv
       ```
       {: codeblock}
       
-      1. Run the following command to confirm that the operator is installed:
-      
-         ```text
-         oc get pod -n $OPERATOR_NS -l app.kubernetes.io/name=ibm-cloud-databases-redis-operator \
-         -o jsonpath='{.items[0].status.phase} {"\n"}'
-         ```
-         {: codeblock}
+   1. Run the following command to confirm that the operator is installed:
+   
+      ```text
+      oc get pod -n $OPERATOR_NS -l app.kubernetes.io/name=ibm-cloud-databases-redis-operator \
+      -o jsonpath='{.items[0].status.phase} {"\n"}'
+      ```
+      {: codeblock}
 
 ## 4.0.4
 {: #troubleshoot-404}
@@ -1087,7 +1087,7 @@ To fix the search skill, you inject the CA that signed your TLS certificate into
       name: "watson-assistant---wa"    # Replace this with the name of your Watson Assistance instance
       patchType: patchStrategicMerge
       patch:
-         "skill-search":
+          "skill-search":
             deployment:
                spec:
                   template:
