@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-20"
+lastupdated: "2023-10-23"
 
 subcollection: watson-assistant
 
@@ -10,7 +10,7 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Service architecture
+# Service architecture for {{site.data.keyword.icp4dfull}}
 {: #architecture-data}
 
 [{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d}
