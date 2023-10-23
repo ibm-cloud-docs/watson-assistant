@@ -10,7 +10,7 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Service architecture for {{site.data.keyword.icp4dfull}}
+# Service architecture for {{site.data.keyword.icp4dfull_notm}}
 {: #architecture-data}
 
 [{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d}
