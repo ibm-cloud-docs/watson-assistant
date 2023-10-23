@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-20"
+lastupdated: "2023-10-23"
 
 subcollection: watson-assistant
 
@@ -28,7 +28,7 @@ Get help with solving issues that you might encounter with {{site.data.keyword.a
 - Cause: During the upgrade, custom resources that are owned by {{site.data.keyword.assistant_classic_short}} for the `certificates.certmanager.k8s.io` CRD are deleted by using a script that runs in the background. Sometimes the CR deletion script completes before the assistant operator gets upgraded. In that case, the old assistant operator might re-create custom resources for the `certificates.certmanager.k8s.io` CRD. Leftover CRs might cause the certificate manager to continuously regenerate some certificate secrets, causing some assistant pods to restart recursively.
 - Solution: Run the following script to delete leftover custom resources for the `certificates.certmanager.k8s.io` CRD after you set INSTANCE (normally `wa`) and PROJECT_CPD_INSTANCE variables:
 
-   ```text
+   ```bash
    for i in `oc get certificates.certmanager.k8s.io -l icpdsupport/addOnId=assistant --namespace ${PROJECT_CPD_INSTANCE} | grep "${INSTANCE}-"| awk '{print $1}'`; do oc delete certificates.certmanager.k8s.io $i --namespace ${PROJECT_CPD_INSTANCE}; done
    ```
    {: codeblock}
@@ -348,7 +348,7 @@ Complete the following steps to determine whether you are impacted by this issue
 
 1. To determine whether you are impacted, run the following command to see whether the CR was applied successfully:
 
-    ```sh
+    ```bash
     oc get dataexhaust wa-data-governor -n $OPERAND_NS -o yaml
     ```
     {: codeblock}
@@ -366,11 +366,11 @@ Complete the following steps to determine whether you are impacted by this issue
         type: Failure
       ibmDataGovernorService: InProgress
     ```
-    {: codeblock}
+    {: screen}
 
 1. From your operand namespace, run the following command to apply the patch. In the command, `wa` is used as the name of the instance. Replace this value with the name of your instance:
 
-    ```text
+    ```bash
     cat <<EOF | oc apply -f -
     apiVersion: assistant.watson.ibm.com/v1
     kind: TemporaryPatch
@@ -399,7 +399,7 @@ Complete the following steps to determine whether you are impacted by this issue
 
 1. Validate that the patch was applied successfully:
 
-    ```sh
+    ```bash
     oc get dataexhaust wa-data-governor -n $OPERAND_NS -o yaml
     ```
     {: codeblock}
@@ -411,7 +411,7 @@ Complete the following steps to determine whether you are impacted by this issue
       additionalLabels:
         icpdsupport/serviceInstanceId: inst-1
     ```
-    {: codeblock}
+    {: screen}
 
 ### Security context constraint permission errors
 {: #troubleshoot-40x-scc-permission-error}
@@ -433,14 +433,17 @@ psql: error: could not read root certificate file "/tls/ca.crt": Permission deni
 {: screen}
 
 Other pods might have similar permission errors. If you look at the SCCs of the pods, you can see they are not restricted. For example, if you run the `oc describe pod wa-etcd-0 |grep scc` command, you get an output similar to the following example:
+
 ```text
 openshift.io/scc: fsgroup-scc
 ```
+{: screen}
 
 To fix this issue, raise the priority of the **restricted** SCC so that it takes precedence:
 
 1. Run the following command:
-    ```text
+
+    ```bash
     oc edit scc restricted
     ```
     {: codeblock}
@@ -463,7 +466,7 @@ The following fix applies to all versions of {{site.data.keyword.assistant_class
 
 1. Run the following command. In the following command, replace `INSTANCE_NAME` with the name of your instance and replace `CUSTOM_CERTIFICATE` with your Base64 encoded custom certificate key:
 
-    ```text
+    ```bash
     INSTANCE="INSTANCE_NAME"     # Replace INSTANCE_NAME with the name of the Watson Assistant instance
     CERT="CUSTOM_CERTIFICATE"     # Replace CUSTOM_CERTIFICATE with the custom certificate key
 
@@ -515,7 +518,8 @@ The following fix applies to all versions of {{site.data.keyword.assistant_class
 1. Wait approximately 10 minutes for the `wa-webhooks-connector` pod to restart. This pod restarts automatically.
 
 1. After the pod restarts, check the logs by running the following command. In the command, replace `XXXX` with the suffix of the `wa-webhooks-connector` pod:
-    ```text
+
+    ```bash
     oc logs wa-webhooks-connector-XXXX     // Replace XXXX with the suffix of the wa-webhooks-connector pod
     ```
     {: codeblock}
@@ -542,13 +546,15 @@ If you are installing the Redis operator with an IBM Cloud Pak foundational serv
 {: #troubleshoot-405-install-redis-foundational-services-air-gapped}
 
 1. Check the status of the Redis operator:
-    ```text
+
+    ```bash
     oc get opreq common-service-redis -n ibm-common-services -o jsonpath='{.status.phase}  {"\n"}'
     ```
     {: codeblock}
 
 1. If the Redis operand request is stuck in `Pending` status, delete the operand request:
-    ```text
+
+    ```bash
     oc delete opreq watson-assistant-redis -n ibm-common-services
     ```
     {: codeblock}
@@ -557,7 +563,7 @@ If you are installing the Redis operator with an IBM Cloud Pak foundational serv
 
    1. Create the directories where you want to store the CASE packages:
 
-      ```text
+      ```bash
       mkdir -p $HOME/offline/cpd  
       mkdir -p $HOME/offline/cpfs  
       ```
@@ -565,7 +571,7 @@ If you are installing the Redis operator with an IBM Cloud Pak foundational serv
 
    1. Set the following environment variables:
 
-       ```text
+       ```bash
        export CASE_REPO_PATH=https://github.com/IBM/cloud-pak/raw/master/repo/case  
        export OFFLINEDIR=$HOME/offline/cpd  
        export OFFLINEDIR_CPFS=$HOME/offline/cpfs  
@@ -574,7 +580,7 @@ If you are installing the Redis operator with an IBM Cloud Pak foundational serv
 
 1. Download the Redis operator and {{site.data.keyword.icp4dfull}} platform operator CASE packages:
 
-    ```text
+    ```bash
     cloudctl case save \
     --repo ${CASE_REPO_PATH} \
     --case ibm-cloud-databases-redis \
@@ -592,7 +598,7 @@ If you are installing the Redis operator with an IBM Cloud Pak foundational serv
 
 1. Create the Redis catalog source:
 
-    ```text
+    ```bash
     cloudctl case launch \
     --case ${OFFLINEDIR}/ibm-cloud-databases-redis-1.4.5.tgz \
     --inventory redisOperator \
@@ -604,7 +610,7 @@ If you are installing the Redis operator with an IBM Cloud Pak foundational serv
 
 1. Set the environment variables for your registry credentials:
 
-    ```text
+    ```bash
     export PRIVATE_REGISTRY_USER=username  
     export PRIVATE_REGISTRY_PASSWORD=password  
     export PRIVATE_REGISTRY={registry-info}  
@@ -613,7 +619,7 @@ If you are installing the Redis operator with an IBM Cloud Pak foundational serv
 
 1. Run the following command to store the credentials:
 
-    ```text
+    ```bash
     cloudctl case launch \
     --case ${OFFLINEDIR}/ibm-cp-datacore-2.0.10.tgz \
     --inventory cpdPlatformOperator \
@@ -624,7 +630,7 @@ If you are installing the Redis operator with an IBM Cloud Pak foundational serv
 
 1. Mirror the images:
 
-    ```text
+    ```bash
     export USE_SKOPEO=true  
     cloudctl case launch \
     --case ${OFFLINEDIR}/ibm-cp-datacore-2.0.10.tgz \
@@ -638,14 +644,14 @@ If you are installing the Redis operator with an IBM Cloud Pak foundational serv
 
     1. Export the project that contains the {{site.data.keyword.icp4dfull}} operator:
 
-       ```text
+       ```bash
        export OPERATOR_NS=ibm-common-services|cpd-operators     # Select the project that contains the Cloud Pak for Data operator
        ```
        {: codeblock}
 
     1. Create the subscription:
 
-       ```text
+       ```bash
        cat <<EOF | oc apply --namespace $OPERATOR_NS -f -
        apiVersion: operators.coreos.com/v1alpha1
        kind: Subscription
@@ -664,7 +670,7 @@ If you are installing the Redis operator with an IBM Cloud Pak foundational serv
 
 1. Check the status of the Redis operator:
 
-    ```text
+    ```bash
     oc get opreq common-service-redis -n ibm-common-services -o jsonpath='{.status.phase}  {"\n"}'
 
     ```
@@ -672,7 +678,7 @@ If you are installing the Redis operator with an IBM Cloud Pak foundational serv
 
 1. If the Redis operand request is stuck in `Pending` status, delete the operand request:
 
-    ```text
+    ```bash
     oc delete opreq watson-assistant-redis -n ibm-common-services
     ```
     {: codeblock}
@@ -681,16 +687,16 @@ If you are installing the Redis operator with an IBM Cloud Pak foundational serv
 
     1. Export the project that contains the {{site.data.keyword.icp4dfull}} operator:
 
-       ```text
+       ```bash
        export OPERATOR_NS=ibm-common-services|cpd-operators     # Select the project that contains the Cloud Pak for Data operator
        ```
        {: codeblock}
 
     1. Create the subscription. Choose one of the following two subscriptions, depending on how you are using the IBM Entitled Registry:
 
-       1. IBM Entitled Registry from the `ibm-operator-catalog`:
+       - IBM Entitled Registry from the `ibm-operator-catalog`:
        
-          ```text
+          ```bash
           cat <<EOF | oc apply --namespace  $OPERATOR_NS -f -
           apiVersion: operators.coreos.com/v1alpha1
           kind: Subscription
@@ -704,9 +710,9 @@ If you are installing the Redis operator with an IBM Cloud Pak foundational serv
           ```
           {: codeblock}
 
-       1. IBM Entitled Registry with catalog sources that pull specific versions of the images:
+       - IBM Entitled Registry with catalog sources that pull specific versions of the images:
     
-          ```text
+          ```bash
           cat <<EOF | oc apply --namespace $OPERATOR_NS -f -
           apiVersion: operators.coreos.com/v1alpha1
           kind: Subscription
@@ -724,14 +730,14 @@ If you are installing the Redis operator with an IBM Cloud Pak foundational serv
 
    1. Run the following command to confirm that the subscription was applied:
    
-      ```text
+      ```bash
       oc get sub -n $OPERATOR_NS  ibm-cloud-databases-redis-operator -o jsonpath='{.status.installedCSV} {"\n"}'
       ```
       {: codeblock}
       
-      1. Run the following command to confirm that the operator is installed:
-      
-      ```text
+   1. Run the following command to confirm that the operator is installed:
+   
+      ```bash
       oc get pod -n $OPERATOR_NS -l app.kubernetes.io/name=ibm-cloud-databases-redis-operator \
       -o jsonpath='{.items[0].status.phase} {"\n"}'
       ```
@@ -754,28 +760,28 @@ If your installation uses the IBM Entitled Registry to pull images, complete the
 
 1. Get the name of your instance by running the following command:
 
-   ```text
+   ```bash
    oc get wa
    ```
    {: codeblock}
 
 1. Edit and save the CR.
 
-    1. Run the following command to edit the CR. In the command, replace `INSTANCE_NAME` with the name of the instance:
-    
-      ```text
+   1. Run the following command to edit the CR. In the command, replace `INSTANCE_NAME` with the name of the instance:
+   
+      ```bash
       oc edit wa INSTANCE_NAME
       ```
       {: codeblock}
-
-      1. Edit the CR by adding the following lines:
-
-      ```text
+       
+   1. Edit the CR by adding the following lines:
+   
+      ```bash
       appConfigOverrides:
          container_images:
          integrations:
-             image: cp.icr.io/cp/watson-assistant/servicedesk-integration
-             tag: 20220106-143142-0ea3fbf7-wa_icp_4.0.5-signed@sha256:7078fdba4ab0b69dbb93f47836fd9fcb7cfb12f103662fef0d9d1058d2553910
+            image: cp.icr.io/cp/watson-assistant/servicedesk-integration
+            tag: 20220106-143142-0ea3fbf7-wa_icp_4.0.5-signed@sha256:7078fdba4ab0b69dbb93f47836fd9fcb7cfb12f103662fef0d9d1058d2553910
       ```
       {: codeblock}
 
@@ -801,21 +807,21 @@ If your installation uses a private Docker registry to pull images, complete the
 
    1. Run the following command to open the CSV file:
     
-      ```text
+      ```bash
       vi $OFFLINEDIR/ibm-watson-assistant-4.0.4-images.csv
       ```
       {: codeblock}
 
    1. Add the following line to the CSV file immediately after the existing integrations image:
    
-      ```text
+      ```bash
       cp.icr.io,cp/watson-assistant/servicedesk-integration,20220106-143142-0ea3fbf7-wa_icp_4.0.5-signed,sha256:7078fdba4ab0b69dbb93f47836fd9fcb7cfb12f103662fef0d9d1058d2553910,IMAGE,linux,x86_64,"",0,CASE,"",ibm_wa_4_0_0;ibm_wa_4_0_2;ibm_wa_4_0_4;vLatest
       ```
       {: codeblock}
 
 1. Mirror the image again by using the commands that you used to download and push all the images, for example:
 
-    ```text
+    ```bash
     cloudctl case launch \
       --case ${OFFLINEDIR}/ibm-cp-datacore-2.0.9.tgz \
       --inventory cpdPlatformOperator \
@@ -826,7 +832,7 @@ If your installation uses a private Docker registry to pull images, complete the
 
 1. Get the name of your instance by running the following command:
 
-    ```text
+    ```bash
     oc get wa
     ```
     {: codeblock}
@@ -835,14 +841,14 @@ If your installation uses a private Docker registry to pull images, complete the
 
    1. Run the following command to edit the CR. In the command, replace `INSTANCE_NAME` with the name of the instance:
    
-      ```text
+      ```bash
       oc edit wa INSTANCE_NAME
       ```
       {: codeblock}
 
    1. Edit the CR by adding the following lines:
    
-      ```text
+      ```bash
       appConfigOverrides:
          container_images:
          integrations:
@@ -855,7 +861,7 @@ If your installation uses a private Docker registry to pull images, complete the
 
 1. After the new integrations pod starts, the old pod terminates. When the new pod starts, the server starts locally and the log looks similar to the following example:
 
-    ```text
+    ```bash
     oc logs -f ${INTEGRATIONS_POD}
     [2022-01-07T01:33:13.609] [OPTIMIZED] db.redis.RedisManager - Redis trying to connect. counter# 1
     [2022-01-07T01:33:13.628] [OPTIMIZED] db.redis.RedisManager - Redis connected
@@ -877,7 +883,7 @@ If you upgraded to EDB version 1.8 and need a new installation of {{site.data.ke
 
 1. First, apply the following patch:
 
-    ```text
+    ```bash
     cat <<EOF | oc apply -f -
     apiVersion: assistant.watson.ibm.com/v1
     kind: TemporaryPatch
@@ -904,28 +910,28 @@ If you upgraded to EDB version 1.8 and need a new installation of {{site.data.ke
 
 1. Run the following command to check that the temporary patch is applied to the `WatsonAssistantStore` custom resource. It might take up to 10 minutes after the store custom resource is updated:
 
-    ```text
+    ```bash
     oc get WatsonAssistantStore wa -o jsonpath='{.metadata.annotations.oppy\.ibm\.com/temporary-patches}' ; echo
     ```
     {: codeblock}
 
     If the patch is applied, the command returns output similar to the following example:
 
-    ```text
+    ```bash
     {"wa-postgres-180-hotfix": {"timestamp": "2021-09-23T15:48:12.071497", "api_version": "assistant.watson.ibm.com/v1"}}`
     ```
     {: screen}
 
 1. Run the following command to delete the Postgres instance:
 
-    ```text
+    ```bash
     oc delete clusters.postgresql.k8s.enterprisedb.io wa-postgres
     ```
     {: codeblock}
 
 1. Wait 10 minutes. Then, run the following command to check the Postgres instance:
 
-    ```text
+    ```bash
     oc get pods | grep wa-postgres
     ```
     {: codeblock}
@@ -941,7 +947,7 @@ If you upgraded to EDB version 1.8 and need a new installation of {{site.data.ke
 
 1. Run the following command to check that the jobs that initialize the Postgres database completed successfully:
 
-    ```text
+    ```bash
     oc get jobs wa-create-slot-store-db-job wa-4.0.0-update-schema-store-db-job
     ```
     {: codeblock}
@@ -974,14 +980,14 @@ First, check the logs of the search skill pods to confirm whether this issue app
 
 1. Run the following command to list the search skill pods:
 
-    ```text
+    ```bash
     oc get pods -l component=skill-search
     ```
     {: codeblock}
 
 1. Run the following command to check the logs for the following exception:
 
-    ```text
+    ```bash
     oc logs -l component=skill-search | grep "IBMCertPathBuilderException"
     ```
     {: codeblock}
@@ -989,7 +995,7 @@ First, check the logs of the search skill pods to confirm whether this issue app
     The error looks similar to the following example:
 
     ```text
-    {"level":"ERROR","logger":"wa-skills","message":"Search skill exception","exception":[{"message":"com.ibm.jsse2.util.h: PKIX path building failed: com.ibm.security.cert.IBMCertPathBuilderException: unable to find valid certification path to requested target","name":"SSLHandshakeException"
+    {"level":"ERROR","logger":"wa-skills","message":"Search skill exception","exception":[{"message":"com.ibm.jsse2.util.h: PKIX path building failed: com.ibm.security.cert.IBMCertPathBuilderException: unable to find valid certification path to requested target","name":"SSLHandshakeException"}]}
     ```
     {: screen}
 
@@ -1004,14 +1010,14 @@ To fix the search skill, you inject the CA that signed your TLS certificate into
 
     1. Run the following command to check that the secret exists:
     
-       ```text
+       ```bash
        oc get secret external-tls-secret
        ```
        {: codeblock}
 
     1. Run the following command to retrieve the certificate chain from the secret:
     
-       ```text
+       ```bash
        oc get secret external-tls-secret --output jsonpath='{.data.cert\.crt}' | base64 -d | tee ingress_cert_chain.crt
        ```
        {: codeblock}
@@ -1028,35 +1034,35 @@ To fix the search skill, you inject the CA that signed your TLS certificate into
 
    1. Run the following command to list the search skill pods:
    
-      ```text
+      ```bash
       oc get pods -l component=skill-search
       ```
       {: codeblock}
 
    1. Run the following command to set the `SEARCH_SKILL_POD` environment variable with the search skill pod name:
     
-      ```text
+      ```bash
       SEARCH_SKILL_POD="$(oc get pods -l component=skill-search --output custom-columns=NAME:.metadata.name --no-headers | head -n 1
       ```
       {: codeblock}
 
    1. Run the following command to see the selected pod:
    
-      ```text
+      ```bash
       echo "Selected search skill pod: ${SEARCH_SKILL_POD}"
       ```
       {: codeblock}
 
    1. Retrieve the truststore file. The `cacerts` file is the default truststore that is used by Java. It contains the list of the certificate authorities that Java trusts by default. Run the following command to copy the binary `cacerts` file from the pod into your current directory:
    
-      ```text
+      ```bash
       oc cp ${SEARCH_SKILL_POD}:/opt/ibm/java/jre/lib/security/cacerts cacerts
       ```
       {: codeblock}
 
 1. Run the following command to inject the `ingress_ca.crt` file into the `cacerts` file:
 
-      ```text
+      ```bash
       keytool -import -trustcacerts -keystore cacerts -storepass changeit -alias customer_ca -file ingress_ca.crt
       ```
       {: codeblock}
@@ -1066,7 +1072,7 @@ To fix the search skill, you inject the CA that signed your TLS certificate into
 
 1. Run the following command to create the configmap that contains the updated `cacerts` file:
 
-   ```text
+   ```bash
    oc create configmap watson-assistant-skill-cacerts --from-file=cacerts
    ```
    {: codeblock}
@@ -1075,37 +1081,36 @@ To fix the search skill, you inject the CA that signed your TLS certificate into
 
 1. Override the `cacerts` file in the search skill pods. In this step, you configure the operator to override the `cacerts` file in the search skill pods with the updated `cacerts` file. In the following example file, the instance is called `watson-assistant---wa`. Replace this value with the name of your instance:
 
-   ```text
-   cat <<EOF | oc apply -f -
-   kind: TemporaryPatch
-   apiVersion: com.ibm.oppy/v1
-   metadata:
+    ```bash
+    cat <<EOF | oc apply -f -
+    kind: TemporaryPatch
+    apiVersion: com.ibm.oppy/v1
+    metadata:
       name: watson-assistant---wa-skill-cert
-   spec:
+    spec:
       apiVersion: com.ibm.watson.watson-assistant/v1
       kind: WatsonAssistantSkillSearch
       name: "watson-assistant---wa"    # Replace this with the name of your Watson Assistance instance
       patchType: patchStrategicMerge
       patch:
-         "skill-search":
-            deployment:
-               spec:
-                  template:
-                     spec:
-                        volumes:
-                           - name: updated-cacerts
-                              configMap:
-                                 name: watson-assistant-skill-cacerts
-                                 defaultMode: 420
-                        containers:
-                        - name: skill-search
-                           volumeMounts:
-                           - name: updated-cacerts
-                              mountPath: /opt/ibm/java/jre/lib/security/cacerts
-                              subPath: cacerts
-   EOF
-   ```  
-   {: codeblock}
+        "skill-search":
+          deployment:
+            spec:
+              template:
+                spec:
+                  volumes:
+                   - name: updated-cacerts
+                     configMap:
+                       name: watson-assistant-skill-cacerts
+                       defaultMode: 420
+                  containers:
+                  - name: skill-search
+                    volumeMounts:
+                    - name: updated-cacerts
+                      mountPath: /opt/ibm/java/jre/lib/security/cacerts
+                      subPath: cacerts
+    EOF
+    ```  
 
 1. Wait until new search skill pods are created. It might take up to 10 minutes before the updates take effect.
 
@@ -1118,7 +1123,7 @@ Horizontal Pod Autoscaling (HPA) is enabled automatically. As a result, the numb
 
 1. Disable HPA for the `master` microservice by running the following command. In these steps, substitute your instance name for the `INSTANCE_NAME` variable:
 
-    ```text
+    ```bash
     oc patch wa ${INSTANCE_NAME} --type='json' --patch='[{"op": "add", "path": "/appConfigOverrides/clu", "value":{"master":{"autoscaling":{"enabled":false}}}}]'
     ```
     {: codeblock}
@@ -1132,7 +1137,7 @@ Horizontal Pod Autoscaling (HPA) is enabled automatically. As a result, the numb
 
 1. Run the following command to remove HPA for the `master` microservice:
 
-    ```text
+    ```bash
     oc delete hpa ${INSTANCE_NAME}-master
     ```
     {: codeblock}
@@ -1146,7 +1151,7 @@ Horizontal Pod Autoscaling (HPA) is enabled automatically. As a result, the numb
 
 1. Scale down the `master` microservice to the number of replicas that you want. In the following example, the `master` microservice is scaled down to two replicas:
 
-    ```text
+    ```bash
     oc scale deploy ${INSTANCE_NAME}-master --replicas=2
     ```
     {: codeblock}
@@ -1170,7 +1175,7 @@ Here are steps to resize Redis statefulset memory and cpu values after applying 
 
 1. Use `oc get wa` to see your instance name:
 
-    ```text
+    ```bash
     oc get wa
     NAME                       VERSION   READY   READYREASON   UPDATING   UPDATINGREASON   DEPLOYED   VERIFIED   AGE
     watson-assistant---wa-qa   1.5.0     True    Stable        False      Stable           18/18      18/18      11h
@@ -1179,14 +1184,14 @@ Here are steps to resize Redis statefulset memory and cpu values after applying 
 
 1. Export your instance name as a variable that you can use in each step, for example:
 
-    ```text
+    ```bash
     export INSTANCENAME=watson-assistant---wa-qa
     ```
     {: codeblock}
 
 1. Change the `updateStrategy` in both Redis statefulsets to type `RollingUpdate`:
 
-    ```text
+    ```bash
     oc patch statefulset c-$INSTANCENAME-redis-m -p '{"spec":{"updateStrategy":{"type":"RollingUpdate"}}}'
     oc patch statefulset c-$INSTANCENAME-redis-s -p '{"spec":{"updateStrategy":{"type":"RollingUpdate"}}}'
     ```
@@ -1196,35 +1201,35 @@ Here are steps to resize Redis statefulset memory and cpu values after applying 
 
    - Member CPU
 
-      ```text
+      ```bash
       oc patch statefulset c-$INSTANCENAME-redis-m --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/1/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/2/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/3/resources/requests/cpu", "value":"50m"}]'
       ```
       {: codeblock}
 
    - Member memory
    
-      ```text
+      ```bash
       oc patch statefulset c-$INSTANCENAME-redis-m --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/1/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/2/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/3/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/0/resources/requests/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/1/resources/requests/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/2/resources/requests/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/3/resources/requests/memory", "value":"256Mi"}]'
       ```
       {: codeblock}
       
    - Sentinel CPU
    
-   ```text
-   oc patch statefulset c-$INSTANCENAME-redis-s --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/1/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/2/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/3/resources/requests/cpu", "value":"50m"}]'
-   ```
-   {: codeblock}
+      ```bash
+      oc patch statefulset c-$INSTANCENAME-redis-s --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/1/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/2/resources/requests/cpu", "value":"50m"},{"op": "replace", "path": "/spec/template/spec/containers/3/resources/requests/cpu", "value":"50m"}]'
+      ```
+      {: codeblock}
 
    - Sentinel memory
    
-      ```text
+      ```bash
       oc patch statefulset c-$INSTANCENAME-redis-s --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/1/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/2/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/3/resources/limits/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/0/resources/requests/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/1/resources/requests/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/2/resources/requests/memory", "value":"256Mi"},{"op": "replace", "path": "/spec/template/spec/containers/3/resources/requests/memory", "value":"256Mi"}]'
       ```
       {: codeblock}
 
 1. Confirm that the Redis member and sentinel pods have the new memory and cpu values, for example:
 
-   ```text
+   ```      
    oc describe pod c-$INSTANCENAME-redis-m-0 |grep cpu
    oc describe pod c-$INSTANCENAME-redis-m-0 |grep memory
    oc describe pod c-$INSTANCENAME-redis-s-0 |grep cpu
@@ -1292,7 +1297,7 @@ Here are steps to resize Redis statefulset memory and cpu values after applying 
 
 1. Change the `updateStrategy` in both Redis statefulsets back to type `OnDelete`:
 
-    ```text
+    ```bash
     oc patch statefulset c-$INSTANCENAME-redis-m -p '{"spec":{"updateStrategy":{"type":"OnDelete"}}}'
     oc patch statefulset c-$INSTANCENAME-redis-s -p '{"spec":{"updateStrategy":{"type":"OnDelete"}}}'
     ```
@@ -1305,8 +1310,7 @@ Whenever the deployment size is changed from medium to small. A manual step is r
 
 Run the following command, replacing `<instance-name>` with the name of your CR instance and replacing `<namespace-name>` with the name of the namespace where the instance resides.
 
-```text
+```bash
 oc delete pdb  -l icpdsupport/addOnId=assistant,component!=etcd,ibmevents.ibm.com/kind!=Kafka,app.kubernetes.io/instance=<instance-name> -n <namespace-name>
-
 ```
 {: codeblock}
