@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-20"
+lastupdated: "2023-10-23"
 
 subcollection: watson-assistant
 
@@ -12,7 +12,7 @@ subcollection: watson-assistant
 
 [{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d}
 
-# Installing {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}}
+# Installing {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull_notm}}
 {: #install-data}
 
 Learn how to install {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}}.
