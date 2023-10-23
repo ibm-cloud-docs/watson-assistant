@@ -1081,37 +1081,36 @@ To fix the search skill, you inject the CA that signed your TLS certificate into
 
 1. Override the `cacerts` file in the search skill pods. In this step, you configure the operator to override the `cacerts` file in the search skill pods with the updated `cacerts` file. In the following example file, the instance is called `watson-assistant---wa`. Replace this value with the name of your instance:
 
-   ```bash
-   cat <<EOF | oc apply -f -
-   kind: TemporaryPatch
-   apiVersion: com.ibm.oppy/v1
-   metadata:
+    ```bash
+    cat <<EOF | oc apply -f -
+    kind: TemporaryPatch
+    apiVersion: com.ibm.oppy/v1
+    metadata:
       name: watson-assistant---wa-skill-cert
-   spec:
+    spec:
       apiVersion: com.ibm.watson.watson-assistant/v1
       kind: WatsonAssistantSkillSearch
       name: "watson-assistant---wa"    # Replace this with the name of your Watson Assistance instance
       patchType: patchStrategicMerge
       patch:
-          "skill-search":
-            deployment:
-               spec:
-                  template:
-                     spec:
-                        volumes:
-                           - name: updated-cacerts
-                              configMap:
-                                 name: watson-assistant-skill-cacerts
-                                 defaultMode: 420
-                        containers:
-                        - name: skill-search
-                           volumeMounts:
-                           - name: updated-cacerts
-                              mountPath: /opt/ibm/java/jre/lib/security/cacerts
-                              subPath: cacerts
-   EOF
-   ```  
-   {: codeblock}
+        "skill-search":
+          deployment:
+            spec:
+              template:
+                spec:
+                  volumes:
+                   - name: updated-cacerts
+                     configMap:
+                       name: watson-assistant-skill-cacerts
+                       defaultMode: 420
+                  containers:
+                  - name: skill-search
+                    volumeMounts:
+                    - name: updated-cacerts
+                      mountPath: /opt/ibm/java/jre/lib/security/cacerts
+                      subPath: cacerts
+    EOF
+    ```  
 
 1. Wait until new search skill pods are created. It might take up to 10 minutes before the updates take effect.
 
