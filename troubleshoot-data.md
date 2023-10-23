@@ -1111,7 +1111,6 @@ To fix the search skill, you inject the CA that signed your TLS certificate into
                       subPath: cacerts
     EOF
     ```  
-    {: codeblock}
 
 1. Wait until new search skill pods are created. It might take up to 10 minutes before the updates take effect.
 
