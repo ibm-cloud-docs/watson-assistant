@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-29"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -201,7 +201,7 @@ If you decide a step is no longer needed, you can delete it from the action. To 
 ## Testing the action
 {: #build-actions-overview-test}
 
-We can now test the action to make sure it's working. Click **Preview** to open the Preview pane. (If the text from a previous test is still shown, click the **Refresh** ![Preview refresh icon](../../icons/restart[].svg) icon to restart the conversation.)
+We can now test the action to make sure it's working. Click **Preview** to open the Preview pane. (If the text from a previous test is still shown, click the **Refresh** ![Preview refresh icon](../../icons/restart.svg) icon to restart the conversation.)
 
 Start by typing `I want to withdraw money`. Try various permutations of your input to test how the assistant behaves:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-09-23"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -32,7 +32,7 @@ The appearance and behavior of the launcher icon, the home screen, and most othe
 
 The web chat launcher welcomes and engages customers so they know where to find help if they need it. By default, the web chat launcher appears in a small initial state as a circle in the bottom-right corner:
 
-![An example of the initial launcher](images/web-chat-icon.png){: caption="Example of the initial launcher" caption-side="top"}
+![An example of the initial launcher](images/web-chat-icon.png)
 
 After 15 seconds, the launcher expands to show a greeting message to the user. In this expanded state, a customer can still click the launcher to open the web chat. (If the customer reloads the page or navigates to a different page before the launcher expands, the 15-second timer restarts.)
 
@@ -40,13 +40,13 @@ The appearance of this expanded state differs slightly depending on whether the 
 
 - For desktop browsers, the expanded launcher shows two primary buttons the customer can click to open the web chat, and a **Close** button that closes the launcher.
 
-    ![An example of the desktop launcher](images/desktop-launcher.png){: caption="Example of the desktop launcher" caption-side="top"}
+    ![An example of the desktop launcher](images/desktop-launcher.png)
 
     The expanded launcher remains in its expanded state even if the customer reloads the page or navigates to a different page. It stays in its expanded state until the customer either opens it by clicking either of the two primary buttons, or closes it, at which point it returns to its initial small state for the rest of the session.
 
 - For mobile browsers, the launcher shows only a single primary button.
 
-    ![An example of the mobile launcher](images/mobile-launcher.png){: caption="Example of the mobile launcher" caption-side="top"}
+    ![An example of the mobile launcher](images/mobile-launcher.png)
 
     The customer can close the launcher by scrolling on the page, swiping right on the expanded launcher, or waiting 10 seconds, at which point the expanded launcher shrinks back to its initial small state automatically. If the user reloads the page or navigates to a different page while the launcher is expanded, it stays in its expanded state, and the 10-second timer restarts.
 
@@ -68,7 +68,7 @@ In addition to plain text, {{site.data.keyword.conversationshort}} supports many
 - **Multimedia responses**: The web chat supports all multimedia response types (`audio`, `image`, and `video`).
 - **iframe**: The web chat supports the `iframe` response type, which embeds HTML content (such as a form or interactive map) directly in the web chat window.
 
-For more information about how the web chat handles specific response types, see the [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference#iframe).
+For more information about how the web chat handles specific response types, see the [Response types reference](docs/watson-assistant?topic=watson-assistant-response-types-reference#response-types-json-iframe).
 
 ### Markdown formatting
 {: #web-chat-architecture-markdown}
@@ -122,7 +122,7 @@ For more information about the Markdown format, see the [CommonMark specificatio
 
 The web chat supports transferring the customer to a human in situations the assistant can't handle. If you configure one of the supported contact center integrations, the web chat can open a separate chat window in which the customer can communicate with a live agent.
 
-Your assistant can then initiate a transfer in situations when the assistant is unable to handle a customer's requests. (For more information about initiating a transfer, see [Connecting to a live agent](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-human-agent).)
+Your assistant can then initiate a transfer in situations when the assistant is unable to handle a customer's requests. (For more information about initiating a transfer, see [Connecting to a live agent](/docs/watson-assistant?topic=watson-assistant-human-agent).)
 
 For information about how to add a contact center integration to the web chat, see [Adding contact center support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat-haa).
 

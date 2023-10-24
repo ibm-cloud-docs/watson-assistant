@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-06-09"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -13,21 +13,21 @@ subcollection: watson-assistant
 # NeuralSeek extension setup
 {: #search-extension-neuralseek}
 
-[NeuralSeek](https://neuralseek.com){: external} by [Cerebral Blue](https://cerebralblue.com/){: external} is a combined search and natural-language generation system that is designed to [make conversational AI feel more conversational](https://garrettrowe.medium.com/making-conversational-ai-feel-more-conversational-8748009b3fda){: external}. It requires that you load all your content into [{{site.data.keyword.discoveryfull}}](https://cloud.ibm.com/catalog/services/watson-discovery){: external}. Then, when a user asks a question, it has {{site.data.keyword.discoveryshort}} search for multiple relevant documents and then it generates a natural-language answer that uses the contents of those documents. In some cases, the answer might be taken directly from a single document, and in others, the answer can include information from multiple sources that are combined into a single coherent statement. For each query, NeuralSeek returns a single answer and a confidence score. In most cases, it also returns a URL of a document that influenced the answer, which might be one of several documents.
+[NeuralSeek](https://neuralseek.com){: external} by [Cerebral Blue](https://cerebralblue.com/){: external} is a combined search and natural-language generation system that is designed to [make conversational AI feel more conversational](https://garrettrowe.medium.com/making-conversational-ai-feel-more-conversational-8748009b3fda){: external}. It requires that you load all your content into [{{site.data.keyword.discoveryfull}}](/catalog/services/watson-discovery){: external}. Then, when a user asks a question, it has {{site.data.keyword.discoveryshort}} search for multiple relevant documents and then it generates a natural-language answer that uses the contents of those documents. In some cases, the answer might be taken directly from a single document, and in others, the answer can include information from multiple sources that are combined into a single coherent statement. For each query, NeuralSeek returns a single answer and a confidence score. In most cases, it also returns a URL of a document that influenced the answer, which might be one of several documents.
 
 To set up the extension for NeuralSeek search:
 
 ## Set up {{site.data.keyword.discoveryfull}}
 {: #search-extension-neuralseek-discovery}
 
-1. You need an instance of [{{site.data.keyword.discoveryfull}}](https://cloud.ibm.com/catalog/services/watson-discovery){: external}. Because NeuralSeek can modify your data as needed to make it more effective, make sure it is not an instance with important data that you are using for other purposes.
+1. You need an instance of [{{site.data.keyword.discoveryfull}}](/catalog/services/watson-discovery){: external}. Because NeuralSeek can modify your data as needed to make it more effective, make sure it is not an instance with important data that you are using for other purposes.
 
 1. In {{site.data.keyword.discoveryshort}}, create a project and load the documents that you want to use.
 
 ## Get the NeuralSeek OpenAPI specification and API Key
 {: #search-extension-neuralseek-api-key}
 
-1. You also need an instance of [NeuralSeek on IBM Cloud](https://cloud.ibm.com/catalog/services/neuralseek){: external}.
+1. You also need an instance of [NeuralSeek on IBM Cloud](/catalog/services/neuralseek){: external}.
 
 1. In NeuralSeek, open the **Configure** page and enter your information in the **Discovery instance details** section.
 
@@ -41,7 +41,7 @@ Simple instructions for setting up NeuralSeek are available on the **Integrate**
 ## Create and add extension
 {: #search-extension-neuralseek-add-extension}
 
-1. In your assistant, on the **Integrations** page, click **Build custom extension** and use the OpenAPI specification file to build a custom extension. For general instructions on building any custom extension, see [Building the custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#building-the-custom-extension).
+1. In your assistant, on the **Integrations** page, click **Build custom extension** and use the OpenAPI specification file to build a custom extension. For general instructions on building any custom extension, see [Building a custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension).
 
 1. After you build the NeuralSeek extension and it appears on your **Integrations** page, click **Add** to add it to your assistant. Use your NeuralSeek API key to authenticate. For general instructions on adding any custom extension, see [Adding an extension to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
 

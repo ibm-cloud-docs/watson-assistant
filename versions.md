@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-10-03"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,7 @@ subcollection: watson-assistant
 # Managing workflow with versions
 {: #versions}
 
-[Plus]{: tag-green}[Enterprise]{: tag-purple}
+[Plus]{: tag-green}
 
 In the classic experience only, skill versions help you manage the workflow of a dialog skill development project. In {{site.data.keyword.conversationshort}}, dialog can be included in your published versions of your content. For more information, see [Publishing your content](/docs/watson-assistant?topic=watson-assistant-publish).
 {: important}

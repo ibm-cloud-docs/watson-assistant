@@ -100,7 +100,7 @@ function authenticate(request, response) {
 
 1. When a user logs in, call the `authenticate()` function to store the user information in the `SESSION_INFO` cookie. Then call the `createJWT()` function to regenerate the JWT, using the updated session info to populate the `user_payload` claim.
 
-    In [our example](/docs/watson-assistant?topic=watson-assistant-topicid){: external}, authentication is simulated with a simple button click. The same button also simulates logging out by deleting the cookie:
+    In [our example](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/web-chat-security){: external}, authentication is simulated with a simple button click. The same button also simulates logging out by deleting the cookie:
 
     ```javascript
     async function onClick() {

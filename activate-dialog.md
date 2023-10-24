@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-10-03"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -41,7 +41,7 @@ Once the dialog feature is activated, you can start a new dialog conversation fr
 
 To migrate an existing dialog skill:
 
-1.  Use the classic experience to [download your dialog skill](/docs/assistant?topic=assistant-skill-tasks#skill-tasks-download){: external} in JSON format. 
+1.  Use the classic experience to [download your dialog skill](/docs/watson-assistant?topic=watson-assistant-admin-backup-restore#backup-restore-classic) in JSON format. 
 
 1.  In {{site.data.keyword.conversationshort}}, open the **Dialog** page.
 

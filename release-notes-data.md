@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-20"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -25,7 +25,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 When you install {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}}, the latest available version of the web chat integration is included. See the following table for details about the latest available web chat version for each {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} release. If your web chat version isn't locked, then the web chat integration is upgraded to the latest available version when you upgrade {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}}.
 
-The following table shows the latest version of the web chat integration that is included with each release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}}. {{site.data.keyword.icp4dfull}} supports web chat versions 5.1.1 or later. To customize and change version numbers, see [Controlling the web chat version](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+The following table shows the latest version of the web chat integration that is included with each release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}}. {{site.data.keyword.icp4dfull}} supports web chat versions 5.1.1 or later. To customize and change version numbers, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
 
 | {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} version | Latest web chat version available |
 |----------------|----------------|
@@ -71,7 +71,7 @@ Option to allow change of topic between actions and dialog
 :   If you are using actions and dialog, there is a new setting you can use to ensure that customers can change topics between an action and a dialog node. For more information, see [Allow change of topic between actions and dialog](/docs/watson-assistant?topic=watson-assistant-change-topic).
 
 Action and collection names must now be unique
-:   With this release, each action name must be different from other action names, and each collection name must be different from other collection names. If your existing actions or collections have duplicate names, a warning icon will appear in the Status column. For more information, see [Overview: Editing actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview) and [Organizing actions in collections](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-collections).
+:   With this release, each action name must be different from other action names, and each collection name must be different from other collection names. If your existing actions or collections have duplicate names, a warning icon will appear in the Status column. For more information, see [Overview: Editing actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview) and [Organizing actions in collections](/docs/watson-assistant?topic=watson-assistant-collections).
 
 ## 26 July 2023
 {: #assistant-data-jul262023}
@@ -87,7 +87,7 @@ Filtering the list of actions
 :   You can locate specific actions by filtering the list by subactions, by custom extension, or by variable. For more information, see [Filtering actions](/docs/watson-assistant?topic=watson-assistant-filter-actions).
 
 See which actions use a specific variable
-:   The Variables page now includes a new *Actions count* column. You can click on the number in the column to see which actions use a variable. For more information, see [Creating a session variable](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable).
+:   The Variables page now includes a new *Actions count* column. You can click on the number in the column to see which actions use a variable. For more information, see [Creating a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable).
 
 New expression choice for setting a session variable
 :   Previously, to use an expression to set or modify a variable value, you needed to pick an existing variable or create a new one and select the expression option. Now you can use a new **Expression** choice to write an expression directly without first picking a variable. For more information, see [Storing a value in a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#store-session-variable).
@@ -163,7 +163,7 @@ New expression choice for setting a session variable
 :   Previously, to use an expression to set or modify a variable value, you needed to pick an existing variable or create a new one and select the expression option. Now you can use a new Expression choice to write an expression directly without first picking a variable. For details, see [Storing a value in a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#store-session-variable).
 
 Using the Cloud Object Storage importer to migrate chat logs
-:   You can use the Cloud Object Storage importer service to migrate your chat logs from one installation of {{site.data.keyword.assistant_classic_short}} to another.For more information, see [Using the Cloud Object Storage importer to migrate chat logs](/docs/watson-assistant?topic=watson-assistant-cos-importer).
+:   You can use the Cloud Object Storage importer service to migrate your chat logs from one installation of {{site.data.keyword.assistant_classic_short}} to another.For more information, see [Using the Cloud Object Storage importer to migrate chat logs](/docs/watson-assistant?topic=watson-assistant-cos-importer-data).
 
 ## 2 May 2023
 {: #assistant-data-may022023}
@@ -204,7 +204,7 @@ For more information, see [Algorithm version and training](/docs/watson-assistan
 :   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.6.2 is compatible with {{site.data.keyword.icp4dfull}} Version 4.6. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install#install-support-matrix) for more details. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes various fixes and features.
 
 New {{site.data.keyword.assistant_classic_short}} v2 APIs
-:   {{site.data.keyword.assistant_classic_short}} now provides new methods related to assistants, skills, environments, and releases. For details, see the [{{site.data.keyword.assistant_classic_short}} v2 API documentation](https://cloud.ibm.com/apidocs/assistant/assistant-v2){: external}.
+:   {{site.data.keyword.assistant_classic_short}} now provides new methods related to assistants, skills, environments, and releases. For details, see the [{{site.data.keyword.assistant_classic_short}} v2 API documentation](https://{DomainName}/assistant/assistant-v2){: external}.
 
 ## 30 November 2022
 {: #assistant-data-nov302022}
@@ -296,7 +296,7 @@ Closed entity matching with accent-normalized values in French
 Pattern entities do not prevent spelling autocorrection
 :   Pattern entities that match all characters and words that are usually used to count input words do not prevent spelling autocorrection. For example, if a customer defines the `^..{0,19}$` pattern entity that matches the first 20 characters of an input, then the entity match does not affect spelling autocorrection. In this example, an input of `cancl transaction` is autocorrected to `cancel transaction`.
 
-   This change applies to the following languages: English and French. For more information, see [Correcting user input](/docs/watson-assistant?topic=watson-assistant-dialog-runtime-spell-check#dialog-runtime-spell-check-rules).
+   This change applies to the following languages: English and French. For more information, see [Autocorrecting user input](/docs/watson-assistant?topic=watson-assistant-autocorrection).
 
 Fuzzy matching updates
 :   Previously, an update was made so that interactions between the stemming and misspelling fuzzy matching features were not allowed. This change applied to the following languages: English, French, German, and Czech. This was updated so that this change applies only to the English language. For more information, see [How fuzzy matching works](/docs/watson-assistant?topic=watson-assistant-entities#entities-fuzzy-matching).
@@ -351,7 +351,7 @@ Dialog skill **Try it out** improvements
 Disambiguation feature updates
 :   The dialog skill disambiguation feature now includes improved features:
 
-    - **Increased control**: The frequency and depth of disambiguation can now be controlled by using the **sensitivity** parameter in the [workspace API](/apidocs/assistant-data/assistant-data-v1#updateworkspace){: external}. There are 5 levels of sensitivity:
+    - **Increased control**: The frequency and depth of disambiguation can now be controlled by using the **sensitivity** parameter in the [workspace API](https://{DomainName}/apidocs/assistant-v1#updateworkspace){: external}. There are 5 levels of sensitivity:
         - `high`
         - `medium_high`
         - `medium`
@@ -364,7 +364,7 @@ Disambiguation feature updates
 
     These new features may affect various metrics, such as disambiguation rate and click rates, as well as influence conversation-level key performance indicators such as containment.
 
-    If the new disambiguation algorithm works differently than expected for your assistant, you can adjust it using the sensitivity parameter in the update workspace API. For more information, see [Update workspace](/apidocs/assistant-data/assistant-data-v1#updateworkspace){: external}.
+    If the new disambiguation algorithm works differently than expected for your assistant, you can adjust it using the sensitivity parameter in the update workspace API. For more information, see [Update workspace](https://{DomainName}/apidocs/assistant-v1#updateworkspace){: external}.
 
 ## 26 January 2022
 {: #assistant-data-jan262022}
@@ -387,7 +387,7 @@ Disambiguation feature updates
 {{site.data.keyword.assistant_classic_full}} Cartridge for {{site.data.keyword.icp4dfull}} 4.0.2 is available
 :   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.0.2 is compatible with {{site.data.keyword.icp4dfull}} 4.0 on Red Hat OpenShift 4.8.
 
-[Integration with the {{site.data.keyword.icp4dfull}} auditing service](/docs/watson-assistant?topic=watson-assistant-audit-events)
+Integration with the {{site.data.keyword.icp4dfull}} auditing service
 :   {{site.data.keyword.assistant_classic_short}} integrates with the {{site.data.keyword.icp4dfull}} auditing service feature, providing standard auditing records for important lifecycle and security events. The service generates audit records for events such as intent edits, entity creation, dialog node deletion, and more.
 
 ## 29 July 2021
@@ -446,7 +446,7 @@ Search was added to the Dialog, Intents, and Entities pages
 :   You can now search within the product. For example, if you want to find any dialog nodes that condition on an intent, you can open the Dialog page and search on the intent name.
 
 v2 Logs API is available
-:   Use the v2 API logs method to list log events for an assistant. For more information, see the [API reference documentation](/apidocs/assistant-data-v2#listlogs).
+:   Use the v2 API logs method to list log events for an assistant. For more information, see the [API reference documentation](https://{DomainName}/apidocs/assistant-data-v2#listlogs).
 
 Features not included
 :   This release does not include the following features, which are available for cloud instances at the time of this release:
@@ -455,7 +455,7 @@ Features not included
    - The actions skill is not available.
    - You cannot enable FAQ extraction when you add a web crawl data collection to the search skill.
    - You cannot use the Activity Tracker service to track user actions for auditing purposes.
-   - You cannot manage user access at the individual skill and assistant level. You can control only who can access the entire service instance, which includes all of its skills and assistants. For more information about granting access to services in {{site.data.keyword.icp4dfull_notm}}, see [3.5 Managing users](https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/cpd/admin/users.html)} or [3.0.1 Managing users](https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.0.1/cpd/admin/users.html)}.
+   - You cannot manage user access at the individual skill and assistant level. You can control only who can access the entire service instance, which includes all of its skills and assistants. For more information about granting access to services in {{site.data.keyword.icp4dfull_notm}}, see [3.5 Managing users](https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/cpd/admin/users.html).
 
 ## 19 June 2020
 {: #assistant-data-jun192020}
@@ -465,7 +465,7 @@ Features not included
 :   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 1.4.2 is compatible with {{site.data.keyword.icp4dfull}} 3.0.1 on OpenShift Red Hat 3.11 or 4.5 and {{site.data.keyword.icp4dfull}} 2.5 deployments on OpenShift Red Hat 3.11. The 1.4.2 release is certified on Red Hat OpenShift 4.5.
 
 Autocorrection support was added
-:   Autocorrection helps your assistant understand what your customers want. It corrects misspellings in the input that customers submit before the input is evaluated. With more precise input, your assistant can more easily recognize entity mentions and understand the customer's intent. This feature is not available in all languages. See [Correcting user input](/docs/watson-assistant?topic=watson-assistant-dialog-runtime-spell-check) for more details.
+:   Autocorrection helps your assistant understand what your customers want. It corrects misspellings in the input that customers submit before the input is evaluated. With more precise input, your assistant can more easily recognize entity mentions and understand the customer's intent. This feature is not available in all languages. See [Autocorrecting user input](/docs/watson-assistant?topic=watson-assistant-autocorrection) for more details.
 
 French-language dialog skill improvements
 :   Added full support for fuzzy matching and contextual entities and added beta support for autocorrection.
@@ -477,7 +477,7 @@ Backup automation
 :   Support was added for doing data backups on a schedule.
 
 Stateless v2 message API
-:   The v2 runtime API now supports a new stateless `message` method. For more information, see the [API Reference](https://cloud.ibm.com/apidocs/assistant/assistant-data-v2#message-stateless)}.
+:   The v2 runtime API now supports a new stateless `message` method. For more information, see the [API Reference](https://{DomainName}/assistant/assistant-data-v2#message-stateless)}.
 
 Architecture improvements
 :   The Skill-conversation microservice was removed. The microservice used to convert v2 API calls to v1 format and the other way around. The conversion is now done within the Store microservice. Reimplementing this function in the Store increased the overall speed with which v2 API requests are processed. The Spellchecker and CLU Embedding microservices were added. The word embeddings that are used by the language understanding pipeline (training, TAS, ED-MM) now are stored in the CLU Embedding microservice instead of MongoDB.

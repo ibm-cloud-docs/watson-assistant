@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-08-08"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 content-type: tutorial
@@ -55,7 +55,7 @@ This tutorial will take approximately 4 to 5 hours to complete.
 
 1.  Create a Plus plan {{site.data.keyword.discoveryshort}} service instance.
 
-    Go to the [{{site.data.keyword.discoveryshort}}](https://cloud.ibm.com/catalog/services/watson-discovery){: external} resource page in the {{site.data.keyword.cloud_notm}} catalog and create a Plus plan service instance. 
+    Go to the [{{site.data.keyword.discoveryshort}}](/catalog/services/watson-discovery){: external} resource page in the {{site.data.keyword.cloud_notm}} catalog and create a Plus plan service instance. 
     
     Specify **Dallas** as the location. 
     
@@ -149,7 +149,7 @@ Both Lite and Trial plan {{site.data.keyword.conversationshort}} service instanc
     Keep the {{site.data.keyword.discoveryshort}} page open in a separate tab, so you can switch between the two applications.
     {: tip}
 
-1.  From the [{{site.data.keyword.conversationshort}}](https://cloud.ibm.com/catalog/services/watson-assistant){: external} resource page in the {{site.data.keyword.cloud_notm}} catalog, create a Trial plan {{site.data.keyword.conversationshort}} service instance in the Dallas location.
+1.  From the [{{site.data.keyword.conversationshort}}](/catalog/services/watson-assistant){: external} resource page in the {{site.data.keyword.cloud_notm}} catalog, create a Trial plan {{site.data.keyword.conversationshort}} service instance in the Dallas location.
 
 1.  From the {{site.data.keyword.conversationshort}} plan service page in {{site.data.keyword.cloud_notm}}, click **Launch {{site.data.keyword.conversationshort}}**.
 
@@ -248,7 +248,7 @@ You can use a search extension in {{site.data.keyword.conversationshort}} to con
     Keep the pages to the other services open in separate tabs, so you can switch between the different service instances.
     {: tip}
 
-1.  From the [NeuralSeek](https://cloud.ibm.com/catalog/services/neuralseek){: external} resource page in the {{site.data.keyword.cloud_notm}} catalog, create a Lite plan service instance.
+1.  From the [NeuralSeek](/catalog/services/neuralseek){: external} resource page in the {{site.data.keyword.cloud_notm}} catalog, create a Lite plan service instance.
 
 1.  On the *Configure* page, add details about your {{site.data.keyword.discoveryshort}} service instance and customize the connection. 
 
@@ -293,7 +293,7 @@ While the index is being rebuilt, let's get our assistant ready.
 
 Connect your assistant to your NeuralSeek service instance.
 
-1.  Reopen the NeuralSeek service from {{site.data.keyword.cloud_notm}}. You can find the instance in the *AI and Machine Learning* section of your [resource list](https://cloud.ibm.com/resources){: external}.
+1.  Reopen the NeuralSeek service from {{site.data.keyword.cloud_notm}}. You can find the instance in the *AI and Machine Learning* section of your [resource list](/resources){: external}.
 
 1.  Click the *Integrate* tab and follow the instructions to set up the NeuralSeek custom extension for your assistant. Return to this procedure when you're ready to create the action.
 

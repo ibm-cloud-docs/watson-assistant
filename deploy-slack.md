@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -39,7 +39,7 @@ After you create an action, you can integrate your assistant with Slack.
 
 When integrated, depending on the events that you configure the assistant to support, your assistant can respond to questions that are asked in direct messages or in channels where the assistant is directly mentioned.
 
-An example and instructions on how to create a Slackbot using {{site.data.keyword.conversationshort}}, Slack, and Db2 are given in the solution tutorial, [Build a database-driven Slackbot](https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-slack-chatbot-database-watson).
+An example and instructions on how to create a Slackbot using {{site.data.keyword.conversationshort}}, Slack, and Db2 are given in the solution tutorial, [Build a database-driven Slackbot](/docs/solution-tutorials?topic=solution-tutorials-slack-chatbot-database-watson).
 
 ## Adding the Slack integration
 {: #deploy-slack-task}

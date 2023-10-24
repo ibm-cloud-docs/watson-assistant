@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-12"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -16,7 +16,7 @@ subcollection: watson-assistant
 
 The REST API supports modifying your dialog programmatically. You can use the `/dialog_nodes` API to create, delete, or modify dialog nodes.
 
-A dialog is a tree of interconnected nodes, and that it must conform to certain rules to be valid. Any change that you make to a dialog node might have cascading effects on other nodes, or on the structure of your dialog. Before you use the `/dialog_nodes` API to modify your dialog, make sure you understand how your changes affect the rest of the dialog. You can make a backup copy of the current dialog For more information, see [Backing up and restoring data](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-admin-backup-restore).
+A dialog is a tree of interconnected nodes, and that it must conform to certain rules to be valid. Any change that you make to a dialog node might have cascading effects on other nodes, or on the structure of your dialog. Before you use the `/dialog_nodes` API to modify your dialog, make sure you understand how your changes affect the rest of the dialog. You can make a backup copy of the current dialog For more information, see [Backing up and restoring data](/docs/watson-assistant?topic=watson-assistant-admin-backup-restore).
 
 A valid dialog always satisfies the following criteria:
 

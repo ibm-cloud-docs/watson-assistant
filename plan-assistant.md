@@ -90,6 +90,4 @@ If you deploy by using the phone integration, you can reach a human agent only b
 ## Start building an assistant
 {: #plan-build}
 
-
-
 If you're ready to start building an assistant, see [Editing actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview) for more information.

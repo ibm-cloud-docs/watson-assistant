@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-08-23"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -40,9 +40,9 @@ An action is considered incomplete for these reasons:
 
 | Reason | Description |
 | ------ | ---------- |
-| Escalated to agent | The user explicitly asks to speak to someone, triggering the [Fallback action](/docs/watson-assistant?topic=watson-assistant-handle-errors#fallback-action). For more information, see [When your customer asks to speak to a live agent](/docs/watson-assistant?topic=watson-assistant-handle-errors#when-your-customer-asks-to-speak-to-a-human-agent). Or, the user chooses human agent escalation from the list of [suggestions in web chat](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat#deploy-web-chat-alternate). |
+| Escalated to agent | The user explicitly asks to speak to someone, triggering the [Fallback action](/docs/watson-assistant?topic=watson-assistant-handle-errors#fallback-action). For more information, see [When your customer asks to speak to a live agent](/docs/watson-assistant?topic=watson-assistant-handle-errors#fallback-human-agent). Or, the user chooses live agent escalation from the list of [suggestions in web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-suggestions). |
 | Started a new action | The user changes the topic of the conversation, triggering another action, and either doesn't return to the original action or the other action is also incomplete. |
-| Stuck on a step |  Triggered during step validation where a user exceeds the maximum retries for the particular step. Default tries is 3, but you can change this setting. For more information, see [Customizing validation for a response](/docs/watson-assistant?topic=watson-assistant-handle-errors#customizing-validation-for-a-response). |
+| Stuck on a step |  Triggered during step validation where a user exceeds the maximum retries for the particular step. Default tries is 3, but you can change this setting. For more information, see [Customizing validation for a response](/docs/watson-assistant?topic=watson-assistant-handle-errors#customize-validation). |
 | Abandoned | An action is considered abandoned if it was not completed after 1 hour of inactivity and doesn't meet the criteria for any other incompletion reason. |
 | Trigger phrase | During an action, the customer used a keyword or phrase that activated the *Trigger word detected* action, leaving the original action unfinished. For more information, see [Detecting trigger words](/docs/watson-assistant?topic=watson-assistant-trigger-phrases). |
 {: caption="Incompletion reasons" caption-side="bottom"}

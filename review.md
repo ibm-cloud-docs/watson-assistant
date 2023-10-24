@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-06-07"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -55,7 +55,7 @@ Changes are saved when you:
 -   Open Preview
 -   Reset Preview
 
-To learn more about saving changes, see [Saving your work](/docs/watson-assistant?topic=watson-assistant-save-work).
+To learn more about saving changes, see [Saving your actions](/docs/watson-assistant?topic=watson-assistant-save-actions).
 
 If you make several edits without saving, the preview pane shows a message that you need to save before you test your changes. 
 

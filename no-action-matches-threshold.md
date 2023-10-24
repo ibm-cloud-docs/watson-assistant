@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-06"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -13,9 +13,9 @@ subcollection: watson-assistant
 # Setting a threshold to trigger the "No action matches" system action
 {: #no-action-matches-threshold}
 
-Unrecognized input by customers triggers the [No action matches](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches) action that can be configured to fetch answers from a [search integration](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-search-add#search-no-action-matches) or trigger the [Fallback](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-handle-errors#fallback-action) action. 
+Unrecognized input by customers triggers the [No action matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches) action that can be configured to fetch answers from a [search integration](/docs/watson-assistant?topic=watson-assistant-search-add#search-no-action-matches) or trigger the [Fallback](/docs/watson-assistant?topic=watson-assistant-handle-errors#fallback-action) action. 
 
-For more information, see [When the assistant can't understand your customer's request](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches).
+For more information, see [When the assistant can't understand your customer's request](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches).
 
 By setting this threshold, you can affect how often your assistant routes customers to the “No action matches” action.
 

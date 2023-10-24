@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-27"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -65,15 +65,14 @@ Follow these steps to add integrations to your assistant:
 
     **Phone live agent integrations**
     - [Phone with Genesys Cloud](/docs/watson-assistant?topic=watson-assistant-deploy-phone-genesys)
-    - [Phone with NICE CXone](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-phone-nicecxone)
+    - [Phone with NICE CXone](/docs/watson-assistant?topic=watson-assistant-deploy-phone-nicecxone)
     - [Phone with Twilio Flex](/docs/watson-assistant?topic=watson-assistant-deploy-phone-flex)
     - [Bring your own live agent integration](/docs/assistant?topic=assistant-deploy-phone#deploy-phone-transfer-service){: external}
 
 1.  Follow the instructions provided on screen to complete the integration process.
 
-![Plus or higher plans only](images/plus.png) For environments where private endpoints are in use, keep in mind that these integrations send traffic over the internet.
+[Plus]{: tag-green} For environments where private endpoints are in use, keep in mind that these integrations send traffic over the internet.
 {: note}
-
 
 ## How live agent integrations work
 {: #deploy-integration-live-agent-integrations}

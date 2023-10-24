@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-08-20"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -17,8 +17,8 @@ subcollection: watson-assistant
 
 You can configure the web chat to transfer a customer to a live agent if the customer asks for help from a person. The following service desk integrations are available for your assistant:
 
-- [Genesys](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-genesys)
-- [NICE CXone](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-nice-cxone)
+- [Genesys](/docs/watson-assistant?topic=watson-assistant-deploy-genesys)
+- [NICE CXone](/docs/watson-assistant?topic=watson-assistant-deploy-nice-cxone)
 - [Salesforce](/docs/watson-assistant?topic=watson-assistant-deploy-salesforce) {: #deploy-web-chat-salesforce}
 - [Zendesk](/docs/watson-assistant?topic=watson-assistant-deploy-zendesk) {: #deploy-web-chat-zendesk}
 

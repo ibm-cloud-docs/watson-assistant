@@ -117,7 +117,7 @@ You can also specify the JWT at the beginning of the session by using the `ident
 {: note}
 
 ## Updating the web chat settings
-{: #web-chat-security-enable}
+{: #web-chat-security-enable-update}
 
 Now that you have configured the web chat to send signed JWTs, you can enable web chat security in the web chat integration settings.
 

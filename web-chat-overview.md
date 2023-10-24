@@ -45,6 +45,7 @@ The web chat widget uses cutting-edge functionality from IBM Design and Research
 The web chat is also customizable, which means that you can take advantage of the web chat functionality while still maintaining consistency with your website style and branding, adding custom UI elements, and integrating with external systems (such as live agent tools or CRM systems).
 
 ## What you can do with the web chat
+{: #web-chat-overview-what-you-can-do}
 
 You can quickly deploy the web chat to your website (or even to a local test page) and see how it works. You can also use the web chat integration settings in the {{site.data.keyword.conversationshort}} user interface to configure the web chat for your website and your customers.
 

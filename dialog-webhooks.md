@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-10-04"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -111,7 +111,7 @@ To use a webhook from a dialog node, you must enable webhooks on the node, and t
 
 1. Add any data that you want to pass to the external application as key and value pairs in the *Parameters* section.
 
-   Parameters are passed as request body properties. You cannot specify query parameters or URL parameters in a dialog node. These parameters can be configured with static values only as part of the webhook definition. For more information, see [Defining the webhook](https://cloud.ibm.com/docs/assistant?topic=assistant-dialog-webhooks#dialog-webhooks-create).
+   Parameters are passed as request body properties. You cannot specify query parameters or URL parameters in a dialog node. These parameters can be configured with static values only as part of the webhook definition. For more information, see [Defining the webhook](/docs/assistant?topic=assistant-dialog-webhooks#dialog-webhooks-create).
    {: note}
 
    For example, if you call the Language Translator service, you must provide values for the following parameters:
@@ -219,7 +219,7 @@ Use the following tips when you call a {{site.data.keyword.openwhisk_short}} web
 
     If the external application that you call returns a response, it must be able to send back a response in JSON format.
 
-    Notice the request URL in this example ends in `.json`. By specifying this extension, you take advantage of a feature of web actions where you can specify the content type of the response. Specifying this extension type ensures that, if the web actions can return responses in more than one format, a JSON response is returned. For more information, see [Content extensions](https://cloud.ibm.com/docs/openwhisk?topic=openwhisk-actions_web#extra_features){: external}.
+    Notice the request URL in this example ends in `.json`. By specifying this extension, you take advantage of a feature of web actions where you can specify the content type of the response. Specifying this extension type ensures that, if the web actions can return responses in more than one format, a JSON response is returned. For more information, see [Content extensions](/docs/openwhisk?topic=openwhisk-actions_web#extra_features){: external}.
     {: tip}
 
 1. If the web action is secured, specify any headers, such as `X-Require-Whisk-Auth`, that are required to call the web action.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-03"
+lastupdated: "2023-10-24"
 
 keywords: global support, universal language, universal model, another language
 
@@ -51,7 +51,7 @@ For more information about feature support in the universal language model, see 
 
 Keep these tips in mind for integrations:
 
-- Phone integration: If you want to deploy an assistant that uses the universal language model, you must connect to custom Speech service language models that can understand the language you're using. For more information about supported language models, see the [Speech to Text](/docs/speech-to-text?topic=speech-to-text-models#modelsList){: external} and [Text to Speech](/docs/text-to-speech?topic=text-to-speech-voices#languageVoices){: external} documentation.
+- Phone integration: If you want to deploy an assistant that uses the universal language model, you must connect to custom Speech service language models that can understand the language you're using. For more information about supported language models, see the [Speech to Text](/docs/speech-to-text?topic=speech-to-text-models-ng#models-ng-supported){: external} and [Text to Speech](/docs/text-to-speech?topic=text-to-speech-voices){: external} documentation.
 - Search integration: If you build an assistant that specializes in a single language, be sure to connect it to data collections that are written in that language. For more information about the languages that are supported by {{site.data.keyword.discoveryshort}}, see [Language support](/docs/discovery-data?topic=discovery-data-language-support){: external}.
 - Web chat: Web chat has some hardcoded strings that you can customize to reflect your target language. For more information, see [Supporting global audiences](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-global).
 

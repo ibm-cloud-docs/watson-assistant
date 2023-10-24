@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-13"
+lastupdated: "2023-10-24"
 
 keywords: slot, slots
 
@@ -116,7 +116,7 @@ Using slots produces a more natural dialog flow between the user and your assist
       If you make a slot optional, reference its context variable in the node-level response text if you can word it such that it makes sense even if no value is provided for the slot. For example, you might word a summary statement like this, `I am ordering a $size $dietary pizza for delivery at $time.` The resulting text makes sense whether the dietary restriction information, such as `gluten-free` or `dairy-free`, is provided or not. The result is either, `I am ordering a large gluten-free pizza for delivery at 3:00PM.` or `I am ordering a large pizza for delivery at 3:00PM.`
       {: tip}
 
-    - **Conditional**: If you want a slot to be enabled only under certain conditions, then you can add a condition to it. For example, if slot 1 asks for a meeting start time, slot 2 captures the meeting duration, and slot 3 captures the end time, then you might want to enable slot 3 only if a value for slot 2 is not provided. To make a slot conditional, edit the slot, and then from the **More** ![More icon](images/overflow-menu--vertical.png) menu, select **Enable condition**. Define the condition that must be met for the slot to be enabled.
+    - **Conditional**: If you want a slot to be enabled only under certain conditions, then you can add a condition to it. For example, if slot 1 asks for a meeting start time, slot 2 captures the meeting duration, and slot 3 captures the end time, then you might want to enable slot 3 only if a value for slot 2 is not provided. To make a slot conditional, edit the slot, and then from the **More** ![More icon](images/overflow-menu--vertical.svg) menu, select **Enable condition**. Define the condition that must be met for the slot to be enabled.
 
        You can condition on the value of a context variable from an earlier slot because the order in which the slots are listed is the order in which they are evaluated. However, condition on a slot context variable that you can be confident contains a value when this slot is evaluated. The earlier slot must be a required slot, for example.
        {: tip}
@@ -153,7 +153,7 @@ The following slot properties can help you check and set values in slot context 
 | `all_slots_filled` | Evaluates to true only if all of the context variables for all of the slots in the node have been set. See [Preventing a Found response from displaying when it is not needed](#dialog-slots-stifle-found-responses) for a usage example. |
 | `event.current_value` | Current value of the context variable for this slot. See [Replacing a slot context variable value](#dialog-slots-found-handler-event-properties) for a usage example for this property and the event.previous_value property. |
 | `event.previous_value` | Previous value of the context variable for this slot. |
-| `has_skipped_slots` | True if any of the slots or slot handlers that are configured with a next step option that skips slots was processed. See [Adding conditions to Found and Not found responses](#slot-handler-next-steps) for more information about next step options for slots and [Handling requests to exit a process](#dialog-slots-node-level-handler) for information about next step options for slot handlers. |
+| `has_skipped_slots` | True if any of the slots or slot handlers that are configured with a next step option that skips slots was processed. See [Adding conditions to Found and Not found responses](#dialog-slots-handler-next-steps) for more information about next step options for slots and [Handling requests to exit a process](#dialog-slots-node-level-handler) for information about next step options for slot handlers. |
 | `slot_in_focus` | Forces the slot condition to be applied to the current slot only. See [Getting confirmation](#dialog-slots-get-confirmation) for more details. You can use this property to collect and store the exact words that are submitted by a customer. See [Collecting summary information from the customer](#dialog-slots-get-confirmation). |
 {: caption="Slot properties" caption-side="bottom"}
 

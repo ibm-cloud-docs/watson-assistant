@@ -333,7 +333,7 @@ toc:
               href: https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration
       - link:
           label: REST API reference
-          href: https://cloud.ibm.com/apidocs/assistant/assistant-v2
+          href: https://{DomainName}/apidocs/assistant/assistant-v2
       - filter-reference.md
       - topicgroup:
           label: System entities
@@ -354,7 +354,7 @@ toc:
               label: Stack Overflow
               href: https://stackoverflow.com/questions/tagged/watson-assistant
           - link:
-              label: IBM Watson Natural Language AI Community
+              label: IBM AI and Data Science Community
               href: https://community.ibm.com/community/user/watsonai/communities/community-home?CommunityKey=7a3dc5ba-3018-452d-9a43-a49dc6819633
       - accessibility.md
       - browser-support.md

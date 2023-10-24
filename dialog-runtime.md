@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-29"
+lastupdated: "2023-10-24"
 
 keywords: digression, disambiguation, confidence 
 
@@ -104,7 +104,7 @@ To edit the disambiguation settings, complete the following steps:
 
 Your changes are automatically saved.
 
-You can use the API to modify more disambiguation settings. These settings include the disambiguation sensitivity, which affects how often disambiguation is triggered and how many choices are included. For more information, see the [API Reference](https://cloud.ibm.com/apidocs/assistant/assistant-v1?curl=#updateworkspace){: external}.
+You can use the API to modify more disambiguation settings. These settings include the disambiguation sensitivity, which affects how often disambiguation is triggered and how many choices are included. For more information, see the [API Reference](https://{DomainName}/assistant/assistant-v1?curl=#updateworkspace){: external}.
 {: tip}
 
 ### Choosing nodes to not show as disambiguation options
@@ -267,13 +267,6 @@ After you finish testing, remove any SpEL expressions that you appended to node 
 A digression occurs when a user is in a dialog flow that addresses one goal, but switches topics to initiate a dialog flow that addresses a different goal. If none of the nodes in the dialog branch match the goal of the user's last input, the conversation checks the root node conditions for an appropriate match. The digression settings that are available per node give you the ability to tailor this behavior even more.
 
 With digression settings, you can allow the conversation to return to the dialog flow that was interrupted when the digression occurred. For example, the user might be ordering a new phone, but switches topics to ask about tablets. Your dialog can answer the question about tablets, and then bring the user back to where they left off with the phone order. Allowing digressions to occur and return gives your users more control over the flow of the conversation at run time. They can change topics, follow a dialog flow about the unrelated topic to its end, and then return to where they were before. The result is a dialog flow that more closely simulates a human-to-human conversation.
-
-- [Before you begin](#dialog-runtime-digression-prereqs)
-- [Customizing digressions](#dialog-runtime-enable-digressions)
-- [Digression usage tips](#dialog-runtime-digress-tips)
-- [Disabling digressions into a root node](#dialog-runtime-disable-digressions)
-- [Digression tutorial](#dialog-runtime-digression-tutorial)
-- [Design considerations](#dialog-runtime-digression-design-considerations)
 
 ### Before you begin
 {: #dialog-runtime-digression-prereqs}
