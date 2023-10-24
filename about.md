@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-18"
+lastupdated: "2023-10-24"
 
 keywords: chatbot, live chatbot, omnichannel
 
@@ -69,4 +69,4 @@ For information about the web browsers that are supported by the web chat integr
 ## Language support
 {: #about-lang-support}
 
-Language support by feature is detailed in [Supported languages](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-admin-language-support#admin-language-support-codes).
+Language support by feature is detailed in [Supported languages](/docs/watson-assistant?topic=watson-assistant-admin-language-support#admin-language-support-codes).

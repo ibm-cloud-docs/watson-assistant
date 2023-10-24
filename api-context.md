@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-04"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -19,13 +19,13 @@ The *context* is an object that contains variables that persist throughout a con
 
 You can choose whether you want the context to be maintained by your application or by the {{site.data.keyword.conversationshort}} service:
 
-- If you use the stateful v2 `message` API, the context is automatically maintained by the assistant on a per-session basis. Your application must explicitly create a session at the beginning of each conversation. The context is stored by the service as part of the session and is not returned in message responses unless you request it. For more information, see the [v2 API Reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2#message){: external}.
+- If you use the stateful v2 `message` API, the context is automatically maintained by the assistant on a per-session basis. Your application must explicitly create a session at the beginning of each conversation. The context is stored by the service as part of the session and is not returned in message responses unless you request it. For more information, see the [v2 API Reference](https://{DomainName}/assistant/assistant-v2#message){: external}.
 
 - If you use the stateless v2 `message` API (or the legacy v1 `message` API) your application is responsible for storing the context after each conversation turn and sending it back to the service with the next message. For a complex application, or an application that needs to store personally identifiable information, you might choose to store the context in a database.
 
-   A session ID is automatically generated at the beginning of the conversation, but no session data is stored by the service. With the stateless `message` API, the context is always included with each message response. For more information, see the [v2 API Reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2#messagestateless){: external}.
+   A session ID is automatically generated at the beginning of the conversation, but no session data is stored by the service. With the stateless `message` API, the context is always included with each message response. For more information, see the [v2 API Reference](https://{DomainName}/assistant/assistant-v2#messagestateless){: external}.
 
-**Important:** One use of the context is to specify a unique user ID for each user who interacts with the assistant. For user-based plans, this ID is used for billing purposes. For more information, see [User-based plans explained](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-admin-managing-plan#admin-managing-plan-user-based).
+**Important:** One use of the context is to specify a unique user ID for each user who interacts with the assistant. For user-based plans, this ID is used for billing purposes. For more information, see [User-based plans explained](/docs/watson-assistant?topic=watson-assistant-admin-managing-plan#admin-managing-plan-user-based).
 
 There are two types of context:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: “2023-08-29”
+lastupdated: “2023-10-24”
 
 subcollection: watson-assistant
 
@@ -26,7 +26,7 @@ Because the `user_id` value that you submit is included in the `customer_id` val
 
 To support these user-based capabilities, add the [`updateUserID()` method](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateuserid){: external} in the code snippet before you paste it into your web page.
 
-If you enable security, you set the user ID in the JSON Web Token instead. For more information, see [Authenticating users](/docs/watson-assistant?topic=watson-assistant-web-chat-security#web-chat-security-authenticate).
+If you enable security, you set the user ID in the JSON Web Token instead. For more information, see [Authenticating users](/docs/watson-assistant?topic=watson-assistant-web-chat-security-authenticate).
 {: note}
 
 In the following example, the user ID `L12345` is added to the script.
@@ -62,9 +62,9 @@ To avoid this problem, use a server-side first-party cookie in your web applicat
 
 ## More information
 
-For more information about billing, see [User-based plans explained](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-admin-managing-plan).
+For more information about billing, see [User-based plans explained](/docs/watson-assistant?topic=watson-assistant-admin-managing-plan).
 
-For more information about MAU limits per plan, see [Pricing](https://www.ibm.com/products/watsonx-assistant/pricing).
+For more information about MAU limits per plan, see [Pricing](https://www.ibm.com/products/watsonx-assistant/pricing){: external}.
 
-For more information about deleting a user's data, see [Labeling and deleting data](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-admin-securing).
+For more information about deleting a user's data, see [Labeling and deleting data](/docs/watson-assistant?topic=watson-assistant-admin-securing).
 

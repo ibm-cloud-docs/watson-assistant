@@ -40,7 +40,6 @@ After you create an action, you can integrate your assistant with Facebook Messe
 There is currently no mechanism for identifying users who interact with the assistant through Facebook Messenger, which means that there is no way to identify or delete data associated with a specific user. Do not use this integration method for deployments that must be GDPR compliant.
 {: important}
 
-
 1. Go to the **Integrations** page by clicking the integrations icon (![Integrations icon](images/integrations-icon.png)) in the left menu.
 
 1. Click **Add** on the **Facebook Messenger** tile.

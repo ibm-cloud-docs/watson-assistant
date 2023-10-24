@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-09"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -97,10 +97,12 @@ To pass values to the subaction:
 
 You can call an extension that has been added to your assistant in order to interact with an external service. For example, you might use an extension to interact with a ticketing or customer relationship management (CRM) system, or to retrieve real-time data such as mortgage rates or weather conditions. For more information about calling an extension, see [Calling an extension](/docs/watson-assistant?topic=watson-assistant-call-extension).
 
-## Search for the answer ![Plus or higher plan only](images/plus.png)
+## Search for the answer
 {: #search-for-answer}
 
-This option indicates that the assistant should use the {{site.data.keyword.discoveryfull}} service to search an external data source for information related to the customer's question. To use this option, you must configure a search integration for your assistant. For more information about configuring a search integration, see [Leveraging existing help content](/docs/watson-assistant?topic=watson-assistant-search-add).
+[Plus]{: tag-green}
+
+This option indicates that the assistant should use the {{site.data.keyword.discoveryfull}} service to search an external data source for information related to the customer's question. To use this option, you must configure a search integration for your assistant. For more information about configuring a search integration, see [{{site.data.keyword.discoveryfull}} search integration setup](/docs/watson-assistant?topic=watson-assistant-search-add).
 
 ## Connect to agent
 {: #connect-to-agent}

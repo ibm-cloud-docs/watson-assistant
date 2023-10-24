@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-07-06"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -47,7 +47,7 @@ To encrypt sensitive data:
 
 1. On the **Security** tab of the web chat integration settings, click the **Generate key** button. 
 
-1. Copy the public key that displays in the **IBM-provided public key** field. This field is available only if [web chat security is enabled](#web-chat-security-enable).
+1. Copy the public key that displays in the **IBM-provided public key** field. This field is available only if web chat security is enabled.
 
 1. In the JavaScript function you use to create your JWT, include in the payload a private claim called `user_payload`. Use this claim to contain the sensitive data, encrypted with the IBM public key.
 

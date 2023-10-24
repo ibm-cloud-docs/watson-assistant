@@ -2,7 +2,7 @@
 
 copyright:
 years: 2015, 2023
-lastupdated: "2023-08-22"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -217,7 +217,7 @@ This expression first gets the current date in milliseconds (since January 1, 19
 
 These methods help you get and reformat number values.
 
-For information about recognizing numbers in customer responses, see [Choosing a response type](/docs/watson-assistant?topic=watson-assistant-collect-info#choosing-a-response-type).
+For information about recognizing numbers in customer responses, see [Choosing a response type](/docs/watson-assistant?topic=watson-assistant-collect-info#choose-type).
 
 If you want to change the decimal placement for a number (for example, to reformat a number as a currency value), see the [String format() method](#expression-methods-actions-strings-java-lang-String-format).
 

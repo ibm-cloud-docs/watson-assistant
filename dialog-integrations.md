@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-12"
+lastupdated: "2023-10-24"
 
 keywords: integration settings
 
@@ -60,7 +60,7 @@ You can customize the conversation in the following ways:
 
 The rich response types often behave differently when they are displayed in different built-in integrations or in the assistant preview.
 
-If you need to provide customized responses for different channels, and you do not need to modify your dialog flow based on which integration is in use, you can also use the `channels` array to target your responses to specific integrations. For more information, see [Targeting specific integrations](/docs/watson-assistant?topic=watson-assistant-dialog-responses-json#dialog-responses-json-target-integrations).
+If you need to provide customized responses for different channels, and you do not need to modify your dialog flow based on which integration is in use, you can also use the `channels` array to target your responses to specific integrations.
 {: note}
 
 ## Web chat: Accessing sensitive data
@@ -117,7 +117,7 @@ You might embed the web chat in multiple pages on your website. Perhaps you want
 ## Web chat: Reusing the JWT for webhook authentication
 {: #dialog-integrations-chat-jwt}
 
-You can use the same JSON Web Token (JWT) that was used to secure your web chat to authenticate webhook calls. If you specify a token in the `identityToken` property when you add the web chat to your web page, the token is stored in a private variable named `context.integrations.chat.private.jwt`. For more information about passing a JWT, see [Enabling web chat security](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-web-chat-security-enable).
+You can use the same JSON Web Token (JWT) that was used to secure your web chat to authenticate webhook calls. If you specify a token in the `identityToken` property when you add the web chat to your web page, the token is stored in a private variable named `context.integrations.chat.private.jwt`. For more information about passing a JWT, see [Enabling web chat security](/docs/watson-assistant?topic=watson-assistant-web-chat-security-enable).
 
 1. In your dialog, open **Webhooks**.
 

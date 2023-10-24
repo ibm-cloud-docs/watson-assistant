@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -122,7 +122,7 @@ To set up the integration, complete the following steps:
 
 If you don't have a text messaging phone number, set up an *SMS with IntelePeer* account and get a phone number.
 
-1.  Go to the [IntelePeer website](https://www.intelepeer.com/){: external}.
+1.  Go to the [IntelePeer website](https://www.intelepeer.ai/){: external}.
 1.  Create an account or start a free trial.
 
     When you get an IntelePeer phone number, it supports voice and SMS. If the number is not automatically enabled for SMS, you will need to enable it manually. Your new phone number is listed as an active number. Refer to the [Atmosphere Messaging Quick Start Guide](https://docs.intelepeer.com/atmosphere/Content/Atmosphere-SMS-Messaging/Atmosphere-SMS-Messaging-Quick-Start-Guide.htm){: external}

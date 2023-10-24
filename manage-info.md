@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-31"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -31,7 +31,7 @@ The data that is stored by a variable is characterized by the type of data that 
 ## Action variables and session variables
 {: #manage-info-action-session-variables}
 
-{{site.data.keyword.conversationshort}} supports two categories of variables:
+{{site.data.keyword.conversationfull}} supports two categories of variables:
 
 - **Action variables**: When a step collects information from the customer, the customer response is automatically stored in an *action variable*. You can think of action variables as short-term memory: they persist only during the current action.
 
@@ -62,7 +62,7 @@ To add a session variable that can be accessed by any action:
 
     As you add the name, an ID is generated for you. Any spaces in the name are replaced with underscores (_) in the ID.
 
-1. **Optional**: Add a type to set the response type of the variable. (For more information about response types, see [Choosing a response type](/docs/watson-assistant?topic=watson-assistant-collect-info#choosing-a-response-type).)
+1. **Optional**: Add a type to set the response type of the variable. (For more information about response types, see [Choosing a response type](/docs/watson-assistant?topic=watson-assistant-collect-info#choose-type).)
 
     From this field, you can also select any of the saved responses that you created. For more information about saved responses, see [Saving and reusing customer responses](/docs/watson-assistant?topic=watson-assistant-collect-info#saved-customer-responses).
 

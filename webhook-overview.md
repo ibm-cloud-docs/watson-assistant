@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-09-27"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -22,7 +22,7 @@ You can use the following types of webhooks in your assistant. They are called w
 - [Postmessage](/docs/watson-assistant?topic=watson-assistant-webhook-post)
 - [Logs](/docs/watson-assistant?topic=watson-assistant-webhook-log)
 
-If you are using dialog, you can add a dialog webhook. When used in a dialog skill, a webhook is triggered when the assistant processes a node with a webhook that is enabled. For more information, see [Making a programmatic call from dialog](/docs/assistant?topic=watson-assistant-dialog-webhooks).
+If you are using dialog, you can add a dialog webhook. When used in a dialog skill, a webhook is triggered when the assistant processes a node with a webhook that is enabled. For more information, see [Making a programmatic call from dialog](/docs/watson-assistant?topic=watson-assistant-dialog-webhooks).
 
 | Type | Frequency | Conditions |
 | --- | --- | --- |

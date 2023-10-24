@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -25,8 +25,8 @@ The products, services, and other capabilities described herein can have restric
 
 If you need to request GDPR support for {{site.data.keyword.cloud}} {{site.data.keyword.watson}} resources:
 
-- In the European Union, see [Requesting support for IBM Cloud Watson resources in the European Union](/docs/watson/getting-started-gdpr-sar?topic=watson-gdpr-sar#request-EU){: external}.
-- Outside the European Union, see [Requesting support for resources outside the European Union](/docs/watson/getting-started-gdpr-sar?topic=watson-gdpr-sar#request-non-EU){: external}.
+- In the European Union, see [Requesting support for IBM Cloud Watson resources created in the European Union](/docs/watson?topic=watson-gdpr-sar#request-EU){: external}.
+- Outside the European Union, see [Requesting support for resources outside the European Union](/docs/watson?topic=watson-gdpr-sar#request-non-EU){: external}.
 
 ## European Union General Data Protection Regulation (GDPR)
 {: #securing-gdpr}
@@ -51,7 +51,7 @@ To prevent IBM from using your log data for general service improvements, comple
 
 - If you use a custom application, for each API `/message` request, set the `X-Watson-Learning-Opt-Out` header parameter to `true`.
 
-    For more information, see [Data collection](/apidocs/assistant/assistant-v2#data-collection){: external}.
+    For more information, see [Data collection](https://{DomainName}/apidocs/assistant/assistant-v2#data-collection){: external}.
 - If you use the web chat integration, add the `learningOptOut` parameter to the script that you embed in your web page, and set it to `true`.
 
     For more information, see [Configuration](https://integrations.us-south.assistant.watson.cloud.ibm.com/web/developer-documentation/api-configuration){: external}.
@@ -99,7 +99,7 @@ curl -X POST -u "apikey:3Df... ...Y7Pc9"
 ```
 {: pre}
 
-where {url} is the appropriate URL for your instance. For more information, see [Service endpoint](/apidocs/assistant/assistant-v2#service-endpoint){: external}.
+where {url} is the appropriate URL for your instance. For more information, see [Service endpoint](https://{DomainName}/apidocs/assistant/assistant-v2#service-endpoint){: external}.
 
 The `customer_id` string cannot include the semicolon (`;`) or equal sign (`=`) characters. You are responsible for ensuring that each `customer ID` property is unique across your customers.
 {: note}
@@ -108,7 +108,7 @@ Only the first **customer ID** value that is passed in the `X-Watson-Metadata` h
 
 If you add search to an assistant, user input that is submitted to the assistant is passed to the {{site.data.keyword.discoveryshort}} service as a search query. If the {{site.data.keyword.conversationshort}} integration provides a customer ID, then the resulting `/message` API request includes the customer ID in the header, and the ID is passed through to the {{site.data.keyword.discoveryshort}} `/query` API request. 
 
-To delete query data associated with a specific customer, you must send a separate delete request directly to the {{site.data.keyword.discoveryshort}} service instance that is linked to your assistant. For more information, see the {{site.data.keyword.discoveryshort}} [information security](/docs/discovery/information-security?topic=discovery-information-security).
+To delete query data associated with a specific customer, you must send a separate delete request directly to the {{site.data.keyword.discoveryshort}} service instance that is linked to your assistant. For more information, see the {{site.data.keyword.discoveryshort}} [information security](/docs/discovery-data/information-security?topic=discovery-data-information-security){: external}.
 
 ### Querying user data
 {: #securing-query-customer-id}
@@ -121,7 +121,7 @@ curl -X GET -u "apikey:3Df... ...Y7Pc9" \
 ```
 {: pre}
 
-where {url} is the appropriate URL for your instance. For more information, see [Service endpoint](/apidocs/assistant/assistant-v2#service-endpoint){: external}.
+where {url} is the appropriate URL for your instance. For more information, see [Service endpoint](https://{DomainName}/apidocs/assistant/assistant-v2#service-endpoint){: external}.
 
 For more information, see the [Filter query reference](/docs/watson-assistant?topic=watson-assistant-filter-reference){: external}.
 
@@ -143,11 +143,11 @@ curl -X DELETE -u "apikey:3Df... ...Y7Pc9" \
 ```
 {: pre}
 
-where {url} is the appropriate URL for your instance. For more information, see [Service endpoint](/apidocs/assistant/assistant-v2#service-endpoint){: external}.
+where {url} is the appropriate URL for your instance. For more information, see [Service endpoint](https://{DomainName}/apidocs/assistant/assistant-v2#service-endpoint){: external}.
 
 An empty JSON object `{}` is returned.
 
-For more information, see the [API reference](/apidocs/assistant/assistant-v2#deleteuserdata).
+For more information, see the [API reference](https://{DomainName}/apidocs/assistant/assistant-v2#deleteuserdata).
 
 **Note:** Delete requests are processed in batches and can take up to 24 hours to complete.
 

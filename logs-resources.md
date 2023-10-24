@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015,  2023
-lastupdated: "2023-10-04"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -106,7 +106,7 @@ The [{{site.data.keyword.conversationshort}} Continuous Improvement Best Practic
 ## Using the logs API
 {: #logs-resources-api}
 
-You can use the `/logs` API to list events from the transcripts of conversations that occurred between your users and your assistant. For conversations created with the v2 `/message` API, use the instance-level endpoint to [list log events in all workspaces](https://cloud.ibm.com/apidocs/assistant/assistant-v1#listalllogs){: external}, and then filter by Assistant ID. For more information, see [Filter query reference](/docs/watson-assistant?topic=watson-assistant-filter-reference).
+You can use the `/logs` API to list events from the transcripts of conversations that occurred between your users and your assistant. For conversations created with the v2 `/message` API, use the instance-level endpoint to [list log events in all workspaces](https://{DomainName}/assistant/assistant-v1#listalllogs){: external}, and then filter by Assistant ID. For more information, see [Filter query reference](/docs/watson-assistant?topic=watson-assistant-filter-reference).
 
 The API logs messages that are exchanged in conversations that are defined by a dialog skill only.
 {: important}
@@ -158,9 +158,9 @@ curl -X POST -u "apikey:3Df... ...Y7Pc9" \
 ```
 {: pre}
 
-where {url} is the appropriate URL for your instance. For more information, see [Endpoint URLs](/apidocs/assistant/assistant-v2#service-endpoint){: external}.
+where {url} is the appropriate URL for your instance. For more information, see [Endpoint URLs](https://{DomainName}/apidocs/assistant/assistant-v2#service-endpoint){: external}.
 
 The `customer_id` string cannot include the semicolon (`;`) or equal sign (`=`) characters. You are responsible for ensuring that each `Customer ID` parameter is unique across your customers.
 {: note}
 
-For instructions on how to delete messages that use `customer_id` values, see the [Labeling and deleting data in {{site.data.keyword.conversationshort}}](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-admin-securing#securing-gdpr-wa).
+For instructions on how to delete messages that use `customer_id` values, see the [Labeling and deleting data in {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-admin-securing#securing-gdpr-wa).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-10"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,7 @@ subcollection: watson-assistant
 # {{site.data.keyword.discoveryfull}} search integration setup 
 {: #search-add}
 
-[Plus]{: tag-green}[Enterprise]{: tag-purple}
+[Plus]{: tag-green}
 
 The search integration searches for information from a data collection that you create by using the {{site.data.keyword.discoveryshort}} service.
 
@@ -33,7 +33,7 @@ Watch a 4-minute video that provides an overview of the search integration:
 
 Before you begin, you must: 
 - Set up a {{site.data.keyword.discoveryshort}} v2 instance on {{site.data.keyword.cloud_notm}} or installed on {{site.data.keyword.icp4dfull_notm}}. 
-- Have at least a Plus plan {{site.data.keyword.discoveryshort}} service instance for {{site.data.keyword.cloud_notm}}. Go to the [{{site.data.keyword.discoveryshort}}](https://cloud.ibm.com/catalog/services/watson-discovery){: external} page in the {{site.data.keyword.cloud_notm}} catalog and create a Plus plan service instance.
+- Have at least a Plus plan {{site.data.keyword.discoveryshort}} service instance for {{site.data.keyword.cloud_notm}}. Go to the [{{site.data.keyword.discoveryshort}}](/catalog/services/watson-discovery){: external} page in the {{site.data.keyword.cloud_notm}} catalog and create a Plus plan service instance.
 - Use public endpoints. Private endpoints are currently not supported for {{site.data.keyword.conversationshort}} or the classic experience.
 
 ## Create the search integration or search skill
@@ -253,7 +253,7 @@ To configure the search in {{site.data.keyword.discoveryshort}}, complete the fo
       If you want to use the original customer message that triggered the action as the query string instead, you need to plan ahead. You can follow these steps:
 
       1. Create a session variable to store the initial user input. For example, named `original message`.
-      1. In Step 1, meaning the first step after the action trigger, set the value of the session variable. For more information about session variables, see [Defining session variables](#actions-variables-global).
+      1. In Step 1, meaning the first step after the action trigger, set the value of the session variable. For more information about session variables, see [Creating a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable).
       1. Set the value of the variable by using an expression that looks like this: `<? input.text ?>`.
 
         This expression captures the complete message that was submitted by the customer. As a result, your variable captures the customer message that triggered this action.

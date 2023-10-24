@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-02"
+lastupdated: "2023-10-24"
 
 keywords: building a dialog, condition, response, options, jump, jump-to, multiline, response variations
 
@@ -703,7 +703,7 @@ To add a *Pause* response type, complete the following steps:
     Add another response type, such as a text response type, after the pause to clearly denote that the pause is over.
     {: tip}
 
-This response type does not render in the "Try it out" pane. You must access a node that uses this response type from a test deployment to see how your users will experience it. For more information, see [Testing your assistant from a web page](/docs/assistant?topic=assistant-deploy-web-link).
+This response type does not render in the "Try it out" pane. You must access a node that uses this response type from a test deployment to see how your users will experience it.
 
 ### Adding a *Search skill* response type 
 {: #dialog-overview-add-search-skill}

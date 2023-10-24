@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-05-11"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -83,7 +83,7 @@ If you plan to deploy your assistant to multiple channels, you might want to sen
 
 This mechanism is useful if your conversation flow does not change based on the integration in use, and if you cannot know in advance what integration the response is sent to at run time. By using `channels`, you can define a single step that supports all integrations, while still customizing the output for each channel. For example, you might want to customize the text formatting, or even send different response types, based on what the channel supports.
 
-Using `channels` is useful along with the `channel_transfer` response type. Because the message output is processed both by the channel that initiates the `transfer` and by the target channel, you can use `channels` to define responses that are processed by one or the other. (For more information, and an example, see [Channel transfer](#assistant-responses-json-channel-transfer).)
+Using `channels` is useful along with the `channel_transfer` response type. Because the message output is processed both by the channel that initiates the `transfer` and by the target channel, you can use `channels` to define responses that are processed by one or the other.
 
 To specify the integrations for which a response is intended, include the optional `channels` array as part of the response object. All response types support the `channels` array. This array contains one or more objects by using the following syntax:
 

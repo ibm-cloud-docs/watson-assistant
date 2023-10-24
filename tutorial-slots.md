@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-10"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 content-type: tutorial
@@ -38,7 +38,7 @@ This tutorial takes approximately 30 minutes to complete.
 ### Prerequisite
 {: #tutorial-slots-prereqs}
 
-Before you begin, complete the [Getting Started tutorial](/docs/watson-assistant?topic=gs-dialog). You use the dialog that you created, and add nodes to the simple dialog that you built as part of the getting started exercise.
+Before you begin, complete the [Getting Started tutorial](/docs/watson-assistant?topic=watson-assistant-gs-dialog). You use the dialog that you created, and add nodes to the simple dialog that you built as part of the getting started exercise.
 
 ## Add intents and examples
 {: #tutorial-slots-add-intent}

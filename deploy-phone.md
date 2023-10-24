@@ -27,10 +27,10 @@ subcollection: watson-assistant
 
 
 
-# Integrating with phone ![Plus or higher plans only](images/plus.png)
+# Integrating with phone
 {: #deploy-phone}
 
-[IBM Cloud]{: tag-ibm-cloud}
+[IBM Cloud]{: tag-ibm-cloud} [Plus]{: tag-green}
 
 Adding the phone integration to your assistant makes your assistant available to customers over the phone.
 {: shortdesc}
@@ -51,7 +51,7 @@ A SIP trunk is equivalent to an analog telephone line, except it uses Voice over
 
 When a customer makes a phone call using the telephone number connected to your assistant, the phone integration makes it possible for your assistant to answer. The integration converts output from your assistant into voice audio by using the {{site.data.keyword.texttospeechfull}} service, and the audio is sent to the telephone network through the SIP trunk. When the customer replies, the voice input is converted into text by using the {{site.data.keyword.speechtotextfull}} service.
 
-This feature is available only to Plus or Enterprise plan users. 
+This feature is available only to Plus or Enterprise plan users.
 
 Depending on the architecture of your existing telephony infrastructure, there are multiple ways you might integrate it with {{site.data.keyword.conversationshort}}. For more information about common integration patterns, read the blog post [Hey Watson, can I have your number?](https://medium.com/ibm-watson/hey-watson-can-i-have-your-number-7de8fc7621ed) on Medium.
 {: tip}

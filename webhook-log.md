@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-09-27"
+lastupdated: "2023-10-24"
 
 keywords: log webhook
 
@@ -31,7 +31,7 @@ Add a log webhook to your assistant if you want to use an external service to lo
 
 - **Messages and responses**: The log webhook is triggered each time that the assistant responds to customer input. You can use this option as an alternative to the built-in analytics feature to handle logging yourself. (For more information about the built-in analytics support, see [Review your entire assistant at a glance](/docs/watson-assistant?topic=watson-assistant-analytics-overview).)
   
-    If you are using a custom channel, the log webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2#message). All built-in channel integrations use this API.
+    If you are using a custom channel, the log webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://{DomainName}/assistant/assistant-v2#message). All built-in channel integrations use this API.
     {: important}
 
 - **Call detail records (CDRs)**: The log webhook is triggered after each telephone call a user makes to your assistant that uses the phone integration. A Call Detail Record (CDR) is a summary report that documents the details of a telephone call, including phone numbers, call length, latency, and other diagnostic information. CDR records are only for assistants that use the phone integration.
@@ -160,7 +160,7 @@ The `payload` object contains the event data to be logged. The structure of the 
 ### Message event payload
 {: #webhook-log-request-body-message}
 
-For `message_logged` events, the `payload` object contains data about a message request that is sent to the assistant and the message response that is returned to the integration or client application. For more information about the fields that are part of message requests and responses, see the [API reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2#message).
+For `message_logged` events, the `payload` object contains data about a message request that is sent to the assistant and the message response that is returned to the integration or client application. For more information about the fields that are part of message requests and responses, see the [API reference](https://{DomainName}/assistant/assistant-v2#message).
 
 The log webhook payload might include data that is not currently supported by the API. Any fields that are not defined in the API reference documentation are subject to change.
 {: important}

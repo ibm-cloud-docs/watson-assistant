@@ -30,7 +30,7 @@ subcollection: watson-assistant
 # Supporting global audiences
 {: #web-chat-develop-global}
 
-You can build an assistant that understands customer messages in any of the languages that are supported by the service.  The responses from your assistant are defined by you and can be written in any language you want.
+You can build an assistant that understands customer messages in any of the languages that are supported by the service. The responses from your assistant are defined by you and can be written in any language you want.
 
 However, some of the phrases that are displayed in the web chat widget are part of the web chat itself and do not come from the assistant. By default, these hardcoded phrases are specified in English, but you can apply a different language by adding lines to the embedded web chat script.
 

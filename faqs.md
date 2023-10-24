@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-17"
+lastupdated: "2023-10-24"
 
 keywords: Watson Assistant frequently asked questions
 
@@ -110,7 +110,7 @@ To edit a dialog, you must have Writer service access to the service instance an
 {: #faqs-export-conversation}
 {: faq}
 
-You cannot directly export conversations from the conversation page. However, you can use the `/logs` API to list events from the transcripts of conversations that occurred between your users and your assistant. For more information, see the [V2 API reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2#listlogs){: external}. Or, you can use a Python script to export logs. For more information, see [export_logs_py](https://github.com/watson-developer-cloud/community/blob/master/watson-assistant/export_logs_py.py){: external}.
+You cannot directly export conversations from the conversation page. However, you can use the `/logs` API to list events from the transcripts of conversations that occurred between your users and your assistant. For more information, see the [V2 API reference](https://{DomainName}/assistant/assistant-v2#listlogs){: external}. Or, you can use a Python script to export logs. For more information, see [export_logs_py](https://github.com/watson-developer-cloud/community/blob/master/watson-assistant/export_logs_py.py){: external}.
 
 ## Can I export and import dialog nodes?
 {: #faqs-nodes}
@@ -203,7 +203,7 @@ curl -X POST -H "content-type: application/json" -H "accept: application/json" -
 {: #faqs-stuck-training}
 {: faq}
 
-If the training process gets stuck, first check whether for an outage for the service by going to the [Cloud status page](https://cloud.ibm.com/status){: external}. You can start a new training process to stop the current process and start over.
+If the training process gets stuck, first check whether for an outage for the service by going to the [Cloud status page](/status){: external}. You can start a new training process to stop the current process and start over.
 
 ## How do I see my monthly active users in {{site.data.keyword.conversationshort}}?
 {: #faqs-see-mau}
@@ -229,7 +229,7 @@ To resolve this issue, modify the JSON file by setting `off_topic` to `false`. F
 {: #faqs-user-browser}
 {: faq}
 
-With the V2 API and an Enterprise plan, you can use the Segment extension to see what browser was used to send the message. For more information, see [Sending events to Segment](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-segment-add).
+With the V2 API and an Enterprise plan, you can use the Segment extension to see what browser was used to send the message. For more information, see [Sending events to Segment](/docs/watson-assistant?topic=watson-assistant-segment-add).
 
 ## Is it possible to increase the number of intents per skill
 {: #faqs-intents-number}

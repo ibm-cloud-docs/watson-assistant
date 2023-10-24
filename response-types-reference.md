@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-12"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -108,7 +108,7 @@ Transfers the conversation to a different channel integration. Currently, the we
 ### Example
 {: #response-types-json-channel-transfer-example}
 
-This example requests a transfer from WhatsApp to the web chat. In addition to the `channel_transfer` response, the output also includes a `text` response to be displayed by the web chat integration after the transfer. The use of the `channels` array ensures that the `channel_transfer` response is handled only by the WhatsApp integration (before the transfer), and the `connect_to_agent` response only by the web chat integration (after the transfer). For more information, see [Targeting specific integrations](#assistant-responses-json-target-integrations).
+This example requests a transfer from WhatsApp to the web chat. In addition to the `channel_transfer` response, the output also includes a `text` response to be displayed by the web chat integration after the transfer. The use of the `channels` array ensures that the `channel_transfer` response is handled only by the WhatsApp integration (before the transfer), and the `connect_to_agent` response only by the web chat integration (after the transfer).
 
 ```json
 {
@@ -268,7 +268,7 @@ Sends commands to the phone integration to control input or output with dual-ton
 | response_type | string | `dtmf`             | Y         |
 | command_info  | object | Information specifying the DTMF command to send to the phone integration. | Y |
 | command_info.type | string | The DTMF command to send (`collect`, `disable_barge_in`, `enable_barge_in`, or `send`). | Y |
-| command_info.parameters | object | See [Handling phone interactions](/docs/watson-assistant?topic=phone-actions). | N |
+| command_info.parameters | object | See [Handling phone interactions](/docs/watson-assistant?topic=watson-assistant-phone-actions). | N |
 
 The `command_info.type` field can specify any of the following supported commands:
 
@@ -473,7 +473,7 @@ Use to show a set of options (such as buttons or a drop-down list) that users ca
 | options       | list   | A list of key-value pairs that specify options from which a user can choose. | Y |
 | options[].label | string | The user-facing label for the option. | Y     |
 | options[].value | object | An object that defines the response that is sent to the {{site.data.keyword.conversationshort}} service if the user selects the option. | Y |
-| options[].value.input | object | An object that includes the message input corresponding to the option, including input text and any other field that is a valid part of a {{site.data.keyword.conversationshort}} message. For more information, see the [API Reference](https://cloud.ibm.com/apidocs/assistant/assistant-v2?curl=#message){: external}. | N |
+| options[].value.input | object | An object that includes the message input corresponding to the option, including input text and any other field that is a valid part of a {{site.data.keyword.conversationshort}} message. For more information, see the [API Reference](https://{DomainName}/assistant/assistant-v2?curl=#message){: external}. | N |
 
 ### Example
 {: #response-types-json-option-example}

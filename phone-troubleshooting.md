@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-30"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -37,7 +37,7 @@ Currently, the Phone and SMS integrations are the only components of your assist
 
 After you create the instance, get log information by completing the following steps.
 
-1.  Go to the [IBM Cloud Logging](https://cloud.ibm.com/observe/logging){: external} page.
+1.  Go to the [IBM Cloud Logging](/observe/logging){: external} page.
 1.  Click **Options**, then choose **Edit platform**.
 1.  Select the region and instance, and then click **Select**.
 1.  To open the IBM Log Analysis console, click **Open Dashboard**.

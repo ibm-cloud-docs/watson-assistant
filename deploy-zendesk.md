@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-09-06"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -150,7 +150,7 @@ Before you can secure the Zendesk connection, complete the following required ta
     ```
     {: codeblock}
 
-    For more information, see [Passing sensitive data](/docs/watson-assistant?topic=watson-assistant-web-chat-security#web-chat-security-encrypt).
+    For more information, see [Encrypting sensitive data](/docs/watson-assistant?topic=watson-assistant-web-chat-security-encrypt).
 
     Zendesk also expects `iat` and `external_id` name and value pairs. However, you need not provide this information. IBM automatically provides a JWT that contains these values.
 

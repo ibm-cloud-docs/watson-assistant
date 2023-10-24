@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-16"
+lastupdated: "2023-10-24"
 
 keywords: phone, context variables, input parameters
 
@@ -87,7 +87,7 @@ The following input parameters are only valid for the current conversation turn.
 | `final_utterance_timeout_occurred` | `true` or `false` | Whether the final-utterance timeout expired |
 | `dtmf_collection_succeeded` | Boolean | Whether the DTMF collection succeeded or failed. When `true`, a DTMF collection succeeded, and returns the expected number of digits. When `false`, a DTMF collection failed to collect the specified number of digits. Even when `dtmf_collection_succeeded` is `false`, all collected digits are passed to the dialog in the input string of the turn request. |
 | `is_dtmf` | Boolean | Whether the input to {{site.data.keyword.conversationshort}} is dual-tone multi-frequency signaling (DTMF). |
-| `speech_to_text_result` | object | The final response from the {{site.data.keyword.speechtotextshort}} service in JSON format, including the transcript and confidence score for the lead hypothesis and any alternatives. The format matches exactly the format that is received from the {{site.data.keyword.speechtotextshort}} service. (For more information, see the [{{site.data.keyword.speechtotextshort}} API documentation](https://cloud.ibm.com/apidocs/speech-to-text#recognize){: external}.) |
+| `speech_to_text_result` | object | The final response from the {{site.data.keyword.speechtotextshort}} service in JSON format, including the transcript and confidence score for the lead hypothesis and any alternatives. The format matches exactly the format that is received from the {{site.data.keyword.speechtotextshort}} service. (For more information, see the [{{site.data.keyword.speechtotextshort}} API documentation](https://{DomainName}/speech-to-text#recognize){: external}.) |
 | `sms_message` | string | An SMS message received from the caller |
 {: caption="Input parameters set by the phone channel" caption-side="bottom"}
 

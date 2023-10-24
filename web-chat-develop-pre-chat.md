@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-31"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -30,7 +30,7 @@ This example shows how to create a pre-chat form. To create a post-chat form, fo
 
 To display a pre-chat form, follow these steps:
 
-1. Create a handler for the [`view:change`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#viewchange){: external} event, which is fired when one of the view in web chat changes (such as when the main window opens). This handler uses the [`customPanels.getPanel()`](/docs/watson-assistant?topic=watson-assistant-topicid){: external} instance method to open a custom panel that contains the pre-chat form.
+1. Create a handler for the [`view:change`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#viewchange){: external} event, which is fired when one of the view in web chat changes (such as when the main window opens). This handler uses the `customPanels.getPanel()` instance method to open a custom panel that contains the pre-chat form.
 
     Your handler should return a promise that resolves when the custom panel is closed. This prevents the web chat main window from opening until after the pre-chat form is completed.
     {: tip}

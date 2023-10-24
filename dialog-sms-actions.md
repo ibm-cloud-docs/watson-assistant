@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-12"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -16,13 +16,13 @@ subcollection: watson-assistant
 Learn about common tasks that you can use to manage the flow of conversations that your assistant has with customers by using SMS text messaging.
 {: shortdesc}
 
-Before you add customizations to your dialog that support SMS messaging interactions, you must set up the SMS with Twilio integration. For more information, see [Integrating with SMS with Twilio](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-sms#deploy-sms-twilio).
+Before you add customizations to your dialog that support SMS messaging interactions, you must set up the SMS with Twilio integration. For more information, see [Integrating with SMS with Twilio](/docs/watson-assistant?topic=watson-assistant-deploy-sms#deploy-sms-twilio).
 
 You can perform the following types of tasks:
 
 - [Sending multimedia content over text](#dialog-sms-actions-mms)
 - [Customizing lists in a text message](#dialog-sms-actions-lists)
-- [Sending a text message during a phone conversation](/docs/watson-assistant?topic=watson-assistant-dialog-voice-actions#dialog-voice-actions-sms)
+- [Sending a text message during a phone conversation](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-sms)
 
 For command reference documentation, see [SMS integration reference](/docs/watson-assistant?topic=watson-assistant-sms-reference).
 

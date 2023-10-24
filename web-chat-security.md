@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-07-31"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -61,7 +61,7 @@ For detailed information about how to complete these steps, see [Enabling web ch
 
 With web chat security enabled, you can optionally implement additional security measures as needed:
 
-- You can use JWTs to securely [authenticate customers](#web-chat-security-authenticate) by user ID, which makes it possible for your assistant to control access to functions that require authorization.
+- You can use JWTs to securely authenticate customers by user ID, which makes it possible for your assistant to control access to functions that require authorization.
 
     Without web chat security enabled, each customer who uses your assistant is identified only by the `user_id` property that is part of the message request. This is sufficient for identifying unique users for billing purposes, but it is not secure, because it could be modified.
 
@@ -69,7 +69,7 @@ With web chat security enabled, you can optionally implement additional security
 
     For more information about using JWTs for secure authentication, see [Authenticating users](/docs/watson-assistant?topic=watson-assistant-web-chat-security-authenticate).
 
-- You can [prevent unauthorized access](#web-chat-security-encrypt) to sensitive customer information by encrypting it and including it as part of the JWT user payload.
+- You can prevent unauthorized access to sensitive customer information by encrypting it and including it as part of the JWT user payload.
 
     The user payload is a part of the JWT you can use to send information you want your assistant to have access to, but you do not want customers to see. This information is stored only in private variables, which cannot be seen by customers and are never included in logs.
 

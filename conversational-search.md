@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-10"
+lastupdated: "2023-10-24"
 
 keywords: conversational search
 
@@ -31,20 +31,20 @@ To use conversational search, you must have a Plus or Enterprise plan and enroll
 ## Before you begin
 {: #conversational-search-requirements}
 
-You need to have the {{site.data.keyword.discoveryshort}} search integration to enable the conversational search feature. For more information, see [{{site.data.keyword.discoveryfull}} search integration setup](/docs/watson-assistant?topic=search-add).
+You need to have the {{site.data.keyword.discoveryshort}} search integration to enable the conversational search feature. For more information, see [{{site.data.keyword.discoveryfull}} search integration setup](/docs/watson-assistant?topic=watson-assistant-search-add).
 
 ## Conversational search setup
 {: #conversational-search-setup}
 
 After you create the search integration or search skill, connect to an existing {{site.data.keyword.discoveryshort}} instance, and create a project, you can enable the conversational search feature when you configure your search. 
 
-1. Follow steps 1-3 in [Configure the search](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure).
+1. Follow steps 1-3 in [Configure the search](/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure).
 
 1. Click the **Conversational search** toggle to turn on.
 
    ![ConversationalSearch](images/convo-search-toggle-on.png)
 
-1. Follow steps 4-8 in [Configure the search](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure).
+1. Follow steps 4-8 in [Configure the search](/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure).
 
 1. Add a trigger to call out to search. For more information, see [Search trigger](/docs/watson-assistant?topic=watson-assistant-search-add#search-add-trigger).
 

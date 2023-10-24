@@ -28,7 +28,7 @@ subcollection: watson-assistant
 # Terms and notices
 {: #terms-notices}
 
-See [IBM Cloud Terms and Notices](/docs/overview/terms-of-use?topic=overview-terms){: external} for information about the terms of service.
+See [IBM Cloud Terms and Notices](/docs/overview?topic=overview-terms){: external} for information about the terms of service.
 
 US Health Insurance Portability and Accountability Act (HIPAA) support is available with *Enterprise with Data Isolation* plans that are hosted in the Washington, DC location created on or after 1 April 2019. For more information, see [Enabling HIPAA support for your account](/docs/account?topic=account-enabling-hipaa){: external}.
 

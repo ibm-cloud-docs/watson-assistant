@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-02"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -90,7 +90,7 @@ To complete the OAuth authentication setup, follow these steps:
 
 1. In the **Grant type** field, select the grant type that you want to use. Available grant types are determined by flows that are defined in the `securitySchemes` object in the OpenAPI document. Authorization Code, Client Credentials, Password, and custom grant types that start with `x-` are supported.
 
-   The OAuth2 custom grant type `x-`<any custom name> is used by the [IBM IAM authentication mechanism](https://cloud.ibm.com/docs/account?topic=account-iamoverview) and by [watsonx](https://www.ibm.com/watsonx).
+   The OAuth2 custom grant type `x-`<any custom name> is used by the [IBM IAM authentication mechanism](/docs/account?topic=account-iamoverview) and by [watsonx](https://www.ibm.com/watsonx).
    {: note}
 
 1. Specify the required values that were provided by the external API when you registered your application. The required values depend on the grant type:

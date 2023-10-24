@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-23"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -41,7 +41,7 @@ The installation process differs depending on the version you are installing. Th
 | 4.0.4 | {{site.data.keyword.icp4dfull_notm}} 4.0.x | [Installing 4.0.4](https://www.ibm.com/docs/en/SSQNUZ_4.0/archives/refresh-4/CP-Data-4.0-R4-PDF5-Installing.pdf){: external} |
 | 4.0.2 | {{site.data.keyword.icp4dfull_notm}} 4.0.x | [Installing 4.0.2](https://www.ibm.com/docs/en/SSQNUZ_4.0/archives/refresh-2/CP-Data-4.0-R2-PDF5-Installing.pdf){: external} |
 | 4.0.0 | {{site.data.keyword.icp4dfull_notm}} 4.0.x | [Installing 4.0.0](https://www.ibm.com/docs/en/SSQNUZ_4.0/archives/refresh-0/CP-Data-4.0-R0-PDF5-Installing.pdf){: external} |
-| 1.5.0 | {{site.data.keyword.icp4dfull_notm}} 3.0.1 or 3.5 | [Installing 1.5.0](/docs/assistant-data?topic=assistant-data-install-150) |
+| 1.5.0 | {{site.data.keyword.icp4dfull_notm}} 3.0.1 or 3.5 | [Installing 1.5.0](https://www.ibm.com/docs/en/cloud-paks/cp-data/3.5.0?topic=service-installing-watson-assistant){: external} |
 {: caption="Available versions" caption-side="top"}
 
 

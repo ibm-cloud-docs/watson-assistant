@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-09-21"
+lastupdated: "2023-10-24"
 
 keywords: phone, phone interactions, custom language model, custom grammar, advanced settings
 
@@ -79,12 +79,12 @@ Dynamically reconfigures the {{site.data.keyword.speechtotextshort}} service by 
 
 | parameter | description | required | default |
 | ----------|-------------|----------|---------|
-| `narrowband_recognize` | The {{site.data.keyword.speechtotextshort}} service configuration to use for narrowband codecs (such as PCMU and PCMA, which are sampled at 8 kHz). The parameters for this object are used when connecting to the {{site.data.keyword.speechtotextshort}} service for speech recognition requests. For more information about these parameters, see the [{{site.data.keyword.speechtotextshort}} API documentation](/apidocs/speech-to-text#WSRecognizeMethod){: external}. | no | Current {{site.data.keyword.speechtotextshort}} configuration | 
-| `broadband_recognize` | The {{site.data.keyword.speechtotextshort}} service configuration to use for broadband codecs (such as G722, which is sampled at 8 kHz). The parameters for this object are used when connecting to the {{site.data.keyword.speechtotextshort}} service for speech recognition requests. For more information about these parameters, see the [{{site.data.keyword.speechtotextshort}} API documentation](/apidocs/speech-to-text#WSRecognizeMethod){: external}. | no | Current {{site.data.keyword.speechtotextshort}} configuration |
+| `narrowband_recognize` | The {{site.data.keyword.speechtotextshort}} service configuration to use for narrowband codecs (such as PCMU and PCMA, which are sampled at 8 kHz). The parameters for this object are used when connecting to the {{site.data.keyword.speechtotextshort}} service for speech recognition requests. For more information about these parameters, see the [{{site.data.keyword.speechtotextshort}} API documentation](https://{DomainName}/apidocs/speech-to-text#WSRecognizeMethod){: external}. | no | Current {{site.data.keyword.speechtotextshort}} configuration | 
+| `broadband_recognize` | The {{site.data.keyword.speechtotextshort}} service configuration to use for broadband codecs (such as G722, which is sampled at 8 kHz). The parameters for this object are used when connecting to the {{site.data.keyword.speechtotextshort}} service for speech recognition requests. For more information about these parameters, see the [{{site.data.keyword.speechtotextshort}} API documentation](https://{DomainName}/apidocs/speech-to-text#WSRecognizeMethod){: external}. | no | Current {{site.data.keyword.speechtotextshort}} configuration |
 | `band_preference` | Specifies which audio band (`narrowband` or `broadband`) is preferred when negotiating audio codecs for the session. Set to `broadband` to use broadband audio when possible. | no | `narrowband` |
 | `update_strategy` | Specifies the update strategy to use when setting the speech configuration. Possible values include: \n - `replace`: Replaces the configuration for the rest of the session. Any root-level fields in the new configuration completely overwrite the previous configuration. \n - `replace_once`: Replaces the configuration only for the next turn of the conversation. Then, the previous configuration is used. \n - `merge`: Merges the new configuration with the existing configuration for the rest of the session. Only changed parameters are overwritten; any other configuration parameters are unchanged. \n - `merge_once`: Merges the new configuration with the existing configuration only for the next turn of the conversation. Then, the previous configuration is used. | no | `replace` |
   
-The parameters that you can set for `narrowband_recognize` and `broadband_recognize` reflect the parameters that are made available by the {{site.data.keyword.speechtotextshort}} WebSocket interface. The WebSocket API sends two types of parameters: query parameters, which are sent when the phone integration connects to the service, and message parameters, which are sent as part of the JSON data in the request body. For example, `model` is a query parameter, and `smart_formatting` is a WebSocket message parameter. For a full list of parameters, see the [{{site.data.keyword.speechtotextshort}} API documentation](/apidocs/speech-to-text){: external}.
+The parameters that you can set for `narrowband_recognize` and `broadband_recognize` reflect the parameters that are made available by the {{site.data.keyword.speechtotextshort}} WebSocket interface. The WebSocket API sends two types of parameters: query parameters, which are sent when the phone integration connects to the service, and message parameters, which are sent as part of the JSON data in the request body. For example, `model` is a query parameter, and `smart_formatting` is a WebSocket message parameter. For a full list of parameters, see the [{{site.data.keyword.speechtotextshort}} API documentation](https://{DomainName}/apidocs/speech-to-text){: external}.
   
 You can define the following query parameters for the phone integration's connection to the {{site.data.keyword.speechtotextshort}} service. Any other parameter that you define for `narrowband` or `broadband` is passed through as part of the WebSocket message request.
   
@@ -270,10 +270,10 @@ Dynamically reconfigures the {{site.data.keyword.texttospeechshort}} service by 
 
 | parameter | description | required | default |
 | --------- |-------------|----------|---------|
-| `synthesize` | The {{site.data.keyword.texttospeechshort}} service configuration to use when synthesizing audio. The parameters that are defined by this object are used when connecting to the {{site.data.keyword.texttospeechshort}} service for speech synthesis requests. For more information about these parameters, see the [{{site.data.keyword.texttospeechshort}} API documentation](/apidocs/text-to-speech#synthesize-audio-websockets-){: external}. | yes | Current {{site.data.keyword.texttospeechshort}} configuration |
+| `synthesize` | The {{site.data.keyword.texttospeechshort}} service configuration to use when synthesizing audio. The parameters that are defined by this object are used when connecting to the {{site.data.keyword.texttospeechshort}} service for speech synthesis requests. For more information about these parameters, see the [{{site.data.keyword.texttospeechshort}} API documentation](https://{DomainName}/apidocs/text-to-speech#synthesize-audio-websockets-){: external}. | yes | Current {{site.data.keyword.texttospeechshort}} configuration |
 | `update_strategy` | Specifies the update strategy to use when setting the speech configuration. Possible values include: \n - `replace`: Replaces the configuration for the rest of the session. Any root-level fields in the new configuration completely overwrite the previous configuration. \n - `replace_once`: Replaces the configuration only for the next turn of the conversation. Then, the previous configuration is used. \n - `merge`: Merges the new configuration with the existing configuration for the rest of the session. Only changed parameters are overwritten; any other configuration parameters are unchanged. \n - `merge_once`: Merges the new configuration with the existing configuration only for the next turn of the conversation. Then, the previous configuration is used. | no | `replace` |
 
-The parameters that you can set for `synthesize` reflect the parameters that are made available by the {{site.data.keyword.texttospeechshort}} WebSocket interface. The WebSocket API sends two types of parameters: query parameters, which are sent when phone integration connects to the service, and message parameters, which are sent as part of the JSON data in the request body. For a full list of parameters, see the [{{site.data.keyword.texttospeechshort}} API documentation](/apidocs/text-to-speech){: external}.
+The parameters that you can set for `synthesize` reflect the parameters that are made available by the {{site.data.keyword.texttospeechshort}} WebSocket interface. The WebSocket API sends two types of parameters: query parameters, which are sent when phone integration connects to the service, and message parameters, which are sent as part of the JSON data in the request body. For a full list of parameters, see the [{{site.data.keyword.texttospeechshort}} API documentation](https://{DomainName}/apidocs/text-to-speech){: external}.
 
 ### `command_info.type` : `disable_barge_in`
 
@@ -315,7 +315,7 @@ This example shows how to specify a voice during the conversation:
 ```
 {: codeblock}
 
-In the `voice` parameter, specify the voice model that you want to use. For more information about voice model options, see [Supported languages and voices](/docs/text-to-speech?topic=text-to-speech-voices#languageVoices){: external}.
+In the `voice` parameter, specify the voice model that you want to use. For more information about voice model options, see [Supported languages and voices](/docs/text-to-speech?topic=text-to-speech-voices){: external}.
 
 The model that you specify must be one that is supported by the {{site.data.keyword.texttospeechshort}} service instance that is configured for use with the integration.
 {: note}
@@ -446,7 +446,7 @@ To support loading the conversational history between the caller and {{site.data
 
 The value of the SIP header is limited to 1024 bytes.
 
-How this data is presented in the SIP `REFER` message also depends on the value of `transfer_headers_send_method`(as defined in [Generic Service Desk SIP Parameters](#generic-service-desk-sip-parameters)). 
+How this data is presented in the SIP `REFER` message also depends on the value of `transfer_headers_send_method`. 
 
 The example shows the data included as headers:
 

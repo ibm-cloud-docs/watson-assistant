@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-04"
+lastupdated: "2023-10-24"
 
 subcollection: watson-assistant
 
@@ -265,7 +265,7 @@ Now we need to configure the assistant to transfer calls to Twilio Flex when a c
 
 1. Open the JSON editor for the response.
 
-1. In the JSON editor, add a [`connect_to_agent` response](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer), specifying your phone number as the `sip.uri` (replace `{phone_number}` with the phone number of your SIP trunk):
+1. In the JSON editor, add a [`connect_to_agent` response](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer), specifying your phone number as the `sip.uri` (replace `{phone_number}` with the phone number of your SIP trunk):
 
 ```json
 {
