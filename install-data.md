@@ -22,7 +22,7 @@ The {{site.data.keyword.icp4dfull_notm}} environment is a Kubernetes-based conta
 
 The installation process differs depending on the version you are installing. The following table shows the available versions.
 
-<review>| Version |  Cluster | Installation instructions |
+| Version |  Cluster | Installation instructions |
 | --- | --- | --- |
 | 4.7.4 | {{site.data.keyword.icp4dfull_notm}} 4.7.x | [Installing 4.7.4](https://www.ibm.com/docs/SSQNUZ_4.7.x/svc-assistant/assistant-svc-install.html){: external} |
 | 4.7.2 | {{site.data.keyword.icp4dfull_notm}} 4.7.x | [Installing 4.7.2](https://www.ibm.com/docs/SSQNUZ_4.7.x/svc-assistant/assistant-svc-install.html){: external} |
