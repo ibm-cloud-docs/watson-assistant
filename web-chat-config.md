@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-07-19"
+lastupdated: "2023-10-25"
 
 subcollection: watson-assistant
 
@@ -74,7 +74,7 @@ Suggestions
 :   You can configure how and when the web chat offers offers suggestions to customers when the assistant isn't delivering what they expect. For more information, see [Configuring suggestions](/docs/watson-assistant?topic=watson-assistant-web-chat-suggestions).
 
 Security
-:   You can protect your users' private information and prevent unauthorized messages to your assistant by enabling security on the **Security** tab. For more information about web chat security and how it works, see [Security](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture-security).
+:   You can protect your users' private information and prevent unauthorized messages to your assistant by enabling security on the **Security** tab. For more information about web chat security and how it works, see [Security](/docs/watson-assistant?topic=watson-assistant-web-chat-security).
 
 Voice
 :   You can [give your assistant a clear and friendly voice](https://www.ibm.com/products/watson-assistant/voice) by adding Watson Text to Speech. For more information about converting written text to natural-sounding audio and explore a demo, see [Text to Speech](https://www.ibm.com/products/text-to-speech).

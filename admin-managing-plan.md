@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-25"
 
 keywords: billing, data centers, MAU, monthly active users, service plans
 
@@ -112,7 +112,7 @@ Billing is managed per monthly active user per service instance. If a single use
 ### Test activity charges
 {: #admin-managing-plan-billing-testing}
 
-Test messages that you send from *Preview* are charged. For the preview, a random `user_id` is generated and stored in a cookie. The multiple interactions that a single tester has with the assistant are recognized as coming from a single user and are charged. If you are doing your own test, running a scripted regression test for example, use a single `user_id` for all of the calls within your regression test. Other uses are flagged as abuse.
+Test messages that you send from *Preview* are charged. For the preview, a random `user_id` is generated and stored in a cookie. The multiple interactions that a single tester has with the assistant are recognized as coming from a single user and are charged. If you are doing your own test, running a scripted regression test for example, use a single `user_id` for all the calls within your regression test. Other uses are flagged as abuse.
 
 ### Handling anonymous users
 {: #admin-managing-plan-billing-anonymous}
@@ -132,13 +132,13 @@ You can create {{site.data.keyword.conversationshort}} service instances that ar
 
 | Location    | Location code | API location |
 |-------------|---------------|--------------|
-| Dallas      | us-south      | N/A          |
-| Frankfurt   | eu-de         | fra          |
-| Seoul       | kr-seo        | seo          |
-| Sydney      | au-syd        | syd          |
-| Tokyo       | jp-tok        | tok          |
-| London      | eu-gb         | lon          |
-| Washington DC  | us-east    | wdc          |
+| Dallas      | `us-south`      | N/A          |
+| Frankfurt   | `eu-de`         | `fra`          |
+| Seoul       | `kr-seo`        | `seo`          |
+| Sydney      | `au-syd`        | `syd`          |
+| Tokyo       | `jp-tok`        | `tok`          |
+| London      | `eu-gb`         | `lon`          |
+| Washington DC  | `us-east`    | `wdc`          |
 {: caption="Data center locations" caption-side="bottom"}
 
 ## Upgrading your plan

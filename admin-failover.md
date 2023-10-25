@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021,2023
-lastupdated: "2023-10-03"
+lastupdated: "2023-10-25"
 
 subcollection: watson-assistant
 
@@ -67,7 +67,7 @@ SIP trunking providers can be configured to actively health-check the {{site.dat
 ### Failover
 {: #admin-failover-phone-failover}
 
-The SIP trunking provider plays an important role in detecting and managing a failover, especially if an automatic failover is expected between regions. In most cases, SIP trunking providers should be configured to treat each zone within a region as active/active and two regions where an assistant is configured as active/passive. SIP trunking providers should always be configured to balance the load and fail over between zones within a single region.
+The SIP trunking provider plays an important role in detecting and managing a failover, especially if an automatic failover is expected between regions. Usually, SIP trunking providers should be configured to treat each zone within a region as active/active and two regions where an assistant is configured as active/passive. SIP trunking providers should always be configured to balance the load and fail over between zones within a single region.
 
 ### Full outage
 {: #admin-failover-phone-full-outage}
@@ -79,7 +79,7 @@ Phone integration failures have two types. The first type is a full outage where
 ### Partial outage
 {: #admin-failover-phone-partial-outage}
 
-The second type of failure is a partial service outage within the region. A partial outage is much harder to detect and manage because of the large number of variations in service failures that can occur within a region. In some cases, small issues affect the performance characteristics of the call but not cause the call to fail. 
+The second type of failure is a partial service outage within the region. A partial outage is much harder to detect and manage because of the large number of variations in service failures that can occur within a region. Sometimes, small issues affect the performance characteristics of the call but not cause the call to fail. 
 
 For issues that ultimately cause a call to fail, there are two ways your assistant can handle the call. The first is to accept the call and then transfer it to a configured default SIP URI. You can configure this setting in the phone integration and is also used for mid-call failures. The default transfer target SIP URI is defined in the **SIP target when a call fails** field that is on the Advanced tab of the phone integration configuration.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-06-05"
+lastupdated: "2023-10-25"
 
 subcollection: watson-assistant
 
@@ -35,7 +35,7 @@ Available days of activity depend on your plan.
 ## User access to the activity log
 {: #activity-log-access}
 
-To access and view the log, users need at least the *Reader* service role for an assistant. Users might not be able to open links for specific events, depending on their access to all of the items in an assistant.
+To access and view the log, users need at least the *Reader* service role for an assistant. Users might not be able to open links for specific events, depending on their access to all the items in an assistant.
 
 For more information, see [Managing access](/docs/watson-assistant?topic=watson-assistant-access-control).
 

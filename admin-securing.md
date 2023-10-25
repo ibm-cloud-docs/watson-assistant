@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-25"
 
 subcollection: watson-assistant
 
@@ -69,12 +69,12 @@ Removing message data must be an occasional event only for individual customer I
 {: note}
 
 - The assistant preview and automatic Facebook integration do not support the labeling or deletion of data based on customer ID, and cannot be used in a solution that must support the ability to delete data based on customer ID.
-- For Intercom, the `customer_id` is the `user_id` prepended with `intercom_`. The Intercom `user_id` property is the `id` of the `author` message object in the Conversation Model that is defined by Intercom.
+- For Intercom, the `customer_id` is the `user_id` with an `intercom_` prefix. The Intercom `user_id` property is the `id` of the `author` message object in the Conversation Model that is defined by Intercom.
 
     - To get the ID, open the channel from a web browser. Open the web developer tools to view the console. Look for `author`.
 
     The full customer ID looks like this: `customer_id=intercom_5c499e5535ddf5c7fa2d72b3`.
-- For Slack, the `customer_id` is the `user_id` prepended with `slack_`. The Slack `user_id` property is a concatenation of the team ID, such as `T09LVDR7Y`, and the member ID of the user, such has `W4F8K9JNF`. For example, `T09LVDR7YW4F8K9JNF`.
+- For Slack, the `customer_id` is the `user_id` with a `slack_` prefix. The Slack `user_id` property is a concatenation of the team ID, such as `T09LVDR7Y`, and the member ID of the user, such has `W4F8K9JNF`. For example, `T09LVDR7YW4F8K9JNF`.
 
     - To get the team ID, open the channel from a web browser. Open the web developer tools to view the console. Look for `[BOOT] Initial team ID`.
     - You can copy the member ID from the user's Slack profile.
@@ -108,7 +108,7 @@ Only the first **customer ID** value that is passed in the `X-Watson-Metadata` h
 
 If you add search to an assistant, user input that is submitted to the assistant is passed to the {{site.data.keyword.discoveryshort}} service as a search query. If the {{site.data.keyword.conversationshort}} integration provides a customer ID, then the resulting `/message` API request includes the customer ID in the header, and the ID is passed through to the {{site.data.keyword.discoveryshort}} `/query` API request. 
 
-To delete query data associated with a specific customer, you must send a separate delete request directly to the {{site.data.keyword.discoveryshort}} service instance that is linked to your assistant. For more information, see the {{site.data.keyword.discoveryshort}} [information security](/docs/discovery-data/information-security?topic=discovery-data-information-security){: external}.
+To delete query data associated with a specific customer, you must send a separate delete request directly to the {{site.data.keyword.discoveryshort}} service instance that is linked to your assistant. For more information, see the {{site.data.keyword.discoveryshort}} [information security](/docs/discovery-data?topic=discovery-data-information-security){: external}.
 
 ### Querying user data
 {: #securing-query-customer-id}
