@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-25"
 
 subcollection: watson-assistant
 
@@ -58,7 +58,7 @@ Add extra environments to match your existing test-to-deploy process. For exampl
 ### Access control to environments
 {: #multiple-environments-access}
 
-You can control who can work in each environment. Each environment has an ID that you can use in IBM Cloud Identity and Access Management (IAM) and set access by resource. For more information on access control, see [Managing access with Identity and Access Management](/docs/watson-assistant?topic=watson-assistant-access-control#access-control-iam). For more information on settings, see [Environment settings](#multiple-environment-settings).
+You can control who can work in each environment. Each environment has an ID that you can use in IBM Cloud Identity and Access Management (IAM) and set access by resource. For more information on access control, see [Managing access with Identity and Access Management](/docs/watson-assistant?topic=watson-assistant-access-control#access-control-iam). For more information on settings, see [Environment settings](#multiple-environments-settings).
 
 ## Publishing content to an environment
 {: #multiple-environments-publish}

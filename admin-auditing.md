@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-10"
+lastupdated: "2023-10-25"
 
 subcollection: watson-assistant
 
@@ -37,7 +37,7 @@ The following table lists the {{site.data.keyword.conversationshort}} activities
 In {{site.data.keyword.at_full_notm}}, each event has the prefix `conversation.`, for example: `conversation.action.create`
 {: note}
 
-| Activity | When someone... |
+| Activity | When someone |
 | --- | --- |
 | `action.create` | creates an action |
 | `action.delete` | deletes an action |

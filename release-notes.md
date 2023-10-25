@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-25"
 
 subcollection: watson-assistant
 
@@ -153,7 +153,7 @@ Autolearning now available for all languages
 :   Autolearning is now generally available for all languages and enabled by default in all new assistants. Your assistant can learn from interactions with your customers and improve responses. For more information, see [Using autolearning to improve assistant responses](/docs/watson-assistant?topic=watson-assistant-autolearn).
 
 See which actions use a specific variable
-:   The Variables page now includes a new *Actions count* column. You can click on the number in the column to see which actions use a variable. For more information, see [Creating a session variable](t?topic=watson-assistant-manage-info#create-session-variable).
+:   The Variables page now includes a new *Actions count* column. You can click on the number in the column to see which actions use a variable. For more information, see [Creating a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable).
 
 Expression editor character limit increased
 :   The character limit in the expression editor has increased from 1,024 to 4,000. For more information, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).
@@ -608,7 +608,7 @@ Conditioning on days of the week
     For example, you might [define a customer response](/docs/watson-assistant?topic=watson-assistant-collect-info#choose-type) in step 1 with the date response type. When the customer responds to that step, they choose a date. You can then condition a later step on whether the date that the customer chose is Wednesday.
 
 New operators available for building conditions
-:   Several new operators are available for building conditions in your actions. The free text response type now has the `contains`, `does not contain`, `matches`, and `does not match` operators available. For more information, see [Operators](/docs/watson-assistant?topic=watson-assistant-step-conditions#operators).
+:   Several new operators are available for building conditions in your actions. The free text response type now has the `contains`, `does not contain`, `matches`, and `does not match` operators available. For more information, see [Operators](/docs/watson-assistant?topic=watson-assistant-step-conditions#step-conditions-operators).
 
 Extensions support for arrays
 :   Custom extensions now support passing arrays as parameters and accessing arrays in response variables. For more information, see [Calling a custom extension](/docs/watson-assistant?topic=watson-assistant-call-extension).
@@ -847,7 +847,7 @@ Customize the Preview page background
 :   You can now change the background of the **Preview** page to one of your organization's web pages so you can preview and test your assistant from a customer's perspective. For more information, see [Previewing and sharing your assistant](/docs/watson-assistant?topic=watson-assistant-preview-share).
 
 Add a type to session variables
-:   When you create a session variable, you can now assign a type to the variable. For more information, see [Creating a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable). After a type is assigned to a variable, you can set more explicit conditions on that variable. Previously, you were able to check only whether session variables were `defined` or `not defined`. With variable types, you can create conditions based on the type of the variable (for example, `account balance < 100` or `departure date is after today`). For more information, see [Operators](/docs/watson-assistant?topic=watson-assistant-step-conditions#operators).
+:   When you create a session variable, you can now assign a type to the variable. For more information, see [Creating a session variable](/docs/watson-assistant?topic=watson-assistant-manage-info#create-session-variable). After a type is assigned to a variable, you can set more explicit conditions on that variable. Previously, you were able to check only whether session variables were `defined` or `not defined`. With variable types, you can create conditions based on the type of the variable (for example, `account balance < 100` or `departure date is after today`). For more information, see [Operators](/docs/watson-assistant?topic=watson-assistant-step-conditions#step-conditions-operators).
 
 Create saved customer responses
 :   You can now create saved customer responses. There might be some questions that your assistant needs to ask in different steps and actions. For example, a banking assistant might have different actions that ask for a customer's account number. Instead of building the same response over and over, you can create a saved customer response and reuse it across steps in multiple actions. For more information, see [Saving and reusing customer responses](/docs/watson-assistant?topic=watson-assistant-collect-info#saved-customer-responses).
@@ -1306,7 +1306,7 @@ Channel switching
 {: release-note}
 
 Actions skill improvement
-:   Updated the page where you configure a step with an *Options* reply constraint. Now it's clearer that you have a choice to make about whether to always ask for the option value or to skip asking. For more information, see [Skipping steps, always asking steps, or never asking steps](docs/watson-assistant?topic=watson-assistant-collect-info#collect-info-skip-step).
+:   Updated the page where you configure a step with an *Options* reply constraint. Now it's clearer that you have a choice to make about whether to always ask for the option value or to skip asking. For more information, see [Skipping steps, always asking steps, or never asking steps](/docs/watson-assistant?topic=watson-assistant-collect-info#collect-info-skip-step).
 
 ## 4 March 2021
 {: #watson-assistant-mar042021}
@@ -1318,7 +1318,7 @@ Support for every language!
     The universal model is available as a beta feature. For more information, see [Understanding the universal language model](/docs/watson-assistant?topic=watson-assistant-admin-language-support#admin-language-support-universal).
 
 Actions skill improvement
-:   Now you can indicate whether or not to ask for a number when you apply a number reply constraint to a step. Test how changes to this setting might help speed up a customer's interaction. Under the right circumstances, it can be useful to let a number mention be recognized and stored without having to explicitly ask the customer for it. For more information, see [Skipping steps, always asking steps, or never asking steps](docs/watson-assistant?topic=watson-assistant-collect-info#collect-info-skip-step).
+:   Now you can indicate whether or not to ask for a number when you apply a number reply constraint to a step. Test how changes to this setting might help speed up a customer's interaction. Under the right circumstances, it can be useful to let a number mention be recognized and stored without having to explicitly ask the customer for it. For more information, see [Skipping steps, always asking steps, or never asking steps](/docs/watson-assistant?topic=watson-assistant-collect-info#collect-info-skip-step).
 
 ## 1 March 2021
 {: #watson-assistant-mar012021}
@@ -1509,7 +1509,7 @@ New coverage metric and enhanced intent detection model
 :   The following features are available in service instances hosted in all data center locations except Dallas.
 
 Introducing the coverage metric!
-:   Want a quick way to see how your dialog is doing at responding to customer queries? Enable the new coverage metric to find out. The coverage metric measures the rate at which your dialog is confident that it can address a customer's request per message. For conversations that are not covered, you can review the logs to learn more about what the customer wanted. For the metric to work, you must design your dialog to include an *Anything else* node that is processed when no other dialog node intents are matched. For more information, see [Graphs and statistics](t?topic=watson-assistant-logs-overview#logs-overview-graphs).
+:   Want a quick way to see how your dialog is doing at responding to customer queries? Enable the new coverage metric to find out. The coverage metric measures the rate at which your dialog is confident that it can address a customer's request per message. For conversations that are not covered, you can review the logs to learn more about what the customer wanted. For the metric to work, you must design your dialog to include an *Anything else* node that is processed when no other dialog node intents are matched. For more information, see [Graphs and statistics](/docs/watson-assistant?topic=watson-assistant-logs-overview#logs-overview-graphs).
 
 Try out the enhanced intent detection model
 :   The new model, which is being offered as a beta feature in English-language dialog and actions skills, is faster and more accurate. It combines traditional machine learning, transfer learning, and deep learning techniques in a cohesive model that is highly responsive at run time.
@@ -1538,7 +1538,7 @@ Introducing the *actions skill*!
     The actions skill is available as a beta feature.
 
 Web chat integration is created automatically
-:   When you create a new assistant, a web chat integration is created for you automatically (in addition to the preview link integration, which was created previously). These integrations are added also to the assistant that is auto-generated (named *My first assistant*) when you create a new service instance. For more information, see [Web chat overview](docs/watson-assistant?topic=watson-assistant-web-chat-overview).
+:   When you create a new assistant, a web chat integration is created for you automatically (in addition to the preview link integration, which was created previously). These integrations are added also to the assistant that is auto-generated (named *My first assistant*) when you create a new service instance. For more information, see [Web chat overview](/docs/watson-assistant?topic=watson-assistant-web-chat-overview).
 
 Text messaging integration was renamed
 :   The *Twilio messaging* integration was renamed to *SMS with Twilio*.
@@ -1574,7 +1574,7 @@ The web chat integration is added to new assistants automatically
 {: release-note}
 
 Introducing the containment metric!
-:   Want a quick way to see how often your assistant has to ask for help? Enable the new containment metric to find out. The containment metric measures the rate at which your assistant is able to address a customer's goal without human intervention. For conversations that are not contained, you can review the logs to understand what led customers to seek help outside of the assistant. For the metric to work, you must design your dialog to flag requests for additional support when they occur. For more information, see [Graphs and statistics](ant-logs-overview#logs-overview-graphs).
+:   Want a quick way to see how often your assistant has to ask for help? Enable the new containment metric to find out. The containment metric measures the rate at which your assistant is able to address a customer's goal without human intervention. For conversations that are not contained, you can review the logs to understand what led customers to seek help outside of the assistant. For the metric to work, you must design your dialog to flag requests for additional support when they occur. For more information, see [Graphs and statistics](/docs/watson-assistant?topic=watson-assistant-logs-overview#logs-overview-graphs).
 
 Chat transfer improvements
 :   When you add the *Connect to human agent* response type to a dialog node, you can now define messages to show to your customers during the transfer, and can specify service desk agent routing preferences. For more information, see [Adding a *Connect to human agent* response type](/docs/watson-assistant?topic=watson-assistant-dialog-overview#dialog-overview-add-connect-to-human-agent).
@@ -1749,7 +1749,7 @@ Stateless v2 message API
 {: release-note}
 
 Web chat is generally available!
-:   Add your assistant to your company website as a web chat widget that can help your customers with common questions and tasks. Service desk transfer support continues to be a beta feature. For more information, see [Web chat overview](docs/watson-assistant?topic=watson-assistant-web-chat-overview).
+:   Add your assistant to your company website as a web chat widget that can help your customers with common questions and tasks. Service desk transfer support continues to be a beta feature. For more information, see [Web chat overview](/docs/watson-assistant?topic=watson-assistant-web-chat-overview).
 
 Secure your web chat
 :   Enable the beta security feature of web chat so that you can verify that messages sent to your assistant come from only your customers and can pass sensitive information to your assistant.
@@ -1946,7 +1946,7 @@ More web chat color settings
 {: release-note}
 
 Track API events
-:   Premium plan users can now use the Activity Tracker service to track how users and applications interact with {{site.data.keyword.assistant_classic_full}} in {{site.data.keyword.cloud}}. See [Using {{site.data.keyword.at_full_notm}} to audit user activity](/docs/watson-assistant?topic=watson-assistant-at-events).
+:   Premium plan users can now use the Activity Tracker service to track how users and applications interact with {{site.data.keyword.assistant_classic_full}} in {{site.data.keyword.cloud}}. See [Using {{site.data.keyword.at_full_notm}} to audit user activity](docs/watson-assistant?topic=watson-assistant-admin-auditing).
 
 ## 5 February 2020
 {: #watson-assistant-feb052020}
@@ -2062,7 +2062,7 @@ Error message when opening an instance
 {: release-note}
 
 Deploy your assistant in minutes
-:   Create a web chat integration to embed your assistant into a page on your website as a chat widget. See [Web chat overview](docs/watson-assistant?topic=watson-assistant-web-chat-overview).
+:   Create a web chat integration to embed your assistant into a page on your website as a chat widget. See [Web chat overview](/docs/watson-assistant?topic=watson-assistant-web-chat-overview).
 
 UI changes
 :   The main menu options of **Assistants** and **Skills** have moved from being displayed in the page header to being shown as icons on the side of the page. The tabbed pages for the tools you use to develop a dialog skill were moved to a secondary navigation bar that is displayed when you open the skill.
@@ -2288,7 +2288,7 @@ Arabic content catalog
 {: release-note}
 
 Czech language support is generally available
-:   Support for the Czech language is no longer classified as beta; it is now generally available. See [Supported languages](pport#admin-language-support-codes) for more information.
+:   Support for the Czech language is no longer classified as beta; it is now generally available. See [Supported languages](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-admin-language-support#admin-language-support-codes) for more information.
 
 Language support improvements
 :   The language understanding components were updated to improve the following features:
@@ -2402,7 +2402,7 @@ Major user interface revision
 
     What is presented in the tooling as a dialog skill is effectively a wrapper for a V1 workspace. There are currently no API methods for authoring skills and assistants with the V2 API. However, you can continue to use the V1 API for authoring workspaces. See [API Overview](/docs/watson-assistant?topic=watson-assistant-api-overview) for more details.
 
-    - **Switching data sources**: It is now easier to improve the model in one skill with user conversation logs from a different skill. You do not need to rely on deployment IDs, but can simply pick the name of the assistant to which a skill was added and deployed to use its data. See [Improving across assistants](t?topic=watson-assistant-logs#logs-deploy-id).
+    - **Switching data sources**: It is now easier to improve the model in one skill with user conversation logs from a different skill. You do not need to rely on deployment IDs, but can simply pick the name of the assistant to which a skill was added and deployed to use its data. See [Improving across assistants](/docs/watson-assistant?topic=watson-assistant-logs#logs-deploy-id).
 
     - **Preview links from London instances**: If your service instance is hosted in London, then you must edit the preview link URL. The URL includes a region code for the region where the instance is hosted. Because instances in London are syndicated to Dallas, you must replace the `eu-gb` reference in the URL with `us-south` for the preview web page to render properly.
 
@@ -2504,7 +2504,7 @@ Pattern limit expanded
 {: release-note}
 
 Jump-tos from conditional responses
-:   You can now configure a conditional response to jump directly to another node. See [Conditional responses](/docs/watson-assistant?topic=assistant-dialog-overview#dialog-overview-multiple) for more details.
+:   You can now configure a conditional response to jump directly to another node. See [Conditional responses](/docs/watson-assistant?topic=watson-assistant-dialog-overview#dialog-overview-multiple) for more details.
 
 ## 21 June 2018
 {: #watson-assistant-jun212018}
@@ -2599,7 +2599,7 @@ Search intents and entities
 :   A new search feature has been added that allows you to [search intents](/docs/watson-assistant?topic=watson-assistant-intents#intents-search) for user examples, intent names, or descriptions, or to [search entity](/docs/watson-assistant?topic=watson-assistant-entities#entities-search) values and synonyms.
 
 Content catalogs
-:   The new [content catalogs](/docs/watson-assistant?topic=assistant-catalog#catalog-add) contain a single category of prebuilt common intents and entities that you can add to your application. For example, most applications require a general `#greeting-type` intent that starts a dialog with the user. You can add it from the content catalog rather than building your own.
+:   The new [content catalogs](/docs/watson-assistant?topic=watson-assistant-catalog#catalog-add) contain a single category of prebuilt common intents and entities that you can add to your application. For example, most applications require a general `#greeting-type` intent that starts a dialog with the user. You can add it from the content catalog rather than building your own.
 
 Enhanced user metrics
 :   The Improve component has been enhanced with additional user metrics and logging statistics. For example, the Overview page includes several new, detailed graphs that summarize interactions between users and your application, the amount of traffic for a given time period, and the intents and entities that were recognized most often in user conversations.
@@ -2635,7 +2635,7 @@ New API version
 {: release-note}
 
 Dutch system entities (Beta)
-:   Dutch language support has been enhanced to include the availability of [System entities](/docs/watson-assistant?topic=watson-assistant-system-entities) in beta release. See [Supported languages](/docs/watson-assistant?topic=watson-assistant-language-support) for details.
+:   Dutch language support has been enhanced to include the availability of [System entities](/docs/watson-assistant?topic=watson-assistant-system-entities) in beta release. See [Supported languages](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-admin-language-support#admin-language-support-codes) for details.
 
 ## 29 January 2018
 {: #watson-assistant-jan292018}
@@ -2692,7 +2692,7 @@ Eastern Arabic numeral support
 {: release-note}
 
 Improving understanding of user input across workspaces
-:   You can now improve a workspace with utterances that were sent to other workspaces within your instance. For example, you might have multiple versions of production workspaces and development workspaces; you can use the same utterance data to improve any of these workspaces. See [Improving across workspaces](/docs/watson-assistant?topic=assistant-logs#logs-deploy-id).
+:   You can now improve a workspace with utterances that were sent to other workspaces within your instance. For example, you might have multiple versions of production workspaces and development workspaces; you can use the same utterance data to improve any of these workspaces. See [Improving across workspaces](/docs/watson-assistant?topic=watson-assistant-logs#logs-deploy-id).
 
 ## 20 November 2017
 {: #watson-assistant-nov202017}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-25"
 
 subcollection: watson-assistant
 
@@ -115,7 +115,7 @@ To complete the OAuth authentication setup, follow these steps:
 1. If you are using the custom grant type `x-`<any custom name> (for example, x-apikey), follow these steps:
 
     1. Add the secret values associated with the secret fields.
-    1. Add the optional param values, if any. 
+    1. Add the optional parameter values, if any. 
 
 If the external service supports the Refresh Token grant type, {{site.data.keyword.conversationshort}}  automatically obtains a new access token when the old one expires. If the OpenAPI document defines the `refreshUrl` attribute, the specified URL is used; otherwise, the `tokenUrl` URL is used.
 {: note}

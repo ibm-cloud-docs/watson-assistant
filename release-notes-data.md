@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-25"
 
 subcollection: watson-assistant
 
@@ -47,7 +47,7 @@ The following table shows the latest version of the web chat integration that is
 {: release-note}
 
 {{site.data.keyword.assistant_classic_full}} Cartridge for {{site.data.keyword.icp4dfull}} Version 4.7.2 is available
-:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.7.2 is compatible with {{site.data.keyword.icp4dfull}} Version 4.7. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install#install-support-matrix) for more details. 
+:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.7.2 is compatible with {{site.data.keyword.icp4dfull}} Version 4.7. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install-data#install-support-matrix) for more details. 
 
 Multiple validation responses
 :   When you edit a validation for a customer response, you can now include several validation responses. For more information, see [Customizing validation for a response](/docs/watson-assistant?topic=watson-assistant-handle-errors#customize-validation).
@@ -495,7 +495,7 @@ Features not included
    - The @sys-person and @sys-location system entities are not supported and the new version of the numeric system entities is not available.
    - There is no search function in the pages of the product.
    - You cannot use the Activity Tracker service to track user actions.
-   - You cannot manage user access at the individual skill and assistant level. You can control only who can access the entire service instance, which includes all of its skills and assistants. For more information about granting access to services in {{site.data.keyword.icp4dfull_notm}}, see [3.0.1 Managing users](https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.0.1/cpd/admin/users.html)}.
+   - You cannot manage user access at the individual skill and assistant level. You can control only who can access the entire service instance, which includes all of its skills and assistants.
 
 ## 14 April 2020
 {: #assistant-data-apr142020}

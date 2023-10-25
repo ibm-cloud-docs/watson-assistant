@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-25"
 
 subcollection: watson-assistant
 
@@ -21,7 +21,7 @@ Templates are available for different use cases, for example, booking a meeting,
 You can use templates in English-language assistants only.
 {: note}
 
-Some or all of these features are included as examples in action templates:
+These features are included as examples in action templates:
 
 | Feature | Description | More information |
 | --- | --- | --- |
@@ -35,7 +35,7 @@ Some or all of these features are included as examples in action templates:
  | Connect to agent | If your assistant is integrated with one of the supported service desk systems, you can build in logic that transfers the conversation to a live agent when necessary. | [Connecting to a live agent](/docs/watson-assistant?topic=watson-assistant-human-agent) |
  | Embedded video | Includes a video to display a how-to demonstration, promotional clip, or other video content. In the web chat, a video response renders as an embedded video player. | [Adding a Video response](/docs/watson-assistant?topic=watson-assistant-respond#respond-add-video) |
  | Customer responses referenced in URLs | In your assistant's output, you can reference variables to personalize a URL link, including information specific to the customer such as account number or email address | [Adding and referencing variables](/docs/watson-assistant?topic=watson-assistant-respond#respond-variables) |
- | Customized agent handoff information | If your assistant is integrated with one of the supported service desk systems, you can build in logic that transfers the conversation to a live agent when necessary. You can customize messages the assistant displays as part of the transfer | [Connecting to a live agent](/docs/watson-assistant?topic=watson-assistant-human-agent) |
+ | Customized agent hand off information | If your assistant is integrated with one of the supported service desk systems, you can build in logic that transfers the conversation to a live agent when necessary. You can customize messages the assistant displays as part of the transfer | [Connecting to a live agent](/docs/watson-assistant?topic=watson-assistant-human-agent) |
 {: caption="Features" caption-side="bottom"}
 
 ## Creating actions from templates
@@ -84,7 +84,7 @@ To preview the action that you created from a template:
 
 1. In the actions editor, click **Preview**.
 
-1. Try some of the example phrases from **Customer starts with** to see how the assistant responds.
+1. Try some example phrases from **Customer starts with** to see how the assistant responds.
 
    ![Preview](images/actions-templates-preview.png){: caption="Preview" caption-side="bottom"}
 

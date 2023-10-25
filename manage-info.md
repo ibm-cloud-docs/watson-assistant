@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-25"
 
 subcollection: watson-assistant
 
@@ -77,7 +77,7 @@ To add a session variable that can be accessed by any action:
 1. Click **Apply**.
 
 ### Built-in variables
-{: #built-in-variables }
+{: #built-in-variables}
 
 In addition to the variables you create, {{site.data.keyword.conversationshort}} provides a set of built-in variables you can access from any action. At run time, these variables are automatically set with the appropriate values. For example, the *Current time* session variable always provides the current time in the user's time zone, at the time of the interaction with the customer.
 

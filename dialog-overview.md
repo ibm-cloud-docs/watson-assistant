@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-25"
 
 keywords: building a dialog, condition, response, options, jump, jump-to, multiline, response variations
 
@@ -766,7 +766,7 @@ To add a *Search skill* response type, complete the following steps:
     ```
     {: codeblock}  
 
-Test this response type from the assistant *Preview*. You cannot test it from the dialog skill's "Try it out" pane. For more information about testing dialog and search skills together, see [Testing your assistant from a web page](/docs/assistant?topic=assistant-deploy-web-link).
+Test this response type from the assistant *Preview*. You cannot test it from the dialog skill's "Try it out" pane.
 
 ### Conditional responses
 {: #dialog-overview-multiple}
