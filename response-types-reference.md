@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-25"
 
 subcollection: watson-assistant
 
@@ -172,7 +172,7 @@ Transfers the conversation to a live agent for help. Service desk support must b
 - For information about adding service desk support to the phone integration, see [Configuring backup call center support](/docs/watson-assistant?topic=watson-assistant-deploy-phone-config#deploy-phone-config-transfer-service).
 
 ### Fields
-{: #response-types-json-channel-transfer-fields}
+{: #response-types-json-channel-transfer-fields-2}
 
 | Name                   | Type   | Description        | Required? |
 |------------------------|--------|--------------------|-----------|
@@ -229,7 +229,7 @@ Use an interactive date picker that a customer can use to specify a date value.
 | response_type | string | `date`             | Y         |
 
 ### Example
-{: #response-types-json-connect-to-agent-example}
+{: #response-types-json-date-example}
 
 This example sends a text response that asks the user to specify a date, and then shows an interactive date picker.
 

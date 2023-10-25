@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-07"
+lastupdated: "2023-10-25"
 
 subcollection: watson-assistant
 
@@ -292,7 +292,7 @@ Properties contained in the `private` object are treated as private variables, w
 {: caption="Properties of the whatsapp object" caption-side="top"}
 
 ### Example JSON
-{: #expression-integration-variables-sms-example}
+{: #expression-integration-variables-sms-example-2}
 
 ```json
 "whatsapp": {
