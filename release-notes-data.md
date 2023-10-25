@@ -29,6 +29,7 @@ The following table shows the latest version of the web chat integration that is
 
 | {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} version | Latest web chat version available |
 |----------------|----------------|
+| 4.7.4 | [7.6.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.5.0) |
 | 4.7.2 | [7.5.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.5.0) |
 | 4.7.1 | [7.4.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.4.0) |
 | 4.7.0 | [7.3.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.3.0) |
@@ -42,6 +43,34 @@ The following table shows the latest version of the web chat integration that is
 | 4.0.8 | [6.2.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#6.2.0) |
 {: caption="Web chat versions in {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}}" caption-side="top"}
 
+## 25 October 2023
+{: #assistant-data-oct252023}
+{: release-note}
+
+{{site.data.keyword.assistant_classic_full}} Cartridge for {{site.data.keyword.icp4dfull}} Version 4.7.4 is available
+:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.7.4 is compatible with {{site.data.keyword.icp4dfull}} Version 4.7. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install-data#install-support-matrix) for more details. 
+
+Session history summary
+:   You can use the session_history variable to store a summary of the  recent messages from a conversation for each customer. You might use session history to provide a summary of the conversation during a transfer to a live agent, or you might use it to call a generative AI extension to generate an answer. For more information, see [Session history](/docs/watson-assistant?topic=watson-assistant-publish-overview#publish-overview-environment-settings-session-history).
+
+Specify how often to use No action matches
+:   You can use a new global setting for actions to change how often your assistant routes customers to the "No action matches" action. By setting this threshold, you can specify when the assistant fetches answers from a search integration, triggers the "Fallback" action, or switches topics. For more information, see [When the assistant can't understand your customer's request](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches).
+
+See who last edited a collection or action
+:   Now you can see who last edited a collection or action. On the Actions page, you can hover on the values in the Last edited column to see the email address of the person who last modified the collection or action. 
+
+Change to multilingual downloads for translation
+:   The ID values that are used in the multilingual downloads for translation are changed. If you used the multilingual download before, you need to download a new CSV file to match the IDs in your assistant. For more information, see [Using multilingual downloads for translation](/docs/watson-assistant?topic=watson-assistant-admin-language-support#admin-language-support-multilingual).
+
+Algorithm version **Beta** provides improved intent detection and action matching for more languages
+:   The algorithm version **Beta** now provides improved intent detection and action matching for Arabic, Chinese (Simplified), Chinese (Traditional), Czech, Dutch, Italian, Japanese, and Korean. It includes a new foundation model that is trained using a transformer architecture to improve intent detection and action matching.
+
+   Improvements include:
+   - Improved robustness to variations in user inputs such as typos and different inflection forms
+   - Less training data required to reach the same level of performance compared to previous algorithms
+
+   For more information, see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version)
+   
 ## 30 August 2023
 {: #assistant-data-aug302023}
 {: release-note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-25"
 
 subcollection: watson-assistant
 
@@ -22,8 +22,9 @@ The {{site.data.keyword.icp4dfull_notm}} environment is a Kubernetes-based conta
 
 The installation process differs depending on the version you are installing. The following table shows the available versions.
 
-| Version |  Cluster | Installation instructions |
+<review>| Version |  Cluster | Installation instructions |
 | --- | --- | --- |
+| 4.7.4 | {{site.data.keyword.icp4dfull_notm}} 4.7.x | [Installing 4.7.4](https://www.ibm.com/docs/SSQNUZ_4.7.x/svc-assistant/assistant-svc-install.html){: external} |
 | 4.7.2 | {{site.data.keyword.icp4dfull_notm}} 4.7.x | [Installing 4.7.2](https://www.ibm.com/docs/SSQNUZ_4.7.x/svc-assistant/assistant-svc-install.html){: external} |
 | 4.7.1 | {{site.data.keyword.icp4dfull_notm}} 4.7.x | [Installing 4.7.1](https://www.ibm.com/docs/SSQNUZ_4.7.x/svc-assistant/assistant-svc-install.html){: external} |
 | 4.7.0 | {{site.data.keyword.icp4dfull_notm}} 4.7.x | [Installing 4.7.0](https://www.ibm.com/docs/SSQNUZ_4.7.x/svc-assistant/assistant-svc-install.html){: external} |
@@ -44,7 +45,6 @@ The installation process differs depending on the version you are installing. Th
 | 1.5.0 | {{site.data.keyword.icp4dfull_notm}} 3.0.1 or 3.5 | [Installing 1.5.0](https://www.ibm.com/docs/en/cloud-paks/cp-data/3.5.0?topic=service-installing-watson-assistant){: external} |
 {: caption="Available versions" caption-side="top"}
 
-
 ## Support matrix
 {: #install-support-matrix}
 
@@ -52,6 +52,8 @@ The following table describes which versions of {{site.data.keyword.assistant_cl
 
 | {{site.data.keyword.assistant_classic_short}} version | {{site.data.keyword.icp4dfull_notm}} version | Red Hat OpenShift version |
 | --- | --- | --- |
+| 4.7.4 | 4.7.x | 4.12 |
+| 4.7.4 | 4.7.x | 4.10 |
 | 4.7.2 | 4.7.x | 4.12 |
 | 4.7.2 | 4.7.x | 4.10 |
 | 4.7.1 | 4.7.x | 4.12 |
@@ -92,4 +94,3 @@ The following table describes which versions of {{site.data.keyword.assistant_cl
 | 1.5.0 | 3.0.1 | 4.5 |
 | 1.5.0 | 3.0.1 | 3.11 |
 {: caption="Support matrix" caption-side="top"}
-
