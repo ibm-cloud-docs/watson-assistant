@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-25"
+lastupdated: "2023-10-26"
 
 keywords: global support, universal language, universal model, another language
 
@@ -187,8 +187,8 @@ These languages are supported for content in actions, dialog, and the search int
 
 | Language | Actions | Dialog | Search integration |
 | --- |:---:|:---:|:---:|
-| English (en) | ![checkmark icon](../../icons/checkmark-icon.svg) |  ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
-| Arabic (ar) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| English (`en`) | ![checkmark icon](../../icons/checkmark-icon.svg) |  ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Arabic (`ar`) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Chinese (Simplified) (`zh-cn`) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Chinese (Traditional) (`zh-tw`) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Czech (`cs`) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
@@ -221,8 +221,8 @@ For these dialog features, language support differs depending on the language.
 
 | Language | [Content Catalog](/docs/watson-assistant?topic=watson-assistant-catalog) | [Algorithm version](/docs/watson-assistant?topic=watson-assistant-algorithm-version ) |
 | --- |:---:|:---:|
-| English (en) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
-| Arabic (ar) | ![checkmark icon](../../icons/checkmark-icon.svg) (except Covid-19) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| English (`en`) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Arabic (`ar`) | ![checkmark icon](../../icons/checkmark-icon.svg) (except Covid-19) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Chinese (Simplified) (`zh-cn`) |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Chinese (Traditional) (`zh-tw`) |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Czech (`cs`) |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
@@ -242,8 +242,8 @@ For these dialog features, language support differs depending on the language.
 
 | Language | [Dictionary-based entity support](/docs/watson-assistant?topic=watson-assistant-entities#entities-create-dictionary-based) | [Fuzzy matching (*Misspelling*)](/docs/watson-assistant?topic=watson-assistant-entities#entities-fuzzy-matching) | [Fuzzy matching (*Stemming*)](/docs/watson-assistant?topic=watson-assistant-entities#entities-fuzzy-matching) | [Fuzzy matching (*Partial match*)](/docs/watson-assistant?topic=watson-assistant-entities#entities-fuzzy-matching) | [Autocorrection](/docs/watson-assistant?topic=watson-assistant-autocorrection) |
 | --- |:---:|:---:|:---:|:---:|:---:|
-| English (en) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
-| Arabic (ar) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |  |
+| English (`en`) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Arabic (`ar`) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |  |
 | Chinese (Simplified) (`zh-cn`) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |  |  |
 | Chinese (Traditional) (`zh-tw`) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |  |  |
 | Czech (`cs`) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |
@@ -263,8 +263,8 @@ For these dialog features, language support differs depending on the language.
 
 | Language | [Contextual entities](/docs/watson-assistant?topic=watson-assistant-entities#entities-create-annotation-based) | [System entities](/docs/watson-assistant?topic=watson-assistant-system-entities) |
 | --- |:---|:---:|
-| English (en)                   | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
-| Arabic (ar)                    |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| English (`en`)                   | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
+| Arabic (`ar`)                    |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Chinese (Simplified) (`zh-cn`)   |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Chinese (Traditional) (`zh-tw`)  |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Czech (`cs`)                     |  | ![checkmark icon](../../icons/checkmark-icon.svg) |

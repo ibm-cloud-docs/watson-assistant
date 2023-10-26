@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: “2023-10-10”
+lastupdated: "2023-10-26"
 
 subcollection: watson-assistant
 
@@ -15,7 +15,7 @@ subcollection: watson-assistant
 
 [IBM Cloud]{: tag-ibm-cloud}
 
-You can use the phone integration to help your customers over the phone and transfer them to live agents inside of Genesys Cloud. If, in the course of a conversation with your assistant, a customer asks to speak to a person, you can transfer the conversation directly to a Genesys Cloud agent.
+You can use the phone integration to help your customers over the phone and transfer them to live agents inside of Genesys Cloud. If in the course of a conversation with your assistant, a customer asks to speak to a person, you can transfer the conversation directly to a Genesys Cloud agent.
 
 ## Before you begin
 {: #deploy-phone-genesys-prereq}
@@ -81,7 +81,7 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
 1. Under **Protocol**
 
-    - In the **Header/Invite** section, toggle the **Conversation Headers** swtich to **Enabled**.
+    - In the **Header/Invite** section, toggle the **Conversation Headers** switch to **Enabled**.
 
     - Enable **Take Back and Transfer**.
 
@@ -136,7 +136,7 @@ To integrate your assistant with Genesys Cloud, follow these steps:
 
     - When prompted, select **Use an existing phone number with an external provider**.
 
-    - Enter the phone number that you assigned in the Genesys **Number Plans** setting. It is not necessarily a real phone number; it is an identifier you assigned.
+    - Enter the phone number that you assigned in the Genesys **Number Plans** setting. It is not necessarily a real phone number; it is an identifier that you assigned.
 
     - Complete the phone integration setup process. For more information, see [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone).
 
@@ -180,7 +180,7 @@ Now that your Genesys Cloud environment can connect to {{site.data.keyword.conve
 
     1. Click **Architect**.
 
-    1. In the **Flows: Inbound Call** section, click **`+`** to create a new flow. Give it a descriptive name (for example, `Escalate to Agent`).
+    1. In the **Flows: Inbound Call** section click **`+`** to create a new flow. Give it a descriptive name (for example, `Escalate to Agent`).
 
       ![Genesys create flow](images/phone-genesys-flow.png)
 
@@ -188,7 +188,7 @@ Now that your Genesys Cloud environment can connect to {{site.data.keyword.conve
 
       ![Genesys task](images/phone-genesys-task.png)
 
-    1. From your toolbox under **Data**, drag a **Set Participant Data** widget into the first action. Click on the widget and specify an attribute named **uuiData**. For the value to assign, choose the **Expression** type and enter `Call . UUIData`.
+    1. From your toolbox under **Data**, drag a **Set Participant Data** widget into the first action. Click on the widget and specify an attribute that is named **uuiData**. For the value to assign, choose the **Expression** type and enter `Call . UUIData`.
 
     1. From your toolbox, under **Transfer**, drag the **Transfer to ACD** widget into the first action.
 
@@ -214,7 +214,7 @@ Now that your Genesys Cloud environment can connect to {{site.data.keyword.conve
 
     1. Click **Save**.
 
-1. Make sure that your assistant is configured to transfer calls to an agent using the *Connect To Agent* response_type. For more information, see [Transferring a call to a live agent](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer).
+1. Make sure that your assistant is configured to transfer calls to an agent by using the *Connect To Agent* response_type. For more information, see [Transferring a call to a live agent](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-transfer).
 
     For the `sip.uri` parameter, use the DID number that you created in Genesys Cloud, and the inbound SIP URI from your Genesys trunk. Use the following format:
 

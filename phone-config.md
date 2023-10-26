@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-26"
 
 subcollection: watson-assistant
 
@@ -202,7 +202,7 @@ IBM has established relationships with the following SIP trunk providers:
 
 The SIP trunk provider sets up a SIP trunk for your voice traffic, and manages access from allowed IP addresses. Most of the major SIP trunk providers have existing relationships with IBM. Therefore, the network configuration that is required to support the SIP trunk connection typically can be handled for you with minimal effort.
 
-1. Create a [{{site.data.keyword.Bluemix_notm}} case](/unifiedsupport/cases/form){: external}.
+1. Create an [{{site.data.keyword.Bluemix_notm}} case](/unifiedsupport/cases/form){: external}.
 
 1. Click **Customer success** as the case type.
 

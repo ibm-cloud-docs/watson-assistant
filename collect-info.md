@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-10-03"
+lastupdated: "2023-10-26"
 
 subcollection: watson-assistant
 
@@ -295,7 +295,7 @@ A *free text* response collects any arbitrary text string. Use this response for
 - `John Q. Smith`
 - `Please add extra sauce`
 
-The free text response type has these default setttings:
+The free text response type has these default settings:
 
 - **Customer response collection behavior** is **Always ask for this information** and can't be modified. For more information, see [Skipping steps, always asking steps, or never asking steps](#collect-info-skip-step).
 - **Change conversation topic** is disabled. If you want a customer to be able to digress and change topics while entering a free text answer, enable the toggle **Allow customer to change topics during a free text response**. For more information, see [Allowing your customers to change the topic of the conversation](/docs/watson-assistant?topic=watson-assistant-change-topic).

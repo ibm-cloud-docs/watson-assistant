@@ -62,7 +62,7 @@ The following properties are included only for messages that were handled by an 
 | `actionStarted`         | Boolean  | Whether processing of the action started during handling of the message. |
 | `actionTitle`           | String   | The title of the action that was visited during handling of the message (for example, `I want to pay my bill`). |
 | `actionsVisited`        | String[] | An array of strings listing the actions visited during handling of the message. |
-| `fallbackReason`        | String   | The reason why the fallback action was visisted (for example, escalated to human agent or no action matches). |
+| `fallbackReason`        | String   | The reason why the fallback action was visited (for example, escalated to human agent or no action matches). |
 | `handler`               | String   | The name of any handler that was called. |
 | `stepsVisited`          | String[] | An array of strings listing the steps visited during handling of the message. Each step name is prefixed with the action name. |
 | `subaction`             | String   | The name of any other action that was called by the action that was triggered by the message. |
