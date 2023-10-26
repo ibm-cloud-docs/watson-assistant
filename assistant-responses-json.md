@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-26"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,7 @@ subcollection: watson-assistant
 # Defining responses by using the JSON editor
 {: #assistant-responses-json}
 
-In some situations, you might need to define your assistant's responses by using the JSON editor. (For more information about assistant responses, see [Adding assistant responses](/docs/watson-assistant?topic=watson-assistant-respond)).
+In some situations, you might need to define your assistant's responses by using the JSON editor. For more information, see [Adding assistant responses](/docs/watson-assistant?topic=watson-assistant-respond)).
 {: shortdesc}
 
 To edit a response by using the JSON editor, click the **Switch to JSON editor** icon ![Switch to JSON editor icon](images/json-editor-icon.png) in the **Assistant says** field. The JSON editor shows how the response is defined behind the scenes and sent to the channel.
@@ -34,7 +34,7 @@ The `generic` property defines an array of responses that are sent to the channe
 
 The `generic` array for a step can contain multiple responses, and each response has a _response type_. A basic step that sends a simple text response typically includes only a single response with the response type `text`. However, many other response types are available, supporting multimedia and interactive content, plus control over the behavior of some channel integrations.
 
-Although the `generic` format can be sent to any channel integration, not all channels support all response types, so a particular response might be ignored (or handled differently) by some channels. For more information, see [Channel integration support for response types](#assistant-responses-json-integration-support).
+Although the `generic` format can be sent to any channel integration, not all channels support all response types, so a particular response might be ignored or handled differently by some channels. For more information, see [Channel integration support for response types](#assistant-responses-json-integration-support).
 
 At run time, output with multiple responses might be split into multiple message payloads. The channel integration sends these messages to the channel in sequence, but it is the responsibility of the channel to deliver these messages to the user; this can be affected by network or server issues.
 {: note}
@@ -72,7 +72,7 @@ To specify a response in the JSON editor, insert the appropriate JSON objects in
 ```
 {: codeblock}
 
-For information about the available response types, see [Response types](#assistant-responses-json-response-types).
+For more information, see [Response types](#assistant-responses-json-response-types).
 
 
 
@@ -161,9 +161,9 @@ If the `channels` array is present, it must contain at least one channel object.
 ## Response types
 {: #assistant-responses-json-response-types}
 
-The following response types are available. (For detailed information about how to specify each response type, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference).)
+The following response types are available. For more information, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference).
 
-Not all channel integrations support all response types. For information about which integrations support which response types, see [Channel integration support for response types](#assistant-responses-json-integration-support).
+Not all channel integrations support all response types. For more information, see [Channel integration support for response types](#assistant-responses-json-integration-support).
 {: note}
 
 `audio`
@@ -179,7 +179,7 @@ Not all channel integrations support all response types. For information about w
 :   Requests that the channel collects a date value from the customer (for example, by displaying an interactive calendar).
 
 `dtmf`
-:   Sends commands to the phone integration to control input or output by using dual-tone multi-frequency (DTMF) signals. (DTMF is a protocol that is used to transmit the tones that are generated when a user presses keys on a push-button phone.)
+:   Sends commands to the phone integration to control input or output by using dual-tone multi-frequency (DTMF) signals. DTMF is a protocol that transmits tones from a user that presses keys on a push-button phone.)
 
 `end_session`
 :   Sends a command to the channel to end the session. This response type instructs the phone integration to hang up the call.
@@ -194,7 +194,7 @@ Not all channel integrations support all response types. For information about w
 :   Presents a set of options (such as buttons or a drop-down list) that users can choose from. The selected value is then sent to the assistant as user input.
 
 `pause`
-:   Pauses before sending the next message to the channel, and optionally sends a "user is typing" event (for channels that support it).
+:   Pauses before sending the next message to the channel, and optionally sends a "user is typing" event for channels that support it.
 
 
 
@@ -222,25 +222,25 @@ Not all channel integrations support all response types. For information about w
 ## Channel integration support for response types
 {: #assistant-responses-json-integration-support}
 
-The following table indicates which channel integrations support each type. For additional information about any channel-specific limitations, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference).
+The following table indicates which channel integrations support each type. For more information about channel-specific limitations, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference).
 
-| Response type    | Web chat                          | Phone                             | SMS                               | Slack                             | Facebook                          | WhatsApp                          |
-|------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
-| audio            | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
-| channel_transfer |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
-| connect_to_agent | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   | ![Yes](images/checkmark-icon.svg) |
-| date             | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |                                   |
-| dtmf             |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |
-| end_session      |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |
-| iframe           | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   | ![Yes](images/checkmark-icon.svg) |                                   |
-| image            | ![Yes](images/checkmark-icon.svg) |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
-| option           | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
-| pause            | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
-| speech_to_text   |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |
-| start_activities |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |
-| stop_activities  |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |
-| text             | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
-| text_to_speech   |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |
-| user_defined     | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
-| video            | ![Yes](images/checkmark-icon.svg) |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
+| Response type | Web chat | Phone | SMS | Slack | Facebook | WhatsApp | MS Teams |
+|------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
+| audio | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |                                   |  
+| channel_transfer |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |                                   |  
+| connect_to_agent | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   | ![Yes](images/checkmark-icon.svg) |                                   |  
+| date | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |                                   |                                   |  
+| dtmf |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |                                   |  
+| end_session |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |                                   |  
+| iframe | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |  
+| image | ![Yes](images/checkmark-icon.svg) |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |![Yes](images/checkmark-icon.svg) |
+| option | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |![Yes](images/checkmark-icon.svg) |
+| pause | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |                                   | 
+| speech_to_text |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |                                   | 
+| start_activities |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |                                   | 
+| stop_activities |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |                                   | 
+| text | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
+| text_to_speech |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |                                   | 
+| user_defined | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |                                   | 
+| video | ![Yes](images/checkmark-icon.svg) |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |                                   | 
 {: caption="Channel integration support" caption-side="bottom"}
