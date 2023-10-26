@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-10-25"
+lastupdated: "2023-10-26"
 
 subcollection: watson-assistant
 
@@ -149,10 +149,10 @@ The web chat integration complies with the [Web Content Accessibility 2.1 Level 
 
 By default, the web chat creates a unique, anonymous ID the first time a new user starts a session. This identifier is stored in a first-party cookie, which remains active for 45 days. If the same user returns to your site and chats with your assistant again while this cookie is still active, the web chat integration recognizes the user and uses the same user ID. You are charged only once per month for the same anonymous user.
 
-On Apple devices, the Intelligent Tracking Prevention feature automatically deletes any client-side cookie after 7 days. If an anonymous customer accesses your website and then visits again two weeks later, the two visits are treated as two different MAUs. For information about how to prevent this problem, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-userid).
+On Apple devices, the Intelligent Tracking Prevention feature automatically deletes any client-side cookie after 7 days. If an anonymous customer accesses your website and then visits again two weeks later, the two visits are treated as two different MAUs. For information about how to prevent this problem, see [Managing user identity information in web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-userid).
 {: important}
 
-For information about how to customize the handling of user identity information for billing purposes, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-userid).
+For information about how to customize the handling of user identity information for billing purposes, see [Managing user identity information in web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-userid).
 
 The usage is measured differently depending on the plan type. For Lite plans, usage is measured by the number of `/message` calls (API) are sent to the assistant from the web chat integration. For all other plans, usage is measured by the number of monthly active users (MAU) that the web chat interacts with. The maximum number of allowed MAUs differs depending on your {{site.data.keyword.conversationshort}} plan type.
 
@@ -209,7 +209,7 @@ By default, the web chat displays hardcoded labels and messages in English, but 
 
 In whichever language you are using, you can also customize the text of any hardcoded strings.
 
-For more information, see [Supporting global audiences](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-global).
+For more information, see [Supporting global audiences in web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-global).
 
 ### Security
 {: #web-chat-architecture-security}

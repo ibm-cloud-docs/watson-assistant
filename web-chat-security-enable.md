@@ -2,30 +2,13 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-01-19"
+lastupdated: "2023-10-26"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:preview: .preview}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:video: .video}
-
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Enabling web chat security
 {: #web-chat-security-enable}
@@ -59,7 +42,7 @@ Most programming languages offer JWT libraries that you can use to generate a to
 
 The JWT payload must specify the following claims:
 
-- `sub`: A unique user ID that identifies the customer who is interacting with the web chat. This can be either a generated unique identifier (for anonymous users) or an authenticated user ID. For more information about how the `sub` value is used, see [Authenticating users](/docs/watson-assistant?topic=watson-assistant-web-chat-security-authenticate).
+- `sub`: A unique user ID that identifies the customer who is interacting with the web chat. This can be either a generated unique identifier (for anonymous users) or an authenticated user ID. For more information about how the `sub` value is used, see [Authenticating users in web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security-authenticate).
 
     To ensure security, the JWT should be specific to each user. Use either the user's authenticated login information, or a unique generated ID. Do not reuse the same JWT, or the same `sub` value, for more than one user.
 

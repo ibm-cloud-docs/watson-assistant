@@ -8,24 +8,7 @@ subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:preview: .preview}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:video: .video}
-
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Overview: Securing a web chat
 {: #web-chat-security}
@@ -67,13 +50,13 @@ With web chat security enabled, you can optionally implement additional security
 
     By encoding user identity information as part of the JWT payload, you can authenticate users securely. The JWT is signed and cannot be modified by the user.
 
-    For more information about using JWTs for secure authentication, see [Authenticating users](/docs/watson-assistant?topic=watson-assistant-web-chat-security-authenticate).
+    For more information about using JWTs for secure authentication, see [Authenticating users in web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security-authenticate).
 
 - You can prevent unauthorized access to sensitive customer information by encrypting it and including it as part of the JWT user payload.
 
     The user payload is a part of the JWT you can use to send information you want your assistant to have access to, but you do not want customers to see. This information is stored only in private variables, which cannot be seen by customers and are never included in logs.
 
-    For more information about using the user payload to protect sensitive information, see [Encrypting sensitive data](/docs/watson-assistant?topic=watson-assistant-web-chat-security-encrypt).
+    For more information about using the user payload to protect sensitive information, see [Encrypting sensitive data in web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security-encrypt).
 
 ![development icon](images/development-icon.png) **Tutorial:** For a developer tutorial that shows an example of using web chat security to authenticate users and protect sensitive data, see [Tutorial: Authenticating a user in the middle of a session](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-security).
 
