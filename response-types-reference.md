@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-25"
+lastupdated: "2023-10-26"
 
 subcollection: watson-assistant
 
@@ -411,9 +411,9 @@ Displays an image that is specified by a URL.
 ### Integration channel support
 {: #response-types-json-image-integrations}
 
-| Web chat                          | SMS                               | Slack                             | Facebook                          | WhatsApp                          |
-|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
-| ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
+| Web chat                          | SMS                               | Slack                             | Facebook                          | WhatsApp                          | MS Teams                          |
+|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
+| ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |![Yes](images/checkmark-icon.svg) |
 
 - Some channel integrations do not display image titles or descriptions.
 
@@ -455,9 +455,9 @@ Use to show a set of options (such as buttons or a drop-down list) that users ca
 ### Integration channel support
 {: #response-types-json-option-integrations}
 
-| Web chat                          | Phone                             | SMS                               | Slack                             | Facebook                          | WhatsApp                          |
-|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
-| ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
+| Web chat                          | Phone                             | SMS                               | Slack                             | Facebook                          | WhatsApp                          | MS Teams                          |
+|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
+| ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
 
 - How options are presented varies by channel integration. The `preference` field is supported when possible, but not all channels support drop-down lists or buttons.
 
