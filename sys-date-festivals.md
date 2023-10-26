@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-17"
+lastupdated: "2023-10-26"
 
 subcollection: watson-assistant
 
@@ -62,7 +62,7 @@ The following sections list the holidays that [`@sys-date`](/docs/watson-assista
 | Groundhog Day | `groundhog` |
 | Valentines Day | `valentine` |
 | International Women's Day | `women` |
-| Commonweath Day | `commonwealth` |
+| Commonwealth Day | `commonwealth` |
 | St Patrick's Day | `patrick` |
 | April Fool's Day | `fool` |
 | Good Friday | `goodfriday` |
@@ -74,7 +74,7 @@ The following sections list the holidays that [`@sys-date`](/docs/watson-assista
 | Mother's Day | `mother` |
 | Victoria Day | `victoria` |
 | Father's Day | `father` |
-| National Indigenious Day | `indigenous` |
+| National Indigenous Day | `indigenous` |
 | Canada Day | `canada` |
 | Labor Day | `labor` |
 | Thanksgiving | `thanksgiving` |
@@ -143,7 +143,7 @@ The following sections list the holidays that [`@sys-date`](/docs/watson-assista
 | Summer Bank Holiday (England, Wales, Northern Ireland, Scotland) | `summerbankholiday` |
 | Halloween | `halloween` |
 | Guy Fawkes Day | `guyfawkesday` |
-| Remberance Sunday | `rememberancesunday` |
+| Rememberance Sunday | `rememberancesunday` |
 | St Andrew's Day (Scotland) | `standrewsday` |
 | St Andrew's Day Observed (Scotland) | `standrewsdayobserved` |
 | Christmas Day | `christmas` |
@@ -171,7 +171,7 @@ The following sections list the holidays that [`@sys-date`](/docs/watson-assista
 | Labor Day / May Day | `laborday` |
 | Victory in Europe Day | `victoryineuropeday` |
 | Mother's Day | `mothersday` |
-| Childeren's Day | `childrensday` |
+| Children's Day | `childrensday` |
 | Father's Day | `fathersday` |
 | Saints Cyril and Methodius | `saintcyrilandmethodius` |
 | Jan Hus Day | `janhusday` |
@@ -348,7 +348,7 @@ The following sections list the holidays that [`@sys-date`](/docs/watson-assista
 | Christmas Day | `christmasday` |
 | St. Stephen's Day | `st.stephensday` |
 | St. Cyril & St. Methodius Day | `cyrilmethodiusday` |
-| new year's eve | `newyearseve` |
+| New Year's Eve | `newyearseve` |
 {: caption="Slovak holidays" caption-side="bottom"}
 
 ## Holidays (es-es)
@@ -404,11 +404,11 @@ The following sections list the holidays that [`@sys-date`](/docs/watson-assista
 
 | Holiday name | String to use to check for a festival match |
 |--------------|---------------------------------------------|
-| new year | `newyear` |
+| New Year | `newyear` |
 | Valentine | `valentine` |
-| easter sunday | `easter` |
-| christmas eve | `christmaseve` |
-| christmas | `christmas` |
+| Easter Sunday | `easter` |
+| Christmas Eve | `christmaseve` |
+| Christmas | `christmas` |
 | Eid al-Fitr | `eidalfitr` |
 | Eid al-Adha | `eidaladha` |
 | Ramadan | `ramadan` |
@@ -484,10 +484,10 @@ The following sections list the holidays that [`@sys-date`](/docs/watson-assista
 | Chinese New Year | `chinesenewyear` |
 | Lantern Festival | `lanternfestival` |
 | Zhonghe Festival | `zhonghefestival` |
-| christmas | `christmas` |
+| Christmas | `christmas` |
 | Labor Day | `laborday` |
 | Valentine | `valentine` |
-| easter sunday | `easter` |
+| Easter Sunday | `easter` |
 | Dragon Boat Festival | `dragonboatfestival` |
 | Mid-Autumn Festival | `midautumnfestival` |
 | National Day | `nationalday` |
@@ -510,7 +510,7 @@ The following sections list the holidays that [`@sys-date`](/docs/watson-assista
 | Chinese New Year  | `chinesenewyear` |
 | Lantern Festival | `lanternfestival` |
 | Zhonghe Festival | `zhonghefestival` |
-| christmas | `christmas` |
+| Christmas | `christmas` |
 | Labor Day | `laborday` |
 | Valentine | `valentine` |
 | easter sunday | `easter` |

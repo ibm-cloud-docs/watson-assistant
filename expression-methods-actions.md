@@ -2,7 +2,7 @@
 
 copyright:
 years: 2015, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-26"
 
 subcollection: watson-assistant
 
@@ -706,7 +706,7 @@ For example, you might have an array of objects that contain city names and thei
 ```
 {: codeblock}
 
-If the source array is stored in a variable that is called `${cities}`, the following exexpression returns a smaller array that contains only cities with populations greater than 5 million:
+If the source array is stored in a variable that is called `${cities}`, the following expression returns a smaller array that contains only cities with populations greater than 5 million:
 
 ```text
 ${cities}.filter("city", "city.population > 5000000")

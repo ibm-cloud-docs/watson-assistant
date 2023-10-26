@@ -119,7 +119,7 @@ function authenticate(request, response) {
     }
     ```
 
-    The anonoymous ID in the `sub` claim will continue to be used to track the customer for billing purposes, but now the customer's real user ID is stored separately in the user payload.
+    The anonymous ID in the `sub` claim will continue to be used to track the customer for billing purposes, but now the customer's real user ID is stored separately in the user payload.
 
 1. In your actions, you can now access the customer's real user ID by referencing the `user_payload` private context variable:
 

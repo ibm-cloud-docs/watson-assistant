@@ -1,29 +1,14 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-10-17"
+  years: 2018, 2023
+lastupdated: "2023-10-26"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Review customer conversations
 {: #analytics-conversations}
@@ -41,7 +26,7 @@ If you have activated dialog in your assistant, the **Actions** column is replac
 ## Choosing the environment and time period
 {: #analytics-conversations-time-period}
 
-To get started, choose the [environment](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments) and date range you want to analyze. All conversations reflect data based on the environment and the date range you select. When you change the environnment or the date range, the conversations on the page update to reflect the new date range. You can also use **Refresh** ensure the latest data is shown.
+To get started, choose the [environment](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments) and date range you want to analyze. All conversations reflect data based on the environment and the date range you select. When you change the environment or the date range, the conversations on the page update to reflect the new date range. You can also use **Refresh** ensure the latest data is shown.
 
 ![Time period](images/analytics-conversations-time-period.png)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-25"
+lastupdated: "2023-10-26"
 
 subcollection: watson-assistant
 
@@ -1655,7 +1655,7 @@ Support ended for @sys-location and @sys-person
 
     Use contextual entities to teach your skill to recognize the context in which such names are used. For more information about contextual entities, see [Annotation-based method](/docs/watson-assistant?topic=watson-assistant-entities#entities-annotations-overview).
 
-    For more information about how to use contextual entites to identify names of people, see the [Detecting Names And Locations With {{site.data.keyword.assistant_classic_short}}](https://medium.com/ibm-watson/detecting-names-and-locations-with-watson-assistant-e3e1fa2a8427){: external} blog post on Medium.
+    For more information about how to use contextual entities to identify names of people, see the [Detecting Names And Locations With {{site.data.keyword.assistant_classic_short}}](https://medium.com/ibm-watson/detecting-names-and-locations-with-watson-assistant-e3e1fa2a8427){: external} blog post on Medium.
 
 How legacy numeric system entities are processed has changed
 :   All new dialog skills use the new system entities automatically.
@@ -1663,7 +1663,7 @@ How legacy numeric system entities are processed has changed
     For existing skills that use legacy numeric system entities, how the entities are processed now differs based on the skill language.
 
     - Arabic, Chinese, Korean, and Japanese dialog skills that use legacy numeric system entities function the same as before.
-    - If you choose to continue to use the legacy system entities in European-language dialog skills, a new legacy API format is used. The new legacy API format simulates the legacy system entities behavior. In particular, it returns a `metadata` object and does not stop the service from idenfifying multiple system entities for the same input string. In addition, it returns an `interpretation` object, which was introduced with the new version of system entities. Review the `interpretation` object to see the useful information that is returned by the new version.
+    - If you choose to continue to use the legacy system entities in European-language dialog skills, a new legacy API format is used. The new legacy API format simulates the legacy system entities behavior. In particular, it returns a `metadata` object and does not stop the service from identifying multiple system entities for the same input string. In addition, it returns an `interpretation` object, which was introduced with the new version of system entities. Review the `interpretation` object to see the useful information that is returned by the new version.
 
     Update your skills to use the new system entities from the **Options>System Entities** page.
 
@@ -1918,7 +1918,7 @@ March 2020 deprecation notice
 {: release-note}
 
 {{site.data.keyword.assistant_classic_full}} is available in {{site.data.keyword.icp4dfull_notm}}
-:   The service can be installed on-premises in environments where {{site.data.keyword.icp4dfull_notm}} 2.5 is installed on OpenShift or standalone. Version 2.5 has been deprecated, and documentation is no longer online; we recommened [upgrading to the latest version](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.7.x?topic=upgrading). 
+:   The service can be installed on-premises in environments where {{site.data.keyword.icp4dfull_notm}} 2.5 is installed on OpenShift or standalone. Version 2.5 has been deprecated, and documentation is no longer online; we recommend [upgrading to the latest version](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.7.x?topic=upgrading). 
 
 ## 26 February 2020
 {: #watson-assistant-feb262020}
@@ -2257,7 +2257,7 @@ New API version
 
       Similarly, if you included a number sign (#) in the text string in a node response, you used to have to escape it by preceding it with a back slash (`\`). For example, `We are the \#1 seller of lobster rolls in Maine.` You no longer need to escape the `#` symbol in a text response.
 
-      This change does not apply to node or condtional response conditions. Any strings that begin with a number sign (#) which are specified in conditions continue to be treated as intent references. Also, you can use SpEL expression syntax to force the system to treat a string in the `context` or `output` objects of a message as an intent. For example, specify the intent as `<? #intent-name ?>`.
+      This change does not apply to node or conditional response conditions. Any strings that begin with a number sign (#) which are specified in conditions continue to be treated as intent references. Also, you can use SpEL expression syntax to force the system to treat a string in the `context` or `output` objects of a message as an intent. For example, specify the intent as `<? #intent-name ?>`.
 
 ## 25 February 2019
 {: #watson-assistant-feb252019}
@@ -2379,7 +2379,7 @@ User-based Premium plan
 {: release-note}
 
 Recommendations are discontinued
-:   The Recomendations section on the Improve tab was removed. Recommendations was a beta feature available to Premium plan users only. It recommended actions that users could take to improve their training data. Instead of consolidating recommendations in one place, recommendations are now being made available from the parts of the tool where you make actual training data changes. For example, while adding entity synonyms, you can now opt to see a list of synonymous terms that are recommended by Watson.
+:   The Recommendations section on the Improve tab was removed. Recommendations was a beta feature available to Premium plan users only. It recommended actions that users could take to improve their training data. Instead of consolidating recommendations in one place, recommendations are now being made available from the parts of the tool where you make actual training data changes. For example, while adding entity synonyms, you can now opt to see a list of synonymous terms that are recommended by Watson.
 
 ## 9 November 2018
 {: #watson-assistant-nov092018}
@@ -2808,7 +2808,7 @@ Accent normalization
 
     You are expected to train the system with the proper characters and accents. For example, if you are expecting `barrió` as a response, then you should put `barrió` into the training set.
 
-    Although not an accent mark, the same applies to words using, for example, the Spanish letter `ñ` vs. the letter `n`, such as `uña` vs. `una`. In this case the letter `ñ` is not simply an `n` with an accent; it is a unique, Spanish-specific letter.
+    Although not an accent mark, the same applies to words using, for example, the Spanish letter `ñ` versus the letter `n`, such as `uña` versus `una`. In this case the letter `ñ` is not simply an `n` with an accent; it is a unique, Spanish-specific letter.
 
     You can enable fuzzy matching if you think your customers will not use the appropriate accents, or misspell words (including, for example, putting a `n` instead of a `ñ`), or you can explicitly include them in the training examples.
 
@@ -2914,7 +2914,7 @@ Recommendations (Beta - Premium users only)
 {: release-note}
 
 Fuzzy matching for additional languages (Beta)
-:   Fuzzy matching for entities is now available for additional languages. For more information, see [Supported languages](/docs/watson-assistant?topic=watson-assistant-admin-language-support#admin-language-support-codes). You can turn on fuzzy matching per entity to improve the ability of your assistant to recognize terms in user input with syntax that is similar to the entity, without requiring an exact match. The feature is able to map user input to the appropriate corresponding entity despite the presence of misspellings or slight syntactical differences. For example, if you define giraffe as a synonym for an animal entity, and the user input contains the terms giraffes or girafe, the fuzzy match is able to map the term to the animal entity correctly. See [Fuzzy matching](/docs/watson-assistant?topic=watson-assistant-entities#entities-fuzzy-matching) for details.
+:   Fuzzy matching for entities is now available for additional languages. For more information, see [Supported languages](/docs/watson-assistant?topic=watson-assistant-admin-language-support#admin-language-support-codes). You can turn on fuzzy matching per entity to improve the ability of your assistant to recognize terms in user input with syntax that is similar to the entity, without requiring an exact match. The feature is able to map user input to the appropriate corresponding entity despite the presence of misspellings or slight syntactical differences. For example, if you define giraffe as a synonym for an animal entity, and the user input contains the terms `giraffes` or `girafe`, the fuzzy match is able to map the term to the animal entity correctly. See [Fuzzy matching](/docs/watson-assistant?topic=watson-assistant-entities#entities-fuzzy-matching) for details.
 
 ## 13 June 2017
 {: #watson-assistant-jun132017}
@@ -3007,7 +3007,7 @@ System entities
     For more information, see the [System entities reference](/docs/watson-assistant?topic=watson-assistant-system-entities).
 
 Fuzzy matching for entities
-:   Fuzzy matching for entities is a beta feature that is now available in English. You can turn on fuzzy matching per entity to improve the ability of your assistant to recognize terms in user input with syntax that is similar to the entity, without requiring an exact match. The feature is able to map user input to the appropriate corresponding entity despite the presence of misspellings or slight syntactical differences. For examples, if you define **giraffe** as a synonym for an animal entity, and the user input contains the terms *giraffes* or *girafe*, the fuzzy match is able to map the term to the animal entity correctly. See [How fuzzy matching works](/docs/watson-assistant?topic=watson-assistant-entities#entities-fuzzy-matching).
+:   Fuzzy matching for entities is a beta feature that is now available in English. You can turn on fuzzy matching per entity to improve the ability of your assistant to recognize terms in user input with syntax that is similar to the entity, without requiring an exact match. The feature is able to map user input to the appropriate corresponding entity despite the presence of misspellings or slight syntactical differences. For examples, if you define **giraffe** as a synonym for an animal entity, and the user input contains the terms `giraffes` or `girafe`, the fuzzy match is able to map the term to the animal entity correctly. See [How fuzzy matching works](/docs/watson-assistant?topic=watson-assistant-entities#entities-fuzzy-matching).
 
 ## 18 April 2017
 {: #watson-assistant-apr182017}
@@ -3126,7 +3126,7 @@ Updates
 :   This release includes the following updates:
 
     - The service now provides system entities, which are common entities that can be used across any use case.
-    - You can now view a history of conversations with users on the Improve page. You can use this to understand your bot's behavior.
+    - You can now view a history of conversations with users on the Improve page. You can use this to understand the behavior of your chatbot.
     - You can now import entities from a comma-separated value (CSV) file, which helps with when you have a large number of entities.
 
 ## 20 September 2016

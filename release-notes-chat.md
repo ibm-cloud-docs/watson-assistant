@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-26"
 
 subcollection: watson-assistant
 
@@ -73,7 +73,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 - **New Genesys Web Messenger service desk integration**: The service desk integration for Genesys Web Messenger is no longer in beta, and now includes support for user information strings in more languages. For more information, see [Integrating with Genesys Web Messenger](/docs/watson-assistant?topic=watson-assistant-deploy-genesys).
 
-- **New NICE CXone service desk integration**: The service desk integration for NICE CXone Digital First Omnichannel is released. For more information, see [Integratng wwith NICE CXone Digital First Omnichannel](/docs/watson-assistant?topic=watson-assistant-deploy-nice-cxone).
+- **New NICE CXone service desk integration**: The service desk integration for NICE CXone Digital First Omnichannel is released. For more information, see [Integrating with NICE CXone Digital First Omnichannel](/docs/watson-assistant?topic=watson-assistant-deploy-nice-cxone).
 
 - **Added a restart button**: A new `showRestartButton` configuration option specifies whether the web chat interface needs to display a restart button in the header, in addition to the existing **`-`** (Minimize) button. A customer can click this button to end the conversation or end any conversation with a live agent, while keeping the chat open. The chat transcript is cleared, but any transcript of a conversation with a live agent is preserved. For more information, see [showRestartButton](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration){: external}.
 
