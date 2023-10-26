@@ -11,7 +11,7 @@ subcollection: watson-assistant
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Encrypting sensitive data
+# Encrypting sensitive data in web chat
 {: #web-chat-security-encrypt}
 
 By using the public key that is provided by IBM, you can add another level of encryption to hide sensitive data you send from the web chat.

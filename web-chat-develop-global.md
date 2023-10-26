@@ -10,7 +10,7 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Supporting global audiences
+# Supporting global audiences in web chat
 {: #web-chat-develop-global}
 
 You can build an assistant that understands customer messages in any of the languages that are supported by the service. The responses from your assistant are defined by you and can be written in any language you want.

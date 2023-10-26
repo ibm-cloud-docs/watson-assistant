@@ -42,7 +42,7 @@ Most programming languages offer JWT libraries that you can use to generate a to
 
 The JWT payload must specify the following claims:
 
-- `sub`: A unique user ID that identifies the customer who is interacting with the web chat. This can be either a generated unique identifier (for anonymous users) or an authenticated user ID. For more information about how the `sub` value is used, see [Authenticating users](/docs/watson-assistant?topic=watson-assistant-web-chat-security-authenticate).
+- `sub`: A unique user ID that identifies the customer who is interacting with the web chat. This can be either a generated unique identifier (for anonymous users) or an authenticated user ID. For more information about how the `sub` value is used, see [Authenticating users in web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security-authenticate).
 
     To ensure security, the JWT should be specific to each user. Use either the user's authenticated login information, or a unique generated ID. Do not reuse the same JWT, or the same `sub` value, for more than one user.
 

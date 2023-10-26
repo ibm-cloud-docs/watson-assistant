@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: “2023-10-24”
+lastupdated: "2023-10-26"
 
 subcollection: watson-assistant
 
@@ -11,7 +11,7 @@ subcollection: watson-assistant
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Managing user identity information
+# Managing user identity information in web chat
 {: #web-chat-develop-userid}
 
 {{site.data.keyword.conversationshort}} charges based on the number of unique monthly active users (MAU).
@@ -26,7 +26,7 @@ Because the `user_id` value that you submit is included in the `customer_id` val
 
 To support these user-based capabilities, add the [`updateUserID()` method](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateuserid){: external} in the code snippet before you paste it into your web page.
 
-If you enable security, you set the user ID in the JSON Web Token instead. For more information, see [Authenticating users](/docs/watson-assistant?topic=watson-assistant-web-chat-security-authenticate).
+If you enable security, you set the user ID in the JSON Web Token instead. For more information, see [Authenticating users in web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security-authenticate).
 {: note}
 
 In the following example, the user ID `L12345` is added to the script.

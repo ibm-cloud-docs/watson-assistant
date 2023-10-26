@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-10-26"
 
 subcollection: watson-assistant
 
@@ -87,7 +87,7 @@ Customizing strings {: #strings}
 :   You can customize the strings that define the various labels and hardcoded phrases displayed by the web chat. To customize strings, use the [`updateLanguagePack()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatelanguagepack){: external} instance method to replace strings in the current language pack. For more information, see [Languages](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#languages){: external}.
 
 Supporting global audiences {: #global-audiences}
-:   By default, the strings displayed by the web chat are in English. To change to a different language, use the [`updateLanguagePack()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatelanguagepack){: external} instance method to replace the current language pack with one of the available translated language packs. For more information, see [Supporting global audiences](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-global).
+:   By default, the strings displayed by the web chat are in English. To change to a different language, use the [`updateLanguagePack()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatelanguagepack){: external} instance method to replace the current language pack with one of the available translated language packs. For more information, see [Supporting global audiences in web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-global).
 
 ### Opening, closing, and rendering the web chat window
 {: #web-chat-develop-open}
@@ -142,7 +142,7 @@ Managing user identity information {: #user-id}
 
     Depending on whether you have enabled security for the web chat, you can use either the [`updateUserID`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateuserid){: external} instance method or the [`updateIdentityToken`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateidentity){: external} method to specify user identity information.
 
-    For more information about how user identity information is specified and how it is used, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-userid).
+    For more information about how user identity information is specified and how it is used, see [Managing user identity information in web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-userid).
 
 ### Security and administration
 {: #web-chat-develop-admin}

@@ -10,13 +10,13 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Authenticating users
+# Authenticating users in web chat
 {: #web-chat-security-authenticate}
 
 With web chat security enabled, you can securely authenticate customers by user ID.
 {: shortdesc}
 
-The default behavior of the web chat integration is to identify unique users by setting the value of the `user_id` property that is sent as part of each message to the assistant. (For more information, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-userid).)
+The default behavior of the web chat integration is to identify unique users by setting the value of the `user_id` property that is sent as part of each message to the assistant. (For more information, see [Managing user identity information in web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-userid).)
 
 This approach is sufficient for tracking unique users for billing purposes, but it is not secure and should not be used for access control. If you enable web chat security, you can use JSON Web Tokens (JWTs) to securely authenticate your users and control access to functions of your assistant that require authorization.
 

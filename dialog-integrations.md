@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-26"
 
 keywords: integration settings
 
@@ -66,7 +66,7 @@ If you need to provide customized responses for different channels, and you do n
 ## Web chat: Accessing sensitive data
 {: #dialog-integrations-chat-private}
 
-If you enable security for the web chat, you can configure your web chat implementation to send encrypted data to the dialog. Payload data that is sent from web chat is stored in a private context variable named `context.integrations.chat.private.user_payload`. No private variables are sent from the dialog to any integrations. For more information about how to pass data, see [Encrypting sensitive data](/docs/watson-assistant?topic=watson-assistant-web-chat-security-encrypt).
+If you enable security for the web chat, you can configure your web chat implementation to send encrypted data to the dialog. Payload data that is sent from web chat is stored in a private context variable named `context.integrations.chat.private.user_payload`. No private variables are sent from the dialog to any integrations. For more information about how to pass data, see [Encrypting sensitive data in web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security-encrypt).
 
 To access the payload data, you can reference the `context.integrations.chat.private.user_payload` object from the dialog node condition. 
 

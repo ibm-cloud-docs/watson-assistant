@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-25"
+lastupdated: "2023-10-26"
 
 subcollection: watson-assistant
 
@@ -88,7 +88,7 @@ The `channel.private.user.id` property, which is set by the channel integration,
 
 | Channel  | Channel user ID |
 |----------|-----------------|
-| Web chat | The user ID set by the web chat instance. For more information, see [Managing user identity information](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-userid). |
+| Web chat | The user ID set by the web chat instance. For more information, see [Managing user identity information in web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-userid). |
 | Slack    | The Slack member ID (for example, `U2147483697`). |
 | Facebook | The Facebook sender ID (for example, `4310101122439797`). |
 | Whatsapp | The customer's phone number. |
