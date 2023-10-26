@@ -2,9 +2,13 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-03-03"
+lastupdated: "2023-10-26"
 
 subcollection: watson-assistant
+
+---
+
+{{site.data.keyword.attribute-definition-list}}
 
 ---
 

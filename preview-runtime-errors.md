@@ -1,27 +1,14 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-10-04"
+  years: 2021,  2023
+lastupdated: "2023-10-26"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 
 
@@ -53,46 +40,4 @@ Some of these errors correspond to advanced development tasks.
 | `Actions array contains elements with the same id (attribute 'action'). Cannot build an internal representation.` | Advanced programming message | 
 | `No target step %s found for jump-to resolver` | Advanced programming message | 
 | `For resolver of type jump_to the target step cannot be the same as the source step.` | Advanced programming message | 
- 
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{: caption="Preview runtime errors" caption-side="bottom"}
