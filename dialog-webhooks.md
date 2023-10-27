@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -111,7 +111,7 @@ To use a webhook from a dialog node, you must enable webhooks on the node, and t
 
 1. Add any data that you want to pass to the external application as key and value pairs in the *Parameters* section.
 
-   Parameters are passed as request body properties. You cannot specify query parameters or URL parameters in a dialog node. These parameters can be configured with static values only as part of the webhook definition. For more information, see [Defining the webhook](/docs/assistant?topic=assistant-dialog-webhooks#dialog-webhooks-create).
+   Parameters are passed as request body properties. You cannot specify query parameters or URL parameters in a dialog node. These parameters can be configured with static values only as part of the webhook definition. For more information, see [Defining the webhook](/docs/watson-assistant?topic=watson-assistant-dialog-webhooks#dialog-webhooks-create).
    {: note}
 
    For example, if you call the Language Translator service, you must provide values for the following parameters:

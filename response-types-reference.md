@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -40,7 +40,7 @@ Plays an audio clip that is specified by a URL.
 | Name          | Type   | Description                        | Required? |
 |---------------|--------|------------------------------------|-----------|
 | response_type | string | `audio`                            | Y         |
-| source        | string | The `https:` URL of the audio clip. The URL can specify either an audio file or an audio clip on a supported hosting service.  | Y |
+| source        | string | The `https:` URL of the audio clip. The URL can specify either an audio file or an audio clip on a supported hosting service. | Y |
 | title         | string | The title to show before the audio player.| N  |
 | description   | string | The text of the description that accompanies the audio player. | N |
 | alt_text      | string | Descriptive text that can be used for screen readers or other situations where the audio player cannot be seen. | N |
@@ -365,7 +365,7 @@ Embeds content from an external website as an HTML `iframe` element.
 | Name                                        | Type   | Description                        | Required? |
 |---------------------------------------------|--------|------------------------------------|-----------|
 | response_type                               | string | `iframe`                           | Y         |
-| source                                      | string | The URL of the external content. The URL must specify content that is embeddable in an HTML `iframe` element.  | Y |
+| source                                      | string | The URL of the external content. The URL must specify content that is embeddable in an HTML `iframe` element. | Y |
 | title                                       | string | The title to show before the embedded content. | N |
 | description                                 | string | The text of the description that accompanies the embedded content. | N |
 | image_url                                   | string | The URL of an image that shows a preview of the embedded content. | N |
@@ -837,7 +837,7 @@ This example uses the `text_to_speech` response type with the `configure` comman
 
 A custom response type with any JSON data that the client or integration knows how to handle. For example, you might customize the web chat to display a special card, or build a custom application to format responses with a table or chart.
 
-The user-defined response type is not displayed unless the channel has code to handle it. For more information, see [Applying advanced customizations](/docs/watson-assistant?topic=watson-assistant-web-chat-config). 
+The user-defined response type is not displayed unless the channel has code to handle it. For more information, see [Applying advanced customizations](/docs/watson-assistant?topic=watson-assistant-web-chat-config).
 {: note}
 
 ### Integration channel support
@@ -904,7 +904,7 @@ Displays a video that is specified by a URL.
 | Name          | Type   | Description                        | Required? |
 |---------------|--------|------------------------------------|-----------|
 | response_type | string | `video`                            | Y         |
-| source        | string | The `https:` URL of the video. The URL can specify a video file or a streaming video on a supported hosting service.  | Y |
+| source        | string | The `https:` URL of the video. The URL can specify a video file or a streaming video on a supported hosting service. | Y |
 | title         | string | The title to show before the video.| N         |
 | description   | string | The text of the description that accompanies the video. | N |
 | alt_text      | string | Descriptive text that can be used for screen readers or other situations where the video cannot be seen. | N |

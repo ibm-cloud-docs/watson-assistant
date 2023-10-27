@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -67,7 +67,6 @@ Follow these steps to add integrations to your assistant:
     - [Phone with Genesys Cloud](/docs/watson-assistant?topic=watson-assistant-deploy-phone-genesys)
     - [Phone with NICE CXone](/docs/watson-assistant?topic=watson-assistant-deploy-phone-nicecxone)
     - [Phone with Twilio Flex](/docs/watson-assistant?topic=watson-assistant-deploy-phone-flex)
-    - [Bring your own live agent integration](/docs/assistant?topic=assistant-deploy-phone#deploy-phone-transfer-service){: external}
 
 1.  Follow the instructions provided on screen to complete the integration process.
 

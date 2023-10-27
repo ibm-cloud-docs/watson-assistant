@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-08-22"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -153,5 +153,3 @@ For the best customer experience, design your actions with the capabilities of t
 | Italics | `We're talking about _practice_.` | We're talking about *practice*. |
 | Bold | `There's *no* crying in baseball.` | There's **no** crying in baseball. |
 {: caption="Supported Markdown syntax" caption-side="top"}
-
-

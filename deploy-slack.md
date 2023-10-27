@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -107,8 +107,6 @@ The rich responses that you add to an action are displayed in a Slack channel as
 
 
 
-
-
 ## Chatting with the assistant
 {: #deploy-slack-try}
 
@@ -119,7 +117,5 @@ To start a chat with the assistant, complete the following steps:
 1.  Chat with the assistant.
 
 The welcome action is not processed by the Slack integration. The welcome message is not displayed in the Slack channel like it is in the assistant preview. It is not triggered from here because nodes with the `welcome` special condition are skipped in action flows that are started by users. Slack waits for the user to initiate the conversation.
-
-
 
 The action flow for the current session is restarted after 60 minutes of inactivity (5 minutes for Lite and Standard plans). This means that if a user stops interacting with the assistant, after 60 (or 5) minutes, any context variable values that were set during the previous conversation are set to null or back to their default values.

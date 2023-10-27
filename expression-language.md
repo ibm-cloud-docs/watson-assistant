@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-16"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -282,7 +282,7 @@ The following example shows how to access input:
 - To execute a node if the user input is "Yes", add this expression to the node condition:
   `input.text == 'Yes'`
 
-You can use any of the [String methods](/docs/assistant?topic=assistant-dialog-methods#dialog-methods-strings) to evaluate or manipulate text from the user input. For example:
+You can use any of the [String methods](/docs/watson-assistant?topic=watson-assistant-dialog-methods#dialog-methods-strings) to evaluate or manipulate text from the user input. For example:
 
 - To check whether the user input contains "Yes", use: `input.text.contains( 'Yes' )`.
 - Returns true if the user input is a number: `input.text.matches( '[0-9]+' )`.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -172,12 +172,9 @@ For the best customer experience, design your actions with the capabilities of t
 
 - **Image**, **Audio**, **Video** response types allow sending a message containing media. A title and description are sent along with the attachment. Note that depending on the carrier and device of the end user these messages may not be successfully received. For a list of the supported content types for Twilio, see [Twilio: Accepted Content Types for Media](https://www.twilio.com/docs/sms/accepted-mime-types){: external}.
 
-  For more information on these response types, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference).
-
-
+   For more information on these response types, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference).
 
 If you want to use the same action for an assistant that you deploy to many different platforms, add custom responses per integration type. You can add a conditioned response that tells the assistant to show the response only when the *SMS* integration is being used.
-
 
 For reference documentation, see [*SMS* integration reference](/docs/watson-assistant?topic=watson-assistant-sms-reference).
 
@@ -198,7 +195,6 @@ The *SMS* integration provides a more seamless integration with your assistant a
 - Starting an SMS-only interaction with an outgoing text
 - Configuring backup locations
 - Reviewing the usage summary page. Use IBM Log Analysis instead.
-
 
 To migrate from {{site.data.keyword.iva_short}} to the {{site.data.keyword.conversationshort}} *SMS* integration, complete the following step:
 

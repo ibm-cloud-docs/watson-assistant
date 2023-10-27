@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-25"
+lastupdated: "2023-10-27"
 
 keywords: building a dialog, condition, response, options, jump, jump-to, multiline, response variations
 
@@ -27,7 +27,7 @@ The following nodes are created for you automatically:
 
 - **Anything else**: The final node. It contains phrases that are used to reply to users when their input is not recognized. You can replace the responses that are provided or add more responses with a similar meaning to add variety to the conversation. You can also choose whether you want your assistant to return each response that is defined in turn or return them in random order.
 
-For more information about these built-in nodes, see [Starting and ending the dialog](/docs/assistant?topic=assistant-dialog-start).
+For more information about these built-in nodes, see [Starting and ending the dialog](/docs/watson-assistant?topic=watson-assistant-dialog-start).
 
 1. To add more nodes to the dialog tree, click **Add node**.
 
@@ -65,7 +65,7 @@ For more information about these built-in nodes, see [Starting and ending the di
 
     For more information about how to test for values in conditions, see [Conditions](#dialog-overview-conditions).
 
-1. **Optional**: If you want to collect multiple pieces of information from the user in this node, then click **Customize** and enable **Slots**. See [Gathering information with slots](/docs/assistant?topic=assistant-dialog-slots) for more details.
+1. **Optional**: If you want to collect multiple pieces of information from the user in this node, then click **Customize** and enable **Slots**. See [Gathering information with slots](/docs/watson-assistant?topic=watson-assistant-dialog-slots) for more details.
 
 1. Enter a response.
 
@@ -81,7 +81,7 @@ For more information about these built-in nodes, see [Starting and ending the di
 
 1. **Optional**: If you want this node to be considered when users are shown a set of node choices at run time, and asked to pick the one that best matches their goal, then add a short description of the user goal handled by this node to the **external node name** field. For example, *Open an account*.
 
-    [Plus]{: tag-green} The *external node name* field is only displayed only to users of paid plans. See [Disambiguation](/docs/assistant?topic=assistant-dialog-runtime#dialog-runtime-disambiguation) for more details.
+    [Plus]{: tag-green} The *external node name* field is only displayed only to users of paid plans. See [Disambiguation](/docs/watson-assistant?topic=watson-assistant-dialog-runtime#dialog-runtime-disambiguation) for more details.
 
 1. To add more nodes, select a node in the tree, and then click the **More** ![More icon](images/overflow-menu--vertical.svg) icon.
 
@@ -90,11 +90,11 @@ For more information about these built-in nodes, see [Starting and ending the di
     - To create a child node to the selected node, select **Add child node**. A child node is processed after its parent node.
     - To copy the current node, select **Duplicate**.
 
-    For more information about the order in which dialog nodes are processed, see [Dialog overview](/docs/assistant?topic=assistant-dialog-build#dialog-build-flow).
+    For more information about the order in which dialog nodes are processed, see [Dialog overview](/docs/watson-assistant?topic=watson-assistant-dialog-build#dialog-build-flow).
 
 1. Test the dialog as you build it.
 
-    See [Testing your dialog](/docs/assistant?topic=assistant-dialog-tasks#dialog-tasks-test) for more information.
+    See [Testing your dialog](/docs/watson-assistant?topic=watson-assistant-dialog-tasks#dialog-tasks-test) for more information.
 
 ## Conditions
 {: #dialog-overview-conditions}
@@ -105,7 +105,7 @@ A node condition determines whether that node is used in the conversation. Respo
 - [Special conditions](#dialog-overview-special-conditions)
 - [Condition syntax details](#dialog-overview-condition-syntax)
 
-For tips on performing more advanced tasks in conditions, see [Condition usage tips](/docs/assistant?topic=assistant-dialog-tips#dialog-tips-condition-usage).
+For tips on performing more advanced tasks in conditions, see [Condition usage tips](/docs/watson-assistant?topic=watson-assistant-dialog-tips#dialog-tips-condition-usage).
 
 ### Condition artifacts
 {: #dialog-overview-condition-artifacts}
@@ -121,14 +121,14 @@ You can use one or more of the following artifacts in any combination to define 
 
    For response conditions, this artifact type can be used alone. You can change the response based on a specific context variable value. For example, `$city:Boston` checks whether the `$city` context variable contains the value, `Boston`. If so, the response is returned.
   
-   For more information about context variables, see [Context variables](/docs/assistant?topic=assistant-dialog-runtime-context).
+   For more information about context variables, see [Context variables](/docs/watson-assistant?topic=watson-assistant-dialog-runtime-context).
 
 - **Entity**: The node is used when any value or synonym for the entity is recognized in the user input. Use the syntax, `@entity_name`. For example, `@city` checks whether any of the city names that are defined for the @city entity were detected in the user input. If so, the node or response is processed.
 
    Consider creating a peer node to handle the case where none of the entity's values or synonyms are recognized.
    {: tip}
 
-   For more information about entities, see [Defining entities](/docs/assistant?topic=assistant-entities).
+   For more information about entities, see [Defining entities](/docs/watson-assistant?topic=watson-assistant-entities).
 
 - **Entity value**: The node is used if the entity value is detected in the user input. Use the syntax, `@entity_name:value` and specify a defined value for the entity, not a synonym. For example: `@city:Boston` checks whether the specific city name, `Boston`, was detected in the user input.
 
@@ -137,11 +137,11 @@ You can use one or more of the following artifacts in any combination to define 
 
    If the entity is a pattern entity with capture groups, then you can check for a certain group value match. For example, you can use the syntax: `@us_phone.groups[1] == '617'`
   
-   See [Storing and recognizing pattern entity groups in input](/docs/assistant?topic=assistant-dialog-tips#dialog-tips-get-pattern-groups) for more information.
+   See [Storing and recognizing pattern entity groups in input](/docs/watson-assistant?topic=watson-assistant-dialog-tips#dialog-tips-get-pattern-groups) for more information.
 
 - **Intent**: The simplest condition is a single intent. The node is used if, after your assistant's natural language processing evaluates the user's input, it determines that the purpose of the user's input maps to the pre-defined intent. Use the syntax, `#intent_name`. For example, `#weather` checks if the user input is asking for a weather forecast. If so, the node with the `#weather` intent condition is processed.
 
-   For more information about intents, see [Defining intents](/docs/assistant?topic=assistant-intents).
+   For more information about intents, see [Defining intents](/docs/watson-assistant?topic=watson-assistant-intents).
 
 - **Special condition**: Conditions that are provided with the product that you can use to perform common dialog functions. See the **Special conditions** table in the next section for details.
 
@@ -150,7 +150,7 @@ You can use one or more of the following artifacts in any combination to define 
 
 | Condition syntax | Description |
 | --- | --- |
-| `anything_else` | You can use this condition at the end of a dialog, to be processed when the user input does not match any other dialog nodes. The **Anything else** node is triggered by this condition. If you add a search skill to your assistant, a root node with this condition can be configured to trigger a search. |
+| `anything_else` | You can use this condition at the end of a dialog, to be processed when the user input does not match any other dialog nodes. The **Anything else** node is triggered by this condition. If you add search to your assistant, a root node with this condition can be configured to trigger a search. |
 | `conversation_start` | Like **welcome**, this condition is evaluated as true during the first dialog turn. Unlike **welcome**, it is true whether or not the initial request from the application contains user input. |
 | `false` | This condition is always evaluated to false. You might use this at the start of a branch that is under development, to prevent it from being used, or as the condition for a node that provides a common function and is used only as the target of a **Jump to** action. |
 | `irrelevant` | This condition will evaluate to true if the user’s input is determined to be irrelevant by the {{site.data.keyword.conversationshort}} service. |
@@ -163,11 +163,11 @@ You can use one or more of the following artifacts in any combination to define 
 
 Use one of these syntax options to create valid expressions in conditions:
 
-- Shorthand notations to refer to intents, entities, and context variables. See [Accessing and evaluating objects](/docs/assistant?topic=assistant-expression-language).
+- Shorthand notations to refer to intents, entities, and context variables. See [Accessing and evaluating objects](/docs/watson-assistant?topic=watson-assistant-expression-language).
 
 - Spring Expression (SpEL) language, which is an expression language that supports querying and manipulating an object graph at run time. See [Spring Expression Language (SpEL) language](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#expressions){: external} for more information.
 
-You can use regular expressions to check for values to condition against.  To find a matching string, for example, you can use the `String.find` method. See  [Methods](/docs/assistant?topic=assistant-dialog-methods) for more details.
+You can use regular expressions to check for values to condition against.  To find a matching string, for example, you can use the `String.find` method. See  [Methods](/docs/watson-assistant?topic=watson-assistant-dialog-methods) for more details.
 
 ## Responses
 {: #dialog-overview-responses}
@@ -185,9 +185,9 @@ You can reply in the following ways:
 
 If you want to provide a text response, simply enter the text that you want your assistant to display to the user.
 
-![Shows a node that shows a user ask, Where are you located, and the dialog response is, We have no brick and mortar stores! But, with an internet connection, you can shop us from anywhere.](images/response-simple.png)
+![Shows a node that shows a user ask, Where are you located, and the dialog response is, We have no brick and mortar stores! But, with an internet connection, you can shop us from anywhere.](images/response-simple.png){caption="Simple response" caption-side="bottom"}
 
-To include a context variable value in the response, use the syntax `$variable_name` to specify it. See [Context variables](/docs/assistant?topic=assistant-dialog-runtime-context) for more information. For example, if you know that the $user context variable is set to the current user's name before a node is processed, then you can refer to it in the text response of the node like this:
+To include a context variable value in the response, use the syntax `$variable_name` to specify it. See [Context variables](/docs/watson-assistant?topic=watson-assistant-dialog-runtime-context) for more information. For example, if you know that the $user context variable is set to the current user's name before a node is processed, then you can refer to it in the text response of the node like this:
 
 ```text
 Hello $user
@@ -256,7 +256,7 @@ If your users return to your conversation service frequently, they might be bore
 
 In this example, the answer that your assistant provides in response to questions about store locations differs from one interaction to the next:
 
-![Shows a node that shows a user ask, Where are you located, and the dialog has three different responses defined.](images/variety.png)
+![Shows a node that shows a user ask, Where are you located, and the dialog has three different responses defined.](images/variety.png){caption="Response variations" caption-side="bottom"}
 
 You can choose to rotate through the response variations sequentially or in random order. By default, responses are rotated sequentially, as if they were chosen from an ordered list.
 
@@ -334,10 +334,10 @@ In addition to the default response type of **Text**, for which you specify the 
 - **iframe**: Embeds content from an external website, such as a form or other interactive component, directly within the chat. The source content must be publicly accessible using HTTP, and must be embeddable as an HTML `iframe` element.
 - **Option**: Adds a list of one or more options. When a user clicks one of the options, an associated user input value is sent to your assistant. How options are rendered can differ depending on the number of options and where you deploy the dialog.
 - **Pause**: Forces the application to wait for a specified number of milliseconds before continuing with processing. You can choose to show an indicator that the assistant is working on typing a response. Use this response type if you need to perform an action that might take some time.
-- **Search skill**: [Plus]{: tag-green} Searches an external data source for relevant information to return to the user. The data source that is searched is a {{site.data.keyword.discoveryshort}} service data collection that you configure when you add a search skill to the assistant that uses this dialog skill.
-- **User-defined**: If you use the JSON editor to define the response, you can create your own user-defined response type. For more information, see [Defining responses using the JSON editor](/docs/assistant?topic=assistant-dialog-responses-json).
+- **Search skill**: [Plus]{: tag-green} Searches an external data source for relevant information to return to the user. The data source that is searched is a {{site.data.keyword.discoveryshort}} service data collection that you configure when you add search to the assistant that uses this dialog.
+- **User-defined**: If you use the JSON editor to define the response, you can create your own user-defined response type. For more information, see [Defining responses using the JSON editor](/docs/watson-assistant?topic=watson-assistant-dialog-responses-json).
 
-Different integrations have different capabilities for displaying rich responses. If you want to define different responses that are customized for different channels, you can do so by editing the response using the JSON editor. For more information, see [Targeting specific integrations](/docs/assistant?topic=assistant-dialog-responses-json#dialog-responses-json-target-integrations).
+Different integrations have different capabilities for displaying rich responses. If you want to define different responses that are customized for different channels, you can do so by editing the response using the JSON editor. For more information, see [Targeting specific integrations](/docs/watson-assistant?topic=watson-assistant-dialog-responses-json#dialog-responses-json-target-integrations).
 
 To add a rich response, complete the following steps:
 
@@ -373,7 +373,7 @@ To add a rich response, complete the following steps:
 
 If your client application is able to transfer a conversation to a person, such as a customer support agent, then you can add a *Connect to human agent* response type to initiate the transfer. Some of the built-in integrations, such as web chat and Intercom, support making transfers to service desk agents. If you are using a custom application, you must program the application to recognize when this response type is triggered.
 
-If you want to take advantage of the *containment* metric to track your assistant's success rate, add this response type to your dialog or use an alternate method to identify when customers are directed to outside support. For more information, see [Measuring containment](/docs/assistant?topic=assistant-dialog-support#dialog-support-containment).
+If you want to take advantage of the *containment* metric to track your assistant's success rate, add this response type to your dialog or use an alternate method to identify when customers are directed to outside support. For more information, see [Measuring containment](/docs/watson-assistant?topic=watson-assistant-dialog-support#dialog-support-containment).
 {: tip}
 
 To add a *Connect to human agent* response type, complete the following steps:
@@ -402,7 +402,7 @@ To add a *Connect to human agent* response type, complete the following steps:
       | Zendesk | Department | Specify a valid department name from your Zendesk account. |
       {: caption="Service desk routing options" caption-side="bottom"}
 
-The dialog transfer does not occur when you test dialog nodes with this response type in the "Try it out" pane of the dialog skill. You must access a node that uses this response type from the *Preview* button for the assistant to see how your users will experience it.
+The dialog transfer does not occur when you test dialog nodes with this response type in the "Try it out" pane of the dialog. You must access a node that uses this response type from the *Preview* button for the assistant to see how your users will experience it.
 
 ### Adding a *Channel transfer* response type
 {: #dialog-overview-add-channel-transfer}
@@ -431,7 +431,7 @@ To add a *Channel transfer* response type, complete the following steps:
 
 In the integration that processes the *Channel transfer* response, the introductory message is displayed, followed by a link to the URL you specify. The user must then click the link to initiate the transfer.
 
-When a conversation is transferred from one channel to another, the session history and context are preserved, so the destination channel can continue the conversation from where it left off. Note that the message output that contains the *Channel transfer* response is processed first by the channel that initiates the transfer, and then by the target channel. If the output contains multiple responses (perhaps using different response types), these will be processed by both channels (before and after the transfer). If you want to target individual responses to specific channels, you can do so by editing the response using the JSON editor. For more information, see [Targeting specific integrations](/docs/assistant?topic=assistant-dialog-responses-json#dialog-responses-json-target-integrations).
+When a conversation is transferred from one channel to another, the session history and context are preserved, so the destination channel can continue the conversation from where it left off. Note that the message output that contains the *Channel transfer* response is processed first by the channel that initiates the transfer, and then by the target channel. If the output contains multiple responses (perhaps using different response types), these will be processed by both channels (before and after the transfer). If you want to target individual responses to specific channels, you can do so by editing the response using the JSON editor. For more information, see [Targeting specific integrations](/docs/watson-assistant?topic=watson-assistant-dialog-responses-json#dialog-responses-json-target-integrations).
 
 ### Adding an *Image* response type
 {: #dialog-overview-add-image}
@@ -571,11 +571,11 @@ Content loaded in an iframe by the web chat is *sandboxed*, meaning that it has 
 | --- | --- |
 | `allow-downloads`   | Allows downloading files from the network, if the download is initiated by the user. |
 | `allow-forms`       | Allows submitting forms. |
-| `allow-scripts`     | Allows running scripts, but _not_ opening pop-up windows. |
+| `allow-scripts`     | Allows running scripts, but not opening pop-up windows. |
 | `allow-same-origin` | Allows the content to access its own data storage (such as cookies), and allows only very limited access to JavaScript APIs. |
 {: caption="Permissions" caption-side="bottom"}
 
-A script running inside a sandboxed iframe cannot make changes to any content content outside the iframe, _if_ the outer page and the iframe have different origins. Be careful if you use an *iframe* response to embed content that has the same origin as the the page where your web chat widget is hosted; in this situation the embedded content can defeat the sandboxing and gain access to content outside the frame. For more information about this potential vulnerability, see the `sandbox` attribute [documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox){: external}.
+A script running inside a sandboxed iframe cannot make changes to any content content outside the iframe, if the outer page and the iframe have different origins. Be careful if you use an *iframe* response to embed content that has the same origin as the the page where your web chat widget is hosted; in this situation the embedded content can defeat the sandboxing and gain access to content outside the frame. For more information about this potential vulnerability, see the `sandbox` attribute [documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox){: external}.
 {: note}
 
 ### Adding an *Option* response type
@@ -593,7 +593,7 @@ Add an option response type when you want to give the customer a set of options 
 
 Most integrations display the options as buttons if there are only a few items (4 or fewer, for example).
       
-![Shows a small options list in the Preview that is displayed as buttons.](images/options-buttons.png)
+![Shows a small options list in the Preview that is displayed as buttons.](images/options-buttons.png){caption="Option buttons" caption-side="bottom"}
 
 Otherwise, the options are displayed as a list.
 
@@ -678,7 +678,7 @@ To add an *Option* response type, complete the following steps:
 
     When you define an options list with only 3 items, the options are typically displayed as buttons. When you add a preference property that indicates `dropdown` as the preference, for example, you can see in the "Try it out" pane that the list is displayed as a drop-down list instead.
 
-    ![Shows a small options list in the Preview that is displayed as a drop-down menu.](images/options-dropdown.png)
+    ![Shows a small options list in the Preview that is displayed as a drop-down menu.](images/options-dropdown.png){caption="Options list caption-side="bottom"}
 
     Some integration types, such as the web chat, reflect your preference. Other integration types, such as Slack, do not reflect your preference when they render the options.
 
@@ -712,7 +712,7 @@ This response type does not render in the "Try it out" pane. You must access a n
 
 If you have existing customer-facing material, such as an FAQ, a product catalog, or sales material that can answer questions that customers often ask, put that information to use. You can trigger a search of the existing material in real time to get the latest and most up-to-date answer for your customers. 
 
-To use the search skill response type, you must create a search skill and add it to the same assistant that uses this dialog skill. For more information, see [Creating a search skill](/docs/assistant?topic=assistant-skill-search-add).
+To use the search skill response type, you must add search to the same assistant that uses this dialog. For more information, see [{{site.data.keyword.discoveryfull}} search integration setup](/docs/watson-assistant?topic=watson-assistant-search-add).
 
 To add a *Search skill* response type, complete the following steps:
 
@@ -724,7 +724,7 @@ To add a *Search skill* response type, complete the following steps:
 
     - **Query**: Optional. You can specify a specific query in natural language to pass to {{site.data.keyword.discoveryshort}}. If you do not add a query, then the customer's exact input text is passed as the query.
 
-      For example, you can specify `What cities do you fly to?`. This query value is passed to {{site.data.keyword.discoveryshort}} as a search query. {{site.data.keyword.discoveryshort}} uses natural language understanding to understand the query and to find an answer or relevant information about the subject in the data collection that is configured for the search skill.
+      For example, you can specify `What cities do you fly to?`. This query value is passed to {{site.data.keyword.discoveryshort}} as a search query. {{site.data.keyword.discoveryshort}} uses natural language understanding to understand the query and to find an answer or relevant information about the subject in the data collection that is configured for the search.
 
       You can include specific information provided by the user by referencing entities that were detected in the user's input as part of the query. For example, `Tell me about @product`. Or you can reference a context variable, such as `Do you have flights to $destination?`. Just be sure to design your dialog such that the search is not triggered unless any entities or context variables that you reference in the query have been set to valid values.
 
@@ -746,7 +746,7 @@ To add a *Search skill* response type, complete the following steps:
 
 1. **Optional**: Change the query type that is used for the search. 
 
-    The search skill sends a natural language query to {{site.data.keyword.discoveryshort}} automatically. If you want to use the {{site.data.keyword.discoveryshort}} query language instead, you can specify it. To do so, open the JSON editor for the node response.
+    The search sends a natural language query to {{site.data.keyword.discoveryshort}} automatically. If you want to use the {{site.data.keyword.discoveryshort}} query language instead, you can specify it. To do so, open the JSON editor for the node response.
 
     Edit the JSON code snippet to replace `natural_language` with `discovery_query_language`. For example:
 
@@ -766,7 +766,7 @@ To add a *Search skill* response type, complete the following steps:
     ```
     {: codeblock}  
 
-Test this response type from the assistant *Preview*. You cannot test it from the dialog skill's "Try it out" pane.
+Test this response type from the assistant *Preview*. You cannot test it from the "Try it out" pane.
 
 ### Conditional responses
 {: #dialog-overview-multiple}
@@ -775,9 +775,9 @@ A single dialog node can provide different responses, each one triggered by a di
 
 The node still has a main condition, which is the condition for using the node and processing the conditions and responses that it contains.
 
-In this example, your assistant uses information that it collected earlier about the user's location to tailor its response, and provide information about the store nearest the user. See [Context variables](/docs/assistant?topic=assistant-dialog-runtime-context) for more information about how to store information collected from the user.
+In this example, your assistant uses information that it collected earlier about the user's location to tailor its response, and provide information about the store nearest the user. See [Context variables](/docs/watson-assistant?topic=watson-assistant-dialog-runtime-context) for more information about how to store information collected from the user.
 
-![Shows a node that shows a user ask, Where are you located, and the dialog has three different responses depending on conditions that use info from the $state context variable to specify locations in those states.](images/multiple-responses.png)
+![Shows a node that shows a user ask, Where are you located, and the dialog has three different responses depending on conditions that use info from the $state context variable to specify locations in those states.](images/multiple-responses.png){caption="Conditional responses" caption-side="bottom"}
 
 This single node now provides the equivalent function of four separate nodes.
 
@@ -841,8 +841,8 @@ If you choose to jump to another node, specify when the target node is processed
 ### Next steps
 {: #dialog-overview-next}
 
-- Be sure to test your dialog as you build it. For more information, see [Testing the dialog](/docs/assistant?topic=assistant-dialog-tasks).
-- For more information about ways to address common use cases, see [Dialog building tips](/docs/assistant?topic=assistant-dialog-tips).
-- For more information about the expression language that you can use to improve your dialog, such as methods that reformat dates or text, see [Expression language methods](/docs/assistant?topic=assistant-dialog-methods).
+- Be sure to test your dialog as you build it. For more information, see [Testing the dialog](/docs/watson-assistant?topic=watson-assistant-dialog-tasks).
+- For more information about ways to address common use cases, see [Dialog building tips](/docs/watson-assistant?topic=watson-assistant-dialog-tips).
+- For more information about the expression language that you can use to improve your dialog, such as methods that reformat dates or text, see [Expression language methods](/docs/watson-assistant?topic=watson-assistant-dialog-methods).
 
-You can also use the API to add nodes or otherwise edit a dialog. See [Modifying a dialog using the API](/docs/assistant?topic=assistant-api-dialog-modify) for more information.
+You can also use the API to add nodes or otherwise edit a dialog. See [Modifying a dialog using the API](/docs/watson-assistant?topic=watson-assistant-api-dialog-modify) for more information.

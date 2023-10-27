@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-27"
 
 keywords: post webhook, postwebhook, post-webhook
 
@@ -131,7 +131,7 @@ The following error codes can help you track down the cause of issues you might 
 {: caption="Error code details" caption-side="bottom"}
 
 ## Webhook security
-{: #webhook-pre-security}
+{: #webhook-post-security}
 
 To authenticate the webhook request, verify the JSON Web Token (JWT) that is sent with the request. The webhook microservice automatically generates a JWT and sends it in the `Authorization` header with each webhook call. It is your responsibility to add code to the external service that verifies the JWT.
 

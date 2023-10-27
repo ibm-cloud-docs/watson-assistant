@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-25"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -107,7 +107,7 @@ Action and collection names must now be unique
 {: release-note}
 
 {{site.data.keyword.assistant_classic_full}} Cartridge for {{site.data.keyword.icp4dfull}} Version 4.7.1 is available
-:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.7.1 is compatible with {{site.data.keyword.icp4dfull}} Version 4.7. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install#install-support-matrix) for more details. 
+:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.7.1 is compatible with {{site.data.keyword.icp4dfull}} Version 4.7. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install-data#install-support-matrix) for more details. 
 
 Edit step titles
 :  You can now add and edit titles for each step, which can help you more easily identify what a step does in an action. For more information, see [Editing actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview).
@@ -147,7 +147,7 @@ Differences in contextual entity detection for dialog skills with few annotation
 {: release-note}
 
 {{site.data.keyword.assistant_classic_full}} Cartridge for {{site.data.keyword.icp4dfull}} Version 4.7.0 is available
-:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.7.0 is compatible with {{site.data.keyword.icp4dfull}} Version 4.7. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install#install-support-matrix) for more details. 
+:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.7.0 is compatible with {{site.data.keyword.icp4dfull}} Version 4.7. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install-data#install-support-matrix) for more details. 
 
 The new experience is now available for all new instances
 :   When you create a new instance, the new experience will be the default interface to use for building your assistants. The new experience makes it easier to use actions to build customer conversations. If you don't want to use the new experience, you can use the Manage menu to switch to the classic experience. For details, see [Welcome to the new {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant).
@@ -199,7 +199,7 @@ Using the Cloud Object Storage importer to migrate chat logs
 {: release-note}
 
 {{site.data.keyword.assistant_classic_full}} Cartridge for {{site.data.keyword.icp4dfull}} Version 4.6.5 is available
-:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.6.5 is compatible with {{site.data.keyword.icp4dfull}} Version 4.6. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install#install-support-matrix) for more details. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes various fixes and features.
+:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.6.5 is compatible with {{site.data.keyword.icp4dfull}} Version 4.6. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install-data#install-support-matrix) for more details. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes various fixes and features.
 
 Algorithm version 01-Jun-2022 uses enhanced intent detection by default
 :   The algorithm version **Latest (01-Jun-2022)** now uses enhanced intent detection by default. Before this change, some skills that did not include a specific algorithm version selection inadvertently used **Previous (01-Jan-2022)**. You can notice small changes in intent detection behavior when changes are made to an assistant that previously didn't have enhanced intent detection enabled. For more information, see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
@@ -223,14 +223,14 @@ For more information, see [Algorithm version and training](/docs/watson-assistan
 {: release-note}
 
 {{site.data.keyword.assistant_classic_full}} Cartridge for {{site.data.keyword.icp4dfull}} Version 4.6.3 is available
-:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.6.3 is compatible with {{site.data.keyword.icp4dfull}} Version 4.6. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install#install-support-matrix) for more details. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes various fixes and features.
+:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.6.3 is compatible with {{site.data.keyword.icp4dfull}} Version 4.6. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install-data#install-support-matrix) for more details. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes various fixes and features.
 
 ## 30 January 2023
 {: #assistant-data-jan302023}
 {: release-note}
 
 {{site.data.keyword.assistant_classic_full}} Cartridge for {{site.data.keyword.icp4dfull}} Version 4.6.2 is available
-:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.6.2 is compatible with {{site.data.keyword.icp4dfull}} Version 4.6. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install#install-support-matrix) for more details. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes various fixes and features.
+:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.6.2 is compatible with {{site.data.keyword.icp4dfull}} Version 4.6. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install-data#install-support-matrix) for more details. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes various fixes and features.
 
 New {{site.data.keyword.assistant_classic_short}} v2 APIs
 :   {{site.data.keyword.assistant_classic_short}} now provides new methods related to assistants, skills, environments, and releases. For details, see the [{{site.data.keyword.assistant_classic_short}} v2 API documentation](https://{DomainName}/assistant/assistant-v2){: external}.
@@ -240,7 +240,7 @@ New {{site.data.keyword.assistant_classic_short}} v2 APIs
 {: release-note}
 
 {{site.data.keyword.assistant_classic_full}} Cartridge for {{site.data.keyword.icp4dfull}} Version 4.6.0 is available
-:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.6.0 is compatible with {{site.data.keyword.icp4dfull}} Version 4.6. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install#install-support-matrix) for more details. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes various fixes and features.
+:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.6.0 is compatible with {{site.data.keyword.icp4dfull}} Version 4.6. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install-data#install-support-matrix) for more details. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes various fixes and features.
 
 New {{site.data.keyword.conversationshort}} experience
 :   With the new experience in {{site.data.keyword.conversationshort}}, you can build, test, publish, and analyze your assistant from one simple and intuitive interface that focuses on using actions to build customer conversations. To learn more about building your assistant with actions, see [Welcome to the new {{site.data.keyword.conversationshort}}](/docs/watson-assistant).
@@ -266,7 +266,7 @@ Action skills
 {: release-note}
 
 {{site.data.keyword.assistant_classic_full}} Cartridge for {{site.data.keyword.icp4dfull}} Version 4.5.3 is available
-:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.5.3 is compatible with {{site.data.keyword.icp4dfull}} Version 4.5. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install#install-support-matrix) for more details. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes various fixes and features.
+:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.5.3 is compatible with {{site.data.keyword.icp4dfull}} Version 4.5. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install-data#install-support-matrix) for more details. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes various fixes and features.
 
 Support for `autoScaleConfig`
 :   Support for automatically scaling resources using the Red Hat OpenShift Horizontal Pod Autoscaler (HPA). See [Automatically scaling resources for services](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.5.x?topic=services-automatically-scaling).
@@ -276,7 +276,7 @@ Support for `autoScaleConfig`
 {: release-note}
 
 {{site.data.keyword.assistant_classic_full}} Cartridge for {{site.data.keyword.icp4dfull}} Version 4.5.1 is available
-:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.5.1 is compatible with {{site.data.keyword.icp4dfull}} Version 4.5. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install#install-support-matrix) for more details. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes various fixes and features.
+:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.5.1 is compatible with {{site.data.keyword.icp4dfull}} Version 4.5. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install-data#install-support-matrix) for more details. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes various fixes and features.
 
 New deployment sizes
 :   Two new deployment sizes are now available. The two new sizes are `Starter` and `Production`. The `Starter` size is equivalent to the `small` deployment size, and the `Production` size is equivalent to the `medium` deployment size.
@@ -286,7 +286,7 @@ New deployment sizes
 {: release-note}
 
 {{site.data.keyword.assistant_classic_full}} Cartridge for {{site.data.keyword.icp4dfull}} Version 4.5.0 is available
-:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.5.0 is compatible with {{site.data.keyword.icp4dfull}} Version 4.5. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install#install-support-matrix) for more details. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes various fixes and features.
+:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.5.0 is compatible with {{site.data.keyword.icp4dfull}} Version 4.5. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install-data#install-support-matrix) for more details. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes various fixes and features.
 
 Red Hat OpenShift Container Platform support
 :   You can deploy {{site.data.keyword.icp4dfull}} Version 4.5 on the following versions of Red Hat OpenShift Container Platform:
@@ -424,7 +424,7 @@ Integration with the {{site.data.keyword.icp4dfull}} auditing service
 {: release-note}
 
 {{site.data.keyword.assistant_classic_full}} Cartridge for {{site.data.keyword.icp4dfull}} 4.0.0 is available
-:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.0.0 is compatible with {{site.data.keyword.icp4dfull}} 4.0 on Red Hat OpenShift 4.6. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install#install-support-matrix) for more details.
+:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.0.0 is compatible with {{site.data.keyword.icp4dfull}} 4.0 on Red Hat OpenShift 4.6. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install-data#install-support-matrix) for more details.
 
 Universal language
 :   You now can build an assistant in any language you want to support. If a dedicated language model is not available for your target language, create a skill that uses the universal language model. The universal model applies a set of shared linguistic characteristics and rules from multiple languages as a starting point. It then learns from training data written in the target language that you add to it.
@@ -451,7 +451,7 @@ Features not included
 {: release-note}
 
 {{site.data.keyword.assistant_classic_full}} for {{site.data.keyword.icp4dfull}} 1.5.0 is available
-:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 1.5.0 is compatible with {{site.data.keyword.icp4dfull}} 3.5 and {{site.data.keyword.icp4dfull}} 3.0.1 deployments on Red Hat OpenShift 4.6, 4.5, or 3.11. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install#install-support-matrix) for more details.
+:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 1.5.0 is compatible with {{site.data.keyword.icp4dfull}} 3.5 and {{site.data.keyword.icp4dfull}} 3.0.1 deployments on Red Hat OpenShift 4.6, 4.5, or 3.11. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install-data#install-support-matrix) for more details.
 
 {{site.data.keyword.assistant_classic_full}} for {{site.data.keyword.icp4dfull}} 1.5.0 is available
 :   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 1.5.0 is compatible with {{site.data.keyword.icp4dfull}} 3.5 and {{site.data.keyword.icp4dfull}} 3.0.1 deployments on Red Hat OpenShift 4.5 or 3.11.

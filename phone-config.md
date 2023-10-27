@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -129,8 +129,6 @@ For the best customer experience, design your dialog with the capabilities of th
 For more information about using the search integration, see [Leveraging existing help content](/docs/watson-assistant?topic=watson-assistant-search-add).
 
 For more information about how to implement common actions from your dialog, see [Handling phone interactions](/docs/watson-assistant?topic=watson-assistant-phone-actions).
-
-
 
 ## Setting up a SIP trunk
 {: #deploy-phone-config-sip-providers}
