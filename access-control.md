@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -23,8 +23,7 @@ In {{site.data.keyword.conversationshort}}, each assistant contains all the draf
 
 To quickly add users with manager access to all assistants, complete the following steps:
 
-1.  Open the **Manage** menu.
-    ![Manage menu](images/user--avatar.svg)
+1.  Open the **Manage** menu ![Manage menu](images/user--avatar.svg).
 
 1. Click **Add users**.
 
@@ -47,8 +46,7 @@ Another way to add users to your assistants is using Identity and Access Managem
 ### Opening Identity and Access Management
 {: #access-control-open-iam}
 
-1.  Open the **Manage** menu.
-    ![Manage menu](images/user--avatar.svg)
+1.  Open the **Manage** menu ![Manage menu](images/user--avatar.svg).
 
 1.	Click **Manage users**.
 
