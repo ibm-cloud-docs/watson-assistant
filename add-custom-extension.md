@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-25"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -57,7 +57,7 @@ To add a custom extension to the assistant, follow these steps:
 
     The **Review operations** table shows the operations that the assistant is able to call from an action step. An _operation_ is a request by using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
 
-    ![Review operations table](images/extension-review-operations.png)
+    ![Review operations table](images/extension-review-operations.png){: caption="Review operations table" caption-side="bottom"}
 
     For each operation, a row in the table shows the following information:
 
@@ -90,7 +90,7 @@ To complete the OAuth authentication setup, follow these steps:
 
 1. In the **Grant type** field, select the grant type that you want to use. Available grant types are determined by flows that are defined in the `securitySchemes` object in the OpenAPI document. Authorization Code, Client Credentials, Password, and custom grant types that start with `x-` are supported.
 
-   The OAuth2 custom grant type `x-`<any custom name> is used by the [IBM IAM authentication mechanism](/docs/account?topic=account-iamoverview) and by [watsonx](https://www.ibm.com/watsonx).
+   The OAuth2 custom grant type `x-<any custom name>` is used by the [IBM IAM authentication mechanism](/docs/account?topic=account-iamoverview) and by [watsonx](https://www.ibm.com/watsonx).
    {: note}
 
 1. Specify the required values that were provided by the external API when you registered your application. The required values depend on the grant type:
@@ -100,7 +100,8 @@ To complete the OAuth authentication setup, follow these steps:
     | Authorization Code | - **Client ID** \n - **Client secret** |
     | Client Credentials | - **Client ID** \n - **Client secret** |
     | Password           | - **Client ID** \n - **Client secret** \n - **Username** \n - **Password** |
-    | x-<any custom name>| - **A list of secret fields mentioned in the openAPI spec file** |
+    | `x-<any custom name>` | - **A list of secret fields mentioned in the openAPI spec file** |
+    {: caption="Grant types" caption-side="bottom"}
 
 1. If you are using the Authorization Code grant type, follow these steps:
 
@@ -112,7 +113,7 @@ To complete the OAuth authentication setup, follow these steps:
 
 1. In the **Header prefix** field, specify the prefix that precedes the access token in the `Authorization` header. (The default prefix is `Bearer`, which is typical for most applications.)
 
-1. If you are using the custom grant type `x-`<any custom name> (for example, x-apikey), follow these steps:
+1. If you are using the custom grant type `x-<any custom name>` (for example, x-apikey), follow these steps:
 
     1. Add the secret values associated with the secret fields.
     1. Add the optional parameter values, if any. 
@@ -152,4 +153,3 @@ The number of custom extensions you can add to an assistant depends on your plan
 | Lite       |                          3 |
 | Standard (legacy) |                   0 |
 {: caption="Extension limits by plan" caption-side="top"}
-
