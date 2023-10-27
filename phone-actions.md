@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-27"
 
 keywords: phone, phone interactions, custom language model, custom grammar, advanced settings
 
@@ -817,7 +817,7 @@ To send a specific message from an action step, use the `user_defined` response 
         "vgwAction": {
           "command": "vgwActSendSMS",
           "parameters": {
-            "message": "Hey, this is {{site.data.keyword.conversationshort}}. To send me your street address, respond to this text message with your address."
+            "message": "To send me your street address, respond to this text message with your address."
           }
         }
       }

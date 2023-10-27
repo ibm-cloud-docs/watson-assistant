@@ -11,7 +11,6 @@ toc:
     product-page: https://ibm.com/cloud/watsonx-assistant
     path: watson-assistant
     label: watsonx Assistant
-#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
   entries:
   - navgroup:
       id: learn
@@ -314,7 +313,6 @@ toc:
       - expression-methods-actions.md
       - dialog-methods.md
       - expression-language.md
-      - time-zones.md
       - phone-context.md
       - sms-reference.md
       - cdr-log-reference.md

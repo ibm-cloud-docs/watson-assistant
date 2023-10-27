@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-08-01"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -148,12 +148,9 @@ Watch a 5-minute video that provides an overview of setting up a connection to a
 
 Update an action to make sure it understands when users request to speak to a person, and can transfer the conversation properly.
 
-
 ### Routing based on browser information
 {: #deploy-salesforce-routing-browser-info}
 
 When a customer interacts with the web chat, information about the current web browser session is collected. For example, the URL of the current page is collected. You can use this information to add custom routing rules to your actions. For example, if the customer is on the Products page when a transfer to a human is requested, you might want to route the chat transfer to agents who are experts in your product portfolio. If the customer is on the Returns page, you might want to route the chat transfer to agents who know how to help customers return merchandise.
-
-
 
 

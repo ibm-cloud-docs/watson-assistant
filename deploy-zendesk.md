@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -229,7 +229,6 @@ To secure the Zendesk connection, complete the following steps:
 
 Update an action to make sure it understands when users request to speak to a person, and can transfer the conversation properly.
 
-
 ### Routing based on browser information
 {: #deploy-zendesk-routing-browser-info}
 
@@ -238,7 +237,5 @@ When a customer interacts with the web chat, information about the current web b
 You can use this information to add custom routing rules to your actions. For example, if the customer is on the Products page when a transfer to a human is requested, you can route the chat to agents who are experts in your product portfolio. 
 
 If the customer is on the Returns page, you might want to route the chat transfer to agents who know how to help customers return merchandise.
-
-
 
 

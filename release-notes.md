@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -1418,7 +1418,7 @@ Coverage metric change
 {: release-note}
 
 Use new webhooks to process messages!
-:   A set of new webhooks is available as a beta feature. You can use the webhooks to perform preprocessing tasks on incoming messages and postprocessing tasks on the corresponding responses. You can use the new log webhook to log each message with an external service. For more information, see [Webhook overview](/docs/watson-assistant?topic=assistant-webhook-overview).
+:   A set of new webhooks is available as a beta feature. You can use the webhooks to perform preprocessing tasks on incoming messages and postprocessing tasks on the corresponding responses. You can use the new log webhook to log each message with an external service. For more information, see [Webhook overview](/docs/watson-assistant?topic=watson-assistant-webhook-overview).
 
 New service desk support reference implementation
 :   You can use the reference implementation details to integrate the web chat with the NICE inContact service desk. For more information, see [Integrating with phone and NICE CXone contact center](/docs/watson-assistant?topic=watson-assistant-deploy-phone-nicecxone).
@@ -1846,7 +1846,7 @@ Technology preview is discontinued
 {: release-note}
 
 Instructions updated for Slack integrations
-:   The steps required to set up a Slack integration have changed to reflect permission assignment changes that were made by Slack. For more information, see [Integrating with Slack](/docs/watson-assistant?topic=assistant-deploy-slack).
+:   The steps required to set up a Slack integration have changed to reflect permission assignment changes that were made by Slack. For more information, see [Integrating with Slack](/docs/watson-assistant?topic=watson-assistant-deploy-slack).
 
 Order of response types is preserved
 :   Previously, if you included a response type of **Search skill** in a list of response types for a dialog node, the search results were displayed last despite its placement in the list. This behavior was changed to show the search results in the appropriate order, namely in the sequence in which the search skill response type is listed for the dialog node.
@@ -1946,7 +1946,7 @@ More web chat color settings
 {: release-note}
 
 Track API events
-:   Premium plan users can now use the Activity Tracker service to track how users and applications interact with {{site.data.keyword.assistant_classic_full}} in {{site.data.keyword.cloud}}. See [Using {{site.data.keyword.at_full_notm}} to audit user activity](docs/watson-assistant?topic=watson-assistant-admin-auditing).
+:   Premium plan users can now use the Activity Tracker service to track how users and applications interact with {{site.data.keyword.assistant_classic_full}} in {{site.data.keyword.cloud}}. See [Using {{site.data.keyword.at_full_notm}} to audit user activity](/docs/watson-assistant?topic=watson-assistant-admin-auditing).
 
 ## 5 February 2020
 {: #watson-assistant-feb052020}
@@ -2708,7 +2708,7 @@ GB18030 compliance
 Intent examples can directly reference entities
 :   You can now specify an entity reference directly in an intent example. That entity reference, along with all its values or synonyms, is used by the service classifier for training the intent. For more information, see [Directly referencing an entity name in an intent example](/docs/watson-assistant?topic=watson-assistant-intents#intents-entity-as-example).
 
-    Currently, you can only directly reference closed entities that you define. You cannot directly reference [pattern entities](/docs/watson-assistant?topic=watson-assistant-entities#entities-patterns) or [system entities](/docs/watson-assistant?topic=assistant-system-entities).
+    Currently, you can only directly reference closed entities that you define. You cannot directly reference [pattern entities](/docs/watson-assistant?topic=watson-assistant-entities#entities-patterns) or [system entities](/docs/watson-assistant?topic=watson-assistant-system-entities).
 
 ## 8 November 2017
 {: #watson-assistant-nov082017}
@@ -2722,7 +2722,7 @@ New connector tool
 {: release-note}
 
 Dialog updates
-:   The following updates make is easier for you to build a dialog. (See [Creating a dialog](/docs/watson-assistant?topic=assistant-dialog-build) for details.)
+:   The following updates make is easier for you to build a dialog. (See [Creating a dialog](/docs/watson-assistant?topic=watson-assistant-dialog-build) for details.)
 
     - You can add a condition to a slot to make it required only if certain conditions are met. For example, you can make a slot that asks for the name of a spouse required only if a previous (required) slot that asks for marital status indicates that the user is married.
 

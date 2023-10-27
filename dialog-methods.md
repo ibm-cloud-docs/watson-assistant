@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-16"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -689,7 +689,7 @@ This expression would return the following array of strings: `["Flight AZ1040 to
 The optional `retainDataType` parameter specifies whether the method should preserve the data type of all input values in the returned array. If `retainDataType` is set to `false` or omitted, in some situations, strings in the input array might be converted to numbers in the returned array. For example, if the selected values from the input array are `"1"`, `"2"`, and `"3"`, the returned array might be `[ 1, 2, 3 ]`. To avoid unexpected type conversions, specify `true` for this parameter.
 
 #### Complex templates
-{: #join-to-array-complex-template}
+{: #dialog-methods-join-to-array-complex-template}
 
 A more complex template might contain formatting that displays the information in a legible layout. For a complex template, you might want to store the template in a context variable, which you can then pass to the `joinToArray` method instead of a string.
 
@@ -734,7 +734,7 @@ Arrival time: 09:05
 {: screen}
 
 #### JSON Object templates
-{: #join-to-array-object-template}
+{: #dialog-methods-join-to-array-object-template}
 
 Instead of a string, you can define a template as a JSON object. This provides a way to standardize the formatting of information from different systems, or to transform data into the format required for an external service.
 
@@ -1359,7 +1359,7 @@ These methods help you get and reformat number values.
 
 For information about system entities that can recognize and extract numbers from user input, see [@sys-number entity](/docs/watson-assistant?topic=watson-assistant-system-entities#system-entities-sys-number).
 
-If you want the service to recognize specific number formats in user input, such as order number references, consider creating a pattern entity to capture it. See [Creating entities](/docs/assistant?topic=assistant-entities) for more details.
+If you want the service to recognize specific number formats in user input, such as order number references, consider creating a pattern entity to capture it. See [Creating entities](/docs/watson-assistant?topic=watson-assistant-entities) for more details.
 
 If you want to change the decimal placement for a number, to reformat a number as a currency value, for example, see the [String format() method](#dialog-methods-strings-java-lang-String-format).
 

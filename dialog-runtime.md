@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-27"
 
 keywords: digression, disambiguation, confidence 
 
@@ -311,7 +311,7 @@ To change the digression behavior for an individual node, complete the following
 
     - **Nodes with slots**: Choose whether you want to allow users to digress away from the node before all of the slots are filled. Set the **Allow digressions away while slot filling** switch to **Yes** to enable digressions away.
 
-      If enabled, when the conversation returns from the digression, the prompt for the next unfilled slot is displayed to encourage the user to continue providing information. If disabled, then any inputs that the user submits which do not contain a value that can fill a slot are ignored. However, you can address unsolicited questions that you anticipate your users might ask while they interact with the node by defining slot handlers. For more information, see [Adding slots](/docs/assistant?topic=assistant-dialog-slots#dialog-slots-add).
+      If enabled, when the conversation returns from the digression, the prompt for the next unfilled slot is displayed to encourage the user to continue providing information. If disabled, then any inputs that the user submits which do not contain a value that can fill a slot are ignored. However, you can address unsolicited questions that you anticipate your users might ask while they interact with the node by defining slot handlers. For more information, see [Adding slots](/docs/watson-assistant?topic=watson-assistant-dialog-slots#dialog-slots-add).
 
     - **Nodes with slots**: Choose whether the user is allowed to digress away if they return to the current node by selecting the **Only digress from slots to nodes that allow returns** checkbox.
 

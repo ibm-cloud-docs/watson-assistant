@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2015, 2023
-lastupdated: "2023-10-26"
+  years: 2015, 2023
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -863,7 +863,7 @@ This expression would return the following array of strings: `["Flight AZ1040 to
 The optional `retainDataType` parameter specifies whether the method preserves the data type of all input values in the returned array. If `retainDataType` is set to `false` or omitted, in some situations, strings in the input array might be converted to numbers in the returned array. For example, if the selected values from the input array are `"1"`, `"2"`, and `"3"`, the returned array might be `[ 1, 2, 3 ]`. To avoid unexpected type conversions, specify `true` for this parameter.
 
 #### Complex templates
-{: #join-to-array-complex-template}
+{: #expression-methods-actions-join-to-array-complex-template}
 
 A more complex template might contain formatting that displays the information in a legible layout. For a complex template, you might want to store the template in a session variable, which you can then pass to the `joinToArray` method instead of a string.
 
@@ -907,7 +907,7 @@ Arrival time: 09:05
 {: screen}
 
 #### JSON templates
-{: #join-to-array-object-template}
+{: #expression-methods-actions-join-to-array-object-template}
 
 Instead of a string, you can define a template as a JSON object, which provides a way to standardize the formatting of information from different systems, or to transform data into the format required for an external service.
 

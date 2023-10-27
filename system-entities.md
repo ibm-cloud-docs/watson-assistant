@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-17"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -207,7 +207,7 @@ The following table illustrates the information that each attribute captures fro
 
 Mentions of a date or time that are relative to the current time are resolved for a chosen time zone. By default, the time zone is Greenwich mean time. Therefore, REST API clients that are located in different time zones get the current Coordinated Universal Time when `now` is mentioned in input.
 
-Optionally, the REST API client can add the local time zone as the context variable `$timezone`. This context variable must be sent with every client request. For example, the `$timezone` value can be `America/Los_Angeles`, `EST`, or `UTC`. For a full list of supported time zones, see [Supported time zones](/docs/assistant?topic=assistant-time-zones).
+Optionally, the REST API client can add the local time zone as the context variable `$timezone`. This context variable must be sent with every client request. For example, the `$timezone` value can be `America/Los_Angeles`, `EST`, or `UTC`. For a full list of supported time zones, see [Supported time zones](/docs/watson-assistant?topic=watson-assistant-time-zones).
 
 When the `$timezone` variable is provided, the values of relative `@sys-date` and `@sys-time` mentions are computed based on the client time zone instead of Coordinated Universal Time.
 
@@ -256,7 +256,7 @@ The following table illustrates the information that each attribute captures fro
 
    Use `(@sys-number OR @sys-number == 0) AND @sys-number < 4` instead. If no number is present, the first condition evaluates to false. As a result, the whole condition evaluates to false.
 
-For more information about processing number values, see the [Numbers method reference](/docs/assistant?topic=assistant-dialog-methods#dialog-methods-numbers).
+For more information about processing number values, see the [Numbers method reference](/docs/watson-assistant?topic=watson-assistant-dialog-methods#dialog-methods-numbers).
 {: tip}
 
 ## @sys-percentage entity

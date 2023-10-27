@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-27"
 
 keywords: import workspace, import JSON, export JSON, upload JSON, download JSON, collaborate
 
@@ -17,11 +17,11 @@ subcollection: watson-assistant
 
 You can add one dialog skill to an assistant.
 
-- If you are using {{site.data.keyword.conversationshort}}, you need to [activate dialog](#activate-dialog-activating).
+- If you are using {{site.data.keyword.conversationshort}}, you need to [activate dialog](#skill-dialog-add-activate-dialog-activating).
 - If you are using the classic experience, you [create a dialog skill](#skill-dialog-add-task).
 
 ## Activating dialog
-{: #activate-dialog-activating}
+{: #skill-dialog-add-activate-dialog-activating}
 
 To activate the dialog feature in {{site.data.keyword.conversationshort}}:
 

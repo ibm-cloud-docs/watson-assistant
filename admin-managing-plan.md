@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-25"
+lastupdated: "2023-10-27"
 
 keywords: billing, data centers, MAU, monthly active users, service plans
 
@@ -40,7 +40,7 @@ The following features are available only to users of a Plus plan or higher. [Pl
 - [Search](/docs/watson-assistant?topic=watson-assistant-search-add)
 - [v2 Logs API](https://{DomainName}/apidocs/assistant/assistant-v2#listlogs){: external}
 - [Log webhook](/docs/watson-assistant?topic=watson-assistant-webhook-log)
-- [Intent conflict resolution](/docs/assistant?topic=assistant-intents#intents-resolve-conflicts){: external}
+- [Intent conflict resolution](/docs/watson-assistant?topic=watson-assistant-intents#intents-resolve-conflicts)
 
 The following features are available only to users of Enterprise plans. [Enterprise]{: tag-purple}
 

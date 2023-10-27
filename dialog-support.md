@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-08-31"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -85,7 +85,7 @@ To enable the containment metric, complete the following steps:
 
 1.  For any dialog nodes that transfer the chat to a service desk agent, add a *Connect to human agent* response type.
 
-    For more information, see [Adding a *Connect to human agent* response type](/docs/assistant?topic=assistant-dialog-overview#dialog-overview-add-connect-to-human-agent).
+    For more information, see [Adding a *Connect to human agent* response type](/docs/watson-assistant?topic=watson-assistant-dialog-overview#dialog-overview-add-connect-to-human-agent).
 
 1.  For any dialog nodes that redirect customers to alternative forms of customer support, add a context variable that is named `context_connect_to_agent` and set it to `true`.
 

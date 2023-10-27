@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -113,8 +113,6 @@ To set up the integration:
     For more information about voice options, and to listen to audio samples, see [Languages and voices](/docs/text-to-speech?topic=text-to-speech-voices){: external} in the {{site.data.keyword.texttospeechshort}} documentation.
 
     Click **Next**.
-
-
 
 
 

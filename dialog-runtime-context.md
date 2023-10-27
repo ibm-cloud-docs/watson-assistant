@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-09-29"
+lastupdated: "2023-10-27"
 
 keywords: context, context variable
 
@@ -228,7 +228,7 @@ The name and value pair must meet these requirements:
 
 - The `name` can contain any upper- and lowercase alphabet characters, numeric characters (0-9), and underscores.
 
-   You can include other characters, such as periods and hyphens, in the name. However, if you do, then you must specify the shorthand syntax `$(variable-name)` every time you reference the variable. See [Expressions for accessing objects](/docs/assistant?topic=assistant-expression-language#expression-language-shorthand-syntax) for more details.
+   You can include other characters, such as periods and hyphens, in the name. However, if you do, then you must specify the shorthand syntax `$(variable-name)` every time you reference the variable. See [Expressions for accessing objects](/docs/watson-assistant?topic=watson-assistant-expression-language#expression-language-shorthand-syntax) for more details.
    {: tip}
 
 - The `value` can be any supported JSON type, such as a simple string variable, a number, a JSON array, or a JSON object.

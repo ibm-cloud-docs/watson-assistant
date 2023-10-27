@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -73,8 +73,6 @@ To specify a response in the JSON editor, insert the appropriate JSON objects in
 {: codeblock}
 
 For more information, see [Response types](#assistant-responses-json-response-types).
-
-
 
 ### Targeting specific integrations
 {: #assistant-responses-json-target-integrations}
@@ -155,8 +153,6 @@ The following example shows step output that contains two responses: one intende
 {: codeblock}
 
 If the `channels` array is present, it must contain at least one channel object. Any integration that is not listed ignores the response. If the `channels` array is absent, all integrations handle the response.
-
-
 
 ## Response types
 {: #assistant-responses-json-response-types}

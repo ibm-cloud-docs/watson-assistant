@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -43,5 +43,3 @@ The starter kit reference implementations, while functional, are examples only, 
 {: important}
 
 After you set up a service desk integration, you must update your actions to ensure they understand user requests to speak to someone and can transfer the conversation properly.
-
-

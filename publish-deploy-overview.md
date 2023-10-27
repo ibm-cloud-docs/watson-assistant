@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-03"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -137,8 +137,6 @@ The maximum inactivity timeout differs by service instance plan type. The follow
 
 ### Session history
 {: #publish-overview-environment-settings-session-history}
-
-[IBM Cloud]{: tag-ibm-cloud}
 
 For each environment, you can record the recent messages from the conversation for each customer, for use with the [`session_history` variable](/docs/watson-assistant?topic=watson-assistant-manage-info#built-in-variables). Messages are recorded for both actions and dialog.
 

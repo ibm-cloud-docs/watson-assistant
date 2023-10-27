@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-10-27"
 
 subcollection: watson-assistant
 
@@ -14,7 +14,7 @@ subcollection: watson-assistant
 # Managing user identity information in web chat
 {: #web-chat-develop-userid}
 
-{{site.data.keyword.conversationshort}} charges based on the number of unique monthly active users (MAU).
+Your charges for {{site.data.keyword.conversationshort}} are based on the number of unique monthly active users (MAU).
 
 If you do not pass an identifier for the user when the session begins, the web chat creates one for you. It creates a first-party cookie with a generated anonymous ID. The cookie remains active for 45 days. If the same user returns to your site later in the month and chats with your assistant again, the web chat integration recognizes the user. And you are charged only once when the same anonymous user interacts with your assistant multiple times in a single month.
 
@@ -61,6 +61,7 @@ On Apple devices, the Intelligent Tracking Prevention feature automatically dele
 To avoid this problem, use a server-side first-party cookie in your web application. For example, when an anonymous user visits your website for the first time, you can generate a unique user ID and store it in a server-side cookie with any expiration date you choose. Then, your code can use the [`updateUserID()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateuserid){: external} instance method to set the user ID. You can then use the same cookie to set the same user ID for this customer on any future visits until it expires.
 
 ## More information
+{: #web-chat-develop-more-information}
 
 For more information about billing, see [User-based plans explained](/docs/watson-assistant?topic=watson-assistant-admin-managing-plan).
 
