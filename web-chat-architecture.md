@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-10-30"
 
 subcollection: watson-assistant
 
@@ -11,7 +11,7 @@ subcollection: watson-assistant
 {{site.data.keyword.attribute-definition-list}}
 
 # How the web chat works
-{: #web-chat-architecture }
+{: #web-chat-architecture}
 
 The web chat provides an easy-to-use chatbot interface that you can add to your website without writing any code.
 {: shortdesc }

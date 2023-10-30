@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-10-30"
 
 keywords: building a dialog, condition, response, options, jump, jump-to, multiline, response variations
 
@@ -335,9 +335,9 @@ In addition to the default response type of **Text**, for which you specify the 
 - **Option**: Adds a list of one or more options. When a user clicks one of the options, an associated user input value is sent to your assistant. How options are rendered can differ depending on the number of options and where you deploy the dialog.
 - **Pause**: Forces the application to wait for a specified number of milliseconds before continuing with processing. You can choose to show an indicator that the assistant is working on typing a response. Use this response type if you need to perform an action that might take some time.
 - **Search skill**: [Plus]{: tag-green} Searches an external data source for relevant information to return to the user. The data source that is searched is a {{site.data.keyword.discoveryshort}} service data collection that you configure when you add search to the assistant that uses this dialog.
-- **User-defined**: If you use the JSON editor to define the response, you can create your own user-defined response type. For more information, see [Defining responses using the JSON editor](/docs/watson-assistant?topic=watson-assistant-dialog-responses-json).
+- **User-defined**: If you use the JSON editor to define the response, you can create your own user-defined response type. For more information, see [Defining responses using the JSON editor](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json).
 
-Different integrations have different capabilities for displaying rich responses. If you want to define different responses that are customized for different channels, you can do so by editing the response using the JSON editor. For more information, see [Targeting specific integrations](/docs/watson-assistant?topic=watson-assistant-dialog-responses-json#dialog-responses-json-target-integrations).
+Different integrations have different capabilities for displaying rich responses. If you want to define different responses that are customized for different channels, you can do so by editing the response using the JSON editor. For more information, see [Targeting specific integrations](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json#assistant-responses-json-target-integrations).
 
 To add a rich response, complete the following steps:
 
@@ -431,7 +431,7 @@ To add a *Channel transfer* response type, complete the following steps:
 
 In the integration that processes the *Channel transfer* response, the introductory message is displayed, followed by a link to the URL you specify. The user must then click the link to initiate the transfer.
 
-When a conversation is transferred from one channel to another, the session history and context are preserved, so the destination channel can continue the conversation from where it left off. Note that the message output that contains the *Channel transfer* response is processed first by the channel that initiates the transfer, and then by the target channel. If the output contains multiple responses (perhaps using different response types), these will be processed by both channels (before and after the transfer). If you want to target individual responses to specific channels, you can do so by editing the response using the JSON editor. For more information, see [Targeting specific integrations](/docs/watson-assistant?topic=watson-assistant-dialog-responses-json#dialog-responses-json-target-integrations).
+When a conversation is transferred from one channel to another, the session history and context are preserved, so the destination channel can continue the conversation from where it left off. Note that the message output that contains the *Channel transfer* response is processed first by the channel that initiates the transfer, and then by the target channel. If the output contains multiple responses (perhaps using different response types), these will be processed by both channels (before and after the transfer). If you want to target individual responses to specific channels, you can do so by editing the response using the JSON editor. For more information, see [Targeting specific integrations](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json#assistant-responses-json-target-integrations).
 
 ### Adding an *Image* response type
 {: #dialog-overview-add-image}
