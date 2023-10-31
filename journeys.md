@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-04"
+lastupdated: "2023-10-31"
 
 subcollection: watson-assistant
 
@@ -10,8 +10,10 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Guiding customers with journeys ![BETA](images/beta.png)
+# Guiding customers with journeys
 {: #journeys}
+
+[Beta]{: tag-cyan}
 
 A journey is an interactive response that you can use to guide your customers through a complex task, or to give them a tour of new features, taking advantage of capabilities your website already supports. A journey is a multipart response that can combine text, video, and images presented in sequence.
 {: shortdesc}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-10-31"
 
 subcollection: watson-assistant
 
@@ -22,7 +22,7 @@ You can use the phone integration to help your customers over the phone and tran
 
 To use this integration pattern, you need:
 
-- {{site.data.keyword.conversationshort}} Plus or Enterprise Plan (required for phone integration).
+- {{site.data.keyword.conversationshort}} Plus or Enterprise plan (required for phone integration).
 - A working assistant that you are ready to deploy.
 - A Genesys Cloud account.
 
