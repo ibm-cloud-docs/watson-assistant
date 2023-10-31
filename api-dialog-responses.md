@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-31"
 
 subcollection: watson-assistant
 
@@ -255,7 +255,7 @@ For an example of implementing `option` responses in a simple client application
 ### Suggestion
 {: #api-dialog-responses-suggestion}
 
-[Plus]{: tag-green}[Enterprise]{: tag-purple}
+[Plus]{: tag-green}
 
 The `suggestion` response type is used by the disambiguation feature to suggest possible matches to clarify what the user wants to do. A `suggestion` response includes an array of `suggestions`, each one corresponding to a possible matching dialog node:
 

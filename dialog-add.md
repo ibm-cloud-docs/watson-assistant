@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-10-31"
 
 keywords: import workspace, import JSON, export JSON, upload JSON, download JSON, collaborate
 
@@ -103,7 +103,7 @@ If you're interested in using actions, {{site.data.keyword.conversationshort}} i
 ### Search skill in the classic experience
 {: #skill-add-search-skill}
 
-[Plus]{: tag-green}[Enterprise]{: tag-purple}
+[Plus]{: tag-green}
 
 When {{site.data.keyword.conversationshort}} doesn't have an explicit solution to a problem, it routes the user question to a search skill to find an answer from across your disparate sources of self-service content. The search skill interacts with the {{site.data.keyword.discoveryfull}} service to extract this information from a configured data collection.
 

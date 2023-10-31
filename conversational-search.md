@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-10-31"
 
 keywords: conversational search
 
@@ -12,11 +12,10 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Conversational search ![BETA](images/beta.png)
+# Conversational search
 {: #conversational-search}
 
-[Plus]{: tag-green}
-[Enterprise]{: tag-purple}
+[Plus]{: tag-green}[Beta]{: tag-cyan}
 
 Use *conversational search* with the {{site.data.keyword.discoveryfull}} search integration setup to help your assistant extract an answer from the highest-ranked query results and return a text response to the user.
 {: shortdesc}
