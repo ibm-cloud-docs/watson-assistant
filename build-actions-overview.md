@@ -227,11 +227,4 @@ The number of actions, steps, and variables you can create depends on your {{sit
 | Enterprise with Data Isolation | 2,000 | 5,000 | 8,000 |
 {: caption="Plan details" caption-side="top"}
 
-## Switching between Editing and Visualization (Beta)
-After you created the actions, you have **Editor** and **Visualization** tabs. You can switch to **Editor** to edit the actions and **Visualization** to view the flow chart of actions.
-![Editor](images/editor_tab.png) **Editor** tab to edit the actions:
-
-## Visualizing action
-You can view the flow chart of the created actions. You can zoom in and zoom out the complete view of the flow chat. You can select the area of the flow chart to view at the centre.
-
-![Visualization](images/visual_tab.png) **Visualization** tab to to view the flow chart of actions:
+ 
