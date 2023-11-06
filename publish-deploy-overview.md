@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-11-06"
 
 subcollection: watson-assistant
 
@@ -101,6 +101,9 @@ For more information about publishing, see [Publishing your content](/docs/watso
 
 Each environment has its own settings. Click the **Settings** gear icon ![Gear icon](../../icons/settings.svg) to open the settings.
 
+If you are using the classic experience, these settings are located in **Assistant settings** for your assistant.
+{: note}
+
 ### API details
 {: #publish-overview-environment-settings-api}
 
@@ -139,9 +142,6 @@ The maximum inactivity timeout differs by service instance plan type. The follow
 {: #publish-overview-environment-settings-session-history}
 
 For each environment, you can record the recent messages from the conversation for each customer, for use with the [`session_history` variable](/docs/watson-assistant?topic=watson-assistant-manage-info#built-in-variables). Messages are recorded for both actions and dialog.
-
-If you are using the classic experience, these settings are located in **Assistant settings** for your assistant.
-{: note}
 
 Session history might be used to:
 - Provide a summary of the conversation to a live agent during a transfer
