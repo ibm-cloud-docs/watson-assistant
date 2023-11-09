@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-11-09"
 
 subcollection: watson-assistant
 
@@ -99,6 +99,8 @@ This table shows how you might set up the steps. The last step is a catch-all in
 | 4 | Step 1 is Medical | None | Click here to file a medical claim | Skip (default) | End the action |
 | 5 | Step 1 is not defined (no claim type) | None | Click here to file an insurance claim | Skip (default) | End the action |
 {: caption="Example using the never ask response setting" caption-side="bottom"}
+
+
 
 ## Customer response types
 {: #customer-response-types}
