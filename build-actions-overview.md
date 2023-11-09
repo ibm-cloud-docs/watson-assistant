@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-11-01"
+lastupdated: "2023-11-09"
 
 subcollection: watson-assistant
 
@@ -227,4 +227,5 @@ The number of actions, steps, and variables you can create depends on your {{sit
 | Enterprise with Data Isolation | 2,000 | 5,000 | 8,000 |
 {: caption="Plan details" caption-side="top"}
 
+The beta features are available for evaluation and testing purposes only. {: beta}
  
