@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-11-09"
+lastupdated: "2023-11-10"
 
 subcollection: watson-assistant
 
@@ -17,7 +17,20 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+**Update on Algorithm version change**:
+On 8th December 2023, the *Latest* algorithm version available in your assistant will be updated to use what is now the current *Beta* version. For more information, see [{{site.data.keyword.assistant_classic_short}}'s new transformer architecture](https://medium.com/ibm-watson/watson-assistants-new-transformer-architecture-brings-greater-accuracy-with-less-effort-b8badf12864b) or [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version).{: important}
 
+## 10 November 2023
+{: #watson-assistant-nov102023}
+{: release-note}
+
+Masking confidential customer information
+:  You can now mask the confidential customer information in an action by marking the variables as private. The feature for masking the confidential customer information is available only for actions in assistants with the `stateful` endpoint. For more information, see [Using variables to manage conversation information](/docs/watson-assistant?topic=watson-assistant-manage-info) and [Protecting the privacy of the customer information](/docs/watson-assistant?topic=watson-assistant-collect-info#protect-privacy-customer-information).
+
+
+
+Editing and Visualization
+:  After you create an action, you now have the choice to switch from the step edit view to a new visualization that displays a canvas with a flow chart of the action. Within the canvas you can pan and zoom. This visualization of an action is currently in beta. See [Visualizing the flow of the action](/docs/watson-assistant?topic=watson-assistant-build-actions-overview) for more information. 
 
 ## 18 October 2023
 {: #watson-assistant-oct182023}
