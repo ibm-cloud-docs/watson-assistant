@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-11-09"
+lastupdated: "2023-11-10"
 
 subcollection: watson-assistant
 
@@ -24,7 +24,9 @@ Variables are a powerful tool that you can use to build a better assistant. Vari
 
 - **Modularity.** Some information might be useful for many different purposes (for example, a customer's current account balance or contact information). Rather than retrieving or recalculating this information in multiple locations, you can do so once, by using a variable to store the result and then access it wherever you need it.
 
+- **Privacy.** The privacy of the customer information is critical for all enterprises. In your assistant, you can mask the variables to protect the privacy of the shared information. When you mask a variable to make it private, the assistant hides the confidential information in the user input or assistant's responses with asterisks in the conversation logs.
 
+The feature for masking the confidential customer information is available only for actions in assistants with the `stateful` endpoint. This feature is not available for the assistants with the `stateless` endpoint and the classic experience. {: note}
 
 A variable is simply a named container for a piece of information; by referencing this container by name, your assistant can store or retrieve the information at run time. For example, a variable that is called *account_balance* might store your customer's current account balance, a value your assistant can update or retrieve as needed.
 
@@ -39,13 +41,13 @@ The data that is stored by a variable is characterized by the type of data that 
 
     The name of an action variable is always the name of the step that defines the customer response. (You cannot change the name of an action variable.) For example, suppose you define a step that asks "When were you born?" and accepts a date value as a response. The customer response is automatically stored as an action variable called `When were you born?`, which you can then access from any subsequent step in the same action.
     
-    
+    You can make an action variable private by selecting the **Protect data collected at this step** checkbox in the customer response settings.{: tip}
 
 - **Session variables**: A value that is not necessarily tied to a particular action can be stored as a *session variable*. Session variables are long-term memory: they persist throughout the user's interaction with the assistant, and your assistant can reference them from any action.
 
     You can create a session variable to store the value from an action variable, if you want to keep the value available for other actions to use. You can also define a session variable based on another session variable, or by using a value defined in an expression. In addition to variables you create, {{site.data.keyword.conversationshort}} provides a set of built-in session variables for global values like the current time and date. 
     
-    
+    To hide the confidential customer information in the conversation logs, you can select the **Protect data stored in this variable** checkbox when you create or edit a session variable.{: tip)
 
     Session variables can help you to modularize your assistant because you can write a single action that collects information that is needed in multiple places. For example, you might have a greeting action that collects basic information about the customer and stores the responses in session variables, which any action can then access.
 
@@ -80,7 +82,7 @@ To add a session variable that can be accessed by any action:
 
 1. **Optional**: Add a description.
 
-
+1. **Optional**: Select the **Protect data stored in this variable** checkbox in the **Privacy** section if the session variable contains confidential information.
 
 1. Click **Apply**.
 

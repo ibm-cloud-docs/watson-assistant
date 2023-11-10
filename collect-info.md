@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-11-09"
+lastupdated: "2023-11-10"
 
 subcollection: watson-assistant
 
@@ -100,7 +100,14 @@ This table shows how you might set up the steps. The last step is a catch-all in
 | 5 | Step 1 is not defined (no claim type) | None | Click here to file an insurance claim | Skip (default) | End the action |
 {: caption="Example using the never ask response setting" caption-side="bottom"}
 
+## Protecting the privacy of the customer information
+{: #protect-privacy-customer-information}
 
+You can protect the privacy of the customer information in a step that you configure for the assistant. To hide confidential information in user input or assistant's response in a step, you can edit the settings and select the **Protect data collected at this step** checkbox. The protected data is masked with asterisks in the conversation log.
+
+The feature for masking the confidential customer information is available only for actions in assistants with the `stateful` endpoint. If you're calling actions from a dialog, the privacy setting is available in your action steps but won't mask the customer information. In addition, this feature is not available for the assistants with the `stateless` endpoint and the classic experience. {: note}
+
+For information about masking variables, see [Using variables to manage conversation information](/docs/watson-assistant?topic=watson-assistant-manage-info){: tip}
 
 ## Customer response types
 {: #customer-response-types}
