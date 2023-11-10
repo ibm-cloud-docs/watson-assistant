@@ -13,18 +13,15 @@ subcollection: watson-assistant
 # Review customer conversations
 {: #analytics-conversations}
 
-The **Analyze** page of {{site.data.keyword.conversationshort}} provides a history of conversations between users and a deployed assistant. You can use this history to improve how your assistants understand and respond to user requests.
+The **Conversations** page of {{site.data.keyword.conversationshort}} provides a history of conversations between users and a deployed assistant. You can use this history to improve how your assistants understand and respond to user requests.
 {: shortdesc}
 
-In the **Analyze** page, you can see the summary of the conversations at the topic level in **Topic view** tab. 
+Each timestamp represents a single conversation. The **Actions** column shows you how many actions, search queries, or unrecognized requests are included in that conversation. The **Requests** column includes the questions or requests the user entered that initiated an action, started a search query, or weren't recognized.
 
-![Conversations page](images/analytics-conversations-dialog.svg)
+If you have activated dialog in your assistant, the **Actions** column is replaced by a **Topics** column.
+{: note}
 
-In the **Message log** tab, you see the complete history of conversation between user and the assistant by turns. 
-
-If you have activated dialog, you see the Entities column in the **Message log** tab.{: note}
-
- ![Conversation detail Message log](images/analytics-conversation-msg-logs.svg)
+![Conversations page](images/analytics-conversations.png)
 
 ## Choosing the environment and time period
 {: #analytics-conversations-time-period}
@@ -38,19 +35,18 @@ To get started, choose the [environment](/docs/watson-assistant?topic=watson-ass
 
 You can locate specific conversations by filtering the list of conversations. This lets you explore specific areas where your assistant might need improvement or updates to properly handle what your customers are asking about.
 
-You can filter the conversation by:
+You can filter by:
 
-- **Topics**: Select specific topics. You can choose one or more topics to review.
-- **Entities**: Select specific entities. You can choose one or more entities to review.
-    
-    The Entities filter appears in the **Message log** tab only if you have activated dialog in your assistant. {: note}
-
+- **Actions**: Select specific actions. You can choose one or more actions to review.
 - **Keyword**: Search by session ID or for specific key terms, phrases, or words in the conversations. For more information about session IDs, see [session_id](/docs/watson-assistant?topic=watson-assistant-admin-managing-plan#admin-managing-plan-no-userid).
 
 - **Recognition**: Choose between recognized or unrecognized user questions or requests.
 - **Search**: Choose between requests that initiated a search or requests that produced no search results.
 
-The Topics, Entities, and Keyword filters always appear at the top of the page. To show the Recognition and Search filters, click the **Additional filters** icon.
+The Actions and Keyword filters always appear at the top of the page. To show the Recognition and Search filters, click the **Additional filters** icon.
+
+If you have activated dialog in your assistant, the **Actions** filter is replaced by a **Topics** filter.
+{: note}
 
 ![Conversation filters](images/analytics-conversations-filters.png)
 
@@ -60,26 +56,6 @@ If you search for a specific session ID, enclose your search in quotation marks 
 ## Exploring conversations in detail
 {: #analytics-conversations-exploring}
 
-To explore individual conversations in detail, you can go to one of the following tabs in the **Analyze** page based on the level of details you want to analyze:
-- **Topic view** 
-  Displays the list of conversations with the topic-level details such as request, topic, and conversation timestamp and session ID. In the **Topic view** tab you see the following columns: 
-  - The **Topics** column shows you the topics of conversation. 
-  - The **Requests** column includes the questions or requests the user entered that initiated an action, started a search query, or weren't recognized. 
-  - The **Conversations** column shows the timestamp of a single conversation and its session ID.
+To explore individual conversations in detail, you can click on any of the utterances or conversation time stamps.  A panel opens showing the full back and forth between your customer and the assistant, including step interactions. The panel also provides a summary of how many requests there were, how many were recognized, whether search was initiated, and the duration of the conversation.
 
-  When you click on a request or timestamp, a panel opens showing the summary of requests, recognition status, and the duration of the conversation. 
-
-  ![Conversation detail topic view](images/analytics-topic-view.svg)
-
-- **Message log**
-  Displays the list of conversations between the users and assistant with the details such as consumer input, topic, assigned entity, timestamp, and session ID. In the **Message log** tab you see the following columns: 
-  - The **Customer input** column shows you the customer responses or input. 
-  - The **Topics** column shows you the topics of conversation. 
-  - The **Entities** column shows the entities assigned to each customer input.
-
-  When you click on customer input or timestamp, a panel opens showing the conversation between the user and the assistant by turns along with duration and number of recognized input, customer input and searches.
-
-  ![Conversation detail Message log](images/analytics-conversations-side.svg)
-
-
-
+![Conversation detail](images/analytics-conversations-side.png)
