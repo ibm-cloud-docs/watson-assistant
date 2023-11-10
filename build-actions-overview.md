@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-11-01"
+lastupdated: "2023-11-10"
 
 subcollection: watson-assistant
 
@@ -31,6 +31,8 @@ Type `I want to withdraw money` and then click **Save** to create the action.
 
 Initially, you need to specify only one example of typical user input that starts the action. You can add more examples of user input later. For more information, see [Understanding your users' questions or requests](/docs/watson-assistant?topic=watson-assistant-understand-questions).
 {: tip}
+
+ 
 
 ## Using the action editor
 {: #build-actions-overview-use}
@@ -226,5 +228,3 @@ The number of actions, steps, and variables you can create depends on your {{sit
 | Enterprise | 2,000 | 5,000 | 8,000 |
 | Enterprise with Data Isolation | 2,000 | 5,000 | 8,000 |
 {: caption="Plan details" caption-side="top"}
-
- 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-10-25"
+lastupdated: "2023-11-09"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,8 @@ Variables are a powerful tool that you can use to build a better assistant. Vari
 
 - **Modularity.** Some information might be useful for many different purposes (for example, a customer's current account balance or contact information). Rather than retrieving or recalculating this information in multiple locations, you can do so once, by using a variable to store the result and then access it wherever you need it.
 
+
+
 A variable is simply a named container for a piece of information; by referencing this container by name, your assistant can store or retrieve the information at run time. For example, a variable that is called *account_balance* might store your customer's current account balance, a value your assistant can update or retrieve as needed.
 
 The data that is stored by a variable is characterized by the type of data that it contains, such as text, a numeric value, a date, or even a list of multiple values. The operations that you can perform with a variable vary depending on its data type.
@@ -36,10 +38,14 @@ The data that is stored by a variable is characterized by the type of data that 
 - **Action variables**: When a step collects information from the customer, the customer response is automatically stored in an *action variable*. You can think of action variables as short-term memory: they persist only during the current action.
 
     The name of an action variable is always the name of the step that defines the customer response. (You cannot change the name of an action variable.) For example, suppose you define a step that asks "When were you born?" and accepts a date value as a response. The customer response is automatically stored as an action variable called `When were you born?`, which you can then access from any subsequent step in the same action.
+    
+    
 
 - **Session variables**: A value that is not necessarily tied to a particular action can be stored as a *session variable*. Session variables are long-term memory: they persist throughout the user's interaction with the assistant, and your assistant can reference them from any action.
 
-    You can create a session variable to store the value from an action variable, if you want to keep the value available for other actions to use. You can also define a session variable based on another session variable, or by using a value defined in an expression. In addition to variables you create, {{site.data.keyword.conversationshort}} provides a set of built-in session variables for global values like the current time and date.
+    You can create a session variable to store the value from an action variable, if you want to keep the value available for other actions to use. You can also define a session variable based on another session variable, or by using a value defined in an expression. In addition to variables you create, {{site.data.keyword.conversationshort}} provides a set of built-in session variables for global values like the current time and date. 
+    
+    
 
     Session variables can help you to modularize your assistant because you can write a single action that collects information that is needed in multiple places. For example, you might have a greeting action that collects basic information about the customer and stores the responses in session variables, which any action can then access.
 
@@ -73,6 +79,8 @@ To add a session variable that can be accessed by any action:
     To specify a complex object or an array as the initial value, or to calculate the initial value based on other variables, you can write an expression. For more information about writing expressions, see [Writing expressions](/docs/watson-assistant?topic=watson-assistant-expressions).
 
 1. **Optional**: Add a description.
+
+
 
 1. Click **Apply**.
 
@@ -140,6 +148,7 @@ Any action can store a value in a session variable so it is available to other a
    | Integration variables | If you are setting an integration variable, you can choose other integration variables as the value. |
    {: caption="Set variable values" caption-side="bottom"}
    
+ 
 1. To set more variable values in the same step, click **Set new value**.
 
 ## Using variables to manage conversation flow
