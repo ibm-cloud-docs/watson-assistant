@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-11-13"
 
 subcollection: watson-assistant
 
@@ -25,6 +25,15 @@ For information about new features and improvements to the core {{site.data.keyw
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
 
+## 7.8.0
+{: #7.8.0}
+
+*Release date: 13 November 2023*
+
+- **Added a built-in PDF viewer**: A built-in viewer for PDF files can be used for search results from watsonx Discovery that contain links to publicly available PDF documents.
+- **Enhanced routing configuration for the Salesforce integration**: The `additional_routing_info` data passed from your assistant to web chat now has `button_id` and `button_overrides` properties that can further control how web chat routes the user to an agent. The `button_ids` property is deprecated, and `button_overrides` is used instead. And all properties in the `additional_routing_info` objects are optional. If the value for a given property is not included, web chat defaults to the value in live agent settings from the watsonx Assistant web chat configuration. For more information, see [Routing info](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-salesforce){: external}.
+- **Modified the destroySession method**: The [destroySession](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#destroySession){: external} instance method has been enhanced to delete the session from the watsonx Assistant servers and remove session information from the browser memory when called.
+
 ## 7.7.1
 {: #7.7.1}
 
@@ -37,7 +46,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 *Release date: 5 October 2023*
 
-- **Added `fullWidth` to custom responses**: The `customResponse` event includes a `fullWidth` property that can be set to indicate to web that the custom response needs to be rendered full width in the main window. For more information, see [customResponse event](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external}.
+- **Added `fullWidth` to custom responses**: The `customResponse` event includes a `fullWidth` property that can be set to indicate to web chat of a custom response to be rendered full width in the main window. For more information, see [customResponse event](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external}.
 
 - **Longer message input is allowed**: The maximum number of characters allowed in the message input field is increased from 300 to 2048.
 
