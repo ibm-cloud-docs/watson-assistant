@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-11-10"
+lastupdated: "2023-11-13"
 
 subcollection: watson-assistant
 
@@ -32,7 +32,17 @@ Type `I want to withdraw money` and then click **Save** to create the action.
 Initially, you need to specify only one example of typical user input that starts the action. You can add more examples of user input later. For more information, see [Understanding your users' questions or requests](/docs/watson-assistant?topic=watson-assistant-understand-questions).
 {: tip}
 
- 
+## Visualizing the flow of the action [Beta]{: tag-cyan} 
+
+After you created an action, you have the option to switch between the **Edit** tab and the **Visualization** tab. By choosing the visualization tab you can view the flow chart of the action.
+
+![Editor](images/editor_tab.png){: caption="Editor" caption-side="bottom"}
+
+While you are viewing the flow chart of the action, you are able to zoom and pan around the canvas.
+
+![Visualization](images/visual_tab.png){: caption="Visualization" caption-side="bottom"} 
+
+The beta feature is available for evaluation and testing purposes only. {: beta}
 
 ## Using the action editor
 {: #build-actions-overview-use}
