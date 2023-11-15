@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-11-13"
+lastupdated: "2023-11-15"
 
 subcollection: watson-assistant
 
@@ -31,8 +31,8 @@ If you want to evaluate changes that are introduced in a web chat release before
 *Release date: 13 November 2023*
 
 - **Added a built-in PDF viewer**: A built-in viewer for PDF files can be used for search results from watsonx Discovery that contain links to publicly available PDF documents.
-- **Enhanced routing configuration for the Salesforce integration**: The `additional_routing_info` data passed from your assistant to web chat now has `button_id` and `button_overrides` properties that can further control how web chat routes the user to an agent. The `button_ids` property is deprecated, and `button_overrides` is used instead. And all properties in the `additional_routing_info` objects are optional. If the value for a given property is not included, web chat defaults to the value in live agent settings from the watsonx Assistant web chat configuration. For more information, see [Routing info](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-salesforce){: external}.
-- **Modified the destroySession method**: The [destroySession](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#destroySession){: external} instance method has been enhanced to delete the session from the watsonx Assistant servers and remove session information from the browser memory when called.
+- **Enhanced routing configuration for the Salesforce integration**: The `additional_routing_info` data passed from your assistant to web chat now has `button_id` and `button_overrides` properties that can further control how web chat routes the user to an agent. The `button_ids` property is deprecated, and `button_overrides` is used instead. And all properties in the `additional_routing_info` objects are optional. If the value for a property is not included, web chat defaults to the value in live agent settings from the watsonx Assistant web chat configuration. For more information, see [Routing info](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-salesforce){: external}.
+- **Modified the destroySession method**: The [destroySession](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#destroySession){: external} instance method was enhanced to delete the session from the watsonx Assistant servers and remove session information from the browser memory when called.
 
 ## 7.7.1
 {: #7.7.1}
@@ -48,9 +48,9 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 - **Added `fullWidth` to custom responses**: The `customResponse` event includes a `fullWidth` property that can be set to indicate to web chat of a custom response to be rendered full width in the main window. For more information, see [customResponse event](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external}.
 
-- **Longer message input is allowed**: The maximum number of characters allowed in the message input field is increased from 300 to 2048.
+- **Longer message input is allowed**: The maximum number of characters in the message input field is increased from 300 to 2048.
 
-- **File uploads to Salesforce**: The Salesforce integration supports the ability for end users to upload files to an agent when the agent requests a file from the user. If your website has a content security policy, you may need to add `*.salesforce.com` to allow web chat to connect to the Salesforce endpoint used for uploading files.
+- **File uploads to Salesforce**: The Salesforce integration supports the ability for end users to upload files to an agent when the agent requests a file from the user. If your website has a content security policy, you might need to add `*.salesforce.com` to allow web chat to connect to the Salesforce endpoint used for uploading files.
 
 - **Reconnecting to Salesforce agents**: The Salesforce integration automatically reconnects the user to the agent if web chat reloads while a user is engaged in conversation with an agent.
 
@@ -61,7 +61,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 *Release date: 21 August 2023*
 
-- **Added transaction ID to `onError` function:** Information provided in the `onError` config function contains the transaction ID in the `transactionID` property when some errors communicating with {{site.data.keyword.conversationshort}} occur. For more information, see [Listening for errors](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#onerrordetail){: external}.
+- **Added transaction ID to `onError` function:** Information in the `onError` config function contains the transaction ID in the `transactionID` property when some errors communicating with {{site.data.keyword.conversationshort}} occur. For more information, see [Listening for errors](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#onerrordetail){: external}.
 
 - Fixed bug that occurred when sending two messages to an extension without waiting.
 
@@ -76,7 +76,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 - **New viewing options for the Journeys beta feature**: With Journeys adding a third view to web chat -- the other two views being the launcher and main window -- we moved away from methods and events that focused on opening and closing the main window. These events were deprecated in favor of a more generic view change system that includes a new [instance.changeView](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#changeView){: external} method, and [view:pre:change](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#viewprechange){: external} and [view:change](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#viewchange){: external} events. You have more flexibility and can open multiple views at the same time.
 
-    Window methods and events are supported for existing assistants. If you add tours to your assistant, or are using tours, your window events and methods may not work as expected and may not be supported. If you wish to add tours to your assistant, you need to update your custom code to use the new view change methods and events.
+    Window methods and events are supported for existing assistants. If you add tours to your assistant, or are using tours, your window events and methods might not work as expected and might not be supported. If you wish to add tours to your assistant, you need to update your custom code to use the new view change methods and events.
 
     The current window methods and events are still supported for existing web chats and assistants but are deprecated and will be removed in a future version. For more information, see [Migrating from window to view events and methods](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#windowviewmigration){: external}.
 
@@ -90,9 +90,9 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 - **Reconnecting with a custom service desk integration**: Web chat now provides support to custom service desk integrations to allow them to reconnect the user to an agent when web chat is reloaded. For more information, see [Reconnecting sessions](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd#reconnect){: external}.
 
-- **Screen sharing with a custom service desk integration**: Web chat provides support to custom service desk integrations to allow and to give the user options to agree to or stop a screen-sharing session with a service desk. Note that the actual screen sharing capability is not provided by web chat; it must be provided by the service desk integration. [Screen sharing](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd#screen-sharing){: external}.
+- **Screen sharing with a custom service desk integration**: Web chat provides support to custom service desk integrations to allow and to give the user options to agree to or stop a screen-sharing session with a service desk. The actual screen sharing capability is not provided by web chat; it must be provided by the service desk integration. [Screen sharing](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd#screen-sharing){: external}.
 
-- The `history` property in message objects have a newly added `from_history` property that indicates if the message came from session history. For more information, see [Message object extensions](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#messageextensions){: external}.
+- The `history` property in message objects has a newly added `from_history` property that indicates whether the message came from session history. For more information, see [Message object extensions](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#messageextensions){: external}.
 
 ## 7.4.0
 {: #7.4.0}
@@ -107,7 +107,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 *Release date: 30 May 2023*
 
 - **Released a beta of Genesys Web Messenger service desk integration**, which currently only includes user information strings in English. For more information, see [Genesys Web Messenger](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-genesys){: external}. 
-- **Added beta support for file sharing with custom service desk integrations** which currently only includes user information strings in English. For more information, see [Custom service desks](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd){: external}. 
+- **Added beta support for file sharing with custom service desk integrations** that currently only includes user information strings in English. For more information, see [Custom service desks](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd){: external}. 
 
 ## 7.2.2
 {: #7.2.2}
