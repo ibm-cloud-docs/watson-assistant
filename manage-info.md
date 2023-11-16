@@ -26,7 +26,7 @@ Variables are a powerful tool that you can use to build a better assistant. Vari
 
 - **Privacy.** The privacy of the customer information is critical for all enterprises. In your assistant, you can mask the variables to protect the privacy of the shared information. When you mask a variable to make it private, the assistant hides the confidential information in the user input or assistant's responses with asterisks in the conversation logs.
 
-The feature for masking the confidential customer information is available only for actions in assistants with the `stateful` endpoint.{: note} 
+
 
 A variable is simply a named container for a piece of information; by referencing this container by name, your assistant can store or retrieve the information at run time. For example, a variable that is called *account_balance* might store your customer's current account balance, a value your assistant can update or retrieve as needed.
 
