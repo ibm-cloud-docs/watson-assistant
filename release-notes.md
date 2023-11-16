@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-11-14"
+lastupdated: "2023-11-16"
 
 subcollection: watson-assistant
 
@@ -29,8 +29,6 @@ On 8th December 2023, the *Latest* algorithm version available in your assistant
 
 Masking confidential customer information
 :  You can now mask the confidential customer information in an action by marking the variables as private. The feature for masking the confidential customer information is available only for actions in assistants with the `stateful` endpoint. For more information, see [Using variables to manage conversation information](/docs/watson-assistant?topic=watson-assistant-manage-info) and [Protecting the privacy of the customer information](/docs/watson-assistant?topic=watson-assistant-collect-info#protect-privacy-customer-information).
-
-
 
 Editing and Visualization
 :  After you create an action, you now have the choice to switch from the step edit view to a new visualization that displays a canvas with a flow chart of the action. Within the canvas you can pan and zoom. This visualization of an action is currently in beta. See [Visualizing the flow of the action](/docs/watson-assistant?topic=watson-assistant-build-actions-overview) for more information. 
