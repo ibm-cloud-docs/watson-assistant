@@ -22,7 +22,26 @@ You can integrate search in your assistants by using Elasticsearch or {{site.dat
 Refer the following topics to learn more about integrating conversational search by using Elasticsearch:
 - Selecting Elasticsearch as the content source
 
+## Selecting Elasticsearch as the default search integration
 
+You can select Elasticsearch as the default search integration by using one of the following options:
+
+- **Elasticsearch search integration from the Environments page** 
+
+    1. Go to
+
+- **Elasticsearch search integration from the Integrations page** 
+
+
+
+
+and Integrations. Both can be found in the left hand navigation. From the Environments page
+click the "Add +" button in the Search box on the bottom right. From the Integrations page find the Search title by
+scrolling down to the extensions section and then click "Add +". After clicking "Add +" in either location you'll see a
+modal presenting a choice to either use Elasticsearch or Watson Discovery, choose Elasticsearch to begin configuring
+your instance.
+
+<img src="img_search_choice.png" alt="Search choice modal" width="55%"/>
 
 
 
@@ -39,14 +58,7 @@ And that's it! Lets walk through each of those pieces.
 
 ### Choosing Elasticsearch
 
-You can start the Elasticsearch setup in the same two places Watson Discovery is historically configured, either on the
-Environments page, or the Integrations page. Both can be found in the left hand navigation. From the Environments page
-click the "Add +" button in the Search box on the bottom right. From the Integrations page find the Search title by
-scrolling down to the extensions section and then click "Add +". After clicking "Add +" in either location you'll see a
-modal presenting a choice to either use Elasticsearch or Watson Discovery, choose Elasticsearch to begin configuring
-your instance.
 
-<img src="img_search_choice.png" alt="Search choice modal" width="55%"/>
 
 ### Elasticsearch Index Setup
 
