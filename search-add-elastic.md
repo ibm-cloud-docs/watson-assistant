@@ -23,7 +23,6 @@ Refer the following topics to learn more about integrating conversational search
 - Selecting Elasticsearch as the content source
 
 
-Setup Elasticsearch as the 
 
 
 
