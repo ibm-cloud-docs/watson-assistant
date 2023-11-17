@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-11-16"
+lastupdated: "2023-11-17"
 
 subcollection: watson-assistant
 
@@ -19,6 +19,16 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 **Update on Algorithm version change**:
 On 8th December 2023, the *Latest* algorithm version available in your assistant will be updated to use what is now the current *Beta* version. For more information, check out what the [upcoming algorithm version change](https://medium.com/ibm-watson/watson-assistants-new-transformer-architecture-brings-greater-accuracy-with-less-effort-b8badf12864b) has to offer or see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version).{: important}
+
+## 16 November 2023
+{: #watson-assistant-nov162023}
+{: release-note}
+
+Message logs for a dialog without action
+:   You can now use the **Message logs** tab in the **Analyze** page to see a log of all messages that are sent between the user and the assistant by turns. This feature is available for all messages including the messages that are sent when dialog is activated. For more information, see [Review customer conversations](/docs/watson-assistant?topic=watson-assistant-analytics-conversations).
+
+Masking confidential customer information in assistants with `stateless` endpoint
+:   You can now mask the confidential information in user input and assistant responses for assistants with the `stateless` endpoint. In the `stateless` message API, the private data is encrypted before returning them to the client app. For more information, see [Using variables to manage conversation information](/docs/watson-assistant?topic=watson-assistant-manage-info) and [Protecting the privacy of the customer information](/docs/watson-assistant?topic=watson-assistant-collect-info#protect-privacy-customer-information).
 
 
 
