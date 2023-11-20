@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2023
-lastupdated: "2023-10-31"
+lastupdated: "2023-11-16"
 
 subcollection: watson-assistant
 
@@ -30,6 +30,8 @@ You have two options to add search to your assistant:
 Plus and Enterprise plans of {{site.data.keyword.conversationshort}} include a built-in search integration that you can use with your additional, separate instance of {{site.data.keyword.discoveryfull}}. You can embed your existing help content by integrating your assistant with search that is provided by {{site.data.keyword.discoveryfull}}. This gives your assistant access to your organization's data collections that it can mine for answers. Customer questions are used as search queries to find relevant answers for your users.
 
 For instructions on adding the built-in search integration, see [{{site.data.keyword.discoveryfull}} search integration setup](/docs/watson-assistant?topic=watson-assistant-search-add).
+
+
 
 ## Add a search extension
 {: #search-overview-extension}
