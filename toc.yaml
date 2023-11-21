@@ -52,7 +52,7 @@ toc:
              - topic: search-overview.md
                navtitle: Overview
              - search-add.md
-             - searc
+             - search-elasticsearch-add.md
              - search-extension-coveo.md
              - search-extension-google-custom.md
              - search-extension-neuralseek.md
