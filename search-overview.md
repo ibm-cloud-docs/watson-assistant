@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2023
-lastupdated: "2023-11-23"
+lastupdated: "2023-11-24"
 
 subcollection: watson-assistant
 
@@ -20,10 +20,11 @@ Your assistant can route complex customer inquiries as a search query. It finds 
 
 Add search to your assistant to prevent the assistant from having to say things like, `I'm sorry. I can't help you with that`. Instead, the assistant can query existing company documents or data to see whether any useful information can be found and shared with the customer.
 
-You have three options to add search to your assistant:
+You have two options to add search to your assistant:
 - The search integration for {{site.data.keyword.discoveryfull}}. For more information, see [Add the search integration for {{site.data.keyword.discoveryfull}}](#search-overview-integration).
-- The search integration for Elasticsearch. For more information, see [Add the search integration for Elasticsearch](#elasticsearch-integration-overview).
 - A search extension for Coveo, Google, or NeuralSeek. For more information, see [Add a search extension](#search-overview-extension).
+
+
 
 ## Add the search integration for {{site.data.keyword.discoveryfull}}
 {: #search-overview-integration}
