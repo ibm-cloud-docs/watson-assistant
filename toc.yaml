@@ -184,13 +184,7 @@ toc:
           - analytics-action-completion.md
           - analytics-recognition.md
           - analytics-conversations.md
-          - segment-add.md<review>
-          - topicgroup:
-              label: Using watsonx.ai for generative AI capabilities
-              topics:
-              - topic: generative-ai.md
-                navtitle: Overview
-              - conversational-search.md
+          - segment-add.md
       - assistant-add.md
       - assistant-rename-delete.md
       - topicgroup:
