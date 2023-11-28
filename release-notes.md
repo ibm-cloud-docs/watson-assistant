@@ -20,10 +20,6 @@ Release notes describe the new features, changes, and bug fixes in each release 
 **Update on Algorithm version change**:
 On 8th December 2023, the *Latest* algorithm version available in your assistant will be updated to use what is now the current *Beta* version. For more information, check out what the [upcoming algorithm version change](https://medium.com/ibm-watson/watson-assistants-new-transformer-architecture-brings-greater-accuracy-with-less-effort-b8badf12864b) has to offer or see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version).{: important}
 
-## 28 November 2023
-{: #watson-assistant-nov282023}
-{: release-note}
-
 
 
 ## 20 November 2023
