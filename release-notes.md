@@ -25,7 +25,7 @@ On 8th December 2023, the *Latest* algorithm version available in your assistant
 {: release-note}
 
 Store information  by using LLMs
-:   You can now enable your assistants to recognize and store the customer context from the information provided by the customer in a session. When you enable this feature, your assistant uses large language models (LLMs) in watsonx.ai to intelligently recognize multiple pieces of information in the customer response and fill corresponding steps to avoid multiple prompts in a session. This is a beta feature and available only in assistants that use English language. For more information, see [Information Gathering](/docs/watson-assistant?topic=watson-assistant-using-watsonxai-for-generative-ai-capabilities) and [Global settings for actions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings).
+:   You can now enable your assistants to intelligently recognize information provided by the customer in a session when using the free text response in an Action step. When you enable this feature, your assistant uses a large language model (LLM) in [watsonx.ai](https://www.ibm.com/products/watsonx-ai) to intelligently recognize multiple pieces of information in customer responses and fill corresponding steps to avoid multiple prompts in a session. This is a beta feature and available only in assistants that use the English language. For more information, see [Information Gathering](/docs/watson-assistant?topic=watson-assistant-using-watsonxai-for-generative-ai-capabilities) and [Global settings for actions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings).
 
 ## 20 November 2023
 {: #watson-assistant-nov202023}
