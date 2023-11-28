@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-11-17"
+lastupdated: "2023-11-28"
 
 subcollection: watson-assistant
 
@@ -19,6 +19,13 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 **Update on Algorithm version change**:
 On 8th December 2023, the *Latest* algorithm version available in your assistant will be updated to use what is now the current *Beta* version. For more information, check out what the [upcoming algorithm version change](https://medium.com/ibm-watson/watson-assistants-new-transformer-architecture-brings-greater-accuracy-with-less-effort-b8badf12864b) has to offer or see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version).{: important}
+
+## 28 November 2023
+{: #watson-assistant-nov282023}
+{: release-note}
+
+Store information  by using LLMs
+:   You can now enable your assistants to intelligently recognize information provided by the customer in a session when using the free text response in an Action step. When you enable this feature, your assistant uses a large language model (LLM) in [watsonx.ai](https://www.ibm.com/products/watsonx-ai) to intelligently recognize multiple pieces of information in customer responses and fill corresponding steps to avoid multiple prompts in a session. This is a beta feature and available only in assistants that use the English language. For more information, see [Information Gathering](/docs/watson-assistant?topic=watson-assistant-using-watsonxai-for-generative-ai-capabilities) and [Global settings for actions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings).
 
 ## 20 November 2023
 {: #watson-assistant-nov202023}

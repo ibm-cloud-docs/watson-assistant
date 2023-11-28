@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2023
-lastupdated: "2023-11-16"
+lastupdated: "2023-11-24"
 
 subcollection: watson-assistant
 
@@ -23,6 +23,8 @@ Add search to your assistant to prevent the assistant from having to say things 
 You have two options to add search to your assistant:
 - The search integration for {{site.data.keyword.discoveryfull}}. For more information, see [Add the search integration for {{site.data.keyword.discoveryfull}}](#search-overview-integration).
 - A search extension for Coveo, Google, or NeuralSeek. For more information, see [Add a search extension](#search-overview-extension).
+
+
 
 ## Add the search integration for {{site.data.keyword.discoveryfull}}
 {: #search-overview-integration}
