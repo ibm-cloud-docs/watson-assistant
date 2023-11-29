@@ -71,13 +71,15 @@ This setting is available if you activate dialog in Assistant settings. For more
 1. Click **Save**, and then click **Close**.
 
 ## Generative AI
-{: generative-ai}
+{: #generative-ai}
 
-On the **Generative AI** tab, you can enable or disable the generative AI capabilities of the assistant such as *information gathering* and *conversational search*. When you enable the *[information gathering](/docs/watson-assistant?topic=watson-assistant-using-watsonxai-for-generative-ai-capabilities#information-gathering)* feature, your assistant uses a large language model (LLM) in [watsonx.ai](https://www.ibm.com/products/watsonx-ai) to intelligently recognize multiple pieces of information in the customer responses and fill the corresponding steps to avoid multiple prompts in a session. When you enable *[conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search)*, your assistant uses IBM watsonx generative AI model to provide conversational replies to the customer query.
+On the **Generative AI** tab, you can enable or disable the generative AI capabilities of the assistant such as *information gathering* and *conversational search*. 
+
+When you enable the *[information gathering](/docs/watson-assistant?topic=watson-assistant-using-watsonxai-for-generative-ai-capabilities#information-gathering)* feature, your assistant uses a large language model (LLM) in [watsonx.ai](https://www.ibm.com/products/watsonx-ai) to intelligently recognize multiple pieces of information in the customer responses and fill the corresponding steps to avoid multiple prompts in a session. 
+
+When you enable *[conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search)*, your assistant uses IBM watsonx generative AI model to provide conversational replies to the customer query.
 
 For more information, see [Using watsonx.ai for generative AI capabilities](/docs/watson-assistant?topic=watson-assistant-using-watsonxai-for-generative-ai-capabilities).
-
-If you enable Conversational search
 
 ## Confirmation to return to previous topic
 {: #actions-global-settings-change-topic-confirmation}
