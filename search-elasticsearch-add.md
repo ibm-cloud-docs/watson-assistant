@@ -23,8 +23,6 @@ For more information about integrating {{site.data.keyword.discoveryshort}}, see
 
 This beta feature is available for evaluation and testing purposes only. {: beta}
 
-
-
 ## Select Elasticsearch
 {: #select-elasticsearch-search-integration}
 
@@ -50,6 +48,7 @@ To select Elasticsearch as the default search integration, do one of the followi
     ![Select Elasticsearch](images/select-elasticsearch.png)
 
 ## Set up Elasticsearch
+{: #setup-elasticsearch}
 
 After you add the Elasticsearch search skill, do the following:
 
@@ -109,7 +108,7 @@ After you add the Elasticsearch search skill, do the following:
 
 
 ## Test Elasticsearch
-{: #conversational-search-test}
+{: #elasticsearch-test}
 
 You can test search integration for Elasticsearch in actions preview, the preview page, or by using the preview link.
 

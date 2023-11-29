@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-09-27"
+lastupdated: "2023-11-29"
 
 keywords: settings
 subcollection: watson-assistant
@@ -23,6 +23,7 @@ Global settings provide options, configurations, and tasks for:
 
 - [Clarifying questions](#actions-global-settings-response-modes)
 - [Change conversation topic](#actions-global-settings-change-conversation-topic)
+- [Generative AI](#generative-ai)
 - [Autocorrection](#actions-global-settings-autocorrection)
 - [Display formats](#actions-global-settings-display-formats)
 - [Algorithm version](#actions-global-settings-algorithms-versions)
@@ -68,6 +69,17 @@ This setting is available if you activate dialog in Assistant settings. For more
 1. Set the toggle **Change topics from actions to dialog** to **On**.
 
 1. Click **Save**, and then click **Close**.
+
+## Generative AI
+{: #generative-ai}
+
+On the **Generative AI** tab, you can enable or disable the generative AI capabilities of the assistant such as *information gathering* and *conversational search*. 
+
+When you enable the *[information gathering](/docs/watson-assistant?topic=watson-assistant-using-watsonxai-for-generative-ai-capabilities#information-gathering)* feature, your assistant uses a large language model (LLM) in [watsonx.ai](https://www.ibm.com/products/watsonx-ai) to intelligently recognize multiple pieces of information in the customer responses and fill the corresponding steps to avoid multiple prompts in a session. 
+
+When you enable *[conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search)*, your assistant uses IBM watsonx generative AI model to provide conversational replies to the customer query.
+
+For more information, see [Using watsonx.ai for generative AI capabilities](/docs/watson-assistant?topic=watson-assistant-using-watsonxai-for-generative-ai-capabilities).
 
 ## Confirmation to return to previous topic
 {: #actions-global-settings-change-topic-confirmation}
