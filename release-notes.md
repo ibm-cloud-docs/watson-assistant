@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-11-28"
+lastupdated: "2023-11-29"
 
 subcollection: watson-assistant
 
@@ -27,6 +27,9 @@ On 8th December 2023, the *Latest* algorithm version available in your assistant
 Intelligently recognize information in free text responses
 :   You can now enable your assistants to intelligently recognize information provided by the customer in a session when using the free text response in an **Action** step. When you enable this feature, your assistant uses a large language model (LLM) in [watsonx.ai](https://www.ibm.com/products/watsonx-ai) to intelligently recognize multiple pieces of information in customer responses and fill corresponding steps to avoid multiple prompts in a session. This is a beta feature and available only in assistants that use the English language. For more information, see [Information Gathering](/docs/watson-assistant?topic=watson-assistant-using-watsonxai-for-generative-ai-capabilities) and [Global settings for actions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings).
 
+Conversational search by integrating Elasticsearch
+:   You can now configure Elasticsearch as the content source for your search integration. For more information, see [Adding search](/docs/watson-assistant?topic=watson-assistant-search-overview#elasticsearch-integration-overview).
+
 ## 20 November 2023
 {: #watson-assistant-nov202023}
 {: release-note}
@@ -36,9 +39,6 @@ Message logs for a dialog without action
 
 Masking confidential customer information in assistants with `stateless` endpoint
 :   You can now mask the confidential information in user input and assistant responses for assistants with the `stateless` endpoint. In the `stateless` message API, the private data is encrypted before returning them to the client app. For more information, see [Using variables to manage conversation information](/docs/watson-assistant?topic=watson-assistant-manage-info) and [Protecting the privacy of the customer information](/docs/watson-assistant?topic=watson-assistant-collect-info#protect-privacy-customer-information).
-
-
-
 
 ## 10 November 2023
 {: #watson-assistant-nov102023}
