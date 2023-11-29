@@ -88,11 +88,13 @@ After you add the Elasticsearch search skill, do the following:
 
       The query body is used to manipulate the user requests into a format that is expected by search. It controls the query forms, search fields, filters and query size. In the REST API, the query body is an object representing the `POST` body for the `_search` request to Elasticsearch. THe query body has a `"$QUERY"` token to represent the customer's query, and a `"$FILTER"` token to represent the array of filters defined either in the search settings or at the step level.
 
-        You cannot customize the query body in the assistant with an existing Elasticsearch configuration.{: important}
+      You cannot customize the query body in the assistant with an existing Elasticsearch configuration.{: important}
+
       
 1. Switch the **Conversational Search** toggle to `on` if you want to activate [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search). If you don't want to activate conversational search, switch the toggle to `off`.
 
     The **Conversational Search** toggle is available only if you signed up for the beta version.{: beta}
+    
 
 1.  Use the **Message**, **No results found** and **Connectivity issue** tabs to customize different messages to share with users based on the successfulness of the search.
 
