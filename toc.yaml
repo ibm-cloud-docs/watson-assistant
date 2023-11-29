@@ -308,7 +308,6 @@ toc:
           label: Early access features
           topics:
           - boost-words.md
-          - conversational-search.md
   - navgroup:
       id: reference
       topics:
