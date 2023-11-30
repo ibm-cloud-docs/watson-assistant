@@ -45,7 +45,7 @@ The following table shows the latest version of the web chat integration that is
 {: caption="Web chat versions in {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}}" caption-side="top"}
 
 ## 29 November 2023
-{: #assistant-data-Nov292023}
+{: #assistant-data-nov292023}
 {: release-note}
 
 {{site.data.keyword.assistant_classic_full}} is now {{site.data.keyword.conversationfull}}.
