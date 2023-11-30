@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -29,6 +29,7 @@ The following table shows the latest version of the web chat integration that is
 
 | {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} version | Latest web chat version available |
 |----------------|----------------|
+
 | 4.7.4 | [7.6.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.5.0) |
 | 4.7.2 | [7.5.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.5.0) |
 | 4.7.1 | [7.4.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.4.0) |
