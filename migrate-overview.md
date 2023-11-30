@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-10-03"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -12,6 +12,8 @@ subcollection: watson-assistant
 
 # Migrating to {{site.data.keyword.conversationshort}}
 {: #migrate-overview}
+
+
 
 If you are using an older product instance, you might still be using the classic experience. To take advantage of the latest features, consider switching to {{site.data.keyword.conversationshort}}.
 {: shortdesc}

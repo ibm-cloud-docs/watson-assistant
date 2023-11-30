@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -14,6 +14,8 @@ subcollection: watson-assistant
 
 # Analyzing dialog and actions
 {: #dialog-analyze}
+
+
 
 The **Analyze** page provides a summary of the interactions between users and your assistant. If the dialog feature is enabled, the **Analyze** page remains the same, but some slight differences in functionality exist.
 {: shortdesc}

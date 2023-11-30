@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -14,6 +14,8 @@ subcollection: watson-assistant
 
 # Migrating intents and entities
 {: #migrate-intents-entities}
+
+
 
 You can migrate your intents and entities from the classic experience to {{site.data.keyword.conversationshort}}.
 {: shortdesc }

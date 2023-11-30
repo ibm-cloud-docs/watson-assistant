@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -12,6 +12,8 @@ subcollection: watson-assistant
 
 # Use analytics to review your entire assistant at a glance
 {: #analytics-overview}
+
+
 
 The **Analyze** page provides a summary of the interactions between users and your assistant.
 {: shortdesc}

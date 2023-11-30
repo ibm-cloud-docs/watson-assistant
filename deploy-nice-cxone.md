@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-08-04"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -14,6 +14,8 @@ subcollection: watson-assistant
 {: #deploy-nice-cxone}
 
 [IBM Cloud]{: tag-ibm-cloud}
+
+
 
 Integrate web chat with a NICE CXone service desk solution and empower your live agents to provide faster solutions and better customer service.
 {: shortdesc}

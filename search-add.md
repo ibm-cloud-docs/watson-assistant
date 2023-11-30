@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -14,6 +14,8 @@ subcollection: watson-assistant
 {: #search-add}
 
 [Plus]{: tag-green}
+
+
 
 The search integration searches for information from a data collection that you create by using the {{site.data.keyword.discoveryshort}} service.
 

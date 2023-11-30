@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -12,6 +12,8 @@ subcollection: watson-assistant
 
 # Understand your most and least successful actions
 {: #analytics-action-completion}
+
+
 
 The **Action completion** page of {{site.data.keyword.conversationshort}} provides an overview of how all your assistant's actions are doing. You can:
 - Understand how well users are progressing through the action steps

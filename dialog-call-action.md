@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -14,6 +14,8 @@ subcollection: watson-assistant
 
 # Calling actions from a dialog
 {: #dialog-call-action}
+
+
 
 In {{site.data.keyword.conversationshort}}, you can use actions with your primary dialog conversation. A dialog feature takes precedence over actions. You can use actions to supplement a dialog-based conversation, but the dialog drives the conversation with users to match their requests.
 

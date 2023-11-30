@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -16,6 +16,8 @@ subcollection: watson-assistant
 {: #deploy-phone-config}
 
 [IBM Cloud]{: tag-ibm-cloud}
+
+
 
 After you have set up the phone integration for your assistant, you can modify the phone integration settings to customize the call behavior.
 {: shortdesc}

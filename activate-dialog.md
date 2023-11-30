@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -12,6 +12,8 @@ subcollection: watson-assistant
 
 # Activating dialog and migrating skills
 {: #activate-dialog}
+
+
 
 To use an existing dialog skill, you need to activate the dialog feature in your assistant. Then you can upload your existing skill.
 

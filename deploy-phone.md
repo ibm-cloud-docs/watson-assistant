@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -14,6 +14,8 @@ subcollection: watson-assistant
 {: #deploy-phone}
 
 [IBM Cloud]{: tag-ibm-cloud} [Plus]{: tag-green}
+
+
 
 Adding the phone integration to your assistant makes your assistant available to customers over the phone.
 {: shortdesc}
