@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -90,6 +90,10 @@ An example and instructions on how to create a Slackbot using {{site.data.keywor
 1.  Click *Save Changes*.
 
 1.  Optional: To add support for showing buttons, menus, and disambiguation options in the Slack app, go to the *Interactive Components* tab and enable the feature. Paste your request URL in the provided text entry field, and then click *Enable Interactive Components*.
+
+
+If a `token` field required for authentication is changed, then all entries in related fields must be filled and validated again.
+{: note}
 
 ## Action considerations
 {: #deploy-slack-action}

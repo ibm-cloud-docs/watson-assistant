@@ -122,6 +122,9 @@ To integrate your assistant with NICE CXone:
 The connection between your assistant and NICE CXone is complete. 
 
 
+For security reasons, the authentication fields are removed from view after initial setup. If a field required for authentication is changed, then all entries in related fields must be filled and validated again.
+{: note}
+
 ### Configuring the NICE CXone script
 
 NICE CXone provides a scripting tool that allows workflow developers to define routing flows for their contact centers in CXone.

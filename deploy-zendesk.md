@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -223,6 +223,9 @@ To secure the Zendesk connection, complete the following steps:
     {: codeblock}
 
     After you write a function to ensure that name and email values are always provided, set the *Authenticate anonymous user chat transfers* switch to **On**.
+
+For security reasons, the `secret` authentication fields are removed from view after initial setup. 
+{: note}
 
 ## Adding transfer support to your actions
 {: #deploy-zendesk-action-prereq}
