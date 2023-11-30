@@ -199,7 +199,7 @@ When the conversation reaches the Bot Connector node in Architect, Genesys proxi
 ## User-defined response type
 {: #deploy-botconnector-user-defined}
 
-The `user_defined` response type allows you to pass a custom response back to Genesys. For example, this can be used to pass `Cards` and `Carousels` back to Genesys which do not have a {site.data.keyword.conversationshort} equivalent response type. An example of sending back a `Card` back to Genesys is:
+The `user_defined` response type allows you to pass a custom response back to Genesys. For example, this can be used to pass `Cards` and `Carousels` back to Genesys which do not have a {{site.data.keyword.conversationshort}} equivalent response type. An example of sending back a `Card` back to Genesys is:
 
 ```
 {
