@@ -155,6 +155,10 @@ To set up the integration, complete the following steps:
 
 1.  If you want to support multiple phone numbers, repeat the previous step for each phone number that you want to use.
 
+
+For security reasons, the authentication fields are removed from view after initial setup. If a field required for authentication is changed, then all entries in related fields must be filled and validated again.
+{: note}
+
 ## SMS Advanced configuration options
 {: #deploy-sms-advanced}
 

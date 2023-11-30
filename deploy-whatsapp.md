@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -91,6 +91,10 @@ To set up the integration, complete the following steps:
     You can use this webhook URI to test your integration in the following section.
 
 1.  Click **Finish**.
+
+
+If a field required for authentication is changed, then all entries in related fields must be filled and validated again.
+{: note}
 
 ## Testing the integration
 {: #deploy-whatsapp-sandbox}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -31,6 +31,10 @@ There is currently no mechanism for identifying users who interact with the assi
 1. Click **Confirm**.
 
 1.  Follow the instructions that are provided on the screen to complete the integration process.
+
+
+If a field required for authentication is changed, then all entries in related fields must be filled and validated again.
+{: note}
 
 ## Action considerations
 {: #deploy-facebook-action}

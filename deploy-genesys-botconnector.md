@@ -82,6 +82,9 @@ Keep the Genesys web page open in a web browser tab so you can refer to and comp
     - **Integration ID**
     - **API URI** (the Genesys API server for your region e.g., `https://api.regionxyz.mypurecloud.com`)
 
+For security reasons, the authentication fields are removed from view after initial setup. 
+{: note}
+
 ### Configure your Genesys Bot Connector 
 
 1. Copy the value generated in the **Webhook URI** field.
@@ -89,6 +92,9 @@ Keep the Genesys web page open in a web browser tab so you can refer to and comp
 1. Go to the Genesys Bot Connector Configuration tab you left open. Under Properties, replace the placeholder *Bot Connector Handle Utterance URI* you entered previously with this **Webhook URI** value.
 
 1. Click **Finish**. 
+
+If a field required for authentication is changed, then all entries in related fields must be filled and validated again.
+{: note}
 
 ## Chat with the assistant
 {: #deploy-botconnector-chat}
