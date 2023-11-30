@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-11-30"
 
 keywords: phone, phone interactions, custom language model, custom grammar, advanced settings
 
@@ -15,6 +15,8 @@ subcollection: watson-assistant
 
 # Handling phone interactions
 {: #phone-actions}
+
+
 
 If your assistant uses the phone integration, you can use various response types to customize the behavior of the integration or manage the flow of conversations that your assistant has with customers over the telephone.
 {: shortdesc}

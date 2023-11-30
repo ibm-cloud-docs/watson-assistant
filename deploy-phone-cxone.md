@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-09-25"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -15,6 +15,8 @@ subcollection: watson-assistant
 {: #deploy-phone-nicecxone}
 
 [IBM Cloud]{: tag-ibm-cloud}
+
+
 
 Connect your assistant to a NICE CXone contact center with live agents. 
 {: shortdesc}

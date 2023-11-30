@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -16,6 +16,8 @@ subcollection: watson-assistant
 {: #deploy-sms}
 
 [IBM Cloud]{: tag-ibm-cloud}
+
+
 
 Add a text messaging integration so your assistant can exchange messages with your customers.
 {: shortdesc}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -14,6 +14,8 @@ subcollection: watson-assistant
 
 # Publishing dialog and actions
 {: #dialog-publish}
+
+
 
 If the dialog feature is enabled, the publishing and deployment processes remain the same. However, some slight differences in functionality exist.
 {: shortdesc}

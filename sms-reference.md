@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -12,6 +12,8 @@ subcollection: watson-assistant
 
 # *SMS* integration reference
 {: #sms-reference}
+
+
 
 Add action commands to the message `context` object to manage the flow of conversations with customers who interact with your assistant by submitting SMS messages over the telephone.
 {: shortdesc}

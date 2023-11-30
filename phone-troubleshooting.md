@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -13,6 +13,8 @@ subcollection: watson-assistant
 
 # Troubleshooting and Logs
 {: #phone-troubleshooting}
+
+
 
 ## Troubleshooting
 {: #phone-troubleshooting-tips}

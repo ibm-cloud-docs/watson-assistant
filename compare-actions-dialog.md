@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -12,6 +12,8 @@ subcollection: watson-assistant
 
 # Comparing actions and dialog
 {: #comparing-actions-dialog}
+
+
 
 Choose the right type of conversation for your use case.
 {: shortdesc}

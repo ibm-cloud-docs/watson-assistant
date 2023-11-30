@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-06-22"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -14,6 +14,8 @@ subcollection: watson-assistant
 {: #autolearn}
 
 [IBM Cloud]{: tag-ibm-cloud}
+
+
 
 Use *autolearning* to enable your assistant to learn from interactions with your customers and improve responses.
 {: shortdesc}
