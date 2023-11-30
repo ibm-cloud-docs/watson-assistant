@@ -20,6 +20,7 @@ Release notes describe the new features, changes, and bug fixes in each release 
 **Update on Algorithm version change**:
 On 8th December 2023, the *Latest* algorithm version available in your assistant will be updated to use what is now the current *Beta* version. For more information, check out what the [upcoming algorithm version change](https://medium.com/ibm-watson/watson-assistants-new-transformer-architecture-brings-greater-accuracy-with-less-effort-b8badf12864b) has to offer or see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version).{: important}
 
+
 ## 28 November 2023
 {: #watson-assistant-nov282023}
 {: release-note}
@@ -70,14 +71,14 @@ Improvements to dialog search
 Introducing {{site.data.keyword.conversationshort}}
 :   {{site.data.keyword.assistant_classic_full}} is renamed. It is now called {{site.data.keyword.conversationfull}}.
 
-## 25 Aug 2023
+## 25 August 2023
 {: #watson-assistant-aug252023}
 {: release-note}
 
 Setting for when to use *No action matches*
 :   You can use a new global setting for actions to change how often your assistant routes customers to the *No action matches* action. By setting this threshold, you can affect when the assistant fetches answers from a search integration, triggers the *Fallback* action, or switches topics. For more information, see [When the assistant can't understand your customer's request](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches).
 
-## 24 Aug 2023
+## 24 August 2023
 {: #watson-assistant-aug242023}
 {: release-note}
 
@@ -90,7 +91,7 @@ Change to response mode default settings
 Change to id values in multilingual downloads for translation
 :   As of this release, there is a change to the `id` values in the multilingual downloads for translation. If you have used the multilingual download before, you need to download a new CSV file to match the IDs in your assistant. For more information, see [Using multilingual downloads for translation](/docs/watson-assistant?topic=watson-assistant-admin-language-support#admin-language-support-multilingual).
 
-## 10 Aug 2023
+## 10 August 2023
 {: #watson-assistant-aug102023}
 {: release-note}
 Algorithm version **Beta** provides improved intent detection and action matching for more languages
@@ -105,7 +106,7 @@ Algorithm version **Beta** provides improved intent detection and action matchin
 Session history variable
 :   You can record a summary of the recent messages from a conversation for each customer, for use with the `session_history` variable. Session history might be used to provide a summary of the conversation to a live agent during a transfer or call a generative AI extension to generate an answer based on a summary. For more information, see [Session history](/docs/watson-assistant?topic=watson-assistant-publish-overview#publish-overview-environment-settings-session-history).
 
-## 3 Aug 2023
+## 3 August 2023
 {: #watson-assistant-aug032023}
 {: release-note}
 
