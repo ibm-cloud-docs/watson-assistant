@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -29,6 +29,7 @@ The following table shows the latest version of the web chat integration that is
 
 | {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} version | Latest web chat version available |
 |----------------|----------------|
+
 | 4.7.4 | [7.6.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.5.0) |
 | 4.7.2 | [7.5.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.5.0) |
 | 4.7.1 | [7.4.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.4.0) |
@@ -42,6 +43,19 @@ The following table shows the latest version of the web chat integration that is
 | 4.5.0 | [6.4.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#6.4.1) |
 | 4.0.8 | [6.2.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#6.2.0) |
 {: caption="Web chat versions in {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}}" caption-side="top"}
+
+## 29 November 2023
+{: #assistant-data-nov292023}
+{: release-note}
+
+{{site.data.keyword.assistant_classic_full}} is now {{site.data.keyword.conversationfull}}.
+:   {{site.data.keyword.assistant_classic_full}} was renamed to {{site.data.keyword.conversationfull}}.
+
+Store your custom metrics in {{site.data.keyword.conversationshort}}
+:   You can store your custom metrics for assistants by using the metrics method. For more information, see [Monitoring the platform](/docs/en/cloud-paks/cp-data/4.8.x?topic=platform-changing-retention-period-monitoring-data).
+
+Diagnostic logs
+:   You can now use the diagnostics logs in {{site.data.keyword.icp4dfull}} for your assistants. For more information, see [diag](https://ibmdocs-test.dcs.ibm.com/docs/en/SSQNUZ_4.8_test?topic=reference-diag){: external}.
 
 ## 25 October 2023
 {: #assistant-data-oct252023}
