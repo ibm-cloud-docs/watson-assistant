@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-11-30"
 
 subcollection: watson-assistant
 
@@ -17,7 +17,7 @@ subcollection: watson-assistant
 Add integrations to your assistant so that you can publish your bot to the channels where your customers go for help.
 {: shortdesc}
 
-To deploy an assistant to customers, a channel integration must be added. By default, a web chat integration is created, allowing an assistant to be embedded in a website. Other channel integrations are available in the **Integrations** catalog. For more information about deploying to your website, see [Adding the web chat to your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
+To deploy an assistant to customers, a channel integration must be added. By default, a web chat integration is created, allowing an assistant to be embedded in a website. Other channel integrations are available in the **Integrations** catalog. For more information, see [Adding the web chat to your website](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat).
 
 ![Image of the Integrations catalog](images/integrations-catalog.png)
 
@@ -41,6 +41,7 @@ Follow these steps to add integrations to your assistant:
     - [Web chat](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat)
     - [Phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone)
     - [Facebook Messenger](/docs/watson-assistant?topic=watson-assistant-deploy-facebook)
+    - [Genesys Bot Connector](/docs/watson-assistant?topic=watson-assistant-deploy-genesys-botconnector)
     - [Microsoft Teams](/docs/watson-assistant?topic=watson-assistant-deploy-microsoft-teams)
     - [Slack](/docs/watson-assistant?topic=watson-assistant-deploy-slack)
     - [SMS](/docs/watson-assistant?topic=watson-assistant-deploy-sms)
@@ -82,4 +83,4 @@ Watch a 4-minute video about integrating your assistant with a live agent integr
 
 ![Zendesk Integration: {{site.data.keyword.conversationshort}}](https://video.ibm.com/embed/channel/23952663/video/wa-zendesk){: video output="iframe" data-script="none" id="watsonmediaplayer" width="480" height="270" scrolling="no" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="border: 0 none transparent;"}
 
-To learn about how live agent integrations with your assistant can benefit your business, read [Customer Service Just Got Smarter](https://medium.com/ibm-watson/contact-center-post-394dff427c8){: external}.
+To learn how live agent integrations with your assistant can benefit your business, read [Customer Service Just Got Smarter](https://medium.com/ibm-watson/contact-center-post-394dff427c8){: external}.
