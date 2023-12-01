@@ -327,7 +327,7 @@ A script that runs inside a sandboxed iframe cannot change any content outside t
 ## Pause response
 {: #respond-pause-response}
 
-Use a *Pause* response to have your assistant wait for a specified interval before the next response. This pause might be to allow time for a request to complete, or to mimic the appearance of a live agent who might pause between responses. The pause can be of any duration from 1 to 10 seconds.
+Use a *Pause* response to have your assistant wait for a specified interval before the next response. This pause allows time for a request to complete, or acts like a live agent who pauses between responses. The pause must be of any duration between `1` and `60` seconds that includes decimals of a second to pause the response for `milliseconds`.
 
 A *Pause* response is typically used in combination with other responses. By default, a typing indicator animation appears during the pause to simulate a live agent.
 
