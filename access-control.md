@@ -132,48 +132,7 @@ A service role controls what a person can do within each service instance.
 | **Version Maker** | Create or delete versions of an assistant. Doesn't provide publish access. |
 {: caption="Service role details" caption-side="top"}
 
-This table explains the minimum service roles that are required for common tasks in an assistant.
 
-| Task | Resource | Minimum service role required |
-| --- | --- | --- |
-| **Assistant** | | |
-| Create assistant | Service instance | Writer |
-| View assistant settings | Assistant | Writer |
-| View assistant ID | Assistant | Writer |
-| Update assistant settings | Assistant | Writer |
-| Enable or disable dialog | Assistant | Writer |
-| Delete assistant | Service instance | Writer |
-| **Actions** | | |
-| Create action | Action skill | Writer |
-| Update action | Action skill | Writer |
-| Delete action | Action skill | Writer |
-| Download actions JSON file | Action skill | Reader |
-| Upload actions JSON file | Action skill | Writer |
-| Copy action | Action skill (in destination assistant) | Writer |
-| **Publish** | | |
-| Publish version | Environment | Writer |
-| Create version without publishing | Assistant | Writer or Version Maker |
-| Delete unpublished version | Assistant | Writer or Version Maker |
-| Download version | Assistant | Reader |
-| **Environments** | | |
-| Create environment (Enterprise plan only) | Assistant | Writer |
-| Update environment settings | Environment | Writer |
-| Delete environment (Enterprise plan only) |  | Writer |
-| **Integrations** | | |
-| Add integration | Service instance | Writer |
-| Update integration | Service instance | Writer |
-| Delete integration | Service instance | Writer |
-| **Dialog** | | |
-| Create intent | Dialog skill | Writer |
-| Update intent | Dialog skill | Writer |
-| Delete intent | Dialog skill | Writer |
-| Import intents | Dialog skill | Writer |
-| Export intents | Dialog skill | Reader |
-| Create entity | Dialog skill | Writer |
-| Update entity | Dialog skill | Writer |
-| Delete entity | Dialog skill | Writer |
-| Download intents and entities | Dialog skill | Reader |
-{: caption="Minimum service role details" caption-side="top"}
 
 ### Example of limiting access to one assistant
 {: #access-control-limit-access}
