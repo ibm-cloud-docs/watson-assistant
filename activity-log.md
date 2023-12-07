@@ -24,4 +24,13 @@ Use the *activity log* to track changes. It gives you visibility into the modifi
 If an item was triggered by the API, the activity log shows the account owner of the API key, even if the key is shared with another person who is triggered the event.
 {: note}
 
+### What isn't included in the log
+{: #activity-not-included}-->
+
+These items aren't included in the activity log:
+
+- Copying an action from another assistant 
+- Uploading actions, intents, entities aren't included as created
+- Changing actions global settings
+- Reverting a version to draft
 
