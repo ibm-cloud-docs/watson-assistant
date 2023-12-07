@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-12-07"
 
 subcollection: watson-assistant
 
@@ -158,7 +158,7 @@ This table explains the minimum service roles that are required for common tasks
 | **Environments** | | |
 | Create environment (Enterprise plan only) | Assistant | Writer |
 | Update environment settings | Environment | Writer |
-| Delete environment (Enterprise plan only) | Service instance | Writer |
+| Delete environment (Enterprise plan only) |  | Writer |
 | **Integrations** | | |
 | Add integration | Service instance | Writer |
 | Update integration | Service instance | Writer |
