@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-12-06"
+lastupdated: "2023-12-07"
 
 subcollection: watson-assistant
 
@@ -24,15 +24,4 @@ Use the *activity log* to track changes. It gives you visibility into the modifi
 If an item was triggered by the API, the activity log shows the account owner of the API key, even if the key is shared with another person who is triggered the event.
 {: note}
 
-### What isn't included in the log
-{: #activity-not-included}
 
-These items aren't included in the activity log:
-
-- Copying an action from another assistant 
-- Uploading actions, intents, entities aren't included as created
-- Changing actions global settings
-- Reverting a version to draft
-- Adding or deleting entity values and synonyms
-- Creating, updating, or deleting channel integrations
-- Creating, updating, or deleting custom extensions
