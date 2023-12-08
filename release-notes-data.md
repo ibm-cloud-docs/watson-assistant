@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-11-30"
+lastupdated: "2023-12-08"
 
 subcollection: watson-assistant
 
@@ -12,7 +12,7 @@ content-type: release-note
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Release notes for {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}}
+# Release notes for {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}}
 {: #release-notes-data}
 
 [{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d}
@@ -23,11 +23,11 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 ## Web chat versions
 {: #release-notes-web-chat}
 
-When you install {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}}, the latest available version of the web chat integration is included. See the following table for details about the latest available web chat version for each {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} release. If your web chat version isn't locked, then the web chat integration is upgraded to the latest available version when you upgrade {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}}.
+When you install {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}}, the latest available version of the web chat integration is included. See the following table for details about the latest available web chat version for each {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}} release. If your web chat version isn't locked, then the web chat integration is upgraded to the latest available version when you upgrade {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}}.
 
-The following table shows the latest version of the web chat integration that is included with each release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}}. {{site.data.keyword.icp4dfull}} supports web chat versions 5.1.1 or later. To customize and change version numbers, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+The following table shows the latest version of the web chat integration that is included with each release of {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}}. {{site.data.keyword.icp4dfull}} supports web chat versions 5.1.1 or later. To customize and change version numbers, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
 
-| {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} version | Latest web chat version available |
+| {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}} version | Latest web chat version available |
 |----------------|----------------|
 | 4.8.0 | [7.7.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.7.0) |
 | 4.7.4 | [7.6.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.5.0) |
@@ -42,7 +42,7 @@ The following table shows the latest version of the web chat integration that is
 | 4.5.1 | [6.5.2](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#6.5.2) |
 | 4.5.0 | [6.4.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#6.4.1) |
 | 4.0.8 | [6.2.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#6.2.0) |
-{: caption="Web chat versions in {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}}" caption-side="top"}
+{: caption="Web chat versions in {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}}" caption-side="top"}
 
 ## 29 November 2023
 {: #assistant-data-nov292023}
