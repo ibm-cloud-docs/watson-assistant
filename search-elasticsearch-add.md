@@ -15,7 +15,7 @@ subcollection: watson-assistant
 
 [Plus]{: tag-green} [Beta]{: tag-cyan} 
 
-You can integrate search integration in your assistants by using Elasticsearch if you have Plus or Enterprise plan. Elasticsearch powers your assistants to perform different types of searches such as metric, structured, unstructured, and semantic with higher accuracy and relevance. The powerful data analytics engine in Elasticsearch expands the scope of search skill to larger data sets in assistants. In addition, you can enable conversational search for Elasticsearch in your assistant that helps to answer query by using simple conversation.
+You can integrate search integration in your assistants by using Elasticsearch if you have Plus or Enterprise plan. Elasticsearch powers your assistants to perform different types of searches such as metric, structured, unstructured, and semantic with higher accuracy and relevance. The powerful data analytics engine in Elasticsearch expands the scope of search integration to larger data sets in assistants. In addition, you can enable conversational search for Elasticsearch in your assistant that helps to answer query by using simple conversation.
 
 When you change the existing search integration to a new one, the settings of the existing search integration is deleted completely. For example, when you change from {{site.data.keyword.discoveryshort}} to Elasticsearch, the configuration of {{site.data.keyword.discoveryshort}} is deleted completely from the assistant.{: important}
 
@@ -33,7 +33,7 @@ To select Elasticsearch as the default search integration, do one of the followi
     1. After you launch a {{site.data.keyword.conversationshort}} instance, go to **Home** > **Integrations**.
     1. Click **Open** inside the **Search** tile to view the "Open Search" window.
     1. In the "Open Search" window, select the `Draft` option in the dropdown if you want to set up Elasticsearch in a draft assistant. If you want to set up Elasticsearch in a live assistant, select the `Live` option in the dropdown.
-    1. In the following "Edit an existing new search extension" window, select the **Elasticsearch** tile.
+    1. In the following "Edit an existing new search integration" window, select the **Elasticsearch** tile.
 
 - **Select Elasticsearch search integration from the Environments page** 
 
@@ -50,7 +50,7 @@ To select Elasticsearch as the default search integration, do one of the followi
 ## Set up Elasticsearch
 {: #setup-elasticsearch}
 
-After you add the Elasticsearch search skill, do the following:
+After you add the Elasticsearch search integration, do the following:
 
 1. In the first section of the "Search integration" window, fill up the following fields to enable your assistant to connect with your Elasticsearch index:
     - **Elasticsearch url**
