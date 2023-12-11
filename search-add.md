@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-11-30"
+lastupdated: "2023-12-11"
 
 subcollection: watson-assistant
 
@@ -52,7 +52,7 @@ To create a search integration:
 
 If you are using the classic experience, add a search skill:
 
-1.  From the assistant where you want to add the skill, click **Add search skill**.
+1.  From the assistant where you want to add the skill, click **Add search integration**.
 
 1.  Take one of the following actions:
 
