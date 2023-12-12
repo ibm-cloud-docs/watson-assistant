@@ -120,6 +120,8 @@ As you test your conversation in Preview, you can check that each variable is se
 
 ![Variable values](images/expand-debug-mode.png){: caption="Variable values" caption-side="bottom"}
 
+
+
 To learn more about variables, see [Managing information during the conversation](/docs/watson-assistant?topic=watson-assistant-manage-info).
 
 
