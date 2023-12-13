@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-11-30"
+lastupdated: "2023-12-13"
 
 subcollection: watson-assistant
 
@@ -132,43 +132,7 @@ For more information about using the search integration, see [Leveraging existin
 
 For more information about how to implement common actions from your dialog, see [Handling phone interactions](/docs/watson-assistant?topic=watson-assistant-phone-actions).
 
-## Setting up a SIP trunk
-{: #deploy-phone-config-sip-providers}
 
-If you do not use the option to generate a free phone number, you are responsible for setting up the SIP trunk that will be used by the phone integration. Find a provider and create a SIP trunk account. Your account will be charged for the phone integration's use of the SIP trunk.
-
-You can set up a SIP trunk in the following ways:
-
-- [Creating a Twilio SIP trunk](#deploy-phone-config-twilio-setup)
-- [Use other third-party providers](#deploy-phone-config-request-setup)
-- [Bring your own SIP trunk](#deploy-phone-config-byost)
-- [Migrate from Voice Agent with Watson](#deploy-phone-config-migrate-from-va)
-
-### Creating a Twilio SIP trunk
-{: #deploy-phone-config-twilio-setup}
-
-To set up a Twilio SIP trunk, complete the following steps: 
-
-1.  Create a Twilio account on the [Twilio website](https://www.twilio.com/sip-trunking){: external}.
-
-1.  From the Twilio website, go to the *Elastic SIP Trunking* dashboard. If you do not see it on the sidebar, go to the Search Bar at the top and search for 'Elastic SIP Trunking', then select **Elastic SIP Trunks**.
-
-
-1.  On the **Elastic SIP Trunks** page, click the *Create new SIP Trunk* button to create a SIP trunk. Enter a name for your SIP trunk and click *Create*. If you already have a SIP trunk, go to the next step.
-
-1.  From the Elastic SIP Trunks page, select your SIP trunk.
-
-1.  Select *Origination* from the navigation bar for your SIP trunk and configure the origination SIP URI.
-
-    You can get the SIP URI for your phone integration from the phone integration configuration page.
-
-1.  If you plan to support call transfers, enable Call Transfer (SIP REFER) in your SIP trunk. If you expect to transfer calls to the public switched telephone network (PSTN), also enable PSTN Transfer on your trunk.
-
-1.  Select *Numbers* from the navigation bar for your SIP trunk, and then do one of the following things:
-  
-    - Click *Add a number* and then *Buy a Number*.
-    - If you already have a number, you can click *Add a number* and then *Add an Existing Number*.
-  
 If you use a Lite or Trial Twilio account for testing purposes, then be sure to verify the transfer target. For more information, see the [Twilio documentation](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-){: external}.
 
 You cannot enable SIP authentication if you choose Twilio as your SIP trunk provider. Twilio doesn't support SIPS for originating calls.
