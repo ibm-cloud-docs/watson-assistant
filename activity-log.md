@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-25"
+lastupdated: "2023-12-13"
 
 subcollection: watson-assistant
 
@@ -17,9 +17,6 @@ subcollection: watson-assistant
 
 Use the *activity log* to track changes. It gives you visibility into the modifications that are made to your assistant. It is available for Plus plans and higher.
 {: shortdesc}
-
-The activity log is a beta feature that is available for evaluation and testing purposes on IBM Cloud only.
-{: beta}
 
 ![Activity log](images/activity-log.png){: caption="Activity log" caption-side="bottom"}
 
@@ -115,3 +112,4 @@ These items aren't included in the activity log:
 - Adding or deleting entity values and synonyms
 - Creating, updating, or deleting channel integrations
 - Creating, updating, or deleting custom extensions
+

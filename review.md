@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-24"
+lastupdated: "2023-12-13"
 
 subcollection: watson-assistant
 
@@ -120,7 +120,12 @@ As you test your conversation in Preview, you can check that each variable is se
 
 ![Variable values](images/variable-values-preview.png){: caption="Variable values" caption-side="bottom"}
 
+
+
+
 To learn more about variables, see [Managing information during the conversation](/docs/watson-assistant?topic=watson-assistant-manage-info).
+
+
 
 ## Extension inspector in Preview
 {: #review-extension-inspector}

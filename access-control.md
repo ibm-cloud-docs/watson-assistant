@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-12-13"
 
 subcollection: watson-assistant
 
@@ -174,6 +174,9 @@ This table explains the minimum service roles that are required for common tasks
 | Delete entity | Dialog skill | Writer |
 | Download intents and entities | Dialog skill | Reader |
 {: caption="Minimum service role details" caption-side="top"}
+
+
+
 
 ### Example of limiting access to one assistant
 {: #access-control-limit-access}

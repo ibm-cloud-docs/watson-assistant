@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-06-19"
+lastupdated: "2023-12-13"
 
 subcollection: watson-assistant
 
@@ -346,6 +346,8 @@ To add a *Pause* response:
 1. In the **Duration** field, enter the length of time for the pause to last as a number of seconds.
 
     The duration can't exceed 10 seconds. Customers are typically willing to wait about 8 seconds for someone to enter a response. 
+    
+ 
     
 1. The **Typing indicator** is set to **On** by default. You can set this to **Off** if you want.
 

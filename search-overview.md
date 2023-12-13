@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2023
-lastupdated: "2023-11-29"
+lastupdated: "2023-12-11"
 
 subcollection: watson-assistant
 
@@ -48,3 +48,5 @@ For instructions on adding a search extension, see:
 - [Coveo search extension setup](/docs/watson-assistant?topic=watson-assistant-search-extension-coveo)
 - [Google custom search extension setup](/docs/watson-assistant?topic=watson-assistant-search-extension-google)
 - [NeuralSeek extension setup](/docs/watson-assistant?topic=watson-assistant-search-extension-neuralseek)
+
+
