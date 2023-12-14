@@ -26,6 +26,9 @@ On 8th December 2023, the *Latest* algorithm version available in your assistant
 {: #watson-assistant-dec122023}
 {: release-note}
 
+Change in Pause response time configuration
+:   You can now pause a response for any duration from `0` to `60 seconds`, which was limited from `1` to `10 seconds` in the previous releases. In addition, you can now pause the response in `milliseconds` by entering decimals of a `second` in the **Duration** field. For more information, see [Pause response](/docs/watson-assistant?topic=watson-assistant-respond#respond-pause-response).
+
 Invalid date entry not accepted
 :   Starting from this release, the assistant does not recognize the invalid date entry such as `Feb 31`, `31/11/2022`, and `Feb 29 2023`. In addition, the assistant does not automatically parse the invalid dates to the first day of the month. For more information, see [@sys-date](/docs/assistant?topic=assistant-system-entities#system-entities-sys-date).
 
