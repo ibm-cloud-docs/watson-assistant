@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-11-30"
+lastupdated: "2023-12-13"
 
 subcollection: watson-assistant
 
@@ -12,10 +12,10 @@ subcollection: watson-assistant
 
 [{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d}
 
-# Installing {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull_notm}}
+# Installing {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull_notm}}
 {: #install-data}
 
-Learn how to install {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}}.
+Learn how to install {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}}.
 {: shortdesc}
 
 The {{site.data.keyword.icp4dfull_notm}} environment is a Kubernetes-based container platform that can help you quickly modernize and automate workloads that are associated with the applications and services you use. You can develop and deploy on your own infrastructure and in your data center which helps to mitigate risk and minimize vulnerabilities.
@@ -49,9 +49,9 @@ The installation process differs depending on the version you are installing. Th
 ## Support matrix
 {: #install-support-matrix}
 
-The following table describes which versions of {{site.data.keyword.assistant_classic_short}} are supported on which versions of {{site.data.keyword.icp4dfull_notm}} and Red Hat OpenShift.
+The following table describes which versions of {{site.data.keyword.conversationshort}} are supported on which versions of {{site.data.keyword.icp4dfull_notm}} and Red Hat OpenShift.
 
-| {{site.data.keyword.assistant_classic_short}} version | {{site.data.keyword.icp4dfull_notm}} version | Red Hat OpenShift version |
+| {{site.data.keyword.conversationshort}} version | {{site.data.keyword.icp4dfull_notm}} version | Red Hat OpenShift version |
 | --- | --- | --- |
 | 4.8.0 | 4.8.x | 4.12 |
 | 4.7.4 | 4.7.x | 4.12 |

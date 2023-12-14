@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-11-30"
+lastupdated: "2023-12-14"
 
 subcollection: watson-assistant
 
@@ -20,6 +20,14 @@ Release notes describe the new features, changes, and bug fixes in each release 
 **Update on Algorithm version change**:
 On 8th December 2023, the *Latest* algorithm version available in your assistant will be updated to use what is now the current *Beta* version. For more information, check out what the [upcoming algorithm version change](https://medium.com/ibm-watson/watson-assistants-new-transformer-architecture-brings-greater-accuracy-with-less-effort-b8badf12864b) has to offer or see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version).{: important}
 
+
+
+## 12 December 2023
+{: #watson-assistant-dec122023}
+{: release-note}
+
+Invalid date entry not accepted
+:   Starting from this release, the assistant does not recognize the invalid date entry such as `Feb 31`, `31/11/2022`, and `Feb 29 2023`. In addition, the assistant does not automatically parse the invalid dates to the first day of the month. For more information, see [@sys-date](/docs/assistant?topic=assistant-system-entities#system-entities-sys-date).
 
 ## 28 November 2023
 {: #watson-assistant-nov282023}

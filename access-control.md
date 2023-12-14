@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-12-13"
+lastupdated: "2023-12-14"
 
 subcollection: watson-assistant
 
@@ -132,6 +132,7 @@ A service role controls what a person can do within each service instance.
 | **Version Maker** | Create or delete versions of an assistant. Doesn't provide publish access. |
 {: caption="Service role details" caption-side="top"}
 
+
 This table explains the minimum service roles that are required for common tasks in an assistant.
 
 | Task | Resource | Minimum service role required |
@@ -143,6 +144,7 @@ This table explains the minimum service roles that are required for common tasks
 | Update assistant settings | Assistant | Writer |
 | Enable or disable dialog | Assistant | Writer |
 | Delete assistant | Service instance | Writer |
+| View assistant list | Assistant | Reader |
 | **Actions** | | |
 | Create action | Action skill | Writer |
 | Update action | Action skill | Writer |
@@ -150,6 +152,10 @@ This table explains the minimum service roles that are required for common tasks
 | Download actions JSON file | Action skill | Reader |
 | Upload actions JSON file | Action skill | Writer |
 | Copy action | Action skill (in destination assistant) | Writer |
+| Create collections | Action skill | Writer |
+| Update collections | Action skill | Writer |
+| Delete collections | Action skill | Writer |
+| Read collections | Action skill | Reader |
 | **Publish** | | |
 | Publish version | Environment | Writer |
 | Create version without publishing | Assistant | Writer or Version Maker |
@@ -158,25 +164,30 @@ This table explains the minimum service roles that are required for common tasks
 | **Environments** | | |
 | Create environment (Enterprise plan only) | Assistant | Writer |
 | Update environment settings | Environment | Writer |
-| Delete environment (Enterprise plan only) | Service instance | Writer |
+| Delete environment (Enterprise plan only) | Assistant | Writer |
 | **Integrations** | | |
 | Add integration | Service instance | Writer |
 | Update integration | Service instance | Writer |
 | Delete integration | Service instance | Writer |
+| **After Integrations** | | |
+| Create integration | Assistant, Service instance | Writer |
+| Update integration | Assistant, Service instance | Writer |
+| Delete integration | Assistant, Service instance | Writer |
 | **Dialog** | | |
 | Create intent | Dialog skill | Writer |
 | Update intent | Dialog skill | Writer |
 | Delete intent | Dialog skill | Writer |
 | Import intents | Dialog skill | Writer |
 | Export intents | Dialog skill | Reader |
+| View intents | Dialog skill | Reader |
 | Create entity | Dialog skill | Writer |
 | Update entity | Dialog skill | Writer |
 | Delete entity | Dialog skill | Writer |
+| Import entity | Dialog skill | Writer |
+| Export entity | Dialog skill | Reader |
+| View entity | Dialog skill | Reader |
 | Download intents and entities | Dialog skill | Reader |
 {: caption="Minimum service role details" caption-side="top"}
-
-
-
 
 ### Example of limiting access to one assistant
 {: #access-control-limit-access}

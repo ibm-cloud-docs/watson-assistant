@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-11-20"
+lastupdated: "2023-12-14"
 
 subcollection: watson-assistant
 
@@ -25,12 +25,22 @@ For information about new features and improvements to the core {{site.data.keyw
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
 
+## 7.9.0
+{: #7.9.0}
+
+*Release date: 11 December 2023*
+
+- **Enhanced sources view for conversational search **: In the conversational search feature of web chat, you can now access _sources_ of the highlighted response texts in a collapsible carousel. In addition, you can select and find the source for each highlighted text in a response by clicking on it. For more information, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search).
+- **Added error handling to the built-in PDF viewer**: If any error occurs while opening a PDF document in its viewer, the web chat now automatically opens the document in a new tab of the web browser by using the native PDF viewer. This acts as a workaround for the issues such as unsupported CORS (Cross-origin resource sharing). However, in some browsers, the web chat generates a `popup-blocked` error while opening the document.
+- **Added an option to disable the built-in PDF viewer**:  You can now disable the PDF viewer in web chat by configuring `disablePDFViewer`. When the PDF viewer is `disabled`, the documents open in a new tab by using the native PDF viewer in the web browser. For more information, see [web chat configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#onerrordetail){: external}.
+- **New property in web chat state object**: In the object returned from the [getState()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#getState){: external} instance method, the new `userID` property contains the current ID of the web chat. For example, by using this feature, you can get information about the anonymous user ID that web chat assigns to a user by default if no user ID is created.
+
 ## 7.8.0
 {: #7.8.0}
 
 *Release date: 13 November 2023*
 
-- **Added a built-in PDF viewer**: A built-in viewer for PDF files can be used for search results from watsonx Discovery that contain links to publicly available PDF documents.
+- **Added a built-in PDF viewer**: A built-in viewer for PDF files can be used for search results from watsonx Discovery that contains links to the PDF documents. The document links must support CORS (Cross-origin resource sharing) to open in web chat.
 - **Enhanced routing configuration for the Salesforce integration**: The `additional_routing_info` data passed from your assistant to web chat now has `button_id` and `button_overrides` properties that can further control how web chat routes the user to an agent. The `button_ids` property is deprecated, and `button_overrides` is used instead. And all properties in the `additional_routing_info` objects are optional. If the value for a property is not included, web chat defaults to the value in live agent settings from the watsonx Assistant web chat configuration. For more information, see [Routing information](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-salesforce){: external}.
 - **Modified the destroySession method**: The [destroySession](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#destroySession){: external} instance method was enhanced to delete the session from the watsonx Assistant servers and remove session information from the browser memory when called.
 
