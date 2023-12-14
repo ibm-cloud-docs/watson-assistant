@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-12-13"
+lastupdated: "2023-12-14"
 
 subcollection: watson-assistant
 
@@ -118,14 +118,18 @@ Click the icon, and the editor shows the corresponding step in the background.
 
 As you test your conversation in Preview, you can check that each variable is set correctly. Click **Variable values** to see the values stored in each variable during the conversation. The **Variable values** pane has two tabs, one for action variables and one for session variables. If you are using dialog, you can see session variables for both actions and dialog on the **Session variables** tab.
 
-![Variable values](images/variable-values-preview.png){: caption="Variable values" caption-side="bottom"}
+![Variable values](images/expand-debug-mode.png){: caption="Variable values" caption-side="bottom"}
 
-
-
+For better visibility of long variable values, you can expand the width of the debug mode panel by using the **Expand** icon.{: note}
 
 To learn more about variables, see [Managing information during the conversation](/docs/watson-assistant?topic=watson-assistant-manage-info).
 
+### Editing the variable values
+{: edit-variable-values}
 
+In the debug mode, you can edit the variable values by clicking on the value that you want to edit. For better visibility of long variable values, you can expand the width of the debug mode panel by using the **Expand** icon.
+
+![Edit variable value](images/edit-debug-var-value.png){: caption="Edit variable values" caption-side="bottom"}
 
 ## Extension inspector in Preview
 {: #review-extension-inspector}
