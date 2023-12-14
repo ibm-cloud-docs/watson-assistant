@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-12-13"
+lastupdated: "2023-12-14"
 
 subcollection: watson-assistant
 
@@ -95,6 +95,13 @@ For the early access release, here's the current list of items and activity that
 | Entity | Created, Updated, Deleted | <ul><li>Each save (auto or manual) is tracked as an update.</li><li>A renamed entity retains the old name in previous entries and won't have a link.</li></ul> |
 | Dialog Node | Created, Updated, Deleted | Each save (auto or manual) is tracked as an update. |
 | Search | Updated | |
+| Channel Integrations | Created, Updated, Deleted | <ul><li> All three activities are applicable for the integrations of Phone, Facebook Messenger, Slack, SMS, WhatsApp with Twilio, Microsoft Teams, and Genesys Bot Connector.</li><li>For the Web Chat integration, only the Updated activity is applicable.</li></ul>|
+| Custom Extensions | Created, Deleted, Added, Updated, Removed | All the activities are applicable for Custom Extension Name. |
+| Segment Extension | Added, Updated, Removed | |
+| Dialog&#8212;Entity Value Name | Created, Updated, Deleted | |
+| Dialog&#8212;Entity Synonym Name | Created, Updated, Deleted | |
+| Dialog&#8212;Intent Example Name | Created, Updated, Deleted | |
+| Collections | Created, Updated, Deleted | All the activities are applicable for Name of that collection. |
 {: caption="Items and activity" caption-side="top"}
 
 If an item was triggered by the API, the activity log shows the account owner of the API key, even if the key is shared with another person who is triggered the event.
