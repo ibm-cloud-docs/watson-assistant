@@ -28,7 +28,6 @@ OpenAPI document file size limit for integrating custom extension
 :   When you integrate a custom extension by using REST API, the maximum file size of the OpenAPI document that you can import is limted to `4 MB` if you have a *Plus* or *Enterprise* plan of {{site.data.keyword.conversationshort}}. However, if you have an Enteprise plan with data isolation, the maximum file size of the document is limited to `8 MB`. For more information, see [Preparing the API definition](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#build-custom-extension-openapi-file).
 
 
-
 Algorithm version Latest(15-Apr-2023) uses improved intent detection and matching 
 :   The **Latest(15-Apr-2023)** algorithm version uses a new foundation model to improve the intent detection and action matching in assistants with languages such as English, French, German, Portuguese (Brazilian), Spanish, Arabic, Chinese (Simplified), Chinese (Traditional), Czech, Dutch, Italian, Japanese, and Korean. The new foundation model is trained by using the transformer architecture. For more information, see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
 
