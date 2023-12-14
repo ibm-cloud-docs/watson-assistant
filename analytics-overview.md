@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-11-30"
+lastupdated: "2023-12-14"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,7 @@ subcollection: watson-assistant
 # Use analytics to review your entire assistant at a glance
 {: #analytics-overview}
 
-
+This feature is currently not available in IBM watsonx Orchestrate.{: note}
 
 The **Analyze** page provides a summary of the interactions between users and your assistant.
 {: shortdesc}

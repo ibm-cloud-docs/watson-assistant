@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-11-30"
+lastupdated: "2023-12-14"
 
 subcollection: watson-assistant
 
@@ -17,7 +17,7 @@ subcollection: watson-assistant
 
 [IBM Cloud]{: tag-ibm-cloud}
 
-
+This feature is currently not available in IBM watsonx Orchestrate.{: note}
 
 Add a text messaging integration so your assistant can exchange messages with your customers.
 {: shortdesc}

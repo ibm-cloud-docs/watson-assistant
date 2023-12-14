@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-11-30"
+lastupdated: "2023-12-14"
 
 subcollection: watson-assistant
 
@@ -16,7 +16,7 @@ subcollection: watson-assistant
 
 [IBM Cloud]{: tag-ibm-cloud}
 
-
+This feature is currently not available in IBM watsonx Orchestrate.{: note}
 
 Connect your assistant to a NICE CXone contact center with live agents. 
 {: shortdesc}

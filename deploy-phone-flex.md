@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-11-30"
+lastupdated: "2023-12-14"
 
 subcollection: watson-assistant
 
@@ -16,7 +16,7 @@ subcollection: watson-assistant
 
 [IBM Cloud]{: tag-ibm-cloud}
 
-
+This feature is currently not available in IBM watsonx Orchestrate.{: note}
 
 You can use the phone integration to help your customers over the phone and transfer them to live agents inside of Twilio Flex. If, in the course of a conversation with your assistant, a customer asks to speak to a person, you can transfer the conversation directly to a Twilio Flex agent.
 

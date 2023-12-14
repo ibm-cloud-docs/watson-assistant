@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-11-30"
+lastupdated: "2023-12-14"
 
 subcollection: watson-assistant
 
@@ -15,7 +15,7 @@ subcollection: watson-assistant
 # Analyzing dialog and actions
 {: #dialog-analyze}
 
-
+This feature is currently not available in IBM watsonx Orchestrate.{: note}
 
 The **Analyze** page provides a summary of the interactions between users and your assistant. If the dialog feature is enabled, the **Analyze** page remains the same, but some slight differences in functionality exist.
 {: shortdesc}

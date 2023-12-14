@@ -76,7 +76,7 @@ For more information about currencies that are recognized per language, see [Cur
 
 The `@sys-date` system entity detects mentions of dates in user input. The date value is stored as a string in the format `yyyy-MM-dd`. For example, the mention `May 8` is stored as `"2020-05-08"`. The system augments missing elements of a date (such as the year for `"May 8"`) with the current date values.
 
-
+If you enter an invalid date in the user input, the `@sys-date` system entity does not recognize date and shows `Invalid date` error.
 
 If you select English as the language, the system uses US English (`en-us`) as the locale. For the US English locale only, the format of the date is `MM/DD/YYYY`. The format of the date changes to `DD/MM/YYYY` only if the first two numbers are greater than 12. The value that is stored has the format `yyyy-MM-dd`.
 
