@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-12-14"
+lastupdated: "2023-12-15"
 
 subcollection: watson-assistant
 
@@ -30,7 +30,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 *Release date: 11 December 2023*
 
-- **Enhanced sources view for conversational search **: In the conversational search feature of web chat, you can now access _sources_ of the highlighted response texts in a collapsible carousel. In addition, you can select and find the source for each highlighted text in a response by clicking on it. For more information, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search).
+- **Enhanced sources view for conversational search**: In the conversational search feature of web chat, you can now access _sources_ of the highlighted response texts in a collapsible carousel. In addition, you can select and find the source for each highlighted text in a response by clicking on it. For more information, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search).
 - **Added error handling to the built-in PDF viewer**: If any error occurs while opening a PDF document in its viewer, the web chat now automatically opens the document in a new tab of the web browser by using the native PDF viewer. This acts as a workaround for the issues such as unsupported CORS (Cross-origin resource sharing). However, in some browsers, the web chat generates a `popup-blocked` error while opening the document.
 - **Added an option to disable the built-in PDF viewer**:  You can now disable the PDF viewer in web chat by configuring `disablePDFViewer`. When the PDF viewer is `disabled`, the documents open in a new tab by using the native PDF viewer in the web browser. For more information, see [web chat configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#onerrordetail){: external}.
 - **New property in web chat state object**: In the object returned from the [getState()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#getState){: external} instance method, the new `userID` property contains the current ID of the web chat. For example, by using this feature, you can get information about the anonymous user ID that web chat assigns to a user by default if no user ID is created.
