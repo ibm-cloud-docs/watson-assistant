@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-20"
+lastupdated: "2023-12-15"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,8 @@ subcollection: watson-assistant
 
 You can back up and restore the data that is associated with your installation in {{site.data.keyword.icp4dfull_notm}}.
 {: shortdesc}
+
+
 
 The primary data storage is a Postgres database.
 
