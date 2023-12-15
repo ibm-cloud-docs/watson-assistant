@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-11-30"
+lastupdated: "2023-12-14"
 
 subcollection: watson-assistant
 
@@ -15,7 +15,7 @@ subcollection: watson-assistant
 # Migrating intents and entities
 {: #migrate-intents-entities}
 
-
+This feature is currently not available in IBM watsonx Orchestrate.{: note}
 
 You can migrate your intents and entities from the classic experience to {{site.data.keyword.conversationshort}}.
 {: shortdesc }

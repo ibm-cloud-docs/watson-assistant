@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-10-25"
+lastupdated: "2023-12-14"
 
 subcollection: watson-assistant
 
@@ -37,7 +37,7 @@ To choose an algorithm version for dialog:
 
 1. Choose a version.
 
-The latest and previous versions have date labels such as **Latest (01-Jun-2022)** or **Previous (01-Jan-2022)**. See the [{{site.data.keyword.conversationshort}} release notes](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes) for details about each algorithm version release.
+The latest and previous versions have date labels such as **Latest (15-Apr-2023)** or **Previous (20-Dec-2022)**. See the [{{site.data.keyword.conversationshort}} release notes](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes) for details about each algorithm version release.
 
 Algorithm version choices are currently available for Arabic, Chinese (Simplified), Chinese (Traditional), Czech, Dutch, English, French, German, Japanese, Korean, Italian, Portuguese, and Spanish. The universal language model uses a default algorithm.
 

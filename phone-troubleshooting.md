@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-11-30"
+lastupdated: "2023-12-14"
 
 subcollection: watson-assistant
 
@@ -14,7 +14,7 @@ subcollection: watson-assistant
 # Troubleshooting and Logs
 {: #phone-troubleshooting}
 
-
+This feature is currently not available in IBM watsonx Orchestrate.{: note}
 
 ## Troubleshooting
 {: #phone-troubleshooting-tips}

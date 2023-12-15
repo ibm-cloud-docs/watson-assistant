@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-11-30"
+lastupdated: "2023-12-14"
 
 keywords: directlink, private path, transit gateway
 
@@ -17,7 +17,7 @@ subcollection: watson-assistant
 
 [IBM Cloud]{: tag-ibm-cloud}
 
-
+This feature is currently not available in IBM watsonx Orchestrate.{: note}
 
 You can establish {{site.data.keyword.conversationshort}} webhook and voice communication with Private Path instead of a public network. 
 
