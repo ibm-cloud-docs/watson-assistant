@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-12-13"
+lastupdated: "2023-12-19"
 
 subcollection: watson-assistant
 
@@ -323,11 +323,11 @@ Content that is loaded in an iframe by the web chat is _sandboxed_, meaning that
 
 A script that runs inside a sandboxed iframe cannot change any content outside the iframe, _if_ the outer page and the iframe have different origins. Be careful if you use an *iframe* response to embed content that has the same origin as the page where your web chat widget is hosted. In this situation the embedded content can defeat the sandboxing and gain access to content outside the frame. For more information about this potential vulnerability, see the `sandbox` attribute [documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox){: external}.
 {: note}
-
+    
 ## Pause response
 {: #respond-pause-response}
 
-Use a *Pause* response to have your assistant wait for a specified interval before the next response. This pause might be to allow time for a request to complete, or to mimic the appearance of a live agent who might pause between responses. The pause can be of any duration from 1 to 10 seconds.
+Use a *Pause* response to have your assistant wait for a specified interval before the next response. This pause allows time for a request to complete, or acts like a live agent who pauses between responses. The pause must be of any duration from `0` to `60` seconds, which can include decimals of a second to configure the pause up to `milliseconds`.
 
 A *Pause* response is typically used in combination with other responses. By default, a typing indicator animation appears during the pause to simulate a live agent.
 
@@ -343,13 +343,10 @@ To add a *Pause* response:
 
 1. In the **Assistant says** field, click the ![Pause](images/pause.svg) **Pause** icon. 
 
-1. In the **Duration** field, enter the length of time for the pause to last as a number of seconds.
+1. In the **Duration** field, enter the length of time for the pause in `seconds`.
 
-    The duration can't exceed 10 seconds. Customers are typically willing to wait about 8 seconds for someone to enter a response. 
-    
- 
+    The duration must not exceed `60 seconds`. In addition, you can enter the decimals of `second` in the **Duration** field to pause the response up to `milliseconds`. For example, if you enter `10.50 seconds`, it means the response pauses for `10500 milliseconds`. Customers are typically willing to wait about 8 seconds for someone to enter a response.{: note}
     
 1. The **Typing indicator** is set to **On** by default. You can set this to **Off** if you want.
 
-    Add another response type, such as a text response type, after the pause to clearly denote that the pause is over.
-    {: tip}
+    Add another response type, such as a text response type, after the pause to clearly denote that the pause is over.{: tip}

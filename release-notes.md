@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-12-15"
+lastupdated: "2023-12-19"
 
 subcollection: watson-assistant
 
@@ -25,7 +25,6 @@ Release notes describe the new features, changes, and bug fixes in each release 
 OpenAPI document file size limit for integrating custom extension 
 :   When you integrate a custom extension by using REST API, the maximum file size of the OpenAPI document that you can import is limted to `4 MB` if you have a *Plus* or *Enterprise* plan of {{site.data.keyword.conversationshort}}. However, if you have an Enteprise plan with data isolation, the maximum file size of the document is limited to `8 MB`. For more information, see [Preparing the API definition](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#build-custom-extension-openapi-file).
 
-
 Edit variable values directly in debug mode
 :   You can now edit the variable value directly in the debug mode by clicking on the values. For more information, [Editing the variable values](/docs/watson-assistant?topic=watson-assistant-review#edit-variable-values)
 
@@ -45,6 +44,9 @@ Invalid date entry not accepted
 
 Algorithm version Latest(15-Apr-2023) uses improved intent detection and matching 
 :   The **Latest(15-Apr-2023)** algorithm version uses a new foundation model to improve the intent detection and action matching in assistants with languages such as English, French, German, Portuguese (Brazilian), Spanish, Arabic, Chinese (Simplified), Chinese (Traditional), Czech, Dutch, Italian, Japanese, and Korean. The new foundation model is trained by using the transformer architecture. For more information, see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
+
+Change in Pause response time configuration
+:   You can now pause a response for any duration from `0` to `60 seconds`, which was limited from `1` to `10 seconds` in the previous releases. In addition, you can now pause the response in `milliseconds` by entering decimals of a `second` in the **Duration** field. For more information, see [Pause response](/docs/watson-assistant?topic=watson-assistant-respond#respond-pause-response).
 
 ## 28 November 2023
 {: #watson-assistant-nov282023}
