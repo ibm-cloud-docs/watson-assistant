@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-12-15"
+lastupdated: "2023-12-19"
 
 subcollection: watson-assistant
 
@@ -23,6 +23,7 @@ You can back up and restore the data that is associated with your installation i
 The primary data storage is a Postgres database.
 
 Choose one of the following ways to manage the back up of data:
+
 
 - **[Kubernetes CronJob](#backup-cronjob)**: Use the `$INSTANCE-store-cronjob` cron job that is provided for you.
 - **[backupPG.sh script](#backup-os)**: Use the `backupPG.sh` bash script.
@@ -246,6 +247,8 @@ To back up data by using the provided script, complete the following steps:
 1.  Download the `backupPG.sh` script.
 
     Go to [GitHub](https://github.com/watson-developer-cloud/community/blob/master/watson-assistant/data/){: external}, and find the directory for your version to find the file.
+
+    
 
 1.  Log in to the Red Hat OpenShift project namespace where you installed the product.
 
