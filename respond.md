@@ -345,7 +345,7 @@ To add a *Pause* response:
 
 1. In the **Duration** field, enter the length of time for the pause in `seconds`.
 
-    The duration must not exceed `60 seconds`. In addition, you can enter the decimals of `second` in the **Duration** field to pause the response up to `milliseconds`. For example, if you enter `10.50 seconds`, it means the response pauses for `10500 milliseconds`. Customers are typically willing to wait about 8 seconds for someone to enter a response.{: note}
+    The duration must not exceed `60 seconds`. In addition, you can enter the decimals of `second` in the **Duration** field to pause the response up to `milliseconds`. For example, if you enter `10.50 seconds`, the response pauses for `10500 milliseconds`. Customers are typically willing to wait about 8 seconds for someone to enter a response.{: note}
     
 1. The **Typing indicator** is set to **On** by default. You can set this to **Off** if you want.
 
