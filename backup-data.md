@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-01-05"
+lastupdated: "2024-01-08"
 
 subcollection: watson-assistant
 
@@ -249,6 +249,7 @@ To back up data by using the provided script, complete the following steps:
     Go to [GitHub](https://github.com/watson-developer-cloud/community/blob/master/watson-assistant/data/){: external}, and find the directory for your version to find the file.
 
     
+
 
 1.  Log in to the Red Hat OpenShift project namespace where you installed the product.
 
