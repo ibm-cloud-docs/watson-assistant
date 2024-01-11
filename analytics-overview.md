@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-12-14"
+  years: 2018, 2024
+lastupdated: "2024-01-11"
 
 subcollection: watson-assistant
 
@@ -25,6 +25,8 @@ Analytics help you to understand the following things:
 - *How can you make your assistant better?*
 
 To see analytics information, select **Analyze** in the navigation bar.
+
+You can now search and analyze the conversational search requests from the customer in the **Analyze** page. {: note}
 
 ## Choosing the environment and date range
 {: #analytics-overview-time-period}

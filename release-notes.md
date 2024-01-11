@@ -27,6 +27,9 @@ Release notes describe the new features, changes, and bug fixes in each release 
 View number of actions within collections
 :   You can now view the total number of actions that are within each collection on the **Action** page.
 
+Search and analyze the conversational search requests
+:   You can now search and analyze the conversational search requests from the customer in the **Analyze** page. For more information, see [Analyzing dialog and actions](docs/watson-assistant?topic=watson-assistant-dialog-analyze).
+
 ## 15 December 2023
 {: #watson-assistant-dec152023}
 {: release-note}
