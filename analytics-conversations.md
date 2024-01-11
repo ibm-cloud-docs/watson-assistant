@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-12-14"
+  years: 2018, 2024
+lastupdated: "2024-01-11"
 
 subcollection: watson-assistant
 
@@ -56,6 +56,7 @@ You can filter the conversation by:
 
 - **Recognition**: Choose between recognized or unrecognized user questions or requests.
 - **Search**: Choose between requests that initiated a search or requests that produced no search results.
+  
 
 
 The Topics, Entities, and Keyword filters always appear at the top of the page. To show the Recognition and Search filters, click the **Additional filters** icon.

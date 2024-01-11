@@ -26,7 +26,7 @@ Analytics help you to understand the following things:
 
 To see analytics information, select **Analyze** in the navigation bar.
 
-You can search and analyze the conversational search requests from the customer in the **Analyze** page. {: note}
+
 
 ## Choosing the environment and date range
 {: #analytics-overview-time-period}
