@@ -40,6 +40,7 @@ toc:
           - actions-templates.md
           - start-conversation.md
           - understand-questions.md
+          - boost-words.md
           - respond.md
           - collect-info.md
           - manage-info.md
@@ -305,10 +306,6 @@ toc:
           - backup-data.md
           - troubleshoot-data.md
           - cos-importer-data.md
-      - topicgroup:
-          label: Early access features
-          topics:
-          - boost-words.md
   - navgroup:
       id: reference
       topics:
