@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-01-10"
+lastupdated: "2024-01-11"
 
 subcollection: watson-assistant
 
@@ -20,7 +20,12 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
+## 11 January 2024
+{: #watson-assistant-jan112024}
+{: release-note}
 
+View number of actions within collections
+:   You can now view the total number of actions that are within each collection on the **Action** page.
 
 ## 15 December 2023
 {: #watson-assistant-dec152023}
