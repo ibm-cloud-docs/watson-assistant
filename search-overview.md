@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2023
-lastupdated: "2023-12-11"
+  years: 2023, 2024
+lastupdated: "2024-01-10"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,8 @@ You have three options to add search to your assistant:
 - The search integration for {{site.data.keyword.discoveryfull}}. For more information, see [Add the search integration for {{site.data.keyword.discoveryfull}}](#search-overview-integration).
 - The search integration for Elasticsearch. For more information, see [Add the search integration for Elasticsearch](#elasticsearch-integration-overview).
 - A search extension for Coveo, Google, or NeuralSeek. For more information, see [Add a search extension](#search-overview-extension).
+
+
 
 ## Add the search integration for {{site.data.keyword.discoveryfull}}
 {: #search-overview-integration}
@@ -48,5 +50,4 @@ For instructions on adding a search extension, see:
 - [Coveo search extension setup](/docs/watson-assistant?topic=watson-assistant-search-extension-coveo)
 - [Google custom search extension setup](/docs/watson-assistant?topic=watson-assistant-search-extension-google)
 - [NeuralSeek extension setup](/docs/watson-assistant?topic=watson-assistant-search-extension-neuralseek)
-
 

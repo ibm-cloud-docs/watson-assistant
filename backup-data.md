@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-12-19"
+  years: 2015, 2024
+lastupdated: "2024-01-12"
 
 subcollection: watson-assistant
 
@@ -18,7 +18,23 @@ subcollection: watson-assistant
 You can back up and restore the data that is associated with your installation in {{site.data.keyword.icp4dfull_notm}}.
 {: shortdesc}
 
+The following table lists the upgrade paths that are supported by the scripts.
 
+| Version in use | Version that you can upgrade to |
+|------|-----|
+| 4.7.x | 4.8.x |
+| 4.6.x | 4.8.x |
+| 4.5.x | 4.8.x |
+| 4.0.x | 4.8.x |
+{: caption="Upgrade paths supported by scripts" caption-side="top"}
+
+If you are upgrading from 4.5.x to 4.8.x, a simpler way to complete the upgrade is described in the following topics:
+
+- [Upgrading {{site.data.keyword.conversationshort}} to Version 4.8.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=assistant-upgrading){: external}
+- [Upgrading {{site.data.keyword.conversationshort}} to Version 4.7.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.7.x?topic=assistant-upgrading){: external}
+- [Upgrading {{site.data.keyword.conversationshort}} to Version 4.6.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=assistant-upgrading){: external}
+
+If you are upgrading from 4.6.4 or earlier versions to the latest, you must upgrade to 4.6.5 before upgrading to the latest release.{: important}
 
 The primary data storage is a Postgres database.
 
@@ -248,7 +264,8 @@ To back up data by using the provided script, complete the following steps:
 
     Go to [GitHub](https://github.com/watson-developer-cloud/community/blob/master/watson-assistant/data/){: external}, and find the directory for your version to find the file.
 
-    
+    If the `backupPG.sh` script doesn't exist in the directory of your version, backup your data by using [KubernetesCronJob](#backup-cronjob) or [pg_dump tool](#backup-cp4d).
+    {: note}
 
 1.  Log in to the Red Hat OpenShift project namespace where you installed the product.
 

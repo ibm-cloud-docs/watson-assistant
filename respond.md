@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-12-19"
+  years: 2021, 2024
+lastupdated: "2024-01-11"
 
 subcollection: watson-assistant
 
@@ -344,6 +344,7 @@ To add a *Pause* response:
 1. In the **Assistant says** field, click the ![Pause](images/pause.svg) **Pause** icon. 
 
 1. In the **Duration** field, enter the length of time for the pause in `seconds`.
+
 
     The duration must not exceed `60 seconds`. In addition, you can enter the decimals of `second` in the **Duration** field to pause the response up to `milliseconds`. For example, if you enter `10.50 seconds`, the response pauses for `10500 milliseconds`. Customers are typically willing to wait about 8 seconds for someone to enter a response.{: note}
     

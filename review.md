@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-12-14"
+  years: 2021, 2024
+lastupdated: "2024-01-11"
 
 subcollection: watson-assistant
 
@@ -127,7 +127,7 @@ To learn more about variables, see [Managing information during the conversation
 ### Editing the variable values
 {: edit-variable-values}
 
-In the debug mode, you can edit the variable values by clicking on the value that you want to edit. For better visibility of long variable values, you can expand the width of the debug mode panel by using the **Expand** icon.
+In the debug mode, you can edit the variable values by clicking on the value that you want to edit. For better visibility of long variable values, you can resize the width of the debug mode panel by using the **Resize** tab (<). To edit large values for action variables, you can click the **Expand** button next to the variable value to open the **Editor** window. The **Editor** window contains the variable name and the value that is associated with it. You can use the **Editor** window to edit the variable value.
 
 ![Edit variable value](images/edit-debug-var-value.png){: caption="Edit variable values" caption-side="bottom"}
 

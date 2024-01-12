@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-12-19"
+  years: 2015, 2024
+lastupdated: "2024-01-11"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,19 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+
+## 12 January 2024
+{: #watson-assistant-jan122024}
+{: release-note}
+
+Segment extension
+:   The segment extension is now available for Plus plan, Enterprise plan and Enterprise with data isolation plan. For more information, see [Sending events to Segment](/docs/watson-assistant?topic=watson-assistant-segment-add).
+
+View number of actions within collections
+:   You can now view the total number of actions that are within each collection on the **Action** page.
+
+Search and analyze the conversational search requests
+:   You can now search and analyze the conversational search requests from the customer in the **Analyze** page. For more information, see [Filtering conversations](/docs/watson-assistant?topic=watson-assistant-analytics-conversations#analytics-conversations-filtering).
 
 ## 15 December 2023
 {: #watson-assistant-dec152023}

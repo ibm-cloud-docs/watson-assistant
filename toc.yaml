@@ -40,6 +40,7 @@ toc:
           - actions-templates.md
           - start-conversation.md
           - understand-questions.md
+          - boost-words.md
           - respond.md
           - collect-info.md
           - manage-info.md
@@ -186,12 +187,12 @@ toc:
           - analytics-recognition.md
           - analytics-conversations.md
           - segment-add.md
-          - topicgroup:
-              label: Using watsonx.ai for generative AI capabilities
-              topics:
-              - topic: generative-ai.md
-                navtitle: Overview
-              - conversational-search.md
+      - topicgroup:
+          label: Using watsonx.ai for generative AI capabilities
+          topics:
+          - topic: generative-ai.md
+            navtitle: Overview
+          - conversational-search.md
       - assistant-add.md
       - assistant-rename-delete.md
       - topicgroup:
@@ -305,10 +306,6 @@ toc:
           - backup-data.md
           - troubleshoot-data.md
           - cos-importer-data.md
-      - topicgroup:
-          label: Early access features
-          topics:
-          - boost-words.md
   - navgroup:
       id: reference
       topics:
