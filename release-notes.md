@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-01-11"
+lastupdated: "2024-01-12"
 
 subcollection: watson-assistant
 
@@ -36,7 +36,7 @@ Search and analyze the conversational search requests
 {: release-note}
 
 OpenAPI document file size limit for integrating custom extension 
-:   When you integrate a custom extension by using REST API, the maximum file size of the OpenAPI document that you can import is limted to `4 MB` if you have a *Plus* or *Enterprise* plan of {{site.data.keyword.conversationshort}}. However, if you have an Enteprise plan with data isolation, the maximum file size of the document is limited to `8 MB`. For more information, see [Preparing the API definition](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#build-custom-extension-openapi-file).
+:   When you integrate a custom extension by using REST API, the maximum file size of the OpenAPI document that you can import is limited to `4 MB` if you have a *Plus* or *Enterprise* plan of {{site.data.keyword.conversationshort}}. However, if you have an Enterprise plan with data isolation, the maximum file size of the document is limited to `8 MB`. For more information, see [Preparing the API definition](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#build-custom-extension-openapi-file).
 
 Edit variable values directly in debug mode
 :   You can now edit the variable value directly in the debug mode by clicking on the values. For more information, [Editing the variable values](/docs/watson-assistant?topic=watson-assistant-review#edit-variable-values)
