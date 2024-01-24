@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-01-23"
+lastupdated: "2024-01-24"
 
 keywords: conversational search
 
@@ -26,6 +26,7 @@ This beta feature is available in English for evaluation and testing purposes on
 By default, assistants in all regions except `Frankfurt` use the model from the `Dallas` region. {: important}
 
 To use conversational search, you must have a Plus or Enterprise plan and enroll in the early access program with this [signup form](https://form.asana.com/?k=U0gIIpwhM2_LY8r8LC_qDw&d=8612789739828){: external}.
+
 
 
 
