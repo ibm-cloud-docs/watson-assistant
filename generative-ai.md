@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-11-28"
+  years: 2015, 2024
+lastupdated: "2024-01-29"
 
 subcollection: watson-assistant
 
@@ -20,7 +20,6 @@ By enabling watsonx.ai, you bring the generative AI capabilities in your assista
 This beta feature is available in English for evaluation and testing purposes only. The watsonx generative AI model is currently hosted only in the Dallas and Frankfurt regions. To sign up for the beta access, use the [form here](https://form.asana.com/?k=xflsi8sU1akW_LI3ZXdStA&d=8612789739828).{: beta}
 
 By default, assistants in all regions except `Frankfurt` use the model from the `Dallas` region. {: important}
-
 You can configure and manage the following two capabilities of generative AI in your assistants:
 
 - [Information gathering](#information-gathering)
@@ -52,7 +51,8 @@ When you enable intelligent information gathering, settings for existing free te
 ## Conversational search
 {: #conversational-search}
 
-Use *conversational search* with the {{site.data.keyword.discoveryfull}} or Elasticsearch search integration setup to help your assistant extract an answer from the highest-ranked query results and return a text response to the user.
+Use *conversational search* with the {{site.data.keyword.discoveryfull}} or Elasticsearch search integration to help your assistant extract an answer from the highest-ranked query results and return a text response to the user.
 {: shortdesc}
 
 When you enable this feature, search results are provided to an IBM watsonx generative AI model that produces a conversational reply to a user's question. For more information, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search).
+
