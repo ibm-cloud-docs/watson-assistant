@@ -51,7 +51,7 @@ When you enable intelligent information gathering, settings for existing free te
 ## Conversational search
 {: #conversational-search}
 
-Use *conversational search* with the {{site.data.keyword.discoveryfull}} or Elasticsearch search integration to help your assistant extract an answer from the highest-ranked query results and return a text response to the user.
+Use *conversational search* with the {{site.data.keyword.discoveryfull}} search integration or Elasticsearch search integration to help your assistant extract an answer from the highest-ranked query results and return a text response to the user.
 {: shortdesc}
 
 When you enable this feature, search results are provided to an IBM watsonx generative AI model that produces a conversational reply to a user's question. For more information, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search).
