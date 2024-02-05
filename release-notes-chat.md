@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-01-29"
+lastupdated: "2024-02-05"
 
 subcollection: watson-assistant
 
@@ -25,6 +25,14 @@ For information about new features and improvements to the core {{site.data.keyw
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
 
+## 7.10.0
+{: #7.10.0}
+
+*Release date: 31 January 2024*
+
+- **Show timestamps on messages**: You can now display timestamps on top of messages in the web chat with the `enableMessageTimestamps` configuration option. For more information, see [web chat configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#configuration-object){: external}.
+- **New response types**: You now have the option in web chat to render the new card, grid, carousel and button response types. For more information, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference).
+
 ## 7.9.0
 {: #7.9.0}
 
@@ -32,7 +40,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 - **Enhanced sources view for conversational search**: In the conversational search feature of web chat, you can now access _sources_ of the highlighted response texts in a collapsible carousel. In addition, you can select and find the source for each highlighted text in a response by clicking on it. For more information, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search).
 - **Added error handling to the built-in PDF viewer**: If any error occurs while opening a PDF document in its viewer, the web chat now automatically opens the document in a new tab of the web browser by using the native PDF viewer. This acts as a workaround for the issues such as unsupported CORS (Cross-origin resource sharing). However, in some browsers, the web chat generates a `popup-blocked` error while opening the document.
-- **Added an option to disable the built-in PDF viewer**:  You can now disable the PDF viewer in web chat by configuring `disablePDFViewer`. When the PDF viewer is `disabled`, the documents open in a new tab by using the native PDF viewer in the web browser. For more information, see [web chat configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#onerrordetail){: external}.
+- **Added an option to disable the built-in PDF viewer**:  You can now disable the PDF viewer in web chat by configuring `disablePDFViewer`. When the PDF viewer is `disabled`, the documents open in a new tab by using the native PDF viewer in the web browser. For more information, see [web chat configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#configuration-object){: external}.
 - **New property in web chat state object**: In the object returned from the [getState()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#getState){: external} instance method, the new `userID` property contains the current ID of the web chat. For example, by using this feature, you can get information about the anonymous user ID that web chat assigns to a user by default if no user ID is created.
 
 ## 7.8.0
