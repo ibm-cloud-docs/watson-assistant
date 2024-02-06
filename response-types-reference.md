@@ -569,7 +569,7 @@ For technical details about using `Content-Security-Policy: frame-src` to allow 
 ### Example
 {: #response-types-json-iframe-example}
 
-This example embeds an iframe with a title and description.
+The following example embeds an iframe with a title and description.
 
 ```json
 {
