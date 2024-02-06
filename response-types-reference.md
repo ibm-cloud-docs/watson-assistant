@@ -464,7 +464,7 @@ Gives you the flexibility to create the layout you need to present content that 
 
 | Name                                        | Type   | Description                        | Required? |
 |---------------------------------------------|--------|------------------------------------|-----------|
-| response_type                               | string | `grid`                           | Y         |
+| response_type                               | string | `grid`                             |     Y     |
 | horizontal_alignment                        | string | The horizontal alignment for all items in the grid (`left`, `center`, or `right`). | N |
 | vertical_alignment                          | string | The vertical alignment for all items in the grid (`top`, `center`,  or `bottom`). | N |
 | columns[]                                   | list   | The list of columns. A maximum of 5 columns are allowed in the list. Each column has 8px of space between them. | N |
@@ -472,6 +472,8 @@ Gives you the flexibility to create the layout you need to present content that 
 | rows[]                                      | list   | The list rows. A maximum of 5 rows are allowed in the list. Each row has 8px of space between them. | Y |
 | rows[].cells[]                              | list   | The list of cells in a row. A cell corresponds to a column (e.g. cell 1 to column 1, cell 2 to column 2, etc.). A cell’s width is determined by the column it’s in. | Y |
 | rows[].cells[].items[]                      | list   | A list of response types to create rich content. Each item has 8px of space between them. The response types above one another. A maximum of 5 response types are allowed in the list. <p>Supported response types: `text`, `image`, `vdeo`, `audio`, `iframe`, `grid`, and `user_defined`.</p> You can only nest a grid within itself one level deep. A grid in a cell can not contain a grid response type.{: note} | Y |
+| rows[].cells[].horizontal_alignment         | string | The horizontal alignment for items in the cell (`left`, `center`, or `right`). <p>The default value is `left`.</p> | N |
+| rows[].cells[].vertical_alignment           | string | The vertical alignment for items in the cell (`top`, `center`,  or `bottom`). <p>The default values is `top`.</p> | N |
 
 
 
