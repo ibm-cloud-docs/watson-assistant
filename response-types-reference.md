@@ -447,6 +447,33 @@ This example uses the `end_session` response type to end a conversation.
 ```
 {: codeblock}
 
+## `grid`
+{: #response-types-json-grid}
+
+Gives you the flexibility to create the layout you need to present content that conveys the type of information you want users to consume.
+
+### Integration channel support
+{: #response-types-json-grid-integrations}
+
+| Web chat                          | Facebook                          |
+|-----------------------------------|-----------------------------------|
+| ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
+
+### Fields
+{: #response-types-json-grid-fields}
+
+| Name                                        | Type   | Description                        | Required? |
+|---------------------------------------------|--------|------------------------------------|-----------|
+| response_type                               | string | `grid`                           | Y         |
+| horizontal_alignment                        | string | The horizontal alignment for all items in the grid (`left`, `center`, or `right`). | N |
+| vertical_alignment                          | string | The vertical alignment for all items in the grid (`top`, `center`,  or `bottom`). | N |
+| 
+
+The default values is `top`.
+
+The default value is `left`.
+
+
 ## `iframe`
 {: #response-types-json-iframe}
 
