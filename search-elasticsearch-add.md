@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-12-08"
+  years: 2021, 2024
+lastupdated: "2024-01-19"
 
 subcollection: watson-assistant
 
@@ -119,7 +119,6 @@ Search results are pulled from your knowledge base when conversational search is
    ![ConversationalSearchAnswer](images/elasticsearch-answer.png)
 
 A text-based reply from the best results in your knowledge base displays when conversational search is `on`. 
-
 
    ![ConversationalSearchQuestion](images/elasticsearch-question.png)
 
