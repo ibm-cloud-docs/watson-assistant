@@ -123,6 +123,7 @@ The following example shows the basic structure for building a `card` response t
     ]
     }
 ```
+{: codeblock}
 
 ## `carousel`
 {: #response-types-json-carousel}
@@ -181,6 +182,7 @@ A `carousel` to present cards with rich content. If there is only one card in th
      ]
     }
 ```
+{: codeblock}
 
 ## `channel_transfer`
 {: #response-types-json-channel-transfer}
@@ -532,6 +534,7 @@ Gives you the flexibility to create the layout you need to present content that 
   ]
 }
 ```
+{: codeblock}
 
 ## `iframe`
 {: #response-types-json-iframe}
