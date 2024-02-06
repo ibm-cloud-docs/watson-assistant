@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-27"
+  years: 2015, 2024
+lastupdated: "2024-02-06"
 
 subcollection: watson-assistant
 
@@ -79,6 +79,108 @@ This example plays an audio clip with a title and descriptive text.
 }
 ```
 {: codeblock}
+
+## `card`
+{: #response-types-json-card}
+
+Visual content to improve the information experience of users by using `card`.
+
+### Integration channel support
+{: #response-types-card-integrations}
+
+| Phone                              | SMS                               | Slack                             | Facebook                          | WhatsApp                          |
+|------------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
+| ![Yes](images/checkmark-icon.svg)  | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
+
+### Fields
+{: #response-types-json-card-fields}
+
+| Name          | Type   | Description        | Required? |
+|---------------|--------|--------------------|-----------|
+| response_type | string | `card` | Y         |
+| body [] | list | A list of response types to create rich content. A maximum of 10 response types are allowed in the list. <p> Supported response types: `text`, `image`, `video`, `audio`, `iframe`, `grid`, and `user_defined`.</p> | Y |
+| footer [] | list | A list of only `button` response types. A maximum of 5 buttons are allowed in the list. | N |
+
+A `card` can be rendered in a panel, but it is not allowed to have buttons.
+
+### Example
+{: #response-types-json-card-example}
+
+The following example shows the basic structure for building a `card` response type:
+
+```json
+    {
+  "response_type": "card",
+  "body": [
+    {
+      "response_type": "text",
+      "text": "# Heading"
+    },
+    {
+      "response_type": "text",
+      "text": "body"
+    }
+    ]
+    }
+```
+
+## `carousel`
+{: #response-types-json-carousel}
+
+A `carousel` to present cards with rich content. If there is only one card in the carousel, the web chat integration will just render the card instead of the card in a carousel.
+
+### Integration channel support
+{: #response-types-json-carousel-integrations}
+
+| Phone                              | SMS                               | Slack                             | Facebook                          | WhatsApp                          |
+|------------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
+| ![Yes](images/checkmark-icon.svg)  | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
+ 
+
+### Fields
+{: #response-types-json-carousel-fields}
+
+| Name          | Type   | Description        | Required? |
+|---------------|--------|--------------------|-----------|
+| response_type | string | `carousel` | Y         |
+| items [] | list | A list of `card` response types. A maximum of 5 cards are allowed in the list. | Y |
+
+### Example
+{: #response-types-json-carousel-example}
+
+```json
+   {
+  "response_type": "carousel",
+  "items": [
+    {
+      "response_type": "card",
+      "body": [
+        {
+          "response_type": "text",
+          "text": "# Heading"
+        },
+        {
+          "response_type": "text",
+          "text": "body"
+        }
+      ]
+    },
+    {
+      "response_type": "card",
+      "body": [
+        {
+          "response_type": "text",
+          "text": "# Heading"
+        },
+        {
+          "response_type": "text",
+          "text": "body"
+        }
+        ]
+      }
+     ]
+    }
+```
 
 ## `channel_transfer`
 {: #response-types-json-channel-transfer}
