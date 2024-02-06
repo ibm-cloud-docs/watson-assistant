@@ -80,6 +80,43 @@ This example plays an audio clip with a title and descriptive text.
 ```
 {: codeblock}
 
+## Button
+{: #response-types-json-button}
+
+Show buttons that provide users with unique interactions that help them complete tasks.
+
+### Integration channel support
+{: #response-types-button-integrations}
+
+| Phone                              | SMS                               | Slack                             | Facebook                          | WhatsApp                          |
+|------------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
+| ![Yes](images/checkmark-icon.svg)  | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
+
+### Fields
+{: #response-types-json-button-fields}
+
+| Name          | Type   | Description        | Required? |
+|---------------|--------|--------------------|-----------|
+| response_type | string | `button` | Y         |
+| label | string | The button label | Y         |
+| button_type | string | The type of button to render. For example, `post_back`, `custom_event`, `show_panel`, and `url`. | Y |
+| kind | string | The kind of button to display. For example, `primary`, `secondary`, `tertiary`, `danger`, and `link`. <p>The default value is `primary`.</p> | N |
+| image_url | string | The url of an image to render as a button | N |
+| alt_text | string | The alternate text to label the image for the accessibility purposes. | N |
+
+#### `post_back` button type
+
+| Name          | Type   | Description        | Required? |
+|---------------|--------|--------------------|-----------|
+| value | object | An object that defines the response that is sent to the watsonx Assistant service if the user selects the option. <p>If `value.input.text` is not defined, then the value for `label` should be used a fallback.{: note}</p> | N |
+
+#### `custom_event` button type
+
+
+
+
+
+
 ## `card`
 {: #response-types-json-card}
 
