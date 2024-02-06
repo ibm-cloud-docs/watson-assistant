@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-02-05"
+lastupdated: "2024-02-06"
 
 keywords: conversational search
 
@@ -56,8 +56,8 @@ You can enable **Conversational search** in the `Search Integration` window, by 
 You can test Conversational search in actions preview, the preview page, or by using the preview link.
 
 In this example, the user asks, `Tell me about a custom extension`.
-Search results are pulled from your knowledge base when conversational search is `off`. In this case, the answer is returned as a list of cards that are relevant to custom extensions.
-  
+Search results are pulled from your knowledge base when the conversational search is `Off`. In this case,the answer is returned as a list of cards that are relevant to custom extensions.
+
    ![ConversationalSearchAnswer](images/elasticsearch-answer.png)
 
 When Conversational search is `On`, the same search results are pulled from your knowledge base. This time these results are passed to an IBM watsonx generative AI model. This model produces a conversational reply to the user's question, in the form of a text response about custom extensions.
