@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-02-06"
+lastupdated: "2024-02-07"
 
 subcollection: watson-assistant
 
@@ -80,10 +80,10 @@ This example plays an audio clip with a title and descriptive text.
 ```
 {: codeblock}
 
-## Button
+## `button`
 {: #response-types-json-button}
 
-Show buttons that provide users with unique interactions that help them complete tasks.
+Show interactive buttons for users to complete their tasks.
 
 ### Integration channel support
 {: #response-types-button-integrations}
@@ -100,17 +100,33 @@ Show buttons that provide users with unique interactions that help them complete
 | response_type | string | `button` | Y         |
 | label | string | The button label | Y         |
 | button_type | string | The type of button to render. For example, `post_back`, `custom_event`, `show_panel`, and `url`. | Y |
-| kind | string | The kind of button to display. For example, `primary`, `secondary`, `tertiary`, `danger`, and `link`. <p>The default value is `primary`.</p> | N |
-| image_url | string | The url of an image to render as a button | N |
+| kind | string | The kind of button to show. For example, `primary`, `secondary`, `tertiary`, `danger`, and `link`. <p>The default value is `primary`.</p> | N |
+| image_url | string | The url of an image to render as a button. | N |
 | alt_text | string | The alternate text to label the image for the accessibility purposes. | N |
 
 #### `post_back` button type
 
 | Name          | Type   | Description        | Required? |
 |---------------|--------|--------------------|-----------|
-| value | object | An object that defines the response that is sent to the watsonx Assistant service if the user selects the option. <p>If `value.input.text` is not defined, then the value for `label` should be used a fallback.{: note}</p> | N |
+| value | object | An object that defines the response that the {{site.data.keyword.conversationshort}} service receives when the user selects an option. <p>If `value.input.text` is not defined, then the value of `label` appears.{: note}</p> | N |
 
 #### `custom_event` button type
+
+| Name          | Type   | Description        | Required? |
+|---------------|--------|--------------------|-----------|
+| custom_event_name | string | The name of the custom event fired when the button is clicked. <p>In web chat, the [messageItemCustom](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#messageItemCustom){: external} event is fired when the custom_event button is clicked.</p> | Y |
+| user_defined | object | The data to pass as part of the custom event. <p>In web chat, the [messageItemCustom](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#messageItemCustom){: external} event is fired when the custom_event button is clicked.</p> | N |
+
+#### `show_panel` button type
+
+| Name          | Type   | Description        | Required? |
+|---------------|--------|--------------------|-----------|
+| panel | string | An object that defines the content of the panel that will open when the button is clicked. | Y |
+| panel.title | string | The title of the panel. | N |
+| panel.show_header | boolean | The object to hide or unhide the panel header. The default value is `true` | Y |
+| panel.show_animations | boolean | The object to enable or disable the animations for the panel opening and closing. The default value is `true` | Y |
+| panel.body[] | list | A list of response types to create rich visual content. A maximum of 10 response types are allowed in the list. <p>Supported response types: `text`, `image`, `video`, `audio`, `iframe`, `grid`, `card` and `user_defined`.</p> <p>A card response type in a panel does not support buttons.{: note}</p> | Y |
+| panel.footer[] | list | A list of `button` response types. Maximum 5 buttons are allowed in the list.<p>The button type `post_back` is not supported in this list.{: note}</p> | N |
 
 
 
