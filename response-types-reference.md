@@ -104,13 +104,36 @@ Show interactive buttons for users to complete their tasks.
 | image_url | string | The url of an image to render as a button. | N |
 | alt_text | string | The alternate text to label the image for the accessibility purposes. | N |
 
-#### `post_back` button type
+### `post_back` button type
+
+This button sends a response to the assistant when it’s clicked. Both the `value` and `label` properties can be used set the response to send.
+
+#### Fields
 
 | Name          | Type   | Description        | Required? |
 |---------------|--------|--------------------|-----------|
 | value | object | An object that defines the response that the {{site.data.keyword.conversationshort}} service receives when the user selects an option. <p>If `value.input.text` is not defined, then the value of `label` appears.{: note}</p> | N |
 
-#### `custom_event` button type
+#### Example
+
+The following example shows the JSON configuration for a button to send an authored text input to the assistant when the user clicks the button.
+
+```json
+{
+  "response_type": "button",
+  "button_type": "post_back",
+  "label": "Send message",
+  "value": {
+    "input": {
+      "text": "[Message to send]"
+    }
+  }
+}
+```
+
+### `custom_event` button type
+
+
 
 | Name          | Type   | Description        | Required? |
 |---------------|--------|--------------------|-----------|
@@ -127,6 +150,14 @@ Show interactive buttons for users to complete their tasks.
 | panel.show_animations | boolean | The object to enable or disable the animations for the panel opening and closing. The default value is `true` | Y |
 | panel.body[] | list | A list of response types to create rich visual content. A maximum of 10 response types are allowed in the list. <p>Supported response types: `text`, `image`, `video`, `audio`, `iframe`, `grid`, `card` and `user_defined`.</p> <p>A card response type in a panel does not support buttons.{: note}</p> | Y |
 | panel.footer[] | list | A list of `button` response types. Maximum 5 buttons are allowed in the list.<p>The button type `post_back` is not supported in this list.{: note}</p> | N |
+
+#### `url` button type
+
+| Name          | Type   | Description        | Required? |
+|---------------|--------|--------------------|-----------|
+| url | string | The destination url of the button. | Y |
+| target | string | The location to open the url in the browser. For example, `_blank` or  `_self`. `_blank` opens the url in a new tab. `_self` opens the url in the same tab. <p>The default value is `_blank`.</p> | N |
+
 
 
 
