@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-12-08"
+  years: 2015, 2024
+lastupdated: "2024-02-08"
 
 subcollection: watson-assistant
 
@@ -29,6 +29,7 @@ The following table shows the latest version of the web chat integration that is
 
 | {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}} version | Latest web chat version available |
 |----------------|----------------|
+| 4.8.2 | [7.8.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.8.0) |
 | 4.8.0 | [7.7.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.7.0) |
 | 4.7.4 | [7.6.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.5.0) |
 | 4.7.2 | [7.5.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.5.0) |
@@ -43,6 +44,33 @@ The following table shows the latest version of the web chat integration that is
 | 4.5.0 | [6.4.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#6.4.1) |
 | 4.0.8 | [6.2.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#6.2.0) |
 {: caption="Web chat versions in {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}}" caption-side="top"}
+
+## 31 January 2024
+{: #assistant-data-jan312024}
+{: release-note}
+
+Mask confidential customer information
+:  You can now mask confidential customer information in an action by marking variables as private. For more information, see the following topics:
+[Using variables to manage conversation information](/docs/watson-assistant?topic=watson-assistant-manage-info)
+[Protecting the privacy of the customer information](/docs/watson-assistant?topic=watson-assistant-collect-info#protect-privacy-customer-information)
+
+Activity log
+:  You can use the activity log to track changes and modification that you made to an assistant. For more information, see [Activity log](/docs/watson-assistant?topic=watson-assistant-activity-log).
+
+Message logs for a dialog without action
+:  You can now use the Message logs tab on the Analyze page to see a log of all messages that are sent between the user and the assistant by turns. This feature is available for all messages, including the messages that are sent when dialog is activated. For more information, see [Review customer conversations](/docs/watson-assistant?topic=watson-assistant-analytics-conversations).
+
+More control over pause responses
+:  Use a pause response to have your assistant wait for a specified interval before the next response. Previously, pauses were 1 to 10 seconds in length. You can now pause a response for 0 to 60 seconds. You can also specify milliseconds by specifying a decimal. For more information, see [Pause response](/docs/watson-assistant?topic=watson-assistant-respond#respond-pause-response).
+
+Visualize an action
+:  After you create an action, you can optionally switch from the step edit view to a visualization that displays a canvas with a flowchart of the action. The visualization is available as a beta. For more information, see [Visualizing the flow of the action](/docs/watson-assistant?topic=watson-assistant-build-actions-overview#visualizing-the-flow-of-the-action-beta).
+
+Invalid date entry not accepted
+:  Starting from this release, the assistant does not recognize invalid date entries such as Feb 31, 31/11/2022, and Feb 29 2023. In addition, the assistant does not automatically parse the invalid dates to the first day of the month. For more information, see [@sys-date](/docs/assistant?topic=assistant-system-entities#system-entities-sys-date).
+
+OpenAPI document file size limit for integrating custom extension
+:  When you integrate a custom extension by using REST API, the maximum file size of the OpenAPI document that you can import is limited to 4 MB. For more information, see [Preparing the API definition](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#build-custom-extension-openapi-file).
 
 ## 29 November 2023
 {: #assistant-data-nov292023}
