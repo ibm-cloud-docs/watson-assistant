@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-27"
+  years: 2015, 2024
+lastupdated: "2024-02-07"
 
 subcollection: watson-assistant
 
@@ -79,6 +79,8 @@ This example plays an audio clip with a title and descriptive text.
 }
 ```
 {: codeblock}
+
+
 
 ## `channel_transfer`
 {: #response-types-json-channel-transfer}
@@ -345,6 +347,8 @@ This example uses the `end_session` response type to end a conversation.
 ```
 {: codeblock}
 
+
+
 ## `iframe`
 {: #response-types-json-iframe}
 
@@ -381,7 +385,7 @@ For technical details about using `Content-Security-Policy: frame-src` to allow 
 ### Example
 {: #response-types-json-iframe-example}
 
-This example embeds an iframe with a title and description.
+The following example embeds an iframe with a title and description.
 
 ```json
 {

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-27"
+  years: 2015, 2024
+lastupdated: "2024-02-08"
 
 subcollection: watson-assistant
 
@@ -157,86 +157,8 @@ If the `channels` array is present, it must contain at least one channel object.
 ## Response types
 {: #assistant-responses-json-response-types}
 
-The following response types are available. For more information, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference).
-
-Not all channel integrations support all response types. For more information, see [Channel integration support for response types](#assistant-responses-json-integration-support).
-{: note}
-
-`audio`
-:   Plays an audio clip that is specified by a URL.
-
-`channel_transfer`
-:   Requests that the conversation is transferred to a different integration. (Currently, only the web chat integration can be the target of a channel transfer.)
-
-`connect_to_agent`
-:   Requests that the conversation is transferred to a contact center with live agents for help.
-
-`date`
-:   Requests that the channel collects a date value from the customer (for example, by displaying an interactive calendar).
-
-`dtmf`
-:   Sends commands to the phone integration to control input or output by using dual-tone multi-frequency (DTMF) signals. DTMF is a protocol that transmits tones from a user that presses keys on a push-button phone.)
-
-`end_session`
-:   Sends a command to the channel to end the session. This response type instructs the phone integration to hang up the call.
-
-`iframe`
-:   Embeds content from an external website as an HTML `iframe` element.
-
-`image`
-:   Displays an image that is specified by a URL.
-
-`option`
-:   Presents a set of options (such as buttons or a drop-down list) that users can choose from. The selected value is then sent to the assistant as user input.
-
-`pause`
-:   Pauses before sending the next message to the channel, and optionally sends a "user is typing" event for channels that support it.
+You can configure different types of responses using JSON. To learn more about response types and supported integrations for JSON response types, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference).
 
 
 
-`speech_to_text`
-:   Sends a command to the {{site.data.keyword.speechtotextshort}} service instance used by the phone integration. These commands can dynamically change the configuration or behavior of the service during a conversation.
 
-`start_activities`
-:   Sends a command to a channel integration to start one or more activities that are specific to that channel. You can use this response type to restart any activity you previously stopped by using the `stop_activities` response type.
-
-`stop_activities`
-:   Sends a command to a channel integration to stop one or more activities that are specific to that channel. The activities remain stopped until they are restarted by using the `start_activities` response type.
-
-`text`
-:   Displays text (or reads it aloud, for the phone integration). To add variety, you can specify multiple alternative text responses. If you specify multiple responses, you can choose to rotate sequentially through the list, choose a response randomly, or output all specified responses.
-
-`text_to_speech`
-:   Sends a command to the {{site.data.keyword.texttospeechshort}} service instance used by the phone integration. These commands can dynamically change the configuration or behavior of the service during a conversation.
-
-`user_defined`
-:   A custom response type with any JSON data the client or integration knows how to handle.
-
-`video`
-:   Displays a video that is specified by a URL.
-
-## Channel integration support for response types
-{: #assistant-responses-json-integration-support}
-
-The following table indicates which channel integrations support each type. For more information about channel-specific limitations, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference).
-
-| Response type | Web chat | Phone | SMS | Slack | Facebook | WhatsApp | MS Teams |
-|------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
-| audio | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |                                   |  
-| channel_transfer |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |                                   |  
-| connect_to_agent | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   | ![Yes](images/checkmark-icon.svg) |                                   |  
-| date | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |                                   |                                   |  
-| dtmf |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |                                   |  
-| end_session |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |                                   |  
-| iframe | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |  
-| image | ![Yes](images/checkmark-icon.svg) |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |![Yes](images/checkmark-icon.svg) |
-| option | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |![Yes](images/checkmark-icon.svg) |
-| pause | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |                                   | 
-| speech_to_text |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |                                   | 
-| start_activities |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |                                   | 
-| stop_activities |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |                                   | 
-| text | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |
-| text_to_speech |                                   | ![Yes](images/checkmark-icon.svg) |                                   |                                   |                                   |                                   |                                   | 
-| user_defined | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |                                   | 
-| video | ![Yes](images/checkmark-icon.svg) |                                   | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) | ![Yes](images/checkmark-icon.svg) |                                   | 
-{: caption="Channel integration support" caption-side="bottom"}
