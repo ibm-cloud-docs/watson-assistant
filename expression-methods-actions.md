@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-27"
+  years: 2015, 2024
+lastupdated: "2024-02-09"
 
 subcollection: watson-assistant
 
@@ -990,7 +990,9 @@ For example:
 ### `Array.transform()`
 {: #expression-methods-actions-arrays-transform}
 
-This method is used with the [`session_history` variable](/docs/watson-assistant?topic=watson-assistant-manage-info#built-in-variables) only. You can transform the output of the variable to match a specific generative AI system. 
+The `Array.transform()` method is used with the [`session_history` variable](/docs/watson-assistant?topic=watson-assistant-manage-info#built-in-variables) only. You can transform the output of the variable to match a specific generative AI system. 
+
+
 
 The signature is `transform(String rolePrefix, String userPrefix, String assistantPrefix, optional Boolean currentAction=false)`. Customer messages are in the form `{$rolePrefix: $userPrefix, "content": $content}`. Assistant messages are in the form `{$rolePrefix: $assistantPrefix, "content": $content}`.
 
