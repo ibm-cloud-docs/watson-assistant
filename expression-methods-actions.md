@@ -995,7 +995,7 @@ The `Array.transform()` method is used with the [`session_history` variable](/do
 
 
 
-<p>If `currentAction` is true:</p>
+If `currentAction` is true:
 
 | Assistant uses | Description |
 | --- | --- |
