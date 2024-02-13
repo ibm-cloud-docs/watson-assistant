@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-02-09"
+lastupdated: "2024-02-13"
 
 subcollection: watson-assistant
 
@@ -994,9 +994,8 @@ The `Array.transform()` method is used with the [`session_history` variable](/do
 
 
 
-The signature is `transform(String rolePrefix, String userPrefix, String assistantPrefix, optional Boolean currentAction=false)`. Customer messages are in the form `{$rolePrefix: $userPrefix, "content": $content}`. Assistant messages are in the form `{$rolePrefix: $assistantPrefix, "content": $content}`.
 
-If `currentAction` is true:
+<p>If `currentAction` is true:</p>
 
 | Assistant uses | Description |
 | --- | --- |
@@ -1006,15 +1005,3 @@ If `currentAction` is true:
 {: caption="If currentAction is true" caption-side="bottom"}
 
 The `n : true` flags are not included in the output of transform.
-
-This example produces OpenAI chat format:
-
-```text
-${system_session_history}.transform("role", "user", "assistant")
-```
-
-This example produces Google PaLM2 chat format:
-
-```text
-${system_session_history}.transform("author", "USER", "AI")
-```
