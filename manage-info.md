@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-11-17"
+  years: 2018, 2024
+lastupdated: "2024-02-13"
 
 subcollection: watson-assistant
 
@@ -48,7 +48,7 @@ The data that is stored by a variable is characterized by the type of data that 
 
     You can create a session variable to store the value from an action variable, if you want to keep the value available for other actions to use. You can also define a session variable based on another session variable, or by using a value defined in an expression. In addition to variables you create, {{site.data.keyword.conversationshort}} provides a set of built-in session variables for global values like the current time and date. 
     
-    To hide the confidential customer information in the conversation logs, you can select the **Protect data stored in this variable** checkbox when you create or edit a session variable.{: tip)
+    To hide the confidential customer information in the conversation logs, you can select the **Protect data stored in this variable** checkbox when you create or edit a session variable.{: tip}
 
     Session variables can help you to modularize your assistant because you can write a single action that collects information that is needed in multiple places. For example, you might have a greeting action that collects basic information about the customer and stores the responses in session variables, which any action can then access.
 
