@@ -57,6 +57,7 @@ toc:
              - search-extension-coveo.md
              - search-extension-google-custom.md
              - search-extension-neuralseek.md
+             - search-integration-enhancement.md
           - topicgroup:
              label: Managing and organizing your actions
              topics:
