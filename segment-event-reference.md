@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-02-09"
+lastupdated: "2024-02-14"
 
 subcollection: watson-assistant
 
@@ -49,6 +49,7 @@ The following properties are included only for messages that were handled by an 
 | `actionsVisited`        | String[] | An array of strings listing the actions visited during handling of the message. |
 | `fallbackReason`        | String   | The reason why the fallback action was visited (for example, escalated to human agent or no action matches). |
 | `handler`               | String   | The name of any handler that was called. |
+| `stepsVisited`          | Object[] | An object with two properties, `stepId` and `stepTitle`, which lists the steps that the user visited during handling of the message. |
 | `subaction`             | String   | The name of any other action that was called by the action that was triggered by the message. |
 
 The following properties are included only for messages that were handled by a dialog skill:
@@ -83,6 +84,7 @@ Sent when processing of an action begins.
 | `serviceInstance`       | String   | The IBM {{site.data.keyword.conversationshort}} service instance. |
 | `sessionId`             | String   | The ID of the session during which the message that started the action was sent. |
 | `skillsInvoked`         | String[] | An array of strings listing all skills that were invoked during handling of the message that started the action (for example, `main skill` or `actions skill`). |
+| `stepsVisited`          | Object[] | An object with two properties, `stepId` and `stepTitle`, which lists the steps that the user visited during handling of the message. |
 | `subaction`             | String   | The name of any other action that the action called during processing. |
 
 ## Action Completed
@@ -109,6 +111,7 @@ Sent when processing of an action ends.
 | `serviceInstance`       | String   | The IBM {{site.data.keyword.conversationshort}} service instance. |
 | `sessionId`             | String   | The ID of the session during which the message that started the action was sent. |
 | `skillsInvoked`         | String[] | An array of strings listing all skills that were invoked during handling of the message that started the action (for example, `main skill` or `actions skill`). |
+| `stepsVisited`          | Object[] | An object with two properties, `stepId` and `stepTitle`, which lists the steps that the user visited during handling of the message. |
 | `subaction`             | String   | The name of any other action that the action called during processing. |
 
 ## Session Started
