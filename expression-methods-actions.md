@@ -993,7 +993,7 @@ For example:
 The `Array.transform()` method is used with the [`session_history` variable](/docs/watson-assistant?topic=watson-assistant-manage-info#built-in-variables) only. You can transform the output of the variable to match a specific generative AI system. 
 
 
-The signature is `transform(String rolePrefix, String userPrefix, String assistantPrefix, optional Boolean currentAction=false)`. Customer messages are in the form `{$rolePrefix: $userPrefix, "content": $content}`. Assistant messages are in the form `{$rolePrefix: $assistantPrefix, "content": $content}`.
+
 
 If `currentAction` is true:
 
@@ -1006,16 +1006,4 @@ If `currentAction` is true:
 
 The `n : true` flags are not included in the output of transform.
 
-This example produces OpenAI chat format:
 
-```text
-${system_session_history}.transform("role", "user", "assistant")
-```
-{: codeblock}
-
-This example produces Google PaLM2 chat format:
-
-```text
-${system_session_history}.transform("author", "USER", "AI")
-```
-{: codeblock}
