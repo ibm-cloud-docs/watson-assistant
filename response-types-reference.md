@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-02-07"
+lastupdated: "2024-02-16"
 
 subcollection: watson-assistant
 
@@ -80,7 +80,259 @@ This example plays an audio clip with a title and descriptive text.
 ```
 {: codeblock}
 
+## `button`
+{: #response-types-json-button}
 
+Show interactive buttons that help the users to complete their tasks.
+
+### Integration channel support
+{: #response-types-button-integrations}
+
+| WebChat | 
+|-----------|
+| ![Yes](images/checkmark-icon.svg)  |
+
+### Fields
+{: #response-types-json-button-fields}
+
+| Name          | Type   | Description        | Required? |
+|---------------|--------|--------------------|-----------|
+| response_type | string | `button` | Y         |
+| label | string | The button label | Y         |
+| button_type | string | The type of button. For example, `post_back`, `custom_event`, `show_panel`, and `url`. | Y |
+| kind | string | The kind of button. For example, `primary`, `secondary`, `tertiary`, `danger`, and `link`. <p>The default value is `primary`.</p> | N |
+| image_url | string | The url of an image to render as a button. | N |
+| alt_text | string | The alternate text to label the image for the accessibility purposes. | N |
+
+### `post_back` button type
+
+The `post_back` button sends a response to the assistant when the user clicks the button. You can use both the `value` and `label` properties to set up the response to send.
+
+#### Fields
+
+| Name          | Type   | Description        | Required? |
+|---------------|--------|--------------------|-----------|
+| value | object | Defines the response that WebChat sends to the {{site.data.keyword.conversationshort}} service when the user selects an option. <p>**Note:** If you do not define `value.input.text`, then the WebChat sends the value of `label` to the assistant.</p> | N |
+
+#### Example
+
+The following example shows the JSON configuration for a button to send an authored text input to the assistant when the user clicks the button.
+
+```json
+{
+  "response_type": "button",
+  "button_type": "post_back",
+  "label": "Send message",
+  "value": {
+    "input": {
+      "text": "[Message to send]"
+    }
+  }
+}
+```
+{: codeblock}
+
+### `custom_event` button type
+
+When the user clicks the `custom_event` button, a custom event, which you configured along with the user-defined data, is triggered. You must create the event to achieve the desired behavior by using custom codes. In web chat, you can use the `messageItemCustom` event to apply the desired behavior when the user clicks the button.
+
+#### Fields
+
+| Name          | Type   | Description        | Required? |
+|---------------|--------|--------------------|-----------|
+| custom_event_name | string | The name of the custom event that is triggered when the user clicks the button. <p>In web chat, the [messageItemCustom](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#messageItemCustom){: external} event is triggered when the user clicks the `custom_event` button.</p> | Y |
+| user_defined | object | The user-defined data attached to the custom event. | N |
+
+#### Example
+
+In the following example, you use the JSON script to trigger an alert when the button is clicked.
+
+```json
+{
+  "response_type": "button",
+  "button_type": "custom_event",
+  "label": "Alert",
+  "kind": "danger",
+  "custom_event_name": "trigger_alert",
+  "user_defined": {
+    "message": "[Alert message]"
+  }
+}
+```
+{: codeblock}
+
+### `show_panel` button type
+
+When a user clicks the `show_panel` button, the assistant opens a panel that the users can use to get additional information or complete a task.
+
+#### Fields
+
+| Name          | Type   | Description        | Required? |
+|---------------|--------|--------------------|-----------|
+| panel | string | An object that defines the content of the panel. | Y |
+| panel.title | string | The title of the panel. | N |
+| panel.show_animations | boolean | The object to enable or disable the animations in the panel when the user opens or closes it. The default value is `true` | Y |
+| panel.body[] | list | A list of response types to create rich visual content. Maximum 10 response types are allowed in the list. <p>Supported response types: `text`, `image`, `video`, `audio`, `iframe`, `grid`, `card` and `user_defined`.</p> <p>**Note:** A card response type in a panel does not support buttons.</p> | Y |
+| panel.footer[] | list | A list of `button` response types. Maximum 5 buttons are allowed in the list.<p>**Note:** The button type `show_panel` is not supported in this list.</p> | N |
+
+#### Example
+
+In the following example, you use JSON script to create a button that opens a panel for product details:
+
+```json
+{
+  "response_type": "button",
+  "button_type": "show_panel",
+  "label": "See details",
+  "kind": "secondary",
+  "panel": {
+    "title": "[Product name]",
+    "show_animations": true,
+    "body": [
+      {
+        "response_type": "image",
+        "source": "https://example.com/image.jpg"
+      },
+      {
+        "response_type": "text",
+        "text": "[Product details]"
+      }
+    ]
+  }
+}
+```
+{: codeblock}
+
+### `url` button type
+
+When a user clicks the `url` button, the user goes to the url field to add the destination url.
+
+#### Fields
+
+| Name          | Type   | Description        | Required? |
+|---------------|--------|--------------------|-----------|
+| url | string | The destination url of the button. | Y |
+| target | string | The location to open the url in the browser. For example, `_blank` or  `_self`. `_blank` opens the url in a new tab. `_self` opens the url in the same tab. <p>The default value is `_blank`.</p> | N |
+
+#### Example
+
+The example presents a button that takes the user to ibm.com when the button is clicked.
+
+```json
+{
+  "response_type": "button",
+  "button_type": "url",
+  "label": "Visit ibm.com",
+  "url": "https://www.ibm.com"
+}
+```
+{: codeblock}
+
+## `card`
+{: #response-types-json-card}
+
+Visual content to improve the information experience of users by using `card`.
+
+### Integration channel support
+{: #response-types-card-integrations}
+
+| WebChat |
+|-----------|
+| ![Yes](images/checkmark-icon.svg)  |
+
+### Fields
+{: #response-types-json-card-fields}
+
+| Name          | Type   | Description        | Required? |
+|---------------|--------|--------------------|-----------|
+| response_type | string | `card` | Y         |
+| body[] | list | A list of response types to create rich content. A maximum of 10 response types are allowed in the list. <p> Supported response types: `text`, `image`, `video`, `audio`, `iframe`, `grid`, and `user_defined`.</p> | Y |
+| footer[] | list | A list of only `button` response types. A maximum of 5 buttons are allowed in the list. | N |
+
+A `card` can be rendered in a panel, but it is not allowed to have buttons.
+
+### Example
+{: #response-types-json-card-example}
+
+The following example shows the basic structure for building a `card` response type:
+
+```json
+{
+  "response_type": "card",
+  "body": [
+    {
+      "response_type": "text",
+      "text": "# Heading"
+    },
+    {
+      "response_type": "text",
+      "text": "body"
+    }
+  ]
+}
+```
+{: codeblock}
+
+## `carousel`
+{: #response-types-json-carousel}
+
+A `carousel` to present cards with rich content. If there is only one card in the carousel, the web chat integration will just render the card instead of the card in a carousel.
+
+### Integration channel support
+{: #response-types-json-carousel-integrations}
+
+| WebChat | 
+|-----------|
+| ![Yes](images/checkmark-icon.svg)  |
+ 
+
+### Fields
+{: #response-types-json-carousel-fields}
+
+| Name          | Type   | Description        | Required? |
+|---------------|--------|--------------------|-----------|
+| response_type | string | `carousel` | Y         |
+| items[] | list | A list of `card` response types. A maximum of 5 cards are allowed in the list. | Y |
+
+### Example
+{: #response-types-json-carousel-example}
+
+The following example shows the basic structure for building a `carousel` response type:
+
+```json
+{
+  "response_type": "carousel",
+  "items": [
+    {
+      "response_type": "card",
+      "body": [
+        {
+          "response_type": "text",
+          "text": "# Heading"
+        },
+        {
+          "response_type": "text",
+          "text": "body"
+        }
+      ]
+    },
+    {
+      "response_type": "card",
+      "body": [
+        {
+          "response_type": "text",
+          "text": "# Heading"
+        },
+        {
+          "response_type": "text",
+          "text": "body"
+        }
+      ]
+    }
+  ]
+}
+```
+{: codeblock}
 
 ## `channel_transfer`
 {: #response-types-json-channel-transfer}
@@ -347,7 +599,95 @@ This example uses the `end_session` response type to end a conversation.
 ```
 {: codeblock}
 
+## `grid`
+{: #response-types-json-grid}
 
+Gives you the flexibility to create the layout you need to present content that conveys the type of information you want users to consume.
+
+### Integration channel support
+{: #response-types-json-grid-integrations}
+
+| WebChat |
+|-----------|
+| ![Yes](images/checkmark-icon.svg)  |
+
+### Fields
+{: #response-types-json-grid-fields}
+
+| Name                                        | Type   | Description                        | Required? |
+|---------------------------------------------|--------|------------------------------------|-----------|
+| response_type                               | string | `grid`                             |     Y     |
+| horizontal_alignment                        | string | The horizontal alignment for all items in the grid (`left`, `center`, or `right`). <p>The default value is `left`.</p> | N |
+| vertical_alignment                          | string | The vertical alignment for all items in the grid (`top`, `center`,  or `bottom`). <p>The default values is `top`.</p> | N |
+| columns[]                                   | list   | The list of columns. A maximum of 5 columns are allowed in the list. Each column is separated by 8px of space. | N |
+| columns[].width                             | string | The width of the column. You can set the value of width by using number (for example, `1`) or pixel (for example, `48 px`). <p>The number value of a column width is calculated based on the total width of the row and the width of other columns in the row. For example, if the width of the first column is `1` and the width of the second column is 2, then the first column and the second column takes one-third and two-thirds of the total width of the row respectively.</p> <p>By default, the number value of width is `1`.</p> | Y |
+| rows[]                                      | list   | The list of rows. Maximum 5 rows are allowed in the list. Each row is separated by 8px of space. | Y |
+| rows[].cells[]                              | list   | The list of cells in a row. Each cell is a column in a row (for example, cell 1 is column 1 in a row). The width of the cell is equal to width of the column. | Y |
+| rows[].cells[].items[]                      | list   | A list of response-type items. Each item is separated by 8px of space. Maximum 5 response-type items are allowed in the list. <p>Supported response-type items are `text`, `image`, `vdeo`, `audio`, `iframe`, `grid`, and `user_defined`.</p> You can set up a `grid` only within a `grid` and below the first level. <br>A `grid` in a cell cannot contain a grid response type.{: note} | Y |
+| rows[].cells[].horizontal_alignment         | string | The horizontal alignment for items in the cell (`left`, `center`, or `right`). <p>The default value is `left`.</p> | N |
+| rows[].cells[].vertical_alignment           | string | The vertical alignment for items in the cell (`top`, `center`,  or `bottom`). <p>The default values is `top`.</p> | N |
+
+### Example
+{: #response-types-json-grid-example}
+
+The following example shows the basic structure for building a `grid` response type:
+
+```json
+{
+  "response_type": "grid",
+  "columns": [
+    {
+      "width": "1"
+    },
+    {
+      "width": "1"
+    }
+  ],
+  "rows": [
+    {
+      "cells": [
+        {
+          "items": [
+            {
+              "response_type": "text",
+              "text": "row 1 cell 1"
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "response_type": "text",
+              "text": "row 1 cell 2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cells": [
+        {
+          "items": [
+            {
+              "response_type": "text",
+              "text": "row 2 cell 1"
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "response_type": "text",
+              "text": "row 2 cell 2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+{: codeblock}
 
 ## `iframe`
 {: #response-types-json-iframe}
