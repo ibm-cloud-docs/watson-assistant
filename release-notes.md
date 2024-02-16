@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-01-29"
+lastupdated: "2024-02-16"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,13 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+
+## 16 February 2024
+{: #watson-assistant-feb162024}
+{: release-note}
+
+Support for Llama2 chat format
+:	In the session history of your assistant, you can now apply a generative extension with Llama2 chat format while creating an expression by using the `Array.transform ()` method. For more information, see [`Array.transform()`](/docs/watson-assistant?topic=watson-assistant-expression-methods-actions#expression-methods-actions-arrays-transform) and [Session history](/docs/watson-assistant?topic=watson-assistant-publish-overview#publish-overview-environment-settings-session-history).
 
 ## 12 January 2024
 {: #watson-assistant-jan122024}

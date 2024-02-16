@@ -992,8 +992,15 @@ For example:
 
 The `Array.transform()` method is used with the [`session_history` variable](/docs/watson-assistant?topic=watson-assistant-manage-info#built-in-variables) only. You can transform the output of the variable to match a specific generative AI system. 
 
+*Table: Signatures for chat formats* shows signatures that you can use for the different chat formats: 
 
-The signature is `transform(String rolePrefix, String userPrefix, String assistantPrefix, optional Boolean currentAction=false)`. Customer messages are in the form `{$rolePrefix: $userPrefix, "content": $content}`. Assistant messages are in the form `{$rolePrefix: $assistantPrefix, "content": $content}`.
+| Particulars | OpenAI | Google PaLM2 | Llama2 |
+|------|-------|-------|-----|
+| **Signature** | ```transform(String rolePrefix, String userPrefix, String assistantPrefix, optional Boolean currentAction=false)``` | ```transform(String rolePrefix, String userPrefix, String assistantPrefix, optional Boolean currentAction=false)``` | ```transform(optional String systemPrompt, optional Boolean currentAction=false)``` |
+| **Customer message format** | ```{$rolePrefix: $userPrefix, "content": $content}``` | ```{$rolePrefix: $userPrefix, "content": $content}``` | ```<s>[INST] <<SYS>>{{ $systemPrompt }} <</SYS>>{{ $user_content }} [/INST] {{ $assistant_content }} </s><s>[INST] {{ $user_content }} [/INST]``` | 
+| **Assistant message format** | ```{$rolePrefix: $assistantPrefix, "content": $content}``` | ```{$rolePrefix: $assistantPrefix, "content": $content}``` | NA |
+| **Example** | ```${system_session_history}.transform("role", "user", "assistant")``` | ```${system_session_history}.transform("author", "USER", "AI")``` | ```${system_session_history}.transform("<your system prompt>")``` |
+{: caption="Table: Signatures for chat formats" caption-side="bottom"}
 
 If `currentAction` is true:
 
@@ -1006,16 +1013,3 @@ If `currentAction` is true:
 
 The `n : true` flags are not included in the output of transform.
 
-This example produces OpenAI chat format:
-
-```text
-${system_session_history}.transform("role", "user", "assistant")
-```
-{: codeblock}
-
-This example produces Google PaLM2 chat format:
-
-```text
-${system_session_history}.transform("author", "USER", "AI")
-```
-{: codeblock}
