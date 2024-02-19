@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-02-16"
+lastupdated: "2024-02-19"
 
 subcollection: watson-assistant
 
@@ -13,10 +13,15 @@ subcollection: watson-assistant
 # Response types reference
 {: #response-types-reference}
 
+
 You can use the JSON editor to specify responses of many different types.
+
+
 {: shortdesc}
 
 For more information, see [Defining responses with the JSON editor](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json).
+
+
 
 The following response types are supported in the JSON editor.
 

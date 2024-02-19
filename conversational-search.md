@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-02-06"
+lastupdated: "2024-02-19"
 
 keywords: conversational search
 
@@ -48,7 +48,6 @@ You can enable **Conversational search** in the `Search Integration` window, by 
  ![ConversationalSearch](images/convo-search-toggle-on.png) 
 
  For more information about configuring {{site.data.keyword.discoveryshort}}, see [Discovery configure](/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure). For more information about configuring Elasticsearch, see [Elasticsearch configure](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add#setup-elasticsearch).
-
 
 ## Test Conversational search
 {: #conversational-search-test}
