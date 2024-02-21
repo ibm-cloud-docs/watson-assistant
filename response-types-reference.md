@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-02-19"
+lastupdated: "2024-02-21"
 
 subcollection: watson-assistant
 
@@ -12,7 +12,6 @@ subcollection: watson-assistant
 
 # Response types reference
 {: #response-types-reference}
-
 
 You can use the JSON editor to specify responses of many different types.
 
