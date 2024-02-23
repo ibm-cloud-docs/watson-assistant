@@ -1,14 +1,18 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-10-06"
+  years: 2018, 2024
+lastupdated: "2024-02-23"
 
 subcollection: watson-assistant
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
+![schedule-maintenace](/images/scheduled-maintenance.svg)
+
+
 
 # Welcome to {{site.data.keyword.conversationshort}}
 {: #welcome-new-assistant}
