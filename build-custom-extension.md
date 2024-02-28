@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-12-14"
+  years: 2022, 2024
+lastupdated: "2024-02-28"
 
 subcollection: watson-assistant
 
@@ -84,7 +84,7 @@ To build a custom extension based on the API definition, follow these steps:
 
     After you import the file successfully, click **Next**.
 
-1. In the **Review extension** step, review what has been imported.
+1. In the **Manage extension** step, review what has been imported.
 
     - The **Review authentication** table shows information about the authentication methods that are defined in the OpenAPI document. (Authentication methods are defined by the `securitySchemes` object in the OpenAPI document.)
 
@@ -110,3 +110,5 @@ To build a custom extension based on the API definition, follow these steps:
     If you want to change something, delete the extension, edit the JSON file to make your changes, and repeat the import process.
 
 The new extension is now available as a tile in the **Extensions** section of the integrations catalog, and you can [add it to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
+
+

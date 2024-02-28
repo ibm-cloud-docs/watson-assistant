@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-10-27"
+  years: 2022, 2024
+lastupdated: "2024-02-28"
 
 subcollection: watson-assistant
 
@@ -138,6 +138,9 @@ To configure the extension for the live environment, follow these steps:
    {: note}
 
 The extension is now available in the environments that you configured, and it can be called from the assistant. For more information about how to call an extension from an action, see [Calling a custom extension](/docs/watson-assistant?topic=watson-assistant-call-extension).
+
+<review>
+## Replacing the OpenAPI script
 
 ## Plan limits
 {: #add-custom-extension-limits}
