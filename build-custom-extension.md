@@ -116,4 +116,20 @@ To build a custom extension based on the API definition, follow these steps:
 
 The new extension is now available as a tile in the **Extensions** section of the integrations catalog, and you can [add it to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
 
+### Replacing OpenAPI document permanently
 
+To replace an existing OpenAPI document, do the following steps:
+
+1. Go to the **Integrations** (![Integrations icon](images/integrations.svg)) > **Extensions**.
+
+1. Click the **Open** button in the custom extension card for which you want to change the OpenAPI documentation.
+
+1. On the **Open Custom extension** dialog, click **Confirm** to go to the **Manage extension** tab.
+
+1. Click the **Replace** button to select the new OpenAPI document from your system and click **Open**.
+
+1. You can review the operators in the **Review operations** section in the **Manage extension** tab.
+
+1. Review and update the Authentication information in the **Authentication** tab after replacing the OpenAPI document.
+
+1. Go to the **Actions** page and repair any broken action skill because of the replacement of the OpenAPI document.
