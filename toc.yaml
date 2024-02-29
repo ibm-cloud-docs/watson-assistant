@@ -193,7 +193,8 @@ toc:
           topics:
           - topic: generative-ai.md
             navtitle: Overview
-          - generative-ai.md#information-gathering  
+          - topic: generative-ai.md #information-gathering
+            navtitle: Information gathering
           - conversational-search.md 
       - assistant-add.md
       - assistant-rename-delete.md
