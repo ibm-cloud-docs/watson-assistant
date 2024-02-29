@@ -22,7 +22,7 @@ Use *Conversational search* with the {{site.data.keyword.discoveryfull}} search 
 
 When you enable this feature, search results are provided to an IBM watsonx generative AI model that produces a conversational reply to a user's question. 
 
-This beta feature is available in English for evaluation and testing purposes only. The watsonx generative AI model is currently hosted only in the Dallas and Frankfurt regions. To sign up for the beta access to Conversational Search, use the form [here](https://wkf.ms/4bKDCUh).{: beta}
+This beta feature is available in English for evaluation and testing purposes only. The watsonx generative AI model is currently hosted only in the Dallas and Frankfurt regions. To sign up for the beta access to Conversational Search, use the form [here](https://wkf.ms/4bKDCUh){: external}.{: beta}
 
 By default, assistants in all regions except `Frankfurt` use the model from the `Dallas` region. {: important}
 
