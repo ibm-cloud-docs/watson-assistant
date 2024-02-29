@@ -22,8 +22,8 @@ This beta feature is available in English for evaluation and testing purposes on
 By default, assistants in all regions except `Frankfurt` use the model from the `Dallas` region. {: important}
 You can configure and manage the following two capabilities of generative AI in your assistants:
 
-- [Information gathering](#information-gathering)
-- [Conversational search](#conversational-search)
+- [Information gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering)
+- [Conversational search](docs/watson-assistant?topic=watson-assistant-conversational-search)
 
 
 
