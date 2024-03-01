@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-10-27"
+  years: 2022, 2024
+lastupdated: "2024-02-29"
 
 subcollection: watson-assistant
 
@@ -53,9 +53,18 @@ To add a custom extension to the assistant, follow these steps:
 
      Click **Next**.
 
-1. In the **Review extension** step, review the operations that are supported by the extension.
+1. In the **Manage extension** step, you can review and replace the imported OpenAPI document if required. For more information about replacing the OpenAPI document, see [Replacing the OpenAPI document](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
 
-    The **Review operations** table shows the operations that the assistant is able to call from an action step. An _operation_ is a request by using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
+1. In the **Authentication** tab, you see information about the authentication methods that are defined in the OpenAPI document. *Table. Fields in Authentication tab* gives details about the fields in the Authentication tab:
+
+    | Field name | Description | Values |
+    |---- | ---- | ---- |
+    | **Authentication type** | The type of authentication set up in the OpenAPI script. | - `OAuth 2.0` <br> - `Basic Auth` <br> - `API key auth` <br> - `Bearer auth` |
+    | **Username** | The username credential in the OpenAPI script. | For example, `user` |
+    | **Password** | The password credential set up in the OpenAPI script. | For example, `Password@123` |
+    | **Servers** | The link to the server that is defined in the Open API document to connect. to the API extension. | For example, `https://custom-extension-server.xyz` |
+
+1. The **Review operations** table shows the operations that the assistant is able to call from an action step. An _operation_ is a request by using a particular HTTP method, such as `GET` or `POST`, on a particular resource.
 
     ![Review operations table](images/extension-review-operations.png){: caption="Review operations table" caption-side="bottom"}
 
