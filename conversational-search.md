@@ -54,7 +54,7 @@ You can enable **Conversational search** in the `Search Integration` window, by 
 You can test Conversational search in actions preview, the preview page, or by using the preview link.
 
 In this example, the user asks, `Tell me about a custom extension`.
-Search results are pulled from your knowledge base when the conversational search is `Off`. In this case,the answer is returned as a list of cards that are relevant to custom extensions.
+Search results are pulled from your knowledge base when the conversational search is `Off`. In this case, the answer is returned as a list of cards that are relevant to custom extensions.
 
    ![ConversationalSearchAnswer](images/elasticsearch-answer.png)
 
