@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-29"
+lastupdated: "2024-03-01"
 
 subcollection: watson-assistant
 
@@ -116,7 +116,7 @@ To build a custom extension based on the API definition, follow these steps:
 
 The new extension is now available as a tile in the **Extensions** section of the integrations catalog, and you can [add it to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
 
-### Replacing OpenAPI document permanently
+### Replacing OpenAPI document
 {: #replace-openapi-doc}
 
 To replace an existing OpenAPI document, do the following steps:
