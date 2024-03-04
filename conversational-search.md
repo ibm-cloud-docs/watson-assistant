@@ -52,7 +52,7 @@ You can enable **Conversational search** in the `Search Integration` window, by 
  ## Configure your assistant to use conversational search
  {: #conversational-search-assistant-configure}
 
-Your conversational search skill works only if you add search to *No action matches* in your assistant. For more information, refer to [Configure assistant to add search](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-no-action-matches)
+Your conversational search skill works only if you add search to *No action matches* in your assistant. For more information, refer to [Configure assistant to add search](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-no-action-matches).
 
 ## Test Conversational search
 {: #conversational-search-test}
