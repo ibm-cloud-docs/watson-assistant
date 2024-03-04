@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-03-01"
+lastupdated: "2024-03-04"
 
 keywords: conversational search
 
@@ -31,7 +31,8 @@ To use conversational search, you must have a Plus or Enterprise plan and enroll
 Refer to the following topics to configure Conversational search in your assistant:
 
 - [Before you begin](#conversational-search-requirements)
-- [Enable conversational search](#conversational-search-setup)
+- [Enable conversational search](#conversational-search-setup) 
+- [Configure your assistant to use conversational search](#conversational-search-assistant-configure)
 - [Test Conversational search](#conversational-search-test)
 
 ## Before you begin
@@ -42,11 +43,16 @@ You must configure the search integration to enable the conversational search fe
 ## Enable conversational search 
 {: #conversational-search-setup}
 
-You can enable **Conversational search** in the `Search Integration` window, by switching the conversational search toggle to `On`. After enabling the Conversational search, click `Save`. 
+You can enable **Conversational search** in the `Search Integration` window, by switching the conversational search toggle to `On`. After you enable the Conversational search, click `Save`. 
 
  ![ConversationalSearch](images/convo-search-toggle-on.png) 
 
  For more information about configuring {{site.data.keyword.discoveryshort}}, see [Discovery configure](/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure). For more information about configuring Elasticsearch, see [Elasticsearch configure](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add#setup-elasticsearch).
+
+ ## Configure your assistant to use conversational search
+ {: #conversational-search-assistant-configure}
+
+Your conversational search skill works only if you add search to *No action matches* in your assistant. For more information, refer to [Configure assistant to add search](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-no-action-matches)
 
 ## Test Conversational search
 {: #conversational-search-test}
