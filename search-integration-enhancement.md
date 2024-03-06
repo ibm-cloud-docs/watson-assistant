@@ -77,7 +77,7 @@ To update *No action matches* to use search:
 
 
 
-6. Close **No action matches**. Now, your assistant uses search to provide customers with potentially useful answers, if the customer question does not trigger any of the existing actions.
+1. Close **No action matches**. Now, your assistant uses search to provide customers with potentially useful answers, if the customer question does not trigger any of the existing actions.
 
 ## Use Conversational search
 {: #conversational-search-integration}
