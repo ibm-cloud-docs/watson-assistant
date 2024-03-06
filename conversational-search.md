@@ -51,6 +51,7 @@ You can enable **Conversational search** in the `Search Integration` window, by 
  For more information about configuring {{site.data.keyword.discoveryshort}}, see [Discovery configure](/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure). For more information about configuring Elasticsearch, see [Elasticsearch configure](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add#setup-elasticsearch).
 
 
+
 ## Test Conversational search
 {: #conversational-search-test}
 

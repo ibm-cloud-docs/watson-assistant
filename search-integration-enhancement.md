@@ -76,9 +76,6 @@ You can use the search integration with the built-in [No action matches](/docs/w
 To update *No action matches* to use search:
 
 
-
-1. Close **No action matches**. Now, your assistant uses search to provide customers with potentially useful answers, if the customer question does not trigger any of the existing actions.
-
 ## Use Conversational search
 {: #conversational-search-integration}
 
