@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-03-04"
+lastupdated: "2024-03-06"
 
 keywords: conversational search
 
@@ -35,6 +35,7 @@ Refer to the following topics to configure Conversational search in your assista
 - [Configure your assistant to use conversational search](#conversational-search-assistant-configure)
 - [Test Conversational search](#conversational-search-test)
 
+
 ## Before you begin
 {: #conversational-search-requirements}
 
@@ -49,10 +50,6 @@ You can enable **Conversational search** in the `Search Integration` window, by 
 
  For more information about configuring {{site.data.keyword.discoveryshort}}, see [Discovery configure](/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure). For more information about configuring Elasticsearch, see [Elasticsearch configure](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add#setup-elasticsearch).
 
- ## Configure your assistant to use conversational search
- {: #conversational-search-assistant-configure}
-
-Your conversational search skill works only if you add search to *No action matches* in your assistant. For more information, refer to [Configure assistant to add search](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-no-action-matches).
 
 ## Test Conversational search
 {: #conversational-search-test}
