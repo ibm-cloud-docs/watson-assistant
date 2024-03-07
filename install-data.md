@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-12-13"
+  years: 2015, 2024
+lastupdated: "2024-03-07"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,8 @@ The installation process differs depending on the version you are installing. Th
 
 | Version |  Cluster | Installation instructions |
 | --- | --- | --- |
+| 4.8.3 | {{site.data.keyword.icp4dfull_notm}} 4.8.x | [Installing 4.8.0](https://www.ibm.com/docs/SSQNUZ_4.8.x/svc-assistant/assistant-svc-install.html){: external} |
+| 4.8.2 | {{site.data.keyword.icp4dfull_notm}} 4.8.x | [Installing 4.8.0](https://www.ibm.com/docs/SSQNUZ_4.8.x/svc-assistant/assistant-svc-install.html){: external} |
 | 4.8.0 | {{site.data.keyword.icp4dfull_notm}} 4.8.x | [Installing 4.8.0](https://www.ibm.com/docs/SSQNUZ_4.8.x/svc-assistant/assistant-svc-install.html){: external} |
 | 4.7.4 | {{site.data.keyword.icp4dfull_notm}} 4.7.x | [Installing 4.7.4](https://www.ibm.com/docs/SSQNUZ_4.7.x/svc-assistant/assistant-svc-install.html){: external} |
 | 4.7.2 | {{site.data.keyword.icp4dfull_notm}} 4.7.x | [Installing 4.7.2](https://www.ibm.com/docs/SSQNUZ_4.7.x/svc-assistant/assistant-svc-install.html){: external} |
@@ -53,6 +55,10 @@ The following table describes which versions of {{site.data.keyword.conversation
 
 | {{site.data.keyword.conversationshort}} version | {{site.data.keyword.icp4dfull_notm}} version | Red Hat OpenShift version |
 | --- | --- | --- |
+| 4.8.3 | 4.8.x | 4.14 |
+| 4.8.3 | 4.8.x | 4.12 |
+| 4.8.2 | 4.8.x | 4.14 |
+| 4.8.2 | 4.8.x | 4.12 |
 | 4.8.0 | 4.8.x | 4.12 |
 | 4.7.4 | 4.7.x | 4.12 |
 | 4.7.4 | 4.7.x | 4.10 |

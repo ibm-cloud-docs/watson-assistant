@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-02-06"
+lastupdated: "2024-03-07"
 
 subcollection: watson-assistant
 
@@ -54,7 +54,7 @@ To configure the search query, complete the following steps:
 
     - **Custom results filter**: Add a text string that defines information that must be present in any of the search results that are returned.
 
-      You are effectively defining the value that is used by the search integration API as the `filter` parameter. For more information about defining filter values for {{site.data.keyword.discoveryfull}}, see [{{site.data.keyword.discoveryshort}} filter](/docs/discovery-data?topic=discovery-data-query-parameters#filter){: external}. For more information about defining filter values Elasticsearch, see [Elasticsearch filter](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-filter-context.html#filter-context){: external}
+      You are effectively defining the value that is used by the search integration API as the `filter` parameter. For more information about defining filter values for {{site.data.keyword.discoveryfull}}, see [{{site.data.keyword.discoveryshort}} filter](/docs/discovery-data?topic=discovery-data-query-parameters#filter){: external}. For more information about defining filter values in Elasticsearch, see [Elasticsearch filter](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-filter-context.html#filter-context){: external}
 
       The syntax to use for the filter value is not intuitive. Here are a few examples of common use cases:
 
@@ -87,10 +87,11 @@ To update *No action matches* to use search:
 
 1. Close **No action matches**. Now your assistant uses search to provide customers with potentially useful answers, if the customer question does not trigger any of the existing actions.
 
+
 ## Use Conversational search
 {: #conversational-search-integration}
 
-Conversational search uses the large language models (LLMs) to recognize and respond to customer queries. You can enable this feature in the search integration or extensions to improve the assistant responses using simple conversations.
+Conversational search uses the large language models (LLMs) to recognize and respond to customer queries. You can enable this feature in the search integration to improve the assistant responses by using simple conversations.
 
 For more information about Conversational Search, click [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup) 
 

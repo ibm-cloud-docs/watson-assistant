@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-03-01"
+lastupdated: "2024-03-07"
 
 subcollection: watson-assistant
 
@@ -22,12 +22,7 @@ content-type: release-note
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
 
-## 1 March 2024
-{: #watson-assistant-mar012024}
-{: release-note}
 
-Replace OpenAPI document for custom extension
-:   You can now replace the OpenAPI document of a custom extension to change the extension behavior and authentication method. For more information see, the [Building the custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#build-custom-extension-building) and [Replacing OpenAPI document](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#replace-openapi-doc) topics.
 
 ## 16 February 2024
 {: #watson-assistant-feb162024}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-03-01"
+lastupdated: "2024-03-07"
 
 keywords: conversational search
 
@@ -28,11 +28,7 @@ By default, assistants in all regions except `Frankfurt` use the model from the 
 
 To use conversational search, you must have a Plus or Enterprise plan and enroll in the early access program with this [signup form](https://wkf.ms/4bKDCUh){: external}.
 
-Refer to the following topics to configure Conversational search in your assistant:
 
-- [Before you begin](#conversational-search-requirements)
-- [Enable conversational search](#conversational-search-setup)
-- [Test Conversational search](#conversational-search-test)
 
 ## Before you begin
 {: #conversational-search-requirements}
@@ -42,11 +38,13 @@ You must configure the search integration to enable the conversational search fe
 ## Enable conversational search 
 {: #conversational-search-setup}
 
-You can enable **Conversational search** in the `Search Integration` window, by switching the conversational search toggle to `On`. After enabling the Conversational search, click `Save`. 
+You can enable **Conversational search** in the `Search Integration` window by setting the **Conversational search** toggle to `On`. After you enable the Conversational search, click `Save`. 
 
  ![ConversationalSearch](images/convo-search-toggle-on.png) 
 
  For more information about configuring {{site.data.keyword.discoveryshort}}, see [Discovery configure](/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure). For more information about configuring Elasticsearch, see [Elasticsearch configure](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add#setup-elasticsearch).
+
+
 
 ## Test Conversational search
 {: #conversational-search-test}
