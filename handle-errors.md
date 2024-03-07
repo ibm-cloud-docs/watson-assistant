@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-10-27"
+  years: 2018, 2024
+lastupdated: "2024-03-07"
 
 subcollection: watson-assistant
 
@@ -34,7 +34,9 @@ When you build actions, you train your assistant on what your customers might as
 
 You cannot anticipate every possible request, so sometimes customers send input that your assistant fails to match to any action. The input may be phrased in a way that the assistant cannot understand, or customers ask for things that your assistant is not designed to handle.
 
-Unrecognized input of this sort triggers the built-in *No action matches* action. To see how this action works, click **Set by assistant** in the list of actions, and then click *No action matches*.
+<review>
+
+You can configure your action steps to route to search or *No action matches* if the user input do not match any action.For more information about configuring search routing, click **Set by assistant** in the list of actions, and then click *No action matches*.
 
 ![No action matches built-in action.](images/no-action-matches.png){: caption="No action matches built-in action." caption-side="bottom"}
 
