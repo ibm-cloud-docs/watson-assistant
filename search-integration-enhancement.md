@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-03-07"
+lastupdated: "2024-03-13"
 
 subcollection: watson-assistant
 
@@ -86,6 +86,7 @@ To update *No action matches* to use search:
 1. Because you're adding search, you no longer need step 2, which is the step for when the **No action matches** count is 3 or less. Click the delete (trash can) icon to remove it.
 
 1. Close **No action matches**. Now your assistant uses search to provide customers with potentially useful answers, if the customer question does not trigger any of the existing actions.
+
 
 
 ## Use Conversational search
