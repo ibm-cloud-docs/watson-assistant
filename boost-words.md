@@ -1,16 +1,14 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-10-09"
+  years: 2022, 2024
+lastupdated: "2024-03-26"
 
 subcollection: watson-assistant
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
-{{site.data.content.earlyaccess}}
 
 # Boost words
 {: #boost-words}
@@ -21,7 +19,7 @@ Use *boost words* to enter keywords or phrases to help the assistant recognize w
 
 Boost words or phrases are used in addition to example phrases. They can contain only letters, underscores, hyphens, spaces, or dots. They must start with an alphanumeric character. Words or phrases can't be entered more than once per action, but you can use the same boost words or phrases across multiple actions.
 
-This beta feature is available for evaluation and testing purposes only.
+This beta feature is available for evaluation and testing purposes only. To request access to the *Boost words* feature, use the [Request access for {{site.data.keyword.conversationshort}} Boost Words (beta)](https://forms.monday.com/forms/d7f954fe56334a20c4b4bd12fc59f744?r=use1){: external} form.
 {: beta}
 
 To add boost words or phrases to an action:
