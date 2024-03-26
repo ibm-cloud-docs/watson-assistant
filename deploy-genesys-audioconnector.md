@@ -19,16 +19,12 @@ subcollection: watson-assistant
 You can integrate the Genesys Audio Connector with your assistant to stream the conversation audio between assistant and Genesys Cloud.
 {: shortdesc}
 
-
 ## Before you begin
 {: #deploy-audioconnector-genesys-setup}
 
 You must have the following set up before you start integrating Genesys Audio Connector: 
 - A [Genesys Cloud account](https://login.mypurecloud.com/){: external} with an Audio Connector instance that is hosted in the same region like your assistant. 
 - Access to the Genesys Architect.
-
-
-
 
 ## Create the Audio Connector integration in your assistant
 {: #integrate-audio-connector}
@@ -38,11 +34,12 @@ You must have the following set up before you start integrating Genesys Audio Co
 1. Click **Add** on the **Phone** tile.
 1. Click **Genesys Audio Connector** tile.
 1. In the **Credentials** section, copy and store the automatically generated credentials in the following fields:
-        - **API key**
-        - **Client secret**
-        - **Genesys audio connect URI**
-        
-        Store the credentials because you  **cannot**  see them after you click **Save**. You require these credentials to set up the Genesys Audio Connector. {: Important}  
+    - **API key**
+    - **Client secret**
+    - **Genesys audio connect URI**
+
+    Store the credentials because you  **cannot**  see them after you click **Save**. You require these credentials to set up the Genesys Audio Connector.{: important}
+
 1.  Click  **Save and Exit**.
 
 
