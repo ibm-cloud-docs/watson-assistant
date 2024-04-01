@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-02-08"
+lastupdated: "2024-04-01"
 
 subcollection: watson-assistant
 
@@ -29,6 +29,8 @@ The following table shows the latest version of the web chat integration that is
 
 | {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}} version | Latest web chat version available |
 |----------------|----------------|
+| 4.8.4 | [7.10.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.10.0) |
+| 4.8.3 | [7.9.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.9.0) |
 | 4.8.2 | [7.8.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.8.0) |
 | 4.8.0 | [7.7.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.7.0) |
 | 4.7.4 | [7.6.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.5.0) |
@@ -44,6 +46,19 @@ The following table shows the latest version of the web chat integration that is
 | 4.5.0 | [6.4.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#6.4.1) |
 | 4.0.8 | [6.2.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#6.2.0) |
 {: caption="Web chat versions in {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}}" caption-side="top"}
+
+## 29 March 2024
+{: #assistant-data-mar292024}
+{: release-note}
+
+Algorithm version Latest(15 Apr-2023) uses improved intent detection and matching 
+:   The **Latest(15 Apr-2023)** algorithm version uses a new foundation model to improve the intent detection and action matching in assistants with languages such as English, French, German, Portuguese (Brazilian), Spanish, Arabic, Chinese (Simplified), Chinese (Traditional), Czech, Dutch, Italian, Japanese, and Korean. The new foundation model is trained by using the transformer architecture. For more information, see [Algorithm version and training](/docs/watson-assistant?topic=watson-assistant-algorithm-version).
+
+Change in backup PersistentVolumeClaim (PVC) name
+:  The backup PersistentVolumeClaim (PVC) name is changed from store-pvc to store-db-backup-pvc. For more information, see [Backing up and restoring data](/docs/watson-assistant?topic=watson-assistant-backup-data).
+
+Change in default size of PersistentVolumeClaim (PVC)
+:  The default size of PersistentVolumeClaim (PVC) is now 10Gi, which was 1GI in the previous releases. For more information, see [Backing up and restoring data](/docs/watson-assistant?topic=watson-assistant-backup-data).
 
 ## 31 January 2024
 {: #assistant-data-jan312024}
@@ -64,7 +79,7 @@ More control over pause responses
 :  Use a pause response to have your assistant wait for a specified interval before the next response. Previously, pauses were 1 to 10 seconds in length. You can now pause a response for 0 to 60 seconds. You can also specify milliseconds by specifying a decimal. For more information, see [Pause response](/docs/watson-assistant?topic=watson-assistant-respond#respond-pause-response).
 
 Visualize an action
-:  After you create an action, you can optionally switch from the step edit view to a visualization that displays a canvas with a flowchart of the action. The visualization is available as a beta. For more information, see [Visualizing the flow of the action](/docs/watson-assistant?topic=watson-assistant-build-actions-overview#visualizing-the-flow-of-the-action-beta).
+:  After you create an action, you can optionally switch from the step edit view to a visualization that displays a canvas with a flowchart of the action. For more information, see [Visualizing the flow of the action](/docs/watson-assistant?topic=watson-assistant-build-actions-overview#visualizing-the-flow-of-the-action-beta).
 
 Invalid date entry not accepted
 :  Starting from this release, the assistant does not recognize invalid date entries such as Feb 31, 31/11/2022, and Feb 29 2023. In addition, the assistant does not automatically parse the invalid dates to the first day of the month. For more information, see [@sys-date](/docs/assistant?topic=assistant-system-entities#system-entities-sys-date).
