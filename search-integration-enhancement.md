@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-03-13"
+lastupdated: "2024-04-01"
 
 subcollection: watson-assistant
 
@@ -83,11 +83,13 @@ To update *No action matches* to use search:
 
 1. In the **And then** section, click **Continue to next step**, then choose **Search for the answer**.
 
-1. Because you're adding search, you no longer need step 2, which is the step for when the **No action matches** count is 3 or less. Click the delete (trash can) icon to remove it.
+1. Delete action step 2 and action step 3 because you are adding search. Delete the two steps by clicking the <img src="images/trash-can.svg" alt="trash-can" width="3%" height="3%"> icon in the action steps. 
 
-1. Close **No action matches**. Now your assistant uses search to provide customers with potentially useful answers, if the customer question does not trigger any of the existing actions.
+   Figure 1 shows the picture of your assistant after you deleted the two default steps and updated *No action matches* to use search.
 
+   ![No action matches](images/search-no-action-matches.png){: caption="Figure 1. Configure no action matches to use search" caption-side="bottom"}
 
+1. Close **No action matches**. Your assistant uses search to provide customers with potentially useful answers, if the customer question does not trigger any of the existing actions.
 
 ## Use Conversational search
 {: #conversational-search-integration}

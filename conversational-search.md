@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-03-07"
+lastupdated: "2024-04-01"
 
 keywords: conversational search
 
@@ -27,8 +27,12 @@ This beta feature is available in English for evaluation and testing purposes on
 By default, assistants in all regions except `Frankfurt` use the model from the `Dallas` region. {: important}
 
 To use conversational search, you must have a Plus or Enterprise plan and enroll in the early access program with this [signup form](https://wkf.ms/4bKDCUh){: external}.
+Refer to the following topics to configure Conversational search in your assistant:
 
-
+- [Before you begin](#conversational-search-requirements)
+- [Enable conversational search](#conversational-search-setup) 
+- [Configure your assistant to use conversational search](#conversational-search-assistant-configure)
+- [Test Conversational search](#conversational-search-test)
 
 ## Before you begin
 {: #conversational-search-requirements}
@@ -44,7 +48,10 @@ You can enable **Conversational search** in the `Search Integration` window by s
 
  For more information about configuring {{site.data.keyword.discoveryshort}}, see [Discovery configure](/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure). For more information about configuring Elasticsearch, see [Elasticsearch configure](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add#setup-elasticsearch).
 
+ ## Configure your assistant to use conversational search
+ {: #conversational-search-assistant-configure}
 
+After you enable Conversational search, you must configure your assistant to use Conversational search by adding **Search for the answer** in **No action matches**. For more information about updating *No action matches* to use search, see [Use search when no action matches](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-no-action-matches). 
 
 ## Test Conversational search
 {: #conversational-search-test}
