@@ -37,6 +37,10 @@ If you are upgrading from 4.5.x to 4.8.x, a simpler way to complete the upgrade 
 If you are upgrading from 4.6.4 or earlier versions to the latest, you must upgrade to 4.6.5 before upgrading to the latest release.{: important}
 
 
+The primary data storage is a {{site.data.keyword.postgresql}} database.
+
+
+
 Choose one of the following ways to manage the back up of data:
 
 
@@ -64,6 +68,10 @@ A CronJob named `$INSTANCE-store-cronjob` is created and enabled for you automat
 
 
 
+The store CronJob creates the `$INSTANCE-backup-job-$TIMESTAMP` jobs. Each `$INSTANCE-backup-job-$TIMESTAMP` job deletes old logs and runs a backup of the store {{site.data.keyword.postgresql}} database. {{site.data.keyword.postgresql}} provides a `pg_dump` tool that creates a backup. To create a backup, the `pg_dump` tool sends the database contents to `stdout`, which you can then write to a file. The` pg_dump` tool creates the backups with the `pg_dump` command and stores them in a persistent volume claim (PVC) named `$INSTANCE-store-db-backup-pvc`.
+
+
+
 You are responsible for moving the backup to a more secure location after its initial creation, preferably a location that can be accessed outside of the cluster where the backups cannot be deleted easily. Ensure this happens for all environments, especially for Production clusters.
 {: note}
 
@@ -84,6 +92,10 @@ The following table lists the configuration values that control the backup cron 
 {: #backup-access-portworx}
 
 To access the backup files from Portworx, complete the following steps:
+
+
+
+1.  Get the name of the persistent volume that is used for the {{site.data.keyword.postgresql}} backup:
 
 
 
@@ -167,6 +179,10 @@ To access the backup files from Red Hat OpenShift Container Storage (OCS), compl
 
 
 
+1.  Create a volume snapshot of the persistent volume claim that is used for the {{site.data.keyword.postgresql}} backup:
+
+
+
     ```yaml
     cat <<EOF | oc apply -f -
     apiVersion: snapshot.storage.k8s.io/v1
@@ -175,6 +191,10 @@ To access the backup files from Red Hat OpenShift Container Storage (OCS), compl
       name: wa-backup-snapshot
     spec:
       source:
+      
+
+        persistentVolumeClaimName: ${INSTANCE_NAME}-store-db-backup-pvc
+
       
       volumeSnapshotClassName: ocs-storagecluster-rbdplugin-snapclass
     EOF
@@ -253,10 +273,63 @@ To access the backup files from Red Hat OpenShift Container Storage (OCS), compl
     {: codeblock}
    
    
+ 
+
+### Extracting {{site.data.keyword.postgresql}} backup using a debug pod
+{: #backup-extract-postgres}
+
+To extract {{site.data.keyword.postgresql}} backup using a debug pod, complete the following steps:
+
+1. Get the name of the store cronjob pod:
+   ```bash 
+   export STORE_CRONJOB_POD=`oc get pods -l component=store-cronjob --no-headers | awk 'NR==1{print $1}'`
+   ```
+   {: codeblock}
+
+1. View the list of available store backups to identify the most recent backup:
+
+   ```bash
+   oc debug ${STORE_CRONJOB_POD}
+   ls /store-backups/
+   ```
+   {: codeblock}
+
+  In the list of store backups, you can find the latest backup with the help of the timestamps.{: tip}
+
+1. While the debug pod listed in Step 2 remains active, in a separate terminal session, set the `STORE_CRONJOB_POD` variable to match the name of the store cronjob pod returned in Step 1:
+
+   ```bash 
+   export STORE_CRONJOB_POD=`oc get pods -l component=store-cronjob --no-headers | awk 'NR==1{print $1}'`
+   ```
+   {: codeblock}
+
+1. Export and save the `STORE_DUMP_FILE` variable to the name of the most recent `store.dump_YYYYMMDD-TIME` file from `Step 2`:
+
+   ```bash 
+   export STORE_DUMP_FILE=store.dump_YYYYMMDD-TIME
+   ```
+   {: codeblock}
+
+1. Copy the `store.dump_YYYYMMDD-TIME` file to a directory in a secure location on your system:
+
+   ```bash
+   `oc cp ${STORE_CRONJOB_POD}-debug:/store-backups/${STORE_DUMP_FILE} ${STORE_DUMP_FILE}`
+   ```
+   {: codeblock}
+
+   You must verify that you copied the `store.dump_YYYYMMDD-TIME` file to the right directory by running the `ls` command.{: important}
+
 
 
 ## Backing up data by using the script
 {: #backup-os}
+
+
+You cannot backup data by using script in {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}} 4.6.3 or later.{ .note}
+
+The `backupPG.sh` script gathers the pod name and credentials for one of your {{site.data.keyword.postgresql}} pods. Then, the `backupPG.sh` script uses the {{site.data.keyword.postgresql}} pod to run the `pg_dump` command.
+
+
 
 
 To back up data by using the provided script, complete the following steps:
@@ -284,12 +357,24 @@ To back up data by using the provided script, complete the following steps:
 
 
 
+If you prefer to back up data by using the {{site.data.keyword.postgresql}} tool directly, you can complete the procedure to back up data manually.
+
+
+
 ## Backing up data manually
 {: #backup-cp4d}
 
 
 
+Complete the steps in this procedure to back up your data by using the {{site.data.keyword.postgresql}} tool directly.
+
+
+
 To back up your data, complete these steps:
+
+
+
+1.  Fetch a running {{site.data.keyword.postgresql}} pod:
 
 
 
@@ -306,6 +391,10 @@ To back up your data, complete these steps:
     oc get secrets -l component=store,app.kubernetes.io/instance=${INSTANCE} -o=custom-columns=NAME:.metadata.name | grep store-vcap
     ```
     {: codeblock}
+
+
+
+1.  Fetch the {{site.data.keyword.postgresql}} connection values. You will pass these values to the command that you run in the next step. You must have `jq` installed.
 
 
 
@@ -345,6 +434,10 @@ To back up your data, complete these steps:
     {: codeblock}
 
     The following lists describe the arguments. You retrieved the values for some of these parameters in the previous step:
+
+    
+
+    - `$KEEPER_POD`: Any P{{site.data.keyword.postgresql}} pod in your instance.
 
     
     - `${BACKUP_DIR}`: Specify a file where you want to write the downloaded data. Be sure to specify a backup directory in which to store the file. For example, `/bu/backup-file-name.dump` creates a backup directory named `bu`.
@@ -392,6 +485,10 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
 
     
 
+    - `postgres.yaml`: The {{site.data.keyword.postgresql}} file lists details for the target {{site.data.keyword.postgresql}} pods. See [Creating the postgres.yaml file](#backup-postgres-yaml).
+
+    
+
 1.  Get the secret:
 
     ```bash
@@ -401,6 +498,12 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
 
     - Replace `${INSTANCE}` with the name of the instance that you want to back up.
     - Replace `${BACKUP_DIR}` with the directory where the `postgres.yaml` and `resourceController.yaml` files are located.
+
+
+
+1.  Copy the files that you downloaded and created in the previous steps to any existing directory on a {{site.data.keyword.postgresql}} pod.
+
+    1. Run the following command to find P{{site.data.keyword.postgresql}} pods:
 
 
         ```bash
@@ -422,6 +525,10 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
 
     
 
+    - Replace `${POSTGRES_POD}` with the name of one of the {{site.data.keyword.postgresql}} pods from the previous step.
+
+    
+
 1.  Stop the store deployment by scaling the store deployment down to 0 replicas:
 
     ```bash
@@ -436,6 +543,10 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
     oc scale deployment ${STORE_DEPLOYMENT} --replicas=0
     ```
     {: codeblock}
+
+
+
+1.  Initiate the execution of a remote command in the {{site.data.keyword.postgresql}} pod:
 
 
 
@@ -456,6 +567,10 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
     - Replace `<backup-file-name.dump>` with the name of the file that you created for your downloaded data.
 
    
+   
+    For more command options, see [{{site.data.keyword.postgresql}} migration tool details](#backup-pgmig-details).
+
+    
 
     As the script runs, you are prompted for information that includes the instance on the target cluster to which to add the backed-up data. The data on the instance you specify is removed and replaced. If there are multiple instances in the backup, you are prompted multiple times to specify the target instance information.
 
@@ -525,6 +640,10 @@ To add the values that are required but currently missing from the file, complet
 
 
 
+The **postgres.yaml** file contains details about the {{site.data.keyword.postgresql}} pods in your target environment (the environment where you restore the data). Add the following information to the file:
+
+
+
 ```yaml
 host: localhost
 port: 5432
@@ -543,6 +662,10 @@ To add the values that are required but currently missing from the file, complet
     oc get secret ${INSTANCE}-store-vcap -o jsonpath='{.data.vcap_services}' | base64 -d
     ```
     {: codeblock}
+
+    
+
+    The `get` command returns information about the Redis and {{site.data.keyword.postgresql}} databases. Look for the segment of JSON code for the {{site.data.keyword.postgresql}} database, named `pgservice`. It looks like this:
 
     
 
@@ -587,6 +710,10 @@ To add the values that are required but currently missing from the file, complet
 
 
 
+### {{site.data.keyword.postgresql}} migration tool details
+
+
+
 {: #backup-pgmig-details}
 
 The following table lists the arguments that are supported by the `pgmig` tool:
@@ -598,8 +725,16 @@ The following table lists the arguments that are supported by the `pgmig` tool:
 | -s, --source string | Backup file name |   
 | -r, --resourceController string | Resource Controller configuration file name |
 
+
+| -t, --target string | Target {{site.data.keyword.postgresql}} server configuration file name |
+
+
 | -m, --mapping string | Service instance-mapping configuration file name (optional) |
 | --testRCConnection | Test the connection for Resource Controller, then exit |
+
+
+
+| --testPGConnection | Test the connection for {{site.data.keyword.postgresql}} server, then exit |
 
 
 | -v, --version | Get Build version |
