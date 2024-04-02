@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-01-12"
+lastupdated: "2024-04-02"
 
 subcollection: watson-assistant
 
@@ -36,7 +36,6 @@ If you are upgrading from 4.5.x to 4.8.x, a simpler way to complete the upgrade 
 
 If you are upgrading from 4.6.4 or earlier versions to the latest, you must upgrade to 4.6.5 before upgrading to the latest release.{: important}
 
-The primary data storage is a Postgres database.
 
 Choose one of the following ways to manage the back up of data:
 
@@ -63,7 +62,7 @@ When you back up data with one of these procedures before you upgrade from one v
 
 A CronJob named `$INSTANCE-store-cronjob` is created and enabled for you automatically when you deploy the service. A CronJob is a type of Kubernetes controller. A CronJob creates Jobs on a repeating schedule. For more information, see [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/){: external} in the Kubernetes documentation.
 
-The jobs that are created by the store cron job are called `$INSTANCE-backup-job-$TIMESTAMP`. Each job deletes old logs and runs a backup of the store Postgres database. Postgres provides a tool that is called `pg_dump`. The dump tool creates a backup by sending the database contents to `stdout` where you can write it to a file. The backups are created with the `pg_dump` command and stored in a persistent volume claim (PVC) named $INSTANCE-store-pvc. 
+
 
 You are responsible for moving the backup to a more secure location after its initial creation, preferably a location that can be accessed outside of the cluster where the backups cannot be deleted easily. Ensure this happens for all environments, especially for Production clusters.
 {: note}
@@ -86,7 +85,7 @@ The following table lists the configuration values that control the backup cron 
 
 To access the backup files from Portworx, complete the following steps:
 
-1.  Get the name of the persistent volume that is used for the Postgres backup:
+
 
     ```bash
     oc get pv |grep $INSTANCE-store
@@ -166,7 +165,7 @@ To access the backup files from Portworx, complete the following steps:
 
 To access the backup files from Red Hat OpenShift Container Storage (OCS), complete the following steps:
 
-1.  Create a volume snapshot of the persistent volume claim that is used for the Postgres backup:
+
 
     ```yaml
     cat <<EOF | oc apply -f -
@@ -176,7 +175,7 @@ To access the backup files from Red Hat OpenShift Container Storage (OCS), compl
       name: wa-backup-snapshot
     spec:
       source:
-        persistentVolumeClaimName: ${INSTANCE_NAME}-store-pvc
+      
       volumeSnapshotClassName: ocs-storagecluster-rbdplugin-snapclass
     EOF
     ```
@@ -244,7 +243,7 @@ To access the backup files from Red Hat OpenShift Container Storage (OCS), compl
     ```
     {: codeblock}
 
-1.  Run the following commands to clean up the resources that you created for to retrieve the files:
+1.  Run the following commands to clean up the resources that you created to retrieve the files:
 
     ```bash
     oc delete pod wa-retrieve-backup
@@ -252,11 +251,13 @@ To access the backup files from Red Hat OpenShift Container Storage (OCS), compl
     oc delete volumesnapshot wa-backup-snapshot
     ```
     {: codeblock}
+   
+   
+
 
 ## Backing up data by using the script
 {: #backup-os}
 
-The `backupPG.sh` script gathers the pod name and credentials for one of your Postgres pods, which is the pod from which the `pg_dump` command must be run, and then runs the command for you.
 
 To back up data by using the provided script, complete the following steps:
 
@@ -281,16 +282,16 @@ To back up data by using the provided script, complete the following steps:
     - `${BACKUP_DIR}`: Specify a file where you want to write the downloaded data. Be sure to specify a backup directory in which to store the file. For example, `/bu/backup-file-name.dump` creates a backup directory named `bu`.
     - `--instance ${INSTANCE}`: Select the specific instance to be backed up.
 
-If you prefer to back up data by using the Postgres tool directly, you can complete the procedure to back up data manually.
+
 
 ## Backing up data manually
 {: #backup-cp4d}
 
-Complete the steps in this procedure to back up your data by using the Postgres tool directly.
+
 
 To back up your data, complete these steps:
 
-1.  Fetch a running Postgres pod:
+
 
     ```bash
     oc get pods -l app=${INSTANCE}-postgres -o jsonpath="{.items[0].metadata.name}"
@@ -306,7 +307,7 @@ To back up your data, complete these steps:
     ```
     {: codeblock}
 
-1.  Fetch the Postgres connection values. You will pass these values to the command that you run in the next step. You must have `jq` installed.
+
 
     - To get the database:
 
@@ -345,7 +346,7 @@ To back up your data, complete these steps:
 
     The following lists describe the arguments. You retrieved the values for some of these parameters in the previous step:
 
-    - `$KEEPER_POD`: Any Postgres pod in your instance.
+    
     - `${BACKUP_DIR}`: Specify a file where you want to write the downloaded data. Be sure to specify a backup directory in which to store the file. For example, `/bu/backup-file-name.dump` creates a backup directory named `bu`.
     - `$DATABASE`: The store database name that was retrieved from the Store VCAP secret in step 3.
     - `$HOSTNAME`: The hostname that was retrieved from the Store VCAP secret in step 3.
@@ -389,7 +390,7 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
 
     - `resourceController.yaml`: The Resource Controller file keeps a list of all provisioned instances. See [Creating the resourceController.yaml file](#backup-resource-controller-yaml).
 
-    - `postgres.yaml`: The Postgres file lists details for the target Postgres pods. See [Creating the postgres.yaml file](#backup-postgres-yaml).
+    
 
 1.  Get the secret:
 
@@ -401,9 +402,6 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
     - Replace `${INSTANCE}` with the name of the instance that you want to back up.
     - Replace `${BACKUP_DIR}` with the directory where the `postgres.yaml` and `resourceController.yaml` files are located.
 
-1.  Copy the files that you downloaded and created in the previous steps to any existing directory on a Postgres pod.
-
-    1. Run the following command to find Postgres pods:
 
         ```bash
         oc get pods | grep ${INSTANCE}-postgres
@@ -422,7 +420,7 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
         ```
         {: codeblock}
 
-    - Replace `${POSTGRES_POD}` with the name of one of the Postgres pods from the previous step.
+    
 
 1.  Stop the store deployment by scaling the store deployment down to 0 replicas:
 
@@ -439,7 +437,7 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
     ```
     {: codeblock}
 
-1.  Initiate the execution of a remote command in the Postgres pod:
+
 
     ```bash
     oc exec -it ${POSTGRES_POD} /bin/bash
@@ -457,7 +455,7 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
 
     - Replace `<backup-file-name.dump>` with the name of the file that you created for your downloaded data.
 
-    For more command options, see [Postgres migration tool details](#backup-pgmig-details).
+   
 
     As the script runs, you are prompted for information that includes the instance on the target cluster to which to add the backed-up data. The data on the instance you specify is removed and replaced. If there are multiple instances in the backup, you are prompted multiple times to specify the target instance information.
 
@@ -525,7 +523,7 @@ To add the values that are required but currently missing from the file, complet
 ### Creating the postgres.yaml file
 {: #backup-postgres-yaml}
 
-The **postgres.yaml** file contains details about the Postgres pods in your target environment (the environment where you restore the data). Add the following information to the file:
+
 
 ```yaml
 host: localhost
@@ -546,7 +544,7 @@ To add the values that are required but currently missing from the file, complet
     ```
     {: codeblock}
 
-    Information for the Redis and Postgres databases is returned. Look for the segment of JSON code for the Postgres database, named `pgservice`. It looks like this:
+    
 
     ```json
     {
@@ -587,7 +585,8 @@ To add the values that are required but currently missing from the file, complet
 
 1.  Save the `postgres.yaml` file.
 
-### Postgres migration tool details
+
+
 {: #backup-pgmig-details}
 
 The following table lists the arguments that are supported by the `pgmig` tool:
@@ -598,10 +597,11 @@ The following table lists the arguments that are supported by the `pgmig` tool:
 | -f, --force | Erase data if present in the target Store |
 | -s, --source string | Backup file name |   
 | -r, --resourceController string | Resource Controller configuration file name |
-| -t, --target string | Target Postgres server configuration file name |
+
 | -m, --mapping string | Service instance-mapping configuration file name (optional) |
 | --testRCConnection | Test the connection for Resource Controller, then exit |
-| --testPGConnection | Test the connection for Postgres server, then exit |
+
+
 | -v, --version | Get Build version |
 {: caption="pgmig tool arguments" caption-side="top"}
 
