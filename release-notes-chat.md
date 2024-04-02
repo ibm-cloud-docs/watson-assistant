@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-02-05"
+lastupdated: "2024-04-02"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,39 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 8.0.0
+{: #8.0.0}
+*Release date: 1 April 2024*
+
+- **New Carbon UI for web chat**: The web chat has an upgraded Carbon UI for AI, Carbon 11, that helps in AI explainability and adding visual cues to make your interaction AI responsive.
+
+  You must update the Carbon design before you upgrade to web chat 8.0.0 because the new Carbon UI conflicts with the user defined responses and writeable elements.
+
+  In addition, the new Cabon 11 design system does not support Carbon 10 components. Therefore, addition of the Carbon 10 components in to a web chat with the Cabon 11 design system might disrupt the design styling. However, you can add the Carbon 11 components in to an existing web chat with the Carbon 10 desing system because the Carbon 11 components work along with the Carbon 10 components in the same code base without any design disruption. Therefore, you can upgrade any individual Carbon 10 component to Carbon 11 component in an existing web chat without disrupting the remaining Carbon 10 components.
+
+- **New theme configuration option**: You can now use a new` themeConfig` property object in web chat that replaces the `carbonTheme` configuration property. The following new options are available in the configuration object:
+
+    - **`carbonTheme`** 
+      
+      Select a Carbon theme for your widget per the [Carbon Design System](https://carbondesignsystem.com/guidelines/color/tokens).
+
+    - **`useAITheme`** 
+      
+      To add 'IBM Carbon for AI' branding to the web chat.
+  
+  For more information, see [Web chat theme configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#theme-config){: external}.
+
+- **Updated message API version**: You can now use the updated message API version, 2023-06-15 version of the v2 message API.
+
+- **New CSP requirements**: You must use the new CSP requirements for web chat. For more information, see [Web chat architecture security](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture#web-chat-architecture-security).
+
+- **Changes in custom service desk**: You must now use the `getName()` function in the custom service desk to return a name value. For more information, see [Custom Service Desk API details](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd#api-details).
+
+- **Changes in page direction setting**: The `direction` configuration option is not available in web chat now because web chat now uses the `dir` attribute in the `html` element. In addition, the direction configuration is set to left-to-right by default.
+
+- **Native Carbon classes replace the home screen help classes**: The native Carbon classes now replace the home screen help classes in web chat. For more information, see [Web chat CSS helper classes](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-render#helper-classes).
+
 
 ## 7.10.0
 {: #7.10.0}

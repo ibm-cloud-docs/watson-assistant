@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-02-06"
+lastupdated: "2024-03-29"
 
 subcollection: watson-assistant
 
@@ -170,6 +170,8 @@ If you are using the classic experience, add a search skill:
 If you want to change the configuration of the search result card later, open the search integration again, and make edits. You do not need to save changes as you make them; they are automatically applied. When you are happy with the search results, click **Save** to finish configuring the search integration.
 
 If you decide you want to connect to a different {{site.data.keyword.discoveryshort}} service instance or project, open the search integration and click ***Edit Discovery Settings**. You can choose either a new project from the same instance, or a new instance and project.
+
+
 
 ## Troubleshooting
 {: #search-add-troubleshoot}

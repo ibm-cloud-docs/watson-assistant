@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-01-19"
+lastupdated: "2024-03-29"
 
 subcollection: watson-assistant
 
@@ -105,6 +105,7 @@ After you add the Elasticsearch search integration, do the following:
     {: caption="Search result messages" caption-side="top"}
 
 1. Click **Finish**.
+
 
 
 ## Test Elasticsearch

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-10-26"
+  years: 2019, 2024
+lastupdated: "2024-04-02"
 
 subcollection: watson-assistant
 
@@ -33,7 +33,7 @@ If you want to use the web chat API to customize your web chat implementation, y
 ## Development tasks
 {: #web-chat-develop-tasks}
 
-You can use the web chat API to customize and extend the web chat in the following ways.
+You can use the web chat API to customize and extend the web chat in the following ways: 
 
 Web chat style and content
 :   - [Customizing the look of the web chat](#look)
@@ -58,6 +58,8 @@ Managing data
 Security and administration
 :   - [Securing the web chat](#secure-web-chat)
     - [Controlling the web chat version](#web-chat-version)
+
+For more examples of web chat integrations, see [here](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples).
 
 ### Web chat style and content
 {: #web-chat-develop-style}
