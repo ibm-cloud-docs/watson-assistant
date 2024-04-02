@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-04-01"
+lastupdated: "2024-04-02"
 
 subcollection: watson-assistant
 
@@ -73,23 +73,7 @@ To configure the search query, complete the following steps:
 
 You can use the search integration with the built-in [No action matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches) capability. By adding search to *No action matches*, you can have your assistant refer to search when a customer asks a question that isn't addressed by an existing action.
 
-To update *No action matches* to use search:
 
-1. In your assistant, click **Actions**, then click **Set by assistant**.
-
-1. Click **No action matches** to open it in the editor.
-
-1. Click **New step**.
-
-1. In the **And then** section, click **Continue to next step**, then choose **Search for the answer**.
-
-1. Delete action step 2 and action step 3 because you are adding search. Delete the two steps by clicking the <img src="images/trash-can.svg" alt="trash-can" width="3%" height="3%"> icon in the action steps. 
-
-   Figure 1 shows the picture of your assistant after you deleted the two default steps and updated *No action matches* to use search.
-
-   ![No action matches](images/search-no-action-matches.png){: caption="Figure 1. Configure no action matches to use search" caption-side="bottom"}
-
-1. Close **No action matches**. Your assistant uses search to provide customers with potentially useful answers, if the customer question does not trigger any of the existing actions.
 
 ## Use Conversational search
 {: #conversational-search-integration}
