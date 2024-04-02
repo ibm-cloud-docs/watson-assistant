@@ -25,6 +25,12 @@ For information about new features and improvements to the core {{site.data.keyw
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
 
+## 8.0.1
+{: #8.0.1}
+*Release date: 2 April 2024*
+
+- Fixed a bug that would prevent the web chat from loading if `clientVersion` was set to `'latest'`, `'8'`, or `'8.0'`. This bug did not affect web chats locked on previous versions.
+
 ## 8.0.0
 {: #8.0.0}
 *Release date: 1 April 2024*
@@ -33,7 +39,9 @@ If you want to evaluate changes that are introduced in a web chat release before
 
   You must update the Carbon design before you upgrade to web chat 8.0.0 because the new Carbon UI conflicts with the user defined responses and writeable elements.
 
-  In addition, the new Cabon 11 design system does not support Carbon 10 components. Therefore, addition of the Carbon 10 components in to a web chat with the Cabon 11 design system might disrupt the design styling. However, you can add the Carbon 11 components in to an existing web chat with the Carbon 10 desing system because the Carbon 11 components work along with the Carbon 10 components in the same code base without any design disruption. Therefore, you can upgrade any individual Carbon 10 component to Carbon 11 component in an existing web chat without disrupting the remaining Carbon 10 components.
+  In addition, the new Carbon 11 design system does not support Carbon 10 components. Therefore, addition of the Carbon 10 components in to a web chat with the Carbon 11 design system might disrupt the design styling. However, you can add the Carbon 11 components in to an existing web chat with the Carbon 10 design system because the Carbon 11 components work along with the Carbon 10 components in the same code base without any design disruption. Therefore, you can upgrade any individual Carbon 10 component to Carbon 11 component in an existing web chat without disrupting the remaining Carbon 10 components.
+
+  The new updated home screen design is no longer a solid accent color, although a future update will introduce control to the colors.
 
 - **New theme configuration option**: You can now use a new` themeConfig` property object in web chat that replaces the `carbonTheme` configuration property. The following new options are available in the configuration object:
 
