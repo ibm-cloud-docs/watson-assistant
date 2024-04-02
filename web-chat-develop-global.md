@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-10-26"
+  years: 2019, 2024
+lastupdated: "2024-04-02"
 
 subcollection: watson-assistant
 
@@ -34,5 +34,5 @@ To configure the web chat for customers outside the US, follow these steps:
 
     For more information, see [Instance methods](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#languages){: external}.
 
-1.  To change the text direction of the page from right to left, use the `direction` method. For more information, see [Configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#configurationobject){: external}.
+1.  By default, the text direction of the page is left to right. However, if you change the direction to "right to left", the webchat maintains your configuration. 
 

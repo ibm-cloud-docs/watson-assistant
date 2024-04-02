@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-10-26"
+  years: 2019, 2024
+lastupdated: "2024-04-02"
 
 subcollection: watson-assistant
 
@@ -14,7 +14,7 @@ subcollection: watson-assistant
 # Controlling the web chat version
 {: #web-chat-develop-versions}
 
-The web chat JavaScript code follows semantic versioning practices. Starting with web chat version 2.0.0, you can set the version of the web chat that you want to use as a configuration option.
+The web chat JavaScript code follows semantic versioning practices. Starting with web chat version 7.0.0, you can set the version of the web chat that you want to use as a configuration option.
 
 If you don't specify a version, the latest version is used automatically (`clientVersion: "latest"`). When you apply the latest version, you benefit from the continuous improvements, feature additions, and bug fixes that are made to the web chat regularly.
 
@@ -22,11 +22,11 @@ However, if you apply extensive customizations to your deployment, such as overr
 
 To use a specific version (`clientVersion: "major.minor.patch"`), specify it as follows:
 
-The following examples show what to specify when the current version is `2.3.1`.
+The following examples show what to specify when the current version is `7.7.1`.
 
-- If you want to stay on a major version, but get the latest minor and patch releases, specify `clientVersion: "2"`.
-- If you want to stay on a minor version, but get the latest patch releases, specify `clientVersion: "2.3"`. 
-- If you want to lock on to a specific minor version and patch release, specify `clientVersion: "2.3.1"`.
+- If you want to stay on a major version, but get the latest minor and patch releases, specify `clientVersion: "7"`.
+- If you want to stay on a minor version, but get the latest patch releases, specify `clientVersion: "7.7.0"`. 
+- If you want to lock on to a specific minor version and patch release, specify `clientVersion: "7.7.1"`.
 
 To test the updates in a version release of the web chat before you apply the version to your live web chat, follow these steps:
 

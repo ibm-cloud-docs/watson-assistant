@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, {CURRENT_YEAR}]
-lastupdated: "2023-09-06"
+  years: 2019, 2024
+lastupdated: "2024-04-02"
 
 subcollection: watson-assistant
 
@@ -38,3 +38,5 @@ On the **Style** tab, you can configure the overall appearance of the web chat w
     Specify the URL for a publicly accessible hosted image, such as a company or brand logo or an assistant avatar. The image file must be between 64 x 64 and 100 x 100 pixels in size.
 
 Style changes are immediately reflected by the web chat preview that is shown on the page. However, no configuration changes are applied to the environment until you click **Save and exit**.
+
+You can now use the Carbon for AI in your web chat style. For more information about Carbon for AI integration in your web chat, see [Configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#theme-config).

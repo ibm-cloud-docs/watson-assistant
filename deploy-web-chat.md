@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-08-09"
+  years: 2019, 2024
+lastupdated: "2024-04-02"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,8 @@ To add the web chat widget to your website, you need to embed a generated script
 {: shortdesc}
 
 The web chat integration is automatically included for every assistant, and is configured separately for each environment.
+
+For the webchat integration with a React-based application, see the alternative ways [here](https://github.com/watson-developer-cloud/assistant-web-chat-react).{: note}
 
 To add the web chat to your website:
 
@@ -69,7 +71,7 @@ To add the web chat to your website:
 
 1.  Click the launcher icon to open the chat window.
 
-    ![Web chat window](images/web-chat-window.png)
+    ![Web chat window](images/home-screen.png)
 
 1.  Paste the same embed script into each web page where you want the assistant to be available to your customers.
 

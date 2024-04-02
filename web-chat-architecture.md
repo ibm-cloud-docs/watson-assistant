@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-10-30"
+  years: 2019, 2024
+lastupdated: "2024-04-02"
 
 subcollection: watson-assistant
 
@@ -225,13 +225,17 @@ If you are concerned about unauthorized access to your assistant, you can enable
 
 If your website uses a Content Security Policy (CSP), you must update it to grant permission to the web chat.
 
-The following table lists the values to add to your CSP.
+*Table. CSP properties* lists the values to add to your CSP.
 
 | Property | Values |
 |----------|-------------------|
-| default-src	| 'self' *.watson.appdomain.cloud fonts.gstatic.com 'unsafe-inline' |
-| connect-src |	*.watson.appdomain.cloud |
+| `default-src`	| 'self' `*.watson.appdomain.cloud` 'unsafe-inline' |
+| `connect-src` |	`*.watson.appdomain.cloud` |
 {: caption="CSP properties" caption-side="top"}
+
+For default-src, if you have a separate `font-src`, you must add `*.watson.appdomain.cloud` along with `font-src`.{: note}
+If you are using AI assistant builder in watsonx Orchestrate, you must add `*.watson-orchestrate.ibm.com` to the `connect-src` property and `*.watson.appdomain.cloud` to the `style-src` property in the CSP policy.{: tip}
+
 
 The following example shows a complete CSP metadata tag:
 
