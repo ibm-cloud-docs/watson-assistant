@@ -80,5 +80,5 @@ You can use the search integration with the built-in [No action matches](/docs/w
 
 Conversational search uses the large language models (LLMs) to recognize and respond to customer queries. You can enable this feature in the search integration to improve the assistant responses by using simple conversations.
 
-For more information about Conversational Search, click [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup) 
+For more information about Conversational Search, click [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup). 
 
