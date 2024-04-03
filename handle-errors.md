@@ -55,7 +55,7 @@ You can set how often customers are routed to *No action matches* by changing a 
 
 1. From the **Actions** page of the assistant, click **Global settings** ![Gear icon](../../icons/settings.svg).
 
-1. On the **Clarifying questions** tab, you can edit the **No action matches** section. 
+1. On the **Clarifying questions** tab, you can edit the **No matches** section. 
 
    - Rarely (default)
    - Sometimes
