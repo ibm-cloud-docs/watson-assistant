@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-03-07"
+lastupdated: "2024-04-03"
 
 subcollection: watson-assistant
 
@@ -60,6 +60,8 @@ You can set how often customers are routed to *No action matches* by changing a 
    - Rarely (default)
    - Sometimes
    - More often
+
+
 
 #### Adding examples of unsupported input
 {: #no-action-matches-add-examples}

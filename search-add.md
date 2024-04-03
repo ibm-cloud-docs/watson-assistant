@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-03-29"
+lastupdated: "2024-04-03"
 
 subcollection: watson-assistant
 
@@ -144,6 +144,8 @@ If you are using the classic experience, add a search skill:
     | No results found | No search results are found | `I searched my knowledge base for information that might address your query, but did not find anything useful to share.` |
     | Connectivity issue | I was unable to complete the search for some reason | `I might have information that could help address your query, but am unable to search my knowledge base at the moment.` |
     {: caption="Search result messages" caption-side="top"}
+
+
 
 1.  Choose whether to enable **Emphasize the answer**. 
 
