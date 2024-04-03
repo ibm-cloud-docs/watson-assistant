@@ -36,11 +36,11 @@ You cannot anticipate every possible request, so sometimes customers send input 
 
 
 
-Unrecognized input of this sort triggers the built-in *No action matches* action. To see how this action works, click **Set by assistant** in the list of actions, and then click *No action matches*.
+Unrecognized input of this sort triggers the built-in **No matches** action. To see how this action works, click **Set by assistant** in the list of actions, and then click **No matches**.
 
 ![No action matches built-in action.](images/no-action-matches.png){: caption="No action matches built-in action." caption-side="bottom"}
 
-By default, this action has two steps, and each step is conditioned on the *No action matches count* session variable. This built-in variable is automatically incremented with each consecutive unrecognized input. Therefore, the behavior of the *No action matches* action differs depending on how many times in a row the user says something that the assistant fails to understand.
+By default, this action has two steps, and each step is conditioned on the *No action matches count* session variable. This built-in variable is automatically incremented with each consecutive unrecognized input. Therefore, the behavior of the **No matches** action differs depending on how many times in a row the user says something that the assistant fails to understand.
 
 - For the first three unrecognized messages, step 1 executes. This step outputs a message that the assistant did not recognize the user's input, and asks the user to try again. You can edit the message, or modify the number of times that the assistant responds with this message.
 
@@ -48,10 +48,10 @@ By default, this action has two steps, and each step is conditioned on the *No a
 
 - If the user tries more than three times and the assistant still does not understand, step 2 executes. Step 2 calls the *Fallback* action, which offers other options such as connecting to a live agent. For more information, see [Editing the fallback action](#fallback-action).
 
-You can edit the *No action matches* action just as you can any other action by changing the existing steps and adding or deleting steps. If you change the *No action matches* action, you might accidentally break your assistant's ability to recover from errors in the conversation. If this happens, you can re-create the default steps.
+You can edit the **No matches** action just as you can any other action by changing the existing steps and adding or deleting steps. If you change the **No matches** action, you might accidentally break your assistant's ability to recover from errors in the conversation. If this happens, you can re-create the default steps.
 {: tip}
 
-You can set how often customers are routed to *No action matches* by changing a global setting for actions.
+You can set how often customers are routed to **No matches** by changing a global setting for actions.
 
 1. From the **Actions** page of the assistant, click **Global settings** ![Gear icon](../../icons/settings.svg).
 
@@ -66,9 +66,9 @@ You can set how often customers are routed to *No action matches* by changing a 
 #### Adding examples of unsupported input
 {: #no-action-matches-add-examples}
 
-By default, the *No action matches* action is triggered only when the user's input does not match any defined action.
+By default, the **No matches** action is triggered only when the user's input does not match any defined action.
 
-If you can anticipate certain user requests that your assistant does not support, you can add these requests as example phrases in the **Customer starts with** section of the *No action matches* action. Adding example phrases helps to ensure that these requests are sent directly to the *No action matches* action rather than triggering a different action by mistake. You can also upload or download example phrases in a comma-separated value (CSV) file. For more information, see [Adding more examples](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-adding-more-examples).
+If you can anticipate certain user requests that your assistant does not support, you can add these requests as example phrases in the **Customer starts with** section of the **No matches** action. Adding example phrases helps to ensure that these requests are sent directly to the **No matches** action rather than triggering a different action by mistake. You can also upload or download example phrases in a comma-separated value (CSV) file. For more information, see [Adding more examples](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-adding-more-examples).
 
 ### When your customer gives invalid answers
 {: #step-validation}
@@ -126,7 +126,7 @@ Whenever the *Fallback* action is triggered, the assistant also sets a value for
 
 - *Step validation failed*: The customer repeatedly replied with invalid answers for the expected customer response type.
 - *Agent requested*: The customer directly asked to be connected to a live agent.
-- *No action matches*: The customer repeatedly made requests or asked questions that the assistant did not understand.
+- **No matches**: The customer repeatedly made requests or asked questions that the assistant did not understand.
 - *Danger word detected*: The customer uses words or phrases that match the *Connect to agent* step in the *Trigger word detected* action. 
 - *Profanity detected*: The customer repeatedly used words or phrases that match the *Show warning* step in the *Trigger word detected* action.
 
