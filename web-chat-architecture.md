@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-04-02"
+lastupdated: "2024-04-03"
 
 subcollection: watson-assistant
 
@@ -40,7 +40,7 @@ The appearance of this expanded state differs slightly depending on whether the 
 
 - For desktop browsers, the expanded launcher shows two primary buttons the customer can click to open the web chat, and a **Close** button that closes the launcher.
 
-    ![An example of the desktop launcher](images/desktop-launcher.png)
+    ![An example of the desktop launcher](images/web-chat-desktop-launcher.png)
 
     The expanded launcher remains in its expanded state even if the customer reloads the page or navigates to a different page. It stays in its expanded state until the customer either opens it by clicking either of the two primary buttons, or closes it, at which point it returns to its initial small state for the rest of the session.
 
