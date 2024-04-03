@@ -145,8 +145,6 @@ If you are using the classic experience, add a search skill:
     | Connectivity issue | I was unable to complete the search for some reason | `I might have information that could help address your query, but am unable to search my knowledge base at the moment.` |
     {: caption="Search result messages" caption-side="top"}
 
-
-
 1.  Choose whether to enable **Emphasize the answer**. 
 
     This option is available only if your {{site.data.keyword.discoveryshort}} instance uses the v2 {{site.data.keyword.discoveryshort}} API.
@@ -161,6 +159,8 @@ If you are using the classic experience, add a search skill:
     By default, customers can choose to see more results. If you don't want to give customers this choice, clear the **Include link for customers to view up to 10 results** checkbox.
 
 1.  In the **Set result selectivity** section, decide whether to be more selective with the answers that are returned. By increasing result selectivity, Search returns fewer but more accurate results. In most cases, Search is accurate enough that the default setting (off) is sufficient.
+
+
 
 1.  Click **Preview**. Enter a test message to see the results that are returned when your configuration choices are applied to the search. Make adjustments as necessary.
 
