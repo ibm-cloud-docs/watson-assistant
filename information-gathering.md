@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-02-29"
+lastupdated: "2024-04-03"
 
 keywords: information gathering
 
@@ -33,4 +33,5 @@ To enable the information gathering capability, do the following steps:
 1. Go to **Home** > **Actions** > **Global settings** > **Generative AI** > **Information gathering**.
 1. Set **Use watsonx.ai information gathering** to `On`.
 
-When you enable intelligent information gathering, settings for existing free text customer responses change to `Skip asking if the answer is mentioned in previous messages`. If you later disable information gathering, settings for free text responses revert to `Always ask`. For more information, see [Skipping steps, always asking steps, or never asking steps](/docs/watson-assistant?topic=watson-assistant-collect-info#collect-info-skip-step).{: tip}
+When you enable intelligent information gathering, settings for existing free text customer responses change to `Skip asking if the answer is mentioned in previous messages`. If you later disable information gathering, revert the settings for free text responses to `Always ask`. For more information, see [Skipping steps, always asking steps, or never asking steps](/docs/watson-assistant?topic=watson-assistant-collect-info#collect-info-skip-step).{: tip}
+
