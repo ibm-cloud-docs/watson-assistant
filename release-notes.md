@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-04-04"
 
 subcollection: watson-assistant
 
@@ -31,7 +31,7 @@ Release notes describe the new features, changes, and bug fixes in each release 
 {: release-note}
 
 Support integration with Genesys Audio Connector
-: You can now integrate Genesys Audio Connector with your assistant to stream the conversation audio between assistant and Genesys Cloud. For more information, see [Integrating with Genesys Audio Connector](/docs/watson-assistant?topic=watson-assistant-deploy-genesys-audioconnector).
+: You can now integrate Genesys Audio Connector with your assistant to stream the conversation audio between the assistant and Genesys Cloud. For more information, see [Integrating with Genesys Audio Connector](/docs/watson-assistant?topic=watson-assistant-deploy-genesys-audioconnector).
 
 ## 16 February 2024
 {: #watson-assistant-feb162024}
