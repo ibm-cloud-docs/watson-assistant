@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-04"
+lastupdated: "2024-04-09"
 
 subcollection: watson-assistant
 
@@ -11,9 +11,6 @@ content-type: release-note
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
-![schedule-maintenace](/images/scheduled-maintenance.svg)
-
 
 
 # Release notes for {{site.data.keyword.conversationshort}}
