@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-10-31"
+  years: 2019, 2024
+lastupdated: "2024-04-03"
 
 keywords: log webhook
 
@@ -28,10 +28,10 @@ This feature is available only to Plus and Enterprise plan users. The Plus plan 
 Add a log webhook to your assistant if you want to use an external service to log activity. You can log two kinds of activity:
 
 - **Messages and responses**: The log webhook is triggered each time that the assistant responds to customer input. You can use this option as an alternative to the built-in analytics feature to handle logging yourself. (For more information about the built-in analytics support, see [Review your entire assistant at a glance](/docs/watson-assistant?topic=watson-assistant-analytics-overview).)
-  
-    If you are using a custom channel, the log webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://{DomainName}/assistant/assistant-v2#message). All built-in channel integrations use this API.
-    {: important}
 
+    If you are using a custom channel, the log webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://cloud.ibm.com/apidocs/assistant-v2#message). All built-in channel integrations use this API.
+{: important}
+    
 - **Call detail records (CDRs)**: The log webhook is triggered after each telephone call a user makes to your assistant that uses the phone integration. A Call Detail Record (CDR) is a summary report that documents the details of a telephone call, including phone numbers, call length, latency, and other diagnostic information. CDR records are only for assistants that use the phone integration.
 
 The log webhook does not return anything to your assistant.

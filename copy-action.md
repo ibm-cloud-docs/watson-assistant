@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-03-30"
+  years: 2024
+lastupdated: "2024-04-09"
 
 subcollection: watson-assistant
 
@@ -12,6 +12,7 @@ subcollection: watson-assistant
 
 # Copying an action to another assistant
 {: #copy-action}
+
 
 You can copy an action from one assistant to another. When you copy an action, references to other actions, variables, and saved responses are also copied.
 
@@ -30,3 +31,5 @@ To copy an action to another assistant:
    ![Copy to an assistant](images/manage-actions-copy-references.png){: caption="Copy to an assistant" caption-side="bottom"}
 
 1. Click **Apply** to finish copying the action to the other assistant.
+
+

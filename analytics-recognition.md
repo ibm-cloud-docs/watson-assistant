@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-12-14"
+  years: 2022, 2024
+lastupdated: "2024-04-03"
 
 subcollection: watson-assistant
 
@@ -24,7 +24,7 @@ You can analyze the unrecognized requests in assistants that you created for the
 {: note}
 
 *Recognition* measures the requests within a time period that are recognized and successfully routed to an action. Customer requests are considered unrecognized if:
-- The request triggers the *No Action Matches* action
+- The request triggers the **No matches** action
 - The assistant asks a clarifying question and the customer chooses `None of the above` 
 
 ## Viewing groups of unrecognized requests

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-01"
+lastupdated: "2024-04-09"
 
 subcollection: watson-assistant
 
@@ -11,9 +11,6 @@ content-type: release-note
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
-![schedule-maintenace](/images/scheduled-maintenance.svg)
-
 
 
 # Release notes for {{site.data.keyword.conversationshort}}
@@ -24,12 +21,14 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
+
+
 ## 26 March 2024
 {: #watson-assistant-mar262024}
 {: release-note}
 
 Support integration with Genesys Audio Connector
-: You can now integrate Genesys Audio Connector with your assistant to stream the conversation audio between assistant and Genesys Cloud. For more information, see [Integrating with Genesys Audio Connector](/docs/watson-assistant?topic=watson-assistant-deploy-genesys-audioconnector).
+: You can now integrate Genesys Audio Connector with your assistant to stream the conversation audio between the assistant and Genesys Cloud. For more information, see [Integrating with Genesys Audio Connector](/docs/watson-assistant?topic=watson-assistant-deploy-genesys-audioconnector).
 
 ## 16 February 2024
 {: #watson-assistant-feb162024}
@@ -135,8 +134,8 @@ Introducing {{site.data.keyword.conversationshort}}
 {: #watson-assistant-aug252023}
 {: release-note}
 
-Setting for when to use *No action matches*
-:   You can use a new global setting for actions to change how often your assistant routes customers to the *No action matches* action. By setting this threshold, you can affect when the assistant fetches answers from a search integration, triggers the *Fallback* action, or switches topics. For more information, see [When the assistant can't understand your customer's request](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches).
+Setting for when to use **No matches**
+:   You can use a new global setting for actions to change how often your assistant routes customers to the **No matches** action. By setting this threshold, you can affect when the assistant fetches answers from a search integration, triggers the *Fallback* action, or switches topics. For more information, see [When the assistant can't understand your customer's request](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches).
 
 ## 24 August 2023
 {: #watson-assistant-aug242023}

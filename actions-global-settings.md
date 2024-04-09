@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-11-29"
+  years: 2022, 2024
+lastupdated: "2024-04-09"
 
 keywords: settings
 subcollection: watson-assistant
@@ -21,8 +21,8 @@ On the **Actions** page, click **Global settings** ![Gear icon](../../icons/sett
 
 Global settings provide options, configurations, and tasks for:
 
-- [Clarifying questions](#actions-global-settings-response-modes)
-- [Change conversation topic](#actions-global-settings-change-conversation-topic)
+
+
 - [Generative AI](#generative-ai)
 - [Autocorrection](#actions-global-settings-autocorrection)
 - [Display formats](#actions-global-settings-display-formats)
@@ -30,7 +30,9 @@ Global settings provide options, configurations, and tasks for:
 - [Autolearning](#actions-global-settings-autolearning)
 - [Upload/Download](#actions-global-settings-upload-download)
 
-## Clarifying questions
+
+
+### Clarifying questions
 {: #actions-global-settings-response-modes}
 
 On the **Clarifying questions** tab, you can customize how an action asks clarifying questions.
@@ -40,14 +42,14 @@ In the **Ask clarifying questions** section, you can:
 - Modify the text that your assistant uses to introduce the clarification list or when no action matches.
 - Enable or disable response modes, and modify the text that your assistant uses with a response mode. If you enable response modes, you can use the **Customize modes** section to choose a response mode for each action to set how it behaves.
 
-In the **No action matches** section, you can affect how often your assistant routes customers to the *No action matches* action when input is unrecognized.
+In the **No matches** section, you can affect how often your assistant routes customers to the **No matches** action when input is unrecognized.
 
 For more information, see:
 - [Customizing clarifying questions](/docs/watson-assistant?topic=watson-assistant-understand-questions#understand-questions-disambiguation-config)
 - [Response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes)
 - [When the assistant can't understand your customer's request](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches)
 
-## Change conversation topic
+### Change conversation topic
 {: #actions-global-settings-change-conversation-topic}
 
 The **Change conversation topic** feature enables your assistant to handle digressions, dynamically responding to the user by changing the conversation topic as needed. For more information, see [Allowing your customers to change the topic of the conversation](/docs/watson-assistant?topic=watson-assistant-change-topic).
