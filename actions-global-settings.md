@@ -23,6 +23,8 @@ Global settings provide options, configurations, and tasks for:
 
 
 
+- [Clarifying questions](#actions-global-settings-response-modes)
+- [Change conversation topic](#actions-global-settings-change-conversation-topic)
 - [Generative AI](#generative-ai)
 - [Autocorrection](#actions-global-settings-autocorrection)
 - [Display formats](#actions-global-settings-display-formats)
