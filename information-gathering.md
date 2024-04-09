@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-04-04"
+lastupdated: "2024-04-09"
 
 keywords: information gathering
 
@@ -14,6 +14,8 @@ subcollection: watson-assistant
 
 # Information gathering
 {: #information-gathering}
+
+You can use watsonx.ai in your assistant to intelligently gather information and address a customer query quickly to avoid repetitive questions. The watsonx.ai uses large language models (LLMs) to recognize the information units in a query body and stores each of them in the respective slot, which is linked to a prompt.
 
 
 This beta feature is available in English for evaluation and testing purposes only. The watsonx generative AI model is currently hosted only in the Dallas and Frankfurt regions. To sign up for the beta access for Information Gathering, use the form [here](https://forms.monday.com/forms/5d57f5429e099cfe24462c277efdd058?r=use1){: external}.{: beta}
