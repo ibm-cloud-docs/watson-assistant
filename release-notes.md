@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-09"
+lastupdated: "2024-04-10"
 
 subcollection: watson-assistant
 
@@ -21,6 +21,20 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
+
+
+## 5 April 2024
+{: #watson-assistant-apr052024}
+{: release-note}
+
+Add examples button in the action editor
+: You can now use the new **Add examples** button in the action editor to help the intelligent information gathering that uses watsonx.ai model to retrieve accurate information. For more information, see [Adding examples for clarity](/docs/watson-assistant?topic=watson-assistant-information-gathering#add-examples-for-clarity).
+
+Add a custom result filter for the search integration
+: You can now filter your search result in the {{site.data.keyword.discoveryshort}} search integration by adding custom text strings in the **Custom result filter** field in **Search integration**. For more information, see [Configure the search for {{site.data.keyword.discoveryshort}}](/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure).
+
+Configure search routing
+: You can now configure the search routing for your assistant when no matches are available for the customer response. For more information, see [Configuring the search routing when no action matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing).
 
 
 ## 26 March 2024
