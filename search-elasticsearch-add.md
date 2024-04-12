@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-04-12"
 
 subcollection: watson-assistant
 
@@ -79,6 +79,8 @@ After you add the Elasticsearch search integration, do the following:
 
 1. Expand the **Advanced Elasticsearch settings** section to see the following text boxes:
 
+
+
     - **Configure the filter array for Elasticsearch**
 
       You define the filter as an array of objects so that you can create filters to arrange the content per the query body. 
@@ -89,7 +91,8 @@ After you add the Elasticsearch search integration, do the following:
 
       You cannot customize the query body in the assistant with an existing Elasticsearch configuration.{: important}
 
-      
+
+
 1. Switch the **Conversational Search** toggle to `on` if you want to activate [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search). If you don't want to activate conversational search, switch the toggle to `off`.
 
     The **Conversational Search** toggle is available only if you signed up for the beta version.{: beta}
