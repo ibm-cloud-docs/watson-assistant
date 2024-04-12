@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-10"
+lastupdated: "2024-04-12"
 
 subcollection: watson-assistant
 
@@ -23,7 +23,7 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
-## 5 April 2024
+## 11 April 2024
 {: #watson-assistant-apr052024}
 {: release-note}
 
