@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-02"
+lastupdated: "2024-04-12"
 
 subcollection: watson-assistant
 
@@ -55,15 +55,32 @@ If you want to evaluate changes that are introduced in a web chat release before
   
   For more information, see [Web chat theme configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#theme-config){: external}.
 
-- **Updated message API version**: You can now use the updated message API version, 2023-06-15 version of the v2 message API.
-
+- **Updated message API version**: Web chat now uses the `2023-06-15` version of the watsonx Assistant API. The previous version was `2021-09-08`. For more information about changes in behavior for watsonx Assistant with the new API version, see [Release notes for watsonx Assistant](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes) .
+  
 - **New CSP requirements**: You must use the new CSP requirements for web chat. For more information, see [Web chat architecture security](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture#web-chat-architecture-security).
 
-- **Changes in custom service desk**: You must now use the `getName()` function in the custom service desk to return a name value. For more information, see [Custom Service Desk API details](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd#api-details).
+- **Changes in custom service desk**: All the custom service desks must now implement a `getName()` function. If you are using a custom service desk without the `getName()` function, you must update your service desks before you upgrade to Web chat `8.0.0`. For more information, see [Custom Service Desk API details](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-custom-sd#api-details){: external}.
 
 - **Changes in page direction setting**: The `direction` configuration option is not available in web chat now because web chat now uses the `dir` attribute in the `html` element. In addition, the direction configuration is set to left-to-right by default.
 
-- **Native Carbon classes replace the home screen help classes**: The native Carbon classes now replace the home screen help classes in web chat. For more information, see [Web chat CSS helper classes](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-render#helper-classes).
+- **Native Carbon classes replace the home screen help classes**: The native Carbon classes now replace the home screen help classes in web chat. For more information, see [Web chat CSS helper classes](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-render#helper-classes){: external}.
+
+- **The loadWatsonAssistant.js file is no longer updated**: Starting from version 8.0.0, the `loadWatsonAssistantChat.js` file, which was used by the embed script to load the web chat, is no longer updated. Therefore, for web chat version 8.0.0, you must use the `WatsonAssistantChatEntry.js` file in the embed script to load the web chat instead of the `loadWatsonAssistantChat.js` file. For web chat versions `7.x` and earlier, you can continue to use the `loadWatsonAssistantChat.js` file  in the embed script even though it is replaced with the `WatsonAssistantChatEntry.js` file. To make any changes to the embed script, you access the full embed script in the `Embed` tab in the web chat settings.
+ 
+- **Deprecated window methods**: In web chat version 8.0.0, the following window methods are deprecated:
+        - `openWindow`
+        - `closeWindow`
+        - `toggleOpen` 
+        
+        However, {{site.data.keyword.conversationshort}} continues to support these window methods in web chat version 8.0.0. For more information about migrating from window to view methods, see [Migrating from window to view events and methods](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#windowviewmigration){: external}.
+        
+- **Deprecated events**: In web chat version 8.0.0, the following events are deprecated:
+        - `window:pre:open` 
+        - `window:open`
+        - `window:pre:close`
+        - `window:close`
+        
+        However, {{site.data.keyword.conversationshort}} continues to support these events in web chat version 8.0.0. For more information about migrating from window to view events, see [Migrating from window to view events and methods](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#windowviewmigration){: external}.
 
 
 ## 7.10.0
