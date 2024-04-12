@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-04-12"
 
 subcollection: watson-assistant
 
@@ -173,7 +173,10 @@ If you want to change the configuration of the search result card later, open th
 
 If you decide you want to connect to a different {{site.data.keyword.discoveryshort}} service instance or project, open the search integration and click ***Edit Discovery Settings**. You can choose either a new project from the same instance, or a new instance and project.
 
+ ## Configure your assistant to use {{site.data.keyword.discoveryshort}} search
+ {: #search-assistant-configure}
 
+After you configure {{site.data.keyword.discoveryshort}} search integration, you must configure your assistant to use {{site.data.keyword.discoveryshort}} search when the customer response matches no action. For more information about updating **No matches** to use search, see [Use search when no action matches](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-no-action-matches). 
 
 ## Troubleshooting
 {: #search-add-troubleshoot}

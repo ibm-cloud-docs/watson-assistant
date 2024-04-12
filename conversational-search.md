@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-10"
+lastupdated: "2024-04-12"
 
 keywords: conversational search
 
@@ -29,7 +29,11 @@ By default, assistants in all regions except `Frankfurt` use the model from the 
 To use conversational search, you must have a Plus or Enterprise plan and enroll in the early access program with this [signup form](https://wkf.ms/4bKDCUh){: external}.
 Refer to the following topics to configure Conversational search in your assistant:
 
-
+- [Before you begin](#conversational-search-requirements)
+- [Enable conversational search](#conversational-search-setup) 
+- [Configure your assistant to use conversational search](#conversational-search-assistant-configure)
+- [Test Conversational search](#conversational-search-test)
+- [Streaming response support](#conversational-search-streaming-response)
 
 ## Before you begin
 {: #conversational-search-requirements}
