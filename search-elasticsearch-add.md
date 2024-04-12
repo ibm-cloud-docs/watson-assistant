@@ -77,8 +77,6 @@ After you add the Elasticsearch search integration, do the following:
 
     - **URL**: This field can be populated with any footer content that you want to include at the end of the search result.
 
-1. Expand the **Advanced Elasticsearch settings** section to see the following text boxes:
-
 
 
 1. Switch the **Conversational Search** toggle to `on` if you want to   activate [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search). If you don't want to activate conversational search, switch the toggle to `off`.
@@ -86,7 +84,7 @@ After you add the Elasticsearch search integration, do the following:
     The **Conversational Search** toggle is available only if you signed up for the beta version.{: beta}
 
 
-1.  Use the **Message**, **No results found** and **Connectivity issue** tabs to customize different messages to share with users based on the successfulness of the search.
+1. Use the **Message**, **No results found** and **Connectivity issue** tabs to customize different messages to share with users based on the successfulness of the search.
 
     | Tab | Scenario | Example message |
     | --- | --- | --- |
@@ -95,11 +93,16 @@ After you add the Elasticsearch search integration, do the following:
     | Connectivity issue | I was unable to complete the search for some reason | `I might have information that could help address your query, but am unable to search my knowledge base at the moment.` |
     {: caption="Search result messages" caption-side="top"}
 
+1.  Use **Custom results filter** to add a filter for the custom text strings in the search integration. The **Custom results filter** field helps you define the search results relevant for a topic, product, or text string. For example, if you define the **Custom results filter** field by sing `enriched_text.entities.text:"Boston, MA"`, the search responses for any query in the assistant are filtered to make it relevant to `"Boston, MA"` in the `enriched_text.entities.text` file.
 
+    ![Custom result filter Elasticsearch](/images/custom-result-filter-es.png)
 
 1. Click **Finish**.
 
+ ## Configure your assistant to use Elastic search
+ {: #search-assistant-configure}
 
+After you configure Elasticsearch integration, you must configure your assistant to use Elasticsearch when the customer response matches no action. For more information about updating **No matches** to use search, see [Use search when no action matches](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-no-action-matches). 
 
 ## Test Elasticsearch
 {: #elasticsearch-test}
