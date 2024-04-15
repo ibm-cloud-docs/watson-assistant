@@ -24,6 +24,19 @@ Release notes describe the new features, changes, and bug fixes in each release 
 {: #watson-assistant-apr152024}
 {: release-note}
 
+Streaming response  support from Conversational search 
+: You can now use streaming response support from Conversational search that uses watsonx.ai capabilities to provide continuous, real-time responses in your assistant. For more information, see [Streaming response support](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-streaming-response).
+
+
+
+Overwrite all or skip all when you copy actions to another assistant
+:  You can now choose to overwrite all references or skip all references when you copy actions from one assistant into another. For more information, see [Copying an action to another assistant](/docs/watson-assistant?topic=watson-assistant-copy-action).
+
+
+## 11 April 2024
+{: #watson-assistant-apr052024}
+{: release-note}
+
 Add examples button in the action editor
 : You can now use the new **Add examples** button in the action editor to help the intelligent information gathering that uses watsonx.ai model to retrieve accurate information. For more information, see [Adding examples for clarity](/docs/watson-assistant?topic=watson-assistant-information-gathering#add-examples-for-clarity).
 
