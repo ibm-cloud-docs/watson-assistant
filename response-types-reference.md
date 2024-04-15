@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-03-29"
+lastupdated: "2024-04-10"
 
 subcollection: watson-assistant
 
@@ -15,7 +15,6 @@ subcollection: watson-assistant
 
 You can use the JSON editor to specify responses of many different types.
 
-
 For more information, see [Defining responses with the JSON editor](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json).
 
 {: shortdesc}
@@ -25,7 +24,6 @@ The following response types are supported in the JSON editor.
 
 ## `audio`
 {: #response-types-json-audio}
-
 Plays an audio clip that is specified by a URL.
 
 ### Integration channel support

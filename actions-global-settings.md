@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-09"
+lastupdated: "2024-04-15"
 
 keywords: settings
 subcollection: watson-assistant
@@ -21,10 +21,7 @@ On the **Actions** page, click **Global settings** ![Gear icon](../../icons/sett
 
 Global settings provide options, configurations, and tasks for:
 
-
-
-- [Clarifying questions](#actions-global-settings-response-modes)
-- [Change conversation topic](#actions-global-settings-change-conversation-topic)
+- [Conversation routing](#convo-routing)
 - [Generative AI](#generative-ai)
 - [Autocorrection](#actions-global-settings-autocorrection)
 - [Display formats](#actions-global-settings-display-formats)
@@ -32,7 +29,16 @@ Global settings provide options, configurations, and tasks for:
 - [Autolearning](#actions-global-settings-autolearning)
 - [Upload/Download](#actions-global-settings-upload-download)
 
+## Conversation routing
+{: #convo-routing}
 
+In the **Conversation routing** tab, you have the following settings:
+
+- [Ask clarifying questions](#action-global-settings-clarify-questions)
+- [Customize modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes)
+- [Change conversation topic](#actions-global-settings-change-conversation-topic)
+- [No matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches)
+- [Search routing](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing)
 
 ### Clarifying questions
 {: #actions-global-settings-response-modes}

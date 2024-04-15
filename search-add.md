@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-04-15"
 
 subcollection: watson-assistant
 
@@ -160,7 +160,9 @@ If you are using the classic experience, add a search skill:
 
 1.  In the **Set result selectivity** section, decide whether to be more selective with the answers that are returned. By increasing result selectivity, Search returns fewer but more accurate results. In most cases, Search is accurate enough that the default setting (off) is sufficient.
 
+1.  Use **Custom results filter** to add a filter for the custom text strings in the search integration. The **Custom results filter** field helps you define the search results relevant for a topic, product, or text string. For example, if you define the **Custom results filter** field by sing `enriched_text.entities.text:"Boston, MA"`, the search responses for any query in the assistant are filtered to make it relevant to `"Boston, MA"` in the `enriched_text.entities.text` file.
 
+    ![Custom results filter](/images/custom-result-filter-wd.png)
 
 1.  Click **Preview**. Enter a test message to see the results that are returned when your configuration choices are applied to the search. Make adjustments as necessary.
 
@@ -171,9 +173,12 @@ If you are using the classic experience, add a search skill:
 
 If you want to change the configuration of the search result card later, open the search integration again, and make edits. You do not need to save changes as you make them; they are automatically applied. When you are happy with the search results, click **Save** to finish configuring the search integration.
 
-If you decide you want to connect to a different {{site.data.keyword.discoveryshort}} service instance or project, open the search integration and click ***Edit Discovery Settings**. You can choose either a new project from the same instance, or a new instance and project.
+If you decide you want to connect to a different {{site.data.keyword.discoveryshort}} service instance or project, open the search integration and click **Edit Discovery Settings**. You can choose either a new project from the same instance, or a new instance and project.
 
+ ## Configure your assistant to use {{site.data.keyword.discoveryshort}} search
+ {: #search-assistant-configure}
 
+After you configure {{site.data.keyword.discoveryshort}} search integration, you must configure your assistant to use {{site.data.keyword.discoveryshort}} search when the customer response matches no action. For more information about updating **No matches** to use search, see [Use search when no action matches](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-no-action-matches). 
 
 ## Troubleshooting
 {: #search-add-troubleshoot}

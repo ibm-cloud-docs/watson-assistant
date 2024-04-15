@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-02"
+lastupdated: "2024-04-12"
 
 keywords: conversational search
 
@@ -29,7 +29,11 @@ By default, assistants in all regions except `Frankfurt` use the model from the 
 To use conversational search, you must have a Plus or Enterprise plan and enroll in the early access program with this [signup form](https://wkf.ms/4bKDCUh){: external}.
 Refer to the following topics to configure Conversational search in your assistant:
 
-
+- [Before you begin](#conversational-search-requirements)
+- [Enable conversational search](#conversational-search-setup) 
+- [Configure your assistant to use conversational search](#conversational-search-assistant-configure)
+- [Test Conversational search](#conversational-search-test)
+- [Streaming response support](#conversational-search-streaming-response)
 
 ## Before you begin
 {: #conversational-search-requirements}
@@ -45,7 +49,11 @@ You can enable **Conversational search** in the `Search Integration` window by s
 
  For more information about configuring {{site.data.keyword.discoveryshort}}, see [Discovery configure](/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure). For more information about configuring Elasticsearch, see [Elasticsearch configure](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add#setup-elasticsearch).
 
- 
+ ## Configure your assistant to use conversational search
+ {: #conversational-search-assistant-configure}
+
+After you enable Conversational search on **Search integration**, you can enable **Search routing** to use Conversational Search. For more information about search routing, see [Configuring the search routing when no action matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing). 
+
 ## Test Conversational search
 {: #conversational-search-test}
 
@@ -59,7 +67,8 @@ Search results are pulled from your knowledge base when the conversational searc
 When Conversational search is `On`, the same search results are pulled from your knowledge base. This time these results are passed to an IBM watsonx generative AI model. This model produces a conversational reply to the user's question, in the form of a text response about custom extensions.
 
    ![ConversationalSearchQuestion](images/elasticsearch-question.png)
-  
+
+
 
 
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-12-14"
+  years: 2020, 2024
+lastupdated: "2024-04-15"
 
 subcollection: watson-assistant
 
@@ -222,7 +222,7 @@ The SIP trunk provider sets up a SIP trunk for your voice traffic, and manages a
 
 1. Create an [{{site.data.keyword.Bluemix_notm}} case](/unifiedsupport/cases/form){: external}.
 
-1. Click **Customer success** as the case type.
+
 
 1. For **Subject**, enter `SIP trunk provider setup for {{site.data.keyword.conversationshort}}`.
 
