@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-12"
+lastupdated: "2024-04-15"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,18 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 8.1.0
+{: #8.1.0}
+*Release date: 15 April 2024*
+
+- **Support for conversational search streaming**: You can now enable or disable the conversational search streaming in web chat. To enable the conversational search streaming, go to **Integrations** > **Web chat** > **Style** in your assistant. Currently, you can enable streaming only for conversational search responses. However, your customers can see the search message stream in real time in their web chat. 
+
+- **Accent colors for home screen**: You can now apply accent colors instead of the default background colors on the web chat home screen. You can also control the gradient that is displayed on the default home screen background. To change the background color on the web chat home screen, go to **Integrations** > **Web chat** > **Home screen** in your assistant.
+
+- **Updates to `restartConversation()` method**: You can now use the `restartConversation()` method to delete the watsonx Assistant session from the server in addition to deleting the watsonx Assistant session from the client.
+ 
+- **New `sessionExpired` event**: Your assistant now triggers a new `sessionExpired` event before the assistant session expires. For more information, see [sessionExpired event](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#sessionExpired){: external}.
 
 ## 8.0.1
 {: #8.0.1}
