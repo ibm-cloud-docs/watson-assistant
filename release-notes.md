@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-12"
+lastupdated: "2024-04-15"
 
 subcollection: watson-assistant
 
@@ -12,7 +12,6 @@ content-type: release-note
 
 {{site.data.keyword.attribute-definition-list}}
 
-
 # Release notes for {{site.data.keyword.conversationshort}}
 {: #watson-assistant-release-notes}
 
@@ -21,10 +20,8 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
-
-
-## 11 April 2024
-{: #watson-assistant-apr052024}
+## 15 April 2024
+{: #watson-assistant-apr152024}
 {: release-note}
 
 Add examples button in the action editor
@@ -35,7 +32,6 @@ Add a custom result filter for the search integration
 
 Configure search routing
 : You can now configure the search routing for your assistant when no matches are available for the customer response. For more information, see [Configuring the search routing when no action matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing).
-
 
 ## 26 March 2024
 {: #watson-assistant-mar262024}

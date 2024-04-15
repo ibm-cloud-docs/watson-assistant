@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-04-09"
+lastupdated: "2024-04-15"
 
 keywords: information gathering
 
@@ -15,8 +15,7 @@ subcollection: watson-assistant
 # Information gathering
 {: #information-gathering}
 
-You can use watsonx.ai in your assistant to intelligently gather information and address a customer query quickly to avoid repetitive questions. The watsonx.ai uses large language models (LLMs) to recognize the information units in a query body and stores each of them in the respective slot, which is linked to a prompt.
-
+You can use watsonx.ai in your assistant to intelligently gather information and address a customer query quickly to avoid repetitive questions. The watsonx.ai uses large language models (LLMs) to recognize the information that is collected from the customer and store each of them in the respective variable for further processing.
 
 This beta feature is available in English for evaluation and testing purposes only. The watsonx generative AI model is currently hosted only in the Dallas and Frankfurt regions. To sign up for the beta access for Information Gathering, use the form [here](https://forms.monday.com/forms/5d57f5429e099cfe24462c277efdd058?r=use1){: external}.{: beta}
 
@@ -36,3 +35,23 @@ To enable the information gathering capability, do the following steps:
 
 When you enable intelligent information gathering, settings for existing free text customer responses change to `Skip asking if the answer is mentioned in previous messages`. If you later disable information gathering, revert the settings for free text responses to `Always ask`. For more information, see [Skipping steps, always asking steps, or never asking steps](/docs/watson-assistant?topic=watson-assistant-collect-info#collect-info-skip-step).{: tip}
 
+## Adding examples for clarity
+{: #add-examples-for-clarity}
+
+The **Add examples** feature in the action editor improves the capability of your assistant to gather accurate information from the customer response. By using the large language models (LLMs) in *watsonx.ai* and the added examples, your assistant can identify the variables in a customer response and retrieve accurate information. 
+
+You can add examples whenever the response from LLMs lacks clarity on a particular topic. The **Add examples** feature is an optional enhancement because watsonx.ai is capable of gathering information accurately even without the examples.
+
+To use the `Add examples` button, do the following:
+
+1. Go to **Home** > **Actions** > **Editor**. 
+1. Go to the **Step** where you want to add examples.
+1. In **Assistant says**, type the response that you want to display.
+1. Click `Define customer response` and select `Free text`.
+1. Click **Add examples** <img src="images/add-example-icon.png" alt="add example button" width="8%" height="8%"> button, which opens an `Examples` window.
+1. In the `Examples window`, type any customer relevant topic in `Customer says` and give a variable name in `Variable value`.
+1. Click `Apply` to save your changes. 
+
+You can add only three examples in the `Examples` window. {: note}
+
+   ![Add examples](images/add-example-dialog.png) 
