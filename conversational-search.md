@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-12"
+lastupdated: "2024-04-16"
 
 keywords: conversational search
 
@@ -69,6 +69,22 @@ When Conversational search is `On`, the same search results are pulled from your
    ![ConversationalSearchQuestion](images/elasticsearch-question.png)
 
 
+## Streaming response support
+{: #conversational-search-streaming-response}
+
+Streaming response from Conversational search uses watsonx.ai capabilities to provide continuous, real-time responses in your assistant. By default, the streaming response is disabled for the web chat and the assistant preview panels. 
+
+By using the streaming response support feature, you can reduce the wait time for the response. 
+
+{: shortdesc}
+
+To enable streaming response, do the following:
+
+1. Go to **Home** > **Preview** > **Customize web chat**.
+1. Click the **Styles** tab.
+1. Set the **Streaming** toggle button to `On`.
+1. Click **Save and exit**.
+  
 
 
 
