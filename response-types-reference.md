@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-10"
+lastupdated: "2024-04-16"
 
 subcollection: watson-assistant
 
@@ -13,11 +13,61 @@ subcollection: watson-assistant
 # Response types reference
 {: #response-types-reference}
 
-You can use the JSON editor to specify responses of many different types.
+ You can use the JSON editor to specify responses of many different types. 
+ You can use JSON editor to specify the responses to the customer query. By adding the JSON scripts in the JSON editor, your assistant uses the response format mentioned in the JSON script.
 
 For more information, see [Defining responses with the JSON editor](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json).
 
 {: shortdesc}
+
+ When the variables in the action and message API differ at run time, the format of response types in the action and message API also differs. The following examples show the differences in response type format when you use message API and the JSON editor.
+ 
+If the **text** response from the message API has the following format:
+> { "response_type": "text", "text": "Hello world" }
+
+Then, the assistant displays the actual text message, `Hello world`, in a single step.
+
+If the **text** response from the JSON action editor has the following format:
+```json
+{
+  "generic": [
+    {
+      "response_type": "text",
+      "values": [
+        {
+          "text_expression": {
+            "concat": [
+              {
+                "scalar": "Hi, "
+              },
+              {
+                "variable": "step_472"
+              },
+              {
+                "scalar": ". How can I help you?"
+              }
+            ]
+          }
+        }
+      ],
+      "selection_policy": "sequential"
+    }
+  ]
+}
+```
+Then, the assistant combines actual value of `variable` with other items in the `values` array and displays the response. For example, if `step_472` takes the value "Bob", then the assistant displays `Hi, Bob. How can I help you?`.
+
+## Viewing the response type at the runtime
+You can refer to the [API documentation for {{site.data.keyword.conversationshort}}](https://cloud.ibm.com/apidocs/assistant-v2?code=node#introduction) to view the [details of response types and the APIs](https://cloud.ibm.com/apidocs/assistant-v2?code=node#message-response){: external}.
+ 
+ For example, to view the runtime response type, do the following:
+ 1. In the `Response` section, click `MessageOutput`.
+ 1. Click `RuntimeResponseGeneric[]`.
+ 1. Select any option under the `One of`.
+
+To view more details about the selected option, click the `One of`.{: note}
+
+![Response type reference](images/action-response-reference.png)
 
 
 The following response types are supported in the JSON editor.
