@@ -19,7 +19,7 @@ For more information, see [Defining responses with the JSON editor](/docs/watson
 
 {: shortdesc}
 
- When the variables in the action and message API differ at run time, the format of response types in the action and message API also differs. The following examples show the differences in response type format when you use message API and the JSON editor.
+ When the variables in the action and message API differ at run time, the format of response types in the action and message API also differs. The following examples show the differences in response type format when you use the message API and JSON editor.
  
 If the **text** response from the message API has the following format:
 > { "response_type": "text", "text": "Hello world" }
