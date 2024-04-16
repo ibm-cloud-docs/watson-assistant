@@ -13,7 +13,7 @@ subcollection: watson-assistant
 # Response types reference
 {: #response-types-reference}
 
- You can use JSON editor to specify the responses to the customer query. By adding the JSON scripts in the JSON editor, your assistant uses the response format mentioned in the JSON script.
+ You can use JSON editor to customize the responses to the customer query. By adding the JSON scripts in the JSON editor, your assistant uses the response format mentioned in the JSON script.
 
 For more information, see [Defining responses with the JSON editor](/docs/watson-assistant?topic=watson-assistant-assistant-responses-json).
 
