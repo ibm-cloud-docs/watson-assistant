@@ -83,7 +83,7 @@ To enable **the streaming response support** do the following:
 1. Go to **Home** > **Preview** > **Customize web chat**.
 1. Click the `Styles` tab.
 1. Set the **Streaming** toggle button to `On`.
-1. Click `Save and exit`.
+1. Click **Save and exit**.
   
 
 
