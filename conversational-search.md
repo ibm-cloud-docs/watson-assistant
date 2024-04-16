@@ -72,7 +72,7 @@ When Conversational search is `On`, the same search results are pulled from your
 ## Streaming response support
 {: #conversational-search-streaming-response}
 
-Streaming response from Conversational search uses watsonx.ai capabilities to provide continuous, real-time responses in your assistant. By default, the streaming response is disabled for the web chat and the assistant preview panels. 
+The streaming response feature in conversational search uses the watsonx.ai capabilities to provide continuous and real-time responses in your assistant. By default, the streaming response is disabled for web chat and the preview panels of your assistant. 
 
 By using the streaming response support feature, you can reduce the wait time for the response. 
 
