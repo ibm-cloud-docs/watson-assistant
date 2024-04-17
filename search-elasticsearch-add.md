@@ -81,7 +81,7 @@ After you add the Elasticsearch search integration, do the following:
     
 1. Expand the **Advanced Elasticsearch settings** section to see the following text boxes.
 
-    
+   
     
     - **Configure the filter array for Elasticsearch**
 
