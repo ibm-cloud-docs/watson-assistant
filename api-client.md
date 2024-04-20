@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-10-24"
+  years: 2019, 2024
+lastupdated: "2024-04-19"
 
 subcollection: watson-assistant
 
@@ -269,14 +269,18 @@ message_input = {
     'text': ''
     }
 
+context = None
+    
 # Main input/output loop
 while message_input['text'] != 'quit':
 
     # Send message to assistant.
     result = assistant.message_stateless(
         assistant_id,
-        input = message_input
+        input = message_input,
+        context=context
     ).get_result()
+    context = response['context']
 
     # Print responses from actions, if any. Supports only text responses.
     if result['output']['generic']:
