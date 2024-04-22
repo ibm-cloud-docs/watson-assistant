@@ -47,7 +47,7 @@ To use the `Add examples` icon, do the following:
 1. Go to **Home** > **Actions** > **Editor**. 
 1. Go to the **Step** where you want to add examples.
 1. In **Assistant says**, type the response that you want to display.
-1. Click `Define customer response` and select `Free text`.
+1. Click **Define customer response** and select **Free text**.
 1. Click **Add examples** ![Add examples icon](images/add-example-icon.png) icon, which opens an `Examples` window.
 1. In the `Examples` window, type any customer relevant topic in `Customer says` and give a variable name in `Variable value`.
 1. Click `Apply` to save your changes. 
