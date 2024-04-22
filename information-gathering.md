@@ -42,7 +42,7 @@ The **Add examples** feature in the action editor improves the capability of you
 
 You can add examples whenever the response from LLMs lacks clarity on a particular topic. The **Add examples** feature is an optional enhancement because watsonx.ai is capable of gathering information accurately even without the examples.
 
-To use the `Add examples` icon, do the following:
+To use the **Add examples** icon, do the following:
 
 1. Go to **Home** > **Actions** > **Editor**. 
 1. Go to the **Step** where you want to add examples.
