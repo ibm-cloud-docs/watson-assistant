@@ -29,7 +29,6 @@ By default, assistants in all regions except `Frankfurt` use the model from the 
 To use conversational search, you must have a Plus or Enterprise plan and enroll in the early access program with this [signup form](https://wkf.ms/4bKDCUh){: external}.
 Refer to the following topics to configure Conversational search in your assistant:
 
-
   
 
 
