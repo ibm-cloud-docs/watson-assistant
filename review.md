@@ -2,14 +2,13 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-01-11"
+lastupdated: "2024-04-23"
 
 subcollection: watson-assistant
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 
 # Reviewing and debugging your actions
@@ -20,7 +19,7 @@ Learn how to test the conversation you built into an action, to experience what 
 ## Using Preview to test your action
 {: #review-test}
 
-As you make changes, test the action at any time to see whether the resulting interaction works as intended. **Preview**, which is a button on every action page, shows you what customers see when they use web chat to interact with the action.
+
 
 Before you test your action, make sure you save any new changes, and wait until the system finishes training. If the system is still training, a message is displayed that says so.
 {: note}
@@ -44,6 +43,8 @@ Before you test your action, make sure you save any new changes, and wait until 
 Queries that you submit through the Preview pane generate `/message` API calls, but they are not logged and do not incur charges.
 {: note}
 
+
+
 ### Saving changes before testing
 {: #review-save}
 
@@ -65,6 +66,8 @@ If you make several edits without saving, the preview pane shows a message that 
 {: #review-debug}
 
 Preview has a debug mode that you can turn on to see information that helps you understand why the assistant responds or doesn't respond to a particular input.
+
+
 
 Debug mode has four tools to analyze your action:
 
@@ -116,13 +119,8 @@ Click the icon, and the editor shows the corresponding step in the background.
 ## Variable values in Preview
 {: #review-variable-values}
 
-As you test your conversation in Preview, you can check that each variable is set correctly. Click **Variable values** to see the values stored in each variable during the conversation. The **Variable values** pane has two tabs, one for action variables and one for session variables. If you are using dialog, you can see session variables for both actions and dialog on the **Session variables** tab.
 
-![Variable values](images/expand-debug-mode.png){: caption="Variable values" caption-side="bottom"}
 
-For better visibility of long variable values, you can expand the width of the debug mode panel by using the **Expand** icon.{: note}
-
-To learn more about variables, see [Managing information during the conversation](/docs/watson-assistant?topic=watson-assistant-manage-info).
 
 ### Editing the variable values
 {: edit-variable-values}
