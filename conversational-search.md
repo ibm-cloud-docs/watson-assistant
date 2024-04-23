@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-22"
+lastupdated: "2024-04-23"
 
 keywords: conversational search
 
@@ -18,9 +18,9 @@ subcollection: watson-assistant
 [Plus]{: tag-green}[Beta]{: tag-cyan}
 
 Use *Conversational search* with the {{site.data.keyword.discoveryfull}} search integration or Elasticsearch search integration to help your assistant extract an answer from the highest-ranked query results and return a text response to the user.
-{: shortdesc}
 
 When you enable this feature, search results are provided to an IBM watsonx generative AI model that produces a conversational reply to a user's question. 
+{: shortdesc}
 
 This beta feature is available in English for evaluation and testing purposes only. The watsonx generative AI model is currently hosted only in the Dallas and Frankfurt regions. To sign up for the beta access to Conversational Search, use the form [here](https://wkf.ms/4bKDCUh){: external}.{: beta}
 
@@ -62,9 +62,6 @@ Search results are pulled from your knowledge base when the conversational searc
 
    ![ConversationalSearchAnswer](images/elasticsearch-answer.png)
 
-When Conversational search is `On`, the same search results are pulled from your knowledge base. This time these results are passed to an IBM watsonx generative AI model. This model produces a conversational reply to the user's question, in the form of a text response about custom extensions.
-
-   ![ConversationalSearchQuestion](images/elasticsearch-question.png)
 
 
 ## Streaming response support
