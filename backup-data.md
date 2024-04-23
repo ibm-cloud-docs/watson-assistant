@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-02"
+lastupdated: "2024-04-23"
 
 subcollection: watson-assistant
 
@@ -329,9 +329,6 @@ You cannot backup data by using script in {{site.data.keyword.conversationshort}
 
 The `backupPG.sh` script gathers the pod name and credentials for one of your {{site.data.keyword.postgresql}} pods. Then, the `backupPG.sh` script uses the {{site.data.keyword.postgresql}} pod to run the `pg_dump` command.
 
-
-
-
 To back up data by using the provided script, complete the following steps:
 
 1.  Download the `backupPG.sh` script.
@@ -364,19 +361,11 @@ If you prefer to back up data by using the {{site.data.keyword.postgresql}} tool
 ## Backing up data manually
 {: #backup-cp4d}
 
-
-
 Complete the steps in this procedure to back up your data by using the {{site.data.keyword.postgresql}} tool directly.
-
-
 
 To back up your data, complete these steps:
 
-
-
 1.  Fetch a running {{site.data.keyword.postgresql}} pod:
-
-
 
     ```bash
     oc get pods -l app=${INSTANCE}-postgres -o jsonpath="{.items[0].metadata.name}"
@@ -392,11 +381,7 @@ To back up your data, complete these steps:
     ```
     {: codeblock}
 
-
-
 1.  Fetch the {{site.data.keyword.postgresql}} connection values. You will pass these values to the command that you run in the next step. You must have `jq` installed.
-
-
 
     - To get the database:
 
@@ -435,8 +420,6 @@ To back up your data, complete these steps:
 
     The following lists describe the arguments. You retrieved the values for some of these parameters in the previous step:
 
-    
-
     - `$KEEPER_POD`: Any P{{site.data.keyword.postgresql}} pod in your instance.
 
     
@@ -449,7 +432,7 @@ To back up your data, complete these steps:
     To see more information about the `pg_dump` command, you can run this command:
 
     ```bash
-    oc exec -it ${KEEPER_POD} -- pg_dump --help
+      oc exec -it ${KEEPER_POD} -- pg_dump --help
     ```
     {: codeblock}
 
@@ -756,3 +739,5 @@ instance-mappings:
 Where the first value (`00000000-0000-0000-0000-001570184978`) is the instance ID in the database backup and the second value (`00000000-0000-0000-0000-001570194490`) is the ID of a provisioned instance in the service on the system.
 
 You can pass this file to the script for subsequent runs of the script in the same environment. Or you can edit it for use in other back up and restore operations. The mapping file is optional. If it is not provided, the tool prompts you for the mapping details based on information you provide in the YAML files.
+
+

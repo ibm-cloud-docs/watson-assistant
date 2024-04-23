@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-04-15"
+lastupdated: "2024-04-23"
 
 keywords: information gathering
 
@@ -42,16 +42,16 @@ The **Add examples** feature in the action editor improves the capability of you
 
 You can add examples whenever the response from LLMs lacks clarity on a particular topic. The **Add examples** feature is an optional enhancement because watsonx.ai is capable of gathering information accurately even without the examples.
 
-To use the `Add examples` button, do the following:
+To use the **Add examples** icon, do the following:
 
 1. Go to **Home** > **Actions** > **Editor**. 
 1. Go to the **Step** where you want to add examples.
 1. In **Assistant says**, type the response that you want to display.
-1. Click `Define customer response` and select `Free text`.
-1. Click **Add examples** <img src="images/add-example-icon.png" alt="add example button" width="8%" height="8%"> button, which opens an `Examples` window.
-1. In the `Examples window`, type any customer relevant topic in `Customer says` and give a variable name in `Variable value`.
+1. Click **Define customer response** and select **Free text**.
+1. Click **Add examples** ![Add examples icon](images/add-example-icon.png) icon, which opens an 'Examples' window.
+1. In the 'Examples' window, type any customer relevant topic in `Customer says` and give a variable name in `Variable value`.
 1. Click `Apply` to save your changes. 
 
-You can add only three examples in the `Examples` window. {: note}
+You can add only three examples in the 'Examples' window. {: note}
 
    ![Add examples](images/add-example-dialog.png) 
