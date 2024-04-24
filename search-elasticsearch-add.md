@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-04-19"
+lastupdated: "2024-04-24"
 
 subcollection: watson-assistant
 
@@ -130,11 +130,5 @@ You can test search integration for Elasticsearch in actions preview, the previe
 
 In this example, the user asks, `Tell me about a custom extension`.
 
-Search results are pulled from your knowledge base when conversational search is `off`. The answer is, `I searched my knowledge base and found this information which might be useful`.
 
-   ![ConversationalSearchAnswer](images/elasticsearch-answer.png)
-
-A text-based reply from the best results in your knowledge base displays when conversational search is `on`. 
-
-   ![ConversationalSearchQuestion](images/elasticsearch-question.png)
 
