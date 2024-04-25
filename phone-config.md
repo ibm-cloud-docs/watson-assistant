@@ -17,7 +17,7 @@ subcollection: watson-assistant
 
 [IBM Cloud]{: tag-ibm-cloud}
 
-This feature is currently not available in IBM watsonx Orchestrate.{: note}
+This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 After you have set up the phone integration for your assistant, you can modify the phone integration settings to customize the call behavior.
 {: shortdesc}

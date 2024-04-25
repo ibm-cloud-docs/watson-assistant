@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-12-14"
+  years: 2020, 2024
+lastupdated: "2024-04-25"
 
 subcollection: watson-assistant
 
@@ -15,7 +15,7 @@ subcollection: watson-assistant
 
 [IBM Cloud]{: tag-ibm-cloud} [Plus]{: tag-green}
 
-This feature is currently not available in IBM watsonx Orchestrate.{: note}
+This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 Adding the phone integration to your assistant makes your assistant available to customers over the phone.
 {: shortdesc}
