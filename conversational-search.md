@@ -17,8 +17,6 @@ subcollection: watson-assistant
 
 [Plus]{: tag-green}[Beta]{: tag-cyan}
 
- This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
-
 Use *Conversational search* with the {{site.data.keyword.discoveryfull}} search integration or Elasticsearch search integration to help your assistant extract an answer from the highest-ranked query results and return a text response to the user.
 
 When you enable this feature, search results are provided to an IBM watsonx generative AI model that produces a conversational reply to a user's question. 
@@ -84,6 +82,8 @@ The citation title feature is not supported in the web chat integration. So, the
 
 ## Streaming response support
 {: #conversational-search-streaming-response}
+
+This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 Streaming response from the Conversational search uses watsonx.ai capabilities to provide continuous, real-time responses in your assistant. By default, the streaming response is disabled for the web chat and the assistant preview panels. 
 
