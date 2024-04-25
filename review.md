@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-04-23"
+lastupdated: "2024-04-25"
 
 subcollection: watson-assistant
 
@@ -115,9 +115,6 @@ Click the icon, and the editor shows the corresponding step in the background.
 {: #review-debug-follow-along}
 
 **Follow along** connects what you are seeing in Preview with what you built in the action. As you interact with your assistant, the debug mode automatically opens each step in the background. That means you can fix an error as soon as you see it, because the editor is already open to the corresponding step.
-
-## Variable values in Preview
-{: #review-variable-values}
 
 
 

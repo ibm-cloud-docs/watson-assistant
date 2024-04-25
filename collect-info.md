@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-04-23"
+lastupdated: "2024-04-25"
 
 subcollection: watson-assistant
 
@@ -102,7 +102,6 @@ This table shows how you might set up the steps. The last step is a catch-all in
 
 ## Protecting the privacy of the customer information
 {: #protect-privacy-customer-information}
-
 
 
 
