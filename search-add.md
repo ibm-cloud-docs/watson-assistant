@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-04-15"
+lastupdated: "2024-04-25"
 
 subcollection: watson-assistant
 
@@ -15,7 +15,8 @@ subcollection: watson-assistant
 
 [Plus]{: tag-green}
 
-This feature is currently not available in IBM watsonx Orchestrate.{: note}
+  The search integration support for {{site.data.keyword.discoveryfull}} is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
+
 
 The search integration searches for information from a data collection that you create by using the {{site.data.keyword.discoveryshort}} service.
 
