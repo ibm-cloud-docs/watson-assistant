@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-15"
+lastupdated: "2024-04-25"
 
 subcollection: watson-assistant
 
@@ -19,6 +19,13 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
+
+## 18 April 2024
+{: #watson-assistant-apr192024}
+{: release-note}
+
+Behavioral tuning for conversational search: Tendency to say “I don’t know”
+: You can now optimize your conversational search behavior with the **Tendency to say “I don’t know”** option in the **Conversational search** settings. This can help to reduce LLM hallucinations and provide higher fidelity answers for conversational search by tuning assistant's tendency to fall back to the “I don’t know” answer. For more information, see [Behavioral tuning](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
 
 ## 15 April 2024
 {: #watson-assistant-apr152024}

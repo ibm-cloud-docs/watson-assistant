@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-12-14"
+  years: 2018, 2024
+lastupdated: "2024-04-25"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,7 @@ subcollection: watson-assistant
 # Migrating to {{site.data.keyword.conversationshort}}
 {: #migrate-overview}
 
-This feature is currently not available in IBM watsonx Orchestrate.{: note}
+This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 If you are using an older product instance, you might still be using the classic experience. To take advantage of the latest features, consider switching to {{site.data.keyword.conversationshort}}.
 {: shortdesc}

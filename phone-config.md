@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-04-15"
+lastupdated: "2024-04-25"
 
 subcollection: watson-assistant
 
@@ -17,7 +17,7 @@ subcollection: watson-assistant
 
 [IBM Cloud]{: tag-ibm-cloud}
 
-This feature is currently not available in IBM watsonx Orchestrate.{: note}
+This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 After you have set up the phone integration for your assistant, you can modify the phone integration settings to customize the call behavior.
 {: shortdesc}
@@ -221,11 +221,9 @@ IBM has established relationships with the following SIP trunk providers:
 The SIP trunk provider sets up a SIP trunk for your voice traffic, and manages access from allowed IP addresses. Most of the major SIP trunk providers have existing relationships with IBM. Therefore, the network configuration that is required to support the SIP trunk connection typically can be handled for you with minimal effort.
 
 1. Create an [{{site.data.keyword.Bluemix_notm}} case](/unifiedsupport/cases/form){: external}.
-
-
-
-1. For **Subject**, enter `SIP trunk provider setup for {{site.data.keyword.conversationshort}}`.
-
+1. In the **Topic** field, enter `{{site.data.keyword.conversationshort}}`.
+1. In the **Subtopic** drop-down list, select `Phone & SMS Integration`.
+1. In the **Subject** field, enter `SIP trunk provider setup for {{site.data.keyword.conversationshort}}`.
 1. Include the following information in the description:
 
    - Company Name
