@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-02-06"
+lastupdated: "2024-04-25"
 
 subcollection: watson-assistant
 
@@ -31,6 +31,8 @@ For more information about implementing the enhancements for search integration,
 
 ## Add the search integration for {{site.data.keyword.discoveryfull}}
 {: #search-overview-integration}
+
+This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 Plus and Enterprise plans of {{site.data.keyword.conversationshort}} include a built-in search integration that you can use with your additional, separate instance of {{site.data.keyword.discoveryfull}}. You can embed your existing help content by integrating your assistant with search that is provided by {{site.data.keyword.discoveryfull}}. This gives your assistant access to your organization's data collections that it can mine for answers. Customer questions are used as search queries to find relevant answers for your users.
 
