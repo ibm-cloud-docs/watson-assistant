@@ -15,8 +15,7 @@ subcollection: watson-assistant
 
 [Plus]{: tag-green}
 
-  The search integration support for {{site.data.keyword.discoveryfull}} is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
-
+This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 The search integration searches for information from a data collection that you create by using the {{site.data.keyword.discoveryshort}} service.
 

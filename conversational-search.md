@@ -17,7 +17,7 @@ subcollection: watson-assistant
 
 [Plus]{: tag-green}[Beta]{: tag-cyan}
 
-   Streaming response support from the Conversational search is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
+ This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 Use *Conversational search* with the {{site.data.keyword.discoveryfull}} search integration or Elasticsearch search integration to help your assistant extract an answer from the highest-ranked query results and return a text response to the user.
 
