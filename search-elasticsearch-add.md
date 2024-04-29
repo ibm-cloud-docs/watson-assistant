@@ -47,60 +47,6 @@ To select Elasticsearch as the default search integration, do one of the followi
 
     ![Select Elasticsearch](images/select-elasticsearch.png)
 
-## Set up Elasticsearch
-{: #setup-elasticsearch}
-
-After you add the Elasticsearch search integration, do the following:
-
-1. In the first section of the "Search integration" window, fill up the following fields to enable your assistant to connect with your Elasticsearch index:
-    - **Elasticsearch url**
-    - **Elasticsearch port (optional)**
-    - **Elasticsearch index**
-    - **Elasticsearch username**
-    - **Elasticsearch password**
-
-      Elasticsearch setup in your assistant supports only the Basic Authentication token.{: important}
-
-      ![Search integration](images/search-integration-elasticsearch.png)
-
-1. Click **Next** to go to the **Configure result content** section.
-
-1. In the **Configure result content** section, fill up the following fields to map the title, body, and URL to the search response:
-
-    - **Title**: Search result title. Use the title, name, or similar type of field from the collection as the search result title.
-
-      You must select something for the title or no search result response is displayed in the Facebook and Slack integrations.
-
-    - **Body**: Search result description. Use an abstract, summary, or highlight field from the collection as the search result body.
-
-       You must select something for the body or no search result response is displayed in the Facebook and Slack integrations.
-
-    - **URL**: This field can be populated with any footer content that you want to include at the end of the search result.
-
-    When you configure the query body in the **Advanced Elasticsearch Settings** to search the nested documents, you must ensure that the **Title**, **Body**, and **URL** are from the fields of the inner documents in your Elasticsearch index. For more information about using nested queries, see [Elasticsearch nested query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-nested-query.html#query-dsl-nested-query).
-
-    
-1. Expand the **Advanced Elasticsearch settings** section to see the following text boxes.
-    
-    Setting the **Advanced Elasticsearch settings** is optional.{: note}
-    
-    - **Configure the filter array for Elasticsearch**
-
-      You define the filter as an array of objects so that you can create filters to arrange the content per the query body. 
-
-   - **Configure the query body for Elasticsearch**
-
-      The query body is used to manipulate the user requests into a format that is expected by search. It controls the query forms, search fields, filters and query size. In the REST API, the query body is an object representing the `POST` body for the `_search` request to Elasticsearch. THe query body has a `"$QUERY"` token to represent the customer's query, and a `"$FILTER"` token to represent the array of filters defined either in the search settings or at the step level.      
-      
-       By default, Elasticsearch integration uses keyword search. You can use advanced search such as semantic search with ELSER, KNN dense vector search, or nested queries to search the nested documents. For more information about using different types of query body examples, see [Query body examples](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions/docs/elasticsearch-install-and-setup#option-2-set-up-the-built-in-elasticsearch-extension).
-
-       For more information about the Elasticsearch `_search` API request body, see [Elasticsearch search API request body]( https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html#search-search-api-request-body){: external}.
-
-        You cannot customize the query body in the assistant with an existing Elasticsearch configuration.{: important}
-        
-
-1. Switch the **Conversational Search** toggle to `on` if you want to   activate [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search). If you don't want to activate conversational search, switch the toggle to `off`.
-
 
 
 1. Use the **Message**, **No results found** and **Connectivity issue** tabs to customize different messages to share with users based on the successfulness of the search.
@@ -112,11 +58,33 @@ After you add the Elasticsearch search integration, do the following:
     | Connectivity issue | I was unable to complete the search for some reason | `I might have information that could help address your query, but am unable to search my knowledge base at the moment.` |
     {: caption="Search result messages" caption-side="top"}
 
-1.  Use **Custom results filter** to add a filter for the custom text strings in the search integration. The **Custom results filter** field helps you define the search results relevant for a topic, product, or text string. For example, if you define the **Custom results filter** field by sing `enriched_text.entities.text:"Boston, MA"`, the search responses for any query in the assistant are filtered to make it relevant to `"Boston, MA"` in the `enriched_text.entities.text` file.
+1. Switch the Conversational Search toggle to `on` if you want to activate conversational search. If you don't want to activate conversational search, switch the toggle to `off`.  
 
-    ![Custom result filter Elasticsearch](/images/custom-result-filter-es.png)
+1. If you switch the Conversational Search toggle to `on` , you can see the citation titles in your assistant responses. For more information on citation titles of Conversational search, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup)
 
-1. Click **Finish**.
+1. Click **Save** to save your settings.
+
+1. Click **Documents** tab in the **Elasticsearch** window.
+
+1. In **Upload documents** section, you can drag and drop your files or do a single click to upload documents directly to your assistant. Click **Upload**.
+
+     You can upload only 20 PDF files. Each file size must not exceed 500 MB.{: important}
+
+   ![Elasticsearch upload document](images/elastic-search-upload-doc.png)
+  
+
+1. After you upload the documents, you can see the upload status of your documents in a table in the **Elasticsearch** window.
+
+1. Status `Ready` indicates that your files are available for search.
+
+1. If the status indicates `Error`, you can delete the file by clicking the three dots next to the `Error` and click `Delete`.
+
+   ![Elasticsearch upload error](images/elastic-search-upload-doc-error.png)
+
+1. If you want to change the Elasticsearch instance credentials, click **Instance** tab, edit the credentials and then click **Save**. Skip this step if you do not want to change Elasticsearch instance credentials.
+
+1. Click **Close** to end the Elastic search setup.
+
 
  ## Configure your assistant to use Elasticsearch
  {: #search-assistant-configure}
