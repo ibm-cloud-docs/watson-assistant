@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-04-29"
 
 subcollection: watson-assistant
 
@@ -13,15 +13,6 @@ subcollection: watson-assistant
 
 # Reviewing and debugging your actions
 {: #review}
-
-Learn how to test the conversation you built into an action, to experience what your users see with your assistant. If there are any issues, learn how to debug the user’s experience.
-
-## Using Preview to test your action
-{: #review-test}
-
-
-As you make changes, test the action at any time to see whether the resulting interaction works as intended. **Preview**, which is a button on every action page, shows you what customers see when they use web chat to interact with the action.
-
 
 
 
@@ -119,18 +110,6 @@ Click the icon, and the editor shows the corresponding step in the background.
 {: #review-debug-follow-along}
 
 **Follow along** connects what you are seeing in Preview with what you built in the action. As you interact with your assistant, the debug mode automatically opens each step in the background. That means you can fix an error as soon as you see it, because the editor is already open to the corresponding step.
-
-
-## Variable values in Preview
-{: #review-variable-values}
-
-As you test your conversation in Preview, you can check that each variable is set correctly. Click **Variable values** to see the values stored in each variable during the conversation. The **Variable values** pane has two tabs, one for action variables and one for session variables. If you are using dialog, you can see session variables for both actions and dialog on the **Session variables** tab.
-
-![Variable values](images/expand-debug-mode.png){: caption="Variable values" caption-side="bottom"}
-
-For better visibility of long variable values, you can expand the width of the debug mode panel by using the **Expand** icon.{: note}
-
-To learn more about variables, see [Managing information during the conversation](/docs/watson-assistant?topic=watson-assistant-manage-info).
 
 
 
