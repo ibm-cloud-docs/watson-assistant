@@ -49,43 +49,6 @@ To select Elasticsearch as the default search integration, do one of the followi
 
 
 
-1. Use the **Message**, **No results found** and **Connectivity issue** tabs to customize different messages to share with users based on the successfulness of the search.
-
-    | Tab | Scenario | Example message |
-    | --- | --- | --- |
-    | Message | Search results are returned | `I found this information that might be helpful:` |
-    | No results found | No search results are found | `I searched my knowledge base for information that might address your query, but did not find anything useful to share.` |
-    | Connectivity issue | I was unable to complete the search for some reason | `I might have information that could help address your query, but am unable to search my knowledge base at the moment.` |
-    {: caption="Search result messages" caption-side="top"}
-
-1. Switch the Conversational Search toggle to `on` if you want to activate conversational search. If you don't want to activate conversational search, switch the toggle to `off`.  
-
-1. If you switch the Conversational Search toggle to `on` , you can see the citation titles in your assistant responses. For more information on citation titles of Conversational search, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup)
-
-1. Click **Save** to save your settings.
-
-1. Click **Documents** tab in the **Elasticsearch** window.
-
-1. In **Upload documents** section, you can drag and drop your files or do a single click to upload documents directly to your assistant. Click **Upload**.
-
-     You can upload only 20 PDF files. Each file size must not exceed 500 MB.{: important}
-
-   ![Elasticsearch upload document](images/elastic-search-upload-doc.png)
-  
-
-1. After you upload the documents, you can see the upload status of your documents in a table in the **Elasticsearch** window.
-
-1. Status `Ready` indicates that your files are available for search.
-
-1. If the status indicates `Error`, you can delete the file by clicking the three dots next to the `Error` and click `Delete`.
-
-   ![Elasticsearch upload error](images/elastic-search-upload-doc-error.png)
-
-1. If you want to change the Elasticsearch instance credentials, click **Instance** tab, edit the credentials and then click **Save**. Skip this step if you do not want to change Elasticsearch instance credentials.
-
-1. Click **Close** to end the Elastic search setup.
-
-
  ## Configure your assistant to use Elasticsearch
  {: #search-assistant-configure}
 
