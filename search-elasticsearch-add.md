@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-04-29"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,7 @@ subcollection: watson-assistant
 # Elasticsearch search integration set up 
 {: #search-elasticsearch-add}
 
-[Plus]{: tag-green} [Beta]{: tag-cyan} 
+
 
 You can integrate search integration in your assistants by using Elasticsearch if you have Plus or Enterprise plan. Elasticsearch powers your assistants to perform different types of searches such as metric, structured, unstructured, and semantic with higher accuracy and relevance. The powerful data analytics engine in Elasticsearch expands the scope of search integration to larger data sets in assistants. In addition, you can enable conversational search for Elasticsearch in your assistant that helps to answer query by using simple conversation.
 
@@ -21,7 +21,7 @@ When you change the existing search integration to a new one, the settings of th
 
 For more information about integrating {{site.data.keyword.discoveryshort}}, see [{{site.data.keyword.discoveryfull}} search integration setup](/docs/watson-assistant?topic=watson-assistant-search-add).{: tip}
 
-This beta feature is available for evaluation and testing purposes only. {: beta}
+
 
 ## Select Elasticsearch
 {: #select-elasticsearch-search-integration}
@@ -101,7 +101,7 @@ After you add the Elasticsearch search integration, do the following:
 
 1. Switch the **Conversational Search** toggle to `on` if you want to   activate [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search). If you don't want to activate conversational search, switch the toggle to `off`.
 
-    The **Conversational Search** toggle is available only if you signed up for the beta version.{: beta}
+
 
 1. Use the **Message**, **No results found** and **Connectivity issue** tabs to customize different messages to share with users based on the successfulness of the search.
 
