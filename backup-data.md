@@ -753,7 +753,7 @@ Per the number of models in your assistant, you can use one of the following opt
 ### Retrain your backend model manually
 {: #set-up-retrain-model-manual}
 
-  When you have less number of models to get retrained, you can manually retrain your backend model by publishing an action or dialog skill in your assistant. Each time that you open a dialog skill after a change in the training data, training is initiated automatically. Give the skill time to retrain on the restored data. It usually takes less than 10 minutes to get trained. The process of training a machine learning model requires at least one node to have 4 CPUs that can be dedicated to training. Therefore, open restored assistants and skills during low traffic periods and open them one at a time. If the assistant or dialog skill does not respond, then modify the workspace (for example, add an intent and then remove it). Check and confirm.
+When you have less number of models to get retrained, you can manually retrain your backend model by publishing an action or dialog skill in your assistant. Each time that you open a dialog skill after a change in the training data, training is initiated automatically. Give the skill time to retrain on the restored data. It usually takes less than 10 minutes to get trained. The process of training a machine learning model requires at least one node to have 4 CPUs that can be dedicated to training. Therefore, open restored assistants and skills during low traffic periods and open them one at a time. If the assistant or dialog skill does not respond, then modify the workspace (for example, add an intent and then remove it). Check and confirm.
 
 ### Auto-retrain your backend model
 {: #set-up-retrain-model-auto}
