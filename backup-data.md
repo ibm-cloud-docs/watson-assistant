@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-23"
+lastupdated: "2024-04-30"
 
 subcollection: watson-assistant
 
@@ -34,7 +34,7 @@ If you are upgrading from 4.5.x to 4.8.x, a simpler way to complete the upgrade 
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 4.7.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.7.x?topic=assistant-upgrading){: external}
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 4.6.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=assistant-upgrading){: external}
 
-If you are upgrading from 4.6.4 or earlier versions to the latest, you must upgrade to 4.6.5 before upgrading to the latest release.{: important}
+If you are upgrading from 4.6.4 or earlier to the latest version, you must upgrade to 4.6.5 before you upgrade to the latest release.{: important}
 
 
 The primary data storage is a {{site.data.keyword.postgresql}} database.
@@ -46,7 +46,7 @@ Choose one of the following ways to manage the back up of data:
 
 - **[Kubernetes CronJob](#backup-cronjob)**: Use the `$INSTANCE-store-cronjob` cron job that is provided for you.
 - **[backupPG.sh script](#backup-os)**: Use the `backupPG.sh` bash script.
-- **[pg_dump tool](#backup-cp4d)**: Run the `pg_dump` tool on each cluster directly. This is the most manual option, but also affords the most control over the process.
+- **[pg_dump tool](#backup-cp4d)**: Run the `pg_dump` tool on each cluster directly. This is a manual option that gives you control over the process.
 
 When you back up data with one of these procedures before you upgrade from one version to another, the workspace IDs of your skills are preserved, but the service instance IDs and credentials change.
 {: note}
@@ -275,7 +275,7 @@ To access the backup files from Red Hat OpenShift Container Storage (OCS), compl
    
  
 
-### Extracting {{site.data.keyword.postgresql}} backup using a debug pod
+### Extracting {{site.data.keyword.postgresql}} backup by using a debug pod
 {: #backup-extract-postgres}
 
 To extract {{site.data.keyword.postgresql}} backup using a debug pod, complete the following steps:
@@ -567,7 +567,9 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
 
     You might need to wait a few minutes before the data your restored is visible from the web interface.
 
-1.  After you restore the data, you must train the backend model. Ensure you reopen only one assistant or dialog skill at a time. Each time that you open a dialog skill after its training data has changed, training is initiated automatically. Give the skill time to retrain on the restored data. It usually takes less than 10 minutes to get trained. The process of training a machine learning model requires at least one node to have 4 CPUs that can be dedicated to training. Therefore, open restored assistants and skills during low traffic periods and open them one at a time. If the assistant or dialog skill does not respond, then modify the workspace (for example, add an intent and then remove it). Check and confirm.
+1.  After you restore the data, you must train the backend model. For more information about retraining your backend model, see [Retraining your backend model](#set-up-retrain-model).
+
+
 
 ### Creating the resourceController.yaml file
 {: #backup-resource-controller-yaml}
