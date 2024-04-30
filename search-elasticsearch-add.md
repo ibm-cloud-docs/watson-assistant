@@ -109,8 +109,6 @@ After you add the Elasticsearch search integration, do the following:
 
 1. Switch the **Conversational Search** toggle to `on` if you want to   activate [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search). If you don't want to activate conversational search, switch the toggle to `off`.
 
-The Conversational Search toggle is available only if you signed up for the beta version.
-
 1. Use the **Message**, **No results found** and **Connectivity issue** tabs to customize different messages to share with users based on the successfulness of the search.
 
     | Tab | Scenario | Example message |
@@ -130,17 +128,6 @@ After you configure Elasticsearch integration, you must configure your assistant
 ## Test Elasticsearch
 {: #elasticsearch-test}
 
-You can test search integration for Elasticsearch in actions preview, the preview page, or by using the preview link.
-
-In this example, the user asks, `Tell me about a custom extension`.
-
-Search results are pulled from your knowledge base when conversational search is `off`. The answer is, `I searched my knowledge base and found this information which might be useful`.
-
-   ![ConversationalSearchAnswer](images/convo-search-test-toggle-off.png)
-
-A text-based reply from the best results in your knowledge base displays when conversational search is `on`. 
-
-   ![ConversationalSearchQuestion](images/convo-search-test-toggle-on.png)
 
 
 
