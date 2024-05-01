@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-01"
 
 subcollection: watson-assistant
 
@@ -753,12 +753,12 @@ Per the number of models in your assistant, you can use one of the following opt
 ### Retrain your backend model manually
 {: #set-up-retrain-model-manual}
 
-When you have less number of models to get retrained, you can manually retrain your backend model by publishing an action or dialog skill in your assistant. Each time that you open a dialog skill after a change in the training data, training is initiated automatically. Give the skill time to retrain on the restored data. It usually takes less than 10 minutes to get trained. The process of training a machine learning model requires at least one node to have 4 CPUs that can be dedicated to training. Therefore, open restored assistants and skills during low traffic periods and open them one at a time. If the assistant or dialog skill does not respond, then modify the workspace (for example, add an intent and then remove it). Check and confirm.
+When you open a dialog skill after a change in the training data, training is initiated automatically. Give the skill time to retrain on the restored data. It usually takes less than 10 minutes to get trained. The process of training a machine learning model requires at least one node to have 4 CPUs that can be dedicated to training. Therefore, open restored assistants and skills during low traffic periods and open them one at a time. If the assistant or dialog skill does not respond, then modify the workspace (for example, add an intent and then remove it). Check and confirm.
 
 ### Auto-retrain your backend model
 {: #set-up-retrain-model-auto}
 
-When you have a large number of models to retrain, you can use the auto-retrain method to train the {{site.data.keyword.postgresql}} database. To learn more about the auto-retrain feature and its implementation, refer to the following topics:
+When you have a large number of models to retrain, you can use the auto-retrain-all job to train the backend model. To learn more about the auto-retrain-all job and its implementation, refer to the following topics:
 
 - [Before you begin](#set-up-auto-retrain-prereq)
 - [Planning](#set-up-auto-retrain-plan)
@@ -768,12 +768,12 @@ When you have a large number of models to retrain, you can use the auto-retrain 
 #### Before you begin
 {: #set-up-auto-retrain-prereq}
 
-Before you auto-retrain the {{site.data.keyword.postgresql}} database, you must ensure that the {{site.data.keyword.postgresql}} database and Cloud Object Storage (Cloud Object Storage), which stores your action or dialog skill snapshots, are active and not corrupted. In addition, you must ensure that your assistants do not receive or send any data during the auto-retrain all job. 
+Before you begin the auto-retrain-all job, you must ensure that the {{site.data.keyword.postgresql}} database and Cloud Object Storage (Cloud Object Storage), which stores your action or dialog skills along with their snapshots, are active and not corrupted. In addition, you must ensure that your assistants do not receive or send any data during the auto-retrain-all job. 
 
 #### Planning
 {: #set-up-auto-retrain-plan}
 
-To get a good estimation of the duration to complete the auto-retrain all job, you can use the `calculate_autoretrain_all_job_duration.sh` script: 
+To get a good estimation of the duration that is required to complete the auto-retrain-all job, you can use the `calculate_autoretrain_all_job_duration.sh` script: 
 
 ```bash
   #!/bin/bash
@@ -806,31 +806,32 @@ To get a good estimation of the duration to complete the auto-retrain all job, y
 ```
 {: codeblock}
 
-In addition, you can plan to speed up the retrain process after you understand the required duration for the auto-retrain all job. For more information about speeding up the retrain process, see [Speeding up the auto-retrain process](#set-up-auto-retrain-speed-up).
+
+In addition, you can plan to speed up the auto-retrain-all job after you get the estimation of duration. For more information about speeding up the auto-retrain-all job, see the [Speeding up the auto-retrain-all job](#set-up-auto-retrain-speed-up) topic.
 
 
 #### Procedure
 {: #set-up-auto-retrain-procedure}
 
-To auto-retrain the {{site.data.keyword.postgresql}} database, you do the following steps:
+To retrain your data by using the auto-retrain-all job, you do the following steps:
 
-- [Set up the environment variables for auto-retrain](#set-up-auto-retrain-env-variables)
-- [Run auto-retrain](#set-up-auto-retrain-run)
-- [Validate auto-retrain](#set-up-auto-retrain-validate)
+- [Set up the environment variables for the auto-retrain-all job](#set-up-auto-retrain-env-variables)
+- [Run the auto-retrain-all job](#set-up-auto-retrain-run)
+- [Validate the auto-retrain-all job](#set-up-auto-retrain-validate)
 
-##### Set up the environment variables for auto-retrain
+##### Set up the environment variables for the auto-retrain-all job
 {: #set-up-auto-retrain-env-variables}
 
-Set up the following environment variable before you run the auto-retrain all job:
+Set up the following environment variable before you run the auto-retrain-all job:
 
-1. Set the `AUTO_RETRAIN` environment variable to `false` to disable any existing the auto-retrain all job:
+1. Set the `AUTO_RETRAIN` environment variable to `false` to disable any existing the auto-retrain-all job:
 
     ```bash  
       export AUTO_RETRAIN="false"
     ```
     {: codeblock}
 
-1. To set the `BATCH_RETRAIN_ALL_SIZE` environment variable, you multiply the number of available training replicas, `CLU_TRAINING_REPLICAS`, with `2` based on the assumption that each model takes approximately `~30 seconds` to train a model. Use the following command to set `BATCH_RETRAIN_ALL_SIZE`:
+1. To set up the `BATCH_RETRAIN_ALL_SIZE` environment variable, you multiply the number of available training replicas, `CLU_TRAINING_REPLICAS`, with `2` based on the assumption that each model takes approximately `~30 seconds` to train a model. Use the following command to set `BATCH_RETRAIN_ALL_SIZE`:
 
     ```bash
       export BATCH_RETRAIN_ALL_SIZE=$(($(oc get deploy ${INSTANCE}-clu-training --template='{{index .spec.replicas}}') * 2))
@@ -851,7 +852,7 @@ Set up the following environment variable before you run the auto-retrain all jo
     ```
     {: codeblock}
 
-1. Set `AUTO_RETRAIN_ALL_CRON_SCHEDULE` to the time that you want to run the auto-retrain all job:
+1. Set `AUTO_RETRAIN_ALL_CRON_SCHEDULE` to the time that you want to run the auto-retrain-all job:
 
     ```bash
       export AUTO_RETRAIN_ALL_CRON_SCHEDULE=<value of cron schedule>
@@ -869,10 +870,10 @@ Set up the following environment variable before you run the auto-retrain all jo
     ```
     {: codeblock}
 
-##### Run the auto-retrain all job
+##### Run the auto-retrain-all job
 {: #set-up-auto-retrain-run}
 
-1. To run the auto-retrain all job, use the following command:
+1. To run the auto-retrain-all job, use the following command:
 
     ```bash
         export PROJECT_CPD_INST_OPERANDS=<namespace where Cloud Pak for Data and Assistant is installed>
@@ -914,7 +915,7 @@ Set up the following environment variable before you run the auto-retrain all jo
     ```
     {: codeblock}
 
-1. After you complete the auto-retrain all job, you must disable the auto-retrain all flag and enable auto-retrain flag by using the following commands:
+1. After you complete the auto-retrain-all job, you must disable the auto-retrain-all flag and enable auto-retrain flag by using the following commands:
 
     ```bash
       oc patch temporarypatch ${INSTANCE}-store-admin-env-vars -p '{"metadata":{"finalizers":[]}}' --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
@@ -923,22 +924,22 @@ Set up the following environment variable before you run the auto-retrain all jo
     ```
     {: codeblock}
 
-##### Validate auto-retrain
+##### Validate the auto-retrain-all job
 {: #set-up-auto-retrain-validate}
 
-You can validate the successful completion of the auto-retrain all job by comparing the number of `[RETRAIN-ALL-SUMMARY] Affected workspaces found` with the `Retrained Total` count in the store-admin service log. To get the number of `Affected workspaces found` and the `Retrained Total`, run the following command:
+You can validate the successful completion of the auto-retrain-all job by comparing the number of `Affected workspaces found` with the `Retrained Total` count in the store-admin service log. To get the number of `Affected workspaces found` and the `Retrained Total`, run the following command:
 
 ```bash
   oc logs $(oc get pod -l component=store-admin --no-headers |awk '{print $1}') | grep "\[RETRAIN-ALL-SUMMARY\] Affected workspaces found"
 ```
 {: codeblock}
 
-If the auto-retrain all job is successful, the `Retrained Total` count equals the number of `Affected workspaces found`. In addition, if the difference between the counts of the `Retrained Total` and `Affected workspaces found` is small, the auto-retrain all job continues with a limited time delay. However, if the time delay gets extended, you must look at the store-admin logs to analyze the issue and [speed up the auto-retrain all job](#set-up-auto-retrain-speed-up). 
+If the auto-retrain-all job is successful, the `Retrained Total` count equals the number of `Affected workspaces found`. In addition, if the difference between the counts of the `Retrained Total` and `Affected workspaces found` is small, the auto-retrain-all job completes successfully by training the remaining models in the background. However, if there is a time delay to complete the auto-retrain-all job, you must look at the store-admin logs to analyze the issue and consider [speeding up the auto-retrain-all job](#set-up-auto-retrain-speed-up). 
 
-#### Speeding up the retrain process
+#### Speeding up the auto-retrain-all job
 {: #set-up-auto-retrain-speed-up}
 
-The duration to complete the auto-retrain all job depends on the number of models to train. Therefore, to speed up the training process, you must `scale` the number of `CLU_TRAINING_REPLICAS` and its dependencies. For example, if you `scale` the number of `CLU_TRAINING_REPLICAS` to `x`, you must `scale` the number of dependent replicas per the following calculation:
+The duration to complete the auto-retrain-all job depends on the number of models to train. Therefore, to speed up the training process, you must `scale` the number of `CLU_TRAINING_REPLICAS` and its dependencies. For example, if you `scale` the number of `CLU_TRAINING_REPLICAS` to `x`, you must `scale` the number of dependent replicas per the following calculation:
 
 - `TFMM_REPLICAS` to 0.5x
 - `DRAGONFLY_CLU_MM_REPLICAS` to 0.3x 
@@ -1031,7 +1032,7 @@ Use the following steps to `scale` the number of models:
     ```
     {: codeblock}
 
-1. After you complete the auto-retrain all job, you must revert the number of `REPLICAS` to the original numbers:
+1. After you complete the auto-retrain-all job, you must revert the number of `REPLICAS` to the original numbers:
 
     ```bash
       oc patch temporarypatch ${INSTANCE}-clu-training-replicas -p '{"metadata":{"finalizers":[]}}' --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
