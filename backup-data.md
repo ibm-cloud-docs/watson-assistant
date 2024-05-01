@@ -768,7 +768,7 @@ When you have a large number of models to retrain, you can use the auto-retrain-
 #### Before you begin
 {: #set-up-auto-retrain-prereq}
 
-Before you begin the auto-retrain-all job, you must ensure that the {{site.data.keyword.postgresql}} database and Cloud Object Storage (Cloud Object Storage), which stores your action or dialog skills along with their snapshots, are active and not corrupted. In addition, you must ensure that your assistants do not receive or send any data during the auto-retrain-all job. 
+Before you begin the auto-retrain-all job, you must ensure that the {{site.data.keyword.postgresql}} database and Cloud Object Storage (Cloud Object Storage), which stores your action and dialog skills along with their snapshots, are active and not corrupted. In addition, you must ensure that your assistants do not receive or send any data during the auto-retrain-all job. 
 
 #### Planning
 {: #set-up-auto-retrain-plan}
@@ -813,7 +813,7 @@ In addition, you can plan to speed up the auto-retrain-all job after you get the
 #### Procedure
 {: #set-up-auto-retrain-procedure}
 
-To retrain your data by using the auto-retrain-all job, you do the following steps:
+To retrain your backend model by using the auto-retrain-all job, you do the following steps:
 
 - [Set up the environment variables for the auto-retrain-all job](#set-up-auto-retrain-env-variables)
 - [Run the auto-retrain-all job](#set-up-auto-retrain-run)
@@ -824,14 +824,14 @@ To retrain your data by using the auto-retrain-all job, you do the following ste
 
 Set up the following environment variable before you run the auto-retrain-all job:
 
-1. Set the `AUTO_RETRAIN` environment variable to `false` to disable any existing the auto-retrain-all job:
+1. Set the `AUTO_RETRAIN` environment variable to `false` to disable any existing auto-retrain-all job:
 
     ```bash  
       export AUTO_RETRAIN="false"
     ```
     {: codeblock}
 
-1. To set up the `BATCH_RETRAIN_ALL_SIZE` environment variable, you multiply the number of available training replicas, `CLU_TRAINING_REPLICAS`, with `2` based on the assumption that each model takes approximately `~30 seconds` to train a model. Use the following command to set `BATCH_RETRAIN_ALL_SIZE`:
+1. To set up the `BATCH_RETRAIN_ALL_SIZE` environment variable, you multiply the number of available training replicas, `CLU_TRAINING_REPLICAS`, with `2` based on the assumption that each model takes approximately `~30 seconds` to train a model. Use the following command to set up `BATCH_RETRAIN_ALL_SIZE`:
 
     ```bash
       export BATCH_RETRAIN_ALL_SIZE=$(($(oc get deploy ${INSTANCE}-clu-training --template='{{index .spec.replicas}}') * 2))
