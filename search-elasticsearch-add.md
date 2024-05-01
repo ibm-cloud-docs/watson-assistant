@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-01"
 
 subcollection: watson-assistant
 
@@ -43,20 +43,7 @@ To select Elasticsearch as the default search integration, do one of the followi
 
     1. In the "Set up a new search extension" window, select the **Elasticsearch** tile to see the "Search integration" dialog.
 
-    ![Select Elasticsearch](images/select-elasticsearch.png)
-
-
-   
-
-
- ## Configure your assistant to use Elasticsearch
- {: #search-assistant-configure}
-
-After you configure Elasticsearch integration, you must configure your assistant to use Elasticsearch when the customer response matches no action. For more information about updating **No matches** to use search, see [Use search when no action matches](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-no-action-matches). 
-
-## Test Elasticsearch
-{: #elasticsearch-test}## Set up Elasticsearch
-{: #setup-elasticsearch}
+    ![Select Elasticsearch](images/select-elasticsearch.png)   
 
 After you add the Elasticsearch search integration, do the following:
 
@@ -106,7 +93,6 @@ After you add the Elasticsearch search integration, do the following:
 
         You cannot customize the query body in the assistant with an existing Elasticsearch configuration.{: important}
 
-
 1. Switch the **Conversational Search** toggle to `on` if you want to   activate [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search). If you don't want to activate conversational search, switch the toggle to `off`.
 
 1. Use the **Message**, **No results found** and **Connectivity issue** tabs to customize different messages to share with users based on the successfulness of the search.
@@ -127,11 +113,6 @@ After you configure Elasticsearch integration, you must configure your assistant
 
 ## Test Elasticsearch
 {: #elasticsearch-test}
-
-
-
-
-
 
 You can test search integration for Elasticsearch in actions preview, the preview page, or by using the preview link.
 
