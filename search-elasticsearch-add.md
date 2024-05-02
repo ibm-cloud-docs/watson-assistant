@@ -15,6 +15,7 @@ subcollection: watson-assistant
 
 [Plus]{: tag-green} [Enterprise]{: tag-purple}
 
+
 You can integrate search integration in your assistants by using Elasticsearch if you have Plus or Enterprise plan. Elasticsearch powers your assistants to perform different types of searches such as metric, structured, unstructured, and semantic with higher accuracy and relevance. The powerful data analytics engine in Elasticsearch expands the scope of search integration to larger data sets in assistants. In addition, you can enable conversational search for Elasticsearch in your assistant that helps to answer query by using simple conversation.
 
 When you change the existing search integration to a new one, the settings of the existing search integration is deleted completely. For example, when you change from {{site.data.keyword.discoveryshort}} to Elasticsearch, the configuration of {{site.data.keyword.discoveryshort}} is deleted completely from the assistant.{: important}
@@ -73,9 +74,9 @@ After you add the Elasticsearch search integration, do the following:
 
 
 1. Expand the **Advanced Elasticsearch settings** section to see the following text boxes.
-    
+
    Setting the **Advanced Elasticsearch settings** is optional.{: note}
-    
+
     - **Configure the filter array for Elasticsearch**
       You define the filter as an array of objects so that you can create filters to arrange the content per the query body. 
 
@@ -124,5 +125,9 @@ Search results are pulled from your knowledge base when conversational search is
 A text-based reply from the best results in your knowledge base displays when conversational search is `on`. 
 
    ![ConversationalSearchToggleOn](images/convo-search-test-toggle-on.png)
+
+
+
+
 
 
