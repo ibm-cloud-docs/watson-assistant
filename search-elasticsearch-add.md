@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-05-02"
 
 subcollection: watson-assistant
 
@@ -13,15 +13,13 @@ subcollection: watson-assistant
 # Elasticsearch search integration set up 
 {: #search-elasticsearch-add}
 
-[Plus]{: tag-green} [Beta]{: tag-cyan} 
+[Plus]{: tag-green} [Enterprise]{: tag-purple}
 
 You can integrate search integration in your assistants by using Elasticsearch if you have Plus or Enterprise plan. Elasticsearch powers your assistants to perform different types of searches such as metric, structured, unstructured, and semantic with higher accuracy and relevance. The powerful data analytics engine in Elasticsearch expands the scope of search integration to larger data sets in assistants. In addition, you can enable conversational search for Elasticsearch in your assistant that helps to answer query by using simple conversation.
 
 When you change the existing search integration to a new one, the settings of the existing search integration is deleted completely. For example, when you change from {{site.data.keyword.discoveryshort}} to Elasticsearch, the configuration of {{site.data.keyword.discoveryshort}} is deleted completely from the assistant.{: important}
 
 For more information about integrating {{site.data.keyword.discoveryshort}}, see [{{site.data.keyword.discoveryfull}} search integration setup](/docs/watson-assistant?topic=watson-assistant-search-add).{: tip}
-
-This beta feature is available for evaluation and testing purposes only. {: beta}
 
 ## Select Elasticsearch
 {: #select-elasticsearch-search-integration}
@@ -45,7 +43,7 @@ To select Elasticsearch as the default search integration, do one of the followi
 
     1. In the "Set up a new search extension" window, select the **Elasticsearch** tile to see the "Search integration" dialog.
 
-    ![Select Elasticsearch](images/select-elasticsearch.png)
+       ![Select Elasticsearch](images/select-elasticsearch.png)
 
 ## Set up Elasticsearch
 {: #setup-elasticsearch}
@@ -58,50 +56,40 @@ After you add the Elasticsearch search integration, do the following:
     - **Elasticsearch index**
     - **Elasticsearch username**
     - **Elasticsearch password**
-
       Elasticsearch setup in your assistant supports only the Basic Authentication token.{: important}
-
       ![Search integration](images/search-integration-elasticsearch.png)
 
 1. Click **Next** to go to the **Configure result content** section.
 
 1. In the **Configure result content** section, fill up the following fields to map the title, body, and URL to the search response:
-
     - **Title**: Search result title. Use the title, name, or similar type of field from the collection as the search result title.
-
       You must select something for the title or no search result response is displayed in the Facebook and Slack integrations.
-
     - **Body**: Search result description. Use an abstract, summary, or highlight field from the collection as the search result body.
-
        You must select something for the body or no search result response is displayed in the Facebook and Slack integrations.
 
     - **URL**: This field can be populated with any footer content that you want to include at the end of the search result.
 
-    When you configure the query body in the **Advanced Elasticsearch Settings** to search the nested documents, you must ensure that the **Title**, **Body**, and **URL** are from the fields of the inner documents in your Elasticsearch index. For more information about using nested queries, see [Elasticsearch nested query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-nested-query.html#query-dsl-nested-query).
+    When you configure the query body in the **Advanced Elasticsearch Settings** to search the nested documents, you must ensure that the **Title**, **Body**, and **URL** are from the fields in the Elasticsearch internal documents. For more information about using nested queries, see [Elasticsearch nested query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-nested-query.html#query-dsl-nested-query).
 
-    
+
 1. Expand the **Advanced Elasticsearch settings** section to see the following text boxes.
     
-    Setting the **Advanced Elasticsearch settings** is optional.{: note}
+   Setting the **Advanced Elasticsearch settings** is optional.{: note}
     
     - **Configure the filter array for Elasticsearch**
-
       You define the filter as an array of objects so that you can create filters to arrange the content per the query body. 
 
-   - **Configure the query body for Elasticsearch**
+    - **Configure the query body for Elasticsearch**
 
       The query body is used to manipulate the user requests into a format that is expected by search. It controls the query forms, search fields, filters and query size. In the REST API, the query body is an object representing the `POST` body for the `_search` request to Elasticsearch. THe query body has a `"$QUERY"` token to represent the customer's query, and a `"$FILTER"` token to represent the array of filters defined either in the search settings or at the step level.      
-      
-       By default, Elasticsearch integration uses keyword search. You can use advanced search such as semantic search with ELSER, KNN dense vector search, or nested queries to search the nested documents. For more information about using different types of query body examples, see [Query body examples](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions/docs/elasticsearch-install-and-setup#option-2-set-up-the-built-in-elasticsearch-extension).
 
-       For more information about the Elasticsearch `_search` API request body, see [Elasticsearch search API request body]( https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html#search-search-api-request-body){: external}.
+      By default, Elasticsearch integration uses keyword search. You can use advanced search such as semantic search with ELSER, KNN dense vector search, or nested queries to search the nested documents. For more information about using different types of query body examples, see [Query body examples](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions/docs/elasticsearch-install-and-setup#option-2-set-up-the-built-in-elasticsearch-extension).
 
-        You cannot customize the query body in the assistant with an existing Elasticsearch configuration.{: important}
-        
+      For more information about the Elasticsearch `_search` API request body, see [Elasticsearch search API request body]( https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html#search-search-api-request-body){: external}.
+
+      You cannot customize the query body in the assistant with an existing Elasticsearch configuration.{: important}
 
 1. Switch the **Conversational Search** toggle to `on` if you want to   activate [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search). If you don't want to activate conversational search, switch the toggle to `off`.
-
-    The **Conversational Search** toggle is available only if you signed up for the beta version.{: beta}
 
 1. Use the **Message**, **No results found** and **Connectivity issue** tabs to customize different messages to share with users based on the successfulness of the search.
 
@@ -112,13 +100,12 @@ After you add the Elasticsearch search integration, do the following:
     | Connectivity issue | I was unable to complete the search for some reason | `I might have information that could help address your query, but am unable to search my knowledge base at the moment.` |
     {: caption="Search result messages" caption-side="top"}
 
-1.  Use **Custom results filter** to add a filter for the custom text strings in the search integration. The **Custom results filter** field helps you define the search results relevant for a topic, product, or text string. For example, if you define the **Custom results filter** field by sing `enriched_text.entities.text:"Boston, MA"`, the search responses for any query in the assistant are filtered to make it relevant to `"Boston, MA"` in the `enriched_text.entities.text` file.
 
-    ![Custom result filter Elasticsearch](/images/custom-result-filter-es.png)
 
 1. Click **Finish**.
 
- ## Configure your assistant to use Elasticsearch
+
+## Configure your assistant to use Elasticsearch
  {: #search-assistant-configure}
 
 After you configure Elasticsearch integration, you must configure your assistant to use Elasticsearch when the customer response matches no action. For more information about updating **No matches** to use search, see [Use search when no action matches](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-no-action-matches). 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-23"
+lastupdated: "2024-05-01"
 
 subcollection: watson-assistant
 
@@ -34,7 +34,7 @@ If you are upgrading from 4.5.x to 4.8.x, a simpler way to complete the upgrade 
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 4.7.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.7.x?topic=assistant-upgrading){: external}
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 4.6.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=assistant-upgrading){: external}
 
-If you are upgrading from 4.6.4 or earlier versions to the latest, you must upgrade to 4.6.5 before upgrading to the latest release.{: important}
+If you are upgrading from 4.6.4 or earlier to the latest version, you must upgrade to 4.6.5 before you upgrade to the latest release.{: important}
 
 
 The primary data storage is a {{site.data.keyword.postgresql}} database.
@@ -46,7 +46,7 @@ Choose one of the following ways to manage the back up of data:
 
 - **[Kubernetes CronJob](#backup-cronjob)**: Use the `$INSTANCE-store-cronjob` cron job that is provided for you.
 - **[backupPG.sh script](#backup-os)**: Use the `backupPG.sh` bash script.
-- **[pg_dump tool](#backup-cp4d)**: Run the `pg_dump` tool on each cluster directly. This is the most manual option, but also affords the most control over the process.
+- **[pg_dump tool](#backup-cp4d)**: Run the `pg_dump` tool on each cluster directly. This is a manual option that gives you control over the process.
 
 When you back up data with one of these procedures before you upgrade from one version to another, the workspace IDs of your skills are preserved, but the service instance IDs and credentials change.
 {: note}
@@ -275,7 +275,7 @@ To access the backup files from Red Hat OpenShift Container Storage (OCS), compl
    
  
 
-### Extracting {{site.data.keyword.postgresql}} backup using a debug pod
+### Extracting {{site.data.keyword.postgresql}} backup by using a debug pod
 {: #backup-extract-postgres}
 
 To extract {{site.data.keyword.postgresql}} backup using a debug pod, complete the following steps:
@@ -567,7 +567,9 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
 
     You might need to wait a few minutes before the data your restored is visible from the web interface.
 
-1.  After you restore the data, you must train the backend model. Ensure you reopen only one assistant or dialog skill at a time. Each time that you open a dialog skill after its training data has changed, training is initiated automatically. Give the skill time to retrain on the restored data. It usually takes less than 10 minutes to get trained. The process of training a machine learning model requires at least one node to have 4 CPUs that can be dedicated to training. Therefore, open restored assistants and skills during low traffic periods and open them one at a time. If the assistant or dialog skill does not respond, then modify the workspace (for example, add an intent and then remove it). Check and confirm.
+1.  After you restore the data, you must train the backend model. For more information about retraining your backend model, see [Retraining your backend model](#set-up-retrain-model).
+
+
 
 ### Creating the resourceController.yaml file
 {: #backup-resource-controller-yaml}
@@ -740,4 +742,309 @@ Where the first value (`00000000-0000-0000-0000-001570184978`) is the instance I
 
 You can pass this file to the script for subsequent runs of the script in the same environment. Or you can edit it for use in other back up and restore operations. The mapping file is optional. If it is not provided, the tool prompts you for the mapping details based on information you provide in the YAML files.
 
+## Retraining your backend model
+{: #set-up-retrain-model}
 
+Per the number of models in your assistant, you can use one of the following options to retrain your backend model:
+
+- [Retrain your backend model manually](#set-up-retrain-model-manual)
+- [Auto-retrain your backend model](#set-up-retrain-model-auto)
+
+### Retrain your backend model manually
+{: #set-up-retrain-model-manual}
+
+When you open a dialog skill after a change in the training data, training is initiated automatically. Give the skill time to retrain on the restored data. It usually takes less than 10 minutes to get trained. The process of training a machine learning model requires at least one node to have 4 CPUs that can be dedicated to training. Therefore, open restored assistants and skills during low traffic periods and open them one at a time. If the assistant or dialog skill does not respond, then modify the workspace (for example, add an intent and then remove it). Check and confirm.
+
+### Auto-retrain your backend model
+{: #set-up-retrain-model-auto}
+
+When you have a large number of models to retrain, you can use the auto-retrain-all job to train the backend model. To learn more about the auto-retrain-all job and its implementation, refer to the following topics:
+
+- [Before you begin](#set-up-auto-retrain-prereq)
+- [Planning](#set-up-auto-retrain-plan)
+- [Procedure](#set-up-auto-retrain-procedure)
+- [Speeding up the retrain process](#set-up-auto-retrain-speed-up)
+
+#### Before you begin
+{: #set-up-auto-retrain-prereq}
+
+Before you begin the auto-retrain-all job, you must ensure that the {{site.data.keyword.postgresql}} database and Cloud Object Storage (Cloud Object Storage), which stores your action and dialog skills along with their snapshots, are active and not corrupted. In addition, you must ensure that your assistants do not receive or send any data during the auto-retrain-all job. 
+
+#### Planning
+{: #set-up-auto-retrain-plan}
+
+To get a good estimation of the duration that is required to complete the auto-retrain-all job, you can use the `calculate_autoretrain_all_job_duration.sh` script: 
+
+```bash
+  #!/bin/bash
+
+  calculate_duration() {
+    local input_variable="$1"
+    DURATION=$(("$NUM_OF_WORKSPACES_TO_TRAIN"*60 / (input_variable * 2) + "$NUM_OF_WORKSPACES_TO_TRAIN" * 2))
+  }
+
+  NUM_OF_WORKSPACES_TO_TRAIN=$(oc exec wa-etcd-0 -n cpd -- bash -c '
+  password="$( cat /var/run/credentials/pass.key )"
+  etcdctl_user="root:$password"
+  export ETCDCTL_USER="$etcdctl_user"
+
+  ETCDCTL_API=3 etcdctl --cert=/etc/etcdtls/operator/etcd-tls/etcd-client.crt --key=/etc/etcdtls/operator/etcd-tls/etcd-client.key --cacert=/etc/etcdtls/operator/etcd-tls/etcd-client-ca.crt --endpoints=https://$(hostname).${CLUSTER_NAME}.cpd.svc.cluster.local:2379 get  --prefix  /bluegoat/voyager-nlu/voyager-nlu-slot-wa/workspaces/ --keys-only | sed '/^$/d' | wc -l')
+
+  echo "Number of workspaces to train $NUM_OF_WORKSPACES_TO_TRAIN"
+
+  calculate_duration 5
+  DURATION_5=$DURATION
+
+  calculate_duration 10
+  DURATION_10=$DURATION
+
+  calculate_duration 15
+  DURATION_15=$DURATION
+  echo "Approximate duration of the auto retrain all job if you have 5 Training pods: $DURATION_5 seconds"
+  echo "Approximate duration of the auto retrain all job if you have 10 Training pods: $DURATION_10 seconds"
+  echo "Approximate duration of the auto retrain all job if you have 15 Training pods: $DURATION_15 seconds"
+```
+{: codeblock}
+
+
+In addition, you can plan to speed up the auto-retrain-all job after you get the estimation of duration. For more information about speeding up the auto-retrain-all job, see the [Speeding up the auto-retrain-all job](#set-up-auto-retrain-speed-up) topic.
+
+
+#### Procedure
+{: #set-up-auto-retrain-procedure}
+
+To retrain your backend model by using the auto-retrain-all job, you do the following steps:
+
+- [Set up the environment variables for the auto-retrain-all job](#set-up-auto-retrain-env-variables)
+- [Run the auto-retrain-all job](#set-up-auto-retrain-run)
+- [Validate the auto-retrain-all job](#set-up-auto-retrain-validate)
+
+##### Set up the environment variables for the auto-retrain-all job
+{: #set-up-auto-retrain-env-variables}
+
+Set up the following environment variable before you run the auto-retrain-all job:
+
+1. Set the `AUTO_RETRAIN` environment variable to `false` to disable any existing auto-retrain-all job:
+
+    ```bash  
+      export AUTO_RETRAIN="false"
+    ```
+    {: codeblock}
+
+1. To set up the `BATCH_RETRAIN_ALL_SIZE` environment variable, you multiply the number of available training replicas, `CLU_TRAINING_REPLICAS`, with `2` based on the assumption that each model takes approximately `~30 seconds` to train a model. Use the following command to set up `BATCH_RETRAIN_ALL_SIZE`:
+
+    ```bash
+      export BATCH_RETRAIN_ALL_SIZE=$(($(oc get deploy ${INSTANCE}-clu-training --template='{{index .spec.replicas}}') * 2))
+    ```
+    {: codeblock}
+
+1. Set `WAIT_TIME_BETWEEN_BATCH_RETRAIN_IN_SECONDS_FOR_RETRAIN_ALL` to `(60-${BATCH_RETRAIN_ALL_SIZE})`:
+
+    ```bash
+      export WAIT_TIME_BETWEEN_BATCH_RETRAIN_IN_SECONDS_FOR_RETRAIN_ALL=$((60-${BATCH_RETRAIN_ALL_SIZE}))
+    ```
+    {: codeblock}
+
+1. Set `WAIT_TIME_BETWEEN_TRAININGS_FOR_RETRAIN_ALL` to 1:
+
+    ```bash
+      export WAIT_TIME_BETWEEN_TRAININGS_FOR_RETRAIN_ALL=1
+    ```
+    {: codeblock}
+
+1. Set `AUTO_RETRAIN_ALL_CRON_SCHEDULE` to the time that you want to run the auto-retrain-all job:
+
+    ```bash
+      export AUTO_RETRAIN_ALL_CRON_SCHEDULE=<value of cron schedule>
+    ```
+    {: codeblock}
+
+    For example, you can give a value such as `"0 40 19 11 3 ? 2024"`, which is in the following format: 
+    
+    `(Seconds) (Minutes) (Hours) (Day of Month) (Month) (Day of Week) (Year)`
+
+1. Set `AUTO_RETRAIN_ALL_ENABLED` to true:
+
+    ```bash
+      export AUTO_RETRAIN_ALL_ENABLED="true"
+    ```
+    {: codeblock}
+
+##### Run the auto-retrain-all job
+{: #set-up-auto-retrain-run}
+
+1. To run the auto-retrain-all job, use the following command:
+
+    ```bash
+        export PROJECT_CPD_INST_OPERANDS=<namespace where Cloud Pak for Data and Assistant is installed>
+        export INSTANCE=`oc get wa -n ${PROJECT_CPD_INST_OPERANDS} |grep -v NAME| awk '{print $1}'`
+
+        cat <<EOF | oc apply -f -
+        apiVersion: assistant.watson.ibm.com/v1
+        kind: TemporaryPatch
+        metadata:
+          name: ${INSTANCE}-store-admin-env-vars
+          namespace: ${PROJECT_CPD_INST_OPERANDS}
+        spec:
+          apiVersion: assistant.watson.ibm.com/v1
+          kind: WatsonAssistantStore
+          name: ${INSTANCE}
+          patchType: patchStrategicMerge
+          patch:
+            store-admin:
+              deployment:
+                spec:
+                  template:
+                    spec:
+                      containers:
+                      - name: store-admin
+                        env:
+                        - name: AUTO_RETRAIN
+                          value: "${AUTO_RETRAIN}"
+                        - name: AUTO_RETRAIN_ALL_CRON_SCHEDULE
+                          value: "${AUTO_RETRAIN_ALL_CRON_SCHEDULE}"
+                        - name: AUTO_RETRAIN_ALL_ENABLED
+                          value: "${AUTO_RETRAIN_ALL_ENABLED}"
+                        - name: BATCH_RETRAIN_ALL_SIZE
+                          value: "${BATCH_RETRAIN_ALL_SIZE}"
+                        - name: WAIT_TIME_BETWEEN_BATCH_RETRAIN_IN_SECONDS_FOR_RETRAIN_ALL
+                          value: "${WAIT_TIME_BETWEEN_BATCH_RETRAIN_IN_SECONDS_FOR_RETRAIN_ALL}"
+                        - name: WAIT_TIME_BETWEEN_TRAININGS_FOR_RETRAIN_ALL
+                          value: "${WAIT_TIME_BETWEEN_TRAININGS_FOR_RETRAIN_ALL}"
+        EOF
+    ```
+    {: codeblock}
+
+1. After you complete the auto-retrain-all job, you must disable the auto-retrain-all flag and enable auto-retrain flag by using the following commands:
+
+    ```bash
+      oc patch temporarypatch ${INSTANCE}-store-admin-env-vars -p '{"metadata":{"finalizers":[]}}' --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
+      oc delete temporarypatch ${INSTANCE}-store-admin-env-vars -n ${PROJECT_CPD_INST_OPERANDS}
+      oc patch watsonassistantstore/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge
+    ```
+    {: codeblock}
+
+##### Validate the auto-retrain-all job
+{: #set-up-auto-retrain-validate}
+
+You can validate the successful completion of the auto-retrain-all job by comparing the number of `Affected workspaces found` with the `Retrained Total` count in the store-admin service log. To get the number of `Affected workspaces found` and the `Retrained Total`, run the following command:
+
+```bash
+  oc logs $(oc get pod -l component=store-admin --no-headers |awk '{print $1}') | grep "\[RETRAIN-ALL-SUMMARY\] Affected workspaces found"
+```
+{: codeblock}
+
+If the auto-retrain-all job is successful, the `Retrained Total` count equals the number of `Affected workspaces found`. In addition, if the difference between the counts of the `Retrained Total` and `Affected workspaces found` is small, the auto-retrain-all job completes successfully by training the remaining models in the background. However, if there is a time delay to complete the auto-retrain-all job, you must look at the store-admin logs to analyze the issue and consider [speeding up the auto-retrain-all job](#set-up-auto-retrain-speed-up). 
+
+#### Speeding up the auto-retrain-all job
+{: #set-up-auto-retrain-speed-up}
+
+The duration to complete the auto-retrain-all job depends on the number of models to train. Therefore, to speed up the training process, you must `scale` the number of `CLU_TRAINING_REPLICAS` and its dependencies. For example, if you `scale` the number of `CLU_TRAINING_REPLICAS` to `x`, you must `scale` the number of dependent replicas per the following calculation:
+
+- `TFMM_REPLICAS` to 0.5x
+- `DRAGONFLY_CLU_MM_REPLICAS` to 0.3x 
+- `CLU_EMBEDDING_REPLICAS` to 0.2x
+- `CLU_TRITON_SERVING_REPLICAS` to 0.2x. 
+
+If your calculation result for the number of models is a decimal number, then you must round-up the result to the next greater whole number. For example, if the number of `TFMM_REPLICAS` is 2.4, then round-up the value to 3. {: tip}
+
+Use the following steps to `scale` the number of models: 
+
+1. Register the values of the number of replicas in the `store` per your calculation:
+
+    ```bash
+      export CLU_TRAINING_REPLICAS=<value from calculation>
+      export TFMM_REPLICAS=<value from calculation>
+      export DRAGONFLY_CLU_MM_REPLICAS=<value from calculation>
+      export CLU_EMBEDDING_REPLICAS=<value from calculation>
+      export CLU_TRITON_SERVING_REPLICAS=<value from calculation>
+    ```
+    {: codeblock}
+
+1. Increase the number of `REPLICAS` by using the following command:
+
+    ```bash
+      export PROJECT_CPD_INST_OPERANDS=<namespace where Cloud Pak for Data and Assistant is installed>
+      export INSTANCE=`oc get wa -n ${PROJECT_CPD_INST_OPERANDS} |grep -v NAME| awk '{print $1}'`
+
+      cat <<EOF | oc apply -f -
+      apiVersion: assistant.watson.ibm.com/v1
+      kind: TemporaryPatch
+      metadata:
+        name: ${INSTANCE}-clu-training-replicas
+        namespace: ${PROJECT_CPD_INST_OPERANDS}
+      spec:
+        apiVersion: assistant.watson.ibm.com/v1
+        kind: WatsonAssistantCluTraining
+        name: $INSTANCE
+        patchType: patchStrategicMerge
+        patch:
+          clu-training:
+            deployment:
+              training:
+                spec:
+                  replicas: ${CLU_TRAINING_REPLICAS}
+      EOF
+
+      cat <<EOF | oc apply -f -
+      apiVersion: assistant.watson.ibm.com/v1
+      kind: TemporaryPatch
+      metadata:
+        name: ${INSTANCE}-clu-runtime-replicas
+        namespace: ${PROJECT_CPD_INST_OPERANDS}
+      spec:
+        apiVersion: assistant.watson.ibm.com/v1
+        kind: WatsonAssistantCluRuntime
+        name: ${INSTANCE}
+        patchType: patchStrategicMerge
+        patch:
+          tfmm:
+            deployment:
+              spec:
+                replicas: ${TFMM_REPLICAS}
+          dragonfly-clu-mm:
+            deployment:
+              spec:
+                replicas: ${DRAGONFLY_CLU_MM_REPLICAS}
+      EOF
+
+      cat <<EOF | oc apply -f -
+      apiVersion: assistant.watson.ibm.com/v1
+      kind: TemporaryPatch
+      metadata:
+        name: ${INSTANCE}-clu-replicas
+        namespace: ${PROJECT_CPD_INST_OPERANDS}
+      spec:
+        apiVersion: assistant.watson.ibm.com/v1
+        kind: WatsonAssistantClu
+        name: ${INSTANCE}
+        patchType: patchStrategicMerge
+        patch:
+          clu-embedding:
+            deployment:
+              spec:
+                replicas: ${CLU_EMBEDDING_REPLICAS}
+          clu-triton-serving:
+            deployment:
+              spec:
+                replicas: ${CLU_TRITON_SERVING_REPLICAS}
+      EOF
+    ```
+    {: codeblock}
+
+1. After you complete the auto-retrain-all job, you must revert the number of `REPLICAS` to the original numbers:
+
+    ```bash
+      oc patch temporarypatch ${INSTANCE}-clu-training-replicas -p '{"metadata":{"finalizers":[]}}' --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
+      oc patch temporarypatch ${INSTANCE}-clu-runtime-replicas -p '{"metadata":{"finalizers":[]}}' --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
+      oc patch temporarypatch ${INSTANCE}-clu-replicas -p '{"metadata":{"finalizers":[]}}' --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
+
+      oc delete temporarypatch ${INSTANCE}-clu-training-replicas -n ${PROJECT_CPD_INST_OPERANDS}
+      oc delete temporarypatch ${INSTANCE}-clu-runtime-replicas -n ${PROJECT_CPD_INST_OPERANDS}
+      oc delete temporarypatch ${INSTANCE}-clu-replicas -n ${PROJECT_CPD_INST_OPERANDS}
+
+      oc patch watsonassistantclutraining/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge
+      oc patch watsonassistantcluruntime/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge
+      oc patch watsonassistantclu/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge
+    ```
+    {: codeblock}

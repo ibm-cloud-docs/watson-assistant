@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-05-02"
 
 subcollection: watson-assistant
 
@@ -131,6 +131,7 @@ As you test your conversation in Preview, you can check that each variable is se
 For better visibility of long variable values, you can expand the width of the debug mode panel by using the **Expand** icon.{: note}
 
 To learn more about variables, see [Managing information during the conversation](/docs/watson-assistant?topic=watson-assistant-manage-info).
+
 
 
 
