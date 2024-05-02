@@ -104,6 +104,11 @@ This table shows how you might set up the steps. The last step is a catch-all in
 {: #protect-privacy-customer-information}
 
 
+You can protect the privacy of the customer information in a step that you configure for the assistant. To hide confidential information in user input or assistant's response in a step, you can edit the settings and select the **Protect data collected at this step** checkbox. The protected data is masked with asterisks in the conversation log.
+
+
+
+
 
 The feature for masking the confidential customer information is available only for actions in assistants. If you're calling actions from a dialog, you can see the privacy setting in your action steps, but selecting the checkbox doesn't mask the customer information. In addition, this feature is not available for the assistants that are built in the classic experience of {{site.data.keyword.conversationfull}}. {: note}
 
