@@ -25,7 +25,7 @@ Release notes describe the new features, changes, and bug fixes in each release 
 {: release-note}
 
 Conversational search and the Elasticsearch integration are now generally available
-: You can now use the Conversational search and Elasticsearch search integration in your assistants as a beta feature. For more information about conversational search, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search). For more information about Elasticsearch search integration, see [Elasticsearch search integration setup](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add).
+: The Conversational search feature with Retrieval-Augmented Generation (RAG) and Elasticsearch search integration are now generally available. For more information about conversational search, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search). For more information about Elasticsearch search integration, see [Elasticsearch search integration setup](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add).
 
 
 ## 18 April 2024
