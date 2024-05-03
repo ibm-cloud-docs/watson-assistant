@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-01"
+lastupdated: "2024-05-03"
 
 keywords: conversational search
 
@@ -83,8 +83,6 @@ The citation title feature is not supported in the web chat integration. So, the
 
 ## Streaming response support
 {: #conversational-search-streaming-response}
-
-This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 Streaming response from the conversational search uses watsonx.ai capabilities to provide continuous, real-time responses in your assistant. By default, the streaming response is disabled for the web chat and the assistant preview panels. 
 
