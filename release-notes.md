@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-02"
+lastupdated: "2024-05-03"
 
 subcollection: watson-assistant
 
@@ -20,7 +20,15 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
+## 03 May 2024
+{: #watson-assistant-may032024}
+{: release-note}
 
+Conversational search is now generally available
+: The Conversational search feature with the Retrieval-Augmented Generation (RAG) solution, powered by watsonx.ai, is now generally available. For more information about conversational search, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search). 
+
+Elasticsearch search integration is now generally available
+: Elasticsearch search integration is now generally available. For more information about Elasticsearch search integration, see [Elasticsearch search integration setup](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add).
 
 
 ## 18 April 2024

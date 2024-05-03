@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-08-31"
+  years: 2018, 2024
+lastupdated: "2024-05-03"
 
 subcollection: watson-assistant
 
@@ -34,7 +34,9 @@ The assistant determines when to change the conversation topic as follows:
     If the input does not answer the question, and it does not match any existing action of the assistant, a step validation error results. For more information about validation errors and how they are handled, see [Handling errors in the conversation](/docs/watson-assistant?topic=watson-assistant-handle-errors).
     {: note}
 
-1. If the input matches a different action, the assistant switches to the matching action. The assistant changes to the new action if it has a confidence score match of 20% or higher. In the example, the customer's response (`What's a CVV number?`) is not a valid response, but it does match another action that is designed to answer this question. The matching action is triggered, answering the customer's question.
+1. If the input matches a different action, the assistant switches to the matching action.
+
+ In the example, the customer's response (`What's a CVV number?`) is not a valid response, but it does match another action that is designed to answer this question. The matching action is triggered, answering the customer's question.
 
 1. After the second action completes, the assistant asks the customer if they want to return to the original action. If they say `Yes`, the assistant continues with the step where the customer changed the topic. In the example, the assistant returns to the original action and repeats the question `What is your CVV number?`.
 
