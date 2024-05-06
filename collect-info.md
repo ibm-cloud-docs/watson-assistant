@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-02"
+lastupdated: "2024-05-06"
 
 subcollection: watson-assistant
 
@@ -102,9 +102,6 @@ This table shows how you might set up the steps. The last step is a catch-all in
 
 ## Protecting the privacy of the customer information
 {: #protect-privacy-customer-information}
-
-
-You can protect the privacy of the customer information in a step that you configure for the assistant. To hide confidential information in user input or assistant's response in a step, you can edit the settings and select the **Protect data collected at this step** checkbox. The protected data is masked with asterisks in the conversation log.
 
 
 
