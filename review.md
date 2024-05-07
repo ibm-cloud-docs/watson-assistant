@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-02"
+lastupdated: "2024-05-07"
 
 subcollection: watson-assistant
 
@@ -13,16 +13,6 @@ subcollection: watson-assistant
 
 # Reviewing and debugging your actions
 {: #review}
-
-Learn how to test the conversation you built into an action, to experience what your users see with your assistant. If there are any issues, learn how to debug the user’s experience.
-
-## Using Preview to test your action
-{: #review-test}
-
-
-As you make changes, test the action at any time to see whether the resulting interaction works as intended. **Preview**, which is a button on every action page, shows you what customers see when they use web chat to interact with the action.
-
-
 
 
 Before you test your action, make sure you save any new changes, and wait until the system finishes training. If the system is still training, a message is displayed that says so.
