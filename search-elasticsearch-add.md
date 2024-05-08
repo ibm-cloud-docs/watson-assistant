@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-07"
+lastupdated: "2024-05-08"
 
 subcollection: watson-assistant
 
@@ -58,17 +58,7 @@ To set up Elasticsearch on your assistant, use the following procedure:
 
 ### Using an existing index
 
-1. In the **Select index** section, click **Use my index** to connect to an existing Elasticsearch index. The **Use my index** option is selected as default in your Elasticsearch set up. 
 
-1. In the **Use my index** option, type the Elasticsearch index name.
-
-1. You can see the **Requirements not met** error message when your Elasticsearch instance cannot connect to the ELSER semantic embeddings model or does not support the ELSER semantic embeddings model. 
-
-1. Click **Next** to go to the **Enable conversational search (optional)** section.
-
-1. Conversational search is available only in the Plus and Enterprise plans of {{site.data.keyword.conversationshort}}. In the **Enable conversational search (optional)** section, switch the **Conversational Search** toggle to `on` if you want to activate conversational search. If you don't want to activate conversational search, switch the toggle to `off`. For more information about conversational search, see [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
-
-1. Click **Save** and then **Close**.
 
 ### Uploading documents to a new index
 {: #elasticsearch-upload-documents}
@@ -87,7 +77,7 @@ To upload documents to a new index, use the following procedure:
 
 1. In the **Select index** section of the **Elasticsearch** window, click **Upload documents to a new index in your Elasticsearch instance**. 
 
-    {{site.data.keyword.conversationshort}} passes the uploaded documents to your Elasticsearch instance for storage, chunking, and indexing.{: note}
+   {{site.data.keyword.conversationshort}} passes the uploaded documents to your Elasticsearch instance for storage, chunking, and indexing.{: note}
 
 1. In the **Configure result content** section, provide the following fields to map the title, body, and URL to the search response:
 
@@ -142,7 +132,7 @@ To upload documents to a new index, use the following procedure:
 
 1. Click **Upload** button. In the **Upload documents** section, you can drag and drop your files or do a single click to upload documents directly to your assistant. 
 
-   You can upload upto 20 documents at a time. Each document file must not exceed 25 MB. The total size of all documents must not exceed 100 MB.{: important}
+   You can upload upto 20 documents at a time. Each document file must not exceed 500 KB. The total size of all documents must not exceed 100 MB.{: important}
 
    ![Elasticsearch upload document](images/elastic-search-upload-doc.png)
 
