@@ -36,6 +36,10 @@ The assistant determines when to change the conversation topic as follows:
 
 1. If the input matches a different action, the assistant switches to the matching action.
 
+ In the example, the customer's response (`What's a CVV number?`) is not a valid response, but it does match another action that is designed to answer this question. The matching action is triggered, answering the customer's question.
+
+1. After the second action completes, the assistant asks the customer if they want to return to the original action. If they say `Yes`, the assistant continues with the step where the customer changed the topic. In the example, the assistant returns to the original action and repeats the question `What is your CVV number?`.
+
 If an action starts and doesn't finish its step set to *End the action*, then a customer can't digress into that action while it is still in progress. For example, if a customer starts an action, changes the topic to start another action, and then changes the topic again, any in-progress action isn't available for a topic switch.
 {: note}
 
