@@ -76,7 +76,7 @@ For any new assistant, the **Route to conversational search** option is the defa
 
 The **Search routing** feature is enabled for any assistant in draft environment, but not for assistants in live environment. However, the **Search routing** feature is enabled for the assistant in the live environment, if you created the assistant in live environment from a draft environment for which **Search routing** is configured earlier. {: tip}
 
-</review>
+
 
 #### Adding examples of unsupported input
 {: #no-action-matches-add-examples}
