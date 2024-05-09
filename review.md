@@ -19,7 +19,7 @@ Learn how to test the conversation you built into an action to experience what y
 ## Using Preview to test your action
 {: #review-test}
 
-You can test the action at any time to see whether the resulting interaction works as intended. The **Preview** in every action page, shows you what customers see when they use web chat to interact with this action.
+You can test the action at any time to see whether the resulting interaction works as intended. The **Preview** in the action pages, shows you what customers see when they use web chat to interact with this action.
 
 Before you test your action, make sure you save any new changes, and wait until the system finishes training. If the system is still training, a message is displayed that says so.
 {: note}
@@ -125,7 +125,7 @@ Click the icon, and the editor shows the corresponding step in the background.
 ## Variable values in Preview
 {: #Preview-variable-values}
 
-In Preview, to test your conversation to verify the values, click **Variable values** to see the values stored in each variable. The **Variable values** pane has two tabs, one for action variables and one for session variables.
+In **Preview**, you can test your conversation by verifying the variable values. You click **Variable values** to see the values stored in each variable. The **Variable values** pane has two tabs, one for action variables and another one for session variables.
 
 ![Variable values](images/expand-debug-mode.png){: caption="Variable values" caption-side="bottom"}
 

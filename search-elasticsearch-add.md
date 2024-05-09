@@ -51,12 +51,39 @@ To select Elasticsearch as the default search integration, use one of the follow
 To set up Elasticsearch on your assistant, use the following procedure:
 
 
+1. In the first section of the "Search integration" window, provide the following fields to enable your assistant to connect to your Elasticsearch instance:	
+    - **Elasticsearch url**	
+    - **Elasticsearch port (optional)**	
+    - **Choose an authentication type**	
+    - **Elasticsearch username**	
+    - **Elasticsearch password**	
+
+      ![Search integration](images/elastic-search-index.png)
+
+
+
+
 
 1. Click **Next** to go to the **Select an index** section. **Select an index** has two options: 
     - To use an existing index, select **Use my index**. 
     - To create a new index, select **Upload documents to a new index in your Elasticsearch instance**.
 
 ### Using an existing index
+
+
+1. In the **Select index** section, click **Use my index** to connect to an existing Elasticsearch index. The **Use my index** option is selected as default in your Elasticsearch set up. 	
+
+
+1. In the **Use my index** option, type the Elasticsearch index name.	
+
+1. You can see the **Requirements not met** error message when your Elasticsearch instance cannot connect to the ELSER semantic embeddings model or does not support the ELSER semantic embeddings model. 	
+
+1. Click **Next** to go to the **Enable conversational search (optional)** section.	
+
+1. Conversational search is available only in the Plus and Enterprise plans of {{site.data.keyword.conversationshort}}. In the **Enable conversational search (optional)** section, switch the **Conversational Search** toggle to `on` if you want to activate conversational search. If you don't want to activate conversational search, switch the toggle to `off`. For more information about conversational search, see [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).	
+
+1. Click **Save** and then **Close**.	
+
 
 
 
@@ -70,6 +97,11 @@ Before you upload documents, you must meet the following requirements:
 - Your Elasticsearch instance must have a paid or trial subscription, such as the Platinum Edition of [IBM Cloud Databases for Elasticsearch](https://cloud.ibm.com/databases/databases-for-elasticsearch/create){: external} or a Platinum or Enterprise subscription offered by [Elastic.co]( https://www.elastic.co/subscriptions).
 
 - To use the ELSER model, you must have an Machine Learning (ML) node feature and a minimum of 4 GB memory in the ML node to deploy the model. For more information about ELSER requirements, see [ELSER requirements](https://www.elastic.co/guide/en/machine-learning/current/ml-nlp-elser.html#elser-req).
+
+
+
+- You can increase the `number_of_allocations` and `threads_per_allocation` to improve the throughput and latency of the ELSER model when you deploy it. For more information about start trained model deployment, see [Start trained model]( https://www.elastic.co/guide/en/elasticsearch/reference/8.13/start-trained-model-deployment.html#start-trained-model-deployment).
+
 
 
 
