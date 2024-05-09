@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-08"
+lastupdated: "2024-05-09"
 
 subcollection: watson-assistant
 
@@ -128,7 +128,7 @@ To upload documents to a new index, use the following procedure:
 
 1. Click the **Documents** tab in the **Elasticsearch** window.
    
-    The **Documents** tab is enabled only if you select **Upload documents to a new index in your Elasticsearch instance** option.{: tip}
+   The **Documents** tab is enabled only if you select **Upload documents to a new index in your Elasticsearch instance** option.{: tip}
 
 1. Click **Upload** button. In the **Upload documents** section, you can drag and drop your files or do a single click to upload documents directly to your assistant. 
 
