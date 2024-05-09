@@ -36,6 +36,7 @@ The assistant determines when to change the conversation topic as follows:
 
 1. If the input matches a different action, the assistant switches to the matching action.
 
+You can control how often your assistant switches topics. For more information, see [Setting threshold](/docs/watson-assistant?topic=watson-assistant-handle-errors#setting-threshold).
 
 
 

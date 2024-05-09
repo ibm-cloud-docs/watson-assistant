@@ -35,6 +35,7 @@ When you build actions, you train your assistant on what your customers might as
 You cannot anticipate every possible request, so sometimes customers send input that your assistant fails to match to any action. The input may be phrased in a way that the assistant cannot understand, or customers ask for things that your assistant is not designed to handle.
 
 
+You can configure your action steps to route to search or **No matches** if the user input do not match any action. For more information about configuring search routing, see [Configuring the search routing when no action matches](#config-search-routing).
 
 Unrecognized input of this sort triggers the built-in **No matches** action. To see how this action works, click **Set by assistant** in the list of actions, and then click **No matches**.
 
@@ -51,6 +52,16 @@ By default, this action has two steps, and each step is conditioned on the *No a
 You can edit the **No matches** action just as you can any other action by changing the existing steps and adding or deleting steps. If you change the **No matches** action, you might accidentally break your assistant's ability to recover from errors in the conversation. If this happens, you can re-create the default steps.
 {: tip}
 
+
+#### Setting threshold
+{: #setting-threshold}
+
+You can set how often customers are routed to **No matches** by changing a global setting for actions.
+
+1. From the **Actions** page of the assistant, click **Global settings** ![Gear icon](../../icons/settings.svg).
+1. Click **Conversation routing** tab.
+1. Click **No matches** tab.
+1. Drag the slider to set the threshold, or choose an option from the drop-down box.
 
 
 #### Configuring the search routing when no action matches
