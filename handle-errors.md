@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-05-09"
 
 subcollection: watson-assistant
 
@@ -50,6 +50,11 @@ By default, this action has two steps, and each step is conditioned on the *No a
 
 You can edit the **No matches** action just as you can any other action by changing the existing steps and adding or deleting steps. If you change the **No matches** action, you might accidentally break your assistant's ability to recover from errors in the conversation. If this happens, you can re-create the default steps.
 {: tip}
+
+<review>
+
+#### Setting threshold
+{: #setting-threshold}
 
 You can set how often customers are routed to **No matches** by changing a global setting for actions.
 

@@ -36,19 +36,11 @@ The assistant determines when to change the conversation topic as follows:
 
 1. If the input matches a different action, the assistant switches to the matching action.
 
-      You can control how often your assistant switches topics. 
 
-    To set the threshold:
 
-    1. From the **Actions** page of the assistant, click **Global settings** ![Gear icon](../../icons/settings.svg).
 
-    1. Click **Conversation routing** tab.
 
-    1. Click **No matches** tab.
-
-    1. Drag the slider to set the threshold, or choose an option from the drop-down box.
-
-    In the example, the customer's response (`What's a CVV number?`) is not a valid response, but it does match another action that is designed to answer this question. The matching action is triggered, answering the customer's question.
+In the example, the customer's response (`What's a CVV number?`) is not a valid response, but it does match another action that is designed to answer this question. The matching action is triggered, answering the customer's question.
 
 1. After the second action completes, the assistant asks the customer if they want to return to the original action. If they say `Yes`, the assistant continues with the step where the customer changed the topic. In the example, the assistant returns to the original action and repeats the question `What is your CVV number?`.
 
