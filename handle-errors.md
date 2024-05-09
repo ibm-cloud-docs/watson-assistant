@@ -51,22 +51,32 @@ By default, this action has two steps, and each step is conditioned on the *No a
 You can edit the **No matches** action just as you can any other action by changing the existing steps and adding or deleting steps. If you change the **No matches** action, you might accidentally break your assistant's ability to recover from errors in the conversation. If this happens, you can re-create the default steps.
 {: tip}
 
-<review>
-
-#### Setting threshold
-{: #setting-threshold}
-
-You can set how often customers are routed to **No matches** by changing a global setting for actions.
-
-1. From the **Actions** page of the assistant, click **Global settings** ![Gear icon](../../icons/settings.svg).
-
-1. On the **Clarifying questions** tab, you can edit the **No matches** section. 
-
-   - Rarely (default)
-   - Sometimes
-   - More often
 
 
+#### Configuring the search routing when no action matches
+{: #config-search-routing}
+
+When no matches are available for a user input, you can configure the routing behavior of an action by selecting one of the following options:
+
+- **Route to conversational search**
+
+   You can use this option to route the assistant users to the search integration when there are no matches for the user responses. Before you select **Route to conversational search**, you must configure the search integration and the conversational search. 
+
+   ![Route to conversational search](/images/convo-search-routing.png)
+
+- **Route directly to No matches action**
+
+   You can use this option to route the assistant users to the **No matches** action when there are no matches for the user responses.
+
+   ![Route directly to No matches action](/images/no-match-routing.png)
+
+To configure **Search routing**, go to **Home** > **Actions** > **Global settings** > **Conversation routing** > **Search routing**. After you select an option **Search routing**, click the **Save** button.
+
+For any new assistant, the **Route to conversational search** option is the default selction in the **Search routing** section.{: tip}
+
+The **Search routing** feature is enabled for any assistant in draft environment, but not for assistants in live environment. However, the **Search routing** feature is enabled for the assistant in the live environment, if you created the assistant in live environment from a draft environment for which **Search routing** is configured earlier. {: tip}
+
+</review>
 
 #### Adding examples of unsupported input
 {: #no-action-matches-add-examples}
