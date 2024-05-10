@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-09"
+lastupdated: "2024-05-10"
 
 subcollection: watson-assistant
 
@@ -142,11 +142,13 @@ To upload documents to a new index, use the following procedure:
         The query body is used to manipulate the user requests into a format that the search expects. It controls the query forms, search fields, filters, and query size. In the REST API, the query body is an object representing the `POST` body for the `_search` request to Elasticsearch. THe query body has a `"$QUERY"` token to represent the customer's query, and a `"$FILTER"` token to represent the array of filters that are defined either in the search settings or at the step level.    
 
 
+
         By default, Elasticsearch integration uses keyword search. You can use advanced search such as semantic search with ELSER, KNN dense vector search, or nested queries to search the nested documents. For more information about using different types of query body examples, see [Query body examples](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions/docs/elasticsearch-install-and-setup#option-2-set-up-the-built-in-elasticsearch-extension).	
 
         For more information about the Elasticsearch `_search` API request body, see [Elasticsearch search API request body]( https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html#search-search-api-request-body){: external}.	
 
     You cannot customize the query body in the assistant with an existing Elasticsearch configuration.{: important}   
+
 
 
 
