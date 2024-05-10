@@ -50,8 +50,6 @@ To select Elasticsearch as the default search integration, use one of the follow
 
 To set up Elasticsearch on your assistant, use the following procedure:
 
-
-
 1. In the first section of the "Search integration" window, provide the following fields to enable your assistant to connect to your Elasticsearch instance:
     - **Elasticsearch url**
     - **Elasticsearch port (optional)**
@@ -60,16 +58,13 @@ To set up Elasticsearch on your assistant, use the following procedure:
       * If you select `API key`, you must provide **Elasticsearch API key**.
 
       ![Search integration](images/elastic-search-index.png)
-  
-   
+
 
 1. Click **Next** to go to the **Select an index** section. **Select an index** has two options: 
     - To use an existing index, select **Use my index**. 
     - To create a new index, select **Upload documents to a new index in your Elasticsearch instance**.
 
 ### Using an existing index
-
-
 
 1. In the **Select index** section, click **Use my index** to connect to an existing Elasticsearch index. The **Use my index** option is selected as default in your Elasticsearch set up. 
 
@@ -84,8 +79,6 @@ To set up Elasticsearch on your assistant, use the following procedure:
 ### Uploading documents to a new index [Beta]{: tag-cyan}
 {: #elasticsearch-upload-documents}
 
-
-
 Before you upload documents, you must meet the following requirements:
 
 - Upload document feature requires Elasticsearch 8.8 or above because it uses ELSER model and the ELSER model is available since Elasticsearch 8.8.
@@ -94,14 +87,9 @@ Before you upload documents, you must meet the following requirements:
 
 - To use the ELSER model, you must have an Machine Learning (ML) node feature and a minimum of 4 GB memory in the ML node to deploy the model. For more information about ELSER requirements, see [ELSER requirements](https://www.elastic.co/guide/en/machine-learning/current/ml-nlp-elser.html#elser-req).
 
-
-
-
 - You can increase the resources for your ELSER model deployment. For example, you can increase `number_of_allocations` and `threads_per_allocation` to improve the throughput and latency of the ELSER model when you deploy it. For more information about start trained model deployment, see [Start trained model deployment]( https://www.elastic.co/guide/en/elasticsearch/reference/8.13/start-trained-model-deployment.html#start-trained-model-deployment).
 
 You can see the **Requirements not met** error message in the **Elasticsearch window** when the Elasticsearch instance fails to meet the preceding requirements and when the **Upload documents to a new index in your Elasticsearch instance** is disabled.{: note}
-
-
 
 To upload documents to a new index, use the following procedure:
 
@@ -139,10 +127,7 @@ To upload documents to a new index, use the following procedure:
 
       The query body is used to manipulate the user requests into a format that the search expects. It controls the query forms, search fields, filters, and query size. In the REST API, the query body is an object representing the `POST` body for the `_search` request to Elasticsearch. THe query body has a `"$QUERY"` token to represent the customer's query, and a `"$FILTER"` token to represent the array of filters that are defined either in the search settings or at the step level.    
    
-   
         By default, Elasticsearch integration uses keyword search. You can use advanced search such as semantic search with ELSER, KNN dense vector search, or nested queries to search the nested documents. For more information about using different types of query body examples, see [Query body examples](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions/docs/elasticsearch-install-and-setup#option-2-use-the-built-in-search-integration){: external}.
-
-    
 
         For more information about the Elasticsearch `_search` API request body, see [Elasticsearch search API request body]( https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html#search-search-api-request-body){: external}.
 
@@ -170,11 +155,7 @@ To upload documents to a new index, use the following procedure:
 
 1. Click **Upload** button. In the **Upload documents** section, you can drag and drop your files or do a single click to upload documents directly to your assistant. 
 
-  
-
    You can upload up to 20 documents at a time. Each document file must not exceed 500 KB. The total size of all documents must not exceed 100 MB.{: important}
-
-  
   
    ![Elasticsearch upload document](images/elastic-search-upload-doc.png)
 
