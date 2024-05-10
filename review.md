@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-02"
+lastupdated: "2024-05-09"
 
 subcollection: watson-assistant
 
@@ -14,16 +14,12 @@ subcollection: watson-assistant
 # Reviewing and debugging your actions
 {: #review}
 
-Learn how to test the conversation you built into an action, to experience what your users see with your assistant. If there are any issues, learn how to debug the user’s experience.
+Learn how to test the conversation you built into an action to experience what your users see with your assistant. If there are any issues, learn how to debug the user experience.
 
 ## Using Preview to test your action
 {: #review-test}
 
-
-As you make changes, test the action at any time to see whether the resulting interaction works as intended. **Preview**, which is a button on every action page, shows you what customers see when they use web chat to interact with the action.
-
-
-
+You can test the action at any time to see whether the resulting interaction works as intended. The **Preview** in the action pages, shows you what customers see when they use web chat to interact with this action.
 
 Before you test your action, make sure you save any new changes, and wait until the system finishes training. If the system is still training, a message is displayed that says so.
 {: note}
@@ -47,7 +43,13 @@ Before you test your action, make sure you save any new changes, and wait until 
 Queries that you submit through the Preview pane generate `/message` API calls, but they are not logged and do not incur charges.
 {: note}
 
+## Using Preview to test your action with dialog activated
+{: #review-test-action-dialog-activated}
 
+In the action editor, if dialog is activated, the preview panel shows an error message:
+![Image of the action preview page for dialog](images/action-editor-dialog-enabled.png)
+
+Click **Don’t remind me** to hide the notification until you turns off and then on dialog.
 
 ### Saving changes before testing
 {: #review-save}
@@ -120,19 +122,16 @@ Click the icon, and the editor shows the corresponding step in the background.
 
 **Follow along** connects what you are seeing in Preview with what you built in the action. As you interact with your assistant, the debug mode automatically opens each step in the background. That means you can fix an error as soon as you see it, because the editor is already open to the corresponding step.
 
-
 ## Variable values in Preview
-{: #review-variable-values}
+{: #Preview-variable-values}
 
-As you test your conversation in Preview, you can check that each variable is set correctly. Click **Variable values** to see the values stored in each variable during the conversation. The **Variable values** pane has two tabs, one for action variables and one for session variables. If you are using dialog, you can see session variables for both actions and dialog on the **Session variables** tab.
+In **Preview**, you can test your conversation by verifying the variable values. You click **Variable values** to see the values stored in each variable. The **Variable values** pane has two tabs, one for action variables and another one for session variables.
 
 ![Variable values](images/expand-debug-mode.png){: caption="Variable values" caption-side="bottom"}
 
 For better visibility of long variable values, you can expand the width of the debug mode panel by using the **Expand** icon.{: note}
 
 To learn more about variables, see [Managing information during the conversation](/docs/watson-assistant?topic=watson-assistant-manage-info).
-
-
 
 
 

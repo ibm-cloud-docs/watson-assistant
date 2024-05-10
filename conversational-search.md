@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-03"
+lastupdated: "2024-05-09"
 
 keywords: conversational search
 
@@ -28,41 +28,45 @@ To use conversational search, you must have a Plus or Enterprise plan.
 
 If you enable the conversational search toggle to `on`, you agree to the add-on pricing and terms. Conversational search add-on usage charges will apply from 1 June 2024. For more information about pricing plans, see [Pricing plans](https://cloud.ibm.com/catalog/services/watsonx-assistant?catalog_query=aHR0cHM6Ly9jbG91ZC5pYm0uY29tL2NhdGFsb2c%2Fc2VhcmNoPXdhdHNvbnglMjUyMGFzc2lzdGFudCNzZWFyY2hfcmVzdWx0cw%3D%3D&planId=f0a3dd47-b693-4d73-a8df-aa6baf07a933){: external}. For more information about terms, see [Terms](https://www.ibm.com/support/customer/csol/terms/?id=i128-0038&lc=en){: external}.{: important}
 
-Refer to the following topics to configure the conversational search in your assistant:
 
-- [Before you begin](#conversational-search-requirements)
-- [Enable conversational search](#conversational-search-setup) 
-- [Configure your assistant to use conversational search](#conversational-search-assistant-configure)
-- [Test conversational search](#conversational-search-test)
-- [Streaming response support](#conversational-search-streaming-response)
+Refer to the following topics to configure the conversational search in your assistant:	
 
-## Before you begin
-{: #conversational-search-requirements}
+- [Before you begin](#conversational-search-requirements)	
+- [Enable conversational search](#conversational-search-setup) 	
+- [Configure your assistant to use conversational search](#conversational-search-assistant-configure)	
+- [Test conversational search](#conversational-search-test)	
+- [Streaming response support](#conversational-search-streaming-response)	
 
-You must configure the search integration to enable the conversational search feature. For more information about configuring {{site.data.keyword.discoveryfull}} search integration, see [{{site.data.keyword.discoveryshort}} search integration setup](/docs/watson-assistant?topic=watson-assistant-search-add). For more information about configuring Elasticsearch integration, see [Elasticsearch search integration setup](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add).
+## Before you begin	
+{: #conversational-search-requirements}	
 
-## Enable conversational search 
-{: #conversational-search-setup}
+You must configure the search integration to enable the conversational search feature. For more information about configuring {{site.data.keyword.discoveryfull}} search integration, see [{{site.data.keyword.discoveryshort}} search integration setup](/docs/watson-assistant?topic=watson-assistant-search-add). For more information about configuring Elasticsearch integration, see [Elasticsearch search integration setup](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add).	
 
-You can enable the **Conversational search** in the `Search Integration` window by setting the **Conversational search** toggle to `On`. 
+## Enable conversational search 	
+{: #conversational-search-setup}	
 
-You can type `How do we know?` as a default text in the **Define the text for the citation title**. The citation title in the **Conversational search** shows how the responses are generated from various sources and displays the sources of the searched responses. The text in the citation title appears in between the response and the citation titles. 
+You can enable the **Conversational search** in the `Search Integration` window by setting the **Conversational search** toggle to `On`. 	
 
-   Citation title feature is not supported in web chat integration.{: note}
- 
-The **Define the text for the citation title** is enabled only when **Conversational search** toggle is switched to `On`. In the **Tendency to say I don’t know**, `Less often` is selected by default because the conversational search provides answers most of the times. 
+You can type `How do we know?` as a default text in the **Define the text for the citation title**. The citation title in the **Conversational search** shows how the responses are generated from various sources and displays the sources of the searched responses. The text in the citation title appears in between the response and the citation titles. 	
 
-Click `Save` to finish.
+   Citation title feature is not supported in web chat integration.{: note}	
+
+The **Define the text for the citation title** is enabled only when **Conversational search** toggle is switched to `On`. In the **Tendency to say I don’t know**, `Less often` is selected by default because the conversational search provides answers most of the times. 	
+
+Click `Save` to finish.	
 
 
- ![ConversationalSearch](images/convo-search-citation-title.png) 
-   
-For more information about configuring {{site.data.keyword.discoveryshort}}, see [Discovery configure](/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure). For more information about configuring Elasticsearch, see [Elasticsearch configure](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add#setup-elasticsearch).
+ ![ConversationalSearch](images/convo-search-citation-title.png) 	
 
-## Configure your assistant to use the conversational search 
-{: #conversational-search-assistant-configure}
+For more information about configuring {{site.data.keyword.discoveryshort}}, see [Discovery configure](/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure). For more information about configuring Elasticsearch, see [Elasticsearch configure](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add#setup-elasticsearch).	
+
+## Configure your assistant to use the conversational search 	
+{: #conversational-search-assistant-configure}	
 
 After you enable **Conversational search** on **Search integration**, you can enable **Search routing** to use conversational Search. For more information about search routing, see [Configuring the search routing when no action matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing). 
+
+
+
 
 ## Test conversational search
 {: #conversational-search-test}
@@ -78,11 +82,12 @@ When the conversational search is `On`, the same search results are pulled from 
 
    ![ConversationalSearchToggleOn](images/convo-search-test-toggle-on.png)
 
-
 The citation title feature is not supported in the web chat integration. So, the default text in the citation title is not displayed in the preceding image.
 
 ## Streaming response support
 {: #conversational-search-streaming-response}
+
+
 
 Streaming response from the conversational search uses watsonx.ai capabilities to provide continuous, real-time responses in your assistant. By default, the streaming response is disabled for the web chat and the assistant preview panels. 
 

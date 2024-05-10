@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-03"
+lastupdated: "2024-05-04"
 
 subcollection: watson-assistant
 
@@ -42,7 +42,7 @@ Behavioral tuning for conversational search: Tendency to say “I don’t know�
 {: #watson-assistant-apr152024}
 {: release-note}
 
-Streaming response  support from Conversational search 
+Streaming response support from Conversational search 
 : You can now use streaming response support from Conversational search that uses watsonx.ai capabilities to provide continuous, real-time responses in your assistant. For more information, see [Streaming response support](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-streaming-response).
 
 Overwrite all or skip all when you copy actions to another assistant

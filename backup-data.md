@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-01"
+lastupdated: "2024-05-08"
 
 subcollection: watson-assistant
 
@@ -824,7 +824,7 @@ To retrain your backend model by using the auto-retrain-all job, you do the foll
 
 Set up the following environment variable before you run the auto-retrain-all job:
 
-1. Set the `AUTO_RETRAIN` environment variable to `false` to disable any existing auto-retrain-all job:
+1. Set the `AUTO_RETRAIN` environment variable to `false` to disable any existing auto-retrain job:
 
     ```bash  
       export AUTO_RETRAIN="false"
@@ -862,6 +862,8 @@ Set up the following environment variable before you run the auto-retrain-all jo
     For example, you can give a value such as `"0 40 19 11 3 ? 2024"`, which is in the following format: 
     
     `(Seconds) (Minutes) (Hours) (Day of Month) (Month) (Day of Week) (Year)`
+
+    You must set the time in UTC time zone. {: important}
 
 1. Set `AUTO_RETRAIN_ALL_ENABLED` to true:
 
@@ -934,7 +936,7 @@ You can validate the successful completion of the auto-retrain-all job by compar
 ```
 {: codeblock}
 
-If the auto-retrain-all job is successful, the `Retrained Total` count equals the number of `Affected workspaces found`. In addition, if the difference between the counts of the `Retrained Total` and `Affected workspaces found` is small, the auto-retrain-all job completes successfully by training the remaining models in the background. However, if there is a time delay to complete the auto-retrain-all job, you must look at the store-admin logs to analyze the issue and consider [speeding up the auto-retrain-all job](#set-up-auto-retrain-speed-up). 
+If the auto-retrain-all job is successful, the `Retrained Total` count equals the number of `Affected workspaces found`. In addition, if the difference between the counts of the `Retrained Total` and `Affected workspaces found` is small, the auto-retrain-all job completes successfully by training the remaining models in the background. However, if there is a big difference between `Retrained Total` and `Affected workspaces found`, you must look at the store-admin logs to analyze the issue and consider [speeding up the auto-retrain-all job](#set-up-auto-retrain-speed-up). 
 
 #### Speeding up the auto-retrain-all job
 {: #set-up-auto-retrain-speed-up}
@@ -950,7 +952,7 @@ If your calculation result for the number of models is a decimal number, then yo
 
 Use the following steps to `scale` the number of models: 
 
-1. Register the values of the number of replicas in the `store` per your calculation:
+1. Register the values of the number of replicas per your calculation:
 
     ```bash
       export CLU_TRAINING_REPLICAS=<value from calculation>

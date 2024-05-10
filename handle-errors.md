@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-05-09"
 
 subcollection: watson-assistant
 
@@ -35,6 +35,7 @@ When you build actions, you train your assistant on what your customers might as
 You cannot anticipate every possible request, so sometimes customers send input that your assistant fails to match to any action. The input may be phrased in a way that the assistant cannot understand, or customers ask for things that your assistant is not designed to handle.
 
 
+You can configure your action steps to route to search or **No matches** if the user input do not match any action. For more information about configuring search routing, see [Configuring the search routing when no action matches](#config-search-routing).
 
 Unrecognized input of this sort triggers the built-in **No matches** action. To see how this action works, click **Set by assistant** in the list of actions, and then click **No matches**.
 
@@ -51,15 +52,40 @@ By default, this action has two steps, and each step is conditioned on the *No a
 You can edit the **No matches** action just as you can any other action by changing the existing steps and adding or deleting steps. If you change the **No matches** action, you might accidentally break your assistant's ability to recover from errors in the conversation. If this happens, you can re-create the default steps.
 {: tip}
 
+
+#### Setting threshold
+{: #setting-threshold}
+
 You can set how often customers are routed to **No matches** by changing a global setting for actions.
 
 1. From the **Actions** page of the assistant, click **Global settings** ![Gear icon](../../icons/settings.svg).
+1. Click **Conversation routing** tab.
+1. Click **No matches** tab.
+1. Drag the slider to set the threshold, or choose an option from the drop-down box.
 
-1. On the **Clarifying questions** tab, you can edit the **No matches** section. 
 
-   - Rarely (default)
-   - Sometimes
-   - More often
+#### Configuring the search routing when no action matches
+{: #config-search-routing}
+
+When no matches are available for a user input, you can configure the routing behavior of an action by selecting one of the following options:
+
+- **Route to conversational search**
+
+   You can use this option to route the assistant users to the search integration when there are no matches for the user responses. Before you select **Route to conversational search**, you must configure the search integration and the conversational search. 
+
+   ![Route to conversational search](/images/convo-search-routing.png)
+
+- **Route directly to No matches action**
+
+   You can use this option to route the assistant users to the **No matches** action when there are no matches for the user responses.
+
+   ![Route directly to No matches action](/images/no-match-routing.png)
+
+To configure **Search routing**, go to **Home** > **Actions** > **Global settings** > **Conversation routing** > **Search routing**. After you select an option **Search routing**, click the **Save** button.
+
+For any new assistant, the **Route to conversational search** option is the default selction in the **Search routing** section.{: tip}
+
+The **Search routing** feature is enabled for any assistant in draft environment, but not for assistants in live environment. However, the **Search routing** feature is enabled for the assistant in the live environment, if you created the assistant in live environment from a draft environment for which **Search routing** is configured earlier. {: tip}
 
 
 
