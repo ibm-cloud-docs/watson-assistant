@@ -10,8 +10,6 @@ subcollection: watson-assistant
 
 ---
 
-
-
 {{site.data.keyword.attribute-definition-list}}
 
 # Conversational search
@@ -33,14 +31,10 @@ If you enable the conversational search toggle to `on`, you agree to the add-on 
 
 
 
-
-
-
 ## Before you begin
 {: #conversational-search-requirements}
 
 You must configure the search integration to enable the conversational search feature. For more information about configuring {{site.data.keyword.discoveryfull}} search integration, see [{{site.data.keyword.discoveryshort}} search integration setup](/docs/watson-assistant?topic=watson-assistant-search-add). For more information about configuring Elasticsearch integration, see [Elasticsearch search integration setup](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add).
-
 
 
 
