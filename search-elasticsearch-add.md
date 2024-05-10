@@ -52,20 +52,6 @@ To set up Elasticsearch on your assistant, use the following procedure:
 
 
 
-1. In the first section of the "Search integration" window, provide the following fields to enable your assistant to connect to your Elasticsearch instance:	
-    - **Elasticsearch url**	
-    - **Elasticsearch port (optional)**	
-    - **Choose an authentication type**	
-    - **Elasticsearch username**	
-    - **Elasticsearch password**	
-
-      ![Search integration](images/elastic-search-index.png)
-
-
-
-
-
-
 1. Click **Next** to go to the **Select an index** section. **Select an index** has two options: 
     - To use an existing index, select **Use my index**. 
     - To create a new index, select **Upload documents to a new index in your Elasticsearch instance**.
@@ -91,8 +77,7 @@ To set up Elasticsearch on your assistant, use the following procedure:
 
 
 
-### Uploading documents to a new index
-{: #elasticsearch-upload-documents}
+
 
 Before you upload documents, you must meet the following requirements:
 
@@ -101,13 +86,6 @@ Before you upload documents, you must meet the following requirements:
 - Your Elasticsearch instance must have a paid or trial subscription, such as the Platinum Edition of [IBM Cloud Databases for Elasticsearch](https://cloud.ibm.com/databases/databases-for-elasticsearch/create){: external} or a Platinum or Enterprise subscription offered by [Elastic.co]( https://www.elastic.co/subscriptions).
 
 - To use the ELSER model, you must have an Machine Learning (ML) node feature and a minimum of 4 GB memory in the ML node to deploy the model. For more information about ELSER requirements, see [ELSER requirements](https://www.elastic.co/guide/en/machine-learning/current/ml-nlp-elser.html#elser-req).
-
-
-
-
-
-- You can increase the `number_of_allocations` and `threads_per_allocation` to improve the throughput and latency of the ELSER model when you deploy it. For more information about start trained model deployment, see [Start trained model]( https://www.elastic.co/guide/en/elasticsearch/reference/8.13/start-trained-model-deployment.html#start-trained-model-deployment).
-
 
 
 
@@ -144,19 +122,9 @@ To upload documents to a new index, use the following procedure:
     
         You define the filter as an array of objects so that you can create filters to arrange the content per the query body. 
 
-    - **Configure the query body for Elasticsearch**
-    
-        The query body is used to manipulate the user requests into a format that the search expects. It controls the query forms, search fields, filters, and query size. In the REST API, the query body is an object representing the `POST` body for the `_search` request to Elasticsearch. THe query body has a `"$QUERY"` token to represent the customer's query, and a `"$FILTER"` token to represent the array of filters that are defined either in the search settings or at the step level.    
+    - **Configure the query body for Elasticsearch**    
 
-
-
-        By default, Elasticsearch integration uses keyword search. You can use advanced search such as semantic search with ELSER, KNN dense vector search, or nested queries to search the nested documents. For more information about using different types of query body examples, see [Query body examples](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions/docs/elasticsearch-install-and-setup#option-2-set-up-the-built-in-elasticsearch-extension).	
-
-        For more information about the Elasticsearch `_search` API request body, see [Elasticsearch search API request body]( https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html#search-search-api-request-body){: external}.	
-
-    You cannot customize the query body in the assistant with an existing Elasticsearch configuration.{: important}   
-
-
+      The query body is used to manipulate the user requests into a format that the search expects. It controls the query forms, search fields, filters, and query size. In the REST API, the query body is an object representing the `POST` body for the `_search` request to Elasticsearch. THe query body has a `"$QUERY"` token to represent the customer's query, and a `"$FILTER"` token to represent the array of filters that are defined either in the search settings or at the step level.    
 
 
 
