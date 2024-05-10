@@ -51,6 +51,7 @@ To select Elasticsearch as the default search integration, use one of the follow
 To set up Elasticsearch on your assistant, use the following procedure:
 
 
+
 1. In the first section of the "Search integration" window, provide the following fields to enable your assistant to connect to your Elasticsearch instance:	
     - **Elasticsearch url**	
     - **Elasticsearch port (optional)**	
@@ -64,11 +65,13 @@ To set up Elasticsearch on your assistant, use the following procedure:
 
 
 
+
 1. Click **Next** to go to the **Select an index** section. **Select an index** has two options: 
     - To use an existing index, select **Use my index**. 
     - To create a new index, select **Upload documents to a new index in your Elasticsearch instance**.
 
 ### Using an existing index
+
 
 
 1. In the **Select index** section, click **Use my index** to connect to an existing Elasticsearch index. The **Use my index** option is selected as default in your Elasticsearch set up. 	
@@ -87,6 +90,7 @@ To set up Elasticsearch on your assistant, use the following procedure:
 
 
 
+
 ### Uploading documents to a new index
 {: #elasticsearch-upload-documents}
 
@@ -99,8 +103,11 @@ Before you upload documents, you must meet the following requirements:
 - To use the ELSER model, you must have an Machine Learning (ML) node feature and a minimum of 4 GB memory in the ML node to deploy the model. For more information about ELSER requirements, see [ELSER requirements](https://www.elastic.co/guide/en/machine-learning/current/ml-nlp-elser.html#elser-req).
 
 
+<pubish>
+
 
 - You can increase the `number_of_allocations` and `threads_per_allocation` to improve the throughput and latency of the ELSER model when you deploy it. For more information about start trained model deployment, see [Start trained model]( https://www.elastic.co/guide/en/elasticsearch/reference/8.13/start-trained-model-deployment.html#start-trained-model-deployment).
+
 
 
 
