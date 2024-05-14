@@ -89,7 +89,7 @@ Before you upload documents, your Elasticsearch instance must have the following
 
  If your Elasticsearch instance do not have the prerequisites for uploading document, you see the **Requirements not met** error message.
  
- If there is a delay or failure in uploading documents event after having the prerequisites, you can consider scaling the inference performance of the ELSER model deployment by setting up parameters such as `number_of_allocations` and `threads_per_allocation`. For more information about scaling the inference performance, see [Start trained model deployment API]( https://www.elastic.co/guide/en/elasticsearch/reference/8.13/start-trained-model-deployment.html#start-trained-model-deployment).{: note}
+ If there is a delay or failure in uploading documents even after having the prerequisites, you can consider scaling the inference performance of the ELSER model deployment by setting up parameters such as `number_of_allocations` and `threads_per_allocation`. For more information about scaling the inference performance, see [Start trained model deployment API]( https://www.elastic.co/guide/en/elasticsearch/reference/8.13/start-trained-model-deployment.html#start-trained-model-deployment).{: note}
 
 To upload documents to a new index, use the following procedure:
 
