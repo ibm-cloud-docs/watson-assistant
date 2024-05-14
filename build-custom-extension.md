@@ -59,6 +59,7 @@ The OpenAPI document must satisfy the following requirements and restrictions:
     }
     ```
     {: codeblock}
+    
 - The size of the document must not be more than `4 MB` if you have a *Plus* or higher plan of {{site.data.keyword.conversationshort}}. However, if you have an *Enteprise* plan with data isolation, the size of the document must not be more than `8 MB`.
 - The `content-type` must be `application/json`.
 - Each operation must have a clear and concise `summary`. The summary text is used in the UI to describe the operations that are available from an action, so it should be short and meaningful to someone who is building an assistant.
