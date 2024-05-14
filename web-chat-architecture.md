@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-05-14"
 
 subcollection: watson-assistant
 
@@ -291,3 +291,10 @@ If the system that hosts your website has limited Internet access (for example, 
 The web chat integration undergoes tests and scans regularly to find and address potential security issues, such as cross-site scripting (XSS) vulnerabilities.
 
 Be sure to run your own security reviews to see how the web chat fits in with your current website structure and policies. The web chat is hosted on your site and can inherit any vulnerabilities that your site has. Serve content over HTTPS, use a Content Security Policy (CSP), and implement other basic web security precautions.
+
+### Copying session state
+{: #web-chat-copy-session}
+
+The web chat integration stores the state of the current session as cache in the user's web browser. When the user sends a query to the assistant, the assistant replies along with a copy of the current state of the session. When the assistant session expires in the server due to [inactivity timeout](/docs/watson-assistant?topic=watson-assistant-publish-overview#publish-overview-environment-settings-inactivity), web chat creates a new session and copies the previous session state to the new session. Therefore, the users get a seamless conversation from the user if the session expires while the user is in the middle of a conversation. This state is only preserved as long as the user keeps the browser tab with web chat open. If the user reloads the page, leaves the page, or closes the tab, this session state is lost and they will get a new session with new state the next time they open web chat. When the session on the server expires, the user is presented with a warning that they will need to send a message to continue the conversation.
+
+The session state stored by web chat does not include any [private variables](/docs/watson-assistant?topic=watson-assistant-manage-info). These variables are stored only in the server. When an assistant copies the old session state from the server in a new session, which started after the expiry of the old server session, any private variables that were set from the old session are lost. {: note}
