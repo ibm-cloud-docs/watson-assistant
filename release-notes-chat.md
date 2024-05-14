@@ -25,6 +25,11 @@ For information about new features and improvements to the core {{site.data.keyw
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
 
+## 8.1.1
+{: #8.1.1}
+*Release date: 10 May 2024*
+
+- Minor bug fixes.
 
 ## 8.1.0
 {: #8.1.0}
