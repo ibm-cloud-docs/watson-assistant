@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-04"
+lastupdated: "2024-05-14"
 
 subcollection: watson-assistant
 
@@ -19,6 +19,13 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
+
+## 14 May 2024
+{: #watson-assistant-may142024}
+{: release-note}
+
+Autocorrection is disabled for search integration
+: The [autocorrection](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-autocorrection) feature is now disabled for search integration in your assistant. For more information, see [Autocorrecting user input](/docs/watson-assistant?topic=watson-assistant-autocorrection).
 
 ## 03 May 2024
 {: #watson-assistant-may032024}
