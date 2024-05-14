@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-03-07"
+lastupdated: "2024-05-14"
 
 subcollection: watson-assistant
 
@@ -50,6 +50,16 @@ The OpenAPI document must satisfy the following requirements and restrictions:
 
 - The document must conform to the OpenAPI 3.0 specification. If you have an OpenAPI (or Swagger) document that uses an earlier version of the specification, you can use the online [Swagger editor](https://editor.swagger.io/) to convert it to OpenAPI 3.0.
 - The document must be in JSON format (YAML is not supported). If you have a YAML document, you can use the online [Swagger editor](https://editor.swagger.io/) to convert it to JSON.
+- The request body in the JSON script must be presented as an object. For example: 
+
+    ```json
+    {
+        name: "Bob",
+        hobbies: ["sleeping", "eating", "walking"]
+    }
+    ```
+    {: codeblock}
+    
 - The size of the document must not be more than `4 MB` if you have a *Plus* or higher plan of {{site.data.keyword.conversationshort}}. However, if you have an *Enteprise* plan with data isolation, the size of the document must not be more than `8 MB`.
 - The `content-type` must be `application/json`.
 - Each operation must have a clear and concise `summary`. The summary text is used in the UI to describe the operations that are available from an action, so it should be short and meaningful to someone who is building an assistant.

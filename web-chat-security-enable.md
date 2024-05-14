@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-10-26"
+  years: 2019, 2024
+lastupdated: "2024-05-14"
 
 subcollection: watson-assistant
 
@@ -15,6 +15,9 @@ subcollection: watson-assistant
 
 To enable web chat security, you must make changes to your web application server code and the web chat embed script, as well as the web chat integration settings.
 {: shortdesc}
+
+For a complete, NodeJS reference implementation enabling security, see [Enabling security for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/web-chat-security-simple){: external}.
+{: note}
 
 ## Before you begin
 {: #web-chat-security-enable-prereq}

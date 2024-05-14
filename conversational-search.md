@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-09"
+lastupdated: "2024-05-14"
 
 keywords: conversational search
 
@@ -55,7 +55,6 @@ The **Define the text for the citation title** is enabled only when **Conversati
 
 Click `Save` to finish.	
 
-
  ![ConversationalSearch](images/convo-search-citation-title.png) 	
 
 For more information about configuring {{site.data.keyword.discoveryshort}}, see [Discovery configure](/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure). For more information about configuring Elasticsearch, see [Elasticsearch configure](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add#setup-elasticsearch).	
@@ -64,9 +63,6 @@ For more information about configuring {{site.data.keyword.discoveryshort}}, see
 {: #conversational-search-assistant-configure}	
 
 After you enable **Conversational search** on **Search integration**, you can enable **Search routing** to use conversational Search. For more information about search routing, see [Configuring the search routing when no action matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing). 
-
-
-
 
 ## Test conversational search
 {: #conversational-search-test}
@@ -87,8 +83,6 @@ The citation title feature is not supported in the web chat integration. So, the
 ## Streaming response support
 {: #conversational-search-streaming-response}
 
-
-
 Streaming response from the conversational search uses watsonx.ai capabilities to provide continuous, real-time responses in your assistant. By default, the streaming response is disabled for the web chat and the assistant preview panels. 
 
 By using the streaming response support feature, you can reduce the wait time for the response. 
@@ -100,6 +94,10 @@ To enable streaming response, do the following:
 1. Click the **Styles** tab.
 1. Set the **Streaming** toggle button to `On`.
 1. Click **Save and exit**.
+
+
+
+
 
 
 

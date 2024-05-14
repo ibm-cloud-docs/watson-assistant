@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-09-21"
+  years: 2015, 2024
+lastupdated: "2024-05-14"
 
 keywords: autocorrection, spelling correction, spell check
 
@@ -24,7 +24,9 @@ Autocorrection corrects user input in the following way:
 
 When your assistant evaluates whether to correct the spelling of a word, it does not rely on a simple dictionary lookup process. Instead, it uses a combination of natural language processing and probabilistic models to assess whether a term is, in fact, misspelled and should be corrected.
 
-Autocorrection is enabled automatically for all English-language assistants. It is also available in French-language assistants, but is disabled by default. Autocorrection isn't available for any other languages.
+By default, autocorrection is enabled in all assistants that use English. However, it is disabled by default in all assistants that use French. You can enable or disable **Autocorrection** by going to **Global settings** > **Autocorrection**. 
+
+Autocorrection is not available for search integration in your assistant and for assistant languages other than English and French. {: important}
 
 
 ## Disabling autocorrection
