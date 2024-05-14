@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-10"
+lastupdated: "2024-05-14"
 
 subcollection: watson-assistant
 
@@ -79,17 +79,17 @@ To set up Elasticsearch on your assistant, use the following procedure:
 ### Uploading documents to a new index [Beta]{: tag-cyan}
 {: #elasticsearch-upload-documents}
 
-Before you upload documents, you must meet the following requirements:
+Before you upload documents, your Elasticsearch instance must have the following prerequisites:
 
-- Upload document feature requires Elasticsearch 8.8 or above because it uses ELSER model and the ELSER model is available since Elasticsearch 8.8.
+- Elasticsearch 8.8 or above.
 
-- Your Elasticsearch instance must have a paid or trial subscription, such as the Platinum Edition of [IBM Cloud Databases for Elasticsearch](https://cloud.ibm.com/databases/databases-for-elasticsearch/create){: external} or a Platinum or Enterprise subscription offered by [Elastic.co]( https://www.elastic.co/subscriptions).
+- A paid or trial subscription of the Elasticsearch instance such as the Platinum Edition of [IBM Cloud Databases for Elasticsearch](https://cloud.ibm.com/databases/databases-for-elasticsearch/create){: external} or the Platinum or Enterprise subscription offered by [Elastic.co]( https://www.elastic.co/subscriptions).
 
-- To use the ELSER model, you must have an Machine Learning (ML) node feature and a minimum of 4 GB memory in the ML node to deploy the model. For more information about ELSER requirements, see [ELSER requirements](https://www.elastic.co/guide/en/machine-learning/current/ml-nlp-elser.html#elser-req).
+- A Machine Learning (ML) node with a minimum of 4 GB memory to deploy the ELSER model. For more information about the ELSER requirements, see [ELSER requirements](https://www.elastic.co/guide/en/machine-learning/current/ml-nlp-elser.html#elser-req).
 
-- You can increase the resources for your ELSER model deployment. For example, you can increase `number_of_allocations` and `threads_per_allocation` to improve the throughput and latency of the ELSER model when you deploy it. For more information about start trained model deployment, see [Start trained model deployment]( https://www.elastic.co/guide/en/elasticsearch/reference/8.13/start-trained-model-deployment.html#start-trained-model-deployment).
-
-You can see the **Requirements not met** error message in the **Elasticsearch window** when the Elasticsearch instance fails to meet the preceding requirements and when the **Upload documents to a new index in your Elasticsearch instance** is disabled.{: note}
+ If your Elasticsearch instance do not have the prerequisites for uploading document, you see the **Requirements not met** error message.
+ 
+ If there is a delay or failure in uploading documents event after having the prerequisites, you can consider scaling the inference performance of the ELSER model deployment by setting up parameters such as `number_of_allocations` and `threads_per_allocation`. For more information about scaling the inference performance, see [Start trained model deployment API]( https://www.elastic.co/guide/en/elasticsearch/reference/8.13/start-trained-model-deployment.html#start-trained-model-deployment).{: note}
 
 To upload documents to a new index, use the following procedure:
 
