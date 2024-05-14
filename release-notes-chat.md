@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-09"
+lastupdated: "2024-05-14"
 
 subcollection: watson-assistant
 
@@ -232,7 +232,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 - **New journey instance methods**: The new [tours](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#tours){: external} object supports instance methods that provide better control over journeys. You can use these methods to start or end a journey, or to automatically navigate through a journey in response to user actions.
 
-- **Added journey strings to the language pack**: New strings for journeys were added to the language pack. You can modify the strings in the language pack by using the [updateLanguagePack()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatelanguagepack){: external} instance method. For more information about language packs, see [Languages](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/web-chat-security){: external}.
+- **Added journey strings to the language pack**: New strings for journeys were added to the language pack. You can modify the strings in the language pack by using the [updateLanguagePack()](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updatelanguagepack){: external} instance method. For more information about language packs, see [Languages](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-render#languages){: external}.
 
 For more information about the journeys beta feature, see [Guiding customers with journeys](/docs/watson-assistant?topic=watson-assistant-journeys).
 

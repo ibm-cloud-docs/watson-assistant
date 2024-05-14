@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2023
-lastupdated: "2023-10-26"
+  years: 2023, 2024
+lastupdated: "2024-05-14"
 
 subcollection: watson-assistant
 
@@ -21,7 +21,10 @@ With web chat security enabled, the user ID associated with each message is base
 
 However, you might want your customers to be able to authenticate in the middle of a session (for example, to complete an action that updates the user's account information). Because the generated user ID in the `sub` claim cannot be changed, you need another way to authenticate the user securely. You can do this by storing the customer's actual authenticated user ID as a private variable in the user payload of the JWT. (You could store the user ID in an ordinary context variable, but this would not be secure, because such variables can be modified.)
 
-For a complete, working version of the example described in this tutorial, see [Enabling security for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/web-chat-security){: external}.
+For a complete, working version of the example described in this tutorial, see [Enabling security for {{site.data.keyword.conversationshort}} web chat (complex)](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/web-chat-security-complex){: external}.
+{: note}
+
+For a web chat version with minimal codes to enable security, which does not have encrypted payloads and user changes during the session, see [Enabling security for {{site.data.keyword.conversationshort}} web chat (simple)](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/web-chat-security-simple){: external}.
 {: note}
 
 This example in this tutorial, which is based on an Express server for Node.js, shows how to start a session with an anonymous user ID and then authenticate the user during the session.
@@ -84,7 +87,7 @@ function authenticate(request, response) {
 
 1. When a user logs in, call the `authenticate()` function to store the user information in the `SESSION_INFO` cookie. Then call the `createJWT()` function to regenerate the JWT, using the updated session info to populate the `user_payload` claim.
 
-    In [our example](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/web-chat-security){: external}, authentication is simulated with a simple button click. The same button also simulates logging out by deleting the cookie:
+    In [our example](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/web-chat-security-complex){: external}, authentication is simulated with a simple button click. The same button also simulates logging out by deleting the cookie:
 
     ```javascript
     async function onClick() {
@@ -111,7 +114,7 @@ function authenticate(request, response) {
 ${system_integrations.chat.private.user_payload}.custom_user_id
 ```
 
-For complete working code, see the [Enabling security for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/web-chat-security){: external} example.
+For complete working code, see the [Enabling security for {{site.data.keyword.conversationshort}} web chat](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/webchat/examples/web-chat-security-complex){: external} example.
 
 If you are required to comply with GDPR requirements, you might need to persistently store any generated anonymous user IDs, especially for anonymous users who later log in with user credentials. Storing these user IDs makes it possible for you to later delete all data associated with an individual customer if requested to do so.
 {: important}
