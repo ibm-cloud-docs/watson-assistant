@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-11-30"
+  years: 2020, 2024
+lastupdated: "2024-05-16"
 
 subcollection: watson-assistant
 
@@ -22,6 +22,8 @@ Many customers use WhatsApp because it provides fast, simple, secure messaging f
 
 This integration creates a connection between your assistant and WhatsApp by using Twilio as a provider.
 
+
+
 ## Before you begin
 {: #deploy-whatsapp-twilio-setup}
 
@@ -36,6 +38,10 @@ If you don't have one, set up a Twilio messaging account and get a phone number.
 
 Keep the Twilio web page open in a web browser tab so you can refer to it again later.
 {: tip}
+
+
+
+
 
 ## Ask WhatsApp for permission to enable your Twilio number for WhatsApp
 {: #deploy-whatsapp-prereqs}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-11-30"
+  years: 2015, 2024
+lastupdated: "2024-05-16"
 
 subcollection: watson-assistant
 
@@ -21,8 +21,14 @@ Facebook Messenger is a messaging application that helps businesses and customer
 
 After you create an action, you can integrate your assistant with Facebook Messenger.
 
+
 There is currently no mechanism for identifying users who interact with the assistant through Facebook Messenger, which means that there is no way to identify or delete data associated with a specific user. Do not use this integration method for deployments that must be GDPR compliant.
 {: important}
+
+
+
+
+
 
 1. Go to the **Integrations** page by clicking the integrations icon (![Integrations icon](images/integrations-icon.png)) in the left menu.
 
@@ -35,6 +41,9 @@ There is currently no mechanism for identifying users who interact with the assi
 
 If a field required for authentication is changed, then all entries in related fields must be filled and validated again.
 {: note}
+
+
+
 
 ## Action considerations
 {: #deploy-facebook-action}
@@ -66,5 +75,9 @@ The welcome action is not processed by the Facebook Messenger integration. The w
 
 The action flow for the current session is restarted after 60 minutes of inactivity (5 minutes for Lite and Standard plans). This means that if a user stops interacting with the assistant, after 60 (or 5) minutes, any context variable values that were set during the previous conversation are set to null or back to their default values.
 
+
 Only the page administrator can interact with the Facebook Messenger chatbot until after it is approved by Facebook. After the chatbot is approved by Facebook, any page visitor can interact with the chatbot.
 {: note}
+
+
+

@@ -1,14 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-03"
+  years: 2015, 2024
+lastupdated: "2024-05-16"
 
 subcollection: watson-assistant
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
+
 
 # Integrating with Intercom
 {: #deploy-intercom}
@@ -23,6 +25,12 @@ Intercom is a customer messaging platform that helps drive business growth throu
 You can integrate your assistant with an Intercom application to enable the app to seamlessly pass user conversations between your assistant and live agents.
 
 If you integrate the assistant with Intercom, the Intercom application becomes the client-facing application for your skill. All interactions with users are initiated through and managed by Intercom.
+
+
+
+
+
+
 
 ## One-time agent creation
 {: #deploy-intercom-account-prereq}
