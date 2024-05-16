@@ -28,6 +28,37 @@ Autocorrection is disabled for search integration
 : The [autocorrection](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-autocorrection) feature is now disabled for search integration in your assistant. For more information, see [Autocorrecting user input](/docs/watson-assistant?topic=watson-assistant-autocorrection).
 
 
+## 03 May 2024
+{: #watson-assistant-may032024}
+{: release-note}
+
+Conversational search is now generally available
+: The Conversational search feature with the Retrieval-Augmented Generation (RAG) solution, powered by watsonx.ai, is now generally available. For more information about conversational search, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search). 
+
+Elasticsearch search integration is now generally available
+: Elasticsearch search integration is now generally available. For more information about Elasticsearch search integration, see [Elasticsearch search integration setup](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add).
+
+
+## 18 April 2024
+{: #watson-assistant-apr192024}
+{: release-note}
+
+
+
+## 15 April 2024
+{: #watson-assistant-apr152024}
+{: release-note}
+
+
+
+Overwrite all or skip all when you copy actions to another assistant
+:  You can now choose to overwrite all references or skip all references when you copy actions from one assistant into another. For more information, see [Copying an action to another assistant](/docs/watson-assistant?topic=watson-assistant-copy-action).
+
+## 11 April 2024
+{: #watson-assistant-apr052024}
+{: release-note}
+
+
 
 Add a custom result filter for the search integration
 : You can now filter your search result in the {{site.data.keyword.discoveryshort}} search integration by adding custom text strings in the **Custom result filter** field in **Search integration**. For more information, see [Configure the search for {{site.data.keyword.discoveryshort}}](/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure).
