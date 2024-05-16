@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-14"
+lastupdated: "2024-05-16"
 
 subcollection: watson-assistant
 
@@ -27,40 +27,7 @@ Release notes describe the new features, changes, and bug fixes in each release 
 Autocorrection is disabled for search integration
 : The [autocorrection](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-autocorrection) feature is now disabled for search integration in your assistant. For more information, see [Autocorrecting user input](/docs/watson-assistant?topic=watson-assistant-autocorrection).
 
-## 03 May 2024
-{: #watson-assistant-may032024}
-{: release-note}
 
-Conversational search is now generally available
-: The Conversational search feature with the Retrieval-Augmented Generation (RAG) solution, powered by watsonx.ai, is now generally available. For more information about conversational search, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search). 
-
-Elasticsearch search integration is now generally available
-: Elasticsearch search integration is now generally available. For more information about Elasticsearch search integration, see [Elasticsearch search integration setup](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add).
-
-
-## 18 April 2024
-{: #watson-assistant-apr192024}
-{: release-note}
-
-Behavioral tuning for conversational search: Tendency to say “I don’t know”
-: You can now optimize your conversational search behavior with the **Tendency to say “I don’t know”** option in the **Conversational search** settings. This can help to reduce LLM hallucinations and provide higher fidelity answers for conversational search by tuning assistant's tendency to fall back to the “I don’t know” answer. For more information, see [Behavioral tuning](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
-
-## 15 April 2024
-{: #watson-assistant-apr152024}
-{: release-note}
-
-Streaming response support from Conversational search 
-: You can now use streaming response support from Conversational search that uses watsonx.ai capabilities to provide continuous, real-time responses in your assistant. For more information, see [Streaming response support](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-streaming-response).
-
-Overwrite all or skip all when you copy actions to another assistant
-:  You can now choose to overwrite all references or skip all references when you copy actions from one assistant into another. For more information, see [Copying an action to another assistant](/docs/watson-assistant?topic=watson-assistant-copy-action).
-
-## 11 April 2024
-{: #watson-assistant-apr052024}
-{: release-note}
-
-Add examples button in the action editor
-: You can now use the new **Add examples** button in the action editor to help the intelligent information gathering that uses watsonx.ai model to retrieve accurate information. For more information, see [Adding examples for clarity](/docs/watson-assistant?topic=watson-assistant-information-gathering#add-examples-for-clarity).
 
 Add a custom result filter for the search integration
 : You can now filter your search result in the {{site.data.keyword.discoveryshort}} search integration by adding custom text strings in the **Custom result filter** field in **Search integration**. For more information, see [Configure the search for {{site.data.keyword.discoveryshort}}](/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure).
