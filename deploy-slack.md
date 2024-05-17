@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-05-17"
 
 subcollection: watson-assistant
 
@@ -25,7 +25,15 @@ When integrated, depending on the events that you configure the assistant to sup
 
 An example and instructions on how to create a Slackbot using {{site.data.keyword.conversationshort}}, Slack, and Db2 are given in the solution tutorial, [Build a database-driven Slackbot](/docs/solution-tutorials?topic=solution-tutorials-slack-chatbot-database-watson).
 
+## Before you begin
 
+To integrate Slack with your assistant, you must have the necessary roles and permissions:
+
+| Roles | Permissions |
+| ----------- | ---------------------- |
+| Workspace or <br> Org owner | View information <br> Post information <br> Perform actions |
+
+For more information, see [Slack-Getting started](https://slack.com/intl/en-gb/help/categories/360000049043){: external}.
 
 ## Adding the Slack integration
 {: #deploy-slack-task}

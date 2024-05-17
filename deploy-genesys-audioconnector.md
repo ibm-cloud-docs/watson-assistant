@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2024-05-16"
+lastupdated: "2024-05-17"
 
 subcollection: watson-assistant
 
@@ -18,17 +18,14 @@ subcollection: watson-assistant
 You can integrate the Genesys Audio Connector with your assistant to stream the conversation audio between assistant and Genesys Cloud.
 {: shortdesc}
 
-
-
 ## Before you begin
 {: #deploy-audioconnector-genesys-setup}
 
-You must have the following set up before you start integrating Genesys Audio Connector: 
-- A [Genesys Cloud account](https://login.mypurecloud.com/){: external} with an Audio Connector instance that is hosted in the same region like your assistant. 
+You must have the folowing prerequisites before you start integrating your assistant with Genesys Audio Connector: 
+
+- [Genesys Cloud account](https://login.mypurecloud.com/){: external} with an Audio Connector instance that is hosted in the same region like your assistant. 
 - Access to the Genesys Architect.
-
-
-
+- The `read`, `create`,`update`, and `delete` permissions in your account. For more information, see [the documentation of Genesys Audio Connector for Genesys Administrators] (https://docs.genesys.com/Documentation/GA/latest/user/Welcome){: external}.
 
 ## Create the Audio Connector integration in your assistant
 {: #integrate-audio-connector}
@@ -42,32 +39,20 @@ You must have the following set up before you start integrating Genesys Audio Co
     - **Client secret**
     - **Genesys audio connect URI**
 
-
-Store the credentials because you **cannot** see them after you click **Save**. You require these credentials to set up the Genesys Audio Connector.
-
-
-
+Store the credentials because you cannot see them after you click **Save**. You require these credentials to set up the Genesys Audio Connector.
 
 1.  Click  **Save and Exit**.
 
 ## Set up Audio Connector to integrate assistant
 {: #set-up-audio-connector}
 
-
-To set up Genesys Audio Connector, you complete the steps in the [Configure and activate Audio Connector in Genesys Cloud](https://rcstaging.wpengine.com/articles/configure-and-activate-audio-connector-in-genesys-cloud/) topic.
-
-
-
+To set up Genesys Audio Connector, complete the steps in the [Configure and activate Audio Connector in Genesys Cloud](https://rcstaging.wpengine.com/articles/configure-and-activate-audio-connector-in-genesys-cloud/) topic.
 
 In the Genesys **Admin** page, go to **Integrations** > **Configuration**  to add the **Genesys audio connect URI** value that you copied while [creating the Audio Connector integration in your assistant](#integrate-audio-connector).
 {: important}
 
-
-In the **Base Connection URI** field of Genesys, you must enter the first part of the **Genesys audio connect URI** value, which is in the following format:<br>`wss://<data-center>/<region>/genesysaudioconnector`. You must enter the second part of the **Genesys audio connect URI** value, which is `<instance-id>/connect?version=<api-version>`, in the **Connector ID** field.
+In the **Base Connection URI** field of Genesys, you must enter the first part of the **Genesys audio connect URI** value, which is in the following format:<br>`wss://<data-center>/<region>/genesysaudioconnector`. Then, enter the second part of the **Genesys audio connect URI** value, which is `<instance-id>/connect?version=<api-version>`, in the **Connector ID** field.
 {: important}
-s
-
-
 
 In the Genesys **Admin** page, go to **Integrations** > **Credentials**  to add the credentials for the **API key** and **Client secret** fields that you copied while [creating the Audio Connector integration in your assistant](#integrate-audio-connector). 
 {: important}

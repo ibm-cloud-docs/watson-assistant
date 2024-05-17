@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-05-17"
 
 subcollection: watson-assistant
 
@@ -20,10 +20,16 @@ Add a chatbot to Microsoft Teams to create and customize a productive hub where 
 
 After you [create an action](/docs/watson-assistant?topic=watson-assistant-build-actions-overview), you can use this integration to connect your assistant with Microsoft Teams.
 
-
-
 ## Before you begin
 {: #deploy-microsoft-teams-account}
+
+To integrate your assistant with Microsoft Teams, you must have the necessary roles and permissions:
+
+| Roles | Permissions |
+| ----------- | ---------------------- |
+| Global Administrator or <br> Teams Administrator | Read the organization's information <br> Read and write messages <br> Read and write user calendars <br> Read and write files <br> Access to specific teams or channels <br> Basic capabilities for bots and messaging extensions <br> Tab permissions (if applicable) |
+
+For more information, see [Microsoft Build](https://learn.microsoft.com/en-us/){: external}.
 
 Sign up for a Microsoft 365 Developer Administrator email address, if you don’t have one:
 
@@ -34,10 +40,6 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 1.  On the Dashboard, click **Set up E5 subscription**, and select an **Instant** or a **Configurable** sandbox.
 
 1. Copy the email address listed under **Administrator**. Your admin credentials are required at several points of setup.
-
-
-
-
 
 ## Adding the Microsoft Teams integration
 {: #deploy-microsoft-teams-setup}

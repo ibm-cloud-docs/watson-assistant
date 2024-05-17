@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-05-17"
 
 subcollection: watson-assistant
 
@@ -22,12 +22,11 @@ Many customers use WhatsApp because it provides fast, simple, secure messaging f
 
 This integration creates a connection between your assistant and WhatsApp by using Twilio as a provider.
 
-
-
 ## Before you begin
 {: #deploy-whatsapp-twilio-setup}
 
-If you don't have one, set up a Twilio messaging account and get a phone number.
+To integrate Whatsapp with your assistant, you must have access to Twilio and at least a Developer role.
+For more information, see the [difference in roles for Twilio](https://help.twilio.com/articles/223136227){: external}.
 
 1.  Go to the [Twilio website](https://www.twilio.com/){: external}.
 1.  Create an account.
@@ -38,10 +37,6 @@ If you don't have one, set up a Twilio messaging account and get a phone number.
 
 Keep the Twilio web page open in a web browser tab so you can refer to it again later.
 {: tip}
-
-
-
-
 
 ## Ask WhatsApp for permission to enable your Twilio number for WhatsApp
 {: #deploy-whatsapp-prereqs}
