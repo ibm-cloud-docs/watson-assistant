@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-27"
+lastupdated: "2024-05-28"
 
 keywords: conversational search
 
@@ -38,10 +38,6 @@ Refer to the following topics to configure the conversational search in your ass
 
 You must configure the search integration to enable the conversational search feature. For more information about configuring {{site.data.keyword.discoveryfull}} search integration, see [{{site.data.keyword.discoveryshort}} search integration setup](/docs/watson-assistant?topic=watson-assistant-search-add). For more information about configuring Elasticsearch integration, see [Elasticsearch search integration setup](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add).
 
-
-
-
-After you enable **Conversational search** on **Search integration**, you can enable **Search routing** to use conversational Search. For more information about search routing, see [Configuring the search routing when no action matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing).
 
 
 
