@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-09"
+lastupdated: "2024-06-03"
 
 subcollection: watson-assistant
 
@@ -58,8 +58,8 @@ Algorithm version Latest(15 Apr-2023) uses improved intent detection and matchin
 Change in backup PersistentVolumeClaim (PVC) name
 :  The backup PersistentVolumeClaim (PVC) name is changed from store-pvc to store-db-backup-pvc. For more information, see [Backing up and restoring data](/docs/watson-assistant?topic=watson-assistant-backup-data).
 
-Change in the default size of PersistentVolumeClaim (PVC)
-:  The default size of PersistentVolumeClaim (PVC) is now 10Gi, which was 1GI in the previous releases. For more information, see [Backing up and restoring data](/docs/watson-assistant?topic=watson-assistant-backup-data).
+Change in the default size of PersistentVolumeClaim (PVC) in Postgres backup database
+:  The default size of PersistentVolumeClaim (PVC) in the Postgres backup database is now 10Gi, which was 1Gi in the previous releases. For more information, see [Backing up and restoring data](/docs/watson-assistant?topic=watson-assistant-backup-data).
 
 ## 31 January 2024
 {: #assistant-data-jan312024}
