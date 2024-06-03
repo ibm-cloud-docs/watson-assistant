@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-10"
+lastupdated: "2024-06-03"
 
 subcollection: watson-assistant
 
@@ -57,6 +57,11 @@ The following table describes which versions of {{site.data.keyword.conversation
 
 | {{site.data.keyword.conversationshort}} version | {{site.data.keyword.icp4dfull_notm}} version | Red Hat OpenShift version |
 | --- | --- | --- |
+| 4.8.5 | 4.8.x | 4.15 |
+| 4.8.5 | 4.8.x | 4.14 |
+| 4.8.5 | 4.8.x | 4.12 |
+| 4.8.4 | 4.8.x | 4.14 |
+| 4.8.4 | 4.8.x | 4.12 |
 | 4.8.3 | 4.8.x | 4.14 |
 | 4.8.3 | 4.8.x | 4.12 |
 | 4.8.2 | 4.8.x | 4.14 |
