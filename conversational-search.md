@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-28"
+lastupdated: "2024-06-06"
 
 keywords: conversational search
 
@@ -52,7 +52,7 @@ When the conversational search is `On`, the same search results are pulled from 
 
    ![ConversationalSearchToggleOn](images/convo-search-test-toggle-on.png)
 
-The citation title feature is not supported in the web chat integration. So, the default text in the citation title is not displayed in the preceding image.
+The web chat integration does not support the citation title feature. Hence, the preceding image does not display the default text in the citation title.
 
 
 
