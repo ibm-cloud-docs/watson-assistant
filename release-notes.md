@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-06-06"
 
 subcollection: watson-assistant
 
@@ -19,6 +19,20 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
+
+<review
+
+## 06 June 2024
+{: #watson-assistant-jun062024}
+{: release-note}
+
+Conversational skills
+:  You can now use conversational skills in your assistant to begin tasks or workflows. You must register a pro code conversational skill provider on your assistant instance and begin building skill-backed actions to fit your use cases.
+
+Service monitors
+:  Your assistant can now use service monitors to monitor the health of your assistant instances. For more information, see [Installing service monitors](/docs/en/SSQNUZ_5.0_test?topic=monitors-installing-service){: external}.
+
+</review>
 
 ## 14 May 2024
 {: #watson-assistant-may142024}
