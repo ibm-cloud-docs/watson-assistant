@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-17"
+lastupdated: "2024-06-06"
 
 subcollection: watson-assistant
 
@@ -122,7 +122,6 @@ If you don't have a text messaging phone number, set up an *SMS with IntelePeer*
 To integrate Intelepeer with your assistant, you need "SMS" service with Access Type for `create`, `read`, `update`, and `delete`. 
 For more information, see [Managing Users in Customer Portal](https://docs.intelepeer.com/Atmosphere/Content/Getting-Started/Managing-Users-in-Customer-Portal.htm){: external}.
 
-</review>
 
 ### Set up the integration
 {: #deploy-sms-setup-intelepeer}
