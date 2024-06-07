@@ -21,6 +21,12 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
+## 7 June 2024
+{: #watson-assistant-june62024}
+{: release-note}
+
+Improved accuracy in information gathering
+: The information gathering feature is enhanced to reduce errors while filling the free-text step variables from the customer response. This allows for more accurate and efficient data entry. For more information, see [Information gathering](/docs/information-gathering.md).
 
 
 ## 14 May 2024
@@ -46,7 +52,8 @@ Elasticsearch search integration is now generally available
 {: #watson-assistant-apr192024}
 {: release-note}
 
-
+Tuning your assistant's tendency to say "I don't know"
+:  You can now tune the tendency of your assistant to say "I don't know" in conversational search by using the **Tendency to say “I don’t know”** option in the conversational search settings. This option can help to reduce Large Language Model (LLM) hallucinations and provide higher fidelity answers for conversational search by tuning your assistant's tendency to fall back to the “I don’t know” answer. For more information, see [Tuning conversational search’s tendency to say “I don’t know"](/docs/watson-assistant?topic=watson-assistant-conversational-search#behavioral-tuning-conversational-search).
 
 ## 15 April 2024
 {: #watson-assistant-apr152024}
@@ -66,7 +73,8 @@ Phone-based conversational search support
 {: #watson-assistant-apr052024}
 {: release-note}
 
-
+Add examples for variables in the action editor
+: You can now add examples of variables in a user input by using the Add examples button in the action editor. This helps your assistant to retrieve accurate information and respond to the user quickly. For more information, see [Adding examples for clarity](/docs/watson-assistant?topic=watson-assistant-information-gathering#add-examples-for-clarity).
 
 Add a custom result filter for the search integration
 : You can now filter your search result in the {{site.data.keyword.discoveryshort}} search integration by adding custom text strings in the **Custom result filter** field in **Search integration**. For more information, see [Configure the search for {{site.data.keyword.discoveryshort}}](/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure).
