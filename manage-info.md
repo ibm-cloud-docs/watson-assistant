@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-14"
+lastupdated: "2024-06-07"
 
 subcollection: watson-assistant
 
@@ -29,7 +29,7 @@ Variables are a powerful tool that you can use to build a better assistant. Vari
 The feature for masking the confidential customer information is available only for actions in assistants. If you're calling actions from a dialog, the privacy setting is available in your action steps but won't mask the customer information. {: note}
 
 
-When a user's session expires during a conversation in the web chat integration, the assistant loses the masked private variables. This is because web chat cannot copy the variables to a new session. For more information, see [Copying session state](/docs/watson-assistant?topic=watson-assistant-web-chat-architectur#web-chat-copy-session). {: note}.
+When a user's session expires during a conversation in the web chat integration, the assistant loses the masked private variables. This is because  web chat cannot copy the variables to a new session. For more information, see [Copying session state](/docs/watson-assistant?topic=watson-assistant-web-chat-architectur#web-chat-copy-session).{: note}.
 
 A variable is simply a named container for a piece of information; by referencing this container by name, your assistant can store or retrieve the information at run time. For example, a variable that is called *account_balance* might store your customer's current account balance, a value your assistant can update or retrieve as needed.
 

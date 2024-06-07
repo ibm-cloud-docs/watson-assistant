@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-09"
+lastupdated: "2024-06-06"
 
 subcollection: watson-assistant
 
@@ -48,6 +48,8 @@ The following table shows the latest version of the web chat integration that is
 | 4.0.8 | [6.2.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#6.2.0) |
 {: caption="Web chat versions in {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}}" caption-side="top"}
 
+
+
 ## 29 March 2024
 {: #assistant-data-mar292024}
 {: release-note}
@@ -58,8 +60,8 @@ Algorithm version Latest(15 Apr-2023) uses improved intent detection and matchin
 Change in backup PersistentVolumeClaim (PVC) name
 :  The backup PersistentVolumeClaim (PVC) name is changed from store-pvc to store-db-backup-pvc. For more information, see [Backing up and restoring data](/docs/watson-assistant?topic=watson-assistant-backup-data).
 
-Change in the default size of PersistentVolumeClaim (PVC)
-:  The default size of PersistentVolumeClaim (PVC) is now 10Gi, which was 1GI in the previous releases. For more information, see [Backing up and restoring data](/docs/watson-assistant?topic=watson-assistant-backup-data).
+Change in the default size of Postgres backup PersistentVolume (PV)
+:  The default size of Postgres backup PersistentVolume (PV) is now 10Gi. For more information, see [Backing up and restoring data](/docs/watson-assistant?topic=watson-assistant-backup-data).
 
 ## 31 January 2024
 {: #assistant-data-jan312024}

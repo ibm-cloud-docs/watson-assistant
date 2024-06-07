@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-30"
+  years: 2015, 2024
+lastupdated: "2024-06-07"
 
 keywords: building a dialog, condition, response, options, jump, jump-to, multiline, response variations
 
@@ -528,55 +528,75 @@ To add an *Audio* response type, complete the following steps:
 
 1. The **Audio** response type is supported in the web chat, Facebook, WhatsApp, Slack, SMS, and phone integrations. 
 
+### Adding an *iframe* response
+{: #respond-add-iframe}
 
-### Adding an *iframe* response type
-{: #dialog-overview-add-iframe}
-
-Include iframes in your response to embed content from another website directly inside the chat window as an HTML `iframe` element. An iframe response is useful if you want to enable customers to perform some interaction with an external service without leaving the chat. For example, you might use an *iframe* response to display the following within the web chat:
+Add an *iframe* response to embed content from another website directly inside the chat window as an HTML `iframe` element. An iframe response is useful if you want to enable customers to perform some interaction with an external service without leaving the chat. For example, you might use an *iframe* response to display the following examples within the web chat:
 
 - An interactive map on [Google Maps](https://www.google.com/maps){: external}
-- A survey using [SurveyMonkey](https://www.surveymonkey.com/){: external}
+- A survey that uses [SurveyMonkey](https://www.surveymonkey.com/){: external}
 - A form for making reservations through [OpenTable](https://www.opentable.com/){: external}
-- A scheduling form using [Calendly](https://calendly.com/){: external}
+- A scheduling form that uses [Calendly](https://calendly.com/){: external}
 
-In the web chat, an iframe response renders as a preview card that describes the embedded content. Customers can click this card to display the frame and interact with the content.
+In the web chat, there are two ways the iframe can be included:
+- Like a preview card that describes the embedded content. Customers can click this card to display the frame and interact with the content.
+
+The *iframe* response type is supported by the following channel integrations:
+- Web chat
+- Facebook
 
 To add an *iframe* response type, complete the following steps:
 
-1. Choose **iframe**.
+1. In the **Assistant says** field, click the **iframe** icon (![iframe](images/content-view.svg)).
 
 1. Add the full URL to the external content in the **iframe source** field.
 
-    The URL must specify content that is embeddable in an HTML `iframe` element. Different sites have varying restrictions for embedding content, and different processes for generating embeddable URLs. An embeddable URL is one that can be specified as the value of the `src` attribute of the `iframe` element.
+   The URL must specify content that is embeddable in an HTML `iframe` element. Different sites have different restrictions for embedding content, and different processes for generating embeddable URLs. An embeddable URL is one that can be specified as the value of the `src` attribute of the `iframe` element.
 
-    For example, to embed an interactive map using Google Maps, you can use the Google Maps Embed API. (For more information, see [The Maps Embed API overview](https://developers.google.com/maps/documentation/embed/get-started){: external}.) Other sites have different processes for creating embeddable content.
+   For example, to embed an interactive map that uses Google Maps, you can use the Google Maps Embed API. For more information, see [The Maps Embed API overview](https://developers.google.com/maps/documentation/embed/get-started){: external}. Other sites have different processes for creating embeddable content.
 
-    For technical details about using `Content-Security-Policy: frame-src` to allow embedding of your website content, see [CSP: frame-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-src){: external}.
+   For the technical details of using `Content-Security-Policy: frame-src` that gives you permission to embed the website content in your assistant, see [CSP: frame-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-src){: external}.
 
 1. Optionally add a descriptive title in the **Title** field.
 
-    In the web chat, this title will be displayed in the preview card before the customer clicks to render the external content. (If you do not specify a title, the web chat will attempt to retrieve metadata from the specified URL and display the title of the content as specified at the source.)
-    
-1. The **iframe** response type is supported in the web chat and Facebook integrations.
+   In the web chat, the title that you add is displayed in the preview card. The customer clicks the preview card to render the external content. 
+   
+   If you do not specify a title, the web chat attempts to retrieve metadata from the specified URL and displays the content title per the specification in the source.{: note}
 
-In the "Try it out" pane, the iframe is rendered immediately, without the preview card. To see how the web chat renders your response, use the assistant **Preview** page.
-{: note}
+   References to variables are not supported.
+   {: note}
 
-#### Technical details: iframe sandboxing
-{: #dialog-overview-iframe-sandboxing}
+#### Technical details: `iframe` sandboxing
 
-Content loaded in an iframe by the web chat is *sandboxed*, meaning that it has restricted permissions that reduce security vulnerabilities. The web chat uses the `sandbox` attribute of the `iframe` element to grant only the following permissions:
+Content that is loaded in an iframe by the web chat is _sandboxed_, meaning that it restricts permissions that reduce security vulnerabilities. The web chat uses the `sandbox` attribute of the `iframe` element to grant only the following permissions:
 
-| Permission | Description |
-| --- | --- |
+| Permission          | Description |
+|---------------------|-------------|
 | `allow-downloads`   | Allows downloading files from the network, if the download is initiated by the user. |
 | `allow-forms`       | Allows submitting forms. |
-| `allow-scripts`     | Allows running scripts, but not opening pop-up windows. |
-| `allow-same-origin` | Allows the content to access its own data storage (such as cookies), and allows only very limited access to JavaScript APIs. |
-{: caption="Permissions" caption-side="bottom"}
+| `allow-scripts`     | Allows running scripts, but _not_ opening pop-up windows. |
+| `allow-same-origin` | Allows the content to access its own data storage (such as cookies), and allows limited access to JavaScript APIs. |
 
-A script running inside a sandboxed iframe cannot make changes to any content content outside the iframe, if the outer page and the iframe have different origins. Be careful if you use an *iframe* response to embed content that has the same origin as the the page where your web chat widget is hosted; in this situation the embedded content can defeat the sandboxing and gain access to content outside the frame. For more information about this potential vulnerability, see the `sandbox` attribute [documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox){: external}.
+A script that runs inside a sandboxed iframe cannot change any content outside the iframe, _if_ the outer page and the iframe have different origins. Be careful if you use an *iframe* response to embed content that has the same origin as the page where your web chat widget is hosted. In this situation the embedded content can defeat the sandboxing and gain access to content outside the frame. For more information about this potential vulnerability, see the `sandbox` attribute [documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox){: external}.
 {: note}
+
+#### Technical details: `iframe` preview card
+
+The `iframe` response type in web chat displays the **Preview card**, which includes an image, title, and description of the webpage that the user visits in the web chat.
+
+To display an image, title, and description in the **Preview card**, the webpage needs the following `<meta>` tags inside the `<head>` tag:
+```html
+<meta property="og:image" content="https://.../image.jpg" />
+
+<meta property="og:image:url" content="https://.../image.jpg" />
+
+<meta property="og:title" content="The webpage title" />
+<meta property="og:description" content="The webpage description" />
+```
+
+These metadata properties specified come from [The Open Graph Protocol](https://ogp.me/).
+
+The metadata is optional. The web chat displays a preview card with the webpage url and metadata, that the web chat fetched successfully. {: tip}
 
 ### Adding an *Option* response type
 {: #dialog-overview-add-option}

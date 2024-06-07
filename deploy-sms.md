@@ -2,14 +2,13 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-06-06"
 
 subcollection: watson-assistant
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 
 # Integrating with *SMS*
@@ -33,13 +32,18 @@ Refer to the following sections to set up the integration for your SMS provider:
 
 If you want your assistant to be able to switch between voice and text during a customer interaction, enable both the phone and text messaging integrations. The integrations do not need to use the same third-party service provider. For more information, see [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone).
 
+## Before you begin
+
+To integrate Twilio with your assistant, you must have at least a Developer role.
+For more information, see the [difference in roles for Twilio](https://help.twilio.com/articles/223136227){: external}.
+
+If you don't have a text messaging phone number, set up an *SMS with Twilio* account and get a phone number.
+{: important}
+
 ## Integrating *SMS with Twilio*
 {: #deploy-sms-twilio}
 
-### Before you begin
 {: #deploy-sms-service-setup-twilio}
-
-If you don't have a text messaging phone number, set up an *SMS with Twilio* account and get a phone number.
 
 1.  Go to the [Twilio website](https://www.twilio.com/){: external}.
 1.  Create an account. Free trial accounts cannot be used for this integration.
@@ -104,7 +108,6 @@ To set up the integration, complete the following steps:
 ## Integrating with *SMS with IntelePeer*
 {: #deploy-sms-intelepeer}
 
-### Before you begin
 {: #deploy-sms-service-setup-intelepeer}
 
 If you don't have a text messaging phone number, set up an *SMS with IntelePeer* account and get a phone number.
@@ -113,6 +116,12 @@ If you don't have a text messaging phone number, set up an *SMS with IntelePeer*
 1.  Create an account or start a free trial.
 
     When you get an IntelePeer phone number, it supports voice and SMS. If the number is not automatically enabled for SMS, you will need to enable it manually. Your new phone number is listed as an active number. Refer to the [Atmosphere Messaging Quick Start Guide](https://docs.intelepeer.com/atmosphere/Content/Atmosphere-SMS-Messaging/Atmosphere-SMS-Messaging-Quick-Start-Guide.htm){: external}
+
+## Before you begin
+
+To integrate Intelepeer with your assistant, you need "SMS" service with Access Type for `create`, `read`, `update`, and `delete`. 
+For more information, see [Managing Users in Customer Portal](https://docs.intelepeer.com/Atmosphere/Content/Getting-Started/Managing-Users-in-Customer-Portal.htm){: external}.
+
 
 ### Set up the integration
 {: #deploy-sms-setup-intelepeer}

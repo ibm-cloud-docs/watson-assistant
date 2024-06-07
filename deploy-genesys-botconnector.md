@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-11-30"
+lastupdated: "2024-05-17"
 
 subcollection: watson-assistant
 
@@ -24,7 +24,10 @@ The Genesys Bot Connector enables Genesys Architect Flow designers to integrate 
 ## Before you begin
 {: #deploy-botconnector-genesys-setup}
 
-You need to create a new account or log in to an existing Genesys Cloud account with access to Genesys Architect and the correct region at the [Genesys Cloud portal](https://login.mypurecloud.com/){: external}.
+You must comply with the folowing requirements before you start integrating your assistant with Genesys Bot Connector:
+
+- You must create a new account or log in to an existing Genesys Cloud account with access to Genesys Architect and the correct region at the [Genesys Cloud portal](https://login.mypurecloud.com/){: external}.
+- You must have `read`, `create`,`update`, and `delete` permissions on your account. For more information, see [Genesys Administrator] (https://docs.genesys. com/Documentation/GA/latest/user/Welcome){: external}.
 
 ## Set up Bot Connector in Genesys
 {: #deploy-botconnector-genesys-setup}
@@ -43,7 +46,7 @@ You need to create a new account or log in to an existing Genesys Cloud account 
 1. In the Credentials tab, use **Configure** to create a credential field with **Field Name** as **x-watson-genesys-verification-token** and with **Value** as the secret you set in {{site.data.keyword.conversationshort}}. 
     You need this **value** to create the {{site.data.keyword.conversationshort}} Genesys Bot Connector integration. Copy and keep the **token** and **value**, so you can paste them into the **Verification Token** field when you integrate with {{site.data.keyword.conversationshort}}.
 
-    You **cannot** see these credentials again after clicking Save.
+    You cannot see these credentials again after clicking Save.
     {: note}
 
 1. Click OK and Save. 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-09"
+lastupdated: "2024-06-06"
 
 subcollection: watson-assistant
 
@@ -64,19 +64,7 @@ You can set how often customers are routed to **No matches** by changing a globa
 1. Drag the slider to set the threshold, or choose an option from the drop-down box.
 
 
-#### Configuring the search routing when no action matches
-{: #config-search-routing}
-
-When no matches are available for a user input, you can configure the routing behavior of an action by selecting one of the following options:
-
-- **Route to conversational search**
-
-   You can use this option to route the assistant users to the search integration when there are no matches for the user responses. Before you select **Route to conversational search**, you must configure the search integration and the conversational search. 
-
-   ![Route to conversational search](/images/convo-search-routing.png)
-
-- **Route directly to No matches action**
-
+ 
    You can use this option to route the assistant users to the **No matches** action when there are no matches for the user responses.
 
    ![Route directly to No matches action](/images/no-match-routing.png)

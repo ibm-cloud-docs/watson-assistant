@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-03"
+  years: 2015, 2024
+lastupdated: "2024-05-17"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,6 @@ subcollection: watson-assistant
 # Integrating with Intercom
 {: #deploy-intercom}
 
-## Classic experience only
 The Intercom integration is available in only in the classic experience for use with a dialog skill. The Intercom integration isn't available in {{site.data.keyword.conversationshort}}.
 {: attention}
 
@@ -23,6 +22,16 @@ Intercom is a customer messaging platform that helps drive business growth throu
 You can integrate your assistant with an Intercom application to enable the app to seamlessly pass user conversations between your assistant and live agents.
 
 If you integrate the assistant with Intercom, the Intercom application becomes the client-facing application for your skill. All interactions with users are initiated through and managed by Intercom.
+
+## Before you begin
+
+To integrate your assistant with Intercom, you must have the necessary roles and permissions:
+
+| Roles | Permissions |
+| ----------- | ---------------------- |
+| Developer | Read and list users and companies <br> Read and write users <br> Write users and companies <br> Read one user and one company <br> Read tags <br> Write tags | 
+
+For more information, see [Intercom for Developers](https://developers.intercom.com){: external}.
 
 ## One-time agent creation
 {: #deploy-intercom-account-prereq}
