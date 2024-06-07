@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-06-07"
 
 subcollection: watson-assistant
 
@@ -17,8 +17,11 @@ subcollection: watson-assistant
 
 This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
+
+You can enable the streaming feature in conversational search for the phone integrations in your assistant. This helps your assistant to stream the responses while generating them. For more information see, [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search).{: note}
+
+
 Adding the phone integration to your assistant makes your assistant available to customers over the phone.
-{: shortdesc}
 
 If an end user asks to speak to a person, the phone integration can transfer the call to an agent.
 Supported live agent and contact center integrations:
