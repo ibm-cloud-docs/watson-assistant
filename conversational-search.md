@@ -12,22 +12,21 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
+Starting from **June 1, 2024**, add-on charges are applicable for using the Conversational search feature in addition to your Plus or Enterprise plans. For more information about the pricing plans, see [Pricing plans](https://cloud.ibm.com/catalog/services/watsonx-assistant?catalog_query=aHR0cHM6Ly9jbG91ZC5pYm0uY29tL2NhdGFsb2c%2Fc2VhcmNoPXdhdHNvbnglMjUyMGFzc2lzdGFudCNzZWFyY2hfcmVzdWx0cw%3D%3D&planId=f0a3dd47-b693-4d73-a8df-aa6baf07a933){: external}. For more information about terms, see [Terms](https://www.ibm.com/support/customer/csol/terms/?id=i128-0038&lc=en){: external}.{: important}
+
 # Conversational search
 {: #conversational-search}
 
 [Plus]{: tag-green} [Enterprise]{: tag-purple}
 
-Use *conversational search* with the {{site.data.keyword.discoveryfull}} search integration or Elasticsearch search integration to help your assistant extract an answer from the highest-ranked query results and return a text response to the user.
+Use *conversational search* with the {{site.data.keyword.discoveryfull}} search integration or Elasticsearch search integration to help your assistant extract an answer from the highest-ranked query results and return a text response to the user.  
 
 When you enable this feature, search results are provided to an IBM watsonx generative AI model that produces a conversational reply to a user's question. 
 {: shortdesc}
 
+To use conversational search, you must have a Plus or Enterprise plan and pay add-on charges. In addition, by enabling the Conversational search feature, you agree to the [pricing plans](https://cloud.ibm.com/catalog/services/watsonx-assistant?catalog_query=aHR0cHM6Ly9jbG91ZC5pYm0uY29tL2NhdGFsb2c%2Fc2VhcmNoPXdhdHNvbnglMjUyMGFzc2lzdGFudCNzZWFyY2hfcmVzdWx0cw%3D%3D&planId=f0a3dd47-b693-4d73-a8df-aa6baf07a933){: external} and the [terms](https://www.ibm.com/support/customer/csol/terms/?id=i128-0038&lc=en){: external} for using the conversational search.{: important}
+
 The watsonx generative AI model is currently hosted only in the Dallas and Frankfurt regions. By default, assistants in all regions except `Frankfurt` use the model from the `Dallas` region. Assistants in the `Frankfurt` region use the model hosted in the `Frankfurt` region.{: important}
-
-To use conversational search, you must have a Plus or Enterprise plan. 
-
-If you enable the conversational search toggle to on, you agree to the add-on pricing and terms. Conversational search add-on usage charges will apply from 1 June 2024. For more information about pricing plans, see [Pricing plans](https://cloud.ibm.com/catalog/services/watsonx-assistant?catalog_query=aHR0cHM6Ly9jbG91ZC5pYm0uY29tL2NhdGFsb2c%2Fc2VhcmNoPXdhdHNvbnglMjUyMGFzc2lzdGFudCNzZWFyY2hfcmVzdWx0cw%3D%3D&planId=f0a3dd47-b693-4d73-a8df-aa6baf07a933){: external}. For more information about terms, see [Terms](https://www.ibm.com/support/customer/csol/terms/?id=i128-0038&lc=en){: external}.{: important}
-
 
 Refer to the following topics to configure the conversational search in your assistant:
 
@@ -67,8 +66,6 @@ To enable conversational search, do the following steps:
 ## Tuning conversational search’s tendency to say “I don’t know"
 {: #behavioral-tuning-conversational-search}
 
-By tuning the assistant's tendency, you can help your assistant to reduce large language model(LLM) hallucinations and provide higher fidelity answers for conversational search. The higher you set the tendency, the more cautious the assistant is about answering. {: shortdesc}
-
 You can tune the tendency of your assistant to say “I don’t know” in conversational search by selecting one of the following options in the **Tendency to say I don’t know** section:
 
 * `Rarely`
@@ -79,24 +76,23 @@ You can tune the tendency of your assistant to say “I don’t know” in conve
 When your assistant generates a conversational search response, it evaluates the response and calculates a response confidence score. The assistant compares the response confidence score against your selection in the **Tendency to say I don’t know** section. If the response confidence score is comparatively high, the assistant responds to the user query with the generated response. If the response confidence score is comparatively low, the assistant does one of the following actions:
 
 * Responds with an “I don’t know” message.
-* Falls back to the “No matches” action as per the [Search routing configuration](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing). in your assistant.
+* Falls back to the “No matches” action per the [Search routing configuration](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing) in your assistant.
  
-In `Table 1, Tendency to say “I don’t know” ` status shows the options available in the Tendency to say “I don’t know” section.
+'Table 1. Tendency to say “I don’t know” options' shows the options available in the **Tendency to say “I don’t know”** section.
 
-
-| Tendency to say “I don’t know”       | Response confidence threshold   | Assistant behavior |
+| Tendency to say “I don’t know” | Response confidence threshold | Assistant behavior |
 |--------------------|---------|-------------|
-| `Rarely`                      | Lowest  | The assistant rarely says “I don’t know” because it compares the response confidence score against the lowest threshold. Therefore, your assistant almost always presents a generated response to the end user. In this case, the assistant more likely presents inaccurate or irrelevant responses to the end user. |
-| `Less often`           | Lower | The assistant says “I don’t know” less often. |
-| `More often`           | Higher | The assistant says “I don’t know” more often.|
-| `Most often`           | Highest | The assistant says “I don’t know” most often because it compares the response confidence score against the highest threshold. Therefore, the assistant least likely presents inaccurate or irrelevant responses to the end user. In this case, the assistant presents fewer generated responses to your end users and more often responds with an “I don’t know” message or falls back to the “No matches” action.|
+| `Rarely` | Lowest  | The assistant rarely says “I don’t know” because it compares the response confidence score against the lowest threshold. Therefore, your assistant gives a generated response to the end user almost all the time. However, the assistant most likely presents inaccurate or irrelevant responses to the end user. |
+| `Less often`           | Lower | The assistant says “I don’t know” less often than the `Rarely` option. |
+| `More often`           | Higher | The assistant says “I don’t know” more often than the `Less often` option.|
+| `Most often`           | Highest | The assistant says “I don’t know” most often than the `More often` option because it compares the response confidence score against the highest threshold. However, the assistant is least likely to present inaccurate or irrelevant responses to the end user. In addition, the assistant presents fewer generated responses to the users and more often responds with an “I don’t know” message or falls back to the “No matches” action.|
 {: caption= "Table 1. Tuning the Tendency to say I don’t know " caption-side="top"}
 
 ## Configuring your assistant to use the conversational search
 
-After you enabled **Conversational search** in the **Search integration**, you must configure your assistant to route to conversational search. To configure your assistant to route to conversational search as a fallback to actions (when the user’s input does not match any actions), you can [configure search routing when no action matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing). To configure your assistant to route to conversational search for specific topics or actions, you can [add search as a step in a new or existing action](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-add-trigger).
+After you enable **Conversational search**, you must configure the **Search routing** setting to route your assistant responses to conversational search when no action matches the user response. For more information about the **Search routing** configuration, see the [Configuring the search routing when no action matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing) topic. To configure your assistant to route to conversational search for specific topics or actions, you can [add search as a step in a new or existing action](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-add-trigger).
 
-When your assistant receives no search results from Elasticsearch or {{site.data.keyword.discoveryshort}} in response to a user’s query or when its connection to Elasticsearch or {{site.data.keyword.discoveryshort}} fails, your assistant responds to the user with a failure message. You can configure the failure messages for no search results and a failed connection in the search integration settings.
+When your assistant receives no search results from Elasticsearch or {{site.data.keyword.discoveryshort}} in response to a user query or when its connection to Elasticsearch or {{site.data.keyword.discoveryshort}} fails, your assistant responds to the user with a failure message. You can configure the failure messages for no search results and a failed connection in the **Search integration** settings.
 
 ## Testing conversational search
 {: #conversational-search-test}
