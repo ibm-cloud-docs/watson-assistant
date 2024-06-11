@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-06-10"
+lastupdated: "2024-06-11"
 
 subcollection: watson-assistant
 
@@ -70,7 +70,7 @@ You can configure your assistant’s behavior for the case when a user’s input
 
 - **Route to conversational search**
 
-   Select this option for your assistant to route to conversational search when the user’s input does not match any actions. If conversational search generates a response that falls below its response confidence score threshold, the assistant falls back to your “No matches” action. You can configure the response confidence score threshold or **Tendency to say “I don’t know”**, in the conversational search settings. 
+   Select this option for your assistant to route to conversational search when the user’s input does not match any actions. If conversational search generates a response that falls below its response confidence score threshold, the assistant falls back to your **No matches** action. You can configure the response confidence score threshold or **Tendency to say “I don’t know”**, in the [conversational search settings](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup). 
    
    Before you select **Route to conversational search**, you must configure the search integration and enable the conversational search.
 
@@ -78,7 +78,12 @@ You can configure your assistant’s behavior for the case when a user’s input
 
 - **Route directly to No matches action**
 
-   Select this option for your assistant to route directly to the No matches action when the user’s input does not match any actions. You can customize the behavior of the No matches action to whatever custom fallback behavior is appropriate for your use case. For example: route to [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search), [transfer to a live agent](/docs/watson-assistant?topic=watson-assistant-human-agent#planned-escalation), [open a support ticket](/docs/watson-assistant?topic=watson-assistant-call-extension), [ask a clarifying question](/docs/watson-assistant?topic=watson-assistant-understand-questions/#understand-questions-ask-clarifying-question), or offer the end user some or all of those options for them to choose their next step.
+   Select this option for your assistant to route directly to the **No matches** action when the user’s input does not match any actions. You can customize the behavior of the **No matches** action per your use case. You can configure the **No matches** action route to 
+
+   - [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search)
+   - [transfer to a live agent](/docs/watson-assistant?topic=watson-assistant-human-agent#planned-escalation)
+   - [open a support ticket](/docs/watson-assistant?topic=watson-assistant-call-extension)
+   - [ask a clarifying question](/docs/watson-assistant?topic=watson-assistant-understand-questions/#understand-questions-ask-clarifying-question)
  
    You can use this option to route the assistant users to the **No matches** action when there are no matches for the user responses.
 
