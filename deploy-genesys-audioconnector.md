@@ -87,7 +87,7 @@ You need the  **Genesys audio connect URI**  from the previous step.
 1.  Select the values:
     -  Enter a name for your Call Flow.
     -  Choose your Audio Connector integration from the **Integration** drop-down menu.
-    -  You must copy the **Genesys audio connect URI** part starting from the <integration-id> and paste it into the **Connector ID** field.  `<instance-id>/connect?version=<api-version>`
+    -  You must copy the **Genesys audio connect URI** part starting from the `<integration-id>` and paste it into the **Connector ID** field.  `<instance-id>/connect?version=<api-version>`
     - Enter session variables you want to be passed to and from {{site.data.keyword.conversationshort}}. For more information, see  **Context Sharing through Session Variables**.
     - Click at the bottom of the Flow Diagram to create a Terminating Action. For example, `Disconnect`.
 
