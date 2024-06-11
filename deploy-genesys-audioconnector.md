@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2024-05-17"
+lastupdated: "2024-06-11"
 
 subcollection: watson-assistant
 
@@ -32,12 +32,7 @@ You must have the folowing prerequisites before you start integrating your assis
 
 1. Go to the **Integrations** page by clicking the integrations icon (![Integrations icon](images/integrations-icon.png)) in the left menu.
 
-1. Click **Add** on the **Phone** tile.
-1. Click **Genesys Audio Connector** tile.
-1. In the **Credentials** section, copy and store the automatically generated credentials in the following fields:
-    - **API key**
-    - **Client secret**
-    - **Genesys audio connect URI**
+
 
 Store the credentials because you cannot see them after you click **Save**. You require these credentials to set up the Genesys Audio Connector.
 
@@ -51,8 +46,7 @@ To set up Genesys Audio Connector, complete the steps in the [Configure and acti
 In the Genesys **Admin** page, go to **Integrations** > **Configuration**  to add the **Genesys audio connect URI** value that you copied while [creating the Audio Connector integration in your assistant](#integrate-audio-connector).
 {: important}
 
-In the **Base Connection URI** field of Genesys, you must enter the first part of the **Genesys audio connect URI** value, which is in the following format:<br>`wss://<data-center>/<region>/genesysaudioconnector`. Then, enter the second part of the **Genesys audio connect URI** value, which is `<instance-id>/connect?version=<api-version>`, in the **Connector ID** field.
-{: important}
+
 
 In the Genesys **Admin** page, go to **Integrations** > **Credentials**  to add the credentials for the **API key** and **Client secret** fields that you copied while [creating the Audio Connector integration in your assistant](#integrate-audio-connector). 
 {: important}
@@ -64,17 +58,9 @@ Use the **Call Audio Connector** action in Genesys to activate the Audio Connect
 
 See [Call Audio Connector action](https://help.mypurecloud.com/articles/call-audio-connector-action/) for more details. 
 
-You need the  **Genesys audio connect URI**  from the previous step. 
 
-1.  Go to the Genesys Admin page.
-1.  Under Architect, click **Architect**, and create an **Inbound Call Flow**.
-1.  In the Toolbox, click  **Bot**, and then  **Call Audio Connector**.
-1.  Select the values:
-    -  Enter a name for your Call Flow.
-    -  Choose your Audio Connector integration from the **Integration** drop-down menu.
-    -  You must copy the **Genesys audio connect URI** part starting from the `<integration-id>` and paste it into the **Connector ID** field. `<instance-id>/connect?version=<api-version>`
-    - Enter session variables you want to be passed to and from {{site.data.keyword.conversationshort}}. For more information, see  **Context Sharing through Session Variables**.
-    - Click at the bottom of the Flow Diagram to create a Terminating Action. For example, `Disconnect`.
+
+
 Click **Save** and **Publish**.
 
 
