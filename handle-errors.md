@@ -72,7 +72,7 @@ You can configure your assistant’s behavior for the case when a user’s input
 
    Select this option for your assistant to route to conversational search when the user’s input does not match any actions. If conversational search generates a response that falls below its response confidence score threshold, the assistant falls back to your **No matches** action. You can configure the response confidence score threshold or **Tendency to say “I don’t know”**, in the [conversational search settings](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup). 
    
-   Before you select **Route to conversational search**, you must configure the search integration and enable the conversational search.
+   Before you select **Route to conversational search**, you must configure the search integration and enable the conversational search.{: note}
 
    ![Route to conversational search](/images/convo-search-routing.png)
 
