@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-06-10"
+lastupdated: "2024-06-11"
 
 subcollection: watson-assistant
 
@@ -21,12 +21,18 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 ## 7 June 2024
-{: #watson-assistant-june62024}
+{: #watson-assistant-jun72024}
 {: release-note}
 
 Improved accuracy in information gathering
 : The information gathering feature is enhanced to reduce errors while filling the free-text step variables from the customer response. This allows for more accurate and efficient data entry. For more information, see [Information gathering](/docs/information-gathering.md).
 
+## 4 June 2024
+{: #watson-assistant-jun42024}
+{: release-note}
+Phone-based conversational search support
+
+: You can now use the streaming feature in the conversational search for the phone integration in your assistant. For more information see, [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search) and [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone).
 
 ## 14 May 2024
 {: #watson-assistant-may142024}
@@ -62,11 +68,6 @@ Tuning your assistant's tendency to say "I don't know"
 
 Overwrite all or skip all when you copy actions to another assistant
 :  You can now choose to overwrite all references or skip all references when you copy actions from one assistant into another. For more information, see [Copying an action to another assistant](/docs/watson-assistant?topic=watson-assistant-copy-action).
-
-## 4 June 2024
-Phone-based conversational search support
-
-: You can now use the streaming feature in the conversational search for the phone integration in your assistant. For more information see, [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search) and [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone).
 
 ## 11 April 2024
 {: #watson-assistant-apr052024}
