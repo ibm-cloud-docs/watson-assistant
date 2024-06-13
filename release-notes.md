@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-06-11"
+lastupdated: "2024-06-13"
 
 subcollection: watson-assistant
 
@@ -25,7 +25,7 @@ Release notes describe the new features, changes, and bug fixes in each release 
 {: release-note}
 
 Improved accuracy in information gathering
-: The information gathering feature is enhanced to reduce errors while filling the free-text step variables from the customer response. This allows for more accurate and efficient data entry. For more information, see [Information gathering](/docs/information-gathering.md).
+: The information gathering feature is enhanced to reduce errors while filling the free-text step variables from the customer response. This allows for more accurate and efficient data entry. For more information, see [Information gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering).
 
 ## 4 June 2024
 {: #watson-assistant-jun42024}
