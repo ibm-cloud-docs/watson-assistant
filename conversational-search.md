@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-06-07"
+lastupdated: "2024-06-13"
 
 keywords: conversational search
 
@@ -83,9 +83,9 @@ When your assistant generates a conversational search response, it evaluates the
 | Tendency to say “I don’t know” | Response confidence threshold | Assistant behavior |
 |--------------------|---------|-------------|
 | `Rarely` | Lowest  | The assistant rarely says “I don’t know” because it compares the response confidence score against the lowest threshold. Therefore, your assistant gives a generated response to the end user almost all the time. However, the assistant most likely presents inaccurate or irrelevant responses to the end user. |
-| `Less often`           | Lower | The assistant says “I don’t know” less often than the `Rarely` option. |
+| `Less often`           | Lower | The assistant says “I don’t know” more often than the `Rarely` option. |
 | `More often`           | Higher | The assistant says “I don’t know” more often than the `Less often` option.|
-| `Most often`           | Highest | The assistant says “I don’t know” most often than the `More often` option because it compares the response confidence score against the highest threshold. However, the assistant is least likely to present inaccurate or irrelevant responses to the end user. In addition, the assistant presents fewer generated responses to the users and more often responds with an “I don’t know” message or falls back to the “No matches” action.|
+| `Most often`           | Highest | The assistant says “I don’t know” more often than the `More often` option because it compares the response confidence score against the highest threshold. However, the assistant most likely presents accurate or relevant responses to the end user. In addition, the assistant presents fewer generated responses to the users and more often responds with an “I don’t know” message or falls back to the “No matches” action.|
 {: caption= "Table 1. Tuning the Tendency to say I don’t know " caption-side="top"}
 
 ## Configuring your assistant to use the conversational search
