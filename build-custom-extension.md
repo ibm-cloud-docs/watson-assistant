@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-14"
+lastupdated: "2024-06-18"
 
 subcollection: watson-assistant
 
@@ -68,7 +68,10 @@ The OpenAPI document must satisfy the following requirements and restrictions:
 - For OAuth 2.0 authentication, Authorization Code, Client Credentials, Password, and custom grant types that starts with `x-` are supported. Note that `x-`<any custom name> is used by the [IBM IAM authentication mechanism](/docs/account?topic=account-iamoverview) and by [watsonx](https://www.ibm.com/watsonx).
 - Schemas that are defined by using `anyOf`, `oneOf`, and `allOf` are currently not supported.
 
-In addition, any call to the external API must complete within 30 seconds.
+## Adhering to the response timeout limit
+{: #adhere-response-timeout-limit}
+
+You must adhere to the response timeout limit, which is 30 seconds, while calling an external API. The timeout value for a custom extension is not configurable.
 
 ## Building the custom extension
 {: #build-custom-extension-building}

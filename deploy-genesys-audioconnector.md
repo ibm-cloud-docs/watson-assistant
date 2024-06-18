@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2024-06-11"
+lastupdated: "2024-06-18"
 
 subcollection: watson-assistant
 
@@ -15,15 +15,15 @@ subcollection: watson-assistant
 
 [IBM Cloud]{: tag-ibm-cloud}
 
-You can integrate the Genesys Audio Connector with your assistant to stream the conversation audio between assistant and Genesys Cloud.
+You can integrate the Genesys Audio Connector with your assistant to stream the conversation audio between the assistant and Genesys Cloud.
 {: shortdesc}
 
 ## Before you begin
 {: #deploy-audioconnector-genesys-setup}
 
-You must have the folowing prerequisites before you start integrating your assistant with Genesys Audio Connector: 
+You must have the following prerequisites before you start integrating your assistant with Genesys Audio Connector: 
 
-- [Genesys Cloud account](https://login.mypurecloud.com/){: external} with an Audio Connector instance that is hosted in the same region like your assistant. 
+- [Genesys Cloud account](https://login.mypurecloud.com/){: external} with an Audio Connector instance that is hosted in the same region as your assistant. 
 - Access to the Genesys Architect.
 - The `read`, `create`,`update`, and `delete` permissions in your account. For more information, see [the documentation of Genesys Audio Connector for Genesys Administrators] (https://docs.genesys.com/Documentation/GA/latest/user/Welcome){: external}.
 
@@ -41,21 +41,21 @@ You must have the folowing prerequisites before you start integrating your assis
     - **API key**
     - **Client secret**
     - **Genesys audio connect URI**
-
-
-
-
-
-Store the credentials because you cannot see them after you click **Save**. You require these credentials to set up the Genesys Audio Connector.
+ 
+   Store the credentials because you cannot see them after you click **Save**. You require these credentials to set up the Genesys Audio Connector.
 
 1.  Click  **Save and Exit**.
+
+
+
+
 
 ## Set up Audio Connector to integrate assistant
 {: #set-up-audio-connector}
 
 To set up Genesys Audio Connector, complete the steps in the [Configure and activate Audio Connector in Genesys Cloud](https://rcstaging.wpengine.com/articles/configure-and-activate-audio-connector-in-genesys-cloud/) topic.
 
-In the Genesys **Admin** page, go to **Integrations** > **Configuration**  to add the **Genesys audio connect URI** value that you copied while [creating the Audio Connector integration in your assistant](#integrate-audio-connector).
+In the Genesys **Admin** page, go to **Integrations** > **Configuration** to add the **Genesys audio connect URI** value that you copied while [creating the Audio Connector integration in your assistant](#integrate-audio-connector).
 {: important}
 
 
@@ -65,9 +65,7 @@ In the **Base Connection URI** field of Genesys, you must enter the first part o
 
 
 
-
-
-In the Genesys **Admin** page, go to **Integrations** > **Credentials**  to add the credentials for the **API key** and **Client secret** fields that you copied while [creating the Audio Connector integration in your assistant](#integrate-audio-connector). 
+In the Genesys **Admin** page, go to **Integrations** > **Credentials** to add the credentials for the **API key** and **Client secret** fields that you copied while [creating the Audio Connector integration in your assistant](#integrate-audio-connector). 
 {: important}
 
 
@@ -75,35 +73,33 @@ In the Genesys **Admin** page, go to **Integrations** > **Credentials**  to add 
 
 Use the **Call Audio Connector** action in Genesys to activate the Audio Connector integration in your assistant. 
 
-See [Call Audio Connector action](https://help.mypurecloud.com/articles/call-audio-connector-action/) for more details. 
+For more information, see [Call Audio Connector action](https://help.mypurecloud.com/articles/call-audio-connector-action/). 
 
 
 
-You need the  **Genesys audio connect URI**  from the previous step. 
+You need the Genesys audio connect URI from the previous step. 
 
 1.  Go to the Genesys Admin page.
 1.  Under Architect, click **Architect**, and create an **Inbound Call Flow**.
-1.  In the Toolbox, click  **Bot**, and then  **Call Audio Connector**.
+1.  In the Toolbox, click Bot**, and then Call Audio Connector**.
 1.  Select the values:
     -  Enter a name for your Call Flow.
     -  Choose your Audio Connector integration from the **Integration** drop-down menu.
     -  You must copy the **Genesys audio connect URI** part starting from the `<integration-id>` and paste it into the **Connector ID** field.  `<instance-id>/connect?version=<api-version>`
-    - Enter session variables you want to be passed to and from {{site.data.keyword.conversationshort}}. For more information, see  **Context Sharing through Session Variables**.
+    - Enter session variables that you want to be passed to and from {{site.data.keyword.conversationshort}}. For more information, see **Context Sharing through Session Variables**.
     - Click at the bottom of the Flow Diagram to create a Terminating Action. For example, `Disconnect`.
 
 
 
 
 
-Click **Save** and **Publish**.
-
 
 ### Call Routing
 
 Create a call routing to direct incoming calls to your Genesys Call Flow.
 
-1. Go to the Genesys Admin page
-1. Go to Call Routing, and create a  **Call Routing**.
+1. Go to the Genesys Admin page.
+1. Go to Call Routing, and create a **Call Routing**.
 1.  Select the values:
     -  Enter a name for your Call Routing.
     -  Choose **Division**.
@@ -111,7 +107,6 @@ Create a call routing to direct incoming calls to your Genesys Call Flow.
     -  Assign numbers to the flow
     -  Click **Create**
   
-
 ## Context-sharing through session variables
 {: #deploy-audioconnector-session-variables}
 
@@ -134,11 +129,10 @@ Both Input and Output parameters are available in the {{site.data.keyword.conver
 
 For Input parameters, you can access the session variable in {{site.data.keyword.conversationshort}} with  `$integrations.genesys_audio_connector.user_id`.
 
-For Output parameters, you can assign the session variables to a state variable in Genesys (e.g.,  `State.some_variable`  and access them later on in your flow).
+For Output parameters, you can assign the session variables to a state variable in Genesys (for example,  `State.some_variable`  and access them later on in your flow).
 
 Variables can be read and set from both Dialog and Action skills.
-
-    
+   
 
 ## Ending the Genesys Audio Connector flow
 {: #deploy-audioconnector-end-flow}
@@ -162,8 +156,6 @@ After receiving the audio conversation from the user, the Audio Connector node i
   ]
 }
 ```
-
-
 
 ## Response types
 {: #deploy-audioconnector-response-types}
