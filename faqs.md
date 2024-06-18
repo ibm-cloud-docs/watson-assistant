@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-24"
+  years: 2015, 2024
+lastupdated: "2024-06-18"
 
 keywords: Watson Assistant frequently asked questions
 
@@ -99,6 +99,12 @@ To view the **Analytics** page, you must have a service role of Manager and a pl
 {: faq}
 
 If you cannot view the API details or service credentials, it is likely that you do not have Manager access to the service instance in which the resource was created. Only people with Manager access to the instance can use the service credentials.
+
+## Can I configure the timeout parameter for a custom extension?
+{: #faqs-config-timeout-parameter}
+{: faq}
+
+No, the timeout value for a custom extension is not configurable. Any call to the external API must complete within 30 seconds.
 
 ## Why can't I edit intents, entities, or dialog nodes?
 {: #faqs-edit-skill}

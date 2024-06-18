@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-08-22"
+  years: 2018, 2024
+lastupdated: "2024-06-18"
 
 subcollection: watson-assistant
 
@@ -99,6 +99,8 @@ The {{site.data.keyword.conversationshort}} expression language is based on the 
 {: #expression-syntax-variables}
 
 To reference a variable in an expression, type type a dollar sign (`$`) and then select a variable from the list. The reference is inserted into your expression in the correct notation, referencing the variable using its variable ID rather than its display name (for example, `${step_773}` or `${customer_id}`). Do not edit this reference unless you want to refer to a different variable and you are sure of its variable ID.
+
+
 
 ### Standard math
 {: #expression-syntax-math}

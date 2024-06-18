@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-06-13"
+lastupdated: "2024-06-18"
 
 keywords: conversational search
 
@@ -59,7 +59,7 @@ To enable conversational search, do the following steps:
    The web chat integration does not support the citation title feature.{: note}      
 
 1. In the **Tendency to say I don’t know**, select the tendency to use. By default, `Less often` is selected. 
-1. Click **Save** to apply your configuration.
+1. Click **Save**.
 
    ![ConversationalSearch](images/convo-search-citation-title.png) 
 
