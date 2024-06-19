@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2024-06-18"
+lastupdated: "2024-06-19"
 
 subcollection: watson-assistant
 
@@ -104,8 +104,8 @@ Create a call routing to direct incoming calls to your Genesys Call Flow.
     -  Enter a name for your Call Routing.
     -  Choose **Division**.
     -  Choose the call flow you configured in the previous step from the **Route to** drop-down menu.
-    -  Assign numbers to the flow
-    -  Click **Create**
+    -  Assign numbers to the flow.
+    -  Click **Create**.
   
 ## Context-sharing through session variables
 {: #deploy-audioconnector-session-variables}
