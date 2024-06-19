@@ -93,7 +93,6 @@ You need the Genesys audio connect URI from the previous step.
 
 
 
-
 ### Call Routing
 
 Create a call routing to direct incoming calls to your Genesys Call Flow.
@@ -137,7 +136,7 @@ Variables can be read and set from both Dialog and Action skills.
 ## Ending the Genesys Audio Connector flow
 {: #deploy-audioconnector-end-flow}
 
-After receiving the audio conversation from the user, the Audio Connector node in Genesys Architect facilitates exchange of messages between the user and assistant until the end of conversation. To send the audio conversation back to Genesys, you must use the  `end_session`  response type.
+After receiving the audio conversation from the user, the Audio Connector node in Genesys Architect facilitates exchange of messages between the user and assistant until the end of conversation. To send the audio conversation back to Genesys, you must use the  `end_session` response type.
 
 ```json
 {
