@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-26"
+  years: 2015, 2024
+lastupdated: "2024-06-23"
 
 subcollection: watson-assistant
 
@@ -58,10 +58,11 @@ Properties contained in the `private` object are treated as private variables, w
 
 | Name                                | Type   | Description |
 |-------------------------------------|--------|-------------|
-| `channel.name`                      | String | The name of the channel that is in use. One of the following values: \n - `Web chat` \n - `Phone` \n - `SMS` \n - `Whatsapp` \n - `Slack` \n - `Facebook Messenger` |
+| `channel.name`                      | String | The name of the channel that is in use. One of the following values: \n - `Web chat` \n - `Phone` \n - `SMS` \n - `Whatsapp` \n - `Slack` \n - `Facebook Messenger` \n - `teams` |
 | `channel.private.user.id`           | String | The ID of the user who is interacting with the assistant through the channel. This ID is specific to the channel and might be different from the user ID {{site.data.keyword.conversationshort}} uses for billing purposes. For more information, see [Channel user IDs](#expression-integration-variables-channel-userid). |
 | `channel.private.user.phone_number` | String | The phone number associated with the user. Set by the phone, SMS, and WhatsApp integrations. |
 | `channel.private.user.name`         | String | The name of the user who is interacting with the assistant through the channel. Set by the Microsoft Teams integration. |
+| `channel.private.user.aadObjectId`         | String | The Azure Active Directory (AAD) object ID of the user who is interacting with the assistant through the channel. Set by the Microsoft Teams integration. |
 {: caption="Properties of the channel object" caption-side="top"}
 
 ### Example JSON
@@ -94,6 +95,7 @@ The `channel.private.user.id` property, which is set by the channel integration,
 | Whatsapp | The customer's phone number. |
 | Phone    | The customer's phone number. |
 | SMS with Twilio | The customer's phone number. |
+| Teams | The Teams user ID (for example, `29:1CV2T75j3QUY-mQCQcIk2...`) and provide the `aadObjectId` of the Teams user. |
 {: caption="Sources of the channel user ID" caption-side="top"}
 
 ## `chat`
