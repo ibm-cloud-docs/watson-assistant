@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2024-06-21"
+lastupdated: "2024-06-23"
 
 subcollection: watson-assistant
 
@@ -23,10 +23,9 @@ You can integrate the Genesys Audio Connector with your assistant to stream the 
 
 You must have the following prerequisites before you start integrating your assistant with Genesys Audio Connector: 
 
-- [Genesys Cloud account](https://login.mypurecloud.com/){: external} with an Audio Connector instance that is hosted in the same region as your assistant. 
-- Access to the Genesys Architect.
-- The `read`, `create`,`update`, and `delete` permissions in your account. For more information, see [the documentation of Genesys Audio Connector for Genesys Administrators](https://docs.genesys.com/Documentation/GA/latest/user/Welcome){: external}.
-
+- A new account or log in to an existing Genesys Cloud account with access to Genesys Architect and the correct region at the [Genesys Cloud portal](https://login.mypurecloud.com/){: external}.
+- The `Admin` role in the Genesys Cloud organization.
+For more information on Genesys Cloud roles and permissions see, [Roles and permissions overview](https://help.mypurecloud.com/articles/about-roles-permissions/).{: external}
 
 ## Create the Audio Connector integration in your assistant
 {: #integrate-audio-connector}

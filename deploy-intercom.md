@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-17"
+lastupdated: "2024-06-23"
 
 subcollection: watson-assistant
 
@@ -25,13 +25,7 @@ If you integrate the assistant with Intercom, the Intercom application becomes t
 
 ## Before you begin
 
-To integrate your assistant with Intercom, you must have the necessary roles and permissions:
-
-| Roles | Permissions |
-| ----------- | ---------------------- |
-| Developer | Read and list users and companies <br> Read and write users <br> Write users and companies <br> Read one user and one company <br> Read tags <br> Write tags | 
-
-For more information, see [Intercom for Developers](https://developers.intercom.com){: external}.
+To integrate your assistant with Intercom, contact your administrator for support.
 
 ## One-time agent creation
 {: #deploy-intercom-account-prereq}
