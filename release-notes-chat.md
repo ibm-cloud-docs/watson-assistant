@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-06-11"
+lastupdated: "2024-06-23"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,22 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 8.2.0
+{: #8.2.0}
+*Release date: 20 June 2024*
+
+- **New layout configuration:** You can customize a full-screen chat window by setting a max-width and removing the drop shadow that provides seamless integration for your assistant. For more information, see [Layout configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#layout-config).
+
+- **New instance method:** You can change the title in the header of the chat with the new `updateMainHeaderTitle`. For more information, see [instance.updateMainHeaderTitle](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateMainHeaderTitle).
+
+- **New Theme config option:** You can change the type of corners to give the web chat widget to be either "rounded" or "squared". For more information, see [Theming configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#theme-config).
+
+- **New Home Screen config option:** You can hide the **Home Screen** avatar, greeting message, and starters using the `homeScreenConfig.custom_content_only` so only custom content is visible. For more information, see [instance.updateHomeScreenConfig](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateHomeScreenConfig).
+
+- Improved markdown handling of tables, code blocks, block quotes, and fenced code blocks.
+
+- Bug fixes
 
 ## 8.1.3
 {: #8.1.3}
