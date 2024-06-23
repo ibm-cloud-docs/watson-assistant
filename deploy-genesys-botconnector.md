@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2024-05-17"
+lastupdated: "2024-06-23"
 
 subcollection: watson-assistant
 
@@ -26,8 +26,9 @@ The Genesys Bot Connector enables Genesys Architect Flow designers to integrate 
 
 You must comply with the folowing requirements before you start integrating your assistant with Genesys Bot Connector:
 
-- You must create a new account or log in to an existing Genesys Cloud account with access to Genesys Architect and the correct region at the [Genesys Cloud portal](https://login.mypurecloud.com/){: external}.
-- You must have `read`, `create`,`update`, and `delete` permissions on your account. For more information, see [Genesys Administrator] (https://docs.genesys. com/Documentation/GA/latest/user/Welcome){: external}.
+- A new account or log in to an existing Genesys Cloud account with access to Genesys Architect and the correct region at the [Genesys Cloud portal](https://login.mypurecloud.com/){: external}.
+- The `Admin` role in the Genesys Cloud organization.
+For more information on Genesys Cloud roles and permissions see, [Roles and permissions overview](https://help.mypurecloud.com/articles/about-roles-permissions/).{: external}
 
 ## Set up Bot Connector in Genesys
 {: #deploy-botconnector-genesys-setup}

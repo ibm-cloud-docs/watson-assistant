@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-05-17"
+lastupdated: "2024-06-23"
 
 subcollection: watson-assistant
 
@@ -23,13 +23,7 @@ After you [create an action](/docs/watson-assistant?topic=watson-assistant-build
 ## Before you begin
 {: #deploy-microsoft-teams-account}
 
-To integrate your assistant with Microsoft Teams, you must have the necessary roles and permissions:
-
-| Roles | Permissions |
-| ----------- | ---------------------- |
-| Global Administrator or <br> Teams Administrator | Read the organization's information <br> Read and write messages <br> Read and write user calendars <br> Read and write files <br> Access to specific teams or channels <br> Basic capabilities for bots and messaging extensions <br> Tab permissions (if applicable) |
-
-For more information, see [Microsoft Build](https://learn.microsoft.com/en-us/){: external}.
+To integrate your assistant with Microsoft Teams, you must have the `Global Administrator`, or `Teams Administrator` roles. For more information, see [App permission policies](https://learn.microsoft.com/en-us/microsoftteams/teams-app-permission-policies){: external}.
 
 Sign up for a Microsoft 365 Developer Administrator email address, if you don’t have one:
 

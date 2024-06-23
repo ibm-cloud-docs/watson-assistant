@@ -166,13 +166,6 @@ toc:
           - deploy-phone-flex.md
           - phone-actions.md
           - phone-troubleshooting.md
-          - topicgroup:
-              label: Phone Gateway
-              topics:
-              - phone-gateway.md
-              - phone-gateway-config.md
-              - phone-gateway-json-config-props.md
-              - phone-gateway-multitenancy.md
       - topicgroup:
           label: Deploying to other channels
           topics:
@@ -184,7 +177,6 @@ toc:
           - deploy-microsoft-teams.md
           - deploy-slack.md
           - deploy-sms.md
-          - deploy-stream-channel.md
           - deploy-whatsapp.md
           - deploy-custom-app.md
           - deploy-intercom.md
@@ -202,7 +194,6 @@ toc:
           - topic: generative-ai.md
             navtitle: Overview
           - information-gathering.md
-          - hap-filter.md
           - conversational-search.md 
       - assistant-add.md
       - assistant-rename-delete.md
@@ -321,7 +312,6 @@ toc:
       id: reference
       topics:
       - glossary.md
-      - beta-features.md
       - response-types-reference.md
       - preview-runtime-errors.md
       - global-variables.md
@@ -373,3 +363,4 @@ toc:
       - accessibility.md
       - browser-support.md
       - terms-notices.md
+

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-17"
+lastupdated: "2024-06-23"
 
 subcollection: watson-assistant
 
@@ -27,13 +27,7 @@ Currently, no method exists to identify or delete data that is associated with a
 ## Before you begin
 {: #deploy-facebook-setup}
 
-To integrate your assistant with Facebook, you must have the following roles and permissions on Facebook's Meta App Development:
-
-| Roles | Permissions |
-| ----------- | ---------------------- |
-| Developer | pages_show_list <br> pages_manage_metadata <br> pages_messaging <br> pages_read_engagement <br> business_management |
-
-For more information, see [Meta App Development](https://developers.facebook.com/docs/development){: external}.
+To integrate your assistant with Facebook, you must have the `Admin` role on Facebook's Meta App Development. For more information, see [Meta App Development](https://developers.facebook.com/docs/development){: external}.
 
 To integrate your assistant with Facebook, do the following steps:
 
