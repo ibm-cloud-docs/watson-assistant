@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-06-23"
 
 subcollection: watson-assistant
 
@@ -29,6 +29,7 @@ The following table shows the latest version of the web chat integration that is
 
 | {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}} version | Latest web chat version available |
 |----------------|----------------|
+| 5.0.0 | [8.1.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.1.0) |
 | 4.8.5 | [8.0.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.0.0) |
 | 4.8.4 | [7.10.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.10.0) |
 | 4.8.3 | [7.9.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.9.0) |
@@ -48,7 +49,36 @@ The following table shows the latest version of the web chat integration that is
 | 4.0.8 | [6.2.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#6.2.0) |
 {: caption="Web chat versions in {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}}" caption-side="top"}
 
+## 19 June 2024
+{: #assistant-data-jun192024}
+{: release-note}
 
+Conversational search
+:  The new conversational search feature has a built-in retrieval-augmented generation(RAG) solution that helps your assistant to extract an answer from the highest-ranked query results and returns a text response to the user. For more information, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search).
+
+Integration of Elasticsearch to the search feature
+:  You can now integrate Elasticsearch to the search feature in your assistant. With Elasticsearch, your assistant can perform different types of searches such as metric, structured, unstructured, and semantic with higher accuracy and relevance by making use of enterprise content. The data analytics engine in Elasticsearch expands the scope of search integration to larger data sets in assistant. For more information about Elasticsearch search integration, see [Elasticsearch search integration setup](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add).
+
+Tuning your assistant's tendency to say "I don't know"
+:  You can now tune the tendency of your assistant to say "I don't know" in conversational search by using the **Tendency to say “I don’t know”** option in the conversational search settings. This option can help to reduce Large Language Model (LLM) hallucinations and provide higher fidelity answers for conversational search by tuning your assistant's tendency to fall back to the “I don’t know” answer. For more information, see [Tuning conversational search’s tendency to say “I don’t know"](/docs/watson-assistant?topic=watson-assistant-conversational-search#behavioral-tuning-conversational-search).
+
+Streaming response for conversational search
+:  You can now use streaming response in your assistant for conversational search. With the help of watsonx.ai capabilities, streaming response can provide continuous and real-time responses. For more information, see [Streaming response](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-streaming-response).
+
+Overwrite all or skip all when you copy actions to another assistant
+:  You can now choose to overwrite all references or skip all references when you copy actions from one assistant into another. For more information, see [Copying an action to another assistant](/docs/watson-assistant?topic=watson-assistant-copy-action).
+
+Add a custom result filter for the {{site.data.keyword.discoveryfull}} search integration
+:  You can now filter your search result in the {{site.data.keyword.discoveryfull}} search integration by adding custom text strings in the Custom result filter field in Search integration. For more information, see [Configure the search for {{site.data.keyword.discoveryfull}}](/docs/watson-assistant?topic=watson-assistant-search-add#search-add-configure).
+
+Configure search routing
+:  You can configure the search routing for your assistant when no matches are available for the customer response. For more information, see [Configuring the search routing when no action matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing).
+
+Conversational skills
+:  You can now use conversational skills in your assistant to begin tasks or workflows. You must register a pro code conversational skill provider on your assistant instance and begin building skill-backed actions to fit your use cases. For more information, see [Conversational skills API documentation](https://cloud.ibm.com/apidocs/assistant-v2#createprovider){: external}.
+
+Service monitors
+:  Your assistant can now use service monitors to monitor the health of your assistant instances. For more information, see [Installing service monitors](/docs/en/SSQNUZ_5.0_test?topic=monitors-installing-service){: external}.
 
 ## 29 March 2024
 {: #assistant-data-mar292024}
