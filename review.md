@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-09"
+lastupdated: "2024-06-27"
 
 subcollection: watson-assistant
 
@@ -71,11 +71,15 @@ If you make several edits without saving, the preview pane shows a message that 
 ## Using debug mode in Preview
 {: #review-debug}
 
-Preview has a debug mode that you can turn on to see information that helps you understand why the assistant responds or doesn't respond to a particular input.
+The **Preview** menu has **Debug mode** that you can turn on to see information related to why the assistant responds or doesn't respond to a particular input.
 
+In **debug mode**, you can identify a conversation that includes a private variable by using the **toggle-tip** icon (![toggle-tip icon](images/private-variable-icon.png)).
 
+To disable the private variable protection, go to **Customer response settings** in the **Editor** tab inside an action step.{: tip}
 
-Debug mode has four tools to analyze your action:
+![Private variable in debug mode](images/debug-mode-toggle-tip-exposed.png){: caption="Private variable in debug mode" caption-side="bottom"}
+
+**Debug mode** has four tools to analyze your action:
 
 -   [Start and end of an action](#review-debug-start-end)
 -   [Confidence scores](#review-debug-confidence)
@@ -96,15 +100,15 @@ Completion options include ending:
 ### Action confidence score
 {: #review-debug-confidence}
 
-Every input that you enter that can start a new topic shows a confidence score icon. Hover over this icon to see a list of actions with different confidence scores.
+Every input that you enter can start a new topic to show a **confidence score** icon. Hover over the **confidence score** icon to see a list of actions with different confidence scores.
 
-These scores represent the assistant’s confidence that the sentence or phrase that you entered can be solved by the steps that are built into a specific action.
+The confidence scores represent the assistant’s confidence that the sentence or phrase that you entered can be solved by the steps that are built into a specific action.
 
 ![Debug mode](images/rn-debug-confidence.png){: caption="Debug mode" caption-side="bottom"}
 
 The top score in green represents the action with the highest confidence and the one the assistant used.
 
-The remaining two are actions that were considered because of their confidence score, but weren't used because thee confidence scores were lower.
+The remaining two are actions that were considered because of their confidence score, but weren't used because the confidence scores were lower.
 
 If no action scores higher than 20% confidence, you see the built-in action `No action matches`.
 
@@ -133,7 +137,29 @@ For better visibility of long variable values, you can expand the width of the d
 
 To learn more about variables, see [Managing information during the conversation](/docs/watson-assistant?topic=watson-assistant-manage-info).
 
+The private variables appear as masked texts in the conversation. You can identify a conversation that includes a private variable with the toggle-tip icon (![toggle-tip icon](images/private-variable-icon.png)) that appears next to the conversation.
 
+### Action variables in Preview
+{: #Preview-action-variable-values}
+
+In the **Action variables** section, identify a private variable with the toggle-tip icon (![toggle-tip icon](images/private-variable-icon.png)) that appears next to the conversation.
+
+To disable the private variable protection, go to **Actions** > **Variables** > **Created by you** > **Action variables**.  In **Action variables** clear **Protect data stored in this variable** checkbox.
+{: tip}
+
+![Private action variable](images/action-variable-toggle-tip-exposed.png){: caption="Private variable in action variables" caption-side="bottom"}
+
+### Session variables in Preview
+{: #Preview-session-variable-values}
+
+If you are using dialog, you can see session variables for both actions and dialog on the **Session variables** tab.
+
+In the **Session variables** section, you can identify a private variable with the toggle-tip icon (![toggle-tip icon](images/private-variable-icon.png)) that appears next to the conversation.
+
+To disable the private variable protection, go to **Actions** > **Variables** > **Created by you** > **Session variables**. In **Session variables** clear **Protect data stored in this variable** checkbox.
+{: tip}
+
+![Private session variable](images/session-variable-toggle-tip-exposed.png){: caption="Private variable in session variables" caption-side="bottom"}
 
 ### Editing the variable values
 {: edit-variable-values}

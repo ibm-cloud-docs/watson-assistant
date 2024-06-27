@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-09"
+lastupdated: "2024-06-27"
 
 subcollection: watson-assistant
 
@@ -103,12 +103,9 @@ This table shows how you might set up the steps. The last step is a catch-all in
 ## Protecting the privacy of the customer information
 {: #protect-privacy-customer-information}
 
+You can protect the privacy of the customer information in a step that you configure for the assistant. To hide confidential information in the conversation in a step, you can edit the settings and select the **Protect data collected at this step** checkbox. When you enable private-variable protection, the protected data is masked with asterisks in the conversation log. You can identify a conversation that includes a private variable in the preview page or preview panel with the **toggle-tip** icon (![toggle-tip icon](images/private-variable-icon.png)) that appears next to conversation.
 
-You can protect the privacy of the customer information in a step that you configure for the assistant. To hide confidential information in user input or assistant's response in a step, you can edit the settings and select the **Protect data collected at this step** checkbox. The protected data is masked with asterisks in the conversation log.
-
-
-
-
+To disable private variable protection, go to **Customer response settings** in the **Editor** tab inside an action step.{: tip}
 
 The feature for masking the confidential customer information is available only for actions in assistants. If you're calling actions from a dialog, you can see the privacy setting in your action steps, but selecting the checkbox doesn't mask the customer information. In addition, this feature is not available for the assistants that are built in the classic experience of {{site.data.keyword.conversationfull}}. {: note}
 
