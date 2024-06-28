@@ -39,7 +39,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 
 - Improved markdown handling of tables, code blocks, block quotes, and fenced code blocks.
 
-
+- You can now see a change in line breaks and bullets in your assistant’s responses due to the improvements made in rendering markdown in the web chat.
 
 - Bug fixes
 
