@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-06-23"
+lastupdated: "2024-06-28"
 
 subcollection: watson-assistant
 
@@ -38,6 +38,8 @@ If you want to evaluate changes that are introduced in a web chat release before
 - **New Home Screen config option:** You can hide the **Home Screen** avatar, greeting message, and starters using the `homeScreenConfig.custom_content_only` so only custom content is visible. For more information, see [instance.updateHomeScreenConfig](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateHomeScreenConfig).
 
 - Improved markdown handling of tables, code blocks, block quotes, and fenced code blocks.
+
+
 
 - Bug fixes
 
