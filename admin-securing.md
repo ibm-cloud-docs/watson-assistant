@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-10-25"
+  years: 2021, 2024
+lastupdated: "2024-07-01"
 
 subcollection: watson-assistant
 
@@ -28,6 +28,8 @@ If you need to request GDPR support for {{site.data.keyword.cloud}} {{site.data.
 - In the European Union, see [Requesting support for IBM Cloud Watson resources created in the European Union](/docs/watson?topic=watson-gdpr-sar#request-EU){: external}.
 - Outside the European Union, see [Requesting support for resources outside the European Union](/docs/watson?topic=watson-gdpr-sar#request-non-EU){: external}.
 
+
+
 ## European Union General Data Protection Regulation (GDPR)
 {: #securing-gdpr}
 
@@ -41,6 +43,8 @@ Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and 
 US Health Insurance Portability and Accountability Act (HIPAA) support is available for Enterprise plans that are hosted in the Washington, DC or Dallas locations. For more information, see [Enabling HIPAA support for your account](/docs/account?topic=account-enabling-hipaa){: external}.
 
 Do not add personal health information (PHI) to the training data (entities and intents, including user examples) that you create. In particular, be sure to remove any PHI from files that contain real user utterances that you upload to mine for intent or intent user example recommendations.
+
+
 
 ## Opting out of log data use
 {: #securing-log-opt-out}

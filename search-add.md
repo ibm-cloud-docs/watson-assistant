@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-07-01"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,7 @@ subcollection: watson-assistant
 # {{site.data.keyword.discoveryfull}} search integration setup 
 {: #search-add}
 
-[Plus]{: tag-green}
+[Plus]{: tag-green} [IBM Cloud Pak for Data]{: tag-cp4d}
 
 This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
