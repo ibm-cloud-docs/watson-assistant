@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-03"
+  years: 2015, 2024
+lastupdated: "2024-07-02"
 
 subcollection: watson-assistant
 
@@ -10,6 +10,8 @@ subcollection: watson-assistant
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
+
 
 # Getting started with {{site.data.keyword.conversationshort}}
 {: #getting-started}
@@ -44,4 +46,7 @@ These starting points in the documentation also help you get started:
 - [Planning your assistant](/docs/watson-assistant?topic=watson-assistant-plan-assistant)
 - [Overview: Editing actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview)
 - [Building actions from a template](/docs/watson-assistant?topic=watson-assistant-actions-templates)
+
+
+
 
