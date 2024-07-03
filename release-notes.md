@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-06-18"
+lastupdated: "2024-07-03"
 
 subcollection: watson-assistant
 
@@ -20,17 +20,25 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
+## 03 July 2024
+{: #watson-assistant-jul032024}
+{: release-note}
+
+Referencing user-defined variables with `user_defined_` prefix
+: You can now reference the user-defined action or session variables through expressions in actions by using a reserved keyword prefix `user_defined_`. For more information, see [Variables](/docs/watson-assistant?topic=watson-assistant-expressions#expression-syntax-variables).
+
+=======
 
 
 ## 7 June 2024
-{: #watson-assistant-jun72024}
+{: #watson-assistant-jun072024}
 {: release-note}
 
 Improved accuracy in information gathering
 : The information gathering feature is enhanced to reduce errors while filling the free-text step variables from the customer response. This allows for more accurate and efficient data entry. For more information, see [Information gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering).
 
 ## 4 June 2024
-{: #watson-assistant-jun42024}
+{: #watson-assistant-jun042024}
 {: release-note}
 Phone-based conversational search support
 
