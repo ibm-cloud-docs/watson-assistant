@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-06-18"
+lastupdated: "2024-07-03"
 
 subcollection: watson-assistant
 
@@ -100,7 +100,7 @@ The {{site.data.keyword.conversationshort}} expression language is based on the 
 
 To reference a variable in an expression, type type a dollar sign (`$`) and then select a variable from the list. The reference is inserted into your expression in the correct notation, referencing the variable using its variable ID rather than its display name (for example, `${step_773}` or `${customer_id}`). Do not edit this reference unless you want to refer to a different variable and you are sure of its variable ID.
 
-
+To reference the user-defined action or session variables in a custom built client application, use the reserved keyword prefix `user_defined_` . For example, use `${user_defined_my_context_var}` to get the value of `my_context_var` set by your client. For more information on custom built client, see [custom built client](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-api-client-get-context){: external}. 
 
 ### Standard math
 {: #expression-syntax-math}
