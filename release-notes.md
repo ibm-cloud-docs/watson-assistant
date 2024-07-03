@@ -20,7 +20,19 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
+## 03 July 2024
+{: #watson-assistant-jul032024}
+{: release-note}
 
+Referencing user-defined variables with `user_defined_` prefix
+: You can now reference the user-defined action or session variables through expressions in actions by using a reserved keyword prefix `user_defined_`. For more information, see [Variables](/docs/watson-assistant?topic=watson-assistant-expressions#expression-syntax-variables).
+
+## 01 July 2024
+{: #watson-assistant-jul012024}
+{: release-note}
+
+All-new homepage for {{site.data.keyword.conversationshort}}
+: The all-new homepage of {{site.data.keyword.conversationshort}} has well-organized sections and easy-to-access tabs to enhance your user-interface experience. For more information, see [Getting started](/docs/watson-assistant?topic=watson-assistant-getting-started).
 
 ## 7 June 2024
 {: #watson-assistant-jun072024}
