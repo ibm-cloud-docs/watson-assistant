@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-07-02"
+lastupdated: "2024-07-04"
 
 subcollection: watson-assistant
 
@@ -31,11 +31,8 @@ subcollection: watson-assistant
 ## Home page
 {: #getting-started-home-page}
 
-The home page of watsonx Assistant provides an enhanced architecture-overview feature, which is designed to optimize your experience with your assistant.
+The **Home page** of watsonx Assistant provides you a complete overview of your assistant, settings, and configuration. In addition, you can quickly navigate to the following useful links from the **Home page**:
 
-![Enhanced home page](images/about-enhanced-homepage.png){: caption="enchanced-homepage" caption-side="top"}
-
-You can use **Home page** of {{site.data.keyword.conversationshort}} to perform the following actions:
 - [Build actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview)
 - [Customize your greeting](/docs/watson-assistant?topic=watson-assistant-start-conversation)
 - [Set up search](/docs/watson-assistant?topic=watson-assistant-conversational-search)
@@ -47,11 +44,9 @@ You can use **Home page** of {{site.data.keyword.conversationshort}} to perform 
 - [Check analytics](/docs/watson-assistant?topic=watson-assistant-analytics-overview)
 - [Create a fallback plan](/docs/watson-assistant?topic=watson-assistant-dynamic-options)
 
-{{site.data.keyword.conversationshort}} shows you the recommendations to improve and customize your assistant. 
+![Enhanced home page](images/about-enhanced-homepage.png){: caption="enchanced-homepage" caption-side="top"}
 
-### Viewing {{site.data.keyword.conversationshort}} architecture
-
-The `assistant architecture` overview displays the complete structure of your assistant. It shows the number of actions that are created, the configured search integration, the integrated live agent, and the fallback configuration. You can directly access the relevant screens by clicking the links in the boxes.
+In the **Assistant architecture** section, you can view the complete structure of your assistant with links to actions that are created by you. In addition, you get a quick summary of your configuration that includes the number of actions that are created, the configured search integration, the integrated live agent, and the fallback configuration. You can directly access the relevant screens by clicking the links in the boxes.
 
 ![Assistant architecture](images/about-assistant-architecture.png){: caption="assistant-architecture" caption-side="top"}
 
