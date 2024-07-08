@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-07-04"
+lastupdated: "2024-07-08"
 
 subcollection: watson-assistant
 
@@ -46,11 +46,9 @@ The **Home page** of watsonx Assistant provides you a complete overview of your 
 
 ![Enhanced home page](images/about-enhanced-homepage.png){: caption="enchanced-homepage" caption-side="top"}
 
-In the **Assistant architecture** section, you can view the complete structure of your assistant with links to actions that are created by you. In addition, you get a quick summary of your configuration that includes the number of actions that are created, the configured search integration, the integrated live agent, and the fallback configuration. You can directly access the relevant screens by clicking the links in the boxes.
+In the **Assistant architecture** section, you can view the complete structure of your assistant with links to actions that are created by you. In addition, you get a quick summary of your configuration that includes the number of actions that are created, the configured search integration, the integrated live agent, and the fallback configuration. 
 
 ![Assistant architecture](images/about-assistant-architecture.png){: caption="assistant-architecture" caption-side="top"}
-
-For more information on FAQs, see [FAQs about {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-watson-assistant-faqs#faqs-new-experience).
 
 ## Tutorial
 {: #getting-started-tutorial}
@@ -69,3 +67,4 @@ Some more starting points in the documentation to also help you get started:
 - [Overview: Editing actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview)
 - [Building actions from a template](/docs/watson-assistant?topic=watson-assistant-actions-templates)
 
+For more information on FAQs, see [FAQs about {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-watson-assistant-faqs#faqs-new-experience).
