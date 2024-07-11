@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-07-08"
 
 subcollection: watson-assistant
 
@@ -12,8 +12,6 @@ subcollection: watson-assistant
 
 # Understand your most and least successful actions
 {: #analytics-action-completion}
-
-This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 The **Action completion** page of {{site.data.keyword.conversationshort}} provides an overview of how all your assistant's actions are doing. You can:
 - Understand how well users are progressing through the action steps
