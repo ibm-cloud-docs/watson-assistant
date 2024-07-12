@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-10-24"
+  years: 2018, 2024
+lastupdated: "2024-07-12"
 
 subcollection: watson-assistant
 
@@ -102,7 +102,7 @@ You can call an extension that has been added to your assistant in order to inte
 
 [Plus]{: tag-green}
 
-This option indicates that the assistant should use the {{site.data.keyword.discoveryfull}} service to search an external data source for information related to the customer's question. To use this option, you must configure a search integration for your assistant. For more information about configuring a search integration, see [{{site.data.keyword.discoveryfull}} search integration setup](/docs/watson-assistant?topic=watson-assistant-search-add).
+This option indicates that the assistant should use the {{site.data.keyword.discoveryfull}} service to search an external data source for information related to the customer's question. To use this option, you must configure a search integration for your assistant. For more information about configuring a search integration, see [{{site.data.keyword.discoveryfull}} search integration setup](/docs/watson-assistant?topic=watson-assistant-search-overview).
 
 ## Connect to agent
 {: #connect-to-agent}
