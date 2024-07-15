@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-07-02"
+lastupdated: "2024-07-15"
 
 keywords: conversational search
 
@@ -61,7 +61,7 @@ To enable conversational search, do the following steps:
 1. In the **Tendency to say I don’t know**, select the tendency to use. By default, `Less often` is selected. 
 1. Click **Save**.
 
-   ![ConversationalSearch](images/convo-search-citation-title.png) 
+
 
 ## Tuning conversational search’s tendency to say “I don’t know"
 {: #behavioral-tuning-conversational-search}
@@ -87,6 +87,8 @@ When your assistant generates a conversational search response, it evaluates the
 | `More often`           | Higher | The assistant says “I don’t know” more often than the `Less often` option.|
 | `Most often`           | Highest | The assistant says “I don’t know” more often than the `More often` option because it compares the response confidence score against the highest threshold. However, the assistant most likely presents accurate or relevant responses to the end user. In addition, the assistant presents fewer generated responses to the users and more often responds with an “I don’t know” message or falls back to the “No matches” action.|
 {: caption= "Table 1. Tuning the Tendency to say I don’t know " caption-side="top"}
+
+
 
 ## Configuring your assistant to use the conversational search
 
