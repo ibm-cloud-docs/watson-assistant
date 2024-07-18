@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-18"
 
 keywords: conversational search
 
@@ -33,6 +33,9 @@ Refer to the following topics to configure the conversational search in your ass
 - [Before you begin](#conversational-search-requirements)
 - [Enabling conversational search](#conversational-search-setup) 
 - [Tuning conversational search’s tendency to say “I don’t know"](#behavioral-tuning-conversational-search)
+
+
+
 - [Configuring your assistant to use the conversational search]()
 - [Testing conversational search](#conversational-search-test)
 - [Streaming response for conversational search](#conversational-search-streaming-response)

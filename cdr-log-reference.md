@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2023
+  years: 2015, 2024
 lastupdated: "2021-12-08"
 
 subcollection: watson-assistant
