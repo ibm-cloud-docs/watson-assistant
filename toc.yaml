@@ -240,6 +240,7 @@ toc:
               - dialog-webhooks.md
           - build-custom-extension.md
           - add-custom-extension.md
+          - stream-from-extension.md
           - topicgroup:
                 label: Building a custom client
                 topics:
@@ -325,6 +326,7 @@ toc:
       - response-types-reference.md
       - preview-runtime-errors.md
       - global-variables.md
+      # 
       - integration-variables.md
       - expression-methods-actions.md
       - dialog-methods.md
