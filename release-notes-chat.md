@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-07-18"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,22 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 8.2.2
+{: #8.2.2}
+*Release date: 15 July 2024*
+
+- **Updated visuals for search results:** The visuals for search responses are updated to make it more consistent with conversational search. In addition, the web chat now displays the search results in a carousel.
+
+- **Updates to dropdown fields:** The maximum width for the dropdown fields for `option` responses are removed. The width of the dropdown fields is now set to 100% of the width of the chat window. However, if you use the `hasContentMaxWidth: true` option, the width is limited to 380px.
+
+- Bug fixes.
+
+## 8.2.1
+{: #8.2.1}
+*Release date: 1 July 2024*
+
+- Reverted the changes related to the line breaks and bullets in your assistant’s responses, which was introduced per improvements in markdown rendering in the previous release.
 
 ## 8.2.0
 {: #8.2.0}
