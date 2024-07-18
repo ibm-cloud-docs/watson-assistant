@@ -39,4 +39,3 @@ Use the `Ran successfully` response variable to check whether the stream complet
 
 
 If the stream fails after it starts due to network issues or it reaches the maximum 30-second timeout, an error will be generated for the user.{: note}
-

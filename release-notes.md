@@ -20,9 +20,15 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
+## 18 July 2024
+{: #watson-assistant-jul182024}
+{: release-note}
 
+Server-Sent Events for custom extensions
+: watsonxAssistant now supports defining a JSON Path to stream text from Server-Sent Events (SSE) in custom extensions. This feature ensures that text is streamed and stored correctly, with built-in checks to handle potential errors. For more information, see [Streaming from an extension](/docs/watson-assistant?topic=watson-assistant-stream-from-extension).
 
-
+New Hate, Abuse and Profanity Filter for {{site.data.keyword.conversationshort}}
+: The new Hate, Abuse and Profanity (HAP) filter in {{site.data.keyword.conversationshort}} enhances user safety by identifying and addressing hate speech, abuse and profanity. This feature helps maintain a positive and inclusive online environment for your customers. For more information, see [HAP filter](/docs/watson-assistant?topic=watson-assistant-hap-filter).
 
 
 
