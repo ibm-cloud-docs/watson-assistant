@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-17"
+lastupdated: "2024-07-18"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,8 @@ After you create an action, you can integrate your assistant with Slack.
 When integrated, depending on the events that you configure the assistant to support, your assistant can respond to questions that are asked in direct messages or in channels where the assistant is directly mentioned.
 
 An example and instructions on how to create a Slackbot using {{site.data.keyword.conversationshort}}, Slack, and Db2 are given in the solution tutorial, [Build a database-driven Slackbot](/docs/solution-tutorials?topic=solution-tutorials-slack-chatbot-database-watson).
+
+
 
 ## Before you begin
 
@@ -132,3 +134,7 @@ To start a chat with the assistant, complete the following steps:
 The welcome action is not processed by the Slack integration. The welcome message is not displayed in the Slack channel like it is in the assistant preview. It is not triggered from here because nodes with the `welcome` special condition are skipped in action flows that are started by users. Slack waits for the user to initiate the conversation.
 
 The action flow for the current session is restarted after 60 minutes of inactivity (5 minutes for Lite and Standard plans). This means that if a user stops interacting with the assistant, after 60 (or 5) minutes, any context variable values that were set during the previous conversation are set to null or back to their default values.
+
+
+
+

@@ -24,6 +24,8 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
+
+
 ## 03 July 2024
 {: #watson-assistant-jul032024}
 {: release-note}
