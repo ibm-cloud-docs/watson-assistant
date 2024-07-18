@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-06-18"
+lastupdated: "2024-07-18"
 
 subcollection: watson-assistant
 
@@ -62,6 +62,7 @@ The OpenAPI document must satisfy the following requirements and restrictions:
     
 - The size of the document must not be more than `4 MB` if you have a *Plus* or higher plan of {{site.data.keyword.conversationshort}}. However, if you have an *Enteprise* plan with data isolation, the size of the document must not be more than `8 MB`.
 - The `content-type` must be `application/json`.
+- To stream from an extension the response content-type must be `text/event-stream`.
 - Each operation must have a clear and concise `summary`. The summary text is used in the UI to describe the operations that are available from an action, so it should be short and meaningful to someone who is building an assistant.
 - [Relative URLs](https://swagger.io/docs/specification/api-host-and-base-path/#relative-urls){: external} are currently not supported.
 - Only Basic, Bearer, OAuth 2.0, and API key authentication are supported.
