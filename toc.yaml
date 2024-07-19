@@ -201,7 +201,8 @@ toc:
           topics:
           - topic: generative-ai.md
             navtitle: Overview
-          - information-gathering.md # 
+          - information-gathering.md 
+          - hap-filter.md
           - conversational-search.md 
       - assistant-add.md
       - assistant-rename-delete.md
