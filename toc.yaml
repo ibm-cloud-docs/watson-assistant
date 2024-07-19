@@ -202,7 +202,7 @@ toc:
           - topic: generative-ai.md
             navtitle: Overview
           - information-gathering.md
-#          - hap-filter.md
+          - hap-filter.md
           - conversational-search.md 
       - assistant-add.md
       - assistant-rename-delete.md
