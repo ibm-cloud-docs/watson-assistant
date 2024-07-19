@@ -201,8 +201,7 @@ toc:
           topics:
           - topic: generative-ai.md
             navtitle: Overview
-          - information-gathering.md
-#          - hap-filter.md
+          - information-gathering.md # 
           - conversational-search.md 
       - assistant-add.md
       - assistant-rename-delete.md
@@ -325,8 +324,7 @@ toc:
 #      - beta-features.md
       - response-types-reference.md
       - preview-runtime-errors.md
-      - global-variables.md
-      # 
+      - global-variables.md # 
       - integration-variables.md
       - expression-methods-actions.md
       - dialog-methods.md

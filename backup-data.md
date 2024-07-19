@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-05-08"
+lastupdated: "2024-07-19"
 
 subcollection: watson-assistant
 
@@ -20,6 +20,8 @@ You can back up and restore the data that is associated with your installation i
 
 The following table lists the upgrade paths that are supported by the scripts.
 
+
+
 | Version in use | Version that you can upgrade to |
 |------|-----|
 | 4.7.x | 4.8.x |
@@ -27,6 +29,10 @@ The following table lists the upgrade paths that are supported by the scripts.
 | 4.5.x | 4.8.x |
 | 4.0.x | 4.8.x |
 {: caption="Upgrade paths supported by scripts" caption-side="top"}
+
+
+
+
 
 If you are upgrading from 4.5.x to 4.8.x, a simpler way to complete the upgrade is described in the following topics:
 
