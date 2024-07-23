@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-07-18"
+lastupdated: "2024-07-23"
 
 subcollection: watson-assistant
 
@@ -112,6 +112,8 @@ This option indicates that the assistant should transfer the conversation to a h
 ## End the action
 {: #end-action}
 
-This option indicates that this action is complete. Any action variable values that were defined based on choices that the customer made during the action are reset. The action ends immediately, without executing any subsequent steps.
+This option indicates that this action is complete. Any action variable values that were defined based on choices that the customer made during the action are reset.
 
 This option can be applied to more than one step in a single action because an action can define more than one branch of a conversation, controlled by step conditions. For example, the open an account action might have one conversational flow for creating a checking account and a separate one for creating a savings account. Each branch might have its own final step. Identifying the final step helps analytical tools that follow a customer's progress through an action to identify the success or failure of the action.
+
+Using “End the action” in the last step functions like “Continue to next step”. {: note}
