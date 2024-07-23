@@ -24,6 +24,9 @@ Release notes describe the new features, changes, and bug fixes in each release 
 {: #watson-assistant-jul232024}
 {: release-note}
 
+New “End the action” step behavior
+: Using "End to action" in the last step no longer ends the action immediately. For more information see, [Choosing what to do at the end of a step](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-step-what-next)
+
 New Hate, Abuse and Profanity Filter for {{site.data.keyword.conversationshort}}
 : The new Hate, Abuse and Profanity (HAP) filter in {{site.data.keyword.conversationshort}} enhances user safety by identifying and addressing hate speech, abuse and profanity. This feature helps maintain a positive and inclusive online environment for your customers. For more information, see [HAP filter](/docs/watson-assistant?topic=watson-assistant-hap-filter).
 
