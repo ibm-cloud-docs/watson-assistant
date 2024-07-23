@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-07-19"
+lastupdated: "2024-07-23"
 
 subcollection: watson-assistant
 
@@ -35,6 +35,8 @@ The following table lists the upgrade paths that are supported by the scripts.
 
 
 If you are upgrading from 4.5.x to 4.8.x, a simpler way to complete the upgrade is described in the following topics:
+
+
 
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 4.8.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=assistant-upgrading){: external}
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 4.7.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.7.x?topic=assistant-upgrading){: external}
