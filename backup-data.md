@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-07-23"
+lastupdated: "2024-07-24"
 
 subcollection: watson-assistant
 
@@ -649,39 +649,42 @@ su_password: password
 
 To add the values that are required but currently missing from the file, complete the following steps:
 
+
+
 1.  To get information about the `host`, you must get the Store VCAP secret.
 
-    ```bash
+  ```bash
     oc get secret ${INSTANCE}-store-vcap -o jsonpath='{.data.vcap_services}' | base64 -d
-    ```
-    {: codeblock}
 
-    
+  ```
+  {: codeblock}
+
+
+
+
+
 
     The `get` command returns information about the Redis and {{site.data.keyword.postgresql}} databases. Look for the segment of JSON code for the {{site.data.keyword.postgresql}} database, named `pgservice`. It looks like this:
 
-    
-
-    ```json
-    {
-      "user-provided":[
-        {
-          "name": "pgservice",
-          "label": "user-provided",
-          "credentials":
+      ```json
+      {
+        "user-provided":[
           {
-            "host": "${INSTANCE}-rw",
-            "port": 5432,
-            "database": "conversation_pprd_${INSTANCE}",
-            "username": "${dbadmin}",
-            "password": "${password}"
+            "name": "pgservice",
+            "label": "user-provided",
+            "credentials":
+            {
+              "host": "${INSTANCE}-rw",
+              "port": 5432,
+              "database": "conversation_pprd_${INSTANCE}",
+              "username": "${dbadmin}",
+              "password": "${password}"
+            }
           }
-        }
-      ],
-      ...
-    }
-    ```
-    {: codeblock}
+        ],
+      }
+      ```
+      {: codeblock}
 
 1.  Copy the values for user-provided credentials (`host`, `port`, `database`, `username`, and `password`).
 
