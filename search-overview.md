@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-07-26"
 
 subcollection: watson-assistant
 
@@ -20,10 +20,16 @@ Your assistant can route complex customer inquiries as a search query. It finds 
 
 Add search to your assistant to prevent the assistant from having to say things like, `I'm sorry. I can't help you with that`. Instead, the assistant can query existing company documents or data to see whether any useful information can be found and shared with the customer.
 
+
+
 You have three options to add search to your assistant:
 - The search integration for {{site.data.keyword.discoveryfull}}. For more information, see [Add the search integration for {{site.data.keyword.discoveryfull}}](#search-overview-integration).
 - The search integration for Elasticsearch. For more information, see [Add the search integration for Elasticsearch](#elasticsearch-integration-overview).
 - A search extension for Coveo, Google, or NeuralSeek. For more information, see [Add a search extension](#search-overview-extension).
+
+
+
+
 
 You can enhance the search integration by using the assistant capabilities such as [Search trigger](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-add-trigger),  [No action matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches) and [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup). 
 
@@ -44,6 +50,8 @@ For instructions on adding the built-in search integration, see [{{site.data.key
 You can add the search integration for Elasticsearch if you have Plus or Enterprise plans of {{site.data.keyword.conversationshort}}. Embedding your assistant with the search from Elasticsearch improves the data collection to provide accurate responses to customer queries. 
 
 You can add Elasticsearch from the Environments page or the Integrations page. For instructions on adding search integration for Elasticsearch, see [Elasticsearch search integration setup](/docs/watson-assistant?topic=watson-assistant-search-elasticsearch-add).
+
+
 
 ## Add a search extension
 {: #search-overview-extension}
