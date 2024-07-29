@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-07-23"
+lastupdated: "2024-07-29"
 
 subcollection: watson-assistant
 
@@ -20,12 +20,22 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
+
+## 29 July 2024
+{: #watson-assistant-jul292024}
+{: release-note}
+
+New supported languages for information gathering
+: The watsonx.ai information gathering capability in watsonx Assistant now supports French, Spanish, Brazilian Portuguese, and Japanese. For more information, see [Information Gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering) and [Global settings for actions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings).
+
+
+
 ## 23 July 2024
 {: #watson-assistant-jul232024}
 {: release-note}
 
 New "End the action" step behavior
-: Using "End the action" in the last step no longer ends the action immediately. For more information see, [Choosing what to do at the end of a step](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-step-what-next).
+: Using "End the action" in the last step no longer ends the action immediately. For more information see, [Choosing what to do at the end of a step](/docs/watson-assistant?topic=watson-assistant-step-what-next).
 
 New Hate, Abuse and Profanity Filter for {{site.data.keyword.conversationshort}}
 : The new Hate, Abuse and Profanity (HAP) filter in {{site.data.keyword.conversationshort}} enhances user safety by identifying and addressing hate speech, abuse and profanity. This feature helps maintain a positive and inclusive online environment for your customers. For more information, see [HAP filter](/docs/watson-assistant?topic=watson-assistant-hap-filter).
