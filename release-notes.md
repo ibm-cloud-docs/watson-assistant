@@ -21,6 +21,14 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
+## 29 July 2024
+{: #watson-assistant-jul292024}
+{: release-note}
+
+New supported languages for information gathering
+: The watsonx.ai information gathering capability in watsonx Assistant now supports French, Spanish, Brazilian Portuguese, and Japanese. This beta feature might produce varied results. For more information, see [Information Gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering) and [Global settings for actions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings).
+
+
 
 ## 23 July 2024
 {: #watson-assistant-jul232024}
