@@ -17,13 +17,7 @@ subcollection: watson-assistant
 
 You can use watsonx.ai in your assistant to intelligently gather information and address a customer query quickly to avoid repetitive questions. The watsonx.ai uses large language models (LLMs) to recognize the information that is collected from the customer and store each of them in the respective variable for further processing.
 
-
-
-This beta feature is available in English for evaluation and testing purposes only. The watsonx generative AI model is currently hosted only in the Dallas and Frankfurt regions.{: beta}
-
-
-
-
+This beta feature is available in English, French, Spanish, Brazilian Portuguese and Japanese for evaluation and testing purposes only. The watsonx generative AI model that supports English, French, Spanish, Brazilian Portuguese is hosted only in the Dallas and Frankfurt regions. The watsonx generative AI model that supports Japanese is hosted only in the Tokyo regions.{: beta}
 
 By enabling information gathering, your assistant can analyze a customer's free text response to:
 - Gather accurate information
