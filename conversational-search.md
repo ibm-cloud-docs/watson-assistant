@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-07-18"
+lastupdated: "2024-07-30"
 
 keywords: conversational search
 
@@ -33,9 +33,7 @@ Refer to the following topics to configure the conversational search in your ass
 - [Before you begin](#conversational-search-requirements)
 - [Enabling conversational search](#conversational-search-setup) 
 - [Tuning conversational search’s tendency to say “I don’t know"](#behavioral-tuning-conversational-search)
-
-
-
+- [Tuning the generated response length in conversational search](#tuning-the-generated-response-length-in-conversational-search)
 - [Configuring your assistant to use the conversational search]()
 - [Testing conversational search](#conversational-search-test)
 - [Streaming response for conversational search](#conversational-search-streaming-response)
@@ -64,7 +62,7 @@ To enable conversational search, do the following steps:
 1. In the **Tendency to say I don’t know**, select the tendency to use. By default, `Less often` is selected. 
 1. Click **Save**.
 
-
+   ![ConversationalSearch](images/convo-search-citation-title-2.png) 
 
 ## Tuning conversational search’s tendency to say “I don’t know"
 {: #behavioral-tuning-conversational-search}
@@ -91,7 +89,19 @@ When your assistant generates a conversational search response, it evaluates the
 | `Most often`           | Highest | The assistant says “I don’t know” more often than the `More often` option because it compares the response confidence score against the highest threshold. However, the assistant most likely presents accurate or relevant responses to the end user. In addition, the assistant presents fewer generated responses to the users and more often responds with an “I don’t know” message or falls back to the “No matches” action.|
 {: caption= "Table 1. Tuning the Tendency to say I don’t know " caption-side="top"}
 
+## Tuning the generated response length in conversational search
 
+The generated response-length feature in IBM Watson Assistant customizes response lengths to best meet your needs.
+
+You can choose from three response lengths: concise, moderate, and verbose. This feature adjusts the length of the responses that your assistant gives to better fit your needs in conversational search. The default setting is moderate, but you can change it as needed:
+
+| Response length | Description |
+| ------------ | ------------|
+| `Concise` | Responses are shorter and to the point, which is ideal for straightforward queries. |
+| `Moderate` | Responses balance detail and conciseness, making them suitable for most general inquiries. |
+| `Verbose` | Responses provide more detailed and comprehensive information that is suitable for complex queries or when a thorough explanation is needed. |
+
+   The response-length feature affects the average length of responses that watsonx Assistant generates. Although it aims to match the specified length, actual responses vary because of the complexity of user input and the inherent limitations of the large language model (LLM).{: note}
 
 ## Configuring your assistant to use the conversational search
 
@@ -129,18 +139,3 @@ To enable streaming response, do the following:
 1. Click the **Styles** tab.
 1. Set the **Streaming** toggle button to `On`.
 1. Click **Save and exit**.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
