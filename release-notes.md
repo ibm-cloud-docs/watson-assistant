@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-07-29"
+lastupdated: "2024-07-30"
 
 subcollection: watson-assistant
 
@@ -20,6 +20,15 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
+## 30 July 2024
+{: #watson-assistant-jul302024}
+{: release-note}
+
+New Custom service integration for search
+: You can now use Custom service integration to create your own search capability in your assistant and enhance the AI responses through conversational search capabilities. For more information, see [Custom service integration](/docs/watson-assistant?topic=watson-assistant-search-customsearch-add).
+
+New option to define the response length in conversational search
+: You can now define the length of generated responses. For more information, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search).
 
 ## 29 July 2024
 {: #watson-assistant-jul292024}
@@ -27,8 +36,6 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 New supported languages for information gathering
 : The watsonx.ai information gathering capability in watsonx Assistant now supports French, Spanish, Brazilian Portuguese, and Japanese. For more information, see [Information Gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering) and [Global settings for actions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings).
-
-
 
 ## 23 July 2024
 {: #watson-assistant-jul232024}
@@ -46,8 +53,6 @@ New Hate, Abuse and Profanity Filter for {{site.data.keyword.conversationshort}}
 
 Server-Sent Events for custom extensions
 : watsonxAssistant now supports defining a JSON Path to stream text from Server-Sent Events (SSE) in custom extensions. This feature ensures that text is streamed and stored correctly, with built-in checks to handle potential errors. For more information, see [Streaming from an extension](/docs/watson-assistant?topic=watson-assistant-stream-from-extension).
-
-
 
 ## 03 July 2024
 {: #watson-assistant-jul032024}
