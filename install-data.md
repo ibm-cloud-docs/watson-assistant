@@ -24,9 +24,7 @@ The installation process differs depending on the version you are installing. Th
 
 | Version |  Cluster | Installation instructions |
 | --- | --- | --- |
-
-
-
+| 5.0.1 | {{site.data.keyword.icp4dfull_notm}} 5.0.x | [Installing 5.0.1](https://www.ibm.com/docs/SSQNUZ_5.0.x/svc-assistant/assistant-svc-install.html){: external} |
 | 5.0.0 | {{site.data.keyword.icp4dfull_notm}} 5.0.x | [Installing 5.0.0](https://www.ibm.com/docs/SSQNUZ_5.0.x/svc-assistant/assistant-svc-install.html){: external} |
 | 4.8.5 | {{site.data.keyword.icp4dfull_notm}} 4.8.x | [Installing 4.8.5](https://www.ibm.com/docs/SSQNUZ_4.8.x/svc-assistant/assistant-svc-install.html){: external} |
 | 4.8.4 | {{site.data.keyword.icp4dfull_notm}} 4.8.x | [Installing 4.8.4](https://www.ibm.com/docs/SSQNUZ_4.8.x/svc-assistant/assistant-svc-install.html){: external} |
