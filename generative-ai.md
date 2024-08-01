@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-07-31"
 
 subcollection: watson-assistant
 
@@ -19,7 +19,7 @@ By default, assistants in all regions except `Frankfurt` use the model from the 
 
 You can configure and manage the following two capabilities of generative AI in your assistants:
 
-- [Information gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering) [Beta]{: tag-cyan}
+- [Information gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering)
 - [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search)
 
 

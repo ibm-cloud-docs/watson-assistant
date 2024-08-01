@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-07-29"
+lastupdated: "2024-07-30"
 
 subcollection: watson-assistant
 
@@ -29,7 +29,9 @@ If you want to evaluate changes that are introduced in a web chat release before
 {: #8.2.3}
 *Release date: 29 July 2024*
 
-- **Update markdown behavior:** Fixed a problem with numbers in ordered lists not showing the right numbers.
+- **Updated markdown behavior:** Fixed a problem with numbers in ordered lists not showing the right numbers.
+
+- **Improved message responsiveness:** Removed or reduced the delay added to longer responses.
 
 - Bug fixes.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-07-30"
+lastupdated: "2024-07-31"
 
 subcollection: watson-assistant
 
@@ -19,6 +19,14 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
+
+## 31 July 2024
+{: #watson-assistant-jul312024}
+{: release-note}
+
+Information gathering is now generally available
+: The watsonx.ai information gathering capability in your watsonx Assistant is now generally available.
+For more information, see [Information gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering).
 
 ## 30 July 2024
 {: #watson-assistant-jul302024}
