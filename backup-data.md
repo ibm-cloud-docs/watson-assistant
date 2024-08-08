@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-08-01"
+lastupdated: "2024-08-08"
 
 subcollection: watson-assistant
 
@@ -643,6 +643,8 @@ su_password: password
 
 To add the values that are required but currently missing from the file, complete the following steps:
 
+
+
 1. For version 5.0.1 or later:
    To get information about the `host`, you must get the Store datastore connection strings secret.
     
@@ -660,6 +662,9 @@ To add the values that are required but currently missing from the file, complet
     ```
     {: codeblock}
 
+  
+
+  
 
     The `get` command returns information about the Redis and {{site.data.keyword.postgresql}} databases. Look for the segment of JSON code for the {{site.data.keyword.postgresql}} database, named `pgservice`. It looks like this:
 
