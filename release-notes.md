@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-08-07"
+lastupdated: "2024-08-09"
 
 subcollection: watson-assistant
 
@@ -19,8 +19,12 @@ Release notes describe the new features, changes, and bug fixes in each release 
 
 
 
+## 9 August 2024
+{: #watson-assistant-mar012024}
+{: release-note}
 
-
+Replace OpenAPI document for custom extension
+:   You can now replace the OpenAPI document of a custom extension to change the extension behavior and authentication method. For more information see, the [Building the custom extension](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#build-custom-extension-building) and [Replacing OpenAPI document](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#replace-openapi-doc) topics.
 
 ## 31 July 2024
 {: #watson-assistant-jul312024}

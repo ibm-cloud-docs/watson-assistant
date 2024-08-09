@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-18"
+lastupdated: "2024-08-09"
 
 subcollection: watson-assistant
 
@@ -98,7 +98,7 @@ To build a custom extension based on the API definition, follow these steps:
 
     After you import the file successfully, click **Next**.
 
-1. In the **Manage extension** step, you can review the imported OpenAPI document if required. 
+1. In the **Manage extension** step, you can review and replace the imported OpenAPI document if required. For more information about replacing the OpenAPI document, see [Replacing the OpenAPI document](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
 
 1. In the **Authentication** tab, you see information about the authentication methods that are defined in the OpenAPI document. *Table. Fields in Authentication tab* gives details about the fields in the Authentication tab:
 
@@ -130,4 +130,21 @@ To build a custom extension based on the API definition, follow these steps:
 
 The new extension is now available as a tile in the **Extensions** section of the integrations catalog, and you can [add it to your assistant](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
 
+### Replacing OpenAPI document
+{: #replace-openapi-doc}
 
+To replace an existing OpenAPI document, do the following steps:
+
+1. Go to the **Integrations** (![Integrations icon](images/integrations.svg)) > **Extensions**.
+
+1. Click the **Open** button in the custom extension card for which you want to change the OpenAPI documentation.
+
+1. On the **Open Custom extension** dialog, click **Confirm** to go to the **Manage extension** tab.
+
+1. Click the **Replace** button to select the new OpenAPI document from your system and click **Open**.
+
+1. You can review the operators in the **Review operations** section in the **Manage extension** tab.
+
+1. Review and update the Authentication information in the **Authentication** tab after replacing the OpenAPI document.
+
+1. Go to the **Actions** page and repair any broken action skill because of the replacement of the OpenAPI document.
