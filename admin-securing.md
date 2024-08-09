@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-08-05"
 
 subcollection: watson-assistant
 
@@ -16,8 +16,8 @@ subcollection: watson-assistant
 IBM is committed to providing our clients and partners with innovative data privacy, security, and governance solutions.
 {: shortdesc}
 
-**Notice**
-Clients are responsible for ensuring their own compliance with various laws and regulations, including the European Union General Data Protection Regulation (GDPR). 
+**Notice**  
+Clients are responsible for ensuring their own compliance with various laws and regulations, including the European Union General Data Protection Regulation (GDPR).
 
 Clients are solely responsible for obtaining advice from competent legal counsel to identify and interpret relevant laws and regulations that can affect the clients’ business and any actions the clients need to take to comply with such laws and regulations.
 

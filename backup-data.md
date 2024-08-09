@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-08-01"
+lastupdated: "2024-08-09"
 
 subcollection: watson-assistant
 
@@ -32,7 +32,7 @@ The following table lists the upgrade paths that are supported by the scripts.
 If you are upgrading from 4.5.x to 4.8.x, a simpler way to complete the upgrade is described in the following topics:
 
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 5.0.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/5.0.x?topic=assistant-upgrading){: external}
-- [Upgrading {{site.data.keyword.conversationshort}} to Version 4.8.x]https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=assistant-upgrading){: external}
+- [Upgrading {{site.data.keyword.conversationshort}} to Version 4.8.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=assistant-upgrading){: external}
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 4.7.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.7.x?topic=assistant-upgrading){: external}
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 4.6.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.6.x?topic=assistant-upgrading){: external}
 
@@ -643,6 +643,8 @@ su_password: password
 
 To add the values that are required but currently missing from the file, complete the following steps:
 
+
+
 1. For version 5.0.1 or later:
    To get information about the `host`, you must get the Store datastore connection strings secret.
     
@@ -660,6 +662,9 @@ To add the values that are required but currently missing from the file, complet
     ```
     {: codeblock}
 
+  
+
+  
 
     The `get` command returns information about the Redis and {{site.data.keyword.postgresql}} databases. Look for the segment of JSON code for the {{site.data.keyword.postgresql}} database, named `pgservice`. It looks like this:
 
