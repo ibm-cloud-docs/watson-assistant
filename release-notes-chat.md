@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-08-09"
+lastupdated: "2024-08-12"
 
 subcollection: watson-assistant
 
@@ -23,7 +23,18 @@ For information about new features and improvements to the core {{site.data.keyw
 ## Controlling the web chat version
 {: #release-notes-chat-version}
 
-If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you
+can set a version of your web chat. For more information, see [Controlling the web chat
+version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 8.2.5
+{: #8.2.5}
+*Release date: 12 August 2024*
+
+- **Updated behavior of a search result:** You can now click the web chat card to see more information about the search
+  result if the result is not contained in a URL or PDF file.
+
+- Updated styling for errors received by the web chat.
 
 ## 8.2.4
 {: #8.2.4}
