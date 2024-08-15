@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-06-07"
+lastupdated: "2024-08-15"
 
 subcollection: watson-assistant
 
@@ -14,8 +14,6 @@ subcollection: watson-assistant
 {: #deploy-phone}
 
 [IBM Cloud]{: tag-ibm-cloud} [Plus]{: tag-green}
-
-This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 
 You can enable the streaming feature in conversational search for the phone integrations in your assistant. This helps your assistant to stream the responses while generating them. For more information see, [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search).{: note}
