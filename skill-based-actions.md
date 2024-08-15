@@ -23,12 +23,16 @@ In watsonx Assistant, you can use your own application as a skill-based action p
 
 To create your own skill-based actions you must first complete the following requirements:
 
-1. Implement an API that complies with the API specifications for skill-based action providers.
-1. Register a skill-based action provider in watsonx Assistant.
+1. [Implement an API that complies with the API specifications for skill-based action providers](#implementing-api).
+1. [Register a skill-based action provider in watsonx Assistant](#registering-provider).
+
+### Implementing the API for the skill-based action provider
+{: #implementing-api}
 
 For more information about the API specifications for skill providers, see [Conversational Skills: Masterdoc for API Endpoints to Implement by the Pro-Code Conversational Skill Client](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/conversational-skills/procode-endpoints.md).
 
 ### Registering a skill-based action provider
+{: #registering-provider}
 
 After you create the endpoints, you must register your skill-based action provider in watsonx Assistant. For more information about how to accomplish that, see [Register a Conversational Skill Provider](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/conversational-skills#register-a-conversational-skill-provider).
 
