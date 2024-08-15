@@ -54,7 +54,7 @@ To create a skill based action from the UI, your skill provider's API must imple
 {: important}
 
 Actions from skills don't support getting input values from other actions or mapping output values to other actions.
-{: important}
+{: note}
 
 To create a skill-based action, complete the following steps:
 
@@ -76,7 +76,7 @@ To create a skill-based action, complete the following steps:
 
     - **Action response mode**
 
-        Defines the response mode for your assistant such as **Clarifying or **Confident**.
+        Defines the response mode for your assistant such as **Clarifying** or **Confident**.
 
     - **Action notes** 
 
@@ -92,6 +92,6 @@ Your assistant can now use the newly created action.
 
 ## Using skill-based actions
 
-To test and use your skill-based actions, you can start a new conversation with your assistant and follow the conditions that you defined when you created the skill. Once you meet the conditions, enter the phrase that triggers the skill.
+To test and use your skill-based actions, you can start a new conversation with your assistant and follow the conditions that you defined when you created the action. Once you meet the conditions, enter the phrase that triggers the action.
 
 The assistant then attempts to turn that action into a conversation, where you can check the status of the task and interact with the assistant to complete the action successfully.
