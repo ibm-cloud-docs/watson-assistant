@@ -64,6 +64,7 @@ toc:
              topics:
              - topic: manage-actions.md
                navtitle: Overview
+             - skill-based-actions.md
              - duplicate-action.md
              - copy-action.md
              - upload-download-actions.md

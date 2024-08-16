@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-08-15"
 
 keywords: phone, phone interactions, custom language model, custom grammar, advanced settings
 
@@ -15,8 +15,6 @@ subcollection: watson-assistant
 
 # Handling phone interactions
 {: #phone-actions}
-
-This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 If your assistant uses the phone integration, you can use various response types to customize the behavior of the integration or manage the flow of conversations that your assistant has with customers over the telephone.
 {: shortdesc}
