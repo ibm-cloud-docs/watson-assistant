@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-08-09"
+lastupdated: "2024-08-20"
 
 subcollection: watson-assistant
 
@@ -16,6 +16,13 @@ content-type: release-note
 {: #watson-assistant-release-notes}
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 20 August 2024
+{: #watson-assistant-aug202024}
+{: release-note}
+
+Intelligent Information gathering
+:   This release brings an improvement of the accuracy of filling free-text step variables for information gathering.
 
 
 
@@ -58,8 +65,8 @@ New supported languages for information gathering
 New "End the action" step behavior
 : Using "End the action" in the last step no longer ends the action immediately. For more information see, [Choosing what to do at the end of a step](/docs/watson-assistant?topic=watson-assistant-step-what-next).
 
-New Hate, Abuse and Profanity Filter for {{site.data.keyword.conversationshort}}
-: The new Hate, Abuse and Profanity (HAP) filter in {{site.data.keyword.conversationshort}} enhances user safety by identifying and addressing hate speech, abuse and profanity. This feature helps maintain a positive and inclusive online environment for your customers. For more information, see [HAP filter](/docs/watson-assistant?topic=watson-assistant-hap-filter).
+New Hate, Abuse, and Profanity Filter for {{site.data.keyword.conversationshort}}
+: The new Hate, Abuse, and Profanity (HAP) filter in {{site.data.keyword.conversationshort}} enhances user safety by identifying and addressing hate speech, abuse, and profanity. This feature helps maintain a positive and inclusive online environment for your customers. For more information, see [HAP filter](/docs/watson-assistant?topic=watson-assistant-hap-filter).
 
 ## 18 July 2024
 {: #watson-assistant-jul182024}
