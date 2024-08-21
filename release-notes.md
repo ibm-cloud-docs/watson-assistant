@@ -26,6 +26,15 @@ Release notes describe the new features, changes, and bug fixes in each release 
 Intelligent Information gathering
 :   This release brings an improvement of the accuracy of filling free-text step variables for information gathering.
 
+
+
+## 20 August 2024
+{: #watson-assistant-aug202024}
+{: release-note}
+
+Intelligent Information gathering
+:   This release brings an improvement of the accuracy of filling free-text step variables for information gathering.
+
 ## 9 August 2024
 {: #watson-assistant-mar012024}
 {: release-note}

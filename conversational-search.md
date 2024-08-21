@@ -32,8 +32,9 @@ Refer to the following topics to configure the conversational search in your ass
 
 - [Before you begin](#conversational-search-requirements)
 - [Enabling conversational search](#conversational-search-setup) 
-- [Single-turn conversational search](#single-turn-conversational-search)
-- [Multi-turn conversational search](#multi-turn-conversational-search)
+
+
+
 - [Tuning conversational search’s tendency to say “I don’t know"](#behavioral-tuning-conversational-search)
 - [Tuning the generated response length in conversational search](#tuning-the-generated-response-length-in-conversational-search)
 - [Configuring your assistant to use the conversational search]()
