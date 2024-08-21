@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-07-30"
+lastupdated: "2024-08-21"
 
 keywords: conversational search
 
@@ -32,6 +32,8 @@ Refer to the following topics to configure the conversational search in your ass
 
 - [Before you begin](#conversational-search-requirements)
 - [Enabling conversational search](#conversational-search-setup) 
+- [Single-turn conversational search](#single-turn-conversational-search)
+- [Multi-turn conversational search](#multi-turn-conversational-search)
 - [Tuning conversational search’s tendency to say “I don’t know"](#behavioral-tuning-conversational-search)
 - [Tuning the generated response length in conversational search](#tuning-the-generated-response-length-in-conversational-search)
 - [Configuring your assistant to use the conversational search]()
@@ -52,6 +54,9 @@ To enable conversational search, do the following steps:
 
 1. Go to **Search Integration** window.
 1. Set the **Conversational search** toggle to `On`. 
+
+
+
 1. In the **Define the text for the citation title**, type `How do we know?`. 
 
    The **Define the text for the citation title** is enabled only when **Conversational search** toggle is switched to `On`.{: tip}
