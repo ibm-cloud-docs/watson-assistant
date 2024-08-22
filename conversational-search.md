@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-08-21"
+lastupdated: "2024-08-22"
 
 keywords: conversational search
 
@@ -68,7 +68,7 @@ To enable conversational search, do the following steps:
 1. In the **Tendency to say I don’t know**, select the tendency to use. By default, `Less often` is selected. 
 1. Click **Save**.
 
-   ![ConversationalSearch](images/convo-search-citation-title-2.png) 
+
 
 ## Tuning conversational search’s tendency to say “I don’t know"
 {: #behavioral-tuning-conversational-search}
