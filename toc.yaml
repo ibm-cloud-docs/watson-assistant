@@ -206,6 +206,7 @@ toc:
           - information-gathering.md 
           - hap-filter.md
           - conversational-search.md 
+          - conversational-search-analytics.md
       - assistant-add.md
       - assistant-rename-delete.md
       - topicgroup:
