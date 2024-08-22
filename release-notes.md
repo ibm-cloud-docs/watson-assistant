@@ -17,19 +17,8 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
-## 23 August 2024
-{: #watson-assistant-aug232024}
-{: release-note}
 
-Source chunk visibility in citations
-:   You can now see full source chunk in citations even when PDF viewer and source link to a website is not available.
 
-## 20 August 2024
-{: #watson-assistant-aug202024}
-{: release-note}
-
-Intelligent Information gathering
-:   This release brings an improvement of the accuracy of filling free-text step variables for information gathering.
 
 
 
