@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-08-20"
+lastupdated: "2024-08-22"
 
 subcollection: watson-assistant
 
@@ -17,14 +17,16 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+
+
+
+
 ## 20 August 2024
 {: #watson-assistant-aug202024}
 {: release-note}
 
 Intelligent Information gathering
 :   This release brings an improvement of the accuracy of filling free-text step variables for information gathering.
-
-
 
 ## 9 August 2024
 {: #watson-assistant-mar012024}

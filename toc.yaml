@@ -206,6 +206,7 @@ toc:
           - information-gathering.md 
           - hap-filter.md
           - conversational-search.md 
+          - conversational-search-analytics.md
       - assistant-add.md
       - assistant-rename-delete.md
       - topicgroup:
@@ -216,7 +217,7 @@ toc:
           - access-control.md
           - admin-managing-plan.md
           - activity-log.md
-          - admin-auditing.md
+          - admin-auditing.md # 
           - admin-securing.md
           - admin-backup-restore.md
           - admin-recovery.md
