@@ -328,7 +328,8 @@ toc:
 #      - beta-features.md
       - response-types-reference.md
       - preview-runtime-errors.md
-      - global-variables.md # 
+      - global-variables.md 
+      - ssl-certificates-configuration-reference.md 
       - integration-variables.md
       - expression-methods-actions.md
       - dialog-methods.md
