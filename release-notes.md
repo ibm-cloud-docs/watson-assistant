@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-08-22"
+lastupdated: "2024-08-27"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,16 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+
+## 27 August 2024
+{: #watson-assistant-aug272024}
+{: release-note}
+
+Security certificates configuration
+: You can now secure the search integrations, custom extensions, conversational skills, and webhooks by configuring TLS certificates in your assistant. For more information, see [Configuring Security certificates](/docs/watson-assistant?topic=watson-assistant-admin-securing#ssl-certificates-config).
+
+Source chunk visibility in citations
+:   You can now see full source chunk in citations even when PDF viewer and source link to a website is not available.
 
 
 

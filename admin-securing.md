@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-08-05"
+lastupdated: "2024-08-27"
 
 subcollection: watson-assistant
 
@@ -28,7 +28,7 @@ If you need to request GDPR support for {{site.data.keyword.cloud}} {{site.data.
 - In the European Union, see [Requesting support for IBM Cloud Watson resources created in the European Union](/docs/watson?topic=watson-gdpr-sar#request-EU){: external}.
 - Outside the European Union, see [Requesting support for resources outside the European Union](/docs/watson?topic=watson-gdpr-sar#request-non-EU){: external}.
 
-
+You can keep user assistant data secure when interacting with server-run code by configuring Secure Sockets Layer or Transport Layer Security (SSL/TLS) certificates in your assistant. For more information, see [Configuring Security certificates](#ssl-certificates-config).
 
 ## European Union General Data Protection Regulation (GDPR)
 {: #securing-gdpr}
@@ -44,6 +44,107 @@ US Health Insurance Portability and Accountability Act (HIPAA) support is availa
 
 Do not add personal health information (PHI) to the training data (entities and intents, including user examples) that you create. In particular, be sure to remove any PHI from files that contain real user utterances that you upload to mine for intent or intent user example recommendations.
 
+## Configuring Security certificates 
+{: #ssl-certificates-config}
+
+You can configure Security certificates in your assistant to ensure secure communication, data protection, and privacy across various applications. By establishing trust and verifying the identity of communicating parties, security certificates help to maintain the confidentiality, integrity, and availability of digital information. You can upload and download certificates, replace old certificates, and delete the certificates in your assistant using the `Security certificates (SSL/TLS)` section. 
+
+The assistant supports TLS 1.2 and TLS 1.3, where TLS 1.3 is the default version. If the service does not support TLS 1.3 or 1.2 versions, ask the administrator of that service to provide support for one of these TLS versions.
+
+When your assistant connects to a user-specified URL through custom extensions, conversational skills, or webhooks, it requires verifying the identity of the services to prevent unauthorized access and eliminate security risks. If the user-specified URL uses the Hypertext Transfer Protocol Secure (HTTPS) protocol, your assistant verifies the identity of the secure service in three ways. {: shortdesc}
+
+` Table 1. Possibilities of identifying secure service` explains the three ways in which the assistant can verify the identity of the secure service when directed to an HTTPS service. 
+
+
+
+
+|Description | Requirements | Certificate verifier | Security level | Notes |
+| ---------------------------- | -------------------------| ----------------- | -------------------- |--------------------|
+| Your assistant has the SSL certificate for the service that is calling. | You provide the SSL certificate for the service to the assistant. | The assistant verifies the identity directly. | Most secure  | This is secure even if the SSL certificate is self-signed because signature verification is not needed when the assistant already has the certificate. |
+| Your assistant has the SSL certificate for a certificate authority that has signed the certificate of the service it is calling. | You provide the SSL certificate for the certifying authority to the assistant, and the SSL certificate for the service must be signed by that certifying authority. | The assistant verifies the authenticity of a service through the certificate authority.  It knows to trust the certificate authority because you provided the certificate for it. | Extremely secure when the certificate authority is extremely secure | This approach works with private certificate authorities such as the ones that enterprises establish for internal use.|
+| The service has an SSL certificate that is signed by a public trusted certificate authority.  | You do not need to provide any SSL certificate to the assistant, but the SSL certificate for the service must be signed by a public trusted authority. | The assistant verifies the authenticity of a service using the public trusted certificate authority. | Extremely secure  | Publicly trusted certificate authorities diligently verify the ownership of the private key before signing any certificate.|
+{: caption="Table 1. Possibilities of identifying secure service" caption-side="top"}
+
+Some example Security certificates configuration options are discussed with which you can achieve an optimal balance of security and convenience for an assistant with few connection details. For more information, see [Methods for choosing the Security certificates option](/docs/watson-assistant?topic=watson-assistant-ssl-certificates-configuration-reference).
+
+
+` Table 2. Security certificates configuration option` provides information about the possible Security certificates configuration option in your assistant and its explanation.
+
+
+
+| Security certificates configuration option | Description | Connectivity | Usage | Uploading option support |
+| ------------------------------------- | ----------- | ------------ | ----- | ------------------------ |
+| `Trust uploaded certificates and any certificates signed by a trusted authority` | Your assistant can connect to any service: \n - with a certificate signed by a trusted authority.\n - with the uploaded certificate (either the certificate for that service or the certificate for its certifying authority).\n  It cannot connect to any other secure service. | - Convenient to use. \n - You can verify the identity of all services that your assistant connects to.  No additional effort is needed for services that have a certificate signed by a publicly trusted authority.  \n - When not signed by a publicly trusted authority, you must upload a certificate file for verifying the identity of the services your assistant connects to. | Commonly used by all assistants. | Yes |
+| `Trust uploaded certificates` | Your assistant can connect to any service with an uploaded certificate (either the certificate for that service or the certificate for its certifying authority). \n It cannot connect to any other secure service. | - Less convenient to use.\n - Your assistant can connect only to secure services with uploaded certificates or their signing authority's certificate. | Less usage | Yes |
+| `Trust all certificates, operation insecure (Not recommended)` | Your assistant can connect to any service and is not recommended because of lack of protection from imposter services.  | Reasonable option \n - for proof-of-concepts or demo assistants where your assistants don’t have any independent users or sensitive data. \n - to keep the assistants operational even when they are connected to services that are not signed by publicly trusted authorities. | - a default option for both old and new assistants.  | No |
+{: caption="Table 2. Securitycertificates configuration option" caption-side="top"}
+
+  
+![SSL certificates configuration option](images/ssl-main-options.png) 
+
+
+### Uploading Security certificates
+{:  #ssl-certificates-upload}
+
+Before you begin
+- Ensure that your files are in the *PEM* format with a maximum size of 500 KB.
+- If you have multiple files, merge them to a single file.
+
+To upload self-signed certificates or certificates from a trusted authority in your assistant:
+
+1.	Go to **Home** > **Assistant settings**. 
+1.	In the **Security certificates (SSL/TLS)** section, select `Trust uploaded certificates and any certificates signed by a trusted authority` or `Trust uploaded certificates` per your requirement.
+1.	Click `Upload`.
+1.	In the `Upload certificate` dialog, add your certificates.
+    You can drag or select the certificate file from your folder.
+1.	Click `Upload`.
+    You can see the `Secure socket layer connected` message.
+
+    ![SSL upload option](images/ssl-upload-option.png) 
+
+### Replacing the existing Security certificates
+{:  #ssl-certificates-replace}
+
+To replace the existing certificates with the new ones in your assistant:
+
+1.	Go to  **Home** > **Assistant settings**.
+1.	In the **Security certificates (SSL/TLS)** section, click `Upload`.
+1.	In the `Upload certificate` dialog, add your new certificates.
+    You can drag or upload the certificate file.
+
+    This option deletes or overwrites the existing certificates.
+    {: note}
+
+1.	Click `Upload`.
+
+### Downloading the Security certificates
+{:  #ssl-certificates-download}
+
+To view the existing certificates in your assistant:
+1.	Go to **Home** > **Assistant settings**. 
+1.	In the **Security certificates (SSL/TLS)** section, click `Download`.
+1.	You can now open the downloaded file and see the existing certificates.
+
+    ![SSL download option](images/ssl-download-option.png) 
+
+### Modifying the existing Security certificates
+{:  #ssl-certificates-modify}
+
+To modify the existing certificates in your assistant:
+1.	Download the Security certificates as described in [Downloading the Security certificates](#ssl-certificates-download).
+1.	Add or remove certificates from the existing file.
+1.	Replace the existing *PEM* file with the modified file as described in [Replacing the existing Security certificates](#ssl-certificates-replace).
+
+###  Deleting the existing Security certificates 
+{:  #ssl-certificates-delete}
+
+To delete the existing certificates in your assistant:
+1.	Go to  **Home** > **Assistant settings**.
+1.	In the **Security certificates (SSL/TLS)** section, click `Delete`.
+1.	In the **Delete certificate** dialog, select `I acknowledge that I read and understand this warning`.
+1.	Click `Yes`.
+ 
+The selected option automatically points to `Trust all certificates, operation insecure (Not recommended)`.
 
 
 ## Opting out of log data use
