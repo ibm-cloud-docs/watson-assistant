@@ -17,12 +17,7 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
-## 28 August 2024
-{: #watson-assistant-aug282024}
-{: release-note}
 
-Contextual awareness in conversational search 
-:   You can now choose the type of conversational search based on the context using contextual awareness. For more information, see [Contextual awareness](docs/watson-assistant?topic=watson-assistant-conversational-search#single-turn-conversational-search).
 
 
 ## 27 August 2024
