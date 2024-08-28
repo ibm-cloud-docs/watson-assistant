@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-08-28"
 
 subcollection: watson-assistant
 
@@ -155,7 +155,7 @@ To upload documents to a new index, use the following procedure:
 
 1. Click **Upload** button. In the **Upload documents** section, you can drag and drop your files or do a single click to upload documents directly to your assistant. 
 
-   You can upload up to 20 documents at a time. Each document file must not exceed 500 KB. The total size of all documents must not exceed 100 MB.{: important}
+   You can upload up to 20 documents at a time. Each document file must not exceed 500 KB. The total size of all documents must not exceed 50 MB.{: important}
   
    ![Elasticsearch upload document](images/elastic-search-upload-doc.png)
 
@@ -193,5 +193,3 @@ Search results are pulled from your knowledge base when conversational search is
 A text-based reply from the best results in your knowledge base displays when conversational search is `on`. 
 
    ![ConversationalSearchToggleOn](images/convo-search-test-toggle-on.png)
-
-
