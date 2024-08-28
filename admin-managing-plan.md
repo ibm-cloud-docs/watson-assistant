@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-10-31"
+  years: 2021, 2024
+lastupdated: "2024-08-28"
 
 keywords: billing, data centers, MAU, monthly active users, service plans
 
@@ -58,7 +58,13 @@ The plan type of the service instance you are currently using is displayed in th
 
 Unlike API-based plans, which measure usage by the number of API calls made during a month, the Plus and Enterprise plans measure usage by the number of monthly active users.
 
+
+
 A *monthly active user (MAU)* is any unique user who has at least one meaningful interaction with your assistant or custom application over the calendar billing month. A meaningful interaction is an exchange in which a user sends a request to your service and your service responds. Welcome messages that are displayed at the start of a conversation are not charged.
+
+
+
+
 
 A unique user is recognized by the user ID that is associated with the person that interacts with your assistant. The web chat and other built-in integrations set this property for you automatically.
 
@@ -111,10 +117,16 @@ The built-in integrations derive the user ID in the following ways:
 
 Billing is managed per monthly active user per service instance. If a single user interacts with assistants that are hosted by different service instances that belong to the same plan, each interaction is treated as a separate use. You are billed for the user's interaction with each service instance separately.
 
+
+
+ 
 ### Test activity charges
 {: #admin-managing-plan-billing-testing}
 
 Test messages that you send from *Preview* are charged. For the preview, a random `user_id` is generated and stored in a cookie. The multiple interactions that a single tester has with the assistant are recognized as coming from a single user and are charged. If you are doing your own test, running a scripted regression test for example, use a single `user_id` for all the calls within your regression test. Other uses are flagged as abuse.
+
+
+
 
 ### Handling anonymous users
 {: #admin-managing-plan-billing-anonymous}
@@ -165,4 +177,3 @@ The page header shows the plan that you are using today. To upgrade your plan, c
     - You cannot change from a Trial plan to a Lite plan.
 
 For answers to common questions about subscriptions, see the [How you're charged](/docs/billing-usage?topic=billing-usage-charges){: external}.
-

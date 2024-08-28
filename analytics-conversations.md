@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-07-08"
+lastupdated: "2024-08-27"
 
 subcollection: watson-assistant
 
@@ -16,16 +16,27 @@ subcollection: watson-assistant
 The **Analyze** page of {{site.data.keyword.conversationshort}} provides a history of conversations between users and a deployed assistant. You can use this history to improve how your assistants understand and respond to user requests.
 {: shortdesc}
 
+
 In the **Analyze** page, you can see the summary of the conversations at the topic level in **Topic view** tab. 
 
 ![Conversations page](images/analytics-conversations-dialog.svg)
 
 
+
+
+
+
 In the **Message log** tab, you see the complete history of conversation between user and the assistant by turns. 
+
+
 
 If you have activated dialog, you see the Entities column in the **Message log** tab.{: note}
 
  ![Conversation detail Message log](images/analytics-conversation-msg-logs.svg)
+
+ 
+
+
 
 
 
@@ -43,6 +54,9 @@ To get started, choose the [environment](/docs/watson-assistant?topic=watson-ass
 You can locate specific conversations by filtering the list of conversations. This lets you explore specific areas where your assistant might need improvement or updates to properly handle what your customers are asking about.
 
 
+
+
+
 You can filter the conversation by:
 
 - **Topics**: Select specific topics. You can choose one or more topics to review.
@@ -56,7 +70,6 @@ You can filter the conversation by:
 - **Search**: Choose between requests that initiated a search or requests that produced no search results.
   You can search and analyze the conversational search requests from the customer in the **Analyze** page. {: note}
 
-
 The Topics, Entities, and Keyword filters always appear at the top of the page. To show the Recognition and Search filters, click the **Additional filters** icon.
 
 ![Conversation filters](images/analytics-conversations-filters-new.png)
@@ -64,8 +77,16 @@ The Topics, Entities, and Keyword filters always appear at the top of the page. 
 If you search for a specific session ID, enclose your search in quotation marks to ensure you receive an exact match on the full ID with its numbers and hyphen characters, for example: `"9015ab9a-2e13-4627-ae33-4179b1125cb5"`.
 {: note}
 
+
+
+
+
+
 ## Exploring conversations in detail
 {: #analytics-conversations-exploring}
+
+
+
 
 
 To explore individual conversations in detail, you can go to one of the following tabs in the **Analyze** page based on the level of details you want to analyze:
