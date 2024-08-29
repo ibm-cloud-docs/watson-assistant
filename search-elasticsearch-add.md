@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-08-28"
+lastupdated: "2024-08-29"
 
 subcollection: watson-assistant
 
@@ -117,6 +117,9 @@ To upload documents to a new index, use the following procedure:
 
     When you configure the query body in the **Advanced Elasticsearch Settings** to search the nested documents, you must ensure that the **Title**, **Body**, and **URL** are from the fields of the inner documents in your Elasticsearch index. For more information about using nested queries, see [Elasticsearch nested query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-nested-query.html#query-dsl-nested-query).
 
+
+
+
 1. Expand the **Advanced Elasticsearch settings** section to see the following text boxes:
     
     - **Configure the filter array for Elasticsearch**
@@ -132,6 +135,9 @@ To upload documents to a new index, use the following procedure:
         For more information about the Elasticsearch `_search` API request body, see [Elasticsearch search API request body]( https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html#search-search-api-request-body){: external}.
 
         You cannot customize the query body in the assistant with an existing Elasticsearch configuration.{: important}   
+
+
+
 
 
 1. Use the **Message**, **No results found** and **Connectivity issue** tabs to customize different messages to share with users based on the successfulness of the search.
@@ -155,7 +161,13 @@ To upload documents to a new index, use the following procedure:
 
 1. Click **Upload** button. In the **Upload documents** section, you can drag and drop your files or do a single click to upload documents directly to your assistant. 
 
-   You can upload up to 20 documents at a time. Each document file must not exceed 500 KB. The total size of all documents must not exceed 50 MB.{: important}
+
+
+    You can upload up to 20 documents at a time. Each document file must not exceed 500 KB. The total size of all documents must not exceed 50 MB.{: important}
+
+
+
+
   
    ![Elasticsearch upload document](images/elastic-search-upload-doc.png)
 
@@ -167,7 +179,13 @@ To upload documents to a new index, use the following procedure:
 
    ![Elasticsearch upload error](images/elastic-search-upload-doc-error.png)
 
+
+
 1. If you want to change the Elasticsearch instance credentials, click the **Instance** tab, edit the credentials, and then click **Save**. Skip this step if you do not want to change Elasticsearch instance credentials.
+
+
+
+
 
 1. Click **Save** and then **Close** to end the Elasticsearch set up.
 
@@ -175,8 +193,6 @@ To upload documents to a new index, use the following procedure:
 {: #search-assistant-configure}
 
 After you configure the Elasticsearch search integration, you must configure your assistant to use Elasticsearch when the customer response matches no action. For more information about updating **No matches** to use search, see [Use search when no action matches](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-no-action-matches).
-
-
 
 
 ## Testing Elasticsearch
