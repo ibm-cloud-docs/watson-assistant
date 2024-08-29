@@ -39,8 +39,20 @@ You can enable conversational search to give accurate responses to the customer 
 To enable conversational search, do the following steps:
 
 1. Go to **Search Integration** window.
-1. Set the **Conversational search** toggle to `On`. 
+1. Set the **Conversational search** toggle to `On`.
+1. Choose the type of conversational search based on the context using contextual awareness.
 
+   -  Single-turn conversational search
+   {: #single-turn-conversational-search}
+
+   For contexts that require only current input to retrieve search results and to generate answers, choose **Single-turn**.
+
+   -  Conversational search using entire conversation
+   {: #entire-conversational-search}
+
+   For context-dependent questions, which might take previous inputs into account, choose **Entire conversation**.
+
+   Entire conversation uses the whole session to continue the conversation. It might bring back subjects that are no longer in the scope of the conversation.{: note}
 
 1. In the **Define the text for the citation title**, type `How do we know?`. 
 
@@ -52,7 +64,7 @@ To enable conversational search, do the following steps:
 1. In the **Tendency to say I don’t know**, select the tendency to use. By default, `Less often` is selected. 
 1. Click **Save**.
 
-
+   ![ConversationalSearch](images/conversational-search-enable.png) 
 
 ## Tuning conversational search’s tendency to say “I don’t know"
 {: #behavioral-tuning-conversational-search}
