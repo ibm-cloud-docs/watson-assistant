@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-08-28"
+lastupdated: "2024-08-29"
 
 subcollection: watson-assistant
 
@@ -17,7 +17,12 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 28 August 2024
+{: #watson-assistant-aug282024}
+{: release-note}
 
+Contextual awareness in conversational search 
+:   You can now choose the type of conversational search based on the context using contextual awareness. For more information, see [Contextual awareness](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
 
 
 ## 27 August 2024
@@ -29,7 +34,6 @@ Security certificates configuration
 
 Source chunk visibility in citations
 :   You can now see full source chunk in citations even when PDF viewer and source link to a website is not available.
-
 
 
 
