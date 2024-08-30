@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-08-30"
 
 subcollection: watson-assistant
 
@@ -38,15 +38,13 @@ If you have activated dialog, you see the Entities column in the **Message log**
 
 
 
-
-
 ## Choosing the environment and time period
 {: #analytics-conversations-time-period}
 
 To get started, choose the [environment](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments) and date range you want to analyze. All conversations reflect data based on the environment and the date range you select. When you change the environment or the date range, the conversations on the page update to reflect the new date range. You can also use **Refresh** ensure the latest data is shown.
 
+![Time period](images/analytics-conversations-time-period.png)
 
-![Time period](images/analytics-conversations-time-period-new.png)
 
 ## Filtering conversations
 {: #analytics-conversations-filtering}
@@ -55,9 +53,7 @@ You can locate specific conversations by filtering the list of conversations. Th
 
 
 
-
-
-You can filter the conversation by:
+You can filter the conversations by:
 
 - **Topics**: Select specific topics. You can choose one or more topics to review.
 - **Entities**: Select specific entities. You can choose one or more entities to review.
