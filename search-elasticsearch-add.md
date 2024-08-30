@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-08-30"
 
 subcollection: watson-assistant
 
@@ -118,27 +118,22 @@ To upload documents to a new index, use the following procedure:
     When you configure the query body in the **Advanced Elasticsearch Settings** to search the nested documents, you must ensure that the **Title**, **Body**, and **URL** are from the fields of the inner documents in your Elasticsearch index. For more information about using nested queries, see [Elasticsearch nested query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-nested-query.html#query-dsl-nested-query).
 
 
-
-
 1. Expand the **Advanced Elasticsearch settings** section to see the following text boxes:
     
-    - **Configure the filter array for Elasticsearch**
+   - **Configure the filter array for Elasticsearch**
     
-        You define the filter as an array of objects so that you can create filters to arrange the content per the query body. 
+        You define the filter as an array of objects so that you can create filters to arrange the content per the query body. For more information, see [Configuring the custom filters](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/docs/elasticsearch-install-and-setup/how_to_configure_advanced_elasticsearch_settings.md#how-to-configure-the-custom-filters){: external}.
 
     - **Configure the query body for Elasticsearch**    
 
       The query body is used to manipulate the user requests into a format that the search expects. It controls the query forms, search fields, filters, and query size. In the REST API, the query body is an object representing the `POST` body for the `_search` request to Elasticsearch. THe query body has a `"$QUERY"` token to represent the customer's query, and a `"$FILTER"` token to represent the array of filters that are defined either in the search settings or at the step level.    
    
-        By default, Elasticsearch integration uses keyword search. You can use advanced search such as semantic search with ELSER, KNN dense vector search, or nested queries to search the nested documents. For more information about using different types of query body examples, see [Query body examples](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions/docs/elasticsearch-install-and-setup#option-2-use-the-built-in-search-integration){: external}.
+      By default, Elasticsearch integration uses keyword search. You can use advanced search such as semantic search with ELSER, KNN dense vector search, nested queries to search the nested documents, or hybrid search. For more information about using different types of query body examples, see [Query body examples](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/docs/elasticsearch-install-and-setup/how_to_configure_advanced_elasticsearch_settings.md#how-to-configure-the-query-body){: external}.
 
-        For more information about the Elasticsearch `_search` API request body, see [Elasticsearch search API request body]( https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html#search-search-api-request-body){: external}.
+      For more information about the Elasticsearch `_search` API request body, see [Elasticsearch search API request body]( https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html#search-search-api-request-body){: external}.
 
-        You cannot customize the query body in the assistant with an existing Elasticsearch configuration.{: important}   
-
-
-
-
+      You cannot customize the query body in the assistant with an existing Elasticsearch configuration.
+      {: important}   
 
 1. Use the **Message**, **No results found** and **Connectivity issue** tabs to customize different messages to share with users based on the successfulness of the search.
 
@@ -161,12 +156,8 @@ To upload documents to a new index, use the following procedure:
 
 1. Click **Upload** button. In the **Upload documents** section, you can drag and drop your files or do a single click to upload documents directly to your assistant. 
 
-
-
-    You can upload up to 20 documents at a time. Each document file must not exceed 500 KB. The total size of all documents must not exceed 50 MB.{: important}
-
-
-
+   You can upload up to 20 documents at a time. Each document file size must not exceed 25 KB. The total size of all documents must not exceed 50 MB.
+   {: important}
 
   
    ![Elasticsearch upload document](images/elastic-search-upload-doc.png)
@@ -180,12 +171,7 @@ To upload documents to a new index, use the following procedure:
    ![Elasticsearch upload error](images/elastic-search-upload-doc-error.png)
 
 
-
-1. If you want to change the Elasticsearch instance credentials, click the **Instance** tab, edit the credentials, and then click **Save**. Skip this step if you do not want to change Elasticsearch instance credentials.
-
-
-
-
+1. Skip this step if you do not want to change Elasticsearch instance credentials. If you want to change the Elasticsearch instance credentials, click the **Instance** tab, edit the credentials, and then click **Save**. 
 
 1. Click **Save** and then **Close** to end the Elasticsearch set up.
 
