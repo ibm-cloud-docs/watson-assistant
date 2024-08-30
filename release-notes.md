@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-08-30"
 
 subcollection: watson-assistant
 
@@ -17,12 +17,20 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 30 August 2024
+{: #watson-assistant-aug302024}
+{: release-note}
+
+Enhancement in analytics conversations
+:  Your assistant is now enhanced to provide history of conversations by specifically indicating the different types of actions, search, dialog, Conversational search, and intents. For more information, see [Review customer conversations](/docs/watson-assistant?topic=watson-assistant-analytics-conversations).
+
+
 ## 28 August 2024
 {: #watson-assistant-aug282024}
 {: release-note}
 
 Contextual awareness in conversational search 
-:   You can now choose the type of conversational search based on the context using contextual awareness. For more information, see [Contextual awareness](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
+:   You can now choose the type of conversational search based on the context by using contextual awareness. For more information, see [Contextual awareness](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
 
 
 ## 27 August 2024
