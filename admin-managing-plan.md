@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-08-28"
+lastupdated: "2024-09-02"
 
 keywords: billing, data centers, MAU, monthly active users, service plans
 
@@ -117,17 +117,6 @@ The built-in integrations derive the user ID in the following ways:
 
 Billing is managed per monthly active user per service instance. If a single user interacts with assistants that are hosted by different service instances that belong to the same plan, each interaction is treated as a separate use. You are billed for the user's interaction with each service instance separately.
 
-
-
- 
-### Test activity charges
-{: #admin-managing-plan-billing-testing}
-
-Test messages that you send from *Preview* are charged. For the preview, a random `user_id` is generated and stored in a cookie. The multiple interactions that a single tester has with the assistant are recognized as coming from a single user and are charged. If you are doing your own test, running a scripted regression test for example, use a single `user_id` for all the calls within your regression test. Other uses are flagged as abuse.
-
-
-
-
 ### Handling anonymous users
 {: #admin-managing-plan-billing-anonymous}
 
@@ -144,15 +133,15 @@ If an anonymous user logs in and later is identified as being the same person wh
 
 You can create {{site.data.keyword.conversationshort}} service instances that are hosted in the following data center locations:
 
-| Location    | Location code | API location |
-|-------------|---------------|--------------|
-| Dallas      | `us-south`      | N/A          |
+| Location    | Location code | API location     |
+|-------------|---------------|--------------    |
+| Dallas      | `us-south`      | N/A            |
 | Frankfurt   | `eu-de`         | `fra`          |
-| Seoul       | `kr-seo`        | `seo`          |
 | Sydney      | `au-syd`        | `syd`          |
 | Tokyo       | `jp-tok`        | `tok`          |
 | London      | `eu-gb`         | `lon`          |
 | Washington DC  | `us-east`    | `wdc`          |
+
 {: caption="Data center locations" caption-side="bottom"}
 
 ## Upgrading your plan
