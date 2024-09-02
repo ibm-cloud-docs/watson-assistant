@@ -194,6 +194,7 @@ toc:
           label: Improving your assistant
           topics:
           - analytics-overview.md
+          - conversational-search-analytics.md
           - analytics-action-completion.md
           - analytics-recognition.md
           - analytics-conversations.md
@@ -206,7 +207,6 @@ toc:
           - information-gathering.md 
           - hap-filter.md
           - conversational-search.md 
-          - conversational-search-analytics.md
       - assistant-add.md
       - assistant-rename-delete.md
       - topicgroup:

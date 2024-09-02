@@ -248,4 +248,3 @@ The object for each stream contains the following properties.
 | `canonical_name` | String | Unique identifier for the sender of the stream, typically in `@` format. |
 | `tool_name`      | String | Name of the application or tool where the stream originated. For the phone integration, the default is `IBM Voice Gateway/  `. |
 {: caption="Properties of the realtime_transport_network_summary object"  caption-side="top"}
-
