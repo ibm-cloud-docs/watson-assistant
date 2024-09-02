@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-09-02"
 
 subcollection: watson-assistant
 
@@ -16,6 +16,15 @@ content-type: release-note
 {: #watson-assistant-release-notes}
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+
+## 31 August 2024
+{: #watson-assistant-aug312024}
+{: release-note}
+
+Conversational search analytics
+:  You can now analyze the performance of your conversational search by using conversational search analytics. For more information, see [Conversational search analytics](/docs/watson-assistant?topic=watson-assistant-conversational-search-analytics).
+
 
 ## 30 August 2024
 {: #watson-assistant-aug302024}
