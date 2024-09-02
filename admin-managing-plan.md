@@ -160,9 +160,6 @@ The page header shows the plan that you are using today. To upgrade your plan, c
 1. From here, you can see other available plan options. For most plan types, you can step through the upgrade process yourself.
 
     - If you upgrade to an Enterprise with Data Isolation plan, you cannot do an in-place upgrade of your service instance. An Enterprise with Data Isolation plan instance must be provisioned for you first.
-
-    - When you upgrade from a legacy Standard plan, you change the metrics that are used for billing purposes. Instead of basing billing on API usage, the Plus plan bases billing on the number of monthly active users. If you built a custom app to deploy your assistant, you might need to update the app. Ensure that the API calls from the app include user ID information. For more information, see [User-based plans explained](#admin-managing-plan-user-based).
-
     - You cannot change from a Trial plan to a Lite plan.
 
 For answers to common questions about subscriptions, see the [How you're charged](/docs/billing-usage?topic=billing-usage-charges){: external}.
