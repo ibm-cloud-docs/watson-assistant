@@ -643,7 +643,8 @@ su_password: password
 
 To add the values that are required but currently missing from the file, complete the following steps:
 
-1. For version 4.8.6 or 5.0.1 and later:
+1. **For version 4.8.6 or 5.0.1 and later**:
+
    To get information about the `host`, you must get the Store datastore connection strings secret.
     
      ```bash
@@ -652,7 +653,8 @@ To add the values that are required but currently missing from the file, complet
     ```
     {: codeblock}
 
-   For version 5.0.0 or 4.8.5 and before:
+   **For version 5.0.0 or 4.8.5 and before**:
+   
    To get information about the `host`, you must get the Store VCAP secret.
 
     ```bash
