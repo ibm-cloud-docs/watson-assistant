@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-05"
 
 subcollection: watson-assistant
 
@@ -91,7 +91,7 @@ New option to define the response length in conversational search
 {: release-note}
 
 New supported languages for information gathering
-: The watsonx.ai information gathering capability in watsonx Assistant now supports French, Spanish, Brazilian Portuguese, and Japanese. For more information, see [Information Gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering) and [Global settings for actions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings).
+: The watsonx.ai information gathering capability in watsonx Assistant now supports French, German, Spanish, Brazilian Portuguese, and Japanese. For more information, see [Information Gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering) and [Global settings for actions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings).
 
 ## 23 July 2024
 {: #watson-assistant-jul232024}
