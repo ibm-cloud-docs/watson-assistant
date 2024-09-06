@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-10-27"
+  years: 2019, 2024
+lastupdated: "2024-09-06"
 
 keywords: post webhook, postwebhook, post-webhook
 
@@ -15,17 +15,17 @@ subcollection: watson-assistant
 # Making a call after processing a message
 {: #webhook-post}
 
-A postmessage webhook makes a call to an external service or application every time a response is rendered by the assistant. The external service can process the assistant output before it is sent to the channel.
+A post-message webhook calls an external service or application every time that the assistant renders a response. The external service can process the assistant's output before it is sent to the channel.
 {: shortdesc}
 
-You can add a postmessage webhook to your assistant if you want the webhook to be triggered before each message response is shown to the customer.
+You can add a post-message webhook to your assistant if you want to trigger the webhook before each message response is shown to the customer.
 
-If you are using a custom channel, the postmessage webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://{DomainName}/assistant/assistant-v2#message). All built-in channel integrations use this API.
+If you are using a custom channel, the post-message webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://cloud.ibm.com/apidocs/assistant-v2#message). All built-in channel integrations use this API.
 {: important}
 
-You can use a postmessage webhook to do things like extract custom responses from an external content repository. For example, you can define actions with custom IDs in the responses instead of text. The postmessage webhook can pass these IDs to an external database to retrieve stored text responses.
+You can use a post-message webhook to do things like extract custom responses from an external content repository. For example, you can define actions with custom IDs in the responses instead of text. The post-message webhook can pass these IDs to an external database to retrieve stored text responses.
 
-You can use this webhook in coordination with the premessage webhook. For example, if you use the premessage webhook to strip personally identifiable information from the customer's input, you can use the postmessage webhook to add it back. If you use the premessage webhook to translate the customer's input to the language of the assistant, you can use the postmessage webhook to translate the response into the customer's language before it is returned. For more information, see [Making a call before processing a message](/docs/watson-assistant?topic=watson-assistant-webhook-pre).
+You can use this webhook in coordination with the pre-message webhook. For example, if you use the pre-message webhook to strip personally identifiable information from the customer's input, you can use the post-message webhook to add it back. If you use the pre-message webhook to translate the customer's input to the assistant's language, you can use the post-message webhook to translate the response into the customer's language before returning it. For more information, see [Making a call before processing a message](/docs/watson-assistant?topic=watson-assistant-webhook-pre).
 
 For environments where private endpoints are in use, keep in mind that a webhook sends traffic over the internet.
 {: note}
@@ -84,7 +84,7 @@ To add the webhook details, complete the following steps:
 
     It is the responsibility of the external service to check for and verify the secret. If the external service does not require a token, specify any string that you want. You cannot leave this field empty.
 
-    If you want to see the secret as you enter it, click the **Show password** icon ![View icon](../../icons/view.svg) before you start typing. After you save the secret, the string is replaced by asterisks and can't be viewed again.
+    If you want to see the secret as you enter it, click the **Show password** icon ![View icon](../../icons/view.svg) before you start typing. After you save the secret, asterisks replace the string and can't be viewed again.
     {: note}
 
 1. In the **Timeout** field, specify the length of time (in seconds) you want the assistant to wait for a response from the webhook before it returns an error. The timeout duration cannot be shorter than 1 second or longer than 30 seconds.
@@ -100,7 +100,7 @@ To add the webhook details, complete the following steps:
 
     The service automatically sends an `Authorization` header with a JWT; you do not need to add one. If you want to handle authorization yourself, add your own authorization header and it is used instead.
 
-    After you save the header value, the string is replaced by asterisks and can't be viewed again. 
+    After you save the secret, asterisks replace the string and can't be viewed again. 
     {: note}
 
 Your webhook details are saved automatically.
@@ -111,22 +111,22 @@ Your webhook details are saved automatically.
 Do extensive testing of your webhook before you enable it for an assistant that is being used in a production environment.
 {: important}
 
-The webhook is triggered only when a message is processed by your assistant, and a response is ready to be returned to the channel.
+The webhook is triggered only when your assistant processes a message and a response is ready to be returned to the channel.
 
-If you enable the setting that returns an error when the webhook call fails, the processing of the assistant is halted entirely if the webhook encounters any issues. Test the process that you are calling regularly so you are alerted if the external service is down, and can prevent all of the message responses from failing to be returned.
+If you enable the setting to return an error when a webhook call fails, the assistant's processing halts entirely if the webhook encounters any issues. Regularly test the process you are calling to ensure that you receive alerts if the external service is down, which helps prevent failures in returning message responses.
 
-If you call an {{site.data.keyword.openwhisk_short}} web action, you can use the logging capability in {{site.data.keyword.openwhisk_short}} to help you troubleshoot your code. You can [download the command line interface](/functions/learn/cli){: external}, and then enable logging with the [activation polling command](/docs/cloud-functions-cli-plugin?topic=cloud-functions-cli-plugin-functions-cli#cli_activation_poll){: external}.
+If you call an {{site.data.keyword.openwhisk_short}} web action, you can use the logging capability in {{site.data.keyword.openwhisk_short}} to help you troubleshoot your code. You can [download the command-line interface](/functions/learn/cli){: external}, and then enable logging with the [activation polling command](/docs/cloud-functions-cli-plugin?topic=cloud-functions-cli-plugin-functions-cli#cli_activation_poll){: external}.
 {: tip}
 
 ## Troubleshooting the webhook
 {: #webhook-post-ts}
 
-The following error codes can help you track down the cause of issues you might encounter. If you have a web chat integration, for example, you know that your webhook has an issue if every test message you submit returns a message such as `There is an error with the message you just sent, but feel free to ask me something else`. If this message is displayed, use a REST API tool, such as cURL, to send a test `/message` API request, so you can see the error code and full message that is returned.
+The following error codes can help you track down the cause of issues you might encounter. If you have a web chat integration, for example, you know that your webhook has an issue if every test message you submit returns a message such as `There is an error with the message you just sent, but feel free to ask me something else`. If this message is displayed, use a REST API tool, such as cURL, to send a test `/message` API request, so you can see the error code and the full message that is returned.
 
 | Error code and message | Description |
 |------------|-------------|
 | 422 Webhook responded with invalid JSON body | The webhook's HTTP response body could not be parsed as JSON. |
-| 422 Webhook responded with `[500]` status code | There's a problem with the external service that you called. The code failed or the external server refused the request. |
+| 422 Webhook responded with `[500]` status code | A problem occured with the external service that you called. The code failed or the external server refused the request. |
 | 500 Processor Exception : `[connections to all backends failing]` | An error occurred in the webhook microservice. It could not connect to backend services. |
 {: caption="Error code details" caption-side="bottom"}
 
@@ -152,9 +152,9 @@ try {
 ## Example request body
 {: #webhook-post-request-body}
 
-It is useful to know the format of the request postmessage webhook body so that your external code can process it.
+It is useful to know the format of the request post-message webhook body so that your external code can process it.
 
-The payload contains the response body that is returned by your assistant for the v2 `/message` (stateful and stateless) API call. The event name `message_processed` indicates that the request is generated by the postmessage webhook. For more information about the message request body, see the [API reference](https://{DomainName}/assistant/assistant-v2#message){: external}.
+The payload contains the response body that your assistant returns for the v2 `/message` (stateful and stateless) API call. The event name `message_processed` indicates that the post-message webhook generates the request. For more information about the message request body, see the [API reference](https://cloud.ibm.com/apidocs/assistant-v2#message){: external}.
 
 The following sample shows how a simple request body is formatted.
 
@@ -204,19 +204,54 @@ The following sample shows how a simple request body is formatted.
 ```
 {: codeblock}
 
+## Skipping the assistant processing
+{: #webhook-post-skipping-assistant-processing}
+
+Enhancements to pre-message webhooks allow Watson Assistant to skip message processing and directly return the response from the webhook. This functionality is activated by setting the `x-watson-assistant-webhook-returnheader` in the webhook's HTTP response.
+
+### Before you begin
+{: #webhook-post-before-you-begin}
+
+Complete the following steps:
+
+ - Include the `x-watson-assistant-webhook-returnheader` with any value in the HTTP response from your webhook.
+ - Ensure that the webhook response contains a valid message response, which is formatted according to watsonX Assistant's requirements.
+
+This feature enables the webhook to dynamically control the conversation flow, enabling immediate responses when needed.
+
+### Response body
+
+In the response body, the `output` does not need to be wrapped inside a `payload` property as it is returned directly to the client:
+
+```javascript
+{
+    "output": {
+      "generic": [
+        {
+          "response_type": "text",
+          "text": "This response is directly from the pre-message webhook."
+        }
+      ]
+    }
+}
+```
+{: codeblock}
+
+For a practical implementation of this feature, see [Example 3](/#example-3)
+
 ## Example 1
 {: #webhook-post-example1}
 
 This example shows you how to add `y'all` to the end of each response from the assistant.
 
-In the postmessage webhook configuration page, the following values are specified:
+In the post-message webhook configuration page, the following values are specified:
 
-- **URL**: `https://us-south.functions.appdomain.cloud/api/v1/web/e97d2516-5ce4-4fd9-9d05-acc3dd8ennn/southernize/add_southern_charm`
+- **URL**: `https://your-webhook-url/`
 - **Secret**: none
 - **Header name**: Content-Type
 - **Header value**: application/json
 
-The postmessage webhook calls an IBM Cloud Functions web action name `add_southern_charm`.
+The post-message webhook calls an IBM Cloud Functions web action name `add_southern_charm`.
 
 The node.js code in the `add_southern_charm` web action looks as follows:
 
@@ -257,13 +292,13 @@ function main(params) {
 ## Example 2
 {: #webhook-post-example-translate-back}
 
-This example shows you how to translate a message response back to the customer's language. It works only if you perform the steps in [Example 2](/docs/watson-assistant?topic=watson-assistant-webhook-pre#webhook-pre-example-translate) to define a premessage webhook that translates the original message into English.
+This example shows you how to translate a message response back to the customer's language. It works only if you perform the steps in [Example 2](/docs/watson-assistant?topic=watson-assistant-webhook-pre#webhook-pre-example-translate) to define a pre-message webhook that translates the original message into English.
 
-Define a sequence of web actions in IBM Cloud Functions. The first action in the sequence checks for the language of the original incoming text, which you stored in a context variable named `original_input` in the premessage webhook code. The second action in the sequence translates the dialog response text from English into the original language that was used by the customer.
+Define a sequence of web actions in IBM Cloud Functions. The first action in the sequence checks for the language of the original incoming text, which you stored in a context variable named `original_input` in the pre-message webhook code. The second action in the sequence translates the dialog response text from English into the original language that was used by the customer.
 
-In the premessage webhook configuration page, the following values are specified:
+In the pre-message webhook configuration page, the following values are specified:
 
-- **URL**: `https://us-south.functions.appdomain.cloud/api/v1/web/e97d2516-5ce4-4fd9-9d05-acc3dd8ennn/default/response-translation_sequence`
+- **URL**: `https://your-webhook-url/`
 - **Secret**: none
 - **Header name**: Content-Type
 - **Header value**: application/json
@@ -313,35 +348,76 @@ The second web action in the sequence looks as follows:
 let rp = require("request-promise");
 
 function main(params) {
-console.log(JSON.stringify(params))
-  if ((params.payload.context.skills["actions skill"].user_defined.language !== 'en') && (params.payload.context.skills["actions skill"].user_defined.language !== 'none')) {
-  const options = { method: 'POST',
-  url: 'https://api.us-south.language-translator.watson.cloud.ibm.com/instances/572b37be-09f4-4704-b693-3bc63869nnnn/v3/translate?version=2018-05-01',
-  auth: {
-           'username': 'apikey',
-           'password': 'nnn'
-       },
-  body: { 
-      text: [ 
-          params.payload.output.generic[0].text
-          ],
-          target: params.payload.context.skills["actions skill"].user_defined.language
-  },
-  json: true 
-  };
-     return rp(options)
-    .then(res => {
-        params.payload.context.skills["actions skill"].user_defined["original_output"] = params.payload.output.generic[0].text;
-        params.payload.output.generic[0].text = res.translations[0].translation;
-        return {
-          body : params
-        }
-})
-}
-return { 
-  body : params
-}
+  console.log(JSON.stringify(params))
+    if ((params.payload.context.skills["actions skill"].user_defined.language !== 'en') && (params.payload.context.skills["actions skill"].user_defined.language !== 'none')) {
+    const options = { method: 'POST',
+    url: 'https://api.us-south.language-translator.watson.cloud.ibm.com/instances/572b37be-09f4-4704-b693-3bc63869nnnn/v3/translate?version=2018-05-01',
+    auth: {
+            'username': 'apikey',
+            'password': 'nnn'
+        },
+    body: { 
+        text: [ 
+            params.payload.output.generic[0].text
+            ],
+            target: params.payload.context.skills["actions skill"].user_defined.language
+    },
+    json: true 
+    };
+      return rp(options)
+      .then(res => {
+          params.payload.context.skills["actions skill"].user_defined["original_output"] = params.payload.output.generic[0].text;
+          params.payload.output.generic[0].text = res.translations[0].translation;
+          return {
+            body : params
+          }
+  })
+  }
+  return { 
+    body : params
+  }
 };
+```
+{: codeblock}
+
+## Example 3
+{: #webhook-post-example3}
+
+This example shows you how to compose a webhook response to let watsonx Assistant to skip processing the message and directly return the webhook's response.
+
+### Webhook Configuration
+In the pre-message webhook configuration page, specify the following values:
+
+ - URL: https://your-webhook-url/webhook_skip
+ - Secret: None
+ - Header Name: Content-Type
+ - Header Value: application/json
+
+The node.js code in the webhook_skip web action looks as follows.
+
+```javascript
+function main(params) {
+  // Your custom logic to determine the response
+  let responseText = "This response is directly from the pre-message webhook.";
+  
+  const response = {
+    headers: {
+      "X-Watson-Assistant-Webhook-Return": "true"
+    },
+    body: {
+      output: {
+        generic: [
+          {
+            response_type: "text",
+            text: responseText
+          }
+        ]
+      }
+    }
+  };
+
+  return response;
+}
 ```
 {: codeblock}
 

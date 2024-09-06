@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-06"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,15 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 6 September 2024
+{: #watson-assistant-sep062024}
+{: release-note}
+
+Access properties from stream events
+:  You can now access properties from the last event in a stream more efficiently. For more information, see [Running the stream](/docs/watson-assistant?topic=watson-assistant-stream-from-extension#running-the-stream).
+
+Conversational search debugging
+:  You can now troubleshoot the errors when you face problems in conversational search. For more information, see [Debugging failures](/docs/watson-assistant?topic=watson-assistant-call-extension#debugging-failures)
 
 ## 31 August 2024
 {: #watson-assistant-aug312024}
@@ -91,7 +100,7 @@ New option to define the response length in conversational search
 {: release-note}
 
 New supported languages for information gathering
-: The watsonx.ai information gathering capability in watsonx Assistant now supports French, Spanish, Brazilian Portuguese, and Japanese. For more information, see [Information Gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering) and [Global settings for actions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings).
+: The watsonx.ai information gathering capability in watsonx Assistant now supports French, German, Spanish, Brazilian Portuguese, and Japanese. For more information, see [Information Gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering) and [Global settings for actions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings).
 
 ## 23 July 2024
 {: #watson-assistant-jul232024}

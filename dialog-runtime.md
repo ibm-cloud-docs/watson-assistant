@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-08-22"
+lastupdated: "2024-09-04"
 
 keywords: digression, disambiguation, confidence 
 
@@ -406,7 +406,14 @@ Evaluate any branches that use this approach to determine whether it would be be
 
 **Test possible digression chains**: If a user digresses from the current node to another node that allows digressions, the user might digress away from that other node, and repeat this pattern. If the starting node in the digression chain is configured to return after the digression, then the user will eventually be brought back to the current dialog node. In fact, any subsequent nodes in the chain that are configured not to return are excluded from being considered as digression targets. Test scenarios that digress multiple times to determine whether individual nodes function as expected.
 
+**Step conditions are not reevaluated on digression returns**: Because the step condition is already evaluated before the digression, it is not evaluated again upon the return of the digression. If your conversational flow requires the step condition to be evaluated again, then add reprompting at the same step where the digression started. If you do not want to reprompt at the same step and to prevent digression returns, do the following steps:
 
+1. Go to **Home** > **Actions** > **Created by you**.
+1. Select the action in which you want to prevent digression returns.
+1. Click **Action settings**.
+1. Switch the toggle to **On** in **Change conversation topic**.
+1. Select **Never return to original action after completing this action**.
+1. Click **Save**.
 
 **The current node gets priority**: Nodes outside the current flow are only considered as digression targets if the current flow cannot address the user input. In a node with slots that allows digressions away, make it clear to users what information is needed, and to add confirmation statements that are displayed after the user provides a value.
 

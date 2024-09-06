@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-10-09"
+  years: 2021, 2024
+lastupdated: "2024-09-06"
 
 subcollection: watson-assistant
 
@@ -12,6 +12,8 @@ subcollection: watson-assistant
 
 # Administering your instance
 {: #admin-overview}
+
+
 
 Topics that cover tasks and areas in administering your instance of {{site.data.keyword.conversationfull}}. 
 {: shortdesc}

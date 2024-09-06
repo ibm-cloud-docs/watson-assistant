@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-01"
+lastupdated: "2024-09-06"
 
 subcollection: watson-assistant
 
@@ -43,6 +43,9 @@ Specify `text` as the JSON Path in watsonx Assistant to indicate where the text 
 ## Running the stream
 
 When the custom extension is called, watsonx Assistant attempts a call to stream text from the specified **Operation**. The next step runs only after the stream is completed successfully or whether an error occurs before the streaming starts. If the stream completes successfully, the streamed text is stored in the `.body` property of the result variable.
+
+You can access properties from the last event in the stream by referencing the `.last_event` property. For example, use `${step_596_result_1.last_event.citations}` to retrieve specific data.
+{: note}
 
 ## Checking success or failure
 
