@@ -21,8 +21,11 @@ Release notes describe the new features, changes, and bug fixes in each release 
 {: #watson-assistant-sep062024}
 {: release-note}
 
+Access properties from stream events
+:  You can now access properties from the last event in a stream more efficiently. For more information, see [Running the stream](/docs/watson-assistant?topic=watson-assistant-stream-from-extension#running-the-stream).
+
 Conversational search debugging
-:  You can now troubleshoot the errors when you face problems in conversational search. For more information, see [Debugging failures](call-extension.md#debugging-failures)
+:  You can now troubleshoot the errors when you face problems in conversational search. For more information, see [Debugging failures](/docs/watson-assistant?topic=watson-assistant-call-extension#debugging-failures)
 
 ## 31 August 2024
 {: #watson-assistant-aug312024}
