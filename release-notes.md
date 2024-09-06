@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-09-05"
+lastupdated: "2024-09-06"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,12 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 6 September 2024
+{: #watson-assistant-sep062024}
+{: release-note}
+
+Conversational search debugging
+:  You can now troubleshoot the errors when you face problems in conversational search. For more information, see [Debugging failures](call-extension.md#debugging-failures)
 
 ## 31 August 2024
 {: #watson-assistant-aug312024}
