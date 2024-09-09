@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-09-06"
+lastupdated: "2024-09-09"
 
 subcollection: watson-assistant
 
@@ -12,7 +12,6 @@ subcollection: watson-assistant
 
 # Administering your instance
 {: #admin-overview}
-
 
 
 Topics that cover tasks and areas in administering your instance of {{site.data.keyword.conversationfull}}. 
@@ -25,6 +24,7 @@ Topics that cover tasks and areas in administering your instance of {{site.data.
 | [Using IBM Cloud Activity Tracker to audit user activity](/docs/watson-assistant?topic=watson-assistant-admin-auditing) | As a security officer, auditor, or manager, you can use the Activity Tracker service to track how users and applications interact with {{site.data.keyword.conversationshort}}. |
 | [Securing your assistant](/docs/watson-assistant?topic=watson-assistant-admin-securing) | Data privacy, security, and governance solutions. |
 | [Backing up and restoring data](/docs/watson-assistant?topic=watson-assistant-admin-backup-restore) | Back up and restore your data by downloading, and then uploading the data. |
+| [Deleting an instance of the service](https://cloud.ibm.com/docs/account?topic=account-delete-resource) | You can delete an instance of the service from your account.  |
 | [High availability and disaster recovery](/docs/watson-assistant?topic=watson-assistant-admin-recovery) | {{site.data.keyword.conversationshort}} is highly available within multiple {{site.data.keyword.cloud}} locations (for example, Dallas and Washington, DC). However, recovering from potential disasters that affect an entire location requires planning and preparation. |
 | [Failover options](/docs/watson-assistant?topic=watson-assistant-admin-failover) | Actions that you can take to increase the availability of {{site.data.keyword.conversationshort}} for your organization. |
 | [Adding support for global audiences](/docs/watson-assistant?topic=watson-assistant-admin-language-support) | {{site.data.keyword.conversationshort}} supports individual features to varying degrees per language. |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-08-26"
+lastupdated: "2024-09-09"
 
 subcollection: watson-assistant
 
@@ -26,6 +26,22 @@ For information about new features and improvements to the core {{site.data.keyw
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you
 can set a version of your web chat. For more information, see [Controlling the web chat
 version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 8.3.0
+{: #8.3.0}
+*Release date: 9 September 2024*
+
+- **Rich text support in conversational search:** Conversational search responses now support rich text formatting in responses, including Markdown.
+
+- **Changes to conversational search sources:** Sources are no longer highlighted in conversational search responses by default. To see the highlights, you must expand the sources carousel and select the source.
+
+- Added the region `aws-eu-central-1`.
+
+- Fixed a bug in the NiceDFO service desk integration that made custom fields unavailable in some cases.
+
+- Fixed a bug with the `aiTooltipAfterDescriptionElement` writeable element that prevented the content from being visible for some occurrences of the tooltip.
+
+- Fixed a bug with the `instance.send` method when called from a `restartConversation` event that would cause web chat to incorrectly display the greeting message.
 
 ## 8.2.6
 {: #8.2.6}
