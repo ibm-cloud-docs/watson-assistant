@@ -188,6 +188,8 @@ You can see the following API response from the [/message API](/apidocs/assistan
 
 Whenever the chat client receives a response with that form (it has an entry in the `output.actions` list of type `search`), it passes the results back to the assistant through the next call to the `/message API` as follows:
 
+
+
 ```json
 {
     "input": {
@@ -212,7 +214,9 @@ Whenever the chat client receives a response with that form (it has an entry in 
     }
 }
 ```
-{: codeblock}
+
+
+
 
 Your assistant response limit cannot exceed 100 KB.  If your assistant gets a `search_results`message with a body that exceeds 100 KB, it returns a 400 response.
 {: important}     
