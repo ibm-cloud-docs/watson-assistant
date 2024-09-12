@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-11"
+lastupdated: "2024-09-12"
 
 subcollection: watson-assistant
 
@@ -121,20 +121,24 @@ Query: `POST </query>`
 **Request**
 ```json
 {
-    "query": "<QUERY >",
-    "filter": "<FILTER >", // optional
+    "query": "<QUERY>",
+    "filter": "<FILTER>", // optional
     "metadata": {
         // optional, you can fill any information here
     }
 }
 ```
 
+
 **Response**
+
+
+
 ```json
 {
     "search_results": [
         {
-            "response_metadata": { // optional, you can fill any information here},
+            "response_metadata": { // optional, you can fill any information here
                 "title": "<TITLE>",
                 "body": "<BODY>",
                 "url": "<URL>", // optional
@@ -150,6 +154,10 @@ Query: `POST </query>`
     ]
 }
 ```
+
+
+
+
 
 The metadata in the request and the entire response object must not exceed 100 KB.{: important}
      
@@ -176,6 +184,8 @@ You can see the following API response from the [/message API](/apidocs/assistan
     }
 }
 ```
+
+
 Whenever the chat client receives a response with that form (it has an entry in the `output.actions` list of type `search`), it passes the results back to the assistant through the next call to the `/message API` as follows:
 
 ```json
@@ -202,6 +212,8 @@ Whenever the chat client receives a response with that form (it has an entry in 
     }
 }
 ```
+
+
 Your assistant response limit cannot exceed 100 KB.  If your assistant gets a `search_results`message with a body that exceeds 100 KB, it returns a 400 response.
 {: important}     
 
