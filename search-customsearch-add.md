@@ -93,7 +93,7 @@ To set up custom service on your assistant through your client, use the followin
 
 1. In the **Connect your search provider** section of the **Custom service** window, select “Through your client”.
 1. Click **Next** to go to **Conversational search (optional)**.
-1. In the **Enable conversational search (optional)** section, switch the **Conversational Search** toggle to `on` if you want to activate conversational search. If you don't want to activate conversational search, switch the toggle to `off`. For more information about conversational search, see [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup){: external}.
+1. In the **Enable conversational search (optional)** section, switch the **Conversational Search** toggle to `on` if you want to activate conversational search. If you don't want to activate conversational search, switch the toggle to `off`. For more information about conversational search, see [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
 1. Click **Save** and then **Close** to end the Custom service set up in the client-side.
 
 
