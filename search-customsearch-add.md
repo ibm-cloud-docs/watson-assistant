@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-13"
 
 subcollection: watson-assistant
 
@@ -53,8 +53,6 @@ To select a custom service as the search integration, use one of the following p
       
 To set up Custom service on your assistant with server credentials, use the following procedure:
       
-
-
 1. In the **Connect your search provider** section of the **Custom service** window, select **By providing credentials**. By default, this option is selected.       
 1. Provide the following fields to enable your assistant to connect to your Custom service 	instance:
     - **URL**
@@ -63,13 +61,8 @@ To set up Custom service on your assistant with server credentials, use the foll
         * if you select `API key`, you must provide an **API key**.
         * if you select `None`, you cannot provide any other authentication details.
 1. Click **Next** to go to **Conversational search (optional)**.
-1. In the **Enable conversational search (optional)** section, switch the **Conversational Search** toggle to `on` if you want to activate conversational search. If you don't want to activate conversational search, switch the toggle to `off`. For more information about conversational search, see [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
-1. In the **Default filter** you define the filter as an array of objects so that you can create filters to arrange the content per the query body.
-1. Filling **Default filter** and **Metadata** is optional.  You can place the information in these fields for your server to perform search requests.  The metadata must be a JSON object and the default filter can be a text string.  You can override the default filter in an action step or dialog node that starts the search. You cannot override the metadata through other options and the metadata you provide applies to all uses of this integration.
-
-
-
-
+1. If you want to activate conversational search, switch the **Conversational Search** toggle to `on`. For more information about conversational search, see [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
+1. Filling **Default filter** and **Metadata** is optional. You can place the information in these fields for your server to perform search requests. The metadata must be a JSON object and the default filter can be a text string.  You can override the default filter in an action step or dialog node that starts the search. You cannot override the metadata through other options and the metadata you provide applies to all uses of this integration. For more information, see [filling default filter and metadata for server](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-custom-service/custom-search-server-setup-guide.md){: external}.
 
 1. Use the **No results found** and **Connectivity issue** tabs to customize different messages to share with users based on the success of the search.
 
@@ -89,16 +82,18 @@ To set up Custom service on your assistant with server credentials, use the foll
 
 To set up custom service on your assistant through your client, use the following procedure:
 
-
-
 1. In the **Connect your search provider** section of the **Custom service** window, select “Through your client”.
 1. Click **Next** to go to **Conversational search (optional)**.
-1. In the **Enable conversational search (optional)** section, switch the **Conversational Search** toggle to `on` if you want to activate conversational search. If you don't want to activate conversational search, switch the toggle to `off`. For more information about conversational search, see [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
-1. Click **Save** and then **Close** to end the Custom service set up in the client-side.
+1. If you want to activate conversational search, switch the **Conversational Search** toggle to `on`. For more information about conversational search, see [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
+1. Filling **Default filter** and **Metadata** is optional. You can place the information in these fields for your server to perform search requests. The metadata must be a JSON object and the default filter can be a text string.  You can override the default filter in an action step or dialog node that starts the search. You cannot override the metadata through other options and the metadata you provide applies to all uses of this integration. For more information, see [filling default filter and metadata for client](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-custom-service/custom-search-client-setup-guide.md){: external}.
+1. Use the **No results found** and **Connectivity issue** tabs to customize different messages to share with users based on the success of the search.
 
-
-
-
+     | Tab | Scenario | Example message |
+     | --- | --- | --- |
+     | No results found | No search results are found | `I searched my knowledge base for information that might address your query, but did not find anything useful to share.` |
+     | Connectivity issue | I was unable to complete the search for some reason | `I might have information that could help address your query, but am unable to search my knowledge base at the moment.` |
+     {: caption="Custom service search result messages" caption-side="top"}
+1. Click **Save** and then **Close** to end the custom service set up in the client-side.
 
 ## Setting up retrieval systems for a custom service
 {: #setup-retrieval}
@@ -110,13 +105,7 @@ To use a custom service with your search integration, you must integrate your se
       
 A server for custom service retrieval must implement the following API:
 
-
-
-Query: `POST </query>`
-
-
-
-
+Query: `POST <server_url>`
 
 **Request**
 ```json
@@ -132,31 +121,30 @@ Query: `POST </query>`
 
 **Response**
 
-
-
 ```json
 {
-    "search_results": [
-        {
-            "response_metadata": { // optional, you can fill any information here
-                "title": "<TITLE>",
-                "body": "<BODY>",
-                "url": "<URL>", // optional
-                "highlight": { // optional
-                    "body": [
-                        "<HIGHLIGHT1>",
-                        "<HIGHLIGHT2>",
-                        ...
-                    ]
-                }
-            }
-        }
-    ]
+    
+  "search_results": [
+    {
+      "result_metadata": { // optional
+        "score": <SCORE as a number>
+      },
+      "title": "<TITLE>",
+      "body": "<BODY>",
+      "url": "<URL>", // optional
+      "highlight": { // optional, will be used instead of "body" for Conversational Search if provided
+        "body": [
+          "<HIGHLIGHT1>",
+          "<HIGHLIGHT2>",
+           ...
+        ]
+      }
+    }
+  ]
+
 }
 ```
-
-
-
+{: codeblock}
 
 
 The metadata in the request and the entire response object must not exceed 100 KB.{: important}
@@ -188,34 +176,31 @@ You can see the following API response from the [/message API](/apidocs/assistan
 
 Whenever the chat client receives a response with that form (it has an entry in the `output.actions` list of type `search`), it passes the results back to the assistant through the next call to the `/message API` as follows:
 
-
-
 ```json
 {
     "input": {
         "message_type": "search_results",
-        "search_results": [
-            {
-                "result_metadata": { // optional
-                    /* you can use any JSON object here */
-                },
-                "title": "<TITLE>",
-                "body": "<BODY>",
-                "url": "<URL>", // optional
-                "highlight": { // optional
-                    "body": [
-                        "<HIGHLIGHT1>",
-                        "<HIGHLIGHT2>",
-                        ...
-                    ]
-                }
+         "search_results": [
+          {
+            "result_metadata": { // optional
+                "score": <SCORE as a number>
+            },
+            "title": "<TITLE>",
+            "body": "<BODY>",
+            "url": "<URL>", // optional
+            "highlight": { // optional, will be used instead of "body" for Conversational Search if provided
+                "body": [
+                "<HIGHLIGHT1>",
+                "<HIGHLIGHT2>",
+                ...
+                ]
             }
-        ]
-    }
+         }
+     ]
+  }
 }
 ```
-
-
+{: codeblock}
 
 
 Your assistant response limit cannot exceed 100 KB.  If your assistant gets a `search_results`message with a body that exceeds 100 KB, it returns a 400 response.
