@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-09-12"
 
 subcollection: watson-assistant
 
@@ -86,6 +86,8 @@ Before you upload documents, your Elasticsearch instance must have the following
 - A paid or trial subscription of the Elasticsearch instance such as the Platinum Edition of [IBM Cloud Databases for Elasticsearch](https://cloud.ibm.com/databases/databases-for-elasticsearch/create){: external} or the Platinum or Enterprise subscription offered by [Elastic.co]( https://www.elastic.co/subscriptions).
 
 - A Machine Learning (ML) node with a minimum of 4 GB memory to deploy the ELSER model. For more information about the ELSER requirements, see [ELSER requirements](https://www.elastic.co/guide/en/machine-learning/current/ml-nlp-elser.html#elser-req).
+
+
 
  If your Elasticsearch instance do not have the prerequisites for uploading document, you see the **Requirements not met** error message.
  

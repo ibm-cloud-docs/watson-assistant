@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-09-06"
+lastupdated: "2024-09-13"
 
 subcollection: watson-assistant
 
@@ -16,6 +16,14 @@ content-type: release-note
 {: #watson-assistant-release-notes}
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+
+## 13 September 2024
+{: #watson-assistant-sep132024}
+{: release-note}
+
+Conversational search and slot filling in Enterprise
+:   [Intelligent Information gathering](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-information-gathering) and [Conversational search](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-conversational-search) are now available for **Enterprise with data isolation plan**.
 
 ## 6 September 2024
 {: #watson-assistant-sep062024}

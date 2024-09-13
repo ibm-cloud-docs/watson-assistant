@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-10-27"
+  years: 2020, 2024
+lastupdated: "2024-09-13"
 
 subcollection: watson-assistant
 
@@ -103,9 +103,8 @@ To set up a Salesforce service desk integration, complete the following steps:
 
     - **Token**: Stores a {{site.data.keyword.conversationshort}} authentication token that secures the communication between Salesforce and your assistant.
 
-      - **Data Type**: Text Area (Long)
+      - **Data Type**: Text Area
       - **Field Label**: `x-watson-assistant-key`
-      - **Field Length**: Specify the maximum length allowed to ensure it can hold a token that might contain over 100,000 characters.
 
 1.  Create a Visualforce page.
 
@@ -152,5 +151,3 @@ Update an action to make sure it understands when users request to speak to a pe
 {: #deploy-salesforce-routing-browser-info}
 
 When a customer interacts with the web chat, information about the current web browser session is collected. For example, the URL of the current page is collected. You can use this information to add custom routing rules to your actions. For example, if the customer is on the Products page when a transfer to a human is requested, you might want to route the chat transfer to agents who are experts in your product portfolio. If the customer is on the Returns page, you might want to route the chat transfer to agents who know how to help customers return merchandise.
-
-
