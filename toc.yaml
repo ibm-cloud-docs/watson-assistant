@@ -216,8 +216,8 @@ toc:
             navtitle: Overview
           - access-control.md
           - admin-managing-plan.md
-          - activity-log.md
-          - admin-auditing.md # 
+          - activity-log.md # 
+          - at_events.md 
           - admin-securing.md
           - admin-backup-restore.md
           - admin-recovery.md
