@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-18"
 
 subcollection: watson-assistant
 
@@ -376,6 +376,8 @@ To back up your data, complete these steps:
 
     Replace ${INSTANCE} with the instance of the deployment that you want to back up.
 
+    
+
 1.  Fetch the store VCAP secret name:
 
     ```bash
@@ -413,7 +415,11 @@ To back up your data, complete these steps:
       ```
       {: codeblock}
 
-1.  Run the following command:
+    
+
+    
+
+4.  Run the following command:
 
     ```bash
     oc exec $KEEPER_POD -- bash -c "export PGPASSWORD='$PASSWORD' && pg_dump -Fc -h $HOSTNAME -d $DATABASE -U $USERNAME" > ${BACKUP_DIR}
@@ -1045,6 +1051,8 @@ Use the following steps to `scale` the number of models:
 
 1. After you complete the auto-retrain-all job, you must revert the number of `REPLICAS` to the original numbers:
 
+   
+
     ```bash
       oc patch temporarypatch ${INSTANCE}-clu-training-replicas -p '{"metadata":{"finalizers":[]}}' --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
       oc patch temporarypatch ${INSTANCE}-clu-runtime-replicas -p '{"metadata":{"finalizers":[]}}' --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
@@ -1059,3 +1067,7 @@ Use the following steps to `scale` the number of models:
       oc patch watsonassistantclu/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge
     ```
     {: codeblock}
+
+    
+
+    
