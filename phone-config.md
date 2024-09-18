@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-08-15"
+lastupdated: "2024-09-18"
 
 subcollection: watson-assistant
 
@@ -277,7 +277,7 @@ To migrate from {{site.data.keyword.iva_short}} to the {{site.data.keyword.conve
 Incoming calls to your assistant follow this path: 
 
 1.  A customer calls the customer support phone number that is managed by your Session Initiation Protocol (SIP) trunk provider.
-1.  The SIP trunk service sends a SIP `INVITE` HTTP request to your assistant's phone integration to establish a connection. 
+1.  The SIP trunk service sends a SIP `INVITE` request to your assistant's phone integration to establish a connection. 
 1.  The phone integration connects to the speech services that are required to support the interaction.
 1.  After the services are ready, the connection is established, and audio is sent over the Real-time Transport Protocol (RTP). 
 
@@ -286,4 +286,4 @@ Incoming calls to your assistant follow this path:
 1.  When the customer says something, the audio is converted to text by the {{site.data.keyword.speechtotextshort}} service and is sent to your assistant for evaluation.
 1.  The assistant processes the input and calculates the best response. The response text from the assistant is sent to the {{site.data.keyword.texttospeechshort}} service to be converted to audio and the audio is sent back to the caller over the existing connection.
 1.  If the caller asks to speak to a person, the assistant can transfer the person to a call center. A SIP `REFER` request is sent to the SIP trunk provider so it can transfer the call to the call center SIP URI that is specified in the dialog node where the transfer action is configured.
-1.  When one of the participants of the call hangs up, a SIP `BYE` HTTP request is sent to the other participant.
+1.  When one of the participants of the call hangs up, a SIP `BYE` request is sent to the other participant.
