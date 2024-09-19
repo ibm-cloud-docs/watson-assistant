@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-09-18"
+lastupdated: "2024-09-19"
 
 subcollection: watson-assistant
 
@@ -415,11 +415,11 @@ To back up your data, complete these steps:
       ```
       {: codeblock}
 
-    
+   
 
-    
+   
 
-4.  Run the following command:
+1.  Run the following command:
 
     ```bash
     oc exec $KEEPER_POD -- bash -c "export PGPASSWORD='$PASSWORD' && pg_dump -Fc -h $HOSTNAME -d $DATABASE -U $USERNAME" > ${BACKUP_DIR}
