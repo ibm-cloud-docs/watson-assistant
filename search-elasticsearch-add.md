@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-19"
 
 subcollection: watson-assistant
 
@@ -87,7 +87,7 @@ Before you upload documents, your Elasticsearch instance must have the following
 
 - A Machine Learning (ML) node with a minimum of 4 GB memory to deploy the ELSER model. For more information about the ELSER requirements, see [ELSER requirements](https://www.elastic.co/guide/en/machine-learning/current/ml-nlp-elser.html#elser-req).
 
-
+- The documents that you upload must be in English.
 
  If your Elasticsearch instance do not have the prerequisites for uploading document, you see the **Requirements not met** error message.
  
