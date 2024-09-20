@@ -52,13 +52,9 @@ Within any action, you can create a step that initiates a transfer to a live age
 
 1. Add a step or edit an existing step to transfer the conversation to a live agent.
 
+    Transferring the conversation to a live agent ends the action. To continue the conversation within the assistant instead of transferring, use step conditions as needed.
 
-
-    Transferring the conversation to a live agent ends the action. If there are situations where you want the conversation to continue within the assistant rather than being transferred, use step conditions as needed.
-
-
-
-
+The action completes once the transfer occurs, regardless of whether the customer is successfully engaged with a live agent after the transfer.{: note}
 
 1. In the **And then** field at the end of the step, select **Connect to agent**.
 
