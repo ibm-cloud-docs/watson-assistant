@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-10-04"
+  years: 2018, 2024
+lastupdated: "2024-09-20"
 
 subcollection: watson-assistant
 
@@ -52,7 +52,13 @@ Within any action, you can create a step that initiates a transfer to a live age
 
 1. Add a step or edit an existing step to transfer the conversation to a live agent.
 
+
+
     Transferring the conversation to a live agent ends the action. If there are situations where you want the conversation to continue within the assistant rather than being transferred, use step conditions as needed.
+
+
+
+
 
 1. In the **And then** field at the end of the step, select **Connect to agent**.
 
