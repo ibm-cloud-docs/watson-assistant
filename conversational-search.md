@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-09-06"
+lastupdated: "2024-09-23"
 
 keywords: conversational search
 
@@ -127,8 +127,15 @@ When the conversational search is `On`, the same search results are pulled from 
 
 The web chat integration does not support the citation title feature. Hence, the preceding image does not display the default text in the citation title.
 
-If you encounter bugs in conversational search, you can troubleshoot the errors. For more information, see [Debugging failures](call-extension.md#debugging-failures)
-{: note}
+If you encounter bugs in conversational search, you can troubleshoot the errors by clicking **Inspect**.
+When you click **Inspect**, you see two options:
+
+| **Option**   | **Description**                                                                                               |
+|--------------|---------------------------------------------------------------------------------------------------------------|
+| **Overview** | Provides general information about the process.                                                               |
+| **Advanced** | Displays a `curl` command to run the retrieval portion. This option helps debug and configure your query setup, including Watson Discovery, Elasticsearch, or custom services. |
+
+   ![ConversationalSearchInspect](images/convo-search-inspect.png)
 
 ## Streaming response for conversational search
 {: #conversational-search-streaming-response}
