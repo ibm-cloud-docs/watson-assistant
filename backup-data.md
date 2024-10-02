@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-10-02"
 
 subcollection: watson-assistant
 
@@ -38,13 +38,10 @@ If you are upgrading from 4.5.x to 4.8.x, a simpler way to complete the upgrade 
 
 If you are upgrading from 4.6.4 or earlier to the latest version, you must upgrade to 4.6.5 before you upgrade to the latest release.{: important}
 
-
 The primary data storage is a {{site.data.keyword.postgresql}} database.
 
 
-
 Choose one of the following ways to manage the back up of data:
-
 
 - **[Kubernetes CronJob](#backup-cronjob)**: Use the `$INSTANCE-store-cronjob` cron job that is provided for you.
 - **[backupPG.sh script](#backup-os)**: Use the `backupPG.sh` bash script.
@@ -69,9 +66,7 @@ When you back up data with one of these procedures before you upgrade from one v
 A CronJob named `$INSTANCE-store-cronjob` is created and enabled for you automatically when you deploy the service. A CronJob is a type of Kubernetes controller. A CronJob creates Jobs on a repeating schedule. For more information, see [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/){: external} in the Kubernetes documentation.
 
 
-
-The store CronJob creates the `$INSTANCE-backup-job-$TIMESTAMP` jobs. Each `$INSTANCE-backup-job-$TIMESTAMP` job deletes old logs and runs a backup of the store {{site.data.keyword.postgresql}} database. {{site.data.keyword.postgresql}} provides a `pg_dump` tool that creates a backup. To create a backup, the `pg_dump` tool sends the database contents to `stdout`, which you can then write to a file. The` pg_dump` tool creates the backups with the `pg_dump` command and stores them in a persistent volume claim (PVC) named `$INSTANCE-store-db-backup-pvc`.
-
+The store CronJob creates the `$INSTANCE-backup-job-$TIMESTAMP` jobs. Each `$INSTANCE-backup-job-$TIMESTAMP` job deletes old logs and runs a backup of the store {{site.data.keyword.postgresql}} database. {{site.data.keyword.postgresql}} provides a `pg_dump` tool that creates a backup. To create a backup, the `pg_dump` tool sends the database contents to `stdout`, which you can then write to a file. The` pg_dump` tool creates the backups with the `pg_dump` command and stores them in a persistent volume claim (PVC) named `$INSTANCE-store-db-backup-pvc`.
 
 
 You are responsible for moving the backup to a more secure location after its initial creation, preferably a location that can be accessed outside of the cluster where the backups cannot be deleted easily. Ensure this happens for all environments, especially for Production clusters.
@@ -96,9 +91,7 @@ The following table lists the configuration values that control the backup cron 
 To access the backup files from Portworx, complete the following steps:
 
 
-
 1.  Get the name of the persistent volume that is used for the {{site.data.keyword.postgresql}} backup:
-
 
 
     ```bash
@@ -180,9 +173,7 @@ To access the backup files from Portworx, complete the following steps:
 To access the backup files from Red Hat OpenShift Container Storage (OCS), complete the following steps:
 
 
-
 1.  Create a volume snapshot of the persistent volume claim that is used for the {{site.data.keyword.postgresql}} backup:
-
 
 
     ```yaml
@@ -305,14 +296,14 @@ To extract {{site.data.keyword.postgresql}} backup using a debug pod, complete t
    ```
    {: codeblock}
 
-1. Export and save the `STORE_DUMP_FILE` variable to the name of the most recent `store.dump_YYYYMMDD-TIME` file from `Step 2`:
+1. Export and save the `STORE_DUMP_FILE` variable to the name of the most recent `store.dump_YYYYMMDD-TIME` file from `Step 2`:
 
    ```bash 
    export STORE_DUMP_FILE=store.dump_YYYYMMDD-TIME
    ```
    {: codeblock}
 
-1. Copy the `store.dump_YYYYMMDD-TIME` file to a directory in a secure location on your system:
+1. Copy the `store.dump_YYYYMMDD-TIME` file to a directory in a secure location on your system:
 
    ```bash
    `oc cp ${STORE_CRONJOB_POD}-debug:/store-backups/${STORE_DUMP_FILE} ${STORE_DUMP_FILE}`
@@ -322,10 +313,8 @@ To extract {{site.data.keyword.postgresql}} backup using a debug pod, complete t
    You must verify that you copied the `store.dump_YYYYMMDD-TIME` file to the right directory by running the `ls` command.{: important}
 
 
-
 ## Backing up data by using the script
 {: #backup-os}
-
 
 You cannot backup data by using script in {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}} 4.6.3 or later.{ .note}
 
@@ -355,9 +344,7 @@ To back up data by using the provided script, complete the following steps:
     - `--instance ${INSTANCE}`: Select the specific instance to be backed up.
 
 
-
 If you prefer to back up data by using the {{site.data.keyword.postgresql}} tool directly, you can complete the procedure to back up data manually.
-
 
 
 ## Backing up data manually
@@ -376,16 +363,16 @@ To back up your data, complete these steps:
 
     Replace ${INSTANCE} with the instance of the deployment that you want to back up.
 
-    
+2. Perform the following two steps only if you have **version 5.0.0 or 4.8.5 and before**:
 
-1.  Fetch the store VCAP secret name:
+   a. Fetch the store VCAP secret name:
 
     ```bash
     oc get secrets -l component=store,app.kubernetes.io/instance=${INSTANCE} -o=custom-columns=NAME:.metadata.name | grep store-vcap
     ```
-    {: codeblock}
-
-1.  Fetch the {{site.data.keyword.postgresql}} connection values. You will pass these values to the command that you run in the next step. You must have `jq` installed.
+    {: codeblock} 
+    
+   b. Fetch the {{site.data.keyword.postgresql}} connection values. You will pass these values to the command that you run in the next step. You must have `jq` installed.
 
     - To get the database:
 
@@ -415,9 +402,44 @@ To back up your data, complete these steps:
       ```
       {: codeblock}
 
-   
+1. Perform the following two steps only if you have **version 4.8.6 or 5.0.1 and later**:
 
-   
+   a. Fetch the store connection secret name:
+
+    ```bash
+    oc get secrets -l component=store-subsystem,app.kubernetes.io/instance=${INSTANCE} -o=custom-columns=NAME:.metadata.name | grep store-datastore-connection
+    ```
+    {: codeblock}   
+
+   b. Fetch the {{site.data.keyword.postgresql}} connection values. You will pass these values to the command that you run in the next step. You must have `jq` installed.
+
+    - To get the database:
+
+      ```bash
+      oc get secret $VCAP_SECRET_NAME -o jsonpath="{.data.store_vcap_services}" | base64 --decode | jq --raw-output '.["user-provided"][]|.credentials|.database'
+      ```
+      {: codeblock}
+
+    - To get the hostname:
+
+      ```bash
+      oc get secret $VCAP_SECRET_NAME -o jsonpath="{.data.store_vcap_services}" | base64 --decode | jq --raw-output '.["user-provided"][]|.credentials|.host'
+      ```
+      {: codeblock}
+
+    - To get the username:
+
+      ```bash
+      oc get secret $VCAP_SECRET_NAME -o jsonpath="{.data.store_vcap_services}" | base64 --decode | jq --raw-output '.["user-provided"][]|.credentials|.username'
+      ```
+      {: codeblock}
+
+    - To get the password:
+
+      ```bash
+      oc get secret $VCAP_SECRET_NAME -o jsonpath="{.data.store_vcap_services}" | base64 --decode | jq --raw-output '.["user-provided"][]|.credentials|.password'
+      ```
+      {: codeblock}
 
 1.  Run the following command:
 
@@ -491,11 +513,9 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
     - Replace `${BACKUP_DIR}` with the directory where the `postgres.yaml` and `resourceController.yaml` files are located.
 
 
-
 1.  Copy the files that you downloaded and created in the previous steps to any existing directory on a {{site.data.keyword.postgresql}} pod.
 
     1. Run the following command to find P{{site.data.keyword.postgresql}} pods:
-
 
         ```bash
         oc get pods | grep ${INSTANCE}-postgres
@@ -536,9 +556,7 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
     {: codeblock}
 
 
-
 1.  Initiate the execution of a remote command in the {{site.data.keyword.postgresql}} pod:
-
 
 
     ```bash
@@ -578,16 +596,15 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
 1.  After you restore the data, you must train the backend model. For more information about retraining your backend model, see [Retraining your backend model](#set-up-retrain-model).
 
 
-
 ### Creating the resourceController.yaml file
 {: #backup-resource-controller-yaml}
 
 The **resourceController.yaml** file contains details about the new environment where you are adding the backed-up data. Add the following information to the file:
 
 ```yaml
-accessTokens: 
-  - value
-  - value2
+accessTokens: 
+  - value
+  - value2
 host: localhost
 port: 5000
 ```
@@ -606,14 +623,14 @@ To add the values that are required but currently missing from the file, complet
 
     If the service has multiple instances, each owned by a different user, then you must gather bearer tokens for each user who owns an instance. You can list multiple bearer token values in the `accessTokens` section.
 
-1.  To get the host information, you need details for the pod that hosts the UI component: 
+1.  To get the host information, you need details for the pod that hosts the UI component: 
 
     ```bash
     oc describe pod -l component=ui
     ```
     {: codeblock}
 
-    Look for the section that says `RESOURCE_CONTROLLER_URL: https://${release-name}-addon-assistant-gateway-svc.zen:5000/api/ibmcloud/resource-controller`.
+    Look for the section that says `RESOURCE_CONTROLLER_URL: https://${release-name}-addon-assistant-gateway-svc.zen:5000/api/ibmcloud/resource-controller`.
 
     For example, you can use a command like this to find it:
 
@@ -632,9 +649,7 @@ To add the values that are required but currently missing from the file, complet
 {: #backup-postgres-yaml}
 
 
-
 The **postgres.yaml** file contains details about the {{site.data.keyword.postgresql}} pods in your target environment (the environment where you restore the data). Add the following information to the file:
-
 
 
 ```yaml
@@ -709,9 +724,7 @@ To add the values that are required but currently missing from the file, complet
 1.  Save the `postgres.yaml` file.
 
 
-
 ### {{site.data.keyword.postgresql}} migration tool details
-
 
 
 {: #backup-pgmig-details}
@@ -720,24 +733,20 @@ The following table lists the arguments that are supported by the `pgmig` tool:
 
 | Argument | Description |
 |---------|-------------|
-| -h, --help | Command usage |                    
-| -f, --force | Erase data if present in the target Store |
-| -s, --source string | Backup file name |   
-| -r, --resourceController string | Resource Controller configuration file name |
+| -h, --help | Command usage |                    
+| -f, --force | Erase data if present in the target Store |
+| -s, --source string | Backup file name |   
+| -r, --resourceController string | Resource Controller configuration file name |
 
+| -t, --target string | Target {{site.data.keyword.postgresql}} server configuration file name |
 
-| -t, --target string | Target {{site.data.keyword.postgresql}} server configuration file name |
-
-
-| -m, --mapping string | Service instance-mapping configuration file name (optional) |
-| --testRCConnection | Test the connection for Resource Controller, then exit |
-
+| -m, --mapping string | Service instance-mapping configuration file name (optional) |
+| --testRCConnection | Test the connection for Resource Controller, then exit |
 
 
 | --testPGConnection | Test the connection for {{site.data.keyword.postgresql}} server, then exit |
 
-
-| -v, --version | Get Build version |
+| -v, --version | Get Build version |
 {: caption="pgmig tool arguments" caption-side="top"}
 
 ### The mapping configuration file
@@ -749,7 +758,7 @@ For example, the YAML file contains values like this:
 
 ```yaml
 instance-mappings:
-  00000000-0000-0000-0000-001570184978: 00000000-0000-0000-0000-001570194490
+  00000000-0000-0000-0000-001570184978: 00000000-0000-0000-0000-001570194490
 ```
 {: codeblock}
 
@@ -821,9 +830,7 @@ To get a good estimation of the duration that is required to complete the auto-r
 ```
 {: codeblock}
 
-
 In addition, you can plan to speed up the auto-retrain-all job after you get the estimation of duration. For more information about speeding up the auto-retrain-all job, see the [Speeding up the auto-retrain-all job](#set-up-auto-retrain-speed-up) topic.
-
 
 #### Procedure
 {: #set-up-auto-retrain-procedure}
@@ -1051,9 +1058,7 @@ Use the following steps to `scale` the number of models:
 
 1. After you complete the auto-retrain-all job, you must revert the number of `REPLICAS` to the original numbers:
 
-   
-
-    ```bash
+     ```bash
       oc patch temporarypatch ${INSTANCE}-clu-training-replicas -p '{"metadata":{"finalizers":[]}}' --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
       oc patch temporarypatch ${INSTANCE}-clu-runtime-replicas -p '{"metadata":{"finalizers":[]}}' --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
       oc patch temporarypatch ${INSTANCE}-clu-replicas -p '{"metadata":{"finalizers":[]}}' --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
@@ -1065,9 +1070,8 @@ Use the following steps to `scale` the number of models:
       oc patch watsonassistantclutraining/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge
       oc patch watsonassistantcluruntime/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge
       oc patch watsonassistantclu/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge
-    ```
-    {: codeblock}
-
-    
-
-    
+      oc patch watsonassistantclutraining/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oper8.org/temporary-patches\":null}}}" --type=merge
+      oc patch watsonassistantcluruntime/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oper8.org/temporary-patches\":null}}}" --type=merge
+      oc patch watsonassistantclu/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oper8.org/temporary-patches\":null}}}" --type=merge
+      ```
+      {: codeblock}

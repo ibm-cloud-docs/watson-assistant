@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-10-02"
 
 subcollection: watson-assistant
 
@@ -22,8 +22,10 @@ The {{site.data.keyword.icp4dfull_notm}} environment is a Kubernetes-based conta
 
 The installation process differs depending on the version you are installing. The following table shows the available versions.
 
+
 | Version |  Cluster | Installation instructions |
 | --- | --- | --- |
+| 5.0.3 | {{site.data.keyword.icp4dfull_notm}} 5.0.x | [Installing 5.0.3](https://www.ibm.com/docs/SSQNUZ_5.0.x/svc-assistant/assistant-svc-install.html){: external} |
 | 5.0.1 | {{site.data.keyword.icp4dfull_notm}} 5.0.x | [Installing 5.0.1](https://www.ibm.com/docs/SSQNUZ_5.0.x/svc-assistant/assistant-svc-install.html){: external} |
 | 5.0.0 | {{site.data.keyword.icp4dfull_notm}} 5.0.x | [Installing 5.0.0](https://www.ibm.com/docs/SSQNUZ_5.0.x/svc-assistant/assistant-svc-install.html){: external} |
 | 4.8.6 | {{site.data.keyword.icp4dfull_notm}} 4.8.x | [Installing 4.8.6](https://www.ibm.com/docs/SSQNUZ_4.8.x/svc-assistant/assistant-svc-install.html){: external} |
@@ -60,6 +62,10 @@ The following table describes which versions of {{site.data.keyword.conversation
 
 | {{site.data.keyword.conversationshort}} version | {{site.data.keyword.icp4dfull_notm}} version | Red Hat OpenShift version |
 | --- | --- | --- |
+| 5.0.3 | 5.0.x | 4.16 |
+| 5.0.3 | 5.0.x | 4.15 |
+| 5.0.3 | 5.0.x | 4.14 |
+| 5.0.3 | 5.0.x | 4.12 |
 | 5.0.1 | 5.0.x | 4.15 |
 | 5.0.1 | 5.0.x | 4.14 |
 | 5.0.1 | 5.0.x | 4.12 |

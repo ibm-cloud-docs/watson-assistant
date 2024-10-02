@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-10-02"
 
 subcollection: watson-assistant
 
@@ -29,6 +29,7 @@ The following table shows the latest version of the web chat integration that is
 
 | {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}} version | Latest web chat version available |
 |----------------|----------------|
+| 5.0.3 | [8.2.6](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.2.6) |
 | 5.0.1 | [8.1.2](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.1.2) |
 | 5.0.0 | [8.1.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.1.0) |
 | 4.8.6 | [8.2.3](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.2.3) |
@@ -50,6 +51,20 @@ The following table shows the latest version of the web chat integration that is
 | 4.5.0 | [6.4.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#6.4.1) |
 | 4.0.8 | [6.2.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#6.2.0) |
 {: caption="Web chat versions in {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}}" caption-side="top"}
+
+## 27 September 2024
+{: #assistant-data-sep272024}
+{: release-note}
+
+Configure security certificates
+: You can now secure the search integrations, custom extensions, conversational skills, and webhooks by configuring TLS certificates in your assistant. For more information, see [Configuring Security certificates](/docs/watson-assistant?topic=watson-assistant-admin-securing#ssl-certificates-config).
+
+Use custom service integration to search information
+: You can now use a custom service integration to create your own search capability in your assistant that uses conversational search for enhanced AI responses. For more information, see [Custom service integration](/docs/watson-assistant?topic=watson-assistant-search-customsearch-add).
+
+Tune the generated response length in conversational search
+: When you use conversational search in your watsonx Assistant, you can now define the length of the generated responses that your watsonx Assistant gives to better fit your needs. For more information, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search).
+
 
 ## 28 August 2024
 {: #assistant-data-aug282024}

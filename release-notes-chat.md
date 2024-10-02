@@ -27,6 +27,12 @@ If you want to evaluate changes that are introduced in a web chat release before
 can set a version of your web chat. For more information, see [Controlling the web chat
 version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
 
+## 8.3.2
+{: #8.3.2}
+*Release date: 23 September 2024*
+
+- Fixed a bug that broke the Journeys feature.
+
 ## 8.3.1
 {: #8.3.1}
 *Release date: 13 September 2024*
