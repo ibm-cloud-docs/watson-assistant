@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-15"
+lastupdated: "2024-10-02"
 
 subcollection: watson-assistant
 
@@ -136,16 +136,6 @@ Use the [Sipputheader](https://help.nice-incontact.com/content/studio/actions/si
 
 - **headerName** X-ContactID
 - **headerValue** {ContactId}
-
-**Sipputheader** must be executed before **Placecall**.
-{: note}
-
-Use a [Placecall](https://help.nice-incontact.com/content/studio/actions/placecall/placecall.htm) action to initiate an outbound call to {{site.data.keyword.conversationshort}}. In the **PhoneNumber** property, enter the phone number that you allocated for this integration. 
-
-The phone number must match the number that you configured in **Use an existing phone number with an external provider** in the {{site.data.keyword.conversationshort}} user interface.
-{: note}
-
-![Image of the outbound call flow](images/cxone-placecall.png)
 
 #### Transferring a caller to a live agent
 
