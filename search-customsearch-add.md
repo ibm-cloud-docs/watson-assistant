@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-13"
+lastupdated: "2024-10-03"
 
 subcollection: watson-assistant
 
@@ -18,15 +18,15 @@ subcollection: watson-assistant
 On IBM watsonx Orchestrate, the plans could vary. Check with your IBM Sales representative for more information.
 {: important}
 
-A custom service integration searches for information by using a search capability that you create.  You can use a custom service integration with the conversational search capabilities of your assistant to generate AI responses. This integration supports both server-side and client-side retrieval of information.
+A Custom service integration searches for information by using a search capability that you create.  You can use a Custom service integration with the conversational search capabilities of your assistant to generate AI responses. This integration supports both server-side and client-side retrieval of information.
 
 You can have only one search integration per environment. When you change the existing search integration to other integration types such as {{site.data.keyword.discoveryfull}} or Elasticsearch, the settings of the existing search integration are overwritten.
 {: important}
 
-## Selecting custom service
+## Selecting Custom service
 {: #select-custom-service}
 
-To select a custom service as the search integration, use one of the following procedures:
+To select a Custom service as the search integration, use one of the following procedures:
 
  - **Selecting Custom service search integration from the Integrations page** 
 
@@ -48,7 +48,7 @@ To select a custom service as the search integration, use one of the following p
  
       ![Select Customserivce](images/select-custom-service.png)
 
-## Setting up a custom service with server credentials
+## Setting up a Custom service with server credentials
 {: #setup-custom-service-server}
       
 To set up Custom service on your assistant with server credentials, use the following procedure:
@@ -77,10 +77,10 @@ To set up Custom service on your assistant with server credentials, use the foll
 
     ![Select Customservice server](images/select-customservice-server.png)
 
-## Setting up a custom service through your client
+## Setting up a Custom service through your client
 {: #setup-custom-service-client}
 
-To set up custom service on your assistant through your client, use the following procedure:
+To set up Custom service on your assistant through your client, use the following procedure:
 
 1. In the **Connect your search provider** section of the **Custom service** window, select “Through your client”.
 1. Click **Next** to go to **Conversational search (optional)**.
@@ -93,17 +93,19 @@ To set up custom service on your assistant through your client, use the followin
      | No results found | No search results are found | `I searched my knowledge base for information that might address your query, but did not find anything useful to share.` |
      | Connectivity issue | I was unable to complete the search for some reason | `I might have information that could help address your query, but am unable to search my knowledge base at the moment.` |
      {: caption="Custom service search result messages" caption-side="top"}
-1. Click **Save** and then **Close** to end the custom service set up in the client-side.
+1. Click **Save** and then **Close** to end the Custom service set up in the client-side.
 
-## Setting up retrieval systems for a custom service
+
+
+## Setting up retrieval systems for a Custom service
 {: #setup-retrieval}
       
-To use a custom service with your search integration, you must integrate your search capability by providing a server or by having the client that calls your assistant to provide search results.  You can use your own retrieval if the retrieval schema matches with the schema that is provided by your assistant. If your retrieval schema does not match with the assistant’s schema, you must provide a wrapper that does the schema mapping.  You can deploy the wrapper as a service or your chat client can start it. Building a wrapper is useful when you want to combine a different source or invoking libraries or services that do not comply with the schema for assistant search results. {: shortdesc}
+To use a Custom service with your search integration, you must integrate your search capability by providing a server or by having the client that calls your assistant to provide search results.  You can use your own retrieval if the retrieval schema matches with the schema that is provided by your assistant. If your retrieval schema does not match with the assistant’s schema, you must provide a wrapper that does the schema mapping.  You can deploy the wrapper as a service or your chat client can start it. Building a wrapper is useful when you want to combine a different source or invoking libraries or services that do not comply with the schema for assistant search results. {: shortdesc}
 
-### Setting up a server for custom service retrieval
+### Setting up a server for Custom service retrieval
 {: #server-side-retrieval}
       
-A server for custom service retrieval must implement the following API:
+A server for Custom service retrieval must implement the following API:
 
 Query: `POST <server_url>`
 
@@ -150,7 +152,7 @@ Query: `POST <server_url>`
 The metadata in the request and the entire response object must not exceed 100 KB.{: important}
      
 
-### Setting up a client for custom service retrieval
+### Setting up a client for Custom service retrieval
 {: #client-side-retrieval}
 
 You can see the following API response from the [/message API](/apidocs/assistant-v2#message){: external} requesting search at run time:
@@ -209,7 +211,7 @@ Your assistant response limit cannot exceed 100 KB.  If your assistant gets a `s
 ### Processing the search results in conversational search
 {: #process-search-results}
     
-When you setup your custom service by providing server credentials or by sending results from your client and if you enable conversational search with your custom service, you get the following behavior:
+When you setup your Custom service by providing server credentials or by sending results from your client and if you enable conversational search with your Custom service, you get the following behavior:
 
 1. Conversational search iterates through the search results from first to last. 
 1. From each search result:
