@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-10-03"
+lastupdated: "2024-10-04"
 
 subcollection: watson-assistant
 
@@ -95,8 +95,23 @@ To set up Custom service on your assistant through your client, use the followin
      {: caption="Custom service search result messages" caption-side="top"}
 1. Click **Save** and then **Close** to end the Custom service set up in the client-side.
 
+## Setting up Milvus for Custom service
+{: #setup-milvus}
 
+Milvus is a full-text search engine that you can use for handling large-scale datasets. For applications requiring real-time search capabilities and numerous concurrent users, you can use Milvus, that has a distributed architecture, high performance, flexible data model, and real-time analytics capabilities.
+{: shortdesc}
 
+### Setting up Milvus with server credentials
+{: #setup-milvus-server}
+
+1.	Set up Milvus on your assistant with server credentials by following the steps mentioned in [Setting up a Custom service with server credentials](#setup-custom-service-server).
+2.	For more information on examples and references for Milvus, see [Example with Milvus]( https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-custom-service/custom-search-server-setup-guide.md#example-with-milvus){: external}.
+
+### Setting up Milvus through your client
+{: #setup-milvus-client}
+
+Set up Milvus on your assistant through your client by following the steps mentioned in [Setting up a Custom service through your client](#setup-custom-service-client).
+    
 ## Setting up retrieval systems for a Custom service
 {: #setup-retrieval}
       
