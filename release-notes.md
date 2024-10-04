@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-03"
+lastupdated: "2024-10-04"
 
 subcollection: watson-assistant
 
@@ -16,6 +16,14 @@ content-type: release-note
 {: #watson-assistant-release-notes}
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+
+## 4 October 2024
+{: #watson-assistant-oct042024}
+{: release-note}
+
+Configure Milvus in Custom service integration
+:  You can now configure Milvus, a full-text search engine with high performance and real-time analytics capabilities, in the Custom service integration of your assistant for enhanced search. For more information, see [Setting up Milvus for Custom service](/docs/watson-assistant?topic=watson-assistant-search-customsearch-add/#setup-milvus).
 
 
 ## 13 September 2024
