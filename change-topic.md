@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-10"
+lastupdated: "2024-10-04"
 
 subcollection: watson-assistant
 
@@ -80,6 +80,8 @@ To disable returning to the original topic:
 1. Keep the **Change conversation topic** toggle switched to **On**.
 
 1. Select the checkbox **Never return to original action after completing this action** to prevent the customer from returning to the previous action.
+
+
 
 ### Allow change of topic between actions and dialog
 {: #change-topic-action-to-dialog}
