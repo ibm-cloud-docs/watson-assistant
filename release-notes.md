@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-09-13"
+lastupdated: "2024-10-03"
 
 subcollection: watson-assistant
 
@@ -69,7 +69,16 @@ Security certificates configuration
 Source chunk visibility in citations
 :   You can now see full source chunk in citations even when PDF viewer and source link to a website is not available.
 
+## 25 August 2024
+{: #watson-assistant-aug252024}
+{: release-note}
 
+New version 2024-08-25 for the search APIs 
+
+:   The search results are no longer returned in the `results` property. Instead, two new properties are introduced:
+
+-  `primary_results` - Returns the initial search results from a query. The result limit is configured using `max_primary_results`, which sets how many search results are included in the `primary_results` property.
+-  `additional_results` - Returns more or additional search results from a query. The result limit is configured using `max_total_results`, which sets how many search results are included in the `additional_results` property.
 
 ## 20 August 2024
 {: #watson-assistant-aug202024}
