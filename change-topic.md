@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-10-04"
+lastupdated: "2024-10-08"
 
 subcollection: watson-assistant
 
@@ -81,6 +81,14 @@ To disable returning to the original topic:
 
 1. Select the checkbox **Never return to original action after completing this action** to prevent the customer from returning to the previous action.
 
+### Conditioning on previous topic
+{: #condition-previous-topic}
+
+You can condition your new topic action, or steps within your new topic action, on the previous topic by using the built-in variable `Digressed from`. For example, if your previous topic action was `Create new account` and you digressed to an action with steps that only apply to existing accounts, use the expression in the following image in your step conditions to decide to run those steps.
+
+![Using Digressed from variable](images/digression.png)
+
+For more information on creating conditions, see [Adding conditions to an action](/docs/watson-assistant?topic=watson-assistant-action-conditions) and [Adding conditions to a step](/docs/watson-assistant?topic=watson-assistant-step-conditions).
 
 
 ### Allow change of topic between actions and dialog
