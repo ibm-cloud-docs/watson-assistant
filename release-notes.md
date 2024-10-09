@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-04"
+lastupdated: "2024-10-09"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,12 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 8 October 2024
+{: #watson-assistant-oct082024}
+{: release-note}
+
+Improved currency recognition
+:  {{site.data.keyword.conversationshort}} now supports filling currency slots with number entities in conversational skills.
 
 ## 4 October 2024
 {: #watson-assistant-oct042024}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-07-08"
+lastupdated: "2024-10-09"
 
 subcollection: watson-assistant
 
@@ -68,3 +68,27 @@ Some more starting points in the documentation to also help you get started:
 - [Building actions from a template](/docs/watson-assistant?topic=watson-assistant-actions-templates)
 
 For more information on FAQs, see [FAQs about {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-watson-assistant-faqs#faqs-new-experience).
+
+## Working with your assistant
+
+Assistants are created within a {{site.data.keyword.conversationshort}} service instance. To continue working with your assistant, open the service instance that contains the assistant. If you can't remember the service instance name, you can switch between instances from within the {{site.data.keyword.conversationshort}} user interface by doing the following steps:
+
+1.  Go to the IBM Cloud Resource list
+1.  Log in.
+
+A list of the service instances that you own or were given access to is displayed.
+
+3.  Click a service instance to open it.
+1.  Click **Launch Watson Assistant** from the service instance details page to open the product in a new browser tab or window.
+1.  Click the following icon from the navigation pane to see a list of your assistants.
+
+   - ![Nav icon](images/nav-ass-icon.png) Assistants
+
+If you do not see the assistant you are looking for, you can look for it in a different service instance.
+
+### Switching the service instance
+
+To switch to a different Watson Assistant service instance, complete the following steps:
+
+1.  Go to **Home**> **View all assistants**
+1.  You can see the list of the available service instances. Click on a different service instance of your choice to open.
