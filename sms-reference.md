@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-10-10"
 
 subcollection: watson-assistant
 
@@ -31,7 +31,7 @@ Each action consists of a `command` property, followed by an optional `parameter
 | `smsActSendMedia` | Enables MMS messaging.  | `mediaURL`: Specifies a JSON array of publicly accessible media URLs that are sent to the user. |
 | `smsActSetDisambiguationConfig` | Configures how to handle the choices that are displayed in a disambiguation list. | `prefixText`: Text to include before each option. For example, `Press %s for` where `%s` represents the number corresponding to a list choice; this is replaced with the actual number at run time. |
 | `smsActSetOptionsConfig` | Configures how to handle option response types. | `prefixText`: Text to include before each option. For example, `Press %s for` where `%s` represents the number corresponding to a list choice; this is replaced with the actual number at run time. |
-{: caption="Table 1. Actions that you can initiate from the action" caption-side="top"}
+{: caption="Actions that you can initiate from the action" caption-side="top"}
 
 ## Reserved context variables
 {: #sms-reference-context-variables}
@@ -46,7 +46,7 @@ Table 2 describes the context variables that are set by your action. Table 3 des
 | Context variable name | Expected value | Description |
 | --------------------- | -------------- | ----------- |
 | `smsConversationResponseTimeout` | Time in ms | The amount of time in milliseconds that the integration waits to receive a response from the action. If the time limit is exceeded, the integration attempts to contact the action again. If the service still can't be reached, the SMS response fails. |
-{: caption="Table 2. SMS context variables set by the action" caption-side="top"}
+{: caption="SMS context variables set by the action" caption-side="top"}
 
 ### Table 3. Context variables that are set by the integration
 {: #sms-reference-context-variables-set-by-integration}
@@ -60,4 +60,4 @@ Table 2 describes the context variables that are set by your action. Table 3 des
 | `smsError` | When the integration fails to send an SMS message, this variable contains details about the error that occurred.  |
 | `smsSessionID` | The globally unique identifier (GUID) for the related SMS Gateway session. |
 | `smsMedia` | The `arraylist` of `mediaURL` and corresponding `mediaContentType`. This context variable is cleared at the end of each conversation turn. |
-{: caption="Table 3. SMS context variables set by the integration" caption-side="top"}
+{: caption="SMS context variables set by the integration" caption-side="top"}

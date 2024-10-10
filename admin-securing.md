@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-10-10"
 
 subcollection: watson-assistant
 
@@ -63,7 +63,7 @@ When your assistant connects to a user-specified URL through custom extensions, 
 | Your assistant has the SSL certificate for the service that is calling. | You provide the SSL certificate for the service to the assistant. | The assistant verifies the identity directly. | Most secure  | This is secure even if the SSL certificate is self-signed because signature verification is not needed when the assistant already has the certificate. |
 | Your assistant has the SSL certificate for a certificate authority that has signed the certificate of the service it is calling. | You provide the SSL certificate for the certifying authority to the assistant, and the SSL certificate for the service must be signed by that certifying authority. | The assistant verifies the authenticity of a service through the certificate authority.  It knows to trust the certificate authority because you provided the certificate for it. | Extremely secure when the certificate authority is extremely secure | This approach works with private certificate authorities such as the ones that enterprises establish for internal use.|
 | The service has an SSL certificate that is signed by a public trusted certificate authority.  | You do not need to provide any SSL certificate to the assistant, but the SSL certificate for the service must be signed by a public trusted authority. | The assistant verifies the authenticity of a service using the public trusted certificate authority. | Extremely secure  | Publicly trusted certificate authorities diligently verify the ownership of the private key before signing any certificate.|
-{: caption="Table 1. Possibilities of identifying secure service" caption-side="top"}
+{: caption="Possibilities of identifying secure service" caption-side="top"}
 
 Some example Security certificates configuration options are discussed with which you can achieve an optimal balance of security and convenience for an assistant with few connection details. For more information, see [Methods for choosing the Security certificates option](/docs/watson-assistant?topic=watson-assistant-ssl-certificates-configuration-reference).
 
@@ -77,7 +77,7 @@ Some example Security certificates configuration options are discussed with whic
 | `Trust uploaded certificates and any certificates signed by a trusted authority` | Your assistant can connect to any service: \n - with a certificate signed by a trusted authority.\n - with the uploaded certificate (either the certificate for that service or the certificate for its certifying authority).\n  It cannot connect to any other secure service. | - Convenient to use. \n - You can verify the identity of all services that your assistant connects to.  No additional effort is needed for services that have a certificate signed by a publicly trusted authority.  \n - When not signed by a publicly trusted authority, you must upload a certificate file for verifying the identity of the services your assistant connects to. | Commonly used by all assistants. | Yes |
 | `Trust uploaded certificates` | Your assistant can connect to any service with an uploaded certificate (either the certificate for that service or the certificate for its certifying authority). \n It cannot connect to any other secure service. | - Less convenient to use.\n - Your assistant can connect only to secure services with uploaded certificates or their signing authority's certificate. | Less usage | Yes |
 | `Trust all certificates, operation insecure (Not recommended)` | Your assistant can connect to any service and is not recommended because of lack of protection from imposter services.  | Reasonable option \n - for proof-of-concepts or demo assistants where your assistants don’t have any independent users or sensitive data. \n - to keep the assistants operational even when they are connected to services that are not signed by publicly trusted authorities. | - a default option for both old and new assistants.  | No |
-{: caption="Table 2. Securitycertificates configuration option" caption-side="top"}
+{: caption="Securitycertificates configuration option" caption-side="top"}
 
   
 ![SSL certificates configuration option](images/ssl-main-options.png) 
