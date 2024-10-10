@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-03-20"
+  years: 2022, 2024
+lastupdated: "2024-10-10"
 
 subcollection: watson-assistant
 
@@ -163,6 +163,7 @@ To create an step condition based on the HTTP status code, follow these steps:
     ${step_549_result_1}.status==408
     ```
 
+
 ## Debugging failures
 {: #extension-debug}
 
@@ -207,6 +208,10 @@ If your calls to an extension are failing, you might want to debug the problem b
 1. Click the **Advanced** tab in the extension inspector if you want to see the raw request and response data:
     - The request is shown as a cURL command, which you can run at a command prompt or import into a tool such as [Postman](https://www.postman.com/){: external}. (For security reasons, the content of any `Authorization` header is not included.)
     - The response is shown as the complete JSON data returned from the external API.
+
+
+
+
 
 ## Reconfiguring a missing extension
 {: #extension-reconfig}
