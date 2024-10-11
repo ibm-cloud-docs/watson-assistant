@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-11"
 
 subcollection: watson-assistant
 
@@ -168,11 +168,11 @@ In the debug mode, you can edit the variable values by clicking on the value tha
 
 ![Edit variable value](images/edit-debug-var-value.png){: caption="Edit variable values" caption-side="bottom"}
 
-
-
-## Extension inspector in Preview
+## Using Inspector in Action preview
 {: #review-extension-inspector}
 
 If you are using a custom extension in your action, you can use the **Inspector** in Preview to debug. For more information, see [Debugging custom extensions](/docs/watson-assistant?topic=watson-assistant-call-extension#extension-debug).
 
-![Extension inspector](images/extension-inspector-preview.png){: caption="Extension inspector" caption-side="bottom"}
+If you are using conversatonal search or skill-based actions, you can use the **Inspector** in Preview to debug. For more information, see [Debugging conversational search](/docs/watson-assistant?topic=watson-assistant-call-extension#debug-conversational-search).
+
+![Inspector](images/extension-inspector-preview.png){: caption="Inspector" caption-side="bottom"}
