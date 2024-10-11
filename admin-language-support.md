@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-12-14"
+  years: 2015, 2024
+lastupdated: "2024-10-10"
 
 keywords: global support, universal language, universal model, another language
 
@@ -235,7 +235,7 @@ For these dialog features, language support differs depending on the language.
 | Portuguese (Brazilian) (`pt-br`) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Spanish (`es`) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Universal (`xx`) |  |  |
-{: caption="Table 3. Intent feature support details" caption-side="bottom"}
+{: caption="Intent feature support details" caption-side="bottom"}
 
 ### User input processing support
 {: #language-support-input}
@@ -256,7 +256,7 @@ For these dialog features, language support differs depending on the language.
 | Portuguese (Brazilian) (`pt-br`) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |  |
 | Spanish (`es`) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |  |
 | Universal (`xx`) | ![checkmark icon](../../icons/checkmark-icon.svg) | ![checkmark icon](../../icons/checkmark-icon.svg) |  |  |  |
-{: caption="Table 4. User input processing support details" caption-side="bottom"}
+{: caption="User input processing support details" caption-side="bottom"}
 
 ### Entity feature support
 {: #language-support-entities}
@@ -277,5 +277,4 @@ For these dialog features, language support differs depending on the language.
 | Portuguese (Brazilian) (`pt-br`) |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Spanish (`es`)                   |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
 | Universal (`xx`)                 |  | ![checkmark icon](../../icons/checkmark-icon.svg) |
-{: caption="Table 5. Entity feature support details" caption-side="bottom"}
-
+{: caption="Entity feature support details" caption-side="bottom"}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-10-24"
+  years: 2024
+lastupdated: "2024-10-10"
 
 subcollection: watson-assistant
 content-type: tutorial
@@ -104,7 +104,7 @@ This tagged information is used later when a natural language phrase is submitte
 1.  From the *My Projects* page, click **New Project**.
 1.  Name your project `Discovery documentation`, and then click the **Document Retrieval** tile.
 
-    ![Shows the project type options](images/tut-neural-new-project.png){: caption="Figure 1. Project type options" caption-side="bottom"}
+    ![Shows the project type options](images/tut-neural-new-project.png){: caption="Project type options" caption-side="bottom"}
 
 1.  Click **Next**.
 
@@ -118,7 +118,7 @@ Add the documentation PDFs to your {{site.data.keyword.discoveryshort}} project.
 
 1.  From the *Select data source* page, click the **Upload data** tile, and then click **Next**.
 
-    ![Shows that the Upload data option is chosen from the data sources page](images/tut-neural-data-source.png){: caption="Figure 2. Creating a collection from uploaded data" caption-side="bottom"}
+    ![Shows that the Upload data option is chosen from the data sources page](images/tut-neural-data-source.png){: caption="Creating a collection from uploaded data" caption-side="bottom"}
 
 1.  Name the collection *Discovery docs part 1*, and then click **Next**.
 
@@ -130,7 +130,7 @@ Add the documentation PDFs to your {{site.data.keyword.discoveryshort}} project.
 
 1.  From the navigation panel, click **Manage collections**, and then click **New collection**.
 
-    ![Shows the Manage collections page where you can add another collection to the project.](images/tut-neural-second-collection.png){: caption="Figure 3. Adding a second collection" caption-side="bottom"}
+    ![Shows the Manage collections page where you can add another collection to the project.](images/tut-neural-second-collection.png){: caption="Adding a second collection" caption-side="bottom"}
 
 1.  Repeat the previous steps to add the second PDF file as a collection named *Discovery docs part 2*.
 
@@ -165,7 +165,7 @@ Both Lite and Trial plan {{site.data.keyword.conversationshort}} service instanc
 
 After a congratulatory message, the home page for your new assistant is displayed.
 
-![Shows the assistant page](images/tut-neural-assistant.png){: caption="Figure 4. Assistant home page" caption-side="bottom"}
+![Shows the assistant page](images/tut-neural-assistant.png){: caption="Assistant home page" caption-side="bottom"}
 
 Before we add anything to our new assistant, let's check on the status of our data.
 
@@ -181,7 +181,7 @@ To improve the retrievability of the information in your PDF files, you will spl
 
 1.  From the *Improvement tools* panel, expand *Define structure*, and then click **New fields**.
 
-    ![Shows the chat bot preview in a fake web page](images/tut-neural-new-fields.png){: caption="Figure 5. Opening the tool for defining fields" caption-side="bottom"}
+    ![Shows the chat bot preview in a fake web page](images/tut-neural-new-fields.png){: caption="Opening the tool for defining fields" caption-side="bottom"}
 
 1.  Choose the *Discovery docs part 1* collection.
 
@@ -189,7 +189,7 @@ To improve the retrievability of the information in your PDF files, you will spl
 
 1.  Click **User-trained models**, and then click **Submit**.
 
-    ![Shows the chat bot preview in a fake web page](images/tut-neural-user-trained.png){: caption="Figure 6. Creating a user-trained model" caption-side="bottom"}
+    ![Shows the chat bot preview in a fake web page](images/tut-neural-user-trained.png){: caption="Creating a user-trained model" caption-side="bottom"}
 
 1.  Click **Apply changes and reprocess**.
 
@@ -201,17 +201,17 @@ To improve the retrievability of the information in your PDF files, you will spl
 
 1.  From the thumbnails view, click the thumbnail for the first full-text page from the document to open the first page with real content.
 
-    ![Shows the Smart Document Understanding tool](images/tut-neural-sdu-tool.png){: caption="Figure 7. The Smart Document Understanding tool" caption-side="bottom"}
+    ![Shows the Smart Document Understanding tool](images/tut-neural-sdu-tool.png){: caption="The Smart Document Understanding tool" caption-side="bottom"}
 
 1.  To annotate the document, click the `subtitle` label from the *Field labels* list. Then, click each block in the representation of the PDF page that represents a heading to change its label from `text` to `subtitle`.
 
-    ![Shows labeled subtitles in the SDU tool](images/tut-neural-sdu-subtitle.png){: caption="Figure 8. Applying the subtitle label" caption-side="bottom"}
+    ![Shows labeled subtitles in the SDU tool](images/tut-neural-sdu-subtitle.png){: caption="Applying the subtitle label" caption-side="bottom"}
 
 1.  After every subtitle on the current page is labeled, click **Submit page**.
 
     The next page of the PDF file is displayed.
 
-    ![Shows labeled subtitles in the SDU tool](images/tut-neural-sdu-page2.png){: caption="Figure 9. Next page is displayed for labeling" caption-side="bottom"}
+    ![Shows labeled subtitles in the SDU tool](images/tut-neural-sdu-page2.png){: caption="Next page is displayed for labeling" caption-side="bottom"}
 
 1.  Repeat this process until the tool is able to label the headings correctly for you in a consistent way when new pages are loaded into the tool. At that point, click **Apply changes and reprocess**.
 
@@ -273,7 +273,7 @@ Now that subtitles are indexed properly in {{site.data.keyword.discoveryshort}},
 
 1.  In the *Split document on each occurrence of* field, choose **subtitle**, and then click **Apply changes and reprocess**.
 
-    ![Shows the split by field option in Discovery](images/tut-neural-split-doc.png){: caption="Figure 10. Split a document" caption-side="bottom"}
+    ![Shows the split by field option in Discovery](images/tut-neural-split-doc.png){: caption="Split a document" caption-side="bottom"}
 
 1.  From the navigation panel, click **Manage collections**, and then open the other collection.
 
@@ -283,7 +283,7 @@ Now that subtitles are indexed properly in {{site.data.keyword.discoveryshort}},
 
 The collections start to be reprocessed. After reindexing is finished, instead of containing one document each, the collections will contain several hundred documents each. 
 
-![Shows the collections with many documents](images/tut-neural-both-collections.png){: caption="Figure 11. The collections with more documents" caption-side="bottom"}
+![Shows the collections with many documents](images/tut-neural-both-collections.png){: caption="The collections with more documents" caption-side="bottom"}
 
 While the index is being rebuilt, let's get our assistant ready.
 
@@ -297,13 +297,13 @@ Connect your assistant to your NeuralSeek service instance.
 
 1.  Click the *Integrate* tab and follow the instructions to set up the NeuralSeek custom extension for your assistant. Return to this procedure when you're ready to create the action.
 
-    ![Shows the Integrate page of the NeuralSeek instance](images/tut-neural-configure.png){: caption="Figure 12. Set up the NeuralSeek instance integration" caption-side="bottom"}
+    ![Shows the Integrate page of the NeuralSeek instance](images/tut-neural-configure.png){: caption="Set up the NeuralSeek instance integration" caption-side="bottom"}
 
 1.  From the {{site.data.keyword.conversationshort}} navigation panel, click **Actions**, and then click **New action**.
 
 1.  Choose **Quick start from templates**, and then scroll to find and click the **NeuralSeek Starter kit**.
 
-    ![Shows the start from template option](images/tut-neural-action-from-template.png){: caption="Figure 13. Choose Quick start from template" caption-side="bottom"}
+    ![Shows the start from template option](images/tut-neural-action-from-template.png){: caption="Choose Quick start from template" caption-side="bottom"}
 
 1.  Click **Select this starter kit**, and then click **Add templates**.
 
@@ -359,7 +359,7 @@ Connect your assistant to your NeuralSeek service instance.
 
     Choose **NeuralSeek**, and then click **Apply**.
 
-    ![Shows the extension setup page](images/tut-neural-setup.png){: caption="Figure 14. Set up the NeuralSeek extension" caption-side="bottom"}
+    ![Shows the extension setup page](images/tut-neural-setup.png){: caption="Set up the NeuralSeek extension" caption-side="bottom"}
 
 1.  Click to open Step 6 for editing.
 
@@ -372,7 +372,7 @@ Connect your assistant to your NeuralSeek service instance.
     ```
     {: codeblock}
 
-    ![Shows the extension setup page](images/tut-neural-edit-url.png){: caption="Figure 15. Change the URL for the *More information* link" caption-side="bottom"}
+    ![Shows the extension setup page](images/tut-neural-edit-url.png){: caption="Change the URL for the *More information* link" caption-side="bottom"}
 
 1.  Save your changes, and then click the X to close the step.
 
@@ -388,13 +388,13 @@ To preview your assistant, you will use the built-in web chat as the chat user i
 
     The draft environment is displayed. It shows that a web chat is connected to your assistant. You also can see that the web chat is connected to the NeuralSeek extension.
 
-    ![Shows the Environments page where NeuralSeek is connected to the assistant.](images/tut-neural-enviro.png){: caption="Figure 16. Environment diagram" caption-side="bottom"}
+    ![Shows the Environments page where NeuralSeek is connected to the assistant.](images/tut-neural-enviro.png){: caption="Environment diagram" caption-side="bottom"}
 
 1.  Click the *Web chat* tile to edit the web chat. 
 
     We don't want to add multiple starter questions, so we're going to turn off the home screen for the web chat. Click the **Home screen** tab. Set the switcher to **Off**, and then click **Save and exit**.
 
-    ![Shows the web chat home screen set to Off.](images/tut-neural-web-chat-off.png){: caption="Figure 17. Web chat home screen disabled" caption-side="bottom"}
+    ![Shows the web chat home screen set to Off.](images/tut-neural-web-chat-off.png){: caption="Web chat home screen disabled" caption-side="bottom"}
 
 You're ready to preview your assistant!
 
@@ -410,7 +410,7 @@ To preview an assistant that connects to data that is stored in {{site.data.keyw
 
 1.  Click the chat icon to open the web chat window.
 
-    ![Shows web chat welcome message](images/tut-convo-test-2.png){: caption="Figure 18. Web chat welcome message" caption-side="bottom"}
+    ![Shows web chat welcome message](images/tut-convo-test-2.png){: caption="Web chat welcome message" caption-side="bottom"}
 
 1.  Enter the following text question:
 
@@ -421,7 +421,7 @@ To preview an assistant that connects to data that is stored in {{site.data.keyw
 
     The correct answer is returned and it includes a link to the product documentation.
 
-    ![Shows a preview of the assistant where the test question is answered](images/tut-neural-answer.png){: caption="Figure 19. Web chat returns search response" caption-side="bottom"}
+    ![Shows a preview of the assistant where the test question is answered](images/tut-neural-answer.png){: caption="Web chat returns search response" caption-side="bottom"}
 
 1.  Submit a question that wasn't used as a query example when you created the action.
 
@@ -432,7 +432,7 @@ To preview an assistant that connects to data that is stored in {{site.data.keyw
 
     A detailed answer is returned.
 
-    ![Shows another preview of the assistant where the test question is answered](images/tut-neural-answer2.png){: caption="Figure 20. Web chat returns a detailed answer" caption-side="bottom"}
+    ![Shows another preview of the assistant where the test question is answered](images/tut-neural-answer2.png){: caption="Web chat returns a detailed answer" caption-side="bottom"}
 
 1.  Optionally ask the assistant other questions. 
 

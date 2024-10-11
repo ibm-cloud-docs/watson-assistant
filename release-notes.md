@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-04"
+lastupdated: "2024-10-11"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,22 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 11 October 2024
+{: #watson-assistant-oct112024}
+{: release-note}
+
+Passing values to skill-based actions
+:  {{site.data.keyword.conversationshort}} now supports passing values to skill-based actions in the conversation flow. External [skill providers](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/conversational-skills#conversational-skills-registering-a-pro-code-conversational-skill-provider){: external} must implement the new endpoint for skill-based actions to use this feature. For more information, see [Passing values to a subaction](/docs/watson-assistant?topic=watson-assistant-step-what-next#passing-values-to-a-subaction).
+
+Inspector supports conversational search
+:  You can now debug conversational search issues using the **Inspector**. For more information, see [Debugging failures for Conversational search or skill based actions](/docs/watson-assistant?topic=watson-assistant-call-extension#debug-conversational-search) 
+
+## 8 October 2024
+{: #watson-assistant-oct082024}
+{: release-note}
+
+Improved currency recognition
+:  {{site.data.keyword.conversationshort}} now supports filling currency slots with number entities in conversational skills.
 
 ## 4 October 2024
 {: #watson-assistant-oct042024}
