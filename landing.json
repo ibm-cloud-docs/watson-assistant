@@ -1,0 +1,53 @@
+
+{
+    "version": 2,
+    "title": "IBM watsonx Assistant",
+    "introduction": "This documentation describes the usage of watsonx Assistant for IBM Cloud as a Service.",
+    "product_page": "https://www.ibm.com/products/watsonx-assistant",
+    "console_page": "/catalog/services/watsonx-assistant",
+    "section_topics": {
+      "links": [
+        {
+          "title": "Getting started with watsonx Assistant",
+          "href": "/docs/watson-assistant?topic=watson-assistant-getting-started"
+        },
+        {
+          "title": "Learning from the tutorial",
+          "href": "/docs/watson-assistant?topic=watson-assistant-tutorial-neuralseek"
+        },
+        {
+          "title": "Managing IAM access",
+          "href": "/docs/watson-assistant?topic=watson-assistant-access-control"
+        },
+        {
+          "title": "Tracking events for watsonx Assistant",
+          "href": "/docs/watson-assistant?topic=watson-assistant-at_events"
+        },
+        {
+          "title": "Helping with FAQs",
+          "href": "/docs/watson-assistant?topic=watson-assistant-watson-assistant-faqs"
+        }
+      ]
+    },
+    "section_highlights": [
+      {
+        "title": "Stack Overflow",
+        "description": "To discuss questions with developers",
+        "href": "https://stackoverflow.com/questions/tagged/watson-assistant",
+        "type": "blog"
+      },
+      {
+        "title": "Blog for watsonx Assistant",
+        "description": "To get various kinds of information about watsonx Assistant",
+        "href": "https://www.ibm.com/blog/category/watsonx-assistant/",
+        "type": "blog",
+        "recommended": true
+      }
+    ],
+    "section_devtools": {
+      "api": "/apidocs/assistant-v2"
+    },
+    "section_updates": {
+      "view_more": "/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes"
+    }
+  }
