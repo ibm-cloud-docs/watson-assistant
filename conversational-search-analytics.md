@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-10-15"
 
 keywords: conversational search
 
@@ -22,7 +22,7 @@ You can analyze the performance of your conversational search by using a holisti
 
 ## Analyzing data and Conversational search scores
 
-You could see the average scores for citations per response, answer length, answer confidence and extractiveness in the draft configuration. You can filter conversational search responses using successful conversational search responses or “I don’t know”. Click any **Customer input** to view the inline citations for that conversational search.
+
 
 ![Conversational search analytics](images/conversational-search-analytics-overview.png)
 

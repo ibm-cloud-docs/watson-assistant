@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-10-02"
+lastupdated: "2024-10-15"
 
 subcollection: watson-assistant
 
@@ -31,7 +31,7 @@ To create your own skill-based actions you must first complete the following req
 
 For more information about the API specifications for skill providers, see [Conversational Skills: Masterdoc for API Endpoints to Implement by the Pro-Code Conversational Skill Client](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/conversational-skills/procode-endpoints.md).
 
-
+You can also use Java SDK for conversational skills. For more information, see [Conversational Skills: Java-based conversational skill for watsonx Assistant](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/conversational-skills/procode-skill-sdk-java).
 
 ### Registering a skill-based action provider
 {: #registering-provider}
