@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-02"
+lastupdated: "2024-10-15"
 
 subcollection: watson-assistant
 
@@ -26,6 +26,16 @@ For information about new features and improvements to the core {{site.data.keyw
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you
 can set a version of your web chat. For more information, see [Controlling the web chat
 version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 8.3.3
+{: #8.3.3}
+*Release date: 14 October 2024*
+
+- **Accessibility fixes:** Added elements to web chat to make it easier to navigate the chat using the next and previous heading keys while using a screen reader.
+
+- Fixed a focus issue with the custom menu. The menu will remain focused after the user selects an item from within the menu.
+
+- Extensions can no longer cause the input field to become disabled while waiting for the extension to complete.
 
 ## 8.3.2
 {: #8.3.2}
