@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-11"
+lastupdated: "2024-10-15"
 
 subcollection: watson-assistant
 
@@ -25,7 +25,7 @@ Passing values to skill-based actions
 :  {{site.data.keyword.conversationshort}} now supports passing values to skill-based actions in the conversation flow. External [skill providers](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/conversational-skills#conversational-skills-registering-a-pro-code-conversational-skill-provider){: external} must implement the new endpoint for skill-based actions to use this feature. For more information, see [Passing values to a subaction](/docs/watson-assistant?topic=watson-assistant-step-what-next#passing-values-to-a-subaction).
 
 Inspector supports conversational search
-:  You can now debug conversational search issues using the **Inspector**. For more information, see [Debugging failures for Conversational search or skill based actions](/docs/watson-assistant?topic=watson-assistant-call-extension#debug-conversational-search) 
+:  You can now debug conversational search issues using the **Inspector**. For more information, see [Debugging failures for Conversational search or skill based actions](/docs/watson-assistant?topic=watson-assistant-call-extension#debug-conversational-search).
 
 ## 8 October 2024
 {: #watson-assistant-oct082024}
