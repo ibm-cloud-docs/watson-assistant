@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-15"
 
 subcollection: watson-assistant
 
@@ -79,6 +79,8 @@ To call a subaction:
 ### Passing values to a subaction
 
 Optionally, you can pass values to the subaction so the customer does not need to specify them again. For example, if your order-placement action collects the customer's name, you can then pass that information to the account-creation subaction. The step in the subaction that asks for the customer's name is skipped, and the value that is already specified is used instead.
+
+External [skill providers](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/conversational-skills#conversational-skills-registering-a-pro-code-conversational-skill-provider){: external} must implement the **Get Conversational Skill** endpoint to use this feature. For more information, see [Get Conversational Skill](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/conversational-skills/procode-endpoints.md#get-conversational-skill).{: note}
 
 To pass values to the subaction:
 
