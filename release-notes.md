@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-22"
 
 subcollection: watson-assistant
 
@@ -16,6 +16,15 @@ content-type: release-note
 {: #watson-assistant-release-notes}
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+
+## 21 October 2024
+{: #watson-assistant-oct212024}
+{: release-note}
+
+New table response type
+:  {{site.data.keyword.conversationshort}} now supports the table response type. This is a beta version that is currently only supported in the {{site.data.keyword.conversationshort}} web chat. For more information, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference#table)
+
 
 ## 11 October 2024
 {: #watson-assistant-oct112024}
