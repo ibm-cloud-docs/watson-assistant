@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-22"
 
 subcollection: watson-assistant
 
@@ -26,6 +26,16 @@ For information about new features and improvements to the core {{site.data.keyw
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you
 can set a version of your web chat. For more information, see [Controlling the web chat
 version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 8.4.0
+{: #8.4.0}
+*Release date: 21 October 2024*
+
+- **Table response type:** Beta support for the new table response type is now available in web chat. For more information, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference).
+
+- Fixed styling issues for single card carousels.
+
+- Fixed a bug that would sometimes cause an error message to be shown when the user clicks a link.
 
 ## 8.3.3
 {: #8.3.3}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-16"
+lastupdated: "2024-10-22"
 
 subcollection: watson-assistant
 
@@ -1111,6 +1111,62 @@ This example uses the `stop_activities` response type to stop recognizing speech
 ```
 {: codeblock}
 
+
+## `table` {: beta}
+{: #response-types-table}
+
+The {: beta} table response type presents structured data in rows and columns, with headers, and cells.
+
+### Integration channel support
+{: #response-types-json-stop-activities-integrations}
+
+| Web chat                             |
+|-----------------------------------|
+| ![Yes](images/checkmark-icon.svg) |
+
+### Properties and Definitions
+
+| Property                 | Description                                                                                   | Type                     | Required |
+|--------------------------|-----------------------------------------------------------------------------------------------|--------------------------|----------|
+| `title`                  | The title of the table.                                                                        | String                   | No       |
+| `description`            | A brief description of the table.                                                              | String                   | No       |
+| `headers`                | Array of column headers.                                                                       | Array<String, Number>     | Yes      |
+| `rows`                   | Array of rows, each containing an array of cells.           | Array<Object>            | Yes      |
+| `rows[].cells`           | Data for each cell in the row.                                                                 | Array<String, Number>     | Yes      |
+|
+
+Each row must have the same number of cells as the headers. A mismatch between cells and headers will cause the web chat to throw an error when it attempts to render the table.{: note}
+
+### Example
+{: #response-types-json-table-example}
+
+This example displays structured data in a table.
+
+```json
+{
+  "output": {
+    "generic": [
+      {
+        "response_type": "table",
+        "title": "Data Table",
+        "description": "A table with data",
+        "headers": ["Column 1", "Column 2"],
+        "rows": [
+          {
+            "cells": ["Row 1, Column 1", "Row 1, Column 2"]
+          },
+          {
+            "cells": ["Row 2, Column 1", "22"]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+{: codeblock}
+
+
 ## `text`
 {: #response-types-json-text}
 
@@ -1342,4 +1398,3 @@ This example displays a video with a title and descriptive text.
 }
 ```
 {: codeblock}
-
