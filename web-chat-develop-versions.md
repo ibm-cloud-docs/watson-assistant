@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-04-02"
+lastupdated: "2024-10-24"
 
 subcollection: watson-assistant
 
@@ -35,5 +35,32 @@ To test the updates in a version release of the web chat before you apply the ve
 1.  Test the web chat, and make adjustments to the configuration if necessary.
 1.  Update your production deployment to use the latest version and apply any other configuration changes that you determined to be necessary after testing.
 
-For more information about features that were introduced in previous web chat versions, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+Here is an example embed script that locks the web chat version to `7.7.0`.
 
+```html
+<html>
+  <body>
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "YOUR_INTEGRATION_ID",
+        region: "YOUR_REGION",
+        serviceInstanceID: "YOUR_SERVICE_INSTANCE_ID",
+
+        // This is what determines the version of web chat used. Note that this value is also used in the script src below.
+        clientVersion: "7.7.0", 
+
+        onLoad: function(instance) {
+          instance.render();
+        },
+      };
+      setTimeout(function() {
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+  </body>
+</html>
+```
+
+For more information about features that were introduced in previous web chat versions, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
