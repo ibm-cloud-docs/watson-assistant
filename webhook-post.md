@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-09-06"
+lastupdated: "2024-10-22"
 
 keywords: post webhook, postwebhook, post-webhook
 
@@ -204,21 +204,6 @@ The following sample shows how a simple request body is formatted.
 ```
 {: codeblock}
 
-## Skipping the assistant processing
-{: #webhook-post-skipping-assistant-processing}
-
-Enhancements to pre-message webhooks allow Watson Assistant to skip message processing and directly return the response from the webhook. This functionality is activated by setting the `x-watson-assistant-webhook-returnheader` in the webhook's HTTP response.
-
-### Before you begin
-{: #webhook-post-before-you-begin}
-
-Complete the following steps:
-
- - Include the `x-watson-assistant-webhook-returnheader` with any value in the HTTP response from your webhook.
- - Ensure that the webhook response contains a valid message response, which is formatted according to watsonX Assistant's requirements.
-
-This feature enables the webhook to dynamically control the conversation flow, enabling immediate responses when needed.
-
 ### Response body
 
 In the response body, the `output` does not need to be wrapped inside a `payload` property as it is returned directly to the client:
@@ -377,47 +362,6 @@ function main(params) {
     body : params
   }
 };
-```
-{: codeblock}
-
-## Example 3
-{: #webhook-post-example3}
-
-This example shows you how to compose a webhook response to let watsonx Assistant to skip processing the message and directly return the webhook's response.
-
-### Webhook Configuration
-In the pre-message webhook configuration page, specify the following values:
-
- - URL: https://your-webhook-url/webhook_skip
- - Secret: None
- - Header Name: Content-Type
- - Header Value: application/json
-
-The node.js code in the webhook_skip web action looks as follows.
-
-```javascript
-function main(params) {
-  // Your custom logic to determine the response
-  let responseText = "This response is directly from the pre-message webhook.";
-  
-  const response = {
-    headers: {
-      "X-Watson-Assistant-Webhook-Return": "true"
-    },
-    body: {
-      output: {
-        generic: [
-          {
-            response_type: "text",
-            text: responseText
-          }
-        ]
-      }
-    }
-  };
-
-  return response;
-}
 ```
 {: codeblock}
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-10-24"
+  years: 2019, 2024
+lastupdated: "2024-10-22"
 
 keywords: pre webhook, prewebhook, pre-webhook
 
@@ -15,22 +15,23 @@ subcollection: watson-assistant
 # Making a call before processing a message
 {: #webhook-pre}
 
-A premessage webhook makes a call to an external service or application every time a customer submits input. The external service can process the message before it is processed by your assistant.
+A premessage webhook calls an external service or application every time a customer submits input. The external service processes the message before it reaches your assistant.
 {: shortdesc}
 
-Add a premessage webhook to your assistant if you want the webhook to be triggered before each incoming message is processed by your assistant.
+Add a premessage webhook if you need to trigger an action before the assistant processes each incoming message.
 
-If you are using a custom channel, the premessage webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://{DomainName}/assistant/assistant-v2#message). All built-in channel integrations use this API.
+If you are using a custom channel, the premessage webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://cloud.ibm.com/apidocs/assistant-v2#message). All built-in channel integrations use this API.
 {: important}
 
-You can use a premessage webhook to do the following types of things:
+You can use premessage webhooks for the following use cases:
 
-- Translate the customer's input to the language that is used by your assistant.
-- Check for and remove any personally identifiable information, such as an email address or social security number that a customer might submit.
+- Translate the customer's input to the language your assistant uses.
 
-You can use this webhook in coordination with the postmessage webhook. For example, the postmessage webhook can do things like translate the response back into the customer's language or add back information that was removed for privacy reasons. For more information, see [Making a call after processing a message](/docs/watson-assistant?topic=watson-assistant-webhook-post).
+- Remove personally identifiable information, such as email addresses or social security numbers.
 
-For environments where private endpoints are in use, keep in mind that a webhook sends traffic over the internet.
+You can use the premessage webhook together with the postmessage webhook. For example, the postmessage webhook can translate the response back into the customer's language or restore information removed for privacy reasons. For more information, see [Making a call after processing a message](/docs/watson-assistant?topic=watson-assistant-webhook-post).
+
+For environments using private endpoints, webhooks send traffic over the internet.
 {: note}
 
 ## Defining the webhook
@@ -38,7 +39,7 @@ For environments where private endpoints are in use, keep in mind that a webhook
 
 You can define one webhook URL to use for preprocessing every incoming message.
 
-The programmatic call to the external service must meet these requirements:
+The programmatic call to the external service must meet the following requirements:
 
 - The call must be a POST HTTP request.
 - The request body must be a JSON object (`Content-Type: application/json`).
@@ -91,13 +92,13 @@ To add the webhook details, complete the following steps.
     You cannot use a webhook to call a {{site.data.keyword.openwhisk_short}} action that uses token-based Identity and Access Management (IAM) authentication. However, you can make a call to a {{site.data.keyword.openwhisk_short}} web action or a secured web action.
     {: important}
 
-1.  In the **Secret** field, add a private key to pass with the request that can be used to authenticate with the external service.
+1.  In the **Secret** field, add a private key to pass with the request that you can use to authenticate with the external service.
 
-    The key must be specified as a text string, such as `purple unicorn`. The maximum length is 1,024 characters. You cannot specify a context variable.
+    You must specify the key as a text string, such as `purple unicorn`. The maximum length is 1,024 characters. You cannot specify a context variable.
 
     It is the responsibility of the external service to check for and verify the secret. If the external service does not require a token, specify any string that you want. You cannot leave this field empty.
 
-    If you want to see the secret as you enter it, click the **Show password** icon ![View icon](../../icons/view.svg) before you start typing. After you save the secret, the string is replaced by asterisks and can't be viewed again.
+    If you want to see the secret as you enter it, click the **Show password** icon ![View icon](../../icons/view.svg) before you start typing. After you save the secret, asteriks replace the string, and you can't view it again.
     {: note}
 
     For more information about how this field is used, see [Webhook security](#webhook-pre-security).
@@ -113,22 +114,22 @@ To add the webhook details, complete the following steps.
     | `Content-Type` | `application/json` |
     {: caption="Header example" caption-side="bottom"}
 
-    The service automatically sends an `Authorization` header with a JWT; you do not need to add one. If you want to handle authorization yourself, add your own authorization header and it is used instead.
+    The service automatically sends an `Authorization` header with a JWT; you do not need to add one. If you want to handle authorization yourself, add your own authorization header and the service uses it instead.
 
-    After you save the header value, the string is replaced by asterisks and can't be viewed again. 
+    After you save the header value, asteriks replace the string, and you can't view it again.
     {: note}
 
-Your webhook details are saved automatically.
+Webhook details save automatically.
 
 ## Testing the webhook
 {: #webhook-pre-test}
 
-Do extensive testing of your webhook before you enable it for an assistant that is being used in a production environment.
+Test your webhook extensively before enabling it for an assistant in a production environment.
 {: important}
 
-The webhook is triggered when a message is sent to your assistant to be processed.
+The assistant triggers the webhook when it processes a message.
 
-If you enable the setting that returns an error when the webhook call fails, the processing of the assistant is halted entirely if the webhook encounters any issues. Test the process that you are calling regularly so to check if it's down, and can change this setting to prevent all of your message calls from failing.
+If you enable the setting to return an error when the webhook call fails, the assistant stops the process entirely if the webhook encounters any issues. Regularly test the process you call to check for downtime and adjust this setting to prevent all message calls from failing.
 
 If you call an {{site.data.keyword.openwhisk_short}} web action, you can use the logging capability in {{site.data.keyword.openwhisk_short}} to help you troubleshoot your code. You can [download the command line interface](/functions/learn/cli){: external}, and then enable logging with the [activation polling command](/docs/cloud-functions-cli-plugin?topic=cloud-functions-cli-plugin-functions-cli#cli_activation_poll){: external}.
 {: tip}
@@ -170,7 +171,7 @@ try {
 
 It is useful to know the format of the request body of the premessage webhook so that your external code can process it.
 
-The payload contains the request body of the `/message` (stateful or stateless) v2 API request. The event name `message_received` indicates that the request is generated by the premessage webhook. For more information about the message request body, see the [API reference](https://{DomainName}/assistant/assistant-v2#message){: external}.
+The payload contains the request body of the `/message` (stateful or stateless) v2 API request. The event name `message_received` indicates that the request is generated by the premessage webhook. For more information about the message request body, see the [API reference](https://cloud.ibm.com/apidocs/assistant-v2#message){: external}.
 
 ```json
 {
@@ -181,6 +182,21 @@ The payload contains the request body of the `/message` (stateful or stateless) 
 }
 ```
 {: codeblock}
+
+## Skipping the assistant processing
+{: #webhook-post-skipping-assistant-processing}
+
+Enhancements to pre-message webhooks allow Watson Assistant to skip message processing and directly return the response from the webhook. This functionality is activated by setting the `x-watson-assistant-webhook-returnheader` in the webhook's HTTP response.
+
+### Before you begin
+{: #webhook-post-before-you-begin}
+
+Complete the following steps:
+
+ - Include the `x-watson-assistant-webhook-returnheader` with any value in the HTTP response from your webhook.
+ - Ensure that the webhook response contains a valid message response, which is formatted according to watsonX Assistant's requirements.
+
+This feature enables the webhook to dynamically control the conversation flow, enabling immediate responses when needed.
 
 ## Response body
 {: #webhook-pre-response}
@@ -198,7 +214,7 @@ The response body must have the following structure:
 ```
 {: codeblock}
 
-The `payload` object in the response should contain the `payload` object that was received in the request body. Your code can modify property values in the message payload it received (for example, to update property values, or to add or remove context variables); but the message payload that is returned to the service must conform to the schema for a request to the `message` method. For more information, see the [API reference](https://{DomainName}/assistant/assistant-v2#message).
+The `payload` object in the response should contain the `payload` object that was received in the request body. Your code can modify property values in the message payload it received (for example, to update property values, or to add or remove context variables); but the message payload that is returned to the service must conform to the schema for a request to the `message` method. For more information, see the [API reference](https://cloud.ibm.com/apidocs/assistant-v2#message).
 
 ## Example 1
 {: #webhook-pre-example1}
@@ -207,7 +223,7 @@ This example shows you how to check the language of the input text, and append t
 
 In the premessage webhook configuration page, the following values are specified:
 
-- **URL**: `https://us-south.functions.appdomain.cloud/api/v1/web/e97d2516-5ce4-4fd9-9d05-acc3dd8ennn/default/check_language`
+- **URL**: `https://your-webhook-url/`
 - **Secret**: none
 - **Header name**: Content-Type
 - **Header value**: application/json
@@ -272,7 +288,7 @@ Define a sequence of web actions in IBM Cloud Functions. The first action in the
 
 In the premessage webhook configuration page, the following values are specified:
 
-- **URL**: `https://us-south.functions.appdomain.cloud/api/v1/web/e97d2516-5ce4-4fd9-9d05-acc3dd8ennn/default/translation_sequence`
+- **URL**: `https://your-webhook-url/`
 - **Secret**: none
 - **Header name**: Content-Type
 - **Header value**: application/json
@@ -373,6 +389,47 @@ return {
 When you test the webhook in the preview panel, you can submit `Buenos días`, and the assistant responds as if you said `Good morning` in English. In fact, when you check the Analyze page of your assistant and open **Conversations**, the log shows that the user input was `Good morning`.
 
 You can add a postmessage webhook to translate the message's response back into the customer's language before it is displayed. For more information, see [Example 2](/docs/watson-assistant?topic=watson-assistant-webhook-post#webhook-post-example-translate-back).
+
+## Example 3
+{: #webhook-post-example3}
+
+This example shows you how to compose a webhook response to let watsonx Assistant to skip processing the message and directly return the webhook's response.
+
+### Webhook Configuration
+In the pre-message webhook configuration page, specify the following values:
+
+ - **URL**: https://your-webhook-url/webhook_skip
+ - **Secret**: None
+ - **Header Name**: Content-Type
+ - **Header Value**: application/json
+
+The node.js code in the webhook_skip web action looks as follows.
+
+```javascript
+function main(params) {
+  // Your custom logic to determine the response
+  let responseText = "This response is directly from the pre-message webhook.";
+  
+  const response = {
+    headers: {
+      "X-Watson-Assistant-Webhook-Return": "true"
+    },
+    body: {
+      output: {
+        generic: [
+          {
+            response_type: "text",
+            text: responseText
+          }
+        ]
+      }
+    }
+  };
+
+  return response;
+}
+```
+{: codeblock}
 
 ## Removing the webhook
 {: #webhook-pre-delete}
