@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-22"
+lastupdated: "2024-10-30"
 
 subcollection: watson-assistant
 
@@ -1112,10 +1112,10 @@ This example uses the `stop_activities` response type to stop recognizing speech
 {: codeblock}
 
 
-## `table` {: beta}
+## `table` [Beta]{: tag-cyan}
 {: #response-types-table}
 
-The {: beta} table response type presents structured data in rows and columns, with headers, and cells.
+The beta table response type presents structured data in rows and columns, with headers, and cells. [Beta]{: tag-cyan}
 
 ### Integration channel support
 {: #response-types-json-stop-activities-integrations}

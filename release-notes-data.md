@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-02"
+lastupdated: "2024-11-01"
 
 subcollection: watson-assistant
 
@@ -27,11 +27,13 @@ When you install {{site.data.keyword.conversationshort}} for {{site.data.keyword
 
 The following table shows the latest version of the web chat integration that is included with each release of {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}}. {{site.data.keyword.icp4dfull}} supports web chat versions 5.1.1 or later. To customize and change version numbers, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
 
+
 | {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}} version | Latest web chat version available |
 |----------------|----------------|
 | 5.0.3 | [8.2.6](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.2.6) |
 | 5.0.1 | [8.1.2](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.1.2) |
 | 5.0.0 | [8.1.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.1.0) |
+| 4.8.7 | [8.3.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.3.1) |
 | 4.8.6 | [8.2.3](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.2.3) |
 | 4.8.5 | [8.0.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.0.0) |
 | 4.8.4 | [7.10.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#7.10.0) |
@@ -52,7 +54,15 @@ The following table shows the latest version of the web chat integration that is
 | 4.0.8 | [6.2.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#6.2.0) |
 {: caption="Web chat versions in {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}}" caption-side="top"}
 
-## 27 September 2024
+
+## Version 4.8.7 (30 October 2024)
+{: #assistant-data-oct302024}
+{: release-note}
+
+Minor updates
+: Added known issues.
+
+## Version 5.0.3 (27 September 2024)
 {: #assistant-data-sep272024}
 {: release-note}
 
@@ -66,21 +76,21 @@ Tune the generated response length in conversational search
 : When you use conversational search in your watsonx Assistant, you can now define the length of the generated responses that your watsonx Assistant gives to better fit your needs. For more information, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search).
 
 
-## 28 August 2024
+## Version 4.8.6 (28 August 2024)
 {: #assistant-data-aug282024}
 {: release-note}
 
 Minor updates
 : Added known issues.
 
-## 31 July 2024
-{: #assistant-data-jun192024}
+## Version 5.0.1 (31 July 2024)
+{: #assistant-data-jul312024}
 {: release-note}
 
 Updates 
 :  The autocorrection feature is now disabled for search integration in your watsonx Assistant. For more information, see [Auto correction](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-autocorrection)
 
-## 19 June 2024
+## Version 5.0.0 (19 June 2024)
 {: #assistant-data-jun192024}
 {: release-note}
 

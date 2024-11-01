@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-11-01"
 
 subcollection: watson-assistant
 
@@ -93,6 +93,8 @@ To pass values to the subaction:
 1. Select the value that you want to pass from the current action. You can select any available variable, or select **Expression** if you want to specify a different value.
 
 1. Click **Apply**.
+
+
 
 ## Use an extension
 {: #use-extension}

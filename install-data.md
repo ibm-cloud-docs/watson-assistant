@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-02"
+lastupdated: "2024-11-01"
 
 subcollection: watson-assistant
 
@@ -21,6 +21,7 @@ Learn how to install {{site.data.keyword.conversationshort}} for {{site.data.key
 The {{site.data.keyword.icp4dfull_notm}} environment is a Kubernetes-based container platform that can help you quickly modernize and automate workloads that are associated with the applications and services you use. You can develop and deploy on your own infrastructure and in your data center which helps to mitigate risk and minimize vulnerabilities.
 
 The installation process differs depending on the version you are installing. The following table shows the available versions.
+
 
 
 | Version |  Cluster | Installation instructions |
@@ -55,6 +56,10 @@ The installation process differs depending on the version you are installing. Th
 | 1.5.0 | {{site.data.keyword.icp4dfull_notm}} 3.0.1 or 3.5 | [Installing 1.5.0](https://www.ibm.com/docs/en/cloud-paks/cp-data/3.5.0?topic=service-installing-watson-assistant){: external} |
 {: caption="Available versions" caption-side="top"}
 
+
+
+
+
 ## Support matrix
 {: #install-support-matrix}
 
@@ -72,6 +77,10 @@ The following table describes which versions of {{site.data.keyword.conversation
 | 5.0.0 | 5.0.x | 4.15 |
 | 5.0.0 | 5.0.x | 4.14 |
 | 5.0.0 | 5.0.x | 4.12 |
+| 4.8.7 | 4.8.x | 4.16 |
+| 4.8.7 | 4.8.x | 4.15 |
+| 4.8.7 | 4.8.x | 4.14 |
+| 4.8.7 | 4.8.x | 4.12 |
 | 4.8.6 | 4.8.x | 4.15 |
 | 4.8.6 | 4.8.x | 4.14 |
 | 4.8.6 | 4.8.x | 4.12 |

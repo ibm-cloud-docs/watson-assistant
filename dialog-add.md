@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-10-31"
+  years: 2018, 2024
+lastupdated: "2024-11-01"
 
 keywords: import workspace, import JSON, export JSON, upload JSON, download JSON, collaborate
 
@@ -22,6 +22,9 @@ You can add one dialog skill to an assistant.
 
 ## Activating dialog
 {: #skill-dialog-add-activate-dialog-activating}
+
+If you need to support both the Dialog skill and the Action skill in the same assistant, use the `Activate dialog` button. This button enables a phased migration strategy for gradually transitioning an assistant built on dialog to Actions.
+{: note}
 
 To activate the dialog feature in {{site.data.keyword.conversationshort}}:
 
@@ -59,7 +62,7 @@ To add a skill in the classic experience, complete the following steps:
       The uploaded JSON file must use UTF-8 encoding, without byte order mark (BOM) encoding. The JSON cannot contain tabs, newlines, or carriage returns.
       {: important}
 
-      The maximum size for a skill JSON file is 10 MB. If you need to upload a larger skill, consider using the REST API. For more information, see the [API Reference](https://{DomainName}/assistant/assistant-v1?curl=#createworkspace){: external}.
+      The maximum size for a skill JSON file is 15 MB. If you need to upload a larger skill, consider using the REST API. For more information, see the [API Reference](https://cloud.ibm.com/apidocs/assistant-v1#createworkspaceasync){: external}.
       {: tip}
 
       Click **Upload**.
