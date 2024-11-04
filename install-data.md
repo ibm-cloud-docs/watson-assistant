@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-11-01"
+lastupdated: "2024-11-04"
 
 subcollection: watson-assistant
 
@@ -23,12 +23,12 @@ The {{site.data.keyword.icp4dfull_notm}} environment is a Kubernetes-based conta
 The installation process differs depending on the version you are installing. The following table shows the available versions.
 
 
-
 | Version |  Cluster | Installation instructions |
 | --- | --- | --- |
 | 5.0.3 | {{site.data.keyword.icp4dfull_notm}} 5.0.x | [Installing 5.0.3](https://www.ibm.com/docs/SSQNUZ_5.0.x/svc-assistant/assistant-svc-install.html){: external} |
 | 5.0.1 | {{site.data.keyword.icp4dfull_notm}} 5.0.x | [Installing 5.0.1](https://www.ibm.com/docs/SSQNUZ_5.0.x/svc-assistant/assistant-svc-install.html){: external} |
 | 5.0.0 | {{site.data.keyword.icp4dfull_notm}} 5.0.x | [Installing 5.0.0](https://www.ibm.com/docs/SSQNUZ_5.0.x/svc-assistant/assistant-svc-install.html){: external} |
+| 4.8.7 | {{site.data.keyword.icp4dfull_notm}} 4.8.x | [Installing 4.8.7](https://www.ibm.com/docs/SSQNUZ_4.8.x/svc-assistant/assistant-svc-install.html){: external} |
 | 4.8.6 | {{site.data.keyword.icp4dfull_notm}} 4.8.x | [Installing 4.8.6](https://www.ibm.com/docs/SSQNUZ_4.8.x/svc-assistant/assistant-svc-install.html){: external} |
 | 4.8.5 | {{site.data.keyword.icp4dfull_notm}} 4.8.x | [Installing 4.8.5](https://www.ibm.com/docs/SSQNUZ_4.8.x/svc-assistant/assistant-svc-install.html){: external} |
 | 4.8.4 | {{site.data.keyword.icp4dfull_notm}} 4.8.x | [Installing 4.8.4](https://www.ibm.com/docs/SSQNUZ_4.8.x/svc-assistant/assistant-svc-install.html){: external} |
@@ -55,9 +55,6 @@ The installation process differs depending on the version you are installing. Th
 | 4.0.0 | {{site.data.keyword.icp4dfull_notm}} 4.0.x | [Installing 4.0.0](https://www.ibm.com/docs/en/SSQNUZ_4.0/archives/refresh-0/CP-Data-4.0-R0-PDF5-Installing.pdf){: external} |
 | 1.5.0 | {{site.data.keyword.icp4dfull_notm}} 3.0.1 or 3.5 | [Installing 1.5.0](https://www.ibm.com/docs/en/cloud-paks/cp-data/3.5.0?topic=service-installing-watson-assistant){: external} |
 {: caption="Available versions" caption-side="top"}
-
-
-
 
 
 ## Support matrix
