@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-22"
+lastupdated: "2024-11-04"
 
 subcollection: watson-assistant
 
@@ -23,7 +23,7 @@ Release notes describe the new features, changes, and bug fixes in each release 
 {: release-note}
 
 New table response type
-:  {{site.data.keyword.conversationshort}} now supports the table response type. This is a beta version that is currently only supported in the {{site.data.keyword.conversationshort}} web chat. For more information, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference#table)
+:  {{site.data.keyword.conversationshort}} now supports the table response type. This is a beta version that is currently only supported in the {{site.data.keyword.conversationshort}} web chat. For more information, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference#response-types-table).
 
 
 ## 11 October 2024
