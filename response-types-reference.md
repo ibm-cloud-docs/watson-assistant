@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-11-04"
+lastupdated: "2024-11-07"
 
 subcollection: watson-assistant
 
@@ -936,7 +936,6 @@ This example sends the "user is typing" event and pauses for 5 seconds.
 
 ```json
 {
-  "output": {
     "generic":[
       {
         "response_type": "pause",
@@ -944,7 +943,6 @@ This example sends the "user is typing" event and pauses for 5 seconds.
         "typing": true
       }
     ]
-  }
 }
 ```
 {: codeblock}
@@ -1144,7 +1142,6 @@ This example displays structured data in a table.
 
 ```json
 {
-  "output": {
     "generic": [
       {
         "response_type": "table",
@@ -1161,7 +1158,6 @@ This example displays structured data in a table.
         ]
       }
     ]
-  }
 }
 ```
 {: codeblock}
