@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-21"
+lastupdated: "2024-11-07"
 
 keywords: conversational search
 
@@ -26,7 +26,7 @@ You can see the average scores for citations per response, answer length, answer
 
 Hover on the information icon (![information icon](images/info.png)) next to the customer input to see the query text inferred from the context.
 
-![Conversational search analytics](images/conversational-search-analytics-overview.png)
+
 
 For a single utterance-response pair, you can view the following metrics:
 
@@ -44,6 +44,3 @@ The number of citations associated with the response.
 
 ### Response length
 The number of characters in the response.
-
-For all the metrics, the average is the average among all questions for which we generated a response, regardless of whether we provided it or not.
-{: note}
