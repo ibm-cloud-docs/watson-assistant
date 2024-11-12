@@ -195,6 +195,7 @@ toc:
           topics:
           - analytics-overview.md
           - conversational-search-analytics.md
+          - conversational-search-evaluation.md
           - analytics-action-completion.md
           - analytics-recognition.md
           - analytics-conversations.md
