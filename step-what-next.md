@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-11-01"
+lastupdated: "2024-11-13"
 
 subcollection: watson-assistant
 
@@ -94,7 +94,7 @@ To pass values to the subaction:
 
 1. Click **Apply**.
 
-
+You can choose to hide or display the skill output that is stored as an assistant variable. Click **Response behavior** and select your choice.
 
 ## Use an extension
 {: #use-extension}
