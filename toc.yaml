@@ -194,8 +194,7 @@ toc:
           label: Improving your assistant
           topics:
           - analytics-overview.md
-          - conversational-search-analytics.md
-          - conversational-search-evaluation.md
+          - conversational-search-analytics.md  # 
           - analytics-action-completion.md
           - analytics-recognition.md
           - analytics-conversations.md
@@ -378,4 +377,4 @@ toc:
               href: https://community.ibm.com/community/user/watsonai/communities/community-home?CommunityKey=7a3dc5ba-3018-452d-9a43-a49dc6819633
       - accessibility.md
       - browser-support.md
-      - terms-notices.md
+      - terms-notices.md  
