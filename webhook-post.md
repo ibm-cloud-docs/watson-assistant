@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-10-22"
+lastupdated: "2024-11-18"
 
 keywords: post webhook, postwebhook, post-webhook
 
@@ -221,8 +221,6 @@ In the response body, the `output` does not need to be wrapped inside a `payload
 }
 ```
 {: codeblock}
-
-For a practical implementation of this feature, see [Example 3](/#example-3)
 
 ## Example 1
 {: #webhook-post-example1}
