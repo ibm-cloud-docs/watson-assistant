@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-11-18"
+lastupdated: "2024-11-19"
 
 keywords: pre webhook, prewebhook, pre-webhook
 
@@ -29,7 +29,7 @@ You can use pre-message webhooks for the following use cases:
 
 - Remove personally identifiable information, such as email addresses or social security numbers.
 
-You can use the pre-message webhook together with the postmessage webhook. For example, the postmessage webhook can translate the response back into the customer's language or restore information removed for privacy reasons. For more information, see [Making a call after processing a message](/docs/watson-assistant?topic=watson-assistant-webhook-post).
+You can use the pre-message webhook together with the post-message webhook. For example, the post-message webhook can translate the response back into the customer's language or restore information removed for privacy reasons. For more information, see [Making a call after processing a message](/docs/watson-assistant?topic=watson-assistant-webhook-post).
 
 For environments using private endpoints, webhooks send traffic over the internet.
 {: note}
@@ -390,7 +390,7 @@ return {
 
 When you test the webhook in the preview panel, you can submit `Buenos días`, and the assistant responds as if you said `Good morning` in English. In fact, when you check the Analyze page of your assistant and open **Conversations**, the log shows that the user input was `Good morning`.
 
-You can add a postmessage webhook to translate the message's response back into the customer's language before it is displayed. For more information, see [Example 2](/docs/watson-assistant?topic=watson-assistant-webhook-post#webhook-post-example-translate-back).
+You can add a post-message webhook to translate the message's response back into the customer's language before it is displayed. For more information, see [Example 2](/docs/watson-assistant?topic=watson-assistant-webhook-post#webhook-post-example-translate-back).
 
 ## Example 3
 {: #webhook-pre-example3}
