@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-22"
+lastupdated: "2024-11-18"
 
 subcollection: watson-assistant
 
@@ -26,6 +26,12 @@ For information about new features and improvements to the core {{site.data.keyw
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you
 can set a version of your web chat. For more information, see [Controlling the web chat
 version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 8.5.0
+{: #8.5.0}
+*Release date: 18 November 2024*
+
+- Fixed a minor accessibility issue.
 
 ## 8.4.0
 {: #8.4.0}
