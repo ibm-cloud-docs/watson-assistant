@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-11-04"
+lastupdated: "2024-11-21"
 
 subcollection: watson-assistant
 
@@ -18,13 +18,19 @@ content-type: release-note
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
 
+## 6 November 2024
+{: #watson-assistant-nov062024}
+{: release-note}
+
+Skill output display
+:   You can now choose to hide or display the skill output that is stored as an assistant variable. For more information, see [Passing values to a subaction](/docs/watson-assistant?topic=watson-assistant-step-what-next#passing-values-to-a-subaction).
+
 ## 21 October 2024
 {: #watson-assistant-oct212024}
 {: release-note}
 
 New table response type
 :  {{site.data.keyword.conversationshort}} now supports the table response type. This is a beta version that is currently only supported in the {{site.data.keyword.conversationshort}} web chat. For more information, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference#response-types-table).
-
 
 ## 11 October 2024
 {: #watson-assistant-oct112024}
