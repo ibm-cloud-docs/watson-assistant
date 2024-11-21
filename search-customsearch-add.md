@@ -41,7 +41,7 @@ To select a Custom service as the search integration, use one of the following p
        If you already added the Custom service search integration, you see the **Open** button instead of **Add** inside the **Search** tile under **Extensions**.
        {: tip}
  
-    1. In the "Set up a new search extension" window, select the **Custom service** tile to see the "Search integration" dialog.
+    1. In the `Set up a new search extension` window, select the **Custom service** tile to see the `Search integration` dialog.
  
       ![Select Customserivce](images/select-custom-service.png)
 
