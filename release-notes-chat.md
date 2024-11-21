@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-11-18"
+lastupdated: "2024-11-21"
 
 subcollection: watson-assistant
 
@@ -26,6 +26,12 @@ For information about new features and improvements to the core {{site.data.keyw
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you
 can set a version of your web chat. For more information, see [Controlling the web chat
 version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 7.11.0
+{: #7.11.0}
+*Release date: 21 November 2024*
+
+- Added an `asyncCallout` option to the `instance.send` method that can be used to ensure a call to an extension is done using a one step process instead of the default two step process.
 
 ## 8.5.0
 {: #8.5.0}
