@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-10-04"
+lastupdated: "2024-11-21"
 
 subcollection: watson-assistant
 
@@ -14,9 +14,6 @@ subcollection: watson-assistant
 {: #search-customsearch-add}
 
 [Plus]{: tag-green} [Enterprise]{: tag-purple}
-
-On IBM watsonx Orchestrate, the plans could vary. Check with your IBM Sales representative for more information.
-{: important}
 
 A Custom service integration searches for information by using a search capability that you create.  You can use a Custom service integration with the conversational search capabilities of your assistant to generate AI responses. This integration supports both server-side and client-side retrieval of information.
 
@@ -47,6 +44,8 @@ To select a Custom service as the search integration, use one of the following p
     1. In the "Set up a new search extension" window, select the **Custom service** tile to see the "Search integration" dialog.
  
       ![Select Customserivce](images/select-custom-service.png)
+
+
 
 ## Setting up a Custom service with server credentials
 {: #setup-custom-service-server}
