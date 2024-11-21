@@ -46,6 +46,8 @@ To select a Custom service as the search integration, use one of the following p
       ![Select Customserivce](images/select-custom-service.png)
 
 
+Your assistant has limitations in passing the search parameters directly to your Custom service or retrieving the search results directly from it. Hence, your Custom service search integration must host an accessible web server that implements the search API interface provided by the assistant or a client that is configured to call your assistant to provide search results. For more information, see [Setting up retrieval systems for a Custom service](#setup-retrieval).
+{: note}
 
 ## Setting up a Custom service with server credentials
 {: #setup-custom-service-server}
