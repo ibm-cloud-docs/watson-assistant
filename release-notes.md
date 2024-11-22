@@ -12,11 +12,10 @@ content-type: release-note
 
 {{site.data.keyword.attribute-definition-list}}
 
+
+
 # Release notes for {{site.data.keyword.conversationshort}}
 {: #watson-assistant-release-notes}
-
-
-
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 

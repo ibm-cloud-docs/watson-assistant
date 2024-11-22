@@ -10,10 +10,10 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
+
+
 # Welcome to {{site.data.keyword.conversationshort}}
 {: #welcome-new-assistant}
-
-
 
 Welcome to the documentation for {{site.data.keyword.conversationshort}}!
 {: shortdesc}
