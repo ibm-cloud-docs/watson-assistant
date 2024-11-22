@@ -24,7 +24,8 @@ toc:
           topics:
           - release-notes.md
           - release-notes-chat.md
-          - release-notes-data.md # 
+          - release-notes-data.md
+          - maintenance.md
   - navgroup:
       id: tutorial
       topics:

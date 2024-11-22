@@ -12,10 +12,10 @@ content-type: release-note
 
 {{site.data.keyword.attribute-definition-list}}
 
-
-
 # Release notes for {{site.data.keyword.conversationshort}}
 {: #watson-assistant-release-notes}
+
+{{site.data.keyword.conversationshort}} maintenance is planned for the period of 7 December 2024 through 23 December 2024. For more information, see [{{site.data.keyword.conversationshort}} planned maintenance](/docs/watson-assistant?topic=watson-assistant-maintenance).{: important}
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
