@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-11-22"
 
 subcollection: watson-assistant
 
@@ -106,7 +106,70 @@ You can call an extension that has been added to your assistant in order to inte
 
 [Plus]{: tag-green}
 
-This option indicates that the assistant should use the {{site.data.keyword.discoveryfull}} service to search an external data source for information related to the customer's question. To use this option, you must configure a search integration for your assistant. For more information about configuring a search integration, see [Adding search](/docs/watson-assistant?topic=watson-assistant-search-add).
+This option indicates that the assistant can use a search integration to search an external data source for information that is related to the customer's question. 
+
+For more information about configuring search integration, see [Adding search](/docs/watson-assistant?topic=watson-assistant-search-overview).
+
+### Configuring the responses
+{: #configure-responses}
+
+Perform the following procedure to configure how the responses are stored and displayed:
+
+1. In the **And then** field go to **Search for answer**.
+
+1. Click **Edit settings** > **After Generation**. 
+
+1. Enable conversational search to do post-processing.
+1. You can configure settings in 3 different ways to store or display your responses after generation.
+
+    - Only display the results and not store it.
+
+        Select this option to display the response to the end user without storing it in an action variable.
+
+    - Display and store the result.
+
+        Select this option to store the response in an action variable and display it to your user. 
+
+    - Only store and do not display
+
+        Select this option to store the response in an action variable only and do not display the response to the user.
+
+When you are storing the response, you can choose to expand the citations to see the full search results. Use the **Search results** check box to include or exclude the full search results in the stored action variable. The exclude option is selected by default.  
+
+### Conditioning the responses
+{: #conditioning-the-responses}
+
+You can view the action variable that will store the response under **Conditions**. You can see the list of conversational search responses in an action as **Conversational search (step n)**, where `n` is the number of the current step.
+
+You can have multiple conversational searches in a single action. Click **Conversational search(step n)** to add a condition to the search status, to the search response text or to the action variable that will store the conversational search response.
+
+### Conversational search status
+{: #conversational-search-status}
+
+When storing the results of a conversational search, the search response will contain a search status corresponding to the results of the search. The possible values of this status field are:
+- **Generated and below confidence threshold**
+- **Generated and above confidence threshold**
+- **Failed to generate**: no search results
+- **Failed to generate**: search result confidence too low
+- **Failed to generate**: unable to connect to search system or got error
+
+### Conversational search response
+{: #conversational-search-response}
+
+It is the text displayed as a response for your conversational search query.
+
+### Conversational search response type
+{: #conversational-search-response-type}
+
+A conversational search response type is available in actions where a conversational search step exists and the search results are saved in an action variable for post-processing. You can select the overall conversational search response to use in the response type. You can choose from the list of available conversational search responses.
+
+Even if streaming is enabled in an assistant, when using this new response type, the output will not be streamed. {: note}
+
+You can print the results of the individual components of your search results by defining them in the **Variable values** in the rich text editor window. The printed results will not be formatted like they are in the response type, but is printed just as a string of text.
+
+In the preview, go to **Variable values** > **Action variables** to view the action variables.
+
+For a conversational search step which stores the response, selecting end action after step will not be honored. If the action should end after a conversational search occurs, use the default after generation setting Display the response to the end user without storing it in an action variable.{: note}
 
 ## Connect to agent
 {: #connect-to-agent}
