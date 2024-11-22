@@ -19,6 +19,23 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 22 November 2024
+{: #watson-assistant-nov222024}
+{: release-note}
+
+Post process conversational search responses
+:   You can now save your conversational search responses in action variables for post-processing. For more information, see[Search for the answer](/docs/watson-assistant?topic=watson-assistant-step-what-next#search-for-answer).
+
+Evaluate assistant
+:   You can now evaluate the performance of your assistant. For more information, see[Evaluating the assistant](/docs/watson-assistant?topic=watson-assistant-evaluating-the-assistant)
+
+## 6 November 2024
+{: #watson-assistant-nov062024}
+{: release-note}
+
+Skill output display
+:   You can now choose to hide or display the skill output that is stored as an assistant variable. For more information, see [Passing values to a subaction](/docs/watson-assistant?topic=watson-assistant-step-what-next#passing-values-to-a-subaction).
+
 
 ## 6 November 2024
 {: #watson-assistant-nov062024}
