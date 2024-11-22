@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-04-15"
+lastupdated: "2024-11-22"
 
 subcollection: watson-assistant
 
@@ -12,6 +12,8 @@ subcollection: watson-assistant
 
 # Welcome to {{site.data.keyword.conversationshort}}
 {: #welcome-new-assistant}
+
+
 
 Welcome to the documentation for {{site.data.keyword.conversationshort}}!
 {: shortdesc}
@@ -46,4 +48,3 @@ You can easily switch back and forth between {{site.data.keyword.conversationsho
 
 - [{{site.data.keyword.cloud_notm}}]{: tag-ibm-cloud} for managed instances
 - [{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d} version 4.6 or later for installed instances
-
