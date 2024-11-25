@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-02"
+lastupdated: "2024-11-25"
 
 subcollection: watson-assistant
 
@@ -352,6 +352,8 @@ If you prefer to back up data by using the {{site.data.keyword.postgresql}} tool
 
 Complete the steps in this procedure to back up your data by using the {{site.data.keyword.postgresql}} tool directly.
 
+
+
 To back up your data, complete these steps:
 
 1.  Fetch a running {{site.data.keyword.postgresql}} pod:
@@ -466,6 +468,10 @@ To back up your data, complete these steps:
     ```
     {: codeblock}
 
+
+
+
+
 ## Restoring data
 {: #backup-restore}
 
@@ -504,6 +510,8 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
 
 1.  Get the secret:
 
+    
+
     ```bash
     oc get secret ${INSTANCE}-postgres-ca -o jsonpath='{.data.ca\.crt}' | base64 -d | tee ${BACKUP_DIR}/ca.crt | openssl x509 -noout -text
     ```
@@ -515,13 +523,15 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
 
 1.  Copy the files that you downloaded and created in the previous steps to any existing directory on a {{site.data.keyword.postgresql}} pod.
 
-    1. Run the following command to find P{{site.data.keyword.postgresql}} pods:
+    
+
+    1. Run the following command to find {{site.data.keyword.postgresql}} pods:
 
         ```bash
         oc get pods | grep ${INSTANCE}-postgres
         ```
         {: codeblock}
-
+    
     1. The files that you must copy are `pgmig`, `postgres.yaml`, `resourceController.yaml`, `ca.crt` (the secret file that is generated in step 6), and the file that you created for your downloaded data. Run the following commands to copy the files.
 
         If you are restoring data to a stand-alone {{site.data.keyword.icp4dfull_notm}} cluster, then replace all references to `oc` with `kubectl` in these sample commands.
@@ -534,11 +544,12 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
         ```
         {: codeblock}
 
+     
+
     
 
     - Replace `${POSTGRES_POD}` with the name of one of the {{site.data.keyword.postgresql}} pods from the previous step.
-
-    
+ 
 
 1.  Stop the store deployment by scaling the store deployment down to 0 replicas:
 
@@ -575,11 +586,9 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
 
     - Replace `<backup-file-name.dump>` with the name of the file that you created for your downloaded data.
 
-   
-   
-    For more command options, see [{{site.data.keyword.postgresql}} migration tool details](#backup-pgmig-details).
-
     
+
+    For more command options, see [{{site.data.keyword.postgresql}} migration tool details](#backup-pgmig-details).
 
     As the script runs, you are prompted for information that includes the instance on the target cluster to which to add the backed-up data. The data on the instance you specify is removed and replaced. If there are multiple instances in the backup, you are prompted multiple times to specify the target instance information.
 
@@ -710,6 +719,10 @@ To add the values that are required but currently missing from the file, complet
     You can specify the same values that were returned for `username` and `password` as the `su_username` and `su_password` values.
 
     The updated file looks something like this:
+   
+    
+
+    
 
     ```yaml
     host: wa_inst-postgres-rw
@@ -720,6 +733,8 @@ To add the values that are required but currently missing from the file, complet
     su_password: mypassword
     ```
     {: codeblock}
+
+       
 
 1.  Save the `postgres.yaml` file.
 
