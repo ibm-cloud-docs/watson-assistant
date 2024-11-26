@@ -195,7 +195,8 @@ toc:
           label: Improving your assistant
           topics:
           - analytics-overview.md
-          - conversational-search-analytics.md  # 
+          - conversational-search-analytics.md
+          - data-evaluation.md
           - analytics-action-completion.md
           - analytics-recognition.md
           - analytics-conversations.md
