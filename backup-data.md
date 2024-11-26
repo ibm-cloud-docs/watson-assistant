@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-11-25"
+lastupdated: "2024-11-26"
 
 subcollection: watson-assistant
 
@@ -20,6 +20,8 @@ You can back up and restore the data that is associated with your installation i
 
 The following table lists the upgrade paths that are supported by the scripts.
 
+
+
 | Version in use | Version that you can upgrade to |
 |------|-----|
 | 4.8.x | 5.0.x |
@@ -29,7 +31,13 @@ The following table lists the upgrade paths that are supported by the scripts.
 | 4.0.x | 4.5.x or 4.6.x
 {: caption="Upgrade paths supported by scripts" caption-side="top"}
 
+
+
+
+
 If you are upgrading from 4.5.x to 4.8.x, a simpler way to complete the upgrade is described in the following topics:
+
+  
 
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 5.0.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/5.0.x?topic=assistant-upgrading){: external}
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 4.8.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=assistant-upgrading){: external}
@@ -477,6 +485,8 @@ To back up your data, complete these steps:
 
 IBM created a restore tool called `pgmig`. The tool restores your database backup by adding it to a database that you choose. It also upgrades the schema to the one that is associated with the version of the product where you restore the data. Before the tool adds the backed-up data, it removes the data for all instances in the current service deployment, so any spares are also removed.
 
+
+
 1.  Install the target {{site.data.keyword.icp4dfull_notm}} cluster to which you want to restore the data.
 
     From the web client for the target cluster, create one service instance of for each service instance that was backed up on the old cluster. The target {{site.data.keyword.icp4dfull_notm}} cluster must have the same number of instances as there were in the environment where you backed up the database.
@@ -575,14 +585,7 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
     ```
     {: codeblock}
 
-1.  Run the `pgmig` tool:
-
-    ```bash
-    cd /controller/tmp/bu
-    export PG_CA_FILE=/controller/tmp/bu/ca.crt
-    ./pgmig --resourceController resourceController.yaml --target postgres.yaml --source <backup-file-name.dump>
-    ```
-    {: codeblock}
+    
 
     - Replace `<backup-file-name.dump>` with the name of the file that you created for your downloaded data.
 
