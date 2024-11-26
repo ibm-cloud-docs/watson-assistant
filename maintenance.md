@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-11-22"
+lastupdated: "2024-11-26"
 
 subcollection: watson-assistant
 
@@ -39,7 +39,7 @@ During the specified period, you might experience the following limitations:
 - You can't create, update, or delete Workspaces.
 - You can't assign Skills to Assistants.
 - You can't assign Skill Versions to Environments.
-- You can't make changes or invoke "write" calls to the resources.
+- You can't make changes or invoke "write" calls to any resources.
 
 **Functional in Read-Only mode**
 
