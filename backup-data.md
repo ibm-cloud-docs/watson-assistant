@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-11-26"
+lastupdated: "2024-11-27"
 
 subcollection: watson-assistant
 
@@ -500,7 +500,7 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
 1.  Run the following command to download the `pgmig` tool from the [GitHub Watson Developer Cloud Community](https://github.com/watson-developer-cloud/community/tree/master/watson-assistant/data){: external} repository.
 
     In the first command, update `<WA_VERSION>` to the version that you want to restore. For example, update `<WA_VERSION>` to `4.6.0` if you want to restore 4.6.0.
-    {:important: .important}
+    {: important}
 
     ```bash
     wget https://github.com/watson-developer-cloud/community/raw/master/watson-assistant/data/<WA_VERSION>/pgmig
