@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-11-22"
+lastupdated: "2024-11-27"
 
 subcollection: watson-assistant
 
@@ -18,6 +18,13 @@ content-type: release-note
 {{site.data.keyword.conversationshort}} maintenance is planned for the period of 7 December 2024 through 23 December 2024. For more information, see [{{site.data.keyword.conversationshort}} planned maintenance](/docs/watson-assistant?topic=watson-assistant-maintenance).{: important}
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 26 November 2024
+{: #watson-assistant-nov262024}
+{: release-note}
+
+Conversational search watsonx.ai model deprecation
+:   The model `granite-13b-chat-v2` was deprecated on 04 November 2024 and will not be available after 19 January 2025. On 19 January 2025, `granite-3-8b-instruct` becomes the default model, automatically replacing the deprecated model. 
 
 ## 22 November 2024
 {: #watson-assistant-nov222024}
