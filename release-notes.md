@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-11-27"
+lastupdated: "2024-12-03"
 
 subcollection: watson-assistant
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 02 December 2024
+{: #watson-assistant-dec022024}
+{: release-note}
+
+New version 2024-12-02 for API
+:   Microsoft Teams integration now supports `options` and `suggestions` response types to have distinct `label` (display name) and `value` (response sent back to {{site.data.keyword.conversationshort}} upon selection). Previously, the same string was used for both `label` and `value`.
+
 ## 26 November 2024
 {: #watson-assistant-nov262024}
 {: release-note}
@@ -31,10 +38,10 @@ Conversational search watsonx.ai model deprecation
 {: release-note}
 
 Post process conversational search responses
-:   You can now save your conversational search responses in action variables for post-processing. For more information, see[Search for the answer](/docs/watson-assistant?topic=watson-assistant-step-what-next#search-for-answer).
+:   You can now save your conversational search responses in action variables for post-processing. For more information, see [Search for the answer](/docs/watson-assistant?topic=watson-assistant-step-what-next#search-for-answer).
 
 Evaluate assistant
-:   You can now evaluate the performance of your assistant. For more information, see[Evaluating the assistant](/docs/watson-assistant?topic=watson-assistant-evaluating-the-assistant)
+:   You can now evaluate the performance of your assistant. For more information, see [Evaluating the assistant](/docs/watson-assistant?topic=watson-assistant-evaluating-the-assistant)
 
 ## 6 November 2024
 {: #watson-assistant-nov062024}
