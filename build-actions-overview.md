@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-11-13"
+  years: 2018, 2024
+lastupdated: "2024-12-03"
 
 subcollection: watson-assistant
 
@@ -12,6 +12,8 @@ subcollection: watson-assistant
 
 # Overview: Editing actions
 {: #build-actions-overview}
+
+If you're looking for the AI Assistant Builder documentation, see [Building AI Assistants](https://www.ibm.com/docs/watsonx/watson-orchestrate/current?topic=building-ai-assistants-ai-assistant-builder).{: note}
 
 Like a human personal assistant, the assistant you build helps your customers complete tasks and answer questions. You build your assistant by defining actions.
 {: shortdesc}

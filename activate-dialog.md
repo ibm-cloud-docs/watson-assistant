@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-12-03"
 
 subcollection: watson-assistant
 
@@ -12,8 +12,6 @@ subcollection: watson-assistant
 
 # Activating dialog and migrating skills
 {: #activate-dialog}
-
-   This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 To use an existing dialog skill, you need to activate the dialog feature in your assistant. Then you can upload your existing skill.
 

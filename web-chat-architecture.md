@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-05-14"
+lastupdated: "2024-12-03"
 
 subcollection: watson-assistant
 
@@ -234,7 +234,6 @@ If your website uses a Content Security Policy (CSP), you must update it to gran
 {: caption="CSP properties" caption-side="top"}
 
 For default-src, if you have a separate `font-src`, you must add `*.watson.appdomain.cloud` along with `font-src`.{: note}
-If you are using AI assistant builder in watsonx Orchestrate, you must add `*.watson-orchestrate.ibm.com` to the `connect-src` property and `*.watson.appdomain.cloud` to the `style-src` property in the CSP policy.{: tip}
 
 
 The following example shows a complete CSP metadata tag:

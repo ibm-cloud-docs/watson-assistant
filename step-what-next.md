@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-11-22"
+lastupdated: "2024-12-03"
 
 subcollection: watson-assistant
 
@@ -115,11 +115,12 @@ For more information about configuring search integration, see [Adding search](/
 
 Perform the following procedure to configure how the responses are stored and displayed:
 
+1.  Enable conversational search to do post-processing.
+
 1. In the **And then** field go to **Search for answer**.
 
 1. Click **Edit settings** > **After Generation**. 
 
-1. Enable conversational search to do post-processing.
 1. You can configure settings in 3 different ways to store or display your responses after generation.
 
     - Only display the results and not store it.

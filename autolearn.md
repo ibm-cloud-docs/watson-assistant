@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-12-03"
 
 subcollection: watson-assistant
 
@@ -14,8 +14,6 @@ subcollection: watson-assistant
 {: #autolearn}
 
 [IBM Cloud]{: tag-ibm-cloud}
-
-This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 Use *autolearning* to enable your assistant to learn from interactions with your customers and improve responses.
 {: shortdesc}
@@ -76,5 +74,3 @@ To prevent your own assistant from applying what it learns by observing user cho
 1. Set the **Use autolearning to modify responses with training from live environment** switch to **Off**. This immediately disables the modifying of responses in the draft environment.
 
 1. Publish a new version of your assistant to the live environment to completely disable the modifying of responses by autolearning.
-
-

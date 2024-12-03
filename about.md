@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-25"
+  years: 2015, 2024
+lastupdated: "2024-12-03"
 
 keywords: chatbot, live chatbot, omnichannel
 
@@ -14,6 +14,8 @@ subcollection: watson-assistant
 
 # About {{site.data.keyword.conversationshort}}
 {: #about}
+
+If you're looking for the AI Assistant Builder documentation, see [Building AI Assistants](https://www.ibm.com/docs/watsonx/watson-orchestrate/current?topic=building-ai-assistants-ai-assistant-builder).{: note}
 
 Use {{site.data.keyword.conversationfull}} to build your own branded live chatbot into any device, application, or channel. Your chatbot, which is also known as an *assistant*, connects to the customer engagement resources you already use to deliver an engaging, unified problem-solving experience to your customers.
 {: shortdesc}
