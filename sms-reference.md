@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-12-03"
 
 subcollection: watson-assistant
 
@@ -12,8 +12,6 @@ subcollection: watson-assistant
 
 # *SMS* integration reference
 {: #sms-reference}
-
-This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 Add action commands to the message `context` object to manage the flow of conversations with customers who interact with your assistant by submitting SMS messages over the telephone.
 {: shortdesc}

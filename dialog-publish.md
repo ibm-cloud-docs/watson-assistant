@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-12-03"
 
 subcollection: watson-assistant
 
@@ -14,8 +14,6 @@ subcollection: watson-assistant
 
 # Publishing dialog and actions
 {: #dialog-publish}
-
-This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 If the dialog feature is enabled, the publishing and deployment processes remain the same. However, some slight differences in functionality exist.
 {: shortdesc}

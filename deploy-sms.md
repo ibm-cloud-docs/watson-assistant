@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-12-03"
 
 subcollection: watson-assistant
 
@@ -15,8 +15,6 @@ subcollection: watson-assistant
 {: #deploy-sms}
 
 [IBM Cloud]{: tag-ibm-cloud}
-
-This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 Add a text messaging integration so your assistant can exchange messages with your customers.
 {: shortdesc}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-12-03"
 
 subcollection: watson-assistant
 
@@ -14,8 +14,6 @@ subcollection: watson-assistant
 {: #deploy-nice-cxone}
 
 [IBM Cloud]{: tag-ibm-cloud}
-
-This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 Integrate web chat with a NICE CXone service desk solution and empower your live agents to provide faster solutions and better customer service.
 {: shortdesc}
@@ -55,5 +53,3 @@ To set up one or more live chat channels to integrate with your assistant, see N
 {: #deploy-nice-cxone-authenticate}
 
 To configure your integration to only allow authenticated users, see [Authenticated users](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-nice#authenticated-users){: external}.
-
-

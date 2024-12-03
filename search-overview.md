@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-07-30"
+lastupdated: "2024-12-03"
 
 subcollection: watson-assistant
 
@@ -34,8 +34,6 @@ For more information about implementing the enhancements for search integration,
 ## Add the search integration for {{site.data.keyword.discoveryfull}}
 {: #search-overview-integration}
 
-This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
-
 Plus and Enterprise plans of {{site.data.keyword.conversationshort}} include a built-in search integration that you can use with your additional, separate instance of {{site.data.keyword.discoveryfull}}. You can embed your existing help content by integrating your assistant with search that is provided by {{site.data.keyword.discoveryfull}}. This gives your assistant access to your organization's data collections that it can mine for answers. Customer questions are used as search queries to find relevant answers for your users.
 
 For instructions on adding the built-in search integration, see [{{site.data.keyword.discoveryfull}} search integration setup](/docs/watson-assistant?topic=watson-assistant-search-add).
@@ -63,4 +61,3 @@ For instructions on adding a search extension, see:
 - [Coveo search extension setup](/docs/watson-assistant?topic=watson-assistant-search-extension-coveo)
 - [Google custom search extension setup](/docs/watson-assistant?topic=watson-assistant-search-extension-google)
 - [NeuralSeek extension setup](/docs/watson-assistant?topic=watson-assistant-search-extension-neuralseek)
-

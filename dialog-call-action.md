@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-12-03"
 
 subcollection: watson-assistant
 
@@ -14,8 +14,6 @@ subcollection: watson-assistant
 
 # Calling actions from a dialog
 {: #dialog-call-action}
-
-This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 In {{site.data.keyword.conversationshort}}, you can use actions with your primary dialog conversation. A dialog feature takes precedence over actions. You can use actions to supplement a dialog-based conversation, but the dialog drives the conversation with users to match their requests.
 
@@ -114,6 +112,3 @@ To call an action from a dialog node:
 1.  Click **X** to close the dialog node. Your changes are saved automatically.
 
 1. Use the **Preview** page to test the interaction between the dialog and the action.
-
-
-

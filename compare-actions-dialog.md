@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-12-03"
 
 subcollection: watson-assistant
 
@@ -12,8 +12,6 @@ subcollection: watson-assistant
 
 # Comparing actions and dialog
 {: #comparing-actions-dialog}
-
-This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 Choose the right type of conversation for your use case.
 {: shortdesc}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-12-03"
 
 subcollection: watson-assistant
 
@@ -14,8 +14,6 @@ subcollection: watson-assistant
 {: #search-add}
 
 [Plus]{: tag-green} [IBM Cloud Pak for Data]{: tag-cp4d}
-
-This feature is currently not available in the AI assistant builder of IBM watsonx Orchestrate.{: note}
 
 The search integration searches for information from a data collection that you create by using the {{site.data.keyword.discoveryshort}} service.
 
