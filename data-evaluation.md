@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2024
-lastupdated: "2024-11-26"
+lastupdated: "2024-12-06"
 
 keywords: evaluation
 
@@ -26,9 +26,6 @@ When a test run completes, you can view a comprehensive evaluation result. It in
 
 Evaluation is supported for the draft environment only.
 
-## Before you begin
-
-To evaluate the Conversational search performance, in the **Search Integration** window, set the **Conversational search** toggle to On. For more information see, [Enabling Conversational search](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup)
 
 
 ## Procedure
@@ -60,4 +57,3 @@ On the **Response details** table, by default you can see the response confidenc
 You can export and save the result of the evaluation. Click the **export** icon(![filter icon](images/export-evaluation-results.png)) to export the evaluation result table to a .csv file. 
 
 The test result of the latest test run is preserved as per the same retention policy of the chat logs. You can also click the **reset** icon(![Reset icon](images/reset-evaluation-results.png)) to delete the result at any time before the test result expires. The result is deleted for all the users.
-
