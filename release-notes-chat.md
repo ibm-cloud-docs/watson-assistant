@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-11-21"
+lastupdated: "2024-12-05"
 
 subcollection: watson-assistant
 
@@ -26,6 +26,14 @@ For information about new features and improvements to the core {{site.data.keyw
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you
 can set a version of your web chat. For more information, see [Controlling the web chat
 version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 8.5.1
+{: #8.5.1}
+*Release date: 5 December 2024*
+
+- Enhanced table response type to allow users to change the number of rows visible per page.
+
+- Fixed bug that caused the typing indicator to not be visible in browsers other than Chrome.
 
 ## 7.11.0
 {: #7.11.0}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2024-06-23"
+lastupdated: "2024-12-04"
 
 subcollection: watson-assistant
 
@@ -107,11 +107,39 @@ Both Input and Output parameters are available in the {{site.data.keyword.conver
 }
 ```
 
-For Input parameters, you can access the session variable in {{site.data.keyword.conversationshort}} with  `$integrations.genesys_audio_connector.user_id`.
+Access the input parameters in your {{site.data.keyword.conversationshort}} with the ${system_integrations.genesys_audio_connector.user_id} session variable.
 
-For Output parameters, you can assign the session variables to a state variable in Genesys (for example,  `State.some_variable`  and access them later on in your flow).
+To set output parameters, use an expression such as ${system_integrations.genesys_audio_connector.some_variable}, which you can access later in your flow.
 
-Variables can be read and set from both Dialog and Action skills.
+
+
+Do the following steps to set an output variable:
+
+1. Go to the {{site.data.keyword.conversationshort}}’s actions step, where you want to define the variable.
+
+2. Click **Set new variable** and select **Expression**.
+
+3. Enter the following expression:
+
+
+
+${system_integrations.genesys_audio_connector.<variable_name>} = "<variable_value>"
+
+
+
+Example:
+
+
+
+${system_integrations.genesys_audio_connector.some_variable} = "this is an output variable"
+
+
+
+In this example, the variable name is `some_variable`, with the value set to "this is an output variable".
+
+
+
+
    
 
 ## Ending the Genesys Audio Connector flow
@@ -149,3 +177,8 @@ After integrating your {{site.data.keyword.conversationshort}} with Genesys Audi
 -  text_to_speech
 -  start_activities
 -  stop_activities
+-  dtmf
+-  user_defined
+-  connect_to_agent
+-  image
+-  audio
