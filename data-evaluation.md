@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2024
-lastupdated: "2024-12-06"
+lastupdated: "2024-12-09"
 
 keywords: evaluation
 
@@ -27,16 +27,6 @@ When a test run completes, you can view a comprehensive evaluation result. It in
 Evaluation is supported for the draft environment only.
 
 
-
-## Procedure
-
-To evaluate the response settings of your assistant, perform the following steps.
-
-1. In the {{site.data.keyword.conversationshort}} home page, click **Evaluate** to open the **Evaluate response settings**.
-
-1. Click **Add file** to select the data. You can upload test data set in .csv format.
-
-1. Click **Run** followed by **Confirm** to start the evaluation to view the results.
 
 ### Conversational search scores
 
