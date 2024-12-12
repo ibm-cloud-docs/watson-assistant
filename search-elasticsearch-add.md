@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-12-12"
 
 subcollection: watson-assistant
 
@@ -17,9 +17,15 @@ subcollection: watson-assistant
 
 Elasticsearch powers your assistants to perform different types of searches such as metric, structured, unstructured, and semantic with higher accuracy and relevance by leveraging enterprise content. The data analytics engine in Elasticsearch expands the scope of search integration to larger data sets in assistants. In addition to this integration, you can enable conversational search for Elasticsearch in your assistant that helps to answer queries in a conversational manner.
 
+
+
 You can also integrate with {{site.data.keyword.discoveryfull}}. For more information about integrating {{site.data.keyword.discoveryshort}}, see [{{site.data.keyword.discoveryfull}} search integration set up](/docs/watson-assistant?topic=watson-assistant-search-add).{: tip}
 
 When you change an existing search integration to {{site.data.keyword.discoveryshort}} to connect to Elasticsearch or vice-versa, the settings of the existing search integration are overwritten. For example, when you change from {{site.data.keyword.discoveryshort}} to Elasticsearch, the configuration of {{site.data.keyword.discoveryshort}} is deleted completely from the assistant.{: important}
+
+
+
+
 
 ## Selecting Elasticsearch
 {: #select-elasticsearch-search-integration}
