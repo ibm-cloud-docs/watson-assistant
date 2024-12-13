@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-12-12"
+lastupdated: "2024-12-13"
 
 subcollection: watson-assistant
 
@@ -49,7 +49,7 @@ To select Elasticsearch as the default search integration, use one of the follow
 
     1. In the "Set up a new search extension" window, select the **Elasticsearch** tile to see the "Search integration" dialog.
   
-       ![Select Elasticsearch](images/select-elasticsearch.png)
+       ![Select Elasticsearch](images/select-milvus.png)
 
 ## Setting up Elasticsearch
 {: #setting-up-elasticsearch}

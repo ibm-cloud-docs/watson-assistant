@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-12-12"
+lastupdated: "2024-12-13"
 
 subcollection: watson-assistant
 
@@ -27,7 +27,6 @@ You have four options to add search to your assistant:
 - The search integration for Elasticsearch. For more information, see [Add the search integration for Elasticsearch](#elasticsearch-integration-overview).
 - The search integration for Custom service. For more information, see [Add the search integration for Custom service](#custom-service-integration-overview).
 - A search extension for Coveo, Google, or NeuralSeek. For more information, see [Add a search extension](#search-overview-extension).
-
 
 
 
