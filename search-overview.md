@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-12-03"
+lastupdated: "2024-12-13"
 
 subcollection: watson-assistant
 
@@ -21,10 +21,14 @@ Your assistant can route complex customer inquiries as a search query. It finds 
 Add search to your assistant to prevent the assistant from having to say things like, `I'm sorry. I can't help you with that`. Instead, the assistant can query existing company documents or data to see whether any useful information can be found and shared with the customer.
 
 You have four options to add search to your assistant:
+
+
 - The search integration for {{site.data.keyword.discoveryfull}}. For more information, see [Add the search integration for {{site.data.keyword.discoveryfull}}](#search-overview-integration).
 - The search integration for Elasticsearch. For more information, see [Add the search integration for Elasticsearch](#elasticsearch-integration-overview).
 - The search integration for Custom service. For more information, see [Add the search integration for Custom service](#custom-service-integration-overview).
 - A search extension for Coveo, Google, or NeuralSeek. For more information, see [Add a search extension](#search-overview-extension).
+
+
 
 
 You can enhance the search integration by using the assistant capabilities such as [Search trigger](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-add-trigger),  [No action matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches) and [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup). 
@@ -50,6 +54,7 @@ You can add Elasticsearch from the Environments page or the Integrations page. F
 {: #custom-service-integration-overview}
 
 You can add the search integration for Custom service if you have Plus or Enterprise plans of {{site.data.keyword.conversationshort}}. With a Custom service integration, you can search for information using a search capability that you create. For instructions on adding search integration for Custom service, see [Custom search integration setup](/docs/watson-assistant?topic=watson-assistant-search-customsearch-add).
+
 
 
 ## Add a search extension

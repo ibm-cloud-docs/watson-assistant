@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-02"
+lastupdated: "2024-12-13"
 
 keywords: conversational search
 
@@ -21,7 +21,13 @@ Starting from **June 1, 2024**, add-on charges are applicable for using the Conv
 
 [Plus]{: tag-green} [Enterprise]{: tag-purple} [IBM Cloud Pak for Data]{: tag-cp4d}
 
+
+
 Use *conversational search* with the {{site.data.keyword.discoveryfull}} search integration or Elasticsearch search integration to help your assistant extract an answer from the highest-ranked query results and return a text response to the user.  
+
+
+
+
 
 When you enable this feature, search results are provided to an IBM watsonx generative AI model that produces a conversational reply to a user's question. 
 {: shortdesc}
