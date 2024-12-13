@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-12-11"
+lastupdated: "2024-12-13"
 
 subcollection: watson-assistant
 
@@ -20,6 +20,12 @@ content-type: release-note
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
 
+## 13 December 2024
+{: #watson-assistant-dec132024}
+{: release-note}
+
+Direct search integration support for Milvus
+:   You can now directly configure your search integration with Milvus. Milvus is a high-performance, highly scalable vector database that you can use for Conversational Search. For more information, see  [Milvus search integration setup](/docs/watson-assistant?topic=watson-assistant-search-milvus-add).
 
 ## 02 December 2024
 {: #watson-assistant-dec022024}
