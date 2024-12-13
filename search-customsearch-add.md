@@ -17,14 +17,8 @@ subcollection: watson-assistant
 
 A Custom service integration searches for information by using a search capability that you create.  You can use a Custom service integration with the conversational search capabilities of your assistant to generate AI responses. This integration supports both server-side and client-side retrieval of information.
 
-
-
-You can have only one search integration per environment. When you change the existing search integration to other integration types such as {{site.data.keyword.discoveryfull}} or Elasticsearch, the settings of the existing search integration are overwritten.
+You can have only one search integration per environment. When you change the existing search integration to other integration types such as {{site.data.keyword.discoveryfull}}, Elasticsearch or Milvus, the settings of the existing search integration are overwritten.
 {: important}
-
-
-
-
 
 ## Selecting Custom service
 {: #select-custom-service}
