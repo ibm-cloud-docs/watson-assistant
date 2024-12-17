@@ -99,13 +99,12 @@ To set up Custom service on your assistant through your client, use the followin
 ## Setting up Milvus for Custom service
 {: #setup-milvus}
 
-
-
-Milvus is a full-text search engine that you can use for handling large-scale datasets. For applications requiring real-time search capabilities and numerous concurrent users, you can use Milvus, that has a distributed architecture, high performance, flexible data model, and real-time analytics capabilities.
+Milvus is a vector database that you can use for handling large-scale datasets. For applications requiring real-time search capabilities and numerous concurrent users, you can use Milvus, which has a distributed architecture, high performance, and flexible data model.
 {: shortdesc}
 
+You can directly configure Milvus search in your search integration without the support of Custom service integration. For more information, see [Milvus search integration setup](/docs/watson-assistant?topic=watson-assistant-search-milvus-add).
 
-
+For more instructions on getting Milvus credentials from watsonx.data and creating connections to watsonx.ai and {{site.data.keyword.conversationshort}}'s custom search, see [Guide for setting up the search integration with watsonx.data Milvus](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-milvus/search-with-watsonx-data-milvus.md).
 
 
 ### Setting up Milvus with server credentials

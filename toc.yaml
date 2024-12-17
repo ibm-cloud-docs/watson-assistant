@@ -24,7 +24,8 @@ toc:
           topics:
           - release-notes.md
           - release-notes-chat.md
-          - release-notes-data.md # 
+          - release-notes-data.md 
+          - release-notes-hub.md 
           - maintenance.md
   - navgroup:
       id: tutorial
@@ -319,7 +320,8 @@ toc:
       - topicgroup:
           label: Installing on Cloud Pak for Data
           topics:
-          - install-data.md # 
+          - install-data.md 
+          - install-hub.md 
           - architecture-data.md
           - backup-data.md
           - troubleshoot-data.md

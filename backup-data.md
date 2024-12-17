@@ -21,24 +21,19 @@ You can back up and restore the data that is associated with your installation i
 The following table lists the upgrade paths that are supported by the scripts.
 
 
-
 | Version in use | Version that you can upgrade to |
 |------|-----|
-| 4.8.x | 5.0.x |
+| 5.0.x | 5.1.x |
+| 4.8.x | 5.0.x or 5.1.x|
 | 4.7.x | 4.8.x or 5.0.x |
 | 4.6.x | 4.7.x or 4.8.x |
 | 4.5.x | 4.6.x or 4.7.x |
 | 4.0.x | 4.5.x or 4.6.x
 {: caption="Upgrade paths supported by scripts" caption-side="top"}
 
-
-
-
-
 If you are upgrading from 4.5.x to 4.8.x, a simpler way to complete the upgrade is described in the following topics:
 
-  
-
+- [Upgrading {{site.data.keyword.conversationshort}} to Version 5.1.x](https://www.ibm.com/docs/en/software-hub/5.1.x?topic=assistant-upgrading){: external}
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 5.0.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/5.0.x?topic=assistant-upgrading){: external}
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 4.8.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=assistant-upgrading){: external}
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 4.7.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.7.x?topic=assistant-upgrading){: external}
@@ -360,11 +355,18 @@ If you prefer to back up data by using the {{site.data.keyword.postgresql}} tool
 
 Complete the steps in this procedure to back up your data by using the {{site.data.keyword.postgresql}} tool directly.
 
-
-
 To back up your data, complete these steps:
 
 1.  Fetch a running {{site.data.keyword.postgresql}} pod:
+
+    Only for version 5.1.0 or greater, use:
+
+    ```bash
+    oc get pods -l app=${INSTANCE}-postgres-16 -o jsonpath="{.items[0].metadata.name}"
+    ```
+    {: codeblock}
+
+    For versions below 5.1.0, use:
 
     ```bash
     oc get pods -l app=${INSTANCE}-postgres -o jsonpath="{.items[0].metadata.name}"
@@ -460,9 +462,16 @@ To back up your data, complete these steps:
 
     The following lists describe the arguments. You retrieved the values for some of these parameters in the previous step:
 
-    - `$KEEPER_POD`: Any P{{site.data.keyword.postgresql}} pod in your instance.
-
+    Only for version 5.1.0 or greater:
     
+    Use  `$KEEPER_POD`: Any {{site.data.keyword.postgresql}} 16 pod in your instance. 
+
+    For versions below 5.1.0:
+
+    Use `$KEEPER_POD`: Any {{site.data.keyword.postgresql}} pod in your instance.
+
+    For all versions:
+
     - `${BACKUP_DIR}`: Specify a file where you want to write the downloaded data. Be sure to specify a backup directory in which to store the file. For example, `/bu/backup-file-name.dump` creates a backup directory named `bu`.
     - `$DATABASE`: The store database name that was retrieved from the Store VCAP secret in step 3.
     - `$HOSTNAME`: The hostname that was retrieved from the Store VCAP secret in step 3.
@@ -472,20 +481,33 @@ To back up your data, complete these steps:
     To see more information about the `pg_dump` command, you can run this command:
 
     ```bash
-      oc exec -it ${KEEPER_POD} -- pg_dump --help
+    oc exec -it ${KEEPER_POD} -- pg_dump --help
     ```
     {: codeblock}
 
+1.  Take a backup of the secret that contains the encryption key. Ignore this step if the below 
+    mentioned secret is not available in that release.      
 
-
-
+    ```bash
+    oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
+    oc get secret $INSTANCE-auth-encryption -o yaml > auth-encryption-secret.yaml
+    ```
+    {: codeblock}
 
 ## Restoring data
 {: #backup-restore}
 
 IBM created a restore tool called `pgmig`. The tool restores your database backup by adding it to a database that you choose. It also upgrades the schema to the one that is associated with the version of the product where you restore the data. Before the tool adds the backed-up data, it removes the data for all instances in the current service deployment, so any spares are also removed.
 
+Prerequisite:
 
+Setup `auth-encryption-secret` that you backed up earlier.
+
+```bash
+oc apply -f auth-encryption-secret.yaml 
+oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
+```
+{: codeblock}
 
 1.  Install the target {{site.data.keyword.icp4dfull_notm}} cluster to which you want to restore the data.
 
@@ -520,7 +542,14 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
 
 1.  Get the secret:
 
-    
+    Only for version 5.1.0 or greater, use:
+
+     ```bash
+    oc get secret ${INSTANCE}-postgres-16-ca -o jsonpath='{.data.ca\.crt}' | base64 -d | tee ${BACKUP_DIR}/ca.crt | openssl x509 -noout -text
+    ```
+    {: codeblock}
+
+    For version below 5.1.0, use:
 
     ```bash
     oc get secret ${INSTANCE}-postgres-ca -o jsonpath='{.data.ca\.crt}' | base64 -d | tee ${BACKUP_DIR}/ca.crt | openssl x509 -noout -text
@@ -533,30 +562,35 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
 
 1.  Copy the files that you downloaded and created in the previous steps to any existing directory on a {{site.data.keyword.postgresql}} pod.
 
+    a. Only for version 5.1.0 or greater:
     
+       Run the following command to find {{site.data.keyword.postgresql}} pods:
 
-    1. Run the following command to find {{site.data.keyword.postgresql}} pods:
+      ```bash
+        oc get pods | grep ${INSTANCE}-postgres-16
+      ```
+      {: codeblock}
 
-        ```bash
+    b. For versions below 5.1.0:
+    
+      Run the following command to find {{site.data.keyword.postgresql}} pods:
+
+      ```bash
         oc get pods | grep ${INSTANCE}-postgres
-        ```
-        {: codeblock}
+      ```
+      {: codeblock}
     
-    1. The files that you must copy are `pgmig`, `postgres.yaml`, `resourceController.yaml`, `ca.crt` (the secret file that is generated in step 6), and the file that you created for your downloaded data. Run the following commands to copy the files.
+    c. The files that you must copy are `pgmig`, `postgres.yaml`, `resourceController.yaml`, `ca.crt` (the secret file that is generated in step 6), and the file that you created for your downloaded data. Run the following commands to copy the files.
 
-        If you are restoring data to a stand-alone {{site.data.keyword.icp4dfull_notm}} cluster, then replace all references to `oc` with `kubectl` in these sample commands.
-        {: note}
+      If you are restoring data to a stand-alone {{site.data.keyword.icp4dfull_notm}} cluster, then replace all references to `oc` with `kubectl` in these sample commands.
+      {: note}
 
-        ```bash
+      ```bash
         oc exec -it ${POSTGRES_POD} -- mkdir /controller/tmp
         oc exec -it ${POSTGRES_POD} -- mkdir /controller/tmp/bu
         oc rsync ${BACKUP_DIR}/ ${POSTGRES_POD}:/controller/tmp/bu/
-        ```
-        {: codeblock}
-
-     
-
-    
+      ```
+      {: codeblock}
 
     - Replace `${POSTGRES_POD}` with the name of one of the {{site.data.keyword.postgresql}} pods from the previous step.
  
@@ -585,11 +619,30 @@ IBM created a restore tool called `pgmig`. The tool restores your database backu
     ```
     {: codeblock}
 
+1.  Run the `pgmig` tool:
+
+    Only for version 5.1.0 or greater:
     
+    ```bash
+    cd /controller/tmp/bu
+    export PG_CA_FILE=/controller/tmp/bu/ca.crt
+    ./pgmig --resourceController resourceController.yaml --target postgres.yaml --source <backup-file-name.dump>
+    export ENABLE_ICP=true
+    ```
+    {: codeblock}
+
+1.  Run the `pgmig` tool:
+
+    For versions below 5.1.0:
+
+    ```bash
+    cd /controller/tmp/bu
+    export PG_CA_FILE=/controller/tmp/bu/ca.crt
+    ./pgmig --resourceController resourceController.yaml --target postgres.yaml --source <backup-file-name.dump>
+    ```
+    {: codeblock}
 
     - Replace `<backup-file-name.dump>` with the name of the file that you created for your downloaded data.
-
-    
 
     For more command options, see [{{site.data.keyword.postgresql}} migration tool details](#backup-pgmig-details).
 
@@ -723,12 +776,10 @@ To add the values that are required but currently missing from the file, complet
 
     The updated file looks something like this:
    
-    
-
-    
+    Only for version 5.1.0 or greater:
 
     ```yaml
-    host: wa_inst-postgres-rw
+    host: wa_inst-postgres-16-rw
     port: 5432
     database: conversation_pprd_wa_inst
     username: dbadmin
@@ -737,7 +788,17 @@ To add the values that are required but currently missing from the file, complet
     ```
     {: codeblock}
 
-       
+    For versions below 5.1.0:
+
+     ```yaml
+    host: wa_inst-postgres-rw
+    port: 5432
+    database: conversation_pprd_wa_inst
+    username: dbadmin
+    su_username: dbadmin
+    su_password: mypassword
+    ```
+    {: codeblock}
 
 1.  Save the `postgres.yaml` file.
 
