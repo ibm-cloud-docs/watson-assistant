@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-11-01"
+lastupdated: "2024-12-17"
 
 subcollection: watson-assistant
 
@@ -88,7 +88,7 @@ Minor updates
 {: release-note}
 
 Updates 
-:  The autocorrection feature is now disabled for search integration in your watsonx Assistant. For more information, see [Auto correction](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-autocorrection)
+:  The autocorrection feature is now disabled for search integration in your watsonx Assistant. For more information, see [Auto correction](/docs/watson-assistant?topic=watson-assistant-autocorrection)
 
 ## Version 5.0.0 (19 June 2024)
 {: #assistant-data-jun192024}
