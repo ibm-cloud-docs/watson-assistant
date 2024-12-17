@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-12-13"
+lastupdated: "2024-12-17"
 
 subcollection: watson-assistant
 
@@ -99,8 +99,14 @@ To set up Custom service on your assistant through your client, use the followin
 ## Setting up Milvus for Custom service
 {: #setup-milvus}
 
+
+
 Milvus is a full-text search engine that you can use for handling large-scale datasets. For applications requiring real-time search capabilities and numerous concurrent users, you can use Milvus, that has a distributed architecture, high performance, flexible data model, and real-time analytics capabilities.
 {: shortdesc}
+
+
+
+
 
 ### Setting up Milvus with server credentials
 {: #setup-milvus-server}
