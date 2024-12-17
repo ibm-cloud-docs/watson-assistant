@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-11-27"
+lastupdated: "2024-12-17"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,7 @@ subcollection: watson-assistant
 # Backing up and restoring data for {{site.data.keyword.icp4dfull_notm}}
 {: #backup-data}
 
-[{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d}
+[{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d}  [{{site.data.keyword.IBM_notm}} Software Hub]{: tag-teal}
 
 You can back up and restore the data that is associated with your installation in {{site.data.keyword.icp4dfull_notm}}.
 {: shortdesc}
