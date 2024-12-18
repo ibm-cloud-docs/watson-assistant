@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-12-17"
+lastupdated: "2024-12-18"
 
 subcollection: watson-assistant
 
@@ -20,7 +20,7 @@ A Custom service integration searches for information by using a search capabili
 You can have only one search integration per environment. When you change the existing search integration to other integration types such as {{site.data.keyword.discoveryfull}}, Elasticsearch or Milvus, the settings of the existing search integration are overwritten.
 {: important}
 
-## Selecting Custom service
+## Selecting a Custom service
 {: #select-custom-service}
 
 To select a Custom service as the search integration, use one of the following procedures:
@@ -102,16 +102,20 @@ To set up Custom service on your assistant through your client, use the followin
 Milvus is a vector database that you can use for handling large-scale datasets. For applications requiring real-time search capabilities and numerous concurrent users, you can use Milvus, which has a distributed architecture, high performance, and flexible data model.
 {: shortdesc}
 
-You can directly configure Milvus search in your search integration without the support of Custom service integration. For more information, see [Milvus search integration setup](/docs/watson-assistant?topic=watson-assistant-search-milvus-add).
+You can directly integrate with your watsonx.data Milvus for Conversational Search than using a custom service. For more information, see [Milvus search integration setup](/docs/watson-assistant?topic=watson-assistant-search-milvus-add).
 
-For more instructions on getting Milvus credentials from watsonx.data and creating connections to watsonx.ai and {{site.data.keyword.conversationshort}}'s custom search, see [Guide for setting up the search integration with watsonx.data Milvus](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-milvus/search-with-watsonx-data-milvus.md).
-
+You need to use the Custom service search, to avail more advanced search capabilities with Milvus, such as:
+* Flexibility to use any Milvus supported and watsonx.ai supported embedding models.
+  For a list of embedding models supported by Milvus, see [Milvus supported embedding models](https://milvus.io/docs/embeddings.md).
+* [Multi-vector hybrid search](https://milvus.io/docs/multi-vector-search.md).
+* [Reranking](https://milvus.io/docs/reranking.md).
 
 ### Setting up Milvus with server credentials
 {: #setup-milvus-server}
 
-1.	Set up Milvus on your assistant with server credentials by following the steps mentioned in [Setting up a Custom service with server credentials](#setup-custom-service-server).
-2.	For more information on examples and references for Milvus, see [Example with Milvus]( https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-custom-service/custom-search-server-setup-guide.md#example-with-milvus){: external}.
+1. For setting up watsonx.data Milvus, see the [Guide for setting up the search integration with watsonx.data Milvus](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-milvus/search-with-watsonx-data-milvus.md).
+1. For general set up on your assistant with server credentials, see [Setting up a Custom service with server credentials](#setup-custom-service-server).
+1. For more information on examples and references for Milvus, see [Example with Milvus]( https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-custom-service/custom-search-server-setup-guide.md#example-with-milvus){: external}.
 
 ### Setting up Milvus through your client
 {: #setup-milvus-client}
