@@ -222,6 +222,9 @@ toc:
           - at_events.md 
           - admin-securing.md
           - admin-backup-restore.md
+          - link:
+              label: Deleting an instance of the service
+              href: https://cloud.ibm.com/docs/account?topic=account-manage_resource&interface=ui#delete-resource
           - admin-recovery.md
           - admin-failover.md
           - admin-language-support.md
@@ -355,7 +358,7 @@ toc:
               href: https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration
       - link:
           label: REST API reference
-          href: https://{DomainName}/apidocs/assistant/assistant-v2
+          href: /apidocs/assistant-v2
       - filter-reference.md
       - topicgroup:
           label: System entities

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-12-13"
+lastupdated: "2024-12-20"
 
 keywords: conversational search
 
@@ -21,7 +21,7 @@ This feature is available for Enterprise with data isolation plan.{: note}
 
 [Plus]{: tag-green} [Enterprise]{: tag-purple} [IBM Cloud Pak for Data]{: tag-cp4d}
 
-Use *conversational search* with the search integrations such as {{site.data.keyword.discoveryfull}},Elasticsearch, Custom service or Milvus to help your assistant extract an answer from the highest-ranked query results and return a text response to the user.  
+Use *conversational search* with the search integrations such as {{site.data.keyword.discoveryfull}}, Elasticsearch, Custom service, or Milvus to help your assistant extract an answer from the highest-ranked query results and return a text response to the user.  
 
 When you enable this feature, search results are provided to an IBM watsonx generative AI model that produces a conversational reply to a user's question. 
 {: shortdesc}
@@ -54,14 +54,16 @@ To enable conversational search, do the following steps:
 
    For context-dependent questions, which might take previous inputs into account, choose **Entire conversation**.
 
-   Entire conversation uses the whole session to continue the conversation. It might bring back subjects that are no longer in the scope of the conversation.{: note}
+   Entire conversation uses the whole session to continue the conversation. It might bring back subjects that are no longer in the scope of the conversation.
+   {: note}
 
 1. In the **Define the text for the citation title**, type `How do we know?`. 
 
-   The **Define the text for the citation title** is enabled only when **Conversational search** toggle is switched to `On`.{: tip}
+   The **Define the text for the citation title** is enabled only when **Conversational search** toggle is switched to `On`.
+   {: tip}
 
-
-   The web chat integration does not support the citation title feature.{: note}      
+   The web chat integration does not support the citation title feature.
+   {: note}      
 
 1. In the **Tendency to say I don’t know**, select the tendency to use. By default, `Less often` is selected. 
 1. Click **Save**.
@@ -83,7 +85,7 @@ When your assistant generates a conversational search response, it evaluates the
 * Responds with an “I don’t know” message.
 * Falls back to the “No matches” action per the [Search routing configuration](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing) in your assistant.
  
-'Table 1. Tendency to say “I don’t know” options' shows the options available in the **Tendency to say “I don’t know”** section.
+`Table 1. Tendency to say “I don’t know” options` shows the options available in the **Tendency to say “I don’t know”** section.
 
 | Tendency to say “I don’t know” | Response confidence threshold | Assistant behavior |
 |--------------------|---------|-------------|
@@ -91,7 +93,7 @@ When your assistant generates a conversational search response, it evaluates the
 | `Less often`           | Lower | The assistant says “I don’t know” more often than the `Rarely` option. |
 | `More often`           | Higher | The assistant says “I don’t know” more often than the `Less often` option.|
 | `Most often`           | Highest | The assistant says “I don’t know” more often than the `More often` option because it compares the response confidence score against the highest threshold. However, the assistant most likely presents accurate or relevant responses to the end user. In addition, the assistant presents fewer generated responses to the users and more often responds with an “I don’t know” message or falls back to the “No matches” action.|
-{: caption= "Table 1. Tuning the Tendency to say I don’t know " caption-side="top"}
+{: caption= "Tuning the Tendency to say I don’t know" caption-side="bottom"}
 
 ## Tuning the generated response length in conversational search
 
@@ -104,8 +106,9 @@ You can choose from three response lengths: concise, moderate, and verbose. This
 | `Concise` | Responses are shorter and to the point, which is ideal for straightforward queries. |
 | `Moderate` | Responses balance detail and conciseness, making them suitable for most general inquiries. |
 | `Verbose` | Responses provide more detailed and comprehensive information that is suitable for complex queries or when a thorough explanation is needed. |
+{: caption= "Response lengths" caption-side="bottom"}
 
-   The response-length feature affects the average length of responses that watsonx Assistant generates. Although it aims to match the specified length, actual responses vary because of the complexity of user input and the inherent limitations of the large language model (LLM).{: note}
+The response-length feature affects the average length of responses that watsonx Assistant generates. Although it aims to match the specified length, actual responses vary because of the complexity of user input and the inherent limitations of the large language model (LLM).{: note}
 
 ## Configuring your assistant to use the conversational search
 

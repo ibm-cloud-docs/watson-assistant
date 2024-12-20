@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-24"
+  years: 2015, 2024
+lastupdated: "2024-12-20"
 
 subcollection: watson-assistant
 
@@ -19,7 +19,7 @@ If you are building a custom channel application by using the REST API, you can 
 
 The request body of the `message` method supports an `attachments` array, which can specify up to 5 media objects. Media objects that are sent in the `attachments` array can be intercepted and processed by a configured premessage webhook.
 
-For detailed information about how to access attachments by using the API, see the [API reference](https://{DomainName}/apidocs/assistant/assistant-v2#message){: external}.
+For detailed information about how to access attachments by using the API, see the [API reference](/apidocs/assistant-v2#message){: external}.
 
 ## Examples
 {: #api-input-attachments-examples}
@@ -122,5 +122,3 @@ print(json.dumps(response, indent=2))
 ```
 {: codeblock}
 {: python}
-
-

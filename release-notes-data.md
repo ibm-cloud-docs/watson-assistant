@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-12-17"
+lastupdated: "2024-12-20"
 
 subcollection: watson-assistant
 
@@ -511,7 +511,7 @@ Dialog skill **Try it out** improvements
 Disambiguation feature updates
 :   The dialog skill disambiguation feature now includes improved features:
 
-    - **Increased control**: The frequency and depth of disambiguation can now be controlled by using the **sensitivity** parameter in the [workspace API](https://{DomainName}/apidocs/assistant-v1#updateworkspace){: external}. There are 5 levels of sensitivity:
+    - **Increased control**: The frequency and depth of disambiguation can now be controlled by using the **sensitivity** parameter in the [workspace API](/apidocs-v1#updateworkspace){: external}. There are 5 levels of sensitivity:
         - `high`
         - `medium_high`
         - `medium`
@@ -524,7 +524,7 @@ Disambiguation feature updates
 
     These new features may affect various metrics, such as disambiguation rate and click rates, as well as influence conversation-level key performance indicators such as containment.
 
-    If the new disambiguation algorithm works differently than expected for your assistant, you can adjust it using the sensitivity parameter in the update workspace API. For more information, see [Update workspace](https://{DomainName}/apidocs/assistant-v1#updateworkspace){: external}.
+    If the new disambiguation algorithm works differently than expected for your assistant, you can adjust it using the sensitivity parameter in the update workspace API. For more information, see [Update workspace](/apidocs-v1#updateworkspace){: external}.
 
 ## 26 January 2022
 {: #assistant-data-jan262022}
@@ -606,7 +606,7 @@ Search was added to the Dialog, Intents, and Entities pages
 :   You can now search within the product. For example, if you want to find any dialog nodes that condition on an intent, you can open the Dialog page and search on the intent name.
 
 v2 Logs API is available
-:   Use the v2 API logs method to list log events for an assistant. For more information, see the [API reference documentation](https://{DomainName}/apidocs/assistant-data-v2#listlogs).
+:   Use the v2 API logs method to list log events for an assistant. For more information, see the [API reference documentation](/apidocs-data-v2#listlogs).
 
 Features not included
 :   This release does not include the following features, which are available for cloud instances at the time of this release:

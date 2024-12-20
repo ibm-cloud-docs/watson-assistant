@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-26"
+  years: 2015, 2024
+lastupdated: "2024-12-20"
 
 subcollection: watson-assistant
 
@@ -30,7 +30,7 @@ All communication with an assistant takes place within the context of a _session
 
 State data persists until you explicitly delete the session, or until the session times out because of inactivity.
 
-If you prefer to manage state yourself, the v2 API also provides a stateless `message` method that functions more like the v1 API. If you use the stateless `message` method, you do not need to explicitly create or delete sessions, and your app is responsible for maintaining context. For more information about the stateless `message` method, see the [API Reference](https://{DomainName}/apidocs/assistant/assistant-v2#messagestateless){: external}.
+If you prefer to manage state yourself, the v2 API also provides a stateless `message` method that functions more like the v1 API. If you use the stateless `message` method, you do not need to explicitly create or delete sessions, and your app is responsible for maintaining context. For more information about the stateless `message` method, see the [API Reference](/apidocs/assistant-v2#messagestateless){: external}.
 {: note}
 
 If you have an existing application that uses the v1 API to send user input directly to a workspace, migrating your app to use the v2 API is a straightforward process.
@@ -48,7 +48,7 @@ Currently, there is no API support for retrieving an assistant ID. To find the a
 
 After you create an assistant, you can update your client application to use the v2 runtime API instead of the v1 runtime API.
 
-1. Before sending the first message in a conversation, use the v2 [**Create a session**](https://{DomainName}/apidocs/assistant/assistant-v2#createsession){: external} method to create a session. Save the returned session ID:
+1. Before sending the first message in a conversation, use the v2 [**Create a session**](/apidocs/assistant-v2#createsession){: external} method to create a session. Save the returned session ID:
 
    ```javascript
    service
@@ -78,7 +78,7 @@ After you create an assistant, you can update your client application to use the
    {: codeblock}
    {: java}
 
-1. Use the v2 [**Send user input to assistant**](https://{DomainName}/apidocs/assistant/assistant-v2#message){: external} method to send user input to the assistant. Instead of specifying the workspace ID as you did with the v1 API, you specify the assistant ID and the session ID:
+1. Use the v2 [**Send user input to assistant**](/apidocs/assistant-v2#message){: external} method to send user input to the assistant. Instead of specifying the workspace ID as you did with the v1 API, you specify the assistant ID and the session ID:
 
    ```javascript
    service
@@ -115,7 +115,7 @@ After you create an assistant, you can update your client application to use the
 
    The basic message structure has not changed; in particular, the user input is still sent as `input.text`.
 
-1. After a conversation ends, use the v2 [**Delete session**](https://{DomainName}/apidocs/assistant/assistant-v2#deletesession){: external} method to delete the session.
+1. After a conversation ends, use the v2 [**Delete session**](/apidocs/assistant-v2#deletesession){: external} method to delete the session.
 
    ```javascript
    service
@@ -165,7 +165,7 @@ Your application might need to be updated to handle the v2 runtime response form
 
    However, keep in mind that state data, including conversation context, is now maintained by the assistant, so your application might not need to access the context at all (see [Let the assistant maintain state](#api-migration-state)).
 
-Refer to the v2 [API Reference ](https://{DomainName}/apidocs/assistant/assistant-v2#message){: external} for complete documentation of the v2 response format.
+Refer to the v2 [API Reference ](/apidocs/assistant-v2#message){: external} for complete documentation of the v2 response format.
 
 ## Let the assistant maintain state
 {: #api-migration-state}

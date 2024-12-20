@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-10-23"
+lastupdated: "2024-12-20"
 
 keywords: billing, data centers, MAU, monthly active users, service plans
 
@@ -26,7 +26,7 @@ Billing for the use of {{site.data.keyword.conversationshort}} is managed throug
 
 The metrics that are used for billing purposes differ based on your plan type. You can be billed based on the number of API calls made to a service instance or on the number of active users who interact with the instance.
 
-For answers to common questions about subscriptions, see [How you're charged](/docs/billing-usage?topic=billing-usage-charges){: external}.
+For answers to common questions about subscriptions, see [How you're charged](/docs/account?topic=account-charges){: external}.
 
 Explore the {{site.data.keyword.conversationshort}} [service plan options](https://www.ibm.com/products/watsonx-assistant/pricing){: external}.
 
@@ -38,15 +38,15 @@ The following features are available only to users of a Plus plan or higher. [Pl
 - [Phone integration](/docs/watson-assistant?topic=watson-assistant-deploy-phone)
 - [Private endpoints](/docs/watson-assistant?topic=watson-assistant-admin-securing#security-private-endpoints)
 - [Search](/docs/watson-assistant?topic=watson-assistant-search-add)
-- [{{site.data.keyword.conversationshort}} v2 API](https://{DomainName}/apidocs/assistant/assistant-v2#listlogs){: external}
+- [{{site.data.keyword.conversationshort}} v2 API](/apidocs/assistant-v2#listlogs){: external}
 - [Log webhook](/docs/watson-assistant?topic=watson-assistant-webhook-log)
 
-The [v2 Logs API](https://{DomainName}/apidocs/assistant/assistant-v2#listlogs){: external} is available with a free trial of the Plus plan.
+The [v2 Logs API](/apidocs/assistant-v2#listlogs){: external} is available with a free trial of the Plus plan.
 {: note}
 
 The following features are available only to users of Enterprise plans. [Enterprise]{: tag-purple}
 
-- [{{site.data.keyword.cloud}} Activity tracker](/docs/watson-assistant?topic=watson-assistant-admin-auditing)
+- [Activity tracking](/docs/watson-assistant?topic=watson-assistant-at_events)
 - [Multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments)
 - [Override system defaults for response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes#action-response-modes-customize)
 - [Sending events to Segment](/docs/watson-assistant?topic=watson-assistant-segment-add)
@@ -62,7 +62,7 @@ A monthly active user (MAU) is any unique user who has at least one interaction 
 
 A unique user is recognized by the user ID that is associated with the person that interacts with your assistant. The web chat and other built-in integrations set this property for you automatically.
 
-You can calculate MAUs on your own, for both {{site.data.keyword.cloud_notm}} and {{site.data.keyword.icp4dfull_notm}}. To calculate MAUs, use the [logs](https://{DomainName}/apidocs/assistant-v2#listlogs){: external} endpoint to export conversations. For a particular month, count the number of unique user IDs found in the results. User IDs with more than 50 messages (API calls) in a month are counted more than once for every 50 messages. In a common use case, where each user ID represents a customer conversing with an assistant, the average number of messages per user are typically much fewer than 50 messages, so it's unusual to count a user ID more than once.
+You can calculate MAUs on your own, for both {{site.data.keyword.cloud_notm}} and {{site.data.keyword.icp4dfull_notm}}. To calculate MAUs, use the [logs](/apidocs/assistant-v2#listlogs){: external} endpoint to export conversations. For a particular month, count the number of unique user IDs found in the results. User IDs with more than 50 messages (API calls) in a month are counted more than once for every 50 messages. In a common use case, where each user ID represents a customer conversing with an assistant, the average number of messages per user are typically much fewer than 50 messages, so it's unusual to count a user ID more than once.
 
 ### Specifying the user ID with the REST API
 {: #admin-managing-plan-userid-api}
@@ -101,7 +101,7 @@ If you are using a custom client application and do not set a `user_id` value, t
 
 If the same person chats with your assistant on three separate occasions over the same billing period, how you represent that user in the API call impacts how the interactions are billed. If you identify the user interaction with a `user_id`, it counts as one use. If you identify the user interaction with a `session_id`, then it counts as three uses because a separate session is created for each interaction.
 
-Design any custom applications to capture a unique `user_id` or `session_id` and pass the information to {{site.data.keyword.conversationshort}}. Choose a non-human-identifiable ID that doesn't change throughout the customer lifecycle. For example, don't use a person's email address as the user ID. In fact, the `user_id` syntax must meet the requirements for header fields as defined in [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2){: external}.
+Design any custom applications to capture a unique `user_id` or `session_id` and pass the information to {{site.data.keyword.conversationshort}}. Choose a non-human-identifiable ID that doesn't change throughout the customer lifecycle. For example, don't use a person's email address as the user ID. In fact, the `user_id` syntax must meet the requirements for header fields as defined in [RFC 7230](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2){: external}.
 
 The built-in integrations derive the user ID in the following ways: 
 
@@ -114,7 +114,7 @@ Billing is managed per monthly active user per service instance. If a single use
 ### Handling anonymous users
 {: #admin-managing-plan-billing-anonymous}
 
-If your custom application or assistant interacts with users who are anonymous, you can generate a randomized universally unique ID to represent each anonymous user. For more information about UUIDs, see [RFC 4122](https://tools.ietf.org/html/rfc4122.html){: external}.
+If your custom application or assistant interacts with users who are anonymous, you can generate a randomized universally unique ID to represent each anonymous user. For more information about UUIDs, see [RFC 4122](https://datatracker.ietf.org/doc/html/rfc4122.html){: external}.
 
 - For web chat, if you do not pass an identifier for the user when the session begins, the web chat creates one for you. It creates a first-party cookie with a generated anonymous ID. The cookie remains active for 45 days. If the same user returns to your site later in the month and chats with your assistant again, the web chat integration recognizes the user. And you are charged only once when the same anonymous user interacts with your assistant multiple times in a single month.
 
@@ -135,7 +135,6 @@ You can create {{site.data.keyword.conversationshort}} service instances that ar
 | Tokyo       | `jp-tok`        | `tok`          |
 | London      | `eu-gb`         | `lon`          |
 | Washington DC  | `us-east`    | `wdc`          |
-
 {: caption="Data center locations" caption-side="bottom"}
 
 ## Upgrading your plan

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-24"
+  years: 2015, 2024
+lastupdated: "2024-12-20"
 
 keywords: mark as irrelevant, counterexample, data source, deployment ID, log retention
 
@@ -109,7 +109,7 @@ Applications that use the older v1 runtime API must specify a deployment ID in e
 
 For assistants or custom apps that use the v2 version of the API, your assistant automatically includes an assistant ID with each `/message` call, so you can choose a data source by assistant name instead of using a deployment ID.
 
-To add the deployment ID, v1 API users include the deployment property inside the metadata of the [context](https://{DomainName}/apidocs/assistant/assistant-v1?curl=#message){: external}, as in this example:
+To add the deployment ID, v1 API users include the deployment property inside the metadata of the [context](/apidocs/assistant-v1?curl=#message){: external}, as in this example:
 
 ```json
 "context" : {
@@ -166,4 +166,3 @@ If you use data from another data source, any improvements you make to the model
 It is important to help your assistant stay focused on the types of customer questions and business transactions that you designed it to handle. You can use information that is collected from real customer conversations to highlight subjects that you do not want your assistant to even attempt to address.
 
 For more information, see [Defining what's irrelevant](/docs/watson-assistant?topic=watson-assistant-irrelevance-detection).
-

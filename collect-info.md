@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-06-27"
+lastupdated: "2024-12-20"
 
 subcollection: watson-assistant
 
@@ -313,7 +313,7 @@ The free text response type has these default settings:
 - **Customer response collection behavior** is **Always ask for this information** and can't be modified. For more information, see [Skipping steps, always asking steps, or never asking steps](#collect-info-skip-step).
 - **Change conversation topic** is disabled. If you want a customer to be able to digress and change topics while entering a free text answer, enable the toggle **Allow customer to change topics during a free text response**. For more information, see [Allowing your customers to change the topic of the conversation](/docs/watson-assistant?topic=watson-assistant-change-topic).
 
-You can enable watsonx.ai in your assistants to intelligently recognize the text strings in a free text response with multiple action variables. For more information about using watsonx.ai to gather information, see [Information-gathering](/docs/watson-assistant?topic=watson-assistant-using-watsonxai-for-generative-ai-capabilities).
+You can enable watsonx.ai in your assistants to intelligently recognize the text strings in a free text response with multiple action variables. For more information about using watsonx.ai to gather information, see [Information-gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering).
 
 ## Saving and reusing customer responses
 {: #saved-customer-responses}

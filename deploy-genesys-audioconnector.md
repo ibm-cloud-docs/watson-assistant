@@ -31,7 +31,7 @@ For more information on Genesys Cloud roles and permissions see, [Roles and perm
 ## Create the Audio Connector integration in your assistant
 {: #integrate-audio-connector}
 
-1. Go to the **Integrations** page by clicking the integrations icon (![Integrations icon](images/integrations-icon.png)) in the left menu.
+1. Go to the **Integrations** page by clicking the integrations icon ![Integrations icon](images/integrations.svg) in the left menu.
 
 Store the credentials because you cannot see them after you click **Save**. You require these credentials to set up the Genesys Audio Connector.{: important}
     

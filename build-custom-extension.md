@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-09"
+lastupdated: "2024-12-20"
 
 subcollection: watson-assistant
 
@@ -43,7 +43,7 @@ After this processing is complete, the custom extension becomes available as a n
 
 To create a custom extension, you need access to an OpenAPI document that describes the REST API you want to integrate with. Many third-party services publish OpenAPI documents that describe their APIs, which you can download and import. For an API that your company maintains, you can use standard tools to create an OpenAPI document that describes it.
 
-The [SwaggerHub](https://swagger.io/tools/swaggerhub/){: external} website offers an [OpenAPI 3.0 Tutorial](https://support.smartbear.com/swaggerhub/docs/tutorials/openapi-3-tutorial.html){: external}, and [tools](https://swagger.io/tools/){: external} to help you develop and validate your OpenAPI document. You can use the online [Swagger editor](https://editor.swagger.io/){: external} to convert your OpenAPI document to the correct format and OpenAPI version.
+The [SwaggerHub](https://swagger.io/tools/swaggerhub/){: external} website offers an [OpenAPI 3.0 Tutorial](https://support.smartbear.com/swaggerhub/docs/en/get-started/openapi-3-0-tutorial.html){: external}, and [tools](https://swagger.io/why-swagger/){: external} to help you develop and validate your OpenAPI document. You can use the online [Swagger editor](https://editor.swagger.io/){: external} to convert your OpenAPI document to the correct format and OpenAPI version.
 {: tip}
 
 The OpenAPI document must satisfy the following requirements and restrictions:
@@ -64,7 +64,7 @@ The OpenAPI document must satisfy the following requirements and restrictions:
 - The `content-type` must be `application/json`.
 - To stream from an extension, the response content-type must be `text/event-stream`.
 - Each operation must have a clear and concise `summary`. The summary text is used in the UI to describe the operations that are available from an action, so it should be short and meaningful to someone who is building an assistant.
-- [Relative URLs](https://swagger.io/docs/specification/api-host-and-base-path/#relative-urls){: external} are currently not supported.
+- [Relative URLs](https://swagger.io/docs/specification/v3_0/api-host-and-base-path/#relative-urls){: external} are currently not supported.
 - Only Basic, Bearer, OAuth 2.0, and API key authentication are supported.
 - For OAuth 2.0 authentication, Authorization Code, Client Credentials, Password, and custom grant types that starts with `x-` are supported. Note that `x-`<any custom name> is used by the [IBM IAM authentication mechanism](/docs/account?topic=account-iamoverview) and by [watsonx](https://www.ibm.com/watsonx).
 - Schemas that are defined by using `anyOf`, `oneOf`, and `allOf` are currently not supported.
