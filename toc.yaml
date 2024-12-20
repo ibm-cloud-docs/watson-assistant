@@ -122,9 +122,7 @@ toc:
                   navtitle: Overview
                 - deploy-web-chat.md
                 - web-chat-develop-mobile.md
-                - web-chat-develop-home-screen.md
                 - web-chat-develop-userid.md
-                - web-chat-develop-strings.md
                 - web-chat-develop-global.md
                 - web-chat-develop-versions.md
           - topicgroup:
@@ -379,7 +377,7 @@ toc:
               href: https://stackoverflow.com/questions/tagged/watson-assistant
           - link:
               label: IBM AI and Data Science Community
-              href: https://community.ibm.com/community/user/watsonai/communities/community-home?CommunityKey=7a3dc5ba-3018-452d-9a43-a49dc6819633
+              href: https://community.ibm.com/community/user/ai-datascience/communities/community-home?CommunityKey=7a3dc5ba-3018-452d-9a43-a49dc6819633
       - accessibility.md
       - browser-support.md
       - terms-notices.md  
