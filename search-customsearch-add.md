@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-12-18"
+lastupdated: "2024-12-20"
 
 subcollection: watson-assistant
 
@@ -106,14 +106,14 @@ You can directly integrate with your watsonx.data Milvus for Conversational Sear
 
 You need to use the Custom service search, to avail more advanced search capabilities with Milvus, such as:
 * Flexibility to use any Milvus supported and watsonx.ai supported embedding models.
-  For a list of embedding models supported by Milvus, see [Milvus supported embedding models](https://milvus.io/docs/embeddings.md){: external}.
-* [Multi-vector hybrid search](https://milvus.io/docs/multi-vector-search.md){: external}.
-* [Reranking](https://milvus.io/docs/reranking.md){: external}.
+  For a list of embedding models supported by Milvus, see [Milvus supported embedding models](https://milvus.io/docs/embeddings.md).
+* [Multi-vector hybrid search](https://milvus.io/docs/multi-vector-search.md).
+* [Reranking](https://milvus.io/docs/reranking.md).
 
 ### Setting up Milvus with server credentials
 {: #setup-milvus-server}
 
-1. For setting up watsonx.data Milvus, see the [Guide for setting up the search integration with watsonx.data Milvus](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-milvus/search-with-watsonx-data-milvus.md){: external}.
+1. For setting up watsonx.data Milvus, see the [Guide for setting up the search integration with watsonx.data Milvus](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-milvus/search-with-watsonx-data-milvus.md).
 1. For general set up on your assistant with server credentials, see [Setting up a Custom service with server credentials](#setup-custom-service-server).
 1. For more information on examples and references for Milvus, see [Example with Milvus]( https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-custom-service/custom-search-server-setup-guide.md#example-with-milvus){: external}.
 
