@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-11-07"
+lastupdated: "2024-12-20"
 
 subcollection: watson-assistant
 
@@ -1110,8 +1110,10 @@ This example uses the `stop_activities` response type to stop recognizing speech
 {: codeblock}
 
 
-## `table` [Beta]{: tag-cyan}
+## `table`
 {: #response-types-table}
+
+[Beta]{: tag-cyan}
 
 The web chat support for new `table` response type represents the structured data in rows and columns, headers, and cells.
 
@@ -1128,9 +1130,9 @@ The web chat support for new `table` response type represents the structured dat
 |--------------------------|-----------------------------------------------------------------------------------------------|--------------------------|----------|
 | `title`                  | The title of the table.                                                                        | String                   | No       |
 | `description`            | A brief description of the table.                                                              | String                   | No       |
-| `headers`                | Array of column headers.                                                                       | Array<String, Number>     | Yes      |
-| `rows`                   | Array of rows, each containing an array of cells.           | Array<Object>            | Yes      |
-| `rows[].cells`           | Data for each cell in the row.                                                                 | Array<String, Number>     | Yes      |
+| `headers`                | Array of column headers.                                                                       | `Array<String, Number>`     | Yes      |
+| `rows`                   | Array of rows, each containing an array of cells.           | `Array<Object>`            | Yes      |
+| `rows[].cells`           | Data for each cell in the row.                                                                 | `Array<String, Number>`     | Yes      |
 |
 
 Each row must have the same number of cells as the headers. A mismatch between cells and headers will cause the web chat to throw an error when it attempts to render the table.{: note}
