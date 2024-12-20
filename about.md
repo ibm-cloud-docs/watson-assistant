@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-12-03"
+lastupdated: "2024-12-20"
 
 keywords: chatbot, live chatbot, omnichannel
 
@@ -53,8 +53,6 @@ The assistant chooses the appropriate resolution from among these options:
 - A **search integration** uses existing FAQ or other curated content that you own to find relevant answers to customer questions.
 
 - If a customer wants more personalized help or wants to discuss a sensitive subject, the assistant can connect the customer with someone from your support team through the web chat or phone integration.
-
-To see how {{site.data.keyword.conversationshort}} is helping enterprises cut costs and improve customer satisfaction today, read the [Independent study finds IBM {{site.data.keyword.conversationshort}} customers can accrue $23.9 million in benefits](https://www.ibm.com/blogs/watson/2020/03/independent-study-finds-ibm-watson-assistant-customers-accrued-23-9-million-in-benefits/){: external} blog on ibm.com.
 
 Read more about these implementation steps by following these links:
 
