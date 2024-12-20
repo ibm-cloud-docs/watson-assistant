@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-12-20"
 
 subcollection: watson-assistant
 
@@ -11,7 +11,7 @@ subcollection: watson-assistant
 {{site.data.keyword.attribute-definition-list}}
 
 # Using watsonx.ai for generative AI capabilities
-{: using-watsonxai-for-generative-ai-capabilities}
+{: #using-watsonxai-for-generative-ai-capabilities}
 
 By enabling watsonx.ai, you bring the generative AI capabilities in your assistants to give quick, accurate, and intelligent responses to the customer queries. In addition, the Large Language Models (LLMs) help your assistant to recognize customer conversation and respond to queries by using clear and concise conversation. 
 
@@ -21,7 +21,3 @@ You can configure and manage the following two capabilities of generative AI in 
 
 - [Information gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering)
 - [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search)
-
-
-
-

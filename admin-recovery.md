@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-10-26"
+  years: 2021, 2024
+lastupdated: "2024-12-20"
 
 subcollection: watson-assistant
 
@@ -16,7 +16,7 @@ subcollection: watson-assistant
 {{site.data.keyword.conversationfull}} is highly available within multiple {{site.data.keyword.cloud}} locations (for example, Dallas and Washington, DC). However, recovering from potential disasters that affect an entire location requires planning and preparation.
 {: shortdesc}
 
-You are responsible for understanding your configuration, customization, and usage of {{site.data.keyword.conversationshort}}. You are also responsible for being ready to re-create an instance of the service in a new location and to restore your data in any location. See [How do I ensure zero downtime?](/docs/overview?topic=overview-zero-downtime#zero-downtime){: external} for more information.
+You are responsible for understanding your configuration, customization, and usage of {{site.data.keyword.conversationshort}}. You are also responsible for being ready to re-create an instance of the service in a new location and to restore your data in any location. See [How do I ensure zero downtime?](/docs/resiliency?topic=resiliency-ha-redundancy#zero-downtime){: external} for more information.
 
 ## High availability
 {: #admin-recovery-ha}

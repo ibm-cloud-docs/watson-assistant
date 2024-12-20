@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-03-06"
+lastupdated: "2024-12-20"
 
 subcollection: watson-assistant
 
@@ -16,7 +16,7 @@ subcollection: watson-assistant
 In some situations, you might need to define your assistant's responses by using the JSON editor. For more information, see [Adding assistant responses](/docs/watson-assistant?topic=watson-assistant-respond).
 {: shortdesc}
 
-To edit a response by using the JSON editor, click the **Switch to JSON editor** icon ![Switch to JSON editor icon](images/json-editor-icon.png) in the **Assistant says** field. The JSON editor shows how the response is defined behind the scenes and sent to the channel.
+To edit a response by using the JSON editor, click the **Switch to JSON editor** icon ![Switch to JSON editor icon](images/code.svg) in the **Assistant says** field. The JSON editor shows how the response is defined behind the scenes and sent to the channel.
 
 ## Generic JSON format
 {: #assistant-responses-json-generic}
@@ -34,7 +34,7 @@ The `generic` property defines an array of responses that are sent to the channe
 
 The `generic` array for a step can contain multiple responses, and each response has a _response type_. A basic step that sends a simple text response typically includes only a single response with the response type `text`. However, many other response types are available, supporting multimedia and interactive content, plus control over the behavior of some channel integrations.
 
-Although the `generic` format can be sent to any channel integration, not all channels support all response types, so a particular response might be ignored or handled differently by some channels. For more information, see [Channel integration support for response types](#assistant-responses-json-integration-support).
+Although the `generic` format can be sent to any channel integration, not all channels support all response types, so a particular response might be ignored or handled differently by some channels. For more information, see see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference).
 
 At run time, output with multiple responses might be split into multiple message payloads. The channel integration sends these messages to the channel in sequence, but it is the responsibility of the channel to deliver these messages to the user; this can be affected by network or server issues.
 {: note}
@@ -158,7 +158,3 @@ If the `channels` array is present, it must contain at least one channel object.
 {: #assistant-responses-json-response-types}
 
 You can configure different types of responses using JSON. To learn more about response types and supported integrations for JSON response types, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference).
-
-
-
-

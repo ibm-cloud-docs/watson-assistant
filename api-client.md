@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-04-19"
+lastupdated: "2024-12-20"
 
 subcollection: watson-assistant
 
@@ -16,7 +16,7 @@ subcollection: watson-assistant
 If none of the built-in integrations meet your requirements, you can deploy your assistant by developing a custom client application that interacts with your users and communicates with the {{site.data.keyword.conversationfull}} service.
 {: shortdesc}
 
-The Watson SDKs help you write code that interacts with {{site.data.keyword.conversationshort}}. For more information about the SDKs, see [Watson SDKs](/developer/watson/sdks-and-tools).
+The Watson SDKs help you write code that interacts with {{site.data.keyword.conversationshort}}. For more information about the SDKs, see [IBM Watson APIs](https://github.com/watson-developer-cloud){: external}.
 
 ## Setting up the assistant
 {: #api-client-setup}
@@ -542,7 +542,4 @@ To implement clarification suggestions in your application:
 
 Using the v2 API is the recommended way to build a runtime client application that communicates with the {{site.data.keyword.conversationshort}} service. However, some older applications might still be using the v1 runtime API, which includes a similar method for sending messages to the workspace within a dialog skill. If your app uses the v1 runtime API, it communicates directly with the workspace, bypassing the skill orchestration and state-management capabilities of the assistant.
 
-For more information about the v1 `/message` method and context, see the [v1 API Reference](https://{DomainName}/apidocs/assistant/assistant-v1#message){: external}.
-
-
-
+For more information about the v1 `/message` method and context, see the [v1 API Reference](/apidocs/assistant-v1#message){: external}.

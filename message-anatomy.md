@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015,  2023
-lastupdated: "2023-10-11"
+  years: 2015, 2024
+lastupdated: "2024-12-20"
 
 keywords: message call, message objects
 
@@ -76,7 +76,7 @@ In the resulting API `/message` response, the text response is formatted as foll
 
 You can define more response types other than a text response. See [Responses](/docs/watson-assistant?topic=watson-assistant-dialog-overview#dialog-overview-responses) for more details.
 
-For more information about the `/message` API call, see the [API reference](https://{DomainName}/apidocs/assistant/assistant-v2){: external}.
+For more information about the `/message` API call, see the [API reference](/apidocs/assistant-v2){: external}.
 
 For information about how to refer to these message objects within a conversation, see [Expressions for accessing objects](/docs/watson-assistant?topic=watson-assistant-expression-language).
 

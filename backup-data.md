@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-12-17"
+lastupdated: "2024-12-20"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,7 @@ subcollection: watson-assistant
 # Backing up and restoring data for {{site.data.keyword.icp4dfull_notm}}
 {: #backup-data}
 
-[{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d}  [{{site.data.keyword.IBM_notm}} Software Hub]{: tag-teal}
+[{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d} [{{site.data.keyword.IBM_notm}} Software Hub]{: tag-teal}
 
 You can back up and restore the data that is associated with your installation in {{site.data.keyword.icp4dfull_notm}}.
 {: shortdesc}
@@ -31,7 +31,7 @@ The following table lists the upgrade paths that are supported by the scripts.
 | 4.0.x | 4.5.x or 4.6.x
 {: caption="Upgrade paths supported by scripts" caption-side="top"}
 
-If you are upgrading from 4.5.x to 4.8.x, a simpler way to complete the upgrade is described in the following topics:
+Simpler ways to complete the upgrade is described in the following topics:
 
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 5.1.x](https://www.ibm.com/docs/en/software-hub/5.1.x?topic=assistant-upgrading){: external}
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 5.0.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/5.0.x?topic=assistant-upgrading){: external}
@@ -327,7 +327,7 @@ To back up data by using the provided script, complete the following steps:
 
 1.  Download the `backupPG.sh` script.
 
-    Go to [GitHub](https://github.com/watson-developer-cloud/community/blob/master/watson-assistant/data/){: external}, and find the directory for your version to find the file.
+    Go to [GitHub](https://github.com/watson-developer-cloud/community/tree/master/watson-assistant/data){: external}, and find the directory for your version to find the file.
 
     If the `backupPG.sh` script doesn't exist in the directory of your version, backup your data by using [KubernetesCronJob](#backup-cronjob) or [pg_dump tool](#backup-cp4d).
     {: note}

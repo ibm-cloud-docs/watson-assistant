@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-12-20"
 
 subcollection: watson-assistant
 
@@ -35,7 +35,7 @@ You can keep user assistant data secure when interacting with server-run code by
 
 IBM is committed to providing our clients and partners with innovative data privacy, security, and governance solutions to assist them on their journey to GDPR compliance.
 
-Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and offerings to support your compliance journey at [Data Responsibility GDPR](https://www.ibm.com/data-responsibility/gdpr/){: external}.
+Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and offerings to support your compliance journey at [IBM Cloud GDPR EU Compliance](https://www.ibm.com/cloud/compliance/gdpr-eu){: external}.
 
 ## Health Insurance Portability and Accountability Act (HIPAA)
 {: #securing-hipaa}
@@ -53,7 +53,7 @@ The assistant supports TLS 1.2 and TLS 1.3, where TLS 1.3 is the default version
 
 When your assistant connects to a user-specified URL through custom extensions, conversational skills, or webhooks, it requires verifying the identity of the services to prevent unauthorized access and eliminate security risks. If the user-specified URL uses the Hypertext Transfer Protocol Secure (HTTPS) protocol, your assistant verifies the identity of the secure service in three ways. {: shortdesc}
 
-` Table 1. Possibilities of identifying secure service` explains the three ways in which the assistant can verify the identity of the secure service when directed to an HTTPS service. 
+`Table 1. Possibilities of identifying secure service` explains the three ways in which the assistant can verify the identity of the secure service when directed to an HTTPS service. 
 
 
 
@@ -68,23 +68,21 @@ When your assistant connects to a user-specified URL through custom extensions, 
 Some example Security certificates configuration options are discussed with which you can achieve an optimal balance of security and convenience for an assistant with few connection details. For more information, see [Methods for choosing the Security certificates option](/docs/watson-assistant?topic=watson-assistant-ssl-certificates-configuration-reference).
 
 
-` Table 2. Security certificates configuration option` provides information about the possible Security certificates configuration option in your assistant and its explanation.
+`Table 2. Security certificates configuration option` provides information about the possible Security certificates configuration option in your assistant and its explanation.
 
 
 
 | Security certificates configuration option | Description | Connectivity | Usage | Uploading option support |
-| ------------------------------------- | ----------- | ------------ | ----- | ------------------------ |
+| --- | --- | --- | --- | --- |
 | `Trust uploaded certificates and any certificates signed by a trusted authority` | Your assistant can connect to any service: \n - with a certificate signed by a trusted authority.\n - with the uploaded certificate (either the certificate for that service or the certificate for its certifying authority).\n  It cannot connect to any other secure service. | - Convenient to use. \n - You can verify the identity of all services that your assistant connects to.  No additional effort is needed for services that have a certificate signed by a publicly trusted authority.  \n - When not signed by a publicly trusted authority, you must upload a certificate file for verifying the identity of the services your assistant connects to. | Commonly used by all assistants. | Yes |
 | `Trust uploaded certificates` | Your assistant can connect to any service with an uploaded certificate (either the certificate for that service or the certificate for its certifying authority). \n It cannot connect to any other secure service. | - Less convenient to use.\n - Your assistant can connect only to secure services with uploaded certificates or their signing authority's certificate. | Less usage | Yes |
-| `Trust all certificates, operation insecure (Not recommended)` | Your assistant can connect to any service and is not recommended because of lack of protection from imposter services.  | Reasonable option \n - for proof-of-concepts or demo assistants where your assistants don’t have any independent users or sensitive data. \n - to keep the assistants operational even when they are connected to services that are not signed by publicly trusted authorities. | - a default option for both old and new assistants.  | No |
-{: caption="Securitycertificates configuration option" caption-side="top"}
-
+| `Trust all certificates, operation insecure (Not recommended)` | Your assistant can connect to any service and is not recommended because of lack of protection from imposter services. | Reasonable option \n - for proof-of-concepts or demo assistants where your assistants don’t have any independent users or sensitive data. \n - to keep the assistants operational even when they are connected to services that are not signed by publicly trusted authorities. | A default option for both old and new assistants. | No |
+{: caption="Security certificates configuration option" caption-side="bottom"}
   
-![SSL certificates configuration option](images/ssl-main-options.png) 
-
+![SSL certificates configuration option](images/ssl-main-options.png){: caption="SSL certificates configuration option" caption-side="bottom"}
 
 ### Uploading Security certificates
-{:  #ssl-certificates-upload}
+{: #ssl-certificates-upload}
 
 Before you begin
 - Ensure that your files are in the *PEM* format with a maximum size of 500 KB.
@@ -103,7 +101,7 @@ To upload self-signed certificates or certificates from a trusted authority in y
     ![SSL upload option](images/ssl-upload-option.png) 
 
 ### Replacing the existing Security certificates
-{:  #ssl-certificates-replace}
+{: #ssl-certificates-replace}
 
 To replace the existing certificates with the new ones in your assistant:
 
@@ -118,7 +116,7 @@ To replace the existing certificates with the new ones in your assistant:
 1.	Click `Upload`.
 
 ### Downloading the Security certificates
-{:  #ssl-certificates-download}
+{: #ssl-certificates-download}
 
 To view the existing certificates in your assistant:
 1.	Go to **Home** > **Assistant settings**. 
@@ -128,7 +126,7 @@ To view the existing certificates in your assistant:
     ![SSL download option](images/ssl-download-option.png) 
 
 ### Modifying the existing Security certificates
-{:  #ssl-certificates-modify}
+{: #ssl-certificates-modify}
 
 To modify the existing certificates in your assistant:
 1.	Download the Security certificates as described in [Downloading the Security certificates](#ssl-certificates-download).
@@ -136,7 +134,7 @@ To modify the existing certificates in your assistant:
 1.	Replace the existing *PEM* file with the modified file as described in [Replacing the existing Security certificates](#ssl-certificates-replace).
 
 ###  Deleting the existing Security certificates 
-{:  #ssl-certificates-delete}
+{: #ssl-certificates-delete}
 
 To delete the existing certificates in your assistant:
 1.	Go to  **Home** > **Assistant settings**.
@@ -156,10 +154,11 @@ To prevent IBM from using your log data for general service improvements, comple
 
 - If you use a custom application, for each API `/message` request, set the `X-Watson-Learning-Opt-Out` header parameter to `true`.
 
-    For more information, see [Data collection](https://{DomainName}/apidocs/assistant/assistant-v2#data-collection){: external}.
+    For more information, see [Data collection](/apidocs/assistant-v2#data-collection){: external}.
+
 - If you use the web chat integration, add the `learningOptOut` parameter to the script that you embed in your web page, and set it to `true`.
 
-    For more information, see [Configuration](https://integrations.us-south.assistant.watson.cloud.ibm.com/web/developer-documentation/api-configuration){: external}.
+    For more information, see [Configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#configuration-object){: external}.
 
 ## Labeling and deleting data in {{site.data.keyword.conversationshort}}
 {: #securing-gdpr-wa}
@@ -204,7 +203,7 @@ curl -X POST -u "apikey:3Df... ...Y7Pc9"
 ```
 {: pre}
 
-where {url} is the appropriate URL for your instance. For more information, see [Service endpoint](https://{DomainName}/apidocs/assistant/assistant-v2#service-endpoint){: external}.
+where {url} is the appropriate URL for your instance. For more information, see [Service endpoint](/apidocs/assistant-v2#service-endpoint){: external}.
 
 The `customer_id` string cannot include the semicolon (`;`) or equal sign (`=`) characters. You are responsible for ensuring that each `customer ID` property is unique across your customers.
 {: note}
@@ -226,7 +225,7 @@ curl -X GET -u "apikey:3Df... ...Y7Pc9" \
 ```
 {: pre}
 
-where {url} is the appropriate URL for your instance. For more information, see [Service endpoint](https://{DomainName}/apidocs/assistant/assistant-v2#service-endpoint){: external}.
+where {url} is the appropriate URL for your instance. For more information, see [Service endpoint](/apidocs/assistant-v2#service-endpoint){: external}.
 
 For more information, see the [Filter query reference](/docs/watson-assistant?topic=watson-assistant-filter-reference){: external}.
 
@@ -248,11 +247,11 @@ curl -X DELETE -u "apikey:3Df... ...Y7Pc9" \
 ```
 {: pre}
 
-where {url} is the appropriate URL for your instance. For more information, see [Service endpoint](https://{DomainName}/apidocs/assistant/assistant-v2#service-endpoint){: external}.
+where {url} is the appropriate URL for your instance. For more information, see [Service endpoint](/apidocs/assistant-v2#service-endpoint){: external}.
 
 An empty JSON object `{}` is returned.
 
-For more information, see the [API reference](https://{DomainName}/apidocs/assistant/assistant-v2#deleteuserdata).
+For more information, see the [API reference](/apidocs/assistant-v2#deleteuserdata).
 
 **Note:** Delete requests are processed in batches and can take up to 24 hours to complete.
 
@@ -280,5 +279,4 @@ Integrations that are provided with the product require endpoints on the public 
 ## Related topics
 {: #security-related}
 
-- [Security architecture](https://www.ibm.com/cloud/architecture/architecture/practices/watson-security-architecture/){: external} describes the security components that are needed for secure cloud development, deployment, and operations.
 - [IBM Cloud compliance programs](https://www.ibm.com/cloud/compliance){: external} describe how to manage regulatory compliance and internal governance requirements with IBM Cloud services.

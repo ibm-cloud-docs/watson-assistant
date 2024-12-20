@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015,  2023
-lastupdated: "2023-10-24"
+  years: 2015, 2024
+lastupdated: "2024-12-20"
 
 subcollection: watson-assistant
 
@@ -158,7 +158,7 @@ curl -X POST -u "apikey:3Df... ...Y7Pc9" \
 ```
 {: pre}
 
-where {url} is the appropriate URL for your instance. For more information, see [Endpoint URLs](https://{DomainName}/apidocs/assistant/assistant-v2#service-endpoint){: external}.
+where {url} is the appropriate URL for your instance. For more information, see [Endpoint URLs](/apidocs/assistant-v2#service-endpoint){: external}.
 
 The `customer_id` string cannot include the semicolon (`;`) or equal sign (`=`) characters. You are responsible for ensuring that each `Customer ID` parameter is unique across your customers.
 {: note}

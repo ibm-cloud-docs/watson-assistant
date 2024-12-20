@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-12-17"
+lastupdated: "2024-12-20"
 
 subcollection: watson-assistant
 
@@ -1329,7 +1329,7 @@ Change to the irrelevance detection option
 
     For more information, see [Defining what's irrelevant](/docs/watson-assistant?topic=watson-assistant-irrelevance-detection).
 
-    If necessary, you can use the [Update workspace API](https://{DomainName}/apidocs/assistant/assistant-v1?curl=#updateworkspace){: external} to set your English-language assistant to one of the four combinations of intent and irrelevance detection:
+    If necessary, you can use the [Update workspace API](/apidocs/assistant-v1?curl=#updateworkspace){: external} to set your English-language assistant to one of the four combinations of intent and irrelevance detection:
 
     - Enhanced intent recognition and enhanced irrelevance detection
     - Enhanced intent recognition and existing irrelevance detection
@@ -1365,7 +1365,7 @@ Dialog skill "Try it out" improvements
 Disambiguation feature updates
 :   The dialog skill disambiguation feature now includes improved features:
 
-    - **Increased control**: The frequency and depth of disambiguation can now be controlled by using the **sensitivity** parameter in the [workspace API](https://{DomainName}/apidocs/assistant/assistant-v1#updateworkspace){: external}. There are 5 levels of sensitivity:
+    - **Increased control**: The frequency and depth of disambiguation can now be controlled by using the **sensitivity** parameter in the [workspace API](/apidocs/assistant-v1#updateworkspace){: external}. There are 5 levels of sensitivity:
         - `high`
         - `medium_high`
         - `medium`
@@ -1378,7 +1378,7 @@ Disambiguation feature updates
 
     These new features may affect various metrics, such as disambiguation rate and click rates, as well as influence conversation-level key performance indicators such as containment.
 
-    If the new disambiguation algorithm works differently than expected for your assistant, you can adjust it using the sensitivity parameter in the update workspace API. For more information, see [Update workspace](https://{DomainName}/apidocs/assistant/assistant-v1#updateworkspace){: external}.
+    If the new disambiguation algorithm works differently than expected for your assistant, you can adjust it using the sensitivity parameter in the update workspace API. For more information, see [Update workspace](/apidocs/assistant-v1#updateworkspace){: external}.
 
 ## 9 September 2021
 {: #watson-assistant-sep092021}
@@ -2078,7 +2078,7 @@ New system entities are enabled automatically
 {: release-note}
 
 Spelling correction in v2 API
-:   The v2 `message` API now supports spelling correction options. For more information see the [API Reference](https://{DomainName}/apidocs/assistant/assistant-v2#message){: external}.
+:   The v2 `message` API now supports spelling correction options. For more information see the [API Reference](/apidocs/assistant-v2#message){: external}.
 
 ## 21 May 2020
 {: #watson-assistant-may212020}
@@ -2313,7 +2313,7 @@ More web chat color settings
 {: release-note}
 
 Track API events
-:   Premium plan users can now use the Activity Tracker service to track how users and applications interact with {{site.data.keyword.assistant_classic_full}} in {{site.data.keyword.cloud}}. See [Using {{site.data.keyword.at_full_notm}} to audit user activity](/docs/watson-assistant?topic=watson-assistant-admin-auditing).
+:   Premium plan users can now use the Activity Tracker service to track how users and applications interact with {{site.data.keyword.assistant_classic_full}} in {{site.data.keyword.cloud}}. See [Using {{site.data.keyword.at_full_notm}} to audit user activity](/docs/watson-assistant?topic=watson-assistant-at-events).
 
 ## 5 February 2020
 {: #watson-assistant-feb052020}

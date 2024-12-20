@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-31"
+  years: 2015, 2024
+lastupdated: "2024-12-20"
 
 subcollection: watson-assistant
 
@@ -48,7 +48,7 @@ It is the responsibility of your client application to handle all response types
 ## Response types
 {: #api-dialog-responses-types}
 
-Each element of a response is of one of the supported response types. Each response type is specified by using a different set of JSON properties, so the properties that are included for each response vary depending upon the response type. For complete information about the response model of the `/message` API, see the [API Reference](https://{DomainName}/apidocs/assistant/assistant-v2#message){: external}.)
+Each element of a response is of one of the supported response types. Each response type is specified by using a different set of JSON properties, so the properties that are included for each response vary depending upon the response type. For complete information about the response model of the `/message` API, see the [API Reference](/apidocs/assistant-v2#message){: external}.
 
 This section describes the available response types and how they are represented in the `/message` API response JSON. If you are using the Watson SDK, you can use the interfaces that are provided for your language to access the same objects.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-26"
+  years: 2015, 2024
+lastupdated: "2024-12-20"
 
 subcollection: watson-assistant
 
@@ -55,7 +55,7 @@ In the v2 API, you would access this user-defined variable as follows:
 ```
 {: codeblock}
 
-For more information about how to access context variables by using the API, see the [v2 API Reference](https://{DomainName}/apidocs/assistant/assistant-v2){: external}.
+For more information about how to access context variables by using the API, see the [v2 API Reference](/apidocs/assistant-v2){: external}.
 
 ## Example
 {: #api-context-example}
