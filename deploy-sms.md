@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-12-06"
+lastupdated: "2024-12-23"
 
 subcollection: watson-assistant
 
@@ -136,7 +136,7 @@ To set up the integration, complete the following steps:
 
 1.  From the [IntelePeer Atmosphere](https://atmosphere.intelepeer.com/home/){: external} site, copy the **API Authentication Token** value and store it temporarily, so you can paste it into the *SMS with IntelePeer* integration setup page in the upcoming steps.
 
-1.  From the [IntelePeer Customer Portal](https://customer.intelepeer.com/){: external} site, under the **My Applications** section, select **SMS API Management**. In the **SMS Management** title bar, click the gear icon, here you will set the SMS **Secret Input**. The Secret Input is used to prevent your webserver webhook from processing any inbound-SMS POST request that does not originate from IntelePeer. Set the **Secret Input** value here and remember it as you will need to use the value in the *SMS with IntelePeer* integration setup page in the upcoming steps.
+1.  From the [IntelePeer Customer Portal](https://customer.intelepeer.com/home){: external} site, under the **My Applications** section, select **SMS API Management**. In the **SMS Management** title bar, click the gear icon, here you will set the SMS **Secret Input**. The Secret Input is used to prevent your webserver webhook from processing any inbound-SMS POST request that does not originate from IntelePeer. Set the **Secret Input** value here and remember it as you will need to use the value in the *SMS with IntelePeer* integration setup page in the upcoming steps.
 
 1.  Return to the *SMS with IntelePeer* integration setup page. Click **Next** to go to Step 1 of your *SMS with IntelePeer* integration setup.
 
@@ -150,7 +150,7 @@ To set up the integration, complete the following steps:
 
     You will add this URI to the webhook configuration in IntelePeer. If you want to support more than one phone number, you must add the URI to the webhook for each phone number separately.
 
-1.  Go to your [IntelePeer Customer Portal](https://customer.intelepeer.com/){: external} site, under the **My Applications** section, select **SMS API Management**.
+1.  Go to your [IntelePeer Customer Portal](https://customer.intelepeer.com/home){: external} site, under the **My Applications** section, select **SMS API Management**.
 
 1.  Go to the phone number(s) you want to enable for SMS. Toggle the **Enabled/Disabled** radial button beside the number and set it to *Enabled*. It may take a few minutes for the phone number to become activated for SMS.
 
@@ -183,7 +183,7 @@ For the best customer experience, design your actions with the capabilities of t
 - Do not include HTML elements in your text responses.
 - The *SMS* integration does not support chat transfers that are initiated with the *connect_to_agent* response type.
 
-- **Image**, **Audio**, **Video** response types allow sending a message containing media. A title and description are sent along with the attachment. Note that depending on the carrier and device of the end user these messages may not be successfully received. For a list of the supported content types for Twilio, see [Twilio: Accepted Content Types for Media](https://www.twilio.com/docs/sms/accepted-mime-types){: external}.
+- **Image**, **Audio**, **Video** response types allow sending a message containing media. A title and description are sent along with the attachment. Note that depending on the carrier and device of the end user these messages may not be successfully received. For a list of the supported content types for Twilio, see [Twilio: Accepted Content Types for Media](https://www.twilio.com/docs/messaging/guides/accepted-mime-types){: external}.
 
    For more information on these response types, see [Response types reference](/docs/watson-assistant?topic=watson-assistant-response-types-reference).
 

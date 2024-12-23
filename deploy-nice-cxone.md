@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-12-03"
+lastupdated: "2024-12-23"
 
 subcollection: watson-assistant
 
@@ -20,7 +20,7 @@ Integrate web chat with a NICE CXone service desk solution and empower your live
 
 Connect NICE CXone to your AI-powered assistant with a web chat integration, and personalize the experience as necessary. If, in the course of conversation with your assistant, a customer requests contact with someone, you can transfer or escalate directly to a live agent.
 
-NICE CXone allows your team to assist customers in real time, which increases customer satisfaction. And satisfied customers are happier customers. To learn more about this service desk solution, see the [NICE website](https://www.nice.com/solutions/omnichannel-customer-service){: external}.
+NICE CXone allows your team to assist customers in real time, which increases customer satisfaction. And satisfied customers are happier customers. To learn more about this service desk solution, see the [NICE website](https://www.nice.com/products/omnichannel-agent-desktop){: external}.
 
 ## Before you begin
 {: #deploy-nice-cxone-prereqs}
