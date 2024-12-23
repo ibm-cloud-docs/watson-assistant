@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-17"
+lastupdated: "2024-12-23"
 
 subcollection: watson-assistant
 
@@ -43,7 +43,7 @@ Keep the Twilio web page open in a web browser tab so you can refer to it again 
 
 WhatsApp has a rigorous process that they use to review all businesses that want to interact with customers over their network. WhatsApp, which is owned by Facebook, requires that you register your business with the Facebook business directory.
 
-1.  To register, go to the [Facebook Business Manager](https://business.facebook.com/overview){: external} website, and click **Create account**. Follow the instructions to create an account.
+1.  To register, go to the [Facebook Business Manager](https://business.facebook.com/business/loginpage/){: external} website, and click **Create new account**. Follow the instructions to create an account.
 
 1.  Get your Facebook Business Manager ID. In [Settings](https://business.facebook.com/settings){: external}, click the **Business info** tab. The Facebook Business Manager ID is at the top of the page.
 

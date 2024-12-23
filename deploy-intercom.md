@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-06-23"
+lastupdated: "2024-12-23"
 
 subcollection: watson-assistant
 
@@ -13,10 +13,10 @@ subcollection: watson-assistant
 # Integrating with Intercom
 {: #deploy-intercom}
 
-The Intercom integration is available in only in the classic experience for use with a dialog skill. The Intercom integration isn't available in {{site.data.keyword.conversationshort}}.
+The Intercom integration is available only in the classic experience for use with a dialog skill. The Intercom integration isn't available in {{site.data.keyword.conversationshort}}.
 {: attention}
 
-Intercom is a customer messaging platform that helps drive business growth through better relationships throughout the customer lifecycle.
+Intercom is a customer messaging platform that helps drive business growth through better relationships in the customer lifecycle.
 {: shortdesc}
 
 You can integrate your assistant with an Intercom application to enable the app to seamlessly pass user conversations between your assistant and live agents.
@@ -202,7 +202,6 @@ To configure how you want the assistant to handle specific dialog branches, defi
 ## Testing the integration
 {: #deploy-intercom-try}
 
-To effectively test your Intercom integration from end-to-end, you must have access to an Intercom application. The workspace must have an associated user interface client. If it does not, see [How do I create an app?](https://www.intercom.com/help/en/articles/1827298-how-do-i-create-an-app){: external} for help with setting one up.
+To effectively test your Intercom integration from end-to-end, you must have access to an Intercom application. The workspace must have an associated user interface client. If it does not, see [Build your app](https://developers.intercom.com/docs#build-your-app){: external} for help.
 
 Submit test user queries through a client application that is associated with your Intercom workspace to see how the messages are handled by Intercom. Verify that messages that are meant to be answered by the assistant are generating the appropriate responses, and that the assistant is not responding to messages that it is not configured to answer.
-

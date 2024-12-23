@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-06-23"
+lastupdated: "2024-12-23"
 
 subcollection: watson-assistant
 
@@ -114,7 +114,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. Click **Download the app package**.
 
-1. Go to [Microsoft Teams](https://teams.microsoft.com){: external}, and log in with your admin credentials.
+1. Go to [Microsoft Teams](https://teams.microsoft.com/v2/){: external}, and log in with your admin credentials.
 
 1. Click **Apps** in the sidebar menu, and then click **Manage your apps** and **Upload an app**. 
 

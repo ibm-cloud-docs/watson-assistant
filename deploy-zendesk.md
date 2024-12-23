@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-11-30"
+  years: 2020, 2024
+lastupdated: "2024-12-23"
 
 subcollection: watson-assistant
 
@@ -128,7 +128,7 @@ Agent Workspace should now feature on several screens in Zendesk Support, includ
 
 You must collect the name and email address of each user if enabling security in Zendesk. This information must be passed to the web chat so it can be provided to Zendesk when the conversation is transferred.
 
-When you add security to your Zendesk integration, you ensure that the visitors you are helping are legitimate customers. Enabling visitor authentication also enables support for cross-domain traffic and cross-browser identification. For more information, see the [Enabling authenticated visitors in Zendesk](https://support.zendesk.com/hc/en-us/articles/360022185314-Enabling-authenticated-visitors-in-the-Chat-widget).
+When you add security to your Zendesk integration, you ensure that the visitors you are helping are legitimate customers. Enabling visitor authentication also enables support for cross-domain traffic and cross-browser identification. For more information, see the [Enabling authenticated visitors in the Zendesk chat widget](https://support.zendesk.com/hc/en-us/articles/4408836328346-Enabling-authenticated-visitors-in-the-Chat-widget).
 
 Before you can secure the Zendesk connection, complete the following required tasks:
 
@@ -197,7 +197,7 @@ Before you can secure the Zendesk connection, complete the following required ta
     - Open the *Widget security* tab.
     - In the *Visitor Authentication* section, click the *Generate* button.
 
-    For more information, see [Enabling authenticated visitors in the Chat widget](https://support.zendesk.com/hc/en-us/articles/360022185314-Enabling-authenticated-visitors-in-the-Chat-widget){: external}. You do not need to follow the steps to create a JWT. The Assistant service generates a JSON Web Token for you.
+    For more information, see [Enabling authenticated visitors in the Zendesk chat widget](https://support.zendesk.com/hc/en-us/articles/4408836328346-Enabling-authenticated-visitors-in-the-Chat-widget){: external}. You do not need to follow the steps to create a JWT. The Assistant service generates a JSON Web Token for you.
 1.  Copy the shared secret from Zendesk.
 
 To secure the Zendesk connection, complete the following steps:
@@ -240,5 +240,3 @@ When a customer interacts with the web chat, information about the current web b
 You can use this information to add custom routing rules to your actions. For example, if the customer is on the Products page when a transfer to a human is requested, you can route the chat to agents who are experts in your product portfolio. 
 
 If the customer is on the Returns page, you might want to route the chat transfer to agents who know how to help customers return merchandise.
-
-
