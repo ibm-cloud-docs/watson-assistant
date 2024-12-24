@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-06-07"
+lastupdated: "2024-12-24"
 
 keywords: building a dialog, condition, response, options, jump, jump-to, multiline, response variations
 
@@ -165,9 +165,9 @@ Use one of these syntax options to create valid expressions in conditions:
 
 - Shorthand notations to refer to intents, entities, and context variables. See [Accessing and evaluating objects](/docs/watson-assistant?topic=watson-assistant-expression-language).
 
-- Spring Expression (SpEL) language, which is an expression language that supports querying and manipulating an object graph at run time. See [Spring Expression Language (SpEL) language](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#expressions){: external} for more information.
+- Spring Expression Language (SpEL), which is an expression language that supports querying and manipulating an object graph at run time. See [Spring Expression Language (SpEL)](https://docs.spring.io/spring-framework/reference/core/expressions.html){: external} for more information.
 
-You can use regular expressions to check for values to condition against.  To find a matching string, for example, you can use the `String.find` method. See  [Methods](/docs/watson-assistant?topic=watson-assistant-dialog-methods) for more details.
+You can use regular expressions to check for values to condition against.  To find a matching string, for example, you can use the `String.find` method. See [Methods](/docs/watson-assistant?topic=watson-assistant-dialog-methods) for more details.
 
 ## Responses
 {: #dialog-overview-responses}
@@ -388,7 +388,7 @@ To add a *Connect to human agent* response type, complete the following steps:
 
     **Web chat built-in service desk integrations only**: The text you add to the *Response when agents are online* and *Response when no agents are online* fields is used for transfers in web chat version 3 and later. If you don't add your own messages, the hint text (the grayed out text that is displayed as the example messages) is used.
     
-    If you use this response type in multiple nodes and want to use the same custom text each time, but don't want to have to edit each node individually, you can change the default text that is used by the web chat. To change the default messages, edit the [language source file](https://github.com/watson-developer-cloud/assistant-web-chat/tree/master/languages){: external}. Look for the `default_agent_availableMessage` and `default_agent_unavailableMessage` values. For more information about how to change web chat text, see [Languages](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#languages){: external}.
+    If you use this response type in multiple nodes and want to use the same custom text each time, but don't want to have to edit each node individually, you can change the default text that is used by the web chat. To change the default messages, edit the [language source file](https://github.com/watson-developer-cloud/assistant-web-chat/tree/main/languages){: external}. Look for the `default_agent_availableMessage` and `default_agent_unavailableMessage` values. For more information about how to change web chat text, see [Languages](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#languages){: external}.
     {: tip}
 
 1. **Optional**: If the channel where you deploy the assistant is integrated with a service desk, you can add initial routing information to pass with the transfer request.
@@ -705,7 +705,7 @@ To add an *Option* response type, complete the following steps:
 Do not add more than one option response type to a single dialog node because both lists are displayed at once, but the customer can choose an option from only one of them.
 {: important}
 
-If you need to be able to populate the list of options with different values based on some other factors, you can design a dynamic options list. For more information, see the [How to Dynamically Add Response Options to Dialog Nodes](https://medium.com/ibm-watson/how-to-dynamically-add-response-options-to-dialog-nodes-in-watson-assistant-e14c5e08beca){: external} blog post.
+If you need to be able to populate the list of options with different values based on some other factors, you can design a dynamic options list. For more information, see the [How to Dynamically Add Response Options to Dialog Nodes](https://medium.com/ibm-data-ai/how-to-dynamically-add-response-options-to-dialog-nodes-in-watson-assistant-e14c5e08beca){: external} blog post.
 
 ### Adding a *Pause* response type
 {: #dialog-overview-add-pause}
@@ -748,7 +748,7 @@ To add a *Search skill* response type, complete the following steps:
 
       You can include specific information provided by the user by referencing entities that were detected in the user's input as part of the query. For example, `Tell me about @product`. Or you can reference a context variable, such as `Do you have flights to $destination?`. Just be sure to design your dialog such that the search is not triggered unless any entities or context variables that you reference in the query have been set to valid values.
 
-      This field is equivalent to the {{site.data.keyword.discoveryshort}} `natural_language_query` parameter. For more information, see [Query parameters](/docs/discovery?topic=discovery-query-parameters#nlq){: external}.
+      This field is equivalent to the {{site.data.keyword.discoveryshort}} `natural_language_query` parameter. For more information, see [Query parameters](/docs/discovery-data?topic=discovery-data-query-parameters#nlq){: external}.
 
       - **Filter**: Optional. Specify a text string that defines information that must be present in any of the search results that are returned.
 
@@ -760,7 +760,7 @@ To add a *Search skill* response type, complete the following steps:
 
         - To filter results to includes only documents that the ingestion process identified as containing a city name that you saved in a context variable named `$destination`, you can specify `enriched_text.entities.text:$destination`.
 
-        This field is equivalent to the {{site.data.keyword.discoveryshort}} `filter` parameter. For more information, see [Query parameters](/docs/discovery?topic=discovery-query-parameters#filter){: external}.
+        This field is equivalent to the {{site.data.keyword.discoveryshort}} `filter` parameter. For more information, see [Query parameters](/docs/discovery-data?topic=discovery-data-query-parameters#filter){: external}.
 
       If you add both a query and a filter value, the filter parameter is applied first to filter the data collection documents and cache the results. The query parameter then ranks the cached results.
 

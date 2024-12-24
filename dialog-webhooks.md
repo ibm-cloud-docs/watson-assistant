@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-10-27"
+  years: 2019, 2024
+lastupdated: "2024-12-24"
 
 subcollection: watson-assistant
 
@@ -202,7 +202,7 @@ To change the external service that you call from dialog nodes, edit the webhook
 ## Calling an {{site.data.keyword.openwhisk}} web action
 {: #dialog-webhooks-cf-web-action}
 
-Typically, web actions can be run without requiring the caller to authenticate first. However, you can secure a web action that requires any callers to pass an ID with the request. For more information about how to secure a web action, see [Securing web actions](/docs/openwhisk?topic=openwhisk-actions_web#actions_web_secure){: external}.
+Typically, web actions can be run without requiring the caller to authenticate first. However, you can secure a web action that requires any callers to pass an ID with the request. For more information about how to secure a web action, see [Securing web actions](https://github.com/apache/openwhisk/blob/master/docs/webactions.md#securing-web-actions){: external}.
 
 Use the following tips when you call a {{site.data.keyword.openwhisk_short}} web action from your dialog. 
 
@@ -219,7 +219,7 @@ Use the following tips when you call a {{site.data.keyword.openwhisk_short}} web
 
     If the external application that you call returns a response, it must be able to send back a response in JSON format.
 
-    Notice the request URL in this example ends in `.json`. By specifying this extension, you take advantage of a feature of web actions where you can specify the content type of the response. Specifying this extension type ensures that, if the web actions can return responses in more than one format, a JSON response is returned. For more information, see [Content extensions](/docs/openwhisk?topic=openwhisk-actions_web#extra_features){: external}.
+    Notice the request URL in this example ends in `.json`. By specifying this extension, you take advantage of a feature of web actions where you can specify the content type of the response. Specifying this extension type ensures that, if the web actions can return responses in more than one format, a JSON response is returned. For more information, see [Content extensions](https://github.com/apache/openwhisk/blob/master/docs/webactions.md#content-extensions){: external}.
     {: tip}
 
 1. If the web action is secured, specify any headers, such as `X-Require-Whisk-Auth`, that are required to call the web action.
@@ -244,7 +244,7 @@ Use the following tips when you call a {{site.data.keyword.openwhisk_short}} web
     | message "hello" | 
     {: caption="Parameter example" caption-side="bottom"}
 
-    When you call a {{site.data.keyword.openwhisk_short}} web action, you cannot pass parameters with the same key as parameters that are defined as part of the web action. See [Protected parameters](/docs/openwhisk?topic=openwhisk-actions_web#actions_web_protect_parameters){: external} for more details.
+    When you call a {{site.data.keyword.openwhisk_short}} web action, you cannot pass parameters with the same key as parameters that are defined as part of the web action. See [Protected parameters](https://github.com/apache/openwhisk/blob/master/docs/webactions.md#protected-parameters){: external} for more details.
     {: note}
 
 1. You can edit the dialog node response to include only the section of the response that you want to display to users.
