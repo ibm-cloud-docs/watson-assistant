@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-12-03"
+lastupdated: "2024-12-24"
 
 subcollection: watson-assistant
 
@@ -26,7 +26,7 @@ Typically, the type of data collection you add to {{site.data.keyword.discoverys
 
 Watch a 4-minute video that provides an overview of the search integration:
 
-![Search Integration: {{site.data.keyword.conversationshort}}](https://video.ibm.com/embed/channel/23952663/video/wa-search){: video output="iframe" data-script="none" id="watsonmediaplayer" width="480" height="270" scrolling="no" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="border: 0 none transparent;"}
+![Search Integration: {{site.data.keyword.conversationshort}}](https://video.ibm.com/embed/recorded/132546255){: video output="iframe" data-script="none" id="watsonmediaplayer" width="480" height="270" scrolling="no" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="border: 0 none transparent;"}
 
 ## Before you begin
 {: #search-add-prereqs}
