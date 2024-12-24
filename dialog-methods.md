@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-27"
+  years: 2015, 2024
+lastupdated: "2024-12-24"
 
 subcollection: watson-assistant
 
@@ -610,7 +610,7 @@ To return the flight codes only, you can create a collection projection expressi
 ```
 {: codeblock}
 
-This expression returns an array of the `flight_code` values as `["OK123","LH421","TS4156"]`. See the [SpEL Collection projection documentation](https://docs.spring.io/spring/docs/3.0.x/reference/expressions.html) for more details.
+This expression returns an array of the `flight_code` values as `["OK123","LH421","TS4156"]`. See the [Spring Expression Language (SpEL) documentation](https://docs.spring.io/spring-framework/docs/3.0.x/reference/expressions.html) for more details.
 
 If you apply the `join()` method to the values in the returned array, the flight codes are displayed in a comma-separated list. For example, you can use the following syntax in a response:
 

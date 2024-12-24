@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-08-31"
+  years: 2015, 2024
+lastupdated: "2024-12-24"
 
 subcollection: watson-assistant
 
@@ -77,7 +77,7 @@ The *Anything else* node provides the following benefits:
 
 - Analytics uses this node to learn about the topics that your dialog can't address. The *coverage metric* looks for occurrences of nodes with the `anything_else` condition processed in the user conversation logs. It uses this information to determine the frequency with which your dialog is able to match user requests to intents that can address them. The node is registered by the metric if it conditions on `anything_else` alone or when used in combination with another condition, such as `anything_else && #positive_feedback`.
 
-- If you want your assistant to redirect queries to the search integration when the dialog is unable to address them, this node recognizes when it's time to initiate the search. It's when a customer's message reaches the `anything_else` node that the message is sent to the search integration to find a relevant answer in your configured data collections. For more information, see [Search trigger](https://test.cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-search-add#search-add-trigger).
+- If you want your assistant to redirect queries to the search integration when the dialog is unable to address them, this node recognizes when it's time to initiate the search. It's when a customer's message reaches the `anything_else` node that the message is sent to the search integration to find a relevant answer in your configured data collections. For more information, see [Search trigger](https://github.com/ibm-cloud-docs/watson-assistant/blob/master/search-integration-enhancement.md#search-trigger){: external}.
 
    Messages that trigger search in this way are still registered by the coverage metric as messages that are *not* covered.
    {: note}
