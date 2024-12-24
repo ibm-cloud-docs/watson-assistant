@@ -1,32 +1,17 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-09-13"
+  years: 2021, 2024
+lastupdated: "2024-12-24"
 
 subcollection: watson-assistant
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:preview: .preview}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 {:video: .video}
 {:tag-ibm-cloud: .tag data-tag-color="blue"}
 {:tag-cp4d: .tag data-tag-color="magenta"}
-
 
 
 # Integrating with Salesforce
@@ -140,7 +125,7 @@ When you test the service desk integration, make sure there is at least one agen
 
 Watch a 5-minute video that provides an overview of setting up a connection to a Salesforce service desk:
 
-![Salesforce Integration: {{site.data.keyword.conversationshort}}](https://video.ibm.com/embed/channel/23952663/video/wa-salesforce){: video output="iframe" data-script="none" id="watsonmediaplayer" width="480" height="270" scrolling="no" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="border: 0 none transparent;"}
+![Salesforce Integration: {{site.data.keyword.conversationshort}}](https://video.ibm.com/embed/recorded/132546254){: video output="iframe" data-script="none" id="watsonmediaplayer" width="480" height="270" scrolling="no" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="border: 0 none transparent;"}
 
 ## Adding transfer support to your actions
 {: #deploy-salesforce-action-prereq}
