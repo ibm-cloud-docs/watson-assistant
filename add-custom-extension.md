@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-29"
+lastupdated: "2024-12-24"
 
 subcollection: watson-assistant
 
@@ -53,7 +53,7 @@ To add a custom extension to the assistant, follow these steps:
 
      Click **Next**.
 
-1. In the **Manage extension** step, you can review and replace the imported OpenAPI document if required. For more information about replacing the OpenAPI document, see [Replacing the OpenAPI document](/docs/watson-assistant?topic=watson-assistant-add-custom-extension).
+1. In the **Manage extension** step, you can review and replace the imported OpenAPI document if required. For more information about replacing the OpenAPI document, see [Replacing the OpenAPI document](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#replace-openapi-doc).
 
 1. In the **Authentication** tab, you see information about the authentication methods that are defined in the OpenAPI document. *Table. Fields in Authentication tab* gives details about the fields in the Authentication tab:
 
