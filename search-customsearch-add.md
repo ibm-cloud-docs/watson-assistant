@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-12-20"
+lastupdated: "2024-12-27"
 
 subcollection: watson-assistant
 
@@ -115,7 +115,7 @@ You need to use the Custom service search, to avail more advanced search capabil
 
 1. For setting up watsonx.data Milvus, see the [Guide for setting up the search integration with watsonx.data Milvus](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-milvus/search-with-watsonx-data-milvus.md).
 1. For general set up on your assistant with server credentials, see [Setting up a Custom service with server credentials](#setup-custom-service-server).
-1. For more information on examples and references for Milvus, see [Example with Milvus]( https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-custom-service/custom-search-server-setup-guide.md#example-with-milvus){: external}.
+1. For more information on examples and references for Milvus, see [Example with Milvus](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-custom-service/custom-search-server-setup-guide.md#example-with-milvus){: external}.
 
 ### Setting up Milvus through your client
 {: #setup-milvus-client}
@@ -180,7 +180,7 @@ The metadata in the request and the entire response object must not exceed 100 K
 ### Setting up a client for Custom service retrieval
 {: #client-side-retrieval}
 
-You can see the following API response from the [/message API](/apidocs/assistant-v2#message){: external} requesting search at run time:
+You can see the following API response from the [/message API](/apidocs/assistant-v2?code=node#message){: external} requesting search at run time:
       
 ```json
 {
