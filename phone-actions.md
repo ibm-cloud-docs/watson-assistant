@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-08-15"
+lastupdated: "2024-12-27"
 
 keywords: phone, phone interactions, custom language model, custom grammar, advanced settings
 
@@ -270,7 +270,7 @@ Dynamically reconfigures the {{site.data.keyword.texttospeechshort}} service by 
 
 | parameter | description | required | default |
 | --------- |-------------|----------|---------|
-| `synthesize` | The {{site.data.keyword.texttospeechshort}} service configuration to use when synthesizing audio. The parameters that are defined by this object are used when connecting to the {{site.data.keyword.texttospeechshort}} service for speech synthesis requests. For more information about these parameters, see the [{{site.data.keyword.texttospeechshort}} API documentation](https://{DomainName}/apidocs/text-to-speech#synthesize-audio-websockets-){: external}. | yes | Current {{site.data.keyword.texttospeechshort}} configuration |
+| `synthesize` | The {{site.data.keyword.texttospeechshort}} service configuration to use when synthesizing audio. The parameters that are defined by this object are used when connecting to the {{site.data.keyword.texttospeechshort}} service for speech synthesis requests. For more information about these parameters, see the [{{site.data.keyword.texttospeechshort}} API documentation](/apidocs/text-to-speech#synthesize-audio-websockets-){: external}. | yes | Current {{site.data.keyword.texttospeechshort}} configuration |
 | `update_strategy` | Specifies the update strategy to use when setting the speech configuration. Possible values include: \n - `replace`: Replaces the configuration for the rest of the session. Any root-level fields in the new configuration completely overwrite the previous configuration. \n - `replace_once`: Replaces the configuration only for the next turn of the conversation. Then, the previous configuration is used. \n - `merge`: Merges the new configuration with the existing configuration for the rest of the session. Only changed parameters are overwritten; any other configuration parameters are unchanged. \n - `merge_once`: Merges the new configuration with the existing configuration only for the next turn of the conversation. Then, the previous configuration is used. | no | `replace` |
 
 The parameters that you can set for `synthesize` reflect the parameters that are made available by the {{site.data.keyword.texttospeechshort}} WebSocket interface. The WebSocket API sends two types of parameters: query parameters, which are sent when phone integration connects to the service, and message parameters, which are sent as part of the JSON data in the request body. For a full list of parameters, see the [{{site.data.keyword.texttospeechshort}} API documentation](https://{DomainName}/apidocs/text-to-speech){: external}.
@@ -485,7 +485,7 @@ Content-Length: 0
 ```
 {: codeblock}
 
-This example shows the metadata passed to the `Refer-To` header as query parameters (as defined by [SIP RFC 3261](https://tools.ietf.org/html/rfc3261){: external}).
+This example shows the metadata passed to the `Refer-To` header as query parameters (as defined by [SIP RFC 3261](https://datatracker.ietf.org/doc/html/rfc3261){: external}).
 
 ```text
 REFER sip:b@atlanta.example.com SIP/2.0
@@ -1003,4 +1003,3 @@ The following example shows how to access the user phone number (the phone numbe
 {: codeblock}
 
 For more information, see [Phone integration context variables](/docs/watson-assistant?topic=watson-assistant-phone-context).
-
