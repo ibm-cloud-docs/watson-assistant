@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-10-26"
+  years: 2019, 2024
+lastupdated: "2024-12-27"
 
 subcollection: watson-assistant
 
@@ -26,7 +26,7 @@ All messages that are sent between the web chat and the assistant are encrypted 
 
 Web chat security uses JSON Web Tokens (JWTs), which are data objects that are sent with each message from your website to the {{site.data.keyword.conversationshort}} service. Because a JWT is digitally signed using a private encryption key that only you have, it ensures that each message originates with your website. The JWT payload can also be used to securely authenticate users and carry encrypted private data.
 
-For detailed information about JSON Web Tokens, see the [JWT specification](https://tools.ietf.org/html/rfc7519){: external}).
+For detailed information about JSON Web Tokens, see the [JWT specification](https://datatracker.ietf.org/doc/html/rfc7519){: external}).
 {: tip}
 
 Enabling web chat security involves making the following customizations:
@@ -59,4 +59,3 @@ With web chat security enabled, you can optionally implement additional security
     For more information about using the user payload to protect sensitive information, see [Encrypting sensitive data in web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security-encrypt).
 
 ![development icon](images/development-icon.png) **Tutorial:** For a developer tutorial that shows an example of using web chat security to authenticate users and protect sensitive data, see [Tutorial: Authenticating a user in the middle of a session](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-security).
-

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-11-28"
+  years: 2019, 2024
+lastupdated: "2024-12-27"
 
 subcollection: watson-assistant
 
@@ -39,7 +39,7 @@ After you specify the JWT for the web chat, you cannot change to a JWT with a di
 
 ## Billing and privacy
 
-For user-based plans, the user ID is used for billing purposes. (You cannot use the `updateUserID()` instance method to set the user ID if web chat security is enabled.) The same user ID is also used as the customer ID, which can be used to make requests to delete user data. Because the customer ID is sent in a header field, the ID you specify must meet the requirements for header fields as defined in [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2){: external}.
+For user-based plans, the user ID is used for billing purposes. (You cannot use the `updateUserID()` instance method to set the user ID if web chat security is enabled.) The same user ID is also used as the customer ID, which can be used to make requests to delete user data. Because the customer ID is sent in a header field, the ID you specify must meet the requirements for header fields as defined in [RFC 7230](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2){: external}.
 
 If you are required to comply with GDPR requirements, you might need to persistently store any generated anonymous user IDs, especially for anonymous users who later log in with user credentials. Storing these user IDs makes it possible for you to later delete all data associated with an individual customer if requested to do so.
 {: important}
@@ -54,4 +54,3 @@ To log out a customer, you must destroy the web chat.
 If you reload the page when a customer logs out, call the [`destroySession()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#destroySession){: external} instance method to remove any reference to the current session from the browser's cookies and storage. If you do not call this method, information that is protected by the JWT is not at risk, but the web chat will try to connect to the previous session and fail.
 
 If you do not perform a full page reload when a customer logs out, call the [`destroy()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#destroy){: external} instance method. The `destroy` method removes the current instance of the web chat that is configured for the current userID from the DOM and browser memory. Next, call the [`destroySession()`](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#destroySession){: external} instance method.
-
