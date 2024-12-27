@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-12-20"
+lastupdated: "2024-12-27"
 
 subcollection: watson-assistant
 
@@ -1286,7 +1286,7 @@ This example uses the `text_to_speech` response type with the `configure` comman
 
 A custom response type with any JSON data that the client or integration knows how to handle. For example, you might customize the web chat to display a special card, or build a custom application to format responses with a table or chart.
 
-The user-defined response type is not displayed unless the channel has code to handle it. For more information, see [Applying advanced customizations](/docs/watson-assistant?topic=watson-assistant-web-chat-config).
+The user-defined response type is not displayed unless the channel has code to handle it. For more information, see [Customizing and developing](/docs/watson-assistant?topic=watson-assistant-develop-overview).
 {: note}
 
 ### Integration channel support
