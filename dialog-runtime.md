@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-12-27"
 
 keywords: digression, disambiguation, confidence 
 
@@ -104,7 +104,7 @@ To edit the disambiguation settings, complete the following steps:
 
 Your changes are automatically saved.
 
-You can use the API to modify more disambiguation settings. These settings include the disambiguation sensitivity, which affects how often disambiguation is triggered and how many choices are included. For more information, see the [API Reference](https://{DomainName}/assistant/assistant-v1?curl=#updateworkspace){: external}.
+You can use the API to modify more disambiguation settings. These settings include the disambiguation sensitivity, which affects how often disambiguation is triggered and how many choices are included. For more information, see the [API Reference](/apidocs/assistant-v1?code=node#updateworkspace){: external}.
 {: tip}
 
 ### Choosing nodes to not show as disambiguation options
