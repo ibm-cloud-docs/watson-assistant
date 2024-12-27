@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-12-13"
+lastupdated: "2024-12-27"
 
 subcollection: watson-assistant
 
@@ -82,7 +82,7 @@ Before you upload documents, your Elasticsearch instance must have the following
 
 - Elasticsearch 8.8 or above.
 
-- A paid or trial subscription of the Elasticsearch instance such as the Platinum Edition of [IBM Cloud Databases for Elasticsearch](https://cloud.ibm.com/databases/databases-for-elasticsearch/create){: external} or the Platinum or Enterprise subscription offered by [Elastic.co]( https://www.elastic.co/subscriptions).
+- A paid or trial subscription of the Elasticsearch instance such as the Platinum Edition of [IBM Cloud Databases for Elasticsearch](https://cloud.ibm.com/databases/databases-for-elasticsearch/create){: external} or the Platinum or Enterprise subscription offered by [Elastic.co](https://www.elastic.co/subscriptions).
 
 - A Machine Learning (ML) node with a minimum of 4 GB memory to deploy the ELSER model. For more information about the ELSER requirements, see [ELSER requirements](https://www.elastic.co/guide/en/machine-learning/current/ml-nlp-elser.html#elser-req).
 
@@ -90,7 +90,7 @@ Before you upload documents, your Elasticsearch instance must have the following
 
  If your Elasticsearch instance do not have the prerequisites for uploading document, you see the **Requirements not met** error message.
  
- If there is a delay or failure in uploading documents even after having the prerequisites, you can consider scaling the inference performance of the ELSER model deployment by setting up parameters such as `number_of_allocations` and `threads_per_allocation`. For more information about scaling the inference performance, see [Start trained model deployment API]( https://www.elastic.co/guide/en/elasticsearch/reference/8.13/start-trained-model-deployment.html#start-trained-model-deployment).{: note}
+ If there is a delay or failure in uploading documents even after having the prerequisites, you can consider scaling the inference performance of the ELSER model deployment by setting up parameters such as `number_of_allocations` and `threads_per_allocation`. For more information about scaling the inference performance, see [Start trained model deployment API](https://www.elastic.co/guide/en/elasticsearch/reference/8.13/start-trained-model-deployment.html#start-trained-model-deployment).{: note}
 
 To upload documents to a new index, use the following procedure:
 
@@ -131,7 +131,7 @@ To upload documents to a new index, use the following procedure:
    
       By default, Elasticsearch integration uses keyword search. You can use advanced search such as semantic search with ELSER, KNN dense vector search, nested queries to search the nested documents, or hybrid search. For more information about using different types of query body examples, see [Query body examples](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/docs/elasticsearch-install-and-setup/how_to_configure_advanced_elasticsearch_settings.md#how-to-configure-the-query-body){: external}.
 
-      For more information about the Elasticsearch `_search` API request body, see [Elasticsearch search API request body]( https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html#search-search-api-request-body){: external}.
+      For more information about the Elasticsearch `_search` API request body, see [Elasticsearch search API request body](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html#search-search-api-request-body){: external}.
 
       You cannot customize the query body in the assistant with an existing Elasticsearch configuration.
       {: important}   

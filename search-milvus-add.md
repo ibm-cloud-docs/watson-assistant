@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-12-13"
+lastupdated: "2024-12-27"
 
 subcollection: watson-assistant
 
@@ -70,7 +70,7 @@ In the **Connect your search provider** section of the **Milvus** window,
       {: note}
 1. Click **Next** to go to **Conversational search (optional)**.
 1. Conversational search is available only in the Plus and Enterprise plans of {{site.data.keyword.conversationshort}}.
-If you want to activate conversational search, switch the **Conversational Search** toggle to `on`. For more information about conversational search, see [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
+To activate conversational search, switch the **Conversational Search** toggle to `on`. For more information, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
 1. In the **Configure result content** section, provide the following fields to map the title, body, and URL to the search response:
 
     - **Title**
@@ -156,8 +156,3 @@ In this example, the user asks, `What is an action?`.
 A text-based reply from the best results in your knowledge base displays when conversational search is `on`. 
 
    ![ConversationalSearchToggleOn](images/milvus-cs-on.png)
-
-
-
-
-
