@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-09-18"
+lastupdated: "2024-12-27"
 
 subcollection: watson-assistant
 
@@ -103,7 +103,7 @@ To configure how your assistant interacts with a SIP trunk from an external prov
 
     If your SIP trunk provider manages holds, disable this feature. For example, some SIP trunk providers prefer to have the assistant send a SIP REFER request, so they can put the call on hold themselves.
 
-For more information about the SIP protocol, see [RFC 3261](https://tools.ietf.org/html/rfc3261){: external} and about the RTP protocol, see [RFC 3550](https://tools.ietf.org/html/rfc3550){: external}.
+For more information about the SIP protocol, see [RFC 3261](https://datatracker.ietf.org/doc/html/rfc3261){: external} and about the RTP protocol, see [RFC 3550](https://datatracker.ietf.org/doc/html/rfc3550){: external}.
 
 ## Configuring a backup service desk solution
 {: #deploy-phone-config-transfer-service}
@@ -201,7 +201,7 @@ To configure a SIP trunk do the following:
       1. Click **Add a number** and then **Buy a Number***.
       2. If you already have a number, you can click *Add a number* and then *Add an Existing Number*.
 
-If you use a Lite or Trial Twilio account for testing purposes, then be sure to verify the transfer target. For more information, see the [Twilio documentation](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-){: external}.
+If you use a Lite or Trial Twilio account for testing purposes, then be sure to verify the transfer target. For more information, see the [Twilio documentation](https://help.twilio.com/articles/223136107-How-does-Twilio-s-Free-Trial-work){: external}.
 
 You cannot enable SIP authentication if you choose Twilio as your SIP trunk provider. Twilio doesn't support SIPS for originating calls.
 

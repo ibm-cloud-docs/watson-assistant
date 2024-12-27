@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-12-20"
+lastupdated: "2024-12-27"
 
 subcollection: watson-assistant
 
@@ -43,7 +43,7 @@ Analysis notebooks are available for:
 
 For more information, see the [product documentation](https://dataplatform.cloud.ibm.com/docs/content/svc-welcome/wsl.html?context=cpdaas){: external}.
 
-The [{{site.data.keyword.conversationshort}} Continuous Improvement Best Practices Guide](https://github.com/watson-developer-cloud/assistant-improve-recommendations-notebook/raw/master/notebook/IBM%20Watson%20Assistant%20Continuous%20Improvement%20Best%20Practices.pdf){: external} describes how to get the most out of these notebooks.
+The [{{site.data.keyword.conversationshort}} Continuous Improvement Best Practices Guide](https://raw.githubusercontent.com/watson-developer-cloud/assistant-improve-recommendations-notebook/master/notebook/IBM%20Watson%20Assistant%20Continuous%20Improvement%20Best%20Practices.pdf){: external} describes how to get the most out of these notebooks.
 
 ### Using the notebooks with {{site.data.keyword.DSX}}
 {: #logs-resources-notebooks-studio}
@@ -88,7 +88,7 @@ If you choose to use the notebooks that are designed for use with {{site.data.ke
     - **Effectiveness**: Provides a deeper analysis of your logs to help you understand the steps that you can take to improve your assistant.
 1.  Use the **Dialog Flow Analysis for {{site.data.keyword.conversationshort}}** notebook to review your dialog. The notebook can help you pinpoint the dialog nodes where customers most frequently abandon the conversation. 
 
-    For more information about how this notebook can help you analyze and assess abandonment, see [Do you know where and why users drop off the conversation?](https://medium.com/ibm-watson/do-you-know-where-and-why-users-drop-off-the-conversation-6246e99baddc){: external}.
+    For more information about how this notebook can help you analyze and assess abandonment, see [Do you know where and why users drop off the conversation?](https://medium.com/ibm-data-ai/do-you-know-where-and-why-users-drop-off-the-conversation-6246e99baddc){: external}.
 
 This process helps you to understand the steps you can take to improve your assistant.
 
@@ -97,11 +97,11 @@ This process helps you to understand the steps you can take to improve your assi
 
 If you choose to use standard Python tools to run the notebooks, you can get the notebooks from GitHub.
 
-- [Dialog Skill Analysis for {{site.data.keyword.conversationshort}}](https://github.com/watson-developer-cloud/assistant-dialog-skill-analysis){: external}
+- [Dialog Skill Analysis for {{site.data.keyword.conversationshort}}](https://github.com/watson-developer-cloud/assistant-skill-analysis){: external}
 - [{{site.data.keyword.conversationfull}} Recommendation notebooks (Measure and Analyze Effectiveness)](https://github.com/watson-developer-cloud/assistant-improve-recommendations-notebook){: external}
 - [{{site.data.keyword.conversationfull}} Dialog Flow Analysis notebook](https://github.com/watson-developer-cloud/assistant-dialog-flow-analysis){: external}
 
-The [{{site.data.keyword.conversationshort}} Continuous Improvement Best Practices Guide](https://github.com/watson-developer-cloud/assistant-improve-recommendations-notebook/raw/master/notebook/IBM%20Watson%20Assistant%20Continuous%20Improvement%20Best%20Practices.pdf){: external} outlines which notebook to use at each stage of your improvement process.
+The [{{site.data.keyword.conversationshort}} Continuous Improvement Best Practices Guide](https://raw.githubusercontent.com/watson-developer-cloud/assistant-improve-recommendations-notebook/master/notebook/IBM%20Watson%20Assistant%20Continuous%20Improvement%20Best%20Practices.pdf){: external} outlines which notebook to use at each stage of your improvement process.
 
 ## Using the logs API
 {: #logs-resources-api}
