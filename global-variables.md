@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-12-20"
+lastupdated: "2024-12-27"
 
 subcollection: watson-assistant
 
@@ -15,7 +15,7 @@ subcollection: watson-assistant
 
 By writing expressions, you can access a set of global system variables that provide information about the conversation.
 
-Each variable contains a JSON object that is taken from the `message` method input or output. For more information about these objects, see the [API Reference](/apidocs/assistant-v2#message){: external} information for the `message` method request and response.
+Each variable contains a JSON object that is taken from the `message` method input or output. For more information about these objects, see the [API Reference](/apidocs/assistant-v2?code=node#message){: external} information for the `message` method request and response.
 
 These variables are special system objects that require syntax different from the standard variable notation. To reference any of these values in an expression, use the variable name by itself (not including `?` or `{}` characters).
 {: important}

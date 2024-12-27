@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-12-03"
+lastupdated: "2024-12-27"
 
 subcollection: watson-assistant
 
@@ -127,7 +127,7 @@ Your assistant can then initiate a transfer in situations when the assistant is 
 For information about how to add a contact center integration to the web chat, see [Adding contact center support](/docs/watson-assistant?topic=watson-assistant-deploy-web-chat-haa).
 
 ## Technical details
-{: #web-chat-architecture-technical details}
+{: #web-chat-architecture-technical-details}
 
 Web chat is displayed on your website by a short JavaScript code snippet, which calls additional JavaScript code that is hosted by {{site.data.keyword.cloud_notm}}. The hosted code is automatically updated with new features and fixes, so by default you always have the latest version. (You can optionally [lock to a specific version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions) if you prefer to control upgrades yourself.)
 

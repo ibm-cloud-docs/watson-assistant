@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-11-19"
+lastupdated: "2024-12-27"
 
 keywords: pre webhook, prewebhook, pre-webhook
 
@@ -20,7 +20,7 @@ A pre-message webhook calls an external service or application every time a cust
 
 Add a pre-message webhook if you need to trigger an action before the assistant processes each incoming message.
 
-If you are using a custom channel, the pre-message webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://cloud.ibm.com/apidocs/assistant-v2#message). All built-in channel integrations use this API.
+If you are using a custom channel, the pre-message webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://cloud.ibm.com/apidocs/assistant-v2?code=node#message). All built-in channel integrations use this API.
 {: important}
 
 You can use pre-message webhooks for the following use cases:

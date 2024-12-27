@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-26"
+  years: 2015, 2024
+lastupdated: "2024-12-27"
 
 keywords: entity, entity value, contextual entity, dictionary entity, pattern entity, entity synonym, annotate mentions
 
@@ -287,7 +287,6 @@ Using an intent's user examples to define contextual entities does not affect th
 
     If you do not want your contextual entities to use this expanded understanding of entity values, select all the user examples in the *Annotation* view for that entity, and then click **Delete**.
 
-**Tutorial**: To walk through a tutorial that shows you how to define contextual entities before you add your own, go to [Tutorial: Defining contextual entities](https://www.ibm.com/cloud/architecture/demo/try-watson-assistant-contextual-entities){: external}.
 
 ### What you don't annotate matters
 {: #entities-counter-examples}
@@ -457,4 +456,3 @@ When you delete an entity, you remove any values, synonyms, patterns, or annotat
     - To delete the entities that are listed on the current page only, select the checkbox in the header. This action selects all of the entities that are listed on the current page. Then, click the **Delete** button.
 
     - To delete one or more specific entities, select the entities that you want to delete, and then click the **Delete** button.
-

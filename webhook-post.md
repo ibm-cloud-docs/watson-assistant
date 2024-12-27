@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-11-18"
+lastupdated: "2024-12-27"
 
 keywords: post webhook, postwebhook, post-webhook
 
@@ -20,7 +20,7 @@ A post-message webhook calls an external service or application every time that 
 
 You can add a post-message webhook to your assistant if you want to trigger the webhook before each message response is shown to the customer.
 
-If you are using a custom channel, the post-message webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://cloud.ibm.com/apidocs/assistant-v2#message). All built-in channel integrations use this API.
+If you are using a custom channel, the post-message webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://cloud.ibm.com/apidocs/assistant-v2?code=node#message). All built-in channel integrations use this API.
 {: important}
 
 You can use a post-message webhook to do things like extract custom responses from an external content repository. For example, you can define actions with custom IDs in the responses instead of text. The post-message webhook can pass these IDs to an external database to retrieve stored text responses.
@@ -154,7 +154,7 @@ try {
 
 It is useful to know the format of the request post-message webhook body so that your external code can process it.
 
-The payload contains the response body that your assistant returns for the v2 `/message` (stateful and stateless) API call. The event name `message_processed` indicates that the post-message webhook generates the request. For more information about the message request body, see the [API reference](https://cloud.ibm.com/apidocs/assistant-v2#message){: external}.
+The payload contains the response body that your assistant returns for the v2 `/message` (stateful and stateless) API call. The event name `message_processed` indicates that the post-message webhook generates the request. For more information about the message request body, see the [API reference](https://cloud.ibm.com/apidocs/assistant-v2?code=node#message){: external}.
 
 The following sample shows how a simple request body is formatted.
 

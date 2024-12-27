@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-06-18"
+lastupdated: "2024-12-27"
 
 keywords: Watson Assistant frequently asked questions
 
@@ -28,7 +28,7 @@ Find answers to frequently-asked questions and quick fixes for common problems.
 {: #faq-what-is-the-new-experience}
 {: faq}
 
-{{site.data.keyword.conversationfull}} is an improved way to build, publish, and improve virtual assistants. You use actions to build conversations. Actions are a simple way for anyone to create assistants. For more information, see the [Getting Started guide](https://www.ibm.com/blogs/watson/2021/12/getting-started-with-the-new-watson-assistant-part-i-the-build-guide/){: external} or the [documentation](/docs/watson-assistant).
+{{site.data.keyword.conversationfull}} is an improved way to build, publish, and improve virtual assistants. You use actions to build conversations. Actions are a simple way for anyone to create assistants. For more information, see the [Getting Started guide](https://www.ibm.com/products/tutorials/getting-started-with-the-new-watson-assistant-part-i-the-build-guide/){: external} or the [documentation](/docs/watson-assistant).
 
 ### Why can't I see the assistants that I made with the classic experience in {{site.data.keyword.conversationshort}}?
 {: #faq-classic-assistants}
@@ -46,7 +46,7 @@ The assistants that you create in one experience don't transfer to the other. Ho
 {: #faq-classic-lifecycle}
 {: faq}
 
-IBM has no plans to discontinue the classic experience. However, we encourage you to explore the benefits and capabilities in {{site.data.keyword.conversationshort}}. For more information, see the [Getting Started guide](https://www.ibm.com/blogs/watson/2021/12/getting-started-with-the-new-watson-assistant-part-i-the-build-guide/){: external}. You can also continue to use dialog in {{site.data.keyword.conversationshort}}. For more information, see [Migrating to {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-migrate-overview).
+IBM has no plans to discontinue the classic experience. However, we encourage you to explore the benefits and capabilities in {{site.data.keyword.conversationshort}}. For more information, see the [Getting Started guide](https://www.ibm.com/products/tutorials/getting-started-with-the-new-watson-assistant-part-i-the-build-guide){: external}. You can also continue to use dialog in {{site.data.keyword.conversationshort}}. For more information, see [Migrating to {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-migrate-overview).
 
 ### Where are the search skill and channel integrations in {{site.data.keyword.conversationshort}}? 
 {: #faq-integrations}
@@ -136,7 +136,7 @@ If you want to copy dialog nodes from one dialog into another dialog, follow the
 {: #faqs-delete-workspace}
 {: faq}
 
-Regularly back up data to prevent problems that might arise from inadvertent deletions. If you do not have a backup, there is a short window of time during which a deleted dialog might be recoverable. Immediately following the deletion, [open a case](/docs/get-support?topic=get-support-open-case) with Support to determine if the data can be recovered. Include the following information in your case:
+Regularly back up data to prevent problems that might arise from inadvertent deletions. If you do not have a backup, there is a short window of time during which a deleted dialog might be recoverable. Immediately following the deletion, [open a case](https://www.ibm.com/mysupport) with Support to determine if the data can be recovered. Include the following information in your case:
 
 - Skill ID
 - Instance ID or name
