@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-12-27"
 
 subcollection: watson-assistant
 content-type: tutorial
@@ -149,7 +149,7 @@ Both Lite and Trial plan {{site.data.keyword.conversationshort}} service instanc
     Keep the {{site.data.keyword.discoveryshort}} page open in a separate tab, so you can switch between the two applications.
     {: tip}
 
-1.  From the [{{site.data.keyword.conversationshort}}](/catalog/services/watson-assistant){: external} resource page in the {{site.data.keyword.cloud_notm}} catalog, create a Trial plan {{site.data.keyword.conversationshort}} service instance in the Dallas location.
+1.  From the [{{site.data.keyword.conversationshort}}](/catalog/services/watsonx-assistant){: external} resource page in the {{site.data.keyword.cloud_notm}} catalog, create a Trial plan {{site.data.keyword.conversationshort}} service instance in the Dallas location.
 
 1.  From the {{site.data.keyword.conversationshort}} plan service page in {{site.data.keyword.cloud_notm}}, click **Launch {{site.data.keyword.conversationshort}}**.
 

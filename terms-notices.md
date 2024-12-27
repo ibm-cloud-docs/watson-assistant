@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-10-26"
+  years: 2021, 2024
+lastupdated: "2024-12-27"
 
 subcollection: watson-assistant
 
@@ -21,4 +21,4 @@ To learn more about service terms and data security, read the following informat
 
 - [Service terms](https://www.ibm.com/support/customer/csol/terms/){: external} (Search for the {{site.data.keyword.conversationshort}} offering)
 - [Data Processing and Protection Datasheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=DF7F84500FA711E69DCADF455C6AF151){: external}
-- [IBM Cloud Data security and privacy](https://www.ibm.com/software/sla/sladb.nsf/sla/csdsp?OpenDocument){: external}
+- [IBM Cloud Data security and privacy](https://www.ibm.com/support/customer/csol/terms/?id=Z126-7745&lc=en){: external}

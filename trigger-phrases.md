@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-07-28"
+  years: 2022, 2024
+lastupdated: "2024-12-27"
 
 subcollection: watson-assistant
 
@@ -37,9 +37,9 @@ In this example, a customer enters a word or phrase that includes `hurt` or `har
 For more information about the *Fallback* action, see [Editing the fallback action](/docs/watson-assistant?topic=watson-assistant-handle-errors#fallback-action).
 
 ## Show warning
-{: #trigger-phrases-show warning}
+{: #trigger-phrases-show-warning}
 
-The second and final step of the *Trigger word detected* action is the *Show warning* step. The *Show warning* step shows a customizable warning message to your customer if any trigger words are detected in the customer's input. Use this step to discourage customers from interacting with your assistant in unacceptable ways, such as using profanity.
+The second and final step of the *Trigger worFixd detected* action is the *Show warning* step. The *Show warning* step shows a customizable warning message to your customer if any trigger words are detected in the customer's input. Use this step to discourage customers from interacting with your assistant in unacceptable ways, such as using profanity.
 
 For example, you might add `darn`, `dang`, and `heck` as trigger words for the *Show warning* step:
 
