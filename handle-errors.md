@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-06-11"
+lastupdated: "2024-12-27"
 
 subcollection: watson-assistant
 
@@ -83,7 +83,7 @@ You can configure your assistant’s behavior for the case when a user’s input
    - [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search)
    - [transfer to a live agent](/docs/watson-assistant?topic=watson-assistant-human-agent#planned-escalation)
    - [open a support ticket](/docs/watson-assistant?topic=watson-assistant-call-extension)
-   - [ask a clarifying question](/docs/watson-assistant?topic=watson-assistant-understand-questions/#understand-questions-ask-clarifying-question)
+   - [understand your users' questions and requests](/docs/watson-assistant?topic=watson-assistant-understand-questions)
  
    You can use this option to route the assistant users to the **No matches** action when there are no matches for the user responses.
 
