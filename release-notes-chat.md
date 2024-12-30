@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-12-05"
+lastupdated: "2024-12-30"
 
 subcollection: watson-assistant
 
@@ -212,7 +212,7 @@ version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions
 
     - **`carbonTheme`** 
       
-      Select a Carbon theme for your widget per the [Carbon Design System](https://carbondesignsystem.com/guidelines/color/tokens).
+      Select a Carbon theme for your widget per the [Carbon Design System](https://carbondesignsystem.com/elements/color/tokens/).
 
     - **`useAITheme`** 
       
@@ -665,7 +665,7 @@ For more information about the journeys beta feature, see [Guiding customers wit
     If you have custom content (such as user-defined responses or writeable elements), verify that any styling is still rendering as you expect. Consider the new [ibm-web-chat--default-styles class](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-render#helper_classes){: external} to maintain consistency with the web chat default styles.
     {: note}
 
-- **Support for Carbon components**: As part of the new styling support, you can now use [Carbon components](https://www.carbondesignsystem.com/components/overview/){: external} in user-defined responses and web chat writeable elements. These components inherit any theming customizations that you made to the web chat.
+- **Support for Carbon components**: As part of the new styling support, you can now use [Carbon components](https://carbondesignsystem.com/components/overview/components/){: external} in user-defined responses and web chat writeable elements. These components inherit any theming customizations that you made to the web chat.
 
 - **New embedded script**: The embedded script that you use to add web chat to your website is updated to avoid unexpected code changes when you lock onto a web chat version. The previous version of the script continues to work but is now deprecated. If you want to upgrade your existing web chat deployments to use the new script, copy the updated code snippet from the **Embed** tab of the web chat integration settings. (Remember to reapply any customizations you made.)
 - **Removal of deprecated methods and events**:
@@ -845,7 +845,7 @@ For more information, see [Instance methods](https://web-chat.global.assistant.w
 
 - **Search result format change**: To support the ability to show more than 3 search results in a response, the search skill response type format changed. If you are using `pre:receive` or `receive` handlers to process search results, you might need to update your code. The `results` property was replaced by the `primary_results` and `additional_results` properties. For more information about the search skill response type format, see the [API reference](https://{DomainName}/assistant/assistant-v2#message){: external}.
 
-- **Language pack key change**: Due to improvements that were made to allow you to specify separate chat transfer messages for situations where agents are available and unavailable, the [language source file](https://github.com/watson-developer-cloud/assistant-web-chat/tree/master/languages) was updated. The `agent_chatDescription` was renamed to `default_agent_availableMessage` and another key (`default_agent_unavailableMessage`) was added. If you defined a custom string for the `agent_chatDescription` key, you must modify your code to reflect this change.
+- **Language pack key change**: Due to improvements that were made to allow you to specify separate chat transfer messages for situations where agents are available and unavailable, the [language source file](https://github.com/watson-developer-cloud/assistant-web-chat/tree/main/languages) was updated. The `agent_chatDescription` was renamed to `default_agent_availableMessage` and another key (`default_agent_unavailableMessage`) was added. If you defined a custom string for the `agent_chatDescription` key, you must modify your code to reflect this change.
 
 ## 2.4.0
 {: #2.4.0}

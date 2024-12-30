@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-10-11"
+lastupdated: "2024-12-30"
 
 subcollection: watson-assistant
 
@@ -127,7 +127,7 @@ Click the icon, and the editor shows the corresponding step in the background.
 **Follow along** connects what you are seeing in Preview with what you built in the action. As you interact with your assistant, the debug mode automatically opens each step in the background. That means you can fix an error as soon as you see it, because the editor is already open to the corresponding step.
 
 ## Variable values in Preview
-{: #Preview-variable-values}
+{: #preview-variable-values}
 
 In **Preview**, you can test your conversation by verifying the variable values. You click **Variable values** to see the values stored in each variable. The **Variable values** pane has two tabs, one for action variables and another one for session variables.
 
@@ -140,7 +140,7 @@ To learn more about variables, see [Managing information during the conversation
 The private variables appear as masked texts in the conversation. You can identify a conversation that includes a private variable with the toggle-tip icon (![toggle-tip icon](images/private-variable-icon.png)) that appears next to the conversation.
 
 ### Action variables in Preview
-{: #Preview-action-variable-values}
+{: #preview-action-variable-values}
 
 In the **Action variables** section, identify a private variable with the toggle-tip icon (![toggle-tip icon](images/private-variable-icon.png)) that appears next to the conversation.
 
@@ -150,7 +150,7 @@ To disable the private variable protection, go to **Actions** > **Variables** > 
 ![Private action variable](images/action-variable-toggle-tip-exposed.png){: caption="Private variable in action variables" caption-side="bottom"}
 
 ### Session variables in Preview
-{: #Preview-session-variable-values}
+{: #preview-session-variable-values}
 
 If you are using dialog, you can see session variables for both actions and dialog on the **Session variables** tab.
 

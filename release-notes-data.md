@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-12-20"
+lastupdated: "2024-12-30"
 
 subcollection: watson-assistant
 
@@ -116,10 +116,10 @@ Configure search routing
 :  You can configure the search routing for your assistant when no matches are available for the customer response. For more information, see [Configuring the search routing when no action matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing).
 
 Conversational skills
-:  You can now use conversational skills in your assistant to begin tasks or workflows. You must register a pro code conversational skill provider on your assistant instance and begin building skill-backed actions to fit your use cases. For more information, see [Conversational skills API documentation](https://cloud.ibm.com/apidocs/assistant-v2#createprovider){: external}.
+:  You can now use conversational skills in your assistant to begin tasks or workflows. You must register a pro code conversational skill provider on your assistant instance and begin building skill-backed actions to fit your use cases. For more information, see [Conversational skills API documentation](/apidocs/assistant-v2?code=node#createprovider){: external}.
 
 Service monitors
-:  Your assistant can now use service monitors to monitor the health of your assistant instances. For more information, see [Installing service monitors](/docs/en/SSQNUZ_5.0_test?topic=monitors-installing-service){: external}.
+:  Your assistant can now use service monitors to monitor the health of your assistant instances. For more information, see [Installing service monitors](https://www.ibm.com/docs/en/software-hub/5.1.x?topic=monitors-installing-service){: external}.
 
 ## 29 March 2024
 {: #assistant-data-mar292024}
@@ -169,10 +169,10 @@ OpenAPI document file size limit for integrating custom extension
 :   {{site.data.keyword.assistant_classic_full}} was renamed to {{site.data.keyword.conversationfull}}.
 
 Store your custom metrics in {{site.data.keyword.conversationshort}}
-:   You can store your custom metrics for assistants by using the metrics method. For more information, see [Monitoring the platform](/docs/en/cloud-paks/cp-data/4.8.x?topic=platform-changing-retention-period-monitoring-data).
+:   You can store your custom metrics for assistants by using the metrics method. For more information, see [Monitoring the platform](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=platform-changing-retention-period-monitoring-data){: external}.
 
 Diagnostic logs
-:   You can now use the diagnostics logs in {{site.data.keyword.icp4dfull}} for your assistants. For more information, see [diag](https://ibmdocs-test.dcs.ibm.com/docs/en/SSQNUZ_4.8_test?topic=reference-diag){: external}.
+:   You can now use the diagnostics logs in {{site.data.keyword.icp4dfull}} for your assistants. For more information, see [diag](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=reference-diag){: external}.
 
 ## 25 October 2023
 {: #assistant-data-oct252023}
@@ -266,7 +266,7 @@ Changes to the date and number formats in assistant responses
 
    The delimiter character changes for numbers in some languages. For example, in French, nonbreaking space (NBSP) changes to narrow no-break space (NNBSP).
 
-   These changes are the result of migrating the {{site.data.keyword.assistant_classic_short}} platform to Java 17, where locale values are updated by using specifications in [CLDR 39](https://cldr.unicode.org/index/downloads/cldr-39){: external}. 
+   These changes are the result of migrating the {{site.data.keyword.assistant_classic_short}} platform to Java 17, where locale values are updated by using specifications in [CLDR 39](https://cldr.unicode.org/downloads/cldr-39){: external}. 
    
    To avoid or minimize the impact of similar changes in the future, you can use [Display formats](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-display-formats).
 
@@ -506,7 +506,7 @@ Analytics overview change
 :   To improve reliability, the **Values** column has been removed from **Top entities** on the **Analytics Overview** page. **Top Entities** continues to provide counts of entity types. For more information, see [Top intents and top entities](/docs/watson-assistant?topic=watson-assistant-logs-overview#logs-overview-tops).
 
 Dialog skill **Try it out** improvements
-:   For dialog skills, the **Try it out** pane now uses the [React](https://reactjs.org/){: external} UI framework similar to the rest of the {{site.data.keyword.assistant_classic_short}} user interface. You shouldn't see any change in behavior or functionality. As a part of the update, dialog skill error handling has been improved within the **Try it out** pane.
+:   For dialog skills, the **Try it out** pane now uses the [React](https://react.dev/){: external} UI framework similar to the rest of the {{site.data.keyword.assistant_classic_short}} user interface. You shouldn't see any change in behavior or functionality. As a part of the update, dialog skill error handling has been improved within the **Try it out** pane.
 
 Disambiguation feature updates
 :   The dialog skill disambiguation feature now includes improved features:
@@ -606,7 +606,7 @@ Search was added to the Dialog, Intents, and Entities pages
 :   You can now search within the product. For example, if you want to find any dialog nodes that condition on an intent, you can open the Dialog page and search on the intent name.
 
 v2 Logs API is available
-:   Use the v2 API logs method to list log events for an assistant. For more information, see the [API reference documentation](/apidocs-data-v2#listlogs).
+:   Use the v2 API logs method to list log events for an assistant. For more information, see the [API reference documentation](/apidocs/assistant-v2?code=node#listlogs).
 
 Features not included
 :   This release does not include the following features, which are available for cloud instances at the time of this release:
@@ -625,7 +625,7 @@ Features not included
 :   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 1.4.2 is compatible with {{site.data.keyword.icp4dfull}} 3.0.1 on OpenShift Red Hat 3.11 or 4.5 and {{site.data.keyword.icp4dfull}} 2.5 deployments on OpenShift Red Hat 3.11. The 1.4.2 release is certified on Red Hat OpenShift 4.5.
 
 Autocorrection support was added
-:   Autocorrection helps your assistant understand what your customers want. It corrects misspellings in the input that customers submit before the input is evaluated. With more precise input, your assistant can more easily recognize entity mentions and understand the customer's intent. This feature is not available in all languages. See [Autocorrecting user input](/docs/watson-assistant?topic=watson-assistant-autocorrection) for more details.
+:   Autocorrection helps your assistant understand what your customers want. It corrects misspellings in the input that customers submit before the input is evaluated. With more precise input, your assistant can more easily recognize entity mentions and understand the customer's intent. This feature is not available in all languages. See [Autocorrecting user input](/docs/watson-assistant?topic=watson-assistant-autocorrection) for details.
 
 French-language dialog skill improvements
 :   Added full support for fuzzy matching and contextual entities and added beta support for autocorrection.
@@ -662,7 +662,7 @@ Features not included
 {: release-note}
 
 IBM Cloud Private End Of Support
-:   Effective 30 September 2020, IBM will withdraw support for {{site.data.keyword.assistant_classic_full}} on IBM Cloud Private. For more information, see the [announcement](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?infotype=an&subtype=ca&appname=gpateam&supplier=897&letternum=ENUS920-075).
+:   Effective 30 September 2020, IBM will withdraw support for {{site.data.keyword.assistant_classic_full}} on IBM Cloud Private. For more information, see the [Product lifecycle](https://www.ibm.com/support/pages/node/6587575){: external} page.
 
 ## 28 February 2020
 {: #assistant-data-feb282020}
