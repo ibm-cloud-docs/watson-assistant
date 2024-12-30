@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-12-20"
+lastupdated: "2024-12-30"
 
 subcollection: watson-assistant
 
@@ -95,7 +95,7 @@ Improved currency recognition
 {: release-note}
 
 Configure Milvus in Custom service integration
-:  You can now configure Milvus, a full-text search engine with high performance and real-time analytics capabilities, in the Custom service integration of your assistant for enhanced search. For more information, see [Setting up Milvus for Custom service](/docs/watson-assistant?topic=watson-assistant-search-customsearch-add/#setup-milvus).
+:  You can now configure Milvus, a full-text search engine with high performance and real-time analytics capabilities, in the Custom service integration of your assistant for enhanced search. For more information, see [Setting up Milvus for Custom service](/docs/watson-assistant?topic=watson-assistant-search-customsearch-add#setup-milvus).
 
 
 ## 13 September 2024
@@ -113,7 +113,7 @@ Access properties from stream events
 :  You can now access properties from the last event in a stream more efficiently. For more information, see [Running the stream](/docs/watson-assistant?topic=watson-assistant-stream-from-extension#running-the-stream).
 
 Conversational search debugging
-:  You can now troubleshoot the errors when you face problems in conversational search. For more information, see [Debugging failures](/docs/watson-assistant?topic=watson-assistant-call-extension#debugging-failures)
+:  You can now troubleshoot the errors when you face problems in conversational search. For more information, see [Debugging failures](/docs/watson-assistant?topic=watson-assistant-call-extension#debug-conversational-search)
 
 ## 31 August 2024
 {: #watson-assistant-aug312024}
@@ -329,10 +329,10 @@ OpenAPI document file size limit for integrating custom extension
 :   When you integrate a custom extension by using REST API, the maximum file size of the OpenAPI document that you can import is limited to `4 MB` if you have a *Plus* or *Enterprise* plan of {{site.data.keyword.conversationshort}}. However, if you have an Enterprise plan with data isolation, the maximum file size of the document is limited to `8 MB`. For more information, see [Preparing the API definition](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#build-custom-extension-openapi-file).
 
 Edit variable values directly in debug mode
-:   You can now edit the variable value directly in the debug mode by clicking on the values. For more information, [Editing the variable values](/docs/watson-assistant?topic=watson-assistant-review#edit-variable-values).
+:   You can now edit the variable value directly in the debug mode by clicking on the values. For more information, [Editing the variable values](/docs/watson-assistant?topic=watson-assistant-review#editing-the-variable-values).
 
 Expand the debug mode panel for better visibility
-:   You can now expand the debug mode panel by clicking the **Expand** icon for better visibility of the long variable values. For more information, see [Variable values in Preview](/docs/watson-assistant?topic=watson-assistant-review#review-variable-values).
+:   You can now expand the debug mode panel by clicking the **Expand** icon for better visibility of the long variable values. For more information, see [Variable values in Preview](/docs/watson-assistant?topic=watson-assistant-review#preview-variable-values).
 
 ## 12 December 2023
 {: #watson-assistant-dec122023}
@@ -579,7 +579,7 @@ Changes to the date and number formats in assistant responses
 
    The delimiter character changes for numbers in some languages. For example, in French, nonbreaking space (NBSP) changes to narrow no-break space (NNBSP).
 
-   These changes are the result of migrating the {{site.data.keyword.conversationshort}} platform to Java 17, where locale values are updated by using specifications in [CLDR 39](https://cldr.unicode.org/index/downloads/cldr-39). 
+   These changes are the result of migrating the {{site.data.keyword.conversationshort}} platform to Java 17, where locale values are updated by using specifications in [CLDR 39](https://cldr.unicode.org/downloads/cldr-39). 
    
    To avoid or minimize the impact of similar changes in the future, you can use [Display formats](/docs/watson-assistant?topic=watson-assistant-actions-global-settings#actions-global-settings-display-formats).
 
@@ -712,7 +712,7 @@ New algorithm version **Latest (20 Dec 2022)** provides improved irrelevance det
 {: release-note}
 
 Dialog session variables now available in Preview
-:   If you are using dialog in {{site.data.keyword.conversationshort}}, you can now see session variables for dialog when debugging in Preview. For more information, see [Variable values in Preview](/docs/watson-assistant?topic=watson-assistant-review#review-variable-values).
+:   If you are using dialog in {{site.data.keyword.conversationshort}}, you can now see session variables for dialog when debugging in Preview. For more information, see [Variable values in Preview](/docs/watson-assistant?topic=watson-assistant-review#preview-variable-values).
 
 ## 6 March 2023
 {: #watson-assistant-mar062023}
@@ -907,7 +907,7 @@ Action notes
 :   You can now add free-form notes to each action. Within each action, you can use **Action notes** to add a description, documentation, comments, or any other annotations to help you keep track of your work as you build an action. For more information, see [Using the action editor](/docs/watson-assistant?topic=watson-assistant-build-actions-overview#build-actions-overview-use).
 
 Variable values in Preview
-:  Viewing action variables in Preview has been improved. Now you can see the history of all action variables, rather than one action at a time. For more information, see [Variable values](/docs/watson-assistant?topic=watson-assistant-review#review-variable-values).
+:  Viewing action variables in Preview has been improved. Now you can see the history of all action variables, rather than one action at a time. For more information, see [Variable values](/docs/watson-assistant?topic=watson-assistant-review#preview-variable-values).
 
 ## 21 October 2022
 {: #watson-assistant-oct212022}
@@ -1349,7 +1349,7 @@ Dialog skill "Try it out" improvements
 
     - It now includes runtime warnings in addition to runtime errors.
 
-    - For dialog skills, the **Try it out** pane now uses the [React](https://reactjs.org/){: external} UI framework similar to the rest of the {{site.data.keyword.assistant_classic_short}} user interface. You shouldn't see any change in behavior or functionality. As a part of the update, dialog skill error handling has been improved within the "Try it out" pane. This update was enabled on these dates:
+    - For dialog skills, the **Try it out** pane now uses the [React](https://react.dev/){: external} UI framework similar to the rest of the {{site.data.keyword.assistant_classic_short}} user interface. You shouldn't see any change in behavior or functionality. As a part of the update, dialog skill error handling has been improved within the "Try it out" pane. This update was enabled on these dates:
 
         - September 9, 2021 in the Tokyo and Seoul data centers
         - September 13, 2021 in the London, Sydney, and Washington, D.C. data centers
@@ -1360,7 +1360,7 @@ Dialog skill "Try it out" improvements
 {: release-note}
 
 Dialog skill "Try it out" improvements
-:   For dialog skills, the **Try it out** pane now uses the [React](https://reactjs.org/){: external} UI framework similar to the rest of the {{site.data.keyword.assistant_classic_short}} user interface. You shouldn't see any change in behavior or functionality. As a part of the update, dialog skill error handling has been improved within the "Try it out" pane. This update was enabled on September 9, 2021 in the Tokyo and Seoul data centers. On September 13, 2021, the update was enabled in the London, Sydney, and Washington, D.C. data centers.
+:   For dialog skills, the **Try it out** pane now uses the [React](https://react.dev/){: external} UI framework similar to the rest of the {{site.data.keyword.assistant_classic_short}} user interface. You shouldn't see any change in behavior or functionality. As a part of the update, dialog skill error handling has been improved within the "Try it out" pane. This update was enabled on September 9, 2021 in the Tokyo and Seoul data centers. On September 13, 2021, the update was enabled in the London, Sydney, and Washington, D.C. data centers.
 
 Disambiguation feature updates
 :   The dialog skill disambiguation feature now includes improved features:
@@ -1398,7 +1398,7 @@ Actions skill improvements
 
 
 Dialog skill "Try it out" improvements
-:   For dialog skills, the **Try it out** pane now uses the [React](https://reactjs.org/){: external} UI framework similar to the rest of the {{site.data.keyword.assistant_classic_short}} user interface. You shouldn't see any change in behavior or functionality. As a part of the update, dialog skill error handling has been improved within the "Try it out" pane. This update will be implemented incrementally, starting with service instances in the Tokyo and Seoul data centers.
+:   For dialog skills, the **Try it out** pane now uses the [React](https://react.dev/){: external} UI framework similar to the rest of the {{site.data.keyword.assistant_classic_short}} user interface. You shouldn't see any change in behavior or functionality. As a part of the update, dialog skill error handling has been improved within the "Try it out" pane. This update will be implemented incrementally, starting with service instances in the Tokyo and Seoul data centers.
 
 ## 2 September 2021
 {: #watson-assistant-sep022021}
@@ -1710,7 +1710,7 @@ Other plan changes
 SOC 2 compliance
 :   {{site.data.keyword.assistant_classic_short}} is SOC 2 Type 2 compliant, so you know your data is secure.
 
-    The System and Organization Controls framework, developed by the American Institute of Certified Public Accountants (AICPA), is a standard for controls that protect information stored in the cloud. SOC 2 reports provide details about the nature of internal controls that are implemented to protect customer-owned data. For more information, see [IBM Cloud compliance programs](https://www.ibm.com/cloud/compliance/global){: external}.
+    The System and Organization Controls framework, developed by the American Institute of Certified Public Accountants (AICPA), is a standard for controls that protect information stored in the cloud. SOC 2 reports provide details about the nature of internal controls that are implemented to protect customer-owned data. For more information, see [IBM Cloud compliance programs](https://www.ibm.com/cloud/compliance/){: external}.
 
 ## 25 February 2021
 {: #watson-assistant-feb252021}
@@ -2078,7 +2078,7 @@ New system entities are enabled automatically
 {: release-note}
 
 Spelling correction in v2 API
-:   The v2 `message` API now supports spelling correction options. For more information see the [API Reference](/apidocs/assistant-v2#message){: external}.
+:   The v2 `message` API now supports spelling correction options. For more information see the [API Reference](/apidocs/assistant-v2?code=node#message){: external}.
 
 ## 21 May 2020
 {: #watson-assistant-may212020}
@@ -2182,7 +2182,7 @@ New API version
 {: release-note}
 
 The web chat integration was updated
-:   The update adds an `isTrackingEnabled` parameter. You can add this parameter and set it to `false` to add the `X-Watson-Learning-Opt-Out` header to each `/message` request that originates from the web chat. For more information about the header, see [Data collection](https://{DomainName}/assistant/assistant-v2#data-collection){: external}. For more information about the parameter, see [Configuration](https://integrations.us-south.assistant.watson.cloud.ibm.com/web/developer-documentation/api-configuration){: external}.
+:   The update adds an `isTrackingEnabled` parameter. You can add this parameter and set it to `false` to add the `X-Watson-Learning-Opt-Out` header to each `/message` request that originates from the web chat. For more information about the header, see [Data collection](/apidocs/assistant-v2?code=node#data-collection){: external}. For more information about the parameter, see [API Configuration](https://integrations.us-south.assistant.watson.cloud.ibm.com/web/developer-documentation/api-configuration){: external}.
 
 ## 26 March 2020
 {: #watson-assistant-mar262020}
@@ -2813,7 +2813,7 @@ Entity synonym recommendations are available in more languages
 {: release-note}
 
 New API version
-:   The current API version is now `2018-09-20`. In this version, the `errors[].path` attribute of the error object that is returned by the API is expressed as a [JSON Pointer](https://tools.ietf.org/html/rfc6901){: external} instead of in dot notation form.
+:   The current API version is now `2018-09-20`. In this version, the `errors[].path` attribute of the error object that is returned by the API is expressed as a [JSON Pointer](https://datatracker.ietf.org/doc/html/rfc6901){: external} instead of in dot notation form.
 
 Web actions support
 :   You can now call {{site.data.keyword.openwhisk_short}} web actions from a dialog node. See [Making programmatic calls from a dialog node](/docs/watson-assistant?topic=watson-assistant-dialog-actions-client) for more details.
@@ -2950,7 +2950,7 @@ Search dialogs
 {: release-note}
 
 Introducing {{site.data.keyword.assistant_classic_full}}
-:   {{site.data.keyword.ibmwatson}} Conversation has been renamed. It is now called {{site.data.keyword.assistant_classic_full}}. The name change reflects the fact that {{site.data.keyword.assistant_classic_short}} is expanding to provide prebuilt content and tools that help you more easily share the virtual assistants you build. Read [this blog post](https://www.ibm.com/blogs/watson/2018/03/the-future-of-watson-conversation-watson-assistant/){: external} for more details.
+:   {{site.data.keyword.ibmwatson}} Conversation has been renamed. It is now called {{site.data.keyword.assistant_classic_full}}. The name change reflects the fact that {{site.data.keyword.assistant_classic_short}} is expanding to provide prebuilt content and tools that help you more easily share the virtual assistants you build. Read [Introducing Watson Assistant, an evolution of Watson Conversation and Virtual Agent](https://medium.com/ibm-watson/introducing-watson-assistant-7e7dcf2d5042){: external} for details.
 
 New REST APIs and SDKs are available for {{site.data.keyword.assistant_classic_short}}
 :   The new APIs are functionally identical to the existing Conversation APIs, which continue to be supported. For more information about the {{site.data.keyword.assistant_classic_short}} APIs, see the [API Reference](https://{DomainName}/assistant/assistant-v1){: external}.
