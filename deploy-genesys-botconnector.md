@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2024-06-23"
+lastupdated: "2024-12-31"
 
 subcollection: watson-assistant
 
@@ -22,7 +22,7 @@ Use the Genesys Bot Connector integration to connect your assistant with Genesys
 The Genesys Bot Connector enables Genesys Architect Flow designers to integrate their messaging and conversation flows with any third-party virtual assistant.
 
 ## Before you begin
-{: #deploy-botconnector-genesys-setup}
+{: #deploy-botconnector-genesys-account}
 
 You must comply with the folowing requirements before you start integrating your assistant with Genesys Bot Connector:
 
