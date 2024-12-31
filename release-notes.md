@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-12-30"
+lastupdated: "2024-12-31"
 
 subcollection: watson-assistant
 
@@ -1666,7 +1666,7 @@ Session history now generally available
     See this example for more information on saving the state of [customResponse](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external} types in session history.
 
 Channel switching
-:   You can now create a dialog response type to functionally generate a connect-to-agent response within channels other than web chat. If a user is in a channel such as Slack or Facebook, they can trigger a channel transfer response type. The user receives a link that forwards them to your organization's website where a connection to an agent response can be started within web chat. For more information, see [Adding a Channel transfer response type](//docs/watson-assistant?topic=watson-assistant-dialog-overview#dialog-overview-add-channel-transfer).
+:   You can now create a dialog response type to functionally generate a connect-to-agent response within channels other than web chat. If a user is in a channel such as Slack or Facebook, they can trigger a channel transfer response type. The user receives a link that forwards them to your organization's website where a connection to an agent response can be started within web chat. For more information, see [Adding a Channel transfer response type](/docs/watson-assistant?topic=watson-assistant-dialog-overview#dialog-overview-add-channel-transfer).
 
 ## 11 March 2021
 {: #watson-assistant-mar112021}

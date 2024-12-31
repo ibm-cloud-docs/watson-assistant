@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-20"
+lastupdated: "2024-12-31"
 
 keywords: settings
 subcollection: watson-assistant
@@ -41,7 +41,7 @@ In the **Conversation routing** tab, you have the following settings:
 - [Search routing](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing)
 
 ### Clarifying questions
-{: #actions-global-settings-response-modes}
+{: #actions-global-settings-clarify-questions}
 
 On the **Clarifying questions** tab, you can customize how an action asks clarifying questions.
 
