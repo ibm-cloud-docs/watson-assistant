@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-12-20"
+lastupdated: "2024-12-31"
 
 keywords: billing, data centers, MAU, monthly active users, service plans
 
@@ -155,4 +155,4 @@ The page header shows the plan that you are using today. To upgrade your plan, c
     - If you upgrade to an Enterprise with Data Isolation plan, you cannot do an in-place upgrade of your service instance. An Enterprise with Data Isolation plan instance must be provisioned for you first.
     - You cannot change from a Trial plan to a Lite plan.
 
-For answers to common questions about subscriptions, see the [How you're charged](/docs/billing-usage?topic=billing-usage-charges){: external}.
+For answers to common questions about subscriptions, see the [How you're charged](docs/account?topic=account-charges){: external}.

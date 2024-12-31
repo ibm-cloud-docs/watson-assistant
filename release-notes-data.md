@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-12-30"
+lastupdated: "2024-12-31"
 
 subcollection: watson-assistant
 
@@ -511,7 +511,7 @@ Dialog skill **Try it out** improvements
 Disambiguation feature updates
 :   The dialog skill disambiguation feature now includes improved features:
 
-    - **Increased control**: The frequency and depth of disambiguation can now be controlled by using the **sensitivity** parameter in the [workspace API](/apidocs-v1#updateworkspace){: external}. There are 5 levels of sensitivity:
+    - **Increased control**: The frequency and depth of disambiguation can now be controlled by using the **sensitivity** parameter in the [workspace API](/apidocs/assistant-v1?code=node#updateworkspace){: external}. There are 5 levels of sensitivity:
         - `high`
         - `medium_high`
         - `medium`
@@ -524,7 +524,7 @@ Disambiguation feature updates
 
     These new features may affect various metrics, such as disambiguation rate and click rates, as well as influence conversation-level key performance indicators such as containment.
 
-    If the new disambiguation algorithm works differently than expected for your assistant, you can adjust it using the sensitivity parameter in the update workspace API. For more information, see [Update workspace](/apidocs-v1#updateworkspace){: external}.
+    If the new disambiguation algorithm works differently than expected for your assistant, you can adjust it using the sensitivity parameter in the update workspace API. For more information, see [Update workspace](/apidocs/assistant-v1?code=node#updateworkspace){: external}.
 
 ## 26 January 2022
 {: #assistant-data-jan262022}

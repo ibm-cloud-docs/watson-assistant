@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-12-27"
+lastupdated: "2024-12-31"
 
 subcollection: watson-assistant
 
@@ -58,7 +58,7 @@ If the **text** response from the JSON action editor has the following format:
 Then, the assistant combines actual value of `variable` with other items in the `values` array and displays the response. For example, if `step_472` takes the value "Bob", then the assistant displays `Hi, Bob. How can I help you?`.
 
 ## Viewing the response type at the runtime
-You can refer to the [API documentation for {{site.data.keyword.conversationshort}}](https://cloud.ibm.com/apidocs/assistant-v2?code=node#introduction) to view the [details of response types and the APIs](https://cloud.ibm.com/apidocs/assistant-v2?code=node#message-response){: external}.
+You can refer to the [API documentation for {{site.data.keyword.conversationshort}}](https://cloud.ibm.com/apidocs/assistant-v2?code=node#introduction) to view the [details of response types and the APIs](https://cloud.ibm.com/apidocs/assistant-v2?code=node#message){: external}.
  
  For example, to view the runtime response type, do the following:
  1. In the **Response** section, click **`MessageOutput`** in **output** to see the **generic** section.
