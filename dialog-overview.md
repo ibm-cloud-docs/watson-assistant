@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-12-24"
+lastupdated: "2024-12-31"
 
 keywords: building a dialog, condition, response, options, jump, jump-to, multiline, response variations
 
@@ -529,7 +529,7 @@ To add an *Audio* response type, complete the following steps:
 1. The **Audio** response type is supported in the web chat, Facebook, WhatsApp, Slack, SMS, and phone integrations. 
 
 ### Adding an *iframe* response
-{: #respond-add-iframe}
+{: #dialog-respond-add-iframe}
 
 Add an *iframe* response to embed content from another website directly inside the chat window as an HTML `iframe` element. An iframe response is useful if you want to enable customers to perform some interaction with an external service without leaving the chat. For example, you might use an *iframe* response to display the following examples within the web chat:
 
