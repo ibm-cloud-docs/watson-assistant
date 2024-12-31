@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-12-27"
+lastupdated: "2024-12-31"
 
 subcollection: watson-assistant
 
@@ -97,7 +97,7 @@ To set up Custom service on your assistant through your client, use the followin
 1. Click **Save** and then **Close** to end the Custom service set up in the client-side.
 
 ## Setting up Milvus for Custom service
-{: #setup-milvus}
+{: #setup-milvus-custom-service}
 
 Milvus is a vector database that you can use for handling large-scale datasets. For applications requiring real-time search capabilities and numerous concurrent users, you can use Milvus, which has a distributed architecture, high performance, and flexible data model.
 {: shortdesc}
