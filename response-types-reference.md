@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-12-31"
+  years: 2015, 2025
+lastupdated: "2025-01-01"
 
 subcollection: watson-assistant
 
@@ -1118,7 +1118,7 @@ This example uses the `stop_activities` response type to stop recognizing speech
 The web chat support for new `table` response type represents the structured data in rows and columns, headers, and cells.
 
 ### Integration channel support
-{: #response-types-json-stop-activities-integrations}
+{: #response-types-json-stop-activities-web}
 
 | Web chat                             |
 |-----------------------------------|

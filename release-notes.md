@@ -58,14 +58,6 @@ Evaluate assistant
 Skill output display
 :   You can now choose to hide or display the skill output that is stored as an assistant variable. For more information, see [Passing values to a subaction](/docs/watson-assistant?topic=watson-assistant-step-what-next#passing-values-to-a-subaction).
 
-
-## 6 November 2024
-{: #watson-assistant-nov062024}
-{: release-note}
-
-Skill output display
-:   You can now choose to hide or display the skill output that is stored as an assistant variable. For more information, see [Passing values to a subaction](/docs/watson-assistant?topic=watson-assistant-step-what-next#passing-values-to-a-subaction).
-
 ## 21 October 2024
 {: #watson-assistant-oct212024}
 {: release-note}
