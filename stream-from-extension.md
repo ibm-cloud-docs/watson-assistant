@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-09-06"
+  years: 2022, 2025
+lastupdated: "2025-01-01"
 
 subcollection: watson-assistant
 
@@ -41,6 +41,7 @@ data: {"model_id":"ibm/granite-13b-chat-v2","created_at":"2024-07-01T21:49:29.76
 Specify `text` as the JSON Path in watsonx Assistant to indicate where the text or token is extracted from each SSE. In the previous example, `results[0].generated_text` is the path from where the text is extracted, resulting in: `to learn new`.
 
 ## Running the stream
+{: #running-the-stream}
 
 When the custom extension is called, watsonx Assistant attempts a call to stream text from the specified **Operation**. The next step runs only after the stream is completed successfully or whether an error occurs before the streaming starts. If the stream completes successfully, the streamed text is stored in the `.body` property of the result variable.
 

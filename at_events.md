@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-09-13"
+  years: 2018, 2025
+lastupdated: "2025-01-01"
 
 keywords: IBM,activity tracker,event,security, assistant event tracker
 
@@ -13,7 +13,7 @@ subcollection: watson-assistant
 {{site.data.keyword.attribute-definition-list}}
 
 # Activity tracking events {{site.data.keyword.conversationshort}}
-{: #at_events}
+{: #at-events}
 
 
 [IBM Cloud]{: tag-ibm-cloud} [Enterprise]{: tag-purple} [Premium]{: tag-teal}

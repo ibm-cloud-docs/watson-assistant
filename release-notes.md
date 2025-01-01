@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-12-31"
+  years: 2015, 2025
+lastupdated: "2025-01-01"
 
 subcollection: watson-assistant
 
@@ -95,7 +95,7 @@ Improved currency recognition
 {: release-note}
 
 Configure Milvus in Custom service integration
-:  You can now configure Milvus, a full-text search engine with high performance and real-time analytics capabilities, in the Custom service integration of your assistant for enhanced search. For more information, see [Setting up Milvus for Custom service](/docs/watson-assistant?topic=watson-assistant-search-customsearch-add#setup-milvus).
+:  You can now configure Milvus, a full-text search engine with high performance and real-time analytics capabilities, in the Custom service integration of your assistant for enhanced search. For more information, see [Setting up Milvus for Custom service](/docs/watson-assistant?topic=watson-assistant-search-customsearch-add#setup-milvus-custom-service).
 
 
 ## 13 September 2024
