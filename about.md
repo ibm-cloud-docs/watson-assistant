@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-12-27"
+  years: 2015, 2025
+lastupdated: "2025-01-01"
 
 keywords: chatbot, live chatbot, omnichannel
 
@@ -20,7 +20,7 @@ If you're looking for the AI Assistant Builder documentation, see [Building AI A
 Use {{site.data.keyword.conversationfull}} to build your own branded live chatbot into any device, application, or channel. Your chatbot, which is also known as an *assistant*, connects to the customer engagement resources you already use to deliver an engaging, unified problem-solving experience to your customers.
 {: shortdesc}
 
-| | |
+|  | Benefit |
 |------------|-------------|
 | *Create AI-driven conversational flows* | Your assistant uses industry-leading AI capabilities to understand questions that your customers ask in natural language. It uses machine learning models that are custom-built from your data to deliver accurate answers in real time. |
 | *Embed existing help content* | You already know the answers to customer questions? Put your subject matter expertise to work. Add a search integration with {{site.data.keyword.discoveryfull}} to give your assistant access to corporate data collections that it can mine for answers. |
