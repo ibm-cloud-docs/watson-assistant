@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-12-31"
+  years: 2015, 2025
+lastupdated: "2025-01-01"
 
 keywords: building a dialog, condition, response, options, jump, jump-to, multiline, response variations
 
@@ -567,6 +567,7 @@ To add an *iframe* response type, complete the following steps:
    {: note}
 
 #### Technical details: `iframe` sandboxing
+{: #dialog-technical-details-iframe-sandboxing}
 
 Content that is loaded in an iframe by the web chat is _sandboxed_, meaning that it restricts permissions that reduce security vulnerabilities. The web chat uses the `sandbox` attribute of the `iframe` element to grant only the following permissions:
 
@@ -581,6 +582,7 @@ A script that runs inside a sandboxed iframe cannot change any content outside t
 {: note}
 
 #### Technical details: `iframe` preview card
+{: #dialog-technical-details-iframe-preview-card}
 
 The `iframe` response type in web chat displays the **Preview card**, which includes an image, title, and description of the webpage that the user visits in the web chat.
 
