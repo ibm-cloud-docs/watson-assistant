@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-12-20"
+  years: 2015, 2025
+lastupdated: "2025-01-01"
 
 keywords: conversational search
 
@@ -96,6 +96,7 @@ When your assistant generates a conversational search response, it evaluates the
 {: caption= "Tuning the Tendency to say I don’t know" caption-side="bottom"}
 
 ## Tuning the generated response length in conversational search
+{: #tuning-the-generated-response-length-in-conversational-search}
 
 The generated response-length feature in IBM Watson Assistant customizes response lengths to best meet your needs.
 
@@ -111,6 +112,7 @@ You can choose from three response lengths: concise, moderate, and verbose. This
 The response-length feature affects the average length of responses that watsonx Assistant generates. Although it aims to match the specified length, actual responses vary because of the complexity of user input and the inherent limitations of the large language model (LLM).{: note}
 
 ## Configuring your assistant to use the conversational search
+{: #configuring-assistant-use-conversational-search}
 
 After you enable **Conversational search**, you must configure the **Search routing** setting to route your assistant responses to conversational search when no action matches the user response. For more information about the **Search routing** configuration, see the [Configuring the search routing when no action matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing) topic. To configure your assistant to route to conversational search for specific topics or actions, you can [add search as a step in a new or existing action](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-add-trigger).
 
