@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-01"
+lastupdated: "2025-01-02"
 
 subcollection: watson-assistant
 
@@ -1576,10 +1576,7 @@ Service API endpoint change
 
       Replace: `src=“https://assistant-integrations-{location}.watsonplatform.net/public/salesforceweb”` with a url with this syntax:
 
-        ```code
-        src="https://integrations.{location}.assistant.watson.appdomain.cloud/public/salesforceweb/{integration-id}/agent_application?version=2020-09-24"
-        ```
-        {: codeblock}
+        `src="https://integrations.{location}.assistant.watson.appdomain.cloud/public/salesforceweb/{integration-id}/agent_application?version=2020-09-24"`
 
       From the Web chat integration Salesforce live agent setup page, find the *Visualforce page markup* field. Look for the `src` parameter in the `<iframe>` element. It contains the full URL to use, including the appropriate `{location}` and `{integration-id}` values for your instance.
 

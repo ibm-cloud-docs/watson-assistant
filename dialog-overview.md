@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-01"
+lastupdated: "2025-01-02"
 
 keywords: building a dialog, condition, response, options, jump, jump-to, multiline, response variations
 
@@ -477,13 +477,13 @@ To add a *Video* response type, complete the following steps:
       {: note}
 
       You can embed videos hosted on the following services:
-      - [YouTube](https://youtube.com){: external}
-      - [Facebook](https://facebook.com){: external}
-      - [Vimeo](https://vimeo.com){: external}
-      - [Twitch](https://twitch.tv){: external}
-      - [Streamable](https://streamable.com){: external}
-      - [Wistia](https://wistia.com){: external}
-      - [Vidyard](https://vidyard.com){: external}
+      - YouTube
+      - Facebook
+      - Vimeo
+      - Twitch
+      - Streamable
+      - Wistia
+      - Vidyard
 
     If you want to display a video title and description above the embedded video in the response, then add them in the fields provided.
 
