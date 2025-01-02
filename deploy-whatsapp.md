@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-12-23"
+  years: 2020, 2025
+lastupdated: "2025-01-02"
 
 subcollection: watson-assistant
 
@@ -45,7 +45,7 @@ WhatsApp has a rigorous process that they use to review all businesses that want
 
 1.  To register, go to the [Facebook Business Manager](https://business.facebook.com/business/loginpage/){: external} website, and click **Create new account**. Follow the instructions to create an account.
 
-1.  Get your Facebook Business Manager ID. In [Settings](https://business.facebook.com/settings){: external}, click the **Business info** tab. The Facebook Business Manager ID is at the top of the page.
+1.  Get your Facebook Business Manager ID. In **Settings**, click the **Business info** tab. The Facebook Business Manager ID is at the top of the page.
 
 1.  Submit the *Request to enable your Twilio numbers for WhatsApp* form from the [Twilio API for WhatsApp](https://www.twilio.com/whatsapp/request-access){: external} web page.
 
