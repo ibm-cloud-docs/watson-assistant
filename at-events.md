@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-01-01"
+lastupdated: "2025-01-02"
 
 keywords: IBM,activity tracker,event,security, assistant event tracker
 

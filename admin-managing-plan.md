@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-01-01"
+lastupdated: "2025-01-02"
 
 keywords: billing, data centers, MAU, monthly active users, service plans
 
@@ -46,7 +46,7 @@ The [v2 Logs API](/apidocs/assistant-v2#listlogs){: external} is available with 
 
 The following features are available only to users of Enterprise plans. [Enterprise]{: tag-purple}
 
-- [Activity tracking](/docs/watson-assistant?topic=watson-assistant-at_events)
+- [Activity tracking](/docs/watson-assistant?topic=watson-assistant-at-events)
 - [Multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments)
 - [Override system defaults for response modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes#action-response-modes-customize)
 - [Sending events to Segment](/docs/watson-assistant?topic=watson-assistant-segment-add)
