@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-10-31"
+  years: 2022, 2025
+lastupdated: "2025-01-02"
 
 subcollection: watson-assistant
 
@@ -138,13 +138,13 @@ As with assistant responses, the `response_type` property identifies the type of
         Specify the URL you would use to view the video in your browser (for example, `https://www.youtube.com/watch?v=52bpMKVigGU`). You do not need to convert the URL to an embeddable form; the web chat will do this automatically.
 
         You can embed videos hosted on the following services:
-        - [YouTube](https://youtube.com){: external}
-        - [Facebook](https://facebook.com){: external}
-        - [Vimeo](https://vimeo.com){: external}
-        - [Twitch](https://twitch.tv){: external}
-        - [Streamable](https://streamable.com){: external}
-        - [Wistia](https://wistia.com){: external}
-        - [Vidyard](https://vidyard.com){: external}
+        - YouTube
+        - Facebook
+        - Vimeo
+        - Twitch
+        - Streamable
+        - Wistia
+        - Vidyard
 
 ## Example
 {: #journeys-example}
@@ -210,4 +210,3 @@ This beta feature currently has the following limitations:
 - Journeys use the `view:change` event or `changeView` method, and do not work with the `window:open` or `window:close` events or the `openWindow`, `closeWindow` and `toggleOpen` instance methods.
 
 - When the customer starts a journey, the web chat window closes. If you are using the `view:change` event to trigger the display of a post-chat form, your code should check the value of the new `event.reason` or `event.newViewState.tour` parameter to decide if showing the form is appropriate.
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-01"
+lastupdated: "2025-01-02"
 
 subcollection: watson-assistant
 
@@ -1369,14 +1369,14 @@ The URL specified with the `source` property can be one of the following types:
 
     Specify the URL of the video that you want to view in your browser (for example, `https://www.youtube.com/watch?v=52bpMKVigGU`). The web chat automatically converts the URL to an embeddable form.
 
-    You can embed videos from the following services:
-    - [YouTube](https://youtube.com){: external}
-    - [Facebook](https://facebook.com){: external}
-    - [Vimeo](https://vimeo.com){: external}
-    - [Twitch](https://twitch.tv){: external}
-    - [Streamable](https://streamable.com){: external}
-    - [Wistia](https://wistia.com){: external}
-    - [Vidyard](https://vidyard.com){: external}
+    You can embed videos that are hosted on the following services:
+      - YouTube
+      - Facebook
+      - Vimeo
+      - Twitch
+      - Streamable
+      - Wistia
+      - Vidyard
 
 ### Example
 {: #response-types-json-video-example}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-06-07"
+  years: 2021, 2025
+lastupdated: "2025-01-02"
 
 subcollection: watson-assistant
 
@@ -256,13 +256,13 @@ To add a *Video* response, complete the following steps:
       {: note}
 
       You can embed videos that are hosted on the following services:
-      - [YouTube](https://youtube.com){: external}
-      - [Facebook](https://facebook.com){: external}
-      - [Vimeo](https://vimeo.com){: external}
-      - [Twitch](https://twitch.tv){: external}
-      - [Streamable](https://streamable.com){: external}
-      - [Wistia](https://wistia.com){: external}
-      - [Vidyard](https://vidyard.com){: external}
+      - YouTube
+      - Facebook
+      - Vimeo
+      - Twitch
+      - Streamable
+      - Wistia
+      - Vidyard
 
 1. Optionally specify a video title, description, and alt text in the fields provided. In the web chat integration, the title and description are displayed along with the video player.
 
