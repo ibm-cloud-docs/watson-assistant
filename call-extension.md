@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-11"
+  years: 2022, 2025
+lastupdated: "2025-01-03"
 
 subcollection: watson-assistant
 
@@ -227,7 +227,7 @@ To see the detailed information for analyzing the problem, use the **Inspector**
     ![Inspect tool](images/inspect.png)
 
     You can also click the ![Extension inspector icon](images/extension-inspector-icon.png) icon to show or hide the extension inspector.  Click **Inspect** in the preview pane to show information about a particular call to the search integration.
-1.  Use the **Overview** tab to find the reasons for the failure of your calls to Conversational saerch.
+1.  Use the **Overview** tab to find the reasons for the failure of your calls to Conversational search.
 
      Understand the two phases of the search extension before knowing about the fields that are displayed in the **Overview** tab.
 

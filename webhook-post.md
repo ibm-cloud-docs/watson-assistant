@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2024-12-27"
+  years: 2019, 2025
+lastupdated: "2025-01-03"
 
 keywords: post webhook, postwebhook, post-webhook
 
@@ -126,7 +126,7 @@ The following error codes can help you track down the cause of issues you might 
 | Error code and message | Description |
 |------------|-------------|
 | 422 Webhook responded with invalid JSON body | The webhook's HTTP response body could not be parsed as JSON. |
-| 422 Webhook responded with `[500]` status code | A problem occured with the external service that you called. The code failed or the external server refused the request. |
+| 422 Webhook responded with `[500]` status code | A problem occurred with the external service that you called. The code failed or the external server refused the request. |
 | 500 Processor Exception : `[connections to all backends failing]` | An error occurred in the webhook microservice. It could not connect to backend services. |
 {: caption="Error code details" caption-side="bottom"}
 

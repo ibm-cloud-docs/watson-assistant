@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-12-30"
+  years: 2021, 2025
+lastupdated: "2025-01-03"
 
 subcollection: watson-assistant
 
@@ -162,7 +162,7 @@ To disable the private variable protection, go to **Actions** > **Variables** > 
 ![Private session variable](images/session-variable-toggle-tip-exposed.png){: caption="Private variable in session variables" caption-side="bottom"}
 
 ### Editing the variable values
-{: edit-variable-values}
+{: #edit-variable-values}
 
 In the debug mode, you can edit the variable values by clicking on the value that you want to edit. For better visibility of long variable values, you can resize the width of the debug mode panel by using the **Resize** tab (<). To edit large values for action variables, you can click the **Expand** button next to the variable value to open the **Editor** window. The **Editor** window contains the variable name and the value that is associated with it. You can use the **Editor** window to edit the variable value.
 
@@ -173,6 +173,6 @@ In the debug mode, you can edit the variable values by clicking on the value tha
 
 If you are using a custom extension in your action, you can use the **Inspector** in Preview to debug. For more information, see [Debugging custom extensions](/docs/watson-assistant?topic=watson-assistant-call-extension#extension-debug).
 
-If you are using conversatonal search or skill-based actions, you can use the **Inspector** in Preview to debug. For more information, see [Debugging conversational search](/docs/watson-assistant?topic=watson-assistant-call-extension#debug-conversational-search).
+If you are using conversational search or skill-based actions, you can use the **Inspector** in Preview to debug. For more information, see [Debugging conversational search](/docs/watson-assistant?topic=watson-assistant-call-extension#debug-conversational-search).
 
 ![Inspector](images/extension-inspector-preview.png){: caption="Inspector" caption-side="bottom"}

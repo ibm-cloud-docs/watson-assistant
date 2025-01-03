@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-12-27"
+  years: 2018, 2025
+lastupdated: "2025-01-03"
 
 subcollection: watson-assistant
 
@@ -91,7 +91,7 @@ You can configure your assistant’s behavior for the case when a user’s input
 
 To configure **Search routing**, go to **Home** > **Actions** > **Global settings** > **Conversation routing** > **Search routing**. After you select an option **Search routing**, click the **Save** button.
 
-For any new assistant, the **Route to conversational search** option is the default selction in the **Search routing** section.{: tip}
+For any new assistant, the **Route to conversational search** option is the default selection in the **Search routing** section.{: tip}
 
 The **Search routing** feature is enabled for any assistant in draft environment, but not for assistants in live environment. However, the **Search routing** feature is enabled for the assistant in the live environment, if you created the assistant in live environment from a draft environment for which **Search routing** is configured earlier. {: tip}
 

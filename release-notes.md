@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-02"
+lastupdated: "2025-01-03"
 
 subcollection: watson-assistant
 
@@ -206,7 +206,7 @@ New Hate, Abuse, and Profanity Filter for {{site.data.keyword.conversationshort}
 {: release-note}
 
 Server-Sent Events for custom extensions
-: watsonxAssistant now supports defining a JSON Path to stream text from Server-Sent Events (SSE) in custom extensions. This feature ensures that text is streamed and stored correctly, with built-in checks to handle potential errors. For more information, see [Streaming from an extension](/docs/watson-assistant?topic=watson-assistant-stream-from-extension).
+: You can now define a JSON Path to stream text from Server-Sent Events (SSE) in custom extensions. This feature ensures that text is streamed and stored correctly, with built-in checks to handle potential errors. For more information, see [Streaming from an extension](/docs/watson-assistant?topic=watson-assistant-stream-from-extension).
 
 ## 03 July 2024
 {: #watson-assistant-jul032024}
@@ -1748,7 +1748,7 @@ Documentation update
 German language improvements
 :   A word decomposition function was added to the intent and entity recognition models for German-language dialog skills.
 
-    A characteristic of the German language is that some words are formed by concatenating separate words to form a single compound word. For example, "festnetznummer" (landline number) concatenates the words "festnetz" (landline) and "nummer" (number). When your customers chat with your assistant, they might write a compound word as a single word, as hyphenated words, or as separate words. Previously, the variants resulted in different intent confidence scores and different entity mention counts based on your training data. With the addition of the word decomposition function, the models now treat all compound word variants as equivalent. This update means you no longer need to add examples of every variant of the compound words to your training data.
+    A characteristic of the German language is that some words are formed by concatenating separate words to form a single compound word. For example, `festnetznummer` (landline number) concatenates the words `festnetz` (landline) and `nummer` (number). When your customers chat with your assistant, they might write a compound word as a single word, as hyphenated words, or as separate words. Previously, the variants resulted in different intent confidence scores and different entity mention counts based on your training data. With the addition of the word decomposition function, the models now treat all compound word variants as equivalent. This update means you no longer need to add examples of every variant of the compound words to your training data.
 
 ## 19 January 2021
 {: #watson-assistant-jan192021}
@@ -2245,7 +2245,7 @@ March 2020 deprecation notice
 
     - **Legacy version of numeric system entities**
 
-        We released a whole new infrastructure for our numeric system entities across all languages except Chinese, Korean, Japanese and Arabic. The updated `@sys-number`, `@sys-date`, `@sys-time`, `@sys-currency`, and `@sys-percentage` entities provide superior number recognition with higher precision. For more information about the new system entities, see [System entities](/docs/watson-assistant?topic=watson-assistant-system-entities).
+        We released a whole new infrastructure for our numeric system entities across all languages except Chinese, Korean, Japanese, and Arabic. The updated `@sys-number`, `@sys-date`, `@sys-time`, `@sys-currency`, and `@sys-percentage` entities provide superior number recognition with higher precision. For more information about the new system entities, see [System entities](/docs/watson-assistant?topic=watson-assistant-system-entities).
 
         The old version of the numeric system entities will stop being supported in June 2020 for English, Brazilian Portuguese, Czech, Dutch, French, German, Italian, and Spanish dialog skills.
 

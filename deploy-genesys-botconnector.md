@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2024-12-31"
+lastupdated: "2025-01-03"
 
 subcollection: watson-assistant
 
@@ -24,7 +24,7 @@ The Genesys Bot Connector enables Genesys Architect Flow designers to integrate 
 ## Before you begin
 {: #deploy-botconnector-genesys-account}
 
-You must comply with the folowing requirements before you start integrating your assistant with Genesys Bot Connector:
+You must comply with the following requirements before you start integrating your assistant with Genesys Bot Connector:
 
 - A new account or log in to an existing Genesys Cloud account with access to Genesys Architect and the correct region at the [Genesys Cloud portal](https://login.mypurecloud.com/){: external}.
 - The `Admin` role in the Genesys Cloud organization.
@@ -84,7 +84,7 @@ Keep the Genesys web page open in a web browser tab so you can refer to and comp
     - **Client Secret**
     - **Verification Token** (token and value from Genesys Bot Connector setup)
     - **Integration ID**
-    - **API URI** (the Genesys API server for your region e.g., `https://api.regionxyz.mypurecloud.com`)
+    - **API URI** (the Genesys API server for your region, for example: `https://api.regionxyz.mypurecloud.com`)
 
 For security reasons, the authentication fields are removed from view after initial setup. 
 {: note}
@@ -135,7 +135,7 @@ Both Input and Output parameters are available in the {{site.data.keyword.conver
 ```
 For Input parameters, you can access the session variable in {{site.data.keyword.conversationshort}} with `$integrations.genesys_bot_connector.user_id`.
 
-For Output parameters, you can assign the session variables to a state variable in Genesys (e.g., `State.some_variable` and access them later on in your flow).
+For Output parameters, you can assign the session variables to a state variable in Genesys (for example, `State.some_variable` and access them later on in your flow).
 
 Variables can be read and set from both Dialog and Action skills.
 
