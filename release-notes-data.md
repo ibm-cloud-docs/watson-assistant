@@ -153,7 +153,7 @@ More control over pause responses
 :  Use a pause response to have your assistant wait for a specified interval before the next response. Previously, pauses were 1 to 10 seconds in length. You can now pause a response for 0 to 60 seconds. You can also specify milliseconds by specifying a decimal. For more information, see [Pause response](/docs/watson-assistant?topic=watson-assistant-respond#respond-pause-response).
 
 Visualize an action
-:  After you create an action, you can optionally switch from the step edit view to a visualization that displays a canvas with a flowchart of the action. For more information, see [Visualizing the flow of the action](/docs/watson-assistant?topic=watson-assistant-build-actions-overview#visualizing-the-flow-of-the-action-beta).
+:  After you create an action, you can optionally switch from the step edit view to a visualization that displays a canvas with a flowchart of the action. For more information, see [Visualizing the flow of the action](/docs/watson-assistant?topic=watson-assistant-build-actions-overview#build-actions-visual-flow).
 
 Invalid date entry not accepted
 :  Starting from this release, the assistant does not recognize invalid date entries such as Feb 31, 31/11/2022, and Feb 29 2023. In addition, the assistant does not automatically parse the invalid dates to the first day of the month. For more information, see [@sys-date](/docs/assistant?topic=assistant-system-entities#system-entities-sys-date).
