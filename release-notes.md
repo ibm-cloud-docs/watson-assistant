@@ -2803,9 +2803,6 @@ Entity synonym recommendations are available in more languages
 New API version
 :   The current API version is now `2018-09-20`. In this version, the `errors[].path` attribute of the error object that is returned by the API is expressed as a [JSON Pointer](https://datatracker.ietf.org/doc/html/rfc6901){: external} instead of in dot notation form.
 
-Web actions support
-:   You can now call {{site.data.keyword.openwhisk_short}} web actions from a dialog node. See [Making programmatic calls from a dialog node](/docs/watson-assistant?topic=watson-assistant-dialog-actions-client) for more details.
-
 ## 15 August 2018
 {: #watson-assistant-aug152018}
 {: release-note}
@@ -3020,13 +3017,6 @@ Copy nodes
 
 Capture groups in pattern entities
 :   You can identify groups in the regular expression pattern that you define for an entity. Identifying groups is useful if you want to be able to refer to a subsection of the pattern later. For example, your entity might have a regex pattern that captures US phone numbers. If you identify the area code segment of the number pattern as a group, then you can subsequently refer to that group to access just the area code segment of a phone number. See [Defining information to look for in customer input](/docs/watson-assistant?topic=watson-assistant-entities#entities-creating-task) for more information.
-
-## 6 December 2017
-{: #watson-assistant-dec062017}
-{: release-note}
-
-{{site.data.keyword.openwhisk}} integration (Beta)
-:   Call {{site.data.keyword.openwhisk}} (formerly IBM OpenWhisk) actions directly from a dialog node. This feature enables you to, for example, call an action to retrieve weather information from within a dialog node, and then condition on the returned information in the dialog response. Currently, you can call an action from a {{site.data.keyword.openwhisk_short}} instance that is hosted in the US South region from instances that are hosted in the US South region. See [Making programmatic calls from a dialog node](/docs/watson-assistant?topic=watson-assistant-dialog-actions-client) for more details.
 
 ## 5 December 2017
 {: #watson-assistant-dec052017}

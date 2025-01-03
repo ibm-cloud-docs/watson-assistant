@@ -89,9 +89,6 @@ To add the webhook details, complete the following steps.
 
     You must specify a URL that uses the SSL protocol, so specify a URL that begins with `https`.
 
-    You cannot use a webhook to call a {{site.data.keyword.openwhisk_short}} action that uses token-based Identity and Access Management (IAM) authentication. However, you can make a call to a {{site.data.keyword.openwhisk_short}} web action or a secured web action.
-    {: important}
-
 1.  In the **Secret** field, add a private key to pass with the request that you can use to authenticate with the external service.
 
     You must specify the key as a text string, such as `purple unicorn`. The maximum length is 1,024 characters. You cannot specify a context variable.
@@ -130,9 +127,6 @@ Test your webhook extensively before enabling it for an assistant in a productio
 The assistant triggers the webhook when it processes a message.
 
 If you enable the setting to return an error when the webhook call fails, the assistant stops the process entirely if the webhook encounters any issues. Regularly test the process you call to check for downtime and adjust this setting to prevent all message calls from failing.
-
-If you call an {{site.data.keyword.openwhisk_short}} web action, you can use the logging capability in {{site.data.keyword.openwhisk_short}} to help you troubleshoot your code. You can [download the command line interface](/functions/learn/cli){: external}, and then enable logging with the [activation polling command](/docs/cloud-functions-cli-plugin?topic=cloud-functions-cli-plugin-functions-cli#cli_activation_poll){: external}.
-{: tip}
 
 ## Troubleshooting the webhook
 {: #webhook-pre-ts}
