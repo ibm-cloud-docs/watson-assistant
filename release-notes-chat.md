@@ -925,6 +925,6 @@ For more information, see [Instance methods](https://web-chat.global.assistant.w
 
 *Release date: 20 March 2020*
 
-- **Customize the CSS theme**: For more information, see [Theming](https://integrations.us-south.assistant.watson.cloud.ibm.com/web/developer-documentation/api-instance-methods#theming){: new_window}.
+- **Customize the CSS theme**: For more information, see [Theme configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#theme-config){: external}.
 
-- **Shadow DOM is no longer used**: When you use custom response types or HTML in your dialog, you can apply CSS styles that are defined in your web page to the assistant's response. To override any default styling in the web chat, you must specify the `!important` modifier in your CSS. For more information, see [Rendering response types](https://integrations.us-south.assistant.watson.cloud.ibm.com/web/developer-documentation/api-render#html){: new_window}.
+- **Shadow DOM is no longer used**: When you use custom response types or HTML in your dialog, you can apply CSS styles that are defined in your web page to the assistant's response. To override any default styling in the web chat, you must specify the `!important` modifier in your CSS.
