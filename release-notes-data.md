@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-12-31"
+  years: 2015, 2025
+lastupdated: "2025-01-03"
 
 subcollection: watson-assistant
 
@@ -73,7 +73,7 @@ Use custom service integration to search information
 : You can now use a custom service integration to create your own search capability in your assistant that uses conversational search for enhanced AI responses. For more information, see [Custom service integration](/docs/watson-assistant?topic=watson-assistant-search-customsearch-add).
 
 Tune the generated response length in conversational search
-: When you use conversational search in your watsonx Assistant, you can now define the length of the generated responses that your watsonx Assistant gives to better fit your needs. For more information, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search).
+: When you use conversational search in your assistant, you can now define the length of the generated responses that your assistant gives to better fit your needs. For more information, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search).
 
 
 ## Version 4.8.6 (28 August 2024)
@@ -88,7 +88,7 @@ Minor updates
 {: release-note}
 
 Updates 
-:  The autocorrection feature is now disabled for search integration in your watsonx Assistant. For more information, see [Auto correction](/docs/watson-assistant?topic=watson-assistant-autocorrection)
+:  The autocorrection feature is now disabled for search integration in your assistant. For more information, see [Auto correction](/docs/watson-assistant?topic=watson-assistant-autocorrection)
 
 ## Version 5.0.0 (19 June 2024)
 {: #assistant-data-jun192024}

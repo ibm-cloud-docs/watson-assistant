@@ -194,7 +194,7 @@ Enhancements to pre-message webhooks allow Watson Assistant to skip message proc
 Complete the following steps:
 
  - Include the `x-watson-assistant-webhook-returnheader` with any value in the HTTP response from your webhook.
- - Ensure that the webhook response contains a valid message response, which is formatted according to watsonX Assistant's requirements.
+ - Ensure that the webhook response contains a valid message response, which is formatted according to the {{site.data.keyword.conversationshort}} requirements.
 
 This feature enables the webhook to dynamically control the conversation flow, enabling immediate responses when needed.
 
@@ -395,7 +395,7 @@ You can add a post-message webhook to translate the message's response back into
 ## Example 3
 {: #webhook-pre-example3}
 
-This example shows you how to compose a webhook response to let watsonx Assistant to skip processing the message and directly return the webhook's response.
+This example shows you how to compose a webhook response to let {{site.data.keyword.conversationshort}} to skip processing the message and directly return the webhook's response.
 
 ### Webhook Configuration
 In the pre-message webhook configuration page, specify the following values:

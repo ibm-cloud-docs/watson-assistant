@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2024-06-23"
+  years: 2019, 2025
+lastupdated: "2025-01-03"
 
 subcollection: watson-assistant
 
@@ -37,7 +37,7 @@ You can configure the style and appearance of your web chat widget by doing the 
 
 1.  Toggle the **IBM Watermark** switch to `enable` or `disable` the `Built with IBM Watson` watermark in the web chat widget.
 
-    The watermark cannot be disabled if you are on the Lite plan of watsonx Assistant.
+    The watermark cannot be disabled if you are on the Lite plan of {{site.data.keyword.conversationshort}}.
     {: note}
 
 1.	Click **Add an avatar image** to add an image, or **Change avatar image** to change an existing image. Specify the URL for a publicly accessible hosted image, such as a company logo or assistant avatar. The image must be between `64×64` and `100×100` pixels in size.
