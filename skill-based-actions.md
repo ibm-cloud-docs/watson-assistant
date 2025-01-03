@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-12-27"
+  years: 2025
+lastupdated: "2025-01-03"
 
 subcollection: watson-assistant
 
@@ -15,34 +15,34 @@ subcollection: watson-assistant
 
 Skill-based actions, also known as conversational skill actions, allow assistants to connect and start tasks from third party applications and services. The assistant then can report the status of the task and interact with the user to complete the given task. For more information about skills, see [Overview of apps and skills](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=studio-overview-apps-skills) in the watsonx Orchestrate documentation.
 
-Skill-based actions require a provider that connects to watsonx Assistant and provides access to the external application's or service's features. In watsonx Orchestrate, you can find [Pre-built skills and apps](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=reference-prebuilt-apps-skills) that allow you to access the functionalities of many services, but you can't register your own application to use it as a skill provider.
+Skill-based actions require a provider that connects to {{site.data.keyword.conversationshort}} and provides access to the external application's or service's features. In watsonx Orchestrate, you can find [Pre-built skills and apps](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=reference-prebuilt-apps-skills) that allow you to access the functionalities of many services, but you can't register your own application to use it as a skill provider.
 
-In watsonx Assistant, you can use your own application as a skill-based action provider and use them to enhance the user's experience with your assistant, providing access to functions that it would not be able to do otherwise.
+In {{site.data.keyword.conversationshort}}, you can use your own application as a skill-based action provider and use them to enhance the user's experience with your assistant, providing access to functions that it would not be able to do otherwise.
 
 ## Before you begin
 
 To create your own skill-based actions you must first complete the following requirements:
 
 1. [Implement an API that complies with the API specifications for skill-based action providers](#implementing-api).
-1. [Register a skill-based action provider in watsonx Assistant](#registering-provider).
+1. [Register a skill-based action provider in {{site.data.keyword.conversationshort}}](#registering-provider).
 
 ### Implementing the API for the skill-based action provider
 {: #implementing-api}
 
 For more information about the API specifications for skill providers, see [Conversational Skills: Masterdoc for API Endpoints to Implement by the Pro-Code Conversational Skill Client](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/conversational-skills/procode-endpoints.md).
 
-You can also use Java SDK for conversational skills. For more information, see [Conversational Skills: Java-based conversational skill for watsonx Assistant](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/conversational-skills/procode-skill-sdk-java).
+You can also use Java SDK for conversational skills. For more information, see [Conversational Skills: Java-based conversational skill for {{site.data.keyword.conversationshort}}](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/conversational-skills/procode-skill-sdk-java).
 
 ### Registering a skill-based action provider
 {: #registering-provider}
 
-After you create the endpoints, you must register your skill-based action provider in watsonx Assistant. For more information about how to accomplish that, see [Register a Conversational Skill Provider](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/conversational-skills#register-a-conversational-skill-provider).
+After you create the endpoints, you must register your skill-based action provider in {{site.data.keyword.conversationshort}}. For more information about how to accomplish that, see [Register a Conversational Skill Provider](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/conversational-skills#register-a-conversational-skill-provider).
 
 If you need more examples of authentication in different schemas, see [Create a conversational skill provider](https://cloud.ibm.com/apidocs/assistant-v2?code=node#createprovider).
 
 ## Creating skill-based actions
 
-There are two methods to create a skill-based action in watsonx Assistant. You can create them by using the API or by using the watsonx Assistant's user interface. Choose the option that is most suitable to your needs.
+There are two methods to create a skill-based action in {{site.data.keyword.conversationshort}}. You can create them by using the API or by using the {{site.data.keyword.conversationshort}} user interface. Choose the option that is most suitable to your needs.
 
 ### Creating skill-based actions by using the API
 
@@ -50,11 +50,11 @@ To create a skill-based action by using the API, you must first create an OpenAP
 
 You can use any OAS editor or the **watsonx Orchestrate OpenAPI Builder** to complete this task. For more information, see [Building OpenAPI specifications for skills](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=skills-building-openapi-specifications) in the watsonx Orchestrate documentation.
 
-After that, you can import the skill by using the [Import skills](https://cloud.ibm.com/apidocs/assistant-v2?code=node#importskills) endpoint in the watsonx Assistant's API. When that's done, you can then use the skill in your assistant.
+After that, you can import the skill by using the [Import skills](https://cloud.ibm.com/apidocs/assistant-v2?code=node#importskills) endpoint in the {{site.data.keyword.conversationshort}} API. When that's done, you can then use the skill in your assistant.
 
 ### Creating skills by using the UI
 
-You can also use the watsonx Assistant's UI to create the skill-based action.
+You can also use the {{site.data.keyword.conversationshort}} UI to create the skill-based action.
 
 To create a skill based action from the UI, your skill provider's API must implement the [list conversational skills](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/conversational-skills/procode-endpoints.md#list-conversational-skills) endpoint.
 {: important}
@@ -64,7 +64,7 @@ Actions from skills don't support getting input values from other actions or map
 
 To create a skill-based action, complete the following steps:
 
-1. In watsonx Assistant, go to **Actions** > **New action** > **Skill-based action**. 
+1. In {{site.data.keyword.conversationshort}}, go to **Actions** > **New action** > **Skill-based action**. 
 
 1. In the **Build an action from a skill** page, click the skill to which you want to link the action to, making the skill the foundation to your action. 
 

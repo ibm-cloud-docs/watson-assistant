@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-01-01"
+lastupdated: "2025-01-03"
 
 subcollection: watson-assistant
 
@@ -38,12 +38,12 @@ data: {"model_id":"ibm/granite-13b-chat-v2","created_at":"2024-07-01T21:49:29.73
 data: {"model_id":"ibm/granite-13b-chat-v2","created_at":"2024-07-01T21:49:29.767Z","results":[{"generated_text":"w skill","generated_token_count":12,"input_token_count":0,"stop_reason":"not_finished"}]}
 ```
 
-Specify `text` as the JSON Path in watsonx Assistant to indicate where the text or token is extracted from each SSE. In the previous example, `results[0].generated_text` is the path from where the text is extracted, resulting in: `to learn new`.
+Specify `text` as the JSON Path in {{site.data.keyword.conversationshort}} to indicate where the text or token is extracted from each SSE. In the previous example, `results[0].generated_text` is the path from where the text is extracted, resulting in: `to learn new`.
 
 ## Running the stream
 {: #running-the-stream}
 
-When the custom extension is called, watsonx Assistant attempts a call to stream text from the specified **Operation**. The next step runs only after the stream is completed successfully or whether an error occurs before the streaming starts. If the stream completes successfully, the streamed text is stored in the `.body` property of the result variable.
+When the custom extension is called, {{site.data.keyword.conversationshort}} attempts a call to stream text from the specified **Operation**. The next step runs only after the stream is completed successfully or whether an error occurs before the streaming starts. If the stream completes successfully, the streamed text is stored in the `.body` property of the result variable.
 
 You can access properties from the last event in the stream by referencing the `.last_event` property. For example, use `${step_596_result_1.last_event.citations}` to retrieve specific data.
 {: note}

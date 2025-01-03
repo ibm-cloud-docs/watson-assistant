@@ -186,7 +186,7 @@ version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions
 
 - **Accent colors for home screen**: You can now apply accent colors instead of the default background colors on the web chat home screen. You can also control the gradient that is displayed on the default home screen background. To change the background color on the web chat home screen, go to **Integrations** > **Web chat** > **Home screen** in your assistant.
 
-- **Updates to `restartConversation()` method**: You can now use the `restartConversation()` method to delete the watsonx Assistant session from the server in addition to deleting the watsonx Assistant session from the client.
+- **Updates to `restartConversation()` method**: You can now use the `restartConversation()` method to delete the {{site.data.keyword.conversationshort}} session from the server in addition to deleting the {{site.data.keyword.conversationshort}} session from the client.
  
 - **New `sessionExpired` event**: Your assistant now triggers a new `sessionExpired` event before the assistant session expires. For more information, see [sessionExpired event](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#sessionExpired){: external}.
 
@@ -220,7 +220,7 @@ version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions
   
   For more information, see [Web chat theme configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#theme-config){: external}.
 
-- **Updated message API version**: Web chat now uses the `2023-06-15` version of the watsonx Assistant API. The previous version was `2021-09-08`. For more information about changes in behavior for watsonx Assistant with the new API version, see [Release notes for watsonx Assistant](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes) .
+- **Updated message API version**: Web chat now uses the `2023-06-15` version of the {{site.data.keyword.conversationshort}} API. The previous version was `2021-09-08`. For more information about changes in behavior for {{site.data.keyword.conversationshort}} with the new API version, see [Release notes for {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes) .
   
 - **New CSP requirements**: You must use the new CSP requirements for web chat. For more information, see [Web chat architecture security](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture#web-chat-architecture-security).
 
@@ -272,8 +272,8 @@ version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions
 *Release date: 13 November 2023*
 
 - **Added a built-in PDF viewer**: A built-in viewer for PDF files can be used for search results from watsonx Discovery that contains links to the PDF documents. The document links must support CORS (Cross-origin resource sharing) to open in web chat.
-- **Enhanced routing configuration for the Salesforce integration**: The `additional_routing_info` data passed from your assistant to web chat now has `button_id` and `button_overrides` properties that can further control how web chat routes the user to an agent. The `button_ids` property is deprecated, and `button_overrides` is used instead. And all properties in the `additional_routing_info` objects are optional. If the value for a property is not included, web chat defaults to the value in live agent settings from the watsonx Assistant web chat configuration. For more information, see [Routing information](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-salesforce){: external}.
-- **Modified the destroySession method**: The [destroySession](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#destroySession){: external} instance method was enhanced to delete the session from the watsonx Assistant servers and remove session information from the browser memory when called.
+- **Enhanced routing configuration for the Salesforce integration**: The `additional_routing_info` data passed from your assistant to web chat now has `button_id` and `button_overrides` properties that can further control how web chat routes the user to an agent. The `button_ids` property is deprecated, and `button_overrides` is used instead. And all properties in the `additional_routing_info` objects are optional. If the value for a property is not included, web chat defaults to the value in live agent settings from the {{site.data.keyword.conversationshort}} web chat configuration. For more information, see [Routing information](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-salesforce){: external}.
+- **Modified the destroySession method**: The [destroySession](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#destroySession){: external} instance method was enhanced to delete the session from the {{site.data.keyword.conversationshort}} servers and remove session information from the browser memory when called.
 
 ## 7.7.1
 {: #7.7.1}

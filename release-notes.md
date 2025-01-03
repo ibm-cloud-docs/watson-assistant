@@ -171,8 +171,7 @@ Replace OpenAPI document for custom extension
 {: release-note}
 
 Information gathering is now generally available
-: The watsonx.ai information gathering capability in your watsonx Assistant is now generally available.
-For more information, see [Information gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering).
+: The watsonx.ai information gathering capability in {{site.data.keyword.conversationshort}} is now generally available. For more information, see [Information gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering).
 
 ## 30 July 2024
 {: #watson-assistant-jul302024}
@@ -189,7 +188,7 @@ New option to define the response length in conversational search
 {: release-note}
 
 New supported languages for information gathering
-: The watsonx.ai information gathering capability in watsonx Assistant now supports French, German, Spanish, Brazilian Portuguese, and Japanese. For more information, see [Information Gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering) and [Global settings for actions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings).
+: The watsonx.ai information gathering capability in {{site.data.keyword.conversationshort}} now supports French, German, Spanish, Brazilian Portuguese, and Japanese. For more information, see [Information Gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering) and [Global settings for actions](/docs/watson-assistant?topic=watson-assistant-actions-global-settings).
 
 ## 23 July 2024
 {: #watson-assistant-jul232024}

@@ -53,7 +53,7 @@ For more information on roles and permissions, see [Slack-Getting started](https
 There are four steps to setting up Slack:
 
 -   Set up your Slack bot
--   Connect watsonx Assistant to Slack
+-   Connect {{site.data.keyword.conversationshort}} to Slack
 -   Configure your Slack bot
 -   Connect your assistant
 
