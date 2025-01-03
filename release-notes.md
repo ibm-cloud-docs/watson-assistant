@@ -56,7 +56,7 @@ Evaluate assistant
 {: release-note}
 
 Skill output display
-:   You can now choose to hide or display the skill output that is stored as an assistant variable. For more information, see [Passing values to a subaction](/docs/watson-assistant?topic=watson-assistant-step-what-next#passing-values-to-a-subaction).
+:   You can now choose to hide or display the skill output that is stored as an assistant variable. For more information, see [Passing values to a subaction](/docs/watson-assistant?topic=watson-assistant-step-what-next#step-what-next-pass-value-to-subaction).
 
 ## 21 October 2024
 {: #watson-assistant-oct212024}
@@ -70,7 +70,7 @@ New table response type
 {: release-note}
 
 Passing values to skill-based actions
-:  {{site.data.keyword.conversationshort}} now supports passing values to skill-based actions in the conversation flow. External [skill providers](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/conversational-skills#conversational-skills-registering-a-pro-code-conversational-skill-provider){: external} must implement the new endpoint for skill-based actions to use this feature. For more information, see [Passing values to a subaction](/docs/watson-assistant?topic=watson-assistant-step-what-next#passing-values-to-a-subaction).
+:  {{site.data.keyword.conversationshort}} now supports passing values to skill-based actions in the conversation flow. External [skill providers](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/conversational-skills#conversational-skills-registering-a-pro-code-conversational-skill-provider){: external} must implement the new endpoint for skill-based actions to use this feature. For more information, see [Passing values to a subaction](/docs/watson-assistant?topic=watson-assistant-step-what-next#step-what-next-pass-value-to-subaction).
 
 Inspector supports conversational search
 :  You can now debug conversational search issues using the **Inspector**. For more information, see [Debugging failures for Conversational search or skill based actions](/docs/watson-assistant?topic=watson-assistant-call-extension#debug-conversational-search).
@@ -320,7 +320,7 @@ OpenAPI document file size limit for integrating custom extension
 :   When you integrate a custom extension by using REST API, the maximum file size of the OpenAPI document that you can import is limited to `4 MB` if you have a *Plus* or *Enterprise* plan of {{site.data.keyword.conversationshort}}. However, if you have an Enterprise plan with data isolation, the maximum file size of the document is limited to `8 MB`. For more information, see [Preparing the API definition](/docs/watson-assistant?topic=watson-assistant-build-custom-extension#build-custom-extension-openapi-file).
 
 Edit variable values directly in debug mode
-:   You can now edit the variable value directly in the debug mode by clicking on the values. For more information, [Editing the variable values](/docs/watson-assistant?topic=watson-assistant-review#editing-the-variable-values).
+:   You can now edit the variable value directly in the debug mode by clicking on the values. For more information, [Editing the variable values](/docs/watson-assistant?topic=watson-assistant-review#edit-variable-values).
 
 Expand the debug mode panel for better visibility
 :   You can now expand the debug mode panel by clicking the **Expand** icon for better visibility of the long variable values. For more information, see [Variable values in Preview](/docs/watson-assistant?topic=watson-assistant-review#preview-variable-values).
@@ -2170,7 +2170,7 @@ New API version
 {: release-note}
 
 The web chat integration was updated
-:   The update adds an `isTrackingEnabled` parameter. You can add this parameter and set it to `false` to add the `X-Watson-Learning-Opt-Out` header to each `/message` request that originates from the web chat. For more information about the header, see [Data collection](/apidocs/assistant-v2?code=node#data-collection){: external}. For more information about the parameter, see [API Configuration](https://integrations.us-south.assistant.watson.cloud.ibm.com/web/developer-documentation/api-configuration){: external}.
+:   The update adds an `isTrackingEnabled` parameter. You can add this parameter and set it to `false` to add the `X-Watson-Learning-Opt-Out` header to each `/message` request that originates from the web chat. For more information about the header, see [Data collection](/apidocs/assistant-v2?code=node#data-collection){: external}.
 
 ## 26 March 2020
 {: #watson-assistant-mar262020}
