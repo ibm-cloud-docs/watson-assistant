@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2024-12-24"
+  years: 2019, 2025
+lastupdated: "2025-01-03"
 
 subcollection: watson-assistant
 
@@ -26,10 +26,6 @@ You can use a webhook to do the following types of things:
 - Interact with an external web service to get information. For example, you might check on the expected arrival time for a flight from an air traffic service or get a forecast from a weather service.
 - Send requests to an external application, such as a restaurant reservation site, to complete a simple transaction on the user's behalf.
 - Trigger an SMS notification.
-- Trigger an {{site.data.keyword.openwhisk}} web action.
-
-You cannot use a webhook to call a {{site.data.keyword.openwhisk_short}} action that uses token-based Identity and Access Management (IAM) authentication. However, you can make a call to a secured {{site.data.keyword.openwhisk_short}} web action. For more information, see [Calling an {{site.data.keyword.openwhisk}} web action](#dialog-webhooks-cf-web-action).
-{: important}
 
 For information about how to call a client application, see [Requesting client actions](/docs/watson-assistant?topic=watson-assistant-dialog-actions-client).
 
@@ -198,66 +194,6 @@ The *Parameters* section and the **Return variable** field are removed from the 
 The *Multiple conditioned responses* section is editable again. You can choose to switch off the feature. If you do so, then only the first conditional response is saved as the node's only text response.
 
 To change the external service that you call from dialog nodes, edit the webhook details defined on the Webhooks page of the **Options** tab. If the new service expects different parameters to be passed to it, be sure to update any dialog nodes that call it.
-
-## Calling an {{site.data.keyword.openwhisk}} web action
-{: #dialog-webhooks-cf-web-action}
-
-Typically, web actions can be run without requiring the caller to authenticate first. However, you can secure a web action that requires any callers to pass an ID with the request. For more information about how to secure a web action, see [Securing web actions](https://github.com/apache/openwhisk/blob/master/docs/webactions.md#securing-web-actions){: external}.
-
-Use the following tips when you call a {{site.data.keyword.openwhisk_short}} web action from your dialog. 
-
-1. In the dialog, click **Webhooks**.
-
-1. In the **URL** field, add the URL for the external application to which you want to send HTTP POST request callouts.
-
-    For example, to call a {{site.data.keyword.openwhisk_short}} web action, specify the URL for the public web action. For example:
-
-    ```bash
-    https://us-south.functions.cloud.ibm.com/api/v1/web/my_org_dev/default/Hello%20World.json
-    ```
-    {: codeblock}
-
-    If the external application that you call returns a response, it must be able to send back a response in JSON format.
-
-    Notice the request URL in this example ends in `.json`. By specifying this extension, you take advantage of a feature of web actions where you can specify the content type of the response. Specifying this extension type ensures that, if the web actions can return responses in more than one format, a JSON response is returned. For more information, see [Content extensions](https://github.com/apache/openwhisk/blob/master/docs/webactions.md#content-extensions){: external}.
-    {: tip}
-
-1. If the web action is secured, specify any headers, such as `X-Require-Whisk-Auth`, that are required to call the web action.
-
-   | Header name | Header value | 
-   | --- | --- | 
-   | `X-Require-Whisk-Auth` | `{my-secret}` | 
-   {: caption="Header example" caption-side="bottom"}
-
-1. Click to open the dialog node, and then click **Customize**.
-
-1. Scroll down to the webhook section. Set the **Call out to webhooks / actions** switch to **On**.
-
-1. Select **Call a webhook**, and then click **Apply**.
-
-1. Add any data that you want to pass to the external application as key and value pairs in the *Parameters* section.
-
-    For example, if you call the Hello World {{site.data.keyword.openwhisk_short}} web action, you might want to add the following information to pass in the message parameter that is accepted by that application:
-    
-    | Key | Value | 
-    | --- | --- | 
-    | message "hello" | 
-    {: caption="Parameter example" caption-side="bottom"}
-
-    When you call a {{site.data.keyword.openwhisk_short}} web action, you cannot pass parameters with the same key as parameters that are defined as part of the web action. See [Protected parameters](https://github.com/apache/openwhisk/blob/master/docs/webactions.md#protected-parameters){: external} for more details.
-    {: note}
-
-1. You can edit the dialog node response to include only the section of the response that you want to display to users.
-
-   The Hello World {{site.data.keyword.openwhisk_short}} web action includes a message name and value pair in its response, along with other information. To show only the content of the message, you can use `<return-variable>.message` syntax to extract the message section only from the response object.
-
-   | Condition | Response |
-   | --- | --- | 
-   | $webhook_result_1 | The application returned "$webhook_result_1.message". | 
-   | anything_else | The call to the external application failed. Please try again later. | 
-   {: caption="Parameter example" caption-side="bottom"}
-
-1. When you are done, click the X to close the node. Your changes are automatically saved.
 
 ## Updating output.generic with a webhook
 {: #dialog-webhooks-outputgeneric}
