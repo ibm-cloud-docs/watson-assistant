@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-12-27"
+  years: 2015, 2025
+lastupdated: "2025-01-03"
 
 subcollection: watson-assistant
 
@@ -31,7 +31,7 @@ subcollection: watson-assistant
 ## Home page
 {: #getting-started-home-page}
 
-The **Home page** of watsonx Assistant provides you a complete overview of your assistant, settings, and configuration. In addition, you can quickly navigate to the following useful links from the **Home page**:
+The **Home page** of {{site.data.keyword.conversationshort}} provides you a complete overview of your assistant, settings, and configuration. In addition, you can quickly navigate to the following useful links from the **Home page**:
 
 - [Build actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview)
 - [Customize your greeting](/docs/watson-assistant?topic=watson-assistant-start-conversation)

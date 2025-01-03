@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-01"
+lastupdated: "2025-01-03"
 
 keywords: conversational search
 
@@ -109,7 +109,7 @@ You can choose from three response lengths: concise, moderate, and verbose. This
 | `Verbose` | Responses provide more detailed and comprehensive information that is suitable for complex queries or when a thorough explanation is needed. |
 {: caption= "Response lengths" caption-side="bottom"}
 
-The response-length feature affects the average length of responses that watsonx Assistant generates. Although it aims to match the specified length, actual responses vary because of the complexity of user input and the inherent limitations of the large language model (LLM).{: note}
+The response-length feature affects the average length of responses that {{site.data.keyword.conversationshort}} generates. Although it aims to match the specified length, actual responses vary because of the complexity of user input and the inherent limitations of the large language model (LLM).{: note}
 
 ## Configuring your assistant to use the conversational search
 {: #configuring-assistant-use-conversational-search}
