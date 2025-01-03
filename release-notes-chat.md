@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-12-30"
+  years: 2015, 2025
+lastupdated: "2025-01-03"
 
 subcollection: watson-assistant
 
@@ -590,7 +590,7 @@ For more information about the journeys beta feature, see [Guiding customers wit
 
 - **Home screen**: Web chat home screen updated with a more modern look. For more information, see [Configuring the home screen](/docs/watson-assistant?topic=watson-assistant-web-chat-configure-home-screen).
 
-- **Agent events**: New events are fired when using a service desk integration and interacting with a live agent. If you use a custom service desk integration based on the [starter kit](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}, you can use these events to create a pre-chat form before the agent escalation occurs, to create a post-chat form after the agent conversation ends, or to specify what happens if an agent is not available (e.g., create a ticket submission form). For more information, see [Agent events summary](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#summary){: external}.
+- **Agent events**: New events are fired when using a service desk integration and interacting with a live agent. If you use a custom service desk integration based on the [starter kit](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter){: external}, you can use these events to create a pre-chat form before the agent escalation occurs, to create a post-chat form after the agent conversation ends, or to specify what happens if an agent is not available (for example, create a ticket submission form). For more information, see [Agent events summary](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#summary){: external}.
 
 - **Markdown support**: The web chat now fully supports common Markdown formatting in messages received from an assistant. You might need to review existing assistant output that contains strings that might be recognized as Markdown. (For example, a line of text that begins with a greater-than (`>`) character is interpreted as a block quote.)
 
@@ -634,7 +634,7 @@ For more information about the journeys beta feature, see [Guiding customers wit
 
 *Release date: 28 October 2021*
 
-- **Custom Panels**: The web chat now supports customizable panels that you can use to display any custom HTML content (e.g., a feedback form or a multistep process). Your code can use instance methods to dynamically populate a custom panel, and open and close it. For more information, see [Custom Panels](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#custompanels){: external}.
+- **Custom Panels**: The web chat now supports customizable panels that you can use to display any custom HTML content (for example, a feedback form or a multistep process). Your code can use instance methods to dynamically populate a custom panel, and open and close it. For more information, see [Custom Panels](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#custompanels){: external}.
 
 ## 5.0.2
 {: #5.0.2}

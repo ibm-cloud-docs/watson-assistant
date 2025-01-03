@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2024-12-27"
+  years: 2019, 2025
+lastupdated: "2025-01-03"
 
 keywords: pre webhook, prewebhook, pre-webhook
 
@@ -98,7 +98,7 @@ To add the webhook details, complete the following steps.
 
     It is the responsibility of the external service to check for and verify the secret. If the external service does not require a token, specify any string that you want. You cannot leave this field empty.
 
-    If you want to see the secret as you enter it, click the **Show password** icon ![View icon](../../icons/view.svg) before you start typing. After you save the secret, asteriks replace the string, and you can't view it again.
+    If you want to see the secret as you enter it, click the **Show password** icon ![View icon](../../icons/view.svg) before you start typing. After you save the secret, asterisks replace the string, and you can't view it again.
     {: note}
 
     For more information about how this field is used, see [Webhook security](#webhook-pre-security).
@@ -116,7 +116,7 @@ To add the webhook details, complete the following steps.
 
     The service automatically sends an `Authorization` header with a JWT; you do not need to add one. If you want to handle authorization yourself, add your own authorization header and the service uses it instead.
 
-    After you save the header value, asteriks replace the string, and you can't view it again.
+    After you save the header value, asterisks replace the string, and you can't view it again.
     {: note}
 
 Webhook details save automatically.

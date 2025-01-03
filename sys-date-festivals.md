@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-26"
+  years: 2015, 2025
+lastupdated: "2025-01-03"
 
 subcollection: watson-assistant
 
@@ -529,7 +529,7 @@ The following sections list the holidays that [`@sys-date`](/docs/watson-assista
 | January 3 Bank Holiday | `january3bankholiday` |
 | Coming of Age Day | `comingofageday` |
 | National Foundation Day | `nationalfoundationday` |
-| easter sunday | `easter` |
+| Easter Sunday | `easter` |
 | Saint Valentines Day | `valentinesday` |
 | Dolls' Festival/Girls' Festival | `dollsfestival` |
 | Spring Equinox | `springequinox` |

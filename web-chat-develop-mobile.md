@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-10-26"
+  years: 2019, 2025
+lastupdated: "2025-01-03"
 
 subcollection: watson-assistant
 
@@ -38,7 +38,7 @@ The following example shows an embed script that includes these configuration op
       window.watsonAssistantChatOptions = {
         // A UUID like '1d7e34d5-3952-4b86-90eb-7c7232b9b540' included in the embed code.
         integrationID: "YOUR_INTEGRATION_ID",
-        // Your assistants region e.g. 'us-south', 'us-east', 'jp-tok' 'au-syd', 'eu-gb', 'eu-de', etc.
+        // Your assistant's region, for example, 'us-south', 'us-east', 'jp-tok' 'au-syd', 'eu-gb', 'eu-de', and so on.
         region: "YOUR_REGION",
         // A UUID like '6435434b-b3e1-4f70-8eff-7149d43d938b' included in the embed code.
         serviceInstanceID: "YOUR_SERVICE_INSTANCE_ID",
@@ -71,4 +71,3 @@ With a JavaScript bridge, events are sent between the mobile app and the WebView
 If your mobile application needs to call a web chat instance method, you must call the method by sending an event from the app to the WebView using the JavaScript bridge. Similarly, if you need to run code in your mobile application in response to behavior in the web chat, you can send an event through the JavaScript bridge from the web chat to your mobile application.
 
 You can make use of the `user_defined` response type and the `customResponse` event to drive behavior on your mobile application. However, you must strip the `event.data.element` property from the event before you pass it through the JavaScript bridge. Removing this property is necessary because it contains an HTML element, which cannot be stringified. Any use of the `user_defined` response type to write new views into the web chat must be written in HTML and JavaScript and handled inside the WebView. (For more information about the `customResponse` event, see the [Web chat API reference](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#customresponse){: external}.)
-

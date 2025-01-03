@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-07-31"
+  years: 2015, 2025
+lastupdated: "2025-01-03"
 
 subcollection: watson-assistant
 
@@ -26,6 +26,7 @@ When integrated, depending on the events that you configure the assistant to sup
 An example and instructions on how to create a Slackbot using {{site.data.keyword.conversationshort}}, Slack, and Db2 are given in the solution tutorial, [Build a database-driven Slackbot](/docs/solution-tutorials?topic=solution-tutorials-slack-chatbot-database-watson).
 
 ## Before you begin
+{: #deploy-slack-before}
 
 To integrate Slack with your assistant, you must have a Slack app and the necessary roles and permissions:
 
@@ -47,6 +48,7 @@ For more information on roles and permissions, see [Slack-Getting started](https
 1.  Then, click **Add** again.
 
 ### Get started
+{: #deploy-slack-get-started}
 
 There are four steps to setting up Slack:
 
@@ -56,10 +58,12 @@ There are four steps to setting up Slack:
 -   Connect your assistant
 
 ### Set up your Slack bot
+{: #deploy-slack-set-up}
 
 1.  Go to the [Your Apps](https://api.slack.com/apps){: external} page on the Slack website, and then click the app you want to use or create a new one.
 
-### Connect watsonx Assistant to Slack
+### Connect {{site.data.keyword.conversationshort}} to Slack
+{: #deploy-slack-connect}
 
 1.  On the **Slack app settings** page, go to the **Basic Information** tab and scroll down to the **App Credentials** section.
 
@@ -67,7 +71,7 @@ There are four steps to setting up Slack:
 
 1.  On the **Slack app settings** page, go to **Features** > **OAuth & Permissions** and scroll down to the **Bot Token Scopes** section.
 
-1.  Click **Add an OAuth Scope** and select the follwing scopes:
+1.  Click **Add an OAuth Scope** and select the following scopes:
 
     - `app_mentions:read`
     - `chat:write`
@@ -84,6 +88,7 @@ There are four steps to setting up Slack:
 1.  Click **Next** to continue.
 
 ### Configure your Slack bot
+{: #deploy-slack-configure}
 
 1.  Copy the **Generated request URL**.
 
@@ -108,6 +113,7 @@ There are four steps to setting up Slack:
 1.  On the **Assistant setup** page, click **Next**.
 
 ### Connect your assistant
+{: #deploy-slack-connect-assistsnt}
 
 1.  On the **Slack app settings** page, go to **Features** > **AppHome** and click **Edit** next to **App Display Name**.
 
