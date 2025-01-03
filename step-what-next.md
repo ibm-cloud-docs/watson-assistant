@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-12-03"
+  years: 2018, 2025
+lastupdated: "2025-01-03"
 
 subcollection: watson-assistant
 
@@ -77,6 +77,7 @@ To call a subaction:
 1. Click **Apply**.
 
 ### Passing values to a subaction
+{: #step-what-next-pass-value-to-subaction}
 
 Optionally, you can pass values to the subaction so the customer does not need to specify them again. For example, if your order-placement action collects the customer's name, you can then pass that information to the account-creation subaction. The step in the subaction that asks for the customer's name is skipped, and the value that is already specified is used instead.
 
