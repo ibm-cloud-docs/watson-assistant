@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-12-20"
+  years: 2015, 2025
+lastupdated: "2025-01-06"
 
 keywords: mark as irrelevant, counterexample, data source, deployment ID, log retention
 
@@ -16,6 +16,8 @@ subcollection: watson-assistant
 {: #logs}
 
 ## Classic experience only
+{: #logs-classic}
+
 This information applies to dialog skill analytics in the classic experience. For information about analytics in {{site.data.keyword.conversationshort}}, see [Use analytics to review your entire assistant at a glance](/docs/watson-assistant?topic=watson-assistant-analytics-overview). 
 {: attention}
 
