@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-03"
+lastupdated: "2025-01-06"
 
 subcollection: watson-assistant
 
@@ -26,6 +26,12 @@ For information about new features and improvements to the core {{site.data.keyw
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you
 can set a version of your web chat. For more information, see [Controlling the web chat
 version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 8.5.2
+{: #8.5.2}
+*Release date: 6 January 2025*
+
+- Bug fixes.
 
 ## 8.5.1
 {: #8.5.1}
@@ -925,6 +931,6 @@ For more information, see [Instance methods](https://web-chat.global.assistant.w
 
 *Release date: 20 March 2020*
 
-- **Customize the CSS theme**: For more information, see [Theming](https://integrations.us-south.assistant.watson.cloud.ibm.com/web/developer-documentation/api-instance-methods#theming){: new_window}.
+- **Customize the CSS theme**: For more information, see [Theme configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#theme-config){: external}.
 
-- **Shadow DOM is no longer used**: When you use custom response types or HTML in your dialog, you can apply CSS styles that are defined in your web page to the assistant's response. To override any default styling in the web chat, you must specify the `!important` modifier in your CSS. For more information, see [Rendering response types](https://integrations.us-south.assistant.watson.cloud.ibm.com/web/developer-documentation/api-render#html){: new_window}.
+- **Shadow DOM is no longer used**: When you use custom response types or HTML in your dialog, you can apply CSS styles that are defined in your web page to the assistant's response. To override any default styling in the web chat, you must specify the `!important` modifier in your CSS.

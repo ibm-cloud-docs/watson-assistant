@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-03"
+  years: 2015, 2025
+lastupdated: "2025-01-06"
 
 subcollection: watson-assistant
 
@@ -15,6 +15,8 @@ subcollection: watson-assistant
 {: #logs-overview}
 
 ## Classic experience only
+{: #logs-overview-classic}
+
 This information applies to dialog skill analytics in the classic experience. For information about analytics in {{site.data.keyword.conversationshort}}, see [Use analytics to review your entire assistant at a glance](/docs/watson-assistant?topic=watson-assistant-analytics-overview). 
 {: attention}
 
@@ -119,4 +121,3 @@ You can also view the intents and entities that were recognized most often durin
 - *Top entities* are also shown in a list. You can select an entity to open the **User conversations** page with the date range that is filtered to match the data you are viewing, and the entity that is filtered to match the selected entity.
 
 See [Improve your skill](/docs/watson-assistant?topic=watson-assistant-logs) for tips on how to edit intents and entities based on discoveries you make by reviewing the intents and entities that your assistant recognizes.
-
