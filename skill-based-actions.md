@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-01-03"
+lastupdated: "2025-01-07"
 
 subcollection: watson-assistant
 
@@ -20,6 +20,7 @@ Skill-based actions require a provider that connects to {{site.data.keyword.conv
 In {{site.data.keyword.conversationshort}}, you can use your own application as a skill-based action provider and use them to enhance the user's experience with your assistant, providing access to functions that it would not be able to do otherwise.
 
 ## Before you begin
+{: #skill-based-actions-before-you-begin}
 
 To create your own skill-based actions you must first complete the following requirements:
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-08-15"
+  years: 2021, 2025
+lastupdated: "2025-01-07"
 
 subcollection: watson-assistant
 
@@ -20,6 +20,7 @@ subcollection: watson-assistant
 You can use the phone integration to help your customers over the phone and transfer them to live agents inside of Twilio Flex. If, in the course of a conversation with your assistant, a customer asks to speak to a person, you can transfer the conversation directly to a Twilio Flex agent.
 
 ## Before you begin
+{: #deploy-phone-flex-before-you-begin}
 
 To use this integration pattern, you need:
 

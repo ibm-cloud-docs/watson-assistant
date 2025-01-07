@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-12-23"
+  years: 2015, 2025
+lastupdated: "2025-01-07"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,7 @@ You can integrate your assistant with an Intercom application to enable the app 
 If you integrate the assistant with Intercom, the Intercom application becomes the client-facing application for your skill. All interactions with users are initiated through and managed by Intercom.
 
 ## Before you begin
+{: #deploy-intercom-before-you-begin}
 
 To integrate your assistant with Intercom, contact your administrator for support.
 
