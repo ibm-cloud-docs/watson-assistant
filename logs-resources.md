@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-06"
+lastupdated: "2025-01-07"
 
 subcollection: watson-assistant
 
@@ -108,7 +108,7 @@ The [{{site.data.keyword.conversationshort}} Continuous Improvement Best Practic
 ## Using the logs API
 {: #logs-resources-api}
 
-You can use the `/logs` API to list events from the transcripts of conversations that occurred between your users and your assistant. For conversations created with the v2 `/message` API, use the instance-level endpoint to [list log events in all workspaces](https://{DomainName}/assistant/assistant-v1#listalllogs){: external}, and then filter by Assistant ID. For more information, see [Filter query reference](/docs/watson-assistant?topic=watson-assistant-filter-reference).
+You can use the `/logs` API to list events from the transcripts of conversations that occurred between your users and your assistant. For conversations created with the v2 `/message` API, use the instance-level endpoint to [list log events in all workspaces](/apidocs/assistant-v1#listalllogs){: external}, and then filter by Assistant ID. For more information, see [Filter query reference](/docs/watson-assistant?topic=watson-assistant-filter-reference).
 
 The API logs messages that are exchanged in conversations that are defined by a dialog skill only.
 {: important}

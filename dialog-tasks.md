@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-24"
+  years: 2015, 2025
+lastupdated: "2025-01-07"
 
 keywords: dialog node limits, copying a node, moving a node, adding a folder
 
@@ -238,7 +238,7 @@ To see the number of dialog nodes in a dialog skill, do one of the following thi
    ```
    {: pre}
 
-   where {url} is the appropriate URL for your instance. For more information, see [Service endpoint](https://{DomainName}/assistant/assistant-v1#service-endpoint){: external}.
+   where {url} is the appropriate URL for your instance. For more information, see [Service endpoint](/apidocs/assistant-v1#service-endpoint){: external}.
 
    In the response, the `total` attribute in the `pagination` object contains the number of dialog nodes.
 

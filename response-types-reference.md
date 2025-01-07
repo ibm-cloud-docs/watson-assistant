@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-02"
+lastupdated: "2025-01-07"
 
 subcollection: watson-assistant
 
@@ -868,7 +868,7 @@ Use to show a set of options (such as buttons or a drop-down list) that users ca
 | options       | list   | A list of key-value pairs that specify options from which a user can choose. | Y |
 | options[].label | string | The user-facing label for the option. | Y     |
 | options[].value | object | An object that defines the response that is sent to the {{site.data.keyword.conversationshort}} service if the user selects the option. | Y |
-| options[].value.input | object | An object that includes the message input corresponding to the option, including input text and any other field that is a valid part of a {{site.data.keyword.conversationshort}} message. For more information, see the [API Reference](https://{DomainName}/assistant/assistant-v2?curl=#message){: external}. | N |
+| options[].value.input | object | An object that includes the message input corresponding to the option, including input text and any other field that is a valid part of a {{site.data.keyword.conversationshort}} message. For more information, see the [API Reference](/apidocs/assistant-v2?curl=#message){: external}. | N |
 
 ### Example
 {: #response-types-json-option-example}

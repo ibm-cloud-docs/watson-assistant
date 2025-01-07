@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-10-24"
+  years: 2021, 2025
+lastupdated: "2025-01-07"
 keywords: export, import
 subcollection: watson-assistant
 
@@ -120,7 +120,7 @@ If the {{site.data.keyword.conversationshort}} service changes between the time 
     The imported JSON file must use UTF-8 encoding, without byte order mark (BOM) encoding. The JSON file cannot contain tabs, newlines, or carriage returns.
     {: important}
 
-    The maximum size for a skill JSON file is 10MB. If you need to import a larger skill, consider using the REST API. For more information, see the [API Reference](https://{DomainName}/assistant/assistant-v1#createworkspace){: external}.
+    The maximum size for a skill JSON file is 10MB. If you need to import a larger skill, consider using the REST API. For more information, see the [API Reference](/apidocs/assistant-v1#createworkspace){: external}.
     {: tip}
 
 1.  Specify the details for the skill:
@@ -134,7 +134,7 @@ After you create the skill, it appears as a tile on the Skills page.
 ## Retaining logs
 {: #backup-retain-logs}
 
-If you want to store logs of conversations, you can use the `/logs` API to export your log data. See [API reference](https://{DomainName}/assistant/assistant-v1#listlogs){: external} for details.
+If you want to store logs of conversations, you can use the `/logs` API to export your log data. See [API reference](/apidocs/assistant-v1#listlogs){: external} for details.
 
 Your service plan determines how long logs are available.
 
