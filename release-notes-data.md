@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-03"
+lastupdated: "2025-01-07"
 
 subcollection: watson-assistant
 
@@ -364,7 +364,7 @@ For more information, see [Algorithm version and training](/docs/watson-assistan
 :   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.6.2 is compatible with {{site.data.keyword.icp4dfull}} Version 4.6. See the [support matrix](/docs/watson-assistant?topic=watson-assistant-install-data#install-support-matrix) for more details. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes various fixes and features.
 
 New {{site.data.keyword.assistant_classic_short}} v2 APIs
-:   {{site.data.keyword.assistant_classic_short}} now provides new methods related to assistants, skills, environments, and releases. For details, see the [{{site.data.keyword.assistant_classic_short}} v2 API documentation](https://{DomainName}/assistant/assistant-v2){: external}.
+:   {{site.data.keyword.assistant_classic_short}} now provides new methods related to assistants, skills, environments, and releases. For details, see the [{{site.data.keyword.assistant_classic_short}} v2 API documentation](/apidocs/assistant-v2){: external}.
 
 ## 30 November 2022
 {: #assistant-data-nov302022}
@@ -637,7 +637,7 @@ Backup automation
 :   Support was added for doing data backups on a schedule.
 
 Stateless v2 message API
-:   The v2 runtime API now supports a new stateless `message` method. For more information, see the [API Reference](https://{DomainName}/assistant/assistant-data-v2#message-stateless)}.
+:   The v2 runtime API now supports a new stateless `message` method. For more information, see the [API Reference](/apidocs/assistant-data-v2#message-stateless)}.
 
 Architecture improvements
 :   The Skill-conversation microservice was removed. The microservice used to convert v2 API calls to v1 format and the other way around. The conversion is now done within the Store microservice. Reimplementing this function in the Store increased the overall speed with which v2 API requests are processed. The Spellchecker and CLU Embedding microservices were added. The word embeddings that are used by the language understanding pipeline (training, TAS, ED-MM) now are stored in the CLU Embedding microservice instead of MongoDB.

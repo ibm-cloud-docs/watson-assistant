@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-12-27"
+  years: 2015, 2025
+lastupdated: "2025-01-07"
 
 keywords: Watson Assistant frequently asked questions
 
@@ -116,7 +116,7 @@ To edit a dialog, you must have Writer service access to the service instance an
 {: #faqs-export-conversation}
 {: faq}
 
-You cannot directly export conversations from the conversation page. However, you can use the `/logs` API to list events from the transcripts of conversations that occurred between your users and your assistant. For more information, see the [V2 API reference](https://{DomainName}/assistant/assistant-v2#listlogs){: external}. Or, you can use a Python script to export logs. For more information, see [export_logs_py](https://github.com/watson-developer-cloud/community/blob/master/watson-assistant/export_logs_py.py){: external}.
+You cannot directly export conversations from the conversation page. However, you can use the `/logs` API to list events from the transcripts of conversations that occurred between your users and your assistant. For more information, see the [V2 API reference](/apidocs/assistant-v2#listlogs){: external}. Or, you can use a Python script to export logs. For more information, see [export_logs_py](https://github.com/watson-developer-cloud/community/blob/master/watson-assistant/export_logs_py.py){: external}.
 
 ## Can I export and import dialog nodes?
 {: #faqs-nodes}

@@ -1009,7 +1009,7 @@ New API methods
 
     - **Releases**: Retrieve information about the releases (versions) that have been published for an assistant, and assign an available release to an environment.
 
-For more information, see the v2 [API Reference](https://{DomainName}/assistant/assistant-v2){: external}.
+For more information, see the v2 [API Reference](/apidocs/assistant-v2){: external}.
 
 ## 5 August 2022
 {: #watson-assistant-aug052022}
@@ -1975,7 +1975,7 @@ Give the web chat integration a try!
 {: release-note}
 
 v2 Logs API is available
-:   If you have a Premium plan, you can use the v2 API `logs` method to list log events for an assistant. For more information, see the [API reference](https://{DomainName}/assistant/assistant-v2#listlogs){: external} documentation.
+:   If you have a Premium plan, you can use the v2 API `logs` method to list log events for an assistant. For more information, see the [API reference](/apidocs/assistant-v2#listlogs){: external} documentation.
 
 ## 5 August 2020
 {: #watson-assistant-aug052020}
@@ -2100,7 +2100,7 @@ System entity deprecation
 {: release-note}
 
 Stateless v2 message API
-:   The v2 runtime API now supports a new stateless `message` method. If you have a client application that manages its own state, you can use this new method to take advantage of [many of the benefits](https://medium.com/ibm-watson/the-new-watson-assistant-v2-stateless-api-unlock-enterprise-features-today-2c02a4bbdef5){: external} of the v2 API without the overhead of creating sessions. For more information, see the [API Reference](https://{DomainName}/assistant/assistant-v2#message-stateless){: external}.
+:   The v2 runtime API now supports a new stateless `message` method. If you have a client application that manages its own state, you can use this new method to take advantage of [many of the benefits](https://medium.com/ibm-watson/the-new-watson-assistant-v2-stateless-api-unlock-enterprise-features-today-2c02a4bbdef5){: external} of the v2 API without the overhead of creating sessions. For more information, see the [API Reference](/apidocs/assistant-v2#message-stateless){: external}.
 
 ## 30 April 2020
 {: #watson-assistant-apr302020}
@@ -2357,7 +2357,7 @@ Full support for IBM Cloud IAM
 
         The previous public endpoint domain was `watsonplatform.net`.
 
-        For more information, see the [API reference](https://{DomainName}/assistant/assistant-v2#service-endpoint){: external}.
+        For more information, see the [API reference](/apidocs/assistant-v2#service-endpoint){: external}.
 
         These URLs do not introduce a breaking change. The new URLs work both for your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year (until December 2020).
 
@@ -2698,7 +2698,7 @@ Determine the number of dialog nodes
         ```
         {: codeblock}
 
-        where {service-hostname} is the appropriate URL for your instance. For more details, see [Service endpoint](https://{DomainName}/assistant/assistant-v1#service-endpoint){: external}.
+        where {service-hostname} is the appropriate URL for your instance. For more details, see [Service endpoint](/apidocs/assistant-v1#service-endpoint){: external}.
 
         In the response, the `total` attribute in the `pagination` object contains the number of dialog nodes.
 
@@ -2887,7 +2887,7 @@ New API authentication process
 
     For all new and existing service instances in other regions, you continue to use service credentials (`{username}:{password}`) for authentication.
 
-    When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication](https://{DomainName}/assistant/assistant-v2#authentication){: external} in the API reference.
+    When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication](/apidocs/assistant-v2#authentication){: external} in the API reference.
 
     If you are not sure which type of authentication to use, view the {{site.data.keyword.assistant_classic_short}} credentials by clicking the service instance from the Services section of the [{{site.data.keyword.Bluemix_notm}} Resource List](){: external}.
 
@@ -2941,7 +2941,7 @@ Introducing {{site.data.keyword.assistant_classic_full}}
 :   {{site.data.keyword.ibmwatson}} Conversation has been renamed. It is now called {{site.data.keyword.assistant_classic_full}}. The name change reflects the fact that {{site.data.keyword.assistant_classic_short}} is expanding to provide prebuilt content and tools that help you more easily share the virtual assistants you build. Read [Introducing Watson Assistant, an evolution of Watson Conversation and Virtual Agent](https://medium.com/ibm-watson/introducing-watson-assistant-7e7dcf2d5042){: external} for details.
 
 New REST APIs and SDKs are available for {{site.data.keyword.assistant_classic_short}}
-:   The new APIs are functionally identical to the existing Conversation APIs, which continue to be supported. For more information about the {{site.data.keyword.assistant_classic_short}} APIs, see the [API Reference](https://{DomainName}/assistant/assistant-v1){: external}.
+:   The new APIs are functionally identical to the existing Conversation APIs, which continue to be supported. For more information about the {{site.data.keyword.assistant_classic_short}} APIs, see the [API Reference](/apidocs/assistant-v1){: external}.
 
 Dialog enhancements
 :   The following features were added to the dialog tool:
@@ -2976,7 +2976,7 @@ Dialog node tracing
 New API version
 :   The current API version is now `2018-02-16`. This version introduces the following changes:
 
-    - A new `include_audit` parameter is now supported on most GET requests. This is an optional boolean parameter that specifies whether the response should include the audit properties (`created` and `updated` timestamps). The default value is `false`. (If you are using an API version earlier than `2018-02-16`, the default value is `true`.) For more information, see the [API Reference](https://{DomainName}/assistant/assistant-v1){: external}.
+    - A new `include_audit` parameter is now supported on most GET requests. This is an optional boolean parameter that specifies whether the response should include the audit properties (`created` and `updated` timestamps). The default value is `false`. (If you are using an API version earlier than `2018-02-16`, the default value is `true`.) For more information, see the [API Reference](/apidocs/assistant-v1){: external}.
 
     - Responses from API calls using the new version include only properties with non-`null` values.
 
@@ -2997,9 +2997,9 @@ Dutch system entities (Beta)
 {: release-note}
 
 REST API now supports new request parameters
-:   - Use the `append` parameter when updating a workspace to indicate whether the new workspace data should be added to the existing data, rather than replacing it. For more information, see [Update workspace](https://{DomainName}/assistant/assistant-v1?curl=#update-workspace){: external}.
+:   - Use the `append` parameter when updating a workspace to indicate whether the new workspace data should be added to the existing data, rather than replacing it. For more information, see [Update workspace](/apidocs/assistant-v1?curl=#update-workspace){: external}.
 
-   - Use the `nodes_visited_details` parameter when sending a message to indicate whether the response should include additional diagnostic information about the nodes that were visited during processing of the message. For more information, see [Send message](https://{DomainName}/assistant/assistant-v1?curl=#message){: external}.
+   - Use the `nodes_visited_details` parameter when sending a message to indicate whether the response should include additional diagnostic information about the nodes that were visited during processing of the message. For more information, see [Send message](/apidocs/assistant-v1?curl=#message){: external}.
 
 ## 23 January 2018
 {: #watson-assistant-jan232018}
@@ -3163,7 +3163,7 @@ Accent normalization
     **Note:** Accent normalization is enabled for Portuguese, Spanish, French, and Czech.
 
 Workspace opt-out flag
-:   The REST API now supports an opt-out flag for workspaces. This flag indicates that workspace training data such as intents and entities are not to be used by IBM for general service improvements. For more information, see the [API Reference](https://{DomainName}/assistant/assistant-v1?curl=#data-collection){: external}
+:   The REST API now supports an opt-out flag for workspaces. This flag indicates that workspace training data such as intents and entities are not to be used by IBM for general service improvements. For more information, see the [API Reference](/apidocs/assistant-v1?curl=#data-collection){: external}
 
 ## 7 August 2017
 {: #watson-assistant-aug072017}
@@ -3197,7 +3197,7 @@ Updates
 {: release-note}
 
 REST API now supports access to dialog nodes
-:   The REST API now supports access to dialog nodes. For more information, see the [API Reference](https://{DomainName}/assistant/assistant-v1?curl=#listdialognodes){: external}.
+:   The REST API now supports access to dialog nodes. For more information, see the [API Reference](/apidocs/assistant-v1?curl=#listdialognodes){: external}.
 
 ## 14 July 2017
 {: #watson-assistant-jul142017}
@@ -3318,7 +3318,7 @@ Reduced training time
 New API version
 :   The current API version is now `2017-05-26`. This version introduces the following changes:
 
-    - The schema of ErrorResponse objects has changed. This change affects all endpoints and methods. For more information, see the [API Reference](https://{DomainName}/assistant){: external}.
+    - The schema of ErrorResponse objects has changed. This change affects all endpoints and methods. For more information, see the [API Reference](/apidocs){: external}.
     - The internal schema used to represent dialog nodes in exported workspace JSON has changed. If you use the `2017-05-26` API to import a workspace that was exported using an earlier version, some dialog nodes might not import correctly. For best results, always import a workspace using the same version that was used to export it.
 
 ## 25 May 2017
@@ -3370,7 +3370,7 @@ Updates
         - entity value synonyms
         - logs
 
-        For more information, see the [API Reference](https://{DomainName}/assistant/assistant-v1){: external}.
+        For more information, see the [API Reference](/apidocs/assistant-v1){: external}.
 
     - The behavior of the /messages `POST` method has changed the handling of entities and intents specified as part of the message input:
         - If you specify intents on input, your assistant uses the intents you specify, but uses natural language processing to detect entities in the user input.
@@ -3394,7 +3394,7 @@ REST API updates
     - examples
     - counterexamples
 
-    For more information, see the [API Reference](https://{DomainName}/assistant/assistant-v1){: external}.
+    For more information, see the [API Reference](/apidocs/assistant-v1){: external}.
 
 ## 7 March 2017
 {: #watson-assistant-mar072017}

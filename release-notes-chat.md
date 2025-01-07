@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-06"
+lastupdated: "2025-01-07"
 
 subcollection: watson-assistant
 
@@ -849,7 +849,7 @@ For more information, see [Instance methods](https://web-chat.global.assistant.w
 
 - **Choose when a link to support is included in suggestions**: The Suggestions beta feature has moved to its own tab. You can enable suggestions even if your web chat is not set up to connect to a service desk solution. You can control if and when the option to connect to customer support is available from the suggestions list.
 
-- **Search result format change**: To support the ability to show more than 3 search results in a response, the search skill response type format changed. If you are using `pre:receive` or `receive` handlers to process search results, you might need to update your code. The `results` property was replaced by the `primary_results` and `additional_results` properties. For more information about the search skill response type format, see the [API reference](https://{DomainName}/assistant/assistant-v2#message){: external}.
+- **Search result format change**: To support the ability to show more than 3 search results in a response, the search skill response type format changed. If you are using `pre:receive` or `receive` handlers to process search results, you might need to update your code. The `results` property was replaced by the `primary_results` and `additional_results` properties. For more information about the search skill response type format, see the [API reference](/apidocs/assistant-v2#message){: external}.
 
 - **Language pack key change**: Due to improvements that were made to allow you to specify separate chat transfer messages for situations where agents are available and unavailable, the [language source file](https://github.com/watson-developer-cloud/assistant-web-chat/tree/main/languages) was updated. The `agent_chatDescription` was renamed to `default_agent_availableMessage` and another key (`default_agent_unavailableMessage`) was added. If you defined a custom string for the `agent_chatDescription` key, you must modify your code to reflect this change.
 
@@ -924,7 +924,7 @@ For more information, see [Instance methods](https://web-chat.global.assistant.w
 
 *Release date: 2 April 2020*
 
-- **Introduced the `learningOptOut` parameter**: You can add the `learningOptOut` parameter and set it to `true` to add the `X-Watson-Learning-Opt-Out` header to each `/message` request that originates from the Web Chat. For more information about the header, see [Data collection](https://{DomainName}/assistant/assistant-v2#data-collection){: external}. For more information, see [Configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration){: external}.
+- **Introduced the `learningOptOut` parameter**: You can add the `learningOptOut` parameter and set it to `true` to add the `X-Watson-Learning-Opt-Out` header to each `/message` request that originates from the Web Chat. For more information about the header, see [Data collection](/apidocs/assistant-v2#data-collection){: external}. For more information, see [Configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration){: external}.
 
 ## 1.4.0
 {: #1.4.0}
