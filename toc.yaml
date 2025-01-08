@@ -358,7 +358,7 @@ toc:
               href: https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration
       - link:
           label: REST API reference
-          href: /apidocs/assistant-v2
+          href: https://cloud.ibm.com/apidocs/assistant-v2
       - filter-reference.md
       - topicgroup:
           label: System entities
