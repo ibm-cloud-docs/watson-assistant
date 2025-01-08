@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-07"
+lastupdated: "2025-01-08"
 
 subcollection: watson-assistant
 
@@ -531,14 +531,14 @@ Disambiguation feature updates
 {: release-note}
 
 {{site.data.keyword.assistant_classic_full}} Cartridge for {{site.data.keyword.icp4dfull}} 4.0.5 is available
-:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.0.5 is compatible with {{site.data.keyword.icp4dfull}} 4.0 on Red Hat OpenShift 4.8. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes various fixes. {{site.dassistant_classic_shortrsationshort}} for {{site.data.keyword.icp4dfull}} 4.0.5 is compatible with FIPS-enabled clusters.
+:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.0.5 is compatible with {{site.data.keyword.icp4dfull}} 4.0 on Red Hat OpenShift 4.8. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes various fixes. {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.0.5 is compatible with FIPS-enabled clusters.
 
 ## 20 December 2021
 {: #assistant-data-dec202021}
 {: release-note}
 
 {{site.data.keyword.assistant_classic_full}} Cartridge for {{site.data.keyword.icp4dfull}} 4.0.4 is available
-:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.0.4 is compatible with {{site.data.keyword.icp4dfull}} 4.0 on Red Hat OpenShift 4.8. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes critical security fixes. {{site.dassistant_classic_shortrsationshort}} for {{site.data.keyword.icp4dfull}} 4.0.4 is not compatible with FIPS-enabled clusters. The upcoming release of {{assistant_classic_short.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.0.5 will be compatible with FIPS-enabled clusters.
+:   {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.0.4 is compatible with {{site.data.keyword.icp4dfull}} 4.0 on Red Hat OpenShift 4.8. This release of {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} includes critical security fixes. {{site.data.keyword.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.0.4 is not compatible with FIPS-enabled clusters. The upcoming release of {{assistant_classic_short.assistant_classic_short}} for {{site.data.keyword.icp4dfull}} 4.0.5 will be compatible with FIPS-enabled clusters.
 
 ## 4 October 2021
 {: #assistant-data-oct042021}

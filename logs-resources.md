@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-07"
+lastupdated: "2025-01-08"
 
 subcollection: watson-assistant
 
@@ -130,7 +130,7 @@ First, review the definitions of terms that are associated with {{site.data.keyw
 | Conversation ID |  Unique identifier that is added to individual message calls to link related message exchanges together. App developers that use the V1 version of the {{site.data.keyword.assistant_classic_short}} API add this value to the message calls in a conversation by including the ID in the metadata of the context object. |
 | Customer ID |  A unique ID that can be used to label customer data such that it can be deleted if the customer requests the removal of their data. |
 | Deployment ID |  A unique label that app developers of the {{site.data.keyword.assistant_classic_short}} API V1 version pass with each user message to help identify the deployment environment that produced the message. |
-| Instance |  Your deployment of {{site.data.keyword.assistant_classic_short}}, accessible with unique credentials. A {{site.data.keassistant_classic_shortnshort}} instance might contain multiple assistants. |
+| Instance |  Your deployment of {{site.data.keyword.assistant_classic_short}}, accessible with unique credentials. A {{site.data.keyword.assistant_classic_short}} instance might contain multiple assistants. |
 | Message |  A message is a single utterance that a user sends to the assistant. |
 | Skill ID |  The unique identifier of a skill. |
 | User |  A user is anyone who interacts with your assistant. |

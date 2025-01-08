@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-10-24"
+  years: 2015, 2025
+lastupdated: "2025-01-08"
 
 subcollection: watson-assistant
 
@@ -122,7 +122,7 @@ The microservices use the following resources:
 
 - **MinIO**: MinIO is an object storage service that implements the Amazon S3 API. It is used by the language understanding pipeline microservices (NLU, Master, TAS, ED-MM, and the training pods) to store and load trained models for intent and entity classification. Data is stored in the `nlclassifier-icp` bucket. In {{site.data.keyword.assistant_classic_short}}, MinIO is often referred to as `COS`, which stands for Cloud Object Storage. For more information, see [MinIO](#architecture-minio).
 
-#### Architecture changes
+### Architecture changes
 {: #architecture-changes}
 
 - **1.5.0**: The following changes to the architecture occurred with this release:
