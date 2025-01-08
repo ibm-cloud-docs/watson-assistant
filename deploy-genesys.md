@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-08-22"
+  years: 2021, 2025
+lastupdated: "2025-01-08"
 
 subcollection: watson-assistant
 
@@ -79,7 +79,7 @@ To embed web chat inside Genesys and give your live agents access to the convers
 
 1. Set the **Grant Type** to **Token Implicit Grant**.
 
-1. Add https://web-chat.global.assistant.watson.appdomain.cloud/serviceDesks/genesysAgentApp.html?clientID=YOUR_CLIENT_ID&environment=YOUR_ENVIRONMENT as a redirect URL.
+1. Add `https://web-chat.global.assistant.watson.appdomain.cloud/serviceDesks/genesysAgentApp.html?clientID=YOUR_CLIENT_ID&environment=YOUR_ENVIRONMENT` as a redirect URL.
 
 1. Replace **YOUR_CLIENT_ID** with the **OAuth client ID**, and **YOUR_ENVIRONMENT** with the Genesys **environment value** from the embed code. Note that the client ID is unavailable when creating the OAuth client; you need to first create the client, and then add the redirect URL to it.
 
@@ -88,13 +88,15 @@ To embed web chat inside Genesys and give your live agents access to the convers
 
 1. Go to the **Integrations** page in Genesys, click the **+Integrations** button, select your integration, and then click **Install**. 
 
-1. Set the **Application URL** to https://web-chat.global.assistant.watson.appdomain.cloud/serviceDesks/genesysAgentApp.html?clientID=YOUR_CLIENT_ID&environment=YOUR_ENVIRONMENT&conversationID={{pcConversationId}}
+1. Set the **Application URL** to `https://web-chat.global.assistant.watson.appdomain.cloud/serviceDesks/genesysAgentApp.html?clientID=YOUR_CLIENT_ID&environment=YOUR_ENVIRONMENT&conversationID={{pcConversationId}}`.
 
 1. Replace **YOUR_CLIENT_ID** with the **OAuth client ID**, and **YOUR_ENVIRONMENT** with the Genesys **environment value** from the embed code. 
+
    The **conversationID={{pcConversationId}}** value is correct as is, and Genesys will replace **{{pcConversationId}}** with the current conversation ID when a live agent opens the widget.
    {: note}
 
 1. Assign the integration to the queue that your agents use and to a group that agents belong to. 
+   
    The widget will be available to all queues if you don't assign one; and the integration widget will be unavailable to agents if you don't assign a group.
    {: note}
 
@@ -102,5 +104,3 @@ To embed web chat inside Genesys and give your live agents access to the convers
 {: #deploy-genesys-authenticate}
 
 To configure your integration to allow only authenticated users to use Genesys Messenger, see [Authenticated users](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-genesys#authenticated-users){: external}.
-
-

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-02-16"
+  years: 2015, 2025
+lastupdated: "2025-01-08"
 
 subcollection: watson-assistant
 
@@ -996,10 +996,10 @@ The `Array.transform()` method is used with the [`session_history` variable](/do
 
 | Particulars | OpenAI | Google PaLM2 | Llama2 |
 |------|-------|-------|-----|
-| **Signature** | ```transform(String rolePrefix, String userPrefix, String assistantPrefix, optional Boolean currentAction=false)``` | ```transform(String rolePrefix, String userPrefix, String assistantPrefix, optional Boolean currentAction=false)``` | ```transform(optional String systemPrompt, optional Boolean currentAction=false)``` |
-| **Customer message format** | ```{$rolePrefix: $userPrefix, "content": $content}``` | ```{$rolePrefix: $userPrefix, "content": $content}``` | ```<s>[INST] <<SYS>>{{ $systemPrompt }} <</SYS>>{{ $user_content }} [/INST] {{ $assistant_content }} </s><s>[INST] {{ $user_content }} [/INST]``` | 
-| **Assistant message format** | ```{$rolePrefix: $assistantPrefix, "content": $content}``` | ```{$rolePrefix: $assistantPrefix, "content": $content}``` | NA |
-| **Example** | ```${system_session_history}.transform("role", "user", "assistant")``` | ```${system_session_history}.transform("author", "USER", "AI")``` | ```${system_session_history}.transform("<your system prompt>")``` |
+| **Signature** | `transform(String rolePrefix, String userPrefix, String assistantPrefix, optional Boolean currentAction=false)` | `transform(String rolePrefix, String userPrefix, String assistantPrefix, optional Boolean currentAction=false)` | `transform(optional String systemPrompt, optional Boolean currentAction=false)` |
+| **Customer message format** | `{$rolePrefix: $userPrefix, "content": $content}` | `{$rolePrefix: $userPrefix, "content": $content}` | `<s>[INST] <<SYS>>{{ $systemPrompt }} <</SYS>>{{ $user_content }} [/INST] {{ $assistant_content }} </s><s>[INST] {{ $user_content }} [/INST]` | 
+| **Assistant message format** | `{$rolePrefix: $assistantPrefix, "content": $content}` | `{$rolePrefix: $assistantPrefix, "content": $content}` | NA |
+| **Example** | `${system_session_history}.transform("role", "user", "assistant")` | `${system_session_history}.transform("author", "USER", "AI")` | `${system_session_history}.transform("<your system prompt>")` |
 {: caption="Table: Signatures for chat formats" caption-side="bottom"}
 
 If `currentAction` is true:
@@ -1012,4 +1012,3 @@ If `currentAction` is true:
 {: caption="If currentAction is true" caption-side="bottom"}
 
 The `n : true` flags are not included in the output of transform.
-
