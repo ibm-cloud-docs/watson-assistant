@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-01-07"
+lastupdated: "2025-01-08"
 
 keywords: billing, data centers, MAU, monthly active users, service plans
 
@@ -84,8 +84,8 @@ In some older SDK versions, the `user_id` property is not supported as a top-lev
 
 For more information about the `user_id` property, see the API reference documentation:
   
-- [v2 stateless `/message`](/apidocs-v2/assistant-v2#messagestateless){: external}
-- [v2 stateful `/message`](/apidocs-v2/assistant-v2#message){: external}
+- [v2 stateless `/message`](/apidocs/assistant-v2#messagestateless){: external}
+- [v2 stateful `/message`](/apidocs/assistant-v2#message){: external}
 
 ### If the user ID is not specified
 {: #admin-managing-plan-no-userid}

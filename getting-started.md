@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-03"
+lastupdated: "2025-01-08"
 
 subcollection: watson-assistant
 
@@ -59,7 +59,7 @@ The following series of blog articles provide a tutorial to help you get started
 - [Part I: The build guide](https://www.ibm.com/products/tutorials/getting-started-with-the-new-watson-assistant-part-i-the-build-guide){: external}
 - [Part II: Refine your assistant](https://www.ibm.com/products/tutorials/getting-started-with-the-new-watson-assistant-part-ii-refine-your-assistant){: external}
 - [Part III: Test and deploy](https://www.ibm.com/products/tutorials/getting-started-with-the-new-watson-assistant-part-iii-test-and-deploy){: external}
-- [Part IV: preview, draft, publish, live](https://www.ibm.com/products/tutorials/getting-started-with-the-new-watson-assistant-part-iv-preview-draft-publish-live}
+- [Part IV: preview, draft, publish, live](https://www.ibm.com/products/tutorials/getting-started-with-the-new-watson-assistant-part-iv-preview-draft-publish-live){: external}
 
 Some more starting points in the documentation to also help you get started:
 - [About {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-about)
