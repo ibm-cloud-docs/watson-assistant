@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-12-27"
+  years: 2020, 2025
+lastupdated: "2025-01-09"
 
 subcollection: watson-assistant
 
@@ -155,22 +155,19 @@ If you already created a SIP trunk, follow steps in [Configure a SIP Trunk](#con
 #### Create a SIP trunk
 {: #create-sip-trunk}
 
-1.  Login to your Twilio account and go to **Explore Products**.
+1.  Log in to your Twilio console and go to the **Elastic SIP Trunking** section.
 
-    **Note**: If you do not see *Explore Products* on the sidebar, do the following:
+    **Note**: If you do not see *Elastic SIP Trunking*, do the following:
     1. Search for 'Elastic SIP Trunking' in the **Search Bar**.
     1. Click **Elastic SIP Trunking Dashboard**.
-    1. Go to step 3.{: note}
 
-1.  Click **Elastic SIP Trunking** dashboard.
+1.  In the left navigation menu, go to **Overview** and click **Get Started**.
 
-1.  On the *Elastic SIP Trunking Dashboard* page, click **Get Started**.
+1.  Click **Create New Trunk** in the *Trunks* navigation bar.
 
-1.  Click **Create a SIP Trunk** button to open *Create A New SIP Trunk* dialog box.
+1.  Enter a name for your SIP trunk in the **FRIENDLY NAME** field. 
 
-1.  Enter a name for your SIP trunk in the **FRIENDLY NAME** field.
-
-1.  Click **Create** button.
+1.  Click **Create** button. A **Trunk SID** is assigned once you create a new trunk.
 
 For configuration of a SIP trunk, follow steps in [Configure a SIP Trunk](#config-sip-trunk).
 
@@ -181,15 +178,15 @@ To configure a SIP trunk do the following:
 
 1.  From the *Elastic SIP Trunking Dashboard* page, go to **Elastic SIP Trunking**.
 
-1.  Click **Manage**.
+1.  Click **Manage** in the left navigation menu.
 
 1.  Click **Trunks** and select the SIP trunk that you created.
 
-1.  Click **Origination** from the navigation bar of your SIP trunk.
+1.  Click **Origination** to configure its settings.
 
-1.  To add the origination SIP URI, click the **Add new Origination URI** button and provide the values for the following fields:
+1.  To add the origination SIP URI, click the **Add new Origination URI** button and provide values for the following fields:
 
-      - **Origination SIP URI** - You can get the SIP URI for your phone integration from the assistant's phone integration configuration page. To do this in assistant, launch the tooling and *Create Assistant*. Choose **Add integration** and select **Phone**. From your assistant, copy the **SIP URI** and paste it in **Origination SIP URI** field of Twilio.
+      - **Origination SIP URI** - You can get the SIP URI for your phone integration on the {{site.data.keyword.conversationshort}}'s phone integration configuration page. To do this in {{site.data.keyword.conversationshort}}, launch the tooling and *Create Assistant*. Choose **Add integration** and select **Phone**. From your assistant, copy the **SIP URI** and paste it in **Origination SIP URI** field of Twilio.
       - **Priority** - Priority ranks the importance of the URI. A lower number represents the highest importance.
       - **Weight** - Weight is used to determine the share of load when more than one URI has the same priority. The higher the value, the more load a URI is given.
       - **Enabled** - You need to switch the *Enabled* toggle to `Yes`. This means that origination SIP URI is enabled.
