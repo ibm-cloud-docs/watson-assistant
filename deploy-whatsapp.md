@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-01-02"
+lastupdated: "2025-01-09"
 
 subcollection: watson-assistant
 
@@ -33,7 +33,7 @@ For more information, see the [difference in roles for Twilio](https://help.twil
 1.  From the **Develop** tab, click **Phone numbers**.
 1.  Follow the instructions to get a phone number.
 
-    When you get a Twilio phone number, it supports voice, SMS, and MMS automatically. Your new phone number is listed as an active number.
+    When you get a Twilio phone number, it supports voice, SMS, and MMS automatically. Your new phone number is listed as an active number. Consider provisioning more than one phone number and going through the process of getting permission for the numbers in parallel. If your number was used by a different business previously (because Twilio assigned you a number that was used before, for example), WhatsApp will reject it.
 
 Keep the Twilio web page open in a web browser tab so you can refer to it again later.
 {: tip}
@@ -41,27 +41,25 @@ Keep the Twilio web page open in a web browser tab so you can refer to it again 
 ## Ask WhatsApp for permission to enable your Twilio number for WhatsApp
 {: #deploy-whatsapp-prereqs}
 
-WhatsApp has a rigorous process that they use to review all businesses that want to interact with customers over their network. WhatsApp, which is owned by Facebook, requires that you register your business with the Facebook business directory.
+WhatsApp has a rigorous process to review all businesses that want to interact with customers over their network. WhatsApp, which is owned by Meta (formerly called Facebook), requires that you register your business with the Meta business directory.
 
-1.  To register, go to the [Facebook Business Manager](https://business.facebook.com/business/loginpage/){: external} website, and click **Create new account**. Follow the instructions to create an account.
+1.  To register, go to the [Meta Business Tools](https://business.facebook.com/business/loginpage/){: external} page, and click **Create new account**. Follow the instructions to create an account.
 
-1.  Get your Facebook Business Manager ID. In **Settings**, click the **Business info** tab. The Facebook Business Manager ID is at the top of the page.
+1.  Get your Meta Business Manager ID. In **Settings**, click the **Business info** tab. The Business Manager ID is at the top of the page.
 
-1.  Submit the *Request to enable your Twilio numbers for WhatsApp* form from the [Twilio API for WhatsApp](https://www.twilio.com/whatsapp/request-access){: external} web page.
+1.  Enable your Twilio numbers for WhatsApp using the [WhatsApp Tech Provider Program](https://www.twilio.com/en-us/whatsapp/tech-provider-program){: external} web page, which is the only officially supported path by Meta to onboard your customers to WhatsApp as of January 1, 2025. For more information, see [WhatsApp Tech Provider Program Overview](https://www.twilio.com/docs/whatsapp/tech-provider-program){: external}.
 
     Tips for specifying the following values:
 
-    - **Phone Number**: Specify the Twilio phone number that you created earlier.
-
-      Consider provisioning more than one phone number and going through the process of getting permission for the numbers in parallel. If your number was used by a different business previously (because Twilio assigned you a number that was used before, for example), WhatsApp will reject it.
-
-    - **Are you working with an ISV**: Select **No**. 
     - **Twilio Account SID**: From the Twilio site, click the home icon to go to your project dashboard to find the SID.
-    - **Facebook Business Manager ID**: Add the ID for the account that you created in the previous step.
+   
+    - **Meta Business Manager ID**: Add the ID for the account that you created in the previous step.
 
-1.  Click **Request Now**.
+    - **Do you offer self-service onboarding for your customers?**: Select **No**. By adopting the Tech Provider Program, your customers will onboard to WhatsApp using Meta's WhatsApp Embedded Signup product.
 
-Give WhatsApp time to evaluate and approve your request. It can take up to 7 days for your request to be approved.
+1.  Click **Submit**.
+
+Give WhatsApp time to evaluate and approve your submission. It can take up to 7 days for your request to be approved.
 
 ## Set up the integration
 {: #deploy-whatsapp-setup}
@@ -100,11 +98,11 @@ If a field required for authentication is changed, then all entries in related f
 ## Testing the integration
 {: #deploy-whatsapp-sandbox}
 
-While you wait for WhatsApp to approve your request, you can test the integration by using the Twilio sandbox. With the sandbox, you can send and receive preapproved template messages to numbers that join your sandbox, using a shared Twilio test number.
+While you wait for WhatsApp to approve your submission, you can test the integration by using the Twilio sandbox. With the sandbox, you can send and receive preapproved template messages to numbers that join your sandbox, using a shared, pre-provisioned Twilio test number.
 
 Do not use the Twilio sandbox in production. Sandbox sessions expire after 3 days.
 
-1.  To create a sandbox, go to the [Twilio Try WhatsApp](https://www.twilio.com/console/sms/whatsapp/learn){: external} web page. An *Activate your sandbox* prompt is displayed. Agree to have a sandbox created, and confirm your choice.
+1.  To create a sandbox, go to the [Twilio Console](https://www.twilio.com/console/sms/whatsapp/learn){: external} web page and log in with your Twilio credentials. An *Activate your sandbox* prompt is displayed. Agree to have a sandbox created, and confirm your choice.
 
 1.  Follow the instructions to create the sandbox.
 
@@ -116,10 +114,12 @@ Do not use the Twilio sandbox in production. Sandbox sessions expire after 3 day
 
 1.  You can test the integration by sending a message from WhatsApp to the shared phone number that is assigned to your Twilio sandbox.
 
+For complete and detailed information, see [Get started with the Twilio Sandbox for WhatsApp](https://www.twilio.com/console/sms/whatsapp/learn){: external}.
+
 ## Finish the product integration
 {: #deploy-whatsapp-finish}
 
-After WhatsApp grants permission for your Twilio phone number or number to access the WhatsApp network, update the integration to use your dedicated Twilio phone number instead of the sandbox number.
+After WhatsApp grants permission and access to the WhatsApp network, update the integration to use your dedicated Twilio phone number instead of the sandbox number.
 
 1.  From the *WhatsApp with Twilio* integration setup page, scroll to the **Webhook** section of the **Basic setup** tab. Copy the value from the **WhatsApp webhook** field.
 
