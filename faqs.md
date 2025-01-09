@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-07"
+lastupdated: "2025-01-09"
 
 keywords: Watson Assistant frequently asked questions
 
@@ -146,7 +146,7 @@ Regularly back up data to prevent problems that might arise from inadvertent del
 {: #faqs-downgrade-plan}
 {: faq}
 
-No, you cannot change from a Trial, Plus, or Standard plan to a Lite plan. And you cannot upgrade from a Trial to a Standard plan.
+No, you cannot change from an Enterprise or a Plus plan to a Lite plan. 
 
 ## How many Lite plan instances of {{site.data.keyword.conversationshort}} can I create?
 {: #faqs-lite-plans}
