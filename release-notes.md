@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-07"
+lastupdated: "2025-01-09"
 
 subcollection: watson-assistant
 
@@ -3318,7 +3318,7 @@ Reduced training time
 New API version
 :   The current API version is now `2017-05-26`. This version introduces the following changes:
 
-    - The schema of ErrorResponse objects has changed. This change affects all endpoints and methods. For more information, see the [API Reference](/apidocs){: external}.
+    - The schema of ErrorResponse objects has changed. This change affects all endpoints and methods. For more information, see the [API Reference](https://cloud.ibm.com/apidocs/assistant-v1#error-handling){: external}.
     - The internal schema used to represent dialog nodes in exported workspace JSON has changed. If you use the `2017-05-26` API to import a workspace that was exported using an earlier version, some dialog nodes might not import correctly. For best results, always import a workspace using the same version that was used to export it.
 
 ## 25 May 2017
