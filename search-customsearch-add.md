@@ -15,7 +15,7 @@ subcollection: watson-assistant
 
 [Plus]{: tag-green} [Enterprise]{: tag-purple}
 
-A Custom service integration searches for information by using a search capability that you create.  You can use a Custom service integration with the conversational search capabilities of your assistant to generate AI responses. This integration supports both server-side and client-side retrieval of information.
+A Custom service integration searches for information by using a search capability that you create. You can use a Custom service integration with the conversational search capabilities of your assistant to generate AI responses. This integration supports both server-side and client-side retrieval of information.
 
 You can have only one search integration per environment. When you change the existing search integration to other integration types such as {{site.data.keyword.discoveryfull}}, Elasticsearch or Milvus, the settings of the existing search integration are overwritten.
 {: important}
@@ -46,7 +46,7 @@ To select a Custom service as the search integration, use one of the following p
       ![Select Custom service](images/select-milvus.png){: caption="Select Custom service" caption-side="bottom"}
 
 
-Your assistant has limitations in passing the search parameters directly to your Custom service or retrieving the search results directly from it. Hence, your Custom service search integration must host an accessible web server that implements the search API interface provided by the assistant or a client that is configured to call your assistant to provide search results. For more information, see [Setting up retrieval systems for a Custom service](#setup-retrieval).
+Your assistant has limitations in passing the search parameters directly to your Custom service or retrieving the search results directly from it. Your Custom service search integration must host an accessible web server that implements the search API interface that is provided by the assistant or a client that is configured to call your assistant to provide search results. For more information, see [Setting up retrieval systems for a Custom service](#setup-retrieval).
 {: note}
 
 ## Setting up a Custom service with server credentials
@@ -54,16 +54,16 @@ Your assistant has limitations in passing the search parameters directly to your
       
 To set up Custom service on your assistant with server credentials, use the following procedure:
       
-1. In the **Connect your search provider** section of the **Custom service** window, select **By providing credentials**. By default, this option is selected.       
+1. In the **Connect your search provider** section of the **Custom service** window, select **By providing credentials**. By default, this option is selected.      
 1. Provide the following fields to enable your assistant to connect to your Custom service 	instance:
     - **URL**
     - **Choose an authentication type**
-        * if you select `Basic authentication`, you must provide **Username** and **Password**.
+        * if you select `Basic authentication`, you must provide a **Username** and a **Password**.
         * if you select `API key`, you must provide an **API key**.
         * if you select `None`, you cannot provide any other authentication details.
 1. Click **Next** to go to **Conversational search (optional)**.
 1. If you want to activate conversational search, switch the **Conversational Search** toggle to `on`. For more information about conversational search, see [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
-1. Filling **Default filter** and **Metadata** is optional. You can place the information in these fields for your server to perform search requests. The metadata must be a JSON object and the default filter can be a text string.  You can override the default filter in an action step or dialog node that starts the search. You cannot override the metadata through other options and the metadata you provide applies to all uses of this integration. For more information, see [filling default filter and metadata for server](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-custom-service/custom-search-server-setup-guide.md){: external}.
+1. Filling **Default filter** and **Metadata** is optional. You can place the information in these fields for your server to perform search requests. The metadata must be a JSON object and the default filter can be a text string. You can override the default filter in an action step or dialog node that starts the search. You cannot override the metadata through other options and the metadata you provide applies to all uses of this integration. For more information, see [filling default filter and metadata for server](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-custom-service/custom-search-server-setup-guide.md){: external}.
 
 1. Use the **No results found** and **Connectivity issue** tabs to customize different messages to share with users based on the success of the search.
 
@@ -86,7 +86,7 @@ To set up Custom service on your assistant through your client, use the followin
 1. In the **Connect your search provider** section of the **Custom service** window, select “Through your client”.
 1. Click **Next** to go to **Conversational search (optional)**.
 1. If you want to activate conversational search, switch the **Conversational Search** toggle to `on`. For more information about conversational search, see [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
-1. Filling **Default filter** and **Metadata** is optional. You can place the information in these fields for your server to perform search requests. The metadata must be a JSON object and the default filter can be a text string.  You can override the default filter in an action step or dialog node that starts the search. You cannot override the metadata through other options and the metadata you provide applies to all uses of this integration. For more information, see [filling default filter and metadata for client](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-custom-service/custom-search-client-setup-guide.md){: external}.
+1. Filling **Default filter** and **Metadata** is optional. You can place the information in these fields for your server to perform search requests. The metadata must be a JSON object and the default filter can be a text string. You can override the default filter in an action step or dialog node that starts the search. You cannot override the metadata through other options and the metadata you provide applies to all uses of this integration. For more information, see [filling default filter and metadata for client](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-custom-service/custom-search-client-setup-guide.md){: external}.
 1. Use the **No results found** and **Connectivity issue** tabs to customize different messages to share with users based on the success of the search.
 
      | Tab | Scenario | Example message |
@@ -100,13 +100,13 @@ To set up Custom service on your assistant through your client, use the followin
 ## Setting up Milvus for Custom service
 {: #setup-milvus-custom-service}
 
-Milvus is a vector database that you can use for handling large-scale datasets. For applications requiring real-time search capabilities and numerous concurrent users, you can use Milvus, which has a distributed architecture, high performance, and flexible data model.
+Milvus is a vector database that you can use for handling large-scale datasets. For applications that require real-time search capabilities and numerous concurrent users, you can use Milvus, which has a distributed architecture, high performance, and flexible data model.
 {: shortdesc}
 
-You can directly integrate with your watsonx.data Milvus for Conversational Search than using a custom service. For more information, see [Milvus search integration setup](/docs/watson-assistant?topic=watson-assistant-search-milvus-add).
+You can directly integrate with your watsonx.data Milvus for Conversational Search rather than using a custom service. For more information, see [Milvus search integration setup](/docs/watson-assistant?topic=watson-assistant-search-milvus-add).
 
 You need to use the Custom service search, to avail more advanced search capabilities with Milvus, such as:
-* Flexibility to use any Milvus supported and watsonx.ai supported embedding models.
+* Flexibility to use any Milvus that is supported and watsonx.ai supported embedding models.
    For a list of embedding models supported by Milvus, see [Milvus supported embedding models](https://milvus.io/docs/embeddings.md).
 * [Multi-vector hybrid search](https://milvus.io/docs/multi-vector-search.md).
 * [Reranking](https://milvus.io/docs/reranking.md).
@@ -115,18 +115,18 @@ You need to use the Custom service search, to avail more advanced search capabil
 {: #setup-milvus-server}
 
 1. For setting up watsonx.data Milvus, see the [Guide for setting up the search integration with watsonx.data Milvus](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-milvus/search-with-watsonx-data-milvus.md).
-1. For general set up on your assistant with server credentials, see [Setting up a Custom service with server credentials](#setup-custom-service-server).
+1. For general setup on your assistant with server credentials, see [Setting up a Custom service with server credentials](#setup-custom-service-server).
 1. For more information on examples and references for Milvus, see [Example with Milvus](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-custom-service/custom-search-server-setup-guide.md#example-with-milvus){: external}.
 
 ### Setting up Milvus through your client
 {: #setup-milvus-client}
 
-Set up Milvus on your assistant through your client by following the steps mentioned in [Setting up a Custom service through your client](#setup-custom-service-client).
+Set up Milvus on your assistant through your client by following the steps in [Setting up a Custom service through your client](#setup-custom-service-client).
     
 ## Setting up retrieval systems for a Custom service
 {: #setup-retrieval}
       
-To use a Custom service with your search integration, you must integrate your search capability by providing a server or by having the client that calls your assistant to provide search results.  You can use your own retrieval if the retrieval schema matches with the schema that is provided by your assistant. If your retrieval schema does not match with the assistant’s schema, you must provide a wrapper that does the schema mapping.  You can deploy the wrapper as a service or your chat client can start it. Building a wrapper is useful when you want to combine a different source or invoking libraries or services that do not comply with the schema for assistant search results. {: shortdesc}
+To use a Custom service with your search integration, you must integrate your search capability by providing a server or by having the client that calls your assistant to provide search results. You can use your own retrieval if the retrieval schema matches with the schema that is provided by your assistant. If your retrieval schema does not match with the assistant’s schema, you must provide a wrapper that does the schema mapping. You can deploy the wrapper as a service or your chat client can start it. Building a wrapper is useful when you want to combine a different source or invoking libraries or services that do not comply with the schema for assistant search results. {: shortdesc}
 
 ### Setting up a server for Custom service retrieval
 {: #server-side-retrieval}
@@ -230,13 +230,13 @@ Whenever the chat client receives a response with that form (it has an entry in 
 {: codeblock}
 
 
-Your assistant response limit cannot exceed 100 KB.  If your assistant gets a `search_results`message with a body that exceeds 100 KB, it returns a 400 response.
+Your assistant response limit cannot exceed 100 KB. If your assistant gets a `search_results`message with a body that exceeds 100 KB, it returns a 400 response.
 {: important}     
 
 ### Processing the search results in conversational search
 {: #process-search-results}
     
-When you setup your Custom service by providing server credentials or by sending results from your client and if you enable conversational search with your Custom service, you get the following behavior:
+When you set up your Custom service by providing server credentials or by sending results from your client and if you enable conversational search with your Custom service, you get the following behavior:
 
 1. Conversational search iterates through the search results from first to last. 
 1. From each search result:
@@ -256,19 +256,19 @@ Your assistant follows the same process for the other search options like Elasti
 ### Adding separate fields for `body` and `highlight.body`
 {: #fields-body-highlightbody}
    
-When the `highlight.body` is present, it is used to generate conversational search answers, else the `body` is used.  Both are passed to the client as part of the search results object and the client provides context for the answer.  For example, the built-in web chat shows the `body` text. If you click a citation card for some search result, you can't see a URL for that search result.
+When the `highlight.body` is present, it is used to generate conversational search answers, else the `body` is used. Both are passed to the client as part of the search results object and the client provides context for the answer. For example, the built-in web chat shows the `body` text. If you click a citation card for some search result, you can't see a URL for that search result.
 
 Recommendations for using the fields:
-- If the search technology returns short portions of documents, use those portions of the documents in the `body` field and omit the `highlight.body`.  For example, many vector database solutions store only 512 token segments of documents.
+- If the search technology returns short portions of documents, use those portions of the documents in the `body` field and omit the `highlight.body`. For example, many vector database solutions store only 512 token segments of documents.
 - If the search technology returns both short portions of documents (“passages” or “highlights” or “snippets”) and the full text of the documents, use the short portions in the `highlight.body` field and use the full text in the `body` field.
 
 ### Adding optional user-defined metadata 
 {: #optional-user-defined-metadata}
 
-For both clients and servers, the schemas for results include a `metadata` field and a `result_metadata` field.  
+For both clients and servers, the schemas for results include a `metadata` field and a `result_metadata` field. 
 
 Recommendations for using the fields:
-- The `metadata` field sends the configuration information to the search capability.  Some examples of configuration information that is used for a search capability include index names, embedding model names, requested passage length, fields to boost, and so on.  The following reasons explain why it is helpful to use the `metadata` field to pass configuration information to the server or client:
+- The `metadata` field sends the configuration information to the search capability. Some examples of configuration information that is used for a search capability include index names, embedding model names, requested passage length, fields to boost, and so on. The following reasons explain why it is helpful to use the `metadata` field to pass configuration information to the server or client:
     * Multiple assistants can use the same server or client code but with a different configuration.
     * Even with one assistant, it is easy to update configurations through the assistant interface.
-- The `result_metadata` field sends additional information about a search result from the server or client to the assistant. The assistant passes the information as part of the `search_results` object in the final response. Calling applications use the additional information.  For example, when the `result_metadata` sends the URLs for images in the search result, the calling application renders the images along with the response.
+- The `result_metadata` field sends additional information about a search result from the server or client to the assistant. The assistant passes the information as part of the `search_results` object in the final response. Calling applications use the additional information. For example, when the `result_metadata` sends the URLs for images in the search result, the calling application renders the images along with the response.

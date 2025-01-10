@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-03"
+lastupdated: "2025-01-10"
 
 keywords: conversational search
 
@@ -12,21 +12,21 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
-Starting from **June 1, 2024**, add-on charges are applicable for using the Conversational search feature in addition to your Plus or Enterprise plans. For more information about the pricing plans, see [Pricing plans](https://cloud.ibm.com/catalog/services/watsonx-assistant?catalog_query=aHR0cHM6Ly9jbG91ZC5pYm0uY29tL2NhdGFsb2c%2Fc2VhcmNoPXdhdHNvbnglMjUyMGFzc2lzdGFudCNzZWFyY2hfcmVzdWx0cw%3D%3D&planId=f0a3dd47-b693-4d73-a8df-aa6baf07a933){: external}. For more information about terms, see [Terms](https://www.ibm.com/support/customer/csol/terms/?id=i128-0038&lc=en){: external}.{: important}
-
-This feature is available for Enterprise with data isolation plan.{: note}
-
 # Conversational search
 {: #conversational-search}
 
 [Plus]{: tag-green} [Enterprise]{: tag-purple} [IBM Cloud Pak for Data]{: tag-cp4d}
 
-Use *conversational search* with the search integrations such as {{site.data.keyword.discoveryfull}}, Elasticsearch, Custom service, or Milvus to help your assistant extract an answer from the highest-ranked query results and return a text response to the user.  
+Starting from **June 1, 2024**, add-on charges are applicable for using the Conversational search feature in addition to your Plus or Enterprise plans. For more information about the pricing plans, see [Pricing plans](https://cloud.ibm.com/catalog/services/watsonx-assistant?catalog_query=aHR0cHM6Ly9jbG91ZC5pYm0uY29tL2NhdGFsb2c%2Fc2VhcmNoPXdhdHNvbnglMjUyMGFzc2lzdGFudCNzZWFyY2hfcmVzdWx0cw%3D%3D&planId=f0a3dd47-b693-4d73-a8df-aa6baf07a933){: external}. For more information about terms, see [Terms](https://www.ibm.com/support/customer/csol/terms/?id=i128-0038&lc=en){: external}.{: important}
+
+This feature is available for Enterprise with data isolation plan.{: note}
+
+Use *conversational search* with the search integrations such as {{site.data.keyword.discoveryfull}}, Elasticsearch, Custom search, or Milvus to help your assistant extract an answer from the highest-ranked query results and return a text response to the user.  
 
 When you enable this feature, search results are provided to an IBM watsonx generative AI model that produces a conversational reply to a user's question. 
 {: shortdesc}
 
-The watsonx generative AI model is currently hosted only in the Dallas and Frankfurt regions. By default, assistants in all regions except `Frankfurt` use the model from the `Dallas` region. Assistants in the `Frankfurt` region use the model hosted in the `Frankfurt` region.{: important}
+The watsonx generative AI model is hosted only in the Dallas and Frankfurt regions. By default, assistants in all regions except `Frankfurt` use the model from the `Dallas` region. Assistants in the `Frankfurt` region use the model hosted in the `Frankfurt` region.{: important}
 
 ## Before you begin
 {: #conversational-search-requirements}
@@ -40,7 +40,7 @@ You can enable conversational search to give accurate responses to the customer 
 
 To enable conversational search, do the following steps:
 
-1. Go to **Search Integration** window.
+1. Go to the **Search Integration** window.
 1. Set the **Conversational search** toggle to `On`.
 1. Choose the type of conversational search based on the context using contextual awareness.
 
@@ -52,7 +52,7 @@ To enable conversational search, do the following steps:
    -  Conversational search using entire conversation
    {: #entire-conversational-search}
 
-   For context-dependent questions, which might take previous inputs into account, choose **Entire conversation**.
+   For context-dependent questions, which might consider previous inputs , choose **Entire conversation**.
 
    Entire conversation uses the whole session to continue the conversation. It might bring back subjects that are no longer in the scope of the conversation.
    {: note}
@@ -68,7 +68,7 @@ To enable conversational search, do the following steps:
 1. In the **Tendency to say I don’t know**, select the tendency to use. By default, `Less often` is selected. 
 1. Click **Save**.
 
-   ![ConversationalSearch](images/conversational-search-enable.png) 
+   ![Conversational search](images/conversational-search-enable.png){: caption="Conversational search" caption-side="bottom"} 
 
 ## Tuning conversational search’s tendency to say “I don’t know"
 {: #behavioral-tuning-conversational-search}
@@ -82,17 +82,17 @@ You can tune the tendency of your assistant to say “I don’t know” in conve
 
 When your assistant generates a conversational search response, it evaluates the response and calculates a response confidence score. The assistant compares the response confidence score against your selection in the **Tendency to say I don’t know** section. If the response confidence score is comparatively high, the assistant responds to the user query with the generated response. If the response confidence score is comparatively low, the assistant does one of the following actions:
 
-* Responds with an “I don’t know” message.
-* Falls back to the “No matches” action per the [Search routing configuration](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing) in your assistant.
+* Responds with an “I don’t know” message
+* Falls back to the “No matches” action per the [Search routing configuration](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing) in your assistant
  
 `Table 1. Tendency to say “I don’t know” options` shows the options available in the **Tendency to say “I don’t know”** section.
 
 | Tendency to say “I don’t know” | Response confidence threshold | Assistant behavior |
 |--------------------|---------|-------------|
-| `Rarely` | Lowest  | The assistant rarely says “I don’t know” because it compares the response confidence score against the lowest threshold. Therefore, your assistant gives a generated response to the end user almost all the time. However, the assistant most likely presents inaccurate or irrelevant responses to the end user. |
+| `Rarely` | Lowest  | The assistant rarely says “I don’t know” because it compares the response confidence score against the lowest threshold. Therefore, your assistant gives a generated response to the user almost all the time. However, the assistant most likely presents inaccurate or irrelevant responses to the user. |
 | `Less often`           | Lower | The assistant says “I don’t know” more often than the `Rarely` option. |
 | `More often`           | Higher | The assistant says “I don’t know” more often than the `Less often` option.|
-| `Most often`           | Highest | The assistant says “I don’t know” more often than the `More often` option because it compares the response confidence score against the highest threshold. However, the assistant most likely presents accurate or relevant responses to the end user. In addition, the assistant presents fewer generated responses to the users and more often responds with an “I don’t know” message or falls back to the “No matches” action.|
+| `Most often`           | Highest | The assistant says “I don’t know” more often than the `More often` option because it compares the response confidence score against the highest threshold. However, the assistant most likely presents accurate or relevant responses to the user. In addition, the assistant presents fewer generated responses to the users and more often responds with an “I don’t know” message or falls back to the “No matches” action.|
 {: caption= "Tuning the Tendency to say I don’t know" caption-side="bottom"}
 
 ## Tuning the generated response length in conversational search
@@ -126,11 +126,11 @@ You can test the conversational search in actions preview, the preview page, or 
 In this example, the user asks, `Tell me about a custom extension`.
 Search results are pulled from your knowledge base when the conversational search is `Off`. In this case, the answer is returned as a list of cards that are relevant to custom extensions.
 
-   ![ConversationalSearchToggleOff](images/convo-search-test-toggle-off.png)
+   ![Conversational search off](images/convo-search-test-toggle-off.png){: caption="Conversational search off" caption-side="bottom"} 
 
 When the conversational search is `On`, the same search results are pulled from your knowledge base. The results are passed to an IBM watsonx generative AI model. This model produces a conversational reply to the user's question, in the form of a text response about custom extensions.
 
-   ![ConversationalSearchToggleOn](images/convo-search-test-toggle-on.png)
+   ![Conversational search on](images/convo-search-test-toggle-on.png){: caption="Conversational search on" caption-side="bottom"}
 
 The web chat integration does not support the citation title feature. Hence, the preceding image does not display the default text in the citation title.
 
@@ -141,20 +141,20 @@ When you click **Inspect**, you see two options:
 |--------------|---------------------------------------------------------------------------------------------------------------|
 | **Overview** | Provides general information about the process.                                                               |
 | **Advanced** | Displays a `curl` command to run the retrieval portion. This option helps debug and configure your query setup, including Watson Discovery, Elasticsearch, or custom services. |
+{: caption="Inspect options" caption-side="bottom"}
 
-   ![ConversationalSearchInspect](images/convo-search-inspect.png)
+![ConversationalSearchInspect](images/convo-search-inspect.png){: caption="Inspect options" caption-side="bottom"}
 
 ## Streaming response for conversational search
 {: #conversational-search-streaming-response}
 
 Streaming response for the conversational search uses watsonx.ai capabilities to provide continuous, real-time responses in your assistant. By default, the streaming response is disabled for the web chat and the assistant preview panels. 
 
-By using the streaming response support feature, you can reduce the wait time for the response. 
-{: shortdesc}
+By using the streaming response support feature, you can reduce the wait time for the response.
 
-To enable streaming response, do the following:
+To enable streaming response:
 
 1. Go to **Home** > **Preview** > **Customize web chat**.
 1. Click the **Styles** tab.
-1. Set the **Streaming** toggle button to `On`.
+1. Set the **Streaming** toggle to `On`.
 1. Click **Save and exit**.
