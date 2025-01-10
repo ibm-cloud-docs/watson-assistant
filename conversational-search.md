@@ -52,7 +52,7 @@ To enable conversational search, do the following steps:
    -  Conversational search using entire conversation
    {: #entire-conversational-search}
 
-   For context-dependent questions, which might consider previous inputs , choose **Entire conversation**.
+   For context-dependent questions, which might consider previous inputs, choose **Entire conversation**.
 
    Entire conversation uses the whole session to continue the conversation. It might bring back subjects that are no longer in the scope of the conversation.
    {: note}
