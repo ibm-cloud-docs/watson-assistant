@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-12-27"
+  years: 2021, 2025
+lastupdated: "2025-01-10"
 
 subcollection: watson-assistant
 
@@ -10,12 +10,12 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Elasticsearch search integration set up 
+# Elasticsearch search integration setup 
 {: #search-elasticsearch-add}
 
 [Plus]{: tag-green} [Enterprise]{: tag-purple} [IBM Cloud Pak for Data]{: tag-cp4d}
 
-Elasticsearch powers your assistants to perform different types of searches such as metric, structured, unstructured, and semantic with higher accuracy and relevance by leveraging enterprise content. The data analytics engine in Elasticsearch expands the scope of search integration to larger data sets in assistants. In addition to this integration, you can enable conversational search for Elasticsearch in your assistant that helps to answer queries in a conversational manner.
+Elasticsearch powers your assistants to perform different types of searches such as metric, structured, unstructured, and semantic with higher accuracy and relevance by leveraging enterprise content. The data analytics engine in Elasticsearch expands the scope of search integration to larger datasets in assistants. In addition to this integration, you can enable conversational search for Elasticsearch in your assistant that helps to answer queries in a conversational manner.
 
 You can have only one search integration per environment. When you change the existing search integration to other integration types such as {{site.data.keyword.discoveryfull}} or Milvus or Custom service, the settings of the existing search integration are overwritten.
 {: important}
@@ -28,35 +28,36 @@ To select Elasticsearch as the default search integration, use one of the follow
 - **Selecting Elasticsearch search integration from the Integrations page** 
 
     1. After you create a {{site.data.keyword.conversationshort}} instance, go to **Home** > **Integrations**.
-    1. Click **Open** inside the **Search** tile to view the "Open Search" window.
-    1. In the "Open Search" window, select the `Draft` option in the dropdown if you want to set up Elasticsearch in your assistant’s draft environment. If you want to set up Elasticsearch in your assistant’s live environment, select the `Live` option in the dropdown.
-    1. In the following "Edit an existing new search integration" window, select the **Elasticsearch** tile.
+    1. Click **Open** inside the **Search tile** to view the **Open Search** window.
+    1. In the **Open Search** window, select the `Draft` option in the dropdown if you want to set up Elasticsearch in your assistant’s draft environment. If you want to set up Elasticsearch in your assistant’s live environment, select the `Live` option in the dropdown.
+    1. In the **Edit an existing new search integration window**, select the **Elasticsearch** tile.
 
 - **Selecting Elasticsearch search integration from the Environments page** 
 
     1. After you create a {{site.data.keyword.conversationshort}} instance, go to **Home** > **Environments**.
-    1. Select the `Draft` tab if you want to set up Elasticsearch in the draft environment. If you want to set up Elasticsearch in the live environment, select the `Live` tab.
-    1. In the **Resolution methods** section, click **Add** inside the **Search** tile under **Extensions** if you want to add a new Elasticsearch search integration.
+    1. Select the **Draft** tab if you want to set up Elasticsearch in the draft environment. If you want to set up Elasticsearch in the live environment, select the **Live** tab.
+    1. In the **Resolution methods** section, click **Add** inside the **Search** tile under **Extensions** if you want to add an Elasticsearch search integration.
 
-       If you already added the Elasticsearch search integration, you see the **Open** button instead of **Add** inside the **Search** tile under **Extensions**. {: tip}
+       If you already added the Elasticsearch search integration, you see the **Open** button instead of **Add** inside the **Search** tile under **Extensions**.
+       {: tip}
 
-    1. In the "Set up a new search extension" window, select the **Elasticsearch** tile to see the "Search integration" dialog.
+    1. In the **Set up a new search extension** window, select the **Elasticsearch** tile.
   
-       ![Select Elasticsearch](images/select-milvus.png)
+       ![Select Elasticsearch](images/select-milvus.png){: caption="Select Elasticsearch" caption-side="bottom"}
 
 ## Setting up Elasticsearch
 {: #setting-up-elasticsearch}
 
 To set up Elasticsearch on your assistant, use the following procedure:
 
-1. In the first section of the "Search integration" window, provide the following fields to enable your assistant to connect to your Elasticsearch instance:
+1. Provide the following fields to enable your assistant to connect to your Elasticsearch instance:
     - **Elasticsearch url**
     - **Elasticsearch port (optional)**
     - **Choose an authentication type**
-      * If you select `Basic authentication`, you must provide **Elasticsearch username** and **Elasticsearch password**.
+      * If you select `Basic authentication`, you must provide an **Elasticsearch username** and an **Elasticsearch password**.
       * If you select `API key`, you must provide **Elasticsearch API key**.
 
-      ![Search integration](images/elastic-search-index.png)
+      ![Connect to Elasticsearch](images/elastic-search-index.png){: caption="Connect to Elasticsearch" caption-side="bottom"}
 
 
 1. Click **Next** to go to the **Select an index** section. **Select an index** has two options: 
@@ -64,6 +65,7 @@ To set up Elasticsearch on your assistant, use the following procedure:
     - To create a new index, select **Upload documents to a new index in your Elasticsearch instance**.
 
 ### Using an existing index
+{: #elasticsearch-use-index}
 
 1. In the **Select index** section, click **Use my index** to connect to an existing Elasticsearch index. The **Use my index** option is selected as default in your Elasticsearch set up. 
 
@@ -82,15 +84,15 @@ Before you upload documents, your Elasticsearch instance must have the following
 
 - Elasticsearch 8.8 or above.
 
-- A paid or trial subscription of the Elasticsearch instance such as the Platinum Edition of [IBM Cloud Databases for Elasticsearch](https://cloud.ibm.com/databases/databases-for-elasticsearch/create){: external} or the Platinum or Enterprise subscription offered by [Elastic.co](https://www.elastic.co/subscriptions).
+- A paid or trial subscription of the Elasticsearch instance such as the Platinum Edition of [IBM Cloud Databases for Elasticsearch](https://cloud.ibm.com/databases/databases-for-elasticsearch/create){: external} or the Platinum or Enterprise subscription that is offered by [Elastic.co](https://www.elastic.co/subscriptions).
 
 - A Machine Learning (ML) node with a minimum of 4 GB memory to deploy the ELSER model. For more information about the ELSER requirements, see [ELSER requirements](https://www.elastic.co/guide/en/machine-learning/current/ml-nlp-elser.html#elser-req).
 
 - The documents that you upload must be in English.
 
- If your Elasticsearch instance do not have the prerequisites for uploading document, you see the **Requirements not met** error message.
+ If your Elasticsearch instance does not have the prerequisites for uploading documents, you see the `Requirements not met` error message.
  
- If there is a delay or failure in uploading documents even after having the prerequisites, you can consider scaling the inference performance of the ELSER model deployment by setting up parameters such as `number_of_allocations` and `threads_per_allocation`. For more information about scaling the inference performance, see [Start trained model deployment API](https://www.elastic.co/guide/en/elasticsearch/reference/8.13/start-trained-model-deployment.html#start-trained-model-deployment).{: note}
+ If you experience a delay or failure in uploading documents even after meeting the prerequisites, you can consider scaling the inference performance of the ELSER model deployment by setting up parameters such as `number_of_allocations` and `threads_per_allocation`. For more information about scaling the inference performance, see [Start trained model deployment API](https://www.elastic.co/guide/en/elasticsearch/reference/8.13/start-trained-model-deployment.html#start-trained-model-deployment).{: note}
 
 To upload documents to a new index, use the following procedure:
 
@@ -125,9 +127,9 @@ To upload documents to a new index, use the following procedure:
     
         You define the filter as an array of objects so that you can create filters to arrange the content per the query body. For more information, see [Configuring the custom filters](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/docs/elasticsearch-install-and-setup/how_to_configure_advanced_elasticsearch_settings.md#how-to-configure-the-custom-filters){: external}.
 
-    - **Configure the query body for Elasticsearch**    
+   - **Configure the query body for Elasticsearch**    
 
-      The query body is used to manipulate the user requests into a format that the search expects. It controls the query forms, search fields, filters, and query size. In the REST API, the query body is an object representing the `POST` body for the `_search` request to Elasticsearch. THe query body has a `"$QUERY"` token to represent the customer's query, and a `"$FILTER"` token to represent the array of filters that are defined either in the search settings or at the step level.    
+      The query body is used to manipulate the user requests into a format that the search expects. It controls the query forms, search fields, filters, and query size. In the REST API, the query body is an object that represents the `POST` body for the `_search` request to Elasticsearch. THe query body has a `"$QUERY"` token to represent the customer's query, and a `"$FILTER"` token to represent the array of filters that are defined either in the search settings or at the step level.    
    
       By default, Elasticsearch integration uses keyword search. You can use advanced search such as semantic search with ELSER, KNN dense vector search, nested queries to search the nested documents, or hybrid search. For more information about using different types of query body examples, see [Query body examples](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/docs/elasticsearch-install-and-setup/how_to_configure_advanced_elasticsearch_settings.md#how-to-configure-the-query-body){: external}.
 
@@ -145,23 +147,23 @@ To upload documents to a new index, use the following procedure:
     | Connectivity issue | I was unable to complete the search for some reason | `I might have information that could help address your query, but am unable to search my knowledge base at the moment.` |
     {: caption="Search result messages" caption-side="top"}
 
-1. Switch the **Conversational Search** toggle to `on` if you want to activate conversational search. If you don't want to activate conversational search, switch the toggle to `off`.  
+1. Switch the **Conversational Search** toggle to `on` if you want to activate conversational search. If you don't want to activate conversational search, switch the toggle to `off`.
 
-1. Conversational search is available only in the Plus and Enterprise plans of {{site.data.keyword.conversationshort}}. If you switch the **Conversational Search** toggle to `on`, you can see the citation titles in your assistant responses. For more information about conversational search, see [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
+    Conversational search is available only in the Plus and Enterprise plans of {{site.data.keyword.conversationshort}}. If you switch the **Conversational Search** toggle to `on`, you can see the citation titles in your assistant responses. For more information about conversational search, see [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
 
 1. Click **Save** to save your settings.
 
 1. Click the **Documents** tab in the **Elasticsearch** window.
    
-   The **Documents** tab is enabled only if you select **Upload documents to a new index in your Elasticsearch instance** option.{: tip}
+   The **Documents** tab is enabled only if you select **Upload documents to a new index in your Elasticsearch instance** option.
+   {: tip}
 
-1. Click **Upload** button. In the **Upload documents** section, you can drag and drop your files or do a single click to upload documents directly to your assistant. 
+1. Click **Upload** button. In the **Upload documents** section, you can drag your files or do a single click to upload documents directly to your assistant. 
 
    You can upload up to 20 documents at a time. Each document file size must not exceed 25 KB. The total size of all documents must not exceed 50 MB.
    {: important}
-
   
-   ![Elasticsearch upload document](images/elastic-search-upload-doc.png)
+   ![Elasticsearch upload document](images/elastic-search-upload-doc.png){: caption="Elasticsearch upload document" caption-side="bottom"}
 
 1. After you upload the documents, you can see the upload status of your documents in a table in the **Elasticsearch** window.
 
@@ -169,8 +171,7 @@ To upload documents to a new index, use the following procedure:
 
 1. If the status indicates `Error`, you can delete the file by clicking the three dots next to the `Error` and click `Delete`.
 
-   ![Elasticsearch upload error](images/elastic-search-upload-doc-error.png)
-
+   ![Elasticsearch upload error](images/elastic-search-upload-doc-error.png){: caption="Elasticsearch upload error" caption-side="bottom"}
 
 1. Skip this step if you do not want to change Elasticsearch instance credentials. If you want to change the Elasticsearch instance credentials, click the **Instance** tab, edit the credentials, and then click **Save**. 
 
@@ -181,7 +182,6 @@ To upload documents to a new index, use the following procedure:
 
 After you configure the Elasticsearch search integration, you must configure your assistant to use Elasticsearch when the customer response matches no action. For more information about updating **No matches** to use search, see [Use search when no action matches](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-no-action-matches).
 
-
 ## Testing Elasticsearch
 {: #elasticsearch-test}
 
@@ -191,8 +191,8 @@ In this example, the user asks, `Tell me about a custom extension`.
 
 Search results are pulled from your knowledge base when conversational search is `off`. The answer is, `I searched my knowledge base and found this information which might be useful`.
 
-   ![ConversationalSearchToggleOff](images/convo-search-test-toggle-off.png)
+   ![Conversational search off](images/convo-search-test-toggle-off.png){: caption="Conversational search off" caption-side="bottom"}
 
 A text-based reply from the best results in your knowledge base displays when conversational search is `on`. 
 
-   ![ConversationalSearchToggleOn](images/convo-search-test-toggle-on.png)
+   ![Conversational search on](images/convo-search-test-toggle-on.png){: caption="Conversational search on" caption-side="bottom"}
