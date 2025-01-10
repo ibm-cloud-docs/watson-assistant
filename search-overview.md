@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-12-13"
+  years: 2023, 2025
+lastupdated: "2025-01-10"
 
 subcollection: watson-assistant
 
@@ -29,7 +29,7 @@ You have four options to add search to your assistant:
 - A search extension for Coveo, Google, or NeuralSeek. For more information, see [Add a search extension](#search-overview-extension).
 
 
-You can enhance the search integration by using the assistant capabilities such as [Search trigger](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-add-trigger),  [No action matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches) and [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup). 
+You can enhance the search integration by using the assistant capabilities such as [Search trigger](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-add-trigger), [No matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches) and [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup). 
 
 For more information about implementing the enhancements for search integration, see [Search integration enhancement](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement).
 

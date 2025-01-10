@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-01-03"
+lastupdated: "2025-01-10"
 
 subcollection: watson-assistant
 
@@ -39,13 +39,13 @@ You can configure your action steps to route to search or **No matches** if the 
 
 Unrecognized input of this sort triggers the built-in **No matches** action. To see how this action works, click **Set by assistant** in the list of actions, and then click **No matches**.
 
-![No action matches built-in action.](images/no-action-matches.png){: caption="No action matches built-in action." caption-side="bottom"}
+![No matches built-in action.](images/no-action-matches.png){: caption="No matches built-in action." caption-side="bottom"}
 
-By default, this action has two steps, and each step is conditioned on the *No action matches count* session variable. This built-in variable is automatically incremented with each consecutive unrecognized input. Therefore, the behavior of the **No matches** action differs depending on how many times in a row the user says something that the assistant fails to understand.
+By default, this action has two steps, and each step is conditioned on the *No matches count* session variable. This built-in variable is automatically incremented with each consecutive unrecognized input. Therefore, the behavior of the **No matches** action differs depending on how many times in a row the user says something that the assistant fails to understand.
 
 - For the first three unrecognized messages, step 1 executes. This step outputs a message that the assistant did not recognize the user's input, and asks the user to try again. You can edit the message, or modify the number of times that the assistant responds with this message.
 
-    When the user sends input that successfully triggers an action, the *No action matches count* session variable is reset to 0.
+    When the user sends input that successfully triggers an action, the *No matches count* session variable is reset to 0.
 
 - If the user tries more than three times and the assistant still does not understand, step 2 executes. Step 2 calls the *Fallback* action, which offers other options such as connecting to a live agent. For more information, see [Editing the fallback action](#fallback-action).
 
@@ -74,20 +74,20 @@ You can configure your assistant’s behavior for the case when a user’s input
    
    Before you select **Route to conversational search**, you must configure the search integration and enable the conversational search.{: note}
 
-   ![Route to conversational search](/images/convo-search-routing.png)
+   ![Route to conversational search](/images/convo-search-routing.png){: caption="Route to conversational search" caption-side="bottom"}
 
-- **Route directly to No matches action**
+- **Route directly to the No matches action**
 
-   Select this option for your assistant to route directly to the **No matches** action when the user’s input does not match any actions. You can customize the behavior of the **No matches** action per your use case. You can configure the **No matches** action route to 
+   Select this option for your assistant to route directly to the **No matches** action when the user’s input does not match any actions. You can customize the behavior of the **No matches** action per your use case. You can configure the **No matches** action to route to: 
 
-   - [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search)
-   - [transfer to a live agent](/docs/watson-assistant?topic=watson-assistant-human-agent#planned-escalation)
-   - [open a support ticket](/docs/watson-assistant?topic=watson-assistant-call-extension)
-   - [understand your users' questions and requests](/docs/watson-assistant?topic=watson-assistant-understand-questions)
+   - [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search)
+   - [Transfer to a live agent](/docs/watson-assistant?topic=watson-assistant-human-agent#planned-escalation)
+   - [Open a support ticket](/docs/watson-assistant?topic=watson-assistant-call-extension)
+   - [Understand your users' questions and requests](/docs/watson-assistant?topic=watson-assistant-understand-questions)
  
    You can use this option to route the assistant users to the **No matches** action when there are no matches for the user responses.
 
-   ![Route directly to No matches action](/images/no-match-routing.png)
+   ![Route directly to No matches action](/images/no-match-routing.png){: caption="Route directly to No matches action" caption-side="bottom"}
 
 To configure **Search routing**, go to **Home** > **Actions** > **Global settings** > **Conversation routing** > **Search routing**. After you select an option **Search routing**, click the **Save** button.
 

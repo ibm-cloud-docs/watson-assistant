@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-12-24"
+  years: 2015, 2025
+lastupdated: "2025-01-10"
 
 subcollection: watson-assistant
 
@@ -1791,7 +1791,7 @@ Results in this output:
 
 This method returns true if the string contains the input substring.
 
-Input: "Yes, I'd like to go."
+Input: `Yes, I'd like to go.`
 
 This syntax:
 

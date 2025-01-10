@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-07"
+lastupdated: "2025-01-10"
 
 subcollection: watson-assistant
 
@@ -23,9 +23,7 @@ For information about new features and improvements to the core {{site.data.keyw
 ## Controlling the web chat version
 {: #release-notes-chat-version}
 
-If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you
-can set a version of your web chat. For more information, see [Controlling the web chat
-version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
 
 ## 8.5.2
 {: #8.5.2}
@@ -111,8 +109,7 @@ version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions
 {: #8.2.5}
 *Release date: 12 August 2024*
 
-- **Updated behavior of a search result:** You can now click the web chat card to see more information about the search
-  result if the result is not contained in a URL or PDF file.
+- **Updated behavior of a search result:** You can now click the web chat card to see more information about the search result if the result is not contained in a URL or PDF file.
 
 - Updated styling for errors received by the web chat.
 
@@ -208,11 +205,11 @@ version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions
 
 - **New Carbon UI for web chat**: The web chat has an upgraded Carbon UI for AI, Carbon 11, that helps in AI explainability and adding visual cues to make your interaction AI responsive.
 
-  You must update the Carbon design before you upgrade to web chat 8.0.0 because the new Carbon UI conflicts with the user defined responses and writeable elements.
+   You must update the Carbon design before you upgrade to web chat 8.0.0 because the new Carbon UI conflicts with the user defined responses and writeable elements.
 
-  In addition, the new Carbon 11 design system does not support Carbon 10 components. Therefore, addition of the Carbon 10 components in to a web chat with the Carbon 11 design system might disrupt the design styling. However, you can add the Carbon 11 components in to an existing web chat with the Carbon 10 design system because the Carbon 11 components work along with the Carbon 10 components in the same code base without any design disruption. Therefore, you can upgrade any individual Carbon 10 component to Carbon 11 component in an existing web chat without disrupting the remaining Carbon 10 components.
+   In addition, the new Carbon 11 design system does not support Carbon 10 components. Therefore, addition of the Carbon 10 components in to a web chat with the Carbon 11 design system might disrupt the design styling. However, you can add the Carbon 11 components in to an existing web chat with the Carbon 10 design system because the Carbon 11 components work along with the Carbon 10 components in the same code base without any design disruption. Therefore, you can upgrade any individual Carbon 10 component to Carbon 11 component in an existing web chat without disrupting the remaining Carbon 10 components.
 
-  The new updated home screen design is no longer a solid accent color, although a future update will introduce control to the colors.
+   The new updated home screen design is no longer a solid accent color, although a future update will introduce control to the colors.
 
 - **New theme configuration option**: You can now use a new` themeConfig` property object in web chat that replaces the `carbonTheme` configuration property. The following new options are available in the configuration object:
 
@@ -222,9 +219,9 @@ version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions
 
     - **`useAITheme`** 
       
-      To add 'IBM Carbon for AI' branding to the web chat.
+      To add IBM Carbon for AI branding to the web chat.
   
-  For more information, see [Web chat theme configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#theme-config){: external}.
+   For more information, see [Web chat theme configuration](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#theme-config){: external}.
 
 - **Updated message API version**: Web chat now uses the `2023-06-15` version of the {{site.data.keyword.conversationshort}} API. The previous version was `2021-09-08`. For more information about changes in behavior for {{site.data.keyword.conversationshort}} with the new API version, see [Release notes for {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes) .
   

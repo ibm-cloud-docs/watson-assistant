@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-31"
+  years: 2022, 2025
+lastupdated: "2025-01-10"
 
 keywords: settings
 subcollection: watson-assistant
@@ -94,7 +94,7 @@ For more information, see [Using watsonx.ai for generative AI capabilities](/doc
 ## Confirmation to return to previous topic
 {: #actions-global-settings-change-topic-confirmation}
 
-By default, new assistants are set to ask a "yes or no" question to confirm that the customers want to return to the previous action. You can modify these settings in the Confirmation section. For more information, see [Confirmation to return to previous topic](/docs/watson-assistant?topic=watson-assistant-change-topic#change-topic-confirmation).
+By default, new assistants are set to ask a `yes or no` question to confirm that the customers want to return to the previous action. You can modify these settings in the Confirmation section. For more information, see [Confirmation to return to previous topic](/docs/watson-assistant?topic=watson-assistant-change-topic#change-topic-confirmation).
 
 ## Autocorrection
 {: #actions-global-settings-autocorrection}
