@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-10-08"
+  years: 2018, 2025
+lastupdated: "2025-01-10"
 
 subcollection: watson-assistant
 
@@ -120,7 +120,7 @@ If you want a customer to be able to digress and change topics when they enter a
 ## Confirmation to return to previous topic
 {: #change-topic-confirmation}
 
-By default, new assistants are set to ask a "yes or no" question to confirm that the customers want to return to the previous action. You can modify these settings.
+By default, new assistants are set to ask a `yes or no` question to confirm that the customers want to return to the previous action. You can modify these settings.
 
 These settings aren't available when the assistant language is set to `Another language`, which uses the universal language model. For more information, see [Adding support for global audiences](/docs/watson-assistant?topic=watson-assistant-admin-language-support).
 {: note}

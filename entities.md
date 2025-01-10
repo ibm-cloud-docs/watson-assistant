@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-12-27"
+  years: 2015, 2025
+lastupdated: "2025-01-10"
 
 keywords: entity, entity value, contextual entity, dictionary entity, pattern entity, entity synonym, annotate mentions
 
@@ -200,7 +200,7 @@ Fuzzy matching is available for specific languages. For more information, see [S
 
 Fuzzy matching has these components:
 
-- *Stemming* - The feature recognizes the stem form of entity values that have several grammatical forms. For example, the stem of 'bananas' would be 'banana', while the stem of 'running' would be 'run'.
+- *Stemming* - The feature recognizes the stem form of entity values that have several grammatical forms. For example, the stem of `bananas` would be `banana`, while the stem of `running` would be `run`.
 - *Misspelling* - The feature is able to map user input to the appropriate corresponding entity despite the presence of misspellings or slight syntactical differences. For example, if you define `giraffe` as a synonym for an animal entity, and the user input contains the terms `giraffes` or `girafe`, the fuzzy match can map the term.
 - *Partial match* - With partial matching, the feature automatically suggests substring-based synonyms present in the user-defined entities, and assigns a lower confidence score as compared to the exact entity match.
 

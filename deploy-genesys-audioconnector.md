@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2024-12-20"
+lastupdated: "2025-01-10"
 
 subcollection: watson-assistant
 
@@ -128,7 +128,7 @@ Do the following steps to set an output variable:
    ${system_integrations.genesys_audio_connector.some_variable} = "this is an output variable"
    ```
    
-   In this example, the variable name is `some_variable`, with the value set to "this is an output variable".
+   In this example, the variable name is `some_variable`, with the value set to `this is an output variable`.
 
 ## Ending the Genesys Audio Connector flow
 {: #deploy-audioconnector-end-flow}

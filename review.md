@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-01-03"
+lastupdated: "2025-01-10"
 
 subcollection: watson-assistant
 
@@ -34,7 +34,7 @@ Before you test your action, make sure you save any new changes, and wait until 
 
     ![Preview](images/review-preview.png){: caption="Preview" caption-side="bottom"}
     
-    If the assistant doesn't understand a phrase, you see the built-in action `No action matches`.
+    If the assistant doesn't understand a phrase, you see the built-in action `No matches`.
 
 1.  Continue to converse with your assistant to see how the conversation flows.
 
@@ -110,7 +110,7 @@ The top score in green represents the action with the highest confidence and the
 
 The remaining two are actions that were considered because of their confidence score, but weren't used because the confidence scores were lower.
 
-If no action scores higher than 20% confidence, you see the built-in action `No action matches`.
+If no action scores higher than 20% confidence, you see the built-in action `No matches`.
 
 ### Step locator
 {: #review-debug-step-locator}

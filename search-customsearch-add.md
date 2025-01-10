@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-12-31"
+  years: 2023, 2025
+lastupdated: "2025-01-10"
 
 subcollection: watson-assistant
 
@@ -43,7 +43,7 @@ To select a Custom service as the search integration, use one of the following p
  
     1. In the `Set up a new search extension` window, select the **Custom service** tile to see the `Search integration` dialog.
  
-      ![Select Customserivce](images/select-milvus.png)
+      ![Select Custom service](images/select-milvus.png){: caption="Select Custom service" caption-side="bottom"}
 
 
 Your assistant has limitations in passing the search parameters directly to your Custom service or retrieving the search results directly from it. Hence, your Custom service search integration must host an accessible web server that implements the search API interface provided by the assistant or a client that is configured to call your assistant to provide search results. For more information, see [Setting up retrieval systems for a Custom service](#setup-retrieval).
@@ -71,12 +71,12 @@ To set up Custom service on your assistant with server credentials, use the foll
      | --- | --- | --- |
      | No results found | No search results are found | `I searched my knowledge base for information that might address your query, but did not find anything useful to share.` |
      | Connectivity issue | I was unable to complete the search for some reason | `I might have information that could help address your query, but am unable to search my knowledge base at the moment.` |
-     {: caption="Custom service search result messages" caption-side="top"}
+     {: caption="Custom service search result messages" caption-side="bottom"}
 
 1. Click **Save** and then **Close** to end the custom service set up with server credentials.
 
 
-    ![Select Customservice server](images/select-customservice-server.png)
+    ![Select Custom service server](images/select-customservice-server.png){: caption="Select Custom service server" caption-side="bottom"}
 
 ## Setting up a Custom service through your client
 {: #setup-custom-service-client}
@@ -93,7 +93,8 @@ To set up Custom service on your assistant through your client, use the followin
      | --- | --- | --- |
      | No results found | No search results are found | `I searched my knowledge base for information that might address your query, but did not find anything useful to share.` |
      | Connectivity issue | I was unable to complete the search for some reason | `I might have information that could help address your query, but am unable to search my knowledge base at the moment.` |
-     {: caption="Custom service search result messages" caption-side="top"}
+     {: caption="Custom service search result messages" caption-side="bottom"}
+
 1. Click **Save** and then **Close** to end the Custom service set up in the client-side.
 
 ## Setting up Milvus for Custom service
@@ -106,7 +107,7 @@ You can directly integrate with your watsonx.data Milvus for Conversational Sear
 
 You need to use the Custom service search, to avail more advanced search capabilities with Milvus, such as:
 * Flexibility to use any Milvus supported and watsonx.ai supported embedding models.
-  For a list of embedding models supported by Milvus, see [Milvus supported embedding models](https://milvus.io/docs/embeddings.md).
+   For a list of embedding models supported by Milvus, see [Milvus supported embedding models](https://milvus.io/docs/embeddings.md).
 * [Multi-vector hybrid search](https://milvus.io/docs/multi-vector-search.md).
 * [Reranking](https://milvus.io/docs/reranking.md).
 
@@ -147,7 +148,6 @@ Query: `POST <server_url>`
 {: codeblock}
 
 **Response**
-
 ```json
 {
     
@@ -272,12 +272,3 @@ Recommendations for using the fields:
     * Multiple assistants can use the same server or client code but with a different configuration.
     * Even with one assistant, it is easy to update configurations through the assistant interface.
 - The `result_metadata` field sends additional information about a search result from the server or client to the assistant. The assistant passes the information as part of the `search_results` object in the final response. Calling applications use the additional information.  For example, when the `result_metadata` sends the URLs for images in the search result, the calling application renders the images along with the response.
-
- 
-      
-             
-    
-
-     
-
-      

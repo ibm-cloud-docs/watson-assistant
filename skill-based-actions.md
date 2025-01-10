@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-01-07"
+lastupdated: "2025-01-10"
 
 subcollection: watson-assistant
 
@@ -42,10 +42,12 @@ After you create the endpoints, you must register your skill-based action provid
 If you need more examples of authentication in different schemas, see [Create a conversational skill provider](https://cloud.ibm.com/apidocs/assistant-v2?code=node#createprovider).
 
 ## Creating skill-based actions
+{: #skill-based-actions-create}
 
 There are two methods to create a skill-based action in {{site.data.keyword.conversationshort}}. You can create them by using the API or by using the {{site.data.keyword.conversationshort}} user interface. Choose the option that is most suitable to your needs.
 
 ### Creating skill-based actions by using the API
+{: #skill-based-actions-create-api}
 
 To create a skill-based action by using the API, you must first create an OpenAPI specification of the skill that references the endpoints of your skill provider.
 
@@ -54,6 +56,7 @@ You can use any OAS editor or the **watsonx Orchestrate OpenAPI Builder** to com
 After that, you can import the skill by using the [Import skills](https://cloud.ibm.com/apidocs/assistant-v2?code=node#importskills) endpoint in the {{site.data.keyword.conversationshort}} API. When that's done, you can then use the skill in your assistant.
 
 ### Creating skills by using the UI
+{: #skill-based-actions-create-ui}
 
 You can also use the {{site.data.keyword.conversationshort}} UI to create the skill-based action.
 
@@ -69,7 +72,8 @@ To create a skill-based action, complete the following steps:
 
 1. In the **Build an action from a skill** page, click the skill to which you want to link the action to, making the skill the foundation to your action. 
 
-    You must connect to the app of the skill for it to appear as an option in this step. For more information, see [Managing connections and connecting to apps](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=administering-managing-connections-connecting-apps#connecting-to-apps).{: note} 
+   You must connect to the app of the skill for it to appear as an option in this step. For more information, see [Managing connections and connecting to apps](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=administering-managing-connections-connecting-apps#connecting-to-apps).
+   {: note} 
 
 1. In the **Name your action** field, enter a name for your action.
 
@@ -98,6 +102,7 @@ To create a skill-based action, complete the following steps:
 Your assistant can now use the newly created action.
 
 ## Using skill-based actions
+{: #skill-based-actions-use}
 
 To test and use your skill-based actions, you can start a new conversation with your assistant and follow the conditions that you defined when you created the action. Once you meet the conditions, enter the phrase that triggers the action.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-01-09"
+lastupdated: "2025-01-10"
 
 subcollection: watson-assistant
 
@@ -158,7 +158,7 @@ If you already created a SIP trunk, follow steps in [Configure a SIP Trunk](#con
 1.  Log in to your Twilio console and go to the **Elastic SIP Trunking** section.
 
     **Note**: If you do not see *Elastic SIP Trunking*, do the following:
-    1. Search for 'Elastic SIP Trunking' in the **Search Bar**.
+    1. Search for `Elastic SIP Trunking` in the **Search Bar**.
     1. Click **Elastic SIP Trunking Dashboard**.
 
 1.  In the left navigation menu, go to **Overview** and click **Get Started**.

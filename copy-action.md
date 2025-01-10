@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-04-15"
+  years: 2025
+lastupdated: "2025-01-10"
 
 subcollection: watson-assistant
 
@@ -27,16 +27,15 @@ To copy an action from one assistant to another assistant:
 
    ![Copy to an assistant](images/manage-actions-copy-destination.png){: caption="Copy to an assistant" caption-side="bottom"}
 
-1. In the **Review references** page, you review the list of references such as action, variables, and saved responses and their status. See 'Table. Conflict status for references' to understand the outcome of the references per their conflicting or non-conflicting status.
+1. In the **Review references** page, review the list of references such as action, variables, and saved responses and their status.
 
-| Type of references | Conflict status | Outcome |
-| --- | --- | --- |
-| * Actions \n * Variables \n * Saved responses | No | By default, it saves a new reference to the target assistant. |
-| * Actions \n * Variables \n * Saved responses | Yes | You can select one of the following options:  \n * Overwrite:  \n Overwrites the existing action in the destination assistant.  \n * Skip:  \n Skips copying the action to the destination assistant. |
-{: caption="Conflict status for references" caption-side="bottom"}
+   | Type of references | Conflict status | Outcome |
+   | --- | --- | --- |
+   | * Actions \n * Variables \n * Saved responses | No | By default, it saves a new reference to the target assistant. |
+   | * Actions \n * Variables \n * Saved responses | Yes | You can select one of the following options:  \n * Overwrite:  \n Overwrites the existing action in the destination assistant.  \n * Skip:  \n Skips copying the action to the destination assistant. |
+   {: caption="Conflict status for references" caption-side="bottom"}
 
-   If you want to overwrite all the conflicting items in the destination assistant, click the **Overwrite all** button. {: tip}
-   If you want to skip copying all the conflicting items to the destination assistant, click the **Skip all** button.
+   If you want to overwrite all the conflicting items in the destination assistant, click the **Overwrite all** button. If you want to skip copying all the conflicting items to the destination assistant, click the **Skip all** button.
    {: tip}
 
    ![Copy to an assistant](images/copy-action-assistant.svg){: caption="Copy to an assistant" caption-side="bottom"}

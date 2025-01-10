@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-01-07"
+lastupdated: "2025-01-10"
 
 subcollection: watson-assistant
 
@@ -31,6 +31,7 @@ To use this integration pattern, you need:
     - Twilio Studio
 
 ## Adding the {{site.data.keyword.conversationshort}} phone integration
+{: #deploy-phone-flex-add-integration}
 
 You can skip this section if you already added the phone integration to your assistant.
 
@@ -49,6 +50,7 @@ If you need to add the phone integration, follow these steps.
 For now, this is all you need to do. For more information about configuring the phone integration, see [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone).
 
 ## Adding the Twilio Flex Project
+{: #deploy-phone-flex-add-project}
 
 A new or an existing Twilio Flex project is required.
 
@@ -67,6 +69,7 @@ If you need a Twilio Flex project, you can create one using these steps.
 1. Under **Enhanced Programmable SIP Features**, toggle the switch to **Enabled**.
 
 ## Creating the call flow
+{: #deploy-phone-flex-create-flow}
 
 After your phone integration and Twilio Flex project are configured, you must create a call-flow with Twilio Studio and provision (or port) the phone number you want your assistant to work with.
 
@@ -88,6 +91,7 @@ To create the call flow:
 
 
 ## Configuring the phone number
+{: #deploy-phone-flex-configure-phone-number}
 
 1. In the navigation menu, click the **All Products & Services** icon.
 
@@ -112,6 +116,7 @@ To create the call flow:
 1. Click **Save and exit**.
 
 ## Test your phone number
+{: #deploy-phone-flex-test-number}
 
 You can now test that your phone number is connected to your flow by triggering a **Say/Play** widget in the Twilio Flex Flow editor.
 
@@ -128,6 +133,7 @@ You can now test that your phone number is connected to your flow by triggering 
 1. If this test did not work as expected, double-check your phone number configuration to ensure it is attached to your flow.
 
 ## Creating a Twilio function to handle incoming calls
+{: #deploy-phone-flex-create-function-incoming}
 
 Now you need to configure the call-flow to direct inbound calls to the assistant by using a Twilio function. Follow these steps:
 
@@ -161,7 +167,8 @@ Now you need to configure the call-flow to direct inbound calls to the assistant
 
 1. Click **Deploy All**.
 
-## Redirecting to the incoming call handler 
+## Redirecting to the incoming call handler
+{: #deploy-phone-flex-redirect-to-handler}
 
 Use a TwiML **Redirect** widget in your Studio Flow editor to call out to the `/receive-call` function created in the previous section.
 
@@ -176,10 +183,11 @@ Use a TwiML **Redirect** widget in your Studio Flow editor to call out to the `/
 1. If the redirect fails, make sure you deployed your `/receive-call` function.
 
 ## Creating a Twilio function to handle transfers from assistant
+{: #deploy-phone-flex-create-function-transfers}
 
 You also need to configure the call-flow to handle calls transferred from the assistant back to Twilio Flex, for cases when customers ask to speak to an agent. Use a **Say/Play** after the **TwiML Redirect** widget to show that the call is transferred back to the flow from {{site.data.keyword.conversationshort}}. Many options are possible at this point, such as queuing the call for a live agent, and are discussed in this section.
 
-1. Add a **Say/Play** widget to your canvas, and configure it with a phrase such as, `Transfer from Watsom complete`.
+1. Add a **Say/Play** widget to your canvas, and configure it with a phrase such as, `Transfer from Watson complete`.
 
 1. Connect the **Return** node on the **TwiML Redirect** widget to your **Say/Play** widget.
 
@@ -256,6 +264,7 @@ You also need to configure the call-flow to handle calls transferred from the as
 1. After you create this refer-handler, copy the function URL back into the `/receive-call` handler's **referUrl** field.
 
 ## Configuring the assistant to transfer calls to Twilio Flex
+{: #deploy-phone-flex-configure-transfer}
 
 Now we need to configure the assistant to transfer calls to Twilio Flex when a customer asks to speak to an agent. Follow these steps:
 
@@ -312,16 +321,18 @@ This example does not show how to use the context that is passed from {{site.dat
 where `redirect_1` is the name of your redirect widget. For example, if you set up multiple queues, you might want to use a Twilio Split widget to pick a queue based on the returned context.
 
 ## Test your assistant
+{: #deploy-phone-flex-test-assistant}
 
 Your assistant should now be able to answer calls to your phone number and transfer calls back to your Twilio Flex flow. To test your assistant:
 
 1. Call your phone number. When the assistant responds, ask for an agent.
 
-1. You should hear the phrase configured in the **Say/Play** widget (such as, "Transfer from Watson complete").
+1. You should hear the phrase configured in the **Say/Play** widget (such as, `Transfer from Watson complete`).
 
 1. If the transfer fails, use the console log to follow the flow of the call as it moves from the flow to the `/receive-call` handler, to {{site.data.keyword.conversationshort}}, to the refer-handler, and then back to your Twilio Flex flow.
  
 
-###  Share the conversation history with service desk agents 
+###  Share the conversation history with service desk agents
+{: #deploy-phone-flex-share-history}
 
 To enable service desk agents to get a quick view of the conversation history between visitor and assistant, set up the {{site.data.keyword.conversationshort}} Agent App app for your Twilio Flex environment. For more information, see documentation at the [Twilio Flex {{site.data.keyword.conversationshort}} Agent App](https://github.com/watson-developer-cloud/assistant-web-chat-service-desk-starter/tree/main/src/flex/agentApp){: external}.

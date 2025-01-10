@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-04-03"
+  years: 2021, 2025
+lastupdated: "2025-01-10"
 
 subcollection: watson-assistant
 
@@ -39,9 +39,9 @@ Before even doing anything else with your action, you can already start checking
 
     ![Preview](images/new-action-preview.png){: caption="Preview" caption-side="bottom"}
 
-1. If the assistant doesn't understand the phrase, you see the built-in action `No action matches`. For more information, see [When the assistant can't understand your customer's request](https://test.cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches).
+1. If the assistant doesn't understand the phrase, you see the built-in action `No matches`. For more information, see [When the assistant can't understand your customer's request](https://test.cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches).
 
-    ![No action matches](images/new-action-preview-no-match.png){: caption="No action matches" caption-side="bottom"}
+    ![No matches](images/new-action-preview-no-match.png){: caption="No matches" caption-side="bottom"}
 
 ## Adding more examples
 {: #understand-questions-adding-more-examples}
@@ -135,7 +135,7 @@ To change settings, complete the following steps:
    | Field | Default text | Description |
    |---|---|---|
    | **Assistant says** | `Did you mean:` | The text that is displayed before the list of clarification choices. You can change it to something else, such as `What do you want to do?` or `Pick what to do next`. |
-   | **No matches** | `None of the above` | The choice for customers when none of the other choices are right. You can change it to something else, such as `I need something else` or `These aren't what I want`. Or, you can remove the text to omit offering this choice. The result of this choice is different depending on the state of the action. If an action has not been triggered yet, the assistant uses the [No action matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches) action. If an action has been triggered and has not ended yet, the assistant uses the [validation settings for the step](/docs/watson-assistant?topic=watson-assistant-handle-errors#step-validation). |
+   | **No matches** | `None of the above` | The choice for customers when none of the other choices are right. You can change it to something else, such as `I need something else` or `These aren't what I want`. Or, you can remove the text to omit offering this choice. The result of this choice is different depending on the state of the action. If an action has not been triggered yet, the assistant uses the [No matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches) action. If an action has been triggered and has not ended yet, the assistant uses the [validation settings for the step](/docs/watson-assistant?topic=watson-assistant-handle-errors#step-validation). |
    {: caption="Ask clarifying question settings" caption-side="bottom"}
    
 1. If you enable response modes, you can modify this text:

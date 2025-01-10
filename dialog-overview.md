@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-02"
+lastupdated: "2025-01-10"
 
 keywords: building a dialog, condition, response, options, jump, jump-to, multiline, response variations
 
@@ -700,7 +700,7 @@ To add an *Option* response type, complete the following steps:
 
     When you define an options list with only 3 items, the options are typically displayed as buttons. When you add a preference property that indicates `dropdown` as the preference, for example, you can see in the "Try it out" pane that the list is displayed as a drop-down list instead.
 
-    ![Shows a small options list in the Preview that is displayed as a drop-down menu.](images/options-dropdown.png){caption="Options list caption-side="bottom"}
+    ![Shows a small options list in the Preview that is displayed as a drop-down menu.](images/options-dropdown.png){: caption="Options list" caption-side="bottom"}
 
     Some integration types, such as the web chat, reflect your preference. Other integration types, such as Slack, do not reflect your preference when they render the options.
 

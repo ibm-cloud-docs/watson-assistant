@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-01-03"
+lastupdated: "2025-01-10"
 
 subcollection: watson-assistant
 
@@ -114,8 +114,8 @@ To use a webhook from a dialog node, you must enable webhooks on the node, and t
    
    | Key | Value | Description | 
    | --- | --- | --- |
-   | model_id | "en-es" | Identifies the input and output languages. In this example, the request is for text in English (en) to be translated into Spanish (es). | 
-   | text | "How are you?" | This parameter contains the text string that you want the service to translate. You can hardcode this value, pass a context variable, such as $saved_text, or pass the user input to the service directly, by specifying `<? input.text ?>` as this value. |
+   | model_id | `en-es` | Identifies the input and output languages. In this example, the request is for text in English (en) to be translated into Spanish (es). | 
+   | text | `How are you?` | This parameter contains the text string that you want the service to translate. You can hardcode this value, pass a context variable, such as $saved_text, or pass the user input to the service directly, by specifying `<? input.text ?>` as this value. |
    {: caption="Parameter example" caption-side="bottom"}
 
    In more complex use cases, you might collect information during a conversation with a user about their travel plans, for example. You can collect dates and destination information and save it in context variables that you can pass to an external application as parameters.
