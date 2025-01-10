@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-08"
+lastupdated: "2025-01-10"
 
 subcollection: watson-assistant
 
@@ -184,8 +184,8 @@ Diagnostic logs
 Session history summary
 :   You can use the session_history variable to store a summary of the  recent messages from a conversation for each customer. You might use session history to provide a summary of the conversation during a transfer to a live agent, or you might use it to call a generative AI extension to generate an answer. For more information, see [Session history](/docs/watson-assistant?topic=watson-assistant-publish-overview#publish-overview-environment-settings-session-history).
 
-Specify how often to use No action matches
-:   You can use a new global setting for actions to change how often your assistant routes customers to the "No action matches" action. By setting this threshold, you can specify when the assistant fetches answers from a search integration, triggers the "Fallback" action, or switches topics. For more information, see [When the assistant can't understand your customer's request](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches).
+Specify how often to use the No matches action
+:   You can use a new global setting for actions to change how often your assistant routes customers to the `No matches`action. By setting this threshold, you can specify when the assistant fetches answers from a search integration, triggers the "Fallback" action, or switches topics. For more information, see [When the assistant can't understand your customer's request](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches).
 
 See who last edited a collection or action
 :   Now you can see who last edited a collection or action. On the Actions page, you can hover on the values in the Last edited column to see the email address of the person who last modified the collection or action. 
