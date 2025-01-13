@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-12-14"
+  years: 2015, 2025
+lastupdated: "2025-01-13"
 
 subcollection: watson-assistant
 
@@ -51,12 +51,12 @@ The following table illustrates the information that each attribute captures fro
 | @sys-currency.unit          | string | `USD` | `USD` |
 {: caption="@sys-currency examples" caption-side="bottom"}
 
-For the input `veinte euro` (`twenty euro` in Spanish) or `&euro;1.234,56`, @sys-currency returns these values:
+For the input `veinte euro` (`twenty euro` in Spanish) or `€1.234,56`, @sys-currency returns these values:
 
-| Attribute                   | Type   | Input is `veinte euro` | Input is `&euro;1.234,56` |
+| Attribute                   | Type   | Input is `veinte euro` | Input is `€1.234,56` |
 |-----------------------------|--------|-----------------------------|-------------------------:|
 | @sys-currency               | string | 20                          |                  1234.56 |
-| @sys-currency.literal       | string | veinte euro                 |                &euro;1.234,56 |
+| @sys-currency.literal       | string | veinte euro                 |                €1.234,56 |
 | @sys-currency.numeric_value | number | 20                          |                  1234.56 |
 | @sys-currency.location      | array  |[0,11]                       |                     [0,9]|
 | @sys-currency.unit          | string | EUR                         |                     EUR  |
@@ -76,7 +76,7 @@ For more information about currencies that are recognized per language, see [Cur
 
 The `@sys-date` system entity detects mentions of dates in user input. The date value is stored as a string in the format `yyyy-MM-dd`. For example, the mention `May 8` is stored as `"2020-05-08"`. The system augments missing elements of a date (such as the year for `"May 8"`) with the current date values.
 
-If you enter an invalid date in the user input, the `@sys-date` system entity does not recognize date and shows `Invalid date` error.
+If you enter an invalid date in the user input, the `@sys-date` system entity does not recognize the date and shows and `Invalid date` error.
 
 If you select English as the language, the system uses US English (`en-us`) as the locale. For the US English locale only, the format of the date is `MM/DD/YYYY`. The format of the date changes to `DD/MM/YYYY` only if the first two numbers are greater than 12. The value that is stored has the format `yyyy-MM-dd`.
 
