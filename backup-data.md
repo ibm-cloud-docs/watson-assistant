@@ -979,7 +979,7 @@ Set up the following environment variable before you run the auto-retrain-all jo
 1. To run the auto-retrain-all job, use the following command:
 
     ```bash
-        export PROJECT_CPD_INST_OPERANDS=<namespace where Cloud Pak for Data and Assistant is installed>
+        export PROJECT_CPD_INST_OPERANDS=<namespace where Assistant is installed>
         export INSTANCE=`oc get wa -n ${PROJECT_CPD_INST_OPERANDS} |grep -v NAME| awk '{print $1}'`
 
         cat <<EOF | oc apply -f -
@@ -1070,7 +1070,7 @@ Use the following steps to `scale` the number of models:
 1. Increase the number of `REPLICAS` by using the following command:
 
     ```bash
-      export PROJECT_CPD_INST_OPERANDS=<namespace where Cloud Pak for Data and Assistant is installed>
+      export PROJECT_CPD_INST_OPERANDS=<namespace where Assistant is installed>
       export INSTANCE=`oc get wa -n ${PROJECT_CPD_INST_OPERANDS} |grep -v NAME| awk '{print $1}'`
 
       cat <<EOF | oc apply -f -
