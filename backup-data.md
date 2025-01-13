@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-12-20"
+  years: 2015, 2025
+lastupdated: "2025-01-13"
 
 subcollection: watson-assistant
 
@@ -1017,6 +1017,9 @@ Set up the following environment variable before you run the auto-retrain-all jo
         EOF
     ```
     {: codeblock}
+
+  
+ 
 
 1. After you complete the auto-retrain-all job, you must disable the auto-retrain-all flag and enable auto-retrain flag by using the following commands:
 
