@@ -359,7 +359,13 @@ To back up your data, complete these steps:
 
 1.  Fetch a running {{site.data.keyword.postgresql}} pod:
 
+   
+ 
+   
+
     Only for version 5.1.0 or greater, use:
+
+    
 
     ```bash
     oc get pods -l app=${INSTANCE}-postgres-16 -o jsonpath="{.items[0].metadata.name}"
@@ -462,7 +468,13 @@ To back up your data, complete these steps:
 
     The following lists describe the arguments. You retrieved the values for some of these parameters in the previous step:
 
+   
+
+   
+
     Only for version 5.1.0 or greater:
+
+    
     
     Use  `$KEEPER_POD`: Any {{site.data.keyword.postgresql}} 16 pod in your instance. 
 
@@ -542,7 +554,13 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
 
 1.  Get the secret:
 
+   
+
+   
+
     Only for version 5.1.0 or greater, use:
+
+    
 
      ```bash
     oc get secret ${INSTANCE}-postgres-16-ca -o jsonpath='{.data.ca\.crt}' | base64 -d | tee ${BACKUP_DIR}/ca.crt | openssl x509 -noout -text
@@ -562,7 +580,13 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
 
 1.  Copy the files that you downloaded and created in the previous steps to any existing directory on a {{site.data.keyword.postgresql}} pod.
 
+   
+
+    
+
     a. Only for version 5.1.0 or greater:
+
+    
     
        Run the following command to find {{site.data.keyword.postgresql}} pods:
 
@@ -621,7 +645,13 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
 
 1.  Run the `pgmig` tool:
 
+   
+   
+   
+
     Only for version 5.1.0 or greater:
+
+    
     
     ```bash
     cd /controller/tmp/bu
@@ -776,7 +806,13 @@ To add the values that are required but currently missing from the file, complet
 
     The updated file looks something like this:
    
+   
+    
+    
+
     Only for version 5.1.0 or greater:
+
+    
 
     ```yaml
     host: wa_inst-postgres-16-rw
@@ -1021,7 +1057,8 @@ Set up the following environment variable before you run the auto-retrain-all jo
     ```
   {: codeblock} 
 
-  
+   
+
 
 1. After you complete the auto-retrain-all job, you must disable the auto-retrain-all flag and enable auto-retrain flag by using the following commands:
 
