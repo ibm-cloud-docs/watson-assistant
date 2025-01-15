@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-13"
+lastupdated: "2025-01-15"
 
 subcollection: watson-assistant
 
@@ -878,6 +878,8 @@ Before you begin the auto-retrain-all job, you must ensure that the {{site.data.
 
 To get a good estimation of the duration that is required to complete the auto-retrain-all job, you can use the `calculate_autoretrain_all_job_duration.sh` script: 
 
+
+
 ```bash
   #!/bin/bash
 
@@ -1016,10 +1018,9 @@ Set up the following environment variable before you run the auto-retrain-all jo
                           value: "${WAIT_TIME_BETWEEN_TRAININGS_FOR_RETRAIN_ALL}"
         EOF
     ```
-    {: codeblock}
+  {: codeblock} 
 
-  
- 
+
 
 1. After you complete the auto-retrain-all job, you must disable the auto-retrain-all flag and enable auto-retrain flag by using the following commands:
 
@@ -1034,6 +1035,8 @@ Set up the following environment variable before you run the auto-retrain-all jo
 {: #set-up-auto-retrain-validate}
 
 You can validate the successful completion of the auto-retrain-all job by comparing the number of `Affected workspaces found` with the `Retrained Total` count in the store-admin service log. To get the number of `Affected workspaces found` and the `Retrained Total`, run the following command:
+
+
 
 ```bash
   oc logs $(oc get pod -l component=store-admin --no-headers |awk '{print $1}') | grep "\[RETRAIN-ALL-SUMMARY\] Affected workspaces found"
