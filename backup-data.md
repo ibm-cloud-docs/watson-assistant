@@ -1021,16 +1021,16 @@ Set up the following environment variable before you run the auto-retrain-all jo
     ```
   {: codeblock} 
 
- 
+  
 
 1. After you complete the auto-retrain-all job, you must disable the auto-retrain-all flag and enable auto-retrain flag by using the following commands:
 
-  ```bash
+   ```bash
       oc patch temporarypatch ${INSTANCE}-store-admin-env-vars -p '{"metadata":{"finalizers":[]}}' --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
       oc delete temporarypatch ${INSTANCE}-store-admin-env-vars -n ${PROJECT_CPD_INST_OPERANDS}
       oc patch watsonassistantstore/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge
-  ```
-  {: codeblock}
+   ```
+   {: codeblock}
 
 ##### Validate the auto-retrain-all job
 {: #set-up-auto-retrain-validate}
