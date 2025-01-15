@@ -908,6 +908,7 @@ To get a good estimation of the duration that is required to complete the auto-r
   echo "Approximate duration of the auto retrain all job if you have 5 Training pods: $DURATION_5 seconds"
   echo "Approximate duration of the auto retrain all job if you have 10 Training pods: $DURATION_10 seconds"
   echo "Approximate duration of the auto retrain all job if you have 15 Training pods: $DURATION_15 seconds"
+
 ```
 {: codeblock}
 
@@ -966,7 +967,7 @@ Set up the following environment variable before you run the auto-retrain-all jo
     
     `(Seconds) (Minutes) (Hours) (Day of Month) (Month) (Day of Week) (Year)`
 
-    You must set the time in UTC time zone. {: important}
+    You must set the time in UTC time zone.{: important}
 
 1. Set `AUTO_RETRAIN_ALL_ENABLED` to true:
 
@@ -1020,7 +1021,7 @@ Set up the following environment variable before you run the auto-retrain-all jo
     ```
   {: codeblock} 
 
-
+ 
 
 1. After you complete the auto-retrain-all job, you must disable the auto-retrain-all flag and enable auto-retrain flag by using the following commands:
 
