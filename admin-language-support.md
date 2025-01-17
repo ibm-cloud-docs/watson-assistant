@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-10-10"
+  years: 2015, 2025
+lastupdated: "2025-01-17"
 
 keywords: global support, universal language, universal model, another language
 
@@ -108,6 +108,8 @@ You can enable the download of language data files, in CSV format, so you can tr
 Each CSV file includes `translatable_string` data that you can use with a machine or human translation service. 
 
 Each CSV file also includes `id`, `resource_type`, and `locator` data that {{site.data.keyword.conversationshort}} can use in another assistant to re-create your source assistant. You don't need to edit this information.
+
+
 
 The overview of the multilingual process is:
 - [Enable multilingual download](#admin-language-support-multilingual-enable): In your source assistant, enable multilingual download
