@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-09"
+lastupdated: "2025-01-17"
 
 subcollection: watson-assistant
 
@@ -19,6 +19,12 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 17 January 2025
+{: #watson-assistant-jan172025}
+{: release-note}
+
+Updated conversational search user query 
+:   Removed a question mark (`?`) that was automatically added to the user query in conversational search. This fixes some edge cases for using elasticsearch integration. It might rarely alter the conversational search responses.
 
 ## 13 December 2024
 {: #watson-assistant-dec132024}
