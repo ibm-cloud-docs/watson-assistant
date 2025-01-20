@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-16"
+lastupdated: "2025-01-20"
 
 subcollection: watson-assistant
 
@@ -372,7 +372,7 @@ To back up your data, complete these steps:
   ```
   {: codeblock}
 
-  For versions below 5.1.0, use:
+  **For other versions, use:**
 
   ```bash
     oc get pods -l app=${INSTANCE}-postgres -o jsonpath="{.items[0].metadata.name}"
@@ -478,7 +478,7 @@ To back up your data, complete these steps:
     
   Use  `$KEEPER_POD`: Any {{site.data.keyword.postgresql}} 16 pod in your instance. 
 
-  For versions below 5.1.0:
+  **For other versions:**
 
   Use `$KEEPER_POD`: Any {{site.data.keyword.postgresql}} pod in your instance.
 
@@ -567,7 +567,7 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
    ```
   {: codeblock}
 
-  For version below 5.1.0, use:
+  **For other versions:**
 
   ```bash
     oc get secret ${INSTANCE}-postgres-ca -o jsonpath='{.data.ca\.crt}' | base64 -d | tee ${BACKUP_DIR}/ca.crt | openssl x509 -noout -text
@@ -595,7 +595,7 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
   ```
   {: codeblock}
 
-  b. For versions below 5.1.0:
+  b. **For other versions:**
     
   Run the following command to find {{site.data.keyword.postgresql}} pods:
 
@@ -663,7 +663,7 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
 
 1.  Run the `pgmig` tool:
 
-    For versions below 5.1.0:
+    **For other versions:**
 
     ```bash
     cd /controller/tmp/bu
@@ -824,7 +824,7 @@ To add the values that are required but currently missing from the file, complet
   ```
   {: codeblock}
 
-  For versions below 5.1.0:
+  **For other versions:**
 
   ```yaml
     host: wa_inst-postgres-rw
@@ -924,7 +924,9 @@ To get a good estimation of the duration that is required to complete the auto-r
     DURATION=$(("$NUM_OF_WORKSPACES_TO_TRAIN"*60 / (input_variable * 2) + "$NUM_OF_WORKSPACES_TO_TRAIN" * 2))
   }
 
-  NUM_OF_WORKSPACES_TO_TRAIN=$(oc exec wa-etcd-0 -n cpd -- bash -c '
+  export PROJECT_CPD_INST_OPERANDS=<namespace where Assistant is installed>
+
+  NUM_OF_WORKSPACES_TO_TRAIN=$(oc exec wa-etcd-0 -n ${PROJECT_CPD_INST_OPERANDS} -- bash -c '
   password="$( cat /var/run/credentials/pass.key )"
   etcdctl_user="root:$password"
   export ETCDCTL_USER="$etcdctl_user"
@@ -1065,7 +1067,7 @@ Set up the following environment variable before you run the auto-retrain-all jo
    ```bash
       oc patch temporarypatch ${INSTANCE}-store-admin-env-vars -p '{"metadata":{"finalizers":[]}}' --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
       oc delete temporarypatch ${INSTANCE}-store-admin-env-vars -n ${PROJECT_CPD_INST_OPERANDS}
-      oc patch watsonassistantstore/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge
+      oc patch watsonassistantstore/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
    ```
    {: codeblock}
 
@@ -1190,11 +1192,11 @@ Use the following steps to `scale` the number of models:
       oc delete temporarypatch ${INSTANCE}-clu-runtime-replicas -n ${PROJECT_CPD_INST_OPERANDS}
       oc delete temporarypatch ${INSTANCE}-clu-replicas -n ${PROJECT_CPD_INST_OPERANDS}
 
-      oc patch watsonassistantclutraining/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge
-      oc patch watsonassistantcluruntime/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge
-      oc patch watsonassistantclu/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge
-      oc patch watsonassistantclutraining/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oper8.org/temporary-patches\":null}}}" --type=merge
-      oc patch watsonassistantcluruntime/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oper8.org/temporary-patches\":null}}}" --type=merge
-      oc patch watsonassistantclu/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oper8.org/temporary-patches\":null}}}" --type=merge
+      oc patch watsonassistantclutraining/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
+      oc patch watsonassistantcluruntime/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
+      oc patch watsonassistantclu/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
+      oc patch watsonassistantclutraining/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oper8.org/temporary-patches\":null}}}" --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
+      oc patch watsonassistantcluruntime/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oper8.org/temporary-patches\":null}}}" --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
+      oc patch watsonassistantclu/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oper8.org/temporary-patches\":null}}}" --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
       ```
       {: codeblock}
