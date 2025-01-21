@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-01-21"
 
 keywords: global support, universal language, universal model, another language
 
@@ -109,7 +109,9 @@ Each CSV file includes `translatable_string` data that you can use with a machin
 
 Each CSV file also includes `id`, `resource_type`, and `locator` data that {{site.data.keyword.conversationshort}} can use in another assistant to re-create your source assistant. You don't need to edit this information.
 
+To successfully download the multilingual package, the total number of translation entries for both action and dialog skills in your assistant must be less than or equal to 400000. You can configure the limit to a higher value in the Enterprise with Data Isolation plan and {{site.data.keyword.conversationfull}} on-premises. Higher values require an additional resource allocation to support large assistants.
 
+To configure the translation entry limit to a higher value, contact [IBM Support Center](https://cloud.ibm.com/unifiedsupport/supportcenter){: external}
 
 The overview of the multilingual process is:
 - [Enable multilingual download](#admin-language-support-multilingual-enable): In your source assistant, enable multilingual download
