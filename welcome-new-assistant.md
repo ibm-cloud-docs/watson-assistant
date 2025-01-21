@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-11-22"
+  years: 2018, 2025
+lastupdated: "2025-01-21"
 
 subcollection: watson-assistant
 
@@ -12,8 +12,6 @@ subcollection: watson-assistant
 
 # Welcome to {{site.data.keyword.conversationshort}}
 {: #welcome-new-assistant}
-
-{{site.data.keyword.conversationshort}} maintenance is planned for the period of 7 December 2024 through 23 December 2024. For more information, see [{{site.data.keyword.conversationshort}} planned maintenance](/docs/watson-assistant?topic=watson-assistant-maintenance).{: important}
 
 Welcome to the documentation for {{site.data.keyword.conversationshort}}!
 {: shortdesc}
