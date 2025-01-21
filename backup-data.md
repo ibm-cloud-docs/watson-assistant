@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-16"
+lastupdated: "2025-01-21"
 
 subcollection: watson-assistant
 
@@ -372,11 +372,11 @@ To back up your data, complete these steps:
   ```
   {: codeblock}
 
-  For versions below 5.1.0, use:
+  **For other versions, use:**
 
-  ```bash
+   ```bash
     oc get pods -l app=${INSTANCE}-postgres -o jsonpath="{.items[0].metadata.name}"
-  ```
+   ```
   {: codeblock}
 
   Replace ${INSTANCE} with the instance of the deployment that you want to back up.
@@ -386,7 +386,7 @@ To back up your data, complete these steps:
    a. Fetch the store VCAP secret name:
 
     ```bash
-    oc get secrets -l component=store,app.kubernetes.io/instance=${INSTANCE} -o=custom-columns=NAME:.metadata.name | grep store-vcap
+     oc get secrets -l component=store,app.kubernetes.io/instance=${INSTANCE} -o=custom-columns=NAME:.metadata.name | grep store-vcap
     ```
     {: codeblock} 
     
@@ -478,7 +478,7 @@ To back up your data, complete these steps:
     
   Use  `$KEEPER_POD`: Any {{site.data.keyword.postgresql}} 16 pod in your instance. 
 
-  For versions below 5.1.0:
+  **For other versions:**
 
   Use `$KEEPER_POD`: Any {{site.data.keyword.postgresql}} pod in your instance.
 
@@ -567,16 +567,15 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
    ```
   {: codeblock}
 
-  For version below 5.1.0, use:
+  **For other versions:**
 
-  ```bash
+   ```bash
     oc get secret ${INSTANCE}-postgres-ca -o jsonpath='{.data.ca\.crt}' | base64 -d | tee ${BACKUP_DIR}/ca.crt | openssl x509 -noout -text
-  ```
-  {: codeblock}
+   ```
+   {: codeblock}
 
-  - Replace `${INSTANCE}` with the name of the instance that you want to back up.
-  - Replace `${BACKUP_DIR}` with the directory where the `postgres.yaml` and `resourceController.yaml` files are located.
-
+   - Replace `${INSTANCE}` with the name of the instance that you want to back up.
+   - Replace `${BACKUP_DIR}` with the directory where the `postgres.yaml` and `resourceController.yaml` files are located.
 
 1.  Copy the files that you downloaded and created in the previous steps to any existing directory on a {{site.data.keyword.postgresql}} pod.
 
@@ -590,47 +589,47 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
     
   Run the following command to find {{site.data.keyword.postgresql}} pods:
 
-  ```bash
+   ```bash
     oc get pods | grep ${INSTANCE}-postgres-16
-  ```
-  {: codeblock}
+   ```
+   {: codeblock}
 
-  b. For versions below 5.1.0:
+  b. **For other versions:**
     
   Run the following command to find {{site.data.keyword.postgresql}} pods:
 
-  ```bash
+   ```bash
     oc get pods | grep ${INSTANCE}-postgres
-  ```
-  {: codeblock}
+   ```
+   {: codeblock}
     
   c. The files that you must copy are `pgmig`, `postgres.yaml`, `resourceController.yaml`, `ca.crt` (the secret file that is generated in step 6), and the file that you created for your downloaded data. Run the following commands to copy the files.
 
   If you are restoring data to a stand-alone {{site.data.keyword.icp4dfull_notm}} cluster, then replace all references to `oc` with `kubectl` in these sample commands.
   {: note}
 
-  ```bash
-    oc exec -it ${POSTGRES_POD} -- mkdir /controller/tmp
-    oc exec -it ${POSTGRES_POD} -- mkdir /controller/tmp/bu
-    oc rsync ${BACKUP_DIR}/ ${POSTGRES_POD}:/controller/tmp/bu/
-  ```
-  {: codeblock}
+   ```bash
+     oc exec -it ${POSTGRES_POD} -- mkdir /controller/tmp
+     oc exec -it ${POSTGRES_POD} -- mkdir /controller/tmp/bu
+     oc rsync ${BACKUP_DIR}/ ${POSTGRES_POD}:/controller/tmp/bu/
+   ```
+   {: codeblock}
 
   - Replace `${POSTGRES_POD}` with the name of one of the {{site.data.keyword.postgresql}} pods from the previous step.
  
 
 1.  Stop the store deployment by scaling the store deployment down to 0 replicas:
 
-    ```bash
-    oc scale deploy ibm-watson-assistant-operator -n ${OPERATOR_NS} --replicas=0
-    oc get deployments -l component=store
-    ```
-    {: codeblock}
+     ```bash
+     oc scale deploy ibm-watson-assistant-operator -n ${OPERATOR_NS} --replicas=0
+     oc get deployments -l component=store
+     ```
+     {: codeblock}
 
     Make a note of how many replicas there are in the store deployment:
-
+ 
     ```bash
-    oc scale deployment ${STORE_DEPLOYMENT} --replicas=0
+     oc scale deployment ${STORE_DEPLOYMENT} --replicas=0
     ```
     {: codeblock}
 
@@ -663,7 +662,7 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
 
 1.  Run the `pgmig` tool:
 
-    For versions below 5.1.0:
+    **For other versions:**
 
     ```bash
     cd /controller/tmp/bu
@@ -806,13 +805,13 @@ To add the values that are required but currently missing from the file, complet
 
     The updated file looks something like this:
    
-  
+   
     
-  
+   
 
-  Only for version 5.1.0 or greater:
+   Only for version 5.1.0 or greater:
 
-  
+   
 
   ```yaml
     host: wa_inst-postgres-16-rw
@@ -824,17 +823,17 @@ To add the values that are required but currently missing from the file, complet
   ```
   {: codeblock}
 
-  For versions below 5.1.0:
+   **For other versions:**
 
-  ```yaml
+   ```yaml
     host: wa_inst-postgres-rw
     port: 5432
     database: conversation_pprd_wa_inst
     username: dbadmin
     su_username: dbadmin
     su_password: mypassword
-  ```
-  {: codeblock}
+   ```
+   {: codeblock}
 
 1.  Save the `postgres.yaml` file.
 
@@ -924,7 +923,9 @@ To get a good estimation of the duration that is required to complete the auto-r
     DURATION=$(("$NUM_OF_WORKSPACES_TO_TRAIN"*60 / (input_variable * 2) + "$NUM_OF_WORKSPACES_TO_TRAIN" * 2))
   }
 
-  NUM_OF_WORKSPACES_TO_TRAIN=$(oc exec wa-etcd-0 -n cpd -- bash -c '
+  export PROJECT_CPD_INST_OPERANDS=<namespace where Assistant is installed>
+
+  NUM_OF_WORKSPACES_TO_TRAIN=$(oc exec wa-etcd-0 -n ${PROJECT_CPD_INST_OPERANDS} -- bash -c '
   password="$( cat /var/run/credentials/pass.key )"
   etcdctl_user="root:$password"
   export ETCDCTL_USER="$etcdctl_user"
@@ -1065,7 +1066,7 @@ Set up the following environment variable before you run the auto-retrain-all jo
    ```bash
       oc patch temporarypatch ${INSTANCE}-store-admin-env-vars -p '{"metadata":{"finalizers":[]}}' --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
       oc delete temporarypatch ${INSTANCE}-store-admin-env-vars -n ${PROJECT_CPD_INST_OPERANDS}
-      oc patch watsonassistantstore/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge
+      oc patch watsonassistantstore/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
    ```
    {: codeblock}
 
@@ -1190,11 +1191,11 @@ Use the following steps to `scale` the number of models:
       oc delete temporarypatch ${INSTANCE}-clu-runtime-replicas -n ${PROJECT_CPD_INST_OPERANDS}
       oc delete temporarypatch ${INSTANCE}-clu-replicas -n ${PROJECT_CPD_INST_OPERANDS}
 
-      oc patch watsonassistantclutraining/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge
-      oc patch watsonassistantcluruntime/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge
-      oc patch watsonassistantclu/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge
-      oc patch watsonassistantclutraining/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oper8.org/temporary-patches\":null}}}" --type=merge
-      oc patch watsonassistantcluruntime/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oper8.org/temporary-patches\":null}}}" --type=merge
-      oc patch watsonassistantclu/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oper8.org/temporary-patches\":null}}}" --type=merge
+      oc patch watsonassistantclutraining/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
+      oc patch watsonassistantcluruntime/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
+      oc patch watsonassistantclu/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oppy.ibm.com/temporary-patches\":null}}}" --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
+      oc patch watsonassistantclutraining/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oper8.org/temporary-patches\":null}}}" --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
+      oc patch watsonassistantcluruntime/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oper8.org/temporary-patches\":null}}}" --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
+      oc patch watsonassistantclu/${INSTANCE} -p "{\"metadata\":{\"annotations\":{\"oper8.org/temporary-patches\":null}}}" --type=merge -n ${PROJECT_CPD_INST_OPERANDS}
       ```
       {: codeblock}
