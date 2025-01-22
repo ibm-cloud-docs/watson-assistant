@@ -847,15 +847,10 @@ The following table lists the arguments that are supported by the `pgmig` tool:
 | -f, --force | Erase data if present in the target Store |
 | -s, --source string | Backup file name |   
 | -r, --resourceController string | Resource Controller configuration file name |
-
 | -t, --target string | Target {{site.data.keyword.postgresql}} server configuration file name |
-
 | -m, --mapping string | Service instance-mapping configuration file name (optional) |
 | --testRCConnection | Test the connection for Resource Controller, then exit |
-
-
 | --testPGConnection | Test the connection for {{site.data.keyword.postgresql}} server, then exit |
-
 | -v, --version | Get Build version |
 {: caption="pgmig tool arguments" caption-side="top"}
 
