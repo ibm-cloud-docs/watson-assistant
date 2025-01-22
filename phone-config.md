@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-01-10"
+lastupdated: "2025-01-22"
 
 subcollection: watson-assistant
 
@@ -211,7 +211,7 @@ IBM has established relationships with the following SIP trunk providers:
 
 - [Five9](https://www.five9.com/products/capabilities/contact-center-software){: external}
 - [Genesys](https://www.genesys.com/en-sg/definitions/what-is-a-trunk){: external}
-- [Vonage](https://www.vonage.com/communications-apis/sip-trunking/){: external}
+- [Vonage](https://www.vonage.com/communications-apis/sip-trunking){: external}
 - [Voximplant](https://voximplant.com/){: external}
 
 The SIP trunk provider sets up a SIP trunk for your voice traffic, and manages access from allowed IP addresses. Most of the major SIP trunk providers have existing relationships with IBM. Therefore, the network configuration that is required to support the SIP trunk connection typically can be handled for you with minimal effort.

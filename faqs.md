@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-09"
+lastupdated: "2025-01-22"
 
 keywords: Watson Assistant frequently asked questions
 
@@ -136,7 +136,7 @@ If you want to copy dialog nodes from one dialog into another dialog, follow the
 {: #faqs-delete-workspace}
 {: faq}
 
-Regularly back up data to prevent problems that might arise from inadvertent deletions. If you do not have a backup, there is a short window of time during which a deleted dialog might be recoverable. Immediately following the deletion, [open a case](https://www.ibm.com/mysupport) with Support to determine if the data can be recovered. Include the following information in your case:
+Regularly back up data to prevent problems that might arise from inadvertent deletions. If you do not have a backup, there is a short window of time during which a deleted dialog might be recoverable. Immediately following the deletion, [open a case](https://www.ibm.com/mysupport/s/) with Support to determine if the data can be recovered. Include the following information in your case:
 
 - Skill ID
 - Instance ID or name

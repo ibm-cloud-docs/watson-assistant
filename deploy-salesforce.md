@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-12-24"
+  years: 2021, 2025
+lastupdated: "2025-01-22"
 
 subcollection: watson-assistant
 
@@ -31,15 +31,15 @@ Salesforce is a customer relationship management solution that brings companies 
 
 To connect to a Salesforce service desk, your organization must have a Salesforce Service Cloud plan that supports Live Agent Chat. Chat support is available in Salesforce Service Cloud Unlimited and Enterprise plans. It is also available with Performance or Developer plans that were created after 14 June 2012.
 
-Your organization must have a [Salesforce chat app](https://help.salesforce.com/s/articleView?id=sf.essentials_chat_messaging.htm&type=5){: external} with the following characteristics:
+Your organization must have a [Salesforce chat app](https://help.salesforce.com/s/articleView?language=en_US&id=sf.essentials_chat_messaging.htm&type=5){: external} with the following characteristics:
 
 - Console navigation
 - Navigation items: Cases, Chat sessions, Chat transcripts
-- User profiles: Apply the appropriate profiles to ensure that agents can access the app and view chat history information. You can limit access to this page later. See [Profiles](https://help.salesforce.com/articleView?id=admin_userprofiles.htm&type=5){: external}.
-- A [chat deployment](https://help.salesforce.com/articleView?id=live_agent_create_deployments.htm&type=5){: external}.
-- A [chat button deployment](https://help.salesforce.com/articleView?id=live_agent_create_buttons.htm&type=5){: external}.
-- Routing must be configured for the chat button. See [Chat routing options](https://help.salesforce.com/articleView?id=live_agent_chat_routing_options.htm&type=5){: external}.
-- If you choose omni-channel routing, be sure to include omni-channel as a utility in the chat app. See [Omni-Channel](https://help.salesforce.com/articleView?id=omnichannel_intro.htm&type=5){: external}.
+- User profiles: Apply the appropriate profiles to ensure that agents can access the app and view chat history information. You can limit access to this page later. See [Profiles](https://help.salesforce.com/s/articleView?language=en_US&id=admin_userprofiles.htm&type=5){: external}.
+- A [chat deployment](https://help.salesforce.com/s/articleView?language=en_US&id=live_agent_create_deployments.htm&type=5){: external}.
+- A [chat button deployment](https://help.salesforce.com/s/articleView?language=en_US&id=live_agent_create_buttons.htm&type=5){: external}.
+- Routing must be configured for the chat button. See [Chat routing options](https://help.salesforce.com/s/articleView?language=en_US&id=live_agent_chat_routing_options.htm&type=5){: external}.
+- If you choose omni-channel routing, be sure to include omni-channel as a utility in the chat app. See [Omni-Channel](https://help.salesforce.com/s/articleView?language=en_US&id=omnichannel_intro.htm&type=5){: external}.
 
 You must have a level of access to your Salesforce service desk deployment that allows you to do the following:
 
@@ -82,7 +82,7 @@ To set up a Salesforce service desk integration, complete the following steps:
 
     These custom fields are referenced from the Visualforce page code that you will use in the next step.
 
-    See [Create Custom Fields](https://help.salesforce.com/articleView?id=adding_fields.htm&type=5){: external}.
+    See [Create Custom Fields](https://help.salesforce.com/s/articleView?language=en_US&id=adding_fields.htm&type=5){: external}.
 
     From the Salesforce **Data >Objects and Fields > Object Manager > Chat Transcript > Fields & Relationships** page, create the following custom fields:
 
@@ -93,14 +93,14 @@ To set up a Salesforce service desk integration, complete the following steps:
 
 1.  Create a Visualforce page.
 
-    Visualforce pages are the mechanism that Salesforce provides for you to customize a live agent's console by adding your own pages to it. A Visualforce page is similar to a standard web page, but it provides ways for you to access, display, and update your organization’s data. Pages can be referenced and invoked by using a unique URL, just as HTML pages on a traditional web server can be. See [Create Visualforce Pages](https://help.salesforce.com/articleView?id=pages_creating.htm&type=5){: external}
+    Visualforce pages are the mechanism that Salesforce provides for you to customize a live agent's console by adding your own pages to it. A Visualforce page is similar to a standard web page, but it provides ways for you to access, display, and update your organization’s data. Pages can be referenced and invoked by using a unique URL, just as HTML pages on a traditional web server can be. See [Create Visualforce Pages](https://help.salesforce.com/s/articleView?language=en_US&id=pages_creating.htm&type=5){: external}
 
     - From the web chat integration page in {{site.data.keyword.conversationshort}}, copy the code snippet from the Visualforce page markup field.
     - Switch to your Salesforce web page. Search for **Visualforce Pages**. Create a page. Add a label and name to the page. Select the *Available for Lightning Experience, Lightning Communities, and the mobile app* checkbox. Paste the code snippet that you copied in the previous step into the page markup field.
 
 1.  Add the Visualforce page that you created to the Salesforce chat app. {: #deploy-salesforce-add-page-to-layout}
 
-    To ensure the Salesforce agents can see history of the chat between the customer and your assistant, you must add the page that you created earlier into the console that they use to keep track of their work. See [Create and Configure Lightning Experience Record Pages](https://help.salesforce.com/articleView?id=lightning_app_builder_customize_lex_pages.htm&type=5){: external}.
+    To ensure the Salesforce agents can see history of the chat between the customer and your assistant, you must add the page that you created earlier into the console that they use to keep track of their work. See [Create and Configure Lightning Experience Record Pages](https://help.salesforce.com/s/articleView?language=en_US&id=lightning_app_builder_customize_lex_pages.htm&type=5){: external}.
 
     - From the Salesforce App Launcher, open the chat app that you created for your agents to talk to customers.
     - Open the *Chat Transcripts* object, and then select a transcript page.
