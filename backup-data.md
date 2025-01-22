@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-21"
+lastupdated: "2025-01-22"
 
 subcollection: watson-assistant
 
@@ -359,27 +359,27 @@ To back up your data, complete these steps:
 
 1.  Fetch a running {{site.data.keyword.postgresql}} pod:
 
-  
+   
  
-  
+   
 
-  Only for version 5.1.0 or greater, use:
+   Only for version 5.1.0 or greater, use:
 
-  
+   
 
   ```bash
        oc get pods -l app=${INSTANCE}-postgres-16 -o jsonpath="{.items[0].metadata.name}"
   ```
   {: codeblock}
 
-  **For other versions, use:**
+   **For other versions, use:**
 
    ```bash
-    oc get pods -l app=${INSTANCE}-postgres -o jsonpath="{.items[0].metadata.name}"
+     oc get pods -l app=${INSTANCE}-postgres -o jsonpath="{.items[0].metadata.name}"
    ```
   {: codeblock}
 
-  Replace ${INSTANCE} with the instance of the deployment that you want to back up.
+   Replace ${INSTANCE} with the instance of the deployment that you want to back up.
 
 2. Perform the following two steps only if you have **version 5.0.0 or 4.8.5 and before**:
 
@@ -468,21 +468,21 @@ To back up your data, complete these steps:
 
     The following lists describe the arguments. You retrieved the values for some of these parameters in the previous step:
 
-  
+   
 
-  
+   
 
-  Only for version 5.1.0 or greater:
+   Only for version 5.1.0 or greater:
 
-  
+   
     
-  Use  `$KEEPER_POD`: Any {{site.data.keyword.postgresql}} 16 pod in your instance. 
+   Use  `$KEEPER_POD`: Any {{site.data.keyword.postgresql}} 16 pod in your instance. 
 
-  **For other versions:**
+   **For other versions:**
 
-  Use `$KEEPER_POD`: Any {{site.data.keyword.postgresql}} pod in your instance.
+   Use `$KEEPER_POD`: Any {{site.data.keyword.postgresql}} pod in your instance.
 
-  For all versions:
+   For all versions:
 
    - `${BACKUP_DIR}`: Specify a file where you want to write the downloaded data. Be sure to specify a backup directory in which to store the file. For example, `/bu/backup-file-name.dump` creates a backup directory named `bu`.
    - `$DATABASE`: The store database name that was retrieved from the Store VCAP secret in step 3.
@@ -490,12 +490,12 @@ To back up your data, complete these steps:
    - `$USERNAME`: The username that was retrieved from the Store VCAP secret in step 3.
    - `$PASSWORD`: The password that was retrieved from the Store VCAP secret in step 3.
 
-  To see more information about the `pg_dump` command, you can run this command:
+   To see more information about the `pg_dump` command, you can run this command:
 
-  ```bash
-    oc exec -it ${KEEPER_POD} -- pg_dump --help
-  ```
-  {: codeblock}
+   ```bash
+   oc exec -it ${KEEPER_POD} -- pg_dump --help
+   ```
+   {: codeblock}
 
 1.  Take a backup of the secret that contains the encryption key. Ignore this step if the below 
     mentioned secret is not available in that release.      
@@ -548,74 +548,72 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
 
     
 
-    - `postgres.yaml`: The {{site.data.keyword.postgresql}} file lists details for the target {{site.data.keyword.postgresql}} pods. See [Creating the postgres.yaml file](#backup-postgres-yaml).
-
-    
+    - `postgres.yaml`: The {{site.data.keyword.postgresql}} file lists details for the target {{site.data.keyword.postgresql}} pods. See [Creating the postgres.yaml file](#backup-postgres-yaml).   
 
 1.  Get the secret:
 
-  
+    
 
-  
+    
 
-  Only for version 5.1.0 or greater, use:
+    Only for version 5.1.0 or greater, use:
 
-  
+    
 
-  ```bash
+    ```bash
     oc get secret ${INSTANCE}-postgres-16-ca -o jsonpath='{.data.ca\.crt}' | base64 -d | tee ${BACKUP_DIR}/ca.crt | openssl x509 -noout -text
-   ```
-  {: codeblock}
+    ```
+    {: codeblock}
 
-  **For other versions:**
+    **For other versions:**
 
-   ```bash
+    ```bash
     oc get secret ${INSTANCE}-postgres-ca -o jsonpath='{.data.ca\.crt}' | base64 -d | tee ${BACKUP_DIR}/ca.crt | openssl x509 -noout -text
-   ```
-   {: codeblock}
+    ```
+    {: codeblock}
 
-   - Replace `${INSTANCE}` with the name of the instance that you want to back up.
-   - Replace `${BACKUP_DIR}` with the directory where the `postgres.yaml` and `resourceController.yaml` files are located.
+    - Replace `${INSTANCE}` with the name of the instance that you want to back up.
+    - Replace `${BACKUP_DIR}` with the directory where the `postgres.yaml` and `resourceController.yaml` files are located.
 
 1.  Copy the files that you downloaded and created in the previous steps to any existing directory on a {{site.data.keyword.postgresql}} pod.
 
-  
-
-  
-
-  a. Only for version 5.1.0 or greater:
-
-  
     
-  Run the following command to find {{site.data.keyword.postgresql}} pods:
 
-   ```bash
+    
+
+    a. Only for version 5.1.0 or greater:
+
+    
+    
+    Run the following command to find {{site.data.keyword.postgresql}} pods:
+
+    ```bash
     oc get pods | grep ${INSTANCE}-postgres-16
-   ```
-   {: codeblock}
+    ```
+    {: codeblock}
 
-  b. **For other versions:**
+    b. **For other versions:**
     
-  Run the following command to find {{site.data.keyword.postgresql}} pods:
+    Run the following command to find {{site.data.keyword.postgresql}} pods:
 
-   ```bash
+    ```bash
     oc get pods | grep ${INSTANCE}-postgres
-   ```
-   {: codeblock}
+    ```
+    {: codeblock}
     
-  c. The files that you must copy are `pgmig`, `postgres.yaml`, `resourceController.yaml`, `ca.crt` (the secret file that is generated in step 6), and the file that you created for your downloaded data. Run the following commands to copy the files.
+    c. The files that you must copy are `pgmig`, `postgres.yaml`, `resourceController.yaml`, `ca.crt` (the secret file that is generated in step 6), and the file that you created for your downloaded data. Run the following commands to copy the files.
 
-  If you are restoring data to a stand-alone {{site.data.keyword.icp4dfull_notm}} cluster, then replace all references to `oc` with `kubectl` in these sample commands.
-  {: note}
+     If you are restoring data to a stand-alone {{site.data.keyword.icp4dfull_notm}} cluster, then replace all references to `oc` with `kubectl` in these sample commands.
+    {: note}
 
-   ```bash
+    ```bash
      oc exec -it ${POSTGRES_POD} -- mkdir /controller/tmp
      oc exec -it ${POSTGRES_POD} -- mkdir /controller/tmp/bu
      oc rsync ${BACKUP_DIR}/ ${POSTGRES_POD}:/controller/tmp/bu/
-   ```
-   {: codeblock}
+    ```
+    {: codeblock}
 
-  - Replace `${POSTGRES_POD}` with the name of one of the {{site.data.keyword.postgresql}} pods from the previous step.
+    - Replace `${POSTGRES_POD}` with the name of one of the {{site.data.keyword.postgresql}} pods from the previous step.
  
 
 1.  Stop the store deployment by scaling the store deployment down to 0 replicas:
@@ -644,21 +642,21 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
 
 1.  Run the `pgmig` tool:
 
-  
-   
-  
-
-  Only for version 5.1.0 or greater:
-
-  
     
-  ```bash
+   
+    
+
+    Only for version 5.1.0 or greater:
+
+    
+    
+    ```bash
     cd /controller/tmp/bu
     export PG_CA_FILE=/controller/tmp/bu/ca.crt
     ./pgmig --resourceController resourceController.yaml --target postgres.yaml --source <backup-file-name.dump>
     export ENABLE_ICP=true
-  ```
-  {: codeblock}
+    ```
+    {: codeblock}
 
 1.  Run the `pgmig` tool:
 
@@ -805,35 +803,35 @@ To add the values that are required but currently missing from the file, complet
 
     The updated file looks something like this:
    
-   
+     
     
-   
+     
 
-   Only for version 5.1.0 or greater:
+     Only for version 5.1.0 or greater:
 
-   
+     
 
-  ```yaml
+    ```yaml
     host: wa_inst-postgres-16-rw
     port: 5432
     database: conversation_pprd_wa_inst
     username: dbadmin
     su_username: dbadmin
     su_password: mypassword
-  ```
-  {: codeblock}
+    ```
+    {: codeblock}
 
-   **For other versions:**
+    **For other versions:**
 
-   ```yaml
+    ```yaml
     host: wa_inst-postgres-rw
     port: 5432
     database: conversation_pprd_wa_inst
     username: dbadmin
     su_username: dbadmin
     su_password: mypassword
-   ```
-   {: codeblock}
+    ```
+    WAIT_TIME_BETWEEN_TRAININGS_FOR_RETRAIN_ALL{: codeblock}
 
 1.  Save the `postgres.yaml` file.
 
@@ -1004,7 +1002,8 @@ Set up the following environment variable before you run the auto-retrain-all jo
     
     `(Seconds) (Minutes) (Hours) (Day of Month) (Month) (Day of Week) (Year)`
 
-    You must set the time in UTC time zone.{: important}
+    You must set the time in UTC time zone.
+    {: important}
 
 1. Set `AUTO_RETRAIN_ALL_ENABLED` to true:
 
