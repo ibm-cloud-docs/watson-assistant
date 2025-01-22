@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-21"
+lastupdated: "2025-01-22"
 
 subcollection: watson-assistant
 
@@ -23,7 +23,7 @@ Release notes describe the new features, changes, and bug fixes in each release 
 {: release-note}
 
 Setting translation entry limit in multilingual package
-:  To successfully download the multilingual package, the total number of translation entries in your assistant must be less than or equal to 400000. For more information, see [Using multilingual downloads for translation](/docs/watson-assistant?topic=watson-assistant-admin-language-support.md#admin-language-support-multilingual).
+:  To successfully download the multilingual package, the total number of translation entries in your assistant must be less than or equal to 400000. For more information, see [Using multilingual downloads for translation](/docs/watson-assistant?topic=watson-assistant-admin-language-support#admin-language-support-multilingual).
 
 ## 17 January 2025
 {: #watson-assistant-jan172025}

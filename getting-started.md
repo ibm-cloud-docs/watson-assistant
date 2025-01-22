@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-08"
+lastupdated: "2025-01-22"
 
 subcollection: watson-assistant
 
@@ -55,7 +55,7 @@ In the **Assistant architecture** section, you can view the complete structure o
 
 The following series of blog articles provide a tutorial to help you get started:
 
-- [Plan it](https://www.ibm.com/blog/getting-started-with-the-new-watson-assistant-plan-it/?c=Watson%20Assistant){: external}
+- [Plan it](https://www.ibm.com/products/blog/getting-started-with-the-new-watson-assistant-plan-it){: external}
 - [Part I: The build guide](https://www.ibm.com/products/tutorials/getting-started-with-the-new-watson-assistant-part-i-the-build-guide){: external}
 - [Part II: Refine your assistant](https://www.ibm.com/products/tutorials/getting-started-with-the-new-watson-assistant-part-ii-refine-your-assistant){: external}
 - [Part III: Test and deploy](https://www.ibm.com/products/tutorials/getting-started-with-the-new-watson-assistant-part-iii-test-and-deploy){: external}

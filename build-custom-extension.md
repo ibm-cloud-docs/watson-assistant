@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-20"
+  years: 2022, 2025
+lastupdated: "2025-01-22"
 
 subcollection: watson-assistant
 
@@ -43,7 +43,7 @@ After this processing is complete, the custom extension becomes available as a n
 
 To create a custom extension, you need access to an OpenAPI document that describes the REST API you want to integrate with. Many third-party services publish OpenAPI documents that describe their APIs, which you can download and import. For an API that your company maintains, you can use standard tools to create an OpenAPI document that describes it.
 
-The [SwaggerHub](https://swagger.io/tools/swaggerhub/){: external} website offers an [OpenAPI 3.0 Tutorial](https://support.smartbear.com/swaggerhub/docs/en/get-started/openapi-3-0-tutorial.html){: external}, and [tools](https://swagger.io/why-swagger/){: external} to help you develop and validate your OpenAPI document. You can use the online [Swagger editor](https://editor.swagger.io/){: external} to convert your OpenAPI document to the correct format and OpenAPI version.
+The [SwaggerHub](https://swagger.io/api-hub/){: external} website offers an [OpenAPI 3.0 Tutorial](https://support.smartbear.com/swaggerhub/docs/en/get-started/openapi-3-0-tutorial.html){: external}, and [tools](https://swagger.io/why-swagger/){: external} to help you develop and validate your OpenAPI document. You can use the online [Swagger editor](https://editor.swagger.io/){: external} to convert your OpenAPI document to the correct format and OpenAPI version.
 {: tip}
 
 The OpenAPI document must satisfy the following requirements and restrictions:
