@@ -809,27 +809,27 @@ To add the values that are required but currently missing from the file, complet
 
      
 
-    ```yaml
-    host: wa_inst-postgres-16-rw
-    port: 5432
-    database: conversation_pprd_wa_inst
-    username: dbadmin
-    su_username: dbadmin
-    su_password: mypassword
-    ```
-    {: codeblock}
+     ```yaml
+     host: wa_inst-postgres-16-rw
+     port: 5432
+     database: conversation_pprd_wa_inst
+     username: dbadmin
+     su_username: dbadmin
+     su_password: mypassword
+     ```
+     {: codeblock}
 
-    **For other versions:**
+     **For other versions:**
 
-    ```yaml
-    host: wa_inst-postgres-rw
-    port: 5432
-    database: conversation_pprd_wa_inst
-    username: dbadmin
-    su_username: dbadmin
-    su_password: mypassword
-    ```
-    WAIT_TIME_BETWEEN_TRAININGS_FOR_RETRAIN_ALL{: codeblock}
+     ```yaml
+     host: wa_inst-postgres-rw
+     port: 5432
+     database: conversation_pprd_wa_inst
+     username: dbadmin
+     su_username: dbadmin
+     su_password: mypassword
+     ```
+     {: codeblock}
 
 1.  Save the `postgres.yaml` file.
 
