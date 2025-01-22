@@ -468,34 +468,34 @@ To back up your data, complete these steps:
 
     The following lists describe the arguments. You retrieved the values for some of these parameters in the previous step:
 
-   
-
-   
-
-   Only for version 5.1.0 or greater:
-
-   
     
-   Use  `$KEEPER_POD`: Any {{site.data.keyword.postgresql}} 16 pod in your instance. 
 
-   **For other versions:**
+    
 
-   Use `$KEEPER_POD`: Any {{site.data.keyword.postgresql}} pod in your instance.
+    Only for version 5.1.0 or greater:
 
-   For all versions:
+    
+    
+    Use  `$KEEPER_POD`: Any {{site.data.keyword.postgresql}} 16 pod in your instance. 
 
-   - `${BACKUP_DIR}`: Specify a file where you want to write the downloaded data. Be sure to specify a backup directory in which to store the file. For example, `/bu/backup-file-name.dump` creates a backup directory named `bu`.
-   - `$DATABASE`: The store database name that was retrieved from the Store VCAP secret in step 3.
-   - `$HOSTNAME`: The hostname that was retrieved from the Store VCAP secret in step 3.
-   - `$USERNAME`: The username that was retrieved from the Store VCAP secret in step 3.
-   - `$PASSWORD`: The password that was retrieved from the Store VCAP secret in step 3.
+    **For other versions:**
 
-   To see more information about the `pg_dump` command, you can run this command:
+    Use `$KEEPER_POD`: Any {{site.data.keyword.postgresql}} pod in your instance.
 
-   ```bash
-   oc exec -it ${KEEPER_POD} -- pg_dump --help
-   ```
-   {: codeblock}
+    For all versions:
+
+    - `${BACKUP_DIR}`: Specify a file where you want to write the downloaded data. Be sure to specify a backup directory in which to store the file. For example, `/bu/backup-file-name.dump` creates a backup directory named `bu`.
+    - `$DATABASE`: The store database name that was retrieved from the Store VCAP secret in step 3.
+    - `$HOSTNAME`: The hostname that was retrieved from the Store VCAP secret in step 3.
+    - `$USERNAME`: The username that was retrieved from the Store VCAP secret in step 3.
+    - `$PASSWORD`: The password that was retrieved from the Store VCAP secret in step 3.
+
+    To see more information about the `pg_dump` command, you can run this command:
+
+    ```bash
+    oc exec -it ${KEEPER_POD} -- pg_dump --help
+    ```
+    {: codeblock}
 
 1.  Take a backup of the secret that contains the encryption key. Ignore this step if the below 
     mentioned secret is not available in that release.      
@@ -657,8 +657,6 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
     export ENABLE_ICP=true
     ```
     {: codeblock}
-
-1.  Run the `pgmig` tool:
 
     **For other versions:**
 
