@@ -359,27 +359,27 @@ To back up your data, complete these steps:
 
 1.  Fetch a running {{site.data.keyword.postgresql}} pod:
 
-   
+    
  
-   
+    
 
-   Only for version 5.1.0 or greater, use:
+    Only for version 5.1.0 or greater, use:
 
-   
+    
 
-  ```bash
+    ```bash
        oc get pods -l app=${INSTANCE}-postgres-16 -o jsonpath="{.items[0].metadata.name}"
-  ```
-  {: codeblock}
+    ```
+    {: codeblock}
 
-   **For other versions, use:**
+    **For other versions, use:**
 
-   ```bash
+    ```bash
      oc get pods -l app=${INSTANCE}-postgres -o jsonpath="{.items[0].metadata.name}"
-   ```
-  {: codeblock}
+    ```
+    {: codeblock}
 
-   Replace ${INSTANCE} with the instance of the deployment that you want to back up.
+    Replace ${INSTANCE} with the instance of the deployment that you want to back up.
 
 2. Perform the following two steps only if you have **version 5.0.0 or 4.8.5 and before**:
 
