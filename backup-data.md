@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-22"
+lastupdated: "2025-01-24"
 
 subcollection: watson-assistant
 
@@ -907,9 +907,8 @@ To get a good estimation of the duration that is required to complete the auto-r
 
 
 ```bash
-  #!/bin/bash
-
-  calculate_duration() {
+#!/bin/bash
+calculate_duration() {
     local input_variable="$1"
     DURATION=$(("$NUM_OF_WORKSPACES_TO_TRAIN"*60 / (input_variable * 2) + "$NUM_OF_WORKSPACES_TO_TRAIN" * 2))
   }
@@ -936,7 +935,6 @@ To get a good estimation of the duration that is required to complete the auto-r
   echo "Approximate duration of the auto retrain all job if you have 5 Training pods: $DURATION_5 seconds"
   echo "Approximate duration of the auto retrain all job if you have 10 Training pods: $DURATION_10 seconds"
   echo "Approximate duration of the auto retrain all job if you have 15 Training pods: $DURATION_15 seconds"
-
 ```
 {: codeblock}
 
@@ -1067,12 +1065,7 @@ Set up the following environment variable before you run the auto-retrain-all jo
 
 You can validate the successful completion of the auto-retrain-all job by comparing the number of `Affected workspaces found` with the `Retrained Total` count in the store-admin service log. To get the number of `Affected workspaces found` and the `Retrained Total`, run the following command:
 
-
-
-```bash
-  oc logs $(oc get pod -l component=store-admin --no-headers |awk '{print $1}') | grep "\[RETRAIN-ALL-SUMMARY\] Affected workspaces found"
-```
-{: codeblock}
+ 
 
 If the auto-retrain-all job is successful, the `Retrained Total` count equals the number of `Affected workspaces found`. In addition, if the difference between the counts of the `Retrained Total` and `Affected workspaces found` is small, the auto-retrain-all job completes successfully by training the remaining models in the background. However, if there is a big difference between `Retrained Total` and `Affected workspaces found`, you must look at the store-admin logs to analyze the issue and consider [speeding up the auto-retrain-all job](#set-up-auto-retrain-speed-up). 
 
