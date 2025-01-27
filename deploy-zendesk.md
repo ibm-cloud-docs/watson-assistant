@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-12-23"
+  years: 2020, 2025
+lastupdated: "2025-01-27"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,8 @@ Zendesk allows you to assist customers in real time, which increases customer sa
 
 ## Before you begin
 {: #deploy-zendesk-prereqs}
+
+Zendesk is [updating](https://support.zendesk.com/hc/en-us/articles/7827476398362-Deprecating-the-Zopim-Chat-REST-API-domain){: external} the Zopim Chat REST API domain. If you use a previous version of the Web Chat that integrates with Zendesk, you must upgrade to the latest version as soon as possible. For more information about how to manage your web chat version, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).{: important}
 
 1.  Sign up for or switch to a [Zendesk Service account with an Enterprise plan](https://www.zendesk.com/enterprise/){: external}, which is required.
 
