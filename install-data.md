@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-11-04"
+  years: 2015, 2025
+lastupdated: "2025-01-27"
 
 subcollection: watson-assistant
 
@@ -15,12 +15,15 @@ subcollection: watson-assistant
 # Installing {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull_notm}}
 {: #install-data}
 
+
+
 Learn how to install {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}}.
 {: shortdesc}
 
 The {{site.data.keyword.icp4dfull_notm}} environment is a Kubernetes-based container platform that can help you quickly modernize and automate workloads that are associated with the applications and services you use. You can develop and deploy on your own infrastructure and in your data center which helps to mitigate risk and minimize vulnerabilities.
 
 The installation process differs depending on the version you are installing. The following table shows the available versions.
+
 
 
 | Version |  Cluster | Installation instructions |
@@ -57,10 +60,15 @@ The installation process differs depending on the version you are installing. Th
 {: caption="Available versions" caption-side="top"}
 
 
+
+
+
 ## Support matrix
 {: #install-support-matrix}
 
 The following table describes which versions of {{site.data.keyword.conversationshort}} are supported on which versions of {{site.data.keyword.icp4dfull_notm}} and Red Hat OpenShift.
+
+
 
 | {{site.data.keyword.conversationshort}} version | {{site.data.keyword.icp4dfull_notm}} version | Red Hat OpenShift version |
 | --- | --- | --- |

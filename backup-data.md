@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-24"
+lastupdated: "2025-01-27"
 
 subcollection: watson-assistant
 
@@ -913,28 +913,28 @@ calculate_duration() {
     DURATION=$(("$NUM_OF_WORKSPACES_TO_TRAIN"*60 / (input_variable * 2) + "$NUM_OF_WORKSPACES_TO_TRAIN" * 2))
   }
 
-  export PROJECT_CPD_INST_OPERANDS=<namespace where Assistant is installed>
+export PROJECT_CPD_INST_OPERANDS=<namespace where Assistant is installed>
 
-  NUM_OF_WORKSPACES_TO_TRAIN=$(oc exec wa-etcd-0 -n ${PROJECT_CPD_INST_OPERANDS} -- bash -c '
+NUM_OF_WORKSPACES_TO_TRAIN=$(oc exec wa-etcd-0 -n ${PROJECT_CPD_INST_OPERANDS} -- bash -c '
   password="$( cat /var/run/credentials/pass.key )"
   etcdctl_user="root:$password"
   export ETCDCTL_USER="$etcdctl_user"
 
   ETCDCTL_API=3 etcdctl --cert=/etc/etcdtls/operator/etcd-tls/etcd-client.crt --key=/etc/etcdtls/operator/etcd-tls/etcd-client.key --cacert=/etc/etcdtls/operator/etcd-tls/etcd-client-ca.crt --endpoints=https://$(hostname).${CLUSTER_NAME}.cpd.svc.cluster.local:2379 get  --prefix  /bluegoat/voyager-nlu/voyager-nlu-slot-wa/workspaces/ --keys-only | sed '/^$/d' | wc -l')
 
-  echo "Number of workspaces to train $NUM_OF_WORKSPACES_TO_TRAIN"
+echo "Number of workspaces to train $NUM_OF_WORKSPACES_TO_TRAIN"
 
-  calculate_duration 5
-  DURATION_5=$DURATION
+calculate_duration 5
+DURATION_5=$DURATION
 
-  calculate_duration 10
-  DURATION_10=$DURATION
+calculate_duration 10
+DURATION_10=$DURATION
 
-  calculate_duration 15
-  DURATION_15=$DURATION
-  echo "Approximate duration of the auto retrain all job if you have 5 Training pods: $DURATION_5 seconds"
-  echo "Approximate duration of the auto retrain all job if you have 10 Training pods: $DURATION_10 seconds"
-  echo "Approximate duration of the auto retrain all job if you have 15 Training pods: $DURATION_15 seconds"
+calculate_duration 15
+DURATION_15=$DURATION
+echo "Approximate duration of the auto retrain all job if you have 5 Training pods: $DURATION_5 seconds"
+echo "Approximate duration of the auto retrain all job if you have 10 Training pods: $DURATION_10 seconds"
+echo "Approximate duration of the auto retrain all job if you have 15 Training pods: $DURATION_15 seconds"
 ```
 {: codeblock}
 
