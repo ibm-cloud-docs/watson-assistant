@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-27"
+lastupdated: "2025-01-30"
 
 subcollection: watson-assistant
 
@@ -359,13 +359,7 @@ To back up your data, complete these steps:
 
 1.  Fetch a running {{site.data.keyword.postgresql}} pod:
 
-    
- 
-    
-
-    Only for version 5.1.0 or greater, use:
-
-    
+    **Only for version 4.8.8, 5.1.0, and all future versions:**
 
     ```bash
        oc get pods -l app=${INSTANCE}-postgres-16 -o jsonpath="{.items[0].metadata.name}"
@@ -468,14 +462,8 @@ To back up your data, complete these steps:
 
     The following lists describe the arguments. You retrieved the values for some of these parameters in the previous step:
 
-    
-
-    
-
-    Only for version 5.1.0 or greater:
-
-    
-    
+    **Only for version 4.8.8, 5.1.0, and all future versions:**  
+  
     Use  `$KEEPER_POD`: Any {{site.data.keyword.postgresql}} 16 pod in your instance. 
 
     **For other versions:**
@@ -546,19 +534,11 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
 
     - `resourceController.yaml`: The Resource Controller file keeps a list of all provisioned instances. See [Creating the resourceController.yaml file](#backup-resource-controller-yaml).
 
-    
-
     - `postgres.yaml`: The {{site.data.keyword.postgresql}} file lists details for the target {{site.data.keyword.postgresql}} pods. See [Creating the postgres.yaml file](#backup-postgres-yaml).   
 
 1.  Get the secret:
 
-    
-
-    
-
-    Only for version 5.1.0 or greater, use:
-
-    
+    **Only for version 4.8.8, 5.1.0, and all future versions:**
 
     ```bash
     oc get secret ${INSTANCE}-postgres-16-ca -o jsonpath='{.data.ca\.crt}' | base64 -d | tee ${BACKUP_DIR}/ca.crt | openssl x509 -noout -text
@@ -577,14 +557,8 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
 
 1.  Copy the files that you downloaded and created in the previous steps to any existing directory on a {{site.data.keyword.postgresql}} pod.
 
-    
-
-    
-
-    a. Only for version 5.1.0 or greater:
-
-    
-    
+    a. **Only for version 4.8.8, 5.1.0, and all future versions:**
+ 
     Run the following command to find {{site.data.keyword.postgresql}} pods:
 
     ```bash
@@ -642,13 +616,7 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
 
 1.  Run the `pgmig` tool:
 
-    
-   
-    
-
-    Only for version 5.1.0 or greater:
-
-    
+    **Only for version 4.8.8, 5.1.0, and all future versions:**
     
     ```bash
     cd /controller/tmp/bu
@@ -801,13 +769,7 @@ To add the values that are required but currently missing from the file, complet
 
     The updated file looks something like this:
    
-     
-    
-     
-
-     Only for version 5.1.0 or greater:
-
-     
+     **Only for version 4.8.8, 5.1.0, and all future versions:**
 
      ```yaml
      host: wa_inst-postgres-16-rw
@@ -904,7 +866,48 @@ Before you begin the auto-retrain-all job, you must ensure that the {{site.data.
 
 To get a good estimation of the duration that is required to complete the auto-retrain-all job, you can use the `calculate_autoretrain_all_job_duration.sh` script: 
 
+ **Only for version 5.1.0, 5.0.3, 4.8.8, and all future versions:**
 
+ Specify the namespace where assistant is installed in the `PROJECT_CPD_INST_OPERANDS` key in the script below.
+ 
+ ```bash
+#!/bin/bash
+
+calculate_duration() {
+  local input_variable="$1"
+  DURATION=$(("$NUM_OF_WORKSPACES_TO_TRAIN"*60 / (input_variable * 2) + "$NUM_OF_WORKSPACES_TO_TRAIN" * 2))
+}
+
+export PROJECT_CPD_INST_OPERANDS=<namespace where Assistant is installed>
+
+ETCD_ENDPOINTS=$(oc get secret wa-cluruntime-datastore-connection-strings -n ${PROJECT_CPD_INST_OPERANDS} -o jsonpath="{.data.etcd}" | base64 --decode | jq -r '.endpoints')
+
+NUM_OF_WORKSPACES_TO_TRAIN=$(oc exec wa-etcd-0 -n ${PROJECT_CPD_INST_OPERANDS} -- bash -c "
+  password=\"\$( cat /var/run/credentials/pass.key)\"
+  etcdctl_user=\"root:\$password\"
+  export ETCDCTL_USER=\"\$etcdctl_user\"
+
+  ETCDCTL_API=3 etcdctl --cert=/etc/etcdtls/operator/etcd-tls/etcd-client.crt --key=/etc/etcdtls/operator/etcd-tls/etcd-client.key --cacert=/etc/etcdtls/operator/etcd-tls/etcd-client-ca.crt --endpoints=${ETCD_ENDPOINTS} get  --prefix  /bluegoat/voyager-nlu/voyager-nlu-slot-wa/workspaces/ --keys-only | sed '/^$/d' | wc -l")
+
+echo "Number of workspaces to train $NUM_OF_WORKSPACES_TO_TRAIN"
+
+calculate_duration 5
+DURATION_5=$DURATION
+
+calculate_duration 10
+DURATION_10=$DURATION
+
+calculate_duration 15
+DURATION_15=$DURATION
+
+echo "Approximate duration of the auto retrain all job if you have 5 Training pods: $DURATION_5 seconds"
+echo "Approximate duration of the auto retrain all job if you have 10 Training pods: $DURATION_10 seconds"
+echo "Approximate duration of the auto retrain all job if you have 15 Training pods: $DURATION_15 seconds"
+   
+ ```
+ {: codeblock} 
+ 
+**For other versions:**
 
 ```bash
 #!/bin/bash
@@ -1048,8 +1051,14 @@ Set up the following environment variable before you run the auto-retrain-all jo
     ```
   {: codeblock} 
 
-   
+   **Only for version 5.1.0, 5.0.3, 4.8.8, and all future versions:**
+ 
+1. Get the etcd endpoint by running the following:
 
+   ```bash
+   oc get secret wa-cluruntime-datastore-connection-strings -o jsonpath="{.data.etcd}" | base64 --decode | jq -r '.endpoints
+   ```
+   {: codeblock}
 
 1. After you complete the auto-retrain-all job, you must disable the auto-retrain-all flag and enable auto-retrain flag by using the following commands:
 
@@ -1065,7 +1074,10 @@ Set up the following environment variable before you run the auto-retrain-all jo
 
 You can validate the successful completion of the auto-retrain-all job by comparing the number of `Affected workspaces found` with the `Retrained Total` count in the store-admin service log. To get the number of `Affected workspaces found` and the `Retrained Total`, run the following command:
 
- 
+ ```bash
+ oc logs $(oc get pod -l component=store-admin --no-headers -n ${PROJECT_CPD_INST_OPERANDS}  |awk '{print $1}') | grep "\[RETRAIN-ALL-SUMMARY\] Affected workspaces found"
+ ```
+ {: codeblock}
 
 If the auto-retrain-all job is successful, the `Retrained Total` count equals the number of `Affected workspaces found`. In addition, if the difference between the counts of the `Retrained Total` and `Affected workspaces found` is small, the auto-retrain-all job completes successfully by training the remaining models in the background. However, if there is a big difference between `Retrained Total` and `Affected workspaces found`, you must look at the store-admin logs to analyze the issue and consider [speeding up the auto-retrain-all job](#set-up-auto-retrain-speed-up). 
 
