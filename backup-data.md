@@ -21,8 +21,14 @@ subcollection: watson-assistant
 
 [{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d} [{{site.data.keyword.IBM_notm}} Software Hub]{: tag-teal}
 
+
+
 You can back up and restore the data that is associated with your installation in {{site.data.keyword.icp4dfull_notm}}.
 {: shortdesc}
+
+
+
+
 
 The following table lists the upgrade paths that are supported by the scripts.
 
