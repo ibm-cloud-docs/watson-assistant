@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-12-27"
+  years: 2025
+lastupdated: "2025-02-03"
 
 subcollection: watson-assistant
 
@@ -65,9 +65,8 @@ In the **Connect your search provider** section of the **Milvus** window,
    -  In **Choose collection**, select your collection.
    -  In **Choose index**, select the index.
    -  In **Choose embedding_model_id**, select your model. 
-   
-      Your selected model must align with the one that you used to create your index. 
-      {: note}
+
+
 1. Click **Next** to go to **Conversational search (optional)**.
 1. Conversational search is available only in the Plus and Enterprise plans of {{site.data.keyword.conversationshort}}.
 To activate conversational search, switch the **Conversational Search** toggle to `on`. For more information, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
