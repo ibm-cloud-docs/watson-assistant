@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024, 2024
-lastupdated: "2024-12-17"
+  years: 2024, 2025
+lastupdated: "2025-02-03"
 
 subcollection: watson-assistant
 
@@ -12,7 +12,7 @@ subcollection: watson-assistant
 
 [{{site.data.keyword.IBM_notm}} Software Hub]{: tag-teal}
 
-# Installing {{site.data.keyword.conversationshort}} for {{site.data.keyword.IBM}} Software Hub
+# Installing {{site.data.keyword.conversationshort}} for {{site.data.keyword.IBM_notm}} Software Hub
 {: #install-hub}
 
 Learn how to install {{site.data.keyword.conversationshort}} for {{site.data.keyword.IBM_notm}} Software Hub.
@@ -41,4 +41,3 @@ The following table describes which versions of {{site.data.keyword.conversation
 | --- | --- | --- |
 | 5.1.0| 5.1.x | 4.12, 4.14, 4.15, 4.16, or 4.17 |
 {: caption="Support matrix" caption-side="top"}
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-30"
+lastupdated: "2025-02-03"
 
 subcollection: watson-assistant
 
@@ -10,13 +10,25 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
+
+
 # Backing up and restoring data for {{site.data.keyword.icp4dfull_notm}}
 {: #backup-data}
 
+
+
+
+
 [{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d} [{{site.data.keyword.IBM_notm}} Software Hub]{: tag-teal}
+
+
 
 You can back up and restore the data that is associated with your installation in {{site.data.keyword.icp4dfull_notm}}.
 {: shortdesc}
+
+
+
+
 
 The following table lists the upgrade paths that are supported by the scripts.
 

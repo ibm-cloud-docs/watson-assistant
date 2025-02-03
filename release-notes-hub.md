@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024, 2024
-lastupdated: "2024-12-17"
+  years: 2024, 2025
+lastupdated: "2025-02-03"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,7 @@ content-type: release-note
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Release notes for {{site.data.keyword.conversationshort}} for {{site.data.keyword.IBM}} Software Hub
+# Release notes for {{site.data.keyword.conversationshort}} for {{site.data.keyword.IBM_notm}} Software Hub
 {: #release-notes-hub}
 
 [{{site.data.keyword.IBM_notm}} Software Hub]{: tag-teal}
@@ -40,4 +40,3 @@ The following table shows the latest version of the web chat integration that is
 For the list of {{site.data.keyword.conversationshort}} known issues, see [Limitations and Known issues in {{site.data.keyword.conversationshort}}](https://www.ibm.com/docs/en/software-hub/5.1.x?topic=issues-watsonx-assistant){: external}.
 
 For a list of new features and fixes, see [What's new and changed in {{site.data.keyword.conversationshort}}](https://www.ibm.com/docs/en/software-hub/5.1.x?topic=new-watsonx-assistant){: external}.
-

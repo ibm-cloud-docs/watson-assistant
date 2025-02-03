@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-30"
+lastupdated: "2025-02-03"
 
 subcollection: watson-assistant
 
@@ -12,15 +12,15 @@ content-type: release-note
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Release notes for {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}}
+# Release notes for {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull_notm}}
 {: #release-notes-data}
 
 [{{site.data.keyword.icp4dfull_notm}}]{: tag-cp4d}
 
-Use these release notes to learn about the latest updates to {{site.data.keyword.assistant_classic_full}} for {{site.data.keyword.icp4dfull}}.
+Use these release notes to learn about the latest updates to {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}}.
 {: shortdesc}
 
-For more information on the latest updates of {{site.data.keyword.conversationfull}} On-premises version 5.1.0 and above, see [{{site.data.keyword.IBM}} Software Hub](/docs/watson-assistant?topic=watson-assistant-release-notes-hub).
+For more information on the latest updates of {{site.data.keyword.conversationshort}} On-premises version 5.1.0 and above, see [{{site.data.keyword.IBM}} Software Hub](/docs/watson-assistant?topic=watson-assistant-release-notes-hub).
 
 ## Web chat versions
 {: #release-notes-web-chat}

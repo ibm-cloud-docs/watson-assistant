@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-10"
+lastupdated: "2025-02-03"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,20 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 8.6.0
+{: #8.6.0}
+*Release date: 3 February 2025*
+
+- **Stop Streaming:** Web chat has added a "Stop Response" button to stop streamed responses that can be canceled.
+  - When the user clicks the "Stop response" button, it fires a [stopStreaming event](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#stopStreaming) that you can hook into.
+- Bug fixes.
+
+## 8.5.3
+{: #8.5.3}
+*Release date: 21 January 2025*
+
+- Bug fixes.
 
 ## 8.5.2
 {: #8.5.2}
