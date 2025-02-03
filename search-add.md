@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-12-24"
+  years: 2021, 2025
+lastupdated: "2025-02-03"
 
 subcollection: watson-assistant
 
@@ -14,6 +14,8 @@ subcollection: watson-assistant
 {: #search-add}
 
 [Plus]{: tag-green} [IBM Cloud Pak for Data]{: tag-cp4d}
+
+
 
 The search integration searches for information from a data collection that you create by using the {{site.data.keyword.discoveryshort}} service.
 
