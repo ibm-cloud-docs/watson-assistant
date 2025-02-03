@@ -317,8 +317,8 @@ toc:
                 - dialog-integrations.md
                 - dialog-sms-actions.md
                 - dialog-actions-client.md
-                - api-dialog-modify.md
-      - topicgroup: 
+                - api-dialog-modify.md # 
+      - topicgroup:
           label: Installing on Cloud Pak for Data  
           topics:
           - install-data.md 
@@ -326,7 +326,7 @@ toc:
           - architecture-data.md
           - backup-data.md
           - troubleshoot-data.md
-          - cos-importer-data.md # 
+          - cos-importer-data.md #  
   - navgroup:
       id: reference
       topics:
