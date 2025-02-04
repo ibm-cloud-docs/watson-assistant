@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-10"
+lastupdated: "2025-02-04"
 
 keywords: conversational search
 
@@ -14,7 +14,7 @@ subcollection: watson-assistant
 # Conversational search analytics
 {: #conversational-search-analytics}
 
-[Plus]{: tag-green} [Enterprise]{: tag-purple} [IBM Cloud Pak for Data]{: tag-cp4d}
+[Plus]{: tag-green} [Enterprise]{: tag-purple} [IBM Cloud Pak for Data]{: tag-cp4d} [{{site.data.keyword.IBM_notm}} Software Hub]{: tag-teal}
 
 ## Overview
 {: #conversational-search-analytics-overview}

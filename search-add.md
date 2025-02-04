@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-04"
 
 subcollection: watson-assistant
 
@@ -13,9 +13,7 @@ subcollection: watson-assistant
 # {{site.data.keyword.discoveryfull}} search integration setup 
 {: #search-add}
 
-[Plus]{: tag-green} [IBM Cloud Pak for Data]{: tag-cp4d}
-
-
+[Plus]{: tag-green} [IBM Cloud Pak for Data]{: tag-cp4d} [{{site.data.keyword.IBM_notm}} Software Hub]{: tag-teal}
 
 The search integration searches for information from a data collection that you create by using the {{site.data.keyword.discoveryshort}} service.
 

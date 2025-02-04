@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-12-14"
+  years: 2015, 2025
+lastupdated: "2025-02-04"
 
 subcollection: watson-assistant
 
@@ -59,10 +59,10 @@ Since {{site.data.keyword.conversationshort}} was first released, the product te
 Usually, this retraining is seamless from a customer point of view. The same inputs result in the same actions, intents, and entities being detected. Sometimes, the retraining might cause changes in accuracy.
 {: note}
 
-## Instructions for {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull_notm}}
+## Instructions for {{site.data.keyword.conversationshort}} for IBM On-premises
 {: #algorithm-version-cp4d}
 
-[IBM Cloud Pak for Data]{: tag-cp4d}
+[IBM Cloud Pak for Data]{: tag-cp4d} [{{site.data.keyword.IBM_notm}} Software Hub]{: tag-teal}
 
 When you upgrade your instance of {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull_notm}}, if your existing models were trained by using an algorithm version that is still supported, your models are not retrained during or after the upgrade.
 
