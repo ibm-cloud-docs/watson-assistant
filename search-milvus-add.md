@@ -70,23 +70,6 @@ In the **Connect your search provider** section of the **Milvus** window,
 1. Click **Next** to go to **Conversational search (optional)**.
 1. Conversational search is available only in the Plus and Enterprise plans of {{site.data.keyword.conversationshort}}.
 To activate conversational search, switch the **Conversational Search** toggle to `on`. For more information, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
-1. In the **Configure result content** section, provide the following fields to map the title, body, and URL to the search response:
-
-    - **Title**
-
-        Search result title. Use the title, name, or similar type of field from the collection as the search result title.
-
-        Select something for the title or no search result response is displayed in the Facebook and Slack integrations.
-
-    - **Body**
-
-        Search result description. Use an abstract, summary, or highlight field from the collection as the search result body.
-
-        Select something for the body or no search result response is displayed in the Facebook and Slack integrations.
-
-    - **URL**
-    
-        This field can be populated with any footer content that you want to include at the end of the search result.
 
 1. Expand the **Advanced Milvus settings** section to define **Filter**.
 
