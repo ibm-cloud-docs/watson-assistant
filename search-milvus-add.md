@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-06"
 
 subcollection: watson-assistant
 
@@ -54,7 +54,7 @@ To set up Milvus on your assistant, use the following procedure:
       
 In the **Connect your search provider** section of the **Milvus** window,      
 1. Provide the following fields to enable your assistant to connect to your Milvus instance:
-    - **URL**
+   
     - **GRPC port (optional)**
     - **Choose an authentication type**
         * If you select `Basic authentication`, you must provide **username** and **password**.
