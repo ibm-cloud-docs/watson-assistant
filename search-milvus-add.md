@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-07"
 
 subcollection: watson-assistant
 
@@ -49,22 +49,6 @@ To select Milvus as the search integration, use one of the following procedures:
  
 ## Setting up Milvus
 {: #setup-milvus}
-      
-To set up Milvus on your assistant, use the following procedure:
-      
-In the **Connect your search provider** section of the **Milvus** window,      
-1. Provide the following fields to enable your assistant to connect to your Milvus instance:
-   
-    - **GRPC port (optional)**
-    - **Choose an authentication type**
-        * If you select `Basic authentication`, you must provide **username** and **password**.
-        * If you select `watsonx.data API key`,  you must provide the corresponding **API key**.
-        * if you select `None`, you cannot provide any other authentication details.
-1. Click **Next** to go to **Select data source** and provide the following details:
-   -  In **Database**, select your preferred database.
-   -  In **Choose collection**, select your collection.
-   -  In **Choose index**, select the index.
-   -  In **Choose embedding_model_id**, select your model. 
 
 
 1. Click **Next** to go to **Conversational search (optional)**.
