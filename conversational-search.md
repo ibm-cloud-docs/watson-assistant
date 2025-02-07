@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-02-07"
 
 keywords: conversational search
 
@@ -132,6 +132,8 @@ When the conversational search is `On`, the same search results are pulled from 
 
    ![Conversational search on](images/convo-search-test-toggle-on.png){: caption="Conversational search on" caption-side="bottom"}
 
+
+
 The web chat integration does not support the citation title feature. Hence, the preceding image does not display the default text in the citation title.
 
 If you encounter bugs in conversational search, you can troubleshoot the errors by clicking **Inspect**.
@@ -144,6 +146,10 @@ When you click **Inspect**, you see two options:
 {: caption="Inspect options" caption-side="bottom"}
 
 ![ConversationalSearchInspect](images/convo-search-inspect.png){: caption="Inspect options" caption-side="bottom"}
+
+
+
+
 
 ## Streaming response for conversational search
 {: #conversational-search-streaming-response}
