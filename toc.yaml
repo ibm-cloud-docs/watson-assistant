@@ -232,7 +232,7 @@ toc:
       - topicgroup:
           label: Customizing and developing
           topics:
-          - develop-overview.md
+          - develop-overview.md # 
           - assistant-responses-json.md
           - dynamic-options.md
           - journeys.md
