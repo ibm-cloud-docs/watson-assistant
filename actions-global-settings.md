@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-01-10"
+lastupdated: "2025-02-10"
 
 keywords: settings
 subcollection: watson-assistant
@@ -34,11 +34,17 @@ Global settings provide options, configurations, and tasks for:
 
 In the **Conversation routing** tab, you have the following settings:
 
+
+
 - [Ask clarifying questions](#actions-global-settings-clarify-questions)
 - [Customize modes](/docs/watson-assistant?topic=watson-assistant-action-response-modes)
 - [Change conversation topic](#actions-global-settings-change-conversation-topic)
 - [No matches](/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches)
 - [Search routing](/docs/watson-assistant?topic=watson-assistant-handle-errors#config-search-routing)
+
+
+
+
 
 ### Clarifying questions
 {: #actions-global-settings-clarify-questions}
@@ -87,7 +93,11 @@ On the **Generative AI** tab, you can enable or disable the generative AI capabi
 
 When you enable the *[information gathering](/docs/watson-assistant?topic=watson-assistant-information-gathering)* feature, your assistant uses a large language model (LLM) in [watsonx.ai](https://www.ibm.com/products/watsonx-ai) to intelligently recognize multiple pieces of information in the customer responses and fill the corresponding steps to avoid multiple prompts in a session. 
 
+
+
 When you enable *[conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search)*, your assistant uses IBM watsonx generative AI model to provide conversational replies to the customer query.
+
+
 
 For more information, see [Using watsonx.ai for generative AI capabilities](/docs/watson-assistant?topic=watson-assistant-using-watsonxai-for-generative-ai-capabilities).
 

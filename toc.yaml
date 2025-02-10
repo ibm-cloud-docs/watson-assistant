@@ -332,7 +332,7 @@ toc:
       topics:
       - glossary.md
 #      - beta-features.md
-      - response-types-reference.md
+      - response-types-reference.md # 
       - preview-runtime-errors.md
       - global-variables.md 
       - ssl-certificates-configuration-reference.md 
