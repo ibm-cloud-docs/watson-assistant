@@ -28,15 +28,13 @@ content-type: conref
 # Content references for watson-assistant
 {: #conref}
 
-
-
 {: #classiclink}
 
 This feature is available only to users enrolled in the early access program. To gain access to early access features, complete the [Early access to beta features form](https://form.asana.com/?k=I-mpQg3brwq-DP9DFwTN_Q&d=8612789739828).
 {: note}
 {: #earlyaccess}
 
-# LLM description table
+## LLM description table
 {: #llm-description-table-reuse}
 
 The following table shows the list of LLMs supported by the {{site.data.keyword.conversationshort}}.
