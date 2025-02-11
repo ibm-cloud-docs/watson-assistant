@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-07-19"
+  years: 2021, 2025
+lastupdated: "2025-02-11"
 
 subcollection: watson-assistant
 
@@ -24,14 +24,3 @@ content-type: conref
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
-
-# Content references for watson-assistant
-{: #watson-assistant-conref}
-
-
-
-{: #classiclink}
-
-This feature is available only to users enrolled in the early access program. To gain access to early access features, complete the [Early access to beta features form](https://form.asana.com/?k=I-mpQg3brwq-DP9DFwTN_Q&d=8612789739828).
-{: note}
-{: #earlyaccess}
