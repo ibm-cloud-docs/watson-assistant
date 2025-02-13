@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-01-27"
+lastupdated: "2025-02-13"
 
 subcollection: watson-assistant
 
@@ -39,9 +39,7 @@ Zendesk is [updating](https://support.zendesk.com/hc/en-us/articles/782747639836
 
 1.  Click your profile, and then select **Check Connection**.
 
-       ![Screen capture of the Zendesk user interface to show where the profile is located.](images/zd-profile-menu.png)
 
-1.  Keep this screen open for the **Connect Zendesk to your assistant** step.
 
        ![Screen capture of the connection dialog.](images/zd-account-key.png)
 
