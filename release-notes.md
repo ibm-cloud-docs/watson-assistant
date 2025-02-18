@@ -18,7 +18,15 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 18 February 2025
+{: #watson-assistant-feb182025}
+{: release-note}
 
+Testing limits update
+:  There are no longer limits to the amount of tests, but there is still a limit of 250 messages per test. For more information, see [Testing limits for the set of data](/docs/watson-assistant?topic=watson-assistant-data-evaluation).
+
+New Generative AI page
+: You now have a new Generative AI page that helps you to configure large language models(LLMs) for your assistants. The LLMs enable your customers to interact with the assistants seamlessly without any custom-built conversational steps. For more information, see [Generative AI](/docs/watson-assistant?topic=watson-assistant-base-llm-wxa).
 
 ## 21 January 2025
 {: #watson-assistant-jan212025}
