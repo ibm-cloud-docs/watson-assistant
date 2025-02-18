@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-02-18"
 
 keywords: evaluation
 
@@ -32,14 +32,8 @@ Evaluation is supported for the draft environment only.
 
 To evaluate the Conversational search performance, in the **Search Integration** window, set the **Conversational search** toggle to `On`. For more information see, [Enabling Conversational search](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
 
-### Testing limits for the set of data
-{: #evaluating-the-assistant-testing-limits}
-
-You can run a maximum of:
-
-- 4 tests per rolling 7-day week per assistant.
-- 40 tests per rolling 7-day week per instance.
-- 250 messages per test.
+You can run a maximum of 250 messages per test.
+{: note}
 
 ### Required format for the CSV file to upload
 {: #evaluating-the-assistant-csv-format}

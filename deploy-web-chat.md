@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2024-04-02"
+  years: 2019, 2025
+lastupdated: "2025-02-13"
 
 subcollection: watson-assistant
 
@@ -65,13 +65,7 @@ To add the web chat to your website:
 
 1.  If the system that hosts your website has limited Internet access (for example, if you use a proxy or firewall), make sure the URLs that host the web chat are accessible. For more information, see [Access to web chat hosts](/docs/watson-assistant?topic=watson-assistant-web-chat-architecture#web-chat-hosts).
 
-1.  Open the web page (or local test file) in your browser. You should see the launcher icon displayed on the page:
 
-    ![Web chat launcher icon](images/web-chat-icon.png) 
-
-1.  Click the launcher icon to open the chat window.
-
-    ![Web chat window](images/home-screen.png)
 
 1.  Paste the same embed script into each web page where you want the assistant to be available to your customers.
 

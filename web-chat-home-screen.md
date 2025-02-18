@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-10-03"
+  years: 2019, 2025
+lastupdated: "2025-02-13"
 
 subcollection: watson-assistant
 
@@ -15,9 +15,6 @@ subcollection: watson-assistant
 
 On the **Home screen** tab, you can configure the contents of the home screen, which welcomes customers and helps them start the conversation with the assistant. The home screen replaces any greeting that would otherwise be sent by the *Greet customer* system action.
 
-![An example of the home screen](images/home-screen.png){: caption="Home screen" caption-side="bottom"}
-
-If you prefer to use a *Greet customer* system action instead of the home screen, you can disable it by clicking the toggle on the **Home screen** tab.
 
 If you use the home screen, you must configure it to show content that is relevant to your customers:
 

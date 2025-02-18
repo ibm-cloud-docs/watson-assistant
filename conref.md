@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-07-19"
+  years: 2021, 2025
+lastupdated: "2025-02-11"
 
 subcollection: watson-assistant
 
@@ -26,12 +26,23 @@ content-type: conref
 {:swift: .ph data-hd-programlang='swift'}
 
 # Content references for watson-assistant
-{: #watson-assistant-conref}
-
-
+{: #conref}
 
 {: #classiclink}
 
 This feature is available only to users enrolled in the early access program. To gain access to early access features, complete the [Early access to beta features form](https://form.asana.com/?k=I-mpQg3brwq-DP9DFwTN_Q&d=8612789739828).
 {: note}
 {: #earlyaccess}
+
+## LLM description table
+{: #llm-description-table-reuse}
+
+The following table shows the list of LLMs supported by the {{site.data.keyword.conversationshort}}.
+
+| LLM model | Description |
+| --------- | ----------- | 
+| [`ibm/granite-13b-chat-v2`](https://dataplatform.cloud.ibm.com/wx/samples/models/ibm/granite-13b-instruct-v2){: external} [Withdrawn]{: tag-cool-gray}| The Granite 13 Billion chat V2 (`granite-13b-chat-v2`) model is the chat-focused variant initialized from the pre-trained Granite Base 13 Billion Base V2 (`granite-13b-base-v2`) model. `granite-13b-base-v2` is trained using over 2.5T tokens. IBM Generative AI Large Language Foundation Models are Enterprise-level English-language models trained with large a volume of data that is subjected to intensive pre-processing and careful analysis. |
+| [`ibm/granite-13b-instruct-v2`](https://dataplatform.cloud.ibm.com/wx/samples/models/ibm/granite-13b-instruct-v2){: external} | The Granite 13 Billion Instruct V2 (`granite.13b.instruct.v2`) model is the instruction-tuned variant initialized from the pre-trained Granite Base 13 Billion Base V2 (`granite.13b.base.v2`) model. `granite.13b.base.v2` is trained using over 2.5T tokens. IBM Generative AI Large Language Foundation Models are Enterprise-level English-language models trained with large a volume of data that is subjected to intensive pre-processing and careful analysis. |
+| [`ibm/granite-3-8b-instruct`](https://dataplatform.cloud.ibm.com/wx/samples/models/ibm/granite-3-8b-instruct){: external} | Granite-3.0-8B-Instruct is a 8B parameter model finetuned from Granite-3.0-8B-Base using a combination of open source instruction datasets with permissive license and internally collected synthetic datasets. The model is designed to respond to general instructions and can be used to build assistants for multiple domains, including bussiness applications. |
+| [`ibm/granite-3-2b-instruct`](https://dataplatform.cloud.ibm.com/wx/samples/models/ibm/granite-3-2b-instruct){: external} | Granite-3.0-2B-Instruct is a lightweight and open-source 2B parameter model fine tuned from Granite-3.0-2B-Base on a combination of open-source and proprietary instruction data with permissive license. The model is designed to respond to general instructions and can be used to build assistants for multiple domains, including business applications. |
+{: caption="LLMs in Assistant" caption-side="bottom"}

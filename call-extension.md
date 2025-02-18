@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-01-03"
+lastupdated: "2025-02-07"
 
 subcollection: watson-assistant
 
@@ -163,6 +163,8 @@ To create an step condition based on the HTTP status code, follow these steps:
     ${step_549_result_1}.status==408
     ```
 
+
+
 ## Debugging failures for custom extension
 {: #extension-debug}
 
@@ -312,6 +314,10 @@ To see the detailed information for analyzing the problem, use the **Inspector**
 
     Response JSON
     :   The raw JSON response that the system receives from the search engine in the retrieval phase of the search.
+
+
+
+
 
 ## Reconfiguring a missing extension
 {: #extension-reconfig}

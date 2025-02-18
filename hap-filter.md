@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-12-20"
+  years: 2023, 2025
+lastupdated: "2025-02-13"
 
 keywords: hap filter
 
@@ -17,9 +17,7 @@ subcollection: watson-assistant
 
 You can use the hate, abuse, and profanity (HAP) filter to maintain an inclusive environment. This feature filters content to provide a positive online atmosphere and a safe community for your customers. 
 
-By enabling HAP detection, you create a more consistent and reliable user experience, safeguarding against the rare instances where HAP content might be generated. 
 
-![HAP filter](images/hap-filter.png){: caption="HAP filter" caption-side="top"}
 
 ## Enabling the HAP filter
 {: #hap-filter-enable}

@@ -232,7 +232,9 @@ toc:
       - topicgroup:
           label: Customizing and developing
           topics:
-          - develop-overview.md
+          - develop-overview.md 
+          - base-llm-wxa.md 
+          - deprecated-llm-models.md 
           - assistant-responses-json.md
           - dynamic-options.md
           - journeys.md
@@ -332,7 +334,8 @@ toc:
       topics:
       - glossary.md
 #      - beta-features.md
-      - response-types-reference.md
+      - response-types-reference.md 
+      - models.md 
       - preview-runtime-errors.md
       - global-variables.md 
       - ssl-certificates-configuration-reference.md 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-10"
 
 subcollection: watson-assistant
 
@@ -49,16 +49,17 @@ To select Milvus as the search integration, use one of the following procedures:
  
 ## Setting up Milvus
 {: #setup-milvus}
-      
+  
 To set up Milvus on your assistant, use the following procedure:
       
 In the **Connect your search provider** section of the **Milvus** window,      
 1. Provide the following fields to enable your assistant to connect to your Milvus instance:
-    - **URL**
-    - **GRPC port (optional)**
+   
+    - **GRPC host**
+    - **GRPC port**
     - **Choose an authentication type**
         * If you select `Basic authentication`, you must provide **username** and **password**.
-        * If you select `watsonx.data API key`,  you must provide the corresponding **API key**.
+        * If you select `watsonx.data API key`,  you must provide the corresponding **API key**. See [Search-with-watsonx-data-milvus](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-milvus/search-with-watsonx-data-milvus.md){: external} to learn more about how to set up watsonx.data Milvus.
         * if you select `None`, you cannot provide any other authentication details.
 1. Click **Next** to go to **Select data source** and provide the following details:
    -  In **Database**, select your preferred database.
@@ -66,27 +67,32 @@ In the **Connect your search provider** section of the **Milvus** window,
    -  In **Choose index**, select the index.
    -  In **Choose embedding_model_id**, select your model. 
 
+   For more information on the supported embedding models, see [Embedding-models](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-models-embed.html?context=wx#embed){: external}.
+   
+   Your selected model must align with the model that you used to create your index. 
+   {: note}
 
-1. Click **Next** to go to **Conversational search (optional)**.
-1. Conversational search is available only in the Plus and Enterprise plans of {{site.data.keyword.conversationshort}}.
-To activate conversational search, switch the **Conversational Search** toggle to `on`. For more information, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
 1. In the **Configure result content** section, provide the following fields to map the title, body, and URL to the search response:
 
     - **Title**
 
-        Search result title. Use the title, name, or similar type of field from the collection as the search result title.
+      Search result title. Use the title, name, or similar type of field from the collection as the search result title.
 
-        Select something for the title or no search result response is displayed in the Facebook and Slack integrations.
+      Select something for the title or no search result response is displayed in the Facebook and Slack integrations.
 
     - **Body**
 
-        Search result description. Use an abstract, summary, or highlight field from the collection as the search result body.
+      Search result description. Use an abstract, summary, or highlight field from the collection as the search result body.
 
-        Select something for the body or no search result response is displayed in the Facebook and Slack integrations.
+      Select something for the body or no search result response is displayed in the Facebook and Slack integrations.
 
     - **URL**
     
-        This field can be populated with any footer content that you want to include at the end of the search result.
+       This field can be populated with any footer content that you want to include at the end of the search result.
+
+1. Click **Next** to go to **Conversational search (optional)**.
+1. Conversational search is available only in the Plus and Enterprise plans of {{site.data.keyword.conversationshort}}.
+To activate conversational search, switch the **Conversational Search** toggle to `on`. For more information, see [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search#conversational-search-setup).
 
 1. Expand the **Advanced Milvus settings** section to define **Filter**.
 
