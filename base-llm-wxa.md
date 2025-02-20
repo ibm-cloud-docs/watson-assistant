@@ -3,7 +3,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-20"
 
 subcollection: watson-assistant
 
@@ -57,7 +57,3 @@ Only Plus or Enterprise plans support Conversational search. Starting from June 
 In conversational search, the LLM uses content that is preloaded during the [search integration](/docs/watson-assistant?topic=watson-assistant-search-overview) to respond to customer queries. 
   
 To use the conversational search, you must configure [search integration](/docs/watson-assistant?topic=watson-assistant-search-overview) and enable [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search).{: note}
-
-To use conversational search in any language other than English, you can change from the default model (Granite) to other model. You can test to verify that you are getting reasonable results in your language that can include Spanish, Brazilian Portuguese, French, or German.
-
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-20"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,8 @@ content-type: release-note
 
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+
 
 ## 18 February 2025
 {: #watson-assistant-feb182025}
