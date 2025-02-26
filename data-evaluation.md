@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-26"
 
 keywords: evaluation
 
@@ -22,6 +22,8 @@ subcollection: watson-assistant
 You can evaluate and analyze the performance of your assistant by uploading a comprehensive, relevant collection of utterances and sending the utterances to your assistant in a test run.
 
 You can use the **Evaluate** page of {{site.data.keyword.conversationshort}} to upload a collection of sample utterances and run through the utterances on your assistant in one test run. 
+
+
 
 When a test run completes, you can view a comprehensive evaluation result. It includes the response routing metrics, conversational search scores (if conversational search is enabled), and response details for any utterance in the uploaded collection. It also includes your assistant settings relevant to the test run.
 
