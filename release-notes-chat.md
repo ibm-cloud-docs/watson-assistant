@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-27"
 
 subcollection: watson-assistant
 
@@ -43,6 +43,7 @@ If you want to evaluate changes that are introduced in a web chat release before
 {: #8.5.3}
 *Release date: 21 January 2025*
 
+- **Changes to conversational search:** Made some UI changes to conversational search responses. This includes the removal of the "Accuracy of generated answers may vary." disclaimer.
 - Bug fixes.
 
 ## 8.5.2
