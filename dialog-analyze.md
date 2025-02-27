@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-12-03"
+  years: 2018, 2025
+lastupdated: "2025-02-27"
 
 subcollection: watson-assistant
 
@@ -18,7 +18,7 @@ subcollection: watson-assistant
 The **Analyze** page provides a summary of the interactions between users and your assistant. If the dialog feature is enabled, the **Analyze** page remains the same, but some slight differences in functionality exist.
 {: shortdesc}
 
-
+You can search and analyze the conversational search requests from the customer in the **Analyze** page.{: note}
 
 ## Overview tab
 {: #dialog-analyze-overview}

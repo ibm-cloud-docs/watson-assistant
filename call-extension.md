@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-02-07"
+lastupdated: "2025-02-27"
 
 subcollection: watson-assistant
 
@@ -163,8 +163,6 @@ To create an step condition based on the HTTP status code, follow these steps:
     ${step_549_result_1}.status==408
     ```
 
-
-
 ## Debugging failures for custom extension
 {: #extension-debug}
 
@@ -172,14 +170,12 @@ If your calls to an extension are failing, you might want to debug the problem b
 
 1. Go to the Actions page, or the action editor, and click **Preview** to open the Preview pane.
 
-    You cannot access the **Inspector** from the assistant preview on the **Preview** page, which shows only what a customer would see. Instead, use the preview feature that is part of the Actions page, which gives you access to additional information.
+    You cannot access the **Inspector** from the {{site.data.keyword.ai-assistant}} preview on the **Preview** page, which shows only what a customer would see. Instead, use the preview feature that is part of the Actions page, which gives you access to additional information.
     {: note}
 
-1. Interact with your assistant as a customer would.
+1. Interact with your {{site.data.keyword.ai-assistant}} as a customer would.
 
 1. Each time an extension is called, the preview pane shows a message giving you access to detailed information:
-
-    ![Extension message in the Preview pane](images/extension-preview-message.png)
 
     Click **Inspect** to see details about the call to the extension.
     
@@ -188,21 +184,14 @@ If your calls to an extension are failing, you might want to debug the problem b
 
     The **Overview** tab of the **Inspector** shows the following information about a call to an extension:
 
-    Extension
-    :   The name of the extension, as specified in the extension settings.
-
-    Operation
-    :   The operation that was called.
-
-    Status
-    :   The HTTP status code from the response. This code can help you determine if an error is being returned from the external service.
-
-    Request parameters
-    :   The input parameters that were sent to the system API as part of the request.
-
-    Response properties
-    :   The values of all properties included in the response from the system API. These are the values that are mapped to action variables after the call to the extension completes.
-
+    | Debugging option | Description |
+    | ----- | ------ |
+    | Extension | The name of the extension, as specified in the extension settings. |
+    | Operation | The operation that was called. |
+    |  Status |  The HTTP status code from the response. This code can help you determine if an error is being returned from the external service. |
+    | Request parameters |  The input parameters that were sent to the system API as part of the request. |
+    | Response properties | The values of all properties included in the response from the system API. These are the values that are mapped to action variables after the call to the extension completes. |
+    
     In the **Request parameters** and **Response properties** tables, long property names might be truncated to show only the last part of the JSON path. To see the complete path and property name, hover the mouse pointer over the property name in the table.
     {: tip}
 
@@ -220,14 +209,12 @@ The conversational search inspector shows up only when conversational search is 
 
 To see the detailed information for analyzing the problem, use the **Inspector** in the Preview pane:
 
-1.	Go to the Actions page, or in the action editor, click **Preview** to open the Preview pane.
+1.  Go to the Actions page, or in the action editor, click **Preview** to open the Preview pane.
 
-    You cannot access the **Inspector** from the assistant preview on the Preview page. Instead, use the preview feature that is part of the Actions page, which gives you access to additional information.
+    You cannot access the **Inspector** from the {{site.data.keyword.ai-assistant}} preview on the Preview page. Instead, use the preview feature that is part of the Actions page, which gives you access to additional information.
     {: note}
-1.	Interact with your assistant as a customer would.
-1.	Each time an extension is called, the preview pane shows a message to access the detailed information:
-    ![Inspect tool](images/inspect.png)
-
+1.  Interact with your {{site.data.keyword.ai-assistant}} as a customer would.
+1.  Each time an extension is called, the preview pane shows a message to access the detailed information:
     You can also click the ![Extension inspector icon](images/extension-inspector-icon.png) icon to show or hide the extension inspector.  Click **Inspect** in the preview pane to show information about a particular call to the search integration.
 1.  Use the **Overview** tab to find the reasons for the failure of your calls to Conversational search.
 
@@ -240,84 +227,37 @@ To see the detailed information for analyzing the problem, use the **Inspector**
 
     The Overview tab of the Inspector shows the following information about the call to the search integration.
 
-    Extension
-    :   The name of the extension, as specified in the extension settings.
-
-    Index
-    :   The name of the Elasticsearch index used by the search, visible only when search extension is configured to use Elasticsearch.
-
-    Project Id
-    :   The ID of the project used by {{site.data.keyword.discoveryfull}} during the retrieval phase of search. This field is visible only when you configure search extension to use {{site.data.keyword.discoveryfull}}.
-
-    Query
-    :   The query used by the system to initiate search on the document engine (Elasticsearch, {{site.data.keyword.discoveryfull}}, or Custom service server-side). The value of this field reflects the system’s rewritten query.
-
-    Original Query
-    :   The query through which the user initiated the search. This field is visible only when the system rewrites the query when multi-turn conversational search is enabled.
-
-    Custom results filter
-    :   Shows the [custom results filter](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-add-trigger), if provided on the search trigger, that triggered the conversational search. This field might not appear in responses always.
-
-    LLM type
-    :   The LLM that was called during the answer generation phase. This value is `watsonx.ai`.
-
-    Model
-    :   The model used by the base LLM during the answer generation phase of the search. 
-
-    Stream close reason
-    :   Gives the reason why the stream ended or was closed with a corresponding value in the UI. 
-    This field is visible only when you enable streaming in the Web Chat. 
-
-    LLM input token count
-    :   Gives the number of tokens in the request that was sent to the LLM in the answer generation phase of the search.
-
-    LLM generated token count
-    :   Gives the number of tokens in the answer that the LLM responds with, in the answer generation phase of the search.
-
-    IDK response
-    :   This field is visible only when the search answer resolves to an IDK (I don't know) response.
-
-    IDK reason
-    :   A reason for why a search answer was resolved to an IDK (I don't know) response by the system is shown with the corresponding value.
-
-    IDK trigger opening phrase
-    :   The field shows the detected standard opening phrase that triggered an IDK (I don't know) response, visible only when the IDK reason is due to this phrase.
-
-    IDK trigger phrase
-    :   The field displays the detected trigger phrase that caused an IDK (I don't know) response, visible only when the IDK reason is due to this phrase.
-
-    Total time to return
-    :   The total time the system took to complete the execution of Conversational search.
-
-    Search time
-    :   The time taken for the system to call the search engine and retrieve results in the retrieval phase of the search.
-
-    Answer generation time
-    :   The time taken for the system to complete the answer generation phase of the search.
-
-    Confidence threshold
-    :   A numerical value that represents the search confidence threshold, also known as [Tendency to say “I don’t know"](/docs/watson-assistant?topic=watson-assistant-conversational-search#behavioral-tuning-conversational-search) in the assistant configuration.
-
-    Extractiveness
-    :   The score reflects how much of the response is directly quoted from sources. A higher score indicates more direct quoting and a lower score indicates rephrasing of the source or lack of source support.
-
-    Retrieval confidence
-    :   The confidence value indicates how sure the system is about the search results. If it’s below the threshold, the system responds with IDK and the reason `Retrieval confidence too low`.
-
-    Response confidence
-    :   The confidence value indicates the system's certainty in view of the generated answer. If it’s below the threshold, the system responds with IDK and the reason `Response confidence too low`.
-
+    | Debugging option | Description |
+    | ------ | ------ |
+    | Extension | The name of the extension, as specified in the extension settings.|
+    | Index | The name of the Elasticsearch index used by the search, visible only when search extension is configured to use Elasticsearch.
+    | Project Id |  The ID of the project used by {{site.data.keyword.discoveryfull}} during the retrieval phase of search. This field is visible only when you configure search extension to use {{site.data.keyword.discoveryfull}}.|
+    | Query | The query used by the system to initiate search on the document engine (Elasticsearch, {{site.data.keyword.discoveryfull}}, or Custom service server-side). The value of this field reflects the system’s rewritten query.| 
+    | Original Query |  The query through which the user initiated the search. This field is visible only when the system rewrites the query when multi-turn conversational search is enabled.| 
+    | Custom results filter | Shows the custom results filter, if provided on the search trigger, that triggered the conversational search. This field might not appear in responses always.| 
+    | LLM type  | The LLM that was called during the answer generation phase. This value is watsonx.ai. To know more about configuring LLM in your {{site.data.keyword.ai-assistant}}, see Base LLM.| 
+    | Model | The model used by the base LLM during the answer generation phase of the search.| 
+    | Stream close reason | Gives the reason why the stream ended or was closed with a corresponding value in the UI. This field is visible only when you enable streaming in the Web Chat.| 
+    | LLM input token count | Gives the number of tokens in the request that was sent to the LLM in the answer generation phase of the search.| 
+    | LLM generated token count | Gives the number of tokens in the answer that the LLM responds with, in the answer generation phase of the search.| 
+    | IDK response  | This field is visible only when the search answer resolves to an IDK (I don't know) response.| 
+    | IDK reason    | A reason for why a search answer was resolved to an IDK (I don't know) response by the system is shown with the corresponding value.| 
+    | IDK trigger opening phrase |  The field shows the detected standard opening phrase that triggered an IDK (I don't know) response, visible only when the IDK reason is due to this phrase.| 
+    | IDK trigger phrase |  The field displays the detected trigger phrase that caused an IDK (I don't know) response, visible only when the IDK reason is due to this phrase.| 
+    | Total time to return  | The total time the system took to complete the execution of Conversational search.| 
+    | Search time | The time taken for the system to call the search engine and retrieve results in the retrieval phase of the search.| 
+    | Answer generation time |  The time taken for the system to complete the answer generation phase of the search.| 
+    | Confidence threshold  | A numerical value that represents the search confidence threshold, also known as Tendency to say “I don’t know" in the {{site.data.keyword.ai-assistant}} configuration.| 
+    | Extractiveness    | The score reflects how much of the response is directly quoted from sources. A higher score indicates more direct quoting and a lower score indicates rephrasing of the source or lack of source support.| 
+    | Retrieval confidence  | The confidence value indicates how sure the system is about the search results. If it’s below the threshold, the system responds with IDK and the reason Retrieval confidence too low.| 
+    Response confidence | The confidence value indicates the system's certainty in view of the generated answer. If it’s below the threshold, the system responds with IDK and the reason `Response confidence too low`.| 
+    
 1. The **Advanced** tab shows the following information about the call to the search integration.
     
-    Request CURL
-    :   The cURL command that is used to replicate the request to the search engine in the retrieval phase of the search. The cURL command does not include any authentication headers or related details. You can include the information into the command.
-
-    Response JSON
-    :   The raw JSON response that the system receives from the search engine in the retrieval phase of the search.
-
-
-
-
+    | Debugging option | Description |
+    | ------ | ------ |
+    | Request cURL | The cURL command that is used to replicate the request to the search engine in the retrieval phase of the search. The cURL command does not include any authentication headers or related details. You can include the information into the command. | 
+    | Response JSON |  The raw JSON response that the system receives from the search engine in the retrieval phase of the search. |
 
 ## Reconfiguring a missing extension
 {: #extension-reconfig}

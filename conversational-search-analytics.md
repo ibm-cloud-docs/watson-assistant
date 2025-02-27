@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-02-27"
 
 keywords: conversational search
 
@@ -56,3 +56,16 @@ The number of citations associated with the response.
 {: #conversational-search-analytics-response-length-confidence}
 
 The number of characters in the response.
+
+### Average citations per response
+{: #conversational-search-analytics-response-avg-citations}
+
+The average number of citations that are received by each response that is provided by the assistant.
+
+### Average response length
+{: #conversational-search-analytics-response-avg-response-length}
+
+The average length of characters required to provide a helpful response.
+
+For all the metrics, the average is the average among all questions for which we generated a response, regardless of whether we provided it or not.
+{: note}

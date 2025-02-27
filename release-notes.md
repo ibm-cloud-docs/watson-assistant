@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-27"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,13 @@ content-type: release-note
 
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 27 February 2025
+{: #watson-assistant-feb272025}
+{: release-note}
+
+Conversational search language support
+:   Conversational search now supports four languages other than English, including French, Spanish, German, and Brazilian Portuguese. For more information, see [Languages supported for conversational search](/docs/watson-assistant?topic=watson-assistant-base-llm-wxa#languages-supported-for-conversational-search)
 
 ## 18 February 2025
 {: #watson-assistant-feb182025}
