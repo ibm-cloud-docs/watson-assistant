@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-27"
 
 subcollection: watson-assistant
 
@@ -19,7 +19,9 @@ When you copy the action to the destination assistant, references to actions, sa
 
 To copy an action from one assistant to another assistant:
 
+1. Click the **Overflow** menu ![Overflow icon](images/overflow-menu--vertical.svg) on the action that you want and select **Copy to an assistant**.
 
+1. Click the **drop-down** icon to select the destination assistant for the copy.
 
 1. In the **Review references** page, review the list of references such as action, variables, and saved responses and their status.
 

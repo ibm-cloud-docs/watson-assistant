@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-27"
 
 subcollection: watson-assistant
 
@@ -18,7 +18,31 @@ The web chat provides an easy-to-use chatbot interface that you can add to your 
 
 After you add the web chat script to your website, your customers see a launcher icon that they can click to open the chat window and start a conversation with the assistant. The appearance of the launcher icon adapts to desktop and mobile browsers.
 
+When a customer clicks the launcher, the web chat window opens, initially displaying the _home screen_. The home screen displays a greeting and an optional set of suggested conversation starters for common questions and problems. The customer can either click a conversation starter or type a message in the input field to start the conversation with the assistant.
 
+The appearance and behavior of the launcher icon, the home screen, and most other aspects of the web chat can be configured and customized to match your website style and branding. For more information, see [Configuring the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-config).
+{: tip}
+
+## Launcher appearance and behavior
+{: #web-chat-architecture-launcher}
+
+The web chat launcher welcomes and engages customers so they know where to find help if they need it. By default, the web chat launcher is displayed as a circle ![An example of the initial launcher](images/web-chat-icon.png) in the bottom-right corner:
+
+After 15 seconds, the launcher expands to show a greeting message to the user. In this expanded state, a customer can still click the launcher to open the web chat. (If the customer reloads the page or navigates to a different page before the launcher expands, the 15-second timer restarts.)
+
+The appearance of this expanded state differs slightly depending on whether the customer is using a desktop browser or a mobile browser:
+
+- For desktop browsers, the expanded launcher shows two primary buttons the customer can click to open the web chat, and a **Close** button that closes the launcher.
+
+    ![An example of the desktop launcher](images/web-chat-desktop-launcher.png)
+
+    The expanded launcher remains in its expanded state even if the customer reloads the page or navigates to a different page. It stays in its expanded state until the customer opens it. The customer can open it by clicking one of the two primary buttons. When the customer closes it, it returns to its initial small state for the rest of the session.
+
+- For mobile browsers, the launcher shows only a single primary button.
+
+    ![An example of the mobile launcher](images/mobile-launcher.png)
+
+    The customer can close the launcher by scrolling on the page, swiping right on the expanded launcher, or waiting 10 seconds, at which point the expanded launcher shrinks back to its initial small state automatically. If the user reloads the page or navigates to a different page while the launcher is expanded, it stays in its expanded state, and the 10-second timer restarts.
 
 After the next page refresh, if the launcher remains in its small state without being clicked, it bounces up and down to attract the customer's attention. The first bounce happens 15 seconds after the page refresh; if the customer still does not click the launcher, it bounces again 60 seconds later. (The timing of the second bounce might be affected if the user refreshes the page or navigates to a different page.) If the user still does not click the launcher, it does not bounce again.
 

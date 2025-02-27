@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-07"
+lastupdated: "2025-02-27"
 
 keywords: conversational search
 
@@ -133,23 +133,12 @@ When the conversational search is `On`, the same search results are pulled from 
    ![Conversational search on](images/convo-search-test-toggle-on.png){: caption="Conversational search on" caption-side="bottom"}
 
 
+## Debugging the failures in conversational search
+{: #debugging-conversational-search}
 
-The web chat integration does not support the citation title feature. Hence, the preceding image does not display the default text in the citation title.
+If your calls to the conversational search fail, you might want to debug the problem by seeing the detailed information about what is being sent to and returned from the system API. 
 
-If you encounter bugs in conversational search, you can troubleshoot the errors by clicking **Inspect**.
-When you click **Inspect**, you see two options:
-
-| **Option**   | **Description**                                                                                               |
-|--------------|---------------------------------------------------------------------------------------------------------------|
-| **Overview** | Provides general information about the process.                                                               |
-| **Advanced** | Displays a `curl` command to run the retrieval portion. This option helps debug and configure your query setup, including Watson Discovery, Elasticsearch, or custom services. |
-{: caption="Inspect options" caption-side="bottom"}
-
-![ConversationalSearchInspect](images/convo-search-inspect.png){: caption="Inspect options" caption-side="bottom"}
-
-
-
-
+ For more information, see [Debugging failures for conversational search](/docs/watson-assistant?topic=watson-assistant-call-extension#debug-conversational-search)
 
 ## Streaming response for conversational search
 {: #conversational-search-streaming-response}
