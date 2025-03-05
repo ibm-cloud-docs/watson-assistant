@@ -151,7 +151,7 @@ For example, if you specify `purple unicorn` in the **Secret** field, you might 
 ```javascript
 const jwt = require('jsonwebtoken');
 ...
-const token = request.headers.authentication; // grab the "Authentication" header
+const token = request.headers.authorization; // grab the "Authorization" header
 try {
   const decoded = jwt.verify(token, 'purple unicorn');
 } catch(err) {
