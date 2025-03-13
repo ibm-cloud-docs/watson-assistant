@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-12-23"
+  years: 2025
+lastupdated: "2025-03-06"
 
 subcollection: watson-assistant
 
@@ -106,6 +106,9 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 1. In your {{site.data.keyword.conversationshort}}  Microsoft Teams integration, click **Finish**.
 
 1. Click **Publish** to publish your bot. 
+
+When a custom extension is run during a conversation in Microsoft Teams, the client receives pre-execution steps only after the call to the extension is completed. For more information, see [calling a custom extension](/docs/watson-assistant?topic=watson-assistant-call-extension).
+{: note}
 
 ## Publishing your Teams app
 {: #deploy-microsoft-teams-publish}

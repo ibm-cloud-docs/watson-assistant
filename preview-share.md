@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-10-03"
+  years: 2021, 2025
+lastupdated: "2025-03-11"
 
 subcollection: watson-assistant
 
@@ -28,6 +28,9 @@ Use the **Preview** page to test your assistant. You can experience your assista
 
 On the **Preview** page, you also find the following elements:
 - **Copy link to share**: Share an unauthenticated version of your assistant with your colleagues by sending them a link. For more information, see [Copying a link to share](#preview-share-link).
+
+
+
 - **Change background**: Change the background of the page so you can see what your assistant looks like on different web pages. For more information, see [Changing background website](#preview-change-background).
 - **Customize web chat**: Customize your draft web chat channel to match your brand or website. For more information, see [Web chat setup overview](/docs/watson-assistant?topic=watson-assistant-web-chat-config).
 
@@ -44,6 +47,8 @@ To share a link:
 
 The preview link is not accessible if web chat security is enabled. For more information about web chat security, see [Securing the web chat](/docs/watson-assistant?topic=watson-assistant-web-chat-security).
 {: note}
+
+
 
 ## Changing background website
 {: #preview-change-background}
@@ -92,5 +97,3 @@ To remove the background image:
 1. On the **Preview** page, click **Change background**. 
 1. Click **Remove background**, then click **Continue**.
 1. Click **Remove background** to finish.
-
-

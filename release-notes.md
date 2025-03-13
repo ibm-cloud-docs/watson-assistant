@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-13"
 
 subcollection: watson-assistant
 
@@ -18,12 +18,25 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+
+## 13 March 2025
+{: #watson-assistant-mar132025}
+{: release-note}
+
+
+Webhook authentication configuration
+:   {{site.data.keyword.conversationshort}} now supports Webhook authentication to verify that the Pre-message webhooks and Post-message webhooks requests are legitimate, comes from the expected source, and ensures the authenticity and integrity of the data. For more information, see [Webhook authentication]((/docs/watson-assistant?topic=watson-assistant-webhook-authentication).
+
+Update on the search confidence for conversational search
+:   Small modifications to text processing can impact the values of retrieval confidence, response confidence, and extractiveness. For more information on the scores, see [Conversational search analytics](/docs/watson-assistant?topic=watson-assistant-conversational-search-analytics).
+
+
 ## 27 February 2025
 {: #watson-assistant-feb272025}
 {: release-note}
 
 Conversational search language support
-:   Conversational search now supports four languages other than English, including French, Spanish, German, and Brazilian Portuguese. For more information, see [Languages supported for conversational search](/docs/watson-assistant?topic=watson-assistant-base-llm-wxa#languages-supported-for-conversational-search)
+:   Conversational search now supports four languages other than English, including French, Spanish, German, and Brazilian Portuguese. For more information, see [Languages supported for conversational search](/docs/watson-assistant?topic=watson-assistant-base-llm-wxa#languages-supported-for-conversational-search).
 
 ## 18 February 2025
 {: #watson-assistant-feb182025}
