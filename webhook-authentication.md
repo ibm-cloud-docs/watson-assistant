@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-03-18"
 
 subcollection: watson-assistant
 
@@ -13,12 +13,12 @@ subcollection: watson-assistant
 # Webhook authentication
 {: #webhook-auth}
 
-This document outlines the process for configuring authentication for pre-message webhooks and post-message webhooks in {{site.data.keyword.ai-assistant}}. It covers the available authentication methods and how to set them up.
+This document outlines the process for configuring authentication for pre-message webhooks and post-message webhooks in {{site.data.keyword.conversationshort}}. It covers the available authentication methods and how to set them up.
 
 ## Overview
 {: #webhook-overview}
 
-Webhooks allow external systems to communicate with {{site.data.keyword.ai-assistant}}. Authentication ensures that only authorized sources can trigger webhooks. This documentation describes the process for configuring and managing webhook authentication, which introduces an updated method for authenticating webhooks.
+Webhooks allow external systems to communicate with {{site.data.keyword.conversationshort}}. Authentication ensures that only authorized sources can trigger webhooks. This documentation describes the process for configuring and managing webhook authentication, which introduces an updated method for authenticating webhooks.
 
 
 ## Before you begin
@@ -191,4 +191,3 @@ If you need to add custom secrets to your application, follow these steps:
 1. Type the **Parameter name**, and the **Parameter value**.
 
 1. **Optional:** If you want to add more parameter names and parameter values, click **Add parameter +**.
-

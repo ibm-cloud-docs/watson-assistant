@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-03-18"
 
 keywords: post webhook, postwebhook, post-webhook
 
@@ -46,11 +46,17 @@ Do not set up and test your webhook in a production environment where the assist
 
 To add the webhook details, complete the following steps:
 
-1. In your assistant, open the environment where you want to configure the webhook.
+1. In your assistant, go to **Environments** and open the environment where you want to configure the webhook.
 
 1. Click the ![Environment settings icon](images/gear-icon-black.png) icon to open the environment settings.
 
 1. On the **Environment settings** page, click **Post-message webhook**.
+
+    1.  Or, if you are using the classic experience, open the **Assistants** page.
+    
+    1. For the assistant you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
+
+    1.  Click **Webhooks**, then click **Post-message webhook**.
 
 1.  Set the **Post-message webhook** switch to **Enabled**.
 
@@ -69,12 +75,24 @@ To add the webhook details, complete the following steps:
 
     You must specify a URL that uses the SSL protocol, so specify a URL that begins with `https`.
 
-    You cannot use a webhook to call a {{site.data.keyword.openwhisk_short}} action that uses token-based Identity and Access Management (IAM) authentication. However, you can make a call to a {{site.data.keyword.openwhisk_short}} web action or a secured web action.
+    If you are using the classic experience, do the following steps:
+    
+    - In the **Secret** field, add a private key to pass with the request that can be used to authenticate with the external service.
+
+    - The key must be specified as a text string, such as `purple unicorn`. The maximum length is 1,024 characters. You cannot specify a context variable.
+
+    - It is the responsibility of the external service to check for and verify the secret. If the external service does not require a token, specify any string that you want. You cannot leave this field empty.
+
+    - If you want to see the secret as you enter it, click the **Show password** icon ![View icon](images/view.svg) before you start typing. After you save the secret, asterisks replace the string and can't be viewed again.
+    {: note}
+
+    - You cannot use a webhook to call a {{site.data.keyword.openwhisk_short}} action that uses token-based Identity and Access Management (IAM) authentication. However, you can make a call to a {{site.data.keyword.openwhisk_short}} web action or a secured web action.
     {: important}
 
-1. In the **Timeout** field, specify the length of time (in seconds) you want the assistant to wait for a response from the webhook before it returns an error. The timeout duration cannot be shorter than 1 second or longer than 30 seconds.
 
-1.  In the Headers section, add any headers that you want to pass to the service one at a time by clicking **Add header**.
+7. In the **Timeout** field, specify the length of time (in seconds) you want the assistant to wait for a response from the webhook before it returns an error. The timeout duration cannot be shorter than 1 second or longer than 30 seconds.
+
+8.  In the Headers section, add any headers that you want to pass to the service one at a time by clicking **Add header**.
 
     For example, if the external application that you call returns a response, it might be able to send a response in multiple different formats. The webhook requires that the response is formatted in JSON. The following table illustrates how to add a header that indicates that you want the resulting value to be returned in JSON format.
 
@@ -83,15 +101,11 @@ To add the webhook details, complete the following steps:
     | `Content-Type` | `application/json` |
     {: caption="Header example" caption-side="bottom"}
 
+    If you are using the classic experience, the service automatically sends an `Authorization` header with a JWT; you do not need to add one. If you want to handle authorization yourself, add your own authorization header and the service uses it instead.{: note}
+
+    After you save the header value, the string is replaced by asterisks and can't be viewed again. 
+
 Your webhook details are saved automatically.
-
-## Webhook authentication behavior
-
-* The authorization header in this section is ignored for new webhooks or webhooks updated through **Edit authentication**.
-* For existing webhooks with a saved authentication header, the **Edit authentication** button is disabled.
-* Updating an existing webhook to use the new authentication configuration changes its behavior.
-
-For more information, see [Webhook authentication](webhook-authentication.md)
 
 ## Testing the webhook
 {: #webhook-post-test}
@@ -114,9 +128,34 @@ The following error codes can help you track down the cause of issues you might 
 | Error code and message | Description |
 |------------|-------------|
 | 422 Webhook responded with invalid JSON body | The webhook's HTTP response body could not be parsed as JSON. |
-| 422 Webhook responded with `[500]` status code | A problem occured with the external service that you called. The code failed or the external server refused the request. |
+| 422 Webhook responded with `[500]` status code | A problem occurred with the external service that you called. The code failed or the external server refused the request. |
 | 500 Processor Exception : `[connections to all backends failing]` | An error occurred in the webhook microservice. It could not connect to backend services. |
 {: caption="Error code details" caption-side="bottom"}
+
+## Webhook security
+{: #webhook-post-security}
+
+If you are using the classic experience, authenticate the webhook request by verifying the JSON Web Token (JWT) that is sent with the request. The webhook microservice automatically generates a JWT and sends it in the `Authorization` header with each webhook call.
+
+- For new webhooks or webhooks updated through **Edit authentication**, the authorization header is ignored.
+- For existing webhooks with a saved authentication header, the **Edit authentication** button is disabled.
+- Updating an existing webhook to use the new authentication configuration will change its behavior.
+
+For more information, see [Webhook authentication](webhook-authentication.md).
+
+If you need to test the JWT verification, you can add code to the external service. For example, if you specify `purple unicorn` in the **Secret** field, you can use the following code:
+
+```javascript
+const jwt = require('jsonwebtoken');
+...
+const token = request.headers.authentication; // grab the "Authentication" header
+try {
+  const decoded = jwt.verify(token, 'purple unicorn');
+} catch(err) {
+  // error thrown if token is invalid
+}
+```
+{: codeblock}
 
 ## Example request body
 {: #webhook-post-request-body}
@@ -216,6 +255,7 @@ This example shows you how to add `y'all` to the end of each response from the a
 In the post-message webhook configuration page, the following values are specified:
 
 - **URL**: `https://your-webhook-url/`
+- **Secret**: none (if you are using the classic experience)
 - **Header name**: Content-Type
 - **Header value**: application/json
 
@@ -267,6 +307,7 @@ Define a sequence of web actions in IBM Cloud Functions. The first action in the
 In the pre-message webhook configuration page, the following values are specified:
 
 - **URL**: `https://your-webhook-url/`
+- **Secret**: none (if you are using the classic experience)
 - **Header name**: Content-Type
 - **Header value**: application/json
 
@@ -390,16 +431,22 @@ function main(params) {
 ## Removing the webhook
 {: #webhook-post-delete}
 
-If you decide you do not want to process message responses with a webhook, complete the following steps:
+If you decide that you do not want to process message responses with a webhook, complete the following steps:
 
-1. In your assistant, go to **Environments** and open the environment where you want to configure the webhook.
+1. In your assistant, go to **Environments** and open the environment where you want to remove the webhook.
 
 1. Click the ![Environment settings icon](images/gear-icon-black.png) icon to open the environment settings.
 
 1. On the **Environment settings** page, click **Post-message webhook**.
 
+    1.  Or, if you are using the classic experience, open the **Assistants** page.
+    
+    1. For the assistant you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Settings**.
+
+    1.  Click **Webhooks**, then click **Post-message webhook**.
+
 1. Do one of the following steps:
 
-    - To stop calling a webhook to process every incoming message, click the **Disabled** toggle to disable the webhook altogether.
+    - To stop calling a webhook to process every incoming message, set the **Post-message webhook** switch to **Disabled**.
 
     - To change the webhook that you want to call, click the **Delete webhook** button.
