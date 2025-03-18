@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-03-18"
 
 subcollection: watson-assistant
 
@@ -24,7 +24,11 @@ You can have only one search integration per environment. When you change the ex
 ## Prerequisites for connecting Milvus to assistant
 {: prerequisites-milvus-connection}
 
-- You must have an active account on {{site.data.keyword.lakehouse_short}} and watsonx.ai.
+- You must have an active account on {{site.data.keyword.lakehouse_short}} and watsonx.ai. 
+
+   To create an account on {{site.data.keyword.lakehouse_short}} see, [{{site.data.keyword.lakehouse_short}} home page](https://www.ibm.com/products/watsonx-data){: external}. 
+
+   To create an account on watsonx.ai, see [watsonx.ai home page](https://www.ibm.com/products/watsonx-ai){: external}.
 
 - You must provision a Milvus instance in {{site.data.keyword.lakehouse_short}}.
 
