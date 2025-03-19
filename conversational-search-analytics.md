@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-19"
 
 keywords: conversational search
 
@@ -28,29 +28,29 @@ You can see the average scores for citations per response, answer length, answer
 
 Hover on the information icon (![information icon](images/info.png)) next to the customer input to see the query text inferred from the context.
 
-
+![Conversational search analytics](images/conversational-search-analytics-overview.png)
 
 For a single utterance-response pair, you can view the following metrics:
 
 ### Response confidence score
 {: #conversational-search-analytics-response-confidence}
 
-The estimated probability that the response correctly answers the user's inquiry given the available content.
+The response confidence score is the estimated probability that the assistant’s response is correct, relevant, and useful in addressing the user's query or request for the available content.
 
 ### Retrieval confidence score
 {: #conversational-search-analytics-retrieval-confidence}
 
-The estimated probability that the search results have the information that is needed to correctly answer the user's inquiry.
+The retrieval confidence score measures how certain the system is that it retrieved the most relevant information from its database to answer a user's query. It is the estimated probability that the retrieved data contains the necessary details to respond accurately to the user's request.
 
 ### Extractiveness
 {: #conversational-search-analytics-extractiveness-confidence}
 
-The fraction of the response that consists of sequences of words that are in the search results. A high score indicates that much of the response is directly quoted from the sources. A low score indicates that the response is abstracted or paraphrased from the sources. However, it might also mean that the response is not supported by the sources.
+Extractiveness is the extent to which the response is directly derived from the input. It is the fraction of the response that consists of sequences of words that are in the search results. A high score indicates that much of the response is directly quoted from the sources. A low score indicates that the response is abstracted or paraphrased from the sources. However, it can also mean that the response is not supported by the sources.
 
 ### Citations
 {: #conversational-search-analytics-citations-confidence}
 
-The number of citations associated with the response.
+Citations refer to the acknowledgment of the sources of data, models, or algorithms that the system uses to generate its outputs or make its predictions. On the analytics page, you can see the number of citations that are associated with the response.
 
 ### Response length
 {: #conversational-search-analytics-response-length-confidence}
