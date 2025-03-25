@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-03-14"
+lastupdated: "2025-03-25"
 
 subcollection: watson-assistant
 
@@ -91,7 +91,7 @@ Post process conversational search responses
 :   You can now save your conversational search responses in action variables for post-processing. For more information, see [Search for the answer](/docs/watson-assistant?topic=watson-assistant-step-what-next#search-for-answer).
 
 Evaluate assistant
-:   You can now evaluate the performance of your assistant. For more information, see [Evaluating the assistant](/docs/watson-assistant?topic=watson-assistant-evaluating-the-assistant)
+:   You can now evaluate the performance of your assistant. For more information, see [Evaluating the assistant](/docs/watson-assistant?topic=watson-assistant-data-evaluation).
 
 ## 6 November 2024
 {: #watson-assistant-nov062024}
