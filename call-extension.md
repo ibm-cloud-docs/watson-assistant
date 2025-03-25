@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-25"
 
 subcollection: watson-assistant
 
@@ -251,13 +251,8 @@ To see the detailed information for analyzing the problem, use the **Inspector**
     | Extractiveness    | The score reflects how much of the response is directly quoted from sources. A higher score indicates more direct quoting and a lower score indicates rephrasing of the source or lack of source support.| 
     | Retrieval confidence  | The confidence value indicates how sure the system is about the search results. If it’s below the threshold, the system responds with IDK and the reason Retrieval confidence too low.| 
     Response confidence | The confidence value indicates the system's certainty in view of the generated answer. If it’s below the threshold, the system responds with IDK and the reason `Response confidence too low`.| 
-    
-1. The **Advanced** tab shows the following information about the call to the search integration.
-    
-    | Debugging option | Description |
-    | ------ | ------ |
-    | Request cURL | The cURL command that is used to replicate the request to the search engine in the retrieval phase of the search. The cURL command does not include any authentication headers or related details. You can include the information into the command. | 
-    | Response JSON |  The raw JSON response that the system receives from the search engine in the retrieval phase of the search. |
+
+
 
 ## Reconfiguring a missing extension
 {: #extension-reconfig}
