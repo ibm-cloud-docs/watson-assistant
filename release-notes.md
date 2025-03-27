@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-03-14"
+lastupdated: "2025-03-27"
 
 subcollection: watson-assistant
 
@@ -18,6 +18,12 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 27 March 2025
+{: #watson-assistant-mar272025}
+{: release-note}
+
+Enhance security with audio recording in phone integration
+:   You can now use Audio recording with the Genesys Audio Connector in Phone Integration! To learn more, see [Recording a caller's utterance](webhook-attestation.md). 
 
 ## 13 March 2025
 {: #watson-assistant-mar132025}
@@ -91,7 +97,7 @@ Post process conversational search responses
 :   You can now save your conversational search responses in action variables for post-processing. For more information, see [Search for the answer](/docs/watson-assistant?topic=watson-assistant-step-what-next#search-for-answer).
 
 Evaluate assistant
-:   You can now evaluate the performance of your assistant. For more information, see [Evaluating the assistant](/docs/watson-assistant?topic=watson-assistant-evaluating-the-assistant)
+:   You can now evaluate the performance of your assistant. For more information, see [Evaluating the assistant](/docs/watson-assistant?topic=watson-assistant-data-evaluation).
 
 ## 6 November 2024
 {: #watson-assistant-nov062024}

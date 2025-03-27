@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-19"
 
 subcollection: watson-assistant
 
@@ -29,7 +29,7 @@ You can search and analyze the conversational search requests from the customer 
 ## Choosing the environment and date range
 {: #analytics-overview-time-period}
 
-To get started, choose the [environment](/docs/watson-assistant?topic=watson-assistant-publish-overview#environments) and date range you want to analyze. All charts and cards reflect data based on the environment and the date range you select. When you change the environment or the date range, the charts and cards on the page update to reflect the new date range. You can also use **Refresh** to ensure the latest data is shown.
+
 
 ![Time period](images/analytics-time-period.png)
 
