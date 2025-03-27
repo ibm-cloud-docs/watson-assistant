@@ -324,8 +324,8 @@ toc:
       - topicgroup: 
           label: Installing on IBM On-premises  
           topics:
-          - install-data.md 
           - install-hub.md 
+          - install-data.md 
           - architecture-data.md
           - backup-data.md
           - troubleshoot-data.md
