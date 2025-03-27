@@ -3,7 +3,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-27"
 
 subcollection: watson-assistant
 
@@ -51,12 +51,14 @@ You can configure the answering behavior of your assistant to provide responses 
 
 - **Conversational search** 
 
+To use the conversational search, configure [search integration](/docs/watson-assistant?topic=watson-assistant-search-overview) and enable [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search). 
+
+**Toggling off**: Conversational search disables the process that calls it in the routing priority path. You are not disabling the search capability itself.{: note}
+
 Only Plus or Enterprise plans support Conversational search. Starting from June 1, 2024, add-on charges are applicable for using the Conversational search feature in addition to your Plus or Enterprise plans. For more information about the pricing plans, see [Pricing plans](https://cloud.ibm.com/catalog/services/watsonx-assistant?catalog_query=aHR0cHM6Ly9jbG91ZC5pYm0uY29tL2NhdGFsb2c%2Fc2VhcmNoPXdhdHNvbnglMjUyMGFzc2lzdGFudCNzZWFyY2hfcmVzdWx0cw%3D%3D&planId=f0a3dd47-b693-4d73-a8df-aa6baf07a933){: external}. For more information about terms, see [Terms](https://www.ibm.com/support/customer/csol/terms/?id=i128-0038&lc=en){: external}.
 {: important}
   
 In conversational search, the LLM uses content that is preloaded during the [search integration](/docs/watson-assistant?topic=watson-assistant-search-overview) to respond to customer queries. 
-  
-To use the conversational search, you must configure [search integration](/docs/watson-assistant?topic=watson-assistant-search-overview) and enable [conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search).{: note}
 
 ## Languages supported for conversational search
 
