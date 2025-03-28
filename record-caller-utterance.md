@@ -2,14 +2,14 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-03-27"
+lastupdated: "2025-03-28"
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
 # Recording a caller's utterance
-{: #webhook-attestation}
+{: #record-caller-utterance}
 
 This feature is currently supported only with the Genesys Audio Connector of the Phone Integration.{: note}
 
@@ -17,7 +17,7 @@ The **Record** feature captures the caller's utterance to verify their identity,
 
 ## Before you begin
 
-Set up an [**Audio webhook**](webhook-audio.md) to collect and save audio from the user.
+Go to [**Defining an audio webhook**](define-webhook-audio.md) to collect and save audio from the user.
 
 ## Adding a recording
 
