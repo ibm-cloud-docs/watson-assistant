@@ -23,7 +23,7 @@ Release notes describe the new features, changes, and bug fixes in each release 
 {: release-note}
 
 Enhance security with audio recording in phone integration
-:   You can now use audio recording with the Genesys Audio Connector in Phone Integration! To learn more, see [Recording a caller's utterance](record-caller-utterance.md). 
+:   You can now use audio recording with the Genesys Audio Connector in Phone Integration! To learn more, see [Recording a caller's utterance](/docs/watson-assistant?topic=record-caller-utterance.md). 
 
 ## 13 March 2025
 {: #watson-assistant-mar132025}
