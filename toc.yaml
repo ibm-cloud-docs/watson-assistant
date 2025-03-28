@@ -248,8 +248,8 @@ toc:
               - webhook-post.md
               - webhook-log.md
               - webhook-authentication.md
-              - webhook-audio.md
-              - webhook-attestation.md
+              - define-webhook-audio.md
+              - record-caller-utterance.md
               - dialog-webhooks.md
           - build-custom-extension.md
           - add-custom-extension.md

@@ -2,18 +2,18 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-03-27"
+lastupdated: "2025-03-28"
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Audio webhook
-{: #webhook-audio}
+# Defining an audio webhook
+{: #define-webhook-audio}
 
 This feature is currently supported only with the Genesys Audio Connector of the Phone Integration.{: note}
 
-An Audio webhook calls an external service or application whenever a record response type is used to collect audio. The external service processes the audio, and if an error occurs, it disconnects the call. A common use for this Audio webhook is to store the audio for compliance reasons, as {{site.data.keyword.conversationshort}} does not store the audio.
+An audio webhook calls an external service or application whenever a record response type is used to collect audio. The external service processes the audio, and if an error occurs, it disconnects the call. The audio webhook is often used to store the audio for compliance reasons, as {{site.data.keyword.conversationshort}} does not store the audio.
 
 ## Before you begin
 
@@ -25,7 +25,7 @@ The programmatic call to the external service must meet these requirements:
 
  - The call must return within 30 seconds or less.
 
-For more information on recording audio, See [Recording a caller's utterance](webhook-attestation.md).
+For more information on recording audio, see [Recording a caller's utterance](record-caller-utterance.md).
 
 ## Procedure
 
@@ -60,7 +60,7 @@ After you save the header value, the string is replaced by asterisks and can't b
 
 Your webhook details are saved automatically.
 
-For more examples, see [Audio webhook examples](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/phone/examples/audio-webhook). {: external}
+For more examples, see [audio webhook examples](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/phone/examples/audio-webhook). {: external}
 
 ## Testing the webhook
 {: #webhook-audio-test}
@@ -73,27 +73,29 @@ The webhook is triggered when a recording response type is used during a phone c
 ## Request body
 {: #webhook-audio-request-body}
 
-It is useful to know the format of the request body of the Audio webhook so that your external code can process it.
+It is useful to know the format of the request body of the audio webhook so that your external code can process it.
 
 The payload contains the audio and metadata as Content-Type: multipart/form-data. An example of the request is:
 
-    POST /audio-webhook HTTP/1.1
-    Content-Type: multipart/form-data; boundary=----------3676416B-9AD6-440C-B3C8-FC66DDC7DB45
-    ----------3676416B-9AD6-440C-B3C8-FC66DDC7DB45
-    Content-Disposition: form-data; name="metadata"
-    Content-Type: application/json
-    {
-        "assistant_id": "dadf4b56-3b67-411a-b48d-079806b626d3",
-        "environment_id": "6205aead-fe91-44af-bfe1-b4435015ba23",
-        "session_id": "50989a59-9976-4b3f-9a98-af42adcad69a",
-        "recording_id": "3daeb5d2-f52b-4c3e-a869-328b6fc6327c",
-        "start_timestamp": "2024-10-21T17:22:07.789Z",
-        "stop_timestamp": "2024-10-21T17:22:37.789Z"
-    }
-    ----------3676416B-9AD6-440C-B3C8-FC66DDC7DB45
-    Content-Disposition: form-data; name="audio_recording"
-    Content-Type: audio/mulaw;rate=8000
+```
+POST /audio-webhook HTTP/1.1
+Content-Type: multipart/form-data; boundary=----------3676416B-9AD6-440C-B3C8-FC66DDC7DB45
+----------3676416B-9AD6-440C-B3C8-FC66DDC7DB45
+Content-Disposition: form-data; name="metadata"
+Content-Type: application/json
+{
+    "assistant_id": "dadf4b56-3b67-411a-b48d-079806b626d3",
+    "environment_id": "6205aead-fe91-44af-bfe1-b4435015ba23",
+    "session_id": "50989a59-9976-4b3f-9a98-af42adcad69a",
+    "recording_id": "3daeb5d2-f52b-4c3e-a869-328b6fc6327c",
+    "start_timestamp": "2024-10-21T17:22:07.789Z",
+    "stop_timestamp": "2024-10-21T17:22:37.789Z"
+}
+----------3676416B-9AD6-440C-B3C8-FC66DDC7DB45
+Content-Disposition: form-data; name="audio_recording"
+Content-Type: audio/mulaw;rate=8000
 
-    <binary data>
+<binary data>
+```
+{: codeblock}
 
-    {: codeblock}
