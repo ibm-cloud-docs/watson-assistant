@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-03-28"
+lastupdated: "2025-04-04"
 
 ---
 
@@ -43,7 +43,7 @@ To add the webhook details, complete the following steps:
 
 1. In the **Secret** field, add a private key to pass with the request to authenticate with the external service. The key must be specified as a text string (for example, purple unicorn), with a maximum length of 1,024 characters. 
 
-    You cannot specify a context variable. If the external service does not require a token, specify any string that you want. You cannot leave this field empty. To view the secret as you enter it, click **Show password** before typing. After saving the secret, asterisks replace the string, and you cannot view it again. For more information about how this field is used, see [Webhook security](webhook-pre.md#webhook-pre-security).{: note}
+    You cannot specify a context variable. If the external service does not require a token, specify any string that you want. You cannot leave this field empty. To view the secret as you enter it, click **Show password** before typing. After saving the secret, asterisks replace the string, and you cannot view it again. For more information about how this field is used, see [Webhook security for the classic experience only](webhook-pre.md#webhook-security-for-the-classic-experience-only).{: note}
 
 1. In the **Timeout** field, specify the duration (in seconds) that you want the assistant to wait for a response from the webhook before returning an error. The timeout duration must be between 1 and 30 seconds.
 
@@ -98,4 +98,3 @@ Content-Type: audio/mulaw;rate=8000
 <binary data>
 ```
 {: codeblock}
-
