@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-04-02"
+lastupdated: "2025-03-28"
 
 subcollection: watson-assistant
 
@@ -31,7 +31,7 @@ Enhance security with audio recording in phone integration
 
 
 Webhook authentication configuration
-:   {{site.data.keyword.conversationshort}} now supports Webhook authentication to verify that the Pre-message webhooks and Post-message webhooks requests are legitimate, comes from the expected source, and ensures the authenticity and integrity of the data. For more information, see [Defining webhook authentication](/docs/watson-assistant?topic=watson-assistant-define-webhook-auth.md).
+:   {{site.data.keyword.conversationshort}} now supports Webhook authentication to verify that the Pre-message webhooks and Post-message webhooks requests are legitimate, comes from the expected source, and ensures the authenticity and integrity of the data. For more information, see [Webhook authentication](/docs/watson-assistant?topic=watson-assistant-webhook-auth).
 
 Update on the search confidence for conversational search
 :   Small modifications to text processing can impact the values of retrieval confidence, response confidence, and extractiveness. For more information on the scores, see [Conversational search analytics](/docs/watson-assistant?topic=watson-assistant-conversational-search-analytics).

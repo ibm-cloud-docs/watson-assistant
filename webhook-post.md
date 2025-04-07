@@ -20,6 +20,9 @@ A post-message webhook calls an external service or application every time that 
 
 You can add a post-message webhook to your assistant if you want to trigger the webhook before each message response is shown to the customer.
 
+If you are using a custom channel, the post-message webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://cloud.ibm.com/apidocs/assistant-v2#message). All built-in channel integrations use this API.
+{: important}
+
 You can use a post-message webhook to do things like extract custom responses from an external content repository. For example, you can define actions with custom IDs in the responses instead of text. The post-message webhook can pass these IDs to an external database to retrieve stored text responses.
 
 You can use this webhook in coordination with the pre-message webhook. For example, if you use the pre-message webhook to strip personally identifiable information from the customer's input, you can use the post-message webhook to add it back. If you use the pre-message webhook to translate the customer's input to the assistant's language, you can use the post-message webhook to translate the response into the customer's language before returning it. For more information, see [Making a call before processing a message](webhook-pre.md).
@@ -42,6 +45,7 @@ The programmatic call to the external service must meet these requirements:
 
 Do not set up and test your webhook in a production environment where the assistant is deployed and is interacting with customers.
 {: important}
+
 
 ### Procedure
 
@@ -224,11 +228,13 @@ The following sample shows how a simple request body is formatted:
 ```
 {: codeblock}
 
-### Skipping the assistant processing
+## Skipping the assistant processing
+{: #webhook-post-skipping-assistant-processing}
 
 Enhancements to pre-message webhooks allow {{site.data.keyword.conversationshort}} to skip message processing and directly return the response from the webhook. This functionality is activated by setting the `x-watson-assistant-webhook-returnheader` in the webhook's HTTP response.
 
-#### Before you begin
+### Before you begin
+{: #webhook-post-before-you-begin}
 
 Complete the following steps:
 
@@ -238,7 +244,7 @@ Complete the following steps:
 
 This feature enables the webhook to dynamically control the conversation flow, enabling immediate responses when needed.
 
-#### Response body
+### Response body
 
 In the response body, the `output` does not need to be wrapped inside a `payload` property as it is returned directly to the client:
 
@@ -268,6 +274,7 @@ In the post-message webhook configuration page, the following values are specifi
 For the **classic experience**, there is no value in the **Secret** field.{: note}
 
 - **URL**: `https://your-webhook-url/`
+- **Secret**: none (if you are using the classic experience)
 - **Header name**: Content-Type
 - **Header value**: application/json
 
@@ -321,6 +328,7 @@ In the pre-message webhook configuration page, the following values are specifie
 For the **classic experience**, there is no value in the **Secret** field.{: note}
 
 - **URL**: `https://your-webhook-url/`
+- **Secret**: none (if you are using the classic experience)
 - **Header name**: Content-Type
 - **Header value**: application/json
 
@@ -402,12 +410,11 @@ function main(params) {
 {: codeblock}
 
 ### Example 3
-{: example-3}
+{: #example-3}
 
 This example shows how to compose a webhook response to let {{site.data.keyword.conversationshort}} skip processing the message and directly return the webhook's response.
 
-#### Webhook configuration
-
+### Webhook Configuration
 In the pre-message webhook configuration page, specify the following values:
 
  - URL: https://your-webhook-url/webhook_skip
@@ -442,7 +449,8 @@ function main(params) {
 ```
 {: codeblock}
 
-### Removing the webhook
+## Removing the webhook
+{: #webhook-post-delete}
 
 If you decide that you do not want to process message responses with a webhook, complete the following steps:
 

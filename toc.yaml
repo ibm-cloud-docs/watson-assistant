@@ -247,8 +247,7 @@ toc:
               - webhook-pre.md
               - webhook-post.md
               - webhook-log.md
-              - topic: define-webhook-auth.md
-                navtitle: Authentication method for webhooks
+              - webhook-authentication.md
               - define-webhook-audio.md
               - record-caller-utterance.md
               - dialog-webhooks.md
