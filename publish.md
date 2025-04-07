@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-10-26"
+  years: 2021, 2025
+lastupdated: "2025-04-04"
 
 subcollection: watson-assistant
 
@@ -18,7 +18,7 @@ Publishing is a way to maintain a healthy lifecycle management process. You can 
 
 When you are ready to create a snapshot of your content and settings, you can publish from the **Publish** page. Each time that you publish, you create a new version, such as V1 or V2.
 
-![Publish page](images/publish-page.png){: caption="Publish page" caption-side="bottom"}
+![Publish page](images/publish-page.png){: caption="Publish page screen." caption-side="bottom"}
 
 When you publish your content, {{site.data.keyword.conversationshort}} creates a snapshot of the draft content, resulting in a version. This version contains all of the content from actions, including settings and variables. Versions do not contain integration configurations or environment settings. Integration configurations and environment settings must be configured manually in each environment.
 
