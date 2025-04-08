@@ -86,12 +86,6 @@ If you use the **Scope string**, it must be a space-delimited set of one or more
 
 1. Click **Save**.
 
-### Signed JWT
-{: #signed-jwt}
-
-1. Click the **Show password** icon ![View icon](images/view.svg) before typing.
-1. Enter the **Secret**.
-
 ## Password
 {: password}
 
