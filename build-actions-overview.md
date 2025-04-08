@@ -54,9 +54,7 @@ After you create the action, the action editor opens.
 
 The editor window shows the parts of an action:
 
-- The assistant shows the **Display name** to the user when their question triggers a clarification.
-
-- The **Add example phrases:** tile shows the customer input that starts the action. You can click this tile to edit the example text.
+- The **Customer starts with:** tile shows the customer input that starts the action. You can click this tile to edit the example text or add more examples, but we'll leave it as is for now.
 
 - Under **Conversation steps**, you can see the steps that make up the action. A step is an interaction between the assistant and the customer; steps are executed in order, from first to last. You can reorder the steps in an action by clicking and dragging steps in the list.
 
@@ -210,13 +208,13 @@ To do this summary, we need to insert action variables (representing customer re
 
 1. Because this is the last step in the action, you don't need to specify any customer response.
 
-If you decide a step is no longer needed, you can delete it from the action. To delete a step, click the **Delete** ![Delete step icon](images/step-delete-icon.png) icon on the tile for the step.
+If you decide a step is no longer needed, you can delete it from the action. To delete a step, click the **Delete** ![Delete step icon](../../icons/delete.svg) icon on the tile for the step.
 {: tip}
 
 ## Testing the action
 {: #build-actions-overview-test}
 
-You can now test the action to make sure it works. Click **Preview** to open the Preview pane. If the text from a previous test still appears, click the **Refresh** ![Preview refresh](images/new-action-refresh.png) icon to restart the conversation.
+We can now test the action to make sure it's working. Click **Preview** to open the Preview pane. (If the text from a previous test is still shown, click the **Refresh** ![Preview refresh icon](../../icons/restart.svg) icon to restart the conversation.)
 
 Start by typing `I want to withdraw money`. Try various permutations of your input to test how the assistant behaves:
 
@@ -227,30 +225,6 @@ Start by typing `I want to withdraw money`. Try various permutations of your inp
 - Try including additional information in your initial message. For example, try typing `I want to withdraw $50 from my savings account`. Confirm that the assistant does not ask you again to specify the information you already provided.
 
 That's it! You built a simple action that includes multiple steps, collects information that it stores as action variables, and conditions its responses based on what your customer chooses. There is a lot more you can do with actions, but all of it is built on this basic pattern.
-
-## Renaming an action
-
-If you want to rename your action, do the following steps:
-
-![Renaming an action](images/action-rename.png){: caption="Rename action" caption-side="bottom"}
-
-1. Click the **Overflow** menu ![Overflow icon](images/overflow-menu--vertical.svg) on the action that you want to rename, and select **Rename**.
-
-1. Click the **Action title** field to change the action title that you see.
-
-1. Click the **Display name** field to change the action title that the user sees.
-
-## Filtering an action
-
-If you want to search for an action, do the following steps:
-
-![Filtering an action](images/action-filter.png){: caption="Filter action" caption-side="bottom"}
-
-1. Click on the search bar, on your action main page.
-
-1. Type either the action **Title** or the action **Display name**.
-
-1. Select the action.
 
 ## Action limits
 {: #build-actions-limits}
