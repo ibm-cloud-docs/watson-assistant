@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-04-07"
+lastupdated: "2025-04-08"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,13 @@ content-type: release-note
 
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 10 April 2025
+{: #watson-assistant-apr102025}
+{: release-note}
+
+New Signed JWT process
+:   You can now create Signed JWTs in pre-message and post-message webhooks. For more information, see []().
 
 ## 27 March 2025
 {: #watson-assistant-mar272025}

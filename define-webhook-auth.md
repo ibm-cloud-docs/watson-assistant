@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-04-07"
+lastupdated: "2025-04-08"
 
 subcollection: watson-assistant
 
@@ -85,6 +85,12 @@ If you use the **Scope string**, it must be a space-delimited set of one or more
     * [Custom](#custom)
 
 1. Click **Save**.
+
+### Signed JWT
+{: #signed-jwt}
+
+1. Click the **Show password** icon ![View icon](images/view.svg) before typing.
+1. Enter the **Secret**.
 
 ## Password
 {: password}
