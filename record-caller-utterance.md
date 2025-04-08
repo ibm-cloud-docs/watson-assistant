@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-03-28"
+lastupdated: "2025-04-07"
 
 ---
 
@@ -17,7 +17,7 @@ The **Record** feature captures the caller's utterance to verify their identity,
 
 ## Before you begin
 
-Go to [**Defining an audio webhook**](define-webhook-audio.md) to collect and save audio from the user.
+Go to [**Defining an audio webhook**](/docs/watson-assistant?topic=watson-assistant-define-webhook-audio) to collect and save audio from the user.
 
 ## Adding a recording
 

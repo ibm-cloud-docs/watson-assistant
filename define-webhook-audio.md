@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-04-04"
+lastupdated: "2025-04-07"
 
 ---
 
@@ -25,7 +25,7 @@ The programmatic call to the external service must meet these requirements:
 
  - The call must return within 30 seconds or less.
 
-For more information on recording audio, see [Recording a caller's utterance](record-caller-utterance.md).
+For more information on recording audio, see [Recording a caller's utterance](/docs/watson-assistant?topic=watson-assistant-record-caller-utterance).
 
 ## Procedure
 
@@ -43,7 +43,7 @@ To add the webhook details, complete the following steps:
 
 1. In the **Secret** field, add a private key to pass with the request to authenticate with the external service. The key must be specified as a text string (for example, purple unicorn), with a maximum length of 1,024 characters. 
 
-    You cannot specify a context variable. If the external service does not require a token, specify any string that you want. You cannot leave this field empty. To view the secret as you enter it, click **Show password** before typing. After saving the secret, asterisks replace the string, and you cannot view it again. For more information about how this field is used, see [Webhook security for the classic experience only](webhook-pre.md#webhook-security-for-the-classic-experience-only).{: note}
+    You cannot specify a context variable. If the external service does not require a token, specify any string that you want. You cannot leave this field empty. To view the secret as you enter it, click **Show password** before typing. After saving the secret, asterisks replace the string, and you cannot view it again. For more information about how this field is used, see [Webhook security for the classic experience only](/docs/watson-assistant?topic=watson-assistant-webhook-pre#webhook-security-for-the-classic-experience-only).{: note}
 
 1. In the **Timeout** field, specify the duration (in seconds) that you want the assistant to wait for a response from the webhook before returning an error. The timeout duration must be between 1 and 30 seconds.
 
@@ -68,7 +68,7 @@ For more examples, see [audio webhook examples](https://github.com/watson-develo
 Do extensive testing of your webhook before you enable it for an assistant that is being used in a production environment.
 {: important}
 
-The webhook is triggered when a recording response type is used during a phone call. If the request to the webhook fails, the call disconnects. You can look at the phone integration logs for more details as to why the webhook failed. For more information, see [Phone integration troubleshooting](phone-troubleshooting.md).
+The webhook is triggered when a recording response type is used during a phone call. If the request to the webhook fails, the call disconnects. You can look at the phone integration logs for more details as to why the webhook failed. For more information, see [Phone integration troubleshooting](/docs/watson-assistant?topic=watson-assistant-phone-troubleshooting).
 
 ## Request body
 {: #webhook-audio-request-body}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-04-04"
+lastupdated: "2025-04-07"
 
 keywords: post webhook, postwebhook, post-webhook
 
@@ -20,17 +20,14 @@ A post-message webhook calls an external service or application every time that 
 
 You can add a post-message webhook to your assistant if you want to trigger the webhook before each message response is shown to the customer.
 
-If you are using a custom channel, the post-message webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://cloud.ibm.com/apidocs/assistant-v2#message). All built-in channel integrations use this API.
-{: important}
-
 You can use a post-message webhook to do things like extract custom responses from an external content repository. For example, you can define actions with custom IDs in the responses instead of text. The post-message webhook can pass these IDs to an external database to retrieve stored text responses.
 
-You can use this webhook in coordination with the pre-message webhook. For example, if you use the pre-message webhook to strip personally identifiable information from the customer's input, you can use the post-message webhook to add it back. If you use the pre-message webhook to translate the customer's input to the assistant's language, you can use the post-message webhook to translate the response into the customer's language before returning it. For more information, see [Making a call before processing a message](webhook-pre.md).
+You can use this webhook in coordination with the pre-message webhook. For example, if you use the pre-message webhook to strip personally identifiable information from the customer's input, you can use the post-message webhook to add it back. If you use the pre-message webhook to translate the customer's input to the assistant's language, you can use the post-message webhook to translate the response into the customer's language before returning it. For more information, see [Making a call before processing a message](/docs/watson-assistant?topic=watson-assistant-webhook-pre).
 
 For environments where private endpoints are in use, keep in mind that a webhook sends traffic over the internet.
 {: note}
 
-For the **classic experience**, use a dialog webhook if you need to perform a one-time action when needed during a conversation. For example, conditions are met when the assistant collects all required details, such as the account number, user ID, and account secret. For more information, see [Making a programmatic call from dialog](dialog-webhooks.md#making-a-programmatic-call-from-dialog).
+For the **classic experience**, use a dialog webhook if you need to perform a one-time action when needed during a conversation. For example, conditions are met when the assistant collects all required details, such as the account number, user ID, and account secret. For more information, see [Making a programmatic call from dialog](/docs/watson-assistant?topic=watson-assistant-dialog-webhooks#making-a-programmatic-call-from-dialog).
 
 ## Defining the webhook
 {: #webhook-post-create}
@@ -46,7 +43,6 @@ The programmatic call to the external service must meet these requirements:
 Do not set up and test your webhook in a production environment where the assistant is deployed and is interacting with customers.
 {: important}
 
-
 ### Procedure
 
 To add the webhook details, complete the following steps:
@@ -59,9 +55,9 @@ To add the webhook details, complete the following steps:
 
 For the **classic experience**, complete the following steps:
 
-  - For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
+- For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
 
-  - Click **Webhooks** > **Post-message webhook**.
+- Click **Webhooks** > **Post-message webhook**.
 
 4. Set the **Post-message webhook** switch to **Enabled**.
 
@@ -158,7 +154,7 @@ If you are using the **classic experience**, authenticate the webhook request by
 
  - Updating an existing webhook to use the new authentication configuration will change its behavior.
 
-For more information, see [Defining the authentication method for pre-message and post-message webhooks](define-webhook-auth.md).
+For more information, see [Defining the authentication method for pre-message and post-message webhooks](/docs/watson-assistant?topic=watson-assistant-define-webhook-auth).
 
 If you need to test the JWT verification, you can add code to the external service. For example, if you specify `purple unicorn` in the **Secret** field, you can use the following code:
 
@@ -228,13 +224,11 @@ The following sample shows how a simple request body is formatted:
 ```
 {: codeblock}
 
-## Skipping the assistant processing
-{: #webhook-post-skipping-assistant-processing}
+### Skipping the assistant processing
 
 Enhancements to pre-message webhooks allow {{site.data.keyword.conversationshort}} to skip message processing and directly return the response from the webhook. This functionality is activated by setting the `x-watson-assistant-webhook-returnheader` in the webhook's HTTP response.
 
-### Before you begin
-{: #webhook-post-before-you-begin}
+#### Before you begin
 
 Complete the following steps:
 
@@ -244,7 +238,7 @@ Complete the following steps:
 
 This feature enables the webhook to dynamically control the conversation flow, enabling immediate responses when needed.
 
-### Response body
+#### Response body
 
 In the response body, the `output` does not need to be wrapped inside a `payload` property as it is returned directly to the client:
 
@@ -274,7 +268,6 @@ In the post-message webhook configuration page, the following values are specifi
 For the **classic experience**, there is no value in the **Secret** field.{: note}
 
 - **URL**: `https://your-webhook-url/`
-- **Secret**: none (if you are using the classic experience)
 - **Header name**: Content-Type
 - **Header value**: application/json
 
@@ -319,7 +312,7 @@ function main(params) {
 ### Example 2
 {: #webhook-post-example-translate-back}
 
-This example shows how to translate a message response back to the customer's language. It works only if you perform the steps in [Example 2](webhook-pre.md#example-2) to define a pre-message webhook that translates the original message into English.
+This example shows how to translate a message response back to the customer's language. It works only if you perform the steps in [Example 2](/docs/watson-assistant?topic=watson-assistant-webhook-pre#example-2) to define a pre-message webhook that translates the original message into English.
 
 Define a sequence of web actions in IBM Cloud Functions. The first action in the sequence checks for the language of the original incoming text, which you stored in a context variable named `original_input` in the pre-message webhook code. The second action in the sequence translates the dialog response text from English into the original language that was used by the customer.
 
@@ -328,7 +321,6 @@ In the pre-message webhook configuration page, the following values are specifie
 For the **classic experience**, there is no value in the **Secret** field.{: note}
 
 - **URL**: `https://your-webhook-url/`
-- **Secret**: none (if you are using the classic experience)
 - **Header name**: Content-Type
 - **Header value**: application/json
 
@@ -410,11 +402,12 @@ function main(params) {
 {: codeblock}
 
 ### Example 3
-{: #example-3}
+{: example-3}
 
 This example shows how to compose a webhook response to let {{site.data.keyword.conversationshort}} skip processing the message and directly return the webhook's response.
 
-### Webhook Configuration
+#### Webhook configuration
+
 In the pre-message webhook configuration page, specify the following values:
 
  - URL: https://your-webhook-url/webhook_skip
@@ -449,8 +442,7 @@ function main(params) {
 ```
 {: codeblock}
 
-## Removing the webhook
-{: #webhook-post-delete}
+### Removing the webhook
 
 If you decide that you do not want to process message responses with a webhook, complete the following steps:
 
@@ -462,9 +454,9 @@ If you decide that you do not want to process message responses with a webhook, 
 
 For the **classic experience**, complete the following steps:
 
-  - For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
+- For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
 
-  - Click **Webhooks** > **Post-message webhook**.
+- Click **Webhooks** > **Post-message webhook**.
 
 4. Do one of the following steps:
 

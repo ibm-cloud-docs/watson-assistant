@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-01-22"
+lastupdated: "2025-04-08"
 
 keywords: Watson Assistant frequently asked questions
 
@@ -104,7 +104,7 @@ If you cannot view the API details or service credentials, it is likely that you
 {: #faqs-config-timeout-parameter}
 {: faq}
 
-No, the timeout value for a custom extension is not configurable. Any call to the external API must complete within 30 seconds.
+No, the timeout value for a custom extension is not configurable. Any call to the external API must complete within 48 seconds.
 
 ## Why can't I edit intents, entities, or dialog nodes?
 {: #faqs-edit-skill}

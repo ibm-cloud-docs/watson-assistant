@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-01-22"
+lastupdated: "2025-04-08"
 
 subcollection: watson-assistant
 
@@ -72,7 +72,7 @@ The OpenAPI document must satisfy the following requirements and restrictions:
 ## Adhering to the response timeout limit
 {: #adhere-response-timeout-limit}
 
-You must adhere to the response timeout limit, which is 30 seconds, while calling an external API. The timeout value for a custom extension is not configurable.
+You must adhere to the response timeout limit, which is 48 seconds, while calling an external API. The timeout value for a custom extension is not configurable.
 
 ## Building the custom extension
 {: #build-custom-extension-building}
