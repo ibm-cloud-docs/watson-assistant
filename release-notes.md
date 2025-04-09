@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-04-08"
+lastupdated: "2025-04-09"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,13 @@ content-type: release-note
 
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 10 April 2025
+{: #watson-assistant-apr102025}
+{: release-note}
+
+New Signed JWT authentication method
+:   The Signed JWT authentication is no longer the default when you create a webhook. Instead, you can select it in the **Edit authentication** dialog. For more information, see [Defining the authentication method for pre-message and post-message webhooks](/docs/watson-assistant?topic=define-webhook-auth).
 
 ## 27 March 2025
 {: #watson-assistant-mar272025}
