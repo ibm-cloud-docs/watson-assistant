@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-04-07"
+lastupdated: "2025-04-09"
 
 keywords: post webhook, postwebhook, post-webhook
 
@@ -49,9 +49,9 @@ To add the webhook details, complete the following steps:
 
 1. In your assistant, go to **Environments** and open the environment where you want to configure the webhook.
 
-2. Click the ![Environment settings icon](images/gear-icon-black.png) icon to open the environment settings.
+1. Click the ![Environment settings icon](images/gear-icon-black.png) icon to open the environment settings.
 
-3. On the **Environment settings** page, click **Post-message webhook**.
+1. On the **Environment settings** page, click **Post-message webhook**.
 
 For the **classic experience**, complete the following steps:
 
@@ -59,9 +59,9 @@ For the **classic experience**, complete the following steps:
 
 - Click **Webhooks** > **Post-message webhook**.
 
-4. Set the **Post-message webhook** switch to **Enabled**.
+1. Set the **Post-message webhook** switch to **Enabled**.
 
-5. In the **Synchronous event**, select from one of the following options:
+1. In the **Synchronous event**, select from one of the following options:
 
   - Continue processing user input without webhook update if there is an error.
 
@@ -69,17 +69,17 @@ For the **classic experience**, complete the following steps:
 
 For more information see, [Configuring webhook error handling for postprocessing](#configuring-webhook-error-handling-for-postprocessing).
 
-6.  In the **URL** field, add the URL for the external application to which you want to send HTTP POST request callouts.
+1.  In the **URL** field, add the URL for the external application to which you want to send HTTP POST request callouts.
 
     For example, maybe you store your assistant's responses in a separate content management system. When the assistant understands the input, the processed action returns a unique ID that corresponds to a response in your CMS. To call a service that retrieves a response from your CMS for a given unique ID, specify the URL for your service instance. For example, `https://example.com/get_answer`.
 
     You must specify a URL that uses the SSL protocol, so specify a URL that begins with `https`.
 
-7. If you are in the classic experience, fill in the **Secret field**. For more information, see [Adding a secret for the classic experience only](#adding-a-secret-for-the-classic-experience-only).
+1. If you are in the classic experience, fill in the **Secret field**. For more information, see [Adding a secret for the classic experience only](#adding-a-secret-for-the-classic-experience-only).
 
-8. In the **Timeout** field, specify the time duration (in seconds) that you want the assistant to wait for a response from the webhook before it returns an error. The timeout duration cannot be shorter than 1 second or longer than 30 seconds.
+1. In the **Timeout** field, specify the time duration (in seconds) that you want the assistant to wait for a response from the webhook before it returns an error. The timeout duration cannot be shorter than 1 second or longer than 30 seconds.
 
-9.  In the **Headers** section, click **Add header +** to add any headers that you want to pass to the service, one at a time.
+1.  In the **Headers** section, click **Add header +** to add any headers that you want to pass to the service, one at a time.
 
 If you are using the **classic experience**, the service automatically sends an Authorization header with a JWT. If you want to handle authorization yourself, add your own authorization header and the service uses it instead.{: note}
 
@@ -312,7 +312,7 @@ function main(params) {
 ### Example 2
 {: #webhook-post-example-translate-back}
 
-This example shows how to translate a message response back to the customer's language. It works only if you perform the steps in [Example 2](/docs/watson-assistant?topic=watson-assistant-webhook-pre#example-2) to define a pre-message webhook that translates the original message into English.
+This example shows how to translate a message response back to the customer's language. It works only if you perform the steps in [Example 2](/docs/watson-assistant?topic=watson-assistant-webhook-pre#webhook-pre-example-translate) to define a pre-message webhook that translates the original message into English.
 
 Define a sequence of web actions in IBM Cloud Functions. The first action in the sequence checks for the language of the original incoming text, which you stored in a context variable named `original_input` in the pre-message webhook code. The second action in the sequence translates the dialog response text from English into the original language that was used by the customer.
 
@@ -448,9 +448,9 @@ If you decide that you do not want to process message responses with a webhook, 
 
 1. In your assistant, go to **Environments** and open the environment where you want to remove the webhook.
 
-2. Click the ![Environment settings icon](images/gear-icon-black.png) icon to open the environment settings.
+1. Click the ![Environment settings icon](images/gear-icon-black.png) icon to open the environment settings.
 
-3. On the **Environment settings** page, click **Post-message webhook**.
+1. On the **Environment settings** page, click **Post-message webhook**.
 
 For the **classic experience**, complete the following steps:
 
@@ -458,7 +458,7 @@ For the **classic experience**, complete the following steps:
 
 - Click **Webhooks** > **Post-message webhook**.
 
-4. Do one of the following steps:
+1. Do one of the following steps:
 
   - To stop calling a webhook to process every incoming message, set the **Post-message webhook** switch to **Disabled**.
 
