@@ -56,7 +56,7 @@ Conversational search language support
 {: release-note}
 
 Testing limits update
-:  There are no longer limits to the amount of tests, but there is still a limit of 250 messages per test. For more information, see [Testing limits for the set of data](/docs/watson-assistant?topic=watson-assistant-data-evaluation).
+:  There are no longer limits to the amount of tests, but there is still a limit of 250 messages per test. For more information, see [Testing limits for the set of data](/docs/watson-assistant?topic=watson-assistant-evaluating-the-assistant).
 
 New Generative AI page
 : You now have a new Generative AI page that helps you to configure large language models(LLMs) for your assistants. The LLMs enable your customers to interact with the assistants seamlessly without any custom-built conversational steps. For more information, see [Generative AI](/docs/watson-assistant?topic=watson-assistant-base-llm-wxa).
@@ -104,7 +104,7 @@ Post process conversational search responses
 :   You can now save your conversational search responses in action variables for post-processing. For more information, see [Search for the answer](/docs/watson-assistant?topic=watson-assistant-step-what-next#search-for-answer).
 
 Evaluate assistant
-:   You can now evaluate the performance of your assistant. For more information, see [Evaluating the assistant](/docs/watson-assistant?topic=watson-assistant-data-evaluation).
+:   You can now evaluate the performance of your assistant. For more information, see [Evaluating the assistant](/docs/watson-assistant?topic=watson-assistant-evaluating-the-assistant).
 
 ## 6 November 2024
 {: #watson-assistant-nov062024}
