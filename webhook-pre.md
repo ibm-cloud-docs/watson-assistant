@@ -74,11 +74,11 @@ To add the webhook details, complete the following steps:
 
 1. In the **Synchronous event**, select from one of the following options:
 
-  - Continue processing user input without webhook update if there is an error.
+   - Continue processing user input without webhook update if there is an error.
 
-  - Return an error to the client if the webhook call fails.
+   - Return an error to the client if the webhook call fails.
 
-For more information see, [Configuring webhook error handling for preprocessing](#configuring-webhook-error-handling-for-preprocessing).
+   For more information see, [Configuring webhook error handling for preprocessing](#configuring-webhook-error-handling-for-preprocessing).
 
 1.  In the **URL** field, add the URL for the external application to which you want to send HTTP POST request callouts.
 
