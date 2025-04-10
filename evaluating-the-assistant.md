@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-04-09"
 
 keywords: evaluation
 
@@ -12,7 +12,7 @@ subcollection: watson-assistant
 {{site.data.keyword.attribute-definition-list}}
 
 # Evaluating the assistant
-{: #data-evaluation}
+{: #evaluating-the-assistant}
 
 [Plus]{: tag-green} [Enterprise]{: tag-purple} [IBM Cloud Pak for Data]{: tag-cp4d} [{{site.data.keyword.IBM_notm}} Software Hub]{: tag-teal}
 

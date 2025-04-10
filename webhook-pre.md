@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-04-07"
+lastupdated: "2025-04-10"
 
 keywords: pre webhook, prewebhook, pre-webhook
 
@@ -64,21 +64,21 @@ To add the webhook details, complete the following steps:
 
 1. On the **Environment settings** page, click **Pre-message webhook**.
 
-For the **classic experience**, complete the following steps:
+   For the **classic experience**, complete the following steps:
 
-- For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
+   - For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
 
-- Click **Webhooks** > **Pre-message webhook**.
+   - Click **Webhooks** > **Pre-message webhook**.
 
 1. Set the **Pre-message webhook** switch to **Enabled**.
 
 1. In the **Synchronous event**, select from one of the following options:
 
-  - Continue processing user input without webhook update if there is an error.
+   - Continue processing user input without webhook update if there is an error.
 
-  - Return an error to the client if the webhook call fails.
+   - Return an error to the client if the webhook call fails.
 
-For more information see, [Configuring webhook error handling for preprocessing](#configuring-webhook-error-handling-for-preprocessing).
+   For more information see, [Configuring webhook error handling for preprocessing](#configuring-webhook-error-handling-for-preprocessing).
 
 1.  In the **URL** field, add the URL for the external application to which you want to send HTTP POST request callouts.
 
@@ -409,7 +409,7 @@ return {
 
 When you test the webhook in the preview panel, you can submit `Buenos días`, and the assistant responds as if you said `Good morning` in English. In fact, when you check the Analyze page of your assistant and open **Conversations**, the log shows that the user input was `Good morning`.
 
-You can add a post-message webhook to translate the message's response back into the customer's language before it is displayed. For more information, see [Example 2](/docs/watson-assistant?topic=watson-assistant-webhook-post#example-2).
+You can add a post-message webhook to translate the message's response back into the customer's language before it is displayed. For more information, see [Example 2](/docs/watson-assistant?topic=watson-assistant-webhook-post#webhook-post-example-translate-back).
 
 ### Example 3
 {: #webhook-pre-example3}
@@ -464,11 +464,11 @@ If you decide that you do not want to preprocess customer input with a webhook, 
 
 1. On the **Environment settings** page, click **Pre-message webhook**.
 
-For the **classic experience**, complete the following steps:
+   For the **classic experience**, complete the following steps:
 
-- For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
+   - For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
 
-- Click **Webhooks** > **Pre-message webhook**.
+   - Click **Webhooks** > **Pre-message webhook**.
 
 1. Do one of the following steps:
 

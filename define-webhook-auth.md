@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-04-08"
+lastupdated: "2025-04-09"
 
 subcollection: watson-assistant
 
@@ -49,6 +49,7 @@ Before you configure the webhook authentication:
     * [Bearer auth](#bearer-auth)
     * [API key auth](#api-key-auth)
     * [OAuth 2.0](#oauth-20)
+    * [Signed JWT](#signed-jwt)
 
 1. Click **Save**.
 
@@ -71,6 +72,12 @@ This is the default option.
 {: api-key-auth}
 
 1. Enter the **API key name** and **API key**.
+
+### Signed JWT
+{: #signed-jwt}
+
+1. Enter the **Secret**.
+1. Click the **Show password** icon ![View icon](images/view.svg) to view the secret.
 
 ### OAuth 2.0
 {: #oauth-20}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-27"
+lastupdated: "2025-04-09"
 
 subcollection: watson-assistant
 
@@ -47,7 +47,7 @@ Use LLMs for your watsonx Assistant
 **Updates**
 
 Evaluate testing message limits
-You no longer have a limit on the number of tests in a test run to evaluate and analyze your {{site.data.keyword.conversationshort}}'s performance but each test can include a maximum of 250 messages. For more information, see [Testing limits for the set of data](/docs/watson-assistant?topic=watson-assistant-data-evaluation).
+You no longer have a limit on the number of tests in a test run to evaluate and analyze your {{site.data.keyword.conversationshort}}'s performance but each test can include a maximum of 250 messages. For more information, see [Testing limits for the set of data](/docs/watson-assistant?topic=watson-assistant-evaluating-the-assistant).
 
 
 ## 5.1.1 release, 27 February 2025
@@ -63,7 +63,7 @@ Integrate your {{site.data.keyword.conversationshort}} with Slack
 : You can integrate your {{site.data.keyword.conversationshort}} with Slack. Then you can configure the assistant to support certain events so that your assistant can respond to questions that are asked in Slack direct messages or in Slack channels where the assistant is directly mentioned. For more information, see [Integrating with Slack](/docs/watson-assistant?topic=watson-assistant-deploy-slack).
 
 Evaluate assistant's performance
-: You can now evaluate the performance of your {{site.data.keyword.conversationshort}} by uploading a comprehensive, relevant collection of utterances and sending the utterances to your assistant in a test run. . For more information, see [Evaluating the assistant](/docs/watson-assistant?topic=watson-assistant-data-evaluation).
+: You can now evaluate the performance of your {{site.data.keyword.conversationshort}} by uploading a comprehensive, relevant collection of utterances and sending the utterances to your assistant in a test run. . For more information, see [Evaluating the assistant](/docs/watson-assistant?topic=watson-assistant-evaluating-the-assistant).
 
 Post-process the conversational search responses
 : You can now save your conversational search responses in action variables of your watsonx Assistant for post-processing. For more information, see [Search for the answer](/docs/watson-assistant?topic=watson-assistant-step-what-next#search-for-answer).

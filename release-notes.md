@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-04-08"
+lastupdated: "2025-04-10"
 
 subcollection: watson-assistant
 
@@ -18,12 +18,24 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 10 April 2025
+{: #watson-assistant-apr102025}
+{: release-note}
+
+Display name now shown for disambiguation
+:   You can now provide a friendly name as display name for you actions. Users will see the display name during actions disambiguation, which is when AI matches multiple actions and provides a list of options for users to select. For more information, see [Overview: Editing actions](/docs/watson-assistant?topic=build-actions-overview).
+
+New Signed JWT authentication method
+:   The Signed JWT authentication is no longer the default when you create a webhook. Instead, you can select it in the **Edit authentication** dialog. For more information, see [Defining the authentication method for pre-message and post-message webhooks](/docs/watson-assistant?topic=define-webhook-auth).
+
 ## 27 March 2025
 {: #watson-assistant-mar272025}
 {: release-note}
 
 Enhance security with audio recording in phone integration
-:   You can now use audio recording with the Genesys Audio Connector in Phone Integration! To learn more, see [Recording a caller's utterance](/docs/watson-assistant?topic=record-caller-utterance). 
+:   You can now use audio recording with the Genesys Audio Connector in Phone Integration! To learn more, see [Recording a caller's utterance](/docs/watson-assistant?topic=watson-assistant-record-caller-utterance). 
+
+
 
 ## 13 March 2025
 {: #watson-assistant-mar132025}
@@ -31,7 +43,7 @@ Enhance security with audio recording in phone integration
 
 
 Webhook authentication configuration
-:   {{site.data.keyword.conversationshort}} now supports Webhook authentication to verify that the Pre-message webhooks and Post-message webhooks requests are legitimate, comes from the expected source, and ensures the authenticity and integrity of the data. For more information, see [Defining webhook authentication](/docs/watson-assistant?topic=watson-assistant-define-webhook-auth).
+:   {{site.data.keyword.conversationshort}} now supports Webhook authentication to verify that the Pre-message webhooks and Post-message webhooks requests are legitimate, comes from the expected source, and ensures the authenticity and integrity of the data. For more information, see [Defining the authentication method for pre-message and post-message webhooks](/docs/watson-assistant?topic=watson-assistant-define-webhook-auth).
 
 Update on the search confidence for conversational search
 :   Small modifications to text processing can impact the values of retrieval confidence, response confidence, and extractiveness. For more information on the scores, see [Conversational search analytics](/docs/watson-assistant?topic=watson-assistant-conversational-search-analytics).
@@ -49,7 +61,7 @@ Conversational search language support
 {: release-note}
 
 Testing limits update
-:  There are no longer limits to the amount of tests, but there is still a limit of 250 messages per test. For more information, see [Testing limits for the set of data](/docs/watson-assistant?topic=watson-assistant-data-evaluation).
+:  There are no longer limits to the amount of tests, but there is still a limit of 250 messages per test. For more information, see [Testing limits for the set of data](/docs/watson-assistant?topic=watson-assistant-evaluating-the-assistant).
 
 New Generative AI page
 : You now have a new Generative AI page that helps you to configure large language models(LLMs) for your assistants. The LLMs enable your customers to interact with the assistants seamlessly without any custom-built conversational steps. For more information, see [Generative AI](/docs/watson-assistant?topic=watson-assistant-base-llm-wxa).
@@ -97,7 +109,7 @@ Post process conversational search responses
 :   You can now save your conversational search responses in action variables for post-processing. For more information, see [Search for the answer](/docs/watson-assistant?topic=watson-assistant-step-what-next#search-for-answer).
 
 Evaluate assistant
-:   You can now evaluate the performance of your assistant. For more information, see [Evaluating the assistant](/docs/watson-assistant?topic=watson-assistant-data-evaluation).
+:   You can now evaluate the performance of your assistant. For more information, see [Evaluating the assistant](/docs/watson-assistant?topic=watson-assistant-evaluating-the-assistant).
 
 ## 6 November 2024
 {: #watson-assistant-nov062024}
