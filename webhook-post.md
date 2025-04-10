@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-04-09"
+lastupdated: "2025-04-10"
 
 keywords: post webhook, postwebhook, post-webhook
 
@@ -53,11 +53,11 @@ To add the webhook details, complete the following steps:
 
 1. On the **Environment settings** page, click **Post-message webhook**.
 
-For the **classic experience**, complete the following steps:
+   For the **classic experience**, complete the following steps:
 
-- For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
+    - For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
 
-- Click **Webhooks** > **Post-message webhook**.
+    - Click **Webhooks** > **Post-message webhook**.
 
 1. Set the **Post-message webhook** switch to **Enabled**.
 
@@ -452,11 +452,11 @@ If you decide that you do not want to process message responses with a webhook, 
 
 1. On the **Environment settings** page, click **Post-message webhook**.
 
-For the **classic experience**, complete the following steps:
+   For the **classic experience**, complete the following steps:
 
-- For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
+   - For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
 
-- Click **Webhooks** > **Post-message webhook**.
+   - Click **Webhooks** > **Post-message webhook**.
 
 1. Do one of the following steps:
 

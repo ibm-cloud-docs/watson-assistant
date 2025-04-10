@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-04-09"
+lastupdated: "2025-04-10"
 
 keywords: pre webhook, prewebhook, pre-webhook
 
@@ -64,11 +64,11 @@ To add the webhook details, complete the following steps:
 
 1. On the **Environment settings** page, click **Pre-message webhook**.
 
-For the **classic experience**, complete the following steps:
+   For the **classic experience**, complete the following steps:
 
-- For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
+   - For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
 
-- Click **Webhooks** > **Pre-message webhook**.
+   - Click **Webhooks** > **Pre-message webhook**.
 
 1. Set the **Pre-message webhook** switch to **Enabled**.
 
@@ -464,11 +464,11 @@ If you decide that you do not want to preprocess customer input with a webhook, 
 
 1. On the **Environment settings** page, click **Pre-message webhook**.
 
-For the **classic experience**, complete the following steps:
+   For the **classic experience**, complete the following steps:
 
-- For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
+   - For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
 
-- Click **Webhooks** > **Pre-message webhook**.
+   - Click **Webhooks** > **Pre-message webhook**.
 
 1. Do one of the following steps:
 
