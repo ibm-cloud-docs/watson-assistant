@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-04-09"
+lastupdated: "2025-04-10"
 
 subcollection: watson-assistant
 
@@ -22,6 +22,9 @@ Release notes describe the new features, changes, and bug fixes in each release 
 {: #watson-assistant-apr102025}
 {: release-note}
 
+Display name now shown for disambiguation
+:   You can now provide a friendly name as display name for you actions. Users will see the display name during actions disambiguation, which is when AI matches multiple actions and provides a list of options for users to select. For more information, see [Overview: Editing actions](/docs/watson-assistant?topic=build-actions-overview).
+
 New Signed JWT authentication method
 :   The Signed JWT authentication is no longer the default when you create a webhook. Instead, you can select it in the **Edit authentication** dialog. For more information, see [Defining the authentication method for pre-message and post-message webhooks](/docs/watson-assistant?topic=define-webhook-auth).
 
@@ -31,6 +34,8 @@ New Signed JWT authentication method
 
 Enhance security with audio recording in phone integration
 :   You can now use audio recording with the Genesys Audio Connector in Phone Integration! To learn more, see [Recording a caller's utterance](/docs/watson-assistant?topic=watson-assistant-record-caller-utterance). 
+
+
 
 ## 13 March 2025
 {: #watson-assistant-mar132025}
