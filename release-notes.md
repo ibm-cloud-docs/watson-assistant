@@ -23,10 +23,10 @@ Release notes describe the new features, changes, and bug fixes in each release 
 {: release-note}
 
 Display name now shown for disambiguation
-:   You can now provide a friendly name as display name for you actions. Users will see the display name during actions disambiguation, which is when AI matches multiple actions and provides a list of options for users to select. For more information, see [Overview: Editing actions](/docs/watson-assistant?topic=build-actions-overview).
+:   You can now provide a friendly name as display name for you actions. Users will see the display name during actions disambiguation, which is when AI matches multiple actions and provides a list of options for users to select. For more information, see [Overview: Editing actions](/docs/watson-assistant?topic=watson-assistant-build-actions-overview).
 
 New Signed JWT authentication method
-:   The Signed JWT authentication is no longer the default when you create a webhook. Instead, you can select it in the **Edit authentication** dialog. For more information, see [Defining the authentication method for pre-message and post-message webhooks](/docs/watson-assistant?topic=define-webhook-auth).
+:   The Signed JWT authentication is no longer the default when you create a webhook. Instead, you can select it in the **Edit authentication** dialog. For more information, see [Defining the authentication method for pre-message and post-message webhooks](/docs/watson-assistant?topic=watson-assistant-define-webhook-auth).
 
 ## 27 March 2025
 {: #watson-assistant-mar272025}
