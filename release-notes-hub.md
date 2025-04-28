@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-09"
+lastupdated: "2025-04-28"
 
 subcollection: watson-assistant
 
@@ -34,6 +34,8 @@ The following table shows the latest version of the web chat integration that is
 | 5.1.1 | [8.5.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.5.1) |
 | 5.1.0 | [8.3.2](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.3.2) |
 {: caption="Web chat versions in {{site.data.keyword.conversationshort}} for {{site.data.keyword.IBM_notm}}  Software Hub" caption-side="top"}
+
+
 
 ## 5.1.2 release, 26 March 2025
 {: #assistant-hub-mar262025}

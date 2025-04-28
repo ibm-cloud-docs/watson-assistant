@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-04-28"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,7 @@ Learn how to install {{site.data.keyword.conversationshort}} for {{site.data.key
 The {{site.data.keyword.icp4dfull_notm}} environment is a Kubernetes-based container platform that can help you quickly modernize and automate workloads that are associated with the applications and services you use. You can develop and deploy on your own infrastructure and in your data center which helps to mitigate risk and minimize vulnerabilities.
 
 The installation process differs depending on the version you are installing. The following table shows the available versions.
+
 
 
 | Version |  Cluster | Installation instructions |
@@ -60,10 +61,16 @@ The installation process differs depending on the version you are installing. Th
 | 1.5.0 | {{site.data.keyword.icp4dfull_notm}} 3.0.1 or 3.5 | [Installing 1.5.0](https://www.ibm.com/docs/en/cloud-paks/cp-data/3.5.0?topic=service-installing-watson-assistant){: external} |
 {: caption="Available versions" caption-side="top"}
 
+
+
+
+
 ## Support matrix
 {: #install-support-matrix}
 
 The following table describes which versions of {{site.data.keyword.conversationshort}} are supported on which versions of {{site.data.keyword.icp4dfull_notm}} and Red Hat OpenShift.
+
+
 
 | {{site.data.keyword.conversationshort}} version | {{site.data.keyword.icp4dfull_notm}} version | Red Hat OpenShift version |
 | --- | --- | --- |
