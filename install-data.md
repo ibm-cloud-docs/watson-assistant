@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-04-30"
 
 subcollection: watson-assistant
 
@@ -25,12 +25,12 @@ The {{site.data.keyword.icp4dfull_notm}} environment is a Kubernetes-based conta
 
 The installation process differs depending on the version you are installing. The following table shows the available versions.
 
-
 | Version |  Cluster | Installation instructions |
 | --- | --- | --- |
 | 5.0.3 | {{site.data.keyword.icp4dfull_notm}} 5.0.x | [Installing 5.0.3](https://www.ibm.com/docs/SSQNUZ_5.0.x/svc-assistant/assistant-svc-install.html){: external} |
 | 5.0.1 | {{site.data.keyword.icp4dfull_notm}} 5.0.x | [Installing 5.0.1](https://www.ibm.com/docs/SSQNUZ_5.0.x/svc-assistant/assistant-svc-install.html){: external} |
 | 5.0.0 | {{site.data.keyword.icp4dfull_notm}} 5.0.x | [Installing 5.0.0](https://www.ibm.com/docs/SSQNUZ_5.0.x/svc-assistant/assistant-svc-install.html){: external} |
+| 4.8.9 | {{site.data.keyword.icp4dfull_notm}} 4.8.x | [Installing 4.8.9](https://www.ibm.com/docs/SSQNUZ_4.8.x/svc-assistant/assistant-svc-install.html){: external} |
 | 4.8.8 | {{site.data.keyword.icp4dfull_notm}} 4.8.x | [Installing 4.8.8](https://www.ibm.com/docs/SSQNUZ_4.8.x/svc-assistant/assistant-svc-install.html){: external} |
 | 4.8.7 | {{site.data.keyword.icp4dfull_notm}} 4.8.x | [Installing 4.8.7](https://www.ibm.com/docs/SSQNUZ_4.8.x/svc-assistant/assistant-svc-install.html){: external} |
 | 4.8.6 | {{site.data.keyword.icp4dfull_notm}} 4.8.x | [Installing 4.8.6](https://www.ibm.com/docs/SSQNUZ_4.8.x/svc-assistant/assistant-svc-install.html){: external} |
@@ -77,6 +77,12 @@ The following table describes which versions of {{site.data.keyword.conversation
 | 5.0.0 | 5.0.x | 4.15 |
 | 5.0.0 | 5.0.x | 4.14 |
 | 5.0.0 | 5.0.x | 4.12 |
+| 4.8.9 | 4.8.x | 4.18 |
+| 4.8.9 | 4.8.x | 4.17 |
+| 4.8.9 | 4.8.x | 4.16 |
+| 4.8.9 | 4.8.x | 4.15 |
+| 4.8.9 | 4.8.x | 4.14 |
+| 4.8.9 | 4.8.x | 4.12 |
 | 4.8.8 | 4.8.x | 4.16 |
 | 4.8.8 | 4.8.x | 4.15 |
 | 4.8.8 | 4.8.x | 4.14 |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-09"
+lastupdated: "2025-04-30"
 
 subcollection: watson-assistant
 
@@ -28,12 +28,27 @@ When you install {{site.data.keyword.conversationshort}} for {{site.data.keyword
 
 The following table shows the latest version of the web chat integration that is included with each release of {{site.data.keyword.conversationshort}} for {{site.data.keyword.IBM_notm}} Software Hub. {{site.data.keyword.IBM_notm}} Software Hub supports web chat versions 8.3.2 or later. To customize and change version numbers, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
 
+
 | {{site.data.keyword.conversationshort}} for {{site.data.keyword.IBM_notm}} Software Hub version | Latest web chat version available |
 |----------------|----------------|
+| 5.1.3 | [8.7.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.7.1) |
 | 5.1.2 | [8.6.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.6.0) |
 | 5.1.1 | [8.5.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.5.1) |
 | 5.1.0 | [8.3.2](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.3.2) |
 {: caption="Web chat versions in {{site.data.keyword.conversationshort}} for {{site.data.keyword.IBM_notm}}  Software Hub" caption-side="top"}
+
+## 5.1.3 release, 30 April 2025
+{: #assistant-hub-apr302025}
+{: release-note}
+
+**Updates**
+
+Support for HTTP proxy configuration
+: {{site.data.keyword.conversationshort}} now supports HTTP proxy configuration. By configuring cluster HTTP proxy settings in {{site.data.keyword.IBM_notm}} Software Hub, you can ensure that your cluster communicates with external repositories and access the required resources to install and update the software. For more information, see [Applying cluster HTTP proxy settings](https://www.ibm.com/docs/en/software-hub/5.1.x?topic=environment-applying-cluster-http-proxy-settings) to {{site.data.keyword.IBM_notm}} Software Hub.
+
+Update on the search confidence for conversational search
+: When you make small modifications to text processing, it impacts the values of retrieval confidence, response confidence, and extractiveness. For more information on the scores, see [Conversational search analytics](/docs/watson-assistant?topic=watson-assistant-conversational-search-analytics).
+
 
 ## 5.1.2 release, 26 March 2025
 {: #assistant-hub-mar262025}

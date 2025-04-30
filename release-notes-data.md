@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-04-30"
 
 subcollection: watson-assistant
 
@@ -35,6 +35,7 @@ The following table shows the latest version of the web chat integration that is
 | 5.0.3 | [8.2.6](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.2.6) |
 | 5.0.1 | [8.1.2](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.1.2) |
 | 5.0.0 | [8.1.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.1.0) |
+| 4.8.9 | [8.5.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.5.1) |
 | 4.8.8 | [8.5.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.5.1) |
 | 4.8.7 | [8.3.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.3.1) |
 | 4.8.6 | [8.2.3](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.2.3) |
@@ -56,6 +57,13 @@ The following table shows the latest version of the web chat integration that is
 | 4.5.0 | [6.4.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#6.4.1) |
 | 4.0.8 | [6.2.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#6.2.0) |
 {: caption="Web chat versions in {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}}" caption-side="top"}
+
+## Version 4.8.9 (30 April 2025)
+{: #assistant-data-apr302025}
+{: release-note}
+
+Updates
+: No new features or updates.
 
 ## Version 4.8.8 (29 January 2025)
 {: #assistant-data-jan292025}
