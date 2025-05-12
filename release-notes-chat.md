@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-04-08"
+lastupdated: "2025-05-12"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,14 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 8.8.0
+{: #8.8.0}
+*Release date: 9 May 2025*
+
+- Added a new [`updateLauncherConfig`](https://web-chat.assistant.test.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateLauncherConfig) instance method.
+- Added a new [`allow_return`](https://web-chat.assistant.test.watson.cloud.ibm.com/docs.html?to=api-instance-methods#updateHomeScreenConfig) property on `updateHomeScreenConfig`.
+- Minor bug fixes.
 
 ## 8.7.1
 {: #8.7.1}
