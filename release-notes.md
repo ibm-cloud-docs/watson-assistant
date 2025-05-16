@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-04-10"
+lastupdated: "2025-05-15"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,13 @@ content-type: release-note
 
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 15 May 2025
+{: #watson-assistant-may152025}
+{: release-note}
+
+**Documentation update**: Preventing data use for Watson services
+:   You can prevent Watson services from using your data for service improvements by adjusting your privacy settings. For more information, see [Controlling request logging for Watson services](https://cloud.ibm.com/docs/watson?topic=watson-gs-logging-overview).{: external}
 
 ## 10 April 2025
 {: #watson-assistant-apr102025}
