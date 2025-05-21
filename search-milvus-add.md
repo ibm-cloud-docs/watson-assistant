@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-05-20"
+lastupdated: "2025-05-21"
 
 subcollection: watson-assistant
 
@@ -75,9 +75,7 @@ After you create a {{site.data.keyword.conversationshort}} instance, you can sel
     If Milvus is already added, the **Open** button is displayed. Else, **Add** is displayed. To set up custom service on the **Draft** or **Live** assistant environment, click **Open**.
        {: note}
  
-      ![Select Milvus](images/select-milvus.png)
-
-      ![Milvus window in assistant](images/milvus-in-assistant.png)
+![Select Milvus](images/select-milvus.png)
 
 ### Connecting to {{site.data.keyword.lakehouse_short}} to set up Milvus
 {: #setup-milvus}
