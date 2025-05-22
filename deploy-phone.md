@@ -1,20 +1,31 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-08-15"
+  years: 2020, 2025
+lastupdated: "2025-05-22"
 
 subcollection: watson-assistant
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+{:deprecated: .deprecated}
 
 # Integrating with phone
 {: #deploy-phone}
 
 [IBM Cloud]{: tag-ibm-cloud} [Plus]{: tag-green}
 
+[Deprecated]{: tag-deprecated}
+
+**Deprecation Notice: IntelePeer free phone number service for {{site.data.keyword.conversationshort}}**
+
+Effective July 31, 2025, the IntelePeer free phone number service is discontinued for {{site.data.keyword.conversationshort}}.
+
+After this date, phone numbers that use this service no longer connect, and users can't make or receive calls.
+To ensure continued service, migrate your phone numbers to Twilio or another telephony provider. Update your phone numbers and adjust your integration settings in {{site.data.keyword.conversationshort}}.
+
+For assistance with the transition, contact support at https://www.ibm.com/mysupport/.
 
 You can enable the streaming feature in conversational search for the phone integrations in your assistant. This helps your assistant to stream the responses while generating them. For more information see, [Conversational search](/docs/watson-assistant?topic=watson-assistant-conversational-search).{: note}
 

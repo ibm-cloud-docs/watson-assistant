@@ -2,19 +2,30 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-05-20"
+lastupdated: "2025-05-22"
 
 subcollection: watson-assistant
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
+{:deprecated: .deprecated}
 
 # Integrating with *SMS*
 {: #deploy-sms}
 
 [IBM Cloud]{: tag-ibm-cloud}
+
+[Deprecated]{: tag-deprecated}
+
+**Deprecation Notice: IntelePeer free phone number service for {{site.data.keyword.conversationshort}}**
+
+Effective July 31, 2025, the IntelePeer free phone number service is discontinued for {{site.data.keyword.conversationshort}}.
+
+After this date, phone numbers that use this service no longer connect, and users can't make or receive calls.
+To ensure continued service, migrate your phone numbers to Twilio or another telephony provider. Update your phone numbers and adjust your integration settings in {{site.data.keyword.conversationshort}}. 
+
+For assistance with the transition, contact support at https://www.ibm.com/mysupport/.
 
 Add a text messaging integration so your assistant can exchange messages with your customers.
 {: shortdesc}
@@ -120,7 +131,7 @@ If you don't have a text messaging phone number, set up an *SMS with IntelePeer*
 ## Before you begin
 {: #deploy-sms-intelepeer-before-you-begin}
 
-To integrate Intelepeer with your assistant, you need "SMS" service with Access Type for `create`, `read`, `update`, and `delete`. 
+To integrate IntelePeer with your assistant, you need "SMS" service with Access Type for `create`, `read`, `update`, and `delete`. 
 For more information, see [Managing Users in Customer Portal](https://docs.intelepeer.com/Atmosphere/Content/Getting-Started/Managing-Users-in-Customer-Portal.htm){: external}.
 
 
@@ -147,7 +158,7 @@ To set up the integration, complete the following steps:
 
 1.  Enter your **Auth token** information. Click **Next** to go to Step 3 of your *SMS with IntelePeer* integration setup.
 
-1.  **Optional**: Enter the phone number that your Intelepeer account uses for SMS integration. The webhook URI is used to transfer messages, but if you add your phone number in this optional field, you can easily refer to it later. Click **Next** to go to Step 4 of your *SMS with IntelePeer* integration setup.
+1.  **Optional**: Enter the phone number that your IntelePeer account uses for SMS integration. The webhook URI is used to transfer messages, but if you add your phone number in this optional field, you can easily refer to it later. Click **Next** to go to Step 4 of your *SMS with IntelePeer* integration setup.
 
 1.  Copy the value from the **Webhook URI** field.
 
