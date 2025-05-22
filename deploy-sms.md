@@ -2,19 +2,30 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-01-07"
+lastupdated: "2025-05-22"
 
 subcollection: watson-assistant
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
+{:deprecated: .deprecated}
 
 # Integrating with *SMS*
 {: #deploy-sms}
 
 [IBM Cloud]{: tag-ibm-cloud}
+
+[Deprecated]{: tag-deprecated}
+
+**Deprecation Notice: IntelePeer free phone number service for {{site.data.keyword.conversationshort}}**
+
+Effective July 31, 2025, the IntelePeer free phone number service is discontinued for {{site.data.keyword.conversationshort}}.
+
+After this date, phone numbers that use this service no longer connect, and users can't make or receive calls.
+To ensure continued service, migrate your phone numbers to Twilio or another telephony provider. Update your phone numbers and adjust your integration settings in {{site.data.keyword.conversationshort}}. 
+
+For assistance with the transition, contact support at https://www.ibm.com/mysupport/.
 
 Add a text messaging integration so your assistant can exchange messages with your customers.
 {: shortdesc}
@@ -27,8 +38,9 @@ Refer to the following sections to set up the integration for your SMS provider:
 
 - [Integrating SMS with Twilio](#deploy-sms-twilio)
 - [Integrating SMS with IntelePeer](#deploy-sms-intelepeer)
+- [Integrating SMS with your own provider](#deploy-sms-byop)
 
-If you want your assistant to be able to switch between voice and text during a customer interaction, enable both the phone and text messaging integrations. The integrations do not need to use the same third-party service provider. For more information, see [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone).
+To switch between voice and text during a customer interaction, enable both the phone and text messaging integrations in your assistant. The integrations need not use the same third-party service provider. For more information, see [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone).
 
 ## Before you begin
 {: #deploy-sms-before-you-begin}
@@ -119,7 +131,7 @@ If you don't have a text messaging phone number, set up an *SMS with IntelePeer*
 ## Before you begin
 {: #deploy-sms-intelepeer-before-you-begin}
 
-To integrate Intelepeer with your assistant, you need "SMS" service with Access Type for `create`, `read`, `update`, and `delete`. 
+To integrate IntelePeer with your assistant, you need "SMS" service with Access Type for `create`, `read`, `update`, and `delete`. 
 For more information, see [Managing Users in Customer Portal](https://docs.intelepeer.com/Atmosphere/Content/Getting-Started/Managing-Users-in-Customer-Portal.htm){: external}.
 
 
@@ -146,7 +158,7 @@ To set up the integration, complete the following steps:
 
 1.  Enter your **Auth token** information. Click **Next** to go to Step 3 of your *SMS with IntelePeer* integration setup.
 
-1.  **Optional**: Enter the phone number that your Intelepeer account uses for SMS integration. The webhook URI is used to transfer messages, but if you add your phone number in this optional field, you can easily refer to it later. Click **Next** to go to Step 4 of your *SMS with IntelePeer* integration setup.
+1.  **Optional**: Enter the phone number that your IntelePeer account uses for SMS integration. The webhook URI is used to transfer messages, but if you add your phone number in this optional field, you can easily refer to it later. Click **Next** to go to Step 4 of your *SMS with IntelePeer* integration setup.
 
 1.  Copy the value from the **Webhook URI** field.
 
@@ -167,6 +179,40 @@ To set up the integration, complete the following steps:
 
 For security reasons, the authentication fields are removed from view after initial setup. If a field required for authentication is changed, then all entries in related fields must be filled and validated again.
 {: note}
+
+
+## Integrating with Bring Your Own Provider (BYOP) SMS
+{: #deploy-sms-byop}
+
+### Setting up the integration
+{: #deploy-sms-setup-byop}
+
+To set up the BYOP SMS integration, follow these steps:
+
+1. Go to the **Integrations** page by clicking the integrations icon  
+   (![Integrations icon](images/integrations-icon.png)) in the left menu.
+
+1. Click **Add** on the **SMS** tile.
+
+1. Select the **Bring Your Own SMS Provider** option.
+
+1. Click **Confirm**.
+
+1. In the **API URL** field, enter the endpoint that is used to send outbound SMS messages.
+
+1. Copy the **Verification Token** and store it securely.  
+   You need this token when sending SMS messages to {{site.data.keyword.conversationshort}}. Click **Next**.
+
+1. *(Optional)* Enter the phone number to use for the SMS integration, then click **Next**.
+
+1. Copy the **Webhook URI** value.  
+   Use this URI to send SMS messages to {{site.data.keyword.conversationshort}}.
+
+1. Click **Save**.
+
+
+
+
 
 ## SMS Advanced configuration options
 {: #deploy-sms-advanced}
