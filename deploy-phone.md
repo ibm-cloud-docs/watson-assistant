@@ -9,7 +9,6 @@ subcollection: watson-assistant
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-{:deprecated: .deprecated}
 
 # Integrating with phone
 {: #deploy-phone}
