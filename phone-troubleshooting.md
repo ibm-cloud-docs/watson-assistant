@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-08-15"
+  years: 2022, 2025
+lastupdated: "2025-05-26"
 
 subcollection: watson-assistant
 
@@ -28,22 +28,29 @@ Find solutions to problems that you might encounter when using the phone integra
 ## Viewing logs
 {: #phone-troubleshooting-logs}
 
-The log events that occur in the components that are used by the phone integration are written to IBM Log Analysis. To check the logs, create an instance and configure the platform logs to observe the region where your service instance is hosted.
+Log events from the components used by the phone integration are written to IBM Cloud Logs. To view these logs, create an instance and configure platform logs to monitor the region where your service instance is hosted.
 
-For more information about setting up an instance, see [Provisioning an instance](/docs/log-analysis?topic=log-analysis-provision){: external}.
+For instructions on setting up an instance, see [Provisioning an instance](https://cloud.ibm.com/docs/cloud-logs?topic=cloud-logs-instance-provision&interface=ui).
 
-Currently, the Phone and SMS integrations are the only components of your assistant that write logs to the IBM Log Analysis dashboard.
-{: note}
+Currently, only the Phone and SMS integrations write logs to the IBM Cloud Logs dashboard.{: note}
 
-After you create the instance, get log information by completing the following steps.
+Once the instance is created, follow these steps to access log information:
 
-1.  Go to the [IBM Cloud Logging](/observe/logging){: external} page.
-1.  Click **Options**, then choose **Edit platform**.
-1.  Select the region and instance, and then click **Select**.
-1.  To open the IBM Log Analysis console, click **Open Dashboard**.
-1.  The source name of the log events is *Watson*.
+1. Go to the [IBM Cloud Logging](https://cloud.ibm.com/observe/logging) page.
 
-    You can apply filters or search the logs by values such as a phone number or instance ID.
+1. Select the Logging instance to use.
+
+1. From the panel, choose **Getting Started**.
+
+1. Click **Add Data Sources** > **Configure Platform Logs**.
+
+1. Set the target region for log viewing, select the IBM Cloud Logs instance, and click **Save**.
+
+1. To open the IBM Cloud Logs console, return to the [IBM Cloud Logging](https://cloud.ibm.com/observe/logging) page, and click **Dashboard**.
+
+1. From the menu, select **Explore Logs**.
+
+You can apply filters or search the logs by values such as phone number or instance ID.
 
 ## Call Detail Records (CDRs)
 {: #phone-troubleshooting-cdrs}
@@ -53,4 +60,3 @@ The phone integration can generate call detail record (CDR) events, which contai
 For more information about the structure of the CDR event payload, see [CDR log event reference](/docs/watson-assistant?topic=watson-assistant-cdr-log-reference).
 
 You can also inject custom data into the CDR event. For more information, see [Injecting custom values into CDR log events](/docs/watson-assistant?topic=watson-assistant-phone-actions#phone-actions-cdr-custom-data).
-
