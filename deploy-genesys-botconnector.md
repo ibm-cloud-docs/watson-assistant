@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2025-05-08"
+lastupdated: "2025-05-28"
 
 subcollection: watson-assistant
 
@@ -138,7 +138,7 @@ For Input parameters, you can access the session variable in {{site.data.keyword
 
 - **For Dialog**: Use `$integrations.genesys_bot_connector.user_id`.
 
-- **For Actions**: Use `${system_integrations.integrations.genesys_bot_connector.user_id}`.
+- **For Actions**: Use `${system_integrations.genesys_bot_connector.user_id}`.
 
 For Output parameters, you can assign the session variables to a state variable in Genesys (for example, `State.some_variable` and access them later on in your flow).
 
