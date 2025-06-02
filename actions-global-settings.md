@@ -116,7 +116,7 @@ Use display formats for variables that use date, time, numbers, currency, or per
 
 Variables are formatted by using a system default unless you specify otherwise.
 
-| <nobr>Display format setting</nobr> | Description | <nobr>English - United States (en-US) examples</nobr> |
+| Display format setting</nobr> | Description | <nobr>English - United States (en-US) examples |
 | ---- | ---- | ---- |
 | Locale | Choose a default locale for the assistant if one can't be determined. The locale that you choose uses formats specific to that country and language. If you choose a locale, the date, time, number, currency, and percentage format fields change to show choices specific to that locale. The system default is `English - United States (en-US)`. | |
 | Date | For calendar dates, choose short, medium, long, full, YY/MM/DD, or YYYY/MM/DD | <ul><li>Short: `1/31/23`</li><li>Medium: `Jan 31, 2023`<li>Long: `January 31, 2023`</li><li>Full: `Tuesday, January 31, 2023`</li></ul> |
