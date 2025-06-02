@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-05-22"
+lastupdated: "2025-06-02"
 
 subcollection: watson-assistant
 
@@ -18,6 +18,12 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
+## 02 June 2025
+{: #watson-assistant-jun022025}
+{: release-note}
+
+Autolearning feature deprecation
+:   The autolearning feature in {{site.data.keyword.conversationshort}} is discontinued from June 16, 2025. The settings are removed, and all autolearning capabilities are disabled. For more information see, [Using autolearning to improve assistant responses](/docs/watson-assistant?topic=watson-assistant-autolearn).
 
 ## 22 May 2025
 {: #watson-assistant-may222025}

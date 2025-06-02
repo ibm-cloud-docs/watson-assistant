@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-25"
+lastupdated: "2025-06-02"
 
 subcollection: watson-assistant
 
@@ -170,10 +170,10 @@ If your calls to an extension are failing, you might want to debug the problem b
 
 1. Go to the Actions page, or the action editor, and click **Preview** to open the Preview pane.
 
-    You cannot access the **Inspector** from the {{site.data.keyword.ai-assistant}} preview on the **Preview** page, which shows only what a customer would see. Instead, use the preview feature that is part of the Actions page, which gives you access to additional information.
+    You cannot access the **Inspector** from the Assistant preview on the **Preview** page, which shows only what a customer would see. Instead, use the preview feature that is part of the Actions page, which gives you access to additional information.
     {: note}
 
-1. Interact with your {{site.data.keyword.ai-assistant}} as a customer would.
+1. Interact with your Assistant as a customer would.
 
 1. Each time an extension is called, the preview pane shows a message giving you access to detailed information:
 
@@ -211,9 +211,9 @@ To see the detailed information for analyzing the problem, use the **Inspector**
 
 1.  Go to the Actions page, or in the action editor, click **Preview** to open the Preview pane.
 
-    You cannot access the **Inspector** from the {{site.data.keyword.ai-assistant}} preview on the Preview page. Instead, use the preview feature that is part of the Actions page, which gives you access to additional information.
+    You cannot access the **Inspector** from the Assistant preview on the Preview page. Instead, use the preview feature that is part of the Actions page, which gives you access to additional information.
     {: note}
-1.  Interact with your {{site.data.keyword.ai-assistant}} as a customer would.
+1.  Interact with your Assistant as a customer would.
 1.  Each time an extension is called, the preview pane shows a message to access the detailed information:
     You can also click the ![Extension inspector icon](images/extension-inspector-icon.png) icon to show or hide the extension inspector.  Click **Inspect** in the preview pane to show information about a particular call to the search integration.
 1.  Use the **Overview** tab to find the reasons for the failure of your calls to Conversational search.
@@ -235,7 +235,7 @@ To see the detailed information for analyzing the problem, use the **Inspector**
     | Query | The query used by the system to initiate search on the document engine (Elasticsearch, {{site.data.keyword.discoveryfull}}, or Custom service server-side). The value of this field reflects the system’s rewritten query.| 
     | Original Query |  The query through which the user initiated the search. This field is visible only when the system rewrites the query when multi-turn conversational search is enabled.| 
     | Custom results filter | Shows the custom results filter, if provided on the search trigger, that triggered the conversational search. This field might not appear in responses always.| 
-    | LLM type  | The LLM that was called during the answer generation phase. This value is watsonx.ai. To know more about configuring LLM in your {{site.data.keyword.ai-assistant}}, see Base LLM.| 
+    | LLM type  | The LLM that was called during the answer generation phase. This value is watsonx.ai. To know more about configuring LLM in your Assistant, see Base LLM.| 
     | Model | The model used by the base LLM during the answer generation phase of the search.| 
     | Stream close reason | Gives the reason why the stream ended or was closed with a corresponding value in the UI. This field is visible only when you enable streaming in the Web Chat.| 
     | LLM input token count | Gives the number of tokens in the request that was sent to the LLM in the answer generation phase of the search.| 
@@ -247,7 +247,7 @@ To see the detailed information for analyzing the problem, use the **Inspector**
     | Total time to return  | The total time the system took to complete the execution of Conversational search.| 
     | Search time | The time taken for the system to call the search engine and retrieve results in the retrieval phase of the search.| 
     | Answer generation time |  The time taken for the system to complete the answer generation phase of the search.| 
-    | Confidence threshold  | A numerical value that represents the search confidence threshold, also known as Tendency to say “I don’t know" in the {{site.data.keyword.ai-assistant}} configuration.| 
+    | Confidence threshold  | A numerical value that represents the search confidence threshold, also known as Tendency to say “I don’t know" in the Assistant configuration.| 
     | Extractiveness    | The score reflects how much of the response is directly quoted from sources. A higher score indicates more direct quoting and a lower score indicates rephrasing of the source or lack of source support.| 
     | Retrieval confidence  | The confidence value indicates how sure the system is about the search results. If it’s below the threshold, the system responds with IDK and the reason Retrieval confidence too low.| 
     Response confidence | The confidence value indicates the system's certainty in view of the generated answer. If it’s below the threshold, the system responds with IDK and the reason `Response confidence too low`.| 
