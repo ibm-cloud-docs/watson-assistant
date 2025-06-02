@@ -116,7 +116,7 @@ Use display formats for variables that use date, time, numbers, currency, or per
 
 Variables are formatted by using a system default unless you specify otherwise.
 
-| Display format setting</nobr> | Description | <nobr>English - United States (en-US) examples |
+| Display format setting | Description | English - United States (en-US) examples |
 | ---- | ---- | ---- |
 | Locale | Choose a default locale for the assistant if one can't be determined. The locale that you choose uses formats specific to that country and language. If you choose a locale, the date, time, number, currency, and percentage format fields change to show choices specific to that locale. The system default is `English - United States (en-US)`. | |
 | Date | For calendar dates, choose short, medium, long, full, YY/MM/DD, or YYYY/MM/DD | <ul><li>Short: `1/31/23`</li><li>Medium: `Jan 31, 2023`<li>Long: `January 31, 2023`</li><li>Full: `Tuesday, January 31, 2023`</li></ul> |
@@ -125,7 +125,7 @@ Variables are formatted by using a system default unless you specify otherwise.
 | Number delimiter | Use the system default, none, comma, or period | <ul><li>None: `2000.12`</li><li>Comma: `2,000.12`<li>Period: `2.000,12`</li></ul> |
 | Currency fraction digits | Use the system default (up to 14 digits) or two digits | `10.99` |
 | Currency symbol | Use the system default or choose a global symbol | `$10.99` |
-| <nobr>Percentage fraction digits</nobr> | Use the system default (up to 14 digits) or two digits | `10.75%` |
+| Percentage fraction digits | Use the system default (up to 14 digits) or two digits | `10.75%` |
 {: caption="Display format settings" caption-side="bottom"}
 
 ## Autolearning
