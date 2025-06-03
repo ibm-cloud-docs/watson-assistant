@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-04-09"
+lastupdated: "2025-06-02"
 
 subcollection: watson-assistant
 
@@ -16,7 +16,7 @@ subcollection: watson-assistant
 This document shows the process for configuring authentication for pre-message webhooks and post-message webhooks in {{site.data.keyword.conversationshort}}. It covers the available authentication methods and how to set them up.
 
 ## Overview
-{: #webhook-overview}
+{: #webhook-auth-overview}
 
 Webhooks allow external systems to communicate with {{site.data.keyword.conversationshort}}. Authentication ensures that only authorized sources can trigger webhooks. This documentation describes the process for configuring and managing webhook authentication, which introduces an updated method for authenticating webhooks.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-12-03"
+  years: 2020, 2025
+lastupdated: "2025-06-02"
 
 subcollection: watson-assistant
 
@@ -14,6 +14,10 @@ subcollection: watson-assistant
 {: #autolearn}
 
 [IBM Cloud]{: tag-ibm-cloud}
+
+**Autolearning feature in {{site.data.keyword.conversationshort}}**  
+Effective June 16, 2025, the autolearning feature is discontinued for {{site.data.keyword.conversationshort}}. After this date, autolearning settings are removed from the **Actions global settings** page, and all autolearning capabilities are disabled.
+{: deprecated}
 
 Use *autolearning* to enable your assistant to learn from interactions with your customers and improve responses.
 {: shortdesc}

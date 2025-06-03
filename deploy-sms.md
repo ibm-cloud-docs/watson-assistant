@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-05-23"
+lastupdated: "2025-06-02"
 
 subcollection: watson-assistant
 
@@ -15,7 +15,7 @@ subcollection: watson-assistant
 
 [IBM Cloud]{: tag-ibm-cloud}
 
-**Deprecation Notice: IntelePeer free phone number service for {{site.data.keyword.conversationshort}}**
+**IntelePeer free phone number service for {{site.data.keyword.conversationshort}}**  
 Effective July 31, 2025, the IntelePeer free phone number service is discontinued for {{site.data.keyword.conversationshort}}.
 After this date, phone numbers that use this service no longer connect, and users can't make or receive calls.
 To ensure continued service, migrate your phone numbers to Twilio or another telephony provider. Update your phone numbers and adjust your integration settings in {{site.data.keyword.conversationshort}}. 

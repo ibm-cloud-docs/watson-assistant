@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-05-21"
+lastupdated: "2025-06-02"
 
 subcollection: watson-assistant
 
@@ -22,7 +22,7 @@ You can have only one search integration per environment. When you change the ex
 {: important}
 
 ## Prerequisites for connecting Milvus to assistant
-{: prerequisites-milvus-connection}
+{: #prerequisites-milvus-connection}
 
 - You must have an active account on {{site.data.keyword.lakehouse_short}} and watsonx.ai. 
 
@@ -45,7 +45,7 @@ You can have only one search integration per environment. When you change the ex
    For more information about creating collections, see [Creating collections](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-milvus/search-with-watsonx-data-milvus.md#step-2-ingest-data-into-milvus).
 
 ## Connecting Milvus to assistant
-{: procedure-milvus-connection}
+{: #procedure-milvus-connection}
 
 Integrating Milvus in assistant involves three platforms.
 1. {{site.data.keyword.conversationshort}}, where we build the integration.
