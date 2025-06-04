@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-06-02"
+lastupdated: "2025-06-04"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,13 @@ content-type: release-note
 
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 04 June 2025
+{: #watson-assistant-jun042025}
+{: release-note}
+
+Feature parity for {{site.data.keyword.conversationshort}}
+:  Know about the feature parity between the software as a service (SaaS) and the on-premises offerings for the available features in {{site.data.keyword.conversationshort}}. For more information, see [Feature parity](/docs/watson-assistant?topic=watson-assistant-wxa-feature-parity).
 
 ## 02 June 2025
 {: #watson-assistant-jun022025}
