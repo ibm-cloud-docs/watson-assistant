@@ -27,7 +27,7 @@ toc:
           - release-notes-data.md 
           - release-notes-hub.md 
 #         - maintenance.md  
-          - wxa-feature-parity.md   
+      - wxa-feature-parity.md   
   - navgroup:
       id: tutorial
       topics:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-06-03"
+lastupdated: "2025-06-04"
 
 keywords: feature parity
 
@@ -17,7 +17,7 @@ subcollection: watson-assistant
 
 {{site.data.keyword.conversationfull}} can be deployed as a managed software as a service (SaaS) or installed on premises. New features are continuously added to each deployment's release cycle. To make informed decisions that align with your business needs, it is important to stay informed about the features available in each deployment.
 
-Stay up to date with the latest features through the [Release notes of {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-release-notes).
+Stay up to date with the latest features through the [Release notes of {{site.data.keyword.conversationshort}}](/docs/watson-assistant?topic=watson-assistant-watson-assistant-release-notes).
 
 The feature parity covers the following deployments:
 
@@ -242,5 +242,3 @@ In the tables, you can find the following indications:
 | Download or upload assistant data | ![Green check icon](images/green-check.svg) | ![Green check icon](images/green-check.svg) | 
 | Delete assistant | ![Green check icon](images/green-check.svg) | ![Green check icon](images/green-check.svg) | 
 {: caption="The support of the Assistant settings capabilities on each deployment." caption-side="top"}
-
-
