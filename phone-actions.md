@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-05-20"
+lastupdated: "2025-06-05"
 
 keywords: phone, phone interactions, custom language model, custom grammar, advanced settings
 
@@ -919,7 +919,7 @@ The format for sending an outbound SMS message to your SMS provider:
   ],
   "metadata": "<json>"
 }
-````
+```
 
 When the recipient replies to an SMS, use the same format to deliver the incoming message to {{site.data.keyword.conversationshort}}:
 
