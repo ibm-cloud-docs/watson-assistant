@@ -33,8 +33,9 @@ Refer to the following sections to set up the integration for your SMS provider:
 
 - [Integrating SMS with Twilio](#deploy-sms-twilio)
 - [Integrating SMS with IntelePeer](#deploy-sms-intelepeer)
+- [Integrating SMS with your own provider](#deploy-sms-byop)
 
-
+To switch between voice and text during a customer interaction, enable both the phone and text messaging integrations in your assistant. The integrations need not use the same third-party service provider. For more information, see [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone).
 
 ## Before you begin
 {: #deploy-sms-before-you-begin}
