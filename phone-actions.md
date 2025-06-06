@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-05-20"
+lastupdated: "2025-06-06"
 
 keywords: phone, phone interactions, custom language model, custom grammar, advanced settings
 
@@ -835,9 +835,8 @@ You can specify any of the following parameters in the `parameters` object:
 | mediaURL          | list   | A list of URLs for media files to be sent with the message as MMS attachments. Optional. |
 | tenantPhoneNumber | string | The phone number that is associated with the tenant. The format of the number must match the format that is required by the SMS provider. If no `tenantPhoneNumber` value is provided, the tenant ID from the phone integration configuration for the active call is used. Optional. |
 | userPhoneNumber   | string | The phone number to send the SMS message to. The format of the number must match the format that is required by the SMS provider. If no `userPhoneNumber` value is provided, the voice caller's phone number from `From` header of the incoming SIP `INVITE` request is used. Optional. |
-| setAsInputText    | boolean | Whether to send a sms message from the user in `input.text`. If you specify `true`, the sms message from the user will be sent in `input.text`. 
-Otherwise, `input.text` will be set to `vgwSMSMessage` and the SMS message will be sent as an integration variable and a context variable. Optional. Default: false. |
-| metadata          | Any valid JSON object | An opaque metadata passed to the SMS provider. Optional. |
+| setAsInputText    | boolean | Whether to send a sms message from the user in `input.text`. If you specify `true`, the sms message from the user will be sent in `input.text`. Otherwise, `input.text` will be set to `vgwSMSMessage` and the SMS message will be sent as an integration variable and a context variable. Optional. Default: false. |
+
 
 
 If your *SMS* integration supports more than one SMS phone number, or you are using a SIP trunk different from your SMS provider, be sure to specify the phone number that you want to use to send the text message. Otherwise, the text is sent by using the same phone number that was called.
@@ -893,66 +892,6 @@ Here's an example of a turn request when `setAsInputText` is set to `true`:
 ```
 
 {: codeblock}
-
-
-
-
-### Sending a text message with the Bring Your Own Provider (BYOP) SMS Integration
-
-This section explains how the SMS messages are exchanged when {{site.data.keyword.conversationshort}} is configured with the BYOP SMS integration.
-
-SMS messages are sent via `POST` to the endpoint URL configured in the BYOP SMS integration. Each request includes the `x-watson-byop-verification-token` header, which contains the verification token defined during integration setup. This token is used to authenticate the request from {{site.data.keyword.conversationshort}}.
-
-The format for sending an outbound SMS message to your SMS provider:
-
-```json
-{
-  "message_id": "",
-  "from": "",
-  "to": "",
-  "message": "",
-  "media_items": [
-    {
-      "content_type": "",
-      "url": ""
-    }
-  ],
-  "metadata": "<json>"
-}
-````
-
-When the recipient replies to an SMS, use the same format to deliver the incoming message to {{site.data.keyword.conversationshort}}:
-
-```json
-{
-  "message_id": "",
-  "from": "",
-  "to": "",
-  "message": "",
-  "media_items": [
-    {
-      "content_type": "",
-      "url": ""
-    }
-  ],
-  "metadata": "<json>"
-}
-```
-
-**Field descriptions:**
-
-| Field         | Type      |   Description                              |
-|---------------|-----------|--------------------------------------------|
-| `message_id`  | string    | The unique identifier of the message.           |
-| `message`     | string    | The text content of the SMS.                |
-| `media_items` | array     | **Optional**: An array of attachments.         |
-| `metadata`    | Any valid JSON object | ** Optional**: An opaque metadata.  |
-
-
-To send inbound messages to {{site.data.keyword.conversationshort}}, use the **Webhook URI** provided in the SMS integration settings. The `POST` request must include the `x-watson-byop-verification-token` header, and the `from` and `to` fields must match those from the original message sent by {{site.data.keyword.conversationshort}}, but with the values reversed.
-
-
-
 
 
 

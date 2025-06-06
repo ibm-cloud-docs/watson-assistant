@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-06-02"
+lastupdated: "2025-06-06"
 
 keywords: pre webhook, prewebhook, pre-webhook
 
@@ -67,7 +67,7 @@ To add the webhook details, complete the following steps:
 
    For the **Classic experience**, complete the following steps:
 
-   - For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
+   - For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Settings**.
 
    - Click **Webhooks** > **Pre-message webhook**.
 
@@ -92,29 +92,31 @@ To add the webhook details, complete the following steps:
 
     You must specify a URL that uses the SSL protocol, so specify a URL that begins with `https`.
 
-1. Fill in the **Secret field** for the **classic experience**. For more information, see [Adding a secret for the classic experience only](#add-secret-for-classic-webhook-pre).
+1.  To configure the authentication for pre-message webhooks, click **Edit authentication**. For detailed instructions, see [Defining the authentication method for pre-message and post-message webhooks](/docs/watson-assistant?topic=watson-assistant-define-webhook-auth).
 
-1. In the Timeout field, specify the time duration (in seconds) that you want the assistant to wait for a response from the webhook before it returns an error. The timeout duration cannot be shorter than 1 second or longer than 30 seconds.
+    - For the **Classic experience**, fill in the **Secret field**. For more information, see [Adding a secret for the Classic experience only](#add-secret-for-classic-webhook-pre).
+
+1. In the **Timeout** field, specify the time duration (in seconds) that you want the assistant to wait for a response from the webhook before it returns an error. The timeout duration cannot be shorter than 1 second or longer than 30 seconds.
 
 1.  In the **Headers** section, click **Add header +** to add any headers that you want to pass to the service, one at a time.
 
-If you are using the **Classic experience**, the service automatically sends an authorization header with a JWT. If you want to handle the authorization yourself, add your own authorization header and the service uses it instead.{: note}
+    For the **Classic experience**, the service automatically sends an authorization header with a JWT. If you want to handle the authorization yourself, add your own authorization header and the service uses it instead.{: note}
 
-If the external application that you call returns a response, it might be able to send a response in different formats. The webhook requires that the response is formatted in JSON. The following table illustrates how to add a header to indicate that you want the resulting value to be returned is in JSON format.
+    If the external application that you call returns a response, it might be able to send a response in different formats. The webhook requires that the response is formatted in JSON. The following table illustrates how to add a header to indicate that you want the resulting value to be returned is in JSON format.
 
-| Header name    | Header value       |
-|----------------|--------------------|
-| `Content-Type` | `application/json` |
-{: caption="Header example" caption-side="bottom"}
+    | Header name    | Header value       |
+    |----------------|--------------------|
+    | `Content-Type` | `application/json` |
+    {: caption="Header example" caption-side="bottom"}
 
-After you save the header value, the string is replaced by asterisks and can't be viewed again. 
+1. After you save the header value, the string is replaced by asterisks and can't be viewed again. 
 
-Your webhook details are saved automatically.
+1. Your webhook details are saved automatically.
 
-#### Adding a secret for the classic experience only
+#### Adding a secret for the Classic experience only
 {: #add-secret-for-classic-webhook-pre}
 
-If you are using the **Classic experience**, add a private key in the **Secret** field to pass with the request for authentication with the external service.
+For the **Classic experience**, add a private key in the **Secret** field to pass with the request for authentication with the external service:
 
 - Enter the key as a text string, such as `purple unicorn`.
 
@@ -127,7 +129,7 @@ The external service is responsible for checking and verifying the secret. If no
 To view the secret as you enter it, click the **Show password** icon ![View icon](images/view.svg) before typing. After saving the secret, asterisks replace the string, and you can't view it again.
 {: note}
 
-For more information about how this field is used, see [Webhook security for the classic experience only](#webhook-pre-security-classic).
+For more information about how this field is used, see [Webhook security for the Classic experience only](#webhook-pre-security-classic).
 
 #### Configuring webhook error handling for preprocessing
 {: #configure-webhook-error-handling-pre}
@@ -163,18 +165,16 @@ The following error codes can help you track down the cause of issues you might 
 | 500 Processor Exception : `[connections to all backends failing]` | An error occurred in the webhook microservice. It could not connect to backend services. |
 {: caption="Error code details" caption-side="bottom"}
 
-### Webhook security for the classic experience only
+### Webhook security for the Classic experience only
 {: #webhook-pre-security-classic}
 
-If you are using the **Classic experience**, authenticate the webhook request by verifying the JSON Web Token (JWT) that is sent with the request. The webhook microservice automatically generates a JWT and sends it in the `Authorization` header with each webhook call.
+For the **Classic experience**, authenticate the webhook request by verifying the JSON Web Token (JWT) that is sent with the request. The webhook microservice automatically generates a JWT and sends it in the `Authorization` header with each webhook call:
 
  - For new webhooks or webhooks updated through **Edit authentication**, the authorization header is ignored.
 
  - For existing webhooks with a saved authentication header, the **Edit authentication** option is disabled.
 
  - Updating an existing webhook to use the new authentication configuration will change its behavior.
-
-For more information, see [Defining the authentication method for pre-message and post-message webhooks](/docs/watson-assistant?topic=watson-assistant-define-webhook-auth).
 
 If you need to test the JWT verification, you can add code to the external service. For example, if you specify `purple unicorn` in the **Secret** field, you can use the following code:
 
@@ -207,15 +207,15 @@ The payload contains the request body of the `/message` (stateful or stateless) 
 ```
 {: codeblock}
 
-### Skipping the assistant processing for classic experience only
+### Skipping the assistant processing for Classic experience only
 {: #webhook-pre-skipping-assistant-processing}
 
-If you are using the **Classic experience**, enhancements to pre-message webhooks allow {{site.data.keyword.conversationshort}} to skip message processing and directly return the response from the webhook. This functionality is activated by setting the `x-watson-assistant-webhook-returnheader` in the webhook's HTTP response.
+For the **Classic experience**, enhancements to pre-message webhooks allow {{site.data.keyword.conversationshort}} to skip message processing and directly return the response from the webhook. This functionality is activated by setting the `x-watson-assistant-webhook-returnheader` in the webhook's HTTP response.
 
 #### Before you begin
 {: #webhook-pre-before-you-begin}
 
-For the **classic experience** complete the following steps:
+For the **Classic experience**, complete the following steps:
 
  - Include the `x-watson-assistant-webhook-returnheader` with any value in the HTTP response from your webhook.
  - Ensure that the webhook response contains a valid message response, which is formatted according to the {{site.data.keyword.conversationshort}} requirements.
@@ -473,7 +473,7 @@ If you decide that you do not want to preprocess customer input with a webhook, 
 
    For the **Classic experience**, complete the following steps:
 
-   - For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Assistant settings**.
+   - For the assistant that you want to configure, click the ![Overflow menu](images/overflow-menu--vertical.svg) icon, and then choose **Settings**.
 
    - Click **Webhooks** > **Pre-message webhook**.
 

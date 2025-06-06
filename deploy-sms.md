@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-06-02"
+lastupdated: "2025-06-06"
 
 subcollection: watson-assistant
 
@@ -33,9 +33,8 @@ Refer to the following sections to set up the integration for your SMS provider:
 
 - [Integrating SMS with Twilio](#deploy-sms-twilio)
 - [Integrating SMS with IntelePeer](#deploy-sms-intelepeer)
-- [Integrating SMS with your own provider](#deploy-sms-byop)
 
-To switch between voice and text during a customer interaction, enable both the phone and text messaging integrations in your assistant. The integrations need not use the same third-party service provider. For more information, see [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone).
+
 
 ## Before you begin
 {: #deploy-sms-before-you-begin}
@@ -174,38 +173,6 @@ To set up the integration, complete the following steps:
 
 For security reasons, the authentication fields are removed from view after initial setup. If a field required for authentication is changed, then all entries in related fields must be filled and validated again.
 {: note}
-
-
-## Integrating with Bring Your Own Provider (BYOP) SMS
-{: #deploy-sms-byop}
-
-### Setting up the integration
-{: #deploy-sms-setup-byop}
-
-To set up the BYOP SMS integration, follow these steps:
-
-1. Go to the **Integrations** page by clicking the integrations icon  
-   (![Integrations icon](images/integrations-icon.png)) in the left menu.
-
-1. Click **Add** on the **SMS** tile.
-
-1. Select the **Bring Your Own SMS Provider** option.
-
-1. Click **Confirm**.
-
-1. In the **API URL** field, enter the endpoint that is used to send outbound SMS messages.
-
-1. Copy the **Verification Token** and store it securely.  
-   You need this token when sending SMS messages to {{site.data.keyword.conversationshort}}. Click **Next**.
-
-1. *(Optional)* Enter the phone number to use for the SMS integration, then click **Next**.
-
-1. Copy the **Webhook URI** value.  
-   Use this URI to send SMS messages to {{site.data.keyword.conversationshort}}.
-
-1. Click **Save**.
-
-
 
 
 
