@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-06-06"
+lastupdated: "2025-06-09"
 
 keywords: pre webhook, prewebhook, pre-webhook
 
@@ -20,7 +20,7 @@ A pre-message webhook makes a call to an external service or application every t
 
 Add a pre-message webhook to your assistant if you want the webhook to be triggered before each incoming message is processed by your assistant.
 
-If you are using a custom channel, the pre-message webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://cloud.ibm.com/apidocs/assistant-v2#message.). All built-in channel integrations use this API.
+If you are using a custom channel, the pre-message webhook works with the v2 `/message` API only (stateless and stateful). For more information, see the [API reference](https://cloud.ibm.com/apidocs/assistant-v2#message). All built-in channel integrations use this API.
 {: important}
 
 You can use pre-message webhooks for the following use cases:
@@ -33,7 +33,7 @@ You can use this webhook in coordination with the post-message webhook. For exam
 
 For environments where private endpoints are in use, keep in mind that a webhook sends traffic over the internet.{: note}
 
-For the **Classic experience**, use a dialog webhook if you need to perform a one-time action when needed during a conversation. For example, conditions are met when the assistant collects all required details, such as the account number, user ID, and account secret. For more information, see [Making a programmatic call from dialog](/docs/watson-assistant?topic=watson-assistant-dialog-webhooks#making-a-programmatic-call-from-dialog).
+For the **Classic experience**, use a dialog webhook if you need to perform a one-time action when needed during a conversation. For example, conditions are met when the assistant collects all required details, such as the account number, user ID, and account secret. For more information, see [Making a programmatic call from dialog](/docs/watson-assistant?topic=watson-assistant-dialog-webhooks#dialog-webhooks).
 
 ## Defining the webhook
 {: #webhook-pre-create}

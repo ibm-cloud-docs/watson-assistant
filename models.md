@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-06-09"
 
 subcollection: watson-assistant
 
@@ -25,7 +25,7 @@ Find information such as the supported languages, latest updates, and training d
 
 As new versions of IBM foundation models are introduced, older versions are deprecated. Similarly, as newer and more effective models from other providers become available, less useful models are removed.
 
-For more information on deprecated or withdrawn models, see [Deprecated or withdrawn models](/docs/watson-assistant?topic=watson-assistant-deprecated-llm-models.md)
+For more information on deprecated or withdrawn models, see [Deprecated or withdrawn models](/docs/watson-assistant?topic=watson-assistant-deprecated-llm-models).
 
 ## `granite-13b-chat-v2`
 {: #granite-13b-chat-v2}
@@ -104,6 +104,3 @@ Granite-3.0-2B-Instruct is a lightweight and open-source 2B parameter model fine
 - [Base LLM](/docs/watson-assistant?topic=watson-assistant-base-llm-wxa)
 
 **Model card**: [ibm/granite-3-2b-instruct](https://dataplatform.cloud.ibm.com/wx/samples/models/ibm/granite-3-2b-instruct){: external}
-
-
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-06-02"
+lastupdated: "2025-06-09"
 
 subcollection: watson-assistant
 
@@ -40,7 +40,7 @@ You can have only one search integration per environment. When you change the ex
 
    To configure {{site.data.keyword.lakehouse_short}} in IBM watsonx.ai, see [Configuring {{site.data.keyword.lakehouse_short}} in IBM watsonx.ai](/docs/watsonxdata?topic=watsonxdata-wxd_wxai_milvus_conn). 
 
-   For more details on creating a vector index, see [Creating vector index](/docs/content/wsj/analyze-data/fm-prompt-data-index-create.html?context=wx#procedure).
+   For more details on creating a vector index, see [Creating vector index](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-prompt-data-index-milvus.html?context=wx&locale=en).
 
    For more information about creating collections, see [Creating collections](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-milvus/search-with-watsonx-data-milvus.md#step-2-ingest-data-into-milvus).
 
@@ -137,7 +137,7 @@ After you connect Milvus by selecting the data source, you can configure how the
       This field can be populated with any footer content that you want to include at the end of the search result.
 
 ## Enabling conversational search in Milvus
-{: enable-conv-search-milvus}
+{: #enable-conv-search-milvus}
 
 After you configure the result content, click **Next** to go to **Conversational search** (optional).
 
