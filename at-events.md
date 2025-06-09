@@ -30,10 +30,11 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 
 
 As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecated and will no longer be supported as of 30 March 2025. Customers will need to migrate to {{site.data.keyword.logs_full_notm}} before 30 March 2025. During the migration period, customers can use {{site.data.keyword.at_full_notm}} along with {{site.data.keyword.logs_full_notm}}. Activity tracking events are the same for both services.
-{: important}
 
-## Locations where activity tracking events are generated
-{: #at-locations}
+{: important}
+-->
+
+
 
 
 
