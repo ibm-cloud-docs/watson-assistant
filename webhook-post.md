@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-06-06"
+lastupdated: "2025-06-09"
 
 keywords: post webhook, postwebhook, post-webhook
 
@@ -27,7 +27,7 @@ You can use this webhook in coordination with the pre-message webhook. For examp
 For environments where private endpoints are in use, keep in mind that a webhook sends traffic over the internet.
 {: note}
 
-For the **Classic experience**, use a dialog webhook if you need to perform a one-time action when needed during a conversation. For example, conditions are met when the assistant collects all required details, such as the account number, user ID, and account secret. For more information, see [Making a programmatic call from dialog](/docs/watson-assistant?topic=watson-assistant-dialog-webhooks#making-a-programmatic-call-from-dialog).
+For the **Classic experience**, use a dialog webhook if you need to perform a one-time action when needed during a conversation. For example, conditions are met when the assistant collects all required details, such as the account number, user ID, and account secret. For more information, see [Making a programmatic call from dialog](/docs/watson-assistant?topic=watson-assistant-dialog-webhooks#dialog-webhooks).
 
 ## Defining the webhook
 {: #webhook-post-create}

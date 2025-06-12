@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-06-04"
+lastupdated: "2025-06-09"
 
 subcollection: watson-assistant
 
@@ -1773,7 +1773,7 @@ Actions skill improvement
 Introducing the *Enterprise* plan!
 :   The Enterprise plan includes all of the market differentiating features of the Plus plan, but with higher capacity limits, additional security features, custom onboarding support to get you going, and a lower overall cost at higher volumes.
 
-    To have a dedicated environment provisioned for your business, request the *Enterprise with Data Isolation* plan. To submit a request online, go to [http://ibm.biz/contact-wa-enterprise](http://ibm.biz/contact-wa-enterprise){: external}.
+    To have a dedicated environment provisioned for your business, request the *Enterprise with Data Isolation* plan. To submit a request online, go to [Contact WA Enterprise](http://ibm.biz/contact-wa-enterprise){: external}.
 
     The Enterprise plan is replacing the Premium plan. The Premium plan is being retired today. Existing Premium plan users are not impacted. They can continue to work in their Premium instances and create instances up to the 30-instance limit. New users do not see the Premium plan as an option when they create a service instance.
 

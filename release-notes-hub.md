@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-06-12"
 
 subcollection: watson-assistant
 
@@ -28,14 +28,27 @@ When you install {{site.data.keyword.conversationshort}} for {{site.data.keyword
 
 The following table shows the latest version of the web chat integration that is included with each release of {{site.data.keyword.conversationshort}} for {{site.data.keyword.IBM_notm}} Software Hub. {{site.data.keyword.IBM_notm}} Software Hub supports web chat versions 8.3.2 or later. To customize and change version numbers, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
 
-
 | {{site.data.keyword.conversationshort}} for {{site.data.keyword.IBM_notm}} Software Hub version | Latest web chat version available |
 |----------------|----------------|
+| 5.2.0 | [8.7.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.7.1) |
 | 5.1.3 | [8.7.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.7.1) |
 | 5.1.2 | [8.6.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.6.0) |
 | 5.1.1 | [8.5.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.5.1) |
 | 5.1.0 | [8.3.2](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.3.2) |
 {: caption="Web chat versions in {{site.data.keyword.conversationshort}} for {{site.data.keyword.IBM_notm}}  Software Hub" caption-side="top"}
+
+## 5.2.0 release, 11 June 2025
+{: #assistant-hub-jun112025}
+{: release-note}
+
+**New features** 
+
+Integrate watsonx Assistant with Genesys Audio Connector
+: You can now integrate Genesys Audio Connector with your assistant to stream conversation audio between the assistant and Genesys Cloud. For more information, see [Integrating with Genesys Audio Connector](/docs/watson-assistant?topic=watson-assistant-deploy-genesys-audioconnector).
+
+Secure watsonx Assistant with webhook authentication
+: Use webhooks in your assistant to communicate with external systems while ensuring security. Define authentication methods to authorize only trusted sources to trigger webhooks. For more information, see [Defining the authentication method for pre-message and post-message webhooks](/docs/watson-assistant?topic=watson-assistant-define-webhook-auth).
+
 
 ## 5.1.3 release, 30 April 2025
 {: #assistant-hub-apr302025}

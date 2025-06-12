@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-06-09"
 
 subcollection: watson-assistant
 
@@ -10,6 +10,7 @@ subcollection: watson-assistant
 {{site.data.keyword.attribute-definition-list}}
 
 # Deprecated and withdrawn models
+{: #deprecated-llm-models}
 
 The {{site.data.keyword.conversationfull}} product is evolving continuously and as technology improves, some foundation models get deprecated or withdrawn from support. Each model contains the reference for its **Model card** where you can get more information about technical specifications of the model.
 
@@ -40,5 +41,3 @@ See the following table for the complete information about the withdrawn models 
 | ----- | ----- | ----- | ----- |
 | granite-13b-chat-v2 | ibm/granite-13b-chat-v2 | From 19 January 2025 |granite-3-8b-instruct |
 {: caption="Foundation models that are withdrawn." caption-side="bottom"}
-
-

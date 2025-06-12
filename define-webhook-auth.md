@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-06-02"
+lastupdated: "2025-06-09"
 
 subcollection: watson-assistant
 
@@ -69,7 +69,7 @@ This is the default option.
 1. Enter the bearer token.
 
 ### API key auth
-{: api-key-auth}
+{: #api-key-auth}
 
 1. Enter the **API key name** and **API key**.
 
@@ -94,7 +94,7 @@ If you use the **Scope string**, it must be a space-delimited set of one or more
 1. Click **Save**.
 
 ## Password
-{: password}
+{: #password}
 
 1. Enter the **Username** of your webhook.
 
@@ -118,7 +118,7 @@ If you use the **Scope string**, it must be a space-delimited set of one or more
 1. Enter the **Header prefix**, for example: Bearer.
 
 ## Client credentials
-{: client-credentials}
+{: #client-credentials}
 
 1. Enter the **Client ID** for your webhook authentication service.
 
@@ -138,7 +138,7 @@ If you use the **Scope string**, it must be a space-delimited set of one or more
 1. Enter the **Header prefix**, for example: Bearer.
 
 ## Authorization code
-{: authorization-code}
+{: #authorization-code}
 
 1. Enter the **Client ID** for your webhook authentication service.
 
@@ -168,7 +168,7 @@ If you use the **Scope string**, it must be a space-delimited set of one or more
 1. Enter the **Client secret** under **Client ID** now that the field is visible.
 
 ## Custom
-{: custom}
+{: #custom}
 
 1. Enter the **Custom grant type name** of your webhook.
 
