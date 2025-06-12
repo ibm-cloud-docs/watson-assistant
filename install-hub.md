@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-06-10"
+lastupdated: "2025-06-12"
 
 subcollection: watson-assistant
 
@@ -25,10 +25,9 @@ Learn how to install {{site.data.keyword.conversationshort}} for {{site.data.key
 
 The installation process differs depending on the version you are installing. The following table shows the available versions.
 
-
-
 | Version |  Cluster | Installation instructions |
 | --- | --- | --- |
+| 5.2.0 | {{site.data.keyword.IBM_notm}} Software Hub 5.2.x | [Installing 5.2.0](https://www.ibm.com/docs/en/software-hub/5.2.x?topic=assistant-installing){: external} |
 | 5.1.3 | {{site.data.keyword.IBM_notm}} Software Hub 5.1.x | [Installing 5.1.3](https://www.ibm.com/docs/en/software-hub/5.1.x?topic=assistant-installing){: external} |
 | 5.1.2 | {{site.data.keyword.IBM_notm}} Software Hub 5.1.x | [Installing 5.1.2](https://www.ibm.com/docs/en/software-hub/5.1.x?topic=assistant-installing){: external} |
 | 5.1.1 | {{site.data.keyword.IBM_notm}} Software Hub 5.1.x | [Installing 5.1.1](https://www.ibm.com/docs/en/software-hub/5.1.x?topic=assistant-installing){: external} |
@@ -36,20 +35,14 @@ The installation process differs depending on the version you are installing. Th
 {: caption="Available versions" caption-side="top"}
 
 
-
-
-
-
-
 ## Support matrix
 {: #install-hub-support-matrix}
 
 The following table describes which versions of {{site.data.keyword.conversationshort}} are supported on which versions of {{site.data.keyword.IBM_notm}} Software Hub and Red Hat OpenShift.
 
-
-
 | {{site.data.keyword.conversationshort}} version | {{site.data.keyword.IBM_notm}} Software Hub version | Red Hat OpenShift version |
 | --- | --- | --- |
+| 5.2.0| 5.2.x | 4.12, 4.14, 4.15, 4.16, 4.17, or 4.18 |
 | 5.1.3| 5.1.x | 4.12, 4.14, 4.15, 4.16, 4.17, or 4.18 |
 | 5.1.2| 5.1.x | 4.12, 4.14, 4.15, 4.16, or 4.17 |
 | 5.1.1| 5.1.x | 4.12, 4.14, 4.15, 4.16, or 4.17 |
