@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-05-12"
+lastupdated: "2025-06-18"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,13 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 8.9.0
+{: #8.9.0}
+*Release date: 18 June 2025*
+
+- Increased the response timeout limit from 40 seconds to 120 seconds to support more complex or time-consuming operations in custom extensions and conversational skills.
+- Minor bug fixes.
 
 ## 8.8.0
 {: #8.8.0}
