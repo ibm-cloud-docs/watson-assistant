@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-06-02"
+lastupdated: "2025-07-08"
 
 subcollection: watson-assistant
 
@@ -15,7 +15,7 @@ subcollection: watson-assistant
 
 **Autolearning feature in {{site.data.keyword.conversationshort}}**  
 Effective June 16, 2025, the autolearning feature is discontinued for {{site.data.keyword.conversationshort}}. After this date, autolearning settings are removed from the **Actions global settings** page, and all autolearning capabilities are disabled.
-{: deprecated}
+{: withdrawn}
 
 If none of the built-in integrations meet your requirements, you can deploy your assistant by developing a custom client application that interacts with your users and communicates with the {{site.data.keyword.conversationfull}} service.
 {: shortdesc}

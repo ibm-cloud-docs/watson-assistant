@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-02"
+lastupdated: "2025-07-08"
 
 keywords: settings
 subcollection: watson-assistant
@@ -15,13 +15,13 @@ subcollection: watson-assistant
 {: #actions-global-settings}
 
 **Autolearning feature in {{site.data.keyword.conversationshort}}**  
-Effective June 16, 2025, the autolearning feature is discontinued for {{site.data.keyword.conversationshort}}. After this date, autolearning settings are removed from the **Actions global settings** page, and all autolearning capabilities are disabled.
-{: deprecated}
+Effective June 16, 2025, the autolearning feature is withdrawn for {{site.data.keyword.conversationshort}}. After this date, autolearning settings are removed from the **Actions global settings** page, and all autolearning capabilities are disabled.
+{: withdrawn}
 
 Use **Global settings** to configure features across all actions.
 {: shortdesc}
 
-On the **Actions** page, click **Global settings** ![Gear icon](../../icons/settings.svg).
+On the **Actions** page, click **Global settings** ![Gear icon](images/gear-icon-black.png).
 
 Global settings provide options, configurations, and tasks for:
 
@@ -30,8 +30,8 @@ Global settings provide options, configurations, and tasks for:
 - [Autocorrection](#actions-global-settings-autocorrection)
 - [Display formats](#actions-global-settings-display-formats)
 - [Algorithm version](#actions-global-settings-algorithms-versions)
-- [Autolearning](#actions-global-settings-autolearning)
 - [Upload/Download](#actions-global-settings-upload-download)
+- Autolearning {: withdrawn}
 
 ## Conversation routing
 {: #convo-routing}
@@ -127,11 +127,6 @@ Variables are formatted by using a system default unless you specify otherwise.
 | Currency symbol | Use the system default or choose a global symbol | `$10.99` |
 | Percentage fraction digits | Use the system default (up to 14 digits) or two digits | `10.75%` |
 {: caption="Display format settings" caption-side="bottom"}
-
-## Autolearning
-{: #actions-global-settings-autolearning}
-
-**Autolearning** enables your assistant to learn from interactions with your customers and improve responses. For more information, see [Using autolearning to improve assistant responses](/docs/watson-assistant?topic=watson-assistant-autolearn).
 
 ## Algorithm version
 {: #actions-global-settings-algorithms-versions}
