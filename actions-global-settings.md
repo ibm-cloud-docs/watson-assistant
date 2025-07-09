@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-08"
+lastupdated: "2025-07-09"
 
 keywords: settings
 subcollection: watson-assistant
@@ -15,7 +15,7 @@ subcollection: watson-assistant
 {: #actions-global-settings}
 
 **Autolearning feature in {{site.data.keyword.conversationshort}}**  
-Effective June 16, 2025, the autolearning feature is withdrawn for {{site.data.keyword.conversationshort}}. After this date, autolearning settings are removed from the **Actions global settings** page, and all autolearning capabilities are disabled.
+Effective 16 June 2025, the autolearning feature is withdrawn for {{site.data.keyword.conversationshort}}. After this date, autolearning settings are removed from the **Actions global settings** page, and all autolearning capabilities are disabled.
 {: withdrawn}
 
 Use **Global settings** to configure features across all actions.

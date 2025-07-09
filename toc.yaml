@@ -244,8 +244,18 @@ toc:
               topics:
               - topic: webhook-overview.md
                 navtitle: Overview
-              - webhook-pre.md
-              - webhook-post.md
+              - topic: webhook-pre.md
+                navtitle: Making a call before processing a message
+              - webhook-pre-cp4d-classic.md
+              - webhook-pre-cp4d.md
+              - webhook-pre-wa-classic.md
+              - webhook-pre-wa.md
+              - topic: webhook-post.md
+                navtitle: Making a call after processing a message
+              - webhook-post-cp4d-classic.md
+              - webhook-post-cp4d.md
+              - webhook-post-wa-classic.md
+              - webhook-post-wa.md
               - webhook-log.md
               - define-webhook-auth.md
               - define-webhook-audio.md
