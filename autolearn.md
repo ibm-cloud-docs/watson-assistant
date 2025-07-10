@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-06-02"
+lastupdated: "2025-07-10"
 
 subcollection: watson-assistant
 
@@ -78,3 +78,5 @@ To prevent your own assistant from applying what it learns by observing user cho
 1. Set the **Use autolearning to modify responses with training from live environment** switch to **Off**. This immediately disables the modifying of responses in the draft environment.
 
 1. Publish a new version of your assistant to the live environment to completely disable the modifying of responses by autolearning.
+
+

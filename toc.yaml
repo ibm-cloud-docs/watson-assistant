@@ -26,8 +26,7 @@ toc:
           - release-notes-chat.md
           - release-notes-data.md 
           - release-notes-hub.md 
-#         - maintenance.md  
-      - wxa-feature-parity.md   
+#         - maintenance.md
   - navgroup:
       id: tutorial
       topics:
@@ -197,7 +196,7 @@ toc:
           topics:
           - analytics-overview.md
           - conversational-search-analytics.md
-          - evaluating-the-assistant.md
+          - data-evaluation.md
           - analytics-action-completion.md
           - analytics-recognition.md
           - analytics-conversations.md
@@ -240,32 +239,46 @@ toc:
           - dynamic-options.md
           - journeys.md
           - expressions.md
-          - topicgroup:
-              label: Extending your assistant with webhooks
-              topics:
-              - topic: webhook-overview.md
-                navtitle: Overview
-              - webhook-pre.md
-              - webhook-post.md
-              - webhook-log.md
-              - define-webhook-auth.md
-              - define-webhook-audio.md
-              - record-caller-utterance.md
-              - dialog-webhooks.md
           - build-custom-extension.md
           - add-custom-extension.md
           - stream-from-extension.md
           - topicgroup:
-                label: Building a custom client
-                topics:
-                - api-overview.md
-                - api-methods.md
-                - api-client.md
-                - api-migration.md
-                - api-context.md
-                - api-dialog-responses.md
-                - api-input-attachments.md
-                -  include: ../watson/getting-started-sdks.md
+              label: Building a custom client
+              topics:
+              - api-overview.md
+              - api-methods.md
+              - api-client.md
+              - api-migration.md
+              - api-context.md
+              - api-dialog-responses.md
+              - api-input-attachments.md
+              - include: ../watson/getting-started-sdks.md
+      - topicgroup:
+          label: Extending your assistant with webhooks
+          topics:
+          - topic: webhook-overview.md
+            navtitle: Overview
+          - topicgroup:
+              label: Pre-message webhooks
+              topics:
+              - webhook-pre.md
+              - webhook-pre-wa.md
+              - webhook-pre-wa-classic.md
+              - webhook-pre-cpd.md
+              - webhook-pre-cpd-classic.md
+          - topicgroup:
+              label: Post-message webhooks
+              topics:
+              - webhook-post.md
+              - webhook-post-wa.md
+              - webhook-post-wa-classic.md
+              - webhook-post-cpd.md
+              - webhook-post-cpd-classic.md
+          - webhook-log.md
+          - define-webhook-auth.md
+          - define-webhook-audio.md
+          - record-caller-utterance.md
+          - dialog-webhooks.md
       - topicgroup:
           label: Migrating to watsonx Assistant
           topics:
