@@ -26,8 +26,7 @@ toc:
           - release-notes-chat.md
           - release-notes-data.md 
           - release-notes-hub.md 
-#         - maintenance.md  
-      - wxa-feature-parity.md   
+#         - maintenance.md
   - navgroup:
       id: tutorial
       topics:
@@ -85,6 +84,7 @@ toc:
           - action-response-modes.md
           - autocorrection.md
           - algorithm-version.md
+          - autolearn.md
       - topicgroup:
           label: Previewing and publishing
           topics:
@@ -196,7 +196,7 @@ toc:
           topics:
           - analytics-overview.md
           - conversational-search-analytics.md
-          - evaluating-the-assistant.md
+          - data-evaluation.md
           - analytics-action-completion.md
           - analytics-recognition.md
           - analytics-conversations.md
@@ -244,18 +244,6 @@ toc:
               topics:
               - topic: webhook-overview.md
                 navtitle: Overview
-              - topic: webhook-pre.md
-                navtitle: Making a call before processing a message
-              - webhook-pre-cp4d-classic.md
-              - webhook-pre-cp4d.md
-              - webhook-pre-wa-classic.md
-              - webhook-pre-wa.md
-              - topic: webhook-post.md
-                navtitle: Making a call after processing a message
-              - webhook-post-cp4d-classic.md
-              - webhook-post-cp4d.md
-              - webhook-post-wa-classic.md
-              - webhook-post-wa.md
               - webhook-log.md
               - define-webhook-auth.md
               - define-webhook-audio.md
@@ -274,7 +262,7 @@ toc:
                 - api-context.md
                 - api-dialog-responses.md
                 - api-input-attachments.md
-                -  include: ../watson/getting-started-sdks.md
+                - include: ../watson/getting-started-sdks.md
       - topicgroup:
           label: Migrating to watsonx Assistant
           topics:
