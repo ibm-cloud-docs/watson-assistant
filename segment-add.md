@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-01"
+lastupdated: "2025-07-11"
 
 subcollection: watson-assistant
 
@@ -10,10 +10,14 @@ subcollection: watson-assistant
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Sending events to Segment ![Enterprise plan only](images/enterprise.png)
+# Sending events to Segment 
 {: #segment-add}
 
+
 [IBM Cloud]{: tag-ibm-cloud}
+
+
+
 
 You can use the Segment extension to send {{site.data.keyword.conversationshort}} events to Segment.
 {: shortdesc}
@@ -35,16 +39,10 @@ To add the Segment extension to your assistant, follow these steps:
 
     When you first add the Segment extension to an assistant, the configuration settings you provide are applied only to the draft environment. You must complete configuration for the draft environment before you can add the extension in the live environment.
     {: important}
-  
-   
-
+    
 1. In the **Connect** step, click the link to log in to your Segment account in another browser tab.
 
     If you do not already have a Segment account, click **Sign up for free account** to create one. Verify your email address and complete your profile to activate your account.
-
-    
-
-    
 
 1. In the Segment web app, go to your workspace. In the **Sources** section, find the **Add IBM {{site.data.keyword.conversationshort}} Source** tile and click **Add Source**.
 
