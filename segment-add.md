@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-11"
+lastupdated: "2025-07-14"
 
 subcollection: watson-assistant
 
@@ -13,11 +13,7 @@ subcollection: watson-assistant
 # Sending events to Segment 
 {: #segment-add}
 
-
-[IBM Cloud]{: tag-ibm-cloud}
-
-
-
+[Premium]{: tag-teal} [Plus]{: tag-green}
 
 You can use the Segment extension to send {{site.data.keyword.conversationshort}} events to Segment.
 {: shortdesc}
