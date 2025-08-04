@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-08"
+lastupdated: "2025-08-04"
 
 subcollection: watson-assistant
 
@@ -76,6 +76,8 @@ You must adhere to the response timeout limit, which is 48 seconds, while callin
 
 ## Building the custom extension
 {: #build-custom-extension-building}
+
+
 
 To build a custom extension based on the API definition, follow these steps:
 
