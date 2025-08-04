@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-06-09"
+lastupdated: "2025-08-04"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,14 @@ content-type: release-note
 
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 04 Aug 2025
+{: #watson-assistant-aug042025}
+{: release-note}
+
+Withdrawal of IntelePeer Phone Number Service
+:   The IntelePeer free phone number service for {{site.data.keyword.conversationshort}} is withdrawn from 31 July 2025. Integrating your assistant with those phone numbers no longer works. Migrate to Twilio or another provider to avoid disruption. For assistance, contact support at https://www.ibm.com/mysupport/. For more information see, [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone) and [Integrating with *SMS*](/docs/watson-assistant?topic=watson-assistant-deploy-sms).
+
 
 ## 04 June 2025
 {: #watson-assistant-jun042025}
@@ -37,7 +45,7 @@ Autolearning feature deprecation
 {: release-note}
 
 IntelePeer phone number service deprecation
-:   The IntelePeer free phone number service for {{site.data.keyword.conversationshort}} is discontinued from July 31, 2025. Migrate to Twilio or another provider to avoid disruption. For assistance, contact support at https://www.ibm.com/mysupport/. For more information see, [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone) and [Integrating with *SMS*](/docs/watson-assistant?topic=watson-assistant-deploy-sms).
+:   The IntelePeer free phone number service for {{site.data.keyword.conversationshort}} is discontinued from 31 July 2025. Migrate to Twilio or another provider to avoid disruption. For assistance, contact support at https://www.ibm.com/mysupport/. For more information see, [Integrating with phone](/docs/watson-assistant?topic=watson-assistant-deploy-phone) and [Integrating with *SMS*](/docs/watson-assistant?topic=watson-assistant-deploy-sms).
 
 ## 15 May 2025
 {: #watson-assistant-may152025}
