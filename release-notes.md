@@ -18,8 +18,8 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
-## 04 Aug 2025
-{: #watson-assistant-aug042025}
+## 05 Aug 2025
+{: #watson-assistant-aug052025}
 {: release-note}
 
 Withdrawal of IntelePeer Phone Number Service
