@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-06-26"
+lastupdated: "2025-08-14"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,14 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 8.11.0
+{: #8.11.0}
+*Release date: 7 July 2025*
+
+- Added the ability to use the `servers` configuration option on Cloud Pak for Data.
+- Made some performance enhancements to how the web chat JavaScript is loaded.
+- Fixed a bug that can cause a request to be resubmitted when the chat is reloaded if the response was empty.
 
 ## 8.10.0
 {: #8.10.0}
