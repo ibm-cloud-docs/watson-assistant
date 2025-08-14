@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-06-09"
+lastupdated: "2025-08-14"
 
 subcollection: watson-assistant
 
@@ -32,6 +32,8 @@ The following table shows the latest version of the web chat integration that is
 
 | {{site.data.keyword.conversationshort}} for {{site.data.keyword.icp4dfull}} version | Latest web chat version available |
 |----------------|----------------|
+| 5.2.1 | [8.11.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.11.0) |
+| 5.2.1 | [8.10.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.10.0) |
 | 5.0.3 | [8.2.6](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.2.6) |
 | 5.0.1 | [8.1.2](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.1.2) |
 | 5.0.0 | [8.1.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.1.0) |
