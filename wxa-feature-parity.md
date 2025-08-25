@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-07-16"
+lastupdated: "2025-08-25"
 
 keywords: feature parity
 
@@ -175,11 +175,11 @@ In the tables, you can find the following indications:
 | Feature |  IBM Cloud | IBM Software Hub  |
 | ---- | ---- | ---- |
 | Add SMS as a channel and customize provider with IntelePeer and Twilio | ![Green check icon](images/green-check.svg) | ![Red cross icon](images/red-cross.svg) |
-| Add and customize Facebook messenger as a channel |  ![Green check icon](images/green-check.svg) | ![Red cross icon](images/red-cross.svg) |
+| Add and customize Facebook messenger as a channel |  ![Green check icon](images/green-check.svg) | ![Green check icon](images/green-check.svg) |
 | Add and customize Genesys Bot Connector as a channel | ![Green check icon](images/green-check.svg) | ![Green check with warning icon](images/green-check-warning.svg)[**¹**](#sw-genesys-bot-connector) |
 | Add and customize Slack as a channel | ![Green check icon](images/green-check.svg) | ![Green check icon](images/green-check.svg) | 
-| Add and customize Microsoft teams as a channel |  ![Green check icon](images/green-check.svg) | ![Red cross icon](images/red-cross.svg) |
-| Add and customize WhatsApp with Twilio as a channel |  ![Green check icon](images/green-check.svg) | ![Red cross icon](images/red-cross.svg) |
+| Add and customize Microsoft teams as a channel |  ![Green check icon](images/green-check.svg) | ![Green check icon](images/green-check.svg) |
+| Add and customize WhatsApp with Twilio as a channel |  ![Green check icon](images/green-check.svg) | ![Green check icon](images/green-check.svg) |
 {: caption="The support of the Integration with other channels capabilities on each deployment." caption-side="top"}
 
 **¹ IBM Software Hub :** Genesys Bot Connector as a channel might be available via patch.   
@@ -242,5 +242,3 @@ In the tables, you can find the following indications:
 | Download or upload assistant data | ![Green check icon](images/green-check.svg) | ![Green check icon](images/green-check.svg) | 
 | Delete assistant | ![Green check icon](images/green-check.svg) | ![Green check icon](images/green-check.svg) | 
 {: caption="The support of the Assistant settings capabilities on each deployment." caption-side="top"}
-
-
