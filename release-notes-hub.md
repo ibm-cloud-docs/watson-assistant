@@ -48,7 +48,7 @@ Automate the clean up of zombie records by using the CLU scheduler
 : When you create an assistant, the Conversational Language Understanding (CLU) scheduler logs a corresponding entry in its database. If the entry is not properly removed during a requested assistant deletion, the entry becomes a zombie record. The CLU cleanup scheduler identifies and cleans up the zombie records. For more information, see [Configuring CLU cleanup scheduler](https://www.ibm.com/docs/en/software-hub/5.2.x?topic=administering-configuring-clu-cleanup-scheduler){: external}.
 
 Integrate your watsonx Assistant with your customers' preferred messaging tool
-You can now set up your assistant to integrate with WhatsApp (by using Twilio for the integration), Facebook Messenger, and Microsoft Teams. Your customers' experiences are enhanced because they can exchange messages with your assistant in their tool of choice. For more information, see the following integration instructions:
+: You can now set up your assistant to integrate with WhatsApp (by using Twilio for the integration), Facebook Messenger, and Microsoft Teams. Your customers' experiences are enhanced because they can exchange messages with your assistant in their tool of choice. For more information, see the following integration instructions:
 - [Integrating with WhatsApp](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-whatsapp){: external}
 - [Integrating with Facebook Messenger](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-facebook){: external}
 - [Integrating with Microsoft Teams](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-microsoft-teams){: external}
