@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-06-12"
+lastupdated: "2025-08-25"
 
 subcollection: watson-assistant
 
@@ -30,12 +30,28 @@ The following table shows the latest version of the web chat integration that is
 
 | {{site.data.keyword.conversationshort}} for {{site.data.keyword.IBM_notm}} Software Hub version | Latest web chat version available |
 |----------------|----------------|
+| 5.2.1 | [8.11.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.11.0) |
 | 5.2.0 | [8.7.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.7.1) |
 | 5.1.3 | [8.7.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.7.1) |
 | 5.1.2 | [8.6.0](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.6.0) |
 | 5.1.1 | [8.5.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.5.1) |
 | 5.1.0 | [8.3.2](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.3.2) |
 {: caption="Web chat versions in {{site.data.keyword.conversationshort}} for {{site.data.keyword.IBM_notm}}  Software Hub" caption-side="top"}
+
+## 5.2.1 release, 27 August 2025
+{: #assistant-hub-aug272025}
+{: release-note}
+
+**New features** 
+
+Automate the clean up of zombie records by using the CLU scheduler
+: When you create an assistant, the Conversational Language Understanding (CLU) scheduler logs a corresponding entry in its database. If the entry is not properly removed during a requested assistant deletion, the entry becomes a zombie record. The CLU cleanup scheduler identifies and cleans up the zombie records. For more information, see [Configuring CLU cleanup scheduler](https://www.ibm.com/docs/en/software-hub/5.2.x?topic=administering-configuring-clu-cleanup-scheduler){: external}.
+
+Integrate your watsonx Assistant with your customers' preferred messaging tool
+: You can now set up your assistant to integrate with WhatsApp (by using Twilio for the integration), Facebook Messenger, and Microsoft Teams. Your customers' experiences are enhanced because they can exchange messages with your assistant in their tool of choice. For more information, see the following integration instructions:
+- [Integrating with WhatsApp](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-whatsapp){: external}
+- [Integrating with Facebook Messenger](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-facebook){: external}
+- [Integrating with Microsoft Teams](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-microsoft-teams){: external}
 
 ## 5.2.0 release, 11 June 2025
 {: #assistant-hub-jun112025}
