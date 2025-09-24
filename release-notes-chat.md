@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-08-14"
+lastupdated: "2025-09-24"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,13 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 8.12.0
+{: #8.12.0}
+*Release date: 24 September 2025*
+
+- Fixed an issue where error messages could appear multiple times during communication failures with Assistant.
+- Fixed an issue where the retry button did not function after web chat failed to open due to communication problems, even when the connection was restored.
 
 ## 8.11.0
 {: #8.11.0}
