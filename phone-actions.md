@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-06-06"
+lastupdated: "2025-09-26"
 
 keywords: phone, phone interactions, custom language model, custom grammar, advanced settings
 
@@ -552,7 +552,7 @@ The following example shows an `audio` response with `loop`=`true`, and a `user_
     },
     {
       "response_type": "audio",
-      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Random_composition3.wav",
+      "source": "https://raw.githubusercontent.com/WASdev/sample.voice.gateway/master/audio/musicOnHoldSample.wav",
       "channel_options": {
         "voice_telephony": {
           "loop": true
