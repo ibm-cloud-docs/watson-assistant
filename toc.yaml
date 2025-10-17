@@ -1,5 +1,3 @@
-#  New Watson Assistant docs
----
 toc:
   properties:
     subcollection: watson-assistant
@@ -24,9 +22,8 @@ toc:
           topics:
           - release-notes.md
           - release-notes-chat.md
-          - release-notes-data.md 
-          - release-notes-hub.md 
-#         - maintenance.md
+          - release-notes-data.md
+          - release-notes-hub.md
       - wxa-feature-parity.md
   - navgroup:
       id: tutorial
@@ -40,7 +37,7 @@ toc:
           topics:
           - topic: build-actions-overview.md
             navtitle: Overview
-          - actions-templates.md 
+          - actions-templates.md
           - start-conversation.md
           - understand-questions.md
           - boost-words.md
@@ -51,29 +48,29 @@ toc:
           - step-conditions.md
           - step-what-next.md
           - topicgroup:
-             label: Adding search
-             topics:
-             - topic: search-overview.md
-               navtitle: Overview
-             - search-add.md
-             - search-elasticsearch-add.md 
-             - search-milvus-add.md 
-             - search-customsearch-add.md 
-             - search-extension-coveo.md
-             - search-extension-google-custom.md
-             - search-extension-neuralseek.md
-             - search-integration-enhancement.md
+              label: Adding search
+              topics:
+              - topic: search-overview.md
+                navtitle: Overview
+              - search-add.md
+              - search-elasticsearch-add.md
+              - search-milvus-add.md
+              - search-customsearch-add.md
+              - search-extension-coveo.md
+              - search-extension-google-custom.md
+              - search-extension-neuralseek.md
+              - search-integration-enhancement.md
           - topicgroup:
-             label: Managing and organizing your actions
-             topics:
-             - topic: manage-actions.md
-               navtitle: Overview
-             - skill-based-actions.md
-             - duplicate-action.md
-             - copy-action.md
-             - upload-download-actions.md
-             - filter-actions.md
-             - collections.md
+              label: Managing and organizing your actions
+              topics:
+              - topic: manage-actions.md
+                navtitle: Overview
+              - skill-based-actions.md
+              - duplicate-action.md
+              - copy-action.md
+              - upload-download-actions.md
+              - filter-actions.md
+              - collections.md
           - call-extension.md
           - change-topic.md
           - handle-errors.md
@@ -111,21 +108,21 @@ toc:
           - topicgroup:
               label: Web chat security
               topics:
-                - topic: web-chat-security.md
-                  navtitle: Overview
-                - web-chat-security-enable.md
-                - web-chat-security-authenticate.md
-                - web-chat-security-encrypt.md
+              - topic: web-chat-security.md
+                navtitle: Overview
+              - web-chat-security-enable.md
+              - web-chat-security-authenticate.md
+              - web-chat-security-encrypt.md
           - topicgroup:
               label: Web chat development
               topics:
-                - topic: web-chat-develop.md
-                  navtitle: Overview
-                - deploy-web-chat.md
-                - web-chat-develop-mobile.md
-                - web-chat-develop-userid.md
-                - web-chat-develop-global.md
-                - web-chat-develop-versions.md
+              - topic: web-chat-develop.md
+                navtitle: Overview
+              - deploy-web-chat.md
+              - web-chat-develop-mobile.md
+              - web-chat-develop-userid.md
+              - web-chat-develop-global.md
+              - web-chat-develop-versions.md
           - topicgroup:
               label: Adding service desk support
               topics:
@@ -138,28 +135,28 @@ toc:
           - topicgroup:
               label: Tutorials
               topics:
-                - topic: web-chat-develop-tutorials.md
-                  navtitle: Overview
-                - topic: web-chat-develop-download-transcript.md
-                  navtitle: Providing a downloadable transcript
-                - topic: web-chat-develop-custom-buttons.md
-                  navtitle: Implementing custom option buttons
-                - topic: web-chat-develop-content-carousel.md
-                  navtitle: Implementing a content carousel
-                - topic: web-chat-develop-set-context.md
-                  navtitle: Setting context variables
-                - topic: web-chat-develop-page-interaction.md
-                  navtitle: Interacting with the host web page
-                - topic: web-chat-develop-security.md
-                  navtitle: Authenticating a user in the middle of a session
-                - topic: web-chat-develop-size-position.md
-                  navtitle: Customizing the size and position of the web chat
-                - topic: web-chat-develop-pre-chat.md
-                  navtitle: Displaying a pre-chat or post-chat form
-                - topic: web-chat-develop-custom-text-for-page.md
-                  navtitle: Customizing text elements based on the current page
-                - topic: web-chat-develop-custom-action-for-page.md
-                  navtitle: Customizing the greeting action based on the current page
+              - topic: web-chat-develop-tutorials.md
+                navtitle: Overview
+              - topic: web-chat-develop-download-transcript.md
+                navtitle: Providing a downloadable transcript
+              - topic: web-chat-develop-custom-buttons.md
+                navtitle: Implementing custom option buttons
+              - topic: web-chat-develop-content-carousel.md
+                navtitle: Implementing a content carousel
+              - topic: web-chat-develop-set-context.md
+                navtitle: Setting context variables
+              - topic: web-chat-develop-page-interaction.md
+                navtitle: Interacting with the host web page
+              - topic: web-chat-develop-security.md
+                navtitle: Authenticating a user in the middle of a session
+              - topic: web-chat-develop-size-position.md
+                navtitle: Customizing the size and position of the web chat
+              - topic: web-chat-develop-pre-chat.md
+                navtitle: Displaying a pre-chat or post-chat form
+              - topic: web-chat-develop-custom-text-for-page.md
+                navtitle: Customizing text elements based on the current page
+              - topic: web-chat-develop-custom-action-for-page.md
+                navtitle: Customizing the greeting action based on the current page
       - topicgroup:
           label: Deploying for phone
           topics:
@@ -170,13 +167,6 @@ toc:
           - deploy-phone-flex.md
           - phone-actions.md
           - phone-troubleshooting.md
- #          - topicgroup:
- #             label: Phone Gateway
- #             topics:
- #             - phone-gateway.md
- #             - phone-gateway-config.md
- #             - phone-gateway-json-config-props.md
- #             - phone-gateway-multitenancy.md
       - topicgroup:
           label: Deploying to other channels
           topics:
@@ -188,7 +178,6 @@ toc:
           - deploy-microsoft-teams.md
           - deploy-slack.md
           - deploy-sms.md
-#          - deploy-stream-channel.md
           - deploy-whatsapp.md
           - deploy-custom-app.md
           - deploy-intercom.md
@@ -207,9 +196,9 @@ toc:
           topics:
           - topic: generative-ai.md
             navtitle: Overview
-          - information-gathering.md 
+          - information-gathering.md
           - hap-filter.md
-          - conversational-search.md 
+          - conversational-search.md
       - assistant-add.md
       - assistant-rename-delete.md
       - topicgroup:
@@ -219,8 +208,8 @@ toc:
             navtitle: Overview
           - access-control.md
           - admin-managing-plan.md
-          - activity-log.md 
-          - at-events.md 
+          - activity-log.md
+          - at-events.md
           - admin-securing.md
           - admin-backup-restore.md
           - link:
@@ -233,9 +222,9 @@ toc:
       - topicgroup:
           label: Customizing and developing
           topics:
-          - develop-overview.md 
-          - base-llm-wxa.md 
-          - deprecated-llm-models.md 
+          - develop-overview.md
+          - base-llm-wxa.md
+          - deprecated-llm-models.md
           - assistant-responses-json.md
           - dynamic-options.md
           - journeys.md
@@ -293,70 +282,69 @@ toc:
           - dialog-publish.md
       - topicgroup:
           label: Building your assistant with dialog
-          topics: 
-             - dialog-add.md
-             - dev-process.md
-             - topicgroup:
-                label: Defining goals for your assistant to address
-                topics:
-                - intents.md
-                - catalog.md
-             - topicgroup:
-                label: Building a conversational flow 
-                topics:
-                - dialog-build.md
-                - dialog-overview.md
-                - dialog-start.md
-                - dialog-support.md
-                - dialog-tips.md
-                - dialog-runtime-context.md
-                - dialog-tasks.md
-                - dialog-runtime.md
-                - dialog-slots.md
-             - entities.md
-             - versions.md
-             - topicgroup:
-                label: Analytics (classic experience)
-                topics:
-                - logs-overview.md
-                - logs.md
-                - irrelevance-detection.md
-                - logs-resources.md
-             - topicgroup:
-                label: Dialog tutorials
-                topics:
-                - gs-dialog.md
-                - tutorial.md
-                - tutorial-slots.md
-                - tutorial-slots-complex.md
-                - tutorial-digressions.md
-             - topicgroup:
-                label: Dialog development
-                topics:
-                - message-anatomy.md
-                - dialog-integrations.md
-                - dialog-sms-actions.md
-                - dialog-actions-client.md
-                - api-dialog-modify.md 
-      - topicgroup: 
-          label: Installing on IBM On-premises  
           topics:
-          - install-hub.md 
-          - install-data.md 
+          - dialog-add.md
+          - dev-process.md
+          - topicgroup:
+              label: Defining goals for your assistant to address
+              topics:
+              - intents.md
+              - catalog.md
+          - topicgroup:
+              label: Building a conversational flow
+              topics:
+              - dialog-build.md
+              - dialog-overview.md
+              - dialog-start.md
+              - dialog-support.md
+              - dialog-tips.md
+              - dialog-runtime-context.md
+              - dialog-tasks.md
+              - dialog-runtime.md
+              - dialog-slots.md
+          - entities.md
+          - versions.md
+          - topicgroup:
+              label: Analytics (classic experience)
+              topics:
+              - logs-overview.md
+              - logs.md
+              - irrelevance-detection.md
+              - logs-resources.md
+          - topicgroup:
+              label: Dialog tutorials
+              topics:
+              - gs-dialog.md
+              - tutorial.md
+              - tutorial-slots.md
+              - tutorial-slots-complex.md
+              - tutorial-digressions.md
+          - topicgroup:
+              label: Dialog development
+              topics:
+              - message-anatomy.md
+              - dialog-integrations.md
+              - dialog-sms-actions.md
+              - dialog-actions-client.md
+              - api-dialog-modify.md
+      - topicgroup:
+          label: Installing on IBM On-premises
+          topics:
+          - install-hub.md
+          - install-data.md
           - architecture-data.md
           - backup-data.md
           - troubleshoot-data.md
-          - cos-importer-data.md 
+          - cos-importer-data.md
   - navgroup:
       id: reference
       topics:
       - glossary.md
-#      - beta-features.md
-      - response-types-reference.md 
-      - models.md 
+      - response-types-reference.md
+      - models.md
       - preview-runtime-errors.md
-      - global-variables.md 
-      - ssl-certificates-configuration-reference.md 
+      - global-variables.md
+      - ssl-certificates-configuration-reference.md
       - integration-variables.md
       - expression-methods-actions.md
       - dialog-methods.md
@@ -404,4 +392,4 @@ toc:
               href: https://community.ibm.com/community/user/ai-datascience/communities/community-home?CommunityKey=7a3dc5ba-3018-452d-9a43-a49dc6819633
       - accessibility.md
       - browser-support.md
-      - terms-notices.md  
+      - terms-notices.md
