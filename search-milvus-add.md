@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-10-21"
+
+years: [{CURRENT_YEAR}]
+lastupdated: "[{LAST_UPDATED_DATE}]"
+
 
 subcollection: watson-assistant
 
@@ -272,3 +274,8 @@ In this example, the user asks, `What is an action?`.
 A text-based reply from the best results in your knowledge base displays when conversational search is `on`. 
 
    ![ConversationalSearchToggleOn](images/milvus-cs-on.png)
+
+
+<!---Search results are pulled from your knowledge base when conversational search is `off`. The answer is, `I searched my knowledge base and found this information which might be useful`.
+
+   ![ConversationalSearchToggleOff](images/convo-search-test-toggle-off.png) -->
