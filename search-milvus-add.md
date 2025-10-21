@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-06-09"
+lastupdated: "2025-10-21"
 
 subcollection: watson-assistant
 
@@ -18,7 +18,7 @@ subcollection: watson-assistant
 Milvus is a vector database that you can use for handling large-scale datasets. For applications that require real-time search capabilities and numerous concurrent users, you can use Milvus, which has a distributed architecture, high performance, and flexible data model.
 {: shortdesc}
 
-You can have only one search integration per environment. When you change the existing search integration to other integration types such as {{site.data.keyword.discoveryfull}}, Elasticsearch or Custom service, the settings of the existing search integration are overwritten.
+You can have only one search integration per environment. When you change the existing search integration to another integration types such as {{site.data.keyword.discoveryfull}}, Elasticsearch or Custom service, the settings of the existing search integration are overwritten.
 {: important}
 
 ## Prerequisites for connecting Milvus to assistant
@@ -33,6 +33,8 @@ You can have only one search integration per environment. When you change the ex
 - You must provision a Milvus instance in {{site.data.keyword.lakehouse_short}}.
 
    For more information on creating a Milvus instance in {{site.data.keyword.lakehouse_short}}, see [Adding Milvus service in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-adding-milvus-service).
+
+   For more information on updating your Milvus authentication credentials, see [Updating your Milvus authentication credentials](#updating-your-milvus-authentication-credentials).
 
    For more information on creating an API key, see [API keys](https://cloud.ibm.com/iam/apikeys).
 
@@ -102,6 +104,54 @@ You can use the **Connect Milvus** to connect to the Milvus service inside {{sit
 
         For more information about credentials, see [Getting credentials](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-milvus/search-with-watsonx-data-milvus.md#get-the-credentials).  
 
+### Updating your Milvus authentication credentials 
+{: #update-milvus-auth-bc}
+
+Starting with version 25.1.0, {{site.data.keyword.lakehouse_full_notm}} uses a new authentication format for Milvus services. This update improves security and aligns authentication across all SaaS environments.
+
+You must update your Milvus username to keep your Milvus connection active and continue retrieving data.  
+
+#### Step 1: Find your new Milvus username
+{: #step-1-find-your-new-milvus-username}
+
+Your new Milvus username uses this format:  
+
+`ibmlhapikey_<your watsonx.data username>`
+
+**Examples**
+
+| watsonx.data username | Milvus username |
+| -- | -- |
+| `abc@ibm.com` | `ibmlhapikey_abc@ibm.com` |
+| `serviceid-abcdef-123456` | `ibmlhapikey_serviceid-abcdef-123456` |
+
+If you do not know your {{site.data.keyword.lakehouse_short}} username:
+
+1. Go to **Infrastructure manager** in {{site.data.keyword.lakehouse_short}} console.  
+2. Select your Milvus service to open the **Details** page.  
+3. Click the **Access control** tab.  
+   Your {{site.data.keyword.lakehouse_short}} usernames appear in the first column of the table.
+
+#### Step 2: Update your Milvus connection in agent builder
+{: #step-2-update-your-milvus-connection-in-agent-builder}
+
+Update your Milvus credentials for each assistant that uses a Milvus as a source.
+
+1. Go to **Home** > **Integrations**.
+1. Scroll down to the **Extensions** section. In the **Search** tile, click **Add** to open the **Set up a new search integration** window.
+1. Select **Milvus**.
+1. Record your existing connection information. You need to have a record of your current settings so that you can find them again after you update your Milvus credentials.
+1. Go to the **Instance** tab and click **Update details**.  
+1. Specify your connection details:  
+   - **GRPC host** and **GRPC port**.  
+   - **Username:** Use your new Milvus username from [Step 1: Find your new Milvus username](#step-1-find-your-new-milvus-username).  
+   - **Password:** Use the same password or API key that you used earlier.  
+     If you are authenticated with a {{site.data.keyword.lakehouse_short}} API key, that same key acts as your password.  
+1. Click **Next**, and reenter your settings.  
+   - If the connection works, your new credentials are valid.  
+   - If you see an error, review [Step 1: Find your new Milvus username](#step-1-find-your-new-milvus-username) to confirm your username and password.  
+1. Use your assistant chat window to verify that Milvus search results appear correctly.
+
 ### Ingesting data into the Milvus vector database through watsonx.ai 
 {: #ingest-data-milvus}
 
@@ -123,7 +173,7 @@ In the Milvus window of your assistant, click **Next** to go to **Select data so
 ### Configuring the result content
 {: #configure-result-content}
 
-After you connect Milvus by selecting the data source, you can configure how the search response displays in the Milvus window of your assistant. In the **Configure result content** section of **Select data source**, provide the following fields to map the title, body, and URL from Milvus to the search response in assistant window:
+After you connect Milvus by selecting the data source, you can configure how the search response displays in the Milvus window of your assistant. In the **Configure result content** section of **Select data source**, provide the following fields to map the title, body, and URL from Milvus to the search response in the assistant window:
 
    - **Title**
       Search result title. Use the title, name, or similar type of field from the collection as the search result title.
@@ -202,7 +252,7 @@ This filter expression allows only the search results with title not equal to th
 ```
 (title like "%action%") and (url in ["www.url1.com", "www.url2.com"])
 ```
-This filter expression allows only the search results with the title that contains the word "action" and the url being one of ["www.url1.com", "www.url2.com"].
+This filter expression allows only the search results with the title that contains the word "action" and the url in one of ["www.url1.com", "www.url2.com"].
 
 ## Configuring your assistant to use Milvus
 {: #milvus-assistant-configure}
