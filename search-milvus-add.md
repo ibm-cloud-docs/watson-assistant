@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-10-22"
+lastupdated: "2025-10-24"
 
 subcollection: watson-assistant
 
@@ -140,18 +140,24 @@ If you do not know your {{site.data.keyword.lakehouse_short}} username:
 Update your Milvus credentials for each assistant that uses a Milvus as a source.
 
 1. Go to **Home** > **Integrations**.
-1. Scroll down to the **Extensions** section. In the **Search** tile, click **Add** to open the **Set up a new search integration** window.
+1. Go to the **Extensions** section and click **Open** on the search tile.
+    If prompted, select the environment to update. Repeat these steps for each environment where Milvus search is integrated. If you use both **Draft** and **Live**, update each one separately. {: note}
 1. Select **Milvus**.
-1. Record your existing connection information. You need to have a record of your current settings so that you can find them again after you update your Milvus credentials.
-1. Go to the **Instance** tab and click **Update details**.  
+1. Record your existing connection information. You need to have a complete record of all your current Milvus settings so that you can enter them again after you update your Milvus credentials.
+1. Go to the **Instance** tab and click **Update** details.  
 1. Specify your connection details:  
    - **GRPC host** and **GRPC port**.  
    - **Username:** Use your new Milvus username from [Step 1: Find your new Milvus username](#step-1-find-your-new-milvus-username).  
    - **Password:** Use the same password or API key that you used earlier.  
      If you are authenticated with a {{site.data.keyword.lakehouse_short}} API key, that same key acts as your password.  
-1. Click **Next**, and reenter your settings.  
-   - If the connection works, your new credentials are valid.  
-   - If you see an error, review [Step 1: Find your new Milvus username](#step-1-find-your-new-milvus-username) to confirm your username and password.  
+1. Click **Next**.
+1. Click **Save** and then click **Close**.  
+1. Return to the search tile and click **Open**.
+1. Select the same environment you chose in step 2.
+1. Click **Milvus**.
+1. Go to the **Conversational Search** section.
+1. Reenter the settings you recorded in step 4.
+1. Click **Save** and then click **Close**. 
 1. Use your assistant chat window to verify that Milvus search results appear correctly.
 
 ### Ingesting data into the Milvus vector database through watsonx.ai 
