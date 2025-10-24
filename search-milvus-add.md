@@ -141,7 +141,7 @@ Update your Milvus credentials for each assistant that uses a Milvus as a source
 
 1. Go to **Home** > **Integrations**.
 1. Go to the **Extensions** section and click **Open** on the search tile.
-    If prompted, select the environment to update. Repeat these steps for each environment where Milvus search is integrated. If you use both **Draft** and **Live**, update each one separately. {: note}
+    If prompted, select the environment to update. Repeat these steps for each environment where Milvus search is integrated. If you use both **Draft** and **Live**, update each one separately.
 1. Select **Milvus**.
 1. Record your existing connection information. You need to have a complete record of all your current Milvus settings so that you can enter them again after you update your Milvus credentials.
 1. Go to the **Instance** tab and click **Update** details.  
