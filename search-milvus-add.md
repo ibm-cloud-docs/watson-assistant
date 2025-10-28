@@ -12,16 +12,14 @@ subcollection: watson-assistant
 
 # Milvus search integration setup
 {: #search-milvus-add}
-
-[Plus]{: tag-green} [Enterprise]{: tag-purple} 
-  
+ 
 Milvus is a vector database that you can use for handling large-scale datasets. For applications that require real-time search capabilities and numerous concurrent users, you can use Milvus, which has a distributed architecture, high performance, and flexible data model.
 {: shortdesc}
 
-You can have only one search integration per environment. When you change the existing search integration to another integration types such as {{site.data.keyword.discoveryfull}}, Elasticsearch or Custom service, the settings of the existing search integration are overwritten.
+You can have only one search integration per environment. When you change the existing search integration to another integration types such as Elasticsearch or Custom service, the settings of the existing search integration are overwritten.
 {: important}
 
-## Prerequisites for connecting Milvus to assistant
+## Prerequisites for connecting Milvus to an assistant
 {: #prerequisites-milvus-connection}
 
 - You must have an active account on {{site.data.keyword.lakehouse_short}} and watsonx.ai. 
@@ -46,18 +44,18 @@ You can have only one search integration per environment. When you change the ex
 
    For more information about creating collections, see [Creating collections](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-milvus/search-with-watsonx-data-milvus.md#step-2-ingest-data-into-milvus).
 
-## Connecting Milvus to assistant
+## Connecting Milvus to an assistant
 {: #procedure-milvus-connection}
 
 Integrating Milvus in assistant involves three platforms.
-1. {{site.data.keyword.conversationshort}}, where we build the integration.
+1. {{site.data.keyword.ai-assistant}}, where we build the integration.
 1. {{site.data.keyword.lakehouse_short}}, where we are provisioning the Milvus instance.
 1. watsonx.ai, where we are building the data source called collections.
 
 ### Selecting Milvus as a search integration in assistant
 {: #select-milvus-search}
 
-After you create a {{site.data.keyword.conversationshort}} instance, you can select Milvus as the search integration by using one of the following procedures:
+After you create a {{site.data.keyword.ai-assistant}} instance, you can select Milvus as the search integration by using one of the following procedures:
 
  - **Selecting Milvus search integration from the Integrations page** 
     1. Go to **Home** > **Integrations**.
@@ -76,8 +74,6 @@ After you create a {{site.data.keyword.conversationshort}} instance, you can sel
 
     If Milvus is already added, the **Open** button is displayed. Else, **Add** is displayed. To set up custom service on the **Draft** or **Live** assistant environment, click **Open**.
        {: note}
- 
-![Select Milvus](images/select-milvus.png)
 
 ### Connecting to {{site.data.keyword.lakehouse_short}} to set up Milvus
 {: #setup-milvus}
@@ -99,7 +95,7 @@ You can use the **Connect Milvus** to connect to the Milvus service inside {{sit
 
    - **Choose an authentication type**
         * If you select `Basic authentication`, you must provide a **username** and **password**.
-        * If you select `watsonx.data API key`, you must provide the corresponding **API key**. 
+        * If you select `{{site.data.keyword.lakehouse_short}} API key`, you must provide the corresponding **API key**. 
         * if you select `None`, you cannot provide any other authentication details.
 
         For more information about credentials, see [Getting credentials](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-milvus/search-with-watsonx-data-milvus.md#get-the-credentials).  
@@ -107,9 +103,7 @@ You can use the **Connect Milvus** to connect to the Milvus service inside {{sit
 ### Updating your Milvus authentication credentials 
 {: #update-milvus-auth-bc}
 
-Starting with version 25.1.0, {{site.data.keyword.lakehouse_full_notm}} uses a new authentication format for Milvus services. This update improves security and aligns authentication across all SaaS environments.
-
-You must update your Milvus username to keep your Milvus connection active and continue retrieving data.  
+The 2.3 release of {{site.data.keyword.lakehouse_full_notm}} impacts existing Milvus authentication types. You must review and update your connection by 10 December 2025 to avoid critical service interruptions.
 
 #### Step 1: Find your new Milvus username
 {: #step-1-find-your-new-milvus-username}
@@ -132,30 +126,36 @@ If you do not know your {{site.data.keyword.lakehouse_short}} username:
 3. Click the **Access control** tab.  
    Your {{site.data.keyword.lakehouse_short}} usernames appear in the first column of the table.
 
-#### Step 2: Update your Milvus connection in agent builder
-{: #step-2-update-your-milvus-connection-in-agent-builder}
+#### Step 2: Update your Milvus connection in assistant
+{: #step-2-update-your-milvus-connection-in-assistant}
 
 Update your Milvus credentials for each assistant that uses a Milvus as a source.
 
 1. Go to **Home** > **Integrations**.
-1. Scroll down to the **Extensions** section. In the **Search** tile, click **Add** to open the **Set up a new search integration** window.
+1. Go to the **Extensions** section and click **Open** on the search tile.
+    If prompted, select the environment to update. Repeat these steps for each environment where Milvus search is integrated. If you use both **Draft** and **Live**, update each one separately.
 1. Select **Milvus**.
-1. Record your existing connection information. You need to have a record of your current settings so that you can find them again after you update your Milvus credentials.
-1. Go to the **Instance** tab and click **Update details**.  
+1. Record your existing connection information. You need to have a complete record of all your current Milvus settings so that you can enter them again after you update your Milvus credentials.
+1. Go to the **Instance** tab and click **Update** details.  
 1. Specify your connection details:  
    - **GRPC host** and **GRPC port**.  
    - **Username:** Use your new Milvus username from [Step 1: Find your new Milvus username](#step-1-find-your-new-milvus-username).  
    - **Password:** Use the same password or API key that you used earlier.  
      If you are authenticated with a {{site.data.keyword.lakehouse_short}} API key, that same key acts as your password.  
-1. Click **Next**, and reenter your settings.  
-   - If the connection works, your new credentials are valid.  
-   - If you see an error, review [Step 1: Find your new Milvus username](#step-1-find-your-new-milvus-username) to confirm your username and password.  
+1. Click **Next**.
+1. Click **Save** and then click **Close**.  
+1. Return to the search tile and click **Open**.
+1. Select the same environment you chose in step 2.
+1. Click **Milvus**.
+1. Go to the **Conversational Search** section.
+1. Reenter the settings you recorded in step 4.
+1. Click **Save** and then click **Close**. 
 1. Use your assistant chat window to verify that Milvus search results appear correctly.
 
 ### Ingesting data into the Milvus vector database through watsonx.ai 
 {: #ingest-data-milvus}
 
-After you collect information from {{site.data.keyword.lakehouse_short}}, you must ingest data into the Milvus database to use in {{site.data.keyword.conversationshort}}.
+After you collect information from {{site.data.keyword.lakehouse_short}}, you must ingest data into the Milvus database to use in your {{site.data.keyword.ai-assistant}}.
 
 In the Milvus window of your assistant, click **Next** to go to **Select data source** and provide the following details:
    -  In **Database**, select your preferred database.
