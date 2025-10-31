@@ -16,7 +16,7 @@ subcollection: watson-assistant
 Milvus is a high-performance, distributed vector database that is designed to manage large-scale datasets. It supports real-time search and handles multiple concurrent users efficiently, making it ideal for AI-powered applications.
 {: shortdesc}
 
-You can configure only one search integration per environment. If you switch to another integration type, such as {{site.data.keyword.discoveryfull}}, Elasticsearch, or a custom service, the existing configuration is overwritten.
+You can configure only one search integration per environment in {{site.data.keyword.conversationfull}}. If you switch to another integration type, such as {{site.data.keyword.discoveryfull}}, Elasticsearch, or a custom service, the existing configuration is overwritten.
 {: important}
 
 ## Prerequisites for connecting Milvus to an assistant
@@ -56,9 +56,9 @@ After you set up Milvus in {{site.data.keyword.lakehouse_short}}, you must confi
 ## Procedure to connect Milvus to an assistant
 {: #procedure-milvus-connection}
 
-This procedure explains how to integrate Milvus as a search provider in {{site.data.keyword.conversationlong}}. The integration involves three IBM platforms:
+This procedure explains how to integrate Milvus as a search provider in {{site.data.keyword.conversationshort}}. The integration involves three IBM platforms:
 
-1. **{{site.data.keyword.assistant_classic_full}}** – Configure and manage the search integration.
+1. **{{site.data.keyword.conversationfull}}** – Configure and manage the search integration.
 2. **{{site.data.keyword.lakehouse_short}}** – Provision and manage the Milvus vector database instance.
 3. **IBM watsonx.ai** – Create and manage collections (data sources) for vector search.
 
@@ -105,8 +105,7 @@ Use the **Connect Milvus** option to link your assistant to the Milvus service i
 
 In the **Connect your search provider** section, enter the following details:
  
-- **GRPC host** and **GRPC port**
-Retrieve these values from your Milvus instance. For instructions, see [Connection details](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-milvus/search-with-watsonx-data-milvus.md#get-other-connection-details).
+- **GRPC host** and **GRPC port** - Retrieve these values from your Milvus instance. For instructions, see [Connection details](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-milvus/search-with-watsonx-data-milvus.md#get-other-connection-details).
 
 #### Authentication options
 
@@ -185,15 +184,12 @@ In the Milvus setup window of your assistant, click **Next** to proceed to the *
    -  In **Database**, select your preferred database.
    -  In **Choose collection**, select the collection that you want to use.
     For more information, see [Prerequisites for Milvus integration](#prerequisites-for-connecting-milvus-to-an-assistant).
-
-   ![Creating a collection](images/create-collection-milvus.png)
    -  In **Choose index**, select the index that is associated with your collection.
    -  In **Choose embedding_model_id**, select the embedding model that matches the one used to create your index.  
 
    [Learn more about embedding models](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-models-embed.html?context=wx#embed){: external}.
    
-  The selected model must match the model that is used during index creation. 
-   {: note}
+  The selected model must match the model that is used during index creation. {: note}
 
 ### Configuring the result content
 {: #configure-result-content}
@@ -202,11 +198,11 @@ After you connect Milvus by selecting the data source, you can configure how the
 
 In the **Configure result content** section of **Select data source**, map the following fields from your Milvus collection:
 
-  - **Title**: Use a title, name, or similar field. It appears as the search result title. If not set, search results are not displayed in Facebook or Slack integrations.
+- **Title**: Use a title, name, or similar field. It appears as the search result title. If not set, search results are not displayed in Facebook or Slack integrations.
 
-  - **Body**: Use an abstract, summary, or highlight field. It appears as the search result description. If not set, search results are not displayed in Facebook or Slack integrations. 
+- **Body**: Use an abstract, summary, or highlight field. It appears as the search result description. If not set, search results are not displayed in Facebook or Slack integrations. 
 
-  - **URL**: Add any footer content to display at the end of the search result.
+- **URL**: Add any footer content to display at the end of the search result.
 
 ---
 
