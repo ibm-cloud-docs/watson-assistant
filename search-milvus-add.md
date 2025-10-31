@@ -51,6 +51,7 @@ After you set up Milvus in {{site.data.keyword.lakehouse_short}}, you must confi
 - [Create a vector index](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-prompt-data-index-milvus.html?context=wx&locale=en)
 - [Create collections](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/search-with-milvus/search-with-watsonx-data-milvus.md#step-2-ingest-data-into-milvus)
 
+
 ---
 
 ## Procedure to connect Milvus to an assistant
@@ -65,9 +66,11 @@ This procedure explains how to integrate Milvus as a search provider in {{site.d
 ### Selecting Milvus as a search integration in {{site.data.keyword.conversationshort}}
 {: #select-milvus-search}
 
+
 After you create a {{site.data.keyword.conversationshort}} instance, you can add Milvus as the search integration by using one of the following procedures:
 
 **Option 1: From the Integrations page**:
+
 
 1. Go to **Home** > **Integrations**.
 2. Scroll to the **Extensions** section.
@@ -111,6 +114,7 @@ In the **Connect your search provider** section, enter the following details:
 
  Choose one of the following authentication methods:
 
+
  - **Basic Authentication**  
       Provide your **username** and **password**.
 
@@ -124,6 +128,7 @@ For more information about credentials, see [Getting credentials](https://github
 
 ### Updating your Milvus authentication credentials 
 {: #update-milvus-auth-bc}
+
 
 {{site.data.keyword.lakehouse_full_notm}} version 2.3 introduces changes to Milvus authentication. To avoid service disruptions, update your Milvus connection settings by 10 December 2025.
 
@@ -148,12 +153,14 @@ If you do not know your {{site.data.keyword.lakehouse_short}} username:
 3. Click the **Access control** tab. 
 4. Locate your {{site.data.keyword.lakehouse_short}} username in the first column of the table. 
 
+
 #### Step 2: Update your Milvus connection in {{site.data.keyword.conversationshort}}
 {: #step-2-update-your-milvus-connection-in-assistant}
 
 Update your Milvus credentials for each assistant that uses a Milvus as a source:
 
 1. Go to **Home** > **Integrations**.
+
 1. In the **Extensions** section, click **Open** on the Search tile.
 1. If prompted, choose the environment to update. Repeat for each environment (For example, **Draft** and **Live**).
 1. Select **Milvus**.
