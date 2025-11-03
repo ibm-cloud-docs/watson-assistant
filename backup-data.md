@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-11-03"
 
 subcollection: watson-assistant
 
@@ -530,9 +530,11 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
     ```
     {: codeblock}
 
-1.  Create the following two configuration files and store them in the same backup directory:
+1.  Create the following configuration files and store them in the same backup directory:
 
-    - `resourceController.yaml`: The Resource Controller file keeps a list of all provisioned instances. See [Creating the resourceController.yaml file](#backup-resource-controller-yaml).
+    - `resourceController.yaml` (prior to Version 5.2.1): The Resource Controller file keeps a list of all provisioned instances. See [Creating the resourceController.yaml file (prior to Version 5.2.1)](#creating-the-resourcecontrolleryaml-file-prior-to-version-521).
+
+    - `resourceController.yaml` (For Version 5.2.1 and later): The Resource Controller file keeps a list of all provisioned instances. See [Creating the resourceController.yaml file (Version 5.2.1 and later)](#creating-the-resourcecontrolleryaml-file-version-521-and-later).
 
     - `postgres.yaml`: The {{site.data.keyword.postgresql}} file lists details for the target {{site.data.keyword.postgresql}} pods. See [Creating the postgres.yaml file](#backup-postgres-yaml).   
 
@@ -654,8 +656,13 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
 1.  After you restore the data, you must train the backend model. For more information about retraining your backend model, see [Retraining your backend model](#set-up-retrain-model).
 
 
-### Creating the resourceController.yaml file
+
+### Creating the resourceController.yaml file 
 {: #backup-resource-controller-yaml}
+
+
+
+
 
 The **resourceController.yaml** file contains details about the new environment where you are adding the backed-up data. Add the following information to the file:
 
@@ -702,6 +709,8 @@ To add the values that are required but currently missing from the file, complet
 1.  To get the port information, again check the RESOURCE_CONTROLLER_URL entry. The port is specified after `<host>:` in the URL. In this sample URL, the port is `5000`.
 
 1.  Paste the values that you discovered into the YAML file and save it.
+
+
 
 ### Creating the postgres.yaml file
 {: #backup-postgres-yaml}
