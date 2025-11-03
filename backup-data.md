@@ -532,11 +532,11 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
 
 1.  Create the following configuration files and store them in the same backup directory:
 
-    - `resourceController.yaml` (prior to Version 5.2.1): The Resource Controller file keeps a list of all provisioned instances. See [Creating the resourceController.yaml file (prior to Version 5.2.1)](#backup-resource-controller-yaml-521).
+    - `resourceController.yaml` (prior to Version 5.2.1): The Resource Controller file keeps a list of all provisioned instances. See [Creating the resourceController.yaml file (prior to Version 5.2.1)](#creating-the-resourcecontrolleryaml-file-prior-to-version-521).
 
-    - `resourceController.yaml` (For Version 5.2.1 and later): The Resource Controller file keeps a list of all provisioned instances. See [Creating the resourceController.yaml file (Version 5.2.1 and later)](#backup-resource-controller-yaml-post-521).
+    - `resourceController.yaml` (For Version 5.2.1 and later): The Resource Controller file keeps a list of all provisioned instances. See [Creating the resourceController.yaml file (Version 5.2.1 and later)](#creating-the-resourcecontrolleryaml-file-version-521-and-later)
 
-    - `postgres.yaml`: The {{site.data.keyword.postgresql}} file lists details for the target {{site.data.keyword.postgresql}} pods. See [Creating the postgres.yaml file](#backup-postgres-yaml).   
+    - `postgres.yaml`: The {{site.data.keyword.postgresql}} file lists details for the target {{site.data.keyword.postgresql}} pods. See [Creating the postgres.yaml file](#creating-the-postgresyaml-file).   
 
 1.  Get the secret:
 
