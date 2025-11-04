@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-11-03"
+lastupdated: "2025-11-04"
 
 subcollection: watson-assistant
 
@@ -534,7 +534,7 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
 
     - `resourceController.yaml` (prior to Version 5.2.1): The Resource Controller file keeps a list of all provisioned instances. See [Creating the resourceController.yaml file (prior to Version 5.2.1)](#creating-the-resourcecontrolleryaml-file-prior-to-version-521).
 
-    - `resourceController.yaml` (For Version 5.2.1 and later):  For more information, see [Creating the resourceController.yaml file (Version 5.2.1 and later)](#creating-the-resourcecontrolleryaml-file-version-521-and-later).
+    - `resourceController.yaml` (For Version 5.2.1 and later): For more information, see [Creating the resourceController.yaml file (Version 5.2.1 and later)](#creating-the-resourcecontrolleryaml-file-version-521-and-later).
 
 
     - `postgres.yaml`: The {{site.data.keyword.postgresql}} file lists details for the target {{site.data.keyword.postgresql}} pods. See [Creating the postgres.yaml file](#creating-the-postgresyaml-file).   
