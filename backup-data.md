@@ -763,8 +763,6 @@ To create the `resourceController.yaml` file, do the following steps:
     - Ensure that the `resourceController.yaml` file is in the same working directory as your restore command.
 
 ### Creating the postgres.yaml file
-{: #backup-postgres-yaml}
-
 
 The **postgres.yaml** file contains details about the {{site.data.keyword.postgresql}} pods in your target environment (the environment where you restore the data). Add the following information to the file:
 
