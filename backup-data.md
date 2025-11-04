@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-11-04"
 
 subcollection: watson-assistant
 
@@ -530,11 +530,14 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
     ```
     {: codeblock}
 
-1.  Create the following two configuration files and store them in the same backup directory:
+1.  Create the following configuration files and store them in the same backup directory:
 
-    - `resourceController.yaml`: The Resource Controller file keeps a list of all provisioned instances. See [Creating the resourceController.yaml file](#backup-resource-controller-yaml).
+    - `resourceController.yaml` (prior to Version 5.2.1): The Resource Controller file keeps a list of all provisioned instances. See [Creating the resourceController.yaml file (prior to Version 5.2.1)](#creating-the-resourcecontrolleryaml-file-prior-to-version-521).
 
-    - `postgres.yaml`: The {{site.data.keyword.postgresql}} file lists details for the target {{site.data.keyword.postgresql}} pods. See [Creating the postgres.yaml file](#backup-postgres-yaml).   
+    - `resourceController.yaml` (For Version 5.2.1 and later): For more information, see [Creating the resourceController.yaml file (Version 5.2.1 and later)](#creating-the-resourcecontrolleryaml-file-version-521-and-later).
+
+
+    - `postgres.yaml`: The {{site.data.keyword.postgresql}} file lists details for the target {{site.data.keyword.postgresql}} pods. See [Creating the postgres.yaml file](#creating-the-postgresyaml-file).   
 
 1.  Get the secret:
 
@@ -653,9 +656,7 @@ oc get secret -l service=conversation,app=$INSTANCE-auth-encryption
 
 1.  After you restore the data, you must train the backend model. For more information about retraining your backend model, see [Retraining your backend model](#set-up-retrain-model).
 
-
-### Creating the resourceController.yaml file
-{: #backup-resource-controller-yaml}
+### Creating the resourceController.yaml file (prior to Version 5.2.1)
 
 The **resourceController.yaml** file contains details about the new environment where you are adding the backed-up data. Add the following information to the file:
 
@@ -703,9 +704,65 @@ To add the values that are required but currently missing from the file, complet
 
 1.  Paste the values that you discovered into the YAML file and save it.
 
-### Creating the postgres.yaml file
-{: #backup-postgres-yaml}
+### Creating the resourceController.yaml file (Version 5.2.1 and later)
 
+Starting from {{site.data.keyword.conversationshort}} 5.2.1, the `resourceController.yaml` file uses an access token and the Zen Core API service endpoint instead of listing provisioned instances.
+ 
+To create the `resourceController.yaml` file, do the following steps:
+
+1. **Retrieve the access token**
+  
+    Run the following command to extract the access token from the `zen-service-broker-secret` in the operands namespace:
+
+    ```
+    export TOKEN="$(oc get secret zen-service-broker-secret   -n "${PROJECT_CPD_INST_OPERANDS}"   --template='{{.data.token}}' | base64 --decode)"
+    echo "${TOKEN}"
+    ```
+    {: codeblock}
+
+    This retrieves the access token that authenticates the restore process with the Zen API.
+
+1. **Generate the `resourceController.yaml` file**
+
+    Create the file in your working directory using the token and the Zen Core API service endpoint:
+
+    ```
+    cat <<EOF > resourceController.yaml
+    accessTokens:
+      - "${TOKEN}"
+    host: "zen-core-api-svc.${PROJECT_CPD_INST_OPERANDS}"
+    port: 4444
+    type: assistant
+    EOF
+    ```
+    {: codeblock}
+
+1. **Verify the file**
+
+    To ensure that the file was created successfully with the expected values:
+
+    ```
+    cat resourceController.yaml
+    ```
+    {: codeblock}
+
+    You must see the output similar to:
+
+    ```
+    accessTokens:
+      - eyJhbGciOiJIUzI1NiIsInR5cCxxxxxxxxx...
+    host: zen-core-api-svc.cpd-instance-1
+    port: 4444
+    type: assistant
+    ```
+    {: codeblock}
+
+1. **Use in the restore process**
+
+    - You must reference `resourceController.yaml` file when you run the `pgmig` restore step.
+    - Ensure that the `resourceController.yaml` file is in the same working directory as your restore command.
+
+### Creating the postgres.yaml file
 
 The **postgres.yaml** file contains details about the {{site.data.keyword.postgresql}} pods in your target environment (the environment where you restore the data). Add the following information to the file:
 
