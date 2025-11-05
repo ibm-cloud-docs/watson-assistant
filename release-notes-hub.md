@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-11-04"
+lastupdated: "2025-11-05"
 
 subcollection: watson-assistant
 
@@ -43,7 +43,7 @@ The following table shows the latest version of the web chat integration that is
 {: #assistant-hub-oct302025}
 {: release-note}
 
-**New features**
+New features  
 : No new features or updates.
 
 ## 5.2.1 release, 27 August 2025
