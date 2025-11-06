@@ -218,9 +218,17 @@ Properties contained in the `private` object are treated as private variables, w
 ```
 
 You can access the custom SIP headers by using the following format:
+
+```text
+${system_integrations}.voice_telephony.sip_custom_invite_headers.<header name>
+```
+
+For example,
+
 ```text
 ${system_integrations}.voice_telephony.sip_custom_invite_headers.custom-header1
 ```
+returns the value `123`.
 
 ### Response properties (set by the assistant)
 {: #expression-integration-variables-phone-properties-response}
