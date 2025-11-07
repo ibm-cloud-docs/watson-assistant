@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-06-23"
+  years: 2015, 2025
+lastupdated: "2025-11-07"
 
 subcollection: watson-assistant
 
@@ -217,6 +217,19 @@ Properties contained in the `private` object are treated as private variables, w
 }
 ```
 
+You can access the custom SIP headers by using the following format:
+
+```text
+${system_integrations.voice_telephony.sip_custom_invite_headers}[<headername>]
+```
+
+For example,
+
+```text
+${system_integrations.voice_telephony.sip_custom_invite_headers}["custom-header1"]
+```
+returns the value `123`.
+
 ### Response properties (set by the assistant)
 {: #expression-integration-variables-phone-properties-response}
 
@@ -371,4 +384,3 @@ Included only if the Microsoft Teams integration is in use.
 }
 ```
 {: codeblock}
-
