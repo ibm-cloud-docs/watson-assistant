@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-11-28"
 
 subcollection: watson-assistant
 
@@ -412,50 +412,6 @@ Complete the following steps to determine whether you are impacted by this issue
         icpdsupport/serviceInstanceId: inst-1
     ```
     {: screen}
-
-### Security context constraint permission errors
-{: #troubleshoot-40x-scc-permission-error}
-
-The following fix applies to 4.0.0 through 4.0.5. If a cluster has a security context constraint (SCC) that takes precedence over **restricted** SCCs and has different permissions than **restricted** SCCs, then 4.0.0 through 4.0.5 installations might fail with permission errors. For example, the `update-schema-store-db-job` job reports errors similar to the following example:
-
-```text
-oc logs wa-4.0.2-update-schema-store-db-job-bpsdr postgres-is-prepared
-Waiting until postgres is running and responding
-psql: error: could not read root certificate file "/tls/ca.crt": Permission denied
-    - The basic command to postgres failed (retry in 5 sec)
-psql: error: could not read root certificate file "/tls/ca.crt": Permission denied
-    - The basic command to postgres failed (retry in 5 sec)
-psql: error: could not read root certificate file "/tls/ca.crt": Permission denied
-    - The basic command to postgres failed (retry in 5 sec)
-..
-..
-```
-{: screen}
-
-Other pods might have similar permission errors. If you look at the SCCs of the pods, you can see they are not restricted. For example, if you run the `oc describe pod wa-etcd-0 |grep scc` command, you get an output similar to the following example:
-
-```text
-openshift.io/scc: fsgroup-scc
-```
-{: screen}
-
-To fix this issue, raise the priority of the **restricted** SCC so that it takes precedence:
-
-1. Run the following command:
-
-    ```bash
-    oc edit scc restricted
-    ```
-    {: codeblock}
-
-1. Change the `priority` from `null` to `1`.
-
-Now, new pods default back to the expected **restricted** SCC. When you run the `oc describe pod wa-etcd-0 |grep scc` command, you get an output similar to the following example:
-
-```text
-openshift.io/scc: restricted
-```
-{: screen}
 
 ### Unable to collect logs with a webhook
 {: #troubleshoot-40x-collect-logs-webhook}
