@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-08-05"
+lastupdated: "2025-12-10"
 
 subcollection: watson-assistant
 
@@ -18,8 +18,15 @@ content-type: release-note
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
 
-## 05 Aug 2025
-{: #watson-assistant-aug052025}
+## 03 Dec 2025
+{: #watson-assistant-dec032025}
+{: release-note}
+
+Support for primitive JSON arrays in the filter() expression
+: The filter() expression now supports using arrays of primitive JSON values (such as strings, numbers, and booleans) as the source array.
+
+## 04 Aug 2025
+{: #watson-assistant-aug042025}
 {: release-note}
 
 Withdrawal of IntelePeer Phone Number Service
