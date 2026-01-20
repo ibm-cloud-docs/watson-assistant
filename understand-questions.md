@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2025
-lastupdated: "2025-01-10"
+  years: 2021, 2026
+lastupdated: "2026-01-20"
 
 subcollection: watson-assistant
 
@@ -39,7 +39,7 @@ Before even doing anything else with your action, you can already start checking
 
     ![Preview](images/new-action-preview.png){: caption="Preview" caption-side="bottom"}
 
-1. If the assistant doesn't understand the phrase, you see the built-in action `No matches`. For more information, see [When the assistant can't understand your customer's request](https://test.cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches).
+1. If the assistant doesn't understand the phrase, you see the built-in action `No matches`. For more information, see [When the assistant can't understand your customer's request](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-handle-errors#no-action-matches).
 
     ![No matches](images/new-action-preview-no-match.png){: caption="No matches" caption-side="bottom"}
 

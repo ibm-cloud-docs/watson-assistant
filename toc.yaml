@@ -232,6 +232,7 @@ toc:
           - build-custom-extension.md
           - add-custom-extension.md
           - stream-from-extension.md
+          - understanding-extension-matching.md
           - topicgroup:
               label: Building a custom client
               topics:
