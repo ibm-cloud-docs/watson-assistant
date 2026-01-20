@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-10-03"
+  years: 2026
+lastupdated: "2026-01-20"
 
 subcollection: watson-assistant
 
@@ -14,6 +14,8 @@ subcollection: watson-assistant
 {: #upload-download-actions}
 
 You can upload or download all your actions as a JSON file. 
+
+
 
 ## Downloading
 {: #upload-download-actions-global-settings-download}

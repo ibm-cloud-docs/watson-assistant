@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-02-27"
+  years: 2026
+lastupdated: "2026-01-20"
 
 subcollection: watson-assistant
 
@@ -12,6 +12,8 @@ subcollection: watson-assistant
 
 # Copying an action to another assistant
 {: #copy-action}
+
+
 
 You can copy an action from one assistant to another when you want to reuse the action content and configuration in the destination assistant.
 
