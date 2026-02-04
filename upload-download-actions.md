@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-01-20"
+lastupdated: "2026-02-04"
 
 subcollection: watson-assistant
 
@@ -15,7 +15,7 @@ subcollection: watson-assistant
 
 You can upload or download all your actions as a JSON file. 
 
-
+Before you upload or download all your actions, refer to [Understanding extension matching](/docs/watson-assistant?topic=watson-assistant-understanding-extension-matching).
 
 ## Downloading
 {: #upload-download-actions-global-settings-download}

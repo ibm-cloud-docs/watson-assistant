@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-01-20"
+lastupdated: "2026-02-04"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,7 @@ subcollection: watson-assistant
 # Copying an action to another assistant
 {: #copy-action}
 
-
+Before you copy an action from one assistant to another, refer to [Understanding extension matching](/docs/watson-assistant?topic=watson-assistant-understanding-extension-matching).
 
 You can copy an action from one assistant to another when you want to reuse the action content and configuration in the destination assistant.
 

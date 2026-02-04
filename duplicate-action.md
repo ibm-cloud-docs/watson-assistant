@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-01-20"
+lastupdated: "2026-02-04"
 
 subcollection: watson-assistant
 
@@ -13,7 +13,7 @@ subcollection: watson-assistant
 # Duplicating an action
 {: #duplicate-action}
 
-
+Before you duplicate an action, refer to [Understanding extension matching](/docs/watson-assistant?topic=watson-assistant-understanding-extension-matching).
 
 You can duplicate an action to reuse information in a new action. When you duplicate an action, the new action includes everything except example phrases. 
 
