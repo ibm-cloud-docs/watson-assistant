@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2025
-lastupdated: "2025-01-21"
+  years: 2015, 2026
+lastupdated: "2026-02-04"
 
 keywords: global support, universal language, universal model, another language
 
@@ -108,6 +108,8 @@ You can enable the download of language data files, in CSV format, so you can tr
 Each CSV file includes `translatable_string` data that you can use with a machine or human translation service. 
 
 Each CSV file also includes `id`, `resource_type`, and `locator` data that {{site.data.keyword.conversationshort}} can use in another assistant to re-create your source assistant. You don't need to edit this information.
+
+Before you download the multilingual package, refer to [Understanding extension matching](/docs/watson-assistant?topic=watson-assistant-understanding-extension-matching).
 
 To successfully download the multilingual package, the total number of translation entries for both action and dialog skills in your assistant must be less than or equal to 400000. You can configure the limit to a higher value in the Enterprise with Data Isolation plan and {{site.data.keyword.conversationfull}} on-premises. Higher values require an additional resource allocation to support large assistants.
 

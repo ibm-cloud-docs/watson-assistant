@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2025
-lastupdated: "2025-12-10"
+  years: 2015, 2026
+lastupdated: "2026-01-20"
 
 subcollection: watson-assistant
 
@@ -830,7 +830,7 @@ Adding and using multiple environments
 :   Each assistant has a draft and live environment. For Enterprise plans, you can now add up to three environments as a staging area to test your assistant before deployment. You can build content in the draft environment and test versions of your content in the extra environments. For more information, see [Adding and using multiple environments](/docs/watson-assistant?topic=watson-assistant-multiple-environments).
 
 Confirmation to return to previous action
-:   If a customer digresses and changes to a new topic, assistants now ask a "yes or no" confirmation question that the customers want to return to the previous action. Previously, the assistant returned to the previous action without asking. New assistants are set to use this confirmation by default. For more information, see [Confirmation to return to previous topic](https://test.cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-change-topic#change-topic-confirmation).
+:   If a customer digresses and changes to a new topic, assistants now ask a "yes or no" confirmation question that the customers want to return to the previous action. Previously, the assistant returned to the previous action without asking. New assistants are set to use this confirmation by default. For more information, see [Confirmation to return to previous topic](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-change-topic#change-topic-confirmation).
 
 ## 1 March 2023
 {: #watson-assistant-mar012023}

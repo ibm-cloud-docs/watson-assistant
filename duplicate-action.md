@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-03-30"
+  years: 2026
+lastupdated: "2026-02-04"
 
 subcollection: watson-assistant
 
@@ -13,9 +13,10 @@ subcollection: watson-assistant
 # Duplicating an action
 {: #duplicate-action}
 
+Before you duplicate an action, refer to [Understanding extension matching](/docs/watson-assistant?topic=watson-assistant-understanding-extension-matching).
+
 You can duplicate an action to reuse information in a new action. When you duplicate an action, the new action includes everything except example phrases. 
 
 To duplicate an action, click the overflow menu on the action you want and select **Duplicate**.
 
 ![Duplicate action](images/manage-actions-duplicate.png){: caption="Duplicate action" caption-side="bottom"}
-
