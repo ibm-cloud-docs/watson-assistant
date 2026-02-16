@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-03-06"
+  years: 2026
+lastupdated: "2026-02-16"
 
 subcollection: watson-assistant
 
@@ -103,7 +103,7 @@ Sign up for a Microsoft 365 Developer Administrator email address, if you don’
 
 1. Click **Save**, but keep the window open.
 
-1. In your {{site.data.keyword.conversationshort}}  Microsoft Teams integration, click **Finish**.
+1. In your {{site.data.keyword.conversationshort}} Microsoft Teams integration, click **Finish**.
 
 1. Click **Publish** to publish your bot. 
 
@@ -121,7 +121,7 @@ When a custom extension is run during a conversation in Microsoft Teams, the cli
 
 1. Click **Apps** in the sidebar menu, and then click **Manage your apps** and **Upload an app**. 
 
-1. Select **Upload a custom app** and specify the app package .zip file you downloaded. 
+1. Select **Upload a custom app** and specify the app package compressed file that you downloaded. 
 
 1. Click **Add** to finish.
 
@@ -137,3 +137,9 @@ These [response types](/docs/watson-assistant?topic=watson-assistant-respond) ar
 - option
 - suggestion
 - text 
+
+## Limitations
+
+In Microsoft Teams, **Option** buttons, whether rendered from an action or a dialog node remain active after you select them. These buttons can be clicked multiple times during a conversation, and each additional click resubmits the same payload to {{site.data.keyword.conversationshort}}. This behavior can result in duplicate processing and might lead to unexpected or incorrect follow‑up responses.
+
+This limitation is specific to the Microsoft Teams channel. In other channels, such as the web chat and the **Try it Out** page in {{site.data.keyword.conversationshort}}, the **Option** buttons are disabled after the first click and cannot be reselected.
