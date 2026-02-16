@@ -22,6 +22,9 @@ Autocorrection corrects user input in the following way:
 - Original input: `letme applt for a memberdhip`
 - Corrected input: `let me apply for a membership`
 
+- Original input: `I want to know the montth-to-month schedule for a facee-to-faace meting with the supervisor`
+- Corrected input: `I want to know the month to month schedule for a face to face meeting with the supervisor`
+
 When your assistant checks whether a word needs a spelling correction, it goes beyond a simple dictionary lookup. It uses natural language processing and probabilistic models to understand the context and decide whether the word is misspelled.
 
 By default, autocorrection is enabled in all assistants that use English. However, it is disabled by default in all assistants that use French. You can enable or disable **Autocorrection** by going to **Global settings** > **Autocorrection**. 
