@@ -50,9 +50,9 @@ The following table shows the latest version of the web chat integration that is
 Support for llama-3-3-70b-instruct model
 : You can use llama-3-3-70b-instruct model to
 
- - Rewrite user questions to an understood format for conversational search
- - Answer conversational search questions
- - Gather information to fill in variables in a conversational skill
+  - Rewrite user questions to an understood format for conversational search
+  - Answer conversational search questions
+  - Gather information to fill in variables in a conversational skill
 
 ## 5.3.0 release, 15 December 2025
 {: #assistant-hub-dec152025}
