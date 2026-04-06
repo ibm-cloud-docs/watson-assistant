@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-02-24"
+lastupdated: "2026-04-06"
 
 subcollection: watson-assistant
 
@@ -24,6 +24,19 @@ For information about new features and improvements to the core {{site.data.keyw
 {: #release-notes-chat-version}
 
 If you want to evaluate changes that are introduced in a web chat release before you apply them to your deployment, you can set a version of your web chat. For more information, see [Controlling the web chat version](/docs/watson-assistant?topic=watson-assistant-web-chat-develop-versions).
+
+## 8.12.4
+{: #8.12.4}
+*Release date: 2 April 2026*
+
+- Fixed a bug introduced in the conversational skill component from the previous release.
+
+## 8.12.3
+{: #8.12.3}
+*Release date: 25 March 2026*
+
+- Added support for additional regions
+- Updated the version of the conversational skill component
 
 ## 8.12.2
 {: #8.12.2}
