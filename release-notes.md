@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-01-20"
+lastupdated: "2026-04-13"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,13 @@ content-type: release-note
 
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 13 April 2026
+{: #watson-assistant-april132026}
+{: release-note}
+
+Dialog intent conflict detection deprecation
+:   Effective 21 May 2026, IBM will deprecate and remove the Dialog intent conflict detection feature. After this date, the feature will no longer be available or supported. Customers currently relying on intent conflict detection must review their dialog configurations and plan accordingly prior to the deprecation date.
 
 ## 03 Dec 2025
 {: #watson-assistant-dec032025}
