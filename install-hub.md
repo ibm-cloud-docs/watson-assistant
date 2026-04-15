@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-02-25"
+lastupdated: "2026-04-15"
 
 subcollection: watson-assistant
 
@@ -26,6 +26,7 @@ The installation process differs depending on the version you are installing. Th
 
 | Version |  Cluster | Installation instructions |
 | --- | --- | --- |
+| 5.3.1 Patch 2 | {{site.data.keyword.IBM_notm}} Software Hub 5.3.x | [Available patches for 5.3.1](https://www.ibm.com/docs/en/software-hub/5.3.x?topic=531-watsonx-assistant#assistant-patch__patch-2__title__1){: external} |
 | 5.3.1 | {{site.data.keyword.IBM_notm}} Software Hub 5.3.x | [Installing 5.3.1](https://www.ibm.com/docs/en/software-hub/5.3.x?topic=assistant-installing){: external} |
 | 5.3.0 | {{site.data.keyword.IBM_notm}} Software Hub 5.3.x | [Installing 5.3.0](https://www.ibm.com/docs/en/software-hub/5.3.x?topic=assistant-installing){: external} |
 | 5.2.2 | {{site.data.keyword.IBM_notm}} Software Hub 5.2.x | [Installing 5.2.2](https://www.ibm.com/docs/en/software-hub/5.2.x?topic=assistant-installing){: external} |
@@ -45,6 +46,7 @@ The following table describes which versions of {{site.data.keyword.conversation
 
 | {{site.data.keyword.conversationshort}} version | {{site.data.keyword.IBM_notm}} Software Hub version | Red Hat OpenShift version |
 | --- | --- | --- |
+| 5.3.1 Patch 2 | 5.3.x | 4.14, 4.16, 4.17, 4.18, 4.19 or 4.20 |
 | 5.3.1| 5.3.x | 4.14, 4.16, 4.17, 4.18, 4.19 or 4.20 |
 | 5.3.0| 5.3.x | 4.14, 4.16, 4.17, 4.18, 4.19 or 4.20 |
 | 5.2.2| 5.2.x | 4.12, 4.14, 4.15, 4.16, 4.17, 4.18 or 4.19 |
