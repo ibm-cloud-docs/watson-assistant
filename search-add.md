@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-05-06"
+lastupdated: "2026-05-07"
 
 subcollection: watson-assistant
 
@@ -185,13 +185,16 @@ By default, Watson Discovery search integration requests 3 passages per document
 
 In such cases, it may be necessary to adjust the configuration of the passages retrieved from Watson Discovery:
 
+If you want the updated passage configuration to apply to both draft and live environments, you must complete these steps independently for each environment using their respective **Environment ID**s.
+{: note}
+
 1. In the watsonx Assistant Tooling, select the **Assistant Settings** icon from the bottom of the left navigation bar.
 
 1. Select the **View details** button under the **Assistant IDs and API details** heading.
 
 1. From the panel displayed, note the **Assistant ID** and the respective Draft or Live **Environment ID** values for which you are trying to adjust the configuration.
 
-1. Retrieve the respective Environment via the [Get environment API method](https://cloud.ibm.com/apidocs/assistant/assistant-v2#getenvironment){: external} which will require a combination of Assistant and Environment IDs.
+1. Retrieve the respective Environment via the [Get environment API method](https://cloud.ibm.com/apidocs/assistant/assistant-v2#getenvironment){: external} which requires a combination of **Assistant ID** and **Environment ID**.
 
 1. Inspect the JSON output and locate the value of the Search Skill ID which will appear in the `skill_references` array as an object with `type":"search"`, for example:
 
