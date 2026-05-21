@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2025
-lastupdated: "2025-02-04"
+  years: 2021, 2026
+lastupdated: "2026-05-07"
 
 subcollection: watson-assistant
 
@@ -176,7 +176,61 @@ If you decide you want to connect to a different {{site.data.keyword.discoverysh
  ## Configure your assistant to use {{site.data.keyword.discoveryshort}} search
  {: #search-assistant-configure}
 
-After you configure {{site.data.keyword.discoveryshort}} search integration, you must configure your assistant to use {{site.data.keyword.discoveryshort}} search when the customer response matches no action. For more information about updating **No matches** to use search, see [Use search when no action matches](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-no-action-matches). 
+After you configure {{site.data.keyword.discoveryshort}} search integration, you must configure your assistant to use {{site.data.keyword.discoveryshort}} search when the customer response matches no action. For more information about updating **No matches** to use search, see [Use search when no action matches](/docs/watson-assistant?topic=watson-assistant-search-integration-enhancement#search-no-action-matches).
+
+## Adjust Discovery passage configuration
+{: #search-add-adjust-passages}
+
+By default, Watson Discovery search integration requests 3 passages per document of up to 325 characters. Depending on the content of the documents queried, it may be possible for the relevant content to be present across a larger span of text. When used in conjunction with the Conversational Search feature, the LLM response may not contain an accurate answer if the default passage length may have not been sufficient to capture it.
+
+In such cases, it may be necessary to adjust the configuration of the passages retrieved from Watson Discovery:
+
+If you want the updated passage configuration to apply to both draft and live environments, you must complete these steps independently for each environment using their respective **Environment ID**s.
+{: note}
+
+1. In the watsonx Assistant Tooling, select the **Assistant Settings** icon from the bottom of the left navigation bar.
+
+1. Select the **View details** button under the **Assistant IDs and API details** heading.
+
+1. From the panel displayed, note the **Assistant ID** and the respective Draft or Live **Environment ID** values for which you are trying to adjust the configuration.
+
+1. Retrieve the respective Environment via the [Get environment API method](https://cloud.ibm.com/apidocs/assistant/assistant-v2#getenvironment){: external} which requires a combination of **Assistant ID** and **Environment ID**.
+
+1. Inspect the JSON output and locate the value of the Search Skill ID which will appear in the `skill_references` array as an object with `type":"search"`, for example:
+
+   ```json
+   "skill_references": [
+       {
+           "type": "search",
+           "disabled": false,
+           "skill_id": "<search_skill_id>",
+           "skill_reference": "search skill"
+   ...
+   ```
+   {: codeblock}
+
+1. Retrieve the specific skill by the `search_skill_id` GUID value via the [Get Skills API](https://cloud.ibm.com/apidocs/assistant/assistant-v1#getskill){: external}.
+
+1. Modify the `search_settings` object to include the following parameters:
+
+   ```json
+   {
+     "search_settings": {
+       "discovery": {
+         "characters_per_passage": <Integer value (1-5000)>,
+         "passages_per_document": <Integer value (1-5)>
+       }
+     }
+   }
+   ```
+   {: codeblock}
+
+1. Use the [Update skill API](https://cloud.ibm.com/apidocs/assistant/assistant-v1#updateskill){: external} to update the respective Search Skill.
+
+1. Call the Get Skills API repeatedly until the `status` field ideally reports `Available`.
+
+Please aim to request no more than approximately 2048 characters when multiplying the number of passages by the number of characters per passage. Depending on the contents of the documents in question, it may be necessary to experiment with different combinations.
+{: tip}
 
 ## Troubleshooting
 {: #search-add-troubleshoot}
