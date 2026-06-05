@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-05-07"
+lastupdated: "2026-06-05"
 
 subcollection: watson-assistant
 
@@ -209,7 +209,7 @@ If you want the updated passage configuration to apply to both draft and live en
    ```
    {: codeblock}
 
-1. Retrieve the specific skill by the `search_skill_id` GUID value via the [Get Skills API](https://cloud.ibm.com/apidocs/assistant/assistant-v1#getskill){: external}.
+1. Retrieve the specific skill by the `search_skill_id` GUID value via the [Get Skills API](https://cloud.ibm.com/apidocs/assistant-v2#getskill){: external}.
 
 1. Modify the `search_settings` object to include the following parameters:
 
@@ -225,7 +225,7 @@ If you want the updated passage configuration to apply to both draft and live en
    ```
    {: codeblock}
 
-1. Use the [Update skill API](https://cloud.ibm.com/apidocs/assistant/assistant-v1#updateskill){: external} to update the respective Search Skill.
+1. Use the [Update skill API](https://cloud.ibm.com/apidocs/assistant-v2#updateskill){: external} to update the respective Search Skill.
 
 1. Call the Get Skills API repeatedly until the `status` field ideally reports `Available`.
 
