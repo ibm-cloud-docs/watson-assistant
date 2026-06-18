@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2025
-lastupdated: "2025-11-04"
+  years: 2015, 2026
+lastupdated: "2026-06-18"
 
 subcollection: watson-assistant
 
@@ -23,16 +23,21 @@ The following table lists the upgrade paths that are supported by the scripts.
 
 | Version in use | Version that you can upgrade to |
 |------|-----|
-| 5.0.x | 5.1.x |
+| 5.3.x | 5.4.x |
+| 5.2.x | 5.3.x or 5.4.x |
+| 5.1.x | 5.2.x or 5.3.x|
+| 5.0.x | 5.1.x or 5.2.x|
 | 4.8.x | 5.0.x or 5.1.x|
 | 4.7.x | 4.8.x or 5.0.x |
 | 4.6.x | 4.7.x or 4.8.x |
 | 4.5.x | 4.6.x or 4.7.x |
-| 4.0.x | 4.5.x or 4.6.x
+| 4.0.x | 4.5.x or 4.6.x |
 {: caption="Upgrade paths supported by scripts" caption-side="top"}
 
 Simpler ways to complete the upgrade is described in the following topics:
-
+- [Upgrading {{site.data.keyword.conversationshort}} to Version 5.4.x](https://www.ibm.com/docs/en/software-hub/5.4.x?topic=assistant-upgrading){: external}
+- [Upgrading {{site.data.keyword.conversationshort}} to Version 5.3.x](https://www.ibm.com/docs/en/software-hub/5.3.x?topic=assistant-upgrading){: external}
+- [Upgrading {{site.data.keyword.conversationshort}} to Version 5.2.x](https://www.ibm.com/docs/en/software-hub/5.2.x?topic=assistant-upgrading){: external}
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 5.1.x](https://www.ibm.com/docs/en/software-hub/5.1.x?topic=assistant-upgrading){: external}
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 5.0.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/5.0.x?topic=assistant-upgrading){: external}
 - [Upgrading {{site.data.keyword.conversationshort}} to Version 4.8.x](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=assistant-upgrading){: external}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-05-22"
+lastupdated: "2026-06-18"
 
 subcollection: watson-assistant
 
@@ -30,6 +30,7 @@ The following table shows the latest version of the web chat integration that is
 
 | {{site.data.keyword.conversationshort}} for {{site.data.keyword.IBM_notm}} Software Hub version | Latest web chat version available |
 |----------------|----------------|
+| 5.4.0 | [8.12.4](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.12.4) |
 | 5.3.1 Patch 5 | [8.12.2](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.12.2) |
 | 5.3.1 Patch 2 | [8.12.2](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.12.2) |
 | 5.3.1 | [8.12.2](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.12.2) |
@@ -42,6 +43,27 @@ The following table shows the latest version of the web chat integration that is
 | 5.1.1 | [8.5.1](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.5.1) |
 | 5.1.0 | [8.3.2](/docs/watson-assistant?topic=watson-assistant-release-notes-chat#8.3.2) |
 {: caption="Web chat versions in {{site.data.keyword.conversationshort}} for {{site.data.keyword.IBM_notm}}  Software Hub" caption-side="top"}
+
+## 5.4.0 release, 17 June 2026
+{: #assistant-hub-jun172026}
+{: release-note}
+
+**Updates**
+
+Support for gpt-oss-120b model
+: You can use gpt-oss-120b model, an OpenAI’s open-weight model designed for
+  - Powerful reasoning and various developer use cases
+  - Answer conversational search questions
+  - Rewrite user questions to an understood format for conversational search
+  - Gather information to fill in variables in custom actions
+
+Deprecated models
+: The following models are deprecated in this release.
+  Deprecated models remain functional until their removal date but may display removal notifications in the UI. Switch to supported models before removal to avoid disruption. Recommended model is openai/gpt-oss-120b.
+  - ibm/ibm-granite-8b-unified-api-model-v2
+  - ibm/granite-3-8b-instruct
+  - meta-llama/llama-3-1-70b-instruct
+  - meta-llama/llama-3-3-70b-instruct
 
 ## 5.3.1 Patch 5 release, 21 May 2026
 {: #assistant-hub-may212026}
