@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-07-08"
+  years: 2022, 2026
+lastupdated: "2026-07-09"
 
 subcollection: watson-assistant
 
@@ -14,6 +14,9 @@ subcollection: watson-assistant
 {: #analytics-recognition}
 
 [IBM Cloud]{: tag-ibm-cloud}[Plus]{: tag-green}[Enterprise]{: tag-purple}
+
+ On 17 August 2026, IBM will remove support for using unrecognized requests to generate recommendations and create actions. If you use the <b>Recognition</b> page to identify gaps in your assistant and create actions from grouped unrecognized requests, review customer conversations and unrecognized request groups before this date. Download any data that you want to retain and complete any required training updates before support is removed.
+{: important}
 
 Use the **Recognition** page to analyze unrecognized requests. You can use this information to create new actions that address questions and issues that aren't being answered by your assistant.
 {: shortdesc}
