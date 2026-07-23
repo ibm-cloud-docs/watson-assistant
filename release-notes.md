@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-04-13"
+lastupdated: "2026-07-23"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,13 @@ content-type: release-note
 
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 10 July 2026
+{: #watson-assistant-july102026}
+{: release-note}
+
+Unrecognized request recommendations and actions deprecation
+:   Effective 17 August 2026, IBM will deprecate and remove support for generating recommendations and creating actions from grouped unrecognized requests on the Recognition page. After this date, this functionality will no longer be available. Customers using unrecognized request groups to identify assistant gaps and create actions must review customer conversations, export any data that they want to retain, and complete any required training updates before the deprecation date.
 
 ## 13 April 2026
 {: #watson-assistant-april132026}
