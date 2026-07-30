@@ -270,6 +270,7 @@ toc:
           - define-webhook-audio.md
           - record-caller-utterance.md
           - dialog-webhooks.md
+      - in-place-upgrade.md
       - topicgroup:
           label: Migrating to watsonx Assistant
           topics:
