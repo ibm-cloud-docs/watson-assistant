@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-08-21"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,13 @@ content-type: release-note
 
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 21 August 2026
+{: #watson-assistant-aug212026}
+{: release-note}
+
+Documentation update: Automatic in-place upgrade to watsonx Orchestrate
+:   Eligible watsonx Assistant instances now begin the in-place upgrade to watsonx Orchestrate automatically when you open the instance page in IBM Cloud. No manual action is required to start the upgrade. Banners on the instance page indicate when the upgrade is in progress and when it is complete. For more information, see [Upgrading to agents with an in-place upgrade](/docs/watson-assistant?topic=watson-assistant-in-place-upgrade).
 
 ## 10 July 2026
 {: #watson-assistant-july102026}

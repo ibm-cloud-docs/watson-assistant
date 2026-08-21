@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2025
-lastupdated: "2025-01-21"
+  years: 2018, 2026
+lastupdated: "2026-08-21"
 
 subcollection: watson-assistant
 
@@ -18,7 +18,10 @@ Welcome to the documentation for {{site.data.keyword.conversationshort}}!
 
 {{site.data.keyword.conversationfull}}, focused on using **actions** to build customer conversations, is designed to make it simple enough for *anyone* to build a virtual assistant. Building, testing, publishing, and analyzing your assistant can all now be done in one simple and intuitive interface.
 
-- New **navigation** provides a workflow for building, previewing, publishing, and analyzing your assistant. 
+If your watsonx Assistant instance is eligible for in-place upgrade, opening the instance page in IBM Cloud can automatically upgrade it to watsonx Orchestrate. No manual action is required to start the upgrade. For more information, see [Upgrading to agents with an in-place upgrade](/docs/watson-assistant?topic=watson-assistant-in-place-upgrade).
+{: note}
+
+- New **navigation** provides a workflow for building, previewing, publishing, and analyzing your assistant.
 
 - Each assistant has a **home page** with a task list to help you get started.
 
