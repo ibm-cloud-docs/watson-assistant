@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-08-21"
+lastupdated: "2026-09-21"
 
 subcollection: watson-assistant
 
@@ -17,6 +17,15 @@ content-type: release-note
 
 
 Release notes describe the new features, changes, and bug fixes in each release of the product. For more information about changes in the web chat integration, see the [Web chat release notes](/docs/watson-assistant?topic=watson-assistant-release-notes-chat).
+
+## 20 September 2026
+{: #watson-assistant-sep202026}
+{: release-note}
+
+Automatic upgrade to IBM watsonx Orchestrate
+:   IBM watsonx Assistant is rolling out automatic upgrades to IBM watsonx Orchestrate for select customers on Standard, Plus, and Enterprise plans. When you open your instance resource page, it automatically upgrades. A confirmation message notifies you when the upgrade is complete. Launching the service takes you into the IBM watsonx Orchestrate experience. All existing resources (Actions, Dialogs, Extensions, Environments) remain untouched and fully operational. You can access them by clicking the navigation menu, selecting **Active inventory**, and then selecting **Assistants**. Upgrades for additional plans will roll out in upcoming phases. For more information, see [Upgrading to agents with an in-place upgrade](/docs/watson-assistant?topic=watson-assistant-in-place-upgrade).
+
+    **Creating new instances for assistant capabilities**: New instance creation for IBM watsonx Assistant is now limited. To access AI assistant features, create an instance of IBM watsonx Orchestrate on the Essentials, Standard, or Premium plans.
 
 ## 21 August 2026
 {: #watson-assistant-aug212026}
